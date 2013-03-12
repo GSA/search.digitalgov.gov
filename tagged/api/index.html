@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Posts tagged api</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/stylesheets/font-awesome-ie7.min.css">
+  <![endif]-->
+  <style>
+    body {
+      padding-top: 60px;
+    }
+  </style>
+  <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+  <link href="/stylesheets/custom.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">-->
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <button type="button" class="btn btn-navbar" data-toggle="collapse"
+              data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="brand" href="/"><span class="usa">USA</span><span class="search">Search</span></a>
+
+      <div class="nav-collapse collapse">
+        <ul class="nav">
+          <li><a href="/customers.html">Testimonials</a></li>
+          <li><a href="/developer/index.html">APIs</a></li>
+          <li><a href="/help-desk.html">Help Desk</a></li>
+        </ul>
+        <ul class="nav">
+          <li>
+            <form class="form-search" accept-charset="UTF-8" action="http://search.usa.gov/search" id="search-form" method="get">
+              <input id="affiliate" name="affiliate" type="hidden" value="usasearch" />
+              <div class="input-append">
+                <label for="search-query" class="hide">Query</label>
+                <input name="query" type="text" autocomplete="off" class="usagov-search-autocomplete span search-query" id="search-query" />
+                <input type="submit" class="btn" id="search-button">Search</input>
+              </div>
+            </form>
+          </li>
+        </ul>
+
+        <ul class="nav login">
+          <li>
+            <a href="http://search.usa.gov/affiliates/home"><i
+                class="icon-user icon-white"></i>&nbsp;Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div id="main-container">
+    <!-- begin tag layout -->
+<p class="muted">Posts tagged <strong>api</strong></p>
+<div class='articles'>
+  
+  <article class='article'>
+    <div class='time'>
+      <a href="/blog/how-and-when-to-use-the-search-api.html">
+        <time>November 28, 2012</time>
+      </a>
+    </div>
+
+    
+    <h3>
+      <a href="/blog/how-and-when-to-use-the-search-api.html">How (and When) to Use the Search API</a>
+    </h3>
+    
+
+    <div class='post-content'>
+      <p>We offer our search results as a hosted results page or as an <a href="http://cms.howto.gov/mobile/api-basics">application programming interface</a> (API). </p>
+<h4>When to Use the Hosted Results</h4>
+<p>Most agencies use our hosted search results page. We recommend that you to use our hosted page for the typical use case of returning search results on your website. Using the hosted page has many benefits such as allowing you to:</p>
+<ul><li>Devote minimal development resources for the initial set up.</li>
+<li>Benefit from new features automatically as they&#8217;re rolled out.</li>
+<li>Stay current with search best practices, such as type-ahead search and formatting of search results.</li>
+</ul><h4>When to Use the API</h4>
+<p>You may need to access our search results to present them outside of a typical search results page. We offer our results as an API for these use cases.</p>
+<p>You can access the API and its documentation at <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Search API. </p>
+<p>The API returns results from each of our indexes—web, image, document (ODIE), RSS (news), video, best bets (boosted content), and related searches—in JSON, JSON-P, or XML.</p>
+<p>We recommend you use our API for limited use cases such as:</p>
+<ul><li>Displaying search results within a native mobile application (i.e., an Android or iPhone app).</li>
+<li>Integrating USASearch results within existing applications (such as your intranet or publications catalog).</li>
+<li>Creating data mashups.</li>
+</ul><p>Examples of how agencies are currently using the API follow.</p>
+<p><strong>Use Case 1. Display Results in Your Mobile App</strong></p>
+<p>USA.gov and the White House use the Search API to render USASearch results within their mobile apps. </p>
+<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me79cgQKOE1qid15q.jpg"/><br/><em>Screenshot of a USASearch results page in the USA.gov iPhone app</em></p>
+<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me78zp7y4v1qid15q.jpg"/> <br/><em>Screenshot of a USASearch results page in the White House iPhone app</em></p>
+<p>Related Links</p>
+<ul><li><a href="http://apps.usa.gov/usagov.shtml">USA.gov mobile app</a></li>
+<li><a href="http://apps.usa.gov/the-white-house-app.shtml">WhiteHouse mobile app</a></li>
+<li><a href="https://github.com/whitehouse">White House Github account</a> (information on and source code for the iOS and Android mobile apps)</li>
+</ul><p><strong>Use Case 2. Integrate USASearch Results within existing applications</strong></p>
+<p><a href="http://www.ri.gov">RI.gov</a> manages hundreds of distinct websites. The state provides a consistent search experience across all of its websites. Some sites are centrally controlled by RI.gov. Others are not. Using the Search API, RI.gov programmatically tells USASearch the site&#8217;s domain from which the user searched (e.g., tmc.dot.ri.gov). RI.gov then highlights results from this specific domain within RI.gov&#8217;s common look and feel.</p>
+<p><span>See the sample results page below that shows a set of results displayed on</span><span> Rhode Island&#8217;s <a href="http://www.tmc.dot.ri.gov/">Transportation Management Center</a> </span><span>for a search on</span><span> </span><em>traffic.</em></p>
+<div><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me7ej38m3P1qid15q.png"/> </div>
+<div><em>Step 1. Searcher on <a href="http://www.tmc.dot.ri.gov">www.tmc.dot.ri.gov</a> types </em>traffic<em> in the search box</em></div>
+<p><br/><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me7el3bJin1qid15q.png"/><br/><em>Step 2. Searcher sees results on RI.gov with a common look and feel that highlights results from the original site</em></p>
+<blockquote>
+<p><strong>Did you know?</strong> The Search API is available for government websites only. Other, publicly available APIs (i.e., for use by anyone) are at <a href="http://www.usa.gov/About/developer-resources/developers.shtml" title="http://www.usa.gov/About/developer-resources/developers.shtml" target="_blank"><a href="http://www.usa.gov/About/developer-resources/developers.shtml">http://www.usa.gov/About/developer-resources/developers.shtml</a></a>.</p>
+</blockquote>
+<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Search API</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/api"><span class="label label-info">api</span></a>
+      
+    </div>
+  </article>
+  
+</div>
+
+<ul class="pager">
+  
+
+  
+</ul>
+<!-- end tag layout -->
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <ul class="footer-links unstyled inline">
+      <li><a href="/tos.html">Terms of Service</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="http://www.twitter.com/usasearch">Follow Us on Twitter</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="mailto:usasearch@gsa.gov">USASearch@gsa.gov</a></li>
+      <li><i class="icon-phone"></i>&nbsp;202-505-5315</li>
+    </ul>
+    <p> An Official Website of the U.S. Government </p>
+    <p>
+      Sponsored by GSA's <a href="http://www.gsa.gov/portal/category/25729">Office of Citizen
+      Services &amp; Innovative Technologies</a>
+    </p>
+    <ul class="footer-links unstyled inline">
+      <li>
+        <a href="http://www.gsa.gov">
+          <img src="http://c566677.r77.cf2.rackcdn.com/logo_footer_gsa.png"
+               alt="GSA.gov logo" id="gsa-logo"></a>
+      </li>
+      <li>
+        <a href="http://www.howto.gov">
+        <img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/footer_htlogo.png"
+             alt="HowTo.gov logo" id="howto-logo"></a>
+      </li>
+      <li>
+        <a href="http://www.usa.gov">
+          <img src="http://c566677.r77.cf2.rackcdn.com/logo_footer_usaGov.png"
+               alt="USA.gov logo" id="usagov-logo"></a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  //<![CDATA[
+  var usasearch_config = { siteHandle:"usasearch" };
+
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "http://search.usa.gov/javascripts/remote.loader.js";
+  document.getElementsByTagName("head")[0].appendChild(script);
+
+  //]]>
+</script>
+
+</body>
+</html>

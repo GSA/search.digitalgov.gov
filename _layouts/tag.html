@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<!-- begin tag layout -->
+<p class="muted">Posts tagged <strong>{{ page.tag }}</strong></p>
+{% include posts.html %}
+
+<ul class="pager">
+  {% if paginator.previous_page %}
+  <li class="previous">
+    {% if paginator.previous_page == 1 %}
+    <a href="/tagged/{{ page.tag }}">&larr; Newer</a>
+    {% else %}
+    <a href="/tagged/{{ page.tag }}/page{{ paginator.previous_page }}">&larr; Newer</a>
+    {% endif %}
+  </li>
+  {% endif %}
+
+  {% if paginator.next_page %}
+  <li class="next">
+    <a href="/tagged/{{ page.tag }}/page{{ paginator.next_page }}">Older &rarr;</a>
+  </li>
+  {% endif %}
+</ul>
+<!-- end tag layout -->
