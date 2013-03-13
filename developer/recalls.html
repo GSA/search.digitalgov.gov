@@ -16,7 +16,6 @@ title: USASearch
     <li class="parameters"><a href="#parameters">Parameters</a></li>
     <li class="sources"><a href="#data-sources">Data Sources</a></li>
     <li class="returns"><a href="#what-it-returns">What it Returns</a></li>
-    <li class="samples"><a href="#code-samples">Code Samples</a></li>
   </ul>
 
   <a name="overview"></a><h2>Overview</h2>
@@ -57,7 +56,7 @@ title: USASearch
 
   <a name="parameters"></a><h2>Parameters</h2>
 
-  <p>Seven generic parameters are accepted: (1) query, (2) organization, (3) start_date, (4) end_date, (5) page, (6) per_page, and (7) sort. None are required.</p>
+  <p>Seven generic parameters are accepted: (1) query, (2) organization, (3) start_date, (4) end_date, (5) page, (6) per_page, and (7) sort. There are additional parameters that are specific to food, product, and car safety recalls. None are required.</p>
 
   <h3>query</h3>
 
@@ -114,22 +113,12 @@ title: USASearch
 
 <h3>make, model, year, and code (only for NHTSA recalls)</h3>
 
-* `make` specifies the make of the vehicle or equipment.
-
-  Example: <http://localhost:3000/search?make=winnebago>
-
-* `model` specifies the model of the vehicle or equipment
-
-  Example: <http://localhost:3000/search?model=ellipse>
-
-* `year` specifies the year of the vehicle or equipment
-
-  Example: <http://localhost:3000/search?year=2010>
-
-* `code` specifies the NHTSA code. Possible values are `E`, `V` [for vehicles], `I`, `T`, `C`, or `X`.
-
-  Example: <http://localhost:3000/search?code=v>
-
+<ul>
+<li>`make` specifies the make of the vehicle or equipment. Example: <http://localhost:3000/search?make=winnebago></li>
+<li>`model` specifies the model of the vehicle or equipment. Example: <http://localhost:3000/search?model=ellipse></li>
+<li>`year` specifies the year of the vehicle or equipment. Example: <http://localhost:3000/search?year=2010></li>
+<li>`code` specifies the NHTSA code. Possible values are `E`, `V` [for vehicles], `I`, `T`, `C`, or `X`. Example: <http://localhost:3000/search?code=v></li>
+</ul>
 <a name="data-sources"></a><h2>Data Sources</h2>
 
     <p>Data are normalized across (1) food safety recalls from <a href="http://www.FoodSafety.gov">FoodSafety.gov</a>; (2) car safety recalls from the <a href="http://www.nhtsa.gov">National Highway Traffic Safety Administration</a>; and (3) product safety recalls from the <a href="http://www.cpsc.gov">Consumer Product Safety Commission</a>.</p>.</p>
