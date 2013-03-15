@@ -6,23 +6,23 @@ tags: how-to
 
 We offer three ways for you to tell us about the web pages that you want us to fetch and include in our index.
 
-#### 1. Discovery Tag
+## 1. Discovery Tag
 
 The surest way to ensure we have complete and timely coverage of your content in our index is to add our discovery tag to your web pages. Visit our [Admin Center](http://search.usa.gov/affiliates/home), select your site, and click on the Get Code option in the left-hand menu.
 
 For more details, read our post on [How to Add Our Code to Your Website](http://usasearch.howto.gov/blog/how-to-add-our-code-to-your-website.html).
 
-#### 2. XML Sitemap
+## 2. XML Sitemap
 
 Tell us the location of your XML sitemap(s).
 
 A sitemap is a recommended best practice for search engine optimization. For more details on how to create an XML sitemap, visit [Sitemaps.org/protocol.html](http://www.sitemaps.org/protocol.html).
 
-#### 3. Specific URLs
+## 3. Specific URLs
 
 Still missing some URLs? Tell us the specific URLs you'd like us to fetch and index. Use the Bulk Upload option to upload a text file with up to 10,000 URLs.
 
-#### Crawl Report
+### Crawl Report
 
 View a report of all previously crawled URLs by clicking on the View All button to browse the list in your browser, or click on the Export to CSV button to download the list as a comma delimited file.
 
