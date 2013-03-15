@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <title>Posts tagged user-interface</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -40,40 +39,33 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
-      <button type="button" class="btn btn-navbar" data-toggle="collapse"
-              data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
       <a class="brand" href="/"><span class="usa">USA</span><span class="search">Search</span></a>
+      <ul class="nav">
+        <li><a href="/customers.html">Testimonials</a></li>
+        <li><a href="/developer/index.html">APIs</a></li>
+        <li><a href="/help-desk.html">Help Desk</a></li>
+      </ul>
+      <ul class="nav">
+        <li>
+          <form class="form-search" accept-charset="UTF-8" action="http://search.usa.gov/search"
+                id="search-form" method="get">
+            <input id="affiliate" name="affiliate" type="hidden" value="usasearch"/>
 
-      <div class="nav-collapse collapse">
-        <ul class="nav">
-          <li><a href="/customers.html">Testimonials</a></li>
-          <li><a href="/developer/index.html">APIs</a></li>
-          <li><a href="/help-desk.html">Help Desk</a></li>
-        </ul>
-        <ul class="nav">
-          <li>
-            <form class="form-search" accept-charset="UTF-8" action="http://search.usa.gov/search" id="search-form" method="get">
-              <input id="affiliate" name="affiliate" type="hidden" value="usasearch" />
-              <div class="input-append">
-                <label for="search-query" class="hide">Query</label>
-                <input name="query" type="text" autocomplete="off" class="usagov-search-autocomplete span search-query" id="search-query" />
-                <input type="submit" class="btn" id="search-button">Search</input>
-              </div>
-            </form>
-          </li>
-        </ul>
-
-        <ul class="nav login">
-          <li>
-            <a href="http://search.usa.gov/affiliates/home"><i
-                class="icon-user icon-white"></i>&nbsp;Login</a>
-          </li>
-        </ul>
-      </div>
+            <div class="input-append">
+              <label for="search-query" class="hide">Query</label>
+              <input name="query" type="text" autocomplete="off"
+                     class="usagov-search-autocomplete span search-query" id="search-query"/>
+              <input type="submit" class="btn" id="search-button">Search</input>
+            </div>
+          </form>
+        </li>
+      </ul>
+      <ul class="nav login">
+        <li>
+          <a href="http://search.usa.gov/affiliates/home"><i
+              class="icon-user icon-white"></i>&nbsp;Login</a>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
