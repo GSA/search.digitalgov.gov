@@ -79,6 +79,117 @@
   
   <article class='article'>
     <div class='time'>
+      <a href="/blog/how-and-when-to-use-the-search-api.html">
+        <time>November 28, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/blog/how-and-when-to-use-the-search-api.html">How (and When) to Use the Search API</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>We offer our search results as a hosted results page or as an <a href="http://cms.howto.gov/mobile/api-basics">application programming interface</a> (API). </p>
+
+
+<h2>When to Use the Hosted Results</h2>
+
+
+<p>Most agencies use our hosted search results page. We recommend that you to use our hosted page for the typical use case of returning search results on your website. Using the hosted page has many benefits such as allowing you to:</p>
+
+
+<ul><li>Devote minimal development resources for the initial set up.</li>
+<li>Benefit from new features automatically as they&#8217;re rolled out.</li>
+<li>Stay current with search best practices, such as type-ahead search and formatting of search results.</li>
+</ul>
+
+
+<h2>When to Use the API</h2>
+
+
+<p>You may need to access our search results to present them outside of a typical search results page. We offer our results as an API for these use cases.</p>
+
+
+<p>You can access the API and its documentation at <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Search API. </p>
+
+
+<p>The API returns results from each of our indexes—web, image, document (ODIE), RSS (news), video, best bets (boosted content), and related searches—in JSON, JSON-P, or XML.</p>
+
+
+<p>We recommend you use our API for limited use cases such as:</p>
+
+
+<ul><li>Displaying search results within a native mobile application (i.e., an Android or iPhone app).</li>
+<li>Integrating USASearch results within existing applications (such as your intranet or publications catalog).</li>
+<li>Creating data mashups.</li>
+</ul>
+
+
+<p>Examples of how agencies are currently using the API follow.</p>
+
+
+<p><strong>Use Case 1. Display Results in Your Mobile App</strong></p>
+
+
+<p>USA.gov and the White House use the Search API to render USASearch results within their mobile apps. </p>
+
+
+<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me79cgQKOE1qid15q.jpg"/><br/><em>Screenshot of a USASearch results page in the USA.gov iPhone app</em></p>
+
+
+<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me78zp7y4v1qid15q.jpg"/> <br/><em>Screenshot of a USASearch results page in the White House iPhone app</em></p>
+
+
+<p>Related Links</p>
+
+
+<ul><li><a href="http://apps.usa.gov/usagov.shtml">USA.gov mobile app</a></li>
+<li><a href="http://apps.usa.gov/the-white-house-app.shtml">WhiteHouse mobile app</a></li>
+<li><a href="https://github.com/whitehouse">White House Github account</a> (information on and source code for the iOS and Android mobile apps)</li>
+</ul>
+
+
+<p><strong>Use Case 2. Integrate USASearch Results within existing applications</strong></p>
+
+
+<p><a href="http://www.ri.gov">RI.gov</a> manages hundreds of distinct websites. The state provides a consistent search experience across all of its websites. Some sites are centrally controlled by RI.gov. Others are not. Using the Search API, RI.gov programmatically tells USASearch the site&#8217;s domain from which the user searched (e.g., tmc.dot.ri.gov). RI.gov then highlights results from this specific domain within RI.gov&#8217;s common look and feel.</p>
+
+
+<p><span>See the sample results page below that shows a set of results displayed on</span><span> Rhode Island&#8217;s <a href="http://www.tmc.dot.ri.gov/">Transportation Management Center</a> </span><span>for a search on</span><span> </span><em>traffic.</em></p>
+
+
+<div><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me7ej38m3P1qid15q.png"/> </div>
+
+
+<div><em>Step 1. Searcher on <a href="http://www.tmc.dot.ri.gov">www.tmc.dot.ri.gov</a> types </em>traffic<em> in the search box</em></div>
+
+
+<p><br/><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me7el3bJin1qid15q.png"/><br/><em>Step 2. Searcher sees results on RI.gov with a common look and feel that highlights results from the original site</em></p>
+
+
+<blockquote>
+<p><strong>Did you know?</strong> The Search API is available for government websites only. Other, publicly available APIs (i.e., for use by anyone) are at <a href="http://www.usa.gov/About/developer-resources/developers.shtml" title="http://www.usa.gov/About/developer-resources/developers.shtml" target="_blank"><a href="http://www.usa.gov/About/developer-resources/developers.shtml">http://www.usa.gov/About/developer-resources/developers.shtml</a></a>.</p>
+</blockquote>
+
+
+<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Search API</p>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/api"><span class="label label-info">api</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
       <a href="/blog/a-punch-list-to-go-live-with-usasearch.html">
         <time>November 26, 2012</time>
       </a>
@@ -92,11 +203,23 @@
 
     <div class='post-content'>
       <p>Your pre-launch checklist will be unique to your agency&#8217;s workflow, requirements, and deadlines. A typical punch list to go live with USASearch follows.</p>
+
+
 <h2>Connect Your Site to USASearch</h2>
+
+
 <p>Most agencies add these two <a href="/blog/how-to-add-our-code-to-your-website.html">snippets of code</a> to the template(s) in their content management systems (rather than adding them to individual pages).</p>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> </strong><strong>1. Does your search box point to USASearch? </strong>Update your search box form code point to USASearch so that, when users execute a search, they&#8217;ll see your USASearch-hosted results page.</p>
+
+
 <pre>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;<br/>    &lt;input id="affiliate" name="affiliate" type="hidden" value="<strong>YourSiteHandle</strong>" /&gt;<br/>    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;<br/>    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;<br/>    &lt;input name="commit" type="submit" value="Search" /&gt;<br/>&lt;/form&gt;</pre>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> </strong><strong>2. Do you have the USASearch Javascript tag on your webpages?</strong> This Javascript helps us <a href="/blog/how-to-add-your-urls-to-our-index.html">find your new and updated pages</a>. It also powers the <a href="/blog/how-to-implement-type-ahead-search.html">type-ahead search</a>.</p>
+
+
 <pre>&lt;script type="text/javascript"&gt;
 //&lt;![CDATA[
       var usasearch_config = { siteHandle:"<strong>YourSiteHandle</strong>" };
@@ -105,19 +228,46 @@
       script.src = "http://search.usa.gov/javascripts/remote.loader.js";
       document.getElementsByTagName("head")[0].appendChild(script);
 //]]&gt;<br/>&lt;/script&gt;</pre>
+
+
 <h2>Double Check Your Content Sources</h2>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> </strong><strong>3. Have you told us which domain(s) you want to search?</strong> List one or more <a href="/blog/how-to-edit-your-domains.html">domains</a> that you want to search on the first page of web results.  Most agencies opt to leave out the &#8216;www&#8217; to include all subdomains (e.g., list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies—especially department-level portals—opt to also include their bureaus&#8217; websites (e.g., Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)</p>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> </strong><strong>4. Have you told us about your RSS feeds?</strong> We love <a href="/blog/how-to-add-your-rss-feeds-to-our-index.html">RSS feeds</a>. Tell us about all of your feeds, even if you opt not to show them  (see #7 below). They&#8217;re the quickest way for you to tell us about your new and updated content. Feeds also have well-structured titles, URLs, descriptions, and dates that we use to improve your search results page. (Tip: Preview your feeds from the RSS page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> to confirm that we&#8217;ve indexed your content.)</p>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> </strong><strong>5. Have you told us about your social media accounts?</strong> Flickr photostreams, tweets, and YouTube videos are a great way to highlight your recent content and to let searchers know about your <a href="/blog/how-to-add-your-social-media-to-our-index.html">social media</a> channels. Tell us about all of your social media, even if you opt not to show them (see #7 below). </p>
+
+
 <h2>Customize Your User Interface</h2>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> 6. Have you made the search results page look like your website?</strong> Customize the <a href="/blog/how-to-customize-the-look-and-feel-of-your-results-page.html">look and feel</a> (colors, fonts, favicon) and <a href="/blog/how-to-customize-the-header-and-footer-of-your-results.html">header and footer</a> of your search results page to create a seamless experience for users as they search and browse your website.</p>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> 7. Have you told us what to show on your results page? </strong>Tell us which <a href="/blog/how-to-select-the-modules-that-appear-on-your-results.html">results modules</a> (i.e., the stuff in the center of the page) and <a href="/blog/how-to-select-the-sidebar-options-that-appear-on-your.html">sidebar</a> options (i.e., the navigation in the left-hand column) you want to appear on your search results.</p>
+
+
 <h2>Set Up Nice-to-Have Features (Optional)</h2>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> 8. Have you masked your domain?  </strong>We offer <a href="/blog/how-to-add-our-code-to-your-website#cname.html">DNS masking</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov. </p>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> 9. Have you added the Javascripts for your other third party web services to your results page? </strong>If you have a <a href="/blog/how-to-add-javascript-for-your-third-party-web-services.html">third party service</a> running on your website, you likely want it to run on your results page. Agencies often include their 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends code, among others.</p>
+
+
 <h2>Don&#8217;t Forget SEO (Optional)</h2>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> 10. Have you optimized your site so we can find your content? </strong>We follow <a href="http://www.howto.gov/web-content/search/seo">search engine optimization</a> (SEO) best practices. Verify that you have a <a href="http://www.robotstxt.org">robots.txt</a> and an <a href="http://www.sitemaps.org">XML sitemap</a>. These two files are typically located in the root directory of your website (i.e., agency.gov/robots.txt and agency.gov/sitemap.xml, respectively). Also verify that your robots.txt file allows our user agent (usasearch) to access your public content.</p>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> </strong><strong>11. Have you registered your site with the major commercial search engines? </strong>Register for both <a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a> and <a href="https://www.google.com/webmasters/tools/home">Google Webmaster Tools</a> to maximize the coverage of your content in their search results.</p>
+
 
     </div>
 
@@ -143,20 +293,40 @@
 
     <div class='post-content'>
       <h2>Highlighted Feature</h2>
+
+
 <p>Searchers often know the exact page they&#8217;re looking for. We&#8217;ve added a feature to help them find that page even more quickly. </p>
+
+
 <p>As searchers type in their query, relevant text <a href="/blog/how-to-highlight-best-bets.html">Best Bets</a> are shown as Recommended Pages, as shown in the sample below for a search on <em>fa&#8230;</em> on <a href="http://search.usa.gov/search?query=jobs&amp;affiliate=u.s.departmentoflabor">DOL.gov</a>.</p>
+
+
 <p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdljlrljT71qid15q.png"/></p>
+
+
 <h2>Other Features</h2>
+
+
 <ul><li>Searchers can narrow RSS news results by custom date ranges.</li>
 <li>Searchers now see more images above the fold on image results pages.</li>
 <li>Searchers see integrated image results across both the images on your website and in your Flickr photostream.</li>
 <li>You can now add the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digtital Analytics Program</a>&#8217;s government-wide analytics tag to your search results pages. Email the Digital Analytics Program at <a href="mailto:DAP@gsa.gov">DAP@gsa.gov</a> for more information on setting up the government-wide analytics tag.</li>
 <li>When you <a href="/blog/how-to-add-your-social-media-to-our-index.html">add your Twitter handle</a> in the Admin Center, we now <a href="/blog/how-to-select-the-modules-that-appear-on-your-results.html">show the Twitter GovBox</a> by default.</li>
-</ul><h2>Chores</h2>
+</ul>
+
+
+<h2>Chores</h2>
+
+
 <ul><li>We upgraded the <a href="https://rubygems.org/gems/tweetstream">tweetstream</a> and <a href="https://rubygems.org/gems/twitter">twitter</a> gems.</li>
 <li>We upgraded <a href="http://jenkins-ci.org/">Jenkins</a>.</li>
 <li>We upgraded to <a href="http://blog.cloudera.com/blog/2012/10/cdh4-1-now-released/">Cloudera 4.1</a> and installed <a href="https://ccp.cloudera.com/display/IMPALA10BETADOC/Cloudera+Impala+1.0+Beta+Documentation">Impala</a>.</li>
-</ul><h2>Fixes</h2>
+</ul>
+
+
+<h2>Fixes</h2>
+
+
 <ul><li>We fixed the URLs within your tweets so that searchers can now click on the links.</li>
 <li>We fixed a bug so that infinite scroll now works on news and image results pages.</li>
 <li>We now index your <span>ISO-8859-1 encoded pages.</span></li>
@@ -165,6 +335,7 @@
 <li>We fixed a bug so that the query timeline chart now displays in all browsers.</li>
 <li>We synced the <a href="/blog/how-to-analyze-your-query-logs.html">Query Logs</a> and <a href="/blog/how-to-analyze-your-click-stats.html">Click Stats</a> reports so that you now see today&#8217;s data for both.</li>
 </ul>
+
 
     </div>
 
@@ -190,14 +361,31 @@
 
     <div class='post-content'>
       <p>The Trending Queries page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the top 10 changing search terms. </p>
+
+
 <p>You&#8217;ll see a list of up to 10 terms with the greatest gain between yesterday and today. (Terms must have been searched by at least 10 unique searchers per day to be included in this list.)</p>
+
+
 <p>Use this report to identify newly popular terms. Create new content or update existing content to ensure it&#8217;s current, accurate, and complete. </p>
+
+
 <p>See the sample report below that shows the 10 trending queries on <a href="http://www.usa.gov/">USA.gov</a> on Monday, November 5, 2012—the day before Election Day.</p>
+
+
 <p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_md0qrd6Q731qid15q.png"/></p>
+
+
 <p>Click on any linked word or the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png"/> symbol in the above list, and you&#8217;ll be taken to a Query Timeline chart. There you&#8217;ll be able to select a period of time for the term, and you can also add a second query for comparison.</p>
+
+
 <p>Click on the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol, and you&#8217;ll be taken to a list of the top clicked URLs for that term.</p>
+
+
 <p>To investigate why the term may be trending, click on the Twitter, news, or trends icons to see what&#8217;s happening on other websites.</p>
+
+
 <p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Trending Queries</p>
+
 
     </div>
 
@@ -225,14 +413,27 @@
 
     <div class='post-content'>
       <p>The Low Click-Thru Rate (CTR) Queries page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the top 10 searches with low click-thru rates. It shows the most popular search terms that people generally don’t act (click) on. </p>
+
+
 <p>You&#8217;ll see a list of up to 10 terms that returned search results, but resulted in a click less than 20 percent of the time over the past day or so. In other words, fewer than one in five people who searched for that topic clicked on a search result. (Terms must have been searched by at least 10 unique searchers per day to be included in this list.)</p>
+
+
 <p>Use this report to identify issues with coverage. Create a <a href="/blog/how-to-highlight-best-bets.html">Best Bet</a>, add pages that may be missing from the results, or do both to improve recall. Incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results. </p>
+
+
 <p>Click on any linked word or the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png"/> symbol in the list, and you&#8217;ll be taken to a Query Timeline chart. There you&#8217;ll be able to select a period of time for the term, and you can also add a second query for comparison.</p>
+
+
 <p>Click on the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol, and you&#8217;ll be taken to a list of the top clicked URLs for that term.</p>
+
+
 <blockquote>
 <p><em><strong>Did you know?</strong> </em>This low click-thru report lists only those terms that returned search results. Visit the <a href="/blog/how-to-analyze-your-query-logs.html">Query Logs</a> page to see the top queries that returned no results.</p>
 </blockquote>
+
+
 <p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Low CTR Queries</p>
+
 
     </div>
 
@@ -260,17 +461,40 @@
 
     <div class='post-content'>
       <p><em>Highlighted Feature: Common Search Metrics for the Digital Strategy</em></p>
+
+
 <p>Do you ever feel like you&#8217;re drowning in data? Do you feel like finding meaningful insights from the data is like searching for a needle in a haystack? </p>
+
+
 <p>To standardize and streamline how agencies collect and report this data, the <a href="http://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html">Digital Government Strategy</a> requires federal executive branch agencies to implement common performance and customer satisfaction metrics. <a href="http://www.howto.gov">HowTo.gov</a> has published <a href="http://www.howto.gov/web-content/digital-metrics">guidance on common metrics</a>, including describing what you should measure, what to do with the data, and common tools to help you collect and analyze your metrics.</p>
+
+
 <p>To support you in collecting and reporting your site <a href="http://usasearch.howto.gov/tagged/analytics">search metrics</a> for the Digital Government Strategy, we&#8217;ve added four new reports to the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
+
+
 <h2>1. Top “no results” queries</h2>
+
+
 <p>The most popular, valid searches that don&#8217;t return any results on your site&#8217;s search results page (e.g., because you don&#8217;t have the content on your site, or the content isn&#8217;t findable by the person&#8217;s search term).<span class="Apple-tab-span"> </span>Review your content to see if you need to add new content, or update existing content to include the words your readers search for. Read our post, <a href="/blog/how-to-analyze-your-query-logs.html">How to Analyze Your Query Logs</a>, for more details.</p>
+
+
 <h2>2. Top searches with low click through rates</h2>
+
+
 <p>The most popular search terms that people generally don’t act (click) on. Consider incorporating language from these popular search terms into page titles or descriptions, to encourage searchers to click on your relevant page. Read our post, <a href="/blog/how-to-analyze-your-queries-with-low-click-thru-rates.html">How to Analyze Your Queries with Low Click-Thru Rates</a>, for more details.</p>
+
+
 <h2>3. Top changing search terms (movement up/down)</h2>
+
+
 <p>Shows trending topics, what’s hot or not. Use this report to investigate why people might be losing interest in once-popular content and consider archiving if it’s no longer needed. For newly popular terms, create new content or update existing content to ensure it’s current, accurate, and complete. Read our post, <a href="/blog/how-to-analyze-your-trending-queries.html">How to Analyze Your Trending Queries</a>, for more details.</p>
+
+
 <h2>4. Top clicked URLs for specific queries</h2>
+
+
 <p>The most common results that searchers found most relevant or appealing, for specific search terms. Review these popular pages and other customer top tasks to make sure they are current, accurate, complete and compelling. Read our post, <a href="/blog/how-to-analyze-your-click-stats.html">How to Analyze Your Click Stats</a>, for more details.</p>
+
 
     </div>
 
@@ -296,16 +520,37 @@
 
     <div class='post-content'>
       <p>The Click Stats page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the URLs your searchers have clicked on. Data start from October 2012.</p>
+
+
 <p>You&#8217;ll see a list, in frequency order, of the most clicked URLs for any time period. You may choose to display 10, 50, 100, 500, or 1,000 results in order of frequency.</p>
+
+
 <p>See the sample report below that shows the 10 most clicked URLs on <a href="http://www.usa.gov/">USA.gov</a> in October 2012.</p>
+
+
 <p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mces5zyKfc1qid15q.png"/></p>
+
+
 <p>Click on the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol in the list above, and you’ll see the top query terms that led to that URL over the same time period.</p>
+
+
 <p>See the sample report below that shows the top queries that led to a click on <a href="http://www.usajobs.gov/"><a href="http://www.usajobs.gov/">http://www.usajobs.gov/</a></a> on <a href="http://www.usa.gov/">USA.gov</a> in October 2012.</p>
+
+
 <p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqp4Jmoy1qid15q.png"/></p>
+
+
 <p>From the list of queries, you will be able to click on the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol again to see the top clicked URLs for that term over the same time period.</p>
+
+
 <p>See the sample report below that shows the top clicked URLs for <em>jobs</em> on <a href="http://www.usa.gov/">USA.gov</a> in October 2012.</p>
+
+
 <p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqlwdZnx1qid15q.png"/></p>
+
+
 <p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Click Stats</p>
+
 
     </div>
 
@@ -333,16 +578,37 @@
 
     <div class='post-content'>
       <p>Good news! We completed a major upgrade of our search infrastructure. You likely didn&#8217;t notice as we completed the upgrade without any downtime for searchers on your site. </p>
+
+
 <p>Our system is now even more secure, stable, and redundant than it was before. Plus, it is faster, too. Highlights of the upgrade follow.</p>
+
+
 <p><em><strong>Multihoming</strong></em></p>
+
+
 <p>We&#8217;ve always had a disaster recovery, backup datacenter, but it often sat idle. We wanted to make better use of all of our servers so we&#8217;re now leveraging a content delivery network to send traffic to whichever datacenter is geographically closest to the searcher. This allows us to use both datacenters equally and serve our results quickly.</p>
+
+
 <p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mcd7tbK8RD1qid15q.png"/></p>
+
+
 <p><em><strong>New Hardware</strong></em></p>
+
+
 <p>We increased our RAM and CPU resources by five times. We have room to grow and to roll out more features.</p>
+
+
 <p><em><strong>Upgraded Software</strong></em></p>
+
+
 <p>We&#8217;re now on Red Hat 6 and Cloudera 4.</p>
+
+
 <p><em><strong>Speed, Speed, Speed</strong></em></p>
+
+
 <p>We&#8217;re always working to improve the speed of our search results. We changed some of our caching rules. We also started to leverage <a href="http://wiki.nginx.org/Main">Nginx</a> (a free, open-source, high-performance HTTP server).</p>
+
 
     </div>
 
@@ -368,15 +634,28 @@
 
     <div class='post-content'>
       <p><strong>Features</strong></p>
+
+
 <ul><li><span>We added alerts to the Admin Center to communicate maintenance windows or other timely content with you.</span></li>
 <li>Searchers can see keyword-scoped results for collections. If you have a collection below three folder levels deep, <a href="mailto:usasearch@gsa.gov">email us</a> and we&#8217;ll help you set up a keyword for your collection. </li>
-</ul><p><strong>Chores</strong></p>
+</ul>
+
+
+<p><strong>Chores</strong></p>
+
+
 <ul><li>We removed the Hosted Sitemap feature.</li>
-</ul><p><strong>Fixes</strong></p>
+</ul>
+
+
+<p><strong>Fixes</strong></p>
+
+
 <ul><li>We now show dates for RSS news items on each customer&#8217;s search results page only.</li>
 <li>We fixed a bug which caused highlighted terms on results pages to omit trailing spaces.</li>
 <li>We fixed a bug on how &#8220;site:&#8221; operators retrieve results.</li>
 </ul>
+
 
     </div>
 
@@ -402,56 +681,37 @@
 
     <div class='post-content'>
       <p><em><strong>Highlighted Feature: Infinite Scrolling</strong></em></p>
+
+
 <p>Searchers now have the benefit of infinite scrolling on your results pages. What is infinite scrolling? You&#8217;ve probably used it on many commercial websites, such as <a href="http://www.bing.com/images/search?q=yosemite">Bing Images</a>, <a href="http://duckduckgo.com/?q=yosemite">Duck Duck Go</a>, <a href="http://pinterest.com/search/boards/?q=yosemite">Pinterest</a>, and <a href="https://twitter.com/i/#!/search/yosemite">Twitter</a>. It automatically allows searchers to see more results when they get to the bottom of the page, without clicking on the link for the next page of results.</p>
+
+
 <p>Try it out on your site&#8217;s search results page, or on <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=yosemite">USA.gov</a>.</p>
+
+
 <p><a href="http://search.usa.gov/search?affiliate=usagov&amp;query=yosemite"><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mb2awk8xwU1qid15q.png"/></a></p>
+
+
 <p>Infinite scrolling has many advantages, including:</p>
+
+
 <ol><li><em><em>Speed.</em><span> </span></em>The next set of new results loads quicker than a totally new page.</li>
 <li><em>Streamlining the user interface.</em> Studies show most searchers don&#8217;t use the next page buttons. Proactively loading results allows searchers to see more results on one page and to compare them.</li>
 <li><em>Simplifying the indexes.</em> When and how we display results from our various web indexes is easier for us, you, and end users. </li>
-</ol><p><em><strong>Other Features</strong></em></p>
+</ol>
+
+
+<p><em><strong>Other Features</strong></em></p>
+
+
 <p>We completely revamped how <a href="/blog/how-to-create-collections-within-our-index.html">collections</a> work to provide you with more flexibility. We encourage you to check out this feature if you&#8217;re interested in offering  navigation options in the left-hand <a href="/blog/how-to-select-the-sidebar-options-that-appear-on-your.html">sidebar</a> on your results page. You can now create a collection:</p>
+
+
 <ul><li>Covering tens of thousands (or even millions) of web pages.</li>
 <li>Covering domains that aren&#8217;t part of your primary <a href="/blog/how-to-edit-your-domains.html">domain</a> (i.e., that aren&#8217;t shown on the main web results page). </li>
 <li>Without needing to add our Javascript <a href="/blog/how-to-add-our-code-to-your-website.html">code snippet</a>.</li>
 </ul>
 
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      <a href="/blog/search-notes-for-the-week-ending-september-21-2012.html">
-        <time>September 28, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/blog/search-notes-for-the-week-ending-september-21-2012.html">Search Notes for the Week Ending September 21, 2012</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><strong>Features</strong></p>
-<p><em>Helping searchers find forms</em></p>
-<p>Similar to our existing <a href="http://search.usa.gov/search?query=census+bureau&amp;affiliate=usagov">agency</a> and <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=diabetes">health</a> GovBoxes, we created a <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=i9+form">forms</a> GovBox to help searchers find federal government forms. So far, we&#8217;ve included forms from the Department of Defense, General Services Administration, Social Security Administration, U.S. Citizenship and Immigration Services, and Department of Veterans Affairs.</p>
-<p>We&#8217;ve also published the forms data as a <a href="http://www.usa.gov/About/developer-resources/forms.shtml">Federal Forms API</a> for third-party developers.</p>
-<p><strong>Chores</strong></p>
-<ul><li>We upgraded our robots.txt parser to account for comments and varying cases.</li>
-<li>We eliminated support for six <a href="/blog/six-legacy-domains-are-expiring.html">legacy domains</a> as part of the .gov web reform project.</li>
-</ul><p><strong>Fixes</strong></p>
-<ul><li>We fixed broken URLs for Best Bets image files.</li>
-<li>We fixed a bug with our browser user agent so that Internet Explorer users no longer sometimes see a blank results page.</li>
-<li>We fixed a CSS validation bug so you don&#8217;t see an error message when editing your header or footer.</li>
-<li>We updated a broken link for Explore Topics on <a href="http://m.usa.gov">m.USA.gov</a>.</li>
-</ul>
 
     </div>
 

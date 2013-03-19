@@ -91,14 +91,28 @@
 
     <div class='post-content'>
       <p><span>As we start 2012, we </span><span>want to highlight two major, new features. </span></p>
+
+
 <ol><li><span>Discovery Tag</span>—O<span>ur on-demand indexing engine allows you to automatically add content to your search index. You may make use of our on-demand indexing by placing our Discovery Tag (available on the Get Code page in the admin center) on your web pages.<br/> </span></li>
 <li><span>Themes for results pages</span>—Our n<span>ew and improved theme-based results pages help you create a customized look and feel &#8220;out of the box.&#8221; You may view the themes by adding a new site in our admin center. We&#8217;re also in the process of migrating all customers into this new user interface.</span></li>
-</ol><p>Below are the details for January and, as a reminder, we divide our work into three categories.</p>
+</ol>
+
+
+<p>Below are the details for January and, as a reminder, we divide our work into three categories.</p>
+
+
 <ol><li>Features—Things you actually notice.</li>
 <li>Chores—Back-end improvements that you don’t notice.</li>
 <li>Fixes—Fixes to any code issues that may arise.</li>
-</ol><p><strong><em>Features</em></strong></p>
+</ol>
+
+
+<p><strong><em>Features</em></strong></p>
+
+
 <p><em>For Searchers</em></p>
+
+
 <ul><li>Searchers get better PDF result coverage in results.</li>
 <li>Searchers only see indexed documents that belong to the site&#8217;s domain collection.</li>
 <li>Searchers see MedlinePlus (health topics) and Enhanced Agency GovBoxes, when customers opt to display them via the admin center.</li>
@@ -108,7 +122,12 @@
 <li>Searchers on template-based results pages see a nice, matching shaded header with rounded corners.</li>
 <li>Mobile searchers see colors from selected theme.</li>
 <li>Searchers see square fade on related searches and other modules.</li>
-</ul><p><em>For Agency Customers</em></p>
+</ul>
+
+
+<p><em>For Agency Customers</em></p>
+
+
 <ul><li>Customers see new Domains page.</li>
 <li>Customers have an easy way to pass multiple parameters.</li>
 <li>By default, customers have a useful header on results pages during signup.</li>
@@ -116,7 +135,11 @@
 <li>Customers may set up sites with keyword filtered results.</li>
 <li>Customers see an updated left nav in the admin center.</li>
 </ul>
+
+
 <p><em><strong>Chores</strong></em> </p>
+
+
 <ul><li>Migrated USA.gov&#8217;s  &#8220;enhanced results&#8221; Agency and MedlinePlus to GovBoxes.</li>
 <li>Refactored search classes.</li>
 <li>Removed website URL from the Add New Site wizard.</li>
@@ -124,7 +147,12 @@
 <li>Upgraded Solr from 1.4 to 3.5.</li>
 <li>Changed timestamp indexing for Solr to use a trie on NewsItem model.</li>
 <li>Modified stopword analysis to include Solr CommonGrams filtering.</li>
-</ul><p><strong>Bug Fixes</strong></p>
+</ul>
+
+
+<p><strong>Bug Fixes</strong></p>
+
+
 <ul><li>Fixed Spanish translations for indexed documents.</li>
 <li>Fixed display error when search results contain Bing matches and indexed documents.</li>
 <li>Fixed error received by customers when migrating to themes. </li>
@@ -148,6 +176,7 @@
 <li>Verified IndexedDocument URL length is &lt;= 2000 rather than accepting it and silently truncating it.</li>
 <li>Used document body for documents with a blank meta description tag.</li>
 </ul>
+
 
     </div>
 
@@ -173,24 +202,48 @@
 
     <div class='post-content'>
       <p>We divide our work into three categories.</p>
+
+
 <ol><li>Features—Things you actually notice.</li>
 <li>Chores—Back-end improvements that you don’t notice.</li>
 <li>Bugs—Fixes to any code issues that may arise.</li>
-</ol><p><strong>Features</strong></p>
+</ol>
+
+
+<p><strong>Features</strong></p>
+
+
 <p><em>Features for Searchers</em></p>
+
+
 <ul><li>Searchers don&#8217;t see duplicate results from Add URLs.</li>
 <li>Spanish searchers see stemmed equivalents.</li>
 <li>Searchers on USA.gov see FAQ GovBox higher in results.</li>
-</ul><p><em>Features for Agency Customers</em></p>
+</ul>
+
+
+<p><em>Features for Agency Customers</em></p>
+
+
 <ul><li>Customers can choose from predefined themes.</li>
 <li>Customers see a a Sitemap box on the Sitemaps page.</li>
 <li>Customers have a Discovery Tag for USASearch to proactively discover and index content from their websites.</li>
 <li>Customers can edit Header and Footer CSS.</li>
 <li>Customers can set their locale to Spanish during sign up.</li>
 <li>Customers see an updated left nav.</li>
-</ul><p><strong>Chores</strong></p>
+</ul>
+
+
+<p><strong>Chores</strong></p>
+
+
 <ul><li>Remove &#8220;locale&#8221; parameter from all models, analytics, etc.</li>
-</ul><p><strong>Bugs<br/></strong></p>
+</ul>
+
+
+<p><strong>Bugs<br/></strong></p>
+
+
 <ul><li>Add Spanish translations for Popular Links, no RSS results, and document results.</li>
 <li>Remove extra whitespace when displaying snippets.</li>
 <li>Fix buggy bold highlighting in type-ahead searches in API.</li>
@@ -203,6 +256,7 @@
 <li>Fix error logging around duplicate indexed docs pages.</li>
 <li>Fix deduping regression to still match exact URLs.</li>
 </ul>
+
 
     </div>
 
@@ -267,6 +321,7 @@
 </ul><p><em>Posted by Erik</em></p>
 </div>
 
+
     </div>
 
     <div class='tags'>
@@ -291,32 +346,59 @@
 
     <div class='post-content'>
       <p><span></span>October wasn&#8217;t scary for the USASearch team. We enhanced your ability to immediately add content to your search results. You can now tell us about a URL or RSS feed in the <a href="http://search.usa.gov/affiliates">Affiliate Center</a> and we will immediately index the content and display it on your results page.</p>
+
+
 <p>Additionally, we now offer real-time reporting for your search queries in the Affiliate Center, allowing you to see your website&#8217;s search activity throughout the day.</p>
+
+
 <p><span>As a reminder, we divide our work into three categories:</span><span> </span></p>
+
+
 <p>1) Features—Things that you actually notice;<br/>2) Chores—Back-end improvements that you don’t notice; and<span><br/>3) Bugs—Fixes to any code issues that may arise.</span></p>
+
+
 <p><strong>Features</strong></p>
+
+
 <p><em>Features for Searchers</em></p>
+
+
 <ul><li>Searchers see polished look and feel for results pages with RSS elements.</li>
 <li>Searchers see option to filter results by last 24 hours, last week, and last month on results pages with RSS elements.</li>
 <li>Searchers see option to remove all filters when no results are found for RSS results. </li>
 <li>Searchers see indexed documents/pages from the USASearch index on results pages.</li>
 <li><a href="http://m.usa.gov">m.USA.gov</a> visitors see new homepage options.</li>
 <li><a href="http://m.usa.gov">m.USA.gov</a> visitors may click anywhere on row to select a homepage option.</li>
-</ul><p><em>Features for Affiliate Center Users<br/></em></p>
+</ul>
+
+
+<p><em>Features for Affiliate Center Users<br/></em></p>
+
+
 <ul><li>Affiliate Center users may input RSS feeds.</li>
 <li>Affiliate Center users see crawl information for USASearch crawler.</li>
 <li>URLs added by Affiliate Center users and fetched by USASearch go into Add to Bing feed transparently.</li>
 <li>Affiliate Center users may add URLs not in their domain list.</li>
 <li>Affiliate Center users may bulk upload Best Bets in CSV format.</li>
 <li>Affiliate Center users may view today&#8217;s analytics data.</li>
-</ul><p><strong>Chores</strong></p>
+</ul>
+
+
+<p><strong>Chores</strong></p>
+
+
 <ul><li>Report RSS feed processing errors.</li>
 <li>Precede Bing logo with &#8220;Results by.&#8221; </li>
 <li>Searchers see attribution to USASearch Program in HTML code.</li>
 <li>Ignore case when RSS feeds are busy or unavailable.</li>
 <li>Update Affiliate Center navigation and text.</li>
 <li>Implement near zero-downtime deployments.</li>
-</ul><p><strong>Bugs</strong></p>
+</ul>
+
+
+<p><strong>Bugs</strong></p>
+
+
 <ul><li>Add flag to determine whether older items from an RSS feed are ignored or processed.</li>
 <li>Affiliate Center users using IE9 may cancel a delete request.</li>
 <li>Publications does not stem to public(s).</li>
@@ -325,6 +407,7 @@
 <li>RSS searches don&#8217;t cause an error when the affiliate name is invalid.</li>
 <li>Indexed document results highlight keywords.</li>
 </ul>
+
 
     </div>
 
@@ -350,18 +433,39 @@
 
     <div class='post-content'>
       <p>In September, we were busy laying the groundwork for an exciting fall.</p>
+
+
 <p>Due to popular demand, all of your search results pages are now mobile-friendly.</p>
+
+
 <p>We also rolled out a feature to index PDF files, the first of our on demand indexing features. Stay tuned as we will have more in-depth posts about how you can use USASearch to make your various content sources immediately appear within your search results.</p>
+
+
 <p><span> </span></p>
+
+
 <p>As a reminder, we divide our work into three categories:</p>
+
+
 <p>1) Features—Things that you actually notice;<br/>2) Bugs—Fixes to any code issues that may arise; and<br/>3) Chores—Back-end improvements that you don’t notice.</p>
+
+
 <p><strong>Features</strong></p>
+
+
 <p><em>Features for Affiliate Center Users</em></p>
+
+
 <ul><li>Ability to specify a PDF file to be fetched and indexed</li>
 <li>Ability to add a featured site</li>
 <li>Ability to access the Search API via XML</li>
 <li>Ability to reference your external CSS</li>
-</ul><p><em>Features for Searchers</em></p>
+</ul>
+
+
+<p><em>Features for Searchers</em></p>
+
+
 <ul><li>Searchers see indexed PDFs after the last Bing result, and can click to see a subsequent page consisting of only locally indexed PDF files</li>
 <li>Searchers see more results from Boosted Content layer if there are no Bing results</li>
 <li>Mobile visitors to your websites see mobile-friendly results pages</li>
@@ -369,15 +473,26 @@
 <li>Searchers see agencies&#8217; popular URLs based on their language (i.e., locale)</li>
 <li>Searchers on <a href="http://www.usa.gov/">USA.gov</a> and <a href="http://www.usa.gov/gobiernousa">GobiernoUSA.gov</a> see Featured Collections</li>
 <li>Mobile visitors to <a href="http://m.usa.gov">m.USA.gov</a> see both Featured Content and Top Questions FAQs</li>
-</ul><p><strong>Bugs</strong></p>
+</ul>
+
+
+<p><strong>Bugs</strong></p>
+
+
 <ul><li>Visitors on <a href="http://m.usa.gov">m.USA.gov</a> who have chosen Classic mode remain on the classic results page after clicking on a search trends link</li>
 <li>Searchers see only the one, most relevant featured collection</li>
 <li>Searchers see both featured sites and collections</li>
 <li>Searchers see newspaper-style lists in featured collections</li>
-</ul><p><strong>Chores</strong></p>
+</ul>
+
+
+<p><strong>Chores</strong></p>
+
+
 <ul><li>Upgrade Rails for security fixes</li>
 <li>Remove PPT from certain query strings</li>
 </ul>
+
 
     </div>
 
@@ -403,14 +518,32 @@
 
     <div class='post-content'>
       <p><span> </span></p>
+
+
 <p><span>While the dogs days of summer are almost over, we didn&#8217;t let the weather stop us from rolling out some hot new features.</span></p>
+
+
 <p><span>We we are currently beta testing two new rendering options: iFrame and a <a href="http://drupal.org/project/USASearch">Drupal module</a> which will allow you to host the search results on your web site and gain additional control of the look and feel. If you are an affiliate and interested in beta testing, please let us know.</span></p>
+
+
 <p><span> </span>As a reminder, we divide our work into three categories:</p>
+
+
 <p>1) Features—Things that you actually notice</p>
+
+
 <p>2) Bugs—Fixes to any code issues that may arise</p>
+
+
 <p>3) Chores—Back-end improvements that users don&#8217;t notice</p>
+
+
 <p><span> </span></p>
+
+
 <p><strong>Features:</strong></p>
+
+
 <ul><li>Users can view Featured Collections in Affiliate SERPs</li>
 <li>Mobile users see boosted sites</li>
 <li>Affiliates have option to embed iFrame that renders search results</li>
@@ -418,14 +551,28 @@
 <li>Update Popular Pages for Affiliates</li>
 <li>Affiliates may assign published start and end date to a Featured Collection</li>
 <li>User sees Popular Pages in Agency Govbox</li>
-</ul><p><strong>Bugs:</strong></p>
+</ul>
+
+
+<p><strong>Bugs:</strong></p>
+
+
 <ul><li><span>Fix accessibility issues</span></li>
 <li><span>User see error page when the request contains unrecognized extension </span></li>
-</ul><p><strong>Chores:</strong></p>
+</ul>
+
+
+<p><strong>Chores:</strong></p>
+
+
 <ul><li><span>Improve monthly reporting process</span></li>
 <li><span>Affiliate admin can assign published start and end date to a Featured Collection</span></li>
 <li><span>Click table housekeeping</span></li>
-</ul><p><em>Posted By Erik</em></p>
+</ul>
+
+
+<p><em>Posted By Erik</em></p>
+
 
     </div>
 
@@ -451,6 +598,8 @@
 
     <div class='post-content'>
       <p><span id="internal-source-marker_0.1385581713595272">We  hope everyone is staying cool in the dog days of our August summer, but  just because it is hot doesn’t mean the USASearch team isn&#8217;t busy. </span><br/><span> </span><br/><span>We  would like to point out an enhancement to our Add to Bing feature.  Immediately after you add a page to Bing, we automatically include it in  your Boosted Content. Once the document is added to the Bing index, we  automatically remove the entry from your Boosted Content. We hope you  enjoy this enhancement as it is something that many of you told us was a  high priority fix.</span><br/><span> </span><br/><span>As a reminder, we divide our work into three categories:</span><br/><span> </span><br/><span>1) Features—Things that you actually notice</span><br/><span>2) Bugs—Fixes to any code issues that may arise</span><br/><span>3) Chores—Back-end improvements that aren’t noticed</span><br/><span> </span><br/><span>Without further adieu, below are the August release notes.</span><br/><span></span><br/><strong><span>Features </span></strong></p>
+
+
 <ul><li><span>Users may find pages added via Add to Bing, even if the pages aren&#8217;t yet indexed by Bing</span></li>
 <li><span>Users see a white background color on the default search results page template. </span></li>
 <li><span>Users see an improved </span><a href="http://search.usa.gov/thispagedoesnotexist"><span>404 page</span></a><span> on Search.USA.gov. </span></li>
@@ -465,7 +614,12 @@
 <li><span>Users see Related Topics below organic Bing web results</span></li>
 <li><span>User sees improved pagination links on results pages</span></li>
 <li><span>Users see Recommended by {affiliate_name} for URLs boosted content on affiliate results pages </span></li>
-</ul><p><span></span><strong><span>Bugs </span></strong></p>
+</ul>
+
+
+<p><span></span><strong><span>Bugs </span></strong></p>
+
+
 <ul><li><span>Affiliate users see a confirmation popup when they delete a site</span></li>
 <li><span>Fixed a misspelled variable name</span></li>
 <li><span>Hide phone icon when there&#8217;s no number in Agency Govboxes</span></li>
@@ -473,11 +627,22 @@
 <li><span>HTML tags no longer show up in search results description</span></li>
 <li><span>USA.gov FAQs now only appear on the first page</span></li>
 <li><span>Search terms are no longer inadvertently selected as users type in the search box</span></li>
-</ul><p><strong><span>Chores</span></strong></p>
+</ul>
+
+
+<p><strong><span>Chores</span></strong></p>
+
+
 <ul><li><span>Imaging/images is no longer stemmed in Solr</span></li>
 <li><span>Upgraded to Rails 3.0.9</span></li>
-</ul><p><span></span></p>
+</ul>
+
+
+<p><span></span></p>
+
+
 <p><em>By Erik</em></p>
+
 
     </div>
 
@@ -503,10 +668,20 @@
 
     <div class='post-content'>
       <p><span><span>The USASearch Team wishes everyone a safe and happy Fourth of July. Before everyone departs for the long holiday, we wanted to post our June release notes.</span><br/></span></p>
+
+
 <p>As a reminder, we divide our work into three categories:</p>
+
+
 <p>1) Features — things that you actually notice<br/>2) Bugs — Fixes to any code issues that may arise <br/>3) Chores — back-end improvements that you don’t notice </p>
+
+
 <p>Features:</p>
+
+
 <p>For End Users Users:</p>
+
+
 <ul><li>Users see polished agency GovBox design</li>
 <li>Users see aligned text on SERPs</li>
 <li>Users don’t see underlines on SERPs</li>
@@ -518,10 +693,20 @@
 <li>Users see improved basic_gray search term highlite visibility and removed</li>
 <li>Mobile users can see SMS option</li>
 <li>Spanish searchers can find web and imagenes landing pages</li>
-</ul><p>For Admins:</p>
+</ul>
+
+
+<p>For Admins:</p>
+
+
 <ul><li>USAAdmins can easily batch process new users by status</li>
 <li>Analysts see 4 column daily click module containing module name, impressions, clicks, and CTR% </li>
-</ul><p>Fixes:</p>
+</ul>
+
+
+<p>Fixes:</p>
+
+
 <ul><li>Users should not have letters “skipped” as they’re typing in the search box</li>
 <li>Display shorter URLs on Affiliate SERPs</li>
 <li>Affiliates should not see global terms populated in type ahead</li>
@@ -533,7 +718,11 @@
 <li>Users don’t see web vertical spotlights on forms vertical</li>
 <li>Search users should be able to see SAYT dropdown</li>
 <li>Users get page not found error when logging out from some program/admin pages</li>
-</ul><p><em>By Erik</em></p>
+</ul>
+
+
+<p><em>By Erik</em></p>
+
 
     </div>
 
@@ -559,12 +748,26 @@
 
     <div class='post-content'>
       <p>In the ongoing government effort for transparency, we are going to use our blog to post our release notes on a monthly basis. While they may not be the most exciting posts ever, it seems the logical place to publish our activities. Search, as many know, is difficult with many of the improvements happening behind the scenes.</p>
+
+
 <p>We divide our work into three categories:</p>
+
+
 <p>1) Features &#8212; things that you actually notice</p>
+
+
 <p>2) Bugs &#8212; Fixes to any code issues that may arise </p>
+
+
 <p>3) Chores &#8212; back-end improvements that you don&#8217;t notice </p>
+
+
 <p>We did complete a big chore this month by upgrading to Rails 3 which will be invisible to you, but it will bring additional stability for our search environment and allow us to have longer feature list in the coming months.</p>
+
+
 <p><strong>New/Enhanced Features:</strong></p>
+
+
 <ul><li>Searchers see new second-level top navigation on landing pages and SERPs on <a href="http://Search.USA.gov">Search.USA.gov</a> and <a href="http://search.usa.gov/?locale=es">Buscador.USA.gov</a></li>
 <li>Spanish searchers see improved <a href="http://search.usa.gov/?locale=es">web</a> and <a href="http://search.usa.gov/images?locale=es&amp;m=false">image</a> landing pages</li>
 <li>Spanish searchers see brown color scheme</li>
@@ -572,13 +775,27 @@
 <li>Searchers see updated affiliate and mobile type-ahead search suggestions</li>
 <li>Mobile visitors can see SMS option on <a href="http://search.usa.gov/?locale=en&amp;m=true">m.USA.gov</a></li>
 <li><span>Searchers see updated affiliate and mobile pages</span><span> </span></li>
-</ul><p><strong>Bugs:</strong></p>
+</ul>
+
+
+<p><strong>Bugs:</strong></p>
+
+
 <ul><li>Fixed bugs/display problems with monthly clicks/queries</li>
 <li>Inconsistent autocomplete on images landing page and image SERPs</li>
 <li>Spanish searchers see updated text on Buscador.USA.gov <a href="http://search.usa.gov/search/advanced?locale=es&amp;m=false">advanced search page</a></li>
-</ul><p><strong>Chores:</strong></p>
+</ul>
+
+
+<p><strong>Chores:</strong></p>
+
+
 <ul><li>Upgraded to Rails 3 &#8212; the chore list would be long, but let us know if anyone is interested in hearing about the upgrade</li>
-</ul><p><em>By Erik</em></p>
+</ul>
+
+
+<p><em>By Erik</em></p>
+
 
     </div>
 

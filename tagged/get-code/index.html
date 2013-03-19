@@ -91,18 +91,30 @@
 
     <div class='post-content'>
       <p><span>As part of the federal <a href="http://www.usa.gov/WebReform.shtml">.gov web reform</a> project, we&#8217;re eliminating six of our legacy domains. Going forward, our only supported domain is search.usa.gov (or search.yoursite.gov, if you&#8217;ve requested <a href="/blog/how-to-add-our-code-to-your-website#cname.html">DNS masking</a>).</span></p>
+
+
 <p><span>What do you need to do? I</span><span>f your URL starts with any of the following six legacy domains, </span><span>you must update your HTML form code.</span><span></span></p>
+
+
 <ol><li><span>firstgovsearch.gov</span></li>
 <li><span>searchusa.gov</span></li>
 <li><span>usasearch.gov</span></li>
 <li><span>(Spanish) buscador.gov</span></li>
 <li><span>(Spanish)  buscadorusa.gov</span></li>
 <li><span>(Spanish)  usabuscador.gov</span></li>
-</ol><p><span>Specifically, you have to update the action of your <a href="/blog/how-to-add-our-code-to-your-website.html">form </a></span><span><a href="/blog/how-to-add-our-code-to-your-website.html">code</a> to call search.usa.gov </span><span>(or search.yoursite.gov)</span><span>.</span></p>
+</ol>
+
+
+<p><span>Specifically, you have to update the action of your <a href="/blog/how-to-add-our-code-to-your-website.html">form </a></span><span><a href="/blog/how-to-add-our-code-to-your-website.html">code</a> to call search.usa.gov </span><span>(or search.yoursite.gov)</span><span>.</span></p>
+
+
 <blockquote>
 <p><span>&lt;form method=&#8221;get&#8221; action=&#8221;http://search.usa.gov/search&#8221;&gt;</span></p>
 </blockquote>
+
+
 <p><span></span><span>Note that, if you don&#8217;t update your form code, your search results </span><span>page will no longer work.</span></p>
+
 
     </div>
 
@@ -128,12 +140,26 @@
 
     <div class='post-content'>
       <p>Visit our <a href="http://search.usa.gov/affiliates/home">Admin Center</a>, select your site, and click on the Get Code option in the left-hand menu. </p>
+
+
 <p>Add the following two snippets of code to your website to &#8220;hook&#8221; together your website and our hosted search service. You can add this code to your individual web pages or to the template(s) in your content management system. </p>
+
+
 <p><strong>1. Form Snippet</strong></p>
+
+
 <p>Include the first snippet of code where the form for your search box appears. Your form should look something like this:</p>
+
+
 <pre>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;<br/>    &lt;input id="affiliate" name="affiliate" type="hidden" value="<span><strong>YourSiteHandle</strong></span>" /&gt;<br/>    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;<br/>    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;<br/>    &lt;input name="commit" type="submit" value="Search" /&gt;<br/>&lt;/form&gt;</pre>
+
+
 <p><strong>2. Javascript Snippet</strong></p>
+
+
 <p>Include the second snippet of code before the closing &lt;/body&gt; tag. This tag enables type-ahead search and ensures we have complete and timely coverage of your content in our index. Your tag should look something like this:</p>
+
+
 <pre>&lt;script type="text/javascript"&gt;
 //&lt;![CDATA[
       var usasearch_config = { siteHandle:"<strong>YourSiteHandle</strong>" };
@@ -142,6 +168,8 @@
       script.src = "http://search.usa.gov/javascripts/remote.loader.js";
       document.getElementsByTagName("head")[0].appendChild(script);
 //]]&gt;<br/>&lt;/script&gt;</pre>
+
+
 <blockquote>
 <div>
 <p><em><strong>Troubleshooting tip:</strong></em> If your website is secured with https, you can add &#8216;s&#8217; to the two URLs above (i.e., <a href="https://search.usa.gov/search">https://search.usa.gov/search</a> and <a href="https://search.usa.gov/javascripts/remote.loader.js,">https://search.usa.gov/javascripts/remote.loader.js,</a> respectively) so that searchers don&#8217;t receive a security message in Internet Explorer.</p>
@@ -157,7 +185,10 @@
 <p>&lt;input type=&#8221;hidden&#8221; name=&#8221;site&#8221; value=&#8221;www.health.ri.gov&#8221; /&gt;</p>
 </div>
 </blockquote>
+
+
 <p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Get Code</p>
+
 
     </div>
 

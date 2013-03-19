@@ -92,24 +92,52 @@
 
     <div class='post-content'>
       <p><strong>Site Name (Required) </strong></p>
+
+
 <p>Tell us the name of your website. Searchers see your site name on the results page, such as in the page title or in the best bets. We recommend using the plain language name for your agency or site, e.g. Department of Commerce.</p>
+
+
 <p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m0f0fwvJOy1qid15q.png"/></p>
+
+
 <p><strong>Site Handle (Required)</strong></p>
+
+
 <p>We use your site handle in the HTTP request to specify displaying your customized settings. We recommend making this handle short and unique, e.g. doc or commerce.</p>
+
+
 <p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m0f0dzAGoY1qid15q.png"/></p>
+
+
 <p><strong>Site ID (System Generated)</strong></p>
+
+
 <p>We assign a unique numeric ID to your site. We use this ID for some back-end code. You also see this ID in the URL for your site in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
+
+
 <p><strong>Site Language (Required)</strong></p>
+
+
 <p>Choose a language for your site, English or Spanish. We will only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language.</p>
+
+
 <p><strong>Emergency Delete</strong></p>
+
+
 <ul><li>Use this feature to remove a single URL from the results on your site. Use it for emergency reasons only.</li>
 <li>It is not meant to fix the results for entire site, such as for launch or redesign problems. For tips on how to fix these problems, view our <a href="/blog/checklist-for-a-successful-website-redesign.html" rel="bookmark">Checklist for a Successful Website Redesign</a>.</li>
 <li>Entire the full path of the URL, e.g. use <a href="http://www.usa.gov/Citizen/Topics/Benefits.shtml,">http://www.usa.gov/Citizen/Topics/Benefits.shtml,</a> not usa.gov/citizen/topics.</li>
 <li>Note that a list is created, below the entry box, of all deleted URLs. You can undo the &#8220;delete” action in real time at any time.</li>
-</ul><blockquote>
+</ul>
+
+
+<blockquote>
 <p><em><strong>Troubleshooting Tip:</strong> </em>If you later need to edit your site handle or switch from one language to the other, e-mail us at <a href="mailto:usasearch@gsa.gov">USASearch@gsa.gov</a>.</p>
 </blockquote>
+
+
 <p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Site Information</p>
+
 
     </div>
 
@@ -137,14 +165,28 @@
 
     <div class='post-content'>
       <p><span>As we start 2012, we </span><span>want to highlight two major, new features. </span></p>
+
+
 <ol><li><span>Discovery Tag</span>—O<span>ur on-demand indexing engine allows you to automatically add content to your search index. You may make use of our on-demand indexing by placing our Discovery Tag (available on the Get Code page in the admin center) on your web pages.<br/> </span></li>
 <li><span>Themes for results pages</span>—Our n<span>ew and improved theme-based results pages help you create a customized look and feel &#8220;out of the box.&#8221; You may view the themes by adding a new site in our admin center. We&#8217;re also in the process of migrating all customers into this new user interface.</span></li>
-</ol><p>Below are the details for January and, as a reminder, we divide our work into three categories.</p>
+</ol>
+
+
+<p>Below are the details for January and, as a reminder, we divide our work into three categories.</p>
+
+
 <ol><li>Features—Things you actually notice.</li>
 <li>Chores—Back-end improvements that you don’t notice.</li>
 <li>Fixes—Fixes to any code issues that may arise.</li>
-</ol><p><strong><em>Features</em></strong></p>
+</ol>
+
+
+<p><strong><em>Features</em></strong></p>
+
+
 <p><em>For Searchers</em></p>
+
+
 <ul><li>Searchers get better PDF result coverage in results.</li>
 <li>Searchers only see indexed documents that belong to the site&#8217;s domain collection.</li>
 <li>Searchers see MedlinePlus (health topics) and Enhanced Agency GovBoxes, when customers opt to display them via the admin center.</li>
@@ -154,7 +196,12 @@
 <li>Searchers on template-based results pages see a nice, matching shaded header with rounded corners.</li>
 <li>Mobile searchers see colors from selected theme.</li>
 <li>Searchers see square fade on related searches and other modules.</li>
-</ul><p><em>For Agency Customers</em></p>
+</ul>
+
+
+<p><em>For Agency Customers</em></p>
+
+
 <ul><li>Customers see new Domains page.</li>
 <li>Customers have an easy way to pass multiple parameters.</li>
 <li>By default, customers have a useful header on results pages during signup.</li>
@@ -162,7 +209,11 @@
 <li>Customers may set up sites with keyword filtered results.</li>
 <li>Customers see an updated left nav in the admin center.</li>
 </ul>
+
+
 <p><em><strong>Chores</strong></em> </p>
+
+
 <ul><li>Migrated USA.gov&#8217;s  &#8220;enhanced results&#8221; Agency and MedlinePlus to GovBoxes.</li>
 <li>Refactored search classes.</li>
 <li>Removed website URL from the Add New Site wizard.</li>
@@ -170,7 +221,12 @@
 <li>Upgraded Solr from 1.4 to 3.5.</li>
 <li>Changed timestamp indexing for Solr to use a trie on NewsItem model.</li>
 <li>Modified stopword analysis to include Solr CommonGrams filtering.</li>
-</ul><p><strong>Bug Fixes</strong></p>
+</ul>
+
+
+<p><strong>Bug Fixes</strong></p>
+
+
 <ul><li>Fixed Spanish translations for indexed documents.</li>
 <li>Fixed display error when search results contain Bing matches and indexed documents.</li>
 <li>Fixed error received by customers when migrating to themes. </li>
@@ -194,6 +250,7 @@
 <li>Verified IndexedDocument URL length is &lt;= 2000 rather than accepting it and silently truncating it.</li>
 <li>Used document body for documents with a blank meta description tag.</li>
 </ul>
+
 
     </div>
 
@@ -221,17 +278,40 @@
       <blockquote>
 <p><em>Mairzy doats and dozy doats and liddle lamzy divey. A kiddle dee divey too, wouldn&#8217;t you?</em></p>
 </blockquote>
+
+
 <p>These are the lyrics to a <a href="http://www.youtube.com/watch?v=Dny_JDlwGFM">novelty song</a> popular many years ago. It was supposedly written by the amused father of a toddler who was trying to sing something she had heard at nursery school: <em>Mares eat oats and does eat oats, and little lambs eat ivy. A kid will eat ivy too, wouldn&#8217;t you?</em></p>
+
+
 <p>In the decades since, there have been various possible spellings of the first word, e.g. <em>marezy, marizy, maresee</em>. Sometimes the lyrics have been written out with no spaces, e.g. <em>Mareseedoatsandoezeedoats</em>…</p>
+
+
 <p>This illustrates, in the extreme, how difficult it can be for visitors to your website to construct a search when they are not sure how a word is spelled or punctuated. They know they’ll recognize it if they see it, but first they would like a clue.</p>
+
+
 <p>You can use the <a href="/blog/how-to-implement-type-ahead-search.html">Type-ahead</a> feature in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> to help with misspellings. It augments spell check, and often cuts out that step.</p>
+
+
 <p>Sometimes it is easy to map misspellings to the correct spelling, e.g. <em>acadamy, accademy</em> map to <em>academy</em>, but you may also want to keep variant forms of a word, e.g. <em>labor, labour </em>rather than treat them as misspellings.</p>
+
+
 <p>You cannot correct for words that are misspellings only in context, e.g. <em>hilary </em>and <em>hillary</em> are individually correct words, but may not be in a particular phrase, e.g. <em>tropical storm hillary</em> (correct form is with one &#8216;l&#8217;) or <em>hilary rodham clinton</em> (correct form is with two &#8216;l&#8217;s&#8217;). So you should not globally map <em>hilary </em>to <em>hillary </em>or a lot of good searches will be turned bad. Since you can map only individual words, and not specific phrases in the type-ahead tool, an exclusion of one form altogether by mapping it to the other form may or may not work for your particular index.</p>
+
+
 <p>Sometimes you don&#8217;t know which word is being misspelled. Is <em>seceed </em>a misspelling of <em>succeed </em>or <em>secede</em>? You may leave it be, or make your best guess only to find out later you were wrong. It helps to search a seemingly misspelled word; it can turn out to be completely correct, even if unknown to you.</p>
+
+
 <p>As in the words in the ditty above, words often evolve: <em>web site </em>or <em>website</em>; <em>email </em>or <em>e-mail</em>? Each form may retrieve different results.</p>
+
+
 <p>Since these lists are built from what users search, there can be unacceptable terms that show up and must be deleted, such as ethnic slurs, profanity, and vulgarity. There are also areas of various shades of gray, depending on who your user population is and the focus of your site. For instance, blunt but accurate medical terms for bodily functions may be ok as suggestions for medical professionals, while their slang equivalents are not ok for children.</p>
+
+
 <p>You can also anticipate searchers&#8217; needs by uploading groups of &#8220;evergreen&#8221; terms in advance of their showing up organically one by one. For instance, USA.gov uploaded all the names of the national parks, as they are heavily searched seasonally. Useful bulk uploads could be lists of jargon or scientific terms or something else. Make sure, however, that you have actual content for these terms. It is not a good search experience if the searcher finds the right term in the type-ahead suggestions list but it retrieves nothing useful.</p>
+
+
 <p><em>By Marilyn</em></p>
+
 
     </div>
 
@@ -259,24 +339,48 @@
 
     <div class='post-content'>
       <p>We divide our work into three categories.</p>
+
+
 <ol><li>Features—Things you actually notice.</li>
 <li>Chores—Back-end improvements that you don’t notice.</li>
 <li>Bugs—Fixes to any code issues that may arise.</li>
-</ol><p><strong>Features</strong></p>
+</ol>
+
+
+<p><strong>Features</strong></p>
+
+
 <p><em>Features for Searchers</em></p>
+
+
 <ul><li>Searchers don&#8217;t see duplicate results from Add URLs.</li>
 <li>Spanish searchers see stemmed equivalents.</li>
 <li>Searchers on USA.gov see FAQ GovBox higher in results.</li>
-</ul><p><em>Features for Agency Customers</em></p>
+</ul>
+
+
+<p><em>Features for Agency Customers</em></p>
+
+
 <ul><li>Customers can choose from predefined themes.</li>
 <li>Customers see a a Sitemap box on the Sitemaps page.</li>
 <li>Customers have a Discovery Tag for USASearch to proactively discover and index content from their websites.</li>
 <li>Customers can edit Header and Footer CSS.</li>
 <li>Customers can set their locale to Spanish during sign up.</li>
 <li>Customers see an updated left nav.</li>
-</ul><p><strong>Chores</strong></p>
+</ul>
+
+
+<p><strong>Chores</strong></p>
+
+
 <ul><li>Remove &#8220;locale&#8221; parameter from all models, analytics, etc.</li>
-</ul><p><strong>Bugs<br/></strong></p>
+</ul>
+
+
+<p><strong>Bugs<br/></strong></p>
+
+
 <ul><li>Add Spanish translations for Popular Links, no RSS results, and document results.</li>
 <li>Remove extra whitespace when displaying snippets.</li>
 <li>Fix buggy bold highlighting in type-ahead searches in API.</li>
@@ -289,6 +393,7 @@
 <li>Fix error logging around duplicate indexed docs pages.</li>
 <li>Fix deduping regression to still match exact URLs.</li>
 </ul>
+
 
     </div>
 
@@ -314,18 +419,43 @@
 
     <div class='post-content'>
       <p>A year ago I rolled my first Hadoop system into production. Since then, I&#8217;ve spoken to quite a few people who are eager to try Hadoop themselves in order to solve their own big data problems. Despite having similar backgrounds and data problems, few of these people have sunk their teeth into Hadoop. When I go to Hadoop Meetups in San Francisco, I often meet new people who are evaluating Hadoop and have yet to launch a cluster. Based on my own background and experience, I have some ideas on why this is the case.</p>
+
+
 <p>I studied computer science in school and have worked on a wide variety of computer systems in my career, with a lot of focus on server-side Java. I learned a bit about building distributed systems and working with large amounts of data when I built a pay-per-click (PPC) ad network in 2004. The system is still in operation and at one point was handling several thousand searches per second. As the sole technical resource on the system, I had to educate myself very quickly about how to scale up.</p>
+
+
 <p>As I contemplated how doomed I would be should traffic levels increase much more, I remember wondering to myself, &#8220;How does Google deal with all that data?&#8221; The answer came to me in the form of the Google File System (GFS) paper and later the MapReduce paper, both from Google. It dawned on me that because Google was forced to solve a much larger problem, they had come up with an elegant solution for a whole range of more modest data problems running on commodity hardware. But it wouldn&#8217;t be until 2010 that I would get to work with this technology firsthand.</p>
+
+
 <p>As I wrote in an <a href="/blog/adopting-apache-hadoop-in-the-federal-government.html" target="_blank">earlier article</a>, I started re-architecting <a href="http://usasearch.howto.gov">USASearch</a>, the U.S. government&#8217;s search system, in 2009 based on a solution stack of free, open source software including Ruby on Rails, Solr, and MySQL. A wave of déja vu hit me as I started worrying about what to do with the growing mountain of data piling up in MySQL and our increasing need to analyze it in different ways. I had heard that a new company called Cloudera, founded by some big data people from Yahoo!, Google, and Facebook, was making Hadoop available for the masses in a reliable distribution, much in the same way that RedHat did for Linux. Curiosity got the best of me and I bought the newly minted <em>Hadoop: The Definitive Guide</em> from O&#8217;Reilly. The most insightful part of the book to me was the very first sentence. It&#8217;s a quote from Grace Hopper: &#8220;In pioneer days, they used oxen for heavy pulling, and when one ox couldn&#8217;t budge a log, they didn&#8217;t try to grow a bigger ox.&#8221; I didn&#8217;t want to grow a bigger server; I wanted to harness a bunch of small servers together to work in unison. The more I learned the more curious I got, so I started reading more. And that&#8217;s when I hit my first roadblock.</p>
+
+
 <p>I think people who have been working with Hadoop technologies for years and years sometimes forget just how rich and diverse the big data software ecosystem has become, and how daunting it can be to folks approaching it for the first time. When people at the Meetups say they are evaluating solutions to their data scaling problem, the answers they hear sound something like this: &#8220;Just use Hadoop Hive Pig Mahout Avro HBase Cassandra Oozie Sqoop Flume ZooKeeper Cascading NoSQL RCFile. Oh, almost forgot…cloud.&#8221;</p>
+
+
 <p>The thought of wading through all of that just to learn about what I needed to learn about was a bit too overwhelming for me, so I put the whole matter aside for a few months. Over time, I started to dive into each of these projects to understand the primary use case, how active the developer community was and which organizations were using it in production. I converged on the idea of using Hive as a warehouse for our data. I opted for Cloudera&#8217;s distribution since I wanted to reduce the risk of running into compatibility issues between all the various subsystems. Having tracked down anomalies in a highly multi-threaded and contentious distributed Java system before, I liked the idea of someone else taking on that problem for me.</p>
+
+
 <p>At some point, I had read everything I could read and grew impatient to get my hands dirty, so I decided to just download CDH3 on my laptop and give it a try. The tutorial instructions for the standalone version worked, and I successfully computed more digits of pi than I ever thought I&#8217;d need. After creating some sample data in Hive and running a few queries, I felt pretty confident that Hive would be the right tool for the job. I just needed to find somewhere to install and run HDFS (namenode, secondary namenode, and data nodes), Hadoop (jobtracker and tasktracker nodes), Hive, and Hue for a nice front end to it all.</p>
+
+
 <p>I knew from my past experience how to stretch the limits of CPU, disk, IO, and memory on commodity servers, and I identified a few potential servers at our primary datacenter with resources I figured I could leverage. Once again I followed the tutorial instructions, this time for the fully distributed version of CDH3, and once again I started to compute pi. And that&#8217;s when I hit my second roadblock. It took me a few days to figure out that I had a problem with DNS. Each machine needs to be able to resolve every other machine&#8217;s name and IP in the cluster. Whether you do that via /etc/hosts or a local DNS server is up to you, but it needs to happen or the whole thing gets wedged. Once I got that sorted out, everything just started falling into place and I had Hive working in production within a few days. A week later, I started pulling out the MySQL jobs and deleting big tables, and that&#8217;s been the trend ever since.</p>
+
+
 <p>Over time, I&#8217;ve gone on to learn about using custom Ruby mappers in Hive, moving data back and forth between MySQL and Hive with Sqoop, and getting the data into HDFS in real-time with Flume. All of these components from the Cloudera distribution are working nicely in our production environment now, and I sleep well at night knowing I have such a solid, deliberate plan for growth. My initial investment in learning about the Hadoop ecosystem is really paying dividends, but when I think about all those people at the Meetups stuck in evaluation mode, I feel their pain. Does it have to be such a struggle?</p>
+
+
 <p>The big challenge in my opinion is not that any one piece of the puzzle is too difficult. Any reasonably smart (or in my case stubborn) engineer can set themselves on the task of learning about a new technology once they know that it needs to be learned. The challenge with the Hadoop ecosystem is that it presents the newbie with the meta-problem of figuring out which of these tools are appropriate for their use case at all, and whether or not to even consider the problem today versus deferring it until later. In a way Facebook has it easy, because when you are adding 15TB of data per day, that decision is pretty much made for you.</p>
+
+
 <p>For all the companies sitting in the twilight between the gigabyte and the petabyte who don&#8217;t have Hadoop expertise in-house, there is a collection of free information to help guide people to the right solution space (Hadoop Tutorial, White Papers). These days, when I talk to people who are evaluating solutions to their big data problems, my advice to them is to break down their problems into a few discrete use cases and then work on ferreting out the technologies that are designed for that use case. Get a proof of concept to demonstrate that the technology can address your use case and convince yourself and others that you&#8217;re on the right track. Work toward putting something simple into production. Lather, rinse, and repeat. I am still in that cycle myself, as these days I&#8217;m exploring HBase and OpenTSDB to give me low-latency access to time series data and Mahout to do frequent item set mining, but that&#8217;s another article for another day.</p>
+
+
 <p><em>By Loren</em></p>
+
+
 <p><em><strong>This post is cross-posted from <a href="http://www.cloudera.com/blog/2011/12/how-i-found-hadoop/">Cloudera</a>.</strong></em></p>
+
 
     </div>
 
@@ -353,29 +483,71 @@
 
     <div class='post-content'>
       <p>Type-ahead search is fast becoming a best practice on websites, and we’ve made this technology available for your site. By default, searchers see type-ahead search suggestions on your search results page.</p>
+
+
 <p>It is a feature that helps your site&#8217;s visitors construct a search query and navigate more quickly to a search results page.</p>
+
+
 <p>Suggestions display as a list in a drop-down box. This list forms as the searcher begins to type in the search box. The searcher can stop typing and scan the list presented and click on any term in the drop-down list, or the searcher can resume typing if the choices in the list are not helpful. The queries are listed in order of most popular (i.e., most searched) and not in alphabetical order.</p>
+
+
 <p><img class="img-polaroid" alt="Type-ahead suggestions for 'hous' on USA.gov" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_lwgn3kYff81qid15q.png"/></p>
+
+
 <p>To implement the Type-ahead Search feature, log in to the <a href="http://search.usa.gov/affiliates">Admin Center</a>. After logging in, you have choices to make.</p>
+
+
 <h2>Type-ahead on the Search Results Page</h2>
+
+
 <p>Enable this feature by checking the box labeled Enable Type-ahead search. You can disable it by unchecking the box later if you want.</p>
+
+
 <p><em><strong>Populate.</strong></em></p>
+
+
 <p>Terms and phrases are automatically populated on a regular basis from searches done in your site&#8217;s search box.</p>
+
+
 <p>On day one of testing USASearch, there will be no terms in Type-ahead Search (unless you add terms to the list, as noted below). The list of terms will build up over time once you implement USASearch on your live website and searchers type their queries in the search box on your site.</p>
+
+
 <p><em><strong>Add terms to the list.</strong></em></p>
+
+
 <p>You may choose to add terms to the list that displays in type-ahead search. You may:</p>
+
+
 <ol><li>Upload an individual term (i.e. click on &#8220;Add a New Entry&#8221;), or</li>
 <li>Add a group of terms all at once (i.e., click on &#8220;Bulk Upload&#8221;).<br/><br/>To bulk upload:</li>
-</ol><ul><li>Create a new text file, one entry per line, for example,<br/><br/>acadia national park<br/>okefenokee<br/>okefenokee swamp<br/>yosemite national park<br/>yosemite valley</li>
-</ul><ul><li>Save as a text file—{filename}.txt—on your computer. (Do <em>not </em>save as spreadsheet or word processing files, such as .xls or .doc.)</li>
+</ol>
+
+
+<ul><li>Create a new text file, one entry per line, for example,<br/><br/>acadia national park<br/>okefenokee<br/>okefenokee swamp<br/>yosemite national park<br/>yosemite valley</li>
+</ul>
+
+
+<ul><li>Save as a text file—{filename}.txt—on your computer. (Do <em>not </em>save as spreadsheet or word processing files, such as .xls or .doc.)</li>
 <li>Add, modify, or delete individual entries in the file.</li>
 <li>Browse for the text file on your computer.</li>
 <li>Upload the file to the Affiliate Center.</li>
-</ul><p><em><strong>Delete terms from the list.</strong></em></p>
+</ul>
+
+
+<p><em><strong>Delete terms from the list.</strong></em></p>
+
+
 <p>You may also delete individual terms that you don&#8217;t want listed, through &#8220;Current Entries&#8221;. Use &#8220;Filter&#8221; to search for particular terms to edit.</p>
+
+
 <h2>Type-ahead on Other Web Pages</h2>
+
+
 <p>You can also add the type-ahead search suggestions to your homepage—or wherever you have a search box on your website—by adding the type-ahead JavaScript code to the head to your HTML web page.</p>
+
+
 <p>Visit our <a href="http://search.usa.gov/affiliates/home">Admin Center</a>, select your site, and click on the Get Code option in the left-hand menu. For more details, read our post on <a href="/blog/how-to-add-our-code-to-your-website.html">How to Add Our Code to Your Website</a>.</p>
+
 
     </div>
 
@@ -403,25 +575,55 @@
 
     <div class='post-content'>
       <p>What do &#8220;turkducken&#8221;, &#8220;thunder thighs dinosaur&#8221;, and &#8220;Goldilocks zone&#8221; have in common?  They have all been searches that have briefly trended upwards. As users were searching for content on these topics, the phrases rose in popularity and then fell. So, all these phrases have been search trends.</p>
+
+
 <p>To determine what is trending, we go to our search query logs and we monitor published trends lists on other sites. Search query logs can tell us what’s on the minds, in the aggregate, of the visitors to our website. Trends lists published on other websites broaden our view and can confirm what we suspect.</p>
+
+
 <p>Interests will change over time. </p>
+
+
 <p>A few years ago, interest in turducken recipes trended upwards. The next year thousands of cooks at Thanksgiving wanted to brine their turkeys. The following Thanksgiving, searchers wanted to know how to fry a whole turkey in a vat of boiling oil.</p>
+
+
 <p>Several years ago, the only hurricanes searched on <a href="http://www.usa.gov/">USA.gov</a> were the Atlantic hurricanes heading towards the U.S. east coast, or the Gulf States. Recently more Pacific hurricanes have been searched, as well as hurricanes far from the continental U.S. Monitoring our search logs alerts us to when we need to provide different navigation to content.</p>
+
+
 <p>Search trends also tell us which aspects of a topic people want to know about and when they want to know.  For instance, there is a pattern to hurricane searches that goes something like this:</p>
+
+
 <ul><li>Where is that hurricane I heard about? (“hurricane forming”)</li>
 <li>Uh-oh, is it headed towards me? (“hurricane tracking”)</li>
 <li>Looks like I am going to get hit, what do I do to prepare? (“hurricane disaster kit”)</li>
 <li>What are my local emergency services telling me to do? (“hurricane evacuation”)</li>
 <li>Where can I go that is safe? (“hurricane shelter”)</li>
 <li>The hurricane has passed, but I need help. (“federal agencies that help natural disaster victim”)</li>
-</ul><p>Knowing the natural timeline of aspects of a topic helps us program to those aspects in the right sequence. It also helps provide content for the editorial features we post on the <a href="http://www.usa.gov/">USA.gov</a> search results page, which we update using the Best Bets feature in the <a href="http://search.usa.gov/affiliates/home">Affiliate Center</a>.</p>
+</ul>
+
+
+<p>Knowing the natural timeline of aspects of a topic helps us program to those aspects in the right sequence. It also helps provide content for the editorial features we post on the <a href="http://www.usa.gov/">USA.gov</a> search results page, which we update using the Best Bets feature in the <a href="http://search.usa.gov/affiliates/home">Affiliate Center</a>.</p>
+
+
 <p>Watching when searches trend also lets us know when interest is building in a seemingly minor topic, something we might not intuitively know. As the economy has gotten tough for so many people, searches for “foreclosed homes” have risen, but so have searches for “foreclosed homes for sale”.</p>
+
+
 <p>The search numbers for the Cash for Clunkers program rose immediately and precipitously, letting us know early that this seemingly modest economic stimulus had caught on with the public. And I was surprised when I noticed, a few years back, that people were consistently searching for Christmas ornaments in July and children’s Halloween costumes in August. These were not trends I would have predicted based on my own habits around Christmas or Halloween.</p>
+
+
 <p>When analyzing the logs for query trends, we have to pay attention to how people search.  I didn&#8217;t realize that searches for the Code of Federal Regulations were so high until I discovered that people search for specific parts, e.g. “10 cfr 1045”.  Adding them all up gave me a better idea of the popularity of the Code.</p>
+
+
 <p>We also need to know how the public spells some terms, e.g. Channukah or Hannuka or what something is popularly called.  I once discovered that were at least 17 different misspellings for the term &#8220;genealogy&#8221;.  And the government used “H1N1”, but people searched for “swine flu”.</p>
+
+
 <p>It is only by aggregating all the searches for variant spellings, names, and aspects that we can get a true picture of the scope, and the trend, of a topic.</p>
+
+
 <p>And finally, always keep in mind that checking the logs and relevant sources is much more efficient than trying to guess what’s on people’s minds. You probably can&#8217;t think of all the variations of a topic, but your users, in aggregate, will.</p>
+
+
 <p><em>By Marilyn</em></p>
+
 
     </div>
 
@@ -486,6 +688,7 @@
 </ul><p><em>Posted by Erik</em></p>
 </div>
 
+
     </div>
 
     <div class='tags'>
@@ -510,31 +713,68 @@
 
     <div class='post-content'>
       <p>Many websites list top or trending search terms (see, for example, <a href="http://www.google.com/trends">Google Trends</a> and <a href="http://www.twitter.com/search">Twitter</a>).</p>
+
+
 <p>Use our Top Searches widget to list top or trending terms, top task terms, or editorial recommendations on your website. It allows you to display up to 5 selected terms on your site, as shown in the sample screenshot below.<br/><br/><a href="http://www.usa.gov/"><img class="img-polaroid" alt="USA.gov search box and trends" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_lvlde501Dl1qid15q.png"/></a></p>
+
+
 <p><strong>How to publish the widget</strong></p>
+
+
 <p>Copy and paste the widget code where you&#8217;d like it to appear on your site (e.g., your home page, search results page, or all pages). Then, select a label for the widget and update the terms listed by entering terms and URLs.<br/><br/><strong>Why publish trends, picks, or tasks?</strong></p>
+
+
 <p>Its purpose is part informational, part navigational, and part marketing. Overall, you can use this tool to highlight what is on the minds of your website visitors. It can help visitors navigate to useful content. It also can encourage repeat visits by providing interest on the homepage itself.<br/><br/>First decide how you want to use it and how you are going to label it. It doesn’t have to be Top Searches, but you must determine the focus and intention. Some choices are:<br/><br/><strong>Top trends</strong></p>
+
+
 <p>You might use this feature to show what the most popular topics are and how they trend over a day, or a week, or longer.</p>
+
+
 <ul><li>Trends should be a reflection of real search trends or high volume searches within a time period.</li>
 <li>Look at your query logs—which are updated in real time in the Affiliate Center—and see how often the top queries change and how often you want to report on these changes. How frequently do you want to update these? Daily, weekly, over weekends and holidays? What are your staff resources?</li>
 <li>Look also to see how varied or interesting the top queries are. Do they merit highlighting? Do they increase the interest for your site and encourage repeat visitors, or are they the same queries each day or week?</li>
 <li>How good are your results for these searches? Does the search term you list provide navigation to good content on your site?</li>
-</ul><p><strong>Editors’ picks</strong><br/><br/>You might use Editors’ Picks to highlight your new content, or most interesting but unknown content, or the best content out of multiple choices.</p>
+</ul>
+
+
+<p><strong>Editors’ picks</strong><br/><br/>You might use Editors’ Picks to highlight your new content, or most interesting but unknown content, or the best content out of multiple choices.</p>
+
+
 <ul><li>Picks can be updated irregularly, and can be less labor-intensive than Top Trends.</li>
 <li>Do you have enough content, or release enough new content, to show editorially curated choices?</li>
 <li>Do you want to educate your users as to the breadth or depth of some content on your website? Or bring attention to under-used but valuable content?</li>
 <li>Do you have clusters of information that are time sensitive, such as press releases or reports that you want to bring attention to?</li>
-</ul><p><strong>Top tasks</strong><br/><br/>You might use this feature to show what the top tasks are that people come to your site to perform.</p>
+</ul>
+
+
+<p><strong>Top tasks</strong><br/><br/>You might use this feature to show what the top tasks are that people come to your site to perform.</p>
+
+
 <ul><li>These may not change often or may change only seasonally and so while they should be monitored, they may still require less staff time to maintain.</li>
 <li>A Top Tasks list becomes a navigational tool designed to get the visitor quickly to the task at hand by providing instant recognition of what the task is called and then quick navigation to the content. </li>
-</ul><p>Choose what your one focus is: Top Trends, Editors’ Picks, Top Tasks, or whatever works for your particular agency site. Pick your label, and your intention, and then make sure the terms you select reflect this one, labeled focus. It should be clear what you are providing. Keep your label consistent with the terms you&#8217;re listing.<br/><br/>For each individual term listed in the string of terms, you will have the choice of what to link it to: a specific site or a search results page.</p>
+</ul>
+
+
+<p>Choose what your one focus is: Top Trends, Editors’ Picks, Top Tasks, or whatever works for your particular agency site. Pick your label, and your intention, and then make sure the terms you select reflect this one, labeled focus. It should be clear what you are providing. Keep your label consistent with the terms you&#8217;re listing.<br/><br/>For each individual term listed in the string of terms, you will have the choice of what to link it to: a specific site or a search results page.</p>
+
+
 <p><img class="img-polaroid" alt="Affiliate Center page to enter top searches" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_lvle15DwKM1qid15q.png"/></p>
+
+
 <p>Search the term selected and see what the search results look like.</p>
+
+
 <ul><li>If the search results page is good, has the best content at the top where the user will recognize it, then you don’t have anything else to do.  Leave the URL box in the Top Searches tool blank.</li>
 <li>If the search results are a mix, not completely awful but not going to provide what you want used, then you may have to boost some content to the top of the search results.  The user can then instantly see what to click on. Leave the URL box in the Top Searches tool blank.</li>
 <li>If the search results are dismal or very confusing, which a boosted site won’t fix, then in the tool add the URL of the site you want navigated to. The search results page will be bypassed and take the user directly to the site you want used.</li>
-</ul><p>Finally, there is a character limit. So you may need to choose the terms you use with this space limitation in mind. You may want to put in only 3 or 4 terms and not fill the available 5 slots.</p>
+</ul>
+
+
+<p>Finally, there is a character limit. So you may need to choose the terms you use with this space limitation in mind. You may want to put in only 3 or 4 terms and not fill the available 5 slots.</p>
+
+
 <p>For more information about using Top Searches, see our blog post, <a href="/blog/trending-searches.html">Trending Searches</a>.</p>
+
 
     </div>
 
@@ -559,10 +799,19 @@
     <div class='post-content'>
       <p>The USASearch tool is awesome. It makes finding things on our website easier than ever. The results that come back are both quick and relevant. My favorite feature has to be Query Logs. What our users are looking for is now crystal clear, which makes my life way easier. It provides insight into what users want that is sometimes very hard to find. It also allows us to promote the correct content.</p>
 
+
+
+
 <p>For instance, for several months our most search terms were employment and jobs, so we created a Jobs page and put it right on our homepage. After that the search for those terms dropped dramatically, which means users no longer had to poke and search for Jobs/Employment information because it was right where it needed to be.</p>
 
+
+
+
 <p>I almost couldn&#8217;t believe that this amazing service is free. It&#8217;s easy to implement and full of useful features, which would normally cost us quite a lot and in this economy it&#8217;s these types of services that help us save money.</p>
+
+
 <p><a href="http://www.bia.gov/">Indian Affairs</a>, U.S. Department of the Interior</p>
+
 
     </div>
 

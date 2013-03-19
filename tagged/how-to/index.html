@@ -78,6 +78,51 @@
   
   <article class='article'>
     <div class='time'>
+      <a href="/manual/third-party.html">
+        <time>March 19, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/third-party.html">How to Add JavaScript for Your Third Party Web Services</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends?</p>
+
+
+<p>Log in to the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> and select the option, Third Party Tracking. Input the JavaScript code you&#8217;d like to call from your search results page. Click submit to send us your request. We&#8217;ll input your code for you and send you an email to confirm that we&#8217;ve done it.</p>
+
+
+<blockquote>
+<p><em><strong>Google Analytics tip:</strong></em> In your Google Analytics JavaScript, be sure to set your domain if you&#8217;ve requested <a href="/blog/how-to-add-our-code-to-your-website#cname.html">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
+<p>_gaq.push([&#8216;_setDomainName&#8217;, &#8216;commerce.gov&#8217;]);<br/><br/>For more information, read Google&#8217;s tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>.</p>
+<p><em><strong>ForeSee tip:</strong> </em>Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
+<ol><li>Email USASearch to <a href="/blog/how-to-add-our-code-to-your-website#cname.html">set up a CNAME</a> for search.{yourdomain}.gov.</li>
+<li>Update the files path in your Foresee code to use an absolute path instead of a relative path. <br/><br/>Find =&gt; &#8216;files&#8217;: &#8216;/fsrscripts/&#8217;,<br/><br/>and replace it with =&gt; &#8216;files&#8217;: &#8216;//{yourdomain}/fsrscripts/&#8217;,<br/><br/>in the following five files.<br/>a. foresee-trigger.js<br/>b. foresee-tracker.js<br/>c. foresee-alive.js<br/>d. foresee-qualifier.js<br/>e. foresee-test.js</li>
+<li>Ask ForeSee to send USASearch your foresee-trigger.js file.</li>
+<li>USASearch will send you an email to confirm that we&#8217;ve set up your CNAME and installed your foresee-trigger.js file.</li>
+</ol></blockquote>
+
+
+<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; 3rd Party Tracking</p>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
       <a href="/blog/how-to-access-your-raw-logs.html">
         <time>February 6, 2013</time>
       </a>
@@ -91,16 +136,31 @@
 
     <div class='post-content'>
       <p>You can directly access your raw HTTP logs. T<span></span><span>he logs include valuable data on searches, clicks, and USASearch tag page loads. </span></p>
+
+
 <p><span>With the raw logs, you can conduct in-depth, ad hoc analyses to answer any questions that you can&#8217;t answer using the standard analytics reports in the </span><a href="http://search.usa.gov/affiliates/home">Admin Center</a>. You can also automatically integrate your search logs with your other reports and business processes. </p>
+
+
 <p><span>To access your raw logs, you&#8217;ll first need to u</span><span>pload your public key </span><span></span><span>on the Raw Logs Access page in the </span><a href="http://search.usa.gov/affiliates/home">Admin Center</a>. </p>
+
+
 <p><span>We&#8217;ll set up your public key on our secure FTP servers and send you an email when your logs are available for download. </span></p>
+
+
 <p><span>Once your key is set up, y</span><span>ou&#8217;ll be able access your log files via secure FTP.</span><span> </span><span>We upload your logs each day, usually within several hours after midnight GMT. After a week, we purge the older files.</span></p>
+
+
 <p><span>We recommend that you set up a cron script to </span><span>automatically download the latest files each day.</span></p>
+
+
 <blockquote>
 <p><em><strong>Troubleshooting tip: </strong></em><span>On Unix systems, you can generate a RSA public key with no passphrase by typing in the following command. G</span><span>enerate the key from the machine or server that you&#8217;ll be using to download the logs. </span><span>Once you&#8217;ve created a key, it&#8217;ll be located at </span><span>/home/user/.ssh/id_rsa.pub.</span></p>
 <p><span>% cd ~<br/></span><span>% ssh-keygen -q -b 4096 -t rsa<br/></span><span>Enter file in which to save the key (/home/user/.ssh/id_rsa):<br/></span><span>Enter passphrase (empty for no passphrase):<br/></span><span>Enter same passphrase again:</span></p>
 </blockquote>
+
+
 <p><a href="http://usasearch.howto.gov/">USASearch</a><span> &gt; </span><a href="http://search.usa.gov/affiliates/home">Admin Center</a><span> &gt; YourSite &gt; Raw Logs Access</span></p>
+
 
     </div>
 
@@ -128,15 +188,27 @@
 
     <div class='post-content'>
       <p>One of the most common search tasks is to look for <span>current job openings. </span><span>To help searchers quickly find relevant jobs we&#8217;ve created the Jobs GovBox.</span></p>
+
+
 <p>When you <a href="/blog/how-to-select-the-modules-that-appear-on-your-results.html">turn on the Jobs GovBox</a>, searchers looking for jobs on your site will see up to three relevant jobs listings on your results page. </p>
+
+
 <ul><li><strong>Federal Department Websites</strong><span>—If your website is affiliated with a specific federal department (e.g., Department of Commerce), the federal Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across</em> <em>all agencies within your department</em>.</span></li>
 <li><span><strong>Federal Agency or Office Websites</strong>—If your website is affiliated with a specific federal agency (e.g., NOAA) or office (e.g, National Ocean Service), the federal Jobs GovBox will return relevant, location-and keyword-matched job openings <em>at your agency</em>.</span></li>
 <li><span><strong>State and Local Websites and Cross-Agency Portals</strong>—If your website is a state or local government site or a federal cross-agency portal (e.g., USA.gov), the federal Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across</em> <em>all federal agencies</em>.</span></li>
-</ul><p>Searchers will also see a direct link to <span></span><a href="http://www.usajobs.gov">USAJobs.gov</a> for <span>all current job openings (specific to your department or agency, if applicable)</span><span>, as shown in the sample below</span><span> for a search on <a href="http://usdasearch.usda.gov/search?affiliate=usda&amp;query=jobs"><em>jobs</em></a> on the USDA.gov.</span></p>
+</ul>
+
+
+<p>Searchers will also see a direct link to <span></span><a href="http://www.usajobs.gov">USAJobs.gov</a> for <span>all current job openings (specific to your department or agency, if applicable)</span><span>, as shown in the sample below</span><span> for a search on <a href="http://usdasearch.usda.gov/search?affiliate=usda&amp;query=jobs"><em>jobs</em></a> on the USDA.gov.</span></p>
+
+
 <p><img class="img-polaroid" class="img-polaroid" alt="image" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_inline_mhpcdd93lO1qz4rgp.png"/></p>
+
+
 <blockquote>
 <p><strong>Did you know? </strong>Are you a local or state government? Or a federal agency that doesn&#8217;t post <span>your jobs on USAJobs? </span>We want your jobs data. <a href="mailto:usasearch@gsa.gov" title="Jobs data">E-mail us</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox. <span><br/></span></p>
 </blockquote>
+
 
     </div>
 
@@ -166,38 +238,90 @@
 
     <div class='post-content'>
       <p>We offer our search results as a hosted results page or as an <a href="http://cms.howto.gov/mobile/api-basics">application programming interface</a> (API). </p>
+
+
 <h2>When to Use the Hosted Results</h2>
+
+
 <p>Most agencies use our hosted search results page. We recommend that you to use our hosted page for the typical use case of returning search results on your website. Using the hosted page has many benefits such as allowing you to:</p>
+
+
 <ul><li>Devote minimal development resources for the initial set up.</li>
 <li>Benefit from new features automatically as they&#8217;re rolled out.</li>
 <li>Stay current with search best practices, such as type-ahead search and formatting of search results.</li>
-</ul><h2>When to Use the API</h2>
+</ul>
+
+
+<h2>When to Use the API</h2>
+
+
 <p>You may need to access our search results to present them outside of a typical search results page. We offer our results as an API for these use cases.</p>
+
+
 <p>You can access the API and its documentation at <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Search API. </p>
+
+
 <p>The API returns results from each of our indexes—web, image, document (ODIE), RSS (news), video, best bets (boosted content), and related searches—in JSON, JSON-P, or XML.</p>
+
+
 <p>We recommend you use our API for limited use cases such as:</p>
+
+
 <ul><li>Displaying search results within a native mobile application (i.e., an Android or iPhone app).</li>
 <li>Integrating USASearch results within existing applications (such as your intranet or publications catalog).</li>
 <li>Creating data mashups.</li>
-</ul><p>Examples of how agencies are currently using the API follow.</p>
+</ul>
+
+
+<p>Examples of how agencies are currently using the API follow.</p>
+
+
 <p><strong>Use Case 1. Display Results in Your Mobile App</strong></p>
+
+
 <p>USA.gov and the White House use the Search API to render USASearch results within their mobile apps. </p>
+
+
 <p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me79cgQKOE1qid15q.jpg"/><br/><em>Screenshot of a USASearch results page in the USA.gov iPhone app</em></p>
+
+
 <p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me78zp7y4v1qid15q.jpg"/> <br/><em>Screenshot of a USASearch results page in the White House iPhone app</em></p>
+
+
 <p>Related Links</p>
+
+
 <ul><li><a href="http://apps.usa.gov/usagov.shtml">USA.gov mobile app</a></li>
 <li><a href="http://apps.usa.gov/the-white-house-app.shtml">WhiteHouse mobile app</a></li>
 <li><a href="https://github.com/whitehouse">White House Github account</a> (information on and source code for the iOS and Android mobile apps)</li>
-</ul><p><strong>Use Case 2. Integrate USASearch Results within existing applications</strong></p>
+</ul>
+
+
+<p><strong>Use Case 2. Integrate USASearch Results within existing applications</strong></p>
+
+
 <p><a href="http://www.ri.gov">RI.gov</a> manages hundreds of distinct websites. The state provides a consistent search experience across all of its websites. Some sites are centrally controlled by RI.gov. Others are not. Using the Search API, RI.gov programmatically tells USASearch the site&#8217;s domain from which the user searched (e.g., tmc.dot.ri.gov). RI.gov then highlights results from this specific domain within RI.gov&#8217;s common look and feel.</p>
+
+
 <p><span>See the sample results page below that shows a set of results displayed on</span><span> Rhode Island&#8217;s <a href="http://www.tmc.dot.ri.gov/">Transportation Management Center</a> </span><span>for a search on</span><span> </span><em>traffic.</em></p>
+
+
 <div><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me7ej38m3P1qid15q.png"/> </div>
+
+
 <div><em>Step 1. Searcher on <a href="http://www.tmc.dot.ri.gov">www.tmc.dot.ri.gov</a> types </em>traffic<em> in the search box</em></div>
+
+
 <p><br/><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me7el3bJin1qid15q.png"/><br/><em>Step 2. Searcher sees results on RI.gov with a common look and feel that highlights results from the original site</em></p>
+
+
 <blockquote>
 <p><strong>Did you know?</strong> The Search API is available for government websites only. Other, publicly available APIs (i.e., for use by anyone) are at <a href="http://www.usa.gov/About/developer-resources/developers.shtml" title="http://www.usa.gov/About/developer-resources/developers.shtml" target="_blank"><a href="http://www.usa.gov/About/developer-resources/developers.shtml">http://www.usa.gov/About/developer-resources/developers.shtml</a></a>.</p>
 </blockquote>
+
+
 <p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Search API</p>
+
 
     </div>
 
@@ -225,11 +349,23 @@
 
     <div class='post-content'>
       <p>Your pre-launch checklist will be unique to your agency&#8217;s workflow, requirements, and deadlines. A typical punch list to go live with USASearch follows.</p>
+
+
 <h2>Connect Your Site to USASearch</h2>
+
+
 <p>Most agencies add these two <a href="/blog/how-to-add-our-code-to-your-website.html">snippets of code</a> to the template(s) in their content management systems (rather than adding them to individual pages).</p>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> </strong><strong>1. Does your search box point to USASearch? </strong>Update your search box form code point to USASearch so that, when users execute a search, they&#8217;ll see your USASearch-hosted results page.</p>
+
+
 <pre>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;<br/>    &lt;input id="affiliate" name="affiliate" type="hidden" value="<strong>YourSiteHandle</strong>" /&gt;<br/>    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;<br/>    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;<br/>    &lt;input name="commit" type="submit" value="Search" /&gt;<br/>&lt;/form&gt;</pre>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> </strong><strong>2. Do you have the USASearch Javascript tag on your webpages?</strong> This Javascript helps us <a href="/blog/how-to-add-your-urls-to-our-index.html">find your new and updated pages</a>. It also powers the <a href="/blog/how-to-implement-type-ahead-search.html">type-ahead search</a>.</p>
+
+
 <pre>&lt;script type="text/javascript"&gt;
 //&lt;![CDATA[
       var usasearch_config = { siteHandle:"<strong>YourSiteHandle</strong>" };
@@ -238,19 +374,46 @@
       script.src = "http://search.usa.gov/javascripts/remote.loader.js";
       document.getElementsByTagName("head")[0].appendChild(script);
 //]]&gt;<br/>&lt;/script&gt;</pre>
+
+
 <h2>Double Check Your Content Sources</h2>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> </strong><strong>3. Have you told us which domain(s) you want to search?</strong> List one or more <a href="/blog/how-to-edit-your-domains.html">domains</a> that you want to search on the first page of web results.  Most agencies opt to leave out the &#8216;www&#8217; to include all subdomains (e.g., list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies—especially department-level portals—opt to also include their bureaus&#8217; websites (e.g., Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)</p>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> </strong><strong>4. Have you told us about your RSS feeds?</strong> We love <a href="/blog/how-to-add-your-rss-feeds-to-our-index.html">RSS feeds</a>. Tell us about all of your feeds, even if you opt not to show them  (see #7 below). They&#8217;re the quickest way for you to tell us about your new and updated content. Feeds also have well-structured titles, URLs, descriptions, and dates that we use to improve your search results page. (Tip: Preview your feeds from the RSS page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> to confirm that we&#8217;ve indexed your content.)</p>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> </strong><strong>5. Have you told us about your social media accounts?</strong> Flickr photostreams, tweets, and YouTube videos are a great way to highlight your recent content and to let searchers know about your <a href="/blog/how-to-add-your-social-media-to-our-index.html">social media</a> channels. Tell us about all of your social media, even if you opt not to show them (see #7 below). </p>
+
+
 <h2>Customize Your User Interface</h2>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> 6. Have you made the search results page look like your website?</strong> Customize the <a href="/blog/how-to-customize-the-look-and-feel-of-your-results-page.html">look and feel</a> (colors, fonts, favicon) and <a href="/blog/how-to-customize-the-header-and-footer-of-your-results.html">header and footer</a> of your search results page to create a seamless experience for users as they search and browse your website.</p>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> 7. Have you told us what to show on your results page? </strong>Tell us which <a href="/blog/how-to-select-the-modules-that-appear-on-your-results.html">results modules</a> (i.e., the stuff in the center of the page) and <a href="/blog/how-to-select-the-sidebar-options-that-appear-on-your.html">sidebar</a> options (i.e., the navigation in the left-hand column) you want to appear on your search results.</p>
+
+
 <h2>Set Up Nice-to-Have Features (Optional)</h2>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> 8. Have you masked your domain?  </strong>We offer <a href="/blog/how-to-add-our-code-to-your-website#cname.html">DNS masking</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov. </p>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> 9. Have you added the Javascripts for your other third party web services to your results page? </strong>If you have a <a href="/blog/how-to-add-javascript-for-your-third-party-web-services.html">third party service</a> running on your website, you likely want it to run on your results page. Agencies often include their 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends code, among others.</p>
+
+
 <h2>Don&#8217;t Forget SEO (Optional)</h2>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> 10. Have you optimized your site so we can find your content? </strong>We follow <a href="http://www.howto.gov/web-content/search/seo">search engine optimization</a> (SEO) best practices. Verify that you have a <a href="http://www.robotstxt.org">robots.txt</a> and an <a href="http://www.sitemaps.org">XML sitemap</a>. These two files are typically located in the root directory of your website (i.e., agency.gov/robots.txt and agency.gov/sitemap.xml, respectively). Also verify that your robots.txt file allows our user agent (usasearch) to access your public content.</p>
+
+
 <p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> </strong><strong>11. Have you registered your site with the major commercial search engines? </strong>Register for both <a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a> and <a href="https://www.google.com/webmasters/tools/home">Google Webmaster Tools</a> to maximize the coverage of your content in their search results.</p>
+
 
     </div>
 
@@ -276,14 +439,31 @@
 
     <div class='post-content'>
       <p>The Trending Queries page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the top 10 changing search terms. </p>
+
+
 <p>You&#8217;ll see a list of up to 10 terms with the greatest gain between yesterday and today. (Terms must have been searched by at least 10 unique searchers per day to be included in this list.)</p>
+
+
 <p>Use this report to identify newly popular terms. Create new content or update existing content to ensure it&#8217;s current, accurate, and complete. </p>
+
+
 <p>See the sample report below that shows the 10 trending queries on <a href="http://www.usa.gov/">USA.gov</a> on Monday, November 5, 2012—the day before Election Day.</p>
+
+
 <p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_md0qrd6Q731qid15q.png"/></p>
+
+
 <p>Click on any linked word or the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png"/> symbol in the above list, and you&#8217;ll be taken to a Query Timeline chart. There you&#8217;ll be able to select a period of time for the term, and you can also add a second query for comparison.</p>
+
+
 <p>Click on the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol, and you&#8217;ll be taken to a list of the top clicked URLs for that term.</p>
+
+
 <p>To investigate why the term may be trending, click on the Twitter, news, or trends icons to see what&#8217;s happening on other websites.</p>
+
+
 <p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Trending Queries</p>
+
 
     </div>
 
@@ -311,14 +491,27 @@
 
     <div class='post-content'>
       <p>The Low Click-Thru Rate (CTR) Queries page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the top 10 searches with low click-thru rates. It shows the most popular search terms that people generally don’t act (click) on. </p>
+
+
 <p>You&#8217;ll see a list of up to 10 terms that returned search results, but resulted in a click less than 20 percent of the time over the past day or so. In other words, fewer than one in five people who searched for that topic clicked on a search result. (Terms must have been searched by at least 10 unique searchers per day to be included in this list.)</p>
+
+
 <p>Use this report to identify issues with coverage. Create a <a href="/blog/how-to-highlight-best-bets.html">Best Bet</a>, add pages that may be missing from the results, or do both to improve recall. Incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results. </p>
+
+
 <p>Click on any linked word or the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png"/> symbol in the list, and you&#8217;ll be taken to a Query Timeline chart. There you&#8217;ll be able to select a period of time for the term, and you can also add a second query for comparison.</p>
+
+
 <p>Click on the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol, and you&#8217;ll be taken to a list of the top clicked URLs for that term.</p>
+
+
 <blockquote>
 <p><em><strong>Did you know?</strong> </em>This low click-thru report lists only those terms that returned search results. Visit the <a href="/blog/how-to-analyze-your-query-logs.html">Query Logs</a> page to see the top queries that returned no results.</p>
 </blockquote>
+
+
 <p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Low CTR Queries</p>
+
 
     </div>
 
@@ -346,60 +539,43 @@
 
     <div class='post-content'>
       <p>The Click Stats page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the URLs your searchers have clicked on. Data start from October 2012.</p>
+
+
 <p>You&#8217;ll see a list, in frequency order, of the most clicked URLs for any time period. You may choose to display 10, 50, 100, 500, or 1,000 results in order of frequency.</p>
+
+
 <p>See the sample report below that shows the 10 most clicked URLs on <a href="http://www.usa.gov/">USA.gov</a> in October 2012.</p>
+
+
 <p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mces5zyKfc1qid15q.png"/></p>
+
+
 <p>Click on the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol in the list above, and you’ll see the top query terms that led to that URL over the same time period.</p>
+
+
 <p>See the sample report below that shows the top queries that led to a click on <a href="http://www.usajobs.gov/"><a href="http://www.usajobs.gov/">http://www.usajobs.gov/</a></a> on <a href="http://www.usa.gov/">USA.gov</a> in October 2012.</p>
+
+
 <p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqp4Jmoy1qid15q.png"/></p>
+
+
 <p>From the list of queries, you will be able to click on the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol again to see the top clicked URLs for that term over the same time period.</p>
+
+
 <p>See the sample report below that shows the top clicked URLs for <em>jobs</em> on <a href="http://www.usa.gov/">USA.gov</a> in October 2012.</p>
+
+
 <p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqlwdZnx1qid15q.png"/></p>
+
+
 <p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Click Stats</p>
+
 
     </div>
 
     <div class='tags'>
       
       <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      <a href="/blog/how-to-add-javascript-for-your-third-party-web-services.html">
-        <time>July 3, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/blog/how-to-add-javascript-for-your-third-party-web-services.html">How to Add JavaScript for Your Third Party Web Services</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends?</p>
-<p>Log in to the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> and select the option, Third Party Tracking. Input the JavaScript code you&#8217;d like to call from your search results page. Click submit to send us your request. We&#8217;ll input your code for you and send you an email to confirm that we&#8217;ve done it.</p>
-<blockquote>
-<p><em><strong>Google Analytics tip:</strong></em> In your Google Analytics JavaScript, be sure to set your domain if you&#8217;ve requested <a href="/blog/how-to-add-our-code-to-your-website#cname.html">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
-<p>_gaq.push([&#8216;_setDomainName&#8217;, &#8216;commerce.gov&#8217;]);<br/><br/>For more information, read Google&#8217;s tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>.</p>
-<p><em><strong>ForeSee tip:</strong> </em>Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
-<ol><li>Email USASearch to <a href="/blog/how-to-add-our-code-to-your-website#cname.html">set up a CNAME</a> for search.{yourdomain}.gov.</li>
-<li>Update the files path in your Foresee code to use an absolute path instead of a relative path. <br/><br/>Find =&gt; &#8216;files&#8217;: &#8216;/fsrscripts/&#8217;,<br/><br/>and replace it with =&gt; &#8216;files&#8217;: &#8216;//{yourdomain}/fsrscripts/&#8217;,<br/><br/>in the following five files.<br/>a. foresee-trigger.js<br/>b. foresee-tracker.js<br/>c. foresee-alive.js<br/>d. foresee-qualifier.js<br/>e. foresee-test.js</li>
-<li>Ask ForeSee to send USASearch your foresee-trigger.js file.</li>
-<li>USASearch will send you an email to confirm that we&#8217;ve set up your CNAME and installed your foresee-trigger.js file.</li>
-</ol></blockquote>
-<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; 3rd Party Tracking</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
       
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
       
@@ -421,29 +597,76 @@
 
     <div class='post-content'>
       <p>The Query Logs page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the terms and phrases your searchers have input. Data start from the time your agency started using USASearch (but no further back than 2009).</p>
+
+
 <h2>Specific Search Queries</h2>
+
+
 <p>You can limit the search for any specific query term or phrase to a specified time period.</p>
+
+
 <p>See the sample report below that shows the number of times <em>housing</em> (or its stemmed equivalents) was searched on <a href="http://www.usa.gov/">USA.gov</a> in October 2012.</p>
+
+
 <p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mcejzpJD7c1qid15q.png"/></p>
+
+
 <h2>Top Queries</h2>
+
+
 <p>You can also get a list, in frequency order, of (a) most popular queries and (b) top queries with no results for any time period. You may choose to display 10, 50, 100, 500, or 1,000 results in order of frequency.</p>
+
+
 <h3>Most Popular Queries</h3>
+
+
 <p>See the sample report below that shows the 10 most popular queries on <a href="http://www.usa.gov/">USA.gov</a> on October 15, 2012.</p>
+
+
 <p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mcekbcO01c1qid15q.png"/></p>
+
+
 <h3>Top Queries with No Results</h3>
+
+
 <p>If there are any terms that were searched by 10 unique searchers within the period of a day and returned no results, they&#8217;ll appear here.</p>
+
+
 <p>For example, on one agency&#8217;s website in October 2012, a dozen searches for <em>frostline</em> returned no results. The frost line—also known as depth of frost or freezing—is the depth to which the groundwater in soil is expected to freeze. The agency&#8217;s pages on the topic referred to this concept as <em>depth of freezing</em>. The agency can use this no results data to help searchers find its content by adding a <a href="/blog/how-to-highlight-best-bets.html">best bet</a>, updating its existing web pages, or both.</p>
+
+
 <h2><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mcer6ynAoe1qid15q.png"/> Query Timeline</h2>
+
+
 <p>Click on any linked word or the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png"/> symbol in the above lists, and you will be taken to a Query Timeline chart. There you will be able to add a second query for comparison.  Note also that placing your cursor over any part of the timeline will give the search frequency for a particular date.</p>
+
+
 <p>See the sample report below that shows a comparison of <em>jobs</em> and <em>employment</em> on <a href="http://www.usa.gov/">USA.gov</a> for the nine months between February and November 2012, with the cursor placed over the spike on <em>jobs</em> May 30.</p>
+
+
 <h2><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> Clicked URLs</h2>
+
+
 <p>Click on the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol in any of the lists, and you&#8217;ll be taken to a list of the top clicked URLs for that term.</p>
+
+
 <p>See the sample report below that shows the top clicked URLs for <em>jobs</em> on <a href="http://www.usa.gov/">USA.gov</a> in October 2012.</p>
+
+
 <p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqlwdZnx1qid15q.png"/></p>
+
+
 <p>From the list of clicked URLs, you will be able to click on the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol again to see the top query terms that led to that URL over the same time period.  </p>
+
+
 <p>See the sample report below that shows the top queries that led to a click on <a href="http://www.usajobs.gov/"><a href="http://www.usajobs.gov/">http://www.usajobs.gov/</a></a> on <a href="http://www.usa.gov/">USA.gov</a> in October 2012.</p>
+
+
 <p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqp4Jmoy1qid15q.png"/></p>
+
+
 <p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Query Logs</p>
+
 
     </div>
 
@@ -471,15 +694,27 @@
 
     <div class='post-content'>
       <p>The Monthly Reports page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the total number of searches and click throughs. A click through is recorded each time a searcher clicks on a results link. Data start from the time your agency started using USASearch (but no further back than 2009).</p>
+
+
 <p>Data are shown for the present month-to-date by default. Change the time period by selecting a different year or month.</p>
+
+
 <p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV link to download the list as a comma delimited file. The CSV file contains three columns.</p>
+
+
 <ol><li>Query—The search term or phrase.</li>
 <li>Raw count—Total number of times the query was submitted.</li>
 <li>IP-deduped—Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of &#8220;real,&#8221; human traffic.</li>
-</ol><blockquote>
+</ol>
+
+
+<blockquote>
 <p><em><strong>Did you know?</strong> </em>On the first of each month, we email you a report with data on the previous month&#8217;s queries, clicks, and top search terms.</p>
 </blockquote>
+
+
 <p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Monthly Reports</p>
+
 
     </div>
 
