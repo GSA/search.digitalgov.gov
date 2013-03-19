@@ -11,16 +11,11 @@ module Jekyll
     def paginate(site, page)
       all_posts = site.site_payload['site']['posts']
       pages = PostPager.calculate_pages(all_posts, site.config['paginate_per_page'].to_i)
-      (1..pages).each do |num_page|
-        pager = PostPager.new(site.config, num_page, all_posts, pages)
-        if num_page > 1
-          newpage = PostPage.new(site, site.source, page.dir, page.name, site.config['posts_paginate_layout'], num_page)
-          newpage.pager = pager
-          newpage.dir = File.join(page.dir, paginate_path(site, num_page))
-          site.pages << newpage
-        else
-          page.pager = pager
-        end
+      (2..pages).each do |num_page|
+        dir = File.join(page.dir, paginate_path(site, num_page))
+        newpage = PostPage.new(site, site.source, dir, page.name, site.config['posts_paginate_layout'], num_page)
+        newpage.pager = PostPager.new(site.config, num_page, all_posts, pages)
+        site.pages << newpage
       end
     end
 
