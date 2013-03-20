@@ -3,9 +3,7 @@ layout: default
 title: "How To Manual and HelpDesk"
 ---
 
-Do you have a question about how our features work? 
-
-Browse through our [How To Manual](http://usasearch.howto.gov/tagged/how-to) and [Go-Live Punch List](http://usasearch.howto.gov/blog/a-punch-list-to-go-live-with-usasearch.html) for tips on how to configure your search.
+Do you have a question about how our features work? Browse through our [How To Manual](http://usasearch.howto.gov/tagged/how-to) and [Go-Live Punch List](http://usasearch.howto.gov/blog/a-punch-list-to-go-live-with-usasearch.html) for tips on how to configure your search.
 
 #### Basic Settings
 
@@ -48,6 +46,6 @@ Browse through our [How To Manual](http://usasearch.howto.gov/tagged/how-to) and
 * [Add new site](http://usasearch.howto.gov/blog/how-to-set-up-a-new-account-and-site.html)
 * [Search API](http://usasearch.howto.gov/blog/how-and-when-to-use-the-search-api.html)
 * [3rd party tracking](http://usasearch.howto.gov/manual/third-party.html)
-* [Raw logs access](http://usasearch.howto.gov/blog/how-to-access-your-raw-logs.html)
+* [Raw logs access](http://usasearch.howto.gov/manual/raw-logs.html)
 
 Still have a question? E-mail us at <USASearch@gsa.gov>.
