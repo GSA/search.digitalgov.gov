@@ -4,7 +4,7 @@ title: "Search Notes for the Week Ending January 25, 2013"
 tags: releases
 ---
 <h2>Highlighted Feature</h2>
-<p>This week we buckled down and analyzed data on jobs-related searches to ensure that the new federal <a href="/blog/help-searchers-find-federal-jobs.html">Jobs GovBox</a> lists the <span>most relevant </span><span>job openings. </span></p>
+<p>This week we buckled down and analyzed data on jobs-related searches to ensure that the new federal <a href="/manual/govbox-jobs.html">Jobs GovBox</a> lists the <span>most relevant </span><span>job openings. </span></p>
 <p>Searchers can now effectively search for jobs by keyword, agency, state, or work schedule (part-or full-time).</p>
 <p>We also focused on not showing the Jobs GovBox when it isn&#8217;t relevant (for example, it is no longer shown when searchers look for job safety posters or employment verification forms).</p>
 <h2>Chores</h2>

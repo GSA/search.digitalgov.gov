@@ -9,7 +9,7 @@ tags: releases
 <li><span>Spanish searchers now see <a href="http://www.plainlanguage.gov/">plain language</a> helper text.</span></li>
 <li><span>Searchers no longer see two search boxes on the search results page, which will create a more visually appealing and usable page.</span></li>
 </ul><h2>Chores</h2>
-<ul><li>We rewrote some query routing rules for job searches to present more precise results in the <a href="/blog/help-searchers-find-jobs.html">Jobs GovBox</a>.</li>
+<ul><li>We rewrote some query routing rules for job searches to present more precise results in the <a href="/manual/govbox-jobs.html">Jobs GovBox</a>.</li>
 <li>We configured <a href="https://travis-ci.org/">Travis-CI</a> to enable continuous integration for the <a href="https://github.com/GSA-OCSIT/recalls_api">Recalls Server API</a> and <a href="https://github.com/GSA-OCSIT/jobs_api">Jobs Server API</a>.</li>
 <li>We shortened the Jobs API base URL to <a href="http://api.usa.gov/recalls/search">api.usa.gov/recalls/search</a>.</li>
 <li><span>We reconfigured our RSS feed fetching to update more efficiently. </span></li>

@@ -10,7 +10,7 @@ tags: how-to govbox related-searches
 <p>USASearch currently provides two pre-built GovBoxes.</p>
 <ol><li>Agency GovBox—For more information, including a screenshot, read our post <a href="/blog/help-searchers-find-information-for-federal-agencies.html">Help Searchers Find Information for Federal Agencies</a>.</li>
 <li>MedlinePlus GovBox—For more information, including a screenshot, read our post <a href="/blog/help-searchers-find-health-information.html">Help Searchers Find Health Information</a>.</li>
-<li>Jobs GovBox—For more information, including a screenshot, read our post <a href="/blog/help-searchers-find-federal-jobs.html">Help Searchers Find Federal Jobs</a>.</li>
+<li>Jobs GovBox—For more information, including a screenshot, read our post <a href="/manual/govbox-jobs.html">Help Searchers Find Federal Jobs</a>.</li>
 </ol><div>
 <h3>2. Social Media GovBoxes</h3>
 <p><a href="/blog/how-to-add-your-social-media-to-our-index.html">Social media</a> channels that you&#8217;ve provided on the Social Media page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> are listed.</p>
