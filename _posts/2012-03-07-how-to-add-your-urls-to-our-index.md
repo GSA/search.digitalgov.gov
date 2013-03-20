@@ -4,6 +4,8 @@ title: "How to Add Your URLs to Our Index"
 tags: how-to
 ---
 
+[USASearch](http://usasearch.howto.gov/) > [Admin Center](http://search.usa.gov/affiliates/home) > YourSite > URLs & Sitemaps
+
 We offer three ways for you to tell us about the web pages that you want us to fetch and include in our index.
 
 ## 1. Discovery Tag
@@ -26,6 +28,8 @@ Still missing some URLs? Tell us the specific URLs you'd like us to fetch and in
 
 View a report of all previously crawled URLs by clicking on the View All button to browse the list in your browser, or click on the Export to CSV button to download the list as a comma delimited file.
 
+---
+
 ***Troubleshooting tip:*** Are you having trouble creating a list of your URLs? E-mail us at USASearch@gsa.gov and we can help identify specific URLs on your site.
 
 ***Troubleshooting tip:*** Are you seeing an error message in the crawled URLs report for your PDF that says, "No content found in document"? Your PDF is likely an image-only, non-searchable file that was created from a paper document using a scanner. See the resources below for more information on how to create searchable PDF files.
@@ -41,5 +45,3 @@ View a report of all previously crawled URLs by clicking on the View All button 
 
 * [Bing Webmaster Tools](http://www.bing.com/toolbox/webmasters/)
 * [Google Webmaster Central](https://www.google.com/webmasters/)
-
-[USASearch](http://usasearch.howto.gov/) > [Admin Center](http://search.usa.gov/affiliates/home) > YourSite > URLs & Sitemaps
