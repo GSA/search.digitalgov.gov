@@ -1,8 +1,8 @@
 ---
+permalink: manual/raw-logs.html
 layout: post
 title: "How to Access Your Raw Logs"
 tags: how-to analytics 
-permalink: manual/raw-logs.html
 ---
 
 [USASearch](http://usasearch.howto.gov) > [Admin Center](http://search.usa.gov/affiliates/home) > YourSite > Raw Logs Access
