@@ -1,8 +1,8 @@
 ---
-permalink: manual/raw-logs.html
+permalink: /manual/raw-logs.html
 layout: post
 title: "How to Access Your Raw Logs"
-tags: how-to analytics 
+tags: how-to analytics
 ---
 
 [USASearch](http://usasearch.howto.gov) > [Admin Center](http://search.usa.gov/affiliates/home) > YourSite > Raw Logs Access
@@ -33,14 +33,14 @@ On Unix systems, you can generate a RSA public key with no passphrase by typing 
 
 You can use [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/), a free telnet/SSH client, to generate a public key on Windows. Download PuTTYgen.exe, Pageant.exe, and PSFTP.exe from the [PuTTY Download Page](](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
-Run PuTTYgen.exe. 
+Run PuTTYgen.exe.
 
-* Select SSH-2 RSA as the type of key to generate. 
+* Select SSH-2 RSA as the type of key to generate.
 * Set the number of bits in the generated key to 2048.
-* Select Generate. Move your mouse within the blank area to create random movements until the key is generated. 
+* Select Generate. Move your mouse within the blank area to create random movements until the key is generated.
 * Fill out your Key Comment, Key Passphrase, and Confirm Passphrase.
 * Copy your *public* key from the string in the Public Key for Pasting into OpenSSH Authorized_keys File. Paste this key into the Raw Logs Access page in the [Admin Center](http://search.usa.gov/affiliates/home). (Note: Don't save this public key and send us the string copied from a text file. It adds lines in the file so it doesn't work.)
-* Save your *private* key. 
+* Save your *private* key.
 
 Run Pageant.exe. Select Add Key and upload your private key, the .ppk file.
 
