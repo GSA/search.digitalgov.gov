@@ -78,6 +78,125 @@
   
   <article class='article'>
     <div class='time'>
+      <a href="/manual/raw-logs.html">
+        <time>March 20, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/raw-logs.html">How to Access Your Raw Logs</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Raw Logs Access</p>
+
+<p>You can directly access your raw HTTP logs. The logs include valuable data on searches, clicks, and USASearch tag page loads.</p>
+
+<p>With the raw logs, you can conduct in-depth, ad hoc analyses to answer any questions that you can't answer using the standard analytics reports in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. You can also automatically integrate your search logs with your other reports and business processes.</p>
+
+<p>To access your raw logs, you'll first need to upload your public key on the Raw Logs Access page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
+
+<p>We'll set up your public key on our secure FTP servers and send you an email when your logs are available for download.</p>
+
+<p>Once your key is set up, you'll be able access your log files via secure FTP. We upload your logs each day, usually within several hours after midnight GMT. After a week, we purge the older files.</p>
+
+<p>We recommend that you set up a cron script to automatically download the latest files each day.</p>
+
+<h2>How to Generate a Key Pair on Unix</h2>
+
+<p>On Unix systems, you can generate a RSA public key with no passphrase by typing in the following command. Generate the key from the machine or server that you'll be using to download the logs. Once you've created a key, it'll be located at /home/user/.ssh/id_rsa.pub.</p>
+
+<pre><code>% cd ~
+% ssh-keygen -q -b 4096 -t rsa
+Enter file in which to save the key (/home/user/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+</code></pre>
+
+<h2>How to Generate a Key Pair on Windows</h2>
+
+<p>You can use <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a>, a free telnet/SSH client, to generate a public key on Windows. Download PuTTYgen.exe, Pageant.exe, and PSFTP.exe from the <a href="](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY Download Page</a>.</p>
+
+<p>Run PuTTYgen.exe.</p>
+
+<ul>
+<li>Select SSH-2 RSA as the type of key to generate.</li>
+<li>Set the number of bits in the generated key to 2048.</li>
+<li>Select Generate. Move your mouse within the blank area to create random movements until the key is generated.</li>
+<li>Fill out your Key Comment, Key Passphrase, and Confirm Passphrase.</li>
+<li>Copy your <em>public</em> key from the string in the Public Key for Pasting into OpenSSH Authorized_keys File. Paste this key into the Raw Logs Access page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. (Note: Don't save this public key and send us the string copied from a text file. It adds lines in the file so it doesn't work.)</li>
+<li>Save your <em>private</em> key.</li>
+</ul>
+
+
+<p>Run Pageant.exe. Select Add Key and upload your private key, the .ppk file.</p>
+
+<p>Run PSFTP.exe and type in the following. You can find your site's handle on the Site Information page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
+
+<pre><code>open YourSiteHandle@198.61.238.46
+</code></pre>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      <a href="/manual/govbox-jobs.html">
+        <time>March 20, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/govbox-jobs.html">Help Searchers Find Jobs</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>One of the most common search tasks is to look for current job openings. To help searchers quickly find relevant jobs we've created the Jobs GovBox.</p>
+
+<p>When you <a href="/blog/how-to-select-the-modules-that-appear-on-your-results.html">turn on the Jobs GovBox</a>, searchers looking for jobs on your site will see up to three relevant jobs listings on your results page.</p>
+
+<ul>
+<li><strong>Federal Department Websites</strong> If your website is affiliated with a specific federal department (e.g., Department of Commerce), the federal Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across all agencies within your department</em>.</li>
+<li><strong>Federal Agency or Office Websites</strong> If your website is affiliated with a specific federal agency (e.g., NOAA) or office (e.g, National Ocean Service), the federal Jobs GovBox will return relevant, location-and keyword-matched job openings <em>at your agency</em>.</li>
+<li><strong>State and Local Websites and Cross-Agency Portals</strong> If your website is a state or local government site or a federal cross-agency portal (e.g., USA.gov), the federal Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across all federal agencies</em>.</li>
+</ul>
+
+
+<p>Searchers will also see a direct link to <a href="http://www.usajobs.gov">USAJobs.gov</a> for all current job openings (specific to your department or agency, if applicable) , as shown in the sample below for a search on <a href="http://usdasearch.usda.gov/search?affiliate=usda&amp;query=jobs" title=""><em>jobs</em></a> on the USDA.gov.</p>
+
+<p><img class="img-polaroid" class="img-polaroid" alt="Search results for jobs on USDA.gov" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_inline_mhpcdd93lO1qz4rgp.png"/></p>
+
+<hr />
+
+<p> <strong>Did you know?</strong> Are you a local or state government? Or a federal agency that doesn't post your jobs on USAJobs? We want your jobs data. E-mail us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#85;&#x53;&#65;&#x53;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#x67;&#x73;&#x61;&#46;&#x67;&#111;&#x76;">&#x55;&#83;&#x41;&#x53;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#x67;&#x73;&#97;&#46;&#x67;&#x6f;&#118;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/govbox"><span class="label label-info">govbox</span></a>
+      
+      <a href="/tagged/jobs"><span class="label label-info">jobs</span></a>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
       <a href="/manual/third-party.html">
         <time>March 19, 2013</time>
       </a>
@@ -115,108 +234,6 @@
     <div class='tags'>
       
       <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      <a href="/blog/how-to-access-your-raw-logs.html">
-        <time>February 6, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/blog/how-to-access-your-raw-logs.html">How to Access Your Raw Logs</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>You can directly access your raw HTTP logs. T<span></span><span>he logs include valuable data on searches, clicks, and USASearch tag page loads. </span></p>
-
-
-<p><span>With the raw logs, you can conduct in-depth, ad hoc analyses to answer any questions that you can&#8217;t answer using the standard analytics reports in the </span><a href="http://search.usa.gov/affiliates/home">Admin Center</a>. You can also automatically integrate your search logs with your other reports and business processes. </p>
-
-
-<p><span>To access your raw logs, you&#8217;ll first need to u</span><span>pload your public key </span><span></span><span>on the Raw Logs Access page in the </span><a href="http://search.usa.gov/affiliates/home">Admin Center</a>. </p>
-
-
-<p><span>We&#8217;ll set up your public key on our secure FTP servers and send you an email when your logs are available for download. </span></p>
-
-
-<p><span>Once your key is set up, y</span><span>ou&#8217;ll be able access your log files via secure FTP.</span><span> </span><span>We upload your logs each day, usually within several hours after midnight GMT. After a week, we purge the older files.</span></p>
-
-
-<p><span>We recommend that you set up a cron script to </span><span>automatically download the latest files each day.</span></p>
-
-
-<blockquote>
-<p><em><strong>Troubleshooting tip: </strong></em><span>On Unix systems, you can generate a RSA public key with no passphrase by typing in the following command. G</span><span>enerate the key from the machine or server that you&#8217;ll be using to download the logs. </span><span>Once you&#8217;ve created a key, it&#8217;ll be located at </span><span>/home/user/.ssh/id_rsa.pub.</span></p>
-<p><span>% cd ~<br/></span><span>% ssh-keygen -q -b 4096 -t rsa<br/></span><span>Enter file in which to save the key (/home/user/.ssh/id_rsa):<br/></span><span>Enter passphrase (empty for no passphrase):<br/></span><span>Enter same passphrase again:</span></p>
-</blockquote>
-
-
-<p><a href="http://usasearch.howto.gov/">USASearch</a><span> &gt; </span><a href="http://search.usa.gov/affiliates/home">Admin Center</a><span> &gt; YourSite &gt; Raw Logs Access</span></p>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      <a href="/manual/govbox-jobs.html">
-        <time>February 4, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/govbox-jobs.html">Help Searchers Find Jobs</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>One of the most common search tasks is to look for <span>current job openings. </span><span>To help searchers quickly find relevant jobs we&#8217;ve created the Jobs GovBox.</span></p>
-
-
-<p>When you <a href="/blog/how-to-select-the-modules-that-appear-on-your-results.html">turn on the Jobs GovBox</a>, searchers looking for jobs on your site will see up to three relevant jobs listings on your results page. </p>
-
-
-<ul><li><strong>Federal Department Websites</strong><span>—If your website is affiliated with a specific federal department (e.g., Department of Commerce), the federal Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across</em> <em>all agencies within your department</em>.</span></li>
-<li><span><strong>Federal Agency or Office Websites</strong>—If your website is affiliated with a specific federal agency (e.g., NOAA) or office (e.g, National Ocean Service), the federal Jobs GovBox will return relevant, location-and keyword-matched job openings <em>at your agency</em>.</span></li>
-<li><span><strong>State and Local Websites and Cross-Agency Portals</strong>—If your website is a state or local government site or a federal cross-agency portal (e.g., USA.gov), the federal Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across</em> <em>all federal agencies</em>.</span></li>
-</ul>
-
-
-<p>Searchers will also see a direct link to <span></span><a href="http://www.usajobs.gov">USAJobs.gov</a> for <span>all current job openings (specific to your department or agency, if applicable)</span><span>, as shown in the sample below</span><span> for a search on <a href="http://usdasearch.usda.gov/search?affiliate=usda&amp;query=jobs"><em>jobs</em></a> on the USDA.gov.</span></p>
-
-
-<p><img class="img-polaroid" class="img-polaroid" alt="image" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_inline_mhpcdd93lO1qz4rgp.png"/></p>
-
-
-<blockquote>
-<p><strong>Did you know? </strong>Are you a local or state government? Or a federal agency that doesn&#8217;t post <span>your jobs on USAJobs? </span>We want your jobs data. <a href="mailto:usasearch@gsa.gov" title="Jobs data">E-mail us</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox. <span><br/></span></p>
-</blockquote>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/govbox"><span class="label label-info">govbox</span></a>
-      
-      <a href="/tagged/jobs"><span class="label label-info">jobs</span></a>
       
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
       
