@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Searching for Mairzy Doats"
+tags: type-ahead spell-correct
+---
+<blockquote>
+<p><em>Mairzy doats and dozy doats and liddle lamzy divey. A kiddle dee divey too, wouldn&#8217;t you?</em></p>
+</blockquote>
+<p>These are the lyrics to a <a href="http://www.youtube.com/watch?v=Dny_JDlwGFM">novelty song</a> popular many years ago. It was supposedly written by the amused father of a toddler who was trying to sing something she had heard at nursery school: <em>Mares eat oats and does eat oats, and little lambs eat ivy. A kid will eat ivy too, wouldn&#8217;t you?</em></p>
+<p>In the decades since, there have been various possible spellings of the first word, e.g. <em>marezy, marizy, maresee</em>. Sometimes the lyrics have been written out with no spaces, e.g. <em>Mareseedoatsandoezeedoats</em>…</p>
+<p>This illustrates, in the extreme, how difficult it can be for visitors to your website to construct a search when they are not sure how a word is spelled or punctuated. They know they’ll recognize it if they see it, but first they would like a clue.</p>
+<p>You can use the <a href="/blog/how-to-implement-type-ahead-search.html">Type-ahead</a> feature in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> to help with misspellings. It augments spell check, and often cuts out that step.</p>
+<p>Sometimes it is easy to map misspellings to the correct spelling, e.g. <em>acadamy, accademy</em> map to <em>academy</em>, but you may also want to keep variant forms of a word, e.g. <em>labor, labour </em>rather than treat them as misspellings.</p>
+<p>You cannot correct for words that are misspellings only in context, e.g. <em>hilary </em>and <em>hillary</em> are individually correct words, but may not be in a particular phrase, e.g. <em>tropical storm hillary</em> (correct form is with one &#8216;l&#8217;) or <em>hilary rodham clinton</em> (correct form is with two &#8216;l&#8217;s&#8217;). So you should not globally map <em>hilary </em>to <em>hillary </em>or a lot of good searches will be turned bad. Since you can map only individual words, and not specific phrases in the type-ahead tool, an exclusion of one form altogether by mapping it to the other form may or may not work for your particular index.</p>
+<p>Sometimes you don&#8217;t know which word is being misspelled. Is <em>seceed </em>a misspelling of <em>succeed </em>or <em>secede</em>? You may leave it be, or make your best guess only to find out later you were wrong. It helps to search a seemingly misspelled word; it can turn out to be completely correct, even if unknown to you.</p>
+<p>As in the words in the ditty above, words often evolve: <em>web site </em>or <em>website</em>; <em>email </em>or <em>e-mail</em>? Each form may retrieve different results.</p>
+<p>Since these lists are built from what users search, there can be unacceptable terms that show up and must be deleted, such as ethnic slurs, profanity, and vulgarity. There are also areas of various shades of gray, depending on who your user population is and the focus of your site. For instance, blunt but accurate medical terms for bodily functions may be ok as suggestions for medical professionals, while their slang equivalents are not ok for children.</p>
+<p>You can also anticipate searchers&#8217; needs by uploading groups of &#8220;evergreen&#8221; terms in advance of their showing up organically one by one. For instance, USA.gov uploaded all the names of the national parks, as they are heavily searched seasonally. Useful bulk uploads could be lists of jargon or scientific terms or something else. Make sure, however, that you have actual content for these terms. It is not a good search experience if the searcher finds the right term in the type-ahead suggestions list but it retrieves nothing useful.</p>
+<p><em>By Marilyn</em></p>

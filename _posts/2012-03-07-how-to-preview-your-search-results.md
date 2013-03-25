@@ -1,0 +1,16 @@
+---
+layout: post
+title: "How to Preview Your Search Results"
+tags: how-to preview 
+---
+<p>As you change your configuration settings, you can preview your search results page before pushing it to your live website.</p>
+<p>Visit our <a href="http://search.usa.gov/affiliates/home">Admin Center</a>, select your site, and click on the Preview option in the left-hand menu. You can also preview your results page by clicking on Admin Center or the name of your site in the breadcrumbs.</p>
+<p><strong>View Current, Live Site<br/></strong></p>
+<p id=":1hc"><span id=":1hc">This option will allow you to view the current, live search results page on your site. This is the only </span>option you&#8217;ll see if you don&#8217;t have any staged changes.</p>
+<p><strong>View Staged Changes</strong></p>
+<p><span id=":1hc">This option will allow you to view the staged search results page before you publish it to your live site. </span>You&#8217;ll see this option if you have staged changes.</p>
+<p>Publish the staged changes by clicking the Make Live/Push Changes button. If you&#8217;re not happy with the staged changes, cancel the changes by clicking the Cancel Changes button.</p>
+<blockquote>
+<p><em><strong>Troubleshooting tip:</strong> </em>If you see a security warning about the page being encrypted, select the option to continue.</p>
+</blockquote>
+<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Preview</p>
