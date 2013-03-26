@@ -78,40 +78,65 @@
   
   <article class='article'>
     <div class='time'>
-      <a href="/blog/how-to-analyze-your-monthly-reports.html">
-        <time>May 3, 2012</time>
+      <a href="/manual/raw-logs.html">
+        <time>March 20, 2013</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/blog/how-to-analyze-your-monthly-reports.html">How to Analyze Your Monthly Reports</a>
+      <a href="/manual/raw-logs.html">How to Access Your Raw Logs</a>
     </h1>
     
 
     <div class='post-content'>
-      <p>The Monthly Reports page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the total number of searches and click throughs. A click through is recorded each time a searcher clicks on a results link. Data start from the time your agency started using USASearch (but no further back than 2009).</p>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Raw Logs Access</p>
+
+<p>You can directly access your raw HTTP logs. The logs include valuable data on searches, clicks, and USASearch tag page loads.</p>
+
+<p>With the raw logs, you can conduct in-depth, ad hoc analyses to answer any questions that you can't answer using the standard analytics reports in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. You can also automatically integrate your search logs with your other reports and business processes.</p>
+
+<p>To access your raw logs, you'll first need to upload your public key on the Raw Logs Access page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
+
+<p>We'll set up your public key on our secure FTP servers and send you an email when your logs are available for download.</p>
+
+<p>Once your key is set up, you'll be able access your log files via secure FTP. We upload your logs each day, usually within several hours after midnight GMT. After a week, we purge the older files.</p>
+
+<p>We recommend that you set up a cron script to automatically download the latest files each day.</p>
+
+<h2>How to Generate a Key Pair on Unix</h2>
+
+<p>On Unix systems, you can generate a RSA public key with no passphrase by typing in the following command. Generate the key from the machine or server that you'll be using to download the logs. Once you've created a key, it'll be located at /home/user/.ssh/id_rsa.pub.</p>
+
+<pre><code>% cd ~
+% ssh-keygen -q -b 4096 -t rsa
+Enter file in which to save the key (/home/user/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+</code></pre>
+
+<h2>How to Generate a Key Pair on Windows</h2>
+
+<p>You can use <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a>, a free telnet/SSH client, to generate a public key on Windows. Download PuTTYgen.exe, Pageant.exe, and PSFTP.exe from the <a href="](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY Download Page</a>.</p>
+
+<p>Run PuTTYgen.exe.</p>
+
+<ul>
+<li>Select SSH-2 RSA as the type of key to generate.</li>
+<li>Set the number of bits in the generated key to 2048.</li>
+<li>Select Generate. Move your mouse within the blank area to create random movements until the key is generated.</li>
+<li>Fill out your Key Comment, Key Passphrase, and Confirm Passphrase.</li>
+<li>Copy your <em>public</em> key from the string in the Public Key for Pasting into OpenSSH Authorized_keys File. Paste this key into the Raw Logs Access page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. (Note: Don't save this public key and send us the string copied from a text file. It adds lines in the file so it doesn't work.)</li>
+<li>Save your <em>private</em> key.</li>
+</ul>
 
 
-<p>Data are shown for the present month-to-date by default. Change the time period by selecting a different year or month.</p>
+<p>Run Pageant.exe. Select Add Key and upload your private key, the .ppk file.</p>
 
+<p>Run PSFTP.exe and type in the following. You can find your site's handle on the Site Information page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
 
-<p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV link to download the list as a comma delimited file. The CSV file contains three columns.</p>
-
-
-<ol><li>Query—The search term or phrase.</li>
-<li>Raw count—Total number of times the query was submitted.</li>
-<li>IP-deduped—Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of &#8220;real,&#8221; human traffic.</li>
-</ol>
-
-
-<blockquote>
-<p><em><strong>Did you know?</strong> </em>On the first of each month, we email you a report with data on the previous month&#8217;s queries, clicks, and top search terms.</p>
-</blockquote>
-
-
-<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Monthly Reports</p>
-
+<pre><code>open YourSiteHandle@198.61.238.46
+</code></pre>
 
     </div>
 
@@ -120,191 +145,6 @@
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
       
       <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      <a href="/blog/hadoop-for-rubyists.html">
-        <time>November 9, 2011</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/blog/hadoop-for-rubyists.html">Hadoop for Rubyists</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>Is your MySQL groaning under too much data? Tired of waiting hours for analytics rake tasks?</p>
-
-
-<p><a href="http://pivotallabs.com/talks/150-hadoop-for-rubyists"><img class="img-polaroid" alt="image" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_luckbhCakH1qid15q.png"/></a></p>
-
-
-<p><a href="http://pivotallabs.com/talks/150-hadoop-for-rubyists">Listen to Loren</a>, USASearch&#8217;s senior technical architect, as he discusses how USASearch leveraged our existing Ruby codebase by building Hadoop Map/Reduce jobs using Hive and plugging in our own Ruby mappers/reducers.</p>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/big-data"><span class="label label-info">big-data</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      <a href="/blog/how-to-analyze-your-page-views.html">
-        <time>March 22, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/blog/how-to-analyze-your-page-views.html">How to Analyze Your Page Views</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>The Page Views page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the number of times your search results page is viewed by searchers.</p>
-
-
-<p>For example, if a searcher is on <a href="http://www.usa.gov/">USA.gov</a> and does a search for <em>cribs</em>, the loading of this results page is recorded as a web page view. From this initial results page the searcher can click around to change the filter from web to images, recalls, FAQs, blog posts, etc. Each time the filter changes, a new page is loaded and it is recorded as a page view.</p>
-
-
-<div class="text ">From these data, you can get answers to questions like:<br/><ol><li>Which type of search do my users use more: web, image, RSS, or collections?</li>
-<li>Do my searchers use the time-based filters for RSS feeds?</li>
-<li>Which of my document collections is most popular?</li>
-<li>Which of my RSS feeds is most popular?</li>
-</ol><p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Page Views</p>
-</div>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      <a href="/blog/how-to-analyze-your-queries-with-low-click-thru-rates.html">
-        <time>November 5, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/blog/how-to-analyze-your-queries-with-low-click-thru-rates.html">How to Analyze Your Queries with Low Click-Thru Rates</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>The Low Click-Thru Rate (CTR) Queries page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the top 10 searches with low click-thru rates. It shows the most popular search terms that people generally don’t act (click) on. </p>
-
-
-<p>You&#8217;ll see a list of up to 10 terms that returned search results, but resulted in a click less than 20 percent of the time over the past day or so. In other words, fewer than one in five people who searched for that topic clicked on a search result. (Terms must have been searched by at least 10 unique searchers per day to be included in this list.)</p>
-
-
-<p>Use this report to identify issues with coverage. Create a <a href="/blog/how-to-highlight-best-bets.html">Best Bet</a>, add pages that may be missing from the results, or do both to improve recall. Incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results. </p>
-
-
-<p>Click on any linked word or the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png"/> symbol in the list, and you&#8217;ll be taken to a Query Timeline chart. There you&#8217;ll be able to select a period of time for the term, and you can also add a second query for comparison.</p>
-
-
-<p>Click on the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol, and you&#8217;ll be taken to a list of the top clicked URLs for that term.</p>
-
-
-<blockquote>
-<p><em><strong>Did you know?</strong> </em>This low click-thru report lists only those terms that returned search results. Visit the <a href="/blog/how-to-analyze-your-query-logs.html">Query Logs</a> page to see the top queries that returned no results.</p>
-</blockquote>
-
-
-<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Low CTR Queries</p>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      <a href="/blog/i-didnt-try-to-grow-a-bigger-ox-how-i-found-hadoop.html">
-        <time>December 28, 2011</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/blog/i-didnt-try-to-grow-a-bigger-ox-how-i-found-hadoop.html">I Didn’t Try to Grow a Bigger Ox: How I Found Hadoop</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>A year ago I rolled my first Hadoop system into production. Since then, I&#8217;ve spoken to quite a few people who are eager to try Hadoop themselves in order to solve their own big data problems. Despite having similar backgrounds and data problems, few of these people have sunk their teeth into Hadoop. When I go to Hadoop Meetups in San Francisco, I often meet new people who are evaluating Hadoop and have yet to launch a cluster. Based on my own background and experience, I have some ideas on why this is the case.</p>
-
-
-<p>I studied computer science in school and have worked on a wide variety of computer systems in my career, with a lot of focus on server-side Java. I learned a bit about building distributed systems and working with large amounts of data when I built a pay-per-click (PPC) ad network in 2004. The system is still in operation and at one point was handling several thousand searches per second. As the sole technical resource on the system, I had to educate myself very quickly about how to scale up.</p>
-
-
-<p>As I contemplated how doomed I would be should traffic levels increase much more, I remember wondering to myself, &#8220;How does Google deal with all that data?&#8221; The answer came to me in the form of the Google File System (GFS) paper and later the MapReduce paper, both from Google. It dawned on me that because Google was forced to solve a much larger problem, they had come up with an elegant solution for a whole range of more modest data problems running on commodity hardware. But it wouldn&#8217;t be until 2010 that I would get to work with this technology firsthand.</p>
-
-
-<p>As I wrote in an <a href="/blog/adopting-apache-hadoop-in-the-federal-government.html" target="_blank">earlier article</a>, I started re-architecting <a href="http://usasearch.howto.gov">USASearch</a>, the U.S. government&#8217;s search system, in 2009 based on a solution stack of free, open source software including Ruby on Rails, Solr, and MySQL. A wave of déja vu hit me as I started worrying about what to do with the growing mountain of data piling up in MySQL and our increasing need to analyze it in different ways. I had heard that a new company called Cloudera, founded by some big data people from Yahoo!, Google, and Facebook, was making Hadoop available for the masses in a reliable distribution, much in the same way that RedHat did for Linux. Curiosity got the best of me and I bought the newly minted <em>Hadoop: The Definitive Guide</em> from O&#8217;Reilly. The most insightful part of the book to me was the very first sentence. It&#8217;s a quote from Grace Hopper: &#8220;In pioneer days, they used oxen for heavy pulling, and when one ox couldn&#8217;t budge a log, they didn&#8217;t try to grow a bigger ox.&#8221; I didn&#8217;t want to grow a bigger server; I wanted to harness a bunch of small servers together to work in unison. The more I learned the more curious I got, so I started reading more. And that&#8217;s when I hit my first roadblock.</p>
-
-
-<p>I think people who have been working with Hadoop technologies for years and years sometimes forget just how rich and diverse the big data software ecosystem has become, and how daunting it can be to folks approaching it for the first time. When people at the Meetups say they are evaluating solutions to their data scaling problem, the answers they hear sound something like this: &#8220;Just use Hadoop Hive Pig Mahout Avro HBase Cassandra Oozie Sqoop Flume ZooKeeper Cascading NoSQL RCFile. Oh, almost forgot…cloud.&#8221;</p>
-
-
-<p>The thought of wading through all of that just to learn about what I needed to learn about was a bit too overwhelming for me, so I put the whole matter aside for a few months. Over time, I started to dive into each of these projects to understand the primary use case, how active the developer community was and which organizations were using it in production. I converged on the idea of using Hive as a warehouse for our data. I opted for Cloudera&#8217;s distribution since I wanted to reduce the risk of running into compatibility issues between all the various subsystems. Having tracked down anomalies in a highly multi-threaded and contentious distributed Java system before, I liked the idea of someone else taking on that problem for me.</p>
-
-
-<p>At some point, I had read everything I could read and grew impatient to get my hands dirty, so I decided to just download CDH3 on my laptop and give it a try. The tutorial instructions for the standalone version worked, and I successfully computed more digits of pi than I ever thought I&#8217;d need. After creating some sample data in Hive and running a few queries, I felt pretty confident that Hive would be the right tool for the job. I just needed to find somewhere to install and run HDFS (namenode, secondary namenode, and data nodes), Hadoop (jobtracker and tasktracker nodes), Hive, and Hue for a nice front end to it all.</p>
-
-
-<p>I knew from my past experience how to stretch the limits of CPU, disk, IO, and memory on commodity servers, and I identified a few potential servers at our primary datacenter with resources I figured I could leverage. Once again I followed the tutorial instructions, this time for the fully distributed version of CDH3, and once again I started to compute pi. And that&#8217;s when I hit my second roadblock. It took me a few days to figure out that I had a problem with DNS. Each machine needs to be able to resolve every other machine&#8217;s name and IP in the cluster. Whether you do that via /etc/hosts or a local DNS server is up to you, but it needs to happen or the whole thing gets wedged. Once I got that sorted out, everything just started falling into place and I had Hive working in production within a few days. A week later, I started pulling out the MySQL jobs and deleting big tables, and that&#8217;s been the trend ever since.</p>
-
-
-<p>Over time, I&#8217;ve gone on to learn about using custom Ruby mappers in Hive, moving data back and forth between MySQL and Hive with Sqoop, and getting the data into HDFS in real-time with Flume. All of these components from the Cloudera distribution are working nicely in our production environment now, and I sleep well at night knowing I have such a solid, deliberate plan for growth. My initial investment in learning about the Hadoop ecosystem is really paying dividends, but when I think about all those people at the Meetups stuck in evaluation mode, I feel their pain. Does it have to be such a struggle?</p>
-
-
-<p>The big challenge in my opinion is not that any one piece of the puzzle is too difficult. Any reasonably smart (or in my case stubborn) engineer can set themselves on the task of learning about a new technology once they know that it needs to be learned. The challenge with the Hadoop ecosystem is that it presents the newbie with the meta-problem of figuring out which of these tools are appropriate for their use case at all, and whether or not to even consider the problem today versus deferring it until later. In a way Facebook has it easy, because when you are adding 15TB of data per day, that decision is pretty much made for you.</p>
-
-
-<p>For all the companies sitting in the twilight between the gigabyte and the petabyte who don&#8217;t have Hadoop expertise in-house, there is a collection of free information to help guide people to the right solution space (Hadoop Tutorial, White Papers). These days, when I talk to people who are evaluating solutions to their big data problems, my advice to them is to break down their problems into a few discrete use cases and then work on ferreting out the technologies that are designed for that use case. Get a proof of concept to demonstrate that the technology can address your use case and convince yourself and others that you&#8217;re on the right track. Work toward putting something simple into production. Lather, rinse, and repeat. I am still in that cycle myself, as these days I&#8217;m exploring HBase and OpenTSDB to give me low-latency access to time series data and Mahout to do frequent item set mining, but that&#8217;s another article for another day.</p>
-
-
-<p><em>By Loren</em></p>
-
-
-<p><em><strong>This post is cross-posted from <a href="http://www.cloudera.com/blog/2011/12/how-i-found-hadoop/">Cloudera</a>.</strong></em></p>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/big-data"><span class="label label-info">big-data</span></a>
       
     </div>
   </article>
@@ -363,88 +203,48 @@
   
   <article class='article'>
     <div class='time'>
-      <a href="/blog/adopting-apache-hadoop-in-the-federal-government.html">
-        <time>June 16, 2011</time>
+      <a href="/blog/how-to-analyze-your-queries-with-low-click-thru-rates.html">
+        <time>November 5, 2012</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/blog/adopting-apache-hadoop-in-the-federal-government.html">Adopting Apache Hadoop in the Federal Government</a>
+      <a href="/blog/how-to-analyze-your-queries-with-low-click-thru-rates.html">How to Analyze Your Queries with Low Click-Thru Rates</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><strong>Background</strong></p>
+      <p>The Low Click-Thru Rate (CTR) Queries page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the top 10 searches with low click-thru rates. It shows the most popular search terms that people generally don’t act (click) on. </p>
 
 
-<p>The United States federal government’s <a href="http://search.usa.gov/program" target="_blank">USASearch program</a> provides hosted search services for government affiliate organizations, shares APIs and web services, and operates the government’s official search engine at Search.USA.gov. The USASearch <a href="https://search.usa.gov/affiliates/how_it_works" target="_blank">affiliate program</a> offers free search services to any federal, state, local, tribal, or territorial government agency. Several hundred websites make use of this service, ranging from the smallest municipality to larger federal sites like <a href="http://weather.gov" target="_blank">weather.gov</a> and <a href="http://usa.gov" target="_blank">usa.gov</a>. The USASearch program leverages the Bing API as the basis for its web results and then augments the user search experience by providing a variety of government-centric information such as related search topics and highlighted editorial content. The entire system is comprised of a suite of open-source tools and resources, including Apache Solr/Lucene, OpenCalais, and Apache Hadoop. Of these, our usage of Hadoop is the most recent. We began using <a href="http://www.cloudera.com/hadoop/" target="_blank">Cloudera’s Distribution including Apache Hadoop</a> (<a href="http://www.cloudera.com/hadoop" target="_blank">CDH3</a>) for the first time in the Fall, and since then we’ve seen our usage grow every month— not just in scale, but in scope as well. But before highlighting everything the USASearch program is doing with Hadoop today, I should explain why we began using it in the first place.</p>
+<p>You&#8217;ll see a list of up to 10 terms that returned search results, but resulted in a click less than 20 percent of the time over the past day or so. In other words, fewer than one in five people who searched for that topic clicked on a search result. (Terms must have been searched by at least 10 unique searchers per day to be included in this list.)</p>
 
 
-<p><strong>Phase 1: Search analytics</strong></p>
+<p>Use this report to identify issues with coverage. Create a <a href="/blog/how-to-highlight-best-bets.html">Best Bet</a>, add pages that may be missing from the results, or do both to improve recall. Incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results. </p>
 
 
-<p>All of the search and <a href="http://search.usa.gov/api" target="_blank">API</a> traffic across hundreds of affiliate sites, iPhone apps, and widgets comes through a single search service, and this generates a lot of data. To improve the service, administrators wanted to see aggregated information on what sorts of information searchers were looking for, how well they were finding it, what trends were forming, and so on. Once searches were initiated, they also wanted to know what results were shown and then what results were clicked on. They wanted to see all this information broken down by affiliate over time, and also aggregated across the entire affiliate landscape.</p>
+<p>Click on any linked word or the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png"/> symbol in the list, and you&#8217;ll be taken to a Query Timeline chart. There you&#8217;ll be able to select a period of time for the term, and you can also add a second query for comparison.</p>
 
 
-<p>The initial system, like many initial systems, was fairly simple and did just enough to address our most pressing analytics needs. We took the logs from Apache and Ruby on Rails, put them in a big MySQL database on a separate machine, ran nightly and monthly jobs on them, and then exported the summary results to the main database cluster to be served up via a low-latency Rails web interface for analytics. We used a separate physical database machine with lots of memory and disk for the batch processing to keep our production MySQL instances from being impacted by this resource-intensive batch processing.</p>
+<p>Click on the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol, and you&#8217;ll be taken to a list of the top clicked URLs for that term.</p>
 
 
-<p><img class="img-polaroid" class="img-polaroid" alt="Diagram showing the initial dataflow of raw logfiles to analytics apps" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_lle73iJ2Ts1qid15q.png"/></p>
+<blockquote>
+<p><em><strong>Did you know?</strong> </em>This low click-thru report lists only those terms that returned search results. Visit the <a href="/blog/how-to-analyze-your-query-logs.html">Query Logs</a> page to see the top queries that returned no results.</p>
+</blockquote>
 
 
-<p>As we watched the main database tables grow and the nightly batch jobs take longer and longer, it became clear that we would soon exhaust the resources available on the single database analytics processing node. We looked at scaling up the hardware vertically and sharding the database horizontally, but both options seemed like we were just kicking the can down the road. Larger database hardware would be both costly and eventually insufficient for our needs, and sharding promised to take all the usual issues associated with a single database system (backups, master/slaves, schema management) and multiply them. We wanted the system to be able to grow cost effectively and without downtime, be naturally resilient to failures, and have backups handled sensibly. It was at this point that we started investigating HDFS, Hadoop, and Apache Hive.</p>
-
-
-<p>HDFS offered us a distributed, resilient, and scalable filesystem while Hadoop promised to bring the work to where the data resided so we could make efficient use of local disk on multiple nodes. Hive, however, really pushed our decision in favor of a Hadoop-based system. Our data is just unstructured enough to make traditional RDBMS schemas a bit brittle and restrictive, but has enough structure to make a schema-less NoSQL system unnecessarily vague. Hive let us compromise between the two— it’s sort of a “SomeSQL” system.</p>
-
-
-<p>But best of all, we could layer the entire Cloudera stack on top of a subset of our existing production machines. By making use of each machine’s excess reserve capacity of disk, CPU, and RAM, we were able to get a small proof-of-concept cluster stood up without purchasing any new hardware. The initial results confirmed that our workload lent itself well to distributed processing, as one job went from taking over an hour on a MySQL node to 20 minutes on a three machine Hadoop cluster. Within a week of getting the prototype up and running, we had transitioned all the remaining nightly analytics batch SQL jobs into Hive scripts. The job output fed into a collection of intermediate Hive tables, from which we generated summary data to export to MySQL as low-latency tables for the Rails web interface to use. To prove the scaling point, we spent five minutes adding another datanode/tasktracker to the mix, kicked off the cluster rebalancer, and the whole process ran faster the next day.</p>
-
-
-<p><img class="img-polaroid" class="img-polaroid" alt="Diagram showing the current dataflow of raw logfiles to analytics apps" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_lle73rea1K1qid15q.png"/></p>
-
-
-<p><strong>Phase 2: Feedback loop</strong></p>
-
-
-<p>The result of all this analysis in Hive shows up not just in various analytics dashboards, but as part of the search experience on many government websites, too. For example, compare the different type-ahead suggestions for ‘<strong>gran</strong>’ on <a href="http://nps.gov/">nps.gov</a> and <a>usa.gov</a>. Both sites use the same USASearch backend system, but the suggestions differ completely. We use Hadoop to help us generate contextually relevant and timely search suggestions for hundreds of government sites like this.</p>
-
-
-<p><img class="img-polaroid" class="img-polaroid" alt="Image showing different type-ahead suggestions on NPS.gov and USA.gov" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_lle73ymed31qid15q.png"/></p>
-
-
-<p><strong>Phase 3: Internal monitoring</strong></p>
-
-
-<p>Shortly after moving our event stream analysis from MySQL to Hadoop/Hive, we noticed a change in how we thought about data. Freed from the constant anxiety of wondering how we were going to handle an ever-increasing amount of data, we shifted from trying to store only what we really needed to storing whatever we thought might be useful. We first turned our attention to the performance data emitted by the various sub-systems that make up the search program.</p>
-
-
-<p>Each search results page is potentially made up of many data modules sintered together from calls to the Bing API, our own Solr indexes, a MySQL cluster, and a Redis cache. A small latency problem with any one of them can propagate through the system to create much larger problems, so we want to have a deep knowledge of how each subsystem behaves throughout the day under various circumstances. We were already monitoring the availability of all these services with Opsview, but we had no insight into their performance over time. Whenever we sensed a problem (“Is one of the Solr indexes getting slow?”), we would liberally apply ssh, tail -f, and grep to try to see what was going on. This seemed like a good use case for Hive, so in the case of Solr, for example, we threw the compressed log files into HDFS, wrote a simple SerDe regular expression to define rows in a Hive table partitioned by date, and built a view on top of that for easy manipulation of extracted columns such as the Solr index name and the hour of day. Hive makes it trivially easy to do some fairly sophisticated aggregate analysis on the response times for each Solr index, such as generating a distribution histogram, or calculating the pth percentile.</p>
-
-
-<p>Some of these Hive queries are not run very often— perhaps just a few times a month— so we don’t want to spend time building them into our test-driven Rails analytics framework. On the other hand, they are complex enough that we don’t want to rewrite them every time we want to use them. For these cases, we use Beeswax in HUE to save off parameterized queries that can then be shared among engineers or analysts to run on an ad hoc basis.</p>
-
-
-<p><strong>Conclusion</strong></p>
-
-
-<p>In the space of a few months, we’ve gone from having a brittle and hard-to-scale RDBMS-based analytics platform to a much more agile Hadoop-based system that was designed to scale intrinsically. We continue to see our Hadoop usage grow in scope with each new data source we add, and it’s clear that we’ll be relying on it more and more in the future as the suite of tools and resources around Hadoop grows and matures.</p>
-
-
-<p><em>By Loren</em></p>
-
-
-<p><em><strong>This post is cross-posted from <a href="http://www.cloudera.com/blog/2011/04/adopting-apache-hadoop-in-the-federal-government/" title="Cloudera">Cloudera</a>.</strong></em></p>
+<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Low CTR Queries</p>
 
 
     </div>
 
     <div class='tags'>
       
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
       
-      <a href="/tagged/big-data"><span class="label label-info">big-data</span></a>
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
       
     </div>
   </article>
@@ -503,6 +303,54 @@
       <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
       
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      <a href="/blog/how-to-analyze-your-monthly-reports.html">
+        <time>May 3, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/blog/how-to-analyze-your-monthly-reports.html">How to Analyze Your Monthly Reports</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>The Monthly Reports page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the total number of searches and click throughs. A click through is recorded each time a searcher clicks on a results link. Data start from the time your agency started using USASearch (but no further back than 2009).</p>
+
+
+<p>Data are shown for the present month-to-date by default. Change the time period by selecting a different year or month.</p>
+
+
+<p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV link to download the list as a comma delimited file. The CSV file contains three columns.</p>
+
+
+<ol><li>Query—The search term or phrase.</li>
+<li>Raw count—Total number of times the query was submitted.</li>
+<li>IP-deduped—Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of &#8220;real,&#8221; human traffic.</li>
+</ol>
+
+
+<blockquote>
+<p><em><strong>Did you know?</strong> </em>On the first of each month, we email you a report with data on the previous month&#8217;s queries, clicks, and top search terms.</p>
+</blockquote>
+
+
+<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Monthly Reports</p>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
       
     </div>
   </article>
@@ -606,73 +454,176 @@
   
   <article class='article'>
     <div class='time'>
-      <a href="/manual/raw-logs.html">
-        <time>March 20, 2013</time>
+      <a href="/blog/how-to-analyze-your-page-views.html">
+        <time>March 22, 2012</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/manual/raw-logs.html">How to Access Your Raw Logs</a>
+      <a href="/blog/how-to-analyze-your-page-views.html">How to Analyze Your Page Views</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Raw Logs Access</p>
-
-<p>You can directly access your raw HTTP logs. The logs include valuable data on searches, clicks, and USASearch tag page loads.</p>
-
-<p>With the raw logs, you can conduct in-depth, ad hoc analyses to answer any questions that you can't answer using the standard analytics reports in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. You can also automatically integrate your search logs with your other reports and business processes.</p>
-
-<p>To access your raw logs, you'll first need to upload your public key on the Raw Logs Access page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
-
-<p>We'll set up your public key on our secure FTP servers and send you an email when your logs are available for download.</p>
-
-<p>Once your key is set up, you'll be able access your log files via secure FTP. We upload your logs each day, usually within several hours after midnight GMT. After a week, we purge the older files.</p>
-
-<p>We recommend that you set up a cron script to automatically download the latest files each day.</p>
-
-<h2>How to Generate a Key Pair on Unix</h2>
-
-<p>On Unix systems, you can generate a RSA public key with no passphrase by typing in the following command. Generate the key from the machine or server that you'll be using to download the logs. Once you've created a key, it'll be located at /home/user/.ssh/id_rsa.pub.</p>
-
-<pre><code>% cd ~
-% ssh-keygen -q -b 4096 -t rsa
-Enter file in which to save the key (/home/user/.ssh/id_rsa):
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-</code></pre>
-
-<h2>How to Generate a Key Pair on Windows</h2>
-
-<p>You can use <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a>, a free telnet/SSH client, to generate a public key on Windows. Download PuTTYgen.exe, Pageant.exe, and PSFTP.exe from the <a href="](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY Download Page</a>.</p>
-
-<p>Run PuTTYgen.exe.</p>
-
-<ul>
-<li>Select SSH-2 RSA as the type of key to generate.</li>
-<li>Set the number of bits in the generated key to 2048.</li>
-<li>Select Generate. Move your mouse within the blank area to create random movements until the key is generated.</li>
-<li>Fill out your Key Comment, Key Passphrase, and Confirm Passphrase.</li>
-<li>Copy your <em>public</em> key from the string in the Public Key for Pasting into OpenSSH Authorized_keys File. Paste this key into the Raw Logs Access page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. (Note: Don't save this public key and send us the string copied from a text file. It adds lines in the file so it doesn't work.)</li>
-<li>Save your <em>private</em> key.</li>
-</ul>
+      <p>The Page Views page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the number of times your search results page is viewed by searchers.</p>
 
 
-<p>Run Pageant.exe. Select Add Key and upload your private key, the .ppk file.</p>
+<p>For example, if a searcher is on <a href="http://www.usa.gov/">USA.gov</a> and does a search for <em>cribs</em>, the loading of this results page is recorded as a web page view. From this initial results page the searcher can click around to change the filter from web to images, recalls, FAQs, blog posts, etc. Each time the filter changes, a new page is loaded and it is recorded as a page view.</p>
 
-<p>Run PSFTP.exe and type in the following. You can find your site's handle on the Site Information page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
 
-<pre><code>open YourSiteHandle@198.61.238.46
-</code></pre>
+<div class="text ">From these data, you can get answers to questions like:<br/><ol><li>Which type of search do my users use more: web, image, RSS, or collections?</li>
+<li>Do my searchers use the time-based filters for RSS feeds?</li>
+<li>Which of my document collections is most popular?</li>
+<li>Which of my RSS feeds is most popular?</li>
+</ol><p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Page Views</p>
+</div>
+
 
     </div>
 
     <div class='tags'>
       
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
       
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      <a href="/blog/i-didnt-try-to-grow-a-bigger-ox-how-i-found-hadoop.html">
+        <time>December 28, 2011</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/blog/i-didnt-try-to-grow-a-bigger-ox-how-i-found-hadoop.html">I Didn’t Try to Grow a Bigger Ox: How I Found Hadoop</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>A year ago I rolled my first Hadoop system into production. Since then, I&#8217;ve spoken to quite a few people who are eager to try Hadoop themselves in order to solve their own big data problems. Despite having similar backgrounds and data problems, few of these people have sunk their teeth into Hadoop. When I go to Hadoop Meetups in San Francisco, I often meet new people who are evaluating Hadoop and have yet to launch a cluster. Based on my own background and experience, I have some ideas on why this is the case.</p>
+
+
+<p>I studied computer science in school and have worked on a wide variety of computer systems in my career, with a lot of focus on server-side Java. I learned a bit about building distributed systems and working with large amounts of data when I built a pay-per-click (PPC) ad network in 2004. The system is still in operation and at one point was handling several thousand searches per second. As the sole technical resource on the system, I had to educate myself very quickly about how to scale up.</p>
+
+
+<p>As I contemplated how doomed I would be should traffic levels increase much more, I remember wondering to myself, &#8220;How does Google deal with all that data?&#8221; The answer came to me in the form of the Google File System (GFS) paper and later the MapReduce paper, both from Google. It dawned on me that because Google was forced to solve a much larger problem, they had come up with an elegant solution for a whole range of more modest data problems running on commodity hardware. But it wouldn&#8217;t be until 2010 that I would get to work with this technology firsthand.</p>
+
+
+<p>As I wrote in an <a href="/blog/adopting-apache-hadoop-in-the-federal-government.html" target="_blank">earlier article</a>, I started re-architecting <a href="http://usasearch.howto.gov">USASearch</a>, the U.S. government&#8217;s search system, in 2009 based on a solution stack of free, open source software including Ruby on Rails, Solr, and MySQL. A wave of déja vu hit me as I started worrying about what to do with the growing mountain of data piling up in MySQL and our increasing need to analyze it in different ways. I had heard that a new company called Cloudera, founded by some big data people from Yahoo!, Google, and Facebook, was making Hadoop available for the masses in a reliable distribution, much in the same way that RedHat did for Linux. Curiosity got the best of me and I bought the newly minted <em>Hadoop: The Definitive Guide</em> from O&#8217;Reilly. The most insightful part of the book to me was the very first sentence. It&#8217;s a quote from Grace Hopper: &#8220;In pioneer days, they used oxen for heavy pulling, and when one ox couldn&#8217;t budge a log, they didn&#8217;t try to grow a bigger ox.&#8221; I didn&#8217;t want to grow a bigger server; I wanted to harness a bunch of small servers together to work in unison. The more I learned the more curious I got, so I started reading more. And that&#8217;s when I hit my first roadblock.</p>
+
+
+<p>I think people who have been working with Hadoop technologies for years and years sometimes forget just how rich and diverse the big data software ecosystem has become, and how daunting it can be to folks approaching it for the first time. When people at the Meetups say they are evaluating solutions to their data scaling problem, the answers they hear sound something like this: &#8220;Just use Hadoop Hive Pig Mahout Avro HBase Cassandra Oozie Sqoop Flume ZooKeeper Cascading NoSQL RCFile. Oh, almost forgot…cloud.&#8221;</p>
+
+
+<p>The thought of wading through all of that just to learn about what I needed to learn about was a bit too overwhelming for me, so I put the whole matter aside for a few months. Over time, I started to dive into each of these projects to understand the primary use case, how active the developer community was and which organizations were using it in production. I converged on the idea of using Hive as a warehouse for our data. I opted for Cloudera&#8217;s distribution since I wanted to reduce the risk of running into compatibility issues between all the various subsystems. Having tracked down anomalies in a highly multi-threaded and contentious distributed Java system before, I liked the idea of someone else taking on that problem for me.</p>
+
+
+<p>At some point, I had read everything I could read and grew impatient to get my hands dirty, so I decided to just download CDH3 on my laptop and give it a try. The tutorial instructions for the standalone version worked, and I successfully computed more digits of pi than I ever thought I&#8217;d need. After creating some sample data in Hive and running a few queries, I felt pretty confident that Hive would be the right tool for the job. I just needed to find somewhere to install and run HDFS (namenode, secondary namenode, and data nodes), Hadoop (jobtracker and tasktracker nodes), Hive, and Hue for a nice front end to it all.</p>
+
+
+<p>I knew from my past experience how to stretch the limits of CPU, disk, IO, and memory on commodity servers, and I identified a few potential servers at our primary datacenter with resources I figured I could leverage. Once again I followed the tutorial instructions, this time for the fully distributed version of CDH3, and once again I started to compute pi. And that&#8217;s when I hit my second roadblock. It took me a few days to figure out that I had a problem with DNS. Each machine needs to be able to resolve every other machine&#8217;s name and IP in the cluster. Whether you do that via /etc/hosts or a local DNS server is up to you, but it needs to happen or the whole thing gets wedged. Once I got that sorted out, everything just started falling into place and I had Hive working in production within a few days. A week later, I started pulling out the MySQL jobs and deleting big tables, and that&#8217;s been the trend ever since.</p>
+
+
+<p>Over time, I&#8217;ve gone on to learn about using custom Ruby mappers in Hive, moving data back and forth between MySQL and Hive with Sqoop, and getting the data into HDFS in real-time with Flume. All of these components from the Cloudera distribution are working nicely in our production environment now, and I sleep well at night knowing I have such a solid, deliberate plan for growth. My initial investment in learning about the Hadoop ecosystem is really paying dividends, but when I think about all those people at the Meetups stuck in evaluation mode, I feel their pain. Does it have to be such a struggle?</p>
+
+
+<p>The big challenge in my opinion is not that any one piece of the puzzle is too difficult. Any reasonably smart (or in my case stubborn) engineer can set themselves on the task of learning about a new technology once they know that it needs to be learned. The challenge with the Hadoop ecosystem is that it presents the newbie with the meta-problem of figuring out which of these tools are appropriate for their use case at all, and whether or not to even consider the problem today versus deferring it until later. In a way Facebook has it easy, because when you are adding 15TB of data per day, that decision is pretty much made for you.</p>
+
+
+<p>For all the companies sitting in the twilight between the gigabyte and the petabyte who don&#8217;t have Hadoop expertise in-house, there is a collection of free information to help guide people to the right solution space (Hadoop Tutorial, White Papers). These days, when I talk to people who are evaluating solutions to their big data problems, my advice to them is to break down their problems into a few discrete use cases and then work on ferreting out the technologies that are designed for that use case. Get a proof of concept to demonstrate that the technology can address your use case and convince yourself and others that you&#8217;re on the right track. Work toward putting something simple into production. Lather, rinse, and repeat. I am still in that cycle myself, as these days I&#8217;m exploring HBase and OpenTSDB to give me low-latency access to time series data and Mahout to do frequent item set mining, but that&#8217;s another article for another day.</p>
+
+
+<p><em>By Loren</em></p>
+
+
+<p><em><strong>This post is cross-posted from <a href="http://www.cloudera.com/blog/2011/12/how-i-found-hadoop/">Cloudera</a>.</strong></em></p>
+
+
+    </div>
+
+    <div class='tags'>
+      
       <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/big-data"><span class="label label-info">big-data</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      <a href="/blog/award-big-data.html">
+        <time>November 14, 2011</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/blog/award-big-data.html">USASearch Wins Government Big Data Solutions Award</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://search.usa.gov/program">USASearch</a> is the <a href="http://ctolabs.com/2011/11/gsa-usasearch-wins-2011-government-big-data-solutions-award/">winner</a> of the 2011 Government Big Data Solutions Award, announced at <a href="http://www.hadoopworld.com/">Hadoop World</a> in New York City on November 8, 2011.</p>
+
+
+<p>The <a href="http://ctolabs.com/big-data-award/">Big Data Award</a> was established to highlight innovative solutions and to facilitate the exchange of best practices, lessons learned, and creative ideas for addressing Big Data challenges. The Award judges saw the USASearch Program as a great example of solving Big Data problems to improve government agility and to provide better service for less.</p>
+
+
+<p>In line with the GSA&#8217;s cost-saving &#8220;build once, use many times&#8221; paradigm, USASearch provides <a href="http://search.usa.gov/affiliates">hosted search services</a> for <a href="http://www.usa.gov">USA.gov</a> and hundreds of other government websites. This is done in a cost-effective way, especially for the agencies involved, which receive these services at no cost.</p>
+
+
+<p>From the Award presentation: &#8220;The GSA is to be congratulated for their mission-focused, citizen-centered, open approach to a big data challenge and a resulting solution that improves the experience of a broad swath of users of federal services. On behalf of our judges and the many citizens who use this capability on a daily basis we say thank you, and congratulations on this well deserved recognition.&#8221;</p>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/research-and-news"><span class="label label-info">research-and-news</span></a>
+      
+      <a href="/tagged/big-data"><span class="label label-info">big-data</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      <a href="/blog/hadoop-for-rubyists.html">
+        <time>November 9, 2011</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/blog/hadoop-for-rubyists.html">Hadoop for Rubyists</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Is your MySQL groaning under too much data? Tired of waiting hours for analytics rake tasks?</p>
+
+
+<p><a href="http://pivotallabs.com/talks/150-hadoop-for-rubyists"><img class="img-polaroid" alt="image" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_luckbhCakH1qid15q.png"/></a></p>
+
+
+<p><a href="http://pivotallabs.com/talks/150-hadoop-for-rubyists">Listen to Loren</a>, USASearch&#8217;s senior technical architect, as he discusses how USASearch leveraged our existing Ruby codebase by building Hadoop Map/Reduce jobs using Hive and plugging in our own Ruby mappers/reducers.</p>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/big-data"><span class="label label-info">big-data</span></a>
       
     </div>
   </article>
