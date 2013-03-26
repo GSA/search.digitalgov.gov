@@ -4,7 +4,7 @@ module Jekyll
 
     def generate(site)
       site.tags.dup.each do |tag, posts|
-        paginate(site, tag, posts.reverse)
+        paginate(site, tag, posts.sort { |a, b| b.date <=> a.date })
       end
     end
 
