@@ -27,6 +27,8 @@ task :generate do
   puts "current sha: #{current_sha}"
   if !current_sha.empty? && previous_sha != current_sha
     system 'bundle exec jekyll --no-auto --no-server'
+    system 'bundle exec compass clean'
+    system 'bundle exec compass compile'
     File.open("last_commit.yml", 'w') { |f|  f.write({ sha: current_sha }.to_yaml) }
   end
 end
