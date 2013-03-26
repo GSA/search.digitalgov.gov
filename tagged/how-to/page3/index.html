@@ -78,459 +78,396 @@
   
   <article class='article'>
     <div class='time'>
-      <a href="/manual/govbox-jobs.html">
+      <a href="/manual/third-party.html">
+        <time>March 19, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/third-party.html">How to Add JavaScript for Your Third Party Web Services</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends?</p>
+
+
+<p>Log in to the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> and select the option, Third Party Tracking. Input the JavaScript code you&#8217;d like to call from your search results page. Click submit to send us your request. We&#8217;ll input your code for you and send you an email to confirm that we&#8217;ve done it.</p>
+
+
+<blockquote>
+<p><em><strong>Google Analytics tip:</strong></em> In your Google Analytics JavaScript, be sure to set your domain if you&#8217;ve requested <a href="/blog/how-to-add-our-code-to-your-website#cname.html">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
+<p>_gaq.push([&#8216;_setDomainName&#8217;, &#8216;commerce.gov&#8217;]);<br/><br/>For more information, read Google&#8217;s tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>.</p>
+<p><em><strong>ForeSee tip:</strong> </em>Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
+<ol><li>Email USASearch to <a href="/blog/how-to-add-our-code-to-your-website#cname.html">set up a CNAME</a> for search.{yourdomain}.gov.</li>
+<li>Update the files path in your Foresee code to use an absolute path instead of a relative path. <br/><br/>Find =&gt; &#8216;files&#8217;: &#8216;/fsrscripts/&#8217;,<br/><br/>and replace it with =&gt; &#8216;files&#8217;: &#8216;//{yourdomain}/fsrscripts/&#8217;,<br/><br/>in the following five files.<br/>a. foresee-trigger.js<br/>b. foresee-tracker.js<br/>c. foresee-alive.js<br/>d. foresee-qualifier.js<br/>e. foresee-test.js</li>
+<li>Ask ForeSee to send USASearch your foresee-trigger.js file.</li>
+<li>USASearch will send you an email to confirm that we&#8217;ve set up your CNAME and installed your foresee-trigger.js file.</li>
+</ol></blockquote>
+
+
+<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; 3rd Party Tracking</p>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      <a href="/blog/how-to-edit-your-domains.html">
+        <time>March 7, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/blog/how-to-edit-your-domains.html">How to Edit Your Domains</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize URLs with or without it. <br/><br/><strong>Entire Site</strong><br/><br/>List yoursite.gov (without www) to search your entire site, including all subdomains.<br/><br/><strong>Part of Site</strong><br/><br/>List <a href="http://www.yoursite.gov">www.yoursite.gov</a> to include only the primary domain.</p>
+
+
+<p>List subdomain.yoursite.gov to include subdomains.</p>
+
+
+<p>List yoursite.gov/folder to include folders.</p>
+
+
+<p>You cannot specify URLs.</p>
+
+
+<p><strong>Bulk Upload</strong></p>
+
+
+<p>Use the Bulk Upload option to upload a CSV file for portals or other websites with multiple domain configurations.</p>
+
+
+<blockquote>
+<p><strong><em>Troubleshooting Tip:</em> </strong>You can list folders up to three levels deep (e.g., yoursite.gov/folder1/folder2/folder3). If you want to limit results to folders deeper in your site hierarchy, add our <a href="/blog/how-to-add-our-search-to-your-website.html">USASearch Tag</a> and then use the <a href="/blog/how-to-create-collections-within-our-index.html">Collections</a> option in left-hand menu. E-mail us at <a href="mailto:usasearch@gsa.gov">USASearch@gsa.gov</a> for additional information.</p>
+<p><strong><em>Troubleshooting </em></strong><em><strong>Tip:</strong></em> You cannot explicitly specify subdomains or folders for exclusion. You can, however, exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</p>
+</blockquote>
+
+
+<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Domains</p>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      <a href="/blog/how-to-add-your-social-media-to-our-index.html">
+        <time>March 12, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/blog/how-to-add-your-social-media-to-our-index.html">How to Add Your Social Media to Our Index</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Provide us with the handles for your Facebook, Twitter, and YouTube accounts. Your &#8220;handle&#8221; is your agency’s pseudonym used within these services (e.g., HUD, HUDnews, and HUDchannel, respectively, for the U.S. Department of Housing and Urban Development). </p>
+
+
+<p>Provide us with the URL for your Flickr account. Most Flicker photostreams are in the photos folder (e.g., <a href="http://www.flickr.com/photos/hudopa">http://www.flickr.com/photos/hudopa</a> for HUD). Some are in the groups folder (e.g., <a href="http://www.flickr.com/groups/usagov">http://www.flickr.com/groups/usagov</a> for USA.gov).</p>
+
+
+<p><strong>Twitter</strong></p>
+
+
+<p>When you add your Twitter handle, we&#8217;ll automatically index your tweets. You can control the display of the tweets on the <a href="/blog/how-to-select-the-modules-that-appear-on-your-results.html">Results Modules</a> in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. To show the tweets as a GovBox on your results page, select the option to show as a GovBox on the Results Modules page.</p>
+
+
+<p>See the sample results page below that shows a recent tweet displayed on <a href="http://search.usa.gov/search?utf8=%E2%9C%93&amp;affiliate=snap-edconnection&amp;query=whole+grain">SNAP-Ed Connection</a> for a search on <em>pumpkin. </em></p>
+
+
+<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me7mccPN5z1qid15q.png"/></p>
+
+
+<p><strong>YouTube</strong></p>
+
+
+<p>When you add your YouTube handle, we&#8217;ll automatically index the <a href="/blog/how-to-add-your-rss-feeds-to-our-index.html">RSS feeds</a> for your YouTube channel. We include your uploaded videos and playlists in the index. You can control the display of the video feed in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
+
+
+<ol><li>Opt to show the feed as an inline GovBox on your results page by selecting the option to show as a GovBox on the Results Modules page.</li>
+<li>Opt to show the feed in the left navigation on your results page by selecting the option to show as a filter on the Sidebar page.</li>
+<li>Edit the default title, Videos, of the feed on the RSS page.</li>
+</ol>
+
+
+<p>See the sample results page below that shows video results displayed on the <a href="http://search.usa.gov/search?query=criminal+justice&amp;affiliate=nationalinstituteofjustice">National Institute of Justice</a> for a search on <em>criminal justice. </em></p>
+
+
+<p><em>Results page with videos shown in sidebar and as a GovBox</em></p>
+
+
+<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m6e4yyLQyG1qid15q.png"/></p>
+
+
+<p><em>Video results page shown when searcher opts to view videos</em></p>
+
+
+<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m6e4zdECkS1qid15q.png"/></p>
+
+
+<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Social Media</p>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      <a href="/blog/how-to-highlight-best-bets.html">
+        <time>April 3, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/blog/how-to-highlight-best-bets.html">How to Highlight Best Bets</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Want to highlight specific pages or information? Create a Best Bet, which appears above the standard web results when a searcher’s query matches the text of its metadata (e.g., title, description, or keywords).</p>
+
+
+<p>Some uses for Best Bets:</p>
+
+
+<ul><li>To respond to an emerging—or sudden interest, such as a weather emergency.</li>
+<li>To showcase select pages, such as in anticipation of events/holidays or following a site redesign.</li>
+<li>To highlight content that is scattered throughout the results pages or doesn’t rise to the top of the search results.</li>
+</ul>
+
+
+<p>There are two types of Best Bets.</p>
+
+
+<h2>Text Best Bets</h2>
+
+
+<p>Text Best Bets have the same look as a standard web result. They may be individually boosted or boosted in bulk. Up to three relevant best bets are listed under a heading, Recommended by {Site Name}.</p>
+
+
+<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m1wph1ENf81qid15q.png"/></p>
+
+
+<h2>Graphics Best Bets</h2>
+
+
+<p>Graphics Best Bets have one or two-column layouts and the ability to add an image. Up to one relevant best bet is listed under a heading, {Best Bet Title} by {Site Name}.</p>
+
+
+<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m1wpnb62Vs1qid15q.png"/></p>
+
+
+<p>These headings include a parameter for the site name you provide on the <a href="/blog/how-to-edit-your-site-information.html">Site Information</a> page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
+
+
+<h2>Filling Out the Form to Add Best Bets</h2>
+
+
+<p><strong><em>Publication Dates.</em> </strong>For both types of Best Bets (text only or graphics), you will have the choice to set a date to publish and a date to deactivate the entry. The default for initial publication is the day in which you input data and create a Best Bet. The default for deactivation is null, so it will stay up forever until you decide to take it down.</p>
+
+
+<p><strong><em>Adding Keywords.</em> </strong>When adding keywords, remember the title and site description is automatically available to be searched. If you add additional keywords, be sure not to be so general that the site comes up in ways that frustrate the searcher. For example, very general, unqualified words, such as <em>reports</em>, <em>business</em>, or an agency name may be so general that the Best Bet site shows up too frequently. Add specific phrases, as keywords, that are not duplicated in the title and description texts.</p>
+
+
+<p><strong><em>Images.</em> </strong>For a graphic Best Bet, you may create the feature with or without an image. Be sure to choose only images for which the display rights are not limited. The alt text and the attribution should both be included if you do add an image. The attribution URL links the attribution text to a site of your choice. Sometimes linking to the actual site where the image was found is not appropriate, so you can choose to use or not use this box.</p>
+
+
+<p><strong><em>Sort and Display.</em></strong> There is no limit as to the number of links that can be included. You can determine what the display order will be of text links within your graphic feature. Use the arrows to rearrange the display order of the links. Remember, you can choose a one or a two column display in the Layout box above. Columns are displayed in newspaper-style format, with an automatic break for columns depending on the number of links listed.</p>
+
+
+<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Best Bets</p>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/best-bets"><span class="label label-info">best-bets</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      <a href="/blog/how-to-set-up-a-new-account-and-site.html">
+        <time>March 19, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/blog/how-to-set-up-a-new-account-and-site.html">How to Set Up a New Account and Site</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>You can use USASearch to power the search box on your federal, state, local, tribal, or territorial government website—at no cost.</p>
+
+
+<p>Access to our hosted search service requires authentication and verification that you&#8217;re a government employee or contractor. </p>
+
+
+<p><strong>Sign In<br/></strong></p>
+
+
+<p>Log in to an existing account or register for a new account at <a href="http://usasearch.howto.gov"><a href="http://usasearch.howto.gov">http://usasearch.howto.gov</a></a>. Select the Sign In option in the upper right-hand corner and fill out your information.</p>
+
+
+<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_meb5z6o0nC1qid15q.png"/></p>
+
+
+<p>After you register, you will receive an automatic e-mail. Click on the link in the e-mail to verify that your e-mail address belongs to you.</p>
+
+
+<p>If you have a .gov or .mil address, you&#8217;ll be able to access your account immediately after you verify your e-mail.</p>
+
+
+<p>If you don&#8217;t have a .gov or .mil address, we&#8217;ll ask for additional information to confirm that you&#8217;re a government employee or contractor. We&#8217;ll notify you when your account is approved.</p>
+
+
+<p><strong>Add a Site</strong></p>
+
+
+<p>Select the option to Add a New Site.</p>
+
+
+<p>Add your basic site information (required) and content sources (optional).</p>
+
+
+<p>For more information about filling in this information, see our blog posts <a href="/blog/how-to-edit-your-site-information.html" rel="bookmark">How to Edit Your Site Information</a> and <a href="/blog/how-to-edit-your-domains.html" rel="bookmark">How to Edit Your Domains</a>.</p>
+
+
+<p>Use the options in the left-hand navigation to further customize the search experience for your site&#8217;s visitors.</p>
+
+
+<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m14t3xWL281qid15q.png"/></p>
+
+
+<p>When you&#8217;re ready to go live with your new search, you&#8217;ll need to <a href="/blog/how-to-add-our-code-to-your-website.html" rel="bookmark">add our code to your website</a>.</p>
+
+
+<blockquote>
+<p><em><strong>Did you know?</strong></em> When you add a new site with a single domain, we&#8217;ll populate content (such <a href="/blog/how-to-add-your-social-media-to-our-index.html">social media</a> handles, <a href="/blog/how-to-add-your-rss-feeds-to-our-index.html">RSS</a> feeds, <a href="/blog/how-to-add-your-urls-to-our-index.html">specific URLs and XML sitemaps</a>, and <a href="/blog/how-to-customize-the-look-and-feel-of-your-results-page.html">favicons</a>) that we can find from your homepage.</p>
+<p><em><strong>Troubleshooting tip:</strong> </em>If you don&#8217;t see the left-hand navigation, check the settings in your Adblock extension or try another browser.</p>
+<em><strong>Troubleshooting tip:</strong> </em>We cannot retrieve any passwords for any account, because we don’t have access to passwords. To reset your password:<ol><li>Go to the USASearch Login page at <a href="http://search.usa.gov/login"><a href="http://search.usa.gov/login">http://search.usa.gov/login</a></a></li>
+<li>Enter your e-mail address.</li>
+<li>Click on “Forgot your password?”</li>
+<li>You will be prompted to reset your password and it will be emailed to you.</li>
+</ol><p>If you have any problem resetting your password, e-mail us at <a href="mailto:usasearch@gsa.gov">USASearch@gsa.gov</a>.</p>
+</blockquote>
+
+
+<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Add Site</p>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      <a href="/manual/raw-logs.html">
         <time>March 20, 2013</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/manual/govbox-jobs.html">Help Searchers Find Jobs</a>
+      <a href="/manual/raw-logs.html">How to Access Your Raw Logs</a>
     </h1>
     
 
     <div class='post-content'>
-      <p>One of the most common search tasks is to look for current job openings. To help searchers quickly find relevant jobs we've created the Jobs GovBox.</p>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Raw Logs Access</p>
 
-<p>When you <a href="/blog/how-to-select-the-modules-that-appear-on-your-results.html">turn on the Jobs GovBox</a>, searchers looking for jobs on your site will see up to three relevant jobs listings on your results page.</p>
+<p>You can directly access your raw HTTP logs. The logs include valuable data on searches, clicks, and USASearch tag page loads.</p>
+
+<p>With the raw logs, you can conduct in-depth, ad hoc analyses to answer any questions that you can't answer using the standard analytics reports in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. You can also automatically integrate your search logs with your other reports and business processes.</p>
+
+<p>To access your raw logs, you'll first need to upload your public key on the Raw Logs Access page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
+
+<p>We'll set up your public key on our secure FTP servers and send you an email when your logs are available for download.</p>
+
+<p>Once your key is set up, you'll be able access your log files via secure FTP. We upload your logs each day, usually within several hours after midnight GMT. After a week, we purge the older files.</p>
+
+<p>We recommend that you set up a cron script to automatically download the latest files each day.</p>
+
+<h2>How to Generate a Key Pair on Unix</h2>
+
+<p>On Unix systems, you can generate a RSA public key with no passphrase by typing in the following command. Generate the key from the machine or server that you'll be using to download the logs. Once you've created a key, it'll be located at /home/user/.ssh/id_rsa.pub.</p>
+
+<pre><code>% cd ~
+% ssh-keygen -q -b 4096 -t rsa
+Enter file in which to save the key (/home/user/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+</code></pre>
+
+<h2>How to Generate a Key Pair on Windows</h2>
+
+<p>You can use <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a>, a free telnet/SSH client, to generate a public key on Windows. Download PuTTYgen.exe, Pageant.exe, and PSFTP.exe from the <a href="](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY Download Page</a>.</p>
+
+<p>Run PuTTYgen.exe.</p>
 
 <ul>
-<li><strong>Federal Department Websites</strong> If your website is affiliated with a specific federal department (e.g., Department of Commerce), the federal Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across all agencies within your department</em>.</li>
-<li><strong>Federal Agency or Office Websites</strong> If your website is affiliated with a specific federal agency (e.g., NOAA) or office (e.g, National Ocean Service), the federal Jobs GovBox will return relevant, location-and keyword-matched job openings <em>at your agency</em>.</li>
-<li><strong>State and Local Websites and Cross-Agency Portals</strong> If your website is a state or local government site or a federal cross-agency portal (e.g., USA.gov), the federal Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across all federal agencies</em>.</li>
+<li>Select SSH-2 RSA as the type of key to generate.</li>
+<li>Set the number of bits in the generated key to 2048.</li>
+<li>Select Generate. Move your mouse within the blank area to create random movements until the key is generated.</li>
+<li>Fill out your Key Comment, Key Passphrase, and Confirm Passphrase.</li>
+<li>Copy your <em>public</em> key from the string in the Public Key for Pasting into OpenSSH Authorized_keys File. Paste this key into the Raw Logs Access page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. (Note: Don't save this public key and send us the string copied from a text file. It adds lines in the file so it doesn't work.)</li>
+<li>Save your <em>private</em> key.</li>
 </ul>
 
 
-<p>Searchers will also see a direct link to <a href="http://www.usajobs.gov">USAJobs.gov</a> for all current job openings (specific to your department or agency, if applicable) , as shown in the sample below for a search on <a href="http://usdasearch.usda.gov/search?affiliate=usda&amp;query=jobs" title=""><em>jobs</em></a> on the USDA.gov.</p>
+<p>Run Pageant.exe. Select Add Key and upload your private key, the .ppk file.</p>
 
-<p><img class="img-polaroid" class="img-polaroid" alt="Search results for jobs on USDA.gov" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_inline_mhpcdd93lO1qz4rgp.png"/></p>
+<p>Run PSFTP.exe and type in the following. You can find your site's handle on the Site Information page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
 
-<hr />
-
-<p> <strong>Did you know?</strong> Are you a local or state government? Or a federal agency that doesn't post your jobs on USAJobs? We want your jobs data. E-mail us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#85;&#83;&#65;&#83;&#101;&#97;&#x72;&#99;&#x68;&#x40;&#x67;&#115;&#97;&#46;&#x67;&#111;&#x76;">&#x55;&#x53;&#x41;&#x53;&#101;&#97;&#114;&#x63;&#x68;&#64;&#103;&#115;&#97;&#46;&#103;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/govbox"><span class="label label-info">govbox</span></a>
-      
-      <a href="/tagged/jobs"><span class="label label-info">jobs</span></a>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      <a href="/blog/how-to-select-the-sidebar-options-that-appear-on-your.html">
-        <time>March 30, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/blog/how-to-select-the-sidebar-options-that-appear-on-your.html">How to Select the Sidebar Options that Appear on Your Results Page</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>Select which navigation options you’d like to appear in the sidebar on your results page. You may choose at any time to activate an option or deactivate it, or to rearrange the order of the options.</p>
-
-
-<h2>By Format or Topic</h2>
-
-
-<p>Check the option, Show in Sidebar, to allow searchers to see navigation options in the left-hand column of the results page.</p>
-
-
-<p>By default, searchers see the options for Everything (i.e., web pages) and Images. To hide Everything or Images, uncheck the option Show in Sidebar. To edit their names, type over the text in the display name fields.</p>
-
-
-<p><a href="/blog/how-to-add-your-rss-feeds-to-our-index.html">RSS</a> feeds and <a href="/blog/how-to-create-collections-within-our-index.html">Collections</a> that you’ve provided on their respective pages in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> are listed. By default, these options aren&#8217;t displayed. To display them, check the option to Show in Sidebar. To edit the name of a feed or collection, click on the hyperlink to update it.</p>
-
-
-<p>Use the arrows on the left to control the display order.</p>
-
-
-<p>Determine if you want to include a heading for your navigation options. If you want a heading, type your label in the label field. Keep your label consistent with the options you’re listing. If you don&#8217;t want a heading, leave the label field blank.</p>
-
-
-<p><em><strong>With Heading. </strong></em>See the sample results page below that shows the navigation options with a heading, labeled Search, displayed on <a href="http://www.usa.gov">USA.gov</a> for a search on <em>passport.</em></p>
-
-
-<p><em><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m1poxc8r0y1qid15q.png"/></em></p>
-
-
-<p><em><strong>Without Heading. </strong></em>See the sample results page below that shows the navigation options without a heading displayed on <a href="http://www.whitehouse.gov/">WhiteHouse.gov</a> for a search on <em>jobs.</em></p>
-
-
-<p><em><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m1pp3zFY2d1qid15q.png"/></em></p>
-
-
-<h2>By Time Period</h2>
-
-
-<p>By default, searchers may narrow results by time period for any <a href="/blog/how-to-add-your-rss-feeds-to-our-index.html">RSS</a> feeds that you’ve provided on the RSS page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. If you opt not to show the time period module, <em>all</em> facet options (time period and the other Dublin Core facets discussed below) are hidden.</p>
-
-
-<p>See the sample results page below that shows the time period options displayed on <a href="http://www.whitehouse.gov/">WhiteHouse.gov</a>. Results for <em>jobs</em> are narrowed to press articles in the last week.</p>
-
-
-<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m1ppt9oMt31qid15q.png"/></p>
-
-
-<h2>By Other Facets</h2>
-
-
-<p>For any of your <a href="/blog/how-to-add-your-rss-feeds-to-our-index.html">RSS</a> feeds that you&#8217;ve extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a> property, searchers may narrow results by the three facets.</p>
-
-
-<p>Determine if you want to customize the display names for your facets. If you leave the label field blank, we&#8217;ll display &#8220;Contributor,&#8221; &#8220;Publisher,&#8221; and &#8220;Subject&#8221; as the default names. Type your desired name in the label field to customize the display name. Keep your label consistent with the options you’re listing.</p>
-
-
-<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Sidebar</p>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/sidebar"><span class="label label-info">sidebar</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      <a href="/blog/a-punch-list-to-go-live-with-usasearch.html">
-        <time>November 26, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/blog/a-punch-list-to-go-live-with-usasearch.html">A Punch List to Go Live with USASearch</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>Your pre-launch checklist will be unique to your agency&#8217;s workflow, requirements, and deadlines. A typical punch list to go live with USASearch follows.</p>
-
-
-<h2>Connect Your Site to USASearch</h2>
-
-
-<p>Most agencies add these two <a href="/blog/how-to-add-our-code-to-your-website.html">snippets of code</a> to the template(s) in their content management systems (rather than adding them to individual pages).</p>
-
-
-<p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> </strong><strong>1. Does your search box point to USASearch? </strong>Update your search box form code point to USASearch so that, when users execute a search, they&#8217;ll see your USASearch-hosted results page.</p>
-
-
-<pre>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;<br/>    &lt;input id="affiliate" name="affiliate" type="hidden" value="<strong>YourSiteHandle</strong>" /&gt;<br/>    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;<br/>    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;<br/>    &lt;input name="commit" type="submit" value="Search" /&gt;<br/>&lt;/form&gt;</pre>
-
-
-<p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> </strong><strong>2. Do you have the USASearch Javascript tag on your webpages?</strong> This Javascript helps us <a href="/blog/how-to-add-your-urls-to-our-index.html">find your new and updated pages</a>. It also powers the <a href="/blog/how-to-implement-type-ahead-search.html">type-ahead search</a>.</p>
-
-
-<pre>&lt;script type="text/javascript"&gt;
-//&lt;![CDATA[
-      var usasearch_config = { siteHandle:"<strong>YourSiteHandle</strong>" };
-      var script = document.createElement("script");
-      script.type = "text/javascript";
-      script.src = "http://search.usa.gov/javascripts/remote.loader.js";
-      document.getElementsByTagName("head")[0].appendChild(script);
-//]]&gt;<br/>&lt;/script&gt;</pre>
-
-
-<h2>Double Check Your Content Sources</h2>
-
-
-<p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> </strong><strong>3. Have you told us which domain(s) you want to search?</strong> List one or more <a href="/blog/how-to-edit-your-domains.html">domains</a> that you want to search on the first page of web results.  Most agencies opt to leave out the &#8216;www&#8217; to include all subdomains (e.g., list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies—especially department-level portals—opt to also include their bureaus&#8217; websites (e.g., Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)</p>
-
-
-<p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> </strong><strong>4. Have you told us about your RSS feeds?</strong> We love <a href="/blog/how-to-add-your-rss-feeds-to-our-index.html">RSS feeds</a>. Tell us about all of your feeds, even if you opt not to show them  (see #7 below). They&#8217;re the quickest way for you to tell us about your new and updated content. Feeds also have well-structured titles, URLs, descriptions, and dates that we use to improve your search results page. (Tip: Preview your feeds from the RSS page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> to confirm that we&#8217;ve indexed your content.)</p>
-
-
-<p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> </strong><strong>5. Have you told us about your social media accounts?</strong> Flickr photostreams, tweets, and YouTube videos are a great way to highlight your recent content and to let searchers know about your <a href="/blog/how-to-add-your-social-media-to-our-index.html">social media</a> channels. Tell us about all of your social media, even if you opt not to show them (see #7 below). </p>
-
-
-<h2>Customize Your User Interface</h2>
-
-
-<p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> 6. Have you made the search results page look like your website?</strong> Customize the <a href="/blog/how-to-customize-the-look-and-feel-of-your-results-page.html">look and feel</a> (colors, fonts, favicon) and <a href="/blog/how-to-customize-the-header-and-footer-of-your-results.html">header and footer</a> of your search results page to create a seamless experience for users as they search and browse your website.</p>
-
-
-<p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> 7. Have you told us what to show on your results page? </strong>Tell us which <a href="/blog/how-to-select-the-modules-that-appear-on-your-results.html">results modules</a> (i.e., the stuff in the center of the page) and <a href="/blog/how-to-select-the-sidebar-options-that-appear-on-your.html">sidebar</a> options (i.e., the navigation in the left-hand column) you want to appear on your search results.</p>
-
-
-<h2>Set Up Nice-to-Have Features (Optional)</h2>
-
-
-<p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> 8. Have you masked your domain?  </strong>We offer <a href="/blog/how-to-add-our-code-to-your-website#cname.html">DNS masking</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov. </p>
-
-
-<p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> 9. Have you added the Javascripts for your other third party web services to your results page? </strong>If you have a <a href="/blog/how-to-add-javascript-for-your-third-party-web-services.html">third party service</a> running on your website, you likely want it to run on your results page. Agencies often include their 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends code, among others.</p>
-
-
-<h2>Don&#8217;t Forget SEO (Optional)</h2>
-
-
-<p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> 10. Have you optimized your site so we can find your content? </strong>We follow <a href="http://www.howto.gov/web-content/search/seo">search engine optimization</a> (SEO) best practices. Verify that you have a <a href="http://www.robotstxt.org">robots.txt</a> and an <a href="http://www.sitemaps.org">XML sitemap</a>. These two files are typically located in the root directory of your website (i.e., agency.gov/robots.txt and agency.gov/sitemap.xml, respectively). Also verify that your robots.txt file allows our user agent (usasearch) to access your public content.</p>
-
-
-<p><strong><img alt="Check box icon" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdskweoqc81qid15q.png"/> </strong><strong>11. Have you registered your site with the major commercial search engines? </strong>Register for both <a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a> and <a href="https://www.google.com/webmasters/tools/home">Google Webmaster Tools</a> to maximize the coverage of your content in their search results.</p>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      <a href="/blog/how-to-publish-top-searches-on-your-website.html">
-        <time>December 6, 2011</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/blog/how-to-publish-top-searches-on-your-website.html">How to Publish Top Searches on Your Website</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>Many websites list top or trending search terms (see, for example, <a href="http://www.google.com/trends">Google Trends</a> and <a href="http://www.twitter.com/search">Twitter</a>).</p>
-
-
-<p>Use our Top Searches widget to list top or trending terms, top task terms, or editorial recommendations on your website. It allows you to display up to 5 selected terms on your site, as shown in the sample screenshot below.<br/><br/><a href="http://www.usa.gov/"><img class="img-polaroid" alt="USA.gov search box and trends" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_lvlde501Dl1qid15q.png"/></a></p>
-
-
-<p><strong>How to publish the widget</strong></p>
-
-
-<p>Copy and paste the widget code where you&#8217;d like it to appear on your site (e.g., your home page, search results page, or all pages). Then, select a label for the widget and update the terms listed by entering terms and URLs.<br/><br/><strong>Why publish trends, picks, or tasks?</strong></p>
-
-
-<p>Its purpose is part informational, part navigational, and part marketing. Overall, you can use this tool to highlight what is on the minds of your website visitors. It can help visitors navigate to useful content. It also can encourage repeat visits by providing interest on the homepage itself.<br/><br/>First decide how you want to use it and how you are going to label it. It doesn’t have to be Top Searches, but you must determine the focus and intention. Some choices are:<br/><br/><strong>Top trends</strong></p>
-
-
-<p>You might use this feature to show what the most popular topics are and how they trend over a day, or a week, or longer.</p>
-
-
-<ul><li>Trends should be a reflection of real search trends or high volume searches within a time period.</li>
-<li>Look at your query logs—which are updated in real time in the Affiliate Center—and see how often the top queries change and how often you want to report on these changes. How frequently do you want to update these? Daily, weekly, over weekends and holidays? What are your staff resources?</li>
-<li>Look also to see how varied or interesting the top queries are. Do they merit highlighting? Do they increase the interest for your site and encourage repeat visitors, or are they the same queries each day or week?</li>
-<li>How good are your results for these searches? Does the search term you list provide navigation to good content on your site?</li>
-</ul>
-
-
-<p><strong>Editors’ picks</strong><br/><br/>You might use Editors’ Picks to highlight your new content, or most interesting but unknown content, or the best content out of multiple choices.</p>
-
-
-<ul><li>Picks can be updated irregularly, and can be less labor-intensive than Top Trends.</li>
-<li>Do you have enough content, or release enough new content, to show editorially curated choices?</li>
-<li>Do you want to educate your users as to the breadth or depth of some content on your website? Or bring attention to under-used but valuable content?</li>
-<li>Do you have clusters of information that are time sensitive, such as press releases or reports that you want to bring attention to?</li>
-</ul>
-
-
-<p><strong>Top tasks</strong><br/><br/>You might use this feature to show what the top tasks are that people come to your site to perform.</p>
-
-
-<ul><li>These may not change often or may change only seasonally and so while they should be monitored, they may still require less staff time to maintain.</li>
-<li>A Top Tasks list becomes a navigational tool designed to get the visitor quickly to the task at hand by providing instant recognition of what the task is called and then quick navigation to the content. </li>
-</ul>
-
-
-<p>Choose what your one focus is: Top Trends, Editors’ Picks, Top Tasks, or whatever works for your particular agency site. Pick your label, and your intention, and then make sure the terms you select reflect this one, labeled focus. It should be clear what you are providing. Keep your label consistent with the terms you&#8217;re listing.<br/><br/>For each individual term listed in the string of terms, you will have the choice of what to link it to: a specific site or a search results page.</p>
-
-
-<p><img class="img-polaroid" alt="Affiliate Center page to enter top searches" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_lvle15DwKM1qid15q.png"/></p>
-
-
-<p>Search the term selected and see what the search results look like.</p>
-
-
-<ul><li>If the search results page is good, has the best content at the top where the user will recognize it, then you don’t have anything else to do.  Leave the URL box in the Top Searches tool blank.</li>
-<li>If the search results are a mix, not completely awful but not going to provide what you want used, then you may have to boost some content to the top of the search results.  The user can then instantly see what to click on. Leave the URL box in the Top Searches tool blank.</li>
-<li>If the search results are dismal or very confusing, which a boosted site won’t fix, then in the tool add the URL of the site you want navigated to. The search results page will be bypassed and take the user directly to the site you want used.</li>
-</ul>
-
-
-<p>Finally, there is a character limit. So you may need to choose the terms you use with this space limitation in mind. You may want to put in only 3 or 4 terms and not fill the available 5 slots.</p>
-
-
-<p>For more information about using Top Searches, see our blog post, <a href="/blog/trending-searches.html">Trending Searches</a>.</p>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/top-searches"><span class="label label-info">top-searches</span></a>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      <a href="/blog/how-to-analyze-your-page-views.html">
-        <time>March 22, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/blog/how-to-analyze-your-page-views.html">How to Analyze Your Page Views</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>The Page Views page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the number of times your search results page is viewed by searchers.</p>
-
-
-<p>For example, if a searcher is on <a href="http://www.usa.gov/">USA.gov</a> and does a search for <em>cribs</em>, the loading of this results page is recorded as a web page view. From this initial results page the searcher can click around to change the filter from web to images, recalls, FAQs, blog posts, etc. Each time the filter changes, a new page is loaded and it is recorded as a page view.</p>
-
-
-<div class="text ">From these data, you can get answers to questions like:<br/><ol><li>Which type of search do my users use more: web, image, RSS, or collections?</li>
-<li>Do my searchers use the time-based filters for RSS feeds?</li>
-<li>Which of my document collections is most popular?</li>
-<li>Which of my RSS feeds is most popular?</li>
-</ol><p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Page Views</p>
-</div>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      <a href="/blog/how-to-edit-your-site-information.html">
-        <time>March 2, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/blog/how-to-edit-your-site-information.html">How to Edit Your Site Information</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><strong>Site Name (Required) </strong></p>
-
-
-<p>Tell us the name of your website. Searchers see your site name on the results page, such as in the page title or in the best bets. We recommend using the plain language name for your agency or site, e.g. Department of Commerce.</p>
-
-
-<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m0f0fwvJOy1qid15q.png"/></p>
-
-
-<p><strong>Site Handle (Required)</strong></p>
-
-
-<p>We use your site handle in the HTTP request to specify displaying your customized settings. We recommend making this handle short and unique, e.g. doc or commerce.</p>
-
-
-<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m0f0dzAGoY1qid15q.png"/></p>
-
-
-<p><strong>Site ID (System Generated)</strong></p>
-
-
-<p>We assign a unique numeric ID to your site. We use this ID for some back-end code. You also see this ID in the URL for your site in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
-
-
-<p><strong>Site Language (Required)</strong></p>
-
-
-<p>Choose a language for your site, English or Spanish. We will only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language.</p>
-
-
-<p><strong>Emergency Delete</strong></p>
-
-
-<ul><li>Use this feature to remove a single URL from the results on your site. Use it for emergency reasons only.</li>
-<li>It is not meant to fix the results for entire site, such as for launch or redesign problems. For tips on how to fix these problems, view our <a href="/blog/checklist-for-a-successful-website-redesign.html" rel="bookmark">Checklist for a Successful Website Redesign</a>.</li>
-<li>Entire the full path of the URL, e.g. use <a href="http://www.usa.gov/Citizen/Topics/Benefits.shtml,">http://www.usa.gov/Citizen/Topics/Benefits.shtml,</a> not usa.gov/citizen/topics.</li>
-<li>Note that a list is created, below the entry box, of all deleted URLs. You can undo the &#8220;delete” action in real time at any time.</li>
-</ul>
-
-
-<blockquote>
-<p><em><strong>Troubleshooting Tip:</strong> </em>If you later need to edit your site handle or switch from one language to the other, e-mail us at <a href="mailto:usasearch@gsa.gov">USASearch@gsa.gov</a>.</p>
-</blockquote>
-
-
-<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Site Information</p>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/site-information"><span class="label label-info">site-information</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      <a href="/blog/how-to-analyze-your-monthly-reports.html">
-        <time>May 3, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/blog/how-to-analyze-your-monthly-reports.html">How to Analyze Your Monthly Reports</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>The Monthly Reports page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the total number of searches and click throughs. A click through is recorded each time a searcher clicks on a results link. Data start from the time your agency started using USASearch (but no further back than 2009).</p>
-
-
-<p>Data are shown for the present month-to-date by default. Change the time period by selecting a different year or month.</p>
-
-
-<p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV link to download the list as a comma delimited file. The CSV file contains three columns.</p>
-
-
-<ol><li>Query—The search term or phrase.</li>
-<li>Raw count—Total number of times the query was submitted.</li>
-<li>IP-deduped—Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of &#8220;real,&#8221; human traffic.</li>
-</ol>
-
-
-<blockquote>
-<p><em><strong>Did you know?</strong> </em>On the first of each month, we email you a report with data on the previous month&#8217;s queries, clicks, and top search terms.</p>
-</blockquote>
-
-
-<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Monthly Reports</p>
-
+<pre><code>open YourSiteHandle@198.61.238.46
+</code></pre>
 
     </div>
 
@@ -539,6 +476,73 @@
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
       
       <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      <a href="/blog/how-to-add-your-rss-feeds-to-our-index.html">
+        <time>March 7, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/blog/how-to-add-your-rss-feeds-to-our-index.html">How to Add Your RSS Feeds to Our Index</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Would you like searchers to be able to search your news content and narrow results by date? Tell us the location and name of your RSS feeds. We will index the content on the feeds so that it appears in your results within minutes.</p>
+
+
+<p><em><strong>Example</strong></em></p>
+
+
+<p>The U.S. Courts publishes an RSS feed at <a href="http://www.uscourts.gov/rss/InsideTheJudiciary.rss">uscourts.gov/rss/InsideTheJudiciary.rss</a>.</p>
+
+
+<p><a href="http://www.uscourts.gov/rss/InsideTheJudiciary.rss"><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m0j0q1BUvw1qid15q.png"/></a></p>
+
+
+<p>The U.S. Courts added this RSS feed to their search configuration by using the RSS option in the left-hand menu of the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
+
+
+<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m4l7qfv91n1qid15q.png"/></p>
+
+
+<p><em>Note: </em>Click on the preview option to see the content we have indexed for each feed.</p>
+
+
+<p>On the <a href="http://search.uscourts.gov/search/news?affiliate=uscourts.gov&amp;channel=76&amp;query=judge">U.S. Courts search results page</a>, searchers can refine their results to see only news results and to narrow by date.</p>
+
+
+<p><a href="http://search.uscourts.gov/search/news?affiliate=uscourts.gov&amp;channel=76&amp;query=judge"><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m0j0ufVg8O1qid15q.png"/></a></p>
+
+
+<blockquote>
+<div class="side-note"><em><strong> Troubleshooting tip:</strong> </em>Feeds must include a title, link, description, and publication date for each item. We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:
+<ul><li>RSS 2.0&#160;<a href="http://www.rssboard.org/rss-specification">specification</a> and <a href="http://www.rssboard.org/rss-validator/">validator</a></li>
+<li><a href="http://www.atomenabled.org/developers/syndication/">Atom syndication format</a></li>
+<li><a href="http://feedvalidator.org">Feed Validator</a> (Atom &amp; RSS)</li>
+</ul></div>
+<div class="side-note"><em><strong><br/>Troubleshooting tip:</strong></em> We index the content on your RSS feeds from the time you input them in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don’t need to coordinate with us.<br/><br/></div>
+<div class="side-note"><em><strong>Did you know?</strong> </em>When you provide us with your YouTube and Twitter handles on the <a href="/blog/how-to-add-your-social-media-to-our-index.html">Social Media</a> page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>, we’ll automatically index the RSS feed for your YouTube channel and tweets.<br/><br/></div>
+<div class="side-note"><em><strong>Did you know? </strong></em>For any feeds that you&#8217;ve extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a> property, searchers may narrow results by these facets in the <a href="/blog/how-to-select-the-sidebar-options-that-appear-on-your.html">sidebar</a> on the results page.</div>
+</blockquote>
+
+
+<div class="side-note"><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; RSS</div>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/rss"><span class="label label-info">rss</span></a>
       
     </div>
   </article>
