@@ -135,30 +135,30 @@ title: USASearch
         href="http://api.usa.gov/jobs/search.json?query=jobs+at+the+va&amp;organization_id=AF">http://api.usa.gov/jobs/search.json?query=jobs+at+the+va&amp;organization_id=AF</a>).
   </p>
 
-  <h3>Hl [highlighting]</h2>
+  <h3>Hl [highlighting]</h3>
     <p>No highlighting is included by default. Use 'hl=1' to highlight terms in the position title
       that match terms in the user's search. Highlighted terms are surrounded with &lt;em&gt;
       tags.</p>
 
-    <h3>Size</h3>
+  <h3>Size</h3>
 
-    <p>Specifies how many results are returned (up to 100 at a time).</p>
+  <p>Specifies how many results are returned (up to 100 at a time).</p>
 
-    <h3>From</h3>
+  <h3>From</h3>
 
-    <p>Specifies the starting record.</p>
+  <p>Specifies the starting record.</p>
 
-<a name="data-sources"></a><h2>Data Sources</h2>
+  <a name="data-sources"></a><h2>Data Sources</h2>
 
-    <p>Data are normalized across government job listings. Federal government jobs are from <a href="http://www.usajobs.gov">USAJobs</a>. State and local government jobs are from a variety of sources.</p>
+  <p>Data are normalized across government job listings. Federal government jobs are from <a href="http://www.usajobs.gov">USAJobs</a>. State and local government jobs are from a variety of sources.</p>
 
-    <p>Are you with a local or state government agency? Or a federal agency that doesn't post jobs on USAJobs? <a href="mailto:usasearch@gsa.gov">E-mail us</a> to let us know where you publish your jobs data. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
+  <p>Are you with a local or state government agency? Or a federal agency that doesn't post jobs on USAJobs? <a href="mailto:usasearch@gsa.gov">E-mail us</a> to let us know where you publish your jobs data. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
 
-    <a name="what-it-returns"></a><h2>What it Returns</h2>
+  <a name="what-it-returns"></a><h2>What it Returns</h2>
 
-    <p>Below is a sample JSON response for <a
-        href="http://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+albany+ny">http://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+albany+ny</a>.
-    </p>
+  <p>Below is a sample JSON response for <a
+      href="http://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+albany+ny">http://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+albany+ny</a>.
+  </p>
 <pre><code>[
   {
   id: "327717800",

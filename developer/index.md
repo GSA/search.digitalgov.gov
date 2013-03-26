@@ -1,37 +1,28 @@
 ---
-layout: default
+layout: article
 title: USASearch
 ---
+# USASearch APIs
 
-<!-- MAIN CONTENT -->
-<article class="article">
+Data underpins everything we do to provide a great search experience on government websites.
+In line with the White House's
+[Digital Government Strategy](http://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html), we're making our data open through APIs.
 
-    <h1>USASearch APIs</h1>
+USASearch.HowTo.gov/Developer connects you&mdash;software developers, researchers, and our
+government customers&mdash;with the tools you need to unlock the government data that
+underpins our hosted search service.
 
-    <p>Data underpins everything we do to provide a great search experience on government websites.
-      In line with the White House's <a
-          href="http://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html">Digital
-        Government Strategy</a>, we're making our data open through APIs.</p>
+## For the Public
 
-    <p>USASearch.HowTo.gov/Developer connects you&mdash;software developers, researchers, and our
-      government customers&mdash;with the tools you need to unlock the government data that
-      underpins our hosted search service.</p>
+<b>[Jobs](jobs.html)</b>&mdash;This API returns job openings across federal, state, and local government agencies.
 
-    <h2>For the Public</h2>
+<b>[Recalls](recalls.html)</b>&mdash;This API returns food, car, and product safety data and recalls.
 
-    <p><b><a href="jobs.html">Jobs</a></b>&mdash;This API returns job openings across federal, state, and local government agencies.</p>
+Visit [USA.gov/Developer](http://www.usa.gov/developer) for a full list of USA.gov's APIs and data feeds available to the public.
 
-    <p><b><a href="recalls.html">Recalls</a></b>&mdash;This API returns food, car, and product safety data and recalls.</p>
+## For Government Customers
 
-    <p>Visit <a href="http://www.usa.gov/developer">USA.gov/Developer</a> for a full list of
-      USA.gov's APIs and data feeds available to the public.</p>
-
-    <h2>For Government Customers</h2>
-
-    <p><b><a href="http://usasearch.howto.gov/post/36743437542/how-and-when-to-use-the-search-api">Search
-      Results</a></b>&mdash;Provides USASearch customers their search results in XML, JSON, or
-      JSON-P. This API is only available for use on official government websites. <a
-          href="https://search.usa.gov/affiliates/home">Sign in</a> is required.</p>
-
-</article>
+<b>[Search Results](/blog/how-and-when-to-use-the-search-api.html)</b>&mdash;Provides USASearch customers their search results in XML, JSON, or
+JSON-P. This API is only available for use on official government websites.
+[Sign in](https://search.usa.gov/affiliates/home) is required.
 

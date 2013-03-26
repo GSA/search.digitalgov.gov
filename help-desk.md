@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: article
 title: "How To Manual and HelpDesk"
 ---
 
