@@ -18,9 +18,9 @@ end
 
 task :generate do
   puts "pulling the latest update on source"
-  system 'git pull origin source'
-  system 'git reset --mixed origin/source'
   system 'git clean -fd'
+  system 'git checkout -- .'
+  system 'git pull origin source'
   previous_sha = YAML.load(File.open("last_commit.yml"))[:sha] rescue nil
   puts "previous sha: #{previous_sha}"
   current_sha = `git log --format=%H -n1`.strip
