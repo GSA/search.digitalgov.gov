@@ -17,11 +17,8 @@ task :setup do
 end
 
 task :generate do
-  puts "pulling the latest update on source"
-  system 'git clean -fd'
-  system 'git checkout -- .'
-  system 'git pull origin source'
-  previous_sha = YAML.load(File.open("last_commit.yml"))[:sha] rescue nil
+  puts 'comparing git SHA'
+  previous_sha = YAML.load(File.open('last_commit.yml'))[:sha] rescue nil
   puts "previous sha: #{previous_sha}"
   current_sha = `git log --format=%H -n1`.strip
   puts "current sha: #{current_sha}"
@@ -29,7 +26,7 @@ task :generate do
     system 'bundle exec jekyll --no-auto --no-server'
     system 'bundle exec compass clean'
     system 'bundle exec compass compile'
-    File.open("last_commit.yml", 'w') { |f|  f.write({ sha: current_sha }.to_yaml) }
+    File.open('last_commit.yml', 'w') { |f|  f.write({ sha: current_sha }.to_yaml) }
   end
 end
 
@@ -40,7 +37,7 @@ task :deploy => :generate do
     puts "Updating master branch using SHA: #{current_sha}"
     system 'git add -A'
     system "git commit -m 'Update pages using SHA: #{current_sha.slice(0, 10)}'"
-    system "git push origin master"
+    system 'git push origin master'
   end
 end
 
