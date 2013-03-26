@@ -8,8 +8,9 @@ current_sha = nil
 desc 'setup jekyll site for deployment'
 task :setup do
   rm_r Dir.glob("#{deploy_dir}")
-  system "git clone --single-branch git@usasearch-github:usasearch/usasearch.github.com.git #{deploy_dir}"
+  system "git clone -b master git@usasearch-github:usasearch/usasearch.github.com.git #{deploy_dir}"
   cd "#{deploy_dir}" do
+    system 'git branch -rd origin/source'
     system 'git config user.name USASearch'
     system 'git config user.email "USASearch@gsa.gov"'
   end
