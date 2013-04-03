@@ -1,4 +1,5 @@
 ---
+permalink: /blog/award-affirm.html
 category: quote
 layout: post
 title: "Congratulations to Mary Sue Deffily, Program..."

@@ -1,4 +1,5 @@
 ---
+permalink: /customers/bia.html
 layout: post
 title: "Indian Affairs Praises USASearch Affiliate Program"
 tags: testimonial 

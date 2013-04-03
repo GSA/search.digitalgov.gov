@@ -1,4 +1,5 @@
 ---
+permalink: /customers/White-House.html
 category: quote
 layout: post
 title: "We encourage the use of shared services across..."
