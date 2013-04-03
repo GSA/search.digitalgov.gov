@@ -78,14 +78,14 @@
   <article class='article'>
     <div class='time'>
       
-      <a href="/blog/i-didnt-try-to-grow-a-bigger-ox-how-i-found-hadoop.html">
+      <a href="/blog/hadoop-bigger-ox.html">
         <time>December 28, 2011</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/blog/i-didnt-try-to-grow-a-bigger-ox-how-i-found-hadoop.html">I Didn’t Try to Grow a Bigger Ox: How I Found Hadoop</a>
+      <a href="/blog/hadoop-bigger-ox.html">I Didn’t Try to Grow a Bigger Ox: How I Found Hadoop</a>
     </h1>
     
 
@@ -99,7 +99,7 @@
 <p>As I contemplated how doomed I would be should traffic levels increase much more, I remember wondering to myself, &#8220;How does Google deal with all that data?&#8221; The answer came to me in the form of the Google File System (GFS) paper and later the MapReduce paper, both from Google. It dawned on me that because Google was forced to solve a much larger problem, they had come up with an elegant solution for a whole range of more modest data problems running on commodity hardware. But it wouldn&#8217;t be until 2010 that I would get to work with this technology firsthand.</p>
 
 
-<p>As I wrote in an <a href="/blog/adopting-apache-hadoop-in-the-federal-government.html" target="_blank">earlier article</a>, I started re-architecting <a href="http://usasearch.howto.gov">USASearch</a>, the U.S. government&#8217;s search system, in 2009 based on a solution stack of free, open source software including Ruby on Rails, Solr, and MySQL. A wave of déja vu hit me as I started worrying about what to do with the growing mountain of data piling up in MySQL and our increasing need to analyze it in different ways. I had heard that a new company called Cloudera, founded by some big data people from Yahoo!, Google, and Facebook, was making Hadoop available for the masses in a reliable distribution, much in the same way that RedHat did for Linux. Curiosity got the best of me and I bought the newly minted <em>Hadoop: The Definitive Guide</em> from O&#8217;Reilly. The most insightful part of the book to me was the very first sentence. It&#8217;s a quote from Grace Hopper: &#8220;In pioneer days, they used oxen for heavy pulling, and when one ox couldn&#8217;t budge a log, they didn&#8217;t try to grow a bigger ox.&#8221; I didn&#8217;t want to grow a bigger server; I wanted to harness a bunch of small servers together to work in unison. The more I learned the more curious I got, so I started reading more. And that&#8217;s when I hit my first roadblock.</p>
+<p>As I wrote in an <a href="/blog/adopting-hadoop.html" target="_blank">earlier article</a>, I started re-architecting <a href="http://usasearch.howto.gov">USASearch</a>, the U.S. government&#8217;s search system, in 2009 based on a solution stack of free, open source software including Ruby on Rails, Solr, and MySQL. A wave of déja vu hit me as I started worrying about what to do with the growing mountain of data piling up in MySQL and our increasing need to analyze it in different ways. I had heard that a new company called Cloudera, founded by some big data people from Yahoo!, Google, and Facebook, was making Hadoop available for the masses in a reliable distribution, much in the same way that RedHat did for Linux. Curiosity got the best of me and I bought the newly minted <em>Hadoop: The Definitive Guide</em> from O&#8217;Reilly. The most insightful part of the book to me was the very first sentence. It&#8217;s a quote from Grace Hopper: &#8220;In pioneer days, they used oxen for heavy pulling, and when one ox couldn&#8217;t budge a log, they didn&#8217;t try to grow a bigger ox.&#8221; I didn&#8217;t want to grow a bigger server; I wanted to harness a bunch of small servers together to work in unison. The more I learned the more curious I got, so I started reading more. And that&#8217;s when I hit my first roadblock.</p>
 
 
 <p>I think people who have been working with Hadoop technologies for years and years sometimes forget just how rich and diverse the big data software ecosystem has become, and how daunting it can be to folks approaching it for the first time. When people at the Meetups say they are evaluating solutions to their data scaling problem, the answers they hear sound something like this: &#8220;Just use Hadoop Hive Pig Mahout Avro HBase Cassandra Oozie Sqoop Flume ZooKeeper Cascading NoSQL RCFile. Oh, almost forgot…cloud.&#8221;</p>
@@ -218,14 +218,49 @@
   <article class='article'>
     <div class='time'>
       
-      <a href="/blog/adopting-apache-hadoop-in-the-federal-government.html">
+      <a href="/blog/hadoop-rubyists.html">
+        <time>November 9, 2011</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/blog/hadoop-rubyists.html">Hadoop for Rubyists</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Is your MySQL groaning under too much data? Tired of waiting hours for analytics rake tasks?</p>
+
+
+<p><a href="http://pivotallabs.com/talks/150-hadoop-for-rubyists"><img class="img-polaroid" alt="image" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_luckbhCakH1qid15q.png"/></a></p>
+
+
+<p><a href="http://pivotallabs.com/talks/150-hadoop-for-rubyists">Listen to Loren</a>, USASearch&#8217;s senior technical architect, as he discusses how USASearch leveraged our existing Ruby codebase by building Hadoop Map/Reduce jobs using Hive and plugging in our own Ruby mappers/reducers.</p>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/big-data"><span class="label label-info">big-data</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <a href="/blog/adopting-hadoop.html">
         <time>June 16, 2011</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/blog/adopting-apache-hadoop-in-the-federal-government.html">Adopting Apache Hadoop in the Federal Government</a>
+      <a href="/blog/adopting-hadoop.html">Adopting Apache Hadoop in the Federal Government</a>
     </h1>
     
 

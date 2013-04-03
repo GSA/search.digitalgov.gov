@@ -156,14 +156,90 @@ Enter same passphrase again:
       
       <span>Last updated on:</span>
       
-      <a href="/blog/how-to-analyze-your-trending-queries.html">
+      <a href="/manual/raw-logs.html">
+        <time>March 20, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/raw-logs.html">How to Access Your Raw Logs</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Raw Logs Access</p>
+
+<p>You can directly access your raw HTTP logs. The logs include valuable data on searches, clicks, and USASearch tag page loads.</p>
+
+<p>With the raw logs, you can conduct in-depth, ad hoc analyses to answer any questions that you can't answer using the standard analytics reports in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. You can also automatically integrate your search logs with your other reports and business processes.</p>
+
+<p>To access your raw logs, you'll first need to upload your public key on the Raw Logs Access page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
+
+<p>We'll set up your public key on our secure FTP servers and send you an email when your logs are available for download.</p>
+
+<p>Once your key is set up, you'll be able access your log files via secure FTP. We upload your logs each day, usually within several hours after midnight GMT. After a week, we purge the older files.</p>
+
+<p>We recommend that you set up a cron script to automatically download the latest files each day.</p>
+
+<h2>How to Generate a Key Pair on Unix</h2>
+
+<p>On Unix systems, you can generate a RSA public key with no passphrase by typing in the following command. Generate the key from the machine or server that you'll be using to download the logs. Once you've created a key, it'll be located at /home/user/.ssh/id_rsa.pub.</p>
+
+<pre><code>% cd ~
+% ssh-keygen -q -b 4096 -t rsa
+Enter file in which to save the key (/home/user/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+</code></pre>
+
+<h2>How to Generate a Key Pair on Windows</h2>
+
+<p>You can use <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a>, a free telnet/SSH client, to generate a public key on Windows. Download PuTTYgen.exe, Pageant.exe, and PSFTP.exe from the <a href="](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY Download Page</a>.</p>
+
+<p>Run PuTTYgen.exe.</p>
+
+<ul>
+<li>Select SSH-2 RSA as the type of key to generate.</li>
+<li>Set the number of bits in the generated key to 2048.</li>
+<li>Select Generate. Move your mouse within the blank area to create random movements until the key is generated.</li>
+<li>Fill out your Key Comment, Key Passphrase, and Confirm Passphrase.</li>
+<li>Copy your <em>public</em> key from the string in the Public Key for Pasting into OpenSSH Authorized_keys File. Paste this key into the Raw Logs Access page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. (Note: Don't save this public key and send us the string copied from a text file. It adds lines in the file so it doesn't work.)</li>
+<li>Save your <em>private</em> key.</li>
+</ul>
+
+
+<p>Run Pageant.exe. Select Add Key and upload your private key, the .ppk file.</p>
+
+<p>Run PSFTP.exe and type in the following. You can find your site's handle on the Site Information page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
+
+<pre><code>open YourSiteHandle@198.61.238.46
+</code></pre>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
+      <a href="/manual/trending-queries.html">
         <time>November 5, 2012</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/blog/how-to-analyze-your-trending-queries.html">How to Analyze Your Trending Queries</a>
+      <a href="/manual/trending-queries.html">How to Analyze Your Trending Queries</a>
     </h1>
     
 
@@ -211,14 +287,14 @@ Enter same passphrase again:
       
       <span>Last updated on:</span>
       
-      <a href="/blog/how-to-analyze-your-queries-with-low-click-thru-rates.html">
+      <a href="/manual/low-ctr.html">
         <time>November 5, 2012</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/blog/how-to-analyze-your-queries-with-low-click-thru-rates.html">How to Analyze Your Queries with Low Click-Thru Rates</a>
+      <a href="/manual/low-ctr.html">How to Analyze Your Queries with Low Click-Thru Rates</a>
     </h1>
     
 
@@ -229,7 +305,7 @@ Enter same passphrase again:
 <p>You&#8217;ll see a list of up to 10 terms that returned search results, but resulted in a click less than 20 percent of the time over the past day or so. In other words, fewer than one in five people who searched for that topic clicked on a search result. (Terms must have been searched by at least 10 unique searchers per day to be included in this list.)</p>
 
 
-<p>Use this report to identify issues with coverage. Create a <a href="/blog/how-to-highlight-best-bets.html">Best Bet</a>, add pages that may be missing from the results, or do both to improve recall. Incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results. </p>
+<p>Use this report to identify issues with coverage. Create a <a href="/manual/best-bets.html">Best Bet</a>, add pages that may be missing from the results, or do both to improve recall. Incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results. </p>
 
 
 <p>Click on any linked word or the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png"/> symbol in the list, and you&#8217;ll be taken to a Query Timeline chart. There you&#8217;ll be able to select a period of time for the term, and you can also add a second query for comparison.</p>
@@ -239,7 +315,7 @@ Enter same passphrase again:
 
 
 <blockquote>
-<p><em><strong>Did you know?</strong> </em>This low click-thru report lists only those terms that returned search results. Visit the <a href="/blog/how-to-analyze-your-query-logs.html">Query Logs</a> page to see the top queries that returned no results.</p>
+<p><em><strong>Did you know?</strong> </em>This low click-thru report lists only those terms that returned search results. Visit the <a href="/manual/query-logs.html">Query Logs</a> page to see the top queries that returned no results.</p>
 </blockquote>
 
 
@@ -262,14 +338,14 @@ Enter same passphrase again:
       
       <span>Last updated on:</span>
       
-      <a href="/blog/how-to-analyze-your-click-stats.html">
+      <a href="/manual/click-stats.html">
         <time>October 24, 2012</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/blog/how-to-analyze-your-click-stats.html">How to Analyze Your Click Stats</a>
+      <a href="/manual/click-stats.html">How to Analyze Your Click Stats</a>
     </h1>
     
 
@@ -323,14 +399,14 @@ Enter same passphrase again:
       
       <span>Last updated on:</span>
       
-      <a href="/blog/how-to-analyze-your-monthly-reports.html">
+      <a href="/manual/monthly-reports.html">
         <time>May 3, 2012</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/blog/how-to-analyze-your-monthly-reports.html">How to Analyze Your Monthly Reports</a>
+      <a href="/manual/monthly-reports.html">How to Analyze Your Monthly Reports</a>
     </h1>
     
 
@@ -374,14 +450,14 @@ Enter same passphrase again:
       
       <span>Last updated on:</span>
       
-      <a href="/blog/how-to-analyze-your-query-logs.html">
+      <a href="/manual/query-logs.html">
         <time>May 3, 2012</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/blog/how-to-analyze-your-query-logs.html">How to Analyze Your Query Logs</a>
+      <a href="/manual/query-logs.html">How to Analyze Your Query Logs</a>
     </h1>
     
 
@@ -422,7 +498,7 @@ Enter same passphrase again:
 <p>If there are any terms that were searched by 10 unique searchers within the period of a day and returned no results, they&#8217;ll appear here.</p>
 
 
-<p>For example, on one agency&#8217;s website in October 2012, a dozen searches for <em>frostline</em> returned no results. The frost line—also known as depth of frost or freezing—is the depth to which the groundwater in soil is expected to freeze. The agency&#8217;s pages on the topic referred to this concept as <em>depth of freezing</em>. The agency can use this no results data to help searchers find its content by adding a <a href="/blog/how-to-highlight-best-bets.html">best bet</a>, updating its existing web pages, or both.</p>
+<p>For example, on one agency&#8217;s website in October 2012, a dozen searches for <em>frostline</em> returned no results. The frost line—also known as depth of frost or freezing—is the depth to which the groundwater in soil is expected to freeze. The agency&#8217;s pages on the topic referred to this concept as <em>depth of freezing</em>. The agency can use this no results data to help searchers find its content by adding a <a href="/manual/best-bets.html">best bet</a>, updating its existing web pages, or both.</p>
 
 
 <h2><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mcer6ynAoe1qid15q.png"/> Query Timeline</h2>
@@ -474,14 +550,14 @@ Enter same passphrase again:
       
       <span>Last updated on:</span>
       
-      <a href="/blog/how-to-analyze-your-page-views.html">
+      <a href="/manual/page-views.html">
         <time>March 22, 2012</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/blog/how-to-analyze-your-page-views.html">How to Analyze Your Page Views</a>
+      <a href="/manual/page-views.html">How to Analyze Your Page Views</a>
     </h1>
     
 
@@ -514,14 +590,14 @@ Enter same passphrase again:
   <article class='article'>
     <div class='time'>
       
-      <a href="/blog/i-didnt-try-to-grow-a-bigger-ox-how-i-found-hadoop.html">
+      <a href="/blog/hadoop-bigger-ox.html">
         <time>December 28, 2011</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/blog/i-didnt-try-to-grow-a-bigger-ox-how-i-found-hadoop.html">I Didn’t Try to Grow a Bigger Ox: How I Found Hadoop</a>
+      <a href="/blog/hadoop-bigger-ox.html">I Didn’t Try to Grow a Bigger Ox: How I Found Hadoop</a>
     </h1>
     
 
@@ -535,7 +611,7 @@ Enter same passphrase again:
 <p>As I contemplated how doomed I would be should traffic levels increase much more, I remember wondering to myself, &#8220;How does Google deal with all that data?&#8221; The answer came to me in the form of the Google File System (GFS) paper and later the MapReduce paper, both from Google. It dawned on me that because Google was forced to solve a much larger problem, they had come up with an elegant solution for a whole range of more modest data problems running on commodity hardware. But it wouldn&#8217;t be until 2010 that I would get to work with this technology firsthand.</p>
 
 
-<p>As I wrote in an <a href="/blog/adopting-apache-hadoop-in-the-federal-government.html" target="_blank">earlier article</a>, I started re-architecting <a href="http://usasearch.howto.gov">USASearch</a>, the U.S. government&#8217;s search system, in 2009 based on a solution stack of free, open source software including Ruby on Rails, Solr, and MySQL. A wave of déja vu hit me as I started worrying about what to do with the growing mountain of data piling up in MySQL and our increasing need to analyze it in different ways. I had heard that a new company called Cloudera, founded by some big data people from Yahoo!, Google, and Facebook, was making Hadoop available for the masses in a reliable distribution, much in the same way that RedHat did for Linux. Curiosity got the best of me and I bought the newly minted <em>Hadoop: The Definitive Guide</em> from O&#8217;Reilly. The most insightful part of the book to me was the very first sentence. It&#8217;s a quote from Grace Hopper: &#8220;In pioneer days, they used oxen for heavy pulling, and when one ox couldn&#8217;t budge a log, they didn&#8217;t try to grow a bigger ox.&#8221; I didn&#8217;t want to grow a bigger server; I wanted to harness a bunch of small servers together to work in unison. The more I learned the more curious I got, so I started reading more. And that&#8217;s when I hit my first roadblock.</p>
+<p>As I wrote in an <a href="/blog/adopting-hadoop.html" target="_blank">earlier article</a>, I started re-architecting <a href="http://usasearch.howto.gov">USASearch</a>, the U.S. government&#8217;s search system, in 2009 based on a solution stack of free, open source software including Ruby on Rails, Solr, and MySQL. A wave of déja vu hit me as I started worrying about what to do with the growing mountain of data piling up in MySQL and our increasing need to analyze it in different ways. I had heard that a new company called Cloudera, founded by some big data people from Yahoo!, Google, and Facebook, was making Hadoop available for the masses in a reliable distribution, much in the same way that RedHat did for Linux. Curiosity got the best of me and I bought the newly minted <em>Hadoop: The Definitive Guide</em> from O&#8217;Reilly. The most insightful part of the book to me was the very first sentence. It&#8217;s a quote from Grace Hopper: &#8220;In pioneer days, they used oxen for heavy pulling, and when one ox couldn&#8217;t budge a log, they didn&#8217;t try to grow a bigger ox.&#8221; I didn&#8217;t want to grow a bigger server; I wanted to harness a bunch of small servers together to work in unison. The more I learned the more curious I got, so I started reading more. And that&#8217;s when I hit my first roadblock.</p>
 
 
 <p>I think people who have been working with Hadoop technologies for years and years sometimes forget just how rich and diverse the big data software ecosystem has become, and how daunting it can be to folks approaching it for the first time. When people at the Meetups say they are evaluating solutions to their data scaling problem, the answers they hear sound something like this: &#8220;Just use Hadoop Hive Pig Mahout Avro HBase Cassandra Oozie Sqoop Flume ZooKeeper Cascading NoSQL RCFile. Oh, almost forgot…cloud.&#8221;</p>
@@ -610,41 +686,6 @@ Enter same passphrase again:
       <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
       
       <a href="/tagged/research-and-news"><span class="label label-info">research-and-news</span></a>
-      
-      <a href="/tagged/big-data"><span class="label label-info">big-data</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <a href="/blog/hadoop-for-rubyists.html">
-        <time>November 9, 2011</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/blog/hadoop-for-rubyists.html">Hadoop for Rubyists</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>Is your MySQL groaning under too much data? Tired of waiting hours for analytics rake tasks?</p>
-
-
-<p><a href="http://pivotallabs.com/talks/150-hadoop-for-rubyists"><img class="img-polaroid" alt="image" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_luckbhCakH1qid15q.png"/></a></p>
-
-
-<p><a href="http://pivotallabs.com/talks/150-hadoop-for-rubyists">Listen to Loren</a>, USASearch&#8217;s senior technical architect, as he discusses how USASearch leveraged our existing Ruby codebase by building Hadoop Map/Reduce jobs using Hive and plugging in our own Ruby mappers/reducers.</p>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
       
       <a href="/tagged/big-data"><span class="label label-info">big-data</span></a>
       
