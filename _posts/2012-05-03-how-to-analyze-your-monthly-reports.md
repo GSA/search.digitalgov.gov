@@ -1,5 +1,4 @@
 ---
-permalink: /manual/monthly-reports.html
 layout: post
 title: "How to Analyze Your Monthly Reports"
 tags: how-to analytics 

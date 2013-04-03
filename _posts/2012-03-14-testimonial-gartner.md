@@ -1,5 +1,4 @@
 ---
-permalink: /customers/gartner.html
 layout: post
 title: "Gartner Case Study Commends USASearch"
 tags: testimonial 

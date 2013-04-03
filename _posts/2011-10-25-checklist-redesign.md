@@ -1,5 +1,4 @@
 ---
-permalink: /blog/redesign.html
 layout: post
 title: "Checklist for a Successful Website Redesign"
 tags: seo 

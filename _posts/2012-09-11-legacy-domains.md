@@ -1,5 +1,4 @@
 ---
-permalink: /blog/legacy-domains.html
 layout: post
 title: "Six legacy domains are expiring"
 tags: get-code

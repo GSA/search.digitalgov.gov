@@ -1,5 +1,4 @@
 ---
-permalink: /blog/award-big-data.html
 layout: post
 title: "USASearch Wins Government Big Data Solutions Award"
 tags: analytics research-and-news big-data 

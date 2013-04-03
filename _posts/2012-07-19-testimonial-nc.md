@@ -1,5 +1,4 @@
 ---
-permalink: /customers/nc.html
 category: quote
 layout: post
 title: "USASearch improved the quality of NC.gov’s search..."

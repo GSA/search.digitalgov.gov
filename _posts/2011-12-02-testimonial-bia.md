@@ -1,5 +1,4 @@
 ---
-permalink: /customers/bia.html
 category: quote
 layout: post
 title: " The USASearch tool is awesome. It makes finding..."

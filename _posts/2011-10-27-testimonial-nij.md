@@ -1,5 +1,4 @@
 ---
-permalink: /customers/nij.html
 category: quote
 layout: post
 title: "Your service is phenomenal. I cannot believe I..."
