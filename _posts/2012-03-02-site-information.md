@@ -16,7 +16,7 @@ tags: how-to site-information
 <p>Choose a language for your site, English or Spanish. We will only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language.</p>
 <p><strong>Emergency Delete</strong></p>
 <ul><li>Use this feature to remove a single URL from the results on your site. Use it for emergency reasons only.</li>
-<li>It is not meant to fix the results for entire site, such as for launch or redesign problems. For tips on how to fix these problems, view our <a href="/blog/checklist-for-a-successful-website-redesign.html" rel="bookmark">Checklist for a Successful Website Redesign</a>.</li>
+<li>It is not meant to fix the results for entire site, such as for launch or redesign problems. For tips on how to fix these problems, view our <a href="/blog/redesign.html" rel="bookmark">Checklist for a Successful Website Redesign</a>.</li>
 <li>Entire the full path of the URL, e.g. use <a href="http://www.usa.gov/Citizen/Topics/Benefits.shtml,">http://www.usa.gov/Citizen/Topics/Benefits.shtml,</a> not usa.gov/citizen/topics.</li>
 <li>Note that a list is created, below the entry box, of all deleted URLs. You can undo the &#8220;delete” action in real time at any time.</li>
 </ul><blockquote>

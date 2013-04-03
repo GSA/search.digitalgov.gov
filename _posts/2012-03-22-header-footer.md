@@ -11,7 +11,7 @@ tags: how-to user-interface
 <p>Customize the color of your header background and text by clicking on the color picker text field. Enter a valid three- or six-digit hex value or pick a color by dragging the cross-hair icon <img class="img-polaroid" alt="crosshair icon" src="http://search.usa.gov/javascripts/jscolor/cross.gif?1332168483"/> inside the color picker window. Drag the triangle icon <img class="img-polaroid" alt="arrow icon" src="http://search.usa.gov/javascripts/jscolor/arrow.gif?1332168483"/> to control the color saturation. When you are done, click anywhere outside the color picker window.</p>
 <p><strong>Header URL, text, and image</strong></p>
 <p><em><strong>URL.</strong> </em>Provide us with the URL for your website&#8217;s homepage. We&#8217;ll use it to provide a link back to you from your header text, image, or both.</p>
-<p><em><strong>Text.</strong> </em>Fill out the text you&#8217;d like to appear in your header. We&#8217;ve pre-populated this field with your <a href="/blog/how-to-edit-your-site-information.html">site name</a>. Edit the same name, or delete it, if you don&#8217;t want this text to appear in your header.</p>
+<p><em><strong>Text.</strong> </em>Fill out the text you&#8217;d like to appear in your header. We&#8217;ve pre-populated this field with your <a href="/manual/site-information.html">site name</a>. Edit the same name, or delete it, if you don&#8217;t want this text to appear in your header.</p>
 <p><em><strong>Image.</strong> </em>Use the Browse&#8230; option to upload the logo or image that you&#8217;d like to appear in the header, if any. If you don&#8217;t have header text, the image will be center-aligned. If you do have header text, the image will be right-aligned. Click on the option, Mark header image for deletion, to delete an uploaded image.</p>
 <p><strong>Header and footer navigation</strong></p>
 <p>Fill out the titles and URLs if you&#8217;d like to add navigation to your header and footer. Use the arrows on the left to rearrange the display order of the links. See the sample results page below that includes navigation.</p>
@@ -29,7 +29,7 @@ tags: how-to user-interface
 <h2>Customize your mobile header</h2>
 <p>We use device detection to show mobile-friendly search results on mobile phones. (Searchers using tablets and desktop computers see the full, classic header as you set it up above.)</p>
 <p><strong>Default mobile header</strong></p>
-<p>By default, searchers on mobile phones see the header, <em>YourSiteName Mobile</em>. If you list only one domain on the <a href="/blog/how-to-edit-your-domains.html">Domains</a> page, we link your header to this domain. See the sample default mobile header below for <a href="http://www.howto.gov">HowTo.gov</a>.</p>
+<p>By default, searchers on mobile phones see the header, <em>YourSiteName Mobile</em>. If you list only one domain on the <a href="/manual/domains.html">Domains</a> page, we link your header to this domain. See the sample default mobile header below for <a href="http://www.howto.gov">HowTo.gov</a>.</p>
 <p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_meazaml0781qid15q.png"/></p>
 <p><strong>Custom mobile header</strong></p>
 <p>You can customize your mobile header to include a logo. You can also edit or add your mobile homepage URL.</p>

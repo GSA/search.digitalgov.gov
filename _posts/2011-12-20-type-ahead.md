@@ -27,4 +27,4 @@ tags: type-ahead how-to
 <p>You may also delete individual terms that you don&#8217;t want listed, through &#8220;Current Entries&#8221;. Use &#8220;Filter&#8221; to search for particular terms to edit.</p>
 <h2>Type-ahead on Other Web Pages</h2>
 <p>You can also add the type-ahead search suggestions to your homepage—or wherever you have a search box on your website—by adding the type-ahead JavaScript code to the head to your HTML web page.</p>
-<p>Visit our <a href="http://search.usa.gov/affiliates/home">Admin Center</a>, select your site, and click on the Get Code option in the left-hand menu. For more details, read our post on <a href="/blog/how-to-add-our-code-to-your-website.html">How to Add Our Code to Your Website</a>.</p>
+<p>Visit our <a href="http://search.usa.gov/affiliates/home">Admin Center</a>, select your site, and click on the Get Code option in the left-hand menu. For more details, read our post on <a href="/manual/get-code.html">How to Add Our Code to Your Website</a>.</p>

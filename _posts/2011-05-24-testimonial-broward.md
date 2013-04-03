@@ -1,5 +1,5 @@
 ---
-permalink: customers/broward.html
+permalink: /customers/broward.html
 layout: post
 title: "Spotlight: Broward County, Florida"
 tags: testimonial

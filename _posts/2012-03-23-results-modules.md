@@ -9,15 +9,15 @@ tags: how-to govbox related-searches
 <p>Check the option to Show as a GovBox to allow searchers to see inline, contextually relevant results for selected content sources based on keyword matches with relevant queries.</p>
 <h3>1. GovBoxes Built by USASearch</h3>
 <p>USASearch currently provides two pre-built GovBoxes.</p>
-<ol><li>Agency GovBox—For more information, including a screenshot, read our post <a href="/blog/help-searchers-find-information-for-federal-agencies.html">Help Searchers Find Information for Federal Agencies</a>.</li>
-<li>MedlinePlus GovBox—For more information, including a screenshot, read our post <a href="/blog/help-searchers-find-health-information.html">Help Searchers Find Health Information</a>.</li>
+<ol><li>Agency GovBox—For more information, including a screenshot, read our post <a href="/manual/govbox-agencies.html">Help Searchers Find Information for Federal Agencies</a>.</li>
+<li>MedlinePlus GovBox—For more information, including a screenshot, read our post <a href="/manual/govbox-health.html">Help Searchers Find Health Information</a>.</li>
 <li>Jobs GovBox—For more information, including a screenshot, read our post <a href="/manual/govbox-jobs.html">Help Searchers Find Federal Jobs</a>.</li>
 </ol><div>
 <h3>2. Social Media GovBoxes</h3>
-<p><a href="/blog/how-to-add-your-social-media-to-our-index.html">Social media</a> channels that you&#8217;ve provided on the Social Media page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> are listed.</p>
+<p><a href="/manual/social-media.html">Social media</a> channels that you&#8217;ve provided on the Social Media page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> are listed.</p>
 </div>
 <h3>3. News GovBox Generated from Your RSS Feeds</h3>
-<p><a href="/blog/how-to-add-your-rss-feeds-to-our-index.html">RSS</a> feeds that you&#8217;ve provided on the RSS page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> are listed. To edit a feed&#8217;s name, click on the hyperlink to update it.</p>
+<p><a href="/manual/rss.html">RSS</a> feeds that you&#8217;ve provided on the RSS page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> are listed. To edit a feed&#8217;s name, click on the hyperlink to update it.</p>
 <p>All selected feeds will be grouped and displayed in a News GovBox. When a searcher’s query matches the title or description of a recent RSS article (i.e., an article from the past year), the article appears in the News GovBox. See the sample results page below that shows a News GovBox displayed on <a href="http://www.bouldercolorado.gov/">BoulderColorado.gov</a> for a search on <em>biking.</em></p>
 <p><img class="img-polaroid" alt="image" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m1cpfsfC1Z1qid15q.png"/></p>
 <h2>Related Modules</h2>
