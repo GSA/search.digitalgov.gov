@@ -1,4 +1,5 @@
 ---
+permalink: /blog/award-informationweek.html
 layout: post
 title: "USASearch Wins InformationWeek Award"
 tags: research-and-news

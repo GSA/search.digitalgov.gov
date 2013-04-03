@@ -1,4 +1,5 @@
 ---
+permalink: /customers/nysdec.html
 layout: post
 title: "NY State Dept of Environmental Conservation Rolls Out New Site Search"
 tags: testimonial

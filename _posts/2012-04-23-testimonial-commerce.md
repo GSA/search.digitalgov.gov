@@ -1,4 +1,5 @@
 ---
+permalink: /customers/commerce.html
 category: quote
 layout: post
 title: "After our migration of Commerce.gov to Drupal, we..."

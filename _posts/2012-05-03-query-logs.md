@@ -1,4 +1,5 @@
 ---
+permalink: /manual/query-logs.html
 layout: post
 title: "How to Analyze Your Query Logs"
 tags: how-to analytics

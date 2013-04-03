@@ -1,4 +1,5 @@
 ---
+permalink: /customers/labor.html
 layout: post
 title: "Department of Labor Launches Improved Site and Uses USASearch"
 tags: testimonial 
