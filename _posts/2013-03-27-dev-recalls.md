@@ -1,7 +1,7 @@
 ---
 permalink: /developer/recalls.html
 layout: article
-title: USASearch
+title: Recalls API
 ---
 
 <h1>Recalls API</h1>
@@ -22,7 +22,7 @@ When you're buying and using products, safety comes first.
 
 Six federal regulatory agencies issue recalls on <a href="http://www.recalls.gov">Recalls.gov</a>.
 
-<p>This Recalls API allows you to tap into a list of (1) food safety recalls from <a href="http://www.FoodSafety.gov">FoodSafety.gov</a>; (2) car safety recalls from the <a href="http://www.nhtsa.gov">National Highway Traffic Safety Administration</a>; and (3) product safety recalls from the <a href="http://www.cpsc.gov">Consumer Product Safety Commission</a>.</p>
+<p>This Recalls API allows you to tap into a list of (1) drug and food safety recalls from <a href="http://www.FoodSafety.gov">FoodSafety.gov</a>; (2) car safety recalls from the <a href="http://www.nhtsa.gov">National Highway Traffic Safety Administration</a>; and (3) product safety recalls from the <a href="http://www.cpsc.gov">Consumer Product Safety Commission</a>.</p>
 
 <p>This API is great for consumer safety websites or applications, news organizations, and websites or magazines targeted to specific audiences, such as parents.</p>
 

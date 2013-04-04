@@ -6,7 +6,7 @@ tags: testimonial
 ---
 <p>While USASearch is for all levels of government (federal, state, local, tribal, and territorial), most of our customers come from the federal sector. So, we are showcasing a highly-trafficked county site to show how other levels of government successfully leverage our site search service.</p>
 <p><a href="http://www.broward.org" target="_blank">Broward County, Florida</a> has a popular web site that serves thousands of multi-lingual users from the Miami metropolitan area. </p>
-<p><img class="img-polaroid" class="img-polaroid" alt="Image of the Broward.org homepage" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_lloa7zX9zz1qid15q.png"/></p>
+<p><img alt="Image of the Broward.org homepage" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_lloa7zX9zz1qid15q.png"/></p>
 <p>We want to thank Rob Nadeau (Web Site Manager for Broward County) for being a good and supportive customer and someone who proactively implements our special features!</p>
 <p>Rob offered these kind words about USASearch.</p>
 <blockquote>

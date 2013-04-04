@@ -1,10 +1,10 @@
 ---
 permalink: help-desk.html
 layout: default
-title: "How To Manual and HelpDesk"
+title: "How It Works"
 ---
 
-Do you have a question about how our features work? Browse through our [How To Manual](/tagged/how-to) and [Go-Live Punch List](/blog/go-live.html) for tips on how to configure your search.
+Do you have a question about how USASearch works? Browse through our [How To Manual](/tagged/how-to) and [Go-Live Punch List](/blog/go-live.html) for tips on how to configure your search.
 
 #### Basic Settings
 
