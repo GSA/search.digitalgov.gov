@@ -86,12 +86,12 @@
 
     
     <h1>
-      <a href="help-desk.html">How To Manual and HelpDesk</a>
+      <a href="help-desk.html">How It Works</a>
     </h1>
     
 
     <div class='post-content'>
-      <p>Do you have a question about how our features work? Browse through our <a href="/tagged/how-to">How To Manual</a> and <a href="/blog/go-live.html">Go-Live Punch List</a> for tips on how to configure your search.</p>
+      <p>Do you have a question about how USASearch works? Browse through our <a href="/tagged/how-to">How To Manual</a> and <a href="/blog/go-live.html">Go-Live Punch List</a> for tips on how to configure your search.</p>
 
 <h4>Basic Settings</h4>
 
@@ -153,7 +153,7 @@
 </ul>
 
 
-<p>Still have a question? E-mail us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#x55;&#x53;&#65;&#83;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#x67;&#115;&#97;&#x2e;&#103;&#111;&#x76;">&#x55;&#83;&#x41;&#x53;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#103;&#x73;&#97;&#46;&#103;&#x6f;&#118;</a>.</p>
+<p>Still have a question? E-mail us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#x55;&#83;&#65;&#x53;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#103;&#115;&#x61;&#x2e;&#103;&#111;&#118;">&#x55;&#x53;&#65;&#83;&#101;&#97;&#114;&#99;&#x68;&#64;&#103;&#x73;&#x61;&#46;&#103;&#x6f;&#118;</a>.</p>
 
     </div>
 
@@ -215,7 +215,7 @@
 
     
     <h1>
-      <a href="/developer/recalls.html">USASearch</a>
+      <a href="/developer/recalls.html">Recalls API</a>
     </h1>
     
 
@@ -245,7 +245,7 @@
 
 <p>Six federal regulatory agencies issue recalls on <a href="http://www.recalls.gov">Recalls.gov</a>.</p>
 
-<p>This Recalls API allows you to tap into a list of (1) food safety recalls from <a href="http://www.FoodSafety.gov">FoodSafety.gov</a>; (2) car safety recalls from the <a href="http://www.nhtsa.gov">National Highway Traffic Safety Administration</a>; and (3) product safety recalls from the <a href="http://www.cpsc.gov">Consumer Product Safety Commission</a>.</p>
+<p>This Recalls API allows you to tap into a list of (1) drug and food safety recalls from <a href="http://www.FoodSafety.gov">FoodSafety.gov</a>; (2) car safety recalls from the <a href="http://www.nhtsa.gov">National Highway Traffic Safety Administration</a>; and (3) product safety recalls from the <a href="http://www.cpsc.gov">Consumer Product Safety Commission</a>.</p>
 
 
 
@@ -1059,82 +1059,6 @@ Enter same passphrase again:
       
       <span>Last updated on:</span>
       
-      <a href="/manual/raw-logs.html">
-        <time>March 20, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/raw-logs.html">How to Access Your Raw Logs</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Raw Logs Access</p>
-
-<p>You can directly access your raw HTTP logs. The logs include valuable data on searches, clicks, and USASearch tag page loads.</p>
-
-<p>With the raw logs, you can conduct in-depth, ad hoc analyses to answer any questions that you can't answer using the standard analytics reports in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. You can also automatically integrate your search logs with your other reports and business processes.</p>
-
-<p>To access your raw logs, you'll first need to upload your public key on the Raw Logs Access page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
-
-<p>We'll set up your public key on our secure FTP servers and send you an email when your logs are available for download.</p>
-
-<p>Once your key is set up, you'll be able access your log files via secure FTP. We upload your logs each day, usually within several hours after midnight GMT. After a week, we purge the older files.</p>
-
-<p>We recommend that you set up a cron script to automatically download the latest files each day.</p>
-
-<h2>How to Generate a Key Pair on Unix</h2>
-
-<p>On Unix systems, you can generate a RSA public key with no passphrase by typing in the following command. Generate the key from the machine or server that you'll be using to download the logs. Once you've created a key, it'll be located at /home/user/.ssh/id_rsa.pub.</p>
-
-<pre><code>% cd ~
-% ssh-keygen -q -b 4096 -t rsa
-Enter file in which to save the key (/home/user/.ssh/id_rsa):
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-</code></pre>
-
-<h2>How to Generate a Key Pair on Windows</h2>
-
-<p>You can use <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a>, a free telnet/SSH client, to generate a public key on Windows. Download PuTTYgen.exe, Pageant.exe, and PSFTP.exe from the <a href="](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY Download Page</a>.</p>
-
-<p>Run PuTTYgen.exe.</p>
-
-<ul>
-<li>Select SSH-2 RSA as the type of key to generate.</li>
-<li>Set the number of bits in the generated key to 2048.</li>
-<li>Select Generate. Move your mouse within the blank area to create random movements until the key is generated.</li>
-<li>Fill out your Key Comment, Key Passphrase, and Confirm Passphrase.</li>
-<li>Copy your <em>public</em> key from the string in the Public Key for Pasting into OpenSSH Authorized_keys File. Paste this key into the Raw Logs Access page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. (Note: Don't save this public key and send us the string copied from a text file. It adds lines in the file so it doesn't work.)</li>
-<li>Save your <em>private</em> key.</li>
-</ul>
-
-
-<p>Run Pageant.exe. Select Add Key and upload your private key, the .ppk file.</p>
-
-<p>Run PSFTP.exe and type in the following. You can find your site's handle on the Site Information page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
-
-<pre><code>open YourSiteHandle@198.61.238.46
-</code></pre>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
       <a href="/manual/govbox-jobs.html">
         <time>March 20, 2013</time>
       </a>
@@ -1160,60 +1084,11 @@ Enter same passphrase again:
 
 <p>Searchers will also see a direct link to <a href="http://www.usajobs.gov">USAJobs.gov</a> for all current job openings (specific to your department or agency, if applicable) , as shown in the sample below for a search on <a href="http://usdasearch.usda.gov/search?affiliate=usda&amp;query=jobs" title=""><em>jobs</em></a> on the USDA.gov.</p>
 
-<p><img class="img-polaroid" class="img-polaroid" alt="Search results for jobs on USDA.gov" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_inline_mhpcdd93lO1qz4rgp.png"/></p>
+<p><img alt="Search results for jobs on USDA.gov" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_inline_mhpcdd93lO1qz4rgp.png"/></p>
 
 <hr />
 
-<p> <strong>Did you know?</strong> Are you a local or state government? Or a federal agency that doesn't post your jobs on USAJobs? We want your jobs data. E-mail us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#x55;&#83;&#x41;&#83;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#103;&#115;&#97;&#x2e;&#x67;&#x6f;&#118;">&#x55;&#83;&#65;&#83;&#101;&#97;&#x72;&#99;&#104;&#64;&#x67;&#115;&#97;&#46;&#x67;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/govbox"><span class="label label-info">govbox</span></a>
-      
-      <a href="/tagged/jobs"><span class="label label-info">jobs</span></a>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/manual/govbox-jobs.html">
-        <time>March 20, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/govbox-jobs.html">Help Searchers Find Jobs</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>One of the most common search tasks is to look for current job openings. To help searchers quickly find relevant jobs we've created the Jobs GovBox.</p>
-
-<p>When you <a href="/blog/how-to-select-the-modules-that-appear-on-your-results.html">turn on the Jobs GovBox</a>, searchers looking for jobs on your site will see up to three relevant jobs listings on your results page.</p>
-
-<ul>
-<li><strong>Federal Department Websites</strong> If your website is affiliated with a specific federal department (e.g., Department of Commerce), the federal Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across all agencies within your department</em>.</li>
-<li><strong>Federal Agency or Office Websites</strong> If your website is affiliated with a specific federal agency (e.g., NOAA) or office (e.g, National Ocean Service), the federal Jobs GovBox will return relevant, location-and keyword-matched job openings <em>at your agency</em>.</li>
-<li><strong>State and Local Websites and Cross-Agency Portals</strong> If your website is a state or local government site or a federal cross-agency portal (e.g., USA.gov), the federal Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across all federal agencies</em>.</li>
-</ul>
-
-
-<p>Searchers will also see a direct link to <a href="http://www.usajobs.gov">USAJobs.gov</a> for all current job openings (specific to your department or agency, if applicable) , as shown in the sample below for a search on <a href="http://usdasearch.usda.gov/search?affiliate=usda&amp;query=jobs" title=""><em>jobs</em></a> on the USDA.gov.</p>
-
-<p><img class="img-polaroid" class="img-polaroid" alt="Search results for jobs on USDA.gov" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_inline_mhpcdd93lO1qz4rgp.png"/></p>
-
-<hr />
-
-<p> <strong>Did you know?</strong> Are you a local or state government? Or a federal agency that doesn't post your jobs on USAJobs? We want your jobs data. E-mail us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#58;&#85;&#83;&#x41;&#83;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#x67;&#x73;&#97;&#x2e;&#x67;&#x6f;&#118;">&#x55;&#x53;&#x41;&#83;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#103;&#x73;&#97;&#46;&#x67;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
+<p> <strong>Did you know?</strong> Are you a local or state government? Or a federal agency that doesn't post your jobs on USAJobs? We want your jobs data. E-mail us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#85;&#x53;&#x41;&#x53;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#x67;&#x73;&#97;&#46;&#103;&#x6f;&#118;">&#85;&#x53;&#x41;&#x53;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#x67;&#x73;&#97;&#x2e;&#x67;&#x6f;&#118;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
 
     </div>
 
@@ -1245,24 +1120,44 @@ Enter same passphrase again:
     
 
     <div class='post-content'>
-      <p>Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends?</p>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > 3rd Party Tracking</p>
+
+<p>Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends?</p>
+
+<p>Log in to the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> and select the option, Third Party Tracking. Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
+
+<hr />
+
+<p><strong><em>Google Analytics tip:</em></strong> In your Google Analytics JavaScript, be sure to set your domain if you've requested <a href="/manual/get-code.html#cname">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
+
+<pre><code>_gaq.push(['_setDomainName', 'commerce.gov']);
+</code></pre>
+
+<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>.</p>
+
+<p><strong><em>ForeSee tip:</em></strong> Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
+
+<ol>
+<li>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x55;&#x53;&#x41;&#x53;&#x65;&#97;&#x72;&#99;&#104;&#64;&#103;&#x73;&#x61;&#x2e;&#103;&#111;&#118;">&#85;&#83;&#65;&#x53;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#x67;&#115;&#x61;&#x2e;&#x67;&#111;&#118;</a> to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</li>
+<li>Update the files path in your Foresee code to use an absolute path instead of a relative path.</li>
+</ol>
 
 
-<p>Log in to the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> and select the option, Third Party Tracking. Input the JavaScript code you&#8217;d like to call from your search results page. Click submit to send us your request. We&#8217;ll input your code for you and send you an email to confirm that we&#8217;ve done it.</p>
+<p>  Find =&gt; 'files': '/fsrscripts/',</p>
 
+<p>  and replace it with =&gt; 'files': '//{yourdomain}/fsrscripts/',</p>
 
-<blockquote>
-<p><em><strong>Google Analytics tip:</strong></em> In your Google Analytics JavaScript, be sure to set your domain if you&#8217;ve requested <a href="/manual/get-code.html#cname">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
-<p>_gaq.push([&#8216;_setDomainName&#8217;, &#8216;commerce.gov&#8217;]);<br/><br/>For more information, read Google&#8217;s tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>.</p>
-<p><em><strong>ForeSee tip:</strong> </em>Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
-<ol><li>Email USASearch to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</li>
-<li>Update the files path in your Foresee code to use an absolute path instead of a relative path. <br/><br/>Find =&gt; &#8216;files&#8217;: &#8216;/fsrscripts/&#8217;,<br/><br/>and replace it with =&gt; &#8216;files&#8217;: &#8216;//{yourdomain}/fsrscripts/&#8217;,<br/><br/>in the following five files.<br/>a. foresee-trigger.js<br/>b. foresee-tracker.js<br/>c. foresee-alive.js<br/>d. foresee-qualifier.js<br/>e. foresee-test.js</li>
-<li>Ask ForeSee to send USASearch your foresee-trigger.js file.</li>
-<li>USASearch will send you an email to confirm that we&#8217;ve set up your CNAME and installed your foresee-trigger.js file.</li>
-</ol></blockquote>
+<p>  in the following five files.</p>
 
-
-<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; 3rd Party Tracking</p>
+<ol type="a">
+<li> foresee-trigger.js</li>
+<li> foresee-tracker.js</li>
+<li> foresee-alive.js</li>
+<li> foresee-qualifier.js</li>
+<li><p> foresee-test.js</p></li>
+<li><p>Ask ForeSee to send USASearch your foresee-trigger.js file.</p></li>
+<li>USASearch will send you an email to confirm that we've set up your CNAME and installed your foresee-trigger.js file.</li>
+</ol>
 
 
     </div>
@@ -1272,6 +1167,121 @@ Enter same passphrase again:
       <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
       
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <a href="/releases/2013-03-08.html">
+        <time>March 8, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/2013-03-08.html">Search Notes for the Week Ending March 8, 2013</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlighted Feature: Limiting Results to a Subset of Your Content</h2>
+
+<p>Do you want to set up a search box (or even hundreds of search boxes) over a subset of your content?</p>
+
+<p>You can set up a <a href="http://usasearch.howto.gov/blog/how-to-create-collections-within-our-index.html">Collection</a>. Or, you can now pass in a 'sitelimit' parameter to filter the results to specific folders or domains.</p>
+
+<h3>Option 1. Set Up a Collection</h3>
+
+<p>See the sample results page on <a href="http://www.nih.gov">NIH.gov</a> that shows results for a search on <a href="(http://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=cancer"><em>cancer</em></a> in NIH.gov's New Releases.</p>
+
+<p>Note that the searcher sees that results are filtered to News in the left-hand menu.</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/nih-collection.png" alt="Collection-based search results for cancer in NIH.gov news releases" /></p>
+
+<h3>Option 2. Use the Sitelimit Parameter</h3>
+
+<p>Compare the collection-based results above with the results for <a href="http://search.usa.gov/search?affiliate=nih&amp;query=cancer&amp;sitelimit=nih.gov/news">the same search using the sitelimit parameter</a>.</p>
+
+<p>Note that the searcher sees that results are filtered to nih.gov/news in a message under the search box, among other differences.</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/nih-sitelimit.png" alt="Sitelimit-based search results for cancer in NIH.gov news releases" /></p>
+
+<h2>Other Feature</h2>
+
+<ul>
+<li>Searchers' see job openings in their state <em>before</em> the listings for jobs in other states.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li>We added sequester/sequestration as an entry in our synonym file so that searchers looking for information on the topic find all relevant results.</li>
+<li>We throttled the YouTube RSSFeedFetcher to avoid HTTP 403 errors.</li>
+<li>We added some compound indexes to speed up queries.</li>
+<li>We added JSONP support for the <a href="http://usasearch.howto.gov/developer/jobs.html">Jobs API</a> and <a href="http://usasearch.howto.gov/developer/recalls.html">Recalls API</a>.</li>
+<li>We investigated additional sources for jobs openings, such as the Department of Labor's <a href="http://developer.dol.gov/DOL-SUMMERJOBS-SERVICE.htm">Summer Jobs</a> and the National Resource Directory's <a href="https://www.nrd.gov/home/api/veterans_job_search">Veterans Jobs Bank</a>.</li>
+<li>We moved the publishing platform for <a href="http://usasearch.howto.gov">USASearch.HowTo.gov</a> from Tumblr to <a href="http://pages.github.com/">Github pages</a>.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>Visitors to eForms.gov, FedForms.gov, and Forms.gov are now automatically redirected to the USA.gov's list of <a href="http://www.usa.gov/Topics/Reference-Shelf/forms.shtml">government forms by agency</a>.</li>
+<li>We tuned the redirect on search.usa.gov/images so that all needed images show up on results pages.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <a href="/releases/2013-02-22.html">
+        <time>February 22, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/2013-02-22.html">Search Notes for the Week Ending February 22, 2013</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><h2>Features</h2>
+<ul><li><span>Searchers now see the most current titles and descriptions available for <a href="/manual/social-media.html">YouTube videos</a> and they won’t see any deleted videos.</span></li>
+<li><span><span>Visitors to the pages search.usa.gov and buscador.usa.gov are now automatically redirected to [USA.gov](http://www.usa.gov/) and <a href="http://www.usa.gov/gobiernousa/">GobiernoUSA.gov</a>, respectively, so they see the most recent content on these homepages.</span></span></li>
+<li><span>Spanish searchers now see <a href="http://www.plainlanguage.gov/">plain language</a> helper text.</span></li>
+<li><span>Searchers no longer see two search boxes on the search results page, which will create a more visually appealing and usable page.</span></li>
+</ul><h2>Chores</h2>
+<ul><li>We rewrote some query routing rules for job searches to present more precise results in the <a href="/manual/govbox-jobs.html">Jobs GovBox</a>.</li>
+<li>We configured <a href="https://travis-ci.org/">Travis-CI</a> to enable continuous integration for the <a href="https://github.com/GSA-OCSIT/recalls_api">Recalls Server API</a> and <a href="https://github.com/GSA-OCSIT/jobs_api">Jobs Server API</a>.</li>
+<li>We shortened the Jobs API base URL to <a href="http://api.usa.gov/recalls/search">api.usa.gov/recalls/search</a>.</li>
+<li><span>We reconfigured our RSS feed fetching to update more efficiently. </span></li>
+<li>We upgraded to <a href="http://weblog.rubyonrails.org/2013/2/11/SEC-ANN-Rails-3-2-12-3-1-11-and-2-3-17-have-been-released/"><span>Rails 3.2.12</span></a> and <a href="http://rubygems.org/gems/rack">Rack</a> 1.4.5.</li>
+<li><span>We upgraded our </span><a href="http://www.cloudera.com/content/cloudera/en/products/cdh.html">Cloudera Distribution for Hadoop</a><span> (CDH) cluster.</span></li>
+<li><span>We removed the outdated yellow call out boxes from the [Admin Center](http://search.usa.gov/affiliates/home).</span></li>
+</ul><h2>Fixes</h2>
+<ul><li><span>You’ll no longer see an error message if you delete a site that has a YouTube profile or when adding a site that has no managed RSS feed.</span></li>
+</ul></p>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
       
     </div>
   </article>
@@ -1298,7 +1308,7 @@ Enter same passphrase again:
     <ul class="footer-links unstyled inline">
       <li><a href="/developer/index.html">APIs</a></li>
       <li class="muted">&bull;</li>
-      <li><a href="http://www.twitter.com/usasearch">Follow Us on Twitter</a></li>
+      <li><img src="http://search.usa.gov/images/govbox/twitter.png" alt="Twitter"><a href="http://www.twitter.com/usasearch">Follow Us on Twitter</a></li>
       <li class="muted">&bull;</li>
       <li><a href="mailto:usasearch@gsa.gov">USASearch@gsa.gov</a></li>
       <li class="muted">&bull;</li>

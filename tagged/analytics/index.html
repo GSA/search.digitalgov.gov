@@ -156,82 +156,6 @@ Enter same passphrase again:
       
       <span>Last updated on:</span>
       
-      <a href="/manual/raw-logs.html">
-        <time>March 20, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/raw-logs.html">How to Access Your Raw Logs</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Raw Logs Access</p>
-
-<p>You can directly access your raw HTTP logs. The logs include valuable data on searches, clicks, and USASearch tag page loads.</p>
-
-<p>With the raw logs, you can conduct in-depth, ad hoc analyses to answer any questions that you can't answer using the standard analytics reports in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. You can also automatically integrate your search logs with your other reports and business processes.</p>
-
-<p>To access your raw logs, you'll first need to upload your public key on the Raw Logs Access page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
-
-<p>We'll set up your public key on our secure FTP servers and send you an email when your logs are available for download.</p>
-
-<p>Once your key is set up, you'll be able access your log files via secure FTP. We upload your logs each day, usually within several hours after midnight GMT. After a week, we purge the older files.</p>
-
-<p>We recommend that you set up a cron script to automatically download the latest files each day.</p>
-
-<h2>How to Generate a Key Pair on Unix</h2>
-
-<p>On Unix systems, you can generate a RSA public key with no passphrase by typing in the following command. Generate the key from the machine or server that you'll be using to download the logs. Once you've created a key, it'll be located at /home/user/.ssh/id_rsa.pub.</p>
-
-<pre><code>% cd ~
-% ssh-keygen -q -b 4096 -t rsa
-Enter file in which to save the key (/home/user/.ssh/id_rsa):
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-</code></pre>
-
-<h2>How to Generate a Key Pair on Windows</h2>
-
-<p>You can use <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a>, a free telnet/SSH client, to generate a public key on Windows. Download PuTTYgen.exe, Pageant.exe, and PSFTP.exe from the <a href="](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY Download Page</a>.</p>
-
-<p>Run PuTTYgen.exe.</p>
-
-<ul>
-<li>Select SSH-2 RSA as the type of key to generate.</li>
-<li>Set the number of bits in the generated key to 2048.</li>
-<li>Select Generate. Move your mouse within the blank area to create random movements until the key is generated.</li>
-<li>Fill out your Key Comment, Key Passphrase, and Confirm Passphrase.</li>
-<li>Copy your <em>public</em> key from the string in the Public Key for Pasting into OpenSSH Authorized_keys File. Paste this key into the Raw Logs Access page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. (Note: Don't save this public key and send us the string copied from a text file. It adds lines in the file so it doesn't work.)</li>
-<li>Save your <em>private</em> key.</li>
-</ul>
-
-
-<p>Run Pageant.exe. Select Add Key and upload your private key, the .ppk file.</p>
-
-<p>Run PSFTP.exe and type in the following. You can find your site's handle on the Site Information page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
-
-<pre><code>open YourSiteHandle@198.61.238.46
-</code></pre>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
       <a href="/manual/trending-queries.html">
         <time>November 5, 2012</time>
       </a>
@@ -244,32 +168,23 @@ Enter same passphrase again:
     
 
     <div class='post-content'>
-      <p>The Trending Queries page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the top 10 changing search terms. </p>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Trending Queries</p>
 
+<p>The Trending Queries page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the top 10 changing search terms.</p>
 
-<p>You&#8217;ll see a list of up to 10 terms with the greatest gain between yesterday and today. (Terms must have been searched by at least 10 unique searchers per day to be included in this list.)</p>
+<p>You'll see a list of up to 10 terms with the greatest gain between yesterday and today. (Terms must have been searched by at least 10 unique searchers per day to be included in this list.)</p>
 
-
-<p>Use this report to identify newly popular terms. Create new content or update existing content to ensure it&#8217;s current, accurate, and complete. </p>
-
+<p>Use this report to identify newly popular terms. Create new content or update existing content to ensure it's current, accurate, and complete.</p>
 
 <p>See the sample report below that shows the 10 trending queries on <a href="http://www.usa.gov/">USA.gov</a> on Monday, November 5, 2012—the day before Election Day.</p>
 
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_md0qrd6Q731qid15q.png"/></p>
 
-<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_md0qrd6Q731qid15q.png"/></p>
+<p>Click on any linked word or the <img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png"/> symbol in the above list, and you'll be taken to a Query Timeline chart. There you'll be able to select a period of time for the term, and you can also add a second query for comparison.</p>
 
+<p>Click on the <img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol, and you'll be taken to a list of the top clicked URLs for that term.</p>
 
-<p>Click on any linked word or the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png"/> symbol in the above list, and you&#8217;ll be taken to a Query Timeline chart. There you&#8217;ll be able to select a period of time for the term, and you can also add a second query for comparison.</p>
-
-
-<p>Click on the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol, and you&#8217;ll be taken to a list of the top clicked URLs for that term.</p>
-
-
-<p>To investigate why the term may be trending, click on the Twitter, news, or trends icons to see what&#8217;s happening on other websites.</p>
-
-
-<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Trending Queries</p>
-
+<p>To investigate why the term may be trending, click on the Twitter, news, or trends icons to see what's happening on other websites.</p>
 
     </div>
 
@@ -299,28 +214,21 @@ Enter same passphrase again:
     
 
     <div class='post-content'>
-      <p>The Low Click-Thru Rate (CTR) Queries page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the top 10 searches with low click-thru rates. It shows the most popular search terms that people generally don’t act (click) on. </p>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Low CTR Queries</p>
 
+<p>The Low Click-Thru Rate (CTR) Queries page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the top 10 searches with low click-thru rates. It shows the most popular search terms that people generally don’t act (click) on.</p>
 
-<p>You&#8217;ll see a list of up to 10 terms that returned search results, but resulted in a click less than 20 percent of the time over the past day or so. In other words, fewer than one in five people who searched for that topic clicked on a search result. (Terms must have been searched by at least 10 unique searchers per day to be included in this list.)</p>
+<p>You'll see a list of up to 10 terms that returned search results, but resulted in a click less than 20 percent of the time over the past day or so. In other words, fewer than one in five people who searched for that topic clicked on a search result. (Terms must have been searched by at least 10 unique searchers per day to be included in this list.)</p>
 
+<p>Use this report to identify issues with coverage. Create a <a href="/manual/best-bets.html">Best Bet</a>, add pages that may be missing from the results, or do both to improve recall. Incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results.</p>
 
-<p>Use this report to identify issues with coverage. Create a <a href="/manual/best-bets.html">Best Bet</a>, add pages that may be missing from the results, or do both to improve recall. Incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results. </p>
+<p>Click on any linked word or the <img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png"/> symbol in the list, and you'll be taken to a Query Timeline chart. There you'll be able to select a period of time for the term, and you can also add a second query for comparison.</p>
 
+<p>Click on the <img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol, and you'll be taken to a list of the top clicked URLs for that term.</p>
 
-<p>Click on any linked word or the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png"/> symbol in the list, and you&#8217;ll be taken to a Query Timeline chart. There you&#8217;ll be able to select a period of time for the term, and you can also add a second query for comparison.</p>
+<hr />
 
-
-<p>Click on the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol, and you&#8217;ll be taken to a list of the top clicked URLs for that term.</p>
-
-
-<blockquote>
-<p><em><strong>Did you know?</strong> </em>This low click-thru report lists only those terms that returned search results. Visit the <a href="/manual/query-logs.html">Query Logs</a> page to see the top queries that returned no results.</p>
-</blockquote>
-
-
-<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Low CTR Queries</p>
-
+<p><strong><em>Did you know?</em></strong> This low click-thru report lists only those terms that returned search results. Visit the <a href="/manual/query-logs.html">Query Logs</a> page to see the top queries that returned no results.</p>
 
     </div>
 
@@ -350,37 +258,36 @@ Enter same passphrase again:
     
 
     <div class='post-content'>
-      <p>The Click Stats page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the URLs your searchers have clicked on. Data start from October 2012.</p>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Click Stats</p>
+
+<p>The Click Stats page in the [Admin Center](http://search.usa.gov/affiliates/home) reports on the URLs your searchers have clicked on. Data start from October 2012.</p>
 
 
-<p>You&#8217;ll see a list, in frequency order, of the most clicked URLs for any time period. You may choose to display 10, 50, 100, 500, or 1,000 results in order of frequency.</p>
+<p>You'll see a list, in frequency order, of the most clicked URLs for any time period. You may choose to display 10, 50, 100, 500, or 1,000 results in order of frequency.</p>
 
 
-<p>See the sample report below that shows the 10 most clicked URLs on <a href="http://www.usa.gov/">USA.gov</a> in October 2012.</p>
+<p>See the sample report below that shows the 10 most clicked URLs on [USA.gov](http://www.usa.gov/) in October 2012.</p>
 
 
-<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mces5zyKfc1qid15q.png"/></p>
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mces5zyKfc1qid15q.png"/></p>
 
 
-<p>Click on the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol in the list above, and you’ll see the top query terms that led to that URL over the same time period.</p>
+<p>Click on the <img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol in the list above, and you’ll see the top query terms that led to that URL over the same time period.</p>
 
 
-<p>See the sample report below that shows the top queries that led to a click on <a href="http://www.usajobs.gov/"><a href="http://www.usajobs.gov/">http://www.usajobs.gov/</a></a> on <a href="http://www.usa.gov/">USA.gov</a> in October 2012.</p>
+<p>See the sample report below that shows the top queries that led to a click on <a href="http://www.usajobs.gov/"><a href="http://www.usajobs.gov/">http://www.usajobs.gov/</a></a> on [USA.gov](http://www.usa.gov/) in October 2012.</p>
 
 
-<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqp4Jmoy1qid15q.png"/></p>
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqp4Jmoy1qid15q.png"/></p>
 
 
-<p>From the list of queries, you will be able to click on the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol again to see the top clicked URLs for that term over the same time period.</p>
+<p>From the list of queries, you will be able to click on the <img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol again to see the top clicked URLs for that term over the same time period.</p>
 
 
-<p>See the sample report below that shows the top clicked URLs for <em>jobs</em> on <a href="http://www.usa.gov/">USA.gov</a> in October 2012.</p>
+<p>See the sample report below that shows the top clicked URLs for <em>jobs</em> on [USA.gov](http://www.usa.gov/) in October 2012.</p>
 
 
-<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqlwdZnx1qid15q.png"/></p>
-
-
-<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Click Stats</p>
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqlwdZnx1qid15q.png"/></p>
 
 
     </div>
@@ -390,57 +297,6 @@ Enter same passphrase again:
       <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
       
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/manual/monthly-reports.html">
-        <time>May 3, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/monthly-reports.html">How to Analyze Your Monthly Reports</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>The Monthly Reports page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the total number of searches and click throughs. A click through is recorded each time a searcher clicks on a results link. Data start from the time your agency started using USASearch (but no further back than 2009).</p>
-
-
-<p>Data are shown for the present month-to-date by default. Change the time period by selecting a different year or month.</p>
-
-
-<p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV link to download the list as a comma delimited file. The CSV file contains three columns.</p>
-
-
-<ol><li>Query—The search term or phrase.</li>
-<li>Raw count—Total number of times the query was submitted.</li>
-<li>IP-deduped—Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of &#8220;real,&#8221; human traffic.</li>
-</ol>
-
-
-<blockquote>
-<p><em><strong>Did you know?</strong> </em>On the first of each month, we email you a report with data on the previous month&#8217;s queries, clicks, and top search terms.</p>
-</blockquote>
-
-
-<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Monthly Reports</p>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
       
     </div>
   </article>
@@ -462,7 +318,9 @@ Enter same passphrase again:
     
 
     <div class='post-content'>
-      <p>The Query Logs page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the terms and phrases your searchers have input. Data start from the time your agency started using USASearch (but no further back than 2009).</p>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Query Logs</p>
+
+<p>The Query Logs page in the [Admin Center](http://search.usa.gov/affiliates/home) reports on the terms and phrases your searchers have input. Data start from the time your agency started using USASearch (but no further back than 2009).</p>
 
 
 <h2>Specific Search Queries</h2>
@@ -471,10 +329,10 @@ Enter same passphrase again:
 <p>You can limit the search for any specific query term or phrase to a specified time period.</p>
 
 
-<p>See the sample report below that shows the number of times <em>housing</em> (or its stemmed equivalents) was searched on <a href="http://www.usa.gov/">USA.gov</a> in October 2012.</p>
+<p>See the sample report below that shows the number of times <em>housing</em> (or its stemmed equivalents) was searched on [USA.gov](http://www.usa.gov/) in October 2012.</p>
 
 
-<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mcejzpJD7c1qid15q.png"/></p>
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mcejzpJD7c1qid15q.png"/></p>
 
 
 <h2>Top Queries</h2>
@@ -486,52 +344,99 @@ Enter same passphrase again:
 <h3>Most Popular Queries</h3>
 
 
-<p>See the sample report below that shows the 10 most popular queries on <a href="http://www.usa.gov/">USA.gov</a> on October 15, 2012.</p>
+<p>See the sample report below that shows the 10 most popular queries on [USA.gov](http://www.usa.gov/) on October 15, 2012.</p>
 
 
-<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mcekbcO01c1qid15q.png"/></p>
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mcekbcO01c1qid15q.png"/></p>
 
 
 <h3>Top Queries with No Results</h3>
 
 
-<p>If there are any terms that were searched by 10 unique searchers within the period of a day and returned no results, they&#8217;ll appear here.</p>
+<p>If there are any terms that were searched by 10 unique searchers within the period of a day and returned no results, they'll appear here.</p>
 
 
-<p>For example, on one agency&#8217;s website in October 2012, a dozen searches for <em>frostline</em> returned no results. The frost line—also known as depth of frost or freezing—is the depth to which the groundwater in soil is expected to freeze. The agency&#8217;s pages on the topic referred to this concept as <em>depth of freezing</em>. The agency can use this no results data to help searchers find its content by adding a <a href="/manual/best-bets.html">best bet</a>, updating its existing web pages, or both.</p>
+<p>For example, on one agency's website in October 2012, a dozen searches for <em>frostline</em> returned no results. The frost line—also known as depth of frost or freezing—is the depth to which the groundwater in soil is expected to freeze. The agency's pages on the topic referred to this concept as <em>depth of freezing</em>. The agency can use this no results data to help searchers find its content by adding a <a href="/manual/best-bets.html">best bet</a>, updating its existing web pages, or both.</p>
 
 
-<h2><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mcer6ynAoe1qid15q.png"/> Query Timeline</h2>
+<h2><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mcer6ynAoe1qid15q.png"/> Query Timeline</h2>
 
 
-<p>Click on any linked word or the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png"/> symbol in the above lists, and you will be taken to a Query Timeline chart. There you will be able to add a second query for comparison.  Note also that placing your cursor over any part of the timeline will give the search frequency for a particular date.</p>
+<p>Click on any linked word or the <img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png"/> symbol in the above lists, and you will be taken to a Query Timeline chart. There you will be able to add a second query for comparison.  Note also that placing your cursor over any part of the timeline will give the search frequency for a particular date.</p>
 
 
-<p>See the sample report below that shows a comparison of <em>jobs</em> and <em>employment</em> on <a href="http://www.usa.gov/">USA.gov</a> for the nine months between February and November 2012, with the cursor placed over the spike on <em>jobs</em> May 30.</p>
+<p>See the sample report below that shows a comparison of <em>jobs</em> and <em>employment</em> on [USA.gov](http://www.usa.gov/) for the nine months between February and November 2012, with the cursor placed over the spike on <em>jobs</em> May 30.</p>
 
 
-<h2><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> Clicked URLs</h2>
+<h2><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> Clicked URLs</h2>
 
 
-<p>Click on the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol in any of the lists, and you&#8217;ll be taken to a list of the top clicked URLs for that term.</p>
+<p>Click on the <img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol in any of the lists, and you'll be taken to a list of the top clicked URLs for that term.</p>
 
 
-<p>See the sample report below that shows the top clicked URLs for <em>jobs</em> on <a href="http://www.usa.gov/">USA.gov</a> in October 2012.</p>
+<p>See the sample report below that shows the top clicked URLs for <em>jobs</em> on [USA.gov](http://www.usa.gov/) in October 2012.</p>
 
 
-<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqlwdZnx1qid15q.png"/></p>
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqlwdZnx1qid15q.png"/></p>
 
 
-<p>From the list of clicked URLs, you will be able to click on the <img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol again to see the top query terms that led to that URL over the same time period.  </p>
+<p>From the list of clicked URLs, you will be able to click on the <img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol again to see the top query terms that led to that URL over the same time period.  </p>
 
 
-<p>See the sample report below that shows the top queries that led to a click on <a href="http://www.usajobs.gov/"><a href="http://www.usajobs.gov/">http://www.usajobs.gov/</a></a> on <a href="http://www.usa.gov/">USA.gov</a> in October 2012.</p>
+<p>See the sample report below that shows the top queries that led to a click on <a href="http://www.usajobs.gov/"><a href="http://www.usajobs.gov/">http://www.usajobs.gov/</a></a> on [USA.gov](http://www.usa.gov/) in October 2012.</p>
 
 
-<p><img class="img-polaroid" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqp4Jmoy1qid15q.png"/></p>
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqp4Jmoy1qid15q.png"/></p>
 
 
-<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Query Logs</p>
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
+      <a href="/manual/monthly-reports.html">
+        <time>May 3, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/monthly-reports.html">How to Analyze Your Monthly Reports</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Monthly Reports</p>
+
+<p>The Monthly Reports page in the [Admin Center](http://search.usa.gov/affiliates/home) reports on the total number of searches and click throughs. A click through is recorded each time a searcher clicks on a results link. Data start from the time your agency started using USASearch (but no further back than 2009).</p>
+
+
+<p>Data are shown for the present month-to-date by default. Change the time period by selecting a different year or month.</p>
+
+
+<p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV link to download the list as a comma delimited file. The CSV file contains three columns.</p>
+
+
+<ol><li>Query—The search term or phrase.</li>
+<li>Raw count—Total number of times the query was submitted.</li>
+<li>IP-deduped—Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of &#8220;real,&#8221; human traffic.</li>
+</ol>
+
+
+<blockquote>
+<p><em><strong>Did you know?</strong> </em>On the first of each month, we email you a report with data on the previous month's queries, clicks, and top search terms.</p>
+</blockquote>
 
 
     </div>
@@ -562,18 +467,20 @@ Enter same passphrase again:
     
 
     <div class='post-content'>
-      <p>The Page Views page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the number of times your search results page is viewed by searchers.</p>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Page Views</p>
 
+<p>The Page Views page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the number of times your search results page is viewed by searchers.</p>
 
-<p>For example, if a searcher is on <a href="http://www.usa.gov/">USA.gov</a> and does a search for <em>cribs</em>, the loading of this results page is recorded as a web page view. From this initial results page the searcher can click around to change the filter from web to images, recalls, FAQs, blog posts, etc. Each time the filter changes, a new page is loaded and it is recorded as a page view.</p>
+<p>For example, if a searcher is on <a href="http://www.usa.gov">USA.gov</a> and does a search for <em>cribs</em>, the loading of this results page is recorded as a web page view. From this initial results page the searcher can click around to change the filter from web to images, recalls, FAQs, blog posts, etc. Each time the filter changes, a new page is loaded and it is recorded as a page view.</p>
 
+<p>From these data, you can get answers to questions like:</p>
 
-<div class="text ">From these data, you can get answers to questions like:<br/><ol><li>Which type of search do my users use more: web, image, RSS, or collections?</li>
+<ul>
+<li>Which type of search do my users use more: web, image, RSS, or collections?</li>
 <li>Do my searchers use the time-based filters for RSS feeds?</li>
 <li>Which of my document collections is most popular?</li>
 <li>Which of my RSS feeds is most popular?</li>
-</ol><p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Page Views</p>
-</div>
+</ul>
 
 
     </div>
@@ -602,37 +509,37 @@ Enter same passphrase again:
     
 
     <div class='post-content'>
-      <p>A year ago I rolled my first Hadoop system into production. Since then, I&#8217;ve spoken to quite a few people who are eager to try Hadoop themselves in order to solve their own big data problems. Despite having similar backgrounds and data problems, few of these people have sunk their teeth into Hadoop. When I go to Hadoop Meetups in San Francisco, I often meet new people who are evaluating Hadoop and have yet to launch a cluster. Based on my own background and experience, I have some ideas on why this is the case.</p>
+      <p>A year ago I rolled my first Hadoop system into production. Since then, I've spoken to quite a few people who are eager to try Hadoop themselves in order to solve their own big data problems. Despite having similar backgrounds and data problems, few of these people have sunk their teeth into Hadoop. When I go to Hadoop Meetups in San Francisco, I often meet new people who are evaluating Hadoop and have yet to launch a cluster. Based on my own background and experience, I have some ideas on why this is the case.</p>
 
 
 <p>I studied computer science in school and have worked on a wide variety of computer systems in my career, with a lot of focus on server-side Java. I learned a bit about building distributed systems and working with large amounts of data when I built a pay-per-click (PPC) ad network in 2004. The system is still in operation and at one point was handling several thousand searches per second. As the sole technical resource on the system, I had to educate myself very quickly about how to scale up.</p>
 
 
-<p>As I contemplated how doomed I would be should traffic levels increase much more, I remember wondering to myself, &#8220;How does Google deal with all that data?&#8221; The answer came to me in the form of the Google File System (GFS) paper and later the MapReduce paper, both from Google. It dawned on me that because Google was forced to solve a much larger problem, they had come up with an elegant solution for a whole range of more modest data problems running on commodity hardware. But it wouldn&#8217;t be until 2010 that I would get to work with this technology firsthand.</p>
+<p>As I contemplated how doomed I would be should traffic levels increase much more, I remember wondering to myself, &#8220;How does Google deal with all that data?&#8221; The answer came to me in the form of the Google File System (GFS) paper and later the MapReduce paper, both from Google. It dawned on me that because Google was forced to solve a much larger problem, they had come up with an elegant solution for a whole range of more modest data problems running on commodity hardware. But it wouldn't be until 2010 that I would get to work with this technology firsthand.</p>
 
 
-<p>As I wrote in an <a href="/blog/adopting-hadoop.html" target="_blank">earlier article</a>, I started re-architecting <a href="http://usasearch.howto.gov">USASearch</a>, the U.S. government&#8217;s search system, in 2009 based on a solution stack of free, open source software including Ruby on Rails, Solr, and MySQL. A wave of déja vu hit me as I started worrying about what to do with the growing mountain of data piling up in MySQL and our increasing need to analyze it in different ways. I had heard that a new company called Cloudera, founded by some big data people from Yahoo!, Google, and Facebook, was making Hadoop available for the masses in a reliable distribution, much in the same way that RedHat did for Linux. Curiosity got the best of me and I bought the newly minted <em>Hadoop: The Definitive Guide</em> from O&#8217;Reilly. The most insightful part of the book to me was the very first sentence. It&#8217;s a quote from Grace Hopper: &#8220;In pioneer days, they used oxen for heavy pulling, and when one ox couldn&#8217;t budge a log, they didn&#8217;t try to grow a bigger ox.&#8221; I didn&#8217;t want to grow a bigger server; I wanted to harness a bunch of small servers together to work in unison. The more I learned the more curious I got, so I started reading more. And that&#8217;s when I hit my first roadblock.</p>
+<p>As I wrote in an <a href="/blog/adopting-hadoop.html" target="_blank">earlier article</a>, I started re-architecting <a href="http://usasearch.howto.gov">USASearch</a>, the U.S. government's search system, in 2009 based on a solution stack of free, open source software including Ruby on Rails, Solr, and MySQL. A wave of déja vu hit me as I started worrying about what to do with the growing mountain of data piling up in MySQL and our increasing need to analyze it in different ways. I had heard that a new company called Cloudera, founded by some big data people from Yahoo!, Google, and Facebook, was making Hadoop available for the masses in a reliable distribution, much in the same way that RedHat did for Linux. Curiosity got the best of me and I bought the newly minted <em>Hadoop: The Definitive Guide</em> from O'Reilly. The most insightful part of the book to me was the very first sentence. It's a quote from Grace Hopper: &#8220;In pioneer days, they used oxen for heavy pulling, and when one ox couldn't budge a log, they didn't try to grow a bigger ox.&#8221; I didn't want to grow a bigger server; I wanted to harness a bunch of small servers together to work in unison. The more I learned the more curious I got, so I started reading more. And that's when I hit my first roadblock.</p>
 
 
 <p>I think people who have been working with Hadoop technologies for years and years sometimes forget just how rich and diverse the big data software ecosystem has become, and how daunting it can be to folks approaching it for the first time. When people at the Meetups say they are evaluating solutions to their data scaling problem, the answers they hear sound something like this: &#8220;Just use Hadoop Hive Pig Mahout Avro HBase Cassandra Oozie Sqoop Flume ZooKeeper Cascading NoSQL RCFile. Oh, almost forgot…cloud.&#8221;</p>
 
 
-<p>The thought of wading through all of that just to learn about what I needed to learn about was a bit too overwhelming for me, so I put the whole matter aside for a few months. Over time, I started to dive into each of these projects to understand the primary use case, how active the developer community was and which organizations were using it in production. I converged on the idea of using Hive as a warehouse for our data. I opted for Cloudera&#8217;s distribution since I wanted to reduce the risk of running into compatibility issues between all the various subsystems. Having tracked down anomalies in a highly multi-threaded and contentious distributed Java system before, I liked the idea of someone else taking on that problem for me.</p>
+<p>The thought of wading through all of that just to learn about what I needed to learn about was a bit too overwhelming for me, so I put the whole matter aside for a few months. Over time, I started to dive into each of these projects to understand the primary use case, how active the developer community was and which organizations were using it in production. I converged on the idea of using Hive as a warehouse for our data. I opted for Cloudera's distribution since I wanted to reduce the risk of running into compatibility issues between all the various subsystems. Having tracked down anomalies in a highly multi-threaded and contentious distributed Java system before, I liked the idea of someone else taking on that problem for me.</p>
 
 
-<p>At some point, I had read everything I could read and grew impatient to get my hands dirty, so I decided to just download CDH3 on my laptop and give it a try. The tutorial instructions for the standalone version worked, and I successfully computed more digits of pi than I ever thought I&#8217;d need. After creating some sample data in Hive and running a few queries, I felt pretty confident that Hive would be the right tool for the job. I just needed to find somewhere to install and run HDFS (namenode, secondary namenode, and data nodes), Hadoop (jobtracker and tasktracker nodes), Hive, and Hue for a nice front end to it all.</p>
+<p>At some point, I had read everything I could read and grew impatient to get my hands dirty, so I decided to just download CDH3 on my laptop and give it a try. The tutorial instructions for the standalone version worked, and I successfully computed more digits of pi than I ever thought I'd need. After creating some sample data in Hive and running a few queries, I felt pretty confident that Hive would be the right tool for the job. I just needed to find somewhere to install and run HDFS (namenode, secondary namenode, and data nodes), Hadoop (jobtracker and tasktracker nodes), Hive, and Hue for a nice front end to it all.</p>
 
 
-<p>I knew from my past experience how to stretch the limits of CPU, disk, IO, and memory on commodity servers, and I identified a few potential servers at our primary datacenter with resources I figured I could leverage. Once again I followed the tutorial instructions, this time for the fully distributed version of CDH3, and once again I started to compute pi. And that&#8217;s when I hit my second roadblock. It took me a few days to figure out that I had a problem with DNS. Each machine needs to be able to resolve every other machine&#8217;s name and IP in the cluster. Whether you do that via /etc/hosts or a local DNS server is up to you, but it needs to happen or the whole thing gets wedged. Once I got that sorted out, everything just started falling into place and I had Hive working in production within a few days. A week later, I started pulling out the MySQL jobs and deleting big tables, and that&#8217;s been the trend ever since.</p>
+<p>I knew from my past experience how to stretch the limits of CPU, disk, IO, and memory on commodity servers, and I identified a few potential servers at our primary datacenter with resources I figured I could leverage. Once again I followed the tutorial instructions, this time for the fully distributed version of CDH3, and once again I started to compute pi. And that's when I hit my second roadblock. It took me a few days to figure out that I had a problem with DNS. Each machine needs to be able to resolve every other machine's name and IP in the cluster. Whether you do that via /etc/hosts or a local DNS server is up to you, but it needs to happen or the whole thing gets wedged. Once I got that sorted out, everything just started falling into place and I had Hive working in production within a few days. A week later, I started pulling out the MySQL jobs and deleting big tables, and that's been the trend ever since.</p>
 
 
-<p>Over time, I&#8217;ve gone on to learn about using custom Ruby mappers in Hive, moving data back and forth between MySQL and Hive with Sqoop, and getting the data into HDFS in real-time with Flume. All of these components from the Cloudera distribution are working nicely in our production environment now, and I sleep well at night knowing I have such a solid, deliberate plan for growth. My initial investment in learning about the Hadoop ecosystem is really paying dividends, but when I think about all those people at the Meetups stuck in evaluation mode, I feel their pain. Does it have to be such a struggle?</p>
+<p>Over time, I've gone on to learn about using custom Ruby mappers in Hive, moving data back and forth between MySQL and Hive with Sqoop, and getting the data into HDFS in real-time with Flume. All of these components from the Cloudera distribution are working nicely in our production environment now, and I sleep well at night knowing I have such a solid, deliberate plan for growth. My initial investment in learning about the Hadoop ecosystem is really paying dividends, but when I think about all those people at the Meetups stuck in evaluation mode, I feel their pain. Does it have to be such a struggle?</p>
 
 
 <p>The big challenge in my opinion is not that any one piece of the puzzle is too difficult. Any reasonably smart (or in my case stubborn) engineer can set themselves on the task of learning about a new technology once they know that it needs to be learned. The challenge with the Hadoop ecosystem is that it presents the newbie with the meta-problem of figuring out which of these tools are appropriate for their use case at all, and whether or not to even consider the problem today versus deferring it until later. In a way Facebook has it easy, because when you are adding 15TB of data per day, that decision is pretty much made for you.</p>
 
 
-<p>For all the companies sitting in the twilight between the gigabyte and the petabyte who don&#8217;t have Hadoop expertise in-house, there is a collection of free information to help guide people to the right solution space (Hadoop Tutorial, White Papers). These days, when I talk to people who are evaluating solutions to their big data problems, my advice to them is to break down their problems into a few discrete use cases and then work on ferreting out the technologies that are designed for that use case. Get a proof of concept to demonstrate that the technology can address your use case and convince yourself and others that you&#8217;re on the right track. Work toward putting something simple into production. Lather, rinse, and repeat. I am still in that cycle myself, as these days I&#8217;m exploring HBase and OpenTSDB to give me low-latency access to time series data and Mahout to do frequent item set mining, but that&#8217;s another article for another day.</p>
+<p>For all the companies sitting in the twilight between the gigabyte and the petabyte who don't have Hadoop expertise in-house, there is a collection of free information to help guide people to the right solution space (Hadoop Tutorial, White Papers). These days, when I talk to people who are evaluating solutions to their big data problems, my advice to them is to break down their problems into a few discrete use cases and then work on ferreting out the technologies that are designed for that use case. Get a proof of concept to demonstrate that the technology can address your use case and convince yourself and others that you're on the right track. Work toward putting something simple into production. Lather, rinse, and repeat. I am still in that cycle myself, as these days I'm exploring HBase and OpenTSDB to give me low-latency access to time series data and Mahout to do frequent item set mining, but that's another article for another day.</p>
 
 
 <p><em>By Loren</em></p>
@@ -673,7 +580,7 @@ Enter same passphrase again:
 <p>The <a href="http://ctolabs.com/big-data-award/">Big Data Award</a> was established to highlight innovative solutions and to facilitate the exchange of best practices, lessons learned, and creative ideas for addressing Big Data challenges. The Award judges saw the USASearch Program as a great example of solving Big Data problems to improve government agility and to provide better service for less.</p>
 
 
-<p>In line with the GSA&#8217;s cost-saving &#8220;build once, use many times&#8221; paradigm, USASearch provides <a href="http://search.usa.gov/affiliates">hosted search services</a> for <a href="http://www.usa.gov">USA.gov</a> and hundreds of other government websites. This is done in a cost-effective way, especially for the agencies involved, which receive these services at no cost.</p>
+<p>In line with the GSA's cost-saving &#8220;build once, use many times&#8221; paradigm, USASearch provides <a href="http://search.usa.gov/affiliates">hosted search services</a> for <a href="http://www.usa.gov">USA.gov</a> and hundreds of other government websites. This is done in a cost-effective way, especially for the agencies involved, which receive these services at no cost.</p>
 
 
 <p>From the Award presentation: &#8220;The GSA is to be congratulated for their mission-focused, citizen-centered, open approach to a big data challenge and a resulting solution that improves the experience of a broad swath of users of federal services. On behalf of our judges and the many citizens who use this capability on a daily basis we say thank you, and congratulations on this well deserved recognition.&#8221;</p>
@@ -686,6 +593,41 @@ Enter same passphrase again:
       <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
       
       <a href="/tagged/research-and-news"><span class="label label-info">research-and-news</span></a>
+      
+      <a href="/tagged/big-data"><span class="label label-info">big-data</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <a href="/blog/hadoop-rubyists.html">
+        <time>November 9, 2011</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/blog/hadoop-rubyists.html">Hadoop for Rubyists</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Is your MySQL groaning under too much data? Tired of waiting hours for analytics rake tasks?</p>
+
+
+<p><a href="http://pivotallabs.com/talks/150-hadoop-for-rubyists"><img alt="image" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_luckbhCakH1qid15q.png"/></a></p>
+
+
+<p><a href="http://pivotallabs.com/talks/150-hadoop-for-rubyists">Listen to Loren</a>, USASearch's senior technical architect, as he discusses how USASearch leveraged our existing Ruby codebase by building Hadoop Map/Reduce jobs using Hive and plugging in our own Ruby mappers/reducers.</p>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
       
       <a href="/tagged/big-data"><span class="label label-info">big-data</span></a>
       
@@ -711,7 +653,7 @@ Enter same passphrase again:
     <ul class="footer-links unstyled inline">
       <li><a href="/developer/index.html">APIs</a></li>
       <li class="muted">&bull;</li>
-      <li><a href="http://www.twitter.com/usasearch">Follow Us on Twitter</a></li>
+      <li><img src="http://search.usa.gov/images/govbox/twitter.png" alt="Twitter"><a href="http://www.twitter.com/usasearch">Follow Us on Twitter</a></li>
       <li class="muted">&bull;</li>
       <li><a href="mailto:usasearch@gsa.gov">USASearch@gsa.gov</a></li>
       <li class="muted">&bull;</li>

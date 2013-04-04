@@ -78,41 +78,6 @@
   <article class='article'>
     <div class='time'>
       
-      <a href="/blog/hadoop-rubyists.html">
-        <time>November 9, 2011</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/blog/hadoop-rubyists.html">Hadoop for Rubyists</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>Is your MySQL groaning under too much data? Tired of waiting hours for analytics rake tasks?</p>
-
-
-<p><a href="http://pivotallabs.com/talks/150-hadoop-for-rubyists"><img class="img-polaroid" alt="image" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_luckbhCakH1qid15q.png"/></a></p>
-
-
-<p><a href="http://pivotallabs.com/talks/150-hadoop-for-rubyists">Listen to Loren</a>, USASearch&#8217;s senior technical architect, as he discusses how USASearch leveraged our existing Ruby codebase by building Hadoop Map/Reduce jobs using Hive and plugging in our own Ruby mappers/reducers.</p>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/big-data"><span class="label label-info">big-data</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
       <a href="/blog/hadoop-for-rubyists.html">
         <time>November 9, 2011</time>
       </a>
@@ -128,10 +93,10 @@
       <p>Is your MySQL groaning under too much data? Tired of waiting hours for analytics rake tasks?</p>
 
 
-<p><a href="http://pivotallabs.com/talks/150-hadoop-for-rubyists"><img class="img-polaroid" alt="image" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_luckbhCakH1qid15q.png"/></a></p>
+<p><a href="http://pivotallabs.com/talks/150-hadoop-for-rubyists"><img alt="image" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_luckbhCakH1qid15q.png"/></a></p>
 
 
-<p><a href="http://pivotallabs.com/talks/150-hadoop-for-rubyists">Listen to Loren</a>, USASearch&#8217;s senior technical architect, as he discusses how USASearch leveraged our existing Ruby codebase by building Hadoop Map/Reduce jobs using Hive and plugging in our own Ruby mappers/reducers.</p>
+<p><a href="http://pivotallabs.com/talks/150-hadoop-for-rubyists">Listen to Loren</a>, USASearch's senior technical architect, as he discusses how USASearch leveraged our existing Ruby codebase by building Hadoop Map/Reduce jobs using Hive and plugging in our own Ruby mappers/reducers.</p>
 
 
     </div>
@@ -175,7 +140,7 @@
 <p>The initial system, like many initial systems, was fairly simple and did just enough to address our most pressing analytics needs. We took the logs from Apache and Ruby on Rails, put them in a big MySQL database on a separate machine, ran nightly and monthly jobs on them, and then exported the summary results to the main database cluster to be served up via a low-latency Rails web interface for analytics. We used a separate physical database machine with lots of memory and disk for the batch processing to keep our production MySQL instances from being impacted by this resource-intensive batch processing.</p>
 
 
-<p><img class="img-polaroid" class="img-polaroid" alt="Diagram showing the initial dataflow of raw logfiles to analytics apps" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_lle73iJ2Ts1qid15q.png"/></p>
+<p><img alt="Diagram showing the initial dataflow of raw logfiles to analytics apps" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_lle73iJ2Ts1qid15q.png"/></p>
 
 
 <p>As we watched the main database tables grow and the nightly batch jobs take longer and longer, it became clear that we would soon exhaust the resources available on the single database analytics processing node. We looked at scaling up the hardware vertically and sharding the database horizontally, but both options seemed like we were just kicking the can down the road. Larger database hardware would be both costly and eventually insufficient for our needs, and sharding promised to take all the usual issues associated with a single database system (backups, master/slaves, schema management) and multiply them. We wanted the system to be able to grow cost effectively and without downtime, be naturally resilient to failures, and have backups handled sensibly. It was at this point that we started investigating HDFS, Hadoop, and Apache Hive.</p>
@@ -187,7 +152,7 @@
 <p>But best of all, we could layer the entire Cloudera stack on top of a subset of our existing production machines. By making use of each machine’s excess reserve capacity of disk, CPU, and RAM, we were able to get a small proof-of-concept cluster stood up without purchasing any new hardware. The initial results confirmed that our workload lent itself well to distributed processing, as one job went from taking over an hour on a MySQL node to 20 minutes on a three machine Hadoop cluster. Within a week of getting the prototype up and running, we had transitioned all the remaining nightly analytics batch SQL jobs into Hive scripts. The job output fed into a collection of intermediate Hive tables, from which we generated summary data to export to MySQL as low-latency tables for the Rails web interface to use. To prove the scaling point, we spent five minutes adding another datanode/tasktracker to the mix, kicked off the cluster rebalancer, and the whole process ran faster the next day.</p>
 
 
-<p><img class="img-polaroid" class="img-polaroid" alt="Diagram showing the current dataflow of raw logfiles to analytics apps" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_lle73rea1K1qid15q.png"/></p>
+<p><img alt="Diagram showing the current dataflow of raw logfiles to analytics apps" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_lle73rea1K1qid15q.png"/></p>
 
 
 <p><strong>Phase 2: Feedback loop</strong></p>
@@ -196,7 +161,7 @@
 <p>The result of all this analysis in Hive shows up not just in various analytics dashboards, but as part of the search experience on many government websites, too. For example, compare the different type-ahead suggestions for ‘<strong>gran</strong>’ on <a href="http://nps.gov/">nps.gov</a> and <a>usa.gov</a>. Both sites use the same USASearch backend system, but the suggestions differ completely. We use Hadoop to help us generate contextually relevant and timely search suggestions for hundreds of government sites like this.</p>
 
 
-<p><img class="img-polaroid" class="img-polaroid" alt="Image showing different type-ahead suggestions on NPS.gov and USA.gov" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_lle73ymed31qid15q.png"/></p>
+<p><img alt="Image showing different type-ahead suggestions on NPS.gov and USA.gov" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_lle73ymed31qid15q.png"/></p>
 
 
 <p><strong>Phase 3: Internal monitoring</strong></p>
@@ -255,7 +220,7 @@
     <ul class="footer-links unstyled inline">
       <li><a href="/developer/index.html">APIs</a></li>
       <li class="muted">&bull;</li>
-      <li><a href="http://www.twitter.com/usasearch">Follow Us on Twitter</a></li>
+      <li><img src="http://search.usa.gov/images/govbox/twitter.png" alt="Twitter"><a href="http://www.twitter.com/usasearch">Follow Us on Twitter</a></li>
       <li class="muted">&bull;</li>
       <li><a href="mailto:usasearch@gsa.gov">USASearch@gsa.gov</a></li>
       <li class="muted">&bull;</li>

@@ -88,24 +88,44 @@
   
 
   <div class='post-content'>
-    <p>Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends?</p>
+    <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > 3rd Party Tracking</p>
+
+<p>Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends?</p>
+
+<p>Log in to the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> and select the option, Third Party Tracking. Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
+
+<hr />
+
+<p><strong><em>Google Analytics tip:</em></strong> In your Google Analytics JavaScript, be sure to set your domain if you've requested <a href="/manual/get-code.html#cname">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
+
+<pre><code>_gaq.push(['_setDomainName', 'commerce.gov']);
+</code></pre>
+
+<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>.</p>
+
+<p><strong><em>ForeSee tip:</em></strong> Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
+
+<ol>
+<li>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x55;&#x53;&#x41;&#x53;&#x65;&#97;&#x72;&#99;&#104;&#64;&#103;&#x73;&#x61;&#x2e;&#103;&#111;&#118;">&#85;&#83;&#65;&#x53;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#x67;&#115;&#x61;&#x2e;&#x67;&#111;&#118;</a> to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</li>
+<li>Update the files path in your Foresee code to use an absolute path instead of a relative path.</li>
+</ol>
 
 
-<p>Log in to the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> and select the option, Third Party Tracking. Input the JavaScript code you&#8217;d like to call from your search results page. Click submit to send us your request. We&#8217;ll input your code for you and send you an email to confirm that we&#8217;ve done it.</p>
+<p>  Find =&gt; 'files': '/fsrscripts/',</p>
 
+<p>  and replace it with =&gt; 'files': '//{yourdomain}/fsrscripts/',</p>
 
-<blockquote>
-<p><em><strong>Google Analytics tip:</strong></em> In your Google Analytics JavaScript, be sure to set your domain if you&#8217;ve requested <a href="/manual/get-code.html#cname">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
-<p>_gaq.push([&#8216;_setDomainName&#8217;, &#8216;commerce.gov&#8217;]);<br/><br/>For more information, read Google&#8217;s tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>.</p>
-<p><em><strong>ForeSee tip:</strong> </em>Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
-<ol><li>Email USASearch to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</li>
-<li>Update the files path in your Foresee code to use an absolute path instead of a relative path. <br/><br/>Find =&gt; &#8216;files&#8217;: &#8216;/fsrscripts/&#8217;,<br/><br/>and replace it with =&gt; &#8216;files&#8217;: &#8216;//{yourdomain}/fsrscripts/&#8217;,<br/><br/>in the following five files.<br/>a. foresee-trigger.js<br/>b. foresee-tracker.js<br/>c. foresee-alive.js<br/>d. foresee-qualifier.js<br/>e. foresee-test.js</li>
-<li>Ask ForeSee to send USASearch your foresee-trigger.js file.</li>
-<li>USASearch will send you an email to confirm that we&#8217;ve set up your CNAME and installed your foresee-trigger.js file.</li>
-</ol></blockquote>
+<p>  in the following five files.</p>
 
-
-<p><a href="http://usasearch.howto.gov/">USASearch</a> &gt; <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; 3rd Party Tracking</p>
+<ol type="a">
+<li> foresee-trigger.js</li>
+<li> foresee-tracker.js</li>
+<li> foresee-alive.js</li>
+<li> foresee-qualifier.js</li>
+<li><p> foresee-test.js</p></li>
+<li><p>Ask ForeSee to send USASearch your foresee-trigger.js file.</p></li>
+<li>USASearch will send you an email to confirm that we've set up your CNAME and installed your foresee-trigger.js file.</li>
+</ol>
 
 
   </div>
@@ -125,7 +145,7 @@
     <ul class="footer-links unstyled inline">
       <li><a href="/developer/index.html">APIs</a></li>
       <li class="muted">&bull;</li>
-      <li><a href="http://www.twitter.com/usasearch">Follow Us on Twitter</a></li>
+      <li><img src="http://search.usa.gov/images/govbox/twitter.png" alt="Twitter"><a href="http://www.twitter.com/usasearch">Follow Us on Twitter</a></li>
       <li class="muted">&bull;</li>
       <li><a href="mailto:usasearch@gsa.gov">USASearch@gsa.gov</a></li>
       <li class="muted">&bull;</li>
