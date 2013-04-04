@@ -15,7 +15,7 @@ When you [turn on the Jobs GovBox](/blog/how-to-select-the-modules-that-appear-o
 
 Searchers will also see a direct link to [USAJobs.gov](http://www.usajobs.gov) for all current job openings (specific to your department or agency, if applicable) , as shown in the sample below for a search on [*jobs*](http://usdasearch.usda.gov/search?affiliate=usda&query=jobs") on the USDA.gov. 
 
-<img alt="Search results for jobs on USDA.gov" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_inline_mhpcdd93lO1qz4rgp.png"/> 
+![Search results for jobs on USDA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_inline_mhpcdd93lO1qz4rgp.png)
 
 ---
 
