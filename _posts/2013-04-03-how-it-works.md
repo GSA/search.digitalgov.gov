@@ -3,16 +3,15 @@ permalink: help-desk.html
 layout: default
 title: "How It Works"
 ---
-
 Do you have a question about how USASearch works? Browse through our [How To Manual](/tagged/how-to) and [Go-Live Punch List](/blog/go-live.html) for tips on how to configure your search.
 
-#### Basic Settings
+## Basic Settings
 
 * [Site information](/manual/site-information.html)
 * [Get code](/manual/get-code.html)
 * [Preview](/manual/preview.html)
 
-#### Content Sources
+## Content Sources
 
 * [Domains](/manual/domains.html)
 * [URLs & sitemaps](/manual/urls.html)
@@ -20,19 +19,19 @@ Do you have a question about how USASearch works? Browse through our [How To Man
 * [Collections](/manual/collections.html)
 * [Social media](/manual/social-media.html)
 
-#### User Interface
+## User Interface
 
 * [Look and feel](/manual/look-feel.html)
 * [Header and footer](/manual/header-footer.html)
 * [Results modules](/manual/results-modules.html)
 * [Sidebar](/manual/sidebar.html)
 
-#### Editorial Features
+## Editorial Features
 
 * [Best bets](/manual/best-bets.html)
 * [Type-ahead search](/manual/type-ahead.html)
 
-#### Site Analytics
+## Site Analytics
 
 * [Trending queries](/manual/trending-queries.html)
 * [Query logs](/manual/query-logs.html)
@@ -41,7 +40,7 @@ Do you have a question about how USASearch works? Browse through our [How To Man
 * [Page views](/manual/page-views.html)
 * [Low CTR queries](/manual/low-ctr.html)
 
-#### Account Settings
+## Account Settings
 
 * [Add new site](/manual/add-site.html)
 * [Search API](/manual/api.html)

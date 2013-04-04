@@ -12,7 +12,7 @@ title: USASearch
 </div>
 <div class="row">
   <div class="span6">
-    <h1>About Us</h1>
+    <h3>About Us</h3>
 
     <p>USASearch is a hosted site search service provided by the <a href="http://www.gsa.gov/">U.S.
       General Services Administration</a> (GSA). USASearch is managed by GSA's <a
@@ -22,13 +22,13 @@ title: USASearch
 
     <p>You can use USASearch to power the search box on your federal, state, local, tribal, or
       territorial government website—at no cost.</p>
-    <h2>Why do you need search on your website?</h2>
+    <h4>Why do you need search on your website?</h4>
 
     <p>Usability <a href="http://www.useit.com/alertbox/9707b.html">studies show</a> that more than
       half of all website visitors are search-dominant, about a fifth are link-dominant, and the
       rest exhibit mixed behavior. Whatever their preference, visitors expect to be able to find a
       search box on your website.</p>
-    <h2>Why should you use USASearch?</h2>
+    <h4>Why should you use USASearch?</h4>
 
     <p>We deliver fast and relevant results. We're committed to openness in government and improving
       customer service. And, we're free!</p>&#13;
@@ -36,15 +36,15 @@ title: USASearch
         href="http://search.usa.gov/affiliates/home">Sign up</a> today.</p>
   </div>
   <div class="span6">
-    <h1>Features</h1>
+    <h3>Features</h3>
 
-    <h2>Free, hosted site search ...</h2>
+    <h4>Free, hosted site search&hellip;</h4>
     <ul>
       <li>Provides an index of your public-facing web pages and social media.</li>
       <li>Fetches and indexes your content sources (RSS feeds, specific URLs, sitemaps).</li>
       <li>Doesn&rsquo;t have a document count limit.</li>
     </ul>
-    <h2>with industry best practice features &hellip;</h2>
+    <h4>with industry best practice features&hellip;</h4>
     <ul>
       <li>Allows you to customize the look and feel of the results.</li>
       <li>Allows you to recommend "best bets."</li>
@@ -53,7 +53,7 @@ title: USASearch
       <li>Supports English and Spanish websites.</li>
       <li>Provides self-service admin center and analytics for site administrators.</li>
     </ul>
-    <h2>and a quick, reliable, and secure infrastructure.</h2>
+    <h4>and a quick, reliable, and secure infrastructure.</h4>
     <ul>
       <li>Maintains 99.95%-plus uptime.</li>
       <li>Delivers nearly all search results in less than 400 milliseconds.</li>
