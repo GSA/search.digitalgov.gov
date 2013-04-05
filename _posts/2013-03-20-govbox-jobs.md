@@ -7,7 +7,7 @@ tags: govbox jobs how-to
 
 One of the most common search tasks is to look for current job openings. To help searchers quickly find relevant jobs we've created the Jobs GovBox. 
 
-When you [turn on the Jobs GovBox](/blog/how-to-select-the-modules-that-appear-on-your-results.html), searchers looking for jobs on your site will see up to three relevant jobs listings on your results page. 
+When you [turn on the Jobs GovBox](/manual/results-modules.html), searchers looking for jobs on your site will see up to three relevant jobs listings on your results page. 
 
 * **Federal Department Websites** If your website is affiliated with a specific federal department (e.g., Department of Commerce), the federal Jobs GovBox will return relevant, location- and keyword-matched job openings *across all agencies within your department*. 
 * **Federal Agency or Office Websites** If your website is affiliated with a specific federal agency (e.g., NOAA) or office (e.g, National Ocean Service), the federal Jobs GovBox will return relevant, location-and keyword-matched job openings *at your agency*. 

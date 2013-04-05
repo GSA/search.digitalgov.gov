@@ -14,6 +14,6 @@ tags: get-code
 <li><span>(Spanish)  usabuscador.gov</span></li>
 </ol><p><span>Specifically, you have to update the action of your <a href="/manual/get-code.html">form </a></span><span><a href="/manual/get-code.html">code</a> to call search.usa.gov </span><span>(or search.yoursite.gov)</span><span>.</span></p>
 <blockquote>
-<p><span>&lt;form method=&#8221;get&#8221; action=&#8221;http://search.usa.gov/search&#8221;&gt;</span></p>
+<p><span>&lt;form method="get" action="http://search.usa.gov/search"&gt;</span></p>
 </blockquote>
 <p><span></span><span>Note that, if you don't update your form code, your search results </span><span>page will no longer work.</span></p>

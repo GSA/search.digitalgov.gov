@@ -24,7 +24,7 @@ tags: how-to user-interface
 <p><strong>Invalid CSS</strong></p>
 <p>&lt;html&gt;<br/>&lt;body&gt;<br/>&lt;style&gt; h1 { color: blue } &lt;/style&gt;<br/>&lt;link href=”http://www.yoursite.gov/custom.css” type=”text/css” /&gt;<br/>&lt;/body&gt;<br/>&lt;/html&gt;</p>
 <p><strong>Valid CSS</strong></p>
-<p>&lt;h1 style=&#8221;color: blue;&#8221;&gt;Your Heading&lt;/h1&gt;</p>
+<p>&lt;h1 style="color: blue;"&gt;Your Heading&lt;/h1&gt;</p>
 <p><a id="mobile" name="mobile"></a></p>
 <h2>Customize your mobile header</h2>
 <p>We use device detection to show mobile-friendly search results on mobile phones. (Searchers using tablets and desktop computers see the full, classic header as you set it up above.)</p>

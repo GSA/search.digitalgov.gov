@@ -11,7 +11,7 @@ tags: how-to analytics
 <p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV link to download the list as a comma delimited file. The CSV file contains three columns.</p>
 <ol><li>Query—The search term or phrase.</li>
 <li>Raw count—Total number of times the query was submitted.</li>
-<li>IP-deduped—Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of &#8220;real,&#8221; human traffic.</li>
+<li>IP-deduped—Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of "real," human traffic.</li>
 </ol><blockquote>
 <p><em><strong>Did you know?</strong> </em>On the first of each month, we email you a report with data on the previous month's queries, clicks, and top search terms.</p>
 </blockquote>

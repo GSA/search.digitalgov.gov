@@ -32,7 +32,7 @@ Choose a language for your site, English or Spanish. We will only index and prov
 * Use this feature to remove a single URL from the results on your site. Use it for emergency reasons only.
 * It is not meant to fix the results for entire site, such as for launch or redesign problems. For tips on how to fix these problems, view our [Checklist for a Successful Website Redesign](/blog/redesign.html).
 * Entire the full path of the URL, e.g. use <http://www.usa.gov/Citizen/Topics/Benefits.shtml>, not usa.gov/citizen/topics.
-* Note that a list is created, below the entry box, of all deleted URLs. You can undo the &#8220;delete” action in real time at any time.
+* Note that a list is created, below the entry box, of all deleted URLs. You can undo the "delete” action in real time at any time.
 
 ---
 

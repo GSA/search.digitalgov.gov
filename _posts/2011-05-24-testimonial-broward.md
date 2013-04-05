@@ -10,7 +10,7 @@ tags: testimonial
 <p>We want to thank Rob Nadeau (Web Site Manager for Broward County) for being a good and supportive customer and someone who proactively implements our special features!</p>
 <p>Rob offered these kind words about USASearch.</p>
 <blockquote>
-<p>When USASearch expanded their affiliate program, <a href="http://www.broward.org" target="_blank">Broward County</a> was fortunate to be the first County in the nation to participate in the effort. During times when budgets are limited, the partnership monetarily saved the County by not moving to a commercial search solution. As the program evolved to &#8220;new&#8221; technology and tools, the County and our visitors once again benefited from an ever-growing feature rich program that now offers a more accurate search with speed 9 times faster.</p>
+<p>When USASearch expanded their affiliate program, <a href="http://www.broward.org" target="_blank">Broward County</a> was fortunate to be the first County in the nation to participate in the effort. During times when budgets are limited, the partnership monetarily saved the County by not moving to a commercial search solution. As the program evolved to "new" technology and tools, the County and our visitors once again benefited from an ever-growing feature rich program that now offers a more accurate search with speed 9 times faster.</p>
 <ul><li>a customized look and feel</li>
 <li>the ability to immediately boost content to showcase specific pages to appear above the main results</li>
 <li>type-ahead search suggestions for visitors to our site</li>
