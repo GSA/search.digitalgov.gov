@@ -275,8 +275,8 @@
 <blockquote>
 <div>
 <p><em><strong>Did you know?</strong> </em>You can set up a search box on your website that limits results to your collection. </p>
-<p>Start with the standard form snippet on the <a href="/manual/get-code.html">Get Code</a> page in the Admin Center. Change the form action to action=&#8221;http://search.usa.gov/search/docs&#8221; and add the following line to limit the results to your collection. </p>
-<p>&lt;input type=&#8221;hidden&#8221; name=&#8221;dc&#8221; value=&#8221;###&#8221;&gt;.</p>
+<p>Start with the standard form snippet on the <a href="/manual/get-code.html">Get Code</a> page in the Admin Center. Change the form action to action="http://search.usa.gov/search/docs" and add the following line to limit the results to your collection. </p>
+<p>&lt;input type="hidden" name="dc" value="###"&gt;.</p>
 <p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
 <p>See the sample search box below that is limited to news releases in FTC.gov's <a href="http://www.ftc.gov/opa/index.shtml">Newroom</a> for a search on <em>privacy</em>.</p>
 <p><img alt="image" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mezhnwedQK1qid15q.png"/></p>
@@ -317,53 +317,84 @@
     <div class='post-content'>
       <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Get Code</p>
 
-<p>Visit our [Admin Center](http://search.usa.gov/affiliates/home), select your site, and click on the Get Code option in the left-hand menu. </p>
+<p>Visit our <a href="http://search.usa.gov/affiliates/home">Admin Center</a>, select your site, and click on the Get Code option in the left-hand menu.</p>
 
+<p>Add the following two snippets of code to your website to "hook" your website and our hosted search service together. You can add this code to your individual web pages or to the template(s) in your content management system.</p>
 
-<p>Add the following two snippets of code to your website to &#8220;hook&#8221; together your website and our hosted search service. You can add this code to your individual web pages or to the template(s) in your content management system. </p>
-
-
-<p><strong>1. Form Snippet</strong></p>
-
+<h2>1. Form Snippet</h2>
 
 <p>Include the first snippet of code where the form for your search box appears. Your form should look something like this:</p>
 
+<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
 
-<pre>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;<br/>    &lt;input id="affiliate" name="affiliate" type="hidden" value="<span><strong>YourSiteHandle</strong></span>" /&gt;<br/>    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;<br/>    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;<br/>    &lt;input name="commit" type="submit" value="Search" /&gt;<br/>&lt;/form&gt;</pre>
+<h2>2. Javascript Snippet</h2>
 
+<p>Include the second snippet of code before the closing <code>&lt;body&gt;</code> tag. This tag enables type-ahead search and ensures we have complete and timely coverage of your content in our index. Your tag should look something like this:</p>
 
-<p><strong>2. Javascript Snippet</strong></p>
-
-
-<p>Include the second snippet of code before the closing &lt;/body&gt; tag. This tag enables type-ahead search and ensures we have complete and timely coverage of your content in our index. Your tag should look something like this:</p>
-
-
-<pre>&lt;script type="text/javascript"&gt;
+<pre><code>&lt;script type="text/javascript"&gt;
 //&lt;![CDATA[
-      var usasearch_config = { siteHandle:"<strong>YourSiteHandle</strong>" };
+      var usasearch_config = { siteHandle:"YourSiteHandle" };
+
       var script = document.createElement("script");
       script.type = "text/javascript";
       script.src = "http://search.usa.gov/javascripts/remote.loader.js";
       document.getElementsByTagName("head")[0].appendChild(script);
-//]]&gt;<br/>&lt;/script&gt;</pre>
+
+//]]&gt;
+&lt;/script&gt;
+</code></pre>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> If your website is secured with https, you can add 's' to the two URLs above (i.e., <a href="https://search.usa.gov/search">https://search.usa.gov/search</a> and <a href="https://search.usa.gov/javascripts/remote.loader.js">https://search.usa.gov/javascripts/remote.loader.js</a>, respectively) so that searchers don't receive a security message in Internet Explorer.</p>
+
+<p><strong><em>Did you know?</em></strong> If you're using Drupal, be sure to check out our <a href="http://drupal.org/project/USASearch">USASearch Drupal module</a>.</p>
+
+<p><strong><em>Did you know?</em></strong> We offer DNS masking, which allows you to show searchers your domain (instead of USA.gov). Follow these three steps to mask your domain.</p>
+
+<ol>
+<li>E-mail us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#85;&#83;&#65;&#x53;&#101;&#97;&#114;&#99;&#104;&#x40;&#x67;&#115;&#x61;&#46;&#x67;&#x6f;&#x76;">&#x55;&#x53;&#65;&#x53;&#101;&#97;&#x72;&#99;&#104;&#x40;&#103;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#x76;</a> and ask us to mask your domain.</li></li>
+<li>Create a CNAME in your DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
+<li>When the setup is complete, change the code for your form action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
+</ol>
 
 
-<blockquote>
-<div>
-<p><em><strong>Troubleshooting tip:</strong></em> If your website is secured with https, you can add 's' to the two URLs above (i.e., <a href="https://search.usa.gov/search">https://search.usa.gov/search</a> and <a href="https://search.usa.gov/javascripts/remote.loader.js,">https://search.usa.gov/javascripts/remote.loader.js,</a> respectively) so that searchers don't receive a security message in Internet Explorer.</p>
-<p><span><em><strong>Did you know?</strong> </em>If you’re using Drupal, be sure to check out our </span><a href="http://drupal.org/project/USASearch">Drupal module</a><span>.</span></p>
-<p><em><strong>Did you know?</strong> </em>We offer DNS masking, which allows you to show searchers your domain (instead of USA.gov). Follow these three steps to mask your domain.</p>
-<ol><li><a href="mailto:usasearch@gsa.gov">E-mail us</a> your request us to mask your domain.</li>
-<li>Create a CNAME in your DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net.</em></li>
-<li>When the setup is complete, change the code for your form action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
-</ol><p><em><strong>Did you know?</strong> </em>You can set up one site in your USASearch account that limits results to specific folders or subdomains by either:<br/><br/>(1) <a href="/manual/collections.html">Creating a collection</a>.<br/><br/>&lt;input type=&#8221;hidden&#8221; name=&#8221;dc&#8221; value=&#8221;###&#8221;&gt;. The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
-<p><img alt="image" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m2l30r5nfy1qid15q.png"/></p>
-<p><br/>(2) Leaving your domain blank on the <a href="/manual/domains.html">Domains</a> page and, instead, passing a hidden value for the domain in the search form code.</p>
+<p><strong><em>Did you know?</em></strong> You can set up one site in your USASearch account that limits results to specific folders or subdomains by either:</p>
+
+<p>(1) <a href="/manual/collections.html">Creating a collection</a>.</p>
+
+<p>Create a collection. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/docs/</code> and (b) add an input for this collection.</p>
+
+<pre><code>&lt;input type="hidden" name="dc" value="###"&gt;. 
+</code></pre>
+
+<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center as shown in the sample below.</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/get-code-collection.png" alt="Value for the collection ID" /></p>
+
+<p>(2) <a href="/manual/rss.html">Setting up an RSS feed</a>.</p>
+
+<p>Set up an RSS feed. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/news/</code> and (b) add an input for this feed.</p>
+
+<pre><code>&lt;input type="hidden" name="channel" value="###"&gt;. 
+</code></pre>
+
+<p>The value is the number for your RSS ID, which is visible in the URL when you edit or preview your feed in the Admin Center.</p>
+
+<p>(3) Leaving your domain blank on the <a href="/manual/domains.html">Domains</a> page and, instead, passing a hidden value for the domain in the search form code.</p>
+
 <p>See, for example, <a href="http://www.ri.gov">RI.gov</a>, <a href="http://www.dmv.ri.gov/">DMV.RI.gov</a>, <a href="http://www.health.ri.gov/">Health.RI.gov</a>. On Health.RI.gov, the following hidden value is added to limit to only the health subdomain.</p>
-<p>&lt;input type=&#8221;hidden&#8221; name=&#8221;site&#8221; value=&#8221;www.health.ri.gov&#8221; /&gt;</p>
-</div>
-</blockquote>
 
+<pre><code>&lt;input type="hidden" name="site" value="www.health.ri.gov" &gt;
+</code></pre>
 
     </div>
 
@@ -421,13 +452,13 @@
 <li>Use this feature to remove a single URL from the results on your site. Use it for emergency reasons only.</li>
 <li>It is not meant to fix the results for entire site, such as for launch or redesign problems. For tips on how to fix these problems, view our <a href="/blog/redesign.html">Checklist for a Successful Website Redesign</a>.</li>
 <li>Entire the full path of the URL, e.g. use <a href="http://www.usa.gov/Citizen/Topics/Benefits.shtml">http://www.usa.gov/Citizen/Topics/Benefits.shtml</a>, not usa.gov/citizen/topics.</li>
-<li>Note that a list is created, below the entry box, of all deleted URLs. You can undo the &#8220;delete” action in real time at any time.</li>
+<li>Note that a list is created, below the entry box, of all deleted URLs. You can undo the "delete” action in real time at any time.</li>
 </ul>
 
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or switch from one language to the other, e-mail us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#x55;&#x53;&#x41;&#83;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#103;&#115;&#x61;&#46;&#103;&#x6f;&#x76;">&#x55;&#x53;&#x41;&#83;&#x65;&#97;&#114;&#99;&#x68;&#64;&#x67;&#x73;&#x61;&#46;&#103;&#111;&#118;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or switch from one language to the other, e-mail us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x55;&#83;&#65;&#x53;&#101;&#x61;&#x72;&#99;&#104;&#64;&#103;&#115;&#97;&#46;&#103;&#111;&#x76;">&#x55;&#x53;&#x41;&#x53;&#101;&#97;&#x72;&#x63;&#104;&#64;&#103;&#x73;&#x61;&#46;&#x67;&#111;&#118;</a>.</p>
 
     </div>
 
@@ -493,8 +524,8 @@
 <p>You may choose to add terms to the list that displays in type-ahead search. You may:</p>
 
 
-<ol><li>Upload an individual term (i.e. click on &#8220;Add a New Entry&#8221;), or</li>
-<li>Add a group of terms all at once (i.e., click on &#8220;Bulk Upload&#8221;).<br/><br/>To bulk upload:</li>
+<ol><li>Upload an individual term (i.e. click on "Add a New Entry"), or</li>
+<li>Add a group of terms all at once (i.e., click on "Bulk Upload").<br/><br/>To bulk upload:</li>
 </ol>
 
 
@@ -512,7 +543,7 @@
 <p><em><strong>Delete terms from the list.</strong></em></p>
 
 
-<p>You may also delete individual terms that you don't want listed, through &#8220;Current Entries&#8221;. Use &#8220;Filter&#8221; to search for particular terms to edit.</p>
+<p>You may also delete individual terms that you don't want listed, through "Current Entries". Use "Filter" to search for particular terms to edit.</p>
 
 
 <h2>Type-ahead on Other Web Pages</h2>
