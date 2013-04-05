@@ -31,7 +31,7 @@ title: USASearch
     <h4>Why should you use USASearch?</h4>
 
     <p>We deliver fast and relevant results. We're committed to openness in government and improving
-      customer service. And, we're free!</p>&#13;
+      customer service. And, we're free!</p>
     <p>Improve visitors' search experience on your website. <a
         href="http://search.usa.gov/affiliates/home">Sign up</a> today.</p>
   </div>

@@ -1,5 +1,5 @@
 ---
-permalink: customers.html
+permalink: /customers.html
 layout: default
 title: Our Customers
 ---
@@ -17,7 +17,7 @@ USASearch has a proven track record of delivering fast, relevant search results.
 </tr>
 </table>
 
-<table align="center" width="100%"> 
+<table align="center" width="100%">
 <tr>
 <td valign="top" align="center"><a href="http://www.hawaii.gov"><img alt="Hawaii" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/customers-hawaii.png"></a><br><strong>Hawaii</strong></td>
 <td valign="top" align="center"><a href="http://www.kansas.gov"><img alt="Kansas" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/customers-kansas.png"></a><br><strong>Kansas</strong></td>

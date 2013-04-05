@@ -1,5 +1,5 @@
 ---
-permalink: help-desk.html
+permalink: /help-desk.html
 layout: default
 title: "How It Works"
 ---
