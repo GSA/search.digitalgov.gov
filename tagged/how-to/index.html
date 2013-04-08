@@ -81,6 +81,164 @@
       
       <span>Last updated on:</span>
       
+      <a href="/manual/get-code.html">
+        <time>April 5, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/get-code.html">How to Add Our Code to Your Website</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Get Code</p>
+
+<p>Visit our <a href="http://search.usa.gov/affiliates/home">Admin Center</a>, select your site, and click on the Get Code option in the left-hand menu.</p>
+
+<p>Add the following two snippets of code to your website to "hook" your website and our hosted search service together. You can add this code to your individual web pages or to the template(s) in your content management system.</p>
+
+<h2>1. Form Snippet</h2>
+
+<p>Include the first snippet of code where the form for your search box appears. Your form should look something like this:</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<h2>2. Javascript Snippet</h2>
+
+<p>Include the second snippet of code before the closing <code>&lt;body&gt;</code> tag. This tag enables type-ahead search and ensures we have complete and timely coverage of your content in our index. Your tag should look something like this:</p>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+      var usasearch_config = { siteHandle:"YourSiteHandle" };
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "http://search.usa.gov/javascripts/remote.loader.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+//]]&gt;
+&lt;/script&gt;
+</code></pre>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> If your website is secured with https, you can add 's' to the two URLs above (i.e., <a href="https://search.usa.gov/search">https://search.usa.gov/search</a> and <a href="https://search.usa.gov/javascripts/remote.loader.js">https://search.usa.gov/javascripts/remote.loader.js</a>, respectively) so that searchers don't receive a security message in Internet Explorer.</p>
+
+<p><strong><em>Did you know?</em></strong> If you're using Drupal, be sure to check out our <a href="http://drupal.org/project/USASearch">USASearch Drupal module</a>.</p>
+
+<p><strong><em>Did you know?</em></strong> We offer DNS masking, which allows you to show searchers your domain (instead of USA.gov). Follow these three steps to mask your domain.</p>
+
+<ol>
+<li>E-mail us at <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#85;&#83;&#65;&#x53;&#101;&#97;&#114;&#99;&#104;&#64;&#x67;&#x73;&#97;&#46;&#x67;&#x6f;&#x76;">&#x55;&#83;&#65;&#83;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#x67;&#x73;&#x61;&#46;&#x67;&#x6f;&#118;</a> and ask us to mask your domain.</li></li>
+<li>Create a CNAME in your DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
+<li>When the setup is complete, change the code for your form action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
+</ol>
+
+
+<p><strong><em>Did you know?</em></strong> You can set up one site in your USASearch account that limits results to specific folders or subdomains by either:</p>
+
+<p>(1) <a href="/manual/collections.html">Creating a collection</a>.</p>
+
+<p>Create a collection. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/docs/</code> and (b) add an input for this collection.</p>
+
+<pre><code>&lt;input type="hidden" name="dc" value="###"&gt;. 
+</code></pre>
+
+<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center as shown in the sample below.</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/get-code-collection.png" alt="Value for the collection ID" /></p>
+
+<p>(2) <a href="/manual/rss.html">Setting up an RSS feed</a>.</p>
+
+<p>Set up an RSS feed. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/news/</code> and (b) add an input for this feed.</p>
+
+<pre><code>&lt;input type="hidden" name="channel" value="###"&gt;. 
+</code></pre>
+
+<p>The value is the number for your RSS ID, which is visible in the URL when you edit or preview your feed in the Admin Center.</p>
+
+<p>(3) Leaving your domain blank on the <a href="/manual/domains.html">Domains</a> page and, instead, passing a hidden value for the domain in the search form code.</p>
+
+<p>See, for example, <a href="http://www.ri.gov">RI.gov</a>, <a href="http://www.dmv.ri.gov/">DMV.RI.gov</a>, <a href="http://www.health.ri.gov/">Health.RI.gov</a>. On Health.RI.gov, the following hidden value is added to limit to only the health subdomain.</p>
+
+<pre><code>&lt;input type="hidden" name="site" value="www.health.ri.gov" &gt;
+</code></pre>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/get-code"><span class="label label-info">get-code</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
+      <a href="/manual/govbox-jobs.html">
+        <time>March 20, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/govbox-jobs.html">Help Searchers Find Jobs</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>One of the most common search tasks is to look for current job openings. To help searchers quickly find relevant jobs we've created the Jobs GovBox.</p>
+
+<p>When you <a href="/manual/results-modules.html">turn on the Jobs GovBox</a>, searchers looking for jobs on your site will see up to three relevant jobs listings on your results page.</p>
+
+<ul>
+<li><strong>Federal Department Websites</strong> If your website is affiliated with a specific federal department (e.g., Department of Commerce), the federal Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across all agencies within your department</em>.</li>
+<li><strong>Federal Agency or Office Websites</strong> If your website is affiliated with a specific federal agency (e.g., NOAA) or office (e.g, National Ocean Service), the federal Jobs GovBox will return relevant, location-and keyword-matched job openings <em>at your agency</em>.</li>
+<li><strong>State and Local Websites and Cross-Agency Portals</strong> If your website is a state or local government site or a federal cross-agency portal (e.g., USA.gov), the federal Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across all federal agencies</em>.</li>
+</ul>
+
+
+<p>Searchers will also see a direct link to <a href="http://www.usajobs.gov">USAJobs.gov</a> for all current job openings (specific to your department or agency, if applicable) , as shown in the sample below for a search on <a href="http://usdasearch.usda.gov/search?affiliate=usda&amp;query=jobs" title=""><em>jobs</em></a> on the USDA.gov.</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_inline_mhpcdd93lO1qz4rgp.png" alt="Search results for jobs on USDA.gov" /></p>
+
+<hr />
+
+<p> <strong>Did you know?</strong> Are you a local or state government? Or a federal agency that doesn't post your jobs on USAJobs? We want your jobs data. E-mail us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#85;&#x53;&#x41;&#83;&#101;&#x61;&#114;&#x63;&#104;&#64;&#x67;&#115;&#x61;&#x2e;&#103;&#111;&#x76;">&#85;&#x53;&#65;&#x53;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#x67;&#115;&#x61;&#x2e;&#103;&#111;&#118;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/govbox"><span class="label label-info">govbox</span></a>
+      
+      <a href="/tagged/jobs"><span class="label label-info">jobs</span></a>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/manual/raw-logs.html">
         <time>March 20, 2013</time>
       </a>
@@ -157,55 +315,6 @@ Enter same passphrase again:
       
       <span>Last updated on:</span>
       
-      <a href="/manual/govbox-jobs.html">
-        <time>March 20, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/govbox-jobs.html">Help Searchers Find Jobs</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>One of the most common search tasks is to look for current job openings. To help searchers quickly find relevant jobs we've created the Jobs GovBox.</p>
-
-<p>When you <a href="/manual/results-modules.html">turn on the Jobs GovBox</a>, searchers looking for jobs on your site will see up to three relevant jobs listings on your results page.</p>
-
-<ul>
-<li><strong>Federal Department Websites</strong> If your website is affiliated with a specific federal department (e.g., Department of Commerce), the federal Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across all agencies within your department</em>.</li>
-<li><strong>Federal Agency or Office Websites</strong> If your website is affiliated with a specific federal agency (e.g., NOAA) or office (e.g, National Ocean Service), the federal Jobs GovBox will return relevant, location-and keyword-matched job openings <em>at your agency</em>.</li>
-<li><strong>State and Local Websites and Cross-Agency Portals</strong> If your website is a state or local government site or a federal cross-agency portal (e.g., USA.gov), the federal Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across all federal agencies</em>.</li>
-</ul>
-
-
-<p>Searchers will also see a direct link to <a href="http://www.usajobs.gov">USAJobs.gov</a> for all current job openings (specific to your department or agency, if applicable) , as shown in the sample below for a search on <a href="http://usdasearch.usda.gov/search?affiliate=usda&amp;query=jobs" title=""><em>jobs</em></a> on the USDA.gov.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_inline_mhpcdd93lO1qz4rgp.png" alt="Search results for jobs on USDA.gov" /></p>
-
-<hr />
-
-<p> <strong>Did you know?</strong> Are you a local or state government? Or a federal agency that doesn't post your jobs on USAJobs? We want your jobs data. E-mail us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#85;&#83;&#x41;&#83;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#x67;&#115;&#x61;&#x2e;&#103;&#111;&#118;">&#85;&#83;&#65;&#83;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#103;&#115;&#97;&#x2e;&#x67;&#x6f;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/govbox"><span class="label label-info">govbox</span></a>
-      
-      <a href="/tagged/jobs"><span class="label label-info">jobs</span></a>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
       <a href="/manual/third-party.html">
         <time>March 19, 2013</time>
       </a>
@@ -236,7 +345,7 @@ Enter same passphrase again:
 <p><strong><em>ForeSee tip:</em></strong> Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li>Email us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#x55;&#83;&#x41;&#83;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#103;&#115;&#97;&#46;&#103;&#111;&#x76;">&#85;&#x53;&#65;&#83;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#103;&#x73;&#x61;&#46;&#x67;&#x6f;&#x76;</a> to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</li>
+<li>Email us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#85;&#x53;&#65;&#83;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#103;&#115;&#x61;&#46;&#x67;&#111;&#118;">&#x55;&#x53;&#x41;&#x53;&#101;&#x61;&#114;&#99;&#x68;&#64;&#103;&#x73;&#97;&#46;&#x67;&#x6f;&#118;</a> to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</li>
 <li>Update the files path in your Foresee code to use an absolute path instead of a relative path.</li>
 </ol>
 
@@ -695,56 +804,6 @@ Enter same passphrase again:
 
 
 <p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqp4Jmoy1qid15q.png"/></p>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/manual/monthly-reports.html">
-        <time>May 3, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/monthly-reports.html">How to Analyze Your Monthly Reports</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Monthly Reports</p>
-
-<p>The Monthly Reports page in the [Admin Center](http://search.usa.gov/affiliates/home) reports on the total number of searches and click throughs. A click through is recorded each time a searcher clicks on a results link. Data start from the time your agency started using USASearch (but no further back than 2009).</p>
-
-
-<p>Data are shown for the present month-to-date by default. Change the time period by selecting a different year or month.</p>
-
-
-<p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV link to download the list as a comma delimited file. The CSV file contains three columns.</p>
-
-
-<ol><li>Query—The search term or phrase.</li>
-<li>Raw count—Total number of times the query was submitted.</li>
-<li>IP-deduped—Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of "real," human traffic.</li>
-</ol>
-
-
-<blockquote>
-<p><em><strong>Did you know?</strong> </em>On the first of each month, we email you a report with data on the previous month's queries, clicks, and top search terms.</p>
-</blockquote>
 
 
     </div>
