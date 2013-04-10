@@ -4,7 +4,7 @@ layout: post
 title: "How to Implement Type-ahead Search"
 tags: type-ahead how-to
 ---
-<p>Type-ahead search is fast becoming a best practice on websites, and we’ve made this technology available for your site. By default, searchers see type-ahead search suggestions on your search results page.</p>
+<p>Type-ahead search is fast becoming a best practice on websites, and we've made this technology available for your site. By default, searchers see type-ahead search suggestions on your search results page.</p>
 <p>It is a feature that helps your site's visitors construct a search query and navigate more quickly to a search results page.</p>
 <p>Suggestions display as a list in a drop-down box. This list forms as the searcher begins to type in the search box. The searcher can stop typing and scan the list presented and click on any term in the drop-down list, or the searcher can resume typing if the choices in the list are not helpful. The queries are listed in order of most popular (i.e., most searched) and not in alphabetical order.</p>
 <p><img alt="Type-ahead suggestions for 'hous' on USA.gov" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_lwgn3kYff81qid15q.png"/></p>

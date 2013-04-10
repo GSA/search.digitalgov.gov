@@ -1,7 +1,7 @@
 ---
 permalink: /blog/hadoop-bigger-ox.html
 layout: post
-title: "I Didn’t Try to Grow a Bigger Ox: How I Found Hadoop"
+title: "I Didn't Try to Grow a Bigger Ox: How I Found Hadoop"
 tags: analytics big-data
 ---
 <p>A year ago I rolled my first Hadoop system into production. Since then, I've spoken to quite a few people who are eager to try Hadoop themselves in order to solve their own big data problems. Despite having similar backgrounds and data problems, few of these people have sunk their teeth into Hadoop. When I go to Hadoop Meetups in San Francisco, I often meet new people who are evaluating Hadoop and have yet to launch a cluster. Based on my own background and experience, I have some ideas on why this is the case.</p>

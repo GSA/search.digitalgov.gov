@@ -4,7 +4,7 @@ layout: post
 title: "How to Add Your Social Media to Our Index"
 tags: social-media how-to
 ---
-<p>Provide us with the handles for your Facebook, Twitter, and YouTube accounts. Your "handle" is your agency’s pseudonym used within these services (e.g., HUD, HUDnews, and HUDchannel, respectively, for the U.S. Department of Housing and Urban Development). </p>
+<p>Provide us with the handles for your Facebook, Twitter, and YouTube accounts. Your "handle" is your agency's pseudonym used within these services (e.g., HUD, HUDnews, and HUDchannel, respectively, for the U.S. Department of Housing and Urban Development). </p>
 <p>Provide us with the URL for your Flickr account. Most Flicker photostreams are in the photos folder (e.g., <a href="http://www.flickr.com/photos/hudopa">http://www.flickr.com/photos/hudopa</a> for HUD). Some are in the groups folder (e.g., <a href="http://www.flickr.com/groups/usagov">http://www.flickr.com/groups/usagov</a> for USA.gov).</p>
 <p><strong>Twitter</strong></p>
 <p>When you add your Twitter handle, we'll automatically index your tweets. You can control the display of the tweets on the <a href="/manual/results-modules.html">Results Modules</a> in the [Admin Center](http://search.usa.gov/affiliates/home). To show the tweets as a GovBox on your results page, select the option to show as a GovBox on the Results Modules page.</p>
