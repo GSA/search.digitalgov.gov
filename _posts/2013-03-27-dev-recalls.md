@@ -6,7 +6,7 @@ title: Recalls API
 
 # Recalls API
 
-Helping alert the public to unsafe, hazardous, or defective products
+Helping alert the public to unsafe, hazardous, or defective products.
 
 <ul>
   <li class="overview current"><a href="#overview">Overview</a></li>
