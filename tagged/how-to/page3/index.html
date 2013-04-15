@@ -81,6 +81,120 @@
       
       <span>Last updated on:</span>
       
+      <a href="/manual/preview.html">
+        <time>March 7, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/preview.html">How to Preview Your Search Results</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Preview</p>
+
+<p>As you change your configuration settings, you can preview your search results page before pushing it to your live website.</p>
+
+<p>Visit our <a href="http://search.usa.gov/affiliates/home">Admin Center</a>, select your site, and click on the Preview option in the left-hand menu. You can also preview your results page by clicking on Admin Center or the name of your site in the breadcrumbs.</p>
+
+<p><strong>View Current, Live Site.</strong> This option will allow you to view the current, live search results page on your site. This is the only option you'll see if you don't have any staged changes.</p>
+
+<p><strong>View Staged Changes.</strong> This option will allow you to view the staged search results page before you publish it to your live site. You'll see this option if you have staged changes.</p>
+
+<p>Publish the staged changes by clicking the Make Live/Push Changes button. If you're not happy with the staged changes, cancel the changes by clicking the Cancel Changes button.</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> If you see a security warning about the page being encrypted, select the option to continue.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/preview"><span class="label label-info">preview</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
+      <a href="/manual/collections.html">
+        <time>March 7, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/collections.html">How to Create Collections Within Our Index</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Collections</p>
+
+<p>Would you like searchers to be able to narrow results to a specific subset of content within your site or on another site?</p>
+
+<h2>Step 1. Create a Collection</h2>
+
+<p>Create a named collection across any set of domains, subdomains, or subfolders.</p>
+
+<p>Enter a name for the collection (e.g., FAQs).</p>
+
+<p>Enter the URLs that make up this collection. Start each URL prefix with http:// and end it in a trailing slash (/) to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov/).</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m0j67qCpD31qid15q.png" alt="Create a Collection" /></p>
+
+<h2>Step 2. Opt to Show in Sidebar</h2>
+
+<p>Click on the <a href="/manual/sidebar.html">Sidebar</a> option in the left-hand menu. Check the option, Show in Sidebar, to allow searchers to see navigation options in the left-hand column of the results page.</p>
+
+<h2>Step 3. Check Your Search Results Page</h2>
+
+<p>Searchers will see an option to narrow their search results to pages in this collection in the left-hand navigation on the results page.</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m0j6jwQoHO1qid15q.png" alt="Collection on the search results page" /></p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your collection.</p>
+
+<p>Start with the standard form snippet on the <a href="/manual/get-code.html">Get Code</a> page in the Admin Center. Change the form action to <code>action="http://search.usa.gov/search/docs</code> and add the following line to limit the results to your collection.</p>
+
+<p><code>&lt;input type="hidden" name="dc" value="###"&gt;</code></p>
+
+<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
+
+<p>See the sample search box below that is limited to news releases in <a href="http://www.ftc.gov/opa/index.shtml">FTC.gov's Newroom</a> for a search on <em>privacy</em>.</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mezhnwedQK1qid15q.png" alt="FTC.gov Newsroom search box" /><br/>
+<em>Newsroom page with a search box that is limited to news</em></p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mezhr7VJZU1qid15q.png" alt="FTC.gov search results page" /><br/>
+<em>Search results page that returns news results only</em></p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/collections"><span class="label label-info">collections</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/manual/domains.html">
         <time>March 7, 2012</time>
       </a>
@@ -118,7 +232,7 @@
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> You can list folders up to three levels deep (e.g., yoursite.gov/folder1/folder2/folder3). If you want to limit results to folders deeper in your site hierarchy, add our <a href="/manual/get-code.html">USASearch Tag</a> and then use the <a href="/manual/collections.html">Collections</a> option in left-hand menu. E-mail us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#x3a;&#85;&#83;&#65;&#x53;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#103;&#115;&#97;&#x2e;&#103;&#x6f;&#118;">&#85;&#x53;&#x41;&#83;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#103;&#115;&#x61;&#x2e;&#103;&#x6f;&#118;</a> for additional information.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> You can list folders up to three levels deep (e.g., yoursite.gov/folder1/folder2/folder3). If you want to limit results to folders deeper in your site hierarchy, add our <a href="/manual/get-code.html">USASearch Tag</a> and then use the <a href="/manual/collections.html">Collections</a> option in left-hand menu. E-mail us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#85;&#x53;&#65;&#83;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#103;&#x73;&#97;&#x2e;&#103;&#x6f;&#x76;">&#x55;&#x53;&#65;&#x53;&#101;&#x61;&#114;&#99;&#104;&#64;&#103;&#x73;&#x61;&#x2e;&#x67;&#111;&#118;</a> for additional information.</p>
 
 <p><strong><em>Troubleshooting Tip:</em></strong> You cannot explicitly specify subdomains or folders for exclusion. You can, however, exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</p>
 
@@ -203,120 +317,6 @@
       
       <span>Last updated on:</span>
       
-      <a href="/manual/collections.html">
-        <time>March 7, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/collections.html">How to Create Collections Within Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Collections</p>
-
-<p>Would you like searchers to be able to narrow results to a specific subset of content within your site or on another site?</p>
-
-<h2>Step 1. Create a Collection</h2>
-
-<p>Create a named collection across any set of domains, subdomains, or subfolders.</p>
-
-<p>Enter a name for the collection (e.g., FAQs).</p>
-
-<p>Enter the URLs that make up this collection. Start each URL prefix with http:// and end it in a trailing slash (/) to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov/).</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m0j67qCpD31qid15q.png" alt="Create a Collection" /></p>
-
-<h2>Step 2. Opt to Show in Sidebar</h2>
-
-<p>Click on the <a href="/manual/sidebar.html">Sidebar</a> option in the left-hand menu. Check the option, Show in Sidebar, to allow searchers to see navigation options in the left-hand column of the results page.</p>
-
-<h2>Step 3. Check Your Search Results Page</h2>
-
-<p>Searchers will see an option to narrow their search results to pages in this collection in the left-hand navigation on the results page.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m0j6jwQoHO1qid15q.png" alt="Collection on the search results page" /></p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your collection.</p>
-
-<p>Start with the standard form snippet on the <a href="/manual/get-code.html">Get Code</a> page in the Admin Center. Change the form action to <code>action="http://search.usa.gov/search/docs</code> and add the following line to limit the results to your collection.</p>
-
-<p><code>&lt;input type="hidden" name="dc" value="###"&gt;</code></p>
-
-<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
-
-<p>See the sample search box below that is limited to news releases in <a href="http://www.ftc.gov/opa/index.shtml">FTC.gov's Newroom</a> for a search on <em>privacy</em>.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mezhnwedQK1qid15q.png" alt="FTC.gov Newsroom search box" /><br/>
-<em>Newsroom page with a search box that is limited to news</em></p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mezhr7VJZU1qid15q.png" alt="FTC.gov search results page" /><br/>
-<em>Search results page that returns news results only</em></p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/collections"><span class="label label-info">collections</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/manual/preview.html">
-        <time>March 7, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/preview.html">How to Preview Your Search Results</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Preview</p>
-
-<p>As you change your configuration settings, you can preview your search results page before pushing it to your live website.</p>
-
-<p>Visit our <a href="http://search.usa.gov/affiliates/home">Admin Center</a>, select your site, and click on the Preview option in the left-hand menu. You can also preview your results page by clicking on Admin Center or the name of your site in the breadcrumbs.</p>
-
-<p><strong>View Current, Live Site.</strong> This option will allow you to view the current, live search results page on your site. This is the only option you'll see if you don't have any staged changes.</p>
-
-<p><strong>View Staged Changes.</strong> This option will allow you to view the staged search results page before you publish it to your live site. You'll see this option if you have staged changes.</p>
-
-<p>Publish the staged changes by clicking the Make Live/Push Changes button. If you're not happy with the staged changes, cancel the changes by clicking the Cancel Changes button.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> If you see a security warning about the page being encrypted, select the option to continue.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/preview"><span class="label label-info">preview</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
       <a href="/manual/site-information.html">
         <time>March 2, 2012</time>
       </a>
@@ -363,7 +363,7 @@
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or switch from one language to the other, e-mail us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#x3a;&#85;&#83;&#x41;&#83;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#x67;&#115;&#x61;&#x2e;&#x67;&#x6f;&#118;">&#x55;&#83;&#x41;&#x53;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#103;&#x73;&#x61;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or switch from one language to the other, e-mail us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#85;&#83;&#x41;&#83;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#x67;&#x73;&#x61;&#46;&#103;&#x6f;&#x76;">&#x55;&#x53;&#x41;&#x53;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#x67;&#115;&#x61;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
 
     </div>
 
