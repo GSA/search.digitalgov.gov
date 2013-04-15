@@ -50,7 +50,7 @@
           <form class="form-search" accept-charset="UTF-8" action="http://search.howto.gov/search/news/" id="search-form" method="get">
             <input id="affiliate" name="affiliate" type="hidden" value="usasearch"/>
             <input type="hidden" name="channel" value="968">
-
+            <input type="hidden" name="sort_by" value="r">
             <div class="input-append">
               <label for="search-query" class="hide">Query</label>
               <input name="query" type="text" autocomplete="off"
@@ -87,31 +87,24 @@
   
 
   <div class='post-content'>
-    <p><span>As part of the federal <a href="http://www.usa.gov/WebReform.shtml">.gov web reform</a> project, we're eliminating six of our legacy domains. Going forward, our only supported domain is search.usa.gov (or search.yoursite.gov, if you've requested <a href="/manual/get-code.html#cname">DNS masking</a>).</span></p>
+    <p>As part of the federal <a href="http://www.usa.gov/WebReform.shtml">.gov web reform</a> project, we're eliminating six of our legacy domains. Going forward, our only supported domain is search.usa.gov (or search.yoursite.gov, if you've requested <a href="/manual/get-code.html#cname">DNS masking</a>).
+What do you need to do? If your URL starts with any of the following six legacy domains, you must update your HTML form code.</p>
 
-
-<p><span>What do you need to do? I</span><span>f your URL starts with any of the following six legacy domains, </span><span>you must update your HTML form code.</span><span></span></p>
-
-
-<ol><li><span>firstgovsearch.gov</span></li>
-<li><span>searchusa.gov</span></li>
-<li><span>usasearch.gov</span></li>
-<li><span>(Spanish) buscador.gov</span></li>
-<li><span>(Spanish)  buscadorusa.gov</span></li>
-<li><span>(Spanish)  usabuscador.gov</span></li>
+<ol>
+<li>firstgovsearch.gov</li>
+<li>searchusa.gov</li>
+<li>usasearch.gov</li>
+<li>(Spanish) buscador.gov</li>
+<li>(Spanish) buscadorusa.gov</li>
+<li>(Spanish) usabuscador.gov</li>
 </ol>
 
 
-<p><span>Specifically, you have to update the action of your <a href="/manual/get-code.html">form </a></span><span><a href="/manual/get-code.html">code</a> to call search.usa.gov </span><span>(or search.yoursite.gov)</span><span>.</span></p>
+<p>Specifically, you have to update the action of your <a href="/manual/get-code.html">form code</a> to call search.usa.gov (or search.yoursite.gov).</p>
 
+<p><code>&lt;form method="get" action="http://search.usa.gov/search"&gt;</code></p>
 
-<blockquote>
-<p><span>&lt;form method="get" action="http://search.usa.gov/search"&gt;</span></p>
-</blockquote>
-
-
-<p><span></span><span>Note that, if you don't update your form code, your search results </span><span>page will no longer work.</span></p>
-
+<p>Note that, if you don't update your form code, your search results page will no longer work.</p>
 
   </div>
 

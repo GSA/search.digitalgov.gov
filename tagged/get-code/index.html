@@ -50,7 +50,7 @@
           <form class="form-search" accept-charset="UTF-8" action="http://search.howto.gov/search/news/" id="search-form" method="get">
             <input id="affiliate" name="affiliate" type="hidden" value="usasearch"/>
             <input type="hidden" name="channel" value="968">
-
+            <input type="hidden" name="sort_by" value="r">
             <div class="input-append">
               <label for="search-query" class="hide">Query</label>
               <input name="query" type="text" autocomplete="off"
@@ -139,7 +139,7 @@
 <p><strong><em>Did you know?</em></strong> We offer DNS masking, which allows you to show searchers your domain (instead of USA.gov). Follow these three steps to mask your domain.</p>
 
 <ol>
-<li>E-mail us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#x55;&#83;&#65;&#83;&#101;&#97;&#114;&#x63;&#104;&#x40;&#x67;&#x73;&#x61;&#x2e;&#103;&#x6f;&#118;">&#85;&#83;&#x41;&#x53;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#103;&#x73;&#97;&#x2e;&#103;&#111;&#x76;</a> and ask us to mask your domain.</li></li>
+<li>E-mail us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#x55;&#83;&#65;&#x53;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#103;&#115;&#x61;&#x2e;&#103;&#111;&#118;">&#x55;&#x53;&#x41;&#83;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#103;&#115;&#x61;&#x2e;&#x67;&#111;&#118;</a> and ask us to mask your domain.</li></li>
 <li>Create a CNAME in your DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
 <li>When the setup is complete, change the code for your form action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
 </ol>
@@ -200,31 +200,24 @@
     
 
     <div class='post-content'>
-      <p><span>As part of the federal <a href="http://www.usa.gov/WebReform.shtml">.gov web reform</a> project, we're eliminating six of our legacy domains. Going forward, our only supported domain is search.usa.gov (or search.yoursite.gov, if you've requested <a href="/manual/get-code.html#cname">DNS masking</a>).</span></p>
+      <p>As part of the federal <a href="http://www.usa.gov/WebReform.shtml">.gov web reform</a> project, we're eliminating six of our legacy domains. Going forward, our only supported domain is search.usa.gov (or search.yoursite.gov, if you've requested <a href="/manual/get-code.html#cname">DNS masking</a>).
+What do you need to do? If your URL starts with any of the following six legacy domains, you must update your HTML form code.</p>
 
-
-<p><span>What do you need to do? I</span><span>f your URL starts with any of the following six legacy domains, </span><span>you must update your HTML form code.</span><span></span></p>
-
-
-<ol><li><span>firstgovsearch.gov</span></li>
-<li><span>searchusa.gov</span></li>
-<li><span>usasearch.gov</span></li>
-<li><span>(Spanish) buscador.gov</span></li>
-<li><span>(Spanish)  buscadorusa.gov</span></li>
-<li><span>(Spanish)  usabuscador.gov</span></li>
+<ol>
+<li>firstgovsearch.gov</li>
+<li>searchusa.gov</li>
+<li>usasearch.gov</li>
+<li>(Spanish) buscador.gov</li>
+<li>(Spanish) buscadorusa.gov</li>
+<li>(Spanish) usabuscador.gov</li>
 </ol>
 
 
-<p><span>Specifically, you have to update the action of your <a href="/manual/get-code.html">form </a></span><span><a href="/manual/get-code.html">code</a> to call search.usa.gov </span><span>(or search.yoursite.gov)</span><span>.</span></p>
+<p>Specifically, you have to update the action of your <a href="/manual/get-code.html">form code</a> to call search.usa.gov (or search.yoursite.gov).</p>
 
+<p><code>&lt;form method="get" action="http://search.usa.gov/search"&gt;</code></p>
 
-<blockquote>
-<p><span>&lt;form method="get" action="http://search.usa.gov/search"&gt;</span></p>
-</blockquote>
-
-
-<p><span></span><span>Note that, if you don't update your form code, your search results </span><span>page will no longer work.</span></p>
-
+<p>Note that, if you don't update your form code, your search results page will no longer work.</p>
 
     </div>
 
