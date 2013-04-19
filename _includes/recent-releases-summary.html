@@ -2,11 +2,9 @@
 
 <h2><i class="icon-flag"></i>&nbsp;Recent Release Notes</h2>
 
-  {% for post in site.tags.releases | sort_by_date limit:5 %}
-    <h3>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </h3>
-  {% endfor %}
+{% for post in site.tags.releases | sort_by_date limit:5 %}
+<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+{% endfor %}
 
 <h3><a href="/tagged/releases/">More release notes >></a></h3>
 
