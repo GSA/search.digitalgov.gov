@@ -1,5 +1,6 @@
 ---
 permalink: /customers/broward.html
+category: quote
 layout: post
 title: "Spotlight: Broward County, Florida"
 tags: testimonial

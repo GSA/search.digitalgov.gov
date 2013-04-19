@@ -1,5 +1,6 @@
 ---
 permalink: /customers/gartner.html
+category: quote
 layout: post
 title: "Gartner Case Study Commends USASearch"
 tags: testimonial 
