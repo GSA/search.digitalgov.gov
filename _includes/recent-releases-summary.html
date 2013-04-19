@@ -1,4 +1,6 @@
-<h2><i class="icon-question-sign"></i>&nbsp;Recent Posts</h2>
+<aside>
+
+<h2><i class="icon-flag"></i>&nbsp;Recent Release Notes</h2>
 
   {% for post in site.tags.releases | sort_by_date limit:5 %}
     <h3>
@@ -7,3 +9,5 @@
   {% endfor %}
 
 <h3><a href="/tagged/releases/">More release notes >></a></h3>
+
+</aside>
