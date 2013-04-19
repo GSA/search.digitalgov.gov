@@ -6,7 +6,7 @@
       <span>Last updated on:</span>
       {% endif %}{% endfor %}
       <a href="{{ post.url }}">
-        <time>{{ post.date | date: "%B %-d, %Y" }}</time>
+        <time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time>
       </a>
     </div>
 
