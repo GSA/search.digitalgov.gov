@@ -20,11 +20,12 @@ For more information, read Google's tip, [Tracking Multiple Domains](https://dev
 ***ForeSee tip:*** Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.
 
 1. Email us at <USASearch@gsa.gov> to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.
+
 2. Update the files path in your Foresee code to use an absolute path instead of a relative path. 
 
-  Find =&gt; 'files': '/fsrscripts/',
+  Find => 'files': '/fsrscripts/',
   
-  and replace it with =&gt; 'files': '//{yourdomain}/fsrscripts/',
+  and replace it with => 'files': '//{yourdomain}/fsrscripts/',
   
   in the following five files.
 
@@ -35,4 +36,5 @@ For more information, read Google's tip, [Tracking Multiple Domains](https://dev
   e. foresee-test.js
 
 3. Ask ForeSee to send USASearch your foresee-trigger.js file.
+
 4. USASearch will send you an email to confirm that we've set up your CNAME and installed your foresee-trigger.js file.
