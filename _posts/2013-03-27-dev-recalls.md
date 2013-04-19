@@ -4,8 +4,6 @@ layout: article
 title: Recalls API
 ---
 
-# Recalls API
-
 Helping alert the public to unsafe, hazardous, or defective products.
 
 <ul>
