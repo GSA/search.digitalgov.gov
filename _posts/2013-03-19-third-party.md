@@ -23,17 +23,17 @@ For more information, read Google's tip, [Tracking Multiple Domains](https://dev
 
 2. Update the files path in your Foresee code to use an absolute path instead of a relative path. 
 
-  Find => 'files': '/fsrscripts/',
+    Find => 'files': '/fsrscripts/',
+    
+    and replace it with => 'files': '//{yourdomain}/fsrscripts/',
   
-  and replace it with => 'files': '//{yourdomain}/fsrscripts/',
-  
-  in the following five files.
+    in the following five files.
 
-  a. foresee-trigger.js  
-  b. foresee-tracker.js  
-  c. foresee-alive.js  
-  d. foresee-qualifier.js  
-  e. foresee-test.js
+    * foresee-trigger.js  
+    * foresee-tracker.js  
+    * foresee-alive.js  
+    * foresee-qualifier.js  
+    * foresee-test.js
 
 3. Ask ForeSee to send USASearch your foresee-trigger.js file.
 

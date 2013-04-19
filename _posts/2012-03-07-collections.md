@@ -16,7 +16,7 @@ Enter a name for the collection (e.g., FAQs).
 
 Enter the URLs that make up this collection. Start each URL prefix with http:// and end it in a trailing slash (/) to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov/).
 
-![Create a Collection](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m0j67qCpD31qid15q.png)
+![Create a Collection](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/manual-collection.png)
 
 ## Step 2. Opt to Show in Sidebar
 
@@ -26,7 +26,7 @@ Click on the [Sidebar](/manual/sidebar.html) option in the left-hand menu. Check
 
 Searchers will see an option to narrow their search results to pages in this collection in the left-hand navigation on the results page.
 
-![Collection on the search results page](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m0j6jwQoHO1qid15q.png)
+![Collection on the search results page](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/manual-collection-2.png)
 
 ---
 
@@ -40,8 +40,8 @@ The value is the number for your collection ID, which is visible in the URL when
 
 See the sample search box below that is limited to news releases in [FTC.gov's Newroom](http://www.ftc.gov/opa/index.shtml) for a search on *privacy*.
 
-![FTC.gov Newsroom search box](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mezhnwedQK1qid15q.png)  
+![FTC.gov Newsroom search box](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/manual-collection-3.png)  
 *Newsroom page with a search box that is limited to news*
 
-![FTC.gov search results page](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mezhr7VJZU1qid15q.png)  
+![FTC.gov search results page](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/manual-collection-4.png)  
 *Search results page that returns news results only*

@@ -10,4 +10,4 @@ This GovBox offers direct access to [MedlinePlus Health Topics](http://www.nlm.n
 
 If you [opt to show the MedlinePlus GovBox](/manual/results-modules.html), searchers looking for health topics on your site can readily find high-quality health information, as shown in the sample below for a search on *[ovarian cancer](http://search.usa.gov/search?query=ovarian+cancer)* on [NC.gov](http://www.nc.gov).
 
-![Health GovBox on NC.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m1col9j6oT1qid15q.png)
+![Health GovBox on NC.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/govbox-health.png)
