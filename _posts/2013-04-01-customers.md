@@ -1,6 +1,6 @@
 ---
 permalink: /customers.html
-layout: default
+layout: article
 title: Our Customers
 ---
 USASearch has a proven track record of delivering fast, relevant search results. Over 1,500 government websites currently use USASearch to power their search box and improve their visitors' search experience.

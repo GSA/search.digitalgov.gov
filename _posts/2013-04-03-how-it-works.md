@@ -1,10 +1,8 @@
 ---
 permalink: /help-desk.html
-layout: default
+layout: article
 title: "How It Works"
 ---
-
-# How It Works
 
 ## About Us
 
