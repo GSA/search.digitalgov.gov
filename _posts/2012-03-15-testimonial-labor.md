@@ -1,5 +1,6 @@
 ---
 permalink: /customers/labor.html
+category: quote
 layout: post
 title: "Department of Labor Launches Improved Site and Uses USASearch"
 tags: testimonial 
