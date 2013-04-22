@@ -80,6 +80,80 @@
   <article class='article'>
     <div class='time'>
       
+      <a href="/blog/open-source.html">
+        <time datetime="2013-04-20">April 20, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/blog/open-source.html">Our Open Source Strategy</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>We keep an eye on on our what our government counterparts are up to, both in the U.S. and other countries. We recently came across <a href="https://www.gov.uk/">Gov.UK's</a> philosophy on and approach to <a href="http://digital.cabinetoffice.gov.uk/2012/10/12/coding-in-the-open/">coding in the open</a>. It caught our attention and we realized we should also articulate our open source strategy.</p>
+
+<h2>Use and Contribute to Open Source Projects</h2>
+
+<p>Since 2010, we've embraced and leveraged open source software to build our site search service for federal, state, and local government websites. This use of open source has allowed us to experience enormous growth over the past few years. In March 2013 alone, over 24 million searchers received results from our service&mdash;a four-fold increase since March 2010.</p>
+
+<p>Our search service is now a complex system made up of many moving parts, including providing type-ahead search suggestions, serving search results, fetching, indexing, and caching content, and providing analytics.</p>
+
+<p>Each of these parts is compiled into our USASearch codebase and, as we use open source components for our system, we contribute back to the projects.</p>
+
+<h2>Code in the Open</h2>
+
+<p>We recently began to unravel our monolithic codebase so that we can share individual pieces of our code. To borrow the phrase from Gov.UK, we're now <strong><em>coding in the open</em></strong>.</p>
+
+<p>We recently released the code for our <a href="https://github.com/GSA-OCSIT/jobs_api">Jobs</a> and <a href="https://github.com/GSA-OCSIT/recalls_api">Recalls</a> API servers. They're our first foray into coding in the open. The source code for these API servers is in <a href="https://github.com/GSA-OCSIT/">our GitHub repo</a> and is available for anyone to see and contribute to.</p>
+
+<p>The data products for this code is also open and available for anyone to consume on our <a href="/developer/index.html">USASearch.HowTo.gov/Developer</a> hub.</p>
+
+<p>These two servers and their underlying data now operate outside of our core search codebase.</p>
+
+<p>Following this same model, moving forward, we plan to:</p>
+
+<ul>
+<li><p>Share first&mdash;For every new feature, we'll write the code so that <em>anyone</em> can make use of the code, not just us. If the public community contributes to the codebase, we'll be able to improve this feature without taxing our developers.</p></li>
+<li><p>Expose APIs&mdash;We'll expose our data products as APIs so that <em>anyone</em> can make use of the the data, not just searchers on a government websites.</p></li>
+<li><p>Be our own customer&mdash;We'll use our own public code and data just like everyone else. We'll call our own API servers to integrate the search results within our search results pages.</p></li>
+</ul>
+
+
+<h2>Make Things Open to Make Things Better</h2>
+
+<p>We agree with Gov.UK that "to make things open makes things better."</p>
+
+<p>We have finite resources and we don't want to lose our focus on serving our agency customers and improving visitors' search experience on government websites. So, we won't be spending a lot of time to build or support a vibrant community around our code.</p>
+
+<p>That said, we hope that exposing the pieces of our system will be useful to someone somewhere. We'll continue to provide the "ingredients" of our search service so that others will be able to make use of the code and data in ways that we could never imagine.</p>
+
+<h2>And, We're Not Alone</h2>
+
+<p>We're not alone. Other federal agencies have embraced the approach of coding in the open and have <a href="http://gsa.github.io/federal-open-source-repos/">GitHub repos</a>. Below are a just a few of our many favorites.</p>
+
+<ol>
+<li><p>The Consumer Finance Protection Bureau has embraced open source, including serving their public data sets through <a href="https://github.com/cfpb/qu">qu</a>.</p></li>
+<li><p>USA.gov recently released the code for their <a href="https://github.com/usagov/usagov-ios-app">iPhone app</a>.</p></li>
+<li><p>The White House was in the forefront of using open source software in the federal government with their use of Drupal. They're continuing to lead by example by opening up the code for their <a href="https://github.com/WhiteHouse/petitions">We the People petitions</a> and <a href="https://github.com/WhiteHouse/wh-app-ios">iOS</a> and <a href="https://github.com/WhiteHouse/wh-app-android">Android</a> mobile apps.</p></li>
+</ol>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/open,"><span class="label label-info">open,</span></a>
+      
+      <a href="/tagged/api"><span class="label label-info">api</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
       <span>Last updated on:</span>
       
       <a href="/manual/add-site.html">
@@ -142,7 +216,7 @@
 </ol>
 
 
-<p>If you have any problem resetting your password, e-mail us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#85;&#x53;&#x41;&#83;&#x65;&#97;&#114;&#99;&#104;&#64;&#x67;&#115;&#x61;&#x2e;&#x67;&#111;&#118;">&#x55;&#83;&#65;&#83;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#x67;&#115;&#x61;&#x2e;&#103;&#111;&#118;</a>.</p>
+<p>If you have any problem resetting your password, e-mail us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#85;&#83;&#65;&#83;&#101;&#97;&#x72;&#99;&#104;&#x40;&#x67;&#115;&#97;&#46;&#103;&#111;&#118;">&#85;&#x53;&#65;&#83;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x67;&#x73;&#97;&#x2e;&#x67;&#111;&#x76;</a>.</p>
 
     </div>
 
@@ -358,7 +432,7 @@
 <p><strong><em>Did you know?</em></strong> We offer DNS masking, which allows you to show searchers your domain (instead of USA.gov). Follow these three steps to mask your domain.</p>
 
 <ol>
-<li>E-mail us at <a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#85;&#x53;&#x41;&#83;&#101;&#97;&#x72;&#99;&#104;&#x40;&#103;&#x73;&#x61;&#x2e;&#103;&#x6f;&#118;">&#85;&#83;&#65;&#x53;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#103;&#x73;&#97;&#x2e;&#x67;&#x6f;&#118;</a> and ask us to mask your domain.</li></li>
+<li>E-mail us at <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#58;&#x55;&#x53;&#x41;&#83;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#103;&#x73;&#97;&#46;&#103;&#111;&#x76;">&#85;&#83;&#x41;&#83;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#103;&#115;&#97;&#46;&#103;&#x6f;&#x76;</a> and ask us to mask your domain.</li></li>
 <li>Create a CNAME in your DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
 <li>When the setup is complete, change the code for your form action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
 </ol>
@@ -534,7 +608,7 @@
 
 <p>Also be sure to read our <a href="/tagged/releases/">release notes</a> to keep up-to-date with our new features.</p>
 
-<p>Do you have other questions or comments about how our service works? E-mail us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#85;&#x53;&#x41;&#x53;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#103;&#115;&#97;&#46;&#x67;&#x6f;&#x76;">&#85;&#83;&#65;&#x53;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#103;&#x73;&#97;&#x2e;&#x67;&#x6f;&#118;</a>.</p>
+<p>Do you have other questions or comments about how our service works? E-mail us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#x55;&#x53;&#65;&#x53;&#101;&#97;&#x72;&#99;&#x68;&#64;&#x67;&#x73;&#97;&#46;&#103;&#x6f;&#118;">&#x55;&#x53;&#65;&#x53;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#103;&#115;&#97;&#46;&#x67;&#111;&#118;</a>.</p>
 
     </div>
 
@@ -898,7 +972,7 @@
 
 <h2>Feedback</h2>
 
-<p>E-mail us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#85;&#x53;&#65;&#83;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#103;&#x73;&#97;&#x2e;&#103;&#111;&#118;">&#85;&#83;&#x41;&#83;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x67;&#x73;&#x61;&#x2e;&#103;&#x6f;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>E-mail us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#x55;&#83;&#65;&#x53;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x67;&#x73;&#x61;&#x2e;&#x67;&#111;&#118;">&#x55;&#83;&#x41;&#x53;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#x67;&#115;&#97;&#46;&#103;&#111;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
@@ -1073,7 +1147,7 @@ generally used for independent agencies or agencies within a department.</p>
 
 <p>Data are normalized across government job listings. Federal government jobs are from <a href="http://www.usajobs.gov">USAJobs</a>. State and local government jobs are from a variety of sources.</p>
 
-<p>Are you with a local or state government agency? Or a federal agency that doesn't post jobs on USAJobs? E-mail us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#58;&#85;&#83;&#x41;&#83;&#x65;&#97;&#114;&#x63;&#104;&#64;&#103;&#x73;&#97;&#x2e;&#x67;&#111;&#118;">&#x55;&#83;&#x41;&#x53;&#x65;&#97;&#114;&#x63;&#104;&#64;&#x67;&#x73;&#x61;&#46;&#x67;&#x6f;&#x76;</a> to let us know where you publish your jobs data. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
+<p>Are you with a local or state government agency? Or a federal agency that doesn't post jobs on USAJobs? E-mail us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#85;&#x53;&#65;&#x53;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#x67;&#x73;&#97;&#x2e;&#x67;&#111;&#118;">&#85;&#x53;&#x41;&#83;&#x65;&#97;&#114;&#99;&#104;&#64;&#x67;&#115;&#x61;&#46;&#103;&#x6f;&#x76;</a> to let us know where you publish your jobs data. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
 
 <p><a name="what-it-returns"></a></p>
 
@@ -1173,59 +1247,11 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <h2>Feedback</h2>
 
-<p>E-mail us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x55;&#83;&#x41;&#83;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#x67;&#x73;&#97;&#46;&#103;&#111;&#118;">&#x55;&#x53;&#65;&#x53;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#x67;&#x73;&#97;&#46;&#x67;&#x6f;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>E-mail us at <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x55;&#83;&#x41;&#83;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#x67;&#115;&#x61;&#46;&#103;&#x6f;&#118;">&#x55;&#x53;&#65;&#x53;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#103;&#115;&#97;&#x2e;&#x67;&#x6f;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
 <p>By accessing the Jobs API, you agree to <a href="http://www.usa.gov/About/developer-resources/terms-of-service.shtml">USA.gov's Terms of Service for Developer Resources</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <a href="/developer/index.html">
-        <time datetime="2013-03-27">March 27, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/developer/index.html">APIs for Developers</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > APIs for Developers</p>
-
-<p><a href="https://github.com/GSA-OCSIT"><img style="position: absolute; top: 41px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a></p>
-
-<p>Data underpins everything we do to provide a great search experience on government websites.
-In line with the White House's
-<a href="http://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html">Digital Government Strategy</a>, we're making our data open through APIs.</p>
-
-<p>USASearch.HowTo.gov/Developer connects you&mdash;software developers, researchers, and our
-government customers&mdash;with the tools you need to unlock the government data that
-underpins our hosted search service.</p>
-
-<h2>For the Public</h2>
-
-<p><strong><a href="jobs.html">Jobs</a></strong>&mdash;This API returns job openings across federal, state, and local government agencies.</p>
-
-<p><strong><a href="recalls.html">Recalls</a></strong>&mdash;This API returns food, car, and product safety data and recalls.</p>
-
-<p>Visit <a href="http://www.usa.gov/developer">USA.gov/Developer</a> for a full list of USA.gov's APIs and data feeds available to the public.</p>
-
-<h2>For Government Customers</h2>
-
-<p><strong><a href="/manual/api.html">Search Results</a></strong>&mdash;Provides USASearch customers their search results in XML, JSON, or
-JSON-P. This API is only available for use on official government websites.
-<a href="https://search.usa.gov/affiliates/home">Sign in</a> is required.</p>
 
     </div>
 

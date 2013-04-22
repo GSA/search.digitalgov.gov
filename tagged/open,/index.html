@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Posts tagged third-party</title>
+  <title>Posts tagged open,</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -73,63 +73,69 @@
 
 <div class="container">
   <div id="main-container"><!-- begin tag layout -->
-<p class="muted">Posts tagged <strong>third-party</strong></p>
+<p class="muted">Posts tagged <strong>open,</strong></p>
 <div class='articles'>
   
   <article class='article'>
     <div class='time'>
       
-      <span>Last updated on:</span>
-      
-      <a href="/manual/third-party.html">
-        <time datetime="2013-03-19">March 19, 2013</time>
+      <a href="/blog/open-source.html">
+        <time datetime="2013-04-20">April 20, 2013</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/manual/third-party.html">How to Add JavaScript for Your Third Party Web Services</a>
+      <a href="/blog/open-source.html">Our Open Source Strategy</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > 3rd Party Tracking</p>
+      <p>We keep an eye on on our what our government counterparts are up to, both in the U.S. and other countries. We recently came across <a href="https://www.gov.uk/">Gov.UK's</a> philosophy on and approach to <a href="http://digital.cabinetoffice.gov.uk/2012/10/12/coding-in-the-open/">coding in the open</a>. It caught our attention and we realized we should also articulate our open source strategy.</p>
 
-<p>Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends?</p>
+<h2>Use and Contribute to Open Source Projects</h2>
 
-<p>Log in to the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> and select the option, Third Party Tracking. Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
+<p>Since 2010, we've embraced and leveraged open source software to build our site search service for federal, state, and local government websites. This use of open source has allowed us to experience enormous growth over the past few years. In March 2013 alone, over 24 million searchers received results from our service&mdash;a four-fold increase since March 2010.</p>
 
-<hr />
+<p>Our search service is now a complex system made up of many moving parts, including providing type-ahead search suggestions, serving search results, fetching, indexing, and caching content, and providing analytics.</p>
 
-<p><strong><em>Google Analytics tip:</em></strong> In your Google Analytics JavaScript, be sure to set your domain if you've requested <a href="/manual/get-code.html#cname">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
+<p>Each of these parts is compiled into our USASearch codebase and, as we use open source components for our system, we contribute back to the projects.</p>
 
-<pre><code>_gaq.push(['_setDomainName', 'commerce.gov']);
-</code></pre>
+<h2>Code in the Open</h2>
 
-<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>.</p>
+<p>We recently began to unravel our monolithic codebase so that we can share individual pieces of our code. To borrow the phrase from Gov.UK, we're now <strong><em>coding in the open</em></strong>.</p>
 
-<p><strong><em>ForeSee tip:</em></strong> Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
+<p>We recently released the code for our <a href="https://github.com/GSA-OCSIT/jobs_api">Jobs</a> and <a href="https://github.com/GSA-OCSIT/recalls_api">Recalls</a> API servers. They're our first foray into coding in the open. The source code for these API servers is in <a href="https://github.com/GSA-OCSIT/">our GitHub repo</a> and is available for anyone to see and contribute to.</p>
 
-<ol>
-<li><p>Email us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#111;&#58;&#85;&#x53;&#65;&#x53;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#103;&#115;&#x61;&#46;&#103;&#x6f;&#118;">&#85;&#x53;&#65;&#83;&#x65;&#97;&#114;&#x63;&#104;&#64;&#x67;&#115;&#97;&#x2e;&#103;&#x6f;&#x76;</a> to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
-<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
+<p>The data products for this code is also open and available for anyone to consume on our <a href="/developer/index.html">USASearch.HowTo.gov/Developer</a> hub.</p>
 
-<p> Find => 'files': '/fsrscripts/',</p>
+<p>These two servers and their underlying data now operate outside of our core search codebase.</p>
 
-<p> and replace it with => 'files': '//{yourdomain}/fsrscripts/',</p>
-
-<p> in the following five files.</p>
+<p>Following this same model, moving forward, we plan to:</p>
 
 <ul>
-<li>foresee-trigger.js</li>
-<li>foresee-tracker.js</li>
-<li>foresee-alive.js</li>
-<li>foresee-qualifier.js</li>
-<li>foresee-test.js</li>
+<li><p>Share first&mdash;For every new feature, we'll write the code so that <em>anyone</em> can make use of the code, not just us. If the public community contributes to the codebase, we'll be able to improve this feature without taxing our developers.</p></li>
+<li><p>Expose APIs&mdash;We'll expose our data products as APIs so that <em>anyone</em> can make use of the the data, not just searchers on a government websites.</p></li>
+<li><p>Be our own customer&mdash;We'll use our own public code and data just like everyone else. We'll call our own API servers to integrate the search results within our search results pages.</p></li>
 </ul>
-</li>
-<li><p>Ask ForeSee to send USASearch your foresee-trigger.js file.</p></li>
-<li><p>USASearch will send you an email to confirm that we've set up your CNAME and installed your foresee-trigger.js file.</p></li>
+
+
+<h2>Make Things Open to Make Things Better</h2>
+
+<p>We agree with Gov.UK that "to make things open makes things better."</p>
+
+<p>We have finite resources and we don't want to lose our focus on serving our agency customers and improving visitors' search experience on government websites. So, we won't be spending a lot of time to build or support a vibrant community around our code.</p>
+
+<p>That said, we hope that exposing the pieces of our system will be useful to someone somewhere. We'll continue to provide the "ingredients" of our search service so that others will be able to make use of the code and data in ways that we could never imagine.</p>
+
+<h2>And, We're Not Alone</h2>
+
+<p>We're not alone. Other federal agencies have embraced the approach of coding in the open and have <a href="http://gsa.github.io/federal-open-source-repos/">GitHub repos</a>. Below are a just a few of our many favorites.</p>
+
+<ol>
+<li><p>The Consumer Finance Protection Bureau has embraced open source, including serving their public data sets through <a href="https://github.com/cfpb/qu">qu</a>.</p></li>
+<li><p>USA.gov recently released the code for their <a href="https://github.com/usagov/usagov-ios-app">iPhone app</a>.</p></li>
+<li><p>The White House was in the forefront of using open source software in the federal government with their use of Drupal. They're continuing to lead by example by opening up the code for their <a href="https://github.com/WhiteHouse/petitions">We the People petitions</a> and <a href="https://github.com/WhiteHouse/wh-app-ios">iOS</a> and <a href="https://github.com/WhiteHouse/wh-app-android">Android</a> mobile apps.</p></li>
 </ol>
 
 
@@ -137,9 +143,9 @@
 
     <div class='tags'>
       
-      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
+      <a href="/tagged/open,"><span class="label label-info">open,</span></a>
       
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      <a href="/tagged/api"><span class="label label-info">api</span></a>
       
     </div>
   </article>
