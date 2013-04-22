@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>How to Set Up a New Account and Site</title>
+  <title>Our Open Source Strategy</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -75,75 +75,77 @@
   <div id="main-container"><article class="article">
   <div class='time'>
     
-    <span>Last updated on:</span>
-    
-    <a href="/manual/add-site.html">
-      <time>April 15, 2013</time>
+    <a href="/drafts/2013-04-20-Our-Open-Source-Strategy.html">
+      <time></time>
     </a>
   </div>
 
   
   <h1>
-    <a href="/manual/add-site.html">How to Set Up a New Account and Site</a>
+    <a href="/drafts/2013-04-20-Our-Open-Source-Strategy.html">Our Open Source Strategy</a>
   </h1>
   
 
   <div class='post-content'>
-    <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Add Site</p>
+    <h1>Our Open Source Strategy</h1>
 
-<p>You can use USASearch to power the search box on your federal, state, local, tribal, or territorial government website at no cost.</p>
+<p>We keep a close eye on on our what our government counterparts are up to, both in the U.S. and other countries. We recently came across the Gov.UK’s philosophy on and approach to coding in the open. It caught our attention and we realized we should also articulate our open source strategy.</p>
 
-<p>Access to our hosted search service requires authentication and verification that you're a government employee or contractor.</p>
+<h2>Use and Contribute to Open Source Projects</h2>
 
-<h2>Sign In</h2>
+<p>Since 2010, we’ve embraced and leveraged open source software to build our site search service for federal, state, and local government websites. This use of open source has allowed us to experience enormous growth over the past few years. In March 2013 alone, 25 million searchers received results from our service--a 12-fold increase since March 2010.</p>
 
-<p><a href="http://search.usa.gov/affiliates/hom">Log in</a> to an existing account or register for a new account at <a href="http://usasearch.howto.gov">http://usasearch.howto.gov</a>. Select the Login option in the upper right-hand corner and fill out your information.</p>
+<p>Our search service is now a complex system made up of many moving parts, including providing type-ahead search suggestions, serving search results, fetching, indexing, and caching content, and providing analytics.</p>
 
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/login.png" alt="Login from USASearch.HowTo.gov" /></p>
+<p>Each of these parts is compiled into our USASearch codebase and, as we use open source components for our system, we contribute back to the projects.</p>
 
-<p>After you register, you'll receive an automatic e-mail. Click on the link in the e-mail to verify that your e-mail address belongs to you.</p>
+<h2>Code in the Open</h2>
 
-<p>If you have a .gov or .mil address, you'll be able to access your account immediately after you verify your e-mail.</p>
+<p>We recently began to unravel our monolithic codebase so that we can share individual pieces. To borrow the phrase from Gov.UK, we’re now <strong><em>coding in the open</em></strong>.</p>
 
-<p>If you don't have a .gov or .mil address, we'll ask for additional information to confirm that you're a government employee or contractor. We'll notify you when your account is approved.</p>
+<p>As most of you know, once a pie is baked, it is hard to get back the apples, but that’s pretty much what we’re going to try to do.</p>
 
-<h2>Add a Site</h2>
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/pie.png" title="Pie" alt="Pie" /></p>
 
-<p>Select the option to Add a New Site.</p>
+<p>We recently released our Jobs and Recalls API servers. They’re our first foray into coding in the open. The source code for these API servers is in GitHub and is available for anyone to see and contribute to. The data for these products are on our USASearch.HowTo.gov/Developer hub for anyone to consume.</p>
 
-<p>Add your basic site information (required) and content sources (optional).</p>
+<p>Previously we would have developed these services within our private search codebase. Now, these two servers and their underlying data operate outside of our core site search service.</p>
 
-<p>For more information about filling in this information, see our blog posts <a href="/manual/site-information.html">How to Edit Your Site Information</a> and <a href="/manual/domains.html">How to Edit Your Domains</a>.</p>
+<p>Following this same model, moving forward, we plan to:</p>
 
-<p>Use the options in the left-hand navigation to further customize the search experience for your site's visitors.</p>
+<ul>
+<li><p>Share first -- For every new feature, we’ll write the code so that it may be shared without affecting the integrity of our core service. If the public community wishes to contribute to the codebase, then this specific feature has the opportunity to improve without taxing our developers.</p></li>
+<li><p>Expose APIs -- Our data “products” will be exposed as APIs so that anyone may make use of the the data, not just searchers on a government websites.</p></li>
+<li><p>Be our own customer -- We’ll use our own public APIs for jobs and recalls data just like any other developer. We’ll call our own servers to integrate the search results within the search engine results pages.</p></li>
+</ul>
 
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m14t3xWL281qid15q.png" alt="Options to customize in the Admin Center" /></p>
 
-<p>When you're ready to go live with your new search, you'll need to <a href="/manual/get-code.html">add our code</a> to your website.</p>
+<h2>Make Things Open to Make Things Better</h2>
 
-<hr />
+<p>We agree with Gov.UK that “to make things open makes things better.”</p>
 
-<p><strong><em>Did you know?</em></strong> When you add a new site with a single domain, we'll populate content (such <a href="/manual/social-media.html">social media</a> handles, <a href="/manual/rss.html">RSS</a> feeds, <a href="/manual/urls.html">specific URLs</a>, and <a href="/manual/look-feel.html">favicons</a>) that we can find from your homepage.</p>
+<p>We don’t want to lose our focus on improving visitors’ search experience on government websites and we have finite resources. So we won’t be spending a lot of time to build or support a vibrant community around our code.</p>
 
-<p><strong><em>Troubleshooting tip:</em></strong> If you don't see the left-hand navigation, check the settings in your Adblock extension or try another browser.</p>
+<p>That said, we hope that exposing the pieces of our system will be useful to someone somewhere so we’ll continue to provide the “ingredients” of our search service so that others will be able to make their own tasty pies.</p>
 
-<p><strong><em>Troubleshooting tip:</em></strong> We cannot retrieve any passwords for any account, because we don't have access to passwords. To reset your password:</p>
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ingredients.png" title="Ingredients" alt="Ingredients" /></p>
+
+<h2>Other Federal Government Open Source Initiatives</h2>
+
+<p>Other US federal government agencies have embraced this approach as well, so we wanted to mention a few of them.</p>
 
 <ol>
-<li>Go to the USASearch Login page at <a href="http://search.usa.gov/login">http://search.usa.gov/login</a></li>
-<li>Enter your e-mail address.</li>
-<li>Click on Forgot your password?</li>
-<li>You will be prompted to reset your password and it will be emailed to you.</li>
+<li><p>The White House -- The White House’s use of Drupal open a lot of open source doors in the federal government and they are continuing to lead by open sourcing their sourced their “[We people application][https://github.com/WhiteHouse/petitions]” as well as their mobile applications.</p></li>
+<li><p>USA.gov -- USA.gov recently released its [iPhone app][https://github.com/usagov/usagov-ios-app]</p></li>
+<li>Consumer Finance Protection Bureau (CFPB) -- Consumer Finance Protection Bureau is a new agency that has embraced open source through [qu][https://github.com/cfpb/qu]. qu is a data platform created by the CFPB to serve their public data sets.</li>
 </ol>
 
 
-<p>If you have any problem resetting your password, e-mail us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#85;&#x53;&#65;&#x53;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#x67;&#x73;&#97;&#x2e;&#103;&#x6f;&#x76;">&#85;&#83;&#x41;&#x53;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#103;&#x73;&#x61;&#46;&#x67;&#111;&#118;</a>.</p>
+<p>This is a public domain work of the US Government. This is the stable version; day-to-day development is at https://github.com/cndreisbach/qu.</p>
 
   </div>
 
   <div class='tags'>
-    
-    <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
     
   </div>
 </article></div>
