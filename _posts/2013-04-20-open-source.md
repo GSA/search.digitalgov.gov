@@ -21,7 +21,7 @@ We recently began to unravel our monolithic codebase so that we can share indivi
 
 We recently released the code for our [Jobs](https://github.com/GSA-OCSIT/jobs_api) and [Recalls](https://github.com/GSA-OCSIT/recalls_api) API servers. They're our first foray into coding in the open. The source code for these API servers is in [our GitHub repo](https://github.com/GSA-OCSIT/) and is available for anyone to see and contribute to. 
 
-The data products for this code is also open and available for anyone to consume on our [USASearch.HowTo.gov/Developer](/developer/index.html) hub.
+The data products for this code are also open and available for anyone to consume on our [USASearch.HowTo.gov/Developer](/developer/index.html) hub.
 
 These two servers and their underlying data now operate outside of our core search codebase.
 
@@ -29,9 +29,9 @@ Following this same model, moving forward, we plan to:
 
 * Share first&mdash;For every new feature, we'll write the code so that *anyone* can make use of the code, not just us. If the public community contributes to the codebase, we'll be able to improve this feature without taxing our developers.
 
-* Expose APIs&mdash;We'll expose our data products as APIs so that *anyone* can make use of the the data, not just searchers on a government websites.
+* Expose APIs&mdash;We'll expose our data products as APIs so that *anyone* can make use of the data, not just searchers on a government websites.
 
-* Be our own customer&mdash;We'll use our own public code and data just like everyone else. We'll call our own API servers to integrate the search results within our search results pages.
+* Be our own customer&mdash;We'll use our own public code and data just like everyone else. We'll call our own API servers to integrate the data within our search results pages.
 
 ## Make Things Open to Make Things Better
 
@@ -45,8 +45,8 @@ That said, we hope that exposing the pieces of our system will be useful to some
 
 We're not alone. Other federal agencies have embraced the approach of coding in the open and have [GitHub repos](http://gsa.github.io/federal-open-source-repos/). Below are a just a few of our many favorites.
 
-1. The Consumer Finance Protection Bureau has embraced open source, including serving their public data sets through [qu](https://github.com/cfpb/qu).
+* The Consumer Finance Protection Bureau has embraced open source, including serving their public data sets through [qu](https://github.com/cfpb/qu).
 
-2. USA.gov recently released the code for their [iPhone app](https://github.com/usagov/usagov-ios-app).
+* USA.gov recently released the code for their [iPhone app](https://github.com/usagov/usagov-ios-app).
 
-3. The White House was in the forefront of using open source software in the federal government with their use of Drupal. They're continuing to lead by example by opening up the code for their [We the People petitions](https://github.com/WhiteHouse/petitions) and [iOS](https://github.com/WhiteHouse/wh-app-ios) and [Android](https://github.com/WhiteHouse/wh-app-android) mobile apps.
+* The White House was in the forefront of using open source software in the federal government with their use of Drupal. They're continuing to lead by example by opening up the code for their [We the People petitions](https://github.com/WhiteHouse/petitions) and [iOS](https://github.com/WhiteHouse/wh-app-ios) and [Android](https://github.com/WhiteHouse/wh-app-android) mobile apps.
