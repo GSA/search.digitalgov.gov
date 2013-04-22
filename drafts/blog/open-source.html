@@ -75,25 +75,25 @@
   <div id="main-container"><article class="article">
   <div class='time'>
     
-    <a href="/drafts/2013-04-20-Our-Open-Source-Strategy.html">
+    <a href="/drafts/blog/open-source.html">
       <time></time>
     </a>
   </div>
 
   
   <h1>
-    <a href="/drafts/2013-04-20-Our-Open-Source-Strategy.html">Our Open Source Strategy</a>
+    <a href="/drafts/blog/open-source.html">Our Open Source Strategy</a>
   </h1>
   
 
   <div class='post-content'>
     <h1>Our Open Source Strategy</h1>
 
-<p>We keep a close eye on on our what our government counterparts are up to, both in the U.S. and other countries. We recently came across the Gov.UK’s philosophy on and approach to coding in the open. It caught our attention and we realized we should also articulate our open source strategy.</p>
+<p>We keep an eye on on our what our government counterparts are up to, both in the U.S. and other countries. We recently came across <a href="https://www.gov.uk/">Gov.UK's</a> philosophy on and approach to <a href="http://digital.cabinetoffice.gov.uk/2012/10/12/coding-in-the-open/">coding in the open</a>. It caught our attention and we realized we should also articulate our open source strategy.</p>
 
 <h2>Use and Contribute to Open Source Projects</h2>
 
-<p>Since 2010, we’ve embraced and leveraged open source software to build our site search service for federal, state, and local government websites. This use of open source has allowed us to experience enormous growth over the past few years. In March 2013 alone, 25 million searchers received results from our service--a 12-fold increase since March 2010.</p>
+<p>Since 2010, we've embraced and leveraged open source software to build our site search service for federal, state, and local government websites. This use of open source has allowed us to experience enormous growth over the past few years. In March 2013 alone, over 24 million searchers received results from our service&mdash;a four-fold increase since March 2010.</p>
 
 <p>Our search service is now a complex system made up of many moving parts, including providing type-ahead search suggestions, serving search results, fetching, indexing, and caching content, and providing analytics.</p>
 
@@ -101,51 +101,47 @@
 
 <h2>Code in the Open</h2>
 
-<p>We recently began to unravel our monolithic codebase so that we can share individual pieces. To borrow the phrase from Gov.UK, we’re now <strong><em>coding in the open</em></strong>.</p>
+<p>We recently began to unravel our monolithic codebase so that we can share individual pieces of our code. To borrow the phrase from Gov.UK, we're now <strong><em>coding in the open</em></strong>.</p>
 
-<p>As most of you know, once a pie is baked, it is hard to get back the apples, but that’s pretty much what we’re going to try to do.</p>
+<p>We recently released the code for our <a href="https://github.com/GSA-OCSIT/jobs_api">Jobs</a> and <a href="https://github.com/GSA-OCSIT/recalls_api">Recalls</a> API servers. They're our first foray into coding in the open. The source code for these API servers is in <a href="https://github.com/GSA-OCSIT/">our GitHub repo</a> and is available for anyone to see and contribute to.</p>
 
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/pie.png" title="Pie" alt="Pie" /></p>
+<p>The data products for this code is also open and available for anyone to consume on our <a href="/developer/index.html">USASearch.HowTo.gov/Developer</a> hub.</p>
 
-<p>We recently released our Jobs and Recalls API servers. They’re our first foray into coding in the open. The source code for these API servers is in GitHub and is available for anyone to see and contribute to. The data for these products are on our USASearch.HowTo.gov/Developer hub for anyone to consume.</p>
-
-<p>Previously we would have developed these services within our private search codebase. Now, these two servers and their underlying data operate outside of our core site search service.</p>
+<p>These two servers and their underlying data now operate outside of our core search codebase.</p>
 
 <p>Following this same model, moving forward, we plan to:</p>
 
 <ul>
-<li><p>Share first -- For every new feature, we’ll write the code so that it may be shared without affecting the integrity of our core service. If the public community wishes to contribute to the codebase, then this specific feature has the opportunity to improve without taxing our developers.</p></li>
-<li><p>Expose APIs -- Our data “products” will be exposed as APIs so that anyone may make use of the the data, not just searchers on a government websites.</p></li>
-<li><p>Be our own customer -- We’ll use our own public APIs for jobs and recalls data just like any other developer. We’ll call our own servers to integrate the search results within the search engine results pages.</p></li>
+<li><p>Share first&mdash;For every new feature, we'll write the code so that <em>anyone</em> can make use of the code, not just us. If the public community contributes to the codebase, we'll be able to improve this feature without taxing our developers.</p></li>
+<li><p>Expose APIs&mdash;We'll expose our data products as APIs so that <em>anyone</em> can make use of the the data, not just searchers on a government websites.</p></li>
+<li><p>Be our own customer&mdash;We'll use our own public code and data just like everyone else. We'll call our own API servers to integrate the search results within our search results pages.</p></li>
 </ul>
 
 
 <h2>Make Things Open to Make Things Better</h2>
 
-<p>We agree with Gov.UK that “to make things open makes things better.”</p>
+<p>We agree with Gov.UK that "to make things open makes things better."</p>
 
-<p>We don’t want to lose our focus on improving visitors’ search experience on government websites and we have finite resources. So we won’t be spending a lot of time to build or support a vibrant community around our code.</p>
+<p>We have finite resources and we don't want to lose our focus on serving our agency customers and improving visitors' search experience on government websites. So, we won't be spending a lot of time to build or support a vibrant community around our code.</p>
 
-<p>That said, we hope that exposing the pieces of our system will be useful to someone somewhere so we’ll continue to provide the “ingredients” of our search service so that others will be able to make their own tasty pies.</p>
+<p>That said, we hope that exposing the pieces of our system will be useful to someone somewhere. We'll continue to provide the "ingredients" of our search service so that others will be able to make use of the code and data in ways that we could never imagine.</p>
 
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ingredients.png" title="Ingredients" alt="Ingredients" /></p>
+<h2>And, We're Not Alone</h2>
 
-<h2>Other Federal Government Open Source Initiatives</h2>
-
-<p>Other US federal government agencies have embraced this approach as well, so we wanted to mention a few of them.</p>
+<p>We're not alone. Other federal agencies have embraced the approach of coding in the open and have <a href="http://gsa.github.io/federal-open-source-repos/">GitHub repos</a>. Below are a just a few of our many favorites.</p>
 
 <ol>
-<li><p>The White House -- The White House’s use of Drupal open a lot of open source doors in the federal government and they are continuing to lead by open sourcing their sourced their “[We people application][https://github.com/WhiteHouse/petitions]” as well as their mobile applications.</p></li>
-<li><p>USA.gov -- USA.gov recently released its [iPhone app][https://github.com/usagov/usagov-ios-app]</p></li>
-<li>Consumer Finance Protection Bureau (CFPB) -- Consumer Finance Protection Bureau is a new agency that has embraced open source through [qu][https://github.com/cfpb/qu]. qu is a data platform created by the CFPB to serve their public data sets.</li>
+<li><p>The Consumer Finance Protection Bureau has embraced open source, including serving their public data sets through <a href="https://github.com/cfpb/qu">qu</a>.</p></li>
+<li><p>USA.gov recently released the code for their <a href="https://github.com/usagov/usagov-ios-app">iPhone app</a>.</p></li>
+<li><p>The White House was in the forefront of using open source software in the federal government with their use of Drupal. They're continuing to lead by example by opening up the code for their <a href="https://github.com/WhiteHouse/petitions">We the People petitions</a> and <a href="https://github.com/WhiteHouse/wh-app-ios">iOS</a> and <a href="https://github.com/WhiteHouse/wh-app-android">Android</a> mobile apps.</p></li>
 </ol>
 
-
-<p>This is a public domain work of the US Government. This is the stable version; day-to-day development is at https://github.com/cndreisbach/qu.</p>
 
   </div>
 
   <div class='tags'>
+    
+    <a href="/tagged/open, api"><span class="label label-info">open, api</span></a>
     
   </div>
 </article></div>
