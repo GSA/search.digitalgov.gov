@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>How to Add JavaScript for Your Third Party Web Services</title>
+  <title>Show Your Footer: Search Notes for the Week Ending April 5, 2013</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -75,67 +75,55 @@
   <div id="main-container"><article class="article">
   <div class='time'>
     
-    <span>Last updated on:</span>
-    
-    <a href="/manual/third-party.html">
-      <time>March 19, 2013</time>
+    <a href="/releases/2013-04-05.html">
+      <time>April 5, 2013</time>
     </a>
   </div>
 
   
   <h1>
-    <a href="/manual/third-party.html">How to Add JavaScript for Your Third Party Web Services</a>
+    <a href="/releases/2013-04-05.html">Show Your Footer: Search Notes for the Week Ending April 5, 2013</a>
   </h1>
   
 
   <div class='post-content'>
-    <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > 3rd Party Tracking</p>
+    <h2>Highlight: Show Your Footer</h2>
 
-<p>Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends?</p>
+<p>Do you have information in the footer of your results page that searchers need to see? Searchers can now view or hide the footer while on your search results page.</p>
 
-<p>Log in to the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> and select the option, Third Party Tracking. Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
+<p>After clicking on the Show Footer icon located at the bottom right-hand corner of the search results page, searchers will see the footer.</p>
 
-<hr />
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/footer-1.png" alt="Show/hide footer icon" /></p>
 
-<p><strong><em>Google Analytics tip:</em></strong> In your Google Analytics JavaScript, be sure to set your domain if you've requested <a href="/manual/get-code.html#cname">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
+<p>They'll still be able to scroll infinitely through the search results while the footer is visible. To hide the footer, they can click on the icon again.</p>
 
-<pre><code>_gaq.push(['_setDomainName', 'commerce.gov']);
-</code></pre>
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/footer-2.png" alt="Results page with a visible footer icon" /></p>
 
-<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>.</p>
-
-<p><strong><em>ForeSee tip:</em></strong> Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
-
-<ol>
-<li><p>Email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#x55;&#83;&#65;&#x53;&#101;&#x61;&#114;&#99;&#104;&#64;&#x67;&#x73;&#x61;&#46;&#103;&#111;&#x76;">&#85;&#83;&#x41;&#x53;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#103;&#x73;&#97;&#x2e;&#103;&#111;&#x76;</a> to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
-<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
-
-<p> Find => 'files': '/fsrscripts/',</p>
-
-<p> and replace it with => 'files': '//{yourdomain}/fsrscripts/',</p>
-
-<p> in the following five files.</p>
+<h2>Chores</h2>
 
 <ul>
-<li>foresee-trigger.js</li>
-<li>foresee-tracker.js</li>
-<li>foresee-alive.js</li>
-<li>foresee-qualifier.js</li>
-<li>foresee-test.js</li>
+<li>We automated the syncing of our geolocation data.</li>
+<li>We published instructions for the <a href="developer/jobs.html">Jobs API</a>.</li>
+<li>We migrated our website platform from Tumblr to <a href="http://pages.github.com/">GitHub Pages</a>.</li>
+<li>We set up a cron job to regenerate tagged pages after commits for our website.</li>
+<li>We published an RSS feed for our website.</li>
 </ul>
-</li>
-<li><p>Ask ForeSee to send USASearch your foresee-trigger.js file.</p></li>
-<li><p>USASearch will send you an email to confirm that we've set up your CNAME and installed your foresee-trigger.js file.</p></li>
-</ol>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>Searchers see a tool tip for the icon that toggles the display of the header and footer.</li>
+<li>Searchers no longer see an unescaped HTML tags.</li>
+<li>We <a href="https://github.com/rails/rails/pull/4911">reduced file name maximum size</a> in our ActiveSupport FileStore cache.</li>
+</ul>
 
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
-    
-    <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+    <a href="/tagged/releases"><span class="label label-info">releases</span></a>
     
   </div>
 </article></div>
