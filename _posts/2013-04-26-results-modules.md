@@ -32,23 +32,13 @@ All selected feeds will be grouped and displayed in a News GovBox. When a search
 
 ![RSS news GovBox on BoulderColorado.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m1cpfsfC1Z1qid15q.png)
 
-## Related Modules
-
-### Related Searches
+## Related Searches
 
 Help visitors better define the focus of their search by offering them searches related to their current search term. Suggestions are derived from the searches performed on your website. Up to five searches related to your visitors' original search are displayed and are updated in near real time.
 
 See the sample results page below that shows related searches displayed on [Access Washington](http://access.wa.gov/) for a search on *seattle.*
 
 ![Related searches on Access Washington](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m1crgxGDb61qid15q.png)
-
-### Deep Links
-
-Deep links provide searchers with direct access to specific subsections of your site. Check the option to display deep links on the first-listed result for relevant search terms.
-
-See the sample results page below that shows deep links displayed on [NOAA](http://www.noaa.gov) for a search on *hurricanes.*
-
-![Deep links on NOAA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m2oogfKJL41qid15q.png)
 
 ## Related Sites
 
@@ -59,6 +49,3 @@ Select one of your other USASearch sites from the drop-down menu. Enter the text
 See the sample results page below that shows a link to GobiernoUSA.gov displayed on [USA.gov](http://www.usa.gov) for a search on *cuba.*
 
 ![Related site on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m2oskqJHiN1qid15q.png)
-
----
-***Troubleshooting tip:*** Is an odd deep link appearing for your site? Visit Bing Webmaster Tools to [manage your deep links](http://onlinehelp.microsoft.com/en-us/bing/hh689741.aspx).

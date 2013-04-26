@@ -8,7 +8,6 @@ Searches for government agencies are very common. So we created the Agency GovBo
 
 The federal Agency GovBox includes:
 
-* Deep links for direct access to common sections of the agency's website;
 * Phone numbers;
 * Links to social media accounts; and
 * A box to search the agency's website.
