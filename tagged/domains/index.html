@@ -82,7 +82,7 @@
       <span>Last updated on:</span>
       
       <a href="/manual/domains.html">
-        <time datetime="2012-03-07">March 7, 2012</time>
+        <time datetime="2013-04-29">April 29, 2013</time>
       </a>
     </div>
 
@@ -104,7 +104,7 @@
 <h2>Part of Site</h2>
 
 <ul>
-<li>List www.yoursite.gov to include only the primary domain.</li>
+<li>List www.yoursite.gov to include only the primary 'www' domain.</li>
 <li>List subdomain.yoursite.gov to include subdomains.</li>
 <li>List yoursite.gov/folder to include folders.</li>
 </ul>
@@ -118,9 +118,14 @@
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> You can list folders up to three levels deep (e.g., yoursite.gov/folder1/folder2/folder3). If you want to limit results to folders deeper in your site hierarchy, add our <a href="/manual/get-code.html">USASearch Tag</a> and then use the <a href="/manual/collections.html">Collections</a> option in left-hand menu. E-mail us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#x55;&#83;&#x41;&#83;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#103;&#x73;&#x61;&#46;&#x67;&#x6f;&#x76;">&#x55;&#83;&#x41;&#83;&#101;&#97;&#x72;&#99;&#104;&#x40;&#103;&#x73;&#97;&#x2e;&#x67;&#111;&#118;</a> for additional information.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> You can exclude specific subdomains or folders using any of the following options.</p>
 
-<p><strong><em>Troubleshooting Tip:</em></strong> You cannot explicitly specify subdomains or folders for exclusion. You can, however, exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</p>
+<ol>
+<li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google, Bing, and USASearch.</li>
+<li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
+<li>E-mail us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#x55;&#83;&#x41;&#83;&#101;&#97;&#114;&#x63;&#104;&#x40;&#x67;&#115;&#x61;&#46;&#103;&#x6f;&#118;">&#85;&#x53;&#65;&#83;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#x67;&#115;&#97;&#46;&#x67;&#111;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
+</ol>
+
 
     </div>
 
