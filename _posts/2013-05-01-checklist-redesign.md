@@ -11,7 +11,7 @@ We often receive questions when an affiliate undergoes a major website upgrade, 
     * [Bing Webmaster Tools](http://www.bing.com/toolbox/webmasters/)  
     * [Google Webmaster Central](https://www.google.com/webmasters/)
 3. Update the [XML sitemap](http://www.sitemaps.org/) on your website and notify the search engines via the webmaster tools.
-4. Notify the search engines of the content that has been removed via the webmaster tools.
+4. Notify the search engines of the content that has been removed via the webmaster tools. Specifically, in Bing, use the [Site Move tool](http://www.bing.com/blogs/site_blogs/b/webmaster/archive/2013/03/15/bing-wmt-launches-site-move-tool.aspx).
 
 If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <USASearch@gsa.gov>.
 
