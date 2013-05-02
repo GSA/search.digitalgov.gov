@@ -12,6 +12,6 @@ The federal Agency GovBox includes:
 * Links to social media accounts; and
 * A box to search the agency's website.
 
-If you [opt to show the Agency GovBox](/manual/results-modules.html), searchers looking for federal agencies on your site can readily find high-quality information, as shown in the sample below for a search on [*irs*](http://search.usa.gov/search?affiliate=usagov&amp;query=irs) on [USA.gov](http://www.usa.gov/).
+If you [opt to show the Agency GovBox](/manual/results-modules.html), searchers looking for federal agencies on your site can readily find high-quality information, as shown in the sample below for a search on [*nps*](http://search.usa.gov/search?affiliate=doi.gov&query=nps) on [DOI.gov](http://www.doi.gov/).
 
 ![Agency GovBox for IRS on USA.gov's search results page](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/govbox-agency.png)
