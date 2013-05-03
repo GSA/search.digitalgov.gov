@@ -79,6 +79,80 @@
   <article class='article'>
     <div class='time'>
       
+      <a href="/releases/2013-05-03.html">
+        <time datetime="2013-05-03">May 3, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/2013-05-03.html">Find State and Local Jobs: Search Notes for the Week Ending May 3, 2013</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlight: Find State and Local Jobs</h2>
+
+<p>Searchers on many state and local websites can now see current job openings. We're automatically indexing and displaying job openings for all of your websites that use <a href="http://www.neogov.com/">NeoGov</a>.</p>
+
+<p>See the sample results page below that shows cuurent job openings displayed on the City of Bloomington, MN, for a search on <a href="http://search.ci.bloomington.mn.us/search?affiliate=cityofbloomingtonmnsearchresults&amp;query=jobs">jobs</a>.</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/jobs-bloomington.png" alt="Search results for jobs on ci.bloomington.mn.us" /></p>
+
+<p>(Thanks, City of Bloomington, for helping us pilot test this new feature!)</p>
+
+<h2>Other Features</h2>
+
+<ul>
+<li>Searchers now see search results for <a href="/manual/collections.html">collections</a> that are in deeply nested folders on your site.</li>
+<li>Searchers no longer see deep site links for the first-listed search result.</li>
+<li>Developers can now access <a href="http://api.usa.gov/jobs/search.json?tags=state">state</a> and <a href="http://api.usa.gov/jobs/search.json?tags=city+county">local</a> jobs data via our <a href="/developer/jobs.html">Jobs API</a> for government agencies that use both USASearch and NeoGov.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li>We updated our <a href="/tos.html">terms of service</a>.</li>
+<li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
+<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#85;&#83;&#65;&#83;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#103;&#115;&#97;&#x2e;&#x67;&#x6f;&#x76;">&#85;&#x53;&#x41;&#83;&#101;&#97;&#114;&#99;&#104;&#x40;&#x67;&#x73;&#97;&#x2e;&#x67;&#x6f;&#118;</a> with any questions.</li>
+<li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
+<li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
+<li>We removed the trending searches feature and widget.</li>
+<li>We updated our <a href="http://jenkins-ci.org/">Jenkins</a> build to fix to failing <a href="http://cukes.info/">Cucumber</a> specs.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We're now tracking impressions on graphics <a href="/manual/best-bets.html">Best Bets</a>.</li>
+<li>We now accept Flickr and RSS feeds even if there are invalid items without a description, date, or other required field.</li>
+<li>The advanced search link no longer propagates unnecessary parameters in the URL.</li>
+<li>We removed trailing spaces from Twitter handles to prevent broken links in the <a href="/manual/social-media.html">Twitter GovBox</a>.</li>
+<li>We now accept Flickr handles with an '@' sign in them.</li>
+<li>Searchers now see better results when they do a search from the <a href="http://search.usa.gov/search/advanced?affiliate=usagov">advanced search page</a> with multiple terms in the 'Any of these words' and 'None of these words' fields.</li>
+<li>Searchers now see results for terms like full-time and part-time. The hyphens had previously been treated as the NOT Boolean operator.</li>
+<li>Searchers no longer see the <a href="/manual/govbox-jobs.html">Jobs GovBox</a> for advanced searches when it isn't relevant.</li>
+<li>We fixed a bug so that, if a site parameter is specified, it overrides the scopeid parameter.</li>
+<li>We added some additional logic to the code that redirects visitors from search.usa.gov to USA.gov's homepage.</li>
+<li>We fixed a few regression bugs for related searches and the naming of the 'unescapedUrl' and 'publishedAt' fields in our <a href="/manual/api.html">Search API</a>.</li>
+<li>We now display search results only for pages that specify a URL.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
       <a href="/releases/2013-04-05.html">
         <time datetime="2013-04-05">April 5, 2013</time>
       </a>
@@ -571,75 +645,6 @@
 <li>We now show both queries and clicks in the analytics reports for customers with really long site handles.</li>
 <li>We fixed a bug with how we recorded clicks for searches with apostrophes.</li>
 <li>We show you an error message when you try to upload an improperly encoded URL  via the <a href="/manual/urls.html">URLs &amp; Sitemaps</a> page in the Admin Center.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <a href="/releases/2012-11-16.html">
-        <time datetime="2012-11-16">November 16, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/releases/2012-11-16.html">Search Notes for the Week Ending November 16, 2012</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2>Highlighted Feature</h2>
-
-
-<p>Searchers often know the exact page they're looking for. We've added a feature to help them find that page even more quickly. </p>
-
-
-<p>As searchers type in their query, relevant text <a href="/manual/best-bets.html">Best Bets</a> are shown as Recommended Pages, as shown in the sample below for a search on <em>fa&#8230;</em> on <a href="http://search.usa.gov/search?query=jobs&amp;affiliate=u.s.departmentoflabor">DOL.gov</a>.</p>
-
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mdljlrljT71qid15q.png"/></p>
-
-
-<h2>Other Features</h2>
-
-
-<ul><li>Searchers can narrow RSS news results by custom date ranges.</li>
-<li>Searchers now see more images above the fold on image results pages.</li>
-<li>Searchers see integrated image results across both the images on your website and in your Flickr photostream.</li>
-<li>You can now add the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digtital Analytics Program</a>'s government-wide analytics tag to your search results pages. Email the Digital Analytics Program at <a href="mailto:DAP@gsa.gov">DAP@gsa.gov</a> for more information on setting up the government-wide analytics tag.</li>
-<li>When you <a href="/manual/social-media.html">add your Twitter handle</a> in the Admin Center, we now <a href="/manual/results-modules.html">show the Twitter GovBox</a> by default.</li>
-</ul>
-
-
-<h2>Chores</h2>
-
-
-<ul><li>We upgraded the <a href="https://rubygems.org/gems/tweetstream">tweetstream</a> and <a href="https://rubygems.org/gems/twitter">twitter</a> gems.</li>
-<li>We upgraded <a href="http://jenkins-ci.org/">Jenkins</a>.</li>
-<li>We upgraded to <a href="http://blog.cloudera.com/blog/2012/10/cdh4-1-now-released/">Cloudera 4.1</a> and installed <a href="https://ccp.cloudera.com/display/IMPALA10BETADOC/Cloudera+Impala+1.0+Beta+Documentation">Impala</a>.</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-
-<ul><li>We fixed the URLs within your tweets so that searchers can now click on the links.</li>
-<li>We fixed a bug so that infinite scroll now works on news and image results pages.</li>
-<li>We now index your <span>ISO-8859-1 encoded pages.</span></li>
-<li>We now always show your no results section on the <a href="/manual/query-logs.html">Query Logs</a> page in the Admin Center.</li>
-<li><span>We fixed some bugs with how the ends of the day and month were calculated so that the data displayed in our reports is consistent.</span></li>
-<li>We fixed a bug so that the query timeline chart now displays in all browsers.</li>
-<li>We synced the <a href="/manual/query-logs.html">Query Logs</a> and <a href="/manual/click-stats.html">Click Stats</a> reports so that you now see today's data for both.</li>
 </ul>
 
 
