@@ -122,6 +122,12 @@
 <p>Nursing jobs in NY<br/>
 <a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs+in+ny">http://api.usa.gov/jobs/search.json?query=nursing+jobs+in+ny</a></p>
 
+<p>Nursing jobs with a state government agency<br/>
+<a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=state">http://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=state</a></p>
+
+<p>Nursing jobs with a federal government agency<br/>
+<a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=federal">http://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=federal</a></p>
+
 <p>Nursing jobs with Veterans Affairs in NY<br/>
 <a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+ny">http://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+ny</a></p>
 
@@ -132,7 +138,7 @@
 
 <h2>Parameters</h2>
 
-<p>Five parameters are accepted: (1) query, (2) organization_id, (3) hl [highlighting], (4) size, and (5) from. Only query is required.</p>
+<p>Six parameters are accepted: (1) query, (2) organization_id, (3) hl [highlighting], (4) size, (5) from, and (6) tags. Only query is required.</p>
 
 <h3>Query</h3>
 
@@ -200,8 +206,26 @@
 
 <h3>Organization_id</h3>
 
-<p>Specifies which federal agency to use as a filter, based on <a href="https://schemas.usajobs.gov/Enumerations/AgencySubElement.xml">USAJobs' agency schema</a>. Two letter codes are used to span entire departments, while four letter codes are
-generally used for independent agencies or agencies within a department.</p>
+<p>Specifies which federal, state, or local agency to use as a filter.</p>
+
+<p>For federal agencies, the ID is based on <a href="https://schemas.usajobs.gov/Enumerations/AgencySubElement.xml">USAJobs' agency schema</a>. Two letter codes are used to span entire departments, while four letter codes are generally used for independent agencies or agencies within a department.</p>
+
+<p>For state agencies, a sample of the format follows.</p>
+
+<p><em>State of Virginia</em><br/>
+US-VA</p>
+
+<p><em>State of Virginia Department of Taxation</em><br/>
+US-VA:DEPT-TAX</p>
+
+<p><em>Fairfax County, VA</em><br/>
+US-VA:COUNTY-FAIRFAX</p>
+
+<p><em>Fairfax County Sheriff</em><br/>
+US-VA:COUNTY-FAIRFAX:SHERIFF</p>
+
+<p><em>City of Fairfax, VA</em><br/>
+US-VA:COUNTY-FAIRFAX:CITY-FAIRFAX</p>
 
 <p>If you specify an <code>organization_id</code> in your API call but the searcher types in another agency, the searchers' agency overrides the <code>organization_id</code> parameter. For example, VA jobs are returned when you specify Air Force jobs, but the searcher looks for jobs at the VA (<a href="http://api.usa.gov/jobs/search.json?query=jobs+at+the+va&amp;amp;organization_id=AF">http://api.usa.gov/jobs/search.json?query=jobs+at+the+va&amp;amp;organization_id=AF</a>).</p>
 
@@ -217,13 +241,17 @@ generally used for independent agencies or agencies within a department.</p>
 
 <p>Specifies the starting record.</p>
 
+<h3>Tags</h3>
+
+<p>Specifies the level of government. Current tags are <code>federal</code>, <code>state</code>, <code>county</code>, and <code>city</code>.</p>
+
 <p><a name="data-sources"></a></p>
 
 <h2>Data Sources</h2>
 
 <p>Data are normalized across government job listings. Federal government jobs are from <a href="http://www.usajobs.gov">USAJobs</a>. State and local government jobs are from a variety of sources.</p>
 
-<p>Are you with a local or state government agency? Or a federal agency that doesn't post jobs on USAJobs? E-mail us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#x55;&#83;&#65;&#83;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#103;&#115;&#x61;&#x2e;&#103;&#111;&#118;">&#85;&#83;&#65;&#x53;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#103;&#115;&#97;&#46;&#x67;&#111;&#118;</a> to let us know where you publish your jobs data. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
+<p>Are you from a federal, state, or local government agency? Are we missing your jobs data? E-mail us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#85;&#83;&#65;&#x53;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x67;&#x73;&#97;&#46;&#103;&#x6f;&#118;">&#x55;&#x53;&#x41;&#x53;&#x65;&#97;&#x72;&#x63;&#104;&#64;&#103;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#x76;</a> to let us know where you publish your jobs data. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
 
 <p><a name="what-it-returns"></a></p>
 
@@ -233,73 +261,35 @@ generally used for independent agencies or agencies within a department.</p>
 
 <pre><code>[
   {
-  id: "327717800",
-  position_title: "Registered Nurse Operating Room",
-  organization_name: "Veterans Affairs, Veterans Health Administration",
-  rate_interval_code: "PA",
-  minimum: 0,
-  maximum: 0,
-  start_date: "2012-10-02",
-  end_date: "2013-03-29",
-  locations: [
-  "Albany, NY"
-  ]
+    id: "usajobs:340537800",
+    position_title: "Nursing Assistant Float Pool",
+    organization_name: "Veterans Affairs, Veterans Health Administration",
+    rate_interval_code: "PA",
+    minimum: 31315,
+    maximum: 40706,
+    start_date: "2013-03-27",
+    end_date: "2013-05-31",
+    locations: [
+        "Albany, NY"
+    ],
+    url: "https://www.usajobs.gov/GetJob/ViewDetails/340537800"
   },
   {
-  id: "331105900",
-  position_title: "Home Telehealth Registered Nurse",
-  organization_name: "Veterans Affairs, Veterans Health Administration",
-  rate_interval_code: "PA",
-  minimum: 0,
-  maximum: 0,
-  start_date: "2012-11-14",
-  end_date: "2013-03-29",
-  locations: [
-  "Albany, NY"
-  ]
-  },
-  {
-  id: "327355000",
-  position_title: "Nursing Assistant (Geriatric)",
-  organization_name: "Veterans Affairs, Veterans Health Administration",
-  rate_interval_code: "PA",
-  minimum: 31315,
-  maximum: 40706,
-  start_date: "2012-09-27",
-  end_date: "2013-03-29",
-  locations: [
-  "Albany, NY"
-  ]
-  },
-  {
-  id: "327579500",
-  position_title: "Diabetes Nurse Practitioner",
-  organization_name: "Veterans Affairs, Veterans Health Administration",
-  rate_interval_code: "PA",
-  minimum: 0,
-  maximum: 0,
-  start_date: "2012-10-02",
-  end_date: "2013-03-29",
-  locations: [
-  "Albany, NY"
-  ]
-  },
-  {
-  id: "332530500",
-  position_title: "LPN - Geriatrics",
-  organization_name: "Veterans Affairs, Veterans Health Administration",
-  rate_interval_code: "PA",
-  minimum: 0,
-  maximum: 0,
-  start_date: "2012-12-04",
-  end_date: "2013-03-29",
-  locations: [
-  "Albany, NY"
-  ]
+    id: "usajobs:342782900",
+    position_title: "Registered Nurse - Endoscopy",
+    organization_name: "Veterans Affairs, Veterans Health Administration",
+    rate_interval_code: "PA",
+    minimum: 0,
+    maximum: 0,
+    start_date: "2013-05-02",
+    end_date: "2013-05-13",
+    locations: [
+        "Albany, NY"
+    ],
+    url: "https://www.usajobs.gov/GetJob/ViewDetails/342782900"
   }
-  ]
+]
 </code></pre>
-
 
 <p><a name="code-samples"></a></p>
 
@@ -323,7 +313,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <h2>Feedback</h2>
 
-<p>E-mail us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#x55;&#83;&#65;&#83;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#103;&#x73;&#97;&#x2e;&#103;&#x6f;&#x76;">&#85;&#83;&#x41;&#83;&#x65;&#97;&#114;&#x63;&#104;&#64;&#x67;&#x73;&#97;&#x2e;&#103;&#111;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>E-mail us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#85;&#83;&#x41;&#x53;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#x67;&#x73;&#x61;&#46;&#103;&#x6f;&#118;">&#85;&#x53;&#x41;&#x53;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#x67;&#x73;&#x61;&#46;&#103;&#111;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
