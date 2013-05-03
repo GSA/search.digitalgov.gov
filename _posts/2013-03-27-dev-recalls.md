@@ -1,7 +1,8 @@
 ---
 permalink: /developer/recalls.html
-layout: article
+layout: post
 title: Recalls API
+tags: recalls api
 ---
 
 [USASearch](http://usasearch.howto.gov) > [APIs for Developers](/developer/index.html) > Recalls API
