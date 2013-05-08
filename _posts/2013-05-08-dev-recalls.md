@@ -62,9 +62,13 @@ Attempts to extract as much "signal" as possible from the input text. Handles wo
 
 ### organization
 
-Specifies which agency issued the recall. Possible values are `CDC`, `CPSC`, or `NHTSA`.
+Specifies which agency issued the recall. Possible values are `FDA`, `USDA`, `CPSC`, or `NHTSA`.
 
 Example: <http://api.usa.gov/recalls/search.json?organization=nhtsa>
+
+Specifies multiple agencies that issued the recall.
+
+Example: <http://api.usa.gov/recalls/search.json?organization=fda+usda>
 
 ### start_date
 
