@@ -62,13 +62,11 @@ Attempts to extract as much "signal" as possible from the input text. Handles wo
 
 ### organization
 
-Specifies which agency issued the recall. Possible values are `FDA`, `USDA`, `CPSC`, or `NHTSA`.
+Specifies which agency issued the recall. Possible values are `CPSC`, `FDA`, `NHTSA`, or `USDA`.
 
-Example: <http://api.usa.gov/recalls/search.json?organization=nhtsa>
+Example (one agency): <http://api.usa.gov/recalls/search.json?organization=nhtsa>
 
-Specifies multiple agencies that issued the recall.
-
-Example: <http://api.usa.gov/recalls/search.json?organization=fda+usda>
+Example (multiple agencies): <http://api.usa.gov/recalls/search.json?organization=fda+usda>
 
 ### start_date
 
@@ -132,7 +130,7 @@ Below are three sample JSON responses for food, product, and car safety recalls.
 	    "total":2,
 	    "results":[
 	        {
-	            "organization":"CDC",
+	            "organization":"FDA",
 	            "recall_number":"b6d9527fc7",
 	            "recall_date":"2012-12-18",
 	            "recall_url":"http://www.fda.gov/Safety/Recalls/ucm332784.htm",
@@ -140,7 +138,7 @@ Below are three sample JSON responses for food, product, and car safety recalls.
 	            "summary":"True Taste, LLC RECALLS,  \"Hot Smoked Rainbow Trout\""
 	        },	
 	        {
-	            "organization":"CDC",
+	            "organization":"FDA",
 	            "recall_number":"8e54d46b8d",
 	            "recall_date":"2012-12-18",
 	            "recall_url":"http://www.fda.gov/Safety/Recalls/ucm332787.htm",
