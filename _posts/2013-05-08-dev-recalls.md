@@ -25,7 +25,7 @@ When you're buying and using products, safety comes first.
 
 Six federal regulatory agencies issue recalls on [Recalls.gov](http://www.recalls.gov).
 
-This Recalls API allows you to tap into a list of (1) drug and food safety recalls from [FoodSafety.gov](http://www.FoodSafety.gov); (2) car safety recalls from the [National Highway Traffic Safety Administration](http://www.nhtsa.gov); and (3) product safety recalls from the [Consumer Product Safety Commission](http://www.cpsc.gov).
+This Recalls API allows you to tap into a list of (1) drug and food safety recalls from the [Food and Drug Administration](http://www.fda.gov), [Food Safety and Inspection Service](http://www.fsis.usda.gov), and [FoodSafety.gov](http://www.FoodSafety.gov); (2) car safety recalls from the [National Highway Traffic Safety Administration](http://www.nhtsa.gov); and (3) product safety recalls from the [Consumer Product Safety Commission](http://www.cpsc.gov).
 
 This API is great for consumer safety websites or applications, news organizations, and websites or magazines targeted to specific audiences, such as parents.
 
@@ -99,7 +99,7 @@ Results are sorted by relevance by default. Possible values are `rel` or `date`.
 Example: <http://api.usa.gov/recalls/search.json?sort=date>
 
 ### food_type 
-Only for FoodSafety.gov recalls. Specifies the type of recall from FoodSafety.gov. Possible values are `food` or `drug`.
+Only for drug and food safety recalls. Possible values are `food` or `drug`.
 
 Example: <http://api.usa.gov/recalls/search.json?food_type=drug>
 
@@ -118,7 +118,7 @@ Example: <http://api.usa.gov/recalls/search.json?upc=042666601627>
 
 <a name="data-sources"></a><h2>Data Sources</h2>
 
-Data are normalized across (1) drug and food safety recalls from [FoodSafety.gov](http://www.FoodSafety.gov); (2) car safety recalls from the [National Highway Traffic Safety Administration](http://www.nhtsa.gov); and (3) product safety recalls from the [Consumer Product Safety Commission](http://www.cpsc.gov).
+Data are normalized across (1) drug and food safety recalls from the [Food and Drug Administration](http://www.fda.gov), [Food Safety and Inspection Service](http://www.fsis.usda.gov), and [FoodSafety.gov](http://www.FoodSafety.gov); (2) car safety recalls from the [National Highway Traffic Safety Administration](http://www.nhtsa.gov); and (3) product safety recalls from the [Consumer Product Safety Commission](http://www.cpsc.gov).
 
 <a name="what-it-returns"></a><h2>What it Returns</h2>
 
