@@ -26,7 +26,9 @@ On the image results page, we'll automatically backfill the standard image resul
 
 ## Show Tweets
 
-When you add your Twitter handle, we'll automatically index your tweets. You can control the display of the tweets on the [Results Modules](/manual/results-modules.html) in the [Admin Center](http://search.usa.gov/affiliates/home). To show the tweets as a GovBox on your results page, select the option to show as a GovBox on the Results Modules page.
+When you add your Twitter handle, we'll automatically index *your* tweets. Select the option, Show tweets from my lists, to index the tweets for all members of your lists.
+
+You can control the display of the tweets on the [Results Modules](/manual/results-modules.html) in the [Admin Center](http://search.usa.gov/affiliates/home). To show the tweets as a GovBox on your results page, select the option to show as a GovBox on the Results Modules page.
 
 See the sample results page below that shows a recent tweet displayed on SNAP-Ed Connection for a search on *[nutrition](http://search.usa.gov/search?affiliate=snap-edconnection&query=nutrition)*.
 
