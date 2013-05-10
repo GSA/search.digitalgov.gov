@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>August 2011 Release Notes</title>
+  <title>Search Your Twitter Lists: Notes for the Week Ending May 17, 2013</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -75,69 +75,51 @@
   <div id="main-container"><article class="article">
   <div class='time'>
     
-    <a href="/releases/2011-09-15.html">
-      <time>September 15, 2011</time>
+    <a href="/drafts/releases/2013-05-17.html">
+      <time></time>
     </a>
   </div>
 
   
   <h1>
-    <a href="/releases/2011-09-15.html">August 2011 Release Notes</a>
+    <a href="/drafts/releases/2013-05-17.html">Search Your Twitter Lists: Notes for the Week Ending May 17, 2013</a>
   </h1>
   
 
   <div class='post-content'>
-    <p><span> </span></p>
+    <h2>Highlight: Search Your Twitter Lists</h2>
 
+<p>Does your agency have dozens of Twitter accounts? Do you have a public Twitter list for these accounts? You can now opt to index tweets from your lists. You can either:</p>
 
-<p><span>While the dogs days of summer are almost over, we didn't let the weather stop us from rolling out some hot new features.</span></p>
-
-
-<p><span>We we are currently beta testing two new rendering options: iFrame and a <a href="http://drupal.org/project/USASearch">Drupal module</a> which will allow you to host the search results on your web site and gain additional control of the look and feel. If you are an affiliate and interested in beta testing, please let us know.</span></p>
-
-
-<p><span> </span>As a reminder, we divide our work into three categories:</p>
-
-
-<p>1) Features—Things that you actually notice</p>
-
-
-<p>2) Bugs—Fixes to any code issues that may arise</p>
-
-
-<p>3) Chores—Back-end improvements that users don't notice</p>
-
-
-<p><span> </span></p>
-
-
-<p><strong>Features:</strong></p>
-
-
-<ul><li>Users can view Featured Collections in Affiliate SERPs</li>
-<li>Mobile users see boosted sites</li>
-<li>Affiliates have option to embed iFrame that renders search results</li>
-<li>Improve monthly reporting process</li>
-<li>Update Popular Pages for Affiliates</li>
-<li>Affiliates may assign published start and end date to a Featured Collection</li>
-<li>User sees Popular Pages in Agency Govbox</li>
+<ul>
+<li>Show tweets from your Twitter account only (for example, index and show tweets from <a href="https://twitter.com/NIHforHealth">@NIHforHealth</a> only)</li>
+<li>Show tweets from your account's public lists (for example, index and show tweets from the all members of @NIHforHealth's list, <a href="https://twitter.com/NIHforHealth/nih-twitter-feeds">NIH Twitter feeds</a>).</li>
 </ul>
 
 
-<p><strong>Bugs:</strong></p>
+<p>(Thanks, <a href="http://www.nih.gov">NIH.gov</a> team, for suggesting this new feature!)</p>
 
+<h2>Other Features</h2>
 
-<ul><li><span>Fix accessibility issues</span></li>
-<li><span>User see error page when the request contains unrecognized extension </span></li>
+<ul>
+<li>Searchers on Spanish-language websites now see the <a href="/manual/govbox-jobs.html">Jobs GovBox</a> when they search on jobs-related terms. For example, a Jobs GovBox appears on GobiernoUSA.gov for a search on <a href="http://search.usa.gov/search?affiliate=gobiernousa&amp;query=trabajos"><em>trabajos</em></a>.</li>
 </ul>
 
 
-<p><strong>Chores:</strong></p>
+<h2>Chores</h2>
+
+<ul>
+<li>We updated the cron script for our monthly analytics emails to always send out reports for the past <em>month</em>, not past <em>day</em>.</li>
+<li>We added bombs, bomber, bombers, bombed, bombing, bombings => bomb to our stemming file.</li>
+<li>We removed the WebTrends code from our search results pages.</li>
+</ul>
 
 
-<ul><li><span>Improve monthly reporting process</span></li>
-<li><span>Affiliate admin can assign published start and end date to a Featured Collection</span></li>
-<li><span>Click table housekeeping</span></li>
+<h2>Fixes</h2>
+
+<ul>
+<li>We now correctly identify the Food and Drug Administration or Food Safety and Inspection Service as the source of the data in our <a href="/developer/recalls.html">Recalls APi</a>.</li>
+<li>We gracefully handle the error when an API query specifies 'index=doc' but doesn't include a 'dc' parameter.</li>
 </ul>
 
 
