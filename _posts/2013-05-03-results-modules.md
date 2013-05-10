@@ -18,7 +18,7 @@ USASearch currently provides three pre-built GovBoxes.
 
 * **Agency GovBox.** For more information, including a screenshot, read our post [Help Searchers Find Information for Federal Agencies](/manual/govbox-agencies.html).
 * **Health GovBox.** For more information, including a screenshot, read our post [Help Searchers Find Health Information](/manual/govbox-health.html).
-* **Jobs GovBox.** For more information, including a screenshot, read our post [Help Searchers Find Federal Jobs](/manual/govbox-jobs.html).
+* **Jobs GovBox.** For more information, including a screenshot, read our post [Help Searchers Find	 Jobs](/manual/govbox-jobs.html).
 
 ### Social Media GovBoxes
 
