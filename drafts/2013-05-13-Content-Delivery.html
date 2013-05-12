@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>How to Set Up a New Account and Site</title>
+  <title>USASearch and Content Delivery</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -75,75 +75,57 @@
   <div id="main-container"><article class="article">
   <div class='time'>
     
-    <span>Last updated on:</span>
-    
-    <a href="/manual/add-site.html">
-      <time>April 15, 2013</time>
+    <a href="/drafts/2013-05-13-Content-Delivery.html">
+      <time></time>
     </a>
   </div>
 
   
   <h1>
-    <a href="/manual/add-site.html">How to Set Up a New Account and Site</a>
+    <a href="/drafts/2013-05-13-Content-Delivery.html">USASearch and Content Delivery</a>
   </h1>
   
 
   <div class='post-content'>
-    <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Add Site</p>
+    <h1>Evolution</h1>
 
-<p>You can use USASearch to power the search box on your federal, state, local, tribal, or territorial government website at no cost.</p>
+<p>USASearch migrated to an open source platform in 2010 with the primary focus of delivering relevant search results in sub-second response times. USASearch architected a system that returns search results quickly, but at the beginning we did not leverage any content delivery technologies. As we have grown our customer base, we scaled with the help of our content delivery partner, Akamai.  We have had several customers ask us questions in regards to USASearch scalability, content delivery, and failover, so we thought it made sense to address this in a post.</p>
 
-<p>Access to our hosted search service requires authentication and verification that you're a government employee or contractor.</p>
+<h1>How It Works</h1>
 
-<h2>Sign In</h2>
+<p>Let's take a student conducting a search on the White House web site for the "4th of July."  When they hit 'enter' the query will go to Akamai who determines if the query is cached within USASearch's specified period of time. (Our caching window is short as no one wants to see old search results.)</p>
 
-<p><a href="http://search.usa.gov/affiliates/hom">Log in</a> to an existing account or register for a new account at <a href="http://usasearch.howto.gov">http://usasearch.howto.gov</a>. Select the Login option in the upper right-hand corner and fill out your information.</p>
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/cdn-cached.png" title="Cached" alt="Cached" /></p>
 
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/login.png" alt="Login from USASearch.HowTo.gov" /></p>
+<p>This is the fastest possible way to serve search results as the user gets the results page from Akamai's closest geographic server. USASearch has worked over time to serve more and more content through Akamai. While this has been an evolution over the last couple years, USASearch is now offloading 90% of its content delivery through Akamai (an astounding percentage!)</p>
 
-<p>After you register, you'll receive an automatic e-mail. Click on the link in the e-mail to verify that your e-mail address belongs to you.</p>
+<h2>Multihoming</h2>
 
-<p>If you have a .gov or .mil address, you'll be able to access your account immediately after you verify your e-mail.</p>
+<p>If USASearch doesn't have a query cached, we use Akamai's multi-homing technology. Multi-homing is fancy way of saying that the user automatically goes to the closest possible USASearch server, thus maximizing the speed that the results gets returned.</p>
 
-<p>If you don't have a .gov or .mil address, we'll ask for additional information to confirm that you're a government employee or contractor. We'll notify you when your account is approved.</p>
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/cdn-multi.png" title="Multi" alt="Multi" /></p>
 
-<h2>Add a Site</h2>
+<h1>Other Benefits of Content Delivery for USASearch</h1>
 
-<p>Select the option to Add a New Site.</p>
+<h2>Automatic Failover</h2>
 
-<p>Add your basic site information (required) and content sources (optional).</p>
+<p>Should USASearch have an issue with one of its server locations, Akamai's multi-homing  will automatically send the traffic to the online data center. This serves as the USASearch "failover." USASearch does not have a "back-up" data center in the classic sense, so USASearch can to maximize all available data center assets.</p>
 
-<p>For more information about filling in this information, see our blog posts <a href="/manual/site-information.html">How to Edit Your Site Information</a> and <a href="/manual/domains.html">How to Edit Your Domains</a>.</p>
+<h2>Security</h2>
 
-<p>Use the options in the left-hand navigation to further customize the search experience for your site's visitors.</p>
+<p>Unfortunately, USASearch and its customer base are subjected to attempts to disrupt the operation of their public web services. Most government web sites have to deal with the threat of DDoS (distributed denial of service attacks). Akamai's content delivery network provides protection to USASearch as it is the "front line" for all USASearch queries. The Akamai network determines whether a dramatic spike in traffic is "normal" (for instance, a search for "tax return" before April 15th) or whether someone is trying to do harm to the service.</p>
 
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/add-site.png" alt="Options to customize your site in the Admin Center" /></p>
+<h2>Cost</h2>
 
-<p>When you're ready to go live with your new search, you'll need to <a href="/manual/get-code.html">add our code</a> to your website.</p>
+<p>Given that Akamai serves almost 90% of our content, USASearch has not had to increase its bandwidth consumption even with a significant rise in traffic and customers.</p>
 
-<hr />
+<h1>Summary</h1>
 
-<p><strong><em>Did you know?</em></strong> When you add a new site with a single domain, we'll populate content (such <a href="/manual/social-media.html">social media</a> handles, <a href="/manual/rss.html">RSS</a> feeds, <a href="/manual/urls.html">specific URLs</a>, and <a href="/manual/look-feel.html">favicons</a>) that we can find from your homepage.</p>
-
-<p><strong><em>Troubleshooting tip:</em></strong> If you don't see the left-hand navigation, check the settings in your Adblock extension or try another browser.</p>
-
-<p><strong><em>Troubleshooting tip:</em></strong> We cannot retrieve any passwords for any account, because we don't have access to passwords. To reset your password:</p>
-
-<ol>
-<li>Go to the USASearch Login page at <a href="http://search.usa.gov/login">http://search.usa.gov/login</a></li>
-<li>Enter your e-mail address.</li>
-<li>Click on Forgot your password?</li>
-<li>You will be prompted to reset your password and it will be emailed to you.</li>
-</ol>
-
-
-<p>If you have any problem resetting your password, e-mail us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#x55;&#83;&#65;&#83;&#x65;&#97;&#114;&#99;&#x68;&#64;&#103;&#115;&#x61;&#46;&#x67;&#111;&#x76;">&#x55;&#x53;&#x41;&#83;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#x67;&#x73;&#97;&#46;&#103;&#111;&#118;</a>.</p>
+<p>While USASearch did not achieve this overnight, we have been able to get to 90% through an iterative process that did take many, many months. However, the investment as paid off as USASearch has been able to double its customer base without increasing its infrastructure.</p>
 
   </div>
 
   <div class='tags'>
-    
-    <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
     
   </div>
 </article></div>
