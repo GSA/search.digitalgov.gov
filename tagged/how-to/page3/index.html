@@ -81,6 +81,105 @@
       
       <span>Last updated on:</span>
       
+      <a href="/manual/header-footer.html">
+        <time datetime="2012-03-22">March 22, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/header-footer.html">How to Customize the Header and Footer of Your Results Page</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov/">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Header and Footer</p>
+
+<p>Select how you'd like to customize your header and footer. The fields that appear on the page will change based on the option you select.</p>
+
+<h2>Option 1. Use a managed header and footer</h2>
+
+<p>Fill out the fields to generate a predefined header and footer.</p>
+
+<p><strong>Color.</strong> Customize the color of your header background and text by clicking on the color picker text field. Enter a valid three- or six-digit hex value or pick a color by dragging the cross-hair icon <img src="http://search.usa.gov/javascripts/jscolor/cross.gif" alt="crosshair icon" /> inside the color picker window. Drag the triangle icon <img src="http://search.usa.gov/javascripts/jscolor/arrow.gif" alt="arrow icon" /> to control the color saturation. When you are done, click anywhere outside the color picker window.</p>
+
+<p><strong>URL.</strong> Provide us with the URL for your website's homepage. We'll use it to provide a link back to you from your header text, image, or both.</p>
+
+<p><strong>Text.</strong> Fill out the text you'd like to appear in your header. We've pre-populated this field with your <a href="/manual/site-information.html">site name</a>. Edit the same name, or delete it, if you don't want this text to appear in your header.</p>
+
+<p><strong>Image.</strong> Use the Browse... option to upload the logo or image that you'd like to appear in the header, if any. If you don't have header text, the image will be center-aligned. If you do have header text, the image will be right-aligned. Click on the option, Mark header image for deletion, to delete an uploaded image.</p>
+
+<p><strong>Header and footer navigation.</strong> Fill out the titles and URLs if you'd like to add navigation to your header and footer. Use the arrows on the left to rearrange the display order of the links. See the sample results page below that includes navigation.</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m1ar9q6nXN1qid15q.png" alt="Managed header with navigation on Sussex County's search results page" /></p>
+
+<h2>Option 2. Use CSS and HTML code to create a custom header and footer</h2>
+
+<p>Use this option to more closely replicate the exact header and footer on your website.</p>
+
+<p>In the first box, enter CSS to customize the header and footer of your search results page. We'll run a validation check to ensure your CSS is valid.</p>
+
+<p>In the second box, enter HTML to customize the header of your search results page. In the third box, enter HTML to customize the footer of your search results page. Be sure to enter <a href="http://webdesign.about.com/od/beginningtutorials/a/aa040502a.htm">absolute hyperlinks</a>, not relative links.</p>
+
+<p>Click on the link, Validate, to check your HTML markup at <a href="http://validator.w3.org/nu">http://validator.w3.org/nu</a>. We'll also run a validation check to ensure that no JavaScript is included in your HTML code. We'll also check to ensure no CSS style or link elements are included. To include CSS, specify inline CSS within an opening tag.</p>
+
+<h3>Invalid CSS</h3>
+
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+&lt;style&gt; h1 { color: blue } &lt;/style&gt;
+&lt;link href="http://www.yoursite.gov/custom.css" type="text/css" /&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3>Valid CSS</h3>
+
+<pre><code>&lt;h1 style="color: blue;"&gt;Your Heading&lt;/h1&gt;
+</code></pre>
+
+<h2><a id="mobile"></a> Customize your mobile header</h2>
+
+<p>We use device detection to show mobile-friendly search results on mobile phones. (Searchers using tablets and desktop computers see the full, classic header as you set it up above.)</p>
+
+<h3>Default mobile header</h3>
+
+<p>By default, searchers on mobile phones see the header, <em>YourSiteName Mobile</em>. If you list only one domain on the <a href="/manual/domains.html">Domains</a> page, we link your header to this domain. See the sample default mobile header below for <a href="http://www.howto.gov">HowTo.gov</a>.</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_meazaml0781qid15q.png" alt="HowTo.gov mobile search results page" /></p>
+
+<h3>Custom mobile header</h3>
+
+<p>You can customize your mobile header to include a logo. You can also edit or add your mobile homepage URL.</p>
+
+<p>The logo must be less than 56&#160;KB. We recommend it be no wider than 320 pixels.</p>
+
+<p>You can link to your classic homepage (e.g., http://www.agency.gov) or to your specific mobile homepage (e.g., http://m.agency.gov). If you use device detection on your website, we recommend that you link to your classic homepage for a more seamless mobile experience.</p>
+
+<p>See the sample custom mobile header below for the <a href="http://m.usa.gov">m.USA.gov</a> results page.</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_meazs7WsWk1qid15q.png" alt="USA.gov mobile search results page" /></p>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> You can implement a drop-down menu using CSS (and without using JavaScript). For more information, A List Apart's tips on <a href="http://www.alistapart.com/articles/horizdropdowns">drop-down menus and horizontal style</a>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/user-interface"><span class="label label-info">user-interface</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/manual/page-views.html">
         <time datetime="2012-03-22">March 22, 2012</time>
       </a>
@@ -325,71 +424,6 @@
       
       <span>Last updated on:</span>
       
-      <a href="/manual/rss.html">
-        <time datetime="2012-03-07">March 7, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/rss.html">How to Add Your RSS Feeds to Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > RSS</p>
-
-<p>Would you like searchers to be able to search your news content and narrow results by date? Tell us the location and name of your RSS feeds. We will index the content on the feeds so that it appears in your results within minutes.</p>
-
-<h2>Example</h2>
-
-<p>The U.S. Courts publishes an RSS feed at <a href="http://news.uscourts.gov/feed">http://news.uscourts.gov/feed</a>.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m0j0q1BUvw1qid15q.png" alt="Inside the Judiciary RSS Feed" /></p>
-
-<p>The U.S. Courts added this RSS feed to their search configuration by using the RSS option in the left-hand menu of the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m4l7qfv91n1qid15q.png" alt="Feed in Admin Center" /></p>
-
-<p><em>Note:</em> Click on the preview option to see the content we have indexed for each feed.</p>
-
-<p>On the <a href="http://search.uscourts.gov/search/news?affiliate=uscourts.gov&amp;amp;channel=76&amp;amp;query=judge">U.S. Courts search results page</a>, searchers can refine their results to see only news results and to narrow by date.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m0j0ufVg8O1qid15q.png" alt="Search results for RSS feed" /></p>
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> Feeds must include a title, link, description, and publication date for each item. We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
-
-<ul>
-<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a> and <a href="http://www.rssboard.org/rss-validator/">validator</a></li>
-<li><a href="http://www.atomenabled.org/developers/syndication/">Atom syndication format</a></li>
-<li><a href="http://feedvalidator.org">Feed Validator</a> (Atom &amp; RSS)</li>
-</ul>
-
-
-<p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don't need to coordinate with us.</p>
-
-<p><strong><em>Did you know?</em></strong> When you provide us with your YouTube and Twitter handles on the <a href="/manual/social-media.html">Social Media</a> page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>, we'll automatically index the RSS feed for your YouTube channel and tweets.</p>
-
-<p><strong><em>Did you know?</em></strong> For any feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a> property, searchers may narrow results by these facets in the <a href="/manual/sidebar.html">sidebar</a> on the results page.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/rss"><span class="label label-info">rss</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
       <a href="/manual/site-information.html">
         <time datetime="2012-03-02">March 2, 2012</time>
       </a>
@@ -436,7 +470,7 @@
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or switch from one language to the other, e-mail us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#58;&#x55;&#83;&#65;&#83;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#103;&#x73;&#97;&#46;&#103;&#x6f;&#x76;">&#85;&#x53;&#65;&#x53;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#103;&#x73;&#97;&#x2e;&#x67;&#111;&#x76;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or switch from one language to the other, e-mail us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#85;&#x53;&#65;&#83;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#x67;&#115;&#97;&#46;&#103;&#111;&#118;">&#85;&#83;&#65;&#83;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#x67;&#115;&#x61;&#46;&#103;&#111;&#118;</a>.</p>
 
     </div>
 
