@@ -370,7 +370,7 @@
 
 <h2>Feedback</h2>
 
-<p>E-mail us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#85;&#83;&#65;&#x53;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#103;&#115;&#97;&#x2e;&#103;&#111;&#x76;">&#x55;&#83;&#x41;&#83;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x67;&#115;&#97;&#x2e;&#x67;&#111;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>E-mail us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#x3a;&#85;&#x53;&#x41;&#83;&#101;&#x61;&#114;&#x63;&#104;&#64;&#103;&#x73;&#97;&#46;&#103;&#x6f;&#118;">&#85;&#83;&#65;&#x53;&#x65;&#97;&#114;&#99;&#104;&#64;&#x67;&#x73;&#97;&#46;&#x67;&#111;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
@@ -438,7 +438,7 @@
 
 <p>Jobs are searchable by keyword, location, agency, schedule, or any combination of these.</p>
 
-<p>The base URL is http://api.usa.gov/jobs/search.json?<strong>parameter</strong></p>
+<p>The base URL is http://api.usa.gov/jobs/search.json?<strong>parameters</strong></p>
 
 <p>Sample API requests follow.</p>
 
@@ -464,15 +464,28 @@
 
 <h2>Parameters</h2>
 
-<p>Six parameters are accepted: (1) query, (2) organization_id, (3) hl [highlighting], (4) size, (5) from, and (6) tags. Only query is required.</p>
+<p>These parameters are accepted:</p>
+
+<ol>
+<li>query</li>
+<li>organization_id</li>
+<li>hl [highlighting]</li>
+<li>size</li>
+<li>from</li>
+<li>tags</li>
+<li>lat_lon</li>
+</ol>
+
+
+<p>Only query is required.</p>
 
 <h3>Query</h3>
 
-<p>Attempts to extract as much "signal" as possible from the input text. Handles word variants, so a search on "nursing jobs" will find a job titled "nurse practitioner" and "RN." When parts of the query parameter are used to search against the position title, the results are ordered by relevance. When no query parameter is specified, they are ordered by date with the most recent listed first.</p>
+<p>Attempts to extract as much "signal" as possible from the input text. Handles word variants, so a search on "nursing jobs" will find a job titled "nurse practitioner" and "RN." When parts of the query parameter are used to search against the position title, the results are ordered by relevance. When no query parameter is specified, they are ordered by date with the most recent listed first.  For basic jobs searches (e.g., 'jobs', 'internships') where the <strong>lat_lon</strong> parameter is passed in, the results will be sorted by distance to the user's location.</p>
 
 <p>Sample query formats follow.</p>
 
-<h4>All jobs (by date)</h4>
+<h4>All jobs (by date or by proximity)</h4>
 
 <ul>
 <li>jobs</li>
@@ -553,7 +566,7 @@ US-VA:COUNTY-FAIRFAX:SHERIFF</p>
 <p><em>City of Fairfax, VA</em><br/>
 US-VA:COUNTY-FAIRFAX:CITY-FAIRFAX</p>
 
-<p>If you specify an <code>organization_id</code> in your API call but the searcher types in another agency, the searchers' agency overrides the <code>organization_id</code> parameter. For example, VA jobs are returned when you specify Air Force jobs, but the searcher looks for jobs at the VA (<a href="http://api.usa.gov/jobs/search.json?query=jobs+at+the+va&amp;amp;organization_id=AF">http://api.usa.gov/jobs/search.json?query=jobs+at+the+va&amp;amp;organization_id=AF</a>).</p>
+<p>If you specify an <code>organization_id</code> in your API call but the searcher types in another agency, the searchers' agency overrides the <code>organization_id</code> parameter. For example, VA jobs are returned when you specify Air Force jobs, but the searcher looks for jobs at the VA (<a href="http://api.usa.gov/jobs/search.json?query=jobs+at+the+va&amp;organization_id=AF">http://api.usa.gov/jobs/search.json?query=jobs+at+the+va&amp;organization_id=AF</a>).</p>
 
 <h3>Hl [highlighting]</h3>
 
@@ -571,13 +584,17 @@ US-VA:COUNTY-FAIRFAX:CITY-FAIRFAX</p>
 
 <p>Specifies the level of government. Current tags are <code>federal</code>, <code>state</code>, <code>county</code>, and <code>city</code>.</p>
 
+<h3>Lat_lon</h3>
+
+<p>Ccomma-separated pair denoting the position of the user searching for the job. For example, 'lat_lon=37.783333,-122.416667' for San Francisco, CA. For basic jobs searches (e.g., 'jobs', 'internships') where this parameter is passed in, the Jobs API server will sort jobs results and return those that are closest to the user's location. For jobs that have multiple locations associated with the position, the distance to the closest location is used to determine the overall geo-distance for the job. Note that for keyword-based job searches (e.g., 'jobs in NY', 'nursing jobs'), this parameter has no effect and is ignored.</p>
+
 <p><a name="data-sources"></a></p>
 
 <h2>Data Sources</h2>
 
 <p>Data are normalized across government job listings. Federal government jobs are from <a href="http://www.usajobs.gov">USAJobs</a>. State and local government jobs are from a variety of sources.</p>
 
-<p>Are you from a federal, state, or local government agency? Are we missing your jobs data? E-mail us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x55;&#83;&#x41;&#x53;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x67;&#x73;&#97;&#x2e;&#x67;&#x6f;&#x76;">&#85;&#83;&#65;&#x53;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#103;&#x73;&#97;&#46;&#103;&#111;&#x76;</a> to let us know where you publish your jobs data. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
+<p>Are you from a federal, state, or local government agency? Are we missing your jobs data? E-mail us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#x55;&#83;&#65;&#x53;&#101;&#97;&#x72;&#99;&#x68;&#x40;&#x67;&#115;&#x61;&#46;&#103;&#111;&#x76;">&#85;&#x53;&#x41;&#83;&#101;&#97;&#114;&#x63;&#x68;&#64;&#103;&#x73;&#x61;&#46;&#x67;&#x6f;&#118;</a> to let us know where you publish your jobs data. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
 
 <p><a name="what-it-returns"></a></p>
 
@@ -639,7 +656,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <h2>Feedback</h2>
 
-<p>E-mail us at <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#x55;&#x53;&#x41;&#83;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#103;&#x73;&#97;&#46;&#103;&#111;&#x76;">&#85;&#x53;&#x41;&#83;&#101;&#97;&#114;&#99;&#104;&#x40;&#103;&#115;&#x61;&#x2e;&#x67;&#111;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>E-mail us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#x55;&#x53;&#x41;&#x53;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#103;&#x73;&#97;&#46;&#103;&#111;&#x76;">&#85;&#x53;&#65;&#83;&#101;&#x61;&#114;&#99;&#x68;&#64;&#103;&#x73;&#x61;&#46;&#103;&#x6f;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
