@@ -35,7 +35,7 @@ This Recalls API accepts a GET request.
 
 Recalls are searchable by keyword, issuing agency, date, UPC code, vehicle-specific attributes, or any combination of these.
 
-The base URL is http://api.usa.gov/recalls/search.json?**parameter**
+The base URL is http://api.usa.gov/recalls/search.json?**parameters**
 
 Sample API requests follow.
 
@@ -54,7 +54,17 @@ All cribs that pose a choking hazard sorted by date
 
 <a name="parameters"></a><h2>Parameters</h2>
 
-Seven generic parameters are accepted: (1) `query`, (2) `organization`, (3) `start_date`, (4) `end_date`, (5) `page`, (6) `per_page`, and (7) `sort`. There are additional parameters that are specific to food, product, and car safety recalls. None are required.
+Seven generic parameters are accepted.
+
+1. query
+1. organization
+1. start_date
+1. end_date
+1. page
+1. per_page
+1. sort
+
+There are additional parameters that are specific to food, product, and car safety recalls. None are required.
 
 ### query
 
