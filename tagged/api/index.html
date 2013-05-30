@@ -79,6 +79,103 @@
   <article class='article'>
     <div class='time'>
       
+      <span>Last updated on:</span>
+      
+      <a href="/manual/api.html">
+        <time datetime="2013-05-30">May 30, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/api.html">How (and When) to Use the Search API</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Search API</p>
+
+<p>We offer our search results as a hosted results page or as an <a href="http://www.howto.gov/mobile/api-basics">application programming interface</a> (API).</p>
+
+<h2>When to Use the Hosted Results</h2>
+
+<p>Most agencies use our hosted search results page. We recommend that you to use our hosted page for the typical use case of returning search results on your website. Using the hosted page has many benefits such as allowing you to:</p>
+
+<ul>
+<li>Devote minimal development resources for the initial set up.</li>
+<li>Benefit from new features automatically as they're rolled out.</li>
+<li>Stay current with search best practices, such as type-ahead search and formatting of search results.</li>
+</ul>
+
+
+<h2>When to Use the API</h2>
+
+<p>You may need to access our search results to present them outside of a typical search results page. We offer our results as an API for these use cases.</p>
+
+<p>You can access the API and its documentation at <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Search API.</p>
+
+<p>The API returns results from each of our indexes&mdash;web, image, document (ODIE), RSS (news), video, best bets (boosted content), related searches, and <a href="/developer/jobs.html">jobs</a>&mdash;in JSON, JSON-P, or XML.</p>
+
+<p>We recommend you use our API for limited use cases such as:</p>
+
+<ul>
+<li>Displaying search results within a native mobile application (i.e., an Android or iPhone app).</li>
+<li>Integrating USASearch results within existing applications (such as your intranet or publications catalog).</li>
+<li>Creating data mashups.</li>
+</ul>
+
+
+<p>Examples of how agencies are currently using the API follow.</p>
+
+<h3>Use Case 1. Display Results in Your Mobile App</h3>
+
+<p>USA.gov and the White House use the Search API to render USASearch results within their mobile apps.</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me79cgQKOE1qid15q.jpg" alt="Screenshot of a USASearch results page in the USA.gov iPhone app" /><br/>
+<em>Screenshot of a USASearch results page in the USA.gov iPhone app</em></p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me78zp7y4v1qid15q.jpg" alt="Screenshot of a USASearch results page in the White House iPhone app" /><br/>
+<em>Screenshot of a USASearch results page in the White House iPhone app</em></p>
+
+<p><strong>Related Links for Use Case 1</strong></p>
+
+<ul>
+<li><a href="http://apps.usa.gov/usagov.shtml">USA.gov mobile app</a></li>
+<li><a href="http://apps.usa.gov/the-white-house-app.shtml">WhiteHouse mobile app</a></li>
+<li><a href="https://github.com/whitehouse">White House Github account</a> (information on and source code for the iOS and Android mobile apps)</li>
+</ul>
+
+
+<h3>Use Case 2. Integrate USASearch Results within existing applications</h3>
+
+<p><a href="http://www.ri.gov">RI.gov</a> manages hundreds of distinct websites. The state provides a consistent search experience across all of its websites. Some sites are centrally controlled by RI.gov. Others are not. Using the Search API, RI.gov programmatically tells USASearch the site's domain from which the user searched (e.g., tmc.dot.ri.gov). RI.gov then highlights results from this specific domain within RI.gov's common look and feel.</p>
+
+<p>See the sample results page below that shows a set of results displayed on Rhode Island's <a href="http://www.tmc.dot.ri.gov/">Transportation Management Center</a> for a search on <em>traffic</em>.</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me7ej38m3P1qid15q.png" alt="Step 1. Searcher on &lt;www.tmc.dot.ri.gov&gt; types traffic in the search box" /><br/>
+<em>Step 1. Searcher on <a href="http://www.tmc.dot.ri.gov">http://www.tmc.dot.ri.gov</a> types traffic in the search box</em></p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me7el3bJin1qid15q.png" alt="Step 2. Searcher sees results on RI.gov with a common look and feel that highlights results from the original site" /><br/>
+<em>Step 2. Searcher sees results on RI.gov with a common look and feel that highlights results from the original site</em></p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> The Search API is available for government websites only. Visit our <a href="/developer/">APIs page</a> for other, publicly available APIs (i.e., for use by anyone).</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/api"><span class="label label-info">api</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
       <a href="/developer/jobs.html">
         <time datetime="2013-05-28">May 28, 2013</time>
       </a>
@@ -281,7 +378,7 @@ US-VA:COUNTY-FAIRFAX:CITY-FAIRFAX</p>
 
 <p>Data are normalized across government job listings. Federal government jobs are from <a href="http://www.usajobs.gov">USAJobs</a>. State and local government jobs are from a variety of sources.</p>
 
-<p>Are you from a federal, state, or local government agency? Are we missing your jobs data? E-mail us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#x55;&#83;&#x41;&#83;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#103;&#x73;&#x61;&#x2e;&#103;&#x6f;&#x76;">&#x55;&#x53;&#x41;&#83;&#x65;&#x61;&#114;&#99;&#104;&#64;&#x67;&#115;&#97;&#46;&#103;&#111;&#x76;</a> to let us know where you publish your jobs data. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
+<p>Are you from a federal, state, or local government agency? Are we missing your jobs data? E-mail us at <a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#85;&#x53;&#65;&#x53;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#x67;&#115;&#97;&#x2e;&#103;&#111;&#x76;">&#x55;&#83;&#65;&#x53;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x67;&#115;&#x61;&#46;&#103;&#111;&#118;</a> to let us know where you publish your jobs data. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
 
 <p><a name="what-it-returns"></a></p>
 
@@ -343,7 +440,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <h2>Feedback</h2>
 
-<p>E-mail us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#x55;&#x53;&#65;&#83;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#x67;&#115;&#97;&#x2e;&#103;&#111;&#118;">&#85;&#x53;&#65;&#83;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#x67;&#115;&#97;&#x2e;&#103;&#x6f;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>E-mail us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#85;&#x53;&#65;&#x53;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#x67;&#115;&#x61;&#46;&#x67;&#x6f;&#118;">&#85;&#x53;&#65;&#x53;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#103;&#x73;&#x61;&#46;&#103;&#111;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
@@ -667,7 +764,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <h2>Feedback</h2>
 
-<p>E-mail us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x55;&#x53;&#65;&#83;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#x67;&#115;&#97;&#46;&#x67;&#x6f;&#118;">&#x55;&#x53;&#65;&#x53;&#101;&#97;&#x72;&#x63;&#104;&#64;&#103;&#x73;&#97;&#x2e;&#103;&#111;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>E-mail us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#85;&#x53;&#65;&#83;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#103;&#x73;&#97;&#x2e;&#103;&#x6f;&#x76;">&#x55;&#83;&#x41;&#x53;&#101;&#97;&#114;&#99;&#x68;&#64;&#x67;&#115;&#97;&#46;&#103;&#111;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
@@ -752,103 +849,6 @@ to contribute your changes to our project and improve this API for everyone who 
     <div class='tags'>
       
       <a href="/tagged/open,"><span class="label label-info">open,</span></a>
-      
-      <a href="/tagged/api"><span class="label label-info">api</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/manual/api.html">
-        <time datetime="2012-11-28">November 28, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/api.html">How (and When) to Use the Search API</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Search API</p>
-
-<p>We offer our search results as a hosted results page or as an <a href="http://www.howto.gov/mobile/api-basics">application programming interface</a> (API).</p>
-
-<h2>When to Use the Hosted Results</h2>
-
-<p>Most agencies use our hosted search results page. We recommend that you to use our hosted page for the typical use case of returning search results on your website. Using the hosted page has many benefits such as allowing you to:</p>
-
-<ul>
-<li>Devote minimal development resources for the initial set up.</li>
-<li>Benefit from new features automatically as they're rolled out.</li>
-<li>Stay current with search best practices, such as type-ahead search and formatting of search results.</li>
-</ul>
-
-
-<h2>When to Use the API</h2>
-
-<p>You may need to access our search results to present them outside of a typical search results page. We offer our results as an API for these use cases.</p>
-
-<p>You can access the API and its documentation at <a href="http://search.usa.gov/affiliates/home">Admin Center</a> &gt; YourSite &gt; Search API.</p>
-
-<p>The API returns results from each of our indexes web, image, document (ODIE), RSS (news), video, best bets (boosted content), and related searches in JSON, JSON-P, or XML.</p>
-
-<p>We recommend you use our API for limited use cases such as:</p>
-
-<ul>
-<li>Displaying search results within a native mobile application (i.e., an Android or iPhone app).</li>
-<li>Integrating USASearch results within existing applications (such as your intranet or publications catalog).</li>
-<li>Creating data mashups.</li>
-</ul>
-
-
-<p>Examples of how agencies are currently using the API follow.</p>
-
-<h3>Use Case 1. Display Results in Your Mobile App</h3>
-
-<p>USA.gov and the White House use the Search API to render USASearch results within their mobile apps.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me79cgQKOE1qid15q.jpg" alt="Screenshot of a USASearch results page in the USA.gov iPhone app" /><br/>
-<em>Screenshot of a USASearch results page in the USA.gov iPhone app</em></p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me78zp7y4v1qid15q.jpg" alt="Screenshot of a USASearch results page in the White House iPhone app" /><br/>
-<em>Screenshot of a USASearch results page in the White House iPhone app</em></p>
-
-<p><strong>Related Links for Use Case 1</strong></p>
-
-<ul>
-<li><a href="http://apps.usa.gov/usagov.shtml">USA.gov mobile app</a></li>
-<li><a href="http://apps.usa.gov/the-white-house-app.shtml">WhiteHouse mobile app</a></li>
-<li><a href="https://github.com/whitehouse">White House Github account</a> (information on and source code for the iOS and Android mobile apps)</li>
-</ul>
-
-
-<h3>Use Case 2. Integrate USASearch Results within existing applications</h3>
-
-<p><a href="http://www.ri.gov">RI.gov</a> manages hundreds of distinct websites. The state provides a consistent search experience across all of its websites. Some sites are centrally controlled by RI.gov. Others are not. Using the Search API, RI.gov programmatically tells USASearch the site's domain from which the user searched (e.g., tmc.dot.ri.gov). RI.gov then highlights results from this specific domain within RI.gov's common look and feel.</p>
-
-<p>See the sample results page below that shows a set of results displayed on Rhode Island's <a href="http://www.tmc.dot.ri.gov/">Transportation Management Center</a> for a search on <em>traffic</em>.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me7ej38m3P1qid15q.png" alt="Step 1. Searcher on &lt;www.tmc.dot.ri.gov&gt; types traffic in the search box" /><br/>
-<em>Step 1. Searcher on <a href="http://www.tmc.dot.ri.gov">http://www.tmc.dot.ri.gov</a> types traffic in the search box</em></p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_me7el3bJin1qid15q.png" alt="Step 2. Searcher sees results on RI.gov with a common look and feel that highlights results from the original site" /><br/>
-<em>Step 2. Searcher sees results on RI.gov with a common look and feel that highlights results from the original site</em></p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> The Search API is available for government websites only. Visit our <a href="/developer/">APIs page</a> for other, publicly available APIs (i.e., for use by anyone).</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
       
       <a href="/tagged/api"><span class="label label-info">api</span></a>
       
