@@ -3,10 +3,115 @@
   <title><![CDATA[USASearch]]></title>
   <link href="http://usasearch.howto.gov/all.atom" rel="self"/>
   <link href="http://usasearch.howto.gov/"/>
-  <updated>2013-05-30T12:18:05+00:00</updated>
+  <updated>2013-05-30T13:09:05+00:00</updated>
   <id>http://usasearch.howto.gov/</id>
   <author><name><![CDATA[USASearch]]></name></author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Add Your RSS Feeds to Our Index]]></title>
+    <link href="http://usasearch.howto.gov/manual/rss.html"/>
+    <updated>2013-05-30T00:00:00+00:00</updated>
+    <id>http://usasearch.howto.gov/manual/rss.html</id>
+    <content type="html"><![CDATA[<p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > RSS</p>
+
+<p>Would you like searchers to be able to search your news content and narrow results by date? Tell us the location and name of your RSS feeds. We will index the content on the feeds so that it appears in your results within minutes.</p>
+
+<h2>Step 1. Tell Us About Your RSS Feeds</h2>
+
+<p>We love feeds! Tell us about <em>all</em> of your RSS feeds, even if you don't opt to show them in step 2 below. Feeds are the fastest and most reliable way for us to learn about your newly published content.</p>
+
+<p>Select the option to add a new RSS feed.</p>
+
+<p>Create a name for the feed. Within this 'bucket' you can list a single RSS feed or many feeds. For example, you can opt to list all of your agency's press releases separately (e.g., Police News, Fire News, EMS News, etc.) or you can list all three under one general name (e.g., News).</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/rss.png" alt="Add an RSS Feed" /></p>
+
+<p>Select the type of feed. The default option is RSS (for text content like press releases or blogs). Change it to <a href="http://www.rssboard.org/media-rss">media RSS</a> for multimedia content like images and videos.</p>
+
+<p>Each item within a RSS feed must include a title, link, description, and publication date.</p>
+
+<p>Each item within a media RSS feed must also include both a <a href="http://www.rssboard.org/media-rss#media-content">media:content URL</a> to specify a direct URL to the media object and a <a href="http://www.rssboard.org/media-rss#media-thumbnails">media:thumbnail URL</a> to specify a URL to the object's thumbnail.</p>
+
+<p>Any items missing a required element won't display in your search results.</p>
+
+<h3>Sample RSS Item with All Required Elements</h3>
+
+<pre><code>&lt;item&gt;
+&lt;title&gt;
+Statement from Agriculture Secretary Tom Vilsack Regarding World Organization for Animal Health (OIE) Upgrade of United States&amp;apos; BSE Risk Status
+&lt;/title&gt;
+&lt;pubDate&gt;May 29, 2013 00:00:00 CDT&lt;/pubDate&gt;
+&lt;link&gt;
+http://www.usda.gov/wps/portal/usda/usdahome?contentid=2013/05/0106.xml&amp;contentidonly=true
+&lt;/link&gt;
+&lt;description&gt;
+WASHINGTON, May 29, 2013–Agriculture Secretary Tom Vilsack made the following statement about notification received today from the World Organization for Animal Health (OIE) upgrading the United States&amp;apos; risk classification for bovine spongiform encephalopathy (BSE) to negligible risk:
+&lt;/description&gt;
+&lt;/item&gt;
+</code></pre>
+
+<h3>Sample Media RSS Item with All Required Elements</h3>
+
+<pre><code>&lt;item&gt;
+&lt;title type="html"&gt;
+&lt;![CDATA[ Great Lakes Beach Health ]]&gt;
+&lt;/title&gt;
+&lt;link&gt;
+http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
+&lt;/link&gt;
+&lt;guid&gt;
+http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
+&lt;/guid&gt;
+&lt;pubDate&gt;Fri, 24 May 2013 00:00:00 EDT&lt;/pubDate&gt;
+&lt;media:description type="html"&gt;
+&lt;![CDATA[
+&lt;p&gt;As schools close for the year and summer weather beckons, many recreationalists head to the Great Lakes' public beaches. However, these coastal areas can become     contaminated with disease-causing bacteria that threaten public health, disrupt water   recreation, and pay a toll on the Great Lakes econ
+]]&gt;
+&lt;![CDATA[
+omies that depend on summer tourism.&lt;/p&gt;
+ &lt;p&gt;The U.S. Geological Survey &lt;a href="http://greatlakesbeaches.usgs.gov/index.html"&gt;Great Lakes Beach Health&lt;/a&gt; initiative provides science-based information and methods that help beach managers make more accurate beach closure and advisory decisions, &lt;a href="http://www.usgs.gov/newsroom/article.asp?ID=3063#.UZv3pSs_87A"&gt;preventing unnecessary beach closures&lt;/a&gt; while protecting public health.&lt;/p&gt;
+]]&gt;
+&lt;/media:description&gt;
+&lt;media:thumbnail url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/thumbs/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
+&lt;media:content type="" url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/large/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
+&lt;/item&gt;
+</code></pre>
+
+<h2>Step 2. Opt to Show as a GovBox, in the Sidebar, or Both</h2>
+
+<p>Click on the <a href="/manual/results-modules.html">Results Modules</a> option in the left-hand menu. Check the option, Show as GovBox, to allow searchers to see inline results for the three most recent, relevant RSS results.</p>
+
+<p>Click on the <a href="/manual/sidebar.html">Sidebar</a> option in the left-hand menu. Check the option, Show in Sidebar, to allow searchers to see a navigation option for your feed(s) in the left-hand column of the results page. To ensure searchers don't encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a sidebar option.</p>
+
+<h2>Step 3. Check Your Search Results Page</h2>
+
+<p><strong>News GovBox.</strong> If you opted to show your RSS feed(s) as a GovBox, searchers will see a News GovBox. This GovBox will highlight the three most recent, relevant results across all of your RSS feeds.</p>
+
+<p><strong>Sidebar.</strong> If you opted to show your RSS feed(s) in the sidebar, searchers can refine their results to see your RSS-based results only.</p>
+
+<p>Within the RSS-based results, searchers can opt to limit results to the last hour, day, week, month, or year, or they can set a custom date range. They also can sort results in descending order by relevance (best match first) or date (most recent first).</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
+
+<ul>
+<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a> and <a href="http://www.rssboard.org/rss-validator/">validator</a></li>
+<li><a href="http://www.atomenabled.org/developers/syndication/">Atom syndication format</a></li>
+<li><a href="http://feedvalidator.org">Feed Validator</a> (Atom &amp; RSS)</li>
+</ul>
+
+
+<p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don't need to coordinate with us.</p>
+
+<p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your RSS feeds.</p>
+
+<p><strong><em>Did you know?</em></strong> When you provide us with your YouTube handle on the <a href="/manual/social-media.html">Social Media</a> page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>, we'll automatically index the RSS feed for your YouTube channel.</p>
+
+<p><strong><em>Did you know?</em></strong> For any feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a> property, searchers may narrow results by these facets in the <a href="/manual/sidebar.html">sidebar</a> on the results page.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Add Your URLs to Our Index]]></title>
@@ -254,7 +359,7 @@ US-VA:COUNTY-FAIRFAX:CITY-FAIRFAX</p>
 
 <p>Data are normalized across government job listings. Federal government jobs are from <a href="http://www.usajobs.gov">USAJobs</a>. State and local government jobs are from a variety of sources.</p>
 
-<p>Are you from a federal, state, or local government agency? Are we missing your jobs data? E-mail us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#85;&#83;&#65;&#x53;&#101;&#x61;&#114;&#99;&#104;&#x40;&#103;&#115;&#x61;&#46;&#103;&#x6f;&#118;">&#x55;&#83;&#x41;&#83;&#101;&#97;&#114;&#99;&#x68;&#64;&#103;&#115;&#97;&#46;&#103;&#111;&#118;</a> to let us know where you publish your jobs data. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
+<p>Are you from a federal, state, or local government agency? Are we missing your jobs data? E-mail us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#x55;&#83;&#x41;&#83;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#103;&#x73;&#x61;&#x2e;&#103;&#x6f;&#x76;">&#x55;&#x53;&#x41;&#83;&#x65;&#x61;&#114;&#99;&#104;&#64;&#x67;&#115;&#97;&#46;&#103;&#111;&#x76;</a> to let us know where you publish your jobs data. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
 
 <p><a name="what-it-returns"></a></p>
 
@@ -316,7 +421,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <h2>Feedback</h2>
 
-<p>E-mail us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#85;&#x53;&#65;&#83;&#101;&#x61;&#114;&#x63;&#104;&#64;&#x67;&#115;&#97;&#x2e;&#x67;&#x6f;&#x76;">&#x55;&#x53;&#x41;&#x53;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#x67;&#115;&#97;&#46;&#103;&#111;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>E-mail us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#x55;&#x53;&#65;&#83;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#x67;&#115;&#97;&#x2e;&#103;&#111;&#118;">&#85;&#x53;&#65;&#83;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#x67;&#115;&#97;&#x2e;&#103;&#x6f;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
@@ -873,7 +978,7 @@ yosemite valley</li>
 
 <h2>Feedback</h2>
 
-<p>E-mail us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#58;&#85;&#83;&#x41;&#83;&#x65;&#97;&#x72;&#99;&#104;&#64;&#x67;&#115;&#97;&#46;&#103;&#111;&#x76;">&#85;&#x53;&#x41;&#83;&#101;&#97;&#x72;&#99;&#x68;&#64;&#103;&#x73;&#x61;&#x2e;&#103;&#x6f;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>E-mail us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x55;&#x53;&#65;&#83;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#x67;&#115;&#97;&#46;&#x67;&#x6f;&#118;">&#x55;&#x53;&#65;&#x53;&#101;&#97;&#x72;&#x63;&#104;&#64;&#103;&#x73;&#97;&#x2e;&#103;&#111;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
@@ -973,7 +1078,7 @@ yosemite valley</li>
 <ul>
 <li>We updated our <a href="/tos.html">terms of service</a>.</li>
 <li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#58;&#85;&#83;&#x41;&#x53;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#103;&#x73;&#97;&#x2e;&#x67;&#x6f;&#x76;">&#x55;&#83;&#x41;&#x53;&#101;&#97;&#x72;&#x63;&#104;&#64;&#103;&#115;&#97;&#46;&#x67;&#111;&#x76;</a> with any questions.</li>
+<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#x55;&#x53;&#x41;&#x53;&#x65;&#x61;&#x72;&#99;&#x68;&#x40;&#103;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#x76;">&#x55;&#83;&#65;&#x53;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#103;&#115;&#97;&#46;&#x67;&#x6f;&#x76;</a> with any questions.</li>
 <li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
 <li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
 <li>We removed the trending searches feature and widget.</li>
@@ -1035,7 +1140,7 @@ yosemite valley</li>
 
 <hr />
 
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. E-mail us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x55;&#x53;&#65;&#83;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#103;&#115;&#x61;&#x2e;&#x67;&#111;&#118;">&#x55;&#83;&#x41;&#83;&#101;&#97;&#x72;&#99;&#104;&#64;&#x67;&#x73;&#x61;&#46;&#103;&#x6f;&#118;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
+<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. E-mail us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#85;&#83;&#x41;&#x53;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#103;&#x73;&#97;&#x2e;&#x67;&#111;&#118;">&#x55;&#83;&#65;&#x53;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#103;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#118;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
 ]]></content>
   </entry>
   
@@ -1060,7 +1165,7 @@ yosemite valley</li>
 </ol>
 
 
-<p>If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#85;&#83;&#65;&#83;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#x67;&#115;&#x61;&#x2e;&#x67;&#x6f;&#x76;">&#x55;&#x53;&#65;&#x53;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#103;&#115;&#x61;&#46;&#103;&#x6f;&#x76;</a>.</p>
+<p>If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#58;&#x55;&#83;&#x41;&#x53;&#x65;&#x61;&#114;&#99;&#104;&#64;&#x67;&#x73;&#97;&#x2e;&#x67;&#x6f;&#x76;">&#x55;&#x53;&#65;&#x53;&#101;&#97;&#x72;&#99;&#104;&#64;&#103;&#115;&#97;&#46;&#x67;&#x6f;&#x76;</a>.</p>
 
 <hr />
 
@@ -1108,7 +1213,7 @@ yosemite valley</li>
 <ol>
 <li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google, Bing, and USASearch.</li>
 <li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>E-mail us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#x55;&#x53;&#x41;&#x53;&#101;&#97;&#114;&#x63;&#104;&#64;&#103;&#115;&#97;&#46;&#x67;&#x6f;&#x76;">&#85;&#83;&#x41;&#x53;&#x65;&#97;&#114;&#x63;&#104;&#64;&#103;&#x73;&#x61;&#46;&#103;&#111;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
+<li>E-mail us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#85;&#x53;&#x41;&#x53;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#x67;&#115;&#x61;&#x2e;&#x67;&#111;&#x76;">&#x55;&#83;&#65;&#x53;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#103;&#115;&#x61;&#46;&#103;&#111;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
 </ol>
 
 ]]></content>
@@ -1340,7 +1445,7 @@ yosemite valley</li>
 </ol>
 
 
-<p>If you have any problem resetting your password, e-mail us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#85;&#x53;&#65;&#x53;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#x67;&#115;&#x61;&#46;&#x67;&#x6f;&#x76;">&#85;&#x53;&#65;&#x53;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#x67;&#x73;&#97;&#46;&#x67;&#x6f;&#x76;</a>.</p>
+<p>If you have any problem resetting your password, e-mail us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#85;&#x53;&#65;&#x53;&#101;&#97;&#114;&#99;&#x68;&#64;&#103;&#115;&#x61;&#x2e;&#103;&#x6f;&#118;">&#x55;&#83;&#65;&#x53;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#103;&#115;&#x61;&#46;&#x67;&#x6f;&#118;</a>.</p>
 ]]></content>
   </entry>
   
@@ -1491,7 +1596,7 @@ yosemite valley</li>
 <p><strong><em>Did you know?</em></strong> We offer DNS masking, which allows you to show searchers your domain (instead of USA.gov). Follow these three steps to mask your domain.</p>
 
 <ol>
-<li>E-mail us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#85;&#83;&#x41;&#x53;&#x65;&#97;&#114;&#x63;&#104;&#64;&#103;&#115;&#x61;&#x2e;&#x67;&#111;&#x76;">&#x55;&#83;&#x41;&#x53;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#x67;&#115;&#x61;&#x2e;&#103;&#x6f;&#118;</a> and ask us to mask your domain.</li></li>
+<li>E-mail us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#x55;&#83;&#x41;&#x53;&#x65;&#97;&#114;&#x63;&#104;&#64;&#103;&#x73;&#97;&#46;&#x67;&#111;&#x76;">&#x55;&#x53;&#x41;&#83;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#103;&#115;&#x61;&#46;&#x67;&#x6f;&#x76;</a> and ask us to mask your domain.</li></li>
 <li>Create a CNAME in your DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
 <li>When the setup is complete, change the code for your form action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
 </ol>
@@ -1608,7 +1713,7 @@ yosemite valley</li>
 
 <p>Also be sure to read our <a href="/tagged/releases/">release notes</a> to keep up-to-date with our new features.</p>
 
-<p>Do you have other questions or comments about how our service works? E-mail us at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x55;&#x53;&#x41;&#x53;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#x67;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#x76;">&#x55;&#83;&#65;&#x53;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#103;&#x73;&#x61;&#46;&#x67;&#x6f;&#x76;</a>.</p>
+<p>Do you have other questions or comments about how our service works? E-mail us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x55;&#x53;&#x41;&#x53;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x67;&#x73;&#x61;&#46;&#x67;&#x6f;&#x76;">&#x55;&#83;&#65;&#x53;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#103;&#x73;&#97;&#x2e;&#103;&#x6f;&#118;</a>.</p>
 ]]></content>
   </entry>
   
@@ -1723,7 +1828,7 @@ Enter same passphrase again:
 <p><strong><em>ForeSee tip:</em></strong> Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li><p>Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#85;&#83;&#65;&#x53;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x67;&#115;&#x61;&#46;&#x67;&#111;&#x76;">&#x55;&#83;&#x41;&#x53;&#x65;&#97;&#114;&#99;&#104;&#64;&#103;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#118;</a> to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
+<li><p>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#58;&#85;&#x53;&#65;&#x53;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x67;&#115;&#x61;&#46;&#103;&#111;&#118;">&#85;&#x53;&#x41;&#83;&#x65;&#97;&#x72;&#99;&#104;&#64;&#103;&#115;&#x61;&#46;&#x67;&#111;&#118;</a> to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
 <li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
 
 <p> Find => 'files': '/fsrscripts/',</p>
@@ -2923,60 +3028,6 @@ What do you need to do? If your URL starts with any of the following six legacy 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[How to Add Your RSS Feeds to Our Index]]></title>
-    <link href="http://usasearch.howto.gov/manual/rss.html"/>
-    <updated>2012-05-20T00:00:00+00:00</updated>
-    <id>http://usasearch.howto.gov/manual/rss.html</id>
-    <content type="html"><![CDATA[<p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > RSS</p>
-
-<p>Would you like searchers to be able to search your news content and narrow results by date? Tell us the location and name of your RSS feeds. We will index the content on the feeds so that it appears in your results within minutes.</p>
-
-<h2>Step 1. Tell Us About Your RSS Feeds</h2>
-
-<p>We love feeds! Tell us about <em>all</em> of your RSS feeds, even if you don't opt to show them in step 2 below. Feeds are the fastest and most reliable way for us to learn about your newly published content.</p>
-
-<p>Select the option to add a new RSS feed. Within this 'bucket' you can list a single RSS feed or many feeds.</p>
-
-<p>For example, you can opt to list all of your agency's press releases separately (e.g., Police News, Fire News, EMS News, etc.) or you can list all three under one general name (e.g., News).</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/rss.png" alt="Add an RSS Feed" /></p>
-
-<h2>Step 2. Opt to Show as a GovBox, in the Sidebar, or Both</h2>
-
-<p>Click on the <a href="/manual/results-modules.html">Results Modules</a> option in the left-hand menu. Check the option, Show as GovBox, to allow searchers to see inline results for the three most recent, relevant RSS results.</p>
-
-<p>Click on the <a href="/manual/sidebar.html">Sidebar</a> option in the left-hand menu. Check the option, Show in Sidebar, to allow searchers to see a navigation option for your feed(s) in the left-hand column of the results page. To ensure searchers don't encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a sidebar option.</p>
-
-<h2>Step 3. Check Your Search Results Page</h2>
-
-<p><strong>News GovBox.</strong> If you opted to show your RSS feed(s) as a GovBox, searchers will see a News GovBox. This GovBox will highlight the three most recent, relevant results across all of your RSS feeds.</p>
-
-<p><strong>Sidebar.</strong> If you opted to show your RSS feed(s) in the sidebar, searchers can refine their results to see your RSS-based results only.</p>
-
-<p>Within the RSS-based results, searchers can opt to limit results to the last hour, day, week, month, or year, or they can set a custom date range. They also can sort results in descending order by relevance (best match first) or date (most recent first).</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> Feeds must include a title, link, description, and publication date for each item. We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
-
-<ul>
-<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a> and <a href="http://www.rssboard.org/rss-validator/">validator</a></li>
-<li><a href="http://www.atomenabled.org/developers/syndication/">Atom syndication format</a></li>
-<li><a href="http://feedvalidator.org">Feed Validator</a> (Atom &amp; RSS)</li>
-</ul>
-
-
-<p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don't need to coordinate with us.</p>
-
-<p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your RSS feeds.</p>
-
-<p><strong><em>Did you know?</em></strong> When you provide us with your YouTube handle on the <a href="/manual/social-media.html">Social Media</a> page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>, we'll automatically index the RSS feed for your YouTube channel.</p>
-
-<p><strong><em>Did you know?</em></strong> For any feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a> property, searchers may narrow results by these facets in the <a href="/manual/sidebar.html">sidebar</a> on the results page.</p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Release Notes for the Week Ending May 18, 2012]]></title>
     <link href="http://usasearch.howto.gov/releases/2012-05-18.html"/>
     <updated>2012-05-18T00:00:00+00:00</updated>
@@ -3728,7 +3779,7 @@ Below are the release details for February and, as a reminder, we divide our wor
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or switch from one language to the other, e-mail us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#x55;&#x53;&#65;&#x53;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#103;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#118;">&#85;&#83;&#x41;&#83;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#103;&#115;&#97;&#46;&#x67;&#x6f;&#118;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or switch from one language to the other, e-mail us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#111;&#58;&#x55;&#83;&#x41;&#x53;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#103;&#115;&#97;&#x2e;&#103;&#111;&#x76;">&#85;&#x53;&#x41;&#x53;&#101;&#x61;&#114;&#99;&#x68;&#64;&#103;&#x73;&#x61;&#46;&#103;&#x6f;&#x76;</a>.</p>
 ]]></content>
   </entry>
   
