@@ -80,6 +80,74 @@
   <article class='article'>
     <div class='time'>
       
+      <a href="/releases/2013-05-31.html">
+        <time datetime="2013-05-31">May 31, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/2013-05-31.html">Search Your Multimedia Galleries: Notes for the Week Ending May 31, 2013</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlight: Search Your Multimedia Galleries</h2>
+
+<p>Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery?</p>
+
+<p>You can now opt to <a href="/manual/rss.html">index MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
+
+<p>MRSS is the standard <a href="http://www.rssboard.org/media-rss">media RSS specification</a> for syndicating multimedia content. So, even if you don't have an MSRSS feed now, it should be easy to generate one as long as your content is in a content management system or other database. MRSS is also the standard specification used by hosted multimedia services such as Flickr, Instagram, Vimeo, and YouTube.</p>
+
+<p>Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x55;&#83;&#65;&#x53;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#x67;&#x73;&#97;&#46;&#103;&#x6f;&#118;">&#85;&#x53;&#x41;&#x53;&#x65;&#97;&#114;&#x63;&#104;&#x40;&#103;&#x73;&#97;&#46;&#103;&#111;&#118;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
+
+<p>(Thanks, <a href="http://www.usgs.gov">USGS.gov</a> team, for suggesting this new feature!)</p>
+
+<h2>Other Features</h2>
+
+<ul>
+<li>For each result, searchers now see the URL directly under the title. The order is now title-URL-description. It had previously been title-description-URL.</li>
+<li>Searchers using screen readers now hear plain language labels for the search box&mdash;Enter your search term (English) and Ingrese su búsqueda (Spanish).</li>
+<li>When searchers opt to allow us to use their location, they now see <a href="/manual/govbox-jobs.html">jobs</a> that are geographically closest them.</li>
+<li>Mobile searchers now see the site's display name as the alt tag for the mobile logo.</li>
+<li>You can now access jobs data in our <a href="/manual/api.html">search API</a> so that, if you use our API, you can display jobs in your search results.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li>We updated how we index and store <a href="/manual/rss.html">RSS feeds</a>, including YouTube feeds, so that we index each feed only one time.</li>
+<li>We now return a Bad Request message for <a href="/developer/recalls.html">recalls API</a> searches that specify a page greater than 20, which is <a href="https://github.com/GSA-OCSIT/recalls_api/commit/0539ce559cae7c4f9360f56dba91932bc48ebb4c">outside of the allowed range</a>.</li>
+<li>When available, we now <a href="https://github.com/GSA-OCSIT/recalls_api/commit/74ff28198b2e09418d9d0826fffdcb99bd7fd22f">pull CPSC's URLs</a> for their recalls from their 301 or 302 response headers.</li>
+<li>We now filter out federal jobs with more than 20 locations.</li>
+<li>We removed the code for our forms feature on <a href="http://www.usa.gov">USA.gov</a> and federal forms API. Follow <a href="https://twitter.com/ProjectMyUSA">@ProjectMyUSA</a> to see how the MyUSA team is working to improve the public's experience with federal forms.</li>
+<li>We removed the code that created a separate mobile version of USA.gov. Visit  <a href="http://m.USA.gov">m.USA.gov</a> to see its new, responsive design.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed the pagination in our <a href="/manual/api.html">search API</a> so that the API now consistently returns 10 results (1-10, 11-20, 21-30, etc).</li>
+<li>We tweaked the Spanish translations for the <a href="/manual/govbox-jobs.html">jobs GovBox</a>.</li>
+<li>We fixed the link for the advanced search operators on the <a href="http://search.usa.gov/search/advanced?affiliate=gobiernousa">Spanish-language advanced search page</a> to point to the corresponding Spanish-language help.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
       <span>Last updated on:</span>
       
       <a href="/manual/rss.html">
@@ -575,7 +643,7 @@ US-VA:COUNTY-FAIRFAX:CITY-FAIRFAX</p>
 
 <p>Data are normalized across government job listings. Federal government jobs are from <a href="http://www.usajobs.gov">USAJobs</a>. The USAJobs API for job opportunity announcements is at <a href="https://data.usajobs.gov/Rest">https://data.usajobs.gov/Rest</a>. State and local government jobs are from a variety of sources.</p>
 
-<p>Are you from a federal, state, or local government agency? Are we missing your jobs data? E-mail us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#85;&#83;&#65;&#x53;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#103;&#115;&#97;&#46;&#103;&#111;&#x76;">&#85;&#x53;&#65;&#x53;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#103;&#x73;&#97;&#x2e;&#103;&#x6f;&#118;</a> to let us know where you publish your jobs data. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
+<p>Are you from a federal, state, or local government agency? Are we missing your jobs data? E-mail us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#x55;&#83;&#65;&#83;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#x67;&#115;&#x61;&#46;&#x67;&#111;&#x76;">&#x55;&#83;&#x41;&#83;&#101;&#97;&#114;&#99;&#x68;&#x40;&#x67;&#115;&#x61;&#46;&#103;&#x6f;&#118;</a> to let us know where you publish your jobs data. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
 
 <p><a name="what-it-returns"></a></p>
 
@@ -637,7 +705,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <h2>Feedback</h2>
 
-<p>E-mail us at <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#85;&#x53;&#x41;&#83;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#103;&#x73;&#x61;&#46;&#103;&#111;&#x76;">&#x55;&#x53;&#65;&#83;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#103;&#x73;&#97;&#x2e;&#x67;&#111;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>E-mail us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#x55;&#x53;&#x41;&#x53;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#103;&#x73;&#x61;&#46;&#x67;&#111;&#x76;">&#x55;&#83;&#x41;&#x53;&#101;&#97;&#x72;&#99;&#x68;&#64;&#103;&#x73;&#97;&#x2e;&#103;&#x6f;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
@@ -997,330 +1065,6 @@ yosemite valley</li>
       <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
       
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <a href="/developer/recalls.html">
-        <time datetime="2013-05-08">May 8, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/developer/recalls.html">Recalls API</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="/developer/index.html">APIs for Developers</a> > Recalls API</p>
-
-<p><a href="https://github.com/GSA-OCSIT"><img style="position: absolute; top: 41px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a></p>
-
-<p>Helping alert the public to unsafe, hazardous, or defective products.</p>
-
-<ul>
-  <li class="overview current"><a href="#overview">Overview</a></li>
-  <li class="api"><a href="#using-the-api">Using the API</a></li>
-  <li class="parameters"><a href="#parameters">Parameters</a></li>
-  <li class="sources"><a href="#data-sources">Data Sources</a></li>
-  <li class="returns"><a href="#what-it-returns">What it Returns</a></li>
-</ul>
-
-
-<p><a name="overview"></a><h2>Overview</h2></p>
-
-<p>When you're buying and using products, safety comes first.</p>
-
-<p>Six federal regulatory agencies issue recalls on <a href="http://www.recalls.gov">Recalls.gov</a>.</p>
-
-<p>This Recalls API allows you to tap into a list of (1) drug and food safety recalls from the <a href="http://www.fda.gov">Food and Drug Administration</a>, <a href="http://www.fsis.usda.gov">Food Safety and Inspection Service</a>, and <a href="http://www.FoodSafety.gov">FoodSafety.gov</a>; (2) car safety recalls from the <a href="http://www.nhtsa.gov">National Highway Traffic Safety Administration</a>; and (3) product safety recalls from the <a href="http://www.cpsc.gov">Consumer Product Safety Commission</a>.</p>
-
-<p>This API is great for consumer safety websites or applications, news organizations, and websites or magazines targeted to specific audiences, such as parents.</p>
-
-<p><a name="using-the-api"></a><h2>Using the API</h2></p>
-
-<p>This Recalls API accepts a GET request.</p>
-
-<p>Recalls are searchable by keyword, issuing agency, date, UPC code, vehicle-specific attributes, or any combination of these.</p>
-
-<p>The base URL is http://api.usa.gov/recalls/search.json?<strong>parameters</strong></p>
-
-<p>Sample API requests follow.</p>
-
-<p>All recalls<br/>
-<a href="http://api.usa.gov/recalls/search.json?">http://api.usa.gov/recalls/search.json?</a></p>
-
-<p>All cribs<br/>
-<a href="http://api.usa.gov/recalls/search.json?query=cribs">http://api.usa.gov/recalls/search.json?query=cribs</a></p>
-
-<p>All cribs that pose a choking hazard<br/>
-<a href="http://api.usa.gov/recalls/search.json?query=cribs+choking">http://api.usa.gov/recalls/search.json?query=cribs+choking</a></p>
-
-<p>All cribs that pose a choking hazard sorted by date<br/>
-<a href="http://api.usa.gov/recalls/search.json?query=cribs+choking&amp;sort=date">http://api.usa.gov/recalls/search.json?query=cribs+choking&amp;sort=date</a></p>
-
-<p><a name="parameters"></a><h2>Parameters</h2></p>
-
-<p>Seven generic parameters are accepted.</p>
-
-<ol>
-<li>query</li>
-<li>organization</li>
-<li>start_date</li>
-<li>end_date</li>
-<li>page</li>
-<li>per_page</li>
-<li>sort</li>
-</ol>
-
-
-<p>There are additional parameters that are specific to food, product, and car safety recalls. None are required.</p>
-
-<h3>query</h3>
-
-<p>Attempts to extract as much "signal" as possible from the input text. Handles word variants, so a search on "choke" will find a recall categorized as a "choking" hazard.</p>
-
-<h3>organization</h3>
-
-<p>Specifies which agency issued the recall. Possible values are <code>CPSC</code>, <code>FDA</code>, <code>NHTSA</code>, or <code>USDA</code>.</p>
-
-<p>Example (one agency): <a href="http://api.usa.gov/recalls/search.json?organization=nhtsa">http://api.usa.gov/recalls/search.json?organization=nhtsa</a></p>
-
-<p>Example (multiple agencies): <a href="http://api.usa.gov/recalls/search.json?organization=fda+usda">http://api.usa.gov/recalls/search.json?organization=fda+usda</a></p>
-
-<h3>start_date</h3>
-
-<p>Specifies the start date of the recall.</p>
-
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?start_date=2012-01-01">http://api.usa.gov/recalls/search.json?start_date=2012-01-01</a></p>
-
-<h3>end_date</h3>
-
-<p>Specifies the end date of the recall.</p>
-
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?end_date=2012-12-31">http://api.usa.gov/recalls/search.json?end_date=2012-12-31</a></p>
-
-<h3>page</h3>
-
-<p>Specifies the pagination of search results. Possible values are <code>1</code> to <code>20</code>.</p>
-
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?page=3">http://api.usa.gov/recalls/search.json?page=3</a></p>
-
-<h3>per_page</h3>
-
-<p>Specifies the number of search results for each page. Possible values are <code>1</code> to <code>50</code>.</p>
-
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?per_page=10">http://api.usa.gov/recalls/search.json?per_page=10</a></p>
-
-<h3>sort</h3>
-
-<p>Results are sorted by relevance by default. Possible values are <code>rel</code> or <code>date</code>. Use 'sort=date' to sort results by date with the most recent listed first.</p>
-
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?sort=date">http://api.usa.gov/recalls/search.json?sort=date</a></p>
-
-<h3>food_type</h3>
-
-<p>Only for drug and food safety recalls. Possible values are <code>food</code> or <code>drug</code>.</p>
-
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?food_type=drug">http://api.usa.gov/recalls/search.json?food_type=drug</a></p>
-
-<h3>upc</h3>
-
-<p>Only for CPSC recalls. Specifies the UPC code when available. Not all products have UPC codes.</p>
-
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?upc=042666601627">http://api.usa.gov/recalls/search.json?upc=042666601627</a></p>
-
-<h3>make, model, year, and code (only for NHTSA recalls)</h3>
-
-<ul>
-<li><code>make</code> specifies the make of the vehicle or equipment. Example: <a href="http://localhost:3000/search?make=winnebago">http://localhost:3000/search?make=winnebago</a></li>
-<li><code>model</code> specifies the model of the vehicle or equipment. Example: <a href="http://localhost:3000/search?model=ellipse">http://localhost:3000/search?model=ellipse</a></li>
-<li><code>year</code> specifies the year of the vehicle or equipment. Example: <a href="http://localhost:3000/search?year=2010">http://localhost:3000/search?year=2010</a></li>
-<li><code>code</code> specifies the NHTSA code. Possible values are <code>E</code>, <code>V</code> [for vehicles], <code>I</code>, <code>T</code>, <code>C</code>, or <code>X</code>. Example: <a href="http://localhost:3000/search?code=v">http://localhost:3000/search?code=v</a></li>
-</ul>
-
-
-<p><a name="data-sources"></a><h2>Data Sources</h2></p>
-
-<p>Data are normalized across (1) drug and food safety recalls from the <a href="http://www.fda.gov">Food and Drug Administration</a>, <a href="http://www.fsis.usda.gov">Food Safety and Inspection Service</a>, and <a href="http://www.FoodSafety.gov">FoodSafety.gov</a>; (2) car safety recalls from the <a href="http://www.nhtsa.gov">National Highway Traffic Safety Administration</a>; and (3) product safety recalls from the <a href="http://www.cpsc.gov">Consumer Product Safety Commission</a>.</p>
-
-<p><a name="what-it-returns"></a><h2>What it Returns</h2></p>
-
-<p>Below are three sample JSON responses for food, product, and car safety recalls.</p>
-
-<h3>Food Recalls</h3>
-
-<pre><code>{
-    success: {
-        total: 82,
-        results: [
-            {
-                organization: "USDA",
-                recall_number: "1df0a5440b",
-                recall_date: "2011-05-14",
-                recall_url: "http://www.fsis.usda.gov/News_&amp;_Events/Recall_037_2011_Release/index.asp",
-                description: "Rose &amp; Shore Meat Co., a Vernon, Calif., establishment, is recalling approximately 15,900 pounds of ready-to-eat deli meat products that may be contaminated with Listeria monocytogenes.",
-                summary: "California Firm Recalls Deli Meat Products for Possible Listeria Contamination"
-            },
-            {
-                organization: "FDA",
-                recall_number: "51d9096a25",
-                recall_date: "2010-06-21",
-                recall_url: "http://www.fda.gov/Safety/Recalls/ucm216371.htm",
-                description: "Portland Shellfish Company, Inc. is expanding this voluntarily recall to include the Meat Without Feet private label food service (2 Lb bags), pack of ready to eat frozen lobster claw and knuckle meat. Lot 13310, as recent tests show the product has the potential to be contaminated with Listeria monocytogenes, an organism which can cause serious and sometimes fatal infections in young children, frail or elderly people, and others with weakened immune systems",
-                summary: "Portland Shellfish Company Expands Recall to Include Meat Without Feet Label, Lobster Claw and Knuckle Meat, because of Possible Health Risk"
-            }
-        ]
-}}
-</code></pre>
-
-<h3>Product Recalls</h3>
-
-<pre><code>{"success":{
-    "total":2,
-    "results":[
-        {
-            "organization":"CPSC",
-            "recall_number":"12080",
-            "recall_date":"2012-01-05",
-            "recall_url":"http://www.cpsc.gov/cpscpub/prerel/prhtml12/12080.html",
-            "manufacturers":["Target"],
-            "product_types":["Lights &amp; Accessories"],
-            "descriptions":["Target 6-pc. LED Flashlight Sets"],
-            "upcs":["490021010049"],
-            "hazards":["Fire &amp; Fire-Related Burn"],
-            "countries":["China"]
-        },
-        {
-            "organization":"CPSC",
-            "recall_number":"12710",
-            "recall_date":"2012-01-05",
-            "recall_url":"http://www.cpsc.gov/cpscpub/prerel/prhtml12/12710.html",
-            "manufacturers":["Sterno"],
-            "product_types":["Candles &amp; Candle Holders"],
-            "descriptions":["Sterno Bulk Pack 5 Hour Tea Lights"],
-            "upcs":null,
-            "hazards":["Fire &amp; Fire-Related Burn"],
-            "countries":["Thailand"]
-        }
-    ]
-}}
-</code></pre>
-
-<h3>Car Recalls</h3>
-
-<pre><code>{"success":{
-    "total":2,
-    "results":[
-        {
-            "organization":"NHTSA",
-            "recall_number":"12V579000",
-            "recall_date":"2012-12-18",
-            "recall_url":"http://www-odi.nhtsa.dot.gov/recalls/recallresults.cfm?start=1&amp;SearchType=QuickSearch&amp;rcl_ID=12V579000&amp;summary=true&amp;PrintVersion=YES",
-            "records":[
-                {
-                    "component_description":"VISIBILITY/WIPER",
-                    "make":"SPARTAN",
-                    "manufacturer":"Spartan Chassis, Inc.",
-                    "manufacturing_begin_date":"2012-10-01",
-                    "manufacturing_end_date":"2012-10-31",
-                    "model":"GLADIATOR",
-                    "recalled_component_id":"000051813001317776000001349",
-                    "year":2012
-                },
-                {
-                    "component_description":"VISIBILITY/WIPER",
-                    "make":"SPARTAN",
-                    "manufacturer":"Spartan Chassis, Inc.",
-                    "manufacturing_begin_date":"2012-10-01",
-                    "manufacturing_end_date":"2012-10-31",
-                    "model":"METROSTAR",
-                    "recalled_component_id":"000051813001317777000001349",
-                    "year":2012
-                }
-            ],
-            "manufacturer_campaign_number":"12016",
-            "component_description":"VISIBILITY/WIPER",
-            "manufacturer":"Spartan Chassis, Inc.",
-            "code":"V",
-            "potential_units_affected":"36",
-            "initiator":"MFR",
-            "report_date":"20121210",
-            "defect_summary":"Spartan Motors Chassis is recalling certain model year 2012-2013 Gladiator, Metro Star, Metro Star-X, and Force emergency rescue chassis cabs built between October 1, 2012, through October 31, 2012.  The wiper motor shaft and the wiper arm shaft have diff",
-            "consequence_summary":"If the windshield wipers become inoperative, the driver could have reduced visibility, which may increase the risk of a crash.  ",
-            "corrective_summary":"The remedy for this recall campaign is still under development.  The manufacturer has not yet provided a notification schedule.  Owners may contact Spartan at 1-800-543-5008.",
-            "notes":"Spartan's recall campaign number is 12016.Owners may also contact the National Highway Traffic Safety Administration Vehicle Safety Hotline at 1-888-327-4236 (TTY 1-800-424-9153), or go to www.safercar.gov.",
-            "recall_subject":"Windshield Wipers may become Inoperative"
-        },
-        {
-            "organization":"NHTSA",
-            "recall_number":"12V571000",
-            "recall_date":"2012-12-18",
-            "recall_url":"http://www-odi.nhtsa.dot.gov/recalls/recallresults.cfm?start=1&amp;SearchType=QuickSearch&amp;rcl_ID=12V571000&amp;summary=true&amp;PrintVersion=YES",
-            "records":[
-                {
-                    "component_description":"FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
-                    "make":"JAGUAR",
-                    "manufacturer":"JAGUAR CARS LTD",
-                    "manufacturing_begin_date":"2012-10-03",
-                    "manufacturing_end_date":"2012-10-12",
-                    "model":"XF",
-                    "recalled_component_id":"000051654001723816000000152",
-                    "year":2013
-                },
-                {
-                    "component_description":"ELECTRICAL SYSTEM",
-                    "make":"JAGUAR",
-                    "manufacturer":"JAGUAR CARS LTD",
-                    "manufacturing_begin_date":"2012-10-03",
-                    "manufacturing_end_date":"2012-10-12",
-                    "model":"XF",
-                    "recalled_component_id":"000051654001723816000000200",
-                    "year":2013
-                }
-            ],
-            "manufacturer_campaign_number":"J028",
-            "component_description":"ELECTRICAL SYSTEM",
-            "manufacturer":"Jaguar Land Rover North America, LLC",
-            "code":"V",
-            "potential_units_affected":"13",
-            "initiator":"MFR",
-            "report_date":"20121207",
-            "defect_summary":"Jaguar Land Rover is recalling certain model year 2013 XF vehicles manufactured October 3, 2012, through October 12, 2012 and equipped with a gasoline engine.",
-            "consequence_summary":"An engine stall without warning while driving may lead to a loss of motive power, a loss of power-assisted braking and a loss of power-assisted steering.",
-            "corrective_summary":"Jaguar Land Rover will notify owners, and dealers will install an additional wiring harness to the in-tank fuel pump, free of charge.",
-            "notes":"Jaguar's campaign recall number is J028.Owners may also contact the National Highway Traffic Safety Administration Vehicle Safety Hotline at 1-888-327-4236 (TTY 1-800-424-9153), or go to www.safercar.gov.",
-            "recall_subject":"Fuel Starvation may cause Vehicle Stall"
-        }
-    ]
-}}
-</code></pre>
-
-<h2>Open Source Code</h2>
-
-<p>The server code that runs this API is on Github. If you're a Rails developer, fork our <a href="https://github.com/GSA-OCSIT/recalls_api">Recalls Server API</a> repo to add features (such as additional datasets) or fix bugs.</p>
-
-<p>Better yet, send us a <a href="https://github.com/GSA-OCSIT/recalls_api/pulls">pull request</a> to contribute your changes to our project and improve this API for everyone who is using it.</p>
-
-<h2>Feedback</h2>
-
-<p>E-mail us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x55;&#x53;&#x41;&#83;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#103;&#x73;&#x61;&#46;&#x67;&#111;&#x76;">&#x55;&#83;&#x41;&#x53;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#103;&#x73;&#x61;&#x2e;&#103;&#111;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
-
-<h2>Terms of Use</h2>
-
-<p>By accessing the Recalls API, you agree to <a href="http://www.usa.gov/About/developer-resources/terms-of-service.shtml">USA.gov's Terms of Service for Developer Resources</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/recalls"><span class="label label-info">recalls</span></a>
-      
-      <a href="/tagged/api"><span class="label label-info">api</span></a>
       
     </div>
   </article>
