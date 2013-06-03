@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Posts tagged seo</title>
+  <title>Search Your Multimedia Galleries: Notes for the Week Ending May 31, 2013</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -72,70 +72,69 @@
 
 
 <div class="container">
-  <div id="main-container"><!-- begin tag layout -->
-<p class="muted">Posts tagged <strong>seo</strong></p>
-<div class='articles'>
+  <div id="main-container"><article class="article">
+  <div class='time'>
+    
+    <a href="/drafts/releases/2013-05-31.html">
+      <time></time>
+    </a>
+  </div>
+
   
-  <article class='article'>
-    <div class='time'>
-      
-      <a href="/blog/redesign.html">
-        <time datetime="2013-05-01">May 1, 2013</time>
-      </a>
-    </div>
+  <h1>
+    <a href="/drafts/releases/2013-05-31.html">Search Your Multimedia Galleries: Notes for the Week Ending May 31, 2013</a>
+  </h1>
+  
 
-    
-    <h1>
-      <a href="/blog/redesign.html">Checklist for a Successful Website Redesign</a>
-    </h1>
-    
+  <div class='post-content'>
+    <h2>Highlight: Search Your Multimedia Galleries</h2>
 
-    <div class='post-content'>
-      <p>We often receive questions when an affiliate undergoes a major website upgrade, changes content management systems, or both. We created this checklist to share with you four steps to take to ensure your redesign is successful.</p>
+<p>Does you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you have a media RSS (MRSS) feed for your gallery?</p>
 
-<ol>
-<li>Keep the file name and directly structure the same, if possible. If it isn't possible, use 301 redirects to send visitors to the appropriate new pages. For more on 301 redirects, read tips from <a href="http://www.bing.com/community/site_blogs/b/webmaster/archive/2011/10/06/managing-redirects-301s-302s-and-canonicals.aspx">Bing</a> and <a href="http://www.google.com/support/webmasters/bin/answer.py?answer=93633">Google</a>. Notify other websites that link to you of the changes.</li>
-<li>Register for the commercial search engines' webmaster tools.
+<p>You can now opt to <a href="/manual/rss.html">index MRSS feeds</a> so that your multimedia content is included in your search results.</p>
+
+<p>(Thanks, <a href="http://www.usgs.gov">USGS.gov</a> team, for suggesting this new feature!)</p>
+
+<h2>Other Features</h2>
 
 <ul>
-<li><a href="http://www.bing.com/toolbox/webmasters/">Bing Webmaster Tools</a></li>
-<li><a href="https://www.google.com/webmasters/">Google Webmaster Central</a></li>
+<li>For each result, searchers now see the URL directly under the title. The order is now title-URL-description. It had previously been title-description-URL.</li>
+<li>Searchers using screen readers now hear plain language labels for the search box&mdash;Enter your search term (English) and Ingrese su búsqueda (Spanish).</li>
+<li>When searchers opt to allow us to use their location, they now see <a href="/manual/govbox-jobs.html">jobs</a> that are geographically closest them.</li>
+<li>Mobile searchers now see the site's display name as the alt tag for the mobile logo.</li>
+<li>You can now access jobs data in our <a href="/manual/api.html">search API</a> so that, if you use our API, you can display jobs in your search results.</li>
 </ul>
-</li>
-<li>Update the <a href="http://www.sitemaps.org/">XML sitemap</a> on your website and notify the search engines via the webmaster tools.</li>
-<li>Notify the search engines of the content that has been removed via the webmaster tools. Specifically, in Bing, use the <a href="http://www.bing.com/blogs/site_blogs/b/webmaster/archive/2013/03/15/bing-wmt-launches-site-move-tool.aspx">Site Move tool</a>.</li>
-</ol>
 
 
-<p>If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#x55;&#x53;&#x41;&#83;&#x65;&#97;&#x72;&#99;&#104;&#64;&#103;&#115;&#97;&#46;&#x67;&#x6f;&#118;">&#x55;&#83;&#x41;&#83;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#103;&#115;&#97;&#x2e;&#x67;&#111;&#118;</a>.</p>
-
-<hr />
-
-<p><strong><em>Additional Resource</em></strong></p>
+<h2>Chores</h2>
 
 <ul>
-<li><em><a href="http://googlewebmastercentral.blogspot.com/2012/04/how-to-move-your-content-to-new.html">How to move your content to a new location</a></em>, Google Webmaster Central Blog</li>
+<li>We updated how we index and store <a href="/manual/rss.html">RSS feeds</a>, including YouTube feeds, so that we index each feed only one time.</li>
+<li>We now return a Bad Request message for <a href="/developer/recalls.html">recalls API</a> searches that specify a page greater than 20, which is <a href="https://github.com/GSA-OCSIT/recalls_api/commit/0539ce559cae7c4f9360f56dba91932bc48ebb4c">outside of the allowed range</a>.</li>
+<li>When available, we now <a href="https://github.com/GSA-OCSIT/recalls_api/commit/74ff28198b2e09418d9d0826fffdcb99bd7fd22f">pull CPSC's URLs</a> for their recalls from their 301 or 302 response headers.</li>
+<li>We now filter out federal jobs with more than 20 locations.</li>
+<li>We removed the code for our forms feature on <a href="http://www.usa.gov">USA.gov</a> and federal forms API. Follow <a href="https://twitter.com/ProjectMyUSA">@ProjectMyUSA</a> to see how the MyUSA team is working to improve the public's experience with federal forms.</li>
+<li>We removed the code that created a standalone version of m.USA.gov. Visit  <a href="http://m.USA.gov">m.USA.gov</a> to see its new, responsive design.</li>
 </ul>
 
 
-    </div>
+<h2>Fixes</h2>
 
-    <div class='tags'>
-      
-      <a href="/tagged/seo"><span class="label label-info">seo</span></a>
-      
-    </div>
-  </article>
-  
-</div>
-
-
-<ul class="pager">
-  
-
-  
+<ul>
+<li>We fixed the pagination in our <a href="/manual/api.html">search API</a> so that results are consistently 1-10, 11-20, 21-30, etc.</li>
+<li>We tweaked the Spanish translations for the <a href="/manual/govbox-jobs.html">jobs GovBox</a>.</li>
+<li>We fixed the link for the advanced search operators on the Spanish-language advanced search page to point to the corresponding Spanish-language help.</li>
 </ul>
-<!-- end tag layout --></div>
+
+
+  </div>
+
+  <div class='tags'>
+    
+    <a href="/tagged/releases"><span class="label label-info">releases</span></a>
+    
+  </div>
+</article></div>
 </div>
 
 <footer class="footer">
