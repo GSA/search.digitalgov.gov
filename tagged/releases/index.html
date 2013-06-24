@@ -79,6 +79,56 @@
   <article class='article'>
     <div class='time'>
       
+      <a href="/releases/2013-06-21.html">
+        <time datetime="2013-06-21">June 21, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/2013-06-21.html">Spring Cleaning: Notes for the Week Ending June 21, 2013</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>We've spent the past few weeks doing some spring cleaning to improve our backend infrastructure and to lay the groundwork for a major update to our Admin Center. Stay tuned!</p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>We started using the Rails <a href="http://guides.rubyonrails.org/asset_pipeline.html">asset pipeline</a>. As a result of using the pipeline and some of the other chores below, we decreased the page load time by 25 percent.</li>
+<li>We upgraded to <a href="http://www.elasticsearch.org/2013/05/30/0-90-1-released/">Elasticsearch 0.90.1</a>.</li>
+<li>We upgraded to <a href="http://www.ruby-lang.org/en/news/2013/05/14/ruby-2-0-0-p195-is-released/">Ruby 2.0.0</a>.</li>
+<li>We updated the way we monitor <a href="http://blog.phusion.nl/category/passenger/phusion-passenger-4/">Phusion Passenger</a>.</li>
+<li>We removed some unused tables and columns from our MySQL database.</li>
+<li>We removed the legacy recalls code from our codebase now that we've released it as a standalone open source <a href="https://github.com/GSA-OCSIT/recalls_api">Recalls API Server</a>.</li>
+<li>We no longer require a valid API key to include API queries in your <a href="/tagged/analytics/">site analytics</a>.</li>
+<li>We updated our list of synonyms to include fracking and hyrdofracturing as equivalent terms.</li>
+<li>The hyperlinks in the Admin Center system alerts are now clickable.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed a regression bug with <a href="https://github.com/haml">Haml</a> and Ruby 2.0.0 that made the background color of the search results the same color as the page background.</li>
+<li>We fixed the CSS for the magnifying glass on the search box so that it appears properly in IE7.</li>
+<li>We now only show unique descriptions for <a href="http://api.usa.gov/recalls/search?organization=cpsc&amp;sort=date">CPSC recalls</a>.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
       <a href="/releases/2013-05-31.html">
         <time datetime="2013-05-31">May 31, 2013</time>
       </a>
@@ -99,7 +149,7 @@
 
 <p>MRSS is the standard <a href="http://www.rssboard.org/media-rss">media RSS specification</a> for syndicating multimedia content. So, even if you don't have an MRSS feed now, it should be easy to generate one as long as your content is in a content management system or other database. MRSS is also the standard specification used by hosted multimedia services such as Flickr, Instagram, Vimeo, and YouTube.</p>
 
-<p>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#85;&#x53;&#x41;&#83;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#x67;&#x73;&#97;&#x2e;&#103;&#111;&#x76;">&#x55;&#83;&#x41;&#x53;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#x67;&#115;&#97;&#46;&#103;&#111;&#118;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
+<p>Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#x55;&#83;&#65;&#x53;&#101;&#97;&#x72;&#99;&#104;&#64;&#x67;&#x73;&#x61;&#x2e;&#103;&#x6f;&#118;">&#x55;&#x53;&#x41;&#83;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#x67;&#x73;&#x61;&#46;&#x67;&#x6f;&#118;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
 
 <p>(Thanks, <a href="http://www.usgs.gov">USGS.gov</a> team, for suggesting this new feature!)</p>
 
@@ -243,7 +293,7 @@
 <ul>
 <li>We updated our <a href="/tos.html">terms of service</a>.</li>
 <li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#58;&#85;&#83;&#x41;&#83;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#x67;&#115;&#x61;&#x2e;&#103;&#111;&#118;">&#x55;&#x53;&#x41;&#x53;&#x65;&#97;&#x72;&#99;&#104;&#64;&#103;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#118;</a> with any questions.</li>
+<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#58;&#x55;&#x53;&#x41;&#x53;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#x67;&#115;&#x61;&#46;&#x67;&#x6f;&#118;">&#x55;&#x53;&#x41;&#83;&#101;&#97;&#114;&#99;&#104;&#64;&#x67;&#115;&#97;&#x2e;&#103;&#x6f;&#118;</a> with any questions.</li>
 <li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
 <li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
 <li>We removed the trending searches feature and widget.</li>
@@ -604,42 +654,6 @@
 <li><span><span>Searchers can now find jobs in non-standard state locations (for example someone searching for jobs in Washington, DC, will find postings the the location of Washington DC Metro Area, District of Columbia)</span><span>.</span></span></li>
 </ul>
 
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <a href="/releases/2013-01-11.html">
-        <time datetime="2013-01-11">January 11, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/releases/2013-01-11.html">Search Notes for the Week Ending January 11, 2013</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2>Highlighted Feature: The Jobs GovBox</h2>
-
-<p>We're excited to announce that searchers looking for jobs on your site can now see all of your agency's current job openings.</p>
-
-<p>Our new <a href="/manual/govbox-jobs.html">Jobs Govbox</a> displays up to three location- and keyword-matched job openings on your results page. For more information on how to turn on this GovBox, see <a href="/manual/results-modules.html">How To Select The Modules That Appear On Your Results Page</a>.</p>
-
-<p>We've also open sourced all of the code that powers our <a href="https://github.com/GSA-OCSIT/jobs_api">Jobs Server API</a> in Github.</p>
-
-<h2>Fixes</h2>
-
-<p>And, we've already pushed two bug fixes for the Jobs GovBox to production. Searchers no longer see yet-to-be-opened or already closed jobs.</p>
 
     </div>
 
