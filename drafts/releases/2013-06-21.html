@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Search Your Multimedia Galleries: Notes for the Week Ending May 31, 2013</title>
+  <title>Notes for the Week Ending June 21, 2013</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -75,59 +75,39 @@
   <div id="main-container"><article class="article">
   <div class='time'>
     
-    <a href="/releases/2013-05-31.html">
-      <time>May 31, 2013</time>
+    <a href="/drafts/releases/2013-06-21.html">
+      <time></time>
     </a>
   </div>
 
   
   <h1>
-    <a href="/releases/2013-05-31.html">Search Your Multimedia Galleries: Notes for the Week Ending May 31, 2013</a>
+    <a href="/drafts/releases/2013-06-21.html">Notes for the Week Ending June 21, 2013</a>
   </h1>
   
 
   <div class='post-content'>
-    <h2>Highlight: Search Your Multimedia Galleries</h2>
-
-<p>Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery?</p>
-
-<p>You can now opt to <a href="/manual/rss.html">index MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
-
-<p>MRSS is the standard <a href="http://www.rssboard.org/media-rss">media RSS specification</a> for syndicating multimedia content. So, even if you don't have an MRSS feed now, it should be easy to generate one as long as your content is in a content management system or other database. MRSS is also the standard specification used by hosted multimedia services such as Flickr, Instagram, Vimeo, and YouTube.</p>
-
-<p>Email us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#x55;&#x53;&#65;&#83;&#101;&#x61;&#114;&#99;&#104;&#x40;&#103;&#115;&#x61;&#x2e;&#x67;&#111;&#118;">&#85;&#x53;&#x41;&#83;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#x67;&#x73;&#97;&#x2e;&#x67;&#x6f;&#x76;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
-
-<p>(Thanks, <a href="http://www.usgs.gov">USGS.gov</a> team, for suggesting this new feature!)</p>
-
-<h2>Other Features</h2>
+    <h2>Chores</h2>
 
 <ul>
-<li>For each result, searchers now see the URL directly under the title. The order is now title-URL-description. It had previously been title-description-URL.</li>
-<li>Searchers using screen readers now hear plain language labels for the search box&mdash;Enter your search term (English) and Ingrese su búsqueda (Spanish).</li>
-<li>When searchers opt to allow us to use their location, they now see <a href="/manual/govbox-jobs.html">jobs</a> that are geographically closest them.</li>
-<li>Mobile searchers now see your site's display name as the alt tag for your mobile logo.</li>
-<li>You can now access jobs data in our <a href="/manual/api.html">search API</a> so that, if you use our API, you can display jobs in your search results.</li>
-</ul>
-
-
-<h2>Chores</h2>
-
-<ul>
-<li>We updated how we index and store <a href="/manual/rss.html">RSS feeds</a>, including YouTube feeds, so that we index each feed only one time.</li>
-<li>We now return a Bad Request message for <a href="/developer/recalls.html">recalls API</a> searches that specify a page greater than 20, which is <a href="https://github.com/GSA-OCSIT/recalls_api/commit/0539ce559cae7c4f9360f56dba91932bc48ebb4c">outside of the allowed range</a>.</li>
-<li>When available, we now <a href="https://github.com/GSA-OCSIT/recalls_api/commit/74ff28198b2e09418d9d0826fffdcb99bd7fd22f">pull CPSC's URLs</a> for their recalls from their 301 or 302 response headers.</li>
-<li>We now filter out federal jobs with more than 20 locations.</li>
-<li>We removed the code for our forms feature on <a href="http://www.usa.gov">USA.gov</a> and federal forms API. Follow <a href="https://twitter.com/ProjectMyUSA">@ProjectMyUSA</a> to see how the MyUSA team is working to improve the public's experience with federal forms.</li>
-<li>We removed the code that created a separate mobile version of USA.gov. Visit  <a href="http://m.USA.gov">m.USA.gov</a> to see its new, responsive design.</li>
+<li>We removed some unused tables and columns from our MySQL database.</li>
+<li>We upgraded to <a href="http://www.elasticsearch.org/2013/05/30/0-90-1-released/">Elasticsearch 0.90.1</a>.</li>
+<li>We upgraded to <a href="http://www.ruby-lang.org/en/news/2013/05/14/ruby-2-0-0-p195-is-released/">Ruby 2.0.0</a>.</li>
+<li>We updated the way we monitor <a href="http://blog.phusion.nl/category/passenger/phusion-passenger-4/">Phusion Passenger</a>.</li>
+<li>We started using the Rails <a href="http://guides.rubyonrails.org/asset_pipeline.html">asset pipeline</a>.</li>
+<li>We removed the legacy recalls code from our codebase now that we've released it as a standalone open source <a href="https://github.com/GSA-OCSIT/recalls_api">Recalls API Server</a>.</li>
+<li>We no longer require a valid API key to include API queries in your <a href="/tagged/analytics/">site analytics</a>.</li>
+<li>We updated our list of synonyms to include fracking and hyrdofracturing as equivalent terms.</li>
+<li>The hyperlinks in the Admin Center system alerts are now clickable.</li>
 </ul>
 
 
 <h2>Fixes</h2>
 
 <ul>
-<li>We fixed the pagination in our <a href="/manual/api.html">search API</a> so that the API now consistently returns 10 results (1-10, 11-20, 21-30, etc).</li>
-<li>We tweaked the Spanish translations for the <a href="/manual/govbox-jobs.html">jobs GovBox</a>.</li>
-<li>We fixed the link for the advanced search operators on the <a href="http://search.usa.gov/search/advanced?affiliate=gobiernousa">Spanish-language advanced search page</a> to point to the corresponding Spanish-language help.</li>
+<li>We fixed a regression bug with (Haml)[https://github.com/haml] and Ruby 2.0.0 that made the background color of the search results the same color as the page background.</li>
+<li>We fixed the CSS for the magnifying glass on the search box so that it appears properly in IE7.</li>
+<li>We now only show unique descriptions for <a href="http://api.usa.gov/recalls/search?organization=cpsc&amp;sort=date">CPSC recalls</a>.</li>
 </ul>
 
 
