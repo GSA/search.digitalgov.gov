@@ -78,7 +78,7 @@
     <span>Last updated on:</span>
     
     <a href="/manual/urls.html">
-      <time>June 25, 2013</time>
+      <time>June 26, 2013</time>
     </a>
   </div>
 
@@ -101,9 +101,9 @@
 
 <h2>Add a Specific URL</h2>
 
-<p>Select "Add New URL" to tell us about a specific URL you'd like us to fetch and index. We'll fetch each URL you add manually and we'll index the title, description, <em>and the full text of the document</em> for the link you provide.</p>
+<p>Select "Add New URL" to tell us about a specific URL you'd like us to fetch and index. We'll fetch each URL you add manually and we'll index the title, description, <em>and the full text of the document</em> for the link you provide. We'll display the title and description you provide (not the page's title or a snippet based on the page's content).</p>
 
-<p>You can delete a manually added URL by selecting Delete within the list of Previously Crawled URLs.</p>
+<p>Delete a manually added URL by selecting Delete within the list of Previously Crawled URLs.</p>
 
 <p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/url-manual.png" alt="Add a new URL" /></p>
 
@@ -111,19 +111,32 @@
 
 <p>You can also use an RSS feed to add URLs. The feed is useful if you'd like to automate the process, add multiple URLs, or both.</p>
 
-<p>Enter the URL of your RSS feed. Click submit. We'll fetch each URL in your feed and index the title, description, <em>and the full text of the document</em> for the items you provide.</p>
+<p>Enter the URL of your RSS feed. Click submit. We'll fetch each URL in your feed and index the title, description, <em>and the full text of the document</em> for the items you provide. We'll display the title and description you provide (not the page's title or a snippet based on the page's content).</p>
 
 <p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/url-rss.png" alt="Manage URLs via RSS feed" /></p>
 
-<p>You can delete a URL added via RSS feed by selecting Delete within the list of Previously Crawled URLs. Or, you can delete <em>all</em> of the URLs added via the RSS feed by deleting the RSS feed itself.</p>
+<p>Delete a URL added via RSS feed by deleting it as an item in your RSS feed. We'll remove the URL from our index the next time we fetch your RSS feed. If you need to remove it from our index immediately, you can take the additional step of deleting the URL by selecting Delete within the list of Previously Crawled URLs.</p>
+
+<p>Note that you must delete the URL from your RSS feed. Otherwise, the URL will reappear the next time we fetch your RSS feed.</p>
+
+<p>You can also delete <em>all</em> of the URLs added via the RSS feed by deleting the RSS feed itself.</p>
 
 <h2>Crawl Report of Uncrawled URLs and Previously Crawled URLs</h2>
 
 <p>View a full report of all previously crawled URLs by clicking on the View All button to browse the list in your browser, or click on the Export to CSV button to download the list as a comma delimited file.</p>
 
-<p>The source column in the crawl report shows how you added the URL, manually or orr via an RSS feed.</p>
+<p>The source column in the crawl report shows how you added the URL, manually or or via an RSS feed.</p>
 
 <hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
+
+<ul>
+<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a> (Atom &amp; RSS)</li>
+<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a> and <a href="http://www.rssboard.org/rss-validator/">validator</a></li>
+<li><a href="http://www.atomenabled.org/developers/syndication/">Atom syndication format</a></li>
+</ul>
+
 
 <p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report for your PDF that says, "No content found in document"? Your PDF is likely an image-only, non-searchable file that was created from a paper document using a scanner. See the resources below for more information on how to create searchable PDF files.</p>
 

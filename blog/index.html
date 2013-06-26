@@ -83,7 +83,7 @@
       <span>Last updated on:</span>
       
       <a href="/manual/urls.html">
-        <time datetime="2013-06-25">June 25, 2013</time>
+        <time datetime="2013-06-26">June 26, 2013</time>
       </a>
     </div>
 
@@ -106,9 +106,9 @@
 
 <h2>Add a Specific URL</h2>
 
-<p>Select "Add New URL" to tell us about a specific URL you'd like us to fetch and index. We'll fetch each URL you add manually and we'll index the title, description, <em>and the full text of the document</em> for the link you provide.</p>
+<p>Select "Add New URL" to tell us about a specific URL you'd like us to fetch and index. We'll fetch each URL you add manually and we'll index the title, description, <em>and the full text of the document</em> for the link you provide. We'll display the title and description you provide (not the page's title or a snippet based on the page's content).</p>
 
-<p>You can delete a manually added URL by selecting Delete within the list of Previously Crawled URLs.</p>
+<p>Delete a manually added URL by selecting Delete within the list of Previously Crawled URLs.</p>
 
 <p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/url-manual.png" alt="Add a new URL" /></p>
 
@@ -116,19 +116,32 @@
 
 <p>You can also use an RSS feed to add URLs. The feed is useful if you'd like to automate the process, add multiple URLs, or both.</p>
 
-<p>Enter the URL of your RSS feed. Click submit. We'll fetch each URL in your feed and index the title, description, <em>and the full text of the document</em> for the items you provide.</p>
+<p>Enter the URL of your RSS feed. Click submit. We'll fetch each URL in your feed and index the title, description, <em>and the full text of the document</em> for the items you provide. We'll display the title and description you provide (not the page's title or a snippet based on the page's content).</p>
 
 <p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/url-rss.png" alt="Manage URLs via RSS feed" /></p>
 
-<p>You can delete a URL added via RSS feed by selecting Delete within the list of Previously Crawled URLs. Or, you can delete <em>all</em> of the URLs added via the RSS feed by deleting the RSS feed itself.</p>
+<p>Delete a URL added via RSS feed by deleting it as an item in your RSS feed. We'll remove the URL from our index the next time we fetch your RSS feed. If you need to remove it from our index immediately, you can take the additional step of deleting the URL by selecting Delete within the list of Previously Crawled URLs.</p>
+
+<p>Note that you must delete the URL from your RSS feed. Otherwise, the URL will reappear the next time we fetch your RSS feed.</p>
+
+<p>You can also delete <em>all</em> of the URLs added via the RSS feed by deleting the RSS feed itself.</p>
 
 <h2>Crawl Report of Uncrawled URLs and Previously Crawled URLs</h2>
 
 <p>View a full report of all previously crawled URLs by clicking on the View All button to browse the list in your browser, or click on the Export to CSV button to download the list as a comma delimited file.</p>
 
-<p>The source column in the crawl report shows how you added the URL, manually or orr via an RSS feed.</p>
+<p>The source column in the crawl report shows how you added the URL, manually or or via an RSS feed.</p>
 
 <hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
+
+<ul>
+<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a> (Atom &amp; RSS)</li>
+<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a> and <a href="http://www.rssboard.org/rss-validator/">validator</a></li>
+<li><a href="http://www.atomenabled.org/developers/syndication/">Atom syndication format</a></li>
+</ul>
+
 
 <p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report for your PDF that says, "No content found in document"? Your PDF is likely an image-only, non-searchable file that was created from a paper document using a scanner. See the resources below for more information on how to create searchable PDF files.</p>
 
@@ -160,128 +173,10 @@
   <article class='article'>
     <div class='time'>
       
-      <a href="/releases/2013-06-21.html">
-        <time datetime="2013-06-21">June 21, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/releases/2013-06-21.html">Spring Cleaning: Notes for the Week Ending June 21, 2013</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>We've spent the past few weeks doing some spring cleaning to improve our backend infrastructure and to lay the groundwork for a major update to our Admin Center. Stay tuned!</p>
-
-<h2>Chores</h2>
-
-<ul>
-<li>We started using the Rails <a href="http://guides.rubyonrails.org/asset_pipeline.html">asset pipeline</a>. As a result of using the pipeline and some of the other chores below, we decreased the page load time by 25 percent.</li>
-<li>We upgraded to <a href="http://www.elasticsearch.org/2013/05/30/0-90-1-released/">Elasticsearch 0.90.1</a>.</li>
-<li>We upgraded to <a href="http://www.ruby-lang.org/en/news/2013/05/14/ruby-2-0-0-p195-is-released/">Ruby 2.0.0</a>.</li>
-<li>We updated the way we monitor <a href="http://blog.phusion.nl/category/passenger/phusion-passenger-4/">Phusion Passenger</a>.</li>
-<li>We removed some unused tables and columns from our MySQL database.</li>
-<li>We removed the legacy recalls code from our codebase now that we've released it as a standalone open source <a href="https://github.com/GSA-OCSIT/recalls_api">Recalls API Server</a>.</li>
-<li>We no longer require a valid API key to include API queries in your <a href="/tagged/analytics/">site analytics</a>.</li>
-<li>We updated our list of synonyms to include fracking and hyrdofracturing as equivalent terms.</li>
-<li>The hyperlinks in the Admin Center system alerts are now clickable.</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>We fixed a regression bug with <a href="https://github.com/haml">Haml</a> and Ruby 2.0.0 that made the background color of the search results the same color as the page background.</li>
-<li>We fixed the CSS for the magnifying glass on the search box so that it appears properly in IE7.</li>
-<li>We now only show unique descriptions for <a href="http://api.usa.gov/recalls/search?organization=cpsc&amp;sort=date">CPSC recalls</a>.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <a href="/releases/2013-05-31.html">
-        <time datetime="2013-05-31">May 31, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/releases/2013-05-31.html">Search Your Multimedia Galleries: Notes for the Week Ending May 31, 2013</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2>Highlight: Search Your Multimedia Galleries</h2>
-
-<p>Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery?</p>
-
-<p>You can now opt to <a href="/manual/rss.html">index MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
-
-<p>MRSS is the standard <a href="http://www.rssboard.org/media-rss">media RSS specification</a> for syndicating multimedia content. So, even if you don't have an MRSS feed now, it should be easy to generate one as long as your content is in a content management system or other database. MRSS is also the standard specification used by hosted multimedia services such as Flickr, Instagram, Vimeo, and YouTube.</p>
-
-<p>Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#85;&#83;&#65;&#x53;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#x67;&#115;&#97;&#x2e;&#x67;&#x6f;&#x76;">&#x55;&#83;&#x41;&#83;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#103;&#115;&#97;&#x2e;&#103;&#111;&#118;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
-
-<p>(Thanks, <a href="http://www.usgs.gov">USGS.gov</a> team, for suggesting this new feature!)</p>
-
-<h2>Other Features</h2>
-
-<ul>
-<li>For each result, searchers now see the URL directly under the title. The order is now title-URL-description. It had previously been title-description-URL.</li>
-<li>Searchers using screen readers now hear plain language labels for the search box&mdash;Enter your search term (English) and Ingrese su búsqueda (Spanish).</li>
-<li>When searchers opt to allow us to use their location, they now see <a href="/manual/govbox-jobs.html">jobs</a> that are geographically closest them.</li>
-<li>Mobile searchers now see your site's display name as the alt tag for your mobile logo.</li>
-<li>You can now access jobs data in our <a href="/manual/api.html">search API</a> so that, if you use our API, you can display jobs in your search results.</li>
-</ul>
-
-
-<h2>Chores</h2>
-
-<ul>
-<li>We updated how we index and store <a href="/manual/rss.html">RSS feeds</a>, including YouTube feeds, so that we index each feed only one time.</li>
-<li>We now return a Bad Request message for <a href="/developer/recalls.html">recalls API</a> searches that specify a page greater than 20, which is <a href="https://github.com/GSA-OCSIT/recalls_api/commit/0539ce559cae7c4f9360f56dba91932bc48ebb4c">outside of the allowed range</a>.</li>
-<li>When available, we now <a href="https://github.com/GSA-OCSIT/recalls_api/commit/74ff28198b2e09418d9d0826fffdcb99bd7fd22f">pull CPSC's URLs</a> for their recalls from their 301 or 302 response headers.</li>
-<li>We now filter out federal jobs with more than 20 locations.</li>
-<li>We removed the code for our forms feature on <a href="http://www.usa.gov">USA.gov</a> and federal forms API. Follow <a href="https://twitter.com/ProjectMyUSA">@ProjectMyUSA</a> to see how the MyUSA team is working to improve the public's experience with federal forms.</li>
-<li>We removed the code that created a separate mobile version of USA.gov. Visit  <a href="http://m.USA.gov">m.USA.gov</a> to see its new, responsive design.</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>We fixed the pagination in our <a href="/manual/api.html">search API</a> so that the API now consistently returns 10 results (1-10, 11-20, 21-30, etc).</li>
-<li>We tweaked the Spanish translations for the <a href="/manual/govbox-jobs.html">jobs GovBox</a>.</li>
-<li>We fixed the link for the advanced search operators on the <a href="http://search.usa.gov/search/advanced?affiliate=gobiernousa">Spanish-language advanced search page</a> to point to the corresponding Spanish-language help.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
       <span>Last updated on:</span>
       
       <a href="/manual/rss.html">
-        <time datetime="2013-05-30">May 30, 2013</time>
+        <time datetime="2013-06-26">June 26, 2013</time>
       </a>
     </div>
 
@@ -376,9 +271,9 @@ omies that depend on summer tourism.&lt;/p&gt;
 <p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
 
 <ul>
+<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a> (Atom &amp; RSS)</li>
 <li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a> and <a href="http://www.rssboard.org/rss-validator/">validator</a></li>
 <li><a href="http://www.atomenabled.org/developers/syndication/">Atom syndication format</a></li>
-<li><a href="http://feedvalidator.org">Feed Validator</a> (Atom &amp; RSS)</li>
 </ul>
 
 
@@ -397,6 +292,124 @@ omies that depend on summer tourism.&lt;/p&gt;
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
       
       <a href="/tagged/rss"><span class="label label-info">rss</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <a href="/releases/2013-06-21.html">
+        <time datetime="2013-06-21">June 21, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/2013-06-21.html">Spring Cleaning: Notes for the Week Ending June 21, 2013</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>We've spent the past few weeks doing some spring cleaning to improve our backend infrastructure and to lay the groundwork for a major update to our Admin Center. Stay tuned!</p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>We started using the Rails <a href="http://guides.rubyonrails.org/asset_pipeline.html">asset pipeline</a>. As a result of using the pipeline and some of the other chores below, we decreased the page load time by 25 percent.</li>
+<li>We upgraded to <a href="http://www.elasticsearch.org/2013/05/30/0-90-1-released/">Elasticsearch 0.90.1</a>.</li>
+<li>We upgraded to <a href="http://www.ruby-lang.org/en/news/2013/05/14/ruby-2-0-0-p195-is-released/">Ruby 2.0.0</a>.</li>
+<li>We updated the way we monitor <a href="http://blog.phusion.nl/category/passenger/phusion-passenger-4/">Phusion Passenger</a>.</li>
+<li>We removed some unused tables and columns from our MySQL database.</li>
+<li>We removed the legacy recalls code from our codebase now that we've released it as a standalone open source <a href="https://github.com/GSA-OCSIT/recalls_api">Recalls API Server</a>.</li>
+<li>We no longer require a valid API key to include API queries in your <a href="/tagged/analytics/">site analytics</a>.</li>
+<li>We updated our list of synonyms to include fracking and hyrdofracturing as equivalent terms.</li>
+<li>The hyperlinks in the Admin Center system alerts are now clickable.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed a regression bug with <a href="https://github.com/haml">Haml</a> and Ruby 2.0.0 that made the background color of the search results the same color as the page background.</li>
+<li>We fixed the CSS for the magnifying glass on the search box so that it appears properly in IE7.</li>
+<li>We now only show unique descriptions for <a href="http://api.usa.gov/recalls/search?organization=cpsc&amp;sort=date">CPSC recalls</a>.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <a href="/releases/2013-05-31.html">
+        <time datetime="2013-05-31">May 31, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/2013-05-31.html">Search Your Multimedia Galleries: Notes for the Week Ending May 31, 2013</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlight: Search Your Multimedia Galleries</h2>
+
+<p>Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery?</p>
+
+<p>You can now opt to <a href="/manual/rss.html">index MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
+
+<p>MRSS is the standard <a href="http://www.rssboard.org/media-rss">media RSS specification</a> for syndicating multimedia content. So, even if you don't have an MRSS feed now, it should be easy to generate one as long as your content is in a content management system or other database. MRSS is also the standard specification used by hosted multimedia services such as Flickr, Instagram, Vimeo, and YouTube.</p>
+
+<p>Email us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#58;&#x55;&#x53;&#x41;&#x53;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x67;&#115;&#97;&#x2e;&#103;&#x6f;&#x76;">&#85;&#x53;&#x41;&#83;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#x67;&#115;&#x61;&#x2e;&#x67;&#x6f;&#118;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
+
+<p>(Thanks, <a href="http://www.usgs.gov">USGS.gov</a> team, for suggesting this new feature!)</p>
+
+<h2>Other Features</h2>
+
+<ul>
+<li>For each result, searchers now see the URL directly under the title. The order is now title-URL-description. It had previously been title-description-URL.</li>
+<li>Searchers using screen readers now hear plain language labels for the search box&mdash;Enter your search term (English) and Ingrese su búsqueda (Spanish).</li>
+<li>When searchers opt to allow us to use their location, they now see <a href="/manual/govbox-jobs.html">jobs</a> that are geographically closest them.</li>
+<li>Mobile searchers now see your site's display name as the alt tag for your mobile logo.</li>
+<li>You can now access jobs data in our <a href="/manual/api.html">search API</a> so that, if you use our API, you can display jobs in your search results.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li>We updated how we index and store <a href="/manual/rss.html">RSS feeds</a>, including YouTube feeds, so that we index each feed only one time.</li>
+<li>We now return a Bad Request message for <a href="/developer/recalls.html">recalls API</a> searches that specify a page greater than 20, which is <a href="https://github.com/GSA-OCSIT/recalls_api/commit/0539ce559cae7c4f9360f56dba91932bc48ebb4c">outside of the allowed range</a>.</li>
+<li>When available, we now <a href="https://github.com/GSA-OCSIT/recalls_api/commit/74ff28198b2e09418d9d0826fffdcb99bd7fd22f">pull CPSC's URLs</a> for their recalls from their 301 or 302 response headers.</li>
+<li>We now filter out federal jobs with more than 20 locations.</li>
+<li>We removed the code for our forms feature on <a href="http://www.usa.gov">USA.gov</a> and federal forms API. Follow <a href="https://twitter.com/ProjectMyUSA">@ProjectMyUSA</a> to see how the MyUSA team is working to improve the public's experience with federal forms.</li>
+<li>We removed the code that created a separate mobile version of USA.gov. Visit  <a href="http://m.USA.gov">m.USA.gov</a> to see its new, responsive design.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed the pagination in our <a href="/manual/api.html">search API</a> so that the API now consistently returns 10 results (1-10, 11-20, 21-30, etc).</li>
+<li>We tweaked the Spanish translations for the <a href="/manual/govbox-jobs.html">jobs GovBox</a>.</li>
+<li>We fixed the link for the advanced search operators on the <a href="http://search.usa.gov/search/advanced?affiliate=gobiernousa">Spanish-language advanced search page</a> to point to the corresponding Spanish-language help.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
       
     </div>
   </article>
@@ -703,7 +716,7 @@ US-VA:COUNTY-FAIRFAX:CITY-FAIRFAX</p>
 
 <p>Data are normalized across government job listings. Federal government jobs are from <a href="http://www.usajobs.gov">USAJobs</a>. The USAJobs API for job opportunity announcements is at <a href="https://data.usajobs.gov/Rest">https://data.usajobs.gov/Rest</a>. State and local government jobs are from a variety of sources.</p>
 
-<p>Are you from a federal, state, or local government agency? Are we missing your jobs data? E-mail us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x55;&#x53;&#65;&#83;&#x65;&#x61;&#114;&#99;&#104;&#64;&#103;&#115;&#97;&#x2e;&#103;&#111;&#118;">&#85;&#83;&#x41;&#x53;&#101;&#97;&#114;&#x63;&#104;&#x40;&#103;&#115;&#x61;&#x2e;&#x67;&#111;&#x76;</a> to let us know where you publish your jobs data. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
+<p>Are you from a federal, state, or local government agency? Are we missing your jobs data? E-mail us at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x55;&#83;&#65;&#83;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#x67;&#115;&#97;&#x2e;&#103;&#x6f;&#118;">&#85;&#x53;&#65;&#83;&#x65;&#97;&#x72;&#99;&#104;&#64;&#103;&#x73;&#x61;&#46;&#103;&#x6f;&#118;</a> to let us know where you publish your jobs data. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
 
 <p><a name="what-it-returns"></a></p>
 
@@ -765,7 +778,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <h2>Feedback</h2>
 
-<p>E-mail us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#85;&#x53;&#65;&#x53;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x67;&#x73;&#x61;&#x2e;&#103;&#111;&#118;">&#x55;&#83;&#x41;&#83;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#103;&#115;&#x61;&#46;&#103;&#111;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>E-mail us at <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#58;&#x55;&#83;&#65;&#x53;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#x67;&#115;&#97;&#46;&#x67;&#x6f;&#118;">&#x55;&#83;&#x41;&#x53;&#101;&#97;&#114;&#99;&#104;&#64;&#103;&#115;&#97;&#46;&#103;&#111;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
