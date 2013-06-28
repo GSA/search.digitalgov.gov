@@ -23,7 +23,7 @@ Browse through our [How To Manual](/tagged/how-to) and [Go-Live Punch List](/blo
 ### Content Sources
 
 * [Domains](/manual/domains.html)
-* [URLs & sitemaps](/manual/urls.html)
+* [URLs](/manual/urls.html)
 * [RSS](/manual/rss.html)
 * [Collections](/manual/collections.html)
 * [Social media](/manual/social-media.html)
