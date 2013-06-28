@@ -46,3 +46,11 @@ We have a proven track record of delivering fast, relevant search results. Over 
 > *&mdash;The White House*
 
 Read more [testimonials](/tagged/testimonial) and [join them](http://search.usa.gov/affiliates/home) today.
+
+## Our History
+
+USASearch got its start when Internet entrepreneur Eric Brewer, whose early research was funded by the Department of Defense, offered to donate a powerful search engine to government. That gift helped accelerate the government's earlier work to create a government-wide portal.
+
+In June 2000, President Clinton announced the gift from the Federal Search Foundation, a nonprofit organization established by Brewer, and instructed that an official U.S. web portal be launched within 90 days. USA.gov went online on September 22, 2000 under the name FirstGov.gov with a [prominent search box](http://web.archive.org/web/20001109105200/http://www.firstgov.gov/) to allow the public to search across government websites.
+
+Visit USA.gov to learn more [about its mission and history](http://www.usa.gov/About.shtml).
