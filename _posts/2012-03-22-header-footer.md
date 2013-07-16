@@ -32,7 +32,9 @@ In the first box, enter CSS to customize the header and footer of your search re
 
 In the second box, enter HTML to customize the header of your search results page. In the third box, enter HTML to customize the footer of your search results page. Be sure to enter [absolute hyperlinks](http://webdesign.about.com/od/beginningtutorials/a/aa040502a.htm), not relative links.
 
-Click on the link, Validate, to check your HTML markup at <http://validator.w3.org/nu>. We'll also run a validation check to ensure that no JavaScript is included in your HTML code. We'll also check to ensure no CSS style or link elements are included. To include CSS, specify inline CSS within an opening tag.
+Click on the link, Validate, to check your HTML markup at <http://validator.w3.org/nu>. On the W3C page select HTML 4.01 Strict from the Parser drop-down box.
+
+We'll also run a validation check to ensure that no JavaScript is included in your HTML code. We'll also check to ensure no CSS style or link elements are included. To include CSS, specify inline CSS within an opening tag.
 
 ### Invalid CSS
 
