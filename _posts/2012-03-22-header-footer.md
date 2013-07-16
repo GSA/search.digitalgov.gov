@@ -12,7 +12,7 @@ Select how you'd like to customize your header and footer. The fields that appea
 
 Fill out the fields to generate a predefined header and footer.
 
-**Color.** Customize the color of your header background and text by clicking on the color picker text field. Enter a valid three- or six-digit hex value or pick a color by dragging the cross-hair icon ![crosshair icon](http://search.usa.gov/javascripts/jscolor/cross.gif) inside the color picker window. Drag the triangle icon ![arrow icon](http://search.usa.gov/javascripts/jscolor/arrow.gif) to control the color saturation. When you are done, click anywhere outside the color picker window.
+**Color.** Customize the color of your header background and text by clicking on the color picker text field. Enter a valid three- or six-digit hex value or pick a color by dragging the cross-hair icon  inside the color picker window. Drag the triangle icon to control the color saturation. When you are done, click anywhere outside the color picker window.
 
 **URL.** Provide us with the URL for your website's homepage. We'll use it to provide a link back to you from your header text, image, or both.
 
