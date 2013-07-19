@@ -9,13 +9,13 @@ tags: how-to site-information
 
 ## Site Name (Required)
 
-Tell us the name of your website. Searchers see your site name on the results page, such as in the page title or in the best bets. We recommend using the plain language name for your agency or site, e.g. Department of Commerce.
+Tell us the name of your website. Searchers see your site name on the results page, such as in your page title or best bets. We recommend using the plain language name for your agency or site, such as Department of Commerce.
 
 ![Site name on NIJ.gov's search results page](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/site-information-name.png)
 
-##Site Handle (Required)
+## Site Handle (Required)
 
-We use your site handle in the HTTP request to specify displaying your customized settings. We recommend making this handle short and unique, e.g. doc or commerce.
+We use your site handle in the HTTP request to specify displaying your customized settings. We recommend making this handle short and unique, such as doc or commerce.
 
 ![Site handle on NIJ.gov's search results page](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/site-information-handle.png)
 
@@ -36,4 +36,4 @@ Choose a language for your site, English or Spanish. We will only index and prov
 
 ---
 
-***Troubleshooting Tip:*** If you later need to edit your site handle or switch from one language to the other, e-mail us at <USASearch@gsa.gov>.
+***Troubleshooting Tip:*** If you later need to edit your site handle or language, e-mail us at <USASearch@gsa.gov>.
