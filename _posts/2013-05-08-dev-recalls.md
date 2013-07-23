@@ -19,17 +19,21 @@ Helping alert the public to unsafe, hazardous, or defective products.
   <li class="returns"><a href="#what-it-returns">What it Returns</a></li>
 </ul>
 
-<a name="overview"></a><h2>Overview</h2>
+<a name="overview"></a>
+
+## Overview
 
 When you're buying and using products, safety comes first.
 
 Six federal regulatory agencies issue recalls on [Recalls.gov](http://www.recalls.gov).
 
-This Recalls API allows you to tap into a list of (1) drug and food safety recalls from the [Food and Drug Administration](http://www.fda.gov), [Food Safety and Inspection Service](http://www.fsis.usda.gov), and [FoodSafety.gov](http://www.FoodSafety.gov); (2) car safety recalls from the [National Highway Traffic Safety Administration](http://www.nhtsa.gov); and (3) product safety recalls from the [Consumer Product Safety Commission](http://www.cpsc.gov).
+This Recalls API allows you to tap into a list of (1) drug and food safety recalls from the [Food and Drug Administration](http://www.fda.gov) (FDA), [U.S. Department of Agriculture's Food Safety and Inspection Service](http://www.fsis.usda.gov) (UDSA FSIS), and [FoodSafety.gov](http://www.FoodSafety.gov); (2) car safety recalls from the [National Highway Traffic Safety Administration](http://www.nhtsa.gov) (NHTSA); and (3) product safety recalls from the [Consumer Product Safety Commission](http://www.cpsc.gov) (CPSC).
 
 This API is great for consumer safety websites or applications, news organizations, and websites or magazines targeted to specific audiences, such as parents.
 
-<a name="using-the-api"></a><h2>Using the API</h2>
+<a name="using-the-api"></a>
+
+## Using the API
 
 This Recalls API accepts a GET request.
 
@@ -52,7 +56,9 @@ All cribs that pose a choking hazard
 All cribs that pose a choking hazard sorted by date  
 <http://api.usa.gov/recalls/search.json?query=cribs+choking&sort=date>
 
-<a name="parameters"></a><h2>Parameters</h2>
+<a name="parameters"></a>
+
+## Parameters
 
 Seven generic parameters are accepted.
 
@@ -126,11 +132,25 @@ Example: <http://api.usa.gov/recalls/search.json?upc=042666601627>
 * `year` specifies the year of the vehicle or equipment. Example: <http://localhost:3000/search?year=2010>
 * `code` specifies the NHTSA code. Possible values are `E`, `V` [for vehicles], `I`, `T`, `C`, or `X`. Example: <http://localhost:3000/search?code=v>
 
-<a name="data-sources"></a><h2>Data Sources</h2>
+<a name="data-sources"></a>
 
-Data are normalized across (1) drug and food safety recalls from the [Food and Drug Administration](http://www.fda.gov), [Food Safety and Inspection Service](http://www.fsis.usda.gov), and [FoodSafety.gov](http://www.FoodSafety.gov); (2) car safety recalls from the [National Highway Traffic Safety Administration](http://www.nhtsa.gov); and (3) product safety recalls from the [Consumer Product Safety Commission](http://www.cpsc.gov).
+## Data Sources
 
-<a name="what-it-returns"></a><h2>What it Returns</h2>
+We've tailored this Recalls API for our use in the [USA.gov iPhone app](http://apps.usa.gov/usagov.shtml) and [Product Recalls Android app](http://apps.usa.gov/product-recalls-2.shtml). 
+
+Data are normalized across (1) drug and food safety recalls from the [FDA](http://www.fda.gov), [UDSA FSIS](http://www.fsis.usda.gov), and [FoodSafety.gov](http://www.FoodSafety.gov); (2) car safety recalls from the [NHTSA](http://www.nhtsa.gov); and (3) product safety recalls from the [CPSC](http://www.cpsc.gov).
+
+So, we encourage you to use the original data sources directly or via [Recalls.gov](http://www.recalls.gov).
+
+1. [FDA recalls, market withdrawals, and safety alerts](http://www.fda.gov/Safety/Recalls/default.htm)
+2. [USDA FSIS recalls and public health alerts](http://www.fsis.usda.gov/fsis_recalls/)
+3. [FoodSafety.gov recalls and alerts](http://www.foodsafety.gov/recalls/)
+4. [NHTSA recalls and defects](http://www.nhtsa.gov/Vehicle+Safety/Recalls+&+Defects)
+5. [CPSC recalls](http://www.cpsc.gov/Recalls/)
+
+<a name="what-it-returns"></a>
+
+## What it Returns
 
 Below are three sample JSON responses for food, product, and car safety recalls.
 
