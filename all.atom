@@ -3,10 +3,607 @@
   <title><![CDATA[USASearch]]></title>
   <link href="http://usasearch.howto.gov/all.atom" rel="self"/>
   <link href="http://usasearch.howto.gov/"/>
-  <updated>2013-07-19T11:24:05+00:00</updated>
+  <updated>2013-07-23T19:03:06+00:00</updated>
   <id>http://usasearch.howto.gov/</id>
   <author><name><![CDATA[USASearch]]></name></author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Recalls API]]></title>
+    <link href="http://usasearch.howto.gov/developer/recalls.html"/>
+    <updated>2013-07-23T00:00:00+00:00</updated>
+    <id>http://usasearch.howto.gov/developer/recalls.html</id>
+    <content type="html"><![CDATA[<p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="/developer/index.html">APIs for Developers</a> > Recalls API</p>
+
+<p><a href="https://github.com/GSA-OCSIT"><img style="position: absolute; top: 41px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a></p>
+
+<p>Helping alert the public to unsafe, hazardous, or defective products.</p>
+
+<ul>
+  <li class="overview current"><a href="#overview">Overview</a></li>
+  <li class="api"><a href="#using-the-api">Using the API</a></li>
+  <li class="parameters"><a href="#parameters">Parameters</a></li>
+  <li class="sources"><a href="#data-sources">Data Sources</a></li>
+  <li class="returns"><a href="#what-it-returns">What it Returns</a></li>
+</ul>
+
+
+<p><a name="overview"></a></p>
+
+<h2>Overview</h2>
+
+<p>When you're buying and using products, safety comes first.</p>
+
+<p>Six federal regulatory agencies issue recalls on <a href="http://www.recalls.gov">Recalls.gov</a>.</p>
+
+<p>This Recalls API allows you to tap into a list of (1) drug and food safety recalls from the <a href="http://www.fda.gov">Food and Drug Administration</a> (FDA), <a href="http://www.fsis.usda.gov">U.S. Department of Agriculture's Food Safety and Inspection Service</a> (UDSA FSIS), and <a href="http://www.FoodSafety.gov">FoodSafety.gov</a>; (2) car safety recalls from the <a href="http://www.nhtsa.gov">National Highway Traffic Safety Administration</a> (NHTSA); and (3) product safety recalls from the <a href="http://www.cpsc.gov">Consumer Product Safety Commission</a> (CPSC).</p>
+
+<p>This API is great for consumer safety websites or applications, news organizations, and websites or magazines targeted to specific audiences, such as parents.</p>
+
+<p><a name="using-the-api"></a></p>
+
+<h2>Using the API</h2>
+
+<p>This Recalls API accepts a GET request.</p>
+
+<p>Recalls are searchable by keyword, issuing agency, date, UPC code, vehicle-specific attributes, or any combination of these.</p>
+
+<p>The base URL is http://api.usa.gov/recalls/search.json?<strong>parameters</strong></p>
+
+<p>Sample API requests follow.</p>
+
+<p>All recalls<br/>
+<a href="http://api.usa.gov/recalls/search.json?">http://api.usa.gov/recalls/search.json?</a></p>
+
+<p>All cribs<br/>
+<a href="http://api.usa.gov/recalls/search.json?query=cribs">http://api.usa.gov/recalls/search.json?query=cribs</a></p>
+
+<p>All cribs that pose a choking hazard<br/>
+<a href="http://api.usa.gov/recalls/search.json?query=cribs+choking">http://api.usa.gov/recalls/search.json?query=cribs+choking</a></p>
+
+<p>All cribs that pose a choking hazard sorted by date<br/>
+<a href="http://api.usa.gov/recalls/search.json?query=cribs+choking&amp;sort=date">http://api.usa.gov/recalls/search.json?query=cribs+choking&amp;sort=date</a></p>
+
+<p><a name="parameters"></a></p>
+
+<h2>Parameters</h2>
+
+<p>Seven generic parameters are accepted.</p>
+
+<ol>
+<li>query</li>
+<li>organization</li>
+<li>start_date</li>
+<li>end_date</li>
+<li>page</li>
+<li>per_page</li>
+<li>sort</li>
+</ol>
+
+
+<p>There are additional parameters that are specific to food, product, and car safety recalls. None are required.</p>
+
+<h3>query</h3>
+
+<p>Attempts to extract as much "signal" as possible from the input text. Handles word variants, so a search on "choke" will find a recall categorized as a "choking" hazard.</p>
+
+<h3>organization</h3>
+
+<p>Specifies which agency issued the recall. Possible values are <code>CPSC</code>, <code>FDA</code>, <code>NHTSA</code>, or <code>USDA</code>.</p>
+
+<p>Example (one agency): <a href="http://api.usa.gov/recalls/search.json?organization=nhtsa">http://api.usa.gov/recalls/search.json?organization=nhtsa</a></p>
+
+<p>Example (multiple agencies): <a href="http://api.usa.gov/recalls/search.json?organization=fda+usda">http://api.usa.gov/recalls/search.json?organization=fda+usda</a></p>
+
+<h3>start_date</h3>
+
+<p>Specifies the start date of the recall.</p>
+
+<p>Example: <a href="http://api.usa.gov/recalls/search.json?start_date=2012-01-01">http://api.usa.gov/recalls/search.json?start_date=2012-01-01</a></p>
+
+<h3>end_date</h3>
+
+<p>Specifies the end date of the recall.</p>
+
+<p>Example: <a href="http://api.usa.gov/recalls/search.json?end_date=2012-12-31">http://api.usa.gov/recalls/search.json?end_date=2012-12-31</a></p>
+
+<h3>page</h3>
+
+<p>Specifies the pagination of search results. Possible values are <code>1</code> to <code>20</code>.</p>
+
+<p>Example: <a href="http://api.usa.gov/recalls/search.json?page=3">http://api.usa.gov/recalls/search.json?page=3</a></p>
+
+<h3>per_page</h3>
+
+<p>Specifies the number of search results for each page. Possible values are <code>1</code> to <code>50</code>.</p>
+
+<p>Example: <a href="http://api.usa.gov/recalls/search.json?per_page=10">http://api.usa.gov/recalls/search.json?per_page=10</a></p>
+
+<h3>sort</h3>
+
+<p>Results are sorted by relevance by default. Possible values are <code>rel</code> or <code>date</code>. Use 'sort=date' to sort results by date with the most recent listed first.</p>
+
+<p>Example: <a href="http://api.usa.gov/recalls/search.json?sort=date">http://api.usa.gov/recalls/search.json?sort=date</a></p>
+
+<h3>food_type</h3>
+
+<p>Only for drug and food safety recalls. Possible values are <code>food</code> or <code>drug</code>.</p>
+
+<p>Example: <a href="http://api.usa.gov/recalls/search.json?food_type=drug">http://api.usa.gov/recalls/search.json?food_type=drug</a></p>
+
+<h3>upc</h3>
+
+<p>Only for CPSC recalls. Specifies the UPC code when available. Not all products have UPC codes.</p>
+
+<p>Example: <a href="http://api.usa.gov/recalls/search.json?upc=042666601627">http://api.usa.gov/recalls/search.json?upc=042666601627</a></p>
+
+<h3>make, model, year, and code (only for NHTSA recalls)</h3>
+
+<ul>
+<li><code>make</code> specifies the make of the vehicle or equipment. Example: <a href="http://localhost:3000/search?make=winnebago">http://localhost:3000/search?make=winnebago</a></li>
+<li><code>model</code> specifies the model of the vehicle or equipment. Example: <a href="http://localhost:3000/search?model=ellipse">http://localhost:3000/search?model=ellipse</a></li>
+<li><code>year</code> specifies the year of the vehicle or equipment. Example: <a href="http://localhost:3000/search?year=2010">http://localhost:3000/search?year=2010</a></li>
+<li><code>code</code> specifies the NHTSA code. Possible values are <code>E</code>, <code>V</code> [for vehicles], <code>I</code>, <code>T</code>, <code>C</code>, or <code>X</code>. Example: <a href="http://localhost:3000/search?code=v">http://localhost:3000/search?code=v</a></li>
+</ul>
+
+
+<p><a name="data-sources"></a></p>
+
+<h2>Data Sources</h2>
+
+<p>We've tailored this Recalls API for our use in the <a href="http://apps.usa.gov/usagov.shtml">USA.gov iPhone app</a> and <a href="http://apps.usa.gov/product-recalls-2.shtml">Product Recalls Android app</a>.</p>
+
+<p>Data are normalized across (1) drug and food safety recalls from the <a href="http://www.fda.gov">FDA</a>, <a href="http://www.fsis.usda.gov">UDSA FSIS</a>, and <a href="http://www.FoodSafety.gov">FoodSafety.gov</a>; (2) car safety recalls from the <a href="http://www.nhtsa.gov">NHTSA</a>; and (3) product safety recalls from the <a href="http://www.cpsc.gov">CPSC</a>.</p>
+
+<p>So, we encourage you to use the original data sources directly or via <a href="http://www.recalls.gov">Recalls.gov</a>.</p>
+
+<ol>
+<li><a href="http://www.fda.gov/Safety/Recalls/default.htm">FDA recalls, market withdrawals, and safety alerts</a></li>
+<li><a href="http://www.fsis.usda.gov/fsis_recalls/">USDA FSIS recalls and public health alerts</a></li>
+<li><a href="http://www.foodsafety.gov/recalls/">FoodSafety.gov recalls and alerts</a></li>
+<li><a href="http://www.nhtsa.gov/Vehicle+Safety/Recalls+&amp;+Defects">NHTSA recalls and defects</a></li>
+<li><a href="http://www.cpsc.gov/Recalls/">CPSC recalls</a></li>
+</ol>
+
+
+<p><a name="what-it-returns"></a></p>
+
+<h2>What it Returns</h2>
+
+<p>Below are three sample JSON responses for food, product, and car safety recalls.</p>
+
+<h3>Food Recalls</h3>
+
+<pre><code>{
+    success: {
+        total: 82,
+        results: [
+            {
+                organization: "USDA",
+                recall_number: "1df0a5440b",
+                recall_date: "2011-05-14",
+                recall_url: "http://www.fsis.usda.gov/News_&amp;_Events/Recall_037_2011_Release/index.asp",
+                description: "Rose &amp; Shore Meat Co., a Vernon, Calif., establishment, is recalling approximately 15,900 pounds of ready-to-eat deli meat products that may be contaminated with Listeria monocytogenes.",
+                summary: "California Firm Recalls Deli Meat Products for Possible Listeria Contamination"
+            },
+            {
+                organization: "FDA",
+                recall_number: "51d9096a25",
+                recall_date: "2010-06-21",
+                recall_url: "http://www.fda.gov/Safety/Recalls/ucm216371.htm",
+                description: "Portland Shellfish Company, Inc. is expanding this voluntarily recall to include the Meat Without Feet private label food service (2 Lb bags), pack of ready to eat frozen lobster claw and knuckle meat. Lot 13310, as recent tests show the product has the potential to be contaminated with Listeria monocytogenes, an organism which can cause serious and sometimes fatal infections in young children, frail or elderly people, and others with weakened immune systems",
+                summary: "Portland Shellfish Company Expands Recall to Include Meat Without Feet Label, Lobster Claw and Knuckle Meat, because of Possible Health Risk"
+            }
+        ]
+}}
+</code></pre>
+
+<h3>Product Recalls</h3>
+
+<pre><code>{"success":{
+    "total":2,
+    "results":[
+        {
+            "organization":"CPSC",
+            "recall_number":"12080",
+            "recall_date":"2012-01-05",
+            "recall_url":"http://www.cpsc.gov/cpscpub/prerel/prhtml12/12080.html",
+            "manufacturers":["Target"],
+            "product_types":["Lights &amp; Accessories"],
+            "descriptions":["Target 6-pc. LED Flashlight Sets"],
+            "upcs":["490021010049"],
+            "hazards":["Fire &amp; Fire-Related Burn"],
+            "countries":["China"]
+        },
+        {
+            "organization":"CPSC",
+            "recall_number":"12710",
+            "recall_date":"2012-01-05",
+            "recall_url":"http://www.cpsc.gov/cpscpub/prerel/prhtml12/12710.html",
+            "manufacturers":["Sterno"],
+            "product_types":["Candles &amp; Candle Holders"],
+            "descriptions":["Sterno Bulk Pack 5 Hour Tea Lights"],
+            "upcs":null,
+            "hazards":["Fire &amp; Fire-Related Burn"],
+            "countries":["Thailand"]
+        }
+    ]
+}}
+</code></pre>
+
+<h3>Car Recalls</h3>
+
+<pre><code>{"success":{
+    "total":2,
+    "results":[
+        {
+            "organization":"NHTSA",
+            "recall_number":"12V579000",
+            "recall_date":"2012-12-18",
+            "recall_url":"http://www-odi.nhtsa.dot.gov/recalls/recallresults.cfm?start=1&amp;SearchType=QuickSearch&amp;rcl_ID=12V579000&amp;summary=true&amp;PrintVersion=YES",
+            "records":[
+                {
+                    "component_description":"VISIBILITY/WIPER",
+                    "make":"SPARTAN",
+                    "manufacturer":"Spartan Chassis, Inc.",
+                    "manufacturing_begin_date":"2012-10-01",
+                    "manufacturing_end_date":"2012-10-31",
+                    "model":"GLADIATOR",
+                    "recalled_component_id":"000051813001317776000001349",
+                    "year":2012
+                },
+                {
+                    "component_description":"VISIBILITY/WIPER",
+                    "make":"SPARTAN",
+                    "manufacturer":"Spartan Chassis, Inc.",
+                    "manufacturing_begin_date":"2012-10-01",
+                    "manufacturing_end_date":"2012-10-31",
+                    "model":"METROSTAR",
+                    "recalled_component_id":"000051813001317777000001349",
+                    "year":2012
+                }
+            ],
+            "manufacturer_campaign_number":"12016",
+            "component_description":"VISIBILITY/WIPER",
+            "manufacturer":"Spartan Chassis, Inc.",
+            "code":"V",
+            "potential_units_affected":"36",
+            "initiator":"MFR",
+            "report_date":"20121210",
+            "defect_summary":"Spartan Motors Chassis is recalling certain model year 2012-2013 Gladiator, Metro Star, Metro Star-X, and Force emergency rescue chassis cabs built between October 1, 2012, through October 31, 2012.  The wiper motor shaft and the wiper arm shaft have diff",
+            "consequence_summary":"If the windshield wipers become inoperative, the driver could have reduced visibility, which may increase the risk of a crash.  ",
+            "corrective_summary":"The remedy for this recall campaign is still under development.  The manufacturer has not yet provided a notification schedule.  Owners may contact Spartan at 1-800-543-5008.",
+            "notes":"Spartan's recall campaign number is 12016.Owners may also contact the National Highway Traffic Safety Administration Vehicle Safety Hotline at 1-888-327-4236 (TTY 1-800-424-9153), or go to www.safercar.gov.",
+            "recall_subject":"Windshield Wipers may become Inoperative"
+        },
+        {
+            "organization":"NHTSA",
+            "recall_number":"12V571000",
+            "recall_date":"2012-12-18",
+            "recall_url":"http://www-odi.nhtsa.dot.gov/recalls/recallresults.cfm?start=1&amp;SearchType=QuickSearch&amp;rcl_ID=12V571000&amp;summary=true&amp;PrintVersion=YES",
+            "records":[
+                {
+                    "component_description":"FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
+                    "make":"JAGUAR",
+                    "manufacturer":"JAGUAR CARS LTD",
+                    "manufacturing_begin_date":"2012-10-03",
+                    "manufacturing_end_date":"2012-10-12",
+                    "model":"XF",
+                    "recalled_component_id":"000051654001723816000000152",
+                    "year":2013
+                },
+                {
+                    "component_description":"ELECTRICAL SYSTEM",
+                    "make":"JAGUAR",
+                    "manufacturer":"JAGUAR CARS LTD",
+                    "manufacturing_begin_date":"2012-10-03",
+                    "manufacturing_end_date":"2012-10-12",
+                    "model":"XF",
+                    "recalled_component_id":"000051654001723816000000200",
+                    "year":2013
+                }
+            ],
+            "manufacturer_campaign_number":"J028",
+            "component_description":"ELECTRICAL SYSTEM",
+            "manufacturer":"Jaguar Land Rover North America, LLC",
+            "code":"V",
+            "potential_units_affected":"13",
+            "initiator":"MFR",
+            "report_date":"20121207",
+            "defect_summary":"Jaguar Land Rover is recalling certain model year 2013 XF vehicles manufactured October 3, 2012, through October 12, 2012 and equipped with a gasoline engine.",
+            "consequence_summary":"An engine stall without warning while driving may lead to a loss of motive power, a loss of power-assisted braking and a loss of power-assisted steering.",
+            "corrective_summary":"Jaguar Land Rover will notify owners, and dealers will install an additional wiring harness to the in-tank fuel pump, free of charge.",
+            "notes":"Jaguar's campaign recall number is J028.Owners may also contact the National Highway Traffic Safety Administration Vehicle Safety Hotline at 1-888-327-4236 (TTY 1-800-424-9153), or go to www.safercar.gov.",
+            "recall_subject":"Fuel Starvation may cause Vehicle Stall"
+        }
+    ]
+}}
+</code></pre>
+
+<h2>Open Source Code</h2>
+
+<p>The server code that runs this API is on Github. If you're a Rails developer, fork our <a href="https://github.com/GSA-OCSIT/recalls_api">Recalls Server API</a> repo to add features (such as additional datasets) or fix bugs.</p>
+
+<p>Better yet, send us a <a href="https://github.com/GSA-OCSIT/recalls_api/pulls">pull request</a> to contribute your changes to our project and improve this API for everyone who is using it.</p>
+
+<h2>Feedback</h2>
+
+<p>E-mail us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#85;&#83;&#65;&#83;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#103;&#x73;&#x61;&#46;&#x67;&#x6f;&#118;">&#85;&#83;&#65;&#x53;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#x67;&#115;&#97;&#x2e;&#103;&#111;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+
+<h2>Terms of Use</h2>
+
+<p>By accessing the Recalls API, you agree to <a href="http://www.usa.gov/About/developer-resources/terms-of-service.shtml">USA.gov's Terms of Service for Developer Resources</a>.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Jobs API]]></title>
+    <link href="http://usasearch.howto.gov/developer/jobs.html"/>
+    <updated>2013-07-23T00:00:00+00:00</updated>
+    <id>http://usasearch.howto.gov/developer/jobs.html</id>
+    <content type="html"><![CDATA[<p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="/developer/index.html">APIs for Developers</a> > Jobs API</p>
+
+<p><a href="https://github.com/GSA-OCSIT"><img style="position: absolute; top: 41px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a></p>
+
+<p>Helping job seekers land a job with the government.</p>
+
+<ul>
+  <li class="overview current"><a href="#overview">Overview</a></li>
+  <li class="api"><a href="#using-the-api">Using the API</a></li>
+  <li class="parameters"><a href="#parameters">Parameters</a></li>
+  <li class="sources"><a href="#data-sources">Data Sources</a></li>
+  <li class="returns"><a href="#what-it-returns">What it Returns</a></li>
+  <li class="samples"><a href="#code-samples">Code Samples</a></li>
+</ul>
+
+
+<p><a name="overview"></a></p>
+
+<h2>Overview</h2>
+
+<p>The unemployment rate has hovered around 8 percent since early 2012. So, not surprisingly, many people are hitting the web to search for jobs.</p>
+
+<p>Federal, state, and local government agencies are hiring and have thousands of job openings across the country.</p>
+
+<p>This Jobs API allows you to tap into a list of current jobs openings with the government. Jobs are searchable by keyword, location, agency, schedule, or any combination of these.</p>
+
+<p>This API is great for job websites or applications, job banks, and career counseling and placement applications.</p>
+
+<p><a name="using-the-api"></a></p>
+
+<h2>Using the API</h2>
+
+<p>This Jobs API accepts a GET request.</p>
+
+<p>Jobs are searchable by keyword, location, agency, schedule, or any combination of these.</p>
+
+<p>The base URL is http://api.usa.gov/jobs/search.json?<strong>parameters</strong></p>
+
+<p>Sample API requests follow.</p>
+
+<p>All nursing jobs<br/>
+<a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs">http://api.usa.gov/jobs/search.json?query=nursing+jobs</a></p>
+
+<p>Nursing jobs in NY<br/>
+<a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs+in+ny">http://api.usa.gov/jobs/search.json?query=nursing+jobs+in+ny</a></p>
+
+<p>Nursing jobs with a state government agency<br/>
+<a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=state">http://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=state</a></p>
+
+<p>Nursing jobs with a federal government agency<br/>
+<a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=federal">http://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=federal</a></p>
+
+<p>Nursing jobs with Veterans Affairs in NY<br/>
+<a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+ny">http://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+ny</a></p>
+
+<p>Part-time nursing jobs with Veterans Affairs in NY<br/>
+<a href="http://api.usa.gov/jobs/search.json?query=parttime+nursing+jobs+with+veterans+affairs+in+ny">http://api.usa.gov/jobs/search.json?query=parttime+nursing+jobs+with+veterans+affairs+in+ny</a></p>
+
+<p><a name="parameters"></a></p>
+
+<h2>Parameters</h2>
+
+<p>Seven parameters are accepted.</p>
+
+<ol>
+<li>query</li>
+<li>organization_id</li>
+<li>hl (for highlighting)</li>
+<li>size</li>
+<li>from</li>
+<li>tags</li>
+<li>lat_lon</li>
+</ol>
+
+
+<h3>Query</h3>
+
+<p>Attempts to extract as much "signal" as possible from the input text. Handles word variants, so a search on "nursing jobs" will find a job titled "nurse practitioner" and "RN." When parts of the query parameter are used to search against the position title, the results are ordered by relevance. When no query parameter is specified, they are ordered by date with the most recent listed first.  For generic jobs searches (e.g., 'jobs', 'internships') where the <strong>lat_lon</strong> parameter is passed in, the results will be sorted by distance to the searcher's geographic location.</p>
+
+<p>Sample query formats follow.</p>
+
+<h4>All jobs (by date or by proximity)</h4>
+
+<ul>
+<li>jobs</li>
+<li>positions</li>
+<li>vacancies</li>
+<li>opportunities</li>
+<li>postings</li>
+</ul>
+
+
+<h4>Location-based (by date)</h4>
+
+<ul>
+<li>jobs in fulton</li>
+<li>jobs in fulton, md</li>
+<li>jobs in fulton, maryland</li>
+<li>jobs in md</li>
+<li>pentagon jobs</li>
+<li>jobs fayetteville</li>
+<li>fayetteville nc jobs</li>
+<li>jobs atlanta georgia</li>
+</ul>
+
+
+<h4>Agency-based (by date)</h4>
+
+<ul>
+<li>job opportunities at the cia</li>
+<li>jobs at the treasury dept</li>
+<li>tsa job openings</li>
+<li>va jobs # will match jobs in Virginia</li>
+</ul>
+
+
+<h4>Keyword-based (by relevance)</h4>
+
+<ul>
+<li>nursing jobs</li>
+<li>summer internship position</li>
+</ul>
+
+
+<h4>Schedule-based (by date)</h4>
+
+<ul>
+<li>part-time jobs</li>
+<li>full-time positions</li>
+</ul>
+
+
+<h4>Combinations (by relevance)</h4>
+
+<ul>
+<li>part-time security guard job openings at the tsa in los angeles, ca</li>
+</ul>
+
+
+<h3>Organization_id</h3>
+
+<p>Specifies which federal, state, or local agency to use as a filter.</p>
+
+<p>For federal agencies, the ID is based on <a href="https://schemas.usajobs.gov/Enumerations/AgencySubElement.xml">USAJobs' agency schema</a>. Two letter codes are used to span entire departments, while four letter codes are generally used for independent agencies or agencies within a department.</p>
+
+<p>For state and local agencies, a sample of the format follows.</p>
+
+<p><em>State of Virginia</em><br/>
+US-VA</p>
+
+<p><em>State of Virginia Department of Taxation</em><br/>
+US-VA:DEPT-TAX</p>
+
+<p><em>Fairfax County, VA</em><br/>
+US-VA:COUNTY-FAIRFAX</p>
+
+<p><em>Fairfax County Sheriff</em><br/>
+US-VA:COUNTY-FAIRFAX:SHERIFF</p>
+
+<p><em>City of Fairfax, VA</em><br/>
+US-VA:COUNTY-FAIRFAX:CITY-FAIRFAX</p>
+
+<p>If you specify an <code>organization_id</code> in your API call but the searcher types in another agency, the searchers' agency overrides the <code>organization_id</code> parameter. For example, VA jobs are returned when you specify Air Force jobs, but the searcher looks for jobs at the VA (<a href="http://api.usa.gov/jobs/search.json?query=jobs+at+the+va&amp;organization_id=AF">http://api.usa.gov/jobs/search.json?query=jobs+at+the+va&amp;organization_id=AF</a>).</p>
+
+<h3>Hl [highlighting]</h3>
+
+<p>No highlighting is included by default. Use 'hl=1' to highlight terms in the position title that match terms in the user's search. Highlighted terms are surrounded with <code>&lt;em&gt;</code> tags.</p>
+
+<h3>Size</h3>
+
+<p>Specifies how many results are returned (up to 100 at a time).</p>
+
+<h3>From</h3>
+
+<p>Specifies the starting record.</p>
+
+<h3>Tags</h3>
+
+<p>Specifies the level of government. Current tags are <code>federal</code>, <code>state</code>, <code>county</code>, and <code>city</code>.</p>
+
+<h3>Lat_lon</h3>
+
+<p>Comma-separated pair denoting the position of the searcher looking for a job. For example, 'lat_lon=37.783333,-122.416667' is the value for San Francisco, CA. For generic job searches (e.g., 'jobs', 'internships') where this parameter is passed in, the Jobs API server will sort jobs results and return those that are closest to the searcher's location. For jobs that have multiple locations associated with the position, the distance to the closest location is used to determine the overall geo-distance for the job. Note that for keyword-based job searches (e.g., 'jobs in NY', 'nursing jobs'), this parameter has no effect and is ignored.</p>
+
+<p><a name="data-sources"></a></p>
+
+<h2>Data Sources</h2>
+
+<p>We've tailored this Jobs API for our use in our search results. Data are normalized across government job listings and we don't include all jobs from all data sources. So, we encourage you to use the original data sources directly.</p>
+
+<p>Federal government jobs are from <a href="http://www.usajobs.gov">USAJobs</a>. The USAJobs API for job opportunity announcements is at <a href="https://data.usajobs.gov/Rest">https://data.usajobs.gov/Rest</a>.</p>
+
+<p>State and local government jobs are from cities, counties, and state agencies that use <a href="http://www.neogov.com/">NeoGov</a>, such <a href="https://bouldercolorado.gov/jobs-and-volunteer">jobs with the the city of Boulder, Colorado</a>.</p>
+
+<p><strong><em>Are we missing your jobs data?</em></strong> E-mail us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#58;&#x55;&#83;&#65;&#83;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#103;&#x73;&#x61;&#46;&#103;&#111;&#x76;">&#85;&#x53;&#x41;&#83;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#103;&#x73;&#97;&#46;&#103;&#111;&#118;</a> to let us know where you publish the jobs data for your federal, state, or local government agency. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
+
+<p><a name="what-it-returns"></a></p>
+
+<h2>What it Returns</h2>
+
+<p>Below is a sample JSON response for <a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+albany+ny">http://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+albany+ny</a>.</p>
+
+<pre><code>[
+  {
+    id: "usajobs:340537800",
+    position_title: "Nursing Assistant Float Pool",
+    organization_name: "Veterans Affairs, Veterans Health Administration",
+    rate_interval_code: "PA",
+    minimum: 31315,
+    maximum: 40706,
+    start_date: "2013-03-27",
+    end_date: "2013-05-31",
+    locations: [
+        "Albany, NY"
+    ],
+    url: "https://www.usajobs.gov/GetJob/ViewDetails/340537800"
+  },
+  {
+    id: "usajobs:342782900",
+    position_title: "Registered Nurse - Endoscopy",
+    organization_name: "Veterans Affairs, Veterans Health Administration",
+    rate_interval_code: "PA",
+    minimum: 0,
+    maximum: 0,
+    start_date: "2013-05-02",
+    end_date: "2013-05-13",
+    locations: [
+        "Albany, NY"
+    ],
+    url: "https://www.usajobs.gov/GetJob/ViewDetails/342782900"
+  }
+]
+</code></pre>
+
+<p><a name="code-samples"></a></p>
+
+<h2>Code Samples</h2>
+
+<p>We "eat our own dog food" and use this Jobs API to display the job openings on the government websites that use USASearch.</p>
+
+<p>See the sample results page below that shows current jobs openings across the Department of Homeland Security for a search on
+<em><a href="http://search.dhs.gov/search?query=security+jobs&amp;affiliate=dhs">security jobs</a></em> on DHS.gov.</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/dhs-jobs.png" alt="Jobs GovBox on DHS.gov" /></p>
+
+<h2>Open Source Code</h2>
+
+<p>The server code that runs this API is on Github. If you're a Rails developer, fork our
+<a href="https://github.com/GSA-OCSIT/jobs_api">Jobs Server API</a> repo to add features (such
+as additional datasets) or fix bugs.</p>
+
+<p>Better yet, send us a <a href="https://github.com/GSA-OCSIT/jobs_api/pulls">pull request</a>
+to contribute your changes to our project and improve this API for everyone who is using it.</p>
+
+<h2>Feedback</h2>
+
+<p>E-mail us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x55;&#83;&#x41;&#x53;&#101;&#97;&#114;&#99;&#x68;&#x40;&#x67;&#115;&#x61;&#46;&#x67;&#111;&#x76;">&#x55;&#x53;&#x41;&#x53;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x67;&#x73;&#97;&#x2e;&#103;&#111;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+
+<h2>Terms of Use</h2>
+
+<p>By accessing the Jobs API, you agree to <a href="http://www.usa.gov/About/developer-resources/terms-of-service.shtml">USA.gov's Terms of Service for Developer Resources</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Our Customers]]></title>
@@ -402,7 +999,7 @@ omies that depend on summer tourism.&lt;/p&gt;
 
 <p>MRSS is the standard <a href="http://www.rssboard.org/media-rss">media RSS specification</a> for syndicating multimedia content. So, even if you don't have an MRSS feed now, it should be easy to generate one as long as your content is in a content management system or other database. MRSS is also the standard specification used by hosted multimedia services such as Flickr, Instagram, Vimeo, and YouTube.</p>
 
-<p>Email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#x55;&#x53;&#65;&#83;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#103;&#115;&#97;&#46;&#103;&#111;&#x76;">&#85;&#83;&#x41;&#x53;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#x67;&#115;&#x61;&#x2e;&#x67;&#111;&#x76;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
+<p>Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#85;&#83;&#x41;&#83;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#x67;&#115;&#97;&#46;&#x67;&#111;&#118;">&#x55;&#83;&#65;&#x53;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#103;&#x73;&#97;&#46;&#x67;&#111;&#x76;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
 
 <p>(Thanks, <a href="http://www.usgs.gov">USGS.gov</a> team, for suggesting this new feature!)</p>
 
@@ -513,271 +1110,6 @@ omies that depend on summer tourism.&lt;/p&gt;
 <hr />
 
 <p><strong><em>Did you know?</em></strong> The Search API is available for government websites only. Visit our <a href="/developer/">APIs page</a> for other, publicly available APIs (i.e., for use by anyone).</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Jobs API]]></title>
-    <link href="http://usasearch.howto.gov/developer/jobs.html"/>
-    <updated>2013-05-28T00:00:00+00:00</updated>
-    <id>http://usasearch.howto.gov/developer/jobs.html</id>
-    <content type="html"><![CDATA[<p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="/developer/index.html">APIs for Developers</a> > Jobs API</p>
-
-<p><a href="https://github.com/GSA-OCSIT"><img style="position: absolute; top: 41px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a></p>
-
-<p>Helping job seekers land a job with the government.</p>
-
-<ul>
-  <li class="overview current"><a href="#overview">Overview</a></li>
-  <li class="api"><a href="#using-the-api">Using the API</a></li>
-  <li class="parameters"><a href="#parameters">Parameters</a></li>
-  <li class="sources"><a href="#data-sources">Data Sources</a></li>
-  <li class="returns"><a href="#what-it-returns">What it Returns</a></li>
-  <li class="samples"><a href="#code-samples">Code Samples</a></li>
-</ul>
-
-
-<p><a name="overview"></a></p>
-
-<h2>Overview</h2>
-
-<p>The unemployment rate has hovered around 8 percent since early 2012. So, not surprisingly, many people are hitting the web to search for jobs.</p>
-
-<p>Federal, state, and local government agencies are hiring and have thousands of job openings across the country.</p>
-
-<p>This Jobs API allows you to tap into a list of current jobs openings with the government. Jobs are searchable by keyword, location, agency, schedule, or any combination of these.</p>
-
-<p>This API is great for job websites or applications, job banks, and career counseling and placement applications.</p>
-
-<p><a name="using-the-api"></a></p>
-
-<h2>Using the API</h2>
-
-<p>This Jobs API accepts a GET request.</p>
-
-<p>Jobs are searchable by keyword, location, agency, schedule, or any combination of these.</p>
-
-<p>The base URL is http://api.usa.gov/jobs/search.json?<strong>parameters</strong></p>
-
-<p>Sample API requests follow.</p>
-
-<p>All nursing jobs<br/>
-<a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs">http://api.usa.gov/jobs/search.json?query=nursing+jobs</a></p>
-
-<p>Nursing jobs in NY<br/>
-<a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs+in+ny">http://api.usa.gov/jobs/search.json?query=nursing+jobs+in+ny</a></p>
-
-<p>Nursing jobs with a state government agency<br/>
-<a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=state">http://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=state</a></p>
-
-<p>Nursing jobs with a federal government agency<br/>
-<a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=federal">http://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=federal</a></p>
-
-<p>Nursing jobs with Veterans Affairs in NY<br/>
-<a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+ny">http://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+ny</a></p>
-
-<p>Part-time nursing jobs with Veterans Affairs in NY<br/>
-<a href="http://api.usa.gov/jobs/search.json?query=parttime+nursing+jobs+with+veterans+affairs+in+ny">http://api.usa.gov/jobs/search.json?query=parttime+nursing+jobs+with+veterans+affairs+in+ny</a></p>
-
-<p><a name="parameters"></a></p>
-
-<h2>Parameters</h2>
-
-<p>Seven parameters are accepted.</p>
-
-<ol>
-<li>query</li>
-<li>organization_id</li>
-<li>hl (for highlighting)</li>
-<li>size</li>
-<li>from</li>
-<li>tags</li>
-<li>lat_lon</li>
-</ol>
-
-
-<h3>Query</h3>
-
-<p>Attempts to extract as much "signal" as possible from the input text. Handles word variants, so a search on "nursing jobs" will find a job titled "nurse practitioner" and "RN." When parts of the query parameter are used to search against the position title, the results are ordered by relevance. When no query parameter is specified, they are ordered by date with the most recent listed first.  For generic jobs searches (e.g., 'jobs', 'internships') where the <strong>lat_lon</strong> parameter is passed in, the results will be sorted by distance to the searcher's geographic location.</p>
-
-<p>Sample query formats follow.</p>
-
-<h4>All jobs (by date or by proximity)</h4>
-
-<ul>
-<li>jobs</li>
-<li>positions</li>
-<li>vacancies</li>
-<li>opportunities</li>
-<li>postings</li>
-</ul>
-
-
-<h4>Location-based (by date)</h4>
-
-<ul>
-<li>jobs in fulton</li>
-<li>jobs in fulton, md</li>
-<li>jobs in fulton, maryland</li>
-<li>jobs in md</li>
-<li>pentagon jobs</li>
-<li>jobs fayetteville</li>
-<li>fayetteville nc jobs</li>
-<li>jobs atlanta georgia</li>
-</ul>
-
-
-<h4>Agency-based (by date)</h4>
-
-<ul>
-<li>job opportunities at the cia</li>
-<li>jobs at the treasury dept</li>
-<li>tsa job openings</li>
-<li>va jobs # will match jobs in Virginia</li>
-</ul>
-
-
-<h4>Keyword-based (by relevance)</h4>
-
-<ul>
-<li>nursing jobs</li>
-<li>summer internship position</li>
-</ul>
-
-
-<h4>Schedule-based (by date)</h4>
-
-<ul>
-<li>part-time jobs</li>
-<li>full-time positions</li>
-</ul>
-
-
-<h4>Combinations (by relevance)</h4>
-
-<ul>
-<li>part-time security guard job openings at the tsa in los angeles, ca</li>
-</ul>
-
-
-<h3>Organization_id</h3>
-
-<p>Specifies which federal, state, or local agency to use as a filter.</p>
-
-<p>For federal agencies, the ID is based on <a href="https://schemas.usajobs.gov/Enumerations/AgencySubElement.xml">USAJobs' agency schema</a>. Two letter codes are used to span entire departments, while four letter codes are generally used for independent agencies or agencies within a department.</p>
-
-<p>For state and local agencies, a sample of the format follows.</p>
-
-<p><em>State of Virginia</em><br/>
-US-VA</p>
-
-<p><em>State of Virginia Department of Taxation</em><br/>
-US-VA:DEPT-TAX</p>
-
-<p><em>Fairfax County, VA</em><br/>
-US-VA:COUNTY-FAIRFAX</p>
-
-<p><em>Fairfax County Sheriff</em><br/>
-US-VA:COUNTY-FAIRFAX:SHERIFF</p>
-
-<p><em>City of Fairfax, VA</em><br/>
-US-VA:COUNTY-FAIRFAX:CITY-FAIRFAX</p>
-
-<p>If you specify an <code>organization_id</code> in your API call but the searcher types in another agency, the searchers' agency overrides the <code>organization_id</code> parameter. For example, VA jobs are returned when you specify Air Force jobs, but the searcher looks for jobs at the VA (<a href="http://api.usa.gov/jobs/search.json?query=jobs+at+the+va&amp;organization_id=AF">http://api.usa.gov/jobs/search.json?query=jobs+at+the+va&amp;organization_id=AF</a>).</p>
-
-<h3>Hl [highlighting]</h3>
-
-<p>No highlighting is included by default. Use 'hl=1' to highlight terms in the position title that match terms in the user's search. Highlighted terms are surrounded with <code>&lt;em&gt;</code> tags.</p>
-
-<h3>Size</h3>
-
-<p>Specifies how many results are returned (up to 100 at a time).</p>
-
-<h3>From</h3>
-
-<p>Specifies the starting record.</p>
-
-<h3>Tags</h3>
-
-<p>Specifies the level of government. Current tags are <code>federal</code>, <code>state</code>, <code>county</code>, and <code>city</code>.</p>
-
-<h3>Lat_lon</h3>
-
-<p>Comma-separated pair denoting the position of the searcher looking for a job. For example, 'lat_lon=37.783333,-122.416667' is the value for San Francisco, CA. For generic job searches (e.g., 'jobs', 'internships') where this parameter is passed in, the Jobs API server will sort jobs results and return those that are closest to the searcher's location. For jobs that have multiple locations associated with the position, the distance to the closest location is used to determine the overall geo-distance for the job. Note that for keyword-based job searches (e.g., 'jobs in NY', 'nursing jobs'), this parameter has no effect and is ignored.</p>
-
-<p><a name="data-sources"></a></p>
-
-<h2>Data Sources</h2>
-
-<p>Data are normalized across government job listings. Federal government jobs are from <a href="http://www.usajobs.gov">USAJobs</a>. The USAJobs API for job opportunity announcements is at <a href="https://data.usajobs.gov/Rest">https://data.usajobs.gov/Rest</a>. State and local government jobs are from a variety of sources.</p>
-
-<p>Are you from a federal, state, or local government agency? Are we missing your jobs data? E-mail us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#85;&#83;&#65;&#x53;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#103;&#x73;&#x61;&#46;&#x67;&#x6f;&#118;">&#x55;&#x53;&#65;&#83;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#x67;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#x76;</a> to let us know where you publish your jobs data. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
-
-<p><a name="what-it-returns"></a></p>
-
-<h2>What it Returns</h2>
-
-<p>Below is a sample JSON response for <a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+albany+ny">http://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+albany+ny</a>.</p>
-
-<pre><code>[
-  {
-    id: "usajobs:340537800",
-    position_title: "Nursing Assistant Float Pool",
-    organization_name: "Veterans Affairs, Veterans Health Administration",
-    rate_interval_code: "PA",
-    minimum: 31315,
-    maximum: 40706,
-    start_date: "2013-03-27",
-    end_date: "2013-05-31",
-    locations: [
-        "Albany, NY"
-    ],
-    url: "https://www.usajobs.gov/GetJob/ViewDetails/340537800"
-  },
-  {
-    id: "usajobs:342782900",
-    position_title: "Registered Nurse - Endoscopy",
-    organization_name: "Veterans Affairs, Veterans Health Administration",
-    rate_interval_code: "PA",
-    minimum: 0,
-    maximum: 0,
-    start_date: "2013-05-02",
-    end_date: "2013-05-13",
-    locations: [
-        "Albany, NY"
-    ],
-    url: "https://www.usajobs.gov/GetJob/ViewDetails/342782900"
-  }
-]
-</code></pre>
-
-<p><a name="code-samples"></a></p>
-
-<h2>Code Samples</h2>
-
-<p>We "eat our own dog food" and use this Jobs API to display the job openings on the government websites that use USASearch.</p>
-
-<p>See the sample results page below that shows current jobs openings across the Department of Homeland Security for a search on
-<em><a href="http://search.dhs.gov/search?query=security+jobs&amp;affiliate=dhs">security jobs</a></em> on DHS.gov.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/dhs-jobs.png" alt="Jobs GovBox on DHS.gov" /></p>
-
-<h2>Open Source Code</h2>
-
-<p>The server code that runs this API is on Github. If you're a Rails developer, fork our
-<a href="https://github.com/GSA-OCSIT/jobs_api">Jobs Server API</a> repo to add features (such
-as additional datasets) or fix bugs.</p>
-
-<p>Better yet, send us a <a href="https://github.com/GSA-OCSIT/jobs_api/pulls">pull request</a>
-to contribute your changes to our project and improve this API for everyone who is using it.</p>
-
-<h2>Feedback</h2>
-
-<p>E-mail us at <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#85;&#x53;&#x41;&#83;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x67;&#115;&#97;&#x2e;&#103;&#x6f;&#x76;">&#85;&#83;&#65;&#x53;&#x65;&#x61;&#114;&#99;&#104;&#64;&#103;&#115;&#97;&#x2e;&#103;&#x6f;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
-
-<h2>Terms of Use</h2>
-
-<p>By accessing the Jobs API, you agree to <a href="http://www.usa.gov/About/developer-resources/terms-of-service.shtml">USA.gov's Terms of Service for Developer Resources</a>.</p>
 ]]></content>
   </entry>
   
@@ -976,311 +1308,6 @@ yosemite valley</li>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Recalls API]]></title>
-    <link href="http://usasearch.howto.gov/developer/recalls.html"/>
-    <updated>2013-05-08T00:00:00+00:00</updated>
-    <id>http://usasearch.howto.gov/developer/recalls.html</id>
-    <content type="html"><![CDATA[<p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="/developer/index.html">APIs for Developers</a> > Recalls API</p>
-
-<p><a href="https://github.com/GSA-OCSIT"><img style="position: absolute; top: 41px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a></p>
-
-<p>Helping alert the public to unsafe, hazardous, or defective products.</p>
-
-<ul>
-  <li class="overview current"><a href="#overview">Overview</a></li>
-  <li class="api"><a href="#using-the-api">Using the API</a></li>
-  <li class="parameters"><a href="#parameters">Parameters</a></li>
-  <li class="sources"><a href="#data-sources">Data Sources</a></li>
-  <li class="returns"><a href="#what-it-returns">What it Returns</a></li>
-</ul>
-
-
-<p><a name="overview"></a><h2>Overview</h2></p>
-
-<p>When you're buying and using products, safety comes first.</p>
-
-<p>Six federal regulatory agencies issue recalls on <a href="http://www.recalls.gov">Recalls.gov</a>.</p>
-
-<p>This Recalls API allows you to tap into a list of (1) drug and food safety recalls from the <a href="http://www.fda.gov">Food and Drug Administration</a>, <a href="http://www.fsis.usda.gov">Food Safety and Inspection Service</a>, and <a href="http://www.FoodSafety.gov">FoodSafety.gov</a>; (2) car safety recalls from the <a href="http://www.nhtsa.gov">National Highway Traffic Safety Administration</a>; and (3) product safety recalls from the <a href="http://www.cpsc.gov">Consumer Product Safety Commission</a>.</p>
-
-<p>This API is great for consumer safety websites or applications, news organizations, and websites or magazines targeted to specific audiences, such as parents.</p>
-
-<p><a name="using-the-api"></a><h2>Using the API</h2></p>
-
-<p>This Recalls API accepts a GET request.</p>
-
-<p>Recalls are searchable by keyword, issuing agency, date, UPC code, vehicle-specific attributes, or any combination of these.</p>
-
-<p>The base URL is http://api.usa.gov/recalls/search.json?<strong>parameters</strong></p>
-
-<p>Sample API requests follow.</p>
-
-<p>All recalls<br/>
-<a href="http://api.usa.gov/recalls/search.json?">http://api.usa.gov/recalls/search.json?</a></p>
-
-<p>All cribs<br/>
-<a href="http://api.usa.gov/recalls/search.json?query=cribs">http://api.usa.gov/recalls/search.json?query=cribs</a></p>
-
-<p>All cribs that pose a choking hazard<br/>
-<a href="http://api.usa.gov/recalls/search.json?query=cribs+choking">http://api.usa.gov/recalls/search.json?query=cribs+choking</a></p>
-
-<p>All cribs that pose a choking hazard sorted by date<br/>
-<a href="http://api.usa.gov/recalls/search.json?query=cribs+choking&amp;sort=date">http://api.usa.gov/recalls/search.json?query=cribs+choking&amp;sort=date</a></p>
-
-<p><a name="parameters"></a><h2>Parameters</h2></p>
-
-<p>Seven generic parameters are accepted.</p>
-
-<ol>
-<li>query</li>
-<li>organization</li>
-<li>start_date</li>
-<li>end_date</li>
-<li>page</li>
-<li>per_page</li>
-<li>sort</li>
-</ol>
-
-
-<p>There are additional parameters that are specific to food, product, and car safety recalls. None are required.</p>
-
-<h3>query</h3>
-
-<p>Attempts to extract as much "signal" as possible from the input text. Handles word variants, so a search on "choke" will find a recall categorized as a "choking" hazard.</p>
-
-<h3>organization</h3>
-
-<p>Specifies which agency issued the recall. Possible values are <code>CPSC</code>, <code>FDA</code>, <code>NHTSA</code>, or <code>USDA</code>.</p>
-
-<p>Example (one agency): <a href="http://api.usa.gov/recalls/search.json?organization=nhtsa">http://api.usa.gov/recalls/search.json?organization=nhtsa</a></p>
-
-<p>Example (multiple agencies): <a href="http://api.usa.gov/recalls/search.json?organization=fda+usda">http://api.usa.gov/recalls/search.json?organization=fda+usda</a></p>
-
-<h3>start_date</h3>
-
-<p>Specifies the start date of the recall.</p>
-
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?start_date=2012-01-01">http://api.usa.gov/recalls/search.json?start_date=2012-01-01</a></p>
-
-<h3>end_date</h3>
-
-<p>Specifies the end date of the recall.</p>
-
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?end_date=2012-12-31">http://api.usa.gov/recalls/search.json?end_date=2012-12-31</a></p>
-
-<h3>page</h3>
-
-<p>Specifies the pagination of search results. Possible values are <code>1</code> to <code>20</code>.</p>
-
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?page=3">http://api.usa.gov/recalls/search.json?page=3</a></p>
-
-<h3>per_page</h3>
-
-<p>Specifies the number of search results for each page. Possible values are <code>1</code> to <code>50</code>.</p>
-
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?per_page=10">http://api.usa.gov/recalls/search.json?per_page=10</a></p>
-
-<h3>sort</h3>
-
-<p>Results are sorted by relevance by default. Possible values are <code>rel</code> or <code>date</code>. Use 'sort=date' to sort results by date with the most recent listed first.</p>
-
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?sort=date">http://api.usa.gov/recalls/search.json?sort=date</a></p>
-
-<h3>food_type</h3>
-
-<p>Only for drug and food safety recalls. Possible values are <code>food</code> or <code>drug</code>.</p>
-
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?food_type=drug">http://api.usa.gov/recalls/search.json?food_type=drug</a></p>
-
-<h3>upc</h3>
-
-<p>Only for CPSC recalls. Specifies the UPC code when available. Not all products have UPC codes.</p>
-
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?upc=042666601627">http://api.usa.gov/recalls/search.json?upc=042666601627</a></p>
-
-<h3>make, model, year, and code (only for NHTSA recalls)</h3>
-
-<ul>
-<li><code>make</code> specifies the make of the vehicle or equipment. Example: <a href="http://localhost:3000/search?make=winnebago">http://localhost:3000/search?make=winnebago</a></li>
-<li><code>model</code> specifies the model of the vehicle or equipment. Example: <a href="http://localhost:3000/search?model=ellipse">http://localhost:3000/search?model=ellipse</a></li>
-<li><code>year</code> specifies the year of the vehicle or equipment. Example: <a href="http://localhost:3000/search?year=2010">http://localhost:3000/search?year=2010</a></li>
-<li><code>code</code> specifies the NHTSA code. Possible values are <code>E</code>, <code>V</code> [for vehicles], <code>I</code>, <code>T</code>, <code>C</code>, or <code>X</code>. Example: <a href="http://localhost:3000/search?code=v">http://localhost:3000/search?code=v</a></li>
-</ul>
-
-
-<p><a name="data-sources"></a><h2>Data Sources</h2></p>
-
-<p>Data are normalized across (1) drug and food safety recalls from the <a href="http://www.fda.gov">Food and Drug Administration</a>, <a href="http://www.fsis.usda.gov">Food Safety and Inspection Service</a>, and <a href="http://www.FoodSafety.gov">FoodSafety.gov</a>; (2) car safety recalls from the <a href="http://www.nhtsa.gov">National Highway Traffic Safety Administration</a>; and (3) product safety recalls from the <a href="http://www.cpsc.gov">Consumer Product Safety Commission</a>.</p>
-
-<p><a name="what-it-returns"></a><h2>What it Returns</h2></p>
-
-<p>Below are three sample JSON responses for food, product, and car safety recalls.</p>
-
-<h3>Food Recalls</h3>
-
-<pre><code>{
-    success: {
-        total: 82,
-        results: [
-            {
-                organization: "USDA",
-                recall_number: "1df0a5440b",
-                recall_date: "2011-05-14",
-                recall_url: "http://www.fsis.usda.gov/News_&amp;_Events/Recall_037_2011_Release/index.asp",
-                description: "Rose &amp; Shore Meat Co., a Vernon, Calif., establishment, is recalling approximately 15,900 pounds of ready-to-eat deli meat products that may be contaminated with Listeria monocytogenes.",
-                summary: "California Firm Recalls Deli Meat Products for Possible Listeria Contamination"
-            },
-            {
-                organization: "FDA",
-                recall_number: "51d9096a25",
-                recall_date: "2010-06-21",
-                recall_url: "http://www.fda.gov/Safety/Recalls/ucm216371.htm",
-                description: "Portland Shellfish Company, Inc. is expanding this voluntarily recall to include the Meat Without Feet private label food service (2 Lb bags), pack of ready to eat frozen lobster claw and knuckle meat. Lot 13310, as recent tests show the product has the potential to be contaminated with Listeria monocytogenes, an organism which can cause serious and sometimes fatal infections in young children, frail or elderly people, and others with weakened immune systems",
-                summary: "Portland Shellfish Company Expands Recall to Include Meat Without Feet Label, Lobster Claw and Knuckle Meat, because of Possible Health Risk"
-            }
-        ]
-}}
-</code></pre>
-
-<h3>Product Recalls</h3>
-
-<pre><code>{"success":{
-    "total":2,
-    "results":[
-        {
-            "organization":"CPSC",
-            "recall_number":"12080",
-            "recall_date":"2012-01-05",
-            "recall_url":"http://www.cpsc.gov/cpscpub/prerel/prhtml12/12080.html",
-            "manufacturers":["Target"],
-            "product_types":["Lights &amp; Accessories"],
-            "descriptions":["Target 6-pc. LED Flashlight Sets"],
-            "upcs":["490021010049"],
-            "hazards":["Fire &amp; Fire-Related Burn"],
-            "countries":["China"]
-        },
-        {
-            "organization":"CPSC",
-            "recall_number":"12710",
-            "recall_date":"2012-01-05",
-            "recall_url":"http://www.cpsc.gov/cpscpub/prerel/prhtml12/12710.html",
-            "manufacturers":["Sterno"],
-            "product_types":["Candles &amp; Candle Holders"],
-            "descriptions":["Sterno Bulk Pack 5 Hour Tea Lights"],
-            "upcs":null,
-            "hazards":["Fire &amp; Fire-Related Burn"],
-            "countries":["Thailand"]
-        }
-    ]
-}}
-</code></pre>
-
-<h3>Car Recalls</h3>
-
-<pre><code>{"success":{
-    "total":2,
-    "results":[
-        {
-            "organization":"NHTSA",
-            "recall_number":"12V579000",
-            "recall_date":"2012-12-18",
-            "recall_url":"http://www-odi.nhtsa.dot.gov/recalls/recallresults.cfm?start=1&amp;SearchType=QuickSearch&amp;rcl_ID=12V579000&amp;summary=true&amp;PrintVersion=YES",
-            "records":[
-                {
-                    "component_description":"VISIBILITY/WIPER",
-                    "make":"SPARTAN",
-                    "manufacturer":"Spartan Chassis, Inc.",
-                    "manufacturing_begin_date":"2012-10-01",
-                    "manufacturing_end_date":"2012-10-31",
-                    "model":"GLADIATOR",
-                    "recalled_component_id":"000051813001317776000001349",
-                    "year":2012
-                },
-                {
-                    "component_description":"VISIBILITY/WIPER",
-                    "make":"SPARTAN",
-                    "manufacturer":"Spartan Chassis, Inc.",
-                    "manufacturing_begin_date":"2012-10-01",
-                    "manufacturing_end_date":"2012-10-31",
-                    "model":"METROSTAR",
-                    "recalled_component_id":"000051813001317777000001349",
-                    "year":2012
-                }
-            ],
-            "manufacturer_campaign_number":"12016",
-            "component_description":"VISIBILITY/WIPER",
-            "manufacturer":"Spartan Chassis, Inc.",
-            "code":"V",
-            "potential_units_affected":"36",
-            "initiator":"MFR",
-            "report_date":"20121210",
-            "defect_summary":"Spartan Motors Chassis is recalling certain model year 2012-2013 Gladiator, Metro Star, Metro Star-X, and Force emergency rescue chassis cabs built between October 1, 2012, through October 31, 2012.  The wiper motor shaft and the wiper arm shaft have diff",
-            "consequence_summary":"If the windshield wipers become inoperative, the driver could have reduced visibility, which may increase the risk of a crash.  ",
-            "corrective_summary":"The remedy for this recall campaign is still under development.  The manufacturer has not yet provided a notification schedule.  Owners may contact Spartan at 1-800-543-5008.",
-            "notes":"Spartan's recall campaign number is 12016.Owners may also contact the National Highway Traffic Safety Administration Vehicle Safety Hotline at 1-888-327-4236 (TTY 1-800-424-9153), or go to www.safercar.gov.",
-            "recall_subject":"Windshield Wipers may become Inoperative"
-        },
-        {
-            "organization":"NHTSA",
-            "recall_number":"12V571000",
-            "recall_date":"2012-12-18",
-            "recall_url":"http://www-odi.nhtsa.dot.gov/recalls/recallresults.cfm?start=1&amp;SearchType=QuickSearch&amp;rcl_ID=12V571000&amp;summary=true&amp;PrintVersion=YES",
-            "records":[
-                {
-                    "component_description":"FUEL SYSTEM, GASOLINE:DELIVERY:FUEL PUMP",
-                    "make":"JAGUAR",
-                    "manufacturer":"JAGUAR CARS LTD",
-                    "manufacturing_begin_date":"2012-10-03",
-                    "manufacturing_end_date":"2012-10-12",
-                    "model":"XF",
-                    "recalled_component_id":"000051654001723816000000152",
-                    "year":2013
-                },
-                {
-                    "component_description":"ELECTRICAL SYSTEM",
-                    "make":"JAGUAR",
-                    "manufacturer":"JAGUAR CARS LTD",
-                    "manufacturing_begin_date":"2012-10-03",
-                    "manufacturing_end_date":"2012-10-12",
-                    "model":"XF",
-                    "recalled_component_id":"000051654001723816000000200",
-                    "year":2013
-                }
-            ],
-            "manufacturer_campaign_number":"J028",
-            "component_description":"ELECTRICAL SYSTEM",
-            "manufacturer":"Jaguar Land Rover North America, LLC",
-            "code":"V",
-            "potential_units_affected":"13",
-            "initiator":"MFR",
-            "report_date":"20121207",
-            "defect_summary":"Jaguar Land Rover is recalling certain model year 2013 XF vehicles manufactured October 3, 2012, through October 12, 2012 and equipped with a gasoline engine.",
-            "consequence_summary":"An engine stall without warning while driving may lead to a loss of motive power, a loss of power-assisted braking and a loss of power-assisted steering.",
-            "corrective_summary":"Jaguar Land Rover will notify owners, and dealers will install an additional wiring harness to the in-tank fuel pump, free of charge.",
-            "notes":"Jaguar's campaign recall number is J028.Owners may also contact the National Highway Traffic Safety Administration Vehicle Safety Hotline at 1-888-327-4236 (TTY 1-800-424-9153), or go to www.safercar.gov.",
-            "recall_subject":"Fuel Starvation may cause Vehicle Stall"
-        }
-    ]
-}}
-</code></pre>
-
-<h2>Open Source Code</h2>
-
-<p>The server code that runs this API is on Github. If you're a Rails developer, fork our <a href="https://github.com/GSA-OCSIT/recalls_api">Recalls Server API</a> repo to add features (such as additional datasets) or fix bugs.</p>
-
-<p>Better yet, send us a <a href="https://github.com/GSA-OCSIT/recalls_api/pulls">pull request</a> to contribute your changes to our project and improve this API for everyone who is using it.</p>
-
-<h2>Feedback</h2>
-
-<p>E-mail us at <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#85;&#83;&#65;&#x53;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#103;&#x73;&#97;&#x2e;&#103;&#x6f;&#118;">&#x55;&#83;&#65;&#x53;&#x65;&#97;&#x72;&#99;&#104;&#64;&#x67;&#x73;&#97;&#x2e;&#103;&#111;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
-
-<h2>Terms of Use</h2>
-
-<p>By accessing the Recalls API, you agree to <a href="http://www.usa.gov/About/developer-resources/terms-of-service.shtml">USA.gov's Terms of Service for Developer Resources</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[How to Select the Modules that Appear on Your Results Page]]></title>
     <link href="http://usasearch.howto.gov/manual/results-modules.html"/>
     <updated>2013-05-03T00:00:00+00:00</updated>
@@ -1372,7 +1399,7 @@ yosemite valley</li>
 <ul>
 <li>We updated our <a href="/tos.html">terms of service</a>.</li>
 <li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x55;&#83;&#x41;&#x53;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x67;&#115;&#x61;&#46;&#x67;&#111;&#x76;">&#85;&#x53;&#x41;&#x53;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#x67;&#115;&#97;&#46;&#x67;&#111;&#118;</a> with any questions.</li>
+<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#x55;&#83;&#65;&#83;&#101;&#97;&#114;&#x63;&#x68;&#64;&#103;&#x73;&#x61;&#46;&#103;&#x6f;&#x76;">&#x55;&#x53;&#65;&#x53;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#103;&#115;&#97;&#x2e;&#x67;&#111;&#x76;</a> with any questions.</li>
 <li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
 <li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
 <li>We removed the trending searches feature and widget.</li>
@@ -1434,7 +1461,7 @@ yosemite valley</li>
 
 <hr />
 
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. E-mail us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#85;&#x53;&#x41;&#x53;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#x67;&#115;&#97;&#46;&#103;&#x6f;&#118;">&#x55;&#x53;&#65;&#x53;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#x67;&#x73;&#97;&#x2e;&#x67;&#x6f;&#118;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
+<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. E-mail us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#85;&#83;&#65;&#83;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#x67;&#115;&#97;&#x2e;&#103;&#111;&#x76;">&#x55;&#x53;&#65;&#83;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x67;&#115;&#97;&#x2e;&#103;&#x6f;&#118;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
 ]]></content>
   </entry>
   
@@ -1459,7 +1486,7 @@ yosemite valley</li>
 </ol>
 
 
-<p>If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#x55;&#83;&#65;&#x53;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#103;&#115;&#x61;&#x2e;&#103;&#x6f;&#118;">&#x55;&#83;&#65;&#83;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#x67;&#115;&#97;&#46;&#x67;&#111;&#118;</a>.</p>
+<p>If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#85;&#x53;&#65;&#x53;&#101;&#97;&#x72;&#99;&#x68;&#x40;&#x67;&#x73;&#97;&#46;&#x67;&#111;&#x76;">&#x55;&#83;&#x41;&#83;&#x65;&#x61;&#114;&#99;&#104;&#64;&#103;&#115;&#97;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
 
 <hr />
 
@@ -1507,7 +1534,7 @@ yosemite valley</li>
 <ol>
 <li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google, Bing, and USASearch.</li>
 <li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>E-mail us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x55;&#83;&#x41;&#x53;&#101;&#97;&#114;&#99;&#x68;&#64;&#103;&#115;&#x61;&#x2e;&#x67;&#x6f;&#118;">&#x55;&#83;&#65;&#83;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#x67;&#x73;&#97;&#x2e;&#103;&#111;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
+<li>E-mail us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#x55;&#x53;&#x41;&#83;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#x67;&#115;&#x61;&#x2e;&#x67;&#111;&#118;">&#85;&#x53;&#x41;&#x53;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x67;&#x73;&#x61;&#x2e;&#x67;&#111;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
 </ol>
 
 ]]></content>
@@ -1739,7 +1766,7 @@ yosemite valley</li>
 </ol>
 
 
-<p>If you have any problem resetting your password, e-mail us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#85;&#x53;&#65;&#x53;&#x65;&#97;&#114;&#x63;&#104;&#x40;&#x67;&#x73;&#x61;&#46;&#x67;&#x6f;&#x76;">&#85;&#83;&#65;&#83;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#103;&#115;&#97;&#46;&#103;&#x6f;&#x76;</a>.</p>
+<p>If you have any problem resetting your password, e-mail us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x55;&#83;&#x41;&#x53;&#101;&#97;&#x72;&#x63;&#104;&#64;&#103;&#115;&#97;&#x2e;&#x67;&#x6f;&#118;">&#85;&#83;&#65;&#x53;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#103;&#x73;&#x61;&#x2e;&#103;&#x6f;&#118;</a>.</p>
 ]]></content>
   </entry>
   
@@ -1890,7 +1917,7 @@ yosemite valley</li>
 <p><strong><em>Did you know?</em></strong> We offer DNS masking, which allows you to show searchers your domain (instead of USA.gov). Follow these three steps to mask your domain.</p>
 
 <ol>
-<li>E-mail us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#58;&#x55;&#83;&#x41;&#x53;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#x67;&#115;&#97;&#x2e;&#103;&#111;&#x76;">&#85;&#x53;&#x41;&#83;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#x67;&#x73;&#x61;&#x2e;&#103;&#x6f;&#x76;</a> and ask us to mask your domain.</li></li>
+<li>E-mail us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#x55;&#x53;&#x41;&#83;&#x65;&#97;&#114;&#x63;&#104;&#x40;&#103;&#x73;&#97;&#46;&#103;&#x6f;&#118;">&#x55;&#83;&#65;&#x53;&#101;&#97;&#114;&#99;&#x68;&#x40;&#x67;&#115;&#97;&#x2e;&#x67;&#x6f;&#118;</a> and ask us to mask your domain.</li></li>
 <li>Create a CNAME in your DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
 <li>When the setup is complete, change the code for your form action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
 </ol>
@@ -2007,7 +2034,7 @@ yosemite valley</li>
 
 <p>Also be sure to read our <a href="/tagged/releases/">release notes</a> to keep up-to-date with our new features.</p>
 
-<p>Do you have other questions or comments about how our service works? E-mail us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#85;&#x53;&#x41;&#83;&#101;&#97;&#x72;&#99;&#x68;&#64;&#x67;&#x73;&#x61;&#46;&#103;&#x6f;&#118;">&#x55;&#83;&#x41;&#83;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#103;&#x73;&#97;&#x2e;&#x67;&#x6f;&#x76;</a>.</p>
+<p>Do you have other questions or comments about how our service works? E-mail us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#85;&#x53;&#65;&#x53;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#103;&#x73;&#97;&#x2e;&#103;&#x6f;&#118;">&#85;&#83;&#x41;&#x53;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#x67;&#x73;&#97;&#x2e;&#x67;&#x6f;&#x76;</a>.</p>
 ]]></content>
   </entry>
   
@@ -2122,7 +2149,7 @@ Enter same passphrase again:
 <p><strong><em>ForeSee tip:</em></strong> Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li><p>Email us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#85;&#83;&#x41;&#83;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#103;&#115;&#97;&#46;&#x67;&#x6f;&#x76;">&#85;&#83;&#x41;&#83;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x67;&#115;&#x61;&#46;&#x67;&#x6f;&#118;</a> to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
+<li><p>Email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#85;&#x53;&#65;&#83;&#101;&#97;&#114;&#99;&#x68;&#x40;&#x67;&#115;&#97;&#x2e;&#x67;&#x6f;&#x76;">&#x55;&#83;&#65;&#83;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#x67;&#x73;&#x61;&#x2e;&#103;&#111;&#x76;</a> to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
 <li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
 
 <p> Find => 'files': '/fsrscripts/',</p>
@@ -3919,7 +3946,7 @@ Below are the release details for February and, as a reminder, we divide our wor
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or language, e-mail us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#85;&#83;&#65;&#83;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#103;&#115;&#97;&#x2e;&#103;&#111;&#x76;">&#85;&#x53;&#x41;&#x53;&#x65;&#97;&#114;&#x63;&#104;&#x40;&#103;&#x73;&#97;&#46;&#103;&#111;&#x76;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or language, e-mail us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#x55;&#x53;&#x41;&#83;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#x67;&#x73;&#97;&#46;&#x67;&#111;&#x76;">&#x55;&#x53;&#x41;&#x53;&#101;&#97;&#114;&#x63;&#x68;&#64;&#103;&#x73;&#x61;&#x2e;&#103;&#111;&#118;</a>.</p>
 ]]></content>
   </entry>
   
