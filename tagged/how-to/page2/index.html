@@ -81,6 +81,72 @@
       
       <span>Last updated on:</span>
       
+      <a href="/manual/type-ahead.html">
+        <time datetime="2013-05-10">May 10, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/type-ahead.html">How to Implement Type-ahead Search</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Type-ahead Search</p>
+
+<p>Type-ahead search is fast becoming a best practice on websites, and we've made this technology available for your site.</p>
+
+<p>Suggestions display as a list in the search box. This list forms as the searcher begins to type in the search box. The suggestions are listed in order of most popular (that is, most searched). They're updated every 15 minutes.</p>
+
+<p>See the sample suggestions below as the searcher types di... on <a href="http://search.socialsecurity.gov/search?affiliate=ssa&amp;query=names">SocialSecurity.gov</a>.</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/type-ahead.png" alt="Type-ahead suggestions for 'di...' on SocialSecurity.gov" /></p>
+
+<h2>Type-ahead on the Search Results Page</h2>
+
+<p>By default, searchers see type-ahead search suggestions on your search results page. You can uncheck the box labeled Enable Type-ahead search to turn off this feature on your search results pages.</p>
+
+<p><strong><em>Populate.</em></strong> Terms and phrases are automatically populated every 15 minutes from searches done in your site's search box. On day one of testing USASearch, there will be no terms in Type-ahead Search (unless you add terms to the list, as noted below). The list of terms will build up within minutes after you implement USASearch on your live website and searchers type their queries in the search box on your site.</p>
+
+<p><strong><em>Add terms to the list.</em></strong> You may choose to add terms to the list that displays in type-ahead search. You may upload an individual term (i.e. click on "Add a New Entry") or add a group of terms all at once (i.e., click on "Bulk Upload"). To bulk upload:</p>
+
+<ul>
+<li>Create a new text file, one entry per line, for example,  <br/>
+acadia national park  <br/>
+okefenokee  <br/>
+okefenokee swamp  <br/>
+yosemite national park  <br/>
+yosemite valley</li>
+<li>Save as a text file on your computer. (Do <em>not</em> save as spreadsheet or word processing files, such as .xls or .doc.)</li>
+<li>Add, modify, or delete individual entries in the file.</li>
+<li>Browse for the text file on your computer.</li>
+<li>Upload the file to the Admin Center.</li>
+</ul>
+
+
+<p><strong><em>Delete terms from the list.</em></strong> You may also delete individual terms that you don't want listed, through "Current Entries". Use "Filter" to search for particular terms to edit.</p>
+
+<h2>Type-ahead on Other Web Pages</h2>
+
+<p>You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding the USASearch JavaScript code to the head to your HTML web page. For more details, read our post on <a href="/manual/get-code.html">How to Add Our Code to Your Website</a>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/type-ahead"><span class="label label-info">type-ahead</span></a>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/manual/best-bets.html">
         <time datetime="2013-05-10">May 10, 2013</time>
       </a>
@@ -270,7 +336,7 @@
 
 <hr />
 
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. E-mail us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#x3a;&#x55;&#x53;&#x41;&#x53;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#x67;&#x73;&#x61;&#46;&#103;&#x6f;&#x76;">&#x55;&#83;&#x41;&#x53;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#103;&#x73;&#x61;&#46;&#103;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
+<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. E-mail us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x55;&#x53;&#x41;&#83;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#103;&#x73;&#x61;&#46;&#103;&#111;&#x76;">&#x55;&#83;&#x41;&#x53;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x67;&#115;&#x61;&#x2e;&#103;&#111;&#118;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
 
     </div>
 
@@ -418,7 +484,7 @@
 <ol>
 <li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google, Bing, and USASearch.</li>
 <li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>E-mail us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x55;&#83;&#x41;&#83;&#101;&#x61;&#114;&#99;&#x68;&#64;&#x67;&#x73;&#97;&#46;&#x67;&#x6f;&#118;">&#85;&#83;&#x41;&#83;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x67;&#x73;&#97;&#x2e;&#x67;&#111;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
+<li>E-mail us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x55;&#x53;&#65;&#x53;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x67;&#115;&#x61;&#x2e;&#103;&#x6f;&#x76;">&#85;&#83;&#65;&#x53;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#x67;&#115;&#97;&#46;&#103;&#x6f;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
 </ol>
 
 
@@ -498,7 +564,7 @@
 </ol>
 
 
-<p>If you have any problem resetting your password, e-mail us at <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#85;&#83;&#x41;&#x53;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#103;&#x73;&#97;&#46;&#103;&#111;&#118;">&#x55;&#83;&#65;&#x53;&#101;&#97;&#x72;&#99;&#104;&#x40;&#103;&#x73;&#x61;&#46;&#103;&#x6f;&#x76;</a>.</p>
+<p>If you have any problem resetting your password, e-mail us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x55;&#83;&#x41;&#x53;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#103;&#x73;&#x61;&#46;&#x67;&#111;&#x76;">&#x55;&#83;&#x41;&#83;&#101;&#x61;&#114;&#99;&#x68;&#64;&#103;&#x73;&#97;&#x2e;&#103;&#x6f;&#118;</a>.</p>
 
     </div>
 
@@ -572,7 +638,7 @@
 <p><strong><em>Did you know?</em></strong> We offer DNS masking, which allows you to show searchers your domain (instead of USA.gov). Follow these three steps to mask your domain.</p>
 
 <ol>
-<li>E-mail us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#85;&#83;&#x41;&#83;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#x67;&#115;&#97;&#46;&#x67;&#111;&#118;">&#85;&#x53;&#65;&#83;&#101;&#97;&#114;&#x63;&#104;&#64;&#x67;&#115;&#x61;&#x2e;&#103;&#111;&#118;</a> and ask us to mask your domain.</li></li>
+<li>E-mail us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#85;&#x53;&#x41;&#x53;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x67;&#115;&#97;&#46;&#103;&#x6f;&#118;">&#85;&#83;&#65;&#83;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#103;&#115;&#97;&#x2e;&#103;&#x6f;&#118;</a> and ask us to mask your domain.</li></li>
 <li>Create a CNAME in your DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
 <li>When the setup is complete, change the code for your form action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
 </ol>
@@ -729,7 +795,7 @@ Enter same passphrase again:
 <p><strong><em>ForeSee tip:</em></strong> Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li><p>Email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x55;&#83;&#x41;&#83;&#101;&#97;&#x72;&#99;&#104;&#x40;&#x67;&#115;&#x61;&#46;&#103;&#x6f;&#x76;">&#x55;&#83;&#x41;&#x53;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#103;&#x73;&#97;&#x2e;&#x67;&#111;&#118;</a> to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
+<li><p>Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#58;&#85;&#83;&#x41;&#83;&#101;&#x61;&#114;&#x63;&#104;&#64;&#x67;&#115;&#x61;&#x2e;&#x67;&#111;&#118;">&#x55;&#x53;&#65;&#x53;&#101;&#97;&#x72;&#99;&#x68;&#x40;&#103;&#115;&#x61;&#46;&#x67;&#x6f;&#118;</a> to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
 <li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
 
 <p> Find => 'files': '/fsrscripts/',</p>
@@ -756,87 +822,6 @@ Enter same passphrase again:
     <div class='tags'>
       
       <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/blog/go-live.html">
-        <time datetime="2012-11-26">November 26, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/blog/go-live.html">A Punch List to Go Live with USASearch</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>Your pre-launch checklist will be unique to your agency's workflow, requirements, and deadlines. A typical punch list to go live with USASearch follows.</p>
-
-<h2>Connect Your Site to USASearch</h2>
-
-<p>Most agencies add these two <a href="/manual/get-code.html">snippets of code</a> to the template(s) in their content management systems (rather than adding them to individual pages).</p>
-
-<p><i class="icon-check"></i> <strong>1. Does your search box point to USASearch?</strong> Update your search box form code point to USASearch so that, when users execute a search, they'll see your USASearch-hosted results page.</p>
-
-<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
-     &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt; 
-    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt; 
-    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt; 
-    &lt;input name="commit" type="submit" value="Search" /&gt; 
-&lt;/form&gt;
-</code></pre>
-
-<p><i class="icon-check"></i> <strong>2. Do you have the USASearch Javascript tag on your webpages?</strong> This Javascript helps us <a href="/manual/urls.html">find your new and updated pages</a>. It also powers the <a href="/manual/type-ahead.html">type-ahead search</a>.</p>
-
-<pre><code>&lt;script type="text/javascript"&gt;
-//&lt;![CDATA[
-     var usasearch_config = { siteHandle:"YourSiteHandle" };
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "http://search.usa.gov/javascripts/remote.loader.js";
-    document.getElementsByTagName("head")[0].appendChild(script);
-//]]&gt;
-&lt;/script&gt;
-</code></pre>
-
-<h2>Double Check Your Content Sources</h2>
-
-<p><i class="icon-check"></i> <strong>3. Have you told us which domain(s) you want to search?</strong> List one or more <a href="/manual/domains.html">domains</a> that you want to search on the first page of web results. Most agencies opt to leave out the 'www' to include all subdomains (e.g., list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies especially department-level portals opt to also include their bureaus' websites (e.g., Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)</p>
-
-<p><i class="icon-check"></i> <strong>4. Have you told us about your RSS feeds?</strong> We love <a href="/manual/rss.html">RSS feeds</a>. Tell us about all of your feeds, even if you opt not to show them (see #7 below). They're the quickest way for you to tell us about your new and updated content. Feeds also have well-structured titles, URLs, descriptions, and dates that we use to improve your search results page. (Tip: Preview your feeds from the RSS page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> to confirm that we've indexed your content.)</p>
-
-<p><i class="icon-check"></i> <strong>5. Have you told us about your social media accounts?</strong> Flickr photostreams, tweets, and YouTube videos are a great way to highlight your recent content and to let searchers know about your <a href="/manual/social-media.html">social media</a> channels. Tell us about all of your social media, even if you opt not to show them (see #7 below).</p>
-
-<h2>Customize Your User Interface</h2>
-
-<p><i class="icon-check"></i> <strong>6. Have you made the search results page look like your website?</strong> Customize the <a href="/manual/look-feel-page.html">look and feel</a> (colors, fonts, favicon) and <a href="/manual/header-footer.html">header and footer</a> of your search results page to create a seamless experience for users as they search and browse your website.</p>
-
-<p><i class="icon-check"></i> <strong>7. Have you told us what to show on your results page?</strong> Tell us which <a href="/manual/results-modules.html">results modules</a> (i.e., the stuff in the center of the page) and <a href="/manual/sidebar.html">sidebar</a> options (i.e., the navigation in the left-hand column) you want to appear on your search results.</p>
-
-<h2>Set Up Nice-to-Have Features (Optional)</h2>
-
-<p><i class="icon-check"></i> <strong>8. Have you masked your domain?</strong> We offer <a href="/manual/get-code.html#cname">DNS masking</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov.</p>
-
-<p><i class="icon-check"></i> <strong>9. Have you added the Javascripts for your other third party web services to your results page?</strong> If you have a <a href="/manual/third-party.html">third party service</a> running on your website, you likely want it to run on your results page. Agencies often include their 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends code, among others.</p>
-
-<h2>Don't Forget SEO (Optional)</h2>
-
-<p><i class="icon-check"></i> <strong>10. Have you optimized your site so we can find your content?</strong> We follow <a href="http://www.howto.gov/web-content/search/seo">search engine optimization</a> (SEO) best practices. Verify that you have a <a href="http://www.robotstxt.org">robots.txt</a> and an <a href="http://www.sitemaps.org">XML sitemap</a>. These two files are typically located in the root directory of your website (i.e., agency.gov/robots.txt and agency.gov/sitemap.xml, respectively). Also verify that your robots.txt file allows our user agent (usasearch) to access your public content.</p>
-
-<p><i class="icon-check"></i> <strong>11. Have you registered your site with the major commercial search engines?</strong> Register for both <a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a> and <a href="https://www.google.com/webmasters/tools/home">Google Webmaster Tools</a> to maximize the coverage of your content in their search results.</p>
-
-    </div>
-
-    <div class='tags'>
       
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
       
