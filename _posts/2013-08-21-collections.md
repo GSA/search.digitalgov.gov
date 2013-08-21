@@ -32,6 +32,8 @@ Searchers will see an option to narrow their search results to pages in this col
 
 ---
 
+***Did you know?*** You can click on the 'Preview' option to see the content we have indexed for each of your collections.
+
 ***Did you know?*** You can set up a search box on your website that limits results to your collection.
 
 Start with the standard form snippet on the [Get Code](/manual/get-code.html) page in the Admin Center. Change the form action to `action="http://search.usa.gov/search/docs` and add the following line to limit the results to your collection.

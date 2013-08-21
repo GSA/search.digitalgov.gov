@@ -34,7 +34,7 @@ USASearch currently provides three pre-built GovBoxes.
 
 All selected feeds will be grouped and displayed in a News GovBox. When a searcher's query matches the title or description of an RSS article published within the last year, the article appears in the News GovBox. See the sample results page below that shows a News GovBox displayed on the U.S. Bureau of Economic Analysis for a search on *[gross domestic product](http://search.bea.gov/search?query=gross+domestic+product&affiliate=u.s.bureauofeconomicanalysis)*.
 
-![RSS news GovBox on BoulderColorado.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/govbox-news.png)
+![RSS news GovBox on BoulderColorado.gov](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/govbox-news.png)
 
 ## Related Searches
 
@@ -42,14 +42,14 @@ Help visitors better define the focus of their search by offering them searches 
 
 See the sample results page below that shows related searches displayed on Access Washington for a search on *[tacoma](http://search.usa.gov/search?affiliate=accesswashington&query=tacoma)*.
 
-![Related searches on Access Washington](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/related-searches.png)
+![Related searches on Access Washington](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/related-searches.png)
 
 ## Related Sites
 
 Help visitors find content relevant to their search query that resides on other websites, such as the site for your parent organization or your Spanish-language site. When searchers click on the link to the related site, they see search results for their query on the related site.
 
-Enter the [site handle](/manual/site-information.html) for one of your other USASearch sites. Enter the text you'd like searchers to see for the link to the related site. Create two entries, one from the first site to the second and vice versa, if you'd like a reciprocal link.
+Enter the [site handle](/manual/settings.html) for one of your other USASearch sites. Enter the text you'd like searchers to see for the link to the related site. Create two entries, one from the first site to the second and vice versa, if you'd like a reciprocal link.
 
 See the sample results page below that shows a link to GobiernoUSA.gov displayed on USA.gov for a search on *[venezuela](http://search.usa.gov/search?query=venezuela&affiliate=usagov)*.
 
-![Related site on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/related-sites.png)
+![Related site on USA.gov](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/related-sites.png)

@@ -140,7 +140,7 @@ We've tailored this Recalls API for our use in the [USA.gov iPhone app](http://a
 
 Data are normalized across (1) drug and food safety recalls from the [FDA](http://www.fda.gov), [UDSA FSIS](http://www.fsis.usda.gov), and [FoodSafety.gov](http://www.FoodSafety.gov); (2) car safety recalls from the [NHTSA](http://www.nhtsa.gov); and (3) product safety recalls from the [CPSC](http://www.cpsc.gov).
 
-So, we encourage you to use the original data sources directly or via [Recalls.gov](http://www.recalls.gov).
+So, we encourage you to use the five original data sources directly or via [Recalls.gov](http://www.recalls.gov).
 
 1. [FDA recalls, market withdrawals, and safety alerts](http://www.fda.gov/Safety/Recalls/default.htm)
 2. [USDA FSIS recalls and public health alerts](http://www.fsis.usda.gov/fsis_recalls/)

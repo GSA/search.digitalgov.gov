@@ -20,7 +20,7 @@ You can control the display of the photos as inline results on the [Results Modu
 
 See the sample results page below that shows photo results displayed on the National Ocean Service for a search on *[humpback whales](http://search.usa.gov/search?query=humpback+whales&affiliate=oceanservice.noaa.gov)*.
 
-![Results page with photos shown as a GovBox](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/govbox-photos.png)  
+![Results page with photos shown as a GovBox](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/govbox-photos.png)  
 
 On the image results page, we'll automatically backfill the standard image results from your website with the photos from your Flickr photostream.
 
@@ -32,7 +32,7 @@ You can control the display of the tweets on the [Results Modules](/manual/resul
 
 See the sample results page below that shows a recent tweet displayed on SNAP-Ed Connection for a search on *[nutrition](http://search.usa.gov/search?affiliate=snap-edconnection&query=nutrition)*.
 
-![Search result with a tweet on SNAP-Ed Connection](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/social-media-tweets.png)
+![Search result with a tweet on SNAP-Ed Connection](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-tweets.png)
 
 ## Show Videos
 
@@ -44,8 +44,8 @@ When you add your YouTube handle, we'll automatically index the [RSS feeds](/man
 
 See the sample results page below that shows video results displayed on the National Institute of Justice for a search on *[violence](http://search.usa.gov/search?query=violence&affiliate=nationalinstituteofjustice)*.
 
-![Results page with videos shown as a GovBox](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/social-media-video1.png)  
+![Results page with videos shown as a GovBox](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-video1.png)  
 *Results page with videos shown as a GovBox*
 
-![Video results page shown when searcher opts to view videos](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/social-media-video2.png)  
+![Video results page shown when searcher opts to view videos](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-video2.png)  
 *Video results page shown when searcher opts to view videos*

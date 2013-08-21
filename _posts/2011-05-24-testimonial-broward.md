@@ -10,7 +10,7 @@ While USASearch is for all levels of government (federal, state, local, tribal, 
 
 [Broward County, Florida](http://www.broward.org) has a popular web site that serves thousands of multi-lingual users from the Miami metropolitan area.
 
-![Broward.org homepage](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/customers-broward.png)
+![Broward.org homepage](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-broward.png)
 
 We want to thank Rob Nadeau (Web Site Manager for Broward County) for being a good and supportive customer and someone who proactively implements our special features!
 

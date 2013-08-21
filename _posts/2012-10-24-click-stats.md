@@ -12,16 +12,16 @@ You'll see a list, in frequency order, of the most clicked URLs for any time per
 
 See the sample report below that shows the 10 most clicked URLs on [USA.gov](http://www.usa.gov/) in October 2012.
 
-![Click stats for USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mces5zyKfc1qid15q.png)
+![Click stats for USA.gov](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mces5zyKfc1qid15q.png)
 
-Click on the ![Link symbol](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png) link symbol in the list above, and you'll see the top query terms that led to that URL over the same time period.
+Click on the ![Link symbol](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png) link symbol in the list above, and you'll see the top query terms that led to that URL over the same time period.
 
 See the sample report below that shows the top queries that led to a click on <http://www.usajobs.gov/> on [USA.gov](http://www.usa.gov/) in October 2012.
 
-![Top queries leading to a click](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqp4Jmoy1qid15q.png)
+![Top queries leading to a click](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mceqp4Jmoy1qid15q.png)
 
-From the list of queries, you will be able to click on the ![link symbol](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png) link symbol again to see the top clicked URLs for that term over the same time period.
+From the list of queries, you will be able to click on the ![link symbol](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png) link symbol again to see the top clicked URLs for that term over the same time period.
 
 See the sample report below that shows the top clicked URLs for *jobs* on [USA.gov](http://www.usa.gov/) in October 2012.
 
-![Top clicked URLs for jobs on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqlwdZnx1qid15q.png)
+![Top clicked URLs for jobs on USA.gov](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mceqlwdZnx1qid15q.png)

@@ -10,7 +10,7 @@ The New York State [Department of Environmental Conservation](http://www.dec.ny.
 
 DEC recently rolled out a new site search functionality using USASearch. Be sure to visit <http://www.dec.ny.gov> and take a look for yourself.
 
-![Search results on the Department of Environmental Conservation's website](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/testimonial-nysdec.png)
+![Search results on the Department of Environmental Conservation's website](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/testimonial-nysdec.png)
 
 Regarding their experience, the DEC web team shares:
 

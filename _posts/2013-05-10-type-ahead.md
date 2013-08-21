@@ -12,7 +12,7 @@ Suggestions display as a list in the search box. This list forms as the searcher
 
 See the sample suggestions below as the searcher types di... on [SocialSecurity.gov](http://search.socialsecurity.gov/search?affiliate=ssa&query=names).
 
-![Type-ahead suggestions for 'di...' on SocialSecurity.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/type-ahead.png)
+![Type-ahead suggestions for 'di...' on SocialSecurity.gov](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/type-ahead.png)
 
 ## Type-ahead on the Search Results Page
 

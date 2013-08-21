@@ -14,10 +14,10 @@ Use this report to identify newly popular terms. Create new content or update ex
 
 See the sample report below that shows the 10 trending queries on [USA.gov](http://www.usa.gov/) on Monday, November 5, 2012—the day before Election Day.
 
-<img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_md0qrd6Q731qid15q.png"/>
+<img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_md0qrd6Q731qid15q.png"/>
 
-Click on any linked word or the <img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png"/> symbol in the above list, and you'll be taken to a Query Timeline chart. There you'll be able to select a period of time for the term, and you can also add a second query for comparison.
+Click on any linked word or the <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png"/> symbol in the above list, and you'll be taken to a Query Timeline chart. There you'll be able to select a period of time for the term, and you can also add a second query for comparison.
 
-Click on the <img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol, and you'll be taken to a list of the top clicked URLs for that term.
+Click on the <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol, and you'll be taken to a list of the top clicked URLs for that term.
 
 To investigate why the term may be trending, click on the Twitter, news, or trends icons to see what's happening on other websites.
