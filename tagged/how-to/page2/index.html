@@ -81,6 +81,107 @@
       
       <span>Last updated on:</span>
       
+      <a href="/manual/header-footer.html">
+        <time datetime="2013-07-16">July 16, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/header-footer.html">How to Customize the Header and Footer of Your Results Page</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov/">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Header and Footer</p>
+
+<p>Select how you'd like to customize your header and footer. The fields that appear on the page will change based on the option you select.</p>
+
+<h2>Option 1. Use a managed header and footer</h2>
+
+<p>Fill out the fields to generate a predefined header and footer.</p>
+
+<p><strong>Color.</strong> Customize the color of your header background and text by clicking on the color picker text field. Enter a valid three- or six-digit hex value or pick a color by dragging the cross-hair icon  inside the color picker window. Drag the triangle icon to control the color saturation. When you are done, click anywhere outside the color picker window.</p>
+
+<p><strong>URL.</strong> Provide us with the URL for your website's homepage. We'll use it to provide a link back to you from your header text, image, or both.</p>
+
+<p><strong>Text.</strong> Fill out the text you'd like to appear in your header. We've pre-populated this field with your <a href="/manual/site-information.html">site name</a>. Edit the same name, or delete it, if you don't want this text to appear in your header.</p>
+
+<p><strong>Image.</strong> Use the Browse... option to upload the logo or image that you'd like to appear in the header, if any. If you don't have header text, the image will be center-aligned. If you do have header text, the image will be right-aligned. Click on the option, Mark header image for deletion, to delete an uploaded image.</p>
+
+<p><strong>Header and footer navigation.</strong> Fill out the titles and URLs if you'd like to add navigation to your header and footer. Use the arrows on the left to rearrange the display order of the links. See the sample results page below that includes navigation.</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m1ar9q6nXN1qid15q.png" alt="Managed header with navigation on Sussex County's search results page" /></p>
+
+<h2>Option 2. Use CSS and HTML code to create a custom header and footer</h2>
+
+<p>Use this option to more closely replicate the exact header and footer on your website.</p>
+
+<p>In the first box, enter CSS to customize the header and footer of your search results page. We'll run a validation check to ensure your CSS is valid.</p>
+
+<p>In the second box, enter HTML to customize the header of your search results page. In the third box, enter HTML to customize the footer of your search results page. Be sure to enter <a href="http://webdesign.about.com/od/beginningtutorials/a/aa040502a.htm">absolute hyperlinks</a>, not relative links.</p>
+
+<p>Click on the link, Validate, to check your HTML markup at <a href="http://validator.w3.org/nu">http://validator.w3.org/nu</a>. On the W3C page select HTML 4.01 Strict from the Parser drop-down box.</p>
+
+<p>We'll also run a validation check to ensure that no JavaScript is included in your HTML code. We'll also check to ensure no CSS style or link elements are included. To include CSS, specify inline CSS within an opening tag.</p>
+
+<h3>Invalid CSS</h3>
+
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+&lt;style&gt; h1 { color: blue } &lt;/style&gt;
+&lt;link href="http://www.yoursite.gov/custom.css" type="text/css" /&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3>Valid CSS</h3>
+
+<pre><code>&lt;h1 style="color: blue;"&gt;Your Heading&lt;/h1&gt;
+</code></pre>
+
+<h2><a id="mobile"></a> Customize your mobile header</h2>
+
+<p>We use device detection to show mobile-friendly search results on mobile phones. (Searchers using tablets and desktop computers see the full, classic header as you set it up above.)</p>
+
+<h3>Default mobile header</h3>
+
+<p>By default, searchers on mobile phones see the header, <em>YourSiteName Mobile</em>. If you list only one domain on the <a href="/manual/domains.html">Domains</a> page, we link your header to this domain. See the sample default mobile header below for <a href="http://www.howto.gov">HowTo.gov</a>.</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_meazaml0781qid15q.png" alt="HowTo.gov mobile search results page" /></p>
+
+<h3>Custom mobile header</h3>
+
+<p>You can customize your mobile header to include a logo. You can also edit or add your mobile homepage URL.</p>
+
+<p>The logo must be less than 56&#160;KB. We recommend it be no wider than 320 pixels.</p>
+
+<p>You can link to your classic homepage (e.g., http://www.agency.gov) or to your specific mobile homepage (e.g., http://m.agency.gov). If you use device detection on your website, we recommend that you link to your classic homepage for a more seamless mobile experience.</p>
+
+<p>See the sample custom mobile header below for the <a href="http://m.usa.gov">m.USA.gov</a> results page.</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_meazs7WsWk1qid15q.png" alt="USA.gov mobile search results page" /></p>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> You can implement a drop-down menu using CSS (and without using JavaScript). For more information, A List Apart's tips on <a href="http://www.alistapart.com/articles/horizdropdowns">drop-down menus and horizontal style</a>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/user-interface"><span class="label label-info">user-interface</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/manual/urls.html">
         <time datetime="2013-06-26">June 26, 2013</time>
       </a>
@@ -738,7 +839,7 @@ yosemite valley</li>
 
 <hr />
 
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. E-mail us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#58;&#85;&#83;&#65;&#83;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x67;&#x73;&#97;&#46;&#x67;&#x6f;&#118;">&#x55;&#x53;&#x41;&#83;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#103;&#x73;&#97;&#x2e;&#x67;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
+<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. E-mail us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#85;&#x53;&#x41;&#x53;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#103;&#115;&#97;&#46;&#103;&#x6f;&#x76;">&#85;&#83;&#x41;&#x53;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#x67;&#x73;&#x61;&#46;&#103;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
 
     </div>
 
@@ -800,7 +901,7 @@ yosemite valley</li>
 <ol>
 <li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google, Bing, and USASearch.</li>
 <li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>E-mail us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#85;&#83;&#65;&#83;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#x67;&#115;&#x61;&#x2e;&#103;&#111;&#118;">&#x55;&#x53;&#x41;&#83;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#103;&#115;&#97;&#46;&#103;&#111;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
+<li>E-mail us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#58;&#x55;&#83;&#65;&#x53;&#101;&#x61;&#114;&#99;&#104;&#x40;&#103;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#118;">&#85;&#83;&#x41;&#x53;&#101;&#97;&#114;&#99;&#104;&#x40;&#103;&#x73;&#x61;&#46;&#x67;&#x6f;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
 </ol>
 
 
@@ -811,82 +912,6 @@ yosemite valley</li>
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
       
       <a href="/tagged/domains"><span class="label label-info">domains</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/manual/add-site.html">
-        <time datetime="2013-04-15">April 15, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/add-site.html">How to Set Up a New Account and Site</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Add Site</p>
-
-<p>You can use USASearch to power the search box on your federal, state, local, tribal, or territorial government website at no cost.</p>
-
-<p>Access to our hosted search service requires authentication and verification that you're a government employee or contractor.</p>
-
-<h2>Sign In</h2>
-
-<p><a href="http://search.usa.gov/affiliates/hom">Log in</a> to an existing account or register for a new account at <a href="http://usasearch.howto.gov">http://usasearch.howto.gov</a>. Select the Login option in the upper right-hand corner and fill out your information.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/login.png" alt="Login from USASearch.HowTo.gov" /></p>
-
-<p>After you register, you'll receive an automatic e-mail. Click on the link in the e-mail to verify that your e-mail address belongs to you.</p>
-
-<p>If you have a .gov or .mil address, you'll be able to access your account immediately after you verify your e-mail.</p>
-
-<p>If you don't have a .gov or .mil address, we'll ask for additional information to confirm that you're a government employee or contractor. We'll notify you when your account is approved.</p>
-
-<h2>Add a Site</h2>
-
-<p>Select the option to Add a New Site.</p>
-
-<p>Add your basic site information (required) and content sources (optional).</p>
-
-<p>For more information about filling in this information, see our blog posts <a href="/manual/site-information.html">How to Edit Your Site Information</a> and <a href="/manual/domains.html">How to Edit Your Domains</a>.</p>
-
-<p>Use the options in the left-hand navigation to further customize the search experience for your site's visitors.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/add-site.png" alt="Options to customize your site in the Admin Center" /></p>
-
-<p>When you're ready to go live with your new search, you'll need to <a href="/manual/get-code.html">add our code</a> to your website.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> When you add a new site with a single domain, we'll populate content (such <a href="/manual/social-media.html">social media</a> handles, <a href="/manual/rss.html">RSS</a> feeds, <a href="/manual/urls.html">specific URLs</a>, and <a href="/manual/look-feel.html">favicons</a>) that we can find from your homepage.</p>
-
-<p><strong><em>Troubleshooting tip:</em></strong> If you don't see the left-hand navigation, check the settings in your Adblock extension or try another browser.</p>
-
-<p><strong><em>Troubleshooting tip:</em></strong> We cannot retrieve any passwords for any account, because we don't have access to passwords. To reset your password:</p>
-
-<ol>
-<li>Go to the USASearch Login page at <a href="http://search.usa.gov/login">http://search.usa.gov/login</a></li>
-<li>Enter your e-mail address.</li>
-<li>Click on Forgot your password?</li>
-<li>You will be prompted to reset your password and it will be emailed to you.</li>
-</ol>
-
-
-<p>If you have any problem resetting your password, e-mail us at <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#x55;&#83;&#65;&#x53;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#103;&#115;&#x61;&#x2e;&#x67;&#111;&#x76;">&#85;&#83;&#x41;&#83;&#x65;&#97;&#114;&#99;&#x68;&#64;&#103;&#x73;&#x61;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
       
     </div>
   </article>
