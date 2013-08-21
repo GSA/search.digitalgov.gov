@@ -48,4 +48,4 @@ Use this report to identify issues with coverage. You may opt to create a <a hre
 
 Reports on the total number of queries and clicks for the present month-to-date. A click  is recorded each time a searcher clicks on a results link. 
 
-A graph of your site's total search queries over time is also presented to provide an overview of how your traffic has trended from the time your agency started using USASearch (but no further back than 2010).
+A graph of your site's total search queries over time is also presented to provide an overview of how your traffic has trended from the time your agency started using USASearch (but no further back than 2010). Hover over the trend line to see the total number of queries in previous months.
