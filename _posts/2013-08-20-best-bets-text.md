@@ -18,7 +18,7 @@ See the sample results page below that shows best bets displayed on TSA.gov for 
 
 Text Best Bets may be added individually or via bulk upload. 
 
-## Add an Individual Best Bets
+## Add an Individual Best Bet
 
 ***URL.*** Add the URL of the web page that you want to promote.
 
