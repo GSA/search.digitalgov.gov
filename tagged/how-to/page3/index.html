@@ -81,6 +81,115 @@
       
       <span>Last updated on:</span>
       
+      <a href="/manual/get-code.html">
+        <time datetime="2013-04-05">April 5, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/get-code.html">How to Add Our Code to Your Website</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Get Code</p>
+
+<p>Visit our <a href="http://search.usa.gov/affiliates/home">Admin Center</a>, select your site, and click on the Get Code option in the left-hand menu.</p>
+
+<p>Add the following two snippets of code to your website to "hook" your website and our hosted search service together. You can add this code to your individual web pages or to the template(s) in your content management system.</p>
+
+<h2>1. Form Snippet</h2>
+
+<p>Include the first snippet of code where the form for your search box appears. Your form should look something like this:</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<h2>2. Javascript Snippet</h2>
+
+<p>Include the second snippet of code before the closing <code>&lt;body&gt;</code> tag. This tag enables type-ahead search and ensures we have complete and timely coverage of your content in our index. Your tag should look something like this:</p>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+      var usasearch_config = { siteHandle:"YourSiteHandle" };
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "http://search.usa.gov/javascripts/remote.loader.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+//]]&gt;
+&lt;/script&gt;
+</code></pre>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> If your website is secured with https, you can add 's' to the two URLs above (i.e., <a href="https://search.usa.gov/search">https://search.usa.gov/search</a> and <a href="https://search.usa.gov/javascripts/remote.loader.js">https://search.usa.gov/javascripts/remote.loader.js</a>, respectively) so that searchers don't receive a security message in Internet Explorer.</p>
+
+<p><strong><em>Did you know?</em></strong> If you're using Drupal, be sure to check out our <a href="http://drupal.org/project/USASearch">USASearch Drupal module</a>.</p>
+
+<p><strong><em>Did you know?</em></strong> We offer DNS masking, which allows you to show searchers your domain (instead of USA.gov). Follow these three steps to mask your domain.</p>
+
+<ol>
+<li>E-mail us at <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#85;&#83;&#x41;&#x53;&#101;&#x61;&#114;&#x63;&#104;&#64;&#x67;&#x73;&#x61;&#46;&#x67;&#111;&#118;">&#x55;&#x53;&#x41;&#83;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#x67;&#x73;&#97;&#46;&#x67;&#111;&#x76;</a> and ask us to mask your domain.</li></li>
+<li>Create a CNAME in your DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
+<li>When the setup is complete, change the code for your form action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
+</ol>
+
+
+<p><strong><em>Did you know?</em></strong> You can set up one site in your USASearch account that limits results to specific folders or subdomains by either:</p>
+
+<p>(1) <a href="/manual/collections.html">Creating a collection</a>.</p>
+
+<p>Create a collection. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/docs/</code> and (b) add an input for this collection.</p>
+
+<pre><code>&lt;input type="hidden" name="dc" value="###"&gt;. 
+</code></pre>
+
+<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center as shown in the sample below.</p>
+
+<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/get-code-collection.png" alt="Value for the collection ID" /></p>
+
+<p>(2) <a href="/manual/rss.html">Setting up an RSS feed</a>.</p>
+
+<p>Set up an RSS feed. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/news/</code> and (b) add an input for this feed.</p>
+
+<pre><code>&lt;input type="hidden" name="channel" value="###"&gt;. 
+</code></pre>
+
+<p>The value is the number for your RSS ID, which is visible in the URL when you edit or preview your feed in the Admin Center.</p>
+
+<p>(3) Leaving your domain blank on the <a href="/manual/domains.html">Domains</a> page and, instead, passing a hidden value for the domain in the search form code.</p>
+
+<p>See, for example, <a href="http://www.ri.gov">RI.gov</a>, <a href="http://www.dmv.ri.gov/">DMV.RI.gov</a>, <a href="http://www.health.ri.gov/">Health.RI.gov</a>. On Health.RI.gov, the following hidden value is added to limit to only the health subdomain.</p>
+
+<pre><code>&lt;input type="hidden" name="site" value="www.health.ri.gov" &gt;
+</code></pre>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/get-code"><span class="label label-info">get-code</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/manual/raw-logs.html">
         <time datetime="2013-03-20">March 20, 2013</time>
       </a>
@@ -187,7 +296,7 @@ Enter same passphrase again:
 <p><strong><em>ForeSee tip:</em></strong> Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li><p>Email us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#85;&#x53;&#x41;&#x53;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#x67;&#x73;&#x61;&#x2e;&#103;&#111;&#x76;">&#85;&#x53;&#65;&#83;&#101;&#x61;&#114;&#99;&#104;&#64;&#103;&#115;&#x61;&#46;&#103;&#111;&#x76;</a> to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
+<li><p>Email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x55;&#83;&#x41;&#83;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#103;&#x73;&#x61;&#x2e;&#x67;&#111;&#118;">&#x55;&#83;&#x41;&#x53;&#x65;&#97;&#x72;&#x63;&#104;&#64;&#103;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#x76;</a> to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
 <li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
 
 <p> Find => 'files': '/fsrscripts/',</p>
@@ -306,6 +415,50 @@ Enter same passphrase again:
       
       <span>Last updated on:</span>
       
+      <a href="/manual/low-ctr.html">
+        <time datetime="2012-11-05">November 5, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/low-ctr.html">How to Analyze Your Queries with Low Click-Thru Rates</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Low CTR Queries</p>
+
+<p>The Low Click-Thru Rate (CTR) Queries page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the top 10 searches with low click-thru rates. It shows the most popular search terms that people generally don't act (click) on.</p>
+
+<p>You'll see a list of up to 10 terms that returned search results, but resulted in a click less than 20 percent of the time over the past day or so. In other words, fewer than one in five people who searched for that topic clicked on a search result. (Terms must have been searched by at least 10 unique searchers per day to be included in this list.)</p>
+
+<p>Use this report to identify issues with coverage. Create a <a href="/manual/best-bets.html">Best Bet</a>, add pages that may be missing from the results, or do both to improve recall. Incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results.</p>
+
+<p>Click on any linked word or the <img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png"/> symbol in the list, and you'll be taken to a Query Timeline chart. There you'll be able to select a period of time for the term, and you can also add a second query for comparison.</p>
+
+<p>Click on the <img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol, and you'll be taken to a list of the top clicked URLs for that term.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> This low click-thru report lists only those terms that returned search results. Visit the <a href="/manual/query-logs.html">Query Logs</a> page to see the top queries that returned no results.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/manual/trending-queries.html">
         <time datetime="2012-11-05">November 5, 2012</time>
       </a>
@@ -335,50 +488,6 @@ Enter same passphrase again:
 <p>Click on the <img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol, and you'll be taken to a list of the top clicked URLs for that term.</p>
 
 <p>To investigate why the term may be trending, click on the Twitter, news, or trends icons to see what's happening on other websites.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/manual/low-ctr.html">
-        <time datetime="2012-11-05">November 5, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/low-ctr.html">How to Analyze Your Queries with Low Click-Thru Rates</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Low CTR Queries</p>
-
-<p>The Low Click-Thru Rate (CTR) Queries page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the top 10 searches with low click-thru rates. It shows the most popular search terms that people generally don't act (click) on.</p>
-
-<p>You'll see a list of up to 10 terms that returned search results, but resulted in a click less than 20 percent of the time over the past day or so. In other words, fewer than one in five people who searched for that topic clicked on a search result. (Terms must have been searched by at least 10 unique searchers per day to be included in this list.)</p>
-
-<p>Use this report to identify issues with coverage. Create a <a href="/manual/best-bets.html">Best Bet</a>, add pages that may be missing from the results, or do both to improve recall. Incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results.</p>
-
-<p>Click on any linked word or the <img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png"/> symbol in the list, and you'll be taken to a Query Timeline chart. There you'll be able to select a period of time for the term, and you can also add a second query for comparison.</p>
-
-<p>Click on the <img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol, and you'll be taken to a list of the top clicked URLs for that term.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> This low click-thru report lists only those terms that returned search results. Visit the <a href="/manual/query-logs.html">Query Logs</a> page to see the top queries that returned no results.</p>
 
     </div>
 
@@ -437,123 +546,6 @@ Enter same passphrase again:
       <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
       
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/manual/collections.html">
-        <time datetime="2012-08-21">August 21, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/collections.html">How to Create Collections Within Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Collections</p>
-
-<p>Would you like searchers to be able to narrow results to a specific subset of content within your site or on another site?</p>
-
-<h2>Step 1. Create a Collection</h2>
-
-<p>Create a named collection across any set of domains, subdomains, or subfolders.</p>
-
-<p>Enter a name for the collection (e.g., FAQs).</p>
-
-<p>Enter the URLs that make up this collection. Start each URL prefix with http:// and end it in a trailing slash (/) to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov/).</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection.png" alt="Create a Collection" /></p>
-
-<h2>Step 2. Opt to Show in Sidebar</h2>
-
-<p>Click on the <a href="/manual/sidebar.html">Sidebar</a> option in the left-hand menu. Check the option, Show in Sidebar, to allow searchers to see navigation options in the left-hand column of the results page.</p>
-
-<h2>Step 3. Check Your Search Results Page</h2>
-
-<p>Searchers will see an option to narrow their search results to pages in this collection in the left-hand navigation on the results page.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-2.png" alt="Collection on the search results page" /></p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your collection.</p>
-
-<p>Start with the standard form snippet on the <a href="/manual/get-code.html">Get Code</a> page in the Admin Center. Change the form action to <code>action="http://search.usa.gov/search/docs</code> and add the following line to limit the results to your collection.</p>
-
-<p><code>&lt;input type="hidden" name="dc" value="###"&gt;</code></p>
-
-<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
-
-<p>See the sample search box below that is limited to news releases in <a href="http://www.ftc.gov/opa/index.shtml">FTC.gov's Newroom</a> for a search on <em>privacy</em>.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-3.png" alt="FTC.gov Newsroom search box" /><br/>
-<em>Newsroom page with a search box that is limited to news</em></p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-4.png" alt="FTC.gov search results page" /><br/>
-<em>Search results page that returns news results only</em></p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/collections"><span class="label label-info">collections</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/manual/monthly-reports.html">
-        <time datetime="2012-05-03">May 3, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/monthly-reports.html">How to Analyze Your Monthly Reports</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Monthly Reports</p>
-
-<p>The Monthly Reports page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the total number of searches and click throughs. A click through is recorded each time a searcher clicks on a results link. Data start from the time your agency started using USASearch (but no further back than 2009).</p>
-
-<p>Data are shown for the present month-to-date by default. Change the time period by selecting a different year or month.</p>
-
-<p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV link to download the list as a comma delimited file. The CSV file contains three columns.</p>
-
-<ol>
-<li>Query&mdash;The search term or phrase.</li>
-<li>Raw count&mdash;Total number of times the query was submitted.</li>
-<li>IP-deduped&mdash;Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of "real," human traffic.</li>
-</ol>
-
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> On the first of each month, we email you a report with data on the previous month's queries, clicks, and top search terms.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
       
     </div>
   </article>
@@ -622,6 +614,53 @@ Enter same passphrase again:
 <p>See the sample report below that shows the top queries that led to a click on <a href="http://www.usajobs.gov/">http://www.usajobs.gov/</a> on <a href="http://www.usa.gov/">USA.gov</a> in October 2012.</p>
 
 <p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqp4Jmoy1qid15q.png" alt="Top queries that led to a click on http://www.usajobs.gov on USA.gov" /></p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
+      <a href="/manual/monthly-reports.html">
+        <time datetime="2012-05-03">May 3, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/monthly-reports.html">How to Analyze Your Monthly Reports</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Monthly Reports</p>
+
+<p>The Monthly Reports page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the total number of searches and click throughs. A click through is recorded each time a searcher clicks on a results link. Data start from the time your agency started using USASearch (but no further back than 2009).</p>
+
+<p>Data are shown for the present month-to-date by default. Change the time period by selecting a different year or month.</p>
+
+<p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV link to download the list as a comma delimited file. The CSV file contains three columns.</p>
+
+<ol>
+<li>Query&mdash;The search term or phrase.</li>
+<li>Raw count&mdash;Total number of times the query was submitted.</li>
+<li>IP-deduped&mdash;Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of "real," human traffic.</li>
+</ol>
+
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> On the first of each month, we email you a report with data on the previous month's queries, clicks, and top search terms.</p>
 
     </div>
 

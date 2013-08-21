@@ -81,6 +81,82 @@
       
       <span>Last updated on:</span>
       
+      <a href="/sites/manual/collections.html">
+        <time datetime="2013-08-21">August 21, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/sites/manual/collections.html">How to Create Collections Within Our Index</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Collections</p>
+
+<p>Would you like searchers to be able to narrow results to a specific subset of content within your site or on another site?</p>
+
+<h2>Step 1. Create a Collection</h2>
+
+<p>Create a named collection across any set of domains, subdomains, or subfolders.</p>
+
+<p>Enter a name for the collection (e.g., FAQs).</p>
+
+<p>Enter the URLs that make up this collection. Start each URL prefix with http:// and end it in a trailing slash (/) to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov/).</p>
+
+<!-- START UPDATE -->
+
+
+<h2>Step 2. Opt to Show in Sidebar</h2>
+
+<p>Click on the <a href="/manual/sidebar.html">Sidebar</a> option in the left-hand menu. Check the option, Show in Sidebar, to allow searchers to see navigation options in the left-hand column of the results page.</p>
+
+<!-- END UPDATE -->
+
+
+<h2>Step 3. Check Your Search Results Page</h2>
+
+<p>Searchers will see an option to narrow their search results to pages in this collection in the left-hand navigation on the results page.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-2.png" alt="Collection on the search results page" /></p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your collection.</p>
+
+<p>Start with the standard form snippet on the <a href="/manual/get-code.html">Get Code</a> page in the Admin Center. Change the form action to <code>action="http://search.usa.gov/search/docs</code> and add the following line to limit the results to your collection.</p>
+
+<p><code>&lt;input type="hidden" name="dc" value="###"&gt;</code></p>
+
+<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
+
+<p>See the sample search box below that is limited to news releases in <a href="http://www.ftc.gov/opa/index.shtml">FTC.gov's Newroom</a> for a search on <em>privacy</em>.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-3.png" alt="FTC.gov Newsroom search box" /><br/>
+<em>Newsroom page with a search box that is limited to news</em></p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-4.png" alt="FTC.gov search results page" /><br/>
+<em>Search results page that returns news results only</em></p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/collections"><span class="label label-info">collections</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/sites/manual/best-bets-text.html">
         <time datetime="2013-08-20">August 20, 2013</time>
       </a>
@@ -193,6 +269,66 @@
       
       <span>Last updated on:</span>
       
+      <a href="/sites/manual/domains.html">
+        <time datetime="2013-08-08">August 8, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/sites/manual/domains.html">How to Edit Your Domains</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Manage Content > Domains</p>
+
+<p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
+
+<h2>Entire Site</h2>
+
+<p>List yoursite.gov (without www) to search your entire site, including all subdomains.</p>
+
+<h2>Part of Site</h2>
+
+<ul>
+<li>List www.yoursite.gov to include only the primary 'www' domain.</li>
+<li>List subdomain.yoursite.gov to include subdomains.</li>
+<li>List yoursite.gov/folder to include folders.</li>
+</ul>
+
+
+<p>You cannot specify individual URLs.</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
+
+<ol>
+<li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
+<li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
+<li>E-mail us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#85;&#x53;&#65;&#x53;&#101;&#97;&#114;&#x63;&#104;&#x40;&#103;&#x73;&#97;&#46;&#x67;&#111;&#118;">&#x55;&#x53;&#x41;&#x53;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#x67;&#115;&#97;&#46;&#103;&#x6f;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
+</ol>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/sites/manual/flickr.html">
         <time datetime="2013-08-08">August 8, 2013</time>
       </a>
@@ -236,66 +372,6 @@
       <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
       
       <a href="/tagged/flickr"><span class="label label-info">flickr</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/sites/manual/domains.html">
-        <time datetime="2013-08-08">August 8, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/sites/manual/domains.html">How to Edit Your Domains</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Manage Content > Domains</p>
-
-<p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
-
-<h2>Entire Site</h2>
-
-<p>List yoursite.gov (without www) to search your entire site, including all subdomains.</p>
-
-<h2>Part of Site</h2>
-
-<ul>
-<li>List www.yoursite.gov to include only the primary 'www' domain.</li>
-<li>List subdomain.yoursite.gov to include subdomains.</li>
-<li>List yoursite.gov/folder to include folders.</li>
-</ul>
-
-
-<p>You cannot specify individual URLs.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
-
-<ol>
-<li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
-<li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>E-mail us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x55;&#83;&#65;&#83;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#103;&#115;&#97;&#x2e;&#x67;&#x6f;&#118;">&#x55;&#x53;&#65;&#83;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#103;&#115;&#97;&#x2e;&#x67;&#111;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
-</ol>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
       
     </div>
   </article>

@@ -3,10 +3,63 @@
   <title><![CDATA[USASearch]]></title>
   <link href="http://usasearch.howto.gov/all.atom" rel="self"/>
   <link href="http://usasearch.howto.gov/"/>
-  <updated>2013-08-21T15:51:05+00:00</updated>
+  <updated>2013-08-21T16:27:04+00:00</updated>
   <id>http://usasearch.howto.gov/</id>
   <author><name><![CDATA[USASearch]]></name></author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Create Collections Within Our Index]]></title>
+    <link href="http://usasearch.howto.gov/sites/manual/collections.html"/>
+    <updated>2013-08-21T00:00:00+00:00</updated>
+    <id>http://usasearch.howto.gov/sites/manual/collections.html</id>
+    <content type="html"><![CDATA[<p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Collections</p>
+
+<p>Would you like searchers to be able to narrow results to a specific subset of content within your site or on another site?</p>
+
+<h2>Step 1. Create a Collection</h2>
+
+<p>Create a named collection across any set of domains, subdomains, or subfolders.</p>
+
+<p>Enter a name for the collection (e.g., FAQs).</p>
+
+<p>Enter the URLs that make up this collection. Start each URL prefix with http:// and end it in a trailing slash (/) to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov/).</p>
+
+<!-- START UPDATE -->
+
+
+<h2>Step 2. Opt to Show in Sidebar</h2>
+
+<p>Click on the <a href="/manual/sidebar.html">Sidebar</a> option in the left-hand menu. Check the option, Show in Sidebar, to allow searchers to see navigation options in the left-hand column of the results page.</p>
+
+<!-- END UPDATE -->
+
+
+<h2>Step 3. Check Your Search Results Page</h2>
+
+<p>Searchers will see an option to narrow their search results to pages in this collection in the left-hand navigation on the results page.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-2.png" alt="Collection on the search results page" /></p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your collection.</p>
+
+<p>Start with the standard form snippet on the <a href="/manual/get-code.html">Get Code</a> page in the Admin Center. Change the form action to <code>action="http://search.usa.gov/search/docs</code> and add the following line to limit the results to your collection.</p>
+
+<p><code>&lt;input type="hidden" name="dc" value="###"&gt;</code></p>
+
+<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
+
+<p>See the sample search box below that is limited to news releases in <a href="http://www.ftc.gov/opa/index.shtml">FTC.gov's Newroom</a> for a search on <em>privacy</em>.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-3.png" alt="FTC.gov Newsroom search box" /><br/>
+<em>Newsroom page with a search box that is limited to news</em></p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-4.png" alt="FTC.gov search results page" /><br/>
+<em>Search results page that returns news results only</em></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to View a Snapshot of What's Happening on Your Site Today]]></title>
@@ -185,7 +238,7 @@
 <ol>
 <li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
 <li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>E-mail us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x55;&#83;&#65;&#83;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#103;&#115;&#97;&#x2e;&#x67;&#x6f;&#118;">&#x55;&#x53;&#65;&#83;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#103;&#115;&#97;&#x2e;&#x67;&#111;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
+<li>E-mail us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#85;&#x53;&#65;&#x53;&#101;&#97;&#114;&#x63;&#104;&#x40;&#103;&#x73;&#97;&#46;&#x67;&#111;&#118;">&#x55;&#x53;&#x41;&#x53;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#x67;&#115;&#97;&#46;&#103;&#x6f;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
 </ol>
 
 ]]></content>
@@ -237,7 +290,7 @@
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or language, e-mail us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#85;&#x53;&#65;&#83;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#103;&#x73;&#97;&#x2e;&#x67;&#x6f;&#x76;">&#85;&#x53;&#x41;&#x53;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#103;&#115;&#97;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or language, e-mail us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#85;&#83;&#x41;&#83;&#101;&#97;&#114;&#99;&#x68;&#64;&#x67;&#x73;&#97;&#x2e;&#103;&#111;&#x76;">&#x55;&#x53;&#65;&#x53;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#103;&#x73;&#97;&#x2e;&#x67;&#111;&#118;</a>.</p>
 ]]></content>
   </entry>
   
@@ -592,7 +645,7 @@
 
 <h2>Feedback</h2>
 
-<p>E-mail us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#x55;&#83;&#x41;&#x53;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#103;&#115;&#x61;&#46;&#103;&#x6f;&#x76;">&#x55;&#x53;&#x41;&#83;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#103;&#115;&#97;&#x2e;&#103;&#111;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>E-mail us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#85;&#83;&#x41;&#83;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#103;&#115;&#97;&#46;&#103;&#x6f;&#118;">&#85;&#x53;&#x41;&#x53;&#101;&#97;&#x72;&#x63;&#104;&#64;&#103;&#x73;&#x61;&#46;&#103;&#x6f;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
@@ -799,7 +852,7 @@ US-VA:COUNTY-FAIRFAX:CITY-FAIRFAX</p>
 
 <p>State and local government jobs are from cities, counties, and state agencies that use <a href="http://www.neogov.com/">NeoGov</a>, such <a href="https://bouldercolorado.gov/jobs-and-volunteer">jobs with the the city of Boulder, Colorado</a>.</p>
 
-<p><strong><em>Are we missing your jobs data?</em></strong> E-mail us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#85;&#83;&#x41;&#x53;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#103;&#115;&#x61;&#x2e;&#x67;&#x6f;&#118;">&#x55;&#83;&#x41;&#x53;&#101;&#97;&#114;&#99;&#104;&#64;&#103;&#115;&#97;&#x2e;&#103;&#x6f;&#x76;</a> to let us know where you publish the jobs data for your federal, state, or local government agency. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
+<p><strong><em>Are we missing your jobs data?</em></strong> E-mail us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#85;&#x53;&#x41;&#83;&#101;&#97;&#x72;&#99;&#x68;&#x40;&#103;&#x73;&#x61;&#46;&#103;&#111;&#118;">&#85;&#83;&#65;&#x53;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#103;&#115;&#97;&#x2e;&#x67;&#x6f;&#118;</a> to let us know where you publish the jobs data for your federal, state, or local government agency. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
 
 <p><a name="what-it-returns"></a></p>
 
@@ -861,7 +914,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <h2>Feedback</h2>
 
-<p>E-mail us at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#85;&#x53;&#65;&#x53;&#101;&#x61;&#x72;&#99;&#104;&#64;&#x67;&#115;&#97;&#46;&#103;&#x6f;&#118;">&#x55;&#x53;&#65;&#83;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#x67;&#115;&#97;&#46;&#103;&#x6f;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>E-mail us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#85;&#x53;&#65;&#83;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#x67;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#x76;">&#x55;&#83;&#x41;&#83;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#103;&#115;&#x61;&#x2e;&#103;&#111;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
@@ -1263,7 +1316,7 @@ omies that depend on summer tourism.&lt;/p&gt;
 
 <p>MRSS is the standard <a href="http://www.rssboard.org/media-rss">media RSS specification</a> for syndicating multimedia content. So, even if you don't have an MRSS feed now, it should be easy to generate one as long as your content is in a content management system or other database. MRSS is also the standard specification used by hosted multimedia services such as Flickr, Instagram, Vimeo, and YouTube.</p>
 
-<p>Email us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#85;&#x53;&#x41;&#x53;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#103;&#115;&#97;&#x2e;&#x67;&#x6f;&#x76;">&#85;&#x53;&#x41;&#83;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#103;&#x73;&#x61;&#46;&#x67;&#111;&#x76;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
+<p>Email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#58;&#x55;&#x53;&#x41;&#83;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#103;&#115;&#97;&#x2e;&#x67;&#x6f;&#x76;">&#85;&#83;&#65;&#83;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#x67;&#115;&#97;&#x2e;&#x67;&#x6f;&#x76;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
 
 <p>(Thanks, <a href="http://www.usgs.gov">USGS.gov</a> team, for suggesting this new feature!)</p>
 
@@ -1663,7 +1716,7 @@ yosemite valley</li>
 <ul>
 <li>We updated our <a href="/tos.html">terms of service</a>.</li>
 <li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#85;&#x53;&#65;&#x53;&#101;&#x61;&#114;&#99;&#104;&#x40;&#103;&#115;&#x61;&#x2e;&#x67;&#x6f;&#118;">&#x55;&#83;&#x41;&#x53;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#x67;&#115;&#x61;&#46;&#103;&#x6f;&#118;</a> with any questions.</li>
+<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#85;&#x53;&#65;&#83;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#x67;&#115;&#x61;&#46;&#x67;&#111;&#x76;">&#x55;&#x53;&#x41;&#83;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#x67;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#118;</a> with any questions.</li>
 <li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
 <li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
 <li>We removed the trending searches feature and widget.</li>
@@ -1725,7 +1778,7 @@ yosemite valley</li>
 
 <hr />
 
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. E-mail us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#x55;&#x53;&#65;&#x53;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#103;&#115;&#97;&#x2e;&#x67;&#x6f;&#x76;">&#85;&#x53;&#x41;&#x53;&#101;&#97;&#x72;&#99;&#104;&#x40;&#103;&#x73;&#x61;&#46;&#103;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
+<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. E-mail us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#58;&#85;&#83;&#65;&#83;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x67;&#x73;&#97;&#46;&#x67;&#x6f;&#118;">&#x55;&#x53;&#x41;&#83;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#103;&#x73;&#97;&#x2e;&#x67;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
 ]]></content>
   </entry>
   
@@ -1750,7 +1803,7 @@ yosemite valley</li>
 </ol>
 
 
-<p>If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#x55;&#x53;&#65;&#x53;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#103;&#x73;&#97;&#46;&#103;&#111;&#118;">&#x55;&#83;&#x41;&#83;&#x65;&#x61;&#x72;&#99;&#x68;&#x40;&#x67;&#x73;&#97;&#x2e;&#x67;&#x6f;&#x76;</a>.</p>
+<p>If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#x55;&#x53;&#65;&#x53;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#103;&#115;&#x61;&#x2e;&#103;&#x6f;&#x76;">&#85;&#x53;&#x41;&#83;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#103;&#115;&#x61;&#x2e;&#103;&#111;&#x76;</a>.</p>
 
 <hr />
 
@@ -1798,7 +1851,7 @@ yosemite valley</li>
 <ol>
 <li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google, Bing, and USASearch.</li>
 <li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>E-mail us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#85;&#83;&#65;&#x53;&#101;&#x61;&#x72;&#99;&#104;&#64;&#x67;&#115;&#x61;&#46;&#103;&#x6f;&#x76;">&#85;&#83;&#65;&#x53;&#101;&#x61;&#x72;&#99;&#104;&#64;&#x67;&#x73;&#x61;&#46;&#x67;&#x6f;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
+<li>E-mail us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#85;&#83;&#65;&#83;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#x67;&#115;&#x61;&#x2e;&#103;&#111;&#118;">&#x55;&#x53;&#x41;&#83;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#103;&#115;&#97;&#46;&#103;&#111;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
 </ol>
 
 ]]></content>
@@ -2030,7 +2083,7 @@ yosemite valley</li>
 </ol>
 
 
-<p>If you have any problem resetting your password, e-mail us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#x55;&#83;&#65;&#x53;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#x67;&#115;&#x61;&#x2e;&#103;&#x6f;&#118;">&#85;&#83;&#65;&#83;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#103;&#x73;&#97;&#x2e;&#103;&#x6f;&#118;</a>.</p>
+<p>If you have any problem resetting your password, e-mail us at <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#x55;&#83;&#65;&#x53;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#103;&#115;&#x61;&#x2e;&#x67;&#111;&#x76;">&#85;&#83;&#x41;&#83;&#x65;&#97;&#114;&#99;&#x68;&#64;&#103;&#x73;&#x61;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
 ]]></content>
   </entry>
   
@@ -2181,7 +2234,7 @@ yosemite valley</li>
 <p><strong><em>Did you know?</em></strong> We offer DNS masking, which allows you to show searchers your domain (instead of USA.gov). Follow these three steps to mask your domain.</p>
 
 <ol>
-<li>E-mail us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#85;&#83;&#65;&#x53;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#103;&#x73;&#x61;&#46;&#103;&#111;&#x76;">&#x55;&#83;&#x41;&#x53;&#101;&#x61;&#114;&#99;&#x68;&#64;&#103;&#x73;&#97;&#46;&#103;&#x6f;&#118;</a> and ask us to mask your domain.</li></li>
+<li>E-mail us at <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#85;&#83;&#x41;&#x53;&#101;&#x61;&#114;&#x63;&#104;&#64;&#x67;&#x73;&#x61;&#46;&#x67;&#111;&#118;">&#x55;&#x53;&#x41;&#83;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#x67;&#x73;&#97;&#46;&#x67;&#111;&#x76;</a> and ask us to mask your domain.</li></li>
 <li>Create a CNAME in your DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
 <li>When the setup is complete, change the code for your form action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
 </ol>
@@ -2298,7 +2351,7 @@ yosemite valley</li>
 
 <p>Also be sure to read our <a href="/tagged/releases/">release notes</a> to keep up-to-date with our new features.</p>
 
-<p>Do you have other questions or comments about how our service works? E-mail us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#85;&#x53;&#65;&#x53;&#x65;&#x61;&#114;&#99;&#104;&#64;&#103;&#115;&#x61;&#46;&#103;&#111;&#118;">&#85;&#83;&#x41;&#83;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#x67;&#115;&#x61;&#46;&#103;&#111;&#x76;</a>.</p>
+<p>Do you have other questions or comments about how our service works? E-mail us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#x55;&#x53;&#65;&#83;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#103;&#115;&#x61;&#x2e;&#103;&#111;&#x76;">&#85;&#x53;&#65;&#83;&#101;&#x61;&#x72;&#99;&#104;&#64;&#103;&#x73;&#x61;&#x2e;&#103;&#111;&#x76;</a>.</p>
 ]]></content>
   </entry>
   
@@ -2413,7 +2466,7 @@ Enter same passphrase again:
 <p><strong><em>ForeSee tip:</em></strong> Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li><p>Email us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#85;&#x53;&#x41;&#x53;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#x67;&#x73;&#x61;&#x2e;&#103;&#111;&#x76;">&#85;&#x53;&#65;&#83;&#101;&#x61;&#114;&#99;&#104;&#64;&#103;&#115;&#x61;&#46;&#103;&#111;&#x76;</a> to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
+<li><p>Email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x55;&#83;&#x41;&#83;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#103;&#x73;&#x61;&#x2e;&#x67;&#111;&#118;">&#x55;&#83;&#x41;&#x53;&#x65;&#97;&#x72;&#x63;&#104;&#64;&#103;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#x76;</a> to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
 <li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
 
 <p> Find => 'files': '/fsrscripts/',</p>
@@ -3186,55 +3239,6 @@ What do you need to do? If your URL starts with any of the following six legacy 
 <li>We fixed an invalid byte sequence in UTF-8.</li>
 </ul>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to Create Collections Within Our Index]]></title>
-    <link href="http://usasearch.howto.gov/manual/collections.html"/>
-    <updated>2012-08-21T00:00:00+00:00</updated>
-    <id>http://usasearch.howto.gov/manual/collections.html</id>
-    <content type="html"><![CDATA[<p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Collections</p>
-
-<p>Would you like searchers to be able to narrow results to a specific subset of content within your site or on another site?</p>
-
-<h2>Step 1. Create a Collection</h2>
-
-<p>Create a named collection across any set of domains, subdomains, or subfolders.</p>
-
-<p>Enter a name for the collection (e.g., FAQs).</p>
-
-<p>Enter the URLs that make up this collection. Start each URL prefix with http:// and end it in a trailing slash (/) to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov/).</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection.png" alt="Create a Collection" /></p>
-
-<h2>Step 2. Opt to Show in Sidebar</h2>
-
-<p>Click on the <a href="/manual/sidebar.html">Sidebar</a> option in the left-hand menu. Check the option, Show in Sidebar, to allow searchers to see navigation options in the left-hand column of the results page.</p>
-
-<h2>Step 3. Check Your Search Results Page</h2>
-
-<p>Searchers will see an option to narrow their search results to pages in this collection in the left-hand navigation on the results page.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-2.png" alt="Collection on the search results page" /></p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your collection.</p>
-
-<p>Start with the standard form snippet on the <a href="/manual/get-code.html">Get Code</a> page in the Admin Center. Change the form action to <code>action="http://search.usa.gov/search/docs</code> and add the following line to limit the results to your collection.</p>
-
-<p><code>&lt;input type="hidden" name="dc" value="###"&gt;</code></p>
-
-<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
-
-<p>See the sample search box below that is limited to news releases in <a href="http://www.ftc.gov/opa/index.shtml">FTC.gov's Newroom</a> for a search on <em>privacy</em>.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-3.png" alt="FTC.gov Newsroom search box" /><br/>
-<em>Newsroom page with a search box that is limited to news</em></p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-4.png" alt="FTC.gov search results page" /><br/>
-<em>Search results page that returns news results only</em></p>
 ]]></content>
   </entry>
   
@@ -4259,7 +4263,7 @@ Below are the release details for February and, as a reminder, we divide our wor
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or language, e-mail us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#x55;&#83;&#x41;&#83;&#101;&#97;&#114;&#99;&#x68;&#64;&#103;&#115;&#x61;&#x2e;&#x67;&#111;&#118;">&#85;&#83;&#65;&#83;&#101;&#97;&#114;&#x63;&#x68;&#x40;&#103;&#115;&#x61;&#46;&#x67;&#x6f;&#x76;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or language, e-mail us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#85;&#x53;&#x41;&#83;&#101;&#x61;&#114;&#99;&#104;&#64;&#103;&#x73;&#97;&#x2e;&#x67;&#x6f;&#118;">&#85;&#83;&#65;&#x53;&#101;&#97;&#114;&#99;&#x68;&#x40;&#103;&#115;&#x61;&#46;&#103;&#111;&#x76;</a>.</p>
 ]]></content>
   </entry>
   

@@ -82,6 +82,82 @@
       
       <span>Last updated on:</span>
       
+      <a href="/sites/manual/collections.html">
+        <time datetime="2013-08-21">August 21, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/sites/manual/collections.html">How to Create Collections Within Our Index</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Collections</p>
+
+<p>Would you like searchers to be able to narrow results to a specific subset of content within your site or on another site?</p>
+
+<h2>Step 1. Create a Collection</h2>
+
+<p>Create a named collection across any set of domains, subdomains, or subfolders.</p>
+
+<p>Enter a name for the collection (e.g., FAQs).</p>
+
+<p>Enter the URLs that make up this collection. Start each URL prefix with http:// and end it in a trailing slash (/) to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov/).</p>
+
+<!-- START UPDATE -->
+
+
+<h2>Step 2. Opt to Show in Sidebar</h2>
+
+<p>Click on the <a href="/manual/sidebar.html">Sidebar</a> option in the left-hand menu. Check the option, Show in Sidebar, to allow searchers to see navigation options in the left-hand column of the results page.</p>
+
+<!-- END UPDATE -->
+
+
+<h2>Step 3. Check Your Search Results Page</h2>
+
+<p>Searchers will see an option to narrow their search results to pages in this collection in the left-hand navigation on the results page.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-2.png" alt="Collection on the search results page" /></p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your collection.</p>
+
+<p>Start with the standard form snippet on the <a href="/manual/get-code.html">Get Code</a> page in the Admin Center. Change the form action to <code>action="http://search.usa.gov/search/docs</code> and add the following line to limit the results to your collection.</p>
+
+<p><code>&lt;input type="hidden" name="dc" value="###"&gt;</code></p>
+
+<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
+
+<p>See the sample search box below that is limited to news releases in <a href="http://www.ftc.gov/opa/index.shtml">FTC.gov's Newroom</a> for a search on <em>privacy</em>.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-3.png" alt="FTC.gov Newsroom search box" /><br/>
+<em>Newsroom page with a search box that is limited to news</em></p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-4.png" alt="FTC.gov search results page" /><br/>
+<em>Search results page that returns news results only</em></p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/collections"><span class="label label-info">collections</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/sites/manual/site-overview.html">
         <time datetime="2013-08-20">August 20, 2013</time>
       </a>
@@ -364,7 +440,7 @@
 <ol>
 <li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
 <li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>E-mail us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x55;&#83;&#65;&#83;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#103;&#115;&#97;&#x2e;&#x67;&#x6f;&#118;">&#x55;&#x53;&#65;&#83;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#103;&#115;&#97;&#x2e;&#x67;&#111;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
+<li>E-mail us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#85;&#x53;&#65;&#x53;&#101;&#97;&#114;&#x63;&#104;&#x40;&#103;&#x73;&#97;&#46;&#x67;&#111;&#118;">&#x55;&#x53;&#x41;&#x53;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#x67;&#115;&#97;&#46;&#103;&#x6f;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
 </ol>
 
 
@@ -462,7 +538,7 @@
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or language, e-mail us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#85;&#x53;&#65;&#83;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#103;&#x73;&#97;&#x2e;&#x67;&#x6f;&#x76;">&#85;&#x53;&#x41;&#x53;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#103;&#115;&#97;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or language, e-mail us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#85;&#83;&#x41;&#83;&#101;&#97;&#114;&#99;&#x68;&#64;&#x67;&#x73;&#97;&#x2e;&#103;&#111;&#x76;">&#x55;&#x53;&#65;&#x53;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#103;&#x73;&#97;&#x2e;&#x67;&#111;&#118;</a>.</p>
 
     </div>
 
@@ -859,7 +935,7 @@
 
 <h2>Feedback</h2>
 
-<p>E-mail us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#x55;&#83;&#x41;&#x53;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#103;&#115;&#x61;&#46;&#103;&#x6f;&#x76;">&#x55;&#x53;&#x41;&#83;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#103;&#115;&#97;&#x2e;&#103;&#111;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>E-mail us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#85;&#83;&#x41;&#83;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#103;&#115;&#97;&#46;&#103;&#x6f;&#118;">&#85;&#x53;&#x41;&#x53;&#101;&#97;&#x72;&#x63;&#104;&#64;&#103;&#x73;&#x61;&#46;&#103;&#x6f;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
@@ -870,294 +946,6 @@
     <div class='tags'>
       
       <a href="/tagged/recalls"><span class="label label-info">recalls</span></a>
-      
-      <a href="/tagged/api"><span class="label label-info">api</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <a href="/developer/jobs.html">
-        <time datetime="2013-07-23">July 23, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/developer/jobs.html">Jobs API</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="/developer/index.html">APIs for Developers</a> > Jobs API</p>
-
-<p><a href="https://github.com/GSA-OCSIT"><img style="position: absolute; top: 41px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a></p>
-
-<p>Helping job seekers land a job with the government.</p>
-
-<ul>
-  <li class="overview current"><a href="#overview">Overview</a></li>
-  <li class="api"><a href="#using-the-api">Using the API</a></li>
-  <li class="parameters"><a href="#parameters">Parameters</a></li>
-  <li class="sources"><a href="#data-sources">Data Sources</a></li>
-  <li class="returns"><a href="#what-it-returns">What it Returns</a></li>
-  <li class="samples"><a href="#code-samples">Code Samples</a></li>
-</ul>
-
-
-<p><a name="overview"></a></p>
-
-<h2>Overview</h2>
-
-<p>The unemployment rate has hovered around 8 percent since early 2012. So, not surprisingly, many people are hitting the web to search for jobs.</p>
-
-<p>Federal, state, and local government agencies are hiring and have thousands of job openings across the country.</p>
-
-<p>This Jobs API allows you to tap into a list of current jobs openings with the government. Jobs are searchable by keyword, location, agency, schedule, or any combination of these.</p>
-
-<p>This API is great for job websites or applications, job banks, and career counseling and placement applications.</p>
-
-<p><a name="using-the-api"></a></p>
-
-<h2>Using the API</h2>
-
-<p>This Jobs API accepts a GET request.</p>
-
-<p>Jobs are searchable by keyword, location, agency, schedule, or any combination of these.</p>
-
-<p>The base URL is http://api.usa.gov/jobs/search.json?<strong>parameters</strong></p>
-
-<p>Sample API requests follow.</p>
-
-<p>All nursing jobs<br/>
-<a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs">http://api.usa.gov/jobs/search.json?query=nursing+jobs</a></p>
-
-<p>Nursing jobs in NY<br/>
-<a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs+in+ny">http://api.usa.gov/jobs/search.json?query=nursing+jobs+in+ny</a></p>
-
-<p>Nursing jobs with a state government agency<br/>
-<a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=state">http://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=state</a></p>
-
-<p>Nursing jobs with a federal government agency<br/>
-<a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=federal">http://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=federal</a></p>
-
-<p>Nursing jobs with Veterans Affairs in NY<br/>
-<a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+ny">http://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+ny</a></p>
-
-<p>Part-time nursing jobs with Veterans Affairs in NY<br/>
-<a href="http://api.usa.gov/jobs/search.json?query=parttime+nursing+jobs+with+veterans+affairs+in+ny">http://api.usa.gov/jobs/search.json?query=parttime+nursing+jobs+with+veterans+affairs+in+ny</a></p>
-
-<p><a name="parameters"></a></p>
-
-<h2>Parameters</h2>
-
-<p>Seven parameters are accepted.</p>
-
-<ol>
-<li>query</li>
-<li>organization_id</li>
-<li>hl (for highlighting)</li>
-<li>size</li>
-<li>from</li>
-<li>tags</li>
-<li>lat_lon</li>
-</ol>
-
-
-<h3>Query</h3>
-
-<p>Attempts to extract as much "signal" as possible from the input text. Handles word variants, so a search on "nursing jobs" will find a job titled "nurse practitioner" and "RN." When parts of the query parameter are used to search against the position title, the results are ordered by relevance. When no query parameter is specified, they are ordered by date with the most recent listed first.  For generic jobs searches (e.g., 'jobs', 'internships') where the <strong>lat_lon</strong> parameter is passed in, the results will be sorted by distance to the searcher's geographic location.</p>
-
-<p>Sample query formats follow.</p>
-
-<h4>All jobs (by date or by proximity)</h4>
-
-<ul>
-<li>jobs</li>
-<li>positions</li>
-<li>vacancies</li>
-<li>opportunities</li>
-<li>postings</li>
-</ul>
-
-
-<h4>Location-based (by date)</h4>
-
-<ul>
-<li>jobs in fulton</li>
-<li>jobs in fulton, md</li>
-<li>jobs in fulton, maryland</li>
-<li>jobs in md</li>
-<li>pentagon jobs</li>
-<li>jobs fayetteville</li>
-<li>fayetteville nc jobs</li>
-<li>jobs atlanta georgia</li>
-</ul>
-
-
-<h4>Agency-based (by date)</h4>
-
-<ul>
-<li>job opportunities at the cia</li>
-<li>jobs at the treasury dept</li>
-<li>tsa job openings</li>
-<li>va jobs # will match jobs in Virginia</li>
-</ul>
-
-
-<h4>Keyword-based (by relevance)</h4>
-
-<ul>
-<li>nursing jobs</li>
-<li>summer internship position</li>
-</ul>
-
-
-<h4>Schedule-based (by date)</h4>
-
-<ul>
-<li>part-time jobs</li>
-<li>full-time positions</li>
-</ul>
-
-
-<h4>Combinations (by relevance)</h4>
-
-<ul>
-<li>part-time security guard job openings at the tsa in los angeles, ca</li>
-</ul>
-
-
-<h3>Organization_id</h3>
-
-<p>Specifies which federal, state, or local agency to use as a filter.</p>
-
-<p>For federal agencies, the ID is based on <a href="https://schemas.usajobs.gov/Enumerations/AgencySubElement.xml">USAJobs' agency schema</a>. Two letter codes are used to span entire departments, while four letter codes are generally used for independent agencies or agencies within a department.</p>
-
-<p>For state and local agencies, a sample of the format follows.</p>
-
-<p><em>State of Virginia</em><br/>
-US-VA</p>
-
-<p><em>State of Virginia Department of Taxation</em><br/>
-US-VA:DEPT-TAX</p>
-
-<p><em>Fairfax County, VA</em><br/>
-US-VA:COUNTY-FAIRFAX</p>
-
-<p><em>Fairfax County Sheriff</em><br/>
-US-VA:COUNTY-FAIRFAX:SHERIFF</p>
-
-<p><em>City of Fairfax, VA</em><br/>
-US-VA:COUNTY-FAIRFAX:CITY-FAIRFAX</p>
-
-<p>If you specify an <code>organization_id</code> in your API call but the searcher types in another agency, the searchers' agency overrides the <code>organization_id</code> parameter. For example, VA jobs are returned when you specify Air Force jobs, but the searcher looks for jobs at the VA (<a href="http://api.usa.gov/jobs/search.json?query=jobs+at+the+va&amp;organization_id=AF">http://api.usa.gov/jobs/search.json?query=jobs+at+the+va&amp;organization_id=AF</a>).</p>
-
-<h3>Hl [highlighting]</h3>
-
-<p>No highlighting is included by default. Use 'hl=1' to highlight terms in the position title that match terms in the user's search. Highlighted terms are surrounded with <code>&lt;em&gt;</code> tags.</p>
-
-<h3>Size</h3>
-
-<p>Specifies how many results are returned (up to 100 at a time).</p>
-
-<h3>From</h3>
-
-<p>Specifies the starting record.</p>
-
-<h3>Tags</h3>
-
-<p>Specifies the level of government. Current tags are <code>federal</code>, <code>state</code>, <code>county</code>, and <code>city</code>.</p>
-
-<h3>Lat_lon</h3>
-
-<p>Comma-separated pair denoting the position of the searcher looking for a job. For example, 'lat_lon=37.783333,-122.416667' is the value for San Francisco, CA. For generic job searches (e.g., 'jobs', 'internships') where this parameter is passed in, the Jobs API server will sort jobs results and return those that are closest to the searcher's location. For jobs that have multiple locations associated with the position, the distance to the closest location is used to determine the overall geo-distance for the job. Note that for keyword-based job searches (e.g., 'jobs in NY', 'nursing jobs'), this parameter has no effect and is ignored.</p>
-
-<p><a name="data-sources"></a></p>
-
-<h2>Data Sources</h2>
-
-<p>We've tailored this Jobs API for our use in our search results. Data are normalized across government job listings and we don't include all jobs from all data sources. So, we encourage you to use the original data sources directly.</p>
-
-<p>Federal government jobs are from <a href="http://www.usajobs.gov">USAJobs</a>. The USAJobs API for job opportunity announcements is at <a href="https://data.usajobs.gov/Rest">https://data.usajobs.gov/Rest</a>.</p>
-
-<p>State and local government jobs are from cities, counties, and state agencies that use <a href="http://www.neogov.com/">NeoGov</a>, such <a href="https://bouldercolorado.gov/jobs-and-volunteer">jobs with the the city of Boulder, Colorado</a>.</p>
-
-<p><strong><em>Are we missing your jobs data?</em></strong> E-mail us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#85;&#83;&#x41;&#x53;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#103;&#115;&#x61;&#x2e;&#x67;&#x6f;&#118;">&#x55;&#83;&#x41;&#x53;&#101;&#97;&#114;&#99;&#104;&#64;&#103;&#115;&#97;&#x2e;&#103;&#x6f;&#x76;</a> to let us know where you publish the jobs data for your federal, state, or local government agency. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
-
-<p><a name="what-it-returns"></a></p>
-
-<h2>What it Returns</h2>
-
-<p>Below is a sample JSON response for <a href="http://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+albany+ny">http://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+albany+ny</a>.</p>
-
-<pre><code>[
-  {
-    id: "usajobs:340537800",
-    position_title: "Nursing Assistant Float Pool",
-    organization_name: "Veterans Affairs, Veterans Health Administration",
-    rate_interval_code: "PA",
-    minimum: 31315,
-    maximum: 40706,
-    start_date: "2013-03-27",
-    end_date: "2013-05-31",
-    locations: [
-        "Albany, NY"
-    ],
-    url: "https://www.usajobs.gov/GetJob/ViewDetails/340537800"
-  },
-  {
-    id: "usajobs:342782900",
-    position_title: "Registered Nurse - Endoscopy",
-    organization_name: "Veterans Affairs, Veterans Health Administration",
-    rate_interval_code: "PA",
-    minimum: 0,
-    maximum: 0,
-    start_date: "2013-05-02",
-    end_date: "2013-05-13",
-    locations: [
-        "Albany, NY"
-    ],
-    url: "https://www.usajobs.gov/GetJob/ViewDetails/342782900"
-  }
-]
-</code></pre>
-
-<p><a name="code-samples"></a></p>
-
-<h2>Code Samples</h2>
-
-<p>We "eat our own dog food" and use this Jobs API to display the job openings on the government websites that use USASearch.</p>
-
-<p>See the sample results page below that shows current jobs openings across the Department of Homeland Security for a search on
-<em><a href="http://search.dhs.gov/search?query=security+jobs&amp;affiliate=dhs">security jobs</a></em> on DHS.gov.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/dhs-jobs.png" alt="Jobs GovBox on DHS.gov" /></p>
-
-<h2>Open Source Code</h2>
-
-<p>The server code that runs this API is on Github. If you're a Rails developer, fork our
-<a href="https://github.com/GSA-OCSIT/jobs_api">Jobs Server API</a> repo to add features (such
-as additional datasets) or fix bugs.</p>
-
-<p>Better yet, send us a <a href="https://github.com/GSA-OCSIT/jobs_api/pulls">pull request</a>
-to contribute your changes to our project and improve this API for everyone who is using it.</p>
-
-<h2>Feedback</h2>
-
-<p>E-mail us at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#85;&#x53;&#65;&#x53;&#101;&#x61;&#x72;&#99;&#104;&#64;&#x67;&#115;&#97;&#46;&#103;&#x6f;&#118;">&#x55;&#x53;&#65;&#83;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#x67;&#115;&#97;&#46;&#103;&#x6f;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
-
-<h2>Terms of Use</h2>
-
-<p>By accessing the Jobs API, you agree to <a href="http://www.usa.gov/About/developer-resources/terms-of-service.shtml">USA.gov's Terms of Service for Developer Resources</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/jobs"><span class="label label-info">jobs</span></a>
       
       <a href="/tagged/api"><span class="label label-info">api</span></a>
       
