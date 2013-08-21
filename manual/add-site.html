@@ -137,7 +137,7 @@
 </ol>
 
 
-<p>If you have any problem resetting your password, e-mail us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#58;&#85;&#x53;&#x41;&#x53;&#x65;&#97;&#114;&#99;&#104;&#x40;&#103;&#x73;&#x61;&#46;&#103;&#x6f;&#118;">&#x55;&#83;&#x41;&#x53;&#101;&#97;&#114;&#x63;&#104;&#64;&#x67;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#118;</a>.</p>
+<p>If you have any problem resetting your password, e-mail us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#x55;&#83;&#x41;&#x53;&#x65;&#97;&#x72;&#x63;&#104;&#64;&#103;&#x73;&#97;&#x2e;&#103;&#111;&#118;">&#x55;&#83;&#65;&#x53;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x67;&#115;&#x61;&#x2e;&#x67;&#111;&#x76;</a>.</p>
 
   </div>
 
@@ -195,6 +195,15 @@
   script.src = "http://search.usa.gov/javascripts/remote.loader.js";
   document.getElementsByTagName("head")[0].appendChild(script);
 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31302465-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
   //]]>
 </script>
 

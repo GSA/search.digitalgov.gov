@@ -127,7 +127,7 @@
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or language, e-mail us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#85;&#83;&#65;&#x53;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#103;&#x73;&#x61;&#x2e;&#103;&#x6f;&#x76;">&#x55;&#83;&#x41;&#x53;&#101;&#97;&#x72;&#99;&#104;&#64;&#103;&#x73;&#97;&#46;&#x67;&#111;&#118;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or language, e-mail us at <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#85;&#83;&#65;&#x53;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#103;&#115;&#x61;&#x2e;&#103;&#x6f;&#x76;">&#x55;&#83;&#65;&#x53;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#x67;&#115;&#97;&#x2e;&#103;&#111;&#x76;</a>.</p>
 
     </div>
 
@@ -197,6 +197,15 @@
   script.src = "http://search.usa.gov/javascripts/remote.loader.js";
   document.getElementsByTagName("head")[0].appendChild(script);
 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31302465-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
   //]]>
 </script>
 
