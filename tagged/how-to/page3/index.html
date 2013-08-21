@@ -81,6 +81,82 @@
       
       <span>Last updated on:</span>
       
+      <a href="/manual/raw-logs.html">
+        <time datetime="2013-03-20">March 20, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/raw-logs.html">How to Access Your Raw Logs</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Raw Logs Access</p>
+
+<p>You can directly access your raw HTTP logs. The logs include valuable data on searches, clicks, and USASearch tag page loads.</p>
+
+<p>With the raw logs, you can conduct in-depth, ad hoc analyses to answer any questions that you can't answer using the standard analytics reports in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. You can also automatically integrate your search logs with your other reports and business processes.</p>
+
+<p>To access your raw logs, you'll first need to upload your public key on the Raw Logs Access page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
+
+<p>We'll set up your public key on our secure FTP servers and send you an email when your logs are available for download.</p>
+
+<p>Once your key is set up, you'll be able access your log files via secure FTP. We upload your logs each day, usually within several hours after midnight GMT. After a week, we purge the older files.</p>
+
+<p>We recommend that you set up a cron script to automatically download the latest files each day.</p>
+
+<h2>How to Generate a Key Pair on Unix</h2>
+
+<p>On Unix systems, you can generate a RSA public key with no passphrase by typing in the following command. Generate the key from the machine or server that you'll be using to download the logs. Once you've created a key, it'll be located at /home/user/.ssh/id_rsa.pub.</p>
+
+<pre><code>% cd ~
+% ssh-keygen -q -b 4096 -t rsa
+Enter file in which to save the key (/home/user/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+</code></pre>
+
+<h2>How to Generate a Key Pair on Windows</h2>
+
+<p>You can use <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a>, a free telnet/SSH client, to generate a public key on Windows. Download PuTTYgen.exe, Pageant.exe, and PSFTP.exe from the <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY Download Page</a>.</p>
+
+<p>Run PuTTYgen.exe.</p>
+
+<ul>
+<li>Select SSH-2 RSA as the type of key to generate.</li>
+<li>Set the number of bits in the generated key to 2048.</li>
+<li>Select Generate. Move your mouse within the blank area to create random movements until the key is generated.</li>
+<li>Fill out your Key Comment, Key Passphrase, and Confirm Passphrase.</li>
+<li>Copy your <em>public</em> key from the string in the Public Key for Pasting into OpenSSH Authorized_keys File. Paste this key into the Raw Logs Access page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. (Note: Don't save this public key and send us the string copied from a text file. It adds lines in the file so it doesn't work.)</li>
+<li>Save your <em>private</em> key.</li>
+</ul>
+
+
+<p>Run Pageant.exe. Select Add Key and upload your private key, the .ppk file.</p>
+
+<p>Run PSFTP.exe and type in the following. You can find your site's handle on the Site Information page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
+
+<pre><code>open YourSiteHandle@198.61.238.46
+</code></pre>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/manual/third-party.html">
         <time datetime="2013-03-19">March 19, 2013</time>
       </a>
@@ -111,7 +187,7 @@
 <p><strong><em>ForeSee tip:</em></strong> Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li><p>Email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#x55;&#83;&#65;&#83;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#x67;&#115;&#x61;&#x2e;&#x67;&#111;&#118;">&#85;&#83;&#x41;&#x53;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#103;&#x73;&#x61;&#46;&#103;&#x6f;&#118;</a> to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
+<li><p>Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#85;&#83;&#65;&#x53;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x67;&#x73;&#x61;&#46;&#103;&#x6f;&#x76;">&#85;&#83;&#x41;&#x53;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#103;&#x73;&#97;&#46;&#103;&#111;&#x76;</a> to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
 <li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
 
 <p> Find => 'files': '/fsrscripts/',</p>
@@ -370,6 +446,53 @@
       
       <span>Last updated on:</span>
       
+      <a href="/manual/monthly-reports.html">
+        <time datetime="2012-05-03">May 3, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/monthly-reports.html">How to Analyze Your Monthly Reports</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Monthly Reports</p>
+
+<p>The Monthly Reports page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the total number of searches and click throughs. A click through is recorded each time a searcher clicks on a results link. Data start from the time your agency started using USASearch (but no further back than 2009).</p>
+
+<p>Data are shown for the present month-to-date by default. Change the time period by selecting a different year or month.</p>
+
+<p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV link to download the list as a comma delimited file. The CSV file contains three columns.</p>
+
+<ol>
+<li>Query&mdash;The search term or phrase.</li>
+<li>Raw count&mdash;Total number of times the query was submitted.</li>
+<li>IP-deduped&mdash;Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of "real," human traffic.</li>
+</ol>
+
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> On the first of each month, we email you a report with data on the previous month's queries, clicks, and top search terms.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/manual/query-logs.html">
         <time datetime="2012-05-03">May 3, 2012</time>
       </a>
@@ -429,53 +552,6 @@
 <p>See the sample report below that shows the top queries that led to a click on <a href="http://www.usajobs.gov/">http://www.usajobs.gov/</a> on <a href="http://www.usa.gov/">USA.gov</a> in October 2012.</p>
 
 <p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_mceqp4Jmoy1qid15q.png" alt="Top queries that led to a click on http://www.usajobs.gov on USA.gov" /></p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/manual/monthly-reports.html">
-        <time datetime="2012-05-03">May 3, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/monthly-reports.html">How to Analyze Your Monthly Reports</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Monthly Reports</p>
-
-<p>The Monthly Reports page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the total number of searches and click throughs. A click through is recorded each time a searcher clicks on a results link. Data start from the time your agency started using USASearch (but no further back than 2009).</p>
-
-<p>Data are shown for the present month-to-date by default. Change the time period by selecting a different year or month.</p>
-
-<p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV link to download the list as a comma delimited file. The CSV file contains three columns.</p>
-
-<ol>
-<li>Query&mdash;The search term or phrase.</li>
-<li>Raw count&mdash;Total number of times the query was submitted.</li>
-<li>IP-deduped&mdash;Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of "real," human traffic.</li>
-</ol>
-
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> On the first of each month, we email you a report with data on the previous month's queries, clicks, and top search terms.</p>
 
     </div>
 
@@ -594,92 +670,6 @@
       <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
       
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/manual/look-feel.html">
-        <time datetime="2012-03-20">March 20, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/look-feel.html">How to Customize the Look and Feel of Your Results Page</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Look and Feel</p>
-
-<h2>Page Title</h2>
-
-<p>The default page title is <em>{Query} - {SiteName} Search Results</em>. This title includes parameters for the searcher's query term and the site name you provide on the <a href="/manual/site-information.html">Site Information</a> page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
-
-<p>You can change the default page title by deleting the text and entering your preferred title.</p>
-
-<p>See the sample results page below for a search for <em>everglades</em> on Broward County's <a href="http://www.broward.org">website</a>.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m1501uNn6v1qid15q.png" alt="Page title on Broward.org" /></p>
-
-<h2>Favicon</h2>
-
-<p>Provide the URL for your agency's favicon. (A favicon, short for favorites icon, is the small image associated with your website.)</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m153f7849k1qid15q.png" alt="Favicon on Broward.org" /></p>
-
-<h2>Font</h2>
-
-<p>Select your preferred font family.</p>
-
-<h2>Borders</h2>
-
-<p>Select the option, Add Top Padding, to add some padding above your search results. If you don't select the option, the results will be flush against the top of the browser window.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m155jwTEf01qid15q.png" alt="With Add Top Padding Selected" /><br/>
-<em>With Add Top Padding Selected</em></p>
-
-<p>Select the option, Add Drop Shadow, to display a drop shadow around the main content of your results page. If you don't select the option, no drop shadow will appear.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/tumblr_m158px2uvj1qid15q.png" alt="With Add Drop Shadow Selected" /><br/>
-<em>With Add Drop Shadow Selected</em></p>
-
-<h2>Theme</h2>
-
-<p>Select a predefined theme by clicking on its radio button. Customize a theme by clicking on its 'Customize' button.</p>
-
-<p>Customize the color of any page element by clicking on the color picker text field. Enter a valid three- or six-digit hex value or pick a color by dragging the cross-hair icon <img alt="crosshair icon" src="http://search.usa.gov/javascripts/jscolor/cross.gif?1332168483"/> inside the color picker window. Drag the triangle icon <img alt="arrow icon" src="http://search.usa.gov/javascripts/jscolor/arrow.gif?1332168483"/> to control the color saturation. When you are done, click anywhere outside the color picker window.</p>
-
-<h2>Background Image</h2>
-
-<p>Use the Browse... option to upload the logo or image that you'd like to appear in the background of your page, if any. Click on the option, Mark page background image for deletion, to delete an uploaded image.</p>
-
-<p>Use the drop-down menu to select a repeat option.</p>
-
-<ul>
-<li>not repeat</li>
-<li>repeat (both horizontally and vertically)</li>
-<li>repeat-x (horizontally, left to right)</li>
-<li>repeat-y (vertically, top to bottom)</li>
-</ul>
-
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> We offer results through our <a href="/manual/api.html">Search Data API</a>, if you'd like to create mash-ups or have complete control of the look and feel of your search results pages. You can access the API by clicking on the option in the left-hand menu in the Admin Center.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/user-interface"><span class="label label-info">user-interface</span></a>
       
     </div>
   </article>
