@@ -1,8 +1,8 @@
 ---
-permalink: /manual/collections.html
+permalink: /sites/manual/collections.html
 layout: post
 title: "How to Create Collections Within Our Index"
-tags: how-to collections
+tags: how-to manage-content collections
 ---
 [USASearch](http://usasearch.howto.gov) > [Admin Center](http://search.usa.gov/affiliates/home) > YourSite > Collections
 
@@ -16,11 +16,13 @@ Enter a name for the collection (e.g., FAQs).
 
 Enter the URLs that make up this collection. Start each URL prefix with http:// and end it in a trailing slash (/) to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov/).
 
-![Create a Collection](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection.png)
+<!-- START UPDATE -->
 
 ## Step 2. Opt to Show in Sidebar
 
 Click on the [Sidebar](/manual/sidebar.html) option in the left-hand menu. Check the option, Show in Sidebar, to allow searchers to see navigation options in the left-hand column of the results page.
+
+<!-- END UPDATE -->
 
 ## Step 3. Check Your Search Results Page
 
