@@ -6,11 +6,9 @@ tags: how-to manage-content collections
 ---
 [USASearch](http://usasearch.howto.gov) > [Admin Center](http://search.usa.gov/affiliates/home) > YourSite > Collections
 
-Would you like searchers to be able to narrow results to a specific subset of content within your site or on another site?
+Would you like searchers to be able to narrow results to a specific subset of content within your site or on another site? You may create a collection across any set of domains, subdomains, or subfolders.
 
 ## Step 1. Create a Collection
-
-Create a named collection across any set of domains, subdomains, or subfolders.
 
 Enter a name for the collection (e.g., FAQs).
 
