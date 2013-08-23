@@ -4,9 +4,9 @@ layout: post
 title: "How to View a Snapshot of What's Happening on Your Site Today"
 tags: how-to analytics dashboard site-overview
 ---
-[USASearch](http://usasearch.howto.gov) > [Admin Center](http://search.usa.gov/affiliates/home) > YourSite > Dashboard > Site Overview
+[USASearch](http://usasearch.howto.gov) > [Admin Center](http://search.usa.gov/sites) > YourSite > Dashboard > Site Overview
 
-The Site Overview page in the [Admin Center](http://search.usa.gov/affiliates/home) provides a snapshot of what has been happening on your site in the past day or so.
+The Site Overview page in the [Admin Center](http://search.usa.gov/sites) provides a snapshot of what has been happening on your site in the past day or so.
 
 ## Top Queries
 
@@ -24,7 +24,11 @@ If there are any pages that are trending, they'll appear here. Reports on up to 
 
 Use this report to identify newly popular pages on your website. Investigate why pages are trending, if the reason is not immediately apparent.
 
+<!--START UPDATE-->
+
 Note that you'll only see this list of trending URLs if you have our [Javascript snippet](/manual/get-code.html) on your web pages. Data are updated every few minutes so this is near real-time information and you may see URLs come and go quickly.
+
+<!--END UPDATE-->
 
 ## Trending Queries
 
@@ -38,13 +42,13 @@ If there are any terms that returned no results, they'll appear here. Reports on
 
 For example, on one agency's website in October 2012, a dozen searches for *frostline* returned no results. The frost line&mdash;also known as depth of frost or freezing&mdash;is the depth to which the groundwater in soil is expected to freeze. The agency's pages on the topic referred to this concept as *depth of freezing*. 
 
-Use this alert about results data to help searchers find your content by adding a [Best Bet](/manual/best-bets.html), updating your existing web pages, or both.
+Use this alert about results data to help searchers find your content by adding a [Best Bet](/sites/manual/best-bets-text.html), updating your existing web pages, or both.
 
 ## Top Queries with Low Click Thrus
 
 If there are any frequently searched terms that returned results but didn't result in a click at least 20% of the time, they'll appear here. Reports on up to the top 10 searches with low click thru rates. 
 
-Use this alert about low click thrus to identify issues with coverage. You may opt to create a <a href="/sites/manual/best-bets-text.html">Best Bet</a>, add pages that may be missing from the results, or do both to improve recall. Or, you may opt to incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results.
+Use this alert about low click thrus to identify issues with coverage. You may opt to create a [Best Bet](/sites/manual/best-bets-text.html), add pages that may be missing from the results, or do both to improve recall. Or, you may opt to incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results.
 
 ## This Month's Totals to Date
 

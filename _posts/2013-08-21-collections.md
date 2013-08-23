@@ -4,9 +4,9 @@ layout: post
 title: "How to Create Collections Within Our Index"
 tags: how-to manage-content collections
 ---
-[USASearch](http://usasearch.howto.gov) > [Admin Center](http://search.usa.gov/affiliates/home) > YourSite > Collections
+[USASearch](http://usasearch.howto.gov) > [Admin Center](http://search.usa.gov/sites) > YourSite > Collections
 
-Would you like searchers to be able to narrow results to a specific subset of content within your site or on another site? You may create a collection across any set of domains, subdomains, or subfolders.
+Would you like searchers to be able to narrow results to a specific subset of content within your site or on another site? You can create a collection across any set of domains, subdomains, or subfolders.
 
 ## Step 1. Create a Collection
 
@@ -18,7 +18,7 @@ Enter the URLs that make up this collection. Start each URL prefix with http:// 
 
 ## Step 2. Opt to Show in Sidebar
 
-Click on the [Sidebar](/manual/sidebar.html) option in the left-hand menu. Check the option, Show in Sidebar, to allow searchers to see navigation options in the left-hand column of the results page.
+Click on the [Display Overview](/sites/manual/display-overview.html) page. Check the option, Show in Sidebar, to allow searchers to see navigation options in the left-hand column of the results page.
 
 <!-- END UPDATE -->
 
@@ -34,7 +34,7 @@ Searchers will see an option to narrow their search results to pages in this col
 
 ***Did you know?*** You can set up a search box on your website that limits results to your collection.
 
-Start with the standard form snippet on the [Get Code](/manual/get-code.html) page in the Admin Center. Change the form action to `action="http://search.usa.gov/search/docs` and add the following line to limit the results to your collection.
+Start with the standard form snippet on the [Activate Search](/sites/manual/activate.html) page. Change the form action to `action="http://search.usa.gov/search/docs` and add the following line to limit the results to your collection.
 
 `<input type="hidden" name="dc" value="###">`
 

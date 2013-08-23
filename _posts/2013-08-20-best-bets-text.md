@@ -4,7 +4,7 @@ layout: post
 title: "How to Highlight Text Best Bets"
 tags: how-to manage-content best-bets
 ---
-[USASearch](http://usasearch.howto.gov) > [Admin Center](http://search.usa.gov/affiliates/home) > YourSite > Manage Content > Best Bets: Text
+[USASearch](http://usasearch.howto.gov) > [Admin Center](http://search.usa.gov/sites) > YourSite > Manage Content > Best Bets: Text
 
 Do you want to promote a specific web page? Create a Text Best Bet. 
 
@@ -26,7 +26,7 @@ Text Best Bets may be added individually or via bulk upload.
 
 ***Publish Dates.*** The default start date is the day in which you input data and create a Best Bet. The default end date is null, so it will stay up forever until you decide to take it down. You can opt to set a start and end date to control to specify other start and end dates. 
 
-***Keywords.*** Keywords are optional. Add specific words or phrases that **are not** already included in the visible title or description. Common keywords include synonyms, acronyms, compound words, misspellings, or other variants. Each field can have up to 255 characters. Keywords are *not* visible to searchers.
+***Keywords.*** Keywords are optional. Add specific words or phrases that are *not* already included in the visible title or description. Common keywords include synonyms, acronyms, compound words, misspellings, or other variants. Each field can have up to 255 characters. Keywords are *not* visible to searchers.
 
 ### Bulk Upload
 
