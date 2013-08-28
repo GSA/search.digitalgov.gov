@@ -81,6 +81,87 @@
       
       <span>Last updated on:</span>
       
+      <a href="/blog/go-live.html">
+        <time datetime="2012-11-26">November 26, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/blog/go-live.html">A Punch List to Go Live with USASearch</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Your pre-launch checklist will be unique to your agency's workflow, requirements, and deadlines. A typical punch list to go live with USASearch follows.</p>
+
+<h2>Connect Your Site to USASearch</h2>
+
+<p>Most agencies add these two <a href="/manual/get-code.html">snippets of code</a> to the template(s) in their content management systems (rather than adding them to individual pages).</p>
+
+<p><i class="icon-check"></i> <strong>1. Does your search box point to USASearch?</strong> Update your search box form code point to USASearch so that, when users execute a search, they'll see your USASearch-hosted results page.</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+     &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt; 
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt; 
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt; 
+    &lt;input name="commit" type="submit" value="Search" /&gt; 
+&lt;/form&gt;
+</code></pre>
+
+<p><i class="icon-check"></i> <strong>2. Do you have the USASearch Javascript tag on your webpages?</strong> This Javascript helps us <a href="/manual/urls.html">find your new and updated pages</a>. It also powers the <a href="/manual/type-ahead.html">type-ahead search</a>.</p>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+     var usasearch_config = { siteHandle:"YourSiteHandle" };
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "http://search.usa.gov/javascripts/remote.loader.js";
+    document.getElementsByTagName("head")[0].appendChild(script);
+//]]&gt;
+&lt;/script&gt;
+</code></pre>
+
+<h2>Double Check Your Content Sources</h2>
+
+<p><i class="icon-check"></i> <strong>3. Have you told us which domain(s) you want to search?</strong> List one or more <a href="/manual/domains.html">domains</a> that you want to search on the first page of web results. Most agencies opt to leave out the 'www' to include all subdomains (e.g., list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies especially department-level portals opt to also include their bureaus' websites (e.g., Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)</p>
+
+<p><i class="icon-check"></i> <strong>4. Have you told us about your RSS feeds?</strong> We love <a href="/manual/rss.html">RSS feeds</a>. Tell us about all of your feeds, even if you opt not to show them (see #7 below). They're the quickest way for you to tell us about your new and updated content. Feeds also have well-structured titles, URLs, descriptions, and dates that we use to improve your search results page. (Tip: Preview your feeds from the RSS page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> to confirm that we've indexed your content.)</p>
+
+<p><i class="icon-check"></i> <strong>5. Have you told us about your social media accounts?</strong> Flickr photostreams, tweets, and YouTube videos are a great way to highlight your recent content and to let searchers know about your <a href="/manual/social-media.html">social media</a> channels. Tell us about all of your social media, even if you opt not to show them (see #7 below).</p>
+
+<h2>Customize Your User Interface</h2>
+
+<p><i class="icon-check"></i> <strong>6. Have you made the search results page look like your website?</strong> Customize the <a href="/manual/look-feel-page.html">look and feel</a> (colors, fonts, favicon) and <a href="/manual/header-footer.html">header and footer</a> of your search results page to create a seamless experience for users as they search and browse your website.</p>
+
+<p><i class="icon-check"></i> <strong>7. Have you told us what to show on your results page?</strong> Tell us which <a href="/manual/results-modules.html">results modules</a> (i.e., the stuff in the center of the page) and <a href="/manual/sidebar.html">sidebar</a> options (i.e., the navigation in the left-hand column) you want to appear on your search results.</p>
+
+<h2>Set Up Nice-to-Have Features (Optional)</h2>
+
+<p><i class="icon-check"></i> <strong>8. Have you masked your domain?</strong> We offer <a href="/manual/get-code.html#cname">DNS masking</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov.</p>
+
+<p><i class="icon-check"></i> <strong>9. Have you added the Javascripts for your other third party web services to your results page?</strong> If you have a <a href="/manual/third-party.html">third party service</a> running on your website, you likely want it to run on your results page. Agencies often include their 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends code, among others.</p>
+
+<h2>Don't Forget SEO (Optional)</h2>
+
+<p><i class="icon-check"></i> <strong>10. Have you optimized your site so we can find your content?</strong> We follow <a href="http://www.howto.gov/web-content/search/seo">search engine optimization</a> (SEO) best practices. Verify that you have a <a href="http://www.robotstxt.org">robots.txt</a> and an <a href="http://www.sitemaps.org">XML sitemap</a>. These two files are typically located in the root directory of your website (i.e., agency.gov/robots.txt and agency.gov/sitemap.xml, respectively). Also verify that your robots.txt file allows our user agent (usasearch) to access your public content.</p>
+
+<p><i class="icon-check"></i> <strong>11. Have you registered your site with the major commercial search engines?</strong> Register for both <a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a> and <a href="https://www.google.com/webmasters/tools/home">Google Webmaster Tools</a> to maximize the coverage of your content in their search results.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/manual/trending-queries.html">
         <time datetime="2012-11-05">November 5, 2012</time>
       </a>
@@ -601,50 +682,6 @@
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
       
       <a href="/tagged/collections"><span class="label label-info">collections</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/manual/preview.html">
-        <time datetime="2012-03-07">March 7, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/preview.html">How to Preview Your Search Results</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Preview</p>
-
-<p>As you change your configuration settings, you can preview your search results page before pushing it to your live website.</p>
-
-<p>Visit our <a href="http://search.usa.gov/affiliates/home">Admin Center</a>, select your site, and click on the Preview option in the left-hand menu. You can also preview your results page by clicking on Admin Center or the name of your site in the breadcrumbs.</p>
-
-<p><strong>View Current, Live Site.</strong> This option will allow you to view the current, live search results page on your site. This is the only option you'll see if you don't have any staged changes.</p>
-
-<p><strong>View Staged Changes.</strong> This option will allow you to view the staged search results page before you publish it to your live site. You'll see this option if you have staged changes.</p>
-
-<p>Publish the staged changes by clicking the Make Live/Push Changes button. If you're not happy with the staged changes, cancel the changes by clicking the Cancel Changes button.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> If you see a security warning about the page being encrypted, select the option to continue.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/preview"><span class="label label-info">preview</span></a>
       
     </div>
   </article>
