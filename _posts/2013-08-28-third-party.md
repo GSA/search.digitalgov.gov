@@ -23,7 +23,7 @@ For more information, read Google's tip, [Tracking Multiple Domains](https://dev
 The code you submit should look something like one of the following two scripts.
 
 ### Google Analytics Code (Older Format)
-
+```javascript
      <script type="text/javascript">
      var _gaq = _gaq || []; 
      _gaq.push(['_setAccount', 'UA-########-1']); 
@@ -36,20 +36,15 @@ The code you submit should look something like one of the following two scripts.
      })();
      
      </script>
-
+```
 ### Google Analytics Code (Newer Format)
 
-     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-     
-
-     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-
-
-     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-
-
-     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
+```javascript
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+```
 
 ## Digital Analytics Program Tip
 
@@ -82,5 +77,6 @@ Coordinate with your ForeSee representative and USASearch to implement your cust
 4. USASearch will send you an email to confirm that we've set up your CNAME and installed your foresee-trigger.js file.
 
 It should look something like the following.
-
+```javascript
      <script type="text/javascript" src="http://www.YourAgency.gov/library/foresee/foresee-trigger.js"></script>
+```
