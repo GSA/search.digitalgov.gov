@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Checklist for a Successful Website Redesign</title>
+  <title>How to Add JavaScript for Your Third Party Web Services</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -75,50 +75,122 @@
   <div id="main-container"><article class="article">
   <div class='time'>
     
-    <a href="/blog/redesign.html">
-      <time>May 1, 2013</time>
+    <span>Last updated on:</span>
+    
+    <a href="/sites/manual/third-party.html">
+      <time>August 28, 2013</time>
     </a>
   </div>
 
   
   <h1>
-    <a href="/blog/redesign.html">Checklist for a Successful Website Redesign</a>
+    <a href="/sites/manual/third-party.html">How to Add JavaScript for Your Third Party Web Services</a>
   </h1>
   
 
   <div class='post-content'>
-    <p>We often receive questions when an affiliate undergoes a major website upgrade, changes content management systems, or both. We created this checklist to share with you four steps to take to ensure your redesign is successful.</p>
+    <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Analytics > 3rd Party Tracking</p>
+
+<p>Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends?</p>
+
+<p>Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
+
+<p>Some tips for commonly used third party web services follow.</p>
+
+<h2>Google Analytics Tip</h2>
+
+<p>In your Google Analytics JavaScript, be sure to set your domain if you've requested <a href="/sites/manual/cname.html">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
+
+<pre><code>_gaq.push(['_setDomainName', 'commerce.gov']);
+</code></pre>
+
+<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>.</p>
+
+<p>The code you submit should look something like one of the following two scripts.</p>
+
+<h3>Google Analytics Code (Older Format)</h3>
+
+<pre><code> &lt;script type="text/javascript"&gt;
+ var _gaq = _gaq || []; 
+ _gaq.push(['_setAccount', 'UA-########-1']); 
+ _gaq.push(['_trackPageview']);
+
+ (function() { 
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
+ })();
+
+ &lt;/script&gt;
+</code></pre>
+
+<h3>Google Analytics Code (Newer Format)</h3>
+
+<pre><code> (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+</code></pre>
+
+<h2>Digital Analytics Program Tip</h2>
+
+<p>Does your federal agency participate in the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> (DAP)?</p>
+
+<p>You don't need to upload the full DAP Google Analytics code. You can simply say something like, "Add DAP code."</p>
+
+<h2>ForeSee Tip</h2>
+
+<p>Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li>Keep the file name and directly structure the same, if possible. If it isn't possible, use 301 redirects to send visitors to the appropriate new pages. For more on 301 redirects, read tips from <a href="http://www.bing.com/community/site_blogs/b/webmaster/archive/2011/10/06/managing-redirects-301s-302s-and-canonicals.aspx">Bing</a> and <a href="http://www.google.com/support/webmasters/bin/answer.py?answer=93633">Google</a>. Notify other websites that link to you of the changes.</li>
-<li>Register for the commercial search engines' webmaster tools.
+<li><p>Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#85;&#x53;&#65;&#83;&#x65;&#x61;&#114;&#99;&#104;&#64;&#x67;&#115;&#x61;&#x2e;&#x67;&#111;&#118;">&#x55;&#83;&#65;&#83;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#103;&#115;&#97;&#x2e;&#103;&#111;&#x76;</a> to <a href="/sites/manual/cname.html">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
+<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
+
+<p> Find => 'files': '/fsrscripts/',</p>
+
+<p> and replace it with => 'files': '//{yourdomain}/fsrscripts/',</p>
+
+<p> in the following five files.</p>
 
 <ul>
-<li><a href="http://www.bing.com/toolbox/webmasters/">Bing Webmaster Tools</a></li>
-<li><a href="https://www.google.com/webmasters/">Google Webmaster Central</a></li>
+<li>foresee-trigger.js</li>
+<li>foresee-tracker.js</li>
+<li>foresee-alive.js</li>
+<li>foresee-qualifier.js</li>
+<li>foresee-test.js</li>
 </ul>
 </li>
-<li>Update the <a href="http://www.sitemaps.org/">XML sitemap</a> on your website and notify the search engines via the webmaster tools.</li>
-<li>Notify the search engines of the content that has been removed via the webmaster tools. Specifically, in Bing, use the <a href="http://www.bing.com/blogs/site_blogs/b/webmaster/archive/2013/03/15/bing-wmt-launches-site-move-tool.aspx">Site Move tool</a>.</li>
+<li><p>Ask ForeSee to send USASearch your foresee-trigger.js file.</p></li>
+<li><p>USASearch will send you an email to confirm that we've set up your CNAME and installed your foresee-trigger.js file.</p></li>
 </ol>
 
 
-<p>If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#85;&#83;&#x41;&#83;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#103;&#x73;&#97;&#x2e;&#x67;&#x6f;&#x76;">&#x55;&#x53;&#x41;&#x53;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#x67;&#x73;&#x61;&#46;&#x67;&#x6f;&#118;</a>.</p>
+<p>It should look something like the following.</p>
 
-<hr />
-
-<p><strong><em>Additional Resource</em></strong></p>
-
-<ul>
-<li><em><a href="http://googlewebmastercentral.blogspot.com/2012/04/how-to-move-your-content-to-new.html">How to move your content to a new location</a></em>, Google Webmaster Central Blog</li>
-</ul>
-
+<pre><code> &lt;script type="text/javascript" src="http://www.YourAgency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;
+</code></pre>
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/seo"><span class="label label-info">seo</span></a>
+    <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+    
+    <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+    
+    <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
+    
+    <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
+    
+    <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
+    
+    <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
     
   </div>
 </article></div>

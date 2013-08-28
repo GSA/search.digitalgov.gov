@@ -81,6 +81,74 @@
       
       <span>Last updated on:</span>
       
+      <a href="/manual/third-party.html">
+        <time datetime="2013-03-19">March 19, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/third-party.html">How to Add JavaScript for Your Third Party Web Services</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > 3rd Party Tracking</p>
+
+<p>Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends?</p>
+
+<p>Log in to the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> and select the option, Third Party Tracking. Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
+
+<hr />
+
+<p><strong><em>Google Analytics tip:</em></strong> In your Google Analytics JavaScript, be sure to set your domain if you've requested <a href="/manual/get-code.html#cname">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
+
+<pre><code>_gaq.push(['_setDomainName', 'commerce.gov']);
+</code></pre>
+
+<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>.</p>
+
+<p><strong><em>ForeSee tip:</em></strong> Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
+
+<ol>
+<li><p>Email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#x55;&#83;&#x41;&#83;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#103;&#115;&#97;&#46;&#x67;&#111;&#118;">&#85;&#x53;&#x41;&#x53;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#x67;&#x73;&#97;&#x2e;&#103;&#x6f;&#x76;</a> to <a href="/manual/get-code.html#cname">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
+<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
+
+<p> Find => 'files': '/fsrscripts/',</p>
+
+<p> and replace it with => 'files': '//{yourdomain}/fsrscripts/',</p>
+
+<p> in the following five files.</p>
+
+<ul>
+<li>foresee-trigger.js</li>
+<li>foresee-tracker.js</li>
+<li>foresee-alive.js</li>
+<li>foresee-qualifier.js</li>
+<li>foresee-test.js</li>
+</ul>
+</li>
+<li><p>Ask ForeSee to send USASearch your foresee-trigger.js file.</p></li>
+<li><p>USASearch will send you an email to confirm that we've set up your CNAME and installed your foresee-trigger.js file.</p></li>
+</ol>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/blog/go-live.html">
         <time datetime="2012-11-26">November 26, 2012</time>
       </a>
@@ -162,6 +230,50 @@
       
       <span>Last updated on:</span>
       
+      <a href="/manual/low-ctr.html">
+        <time datetime="2012-11-05">November 5, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/low-ctr.html">How to Analyze Your Queries with Low Click-Thru Rates</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Low CTR Queries</p>
+
+<p>The Low Click-Thru Rate (CTR) Queries page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the top 10 searches with low click-thru rates. It shows the most popular search terms that people generally don't act (click) on.</p>
+
+<p>You'll see a list of up to 10 terms that returned search results, but resulted in a click less than 20 percent of the time over the past day or so. In other words, fewer than one in five people who searched for that topic clicked on a search result. (Terms must have been searched by at least 10 unique searchers per day to be included in this list.)</p>
+
+<p>Use this report to identify issues with coverage. Create a <a href="/manual/best-bets.html">Best Bet</a>, add pages that may be missing from the results, or do both to improve recall. Incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results.</p>
+
+<p>Click on any linked word or the <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png"/> symbol in the list, and you'll be taken to a Query Timeline chart. There you'll be able to select a period of time for the term, and you can also add a second query for comparison.</p>
+
+<p>Click on the <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol, and you'll be taken to a list of the top clicked URLs for that term.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> This low click-thru report lists only those terms that returned search results. Visit the <a href="/manual/query-logs.html">Query Logs</a> page to see the top queries that returned no results.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/manual/trending-queries.html">
         <time datetime="2012-11-05">November 5, 2012</time>
       </a>
@@ -191,50 +303,6 @@
 <p>Click on the <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol, and you'll be taken to a list of the top clicked URLs for that term.</p>
 
 <p>To investigate why the term may be trending, click on the Twitter, news, or trends icons to see what's happening on other websites.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/manual/low-ctr.html">
-        <time datetime="2012-11-05">November 5, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/low-ctr.html">How to Analyze Your Queries with Low Click-Thru Rates</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Low CTR Queries</p>
-
-<p>The Low Click-Thru Rate (CTR) Queries page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a> reports on the top 10 searches with low click-thru rates. It shows the most popular search terms that people generally don't act (click) on.</p>
-
-<p>You'll see a list of up to 10 terms that returned search results, but resulted in a click less than 20 percent of the time over the past day or so. In other words, fewer than one in five people who searched for that topic clicked on a search result. (Terms must have been searched by at least 10 unique searchers per day to be included in this list.)</p>
-
-<p>Use this report to identify issues with coverage. Create a <a href="/manual/best-bets.html">Best Bet</a>, add pages that may be missing from the results, or do both to improve recall. Incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results.</p>
-
-<p>Click on any linked word or the <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png"/> symbol in the list, and you'll be taken to a Query Timeline chart. There you'll be able to select a period of time for the term, and you can also add a second query for comparison.</p>
-
-<p>Click on the <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png"/> symbol, and you'll be taken to a list of the top clicked URLs for that term.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> This low click-thru report lists only those terms that returned search results. Visit the <a href="/manual/query-logs.html">Query Logs</a> page to see the top queries that returned no results.</p>
 
     </div>
 
@@ -612,76 +680,6 @@
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
       
       <a href="/tagged/user-interface"><span class="label label-info">user-interface</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/manual/collections.html">
-        <time datetime="2012-03-07">March 7, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/collections.html">How to Create Collections Within Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Collections</p>
-
-<p>Would you like searchers to be able to narrow results to a specific subset of content within your site or on another site?</p>
-
-<h2>Step 1. Create a Collection</h2>
-
-<p>Create a named collection across any set of domains, subdomains, or subfolders.</p>
-
-<p>Enter a name for the collection (e.g., FAQs).</p>
-
-<p>Enter the URLs that make up this collection. Start each URL prefix with http:// and end it in a trailing slash (/) to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov/).</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection.png" alt="Create a Collection" /></p>
-
-<h2>Step 2. Opt to Show in Sidebar</h2>
-
-<p>Click on the <a href="/manual/sidebar.html">Sidebar</a> option in the left-hand menu. Check the option, Show in Sidebar, to allow searchers to see navigation options in the left-hand column of the results page.</p>
-
-<h2>Step 3. Check Your Search Results Page</h2>
-
-<p>Searchers will see an option to narrow their search results to pages in this collection in the left-hand navigation on the results page.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-2.png" alt="Collection on the search results page" /></p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your collection.</p>
-
-<p>Start with the standard form snippet on the <a href="/manual/get-code.html">Get Code</a> page in the Admin Center. Change the form action to <code>action="http://search.usa.gov/search/docs</code> and add the following line to limit the results to your collection.</p>
-
-<p><code>&lt;input type="hidden" name="dc" value="###"&gt;</code></p>
-
-<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
-
-<p>See the sample search box below that is limited to news releases in <a href="http://www.ftc.gov/opa/index.shtml">FTC.gov's Newroom</a> for a search on <em>privacy</em>.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-3.png" alt="FTC.gov Newsroom search box" /><br/>
-<em>Newsroom page with a search box that is limited to news</em></p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-4.png" alt="FTC.gov search results page" /><br/>
-<em>Search results page that returns news results only</em></p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/collections"><span class="label label-info">collections</span></a>
       
     </div>
   </article>
