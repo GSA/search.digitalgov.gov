@@ -81,6 +81,130 @@
       
       <span>Last updated on:</span>
       
+      <a href="/sites/manual/code.html">
+        <time datetime="2013-08-28">August 28, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/sites/manual/code.html">How to Activate Your Search by Adding Our Code to Your Website</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Activate Search > Code Snippets</p>
+
+<p>Visit our <a href="https://search.usa.gov/sites">Admin Center</a>, select your site, and click on the Activate Search option in the left-hand menu.</p>
+
+<p>Add the following two snippets of code to your website to "hook" your website and our hosted search service together. You can add this code to your individual web pages or to the template(s) in your content management system.</p>
+
+<h2>1. Form Snippet</h2>
+
+<p>Include this snippet of code where the form for your search box appears. It should look something like this:</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<h2>2. Javascript Snippet</h2>
+
+<p>Include this snippet of code before the closing <code>&lt;body&gt;</code> tag. This tag enables type-ahead search in the search box on your web pages and powers the data on trending URLs on the <a href="/sites/manual/site-overview.html">Site Overview</a> page in the Admin Center. It should look something like this:</p>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+      var usasearch_config = { siteHandle:"YourSiteHandle" };
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "http://search.usa.gov/javascripts/remote.loader.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+//]]&gt;
+&lt;/script&gt;
+</code></pre>
+
+<h2>Setting Up a Search Box for Specific Folders or Subdomains</h2>
+
+<p>You can limit results to specific folders or subdomains by creating a collection, setting up an RSS feed, or passing in a hidden value.</p>
+
+<h3>Collection</h3>
+
+<p>Create a <a href="/sites/manual/collections.html">collection</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/docs/</code> and (b) add an input for this collection, <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>. It should look something like this:</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search/docs/" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input type="hidden" name="dc" value="###"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center as shown in the sample below.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/get-code-collection.png" alt="Value for the collection ID" /></p>
+
+<h3>RSS Feed</h3>
+
+<p>Set up an <a href="/sites/manual/rss.html">RSS feed</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/news/</code> and (b) add an input for this feed, <code>&lt;input type="hidden" name="channel" value="###"&gt;</code>.  It should look something like this:</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search/news/" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input type="hidden" name="channel" value="###"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>The value is the number for your RSS ID, which is visible in the URL when you edit or preview your feed in the Admin Center.</p>
+
+<h3>Hidden Value</h3>
+
+<p>Leave your domain blank on the <a href="/sites/manual/domains.html">Domains</a> page and, instead, passing a hidden value for the domain in the search form code.</p>
+
+<p>See, for example, <a href="http://www.ri.gov">RI.gov</a>, <a href="http://www.dmv.ri.gov/">DMV.RI.gov</a>, <a href="http://www.health.ri.gov/">Health.RI.gov</a>. On Health.RI.gov, the following hidden value is added to limit to only the health subdomain.</p>
+
+<pre><code>&lt;input type="hidden" name="site" value="www.health.ri.gov" &gt;
+</code></pre>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> If your website is secured with https, you can add 's' to the two URLs above (i.e., <a href="https://search.usa.gov/search">https://search.usa.gov/search</a> and <a href="https://search.usa.gov/javascripts/remote.loader.js">https://search.usa.gov/javascripts/remote.loader.js</a>, respectively) so that searchers don't receive a security message in Internet Explorer.</p>
+
+<p><strong><em>Did you know?</em></strong> If you're using Drupal, be sure to check out our <a href="https://drupal.org/project/USASearch">USASearch Drupal module</a>.</p>
+
+<p><strong><em>Did you know?</em></strong> We offer <a href="/sites/manual/cname.html">DNS masking</a>, which allows you to show searchers your domain (instead of USA.gov).</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
+      
+      <a href="/tagged/code-snippets"><span class="label label-info">code-snippets</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/sites/manual/add-site.html">
         <time datetime="2013-08-22">August 22, 2013</time>
       </a>
@@ -141,7 +265,7 @@
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, edit your display name on the <a href="/sites/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, e-mail us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#x55;&#x53;&#x41;&#x53;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x67;&#x73;&#97;&#x2e;&#x67;&#111;&#118;">&#85;&#x53;&#65;&#x53;&#101;&#97;&#114;&#x63;&#x68;&#x40;&#x67;&#115;&#x61;&#x2e;&#103;&#111;&#118;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, edit your display name on the <a href="/sites/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, e-mail us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#x55;&#83;&#x41;&#83;&#101;&#97;&#114;&#99;&#104;&#64;&#103;&#115;&#97;&#46;&#x67;&#x6f;&#x76;">&#85;&#x53;&#x41;&#x53;&#101;&#x61;&#x72;&#99;&#104;&#64;&#x67;&#x73;&#x61;&#x2e;&#103;&#x6f;&#118;</a>.</p>
 
     </div>
 
@@ -152,140 +276,6 @@
       <a href="/tagged/settings"><span class="label label-info">settings</span></a>
       
       <a href="/tagged/add-site"><span class="label label-info">add-site</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/sites/manual/rss.html">
-        <time datetime="2013-08-21">August 21, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/sites/manual/rss.html">How to Add Your RSS Feeds to Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/sites">Admin Center</a> > YourSite > Manage Content > RSS</p>
-
-<p>Would you like searchers to be able to search your news or multimedia content? Would you like them to be able to narrow results by date?</p>
-
-<p>Tell us the locations and names of your RSS feeds. We index all new and updated content on your feeds within minutes.</p>
-
-<h2>Step 1. Tell Us About Your RSS Feeds</h2>
-
-<p>We love feeds! Tell us about <em>all</em> of your RSS feeds, even if you don't opt to show them in step 2 below. Feeds are the fastest and most reliable way for us to learn about your new and updated content.</p>
-
-<p>Select the option to add a new RSS feed.</p>
-
-<h3>Name</h3>
-
-<p>Create a name for the feed. Within this 'bucket' you can list a single RSS feed or many feeds. For example, you can opt to list all of your agency's press releases separately (such as Police News, Fire News, EMS News, etc.) or you can list all three under one general name (such as News).</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/rss.png" alt="Add an RSS Feed" /></p>
-
-<h3>Feed type</h3>
-
-<p>Select the type of feed. The default option is RSS (for text content like press releases or blogs). Change it to <a href="http://www.rssboard.org/media-rss">media RSS</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> for multimedia content like images and videos.</p>
-
-<p>Each item within a RSS feed must include a title, link, description, and publication date.</p>
-
-<p>Each item within a media RSS feed must also include both a <a href="http://www.rssboard.org/media-rss#media-content">media:content URL</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to specify a direct URL to the media object and a <a href="http://www.rssboard.org/media-rss#media-thumbnails">media:thumbnail URL</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to specify a URL to the object's thumbnail.</p>
-
-<p>Any items missing a required element won't display in your search results.</p>
-
-<h3>Sample RSS Item with All Required Elements</h3>
-
-<pre><code>&lt;item&gt;
-&lt;title&gt;
-Statement from Agriculture Secretary Tom Vilsack Regarding World Organization for Animal Health (OIE) Upgrade of United States&amp;apos; BSE Risk Status
-&lt;/title&gt;
-&lt;pubDate&gt;May 29, 2013 00:00:00 CDT&lt;/pubDate&gt;
-&lt;link&gt;
-http://www.usda.gov/wps/portal/usda/usdahome?contentid=2013/05/0106.xml&amp;contentidonly=true
-&lt;/link&gt;
-&lt;description&gt;
-WASHINGTON, May 29, 2013–Agriculture Secretary Tom Vilsack made the following statement about notification received today from the World Organization for Animal Health (OIE) upgrading the United States&amp;apos; risk classification for bovine spongiform encephalopathy (BSE) to negligible risk:
-&lt;/description&gt;
-&lt;/item&gt;
-</code></pre>
-
-<h3>Sample Media RSS Item with All Required Elements</h3>
-
-<pre><code>&lt;item&gt;
-&lt;title type="html"&gt;
-&lt;![CDATA[ Great Lakes Beach Health ]]&gt;
-&lt;/title&gt;
-&lt;link&gt;
-http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
-&lt;/link&gt;
-&lt;guid&gt;
-http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
-&lt;/guid&gt;
-&lt;pubDate&gt;Fri, 24 May 2013 00:00:00 EDT&lt;/pubDate&gt;
-&lt;media:description type="html"&gt;
-&lt;![CDATA[
-&lt;p&gt;As schools close for the year and summer weather beckons, many recreationalists head to the Great Lakes' public beaches. However, these coastal areas can become     contaminated with disease-causing bacteria that threaten public health, disrupt water   recreation, and pay a toll on the Great Lakes econ
-]]&gt;
-&lt;![CDATA[
-omies that depend on summer tourism.&lt;/p&gt;
- &lt;p&gt;The U.S. Geological Survey &lt;a href="http://greatlakesbeaches.usgs.gov/index.html"&gt;Great Lakes Beach Health&lt;/a&gt; initiative provides science-based information and methods that help beach managers make more accurate beach closure and advisory decisions, &lt;a href="http://www.usgs.gov/newsroom/article.asp?ID=3063#.UZv3pSs_87A"&gt;preventing unnecessary beach closures&lt;/a&gt; while protecting public health.&lt;/p&gt;
-]]&gt;
-&lt;/media:description&gt;
-&lt;media:thumbnail url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/thumbs/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
-&lt;media:content type="" url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/large/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
-&lt;/item&gt;
-</code></pre>
-
-<h2>Step 2. Opt to Show as a GovBox, in the Sidebar, or Both</h2>
-
-<p>Allow searchers to see inline results for the three most recent, relevant RSS results <em>across all of your RSS feeds</em> by turning on the option to show as a GovBox on the <a href="/sites/manual/display-overview.html">Display Overview</a> page. You can also edit the default title, News, on the Display Overview page.</p>
-
-<p>Allow searchers to see narrow results to a specific feed in the left-hand column of the results page by turning on the option to show in the Sidebar on the <a href="/sites/manual/display-overview.html">Display Overview</a> page. To ensure searchers don't encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a sidebar option.</p>
-
-<h2>Step 3. Check Your Search Results Page</h2>
-
-<p><strong>GovBox.</strong> If you opted to show your RSS feed(s) as a GovBox, searchers will see a News GovBox. This GovBox will highlight the three most recent, relevant results across all of your RSS feeds.</p>
-
-<p><strong>Sidebar.</strong> If you opted to show your RSS feed(s) in the sidebar, searchers can narrow their results to see your RSS-based results only.</p>
-
-<p>Within the RSS-based results, searchers can opt to limit results to the last hour, day, week, month, or year, or they can set a custom date range. They also can sort results in descending order by relevance (best match first) or date (most recent first).</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
-
-<ul>
-<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> (Atom &amp; RSS)</li>
-<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> and <a href="http://www.rssboard.org/rss-validator/">validator</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /></li>
-<li><a href="http://www.atomenabled.org/developers/syndication/">Atom syndication format</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /></li>
-</ul>
-
-
-<p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="http://search.usa.gov/sites">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don't need to coordinate with us.</p>
-
-<p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your RSS feeds.</p>
-
-<p><strong><em>Did you know?</em></strong> When you <a href="/sites/manual/youtube.html">provide us with your YouTube channel</a>, we'll automatically index the RSS feed for your YouTube channel.</p>
-
-<p><strong><em>Did you know?</em></strong> For any feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> property, searchers may narrow results by these facets in the <a href="/sites/manual/display-overview.html">sidebar</a> on the results page.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/rss"><span class="label label-info">rss</span></a>
       
     </div>
   </article>
@@ -439,6 +429,202 @@ omies that depend on summer tourism.&lt;/p&gt;
       
       <span>Last updated on:</span>
       
+      <a href="/sites/manual/rss.html">
+        <time datetime="2013-08-21">August 21, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/sites/manual/rss.html">How to Add Your RSS Feeds to Our Index</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/sites">Admin Center</a> > YourSite > Manage Content > RSS</p>
+
+<p>Would you like searchers to be able to search your news or multimedia content? Would you like them to be able to narrow results by date?</p>
+
+<p>Tell us the locations and names of your RSS feeds. We index all new and updated content on your feeds within minutes.</p>
+
+<h2>Step 1. Tell Us About Your RSS Feeds</h2>
+
+<p>We love feeds! Tell us about <em>all</em> of your RSS feeds, even if you don't opt to show them in step 2 below. Feeds are the fastest and most reliable way for us to learn about your new and updated content.</p>
+
+<p>Select the option to add a new RSS feed.</p>
+
+<h3>Name</h3>
+
+<p>Create a name for the feed. Within this 'bucket' you can list a single RSS feed or many feeds. For example, you can opt to list all of your agency's press releases separately (such as Police News, Fire News, EMS News, etc.) or you can list all three under one general name (such as News).</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/rss.png" alt="Add an RSS Feed" /></p>
+
+<h3>Feed type</h3>
+
+<p>Select the type of feed. The default option is RSS (for text content like press releases or blogs). Change it to <a href="http://www.rssboard.org/media-rss">media RSS</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> for multimedia content like images and videos.</p>
+
+<p>Each item within a RSS feed must include a title, link, description, and publication date.</p>
+
+<p>Each item within a media RSS feed must also include both a <a href="http://www.rssboard.org/media-rss#media-content">media:content URL</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to specify a direct URL to the media object and a <a href="http://www.rssboard.org/media-rss#media-thumbnails">media:thumbnail URL</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to specify a URL to the object's thumbnail.</p>
+
+<p>Any items missing a required element won't display in your search results.</p>
+
+<h3>Sample RSS Item with All Required Elements</h3>
+
+<pre><code>&lt;item&gt;
+&lt;title&gt;
+Statement from Agriculture Secretary Tom Vilsack Regarding World Organization for Animal Health (OIE) Upgrade of United States&amp;apos; BSE Risk Status
+&lt;/title&gt;
+&lt;pubDate&gt;May 29, 2013 00:00:00 CDT&lt;/pubDate&gt;
+&lt;link&gt;
+http://www.usda.gov/wps/portal/usda/usdahome?contentid=2013/05/0106.xml&amp;contentidonly=true
+&lt;/link&gt;
+&lt;description&gt;
+WASHINGTON, May 29, 2013–Agriculture Secretary Tom Vilsack made the following statement about notification received today from the World Organization for Animal Health (OIE) upgrading the United States&amp;apos; risk classification for bovine spongiform encephalopathy (BSE) to negligible risk:
+&lt;/description&gt;
+&lt;/item&gt;
+</code></pre>
+
+<h3>Sample Media RSS Item with All Required Elements</h3>
+
+<pre><code>&lt;item&gt;
+&lt;title type="html"&gt;
+&lt;![CDATA[ Great Lakes Beach Health ]]&gt;
+&lt;/title&gt;
+&lt;link&gt;
+http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
+&lt;/link&gt;
+&lt;guid&gt;
+http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
+&lt;/guid&gt;
+&lt;pubDate&gt;Fri, 24 May 2013 00:00:00 EDT&lt;/pubDate&gt;
+&lt;media:description type="html"&gt;
+&lt;![CDATA[
+&lt;p&gt;As schools close for the year and summer weather beckons, many recreationalists head to the Great Lakes' public beaches. However, these coastal areas can become     contaminated with disease-causing bacteria that threaten public health, disrupt water   recreation, and pay a toll on the Great Lakes econ
+]]&gt;
+&lt;![CDATA[
+omies that depend on summer tourism.&lt;/p&gt;
+ &lt;p&gt;The U.S. Geological Survey &lt;a href="http://greatlakesbeaches.usgs.gov/index.html"&gt;Great Lakes Beach Health&lt;/a&gt; initiative provides science-based information and methods that help beach managers make more accurate beach closure and advisory decisions, &lt;a href="http://www.usgs.gov/newsroom/article.asp?ID=3063#.UZv3pSs_87A"&gt;preventing unnecessary beach closures&lt;/a&gt; while protecting public health.&lt;/p&gt;
+]]&gt;
+&lt;/media:description&gt;
+&lt;media:thumbnail url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/thumbs/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
+&lt;media:content type="" url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/large/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
+&lt;/item&gt;
+</code></pre>
+
+<h2>Step 2. Opt to Show as a GovBox, in the Sidebar, or Both</h2>
+
+<p>Allow searchers to see inline results for the three most recent, relevant RSS results <em>across all of your RSS feeds</em> by turning on the option to show as a GovBox on the <a href="/sites/manual/display-overview.html">Display Overview</a> page. You can also edit the default title, News, on the Display Overview page.</p>
+
+<p>Allow searchers to see narrow results to a specific feed in the left-hand column of the results page by turning on the option to show in the Sidebar on the <a href="/sites/manual/display-overview.html">Display Overview</a> page. To ensure searchers don't encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a sidebar option.</p>
+
+<h2>Step 3. Check Your Search Results Page</h2>
+
+<p><strong>GovBox.</strong> If you opted to show your RSS feed(s) as a GovBox, searchers will see a News GovBox. This GovBox will highlight the three most recent, relevant results across all of your RSS feeds.</p>
+
+<p><strong>Sidebar.</strong> If you opted to show your RSS feed(s) in the sidebar, searchers can narrow their results to see your RSS-based results only.</p>
+
+<p>Within the RSS-based results, searchers can opt to limit results to the last hour, day, week, month, or year, or they can set a custom date range. They also can sort results in descending order by relevance (best match first) or date (most recent first).</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
+
+<ul>
+<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> (Atom &amp; RSS)</li>
+<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> and <a href="http://www.rssboard.org/rss-validator/">validator</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /></li>
+<li><a href="http://www.atomenabled.org/developers/syndication/">Atom syndication format</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /></li>
+</ul>
+
+
+<p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="http://search.usa.gov/sites">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don't need to coordinate with us.</p>
+
+<p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your RSS feeds.</p>
+
+<p><strong><em>Did you know?</em></strong> When you <a href="/sites/manual/youtube.html">provide us with your YouTube channel</a>, we'll automatically index the RSS feed for your YouTube channel.</p>
+
+<p><strong><em>Did you know?</em></strong> For any feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> property, searchers may narrow results by these facets in the <a href="/sites/manual/display-overview.html">sidebar</a> on the results page.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/rss"><span class="label label-info">rss</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
+      <a href="/sites/manual/best-bets-text.html">
+        <time datetime="2013-08-20">August 20, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/sites/manual/best-bets-text.html">How to Highlight Text Best Bets</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/sites">Admin Center</a> > YourSite > Manage Content > Best Bets: Text</p>
+
+<p>Do you want to promote a specific web page? Create a Text Best Bet.</p>
+
+<p>A Best Bet appears above the standard web results when a searcher's query matches the text of its title, description, or keywords.</p>
+
+<p>Text Best Bets have the same look as standard web results. Up to three relevant best bets are listed under a heading, Recommended by YourSite.</p>
+
+<p>See the sample results page below that shows best bets displayed on TSA.gov for a search on <em><a href="http://search.usa.gov/search?query=razors&amp;affiliate=tsa.gov">razors</a></em>.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/best-bets-text.png" alt="Text best bets for 'razors' on TSA.gov" /></p>
+
+<p>Text Best Bets may be added individually or via bulk upload.</p>
+
+<h2>Add an Individual Best Bet</h2>
+
+<p><strong><em>URL.</em></strong> Add the URL of the web page that you want to promote.</p>
+
+<p><strong><em>Title and Description.</em></strong> Add the title and description of the web page that you want to promote. Each field can have up to 255 characters. Titles and descriptions are visible to searchers.</p>
+
+<p><strong><em>Publish Dates.</em></strong> The default start date is the day in which you input data and create a Best Bet. The default end date is null, so it will stay up forever until you decide to take it down. You can opt to set a start and end date to control to specify other start and end dates.</p>
+
+<p><strong><em>Keywords.</em></strong> Keywords are optional. Add specific words or phrases that are <em>not</em> already included in the visible title or description. Common keywords include synonyms, acronyms, compound words, misspellings, or other variants. Each field can have up to 255 characters. Keywords are <em>not</em> visible to searchers.</p>
+
+<h3>Bulk Upload</h3>
+
+<p>Create a comma-separated file with the following fields.</p>
+
+<p>URL, Title,  Description, StartDate, EndDate, Keywords</p>
+
+<p>URL, title, and description are required. Start date, end date, and keywords are optional. Save the file with .csv, .txt, or .xml extension and upload it.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/best-bets"><span class="label label-info">best-bets</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/sites/manual/site-overview.html">
         <time datetime="2013-08-20">August 20, 2013</time>
       </a>
@@ -516,68 +702,6 @@ omies that depend on summer tourism.&lt;/p&gt;
       <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
       
       <a href="/tagged/site-overview"><span class="label label-info">site-overview</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/sites/manual/best-bets-text.html">
-        <time datetime="2013-08-20">August 20, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/sites/manual/best-bets-text.html">How to Highlight Text Best Bets</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/sites">Admin Center</a> > YourSite > Manage Content > Best Bets: Text</p>
-
-<p>Do you want to promote a specific web page? Create a Text Best Bet.</p>
-
-<p>A Best Bet appears above the standard web results when a searcher's query matches the text of its title, description, or keywords.</p>
-
-<p>Text Best Bets have the same look as standard web results. Up to three relevant best bets are listed under a heading, Recommended by YourSite.</p>
-
-<p>See the sample results page below that shows best bets displayed on TSA.gov for a search on <em><a href="http://search.usa.gov/search?query=razors&amp;affiliate=tsa.gov">razors</a></em>.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/best-bets-text.png" alt="Text best bets for 'razors' on TSA.gov" /></p>
-
-<p>Text Best Bets may be added individually or via bulk upload.</p>
-
-<h2>Add an Individual Best Bet</h2>
-
-<p><strong><em>URL.</em></strong> Add the URL of the web page that you want to promote.</p>
-
-<p><strong><em>Title and Description.</em></strong> Add the title and description of the web page that you want to promote. Each field can have up to 255 characters. Titles and descriptions are visible to searchers.</p>
-
-<p><strong><em>Publish Dates.</em></strong> The default start date is the day in which you input data and create a Best Bet. The default end date is null, so it will stay up forever until you decide to take it down. You can opt to set a start and end date to control to specify other start and end dates.</p>
-
-<p><strong><em>Keywords.</em></strong> Keywords are optional. Add specific words or phrases that are <em>not</em> already included in the visible title or description. Common keywords include synonyms, acronyms, compound words, misspellings, or other variants. Each field can have up to 255 characters. Keywords are <em>not</em> visible to searchers.</p>
-
-<h3>Bulk Upload</h3>
-
-<p>Create a comma-separated file with the following fields.</p>
-
-<p>URL, Title,  Description, StartDate, EndDate, Keywords</p>
-
-<p>URL, title, and description are required. Start date, end date, and keywords are optional. Save the file with .csv, .txt, or .xml extension and upload it.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/best-bets"><span class="label label-info">best-bets</span></a>
       
     </div>
   </article>
@@ -735,7 +859,7 @@ omies that depend on summer tourism.&lt;/p&gt;
 <ol>
 <li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
 <li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>E-mail us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#85;&#83;&#65;&#83;&#101;&#x61;&#114;&#99;&#104;&#64;&#103;&#115;&#x61;&#x2e;&#103;&#x6f;&#x76;">&#x55;&#83;&#x41;&#83;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#x67;&#115;&#97;&#x2e;&#x67;&#111;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
+<li>E-mail us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#85;&#83;&#65;&#83;&#101;&#97;&#x72;&#99;&#104;&#x40;&#103;&#x73;&#x61;&#x2e;&#103;&#x6f;&#x76;">&#x55;&#83;&#65;&#83;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#x67;&#x73;&#97;&#46;&#x67;&#111;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
 </ol>
 
 
@@ -748,60 +872,6 @@ omies that depend on summer tourism.&lt;/p&gt;
       <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
       
       <a href="/tagged/domains"><span class="label label-info">domains</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/sites/manual/settings.html">
-        <time datetime="2013-08-01">August 1, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/sites/manual/settings.html">How to Edit Your Settings</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Settings</p>
-
-<h2>Display Name (Required)</h2>
-
-<p>Tell us the name of your website. Searchers see your site name on the results page, such as in your page title or best bets. We recommend using the plain language name for your agency or site, such as National Institutes of Health.</p>
-
-<h2>Site Handle (Required)</h2>
-
-<p>We use your site handle in the HTTP request to specify displaying your customized settings. We recommend making this handle short and unique, such as nih.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/settings.png" alt="Site name and handle on NIH.gov's search results page" /></p>
-
-<h2>Site ID (System Generated)</h2>
-
-<p>We assign a unique numeric ID to your site. We use this ID for some back-end code. You also see this ID in the URL for your site in the <a href="http://search.usa.gov/sites/">Admin Center</a>.</p>
-
-<h2>Site Language (Required)</h2>
-
-<p>Choose a language for your site, English or Spanish. We will only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or language, e-mail us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#85;&#83;&#x41;&#83;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#103;&#x73;&#97;&#46;&#103;&#x6f;&#x76;">&#x55;&#83;&#65;&#83;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x67;&#115;&#97;&#46;&#103;&#111;&#118;</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
-      
-      <a href="/tagged/settings"><span class="label label-info">settings</span></a>
       
     </div>
   </article>
