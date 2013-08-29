@@ -11,4 +11,4 @@ For instance, for several months our most search terms were employment and jobs,
 
 I almost couldn't believe that this amazing service is free. It's easy to implement and full of useful features, which would normally cost us quite a lot and in this economy it's these types of services that help us save money.
 
-[Indian Affairs](http://www.bia.gov/), U.S. Department of the Interior
+[Indian Affairs](http://www.bia.gov), U.S. Department of the Interior

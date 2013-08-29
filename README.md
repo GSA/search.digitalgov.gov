@@ -20,7 +20,7 @@
 
 ### Ruby
 
-You will need [Ruby 1.9.3](http://www.ruby-lang.org/en/downloads/).
+You will need [Ruby 1.9.3](http://www.ruby-lang.org/en/downloads).
 
 ### Gems
 

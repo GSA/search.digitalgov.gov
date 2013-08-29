@@ -4,9 +4,9 @@ layout: post
 title: "How to Analyze Your Monthly Reports"
 tags: how-to analytics 
 ---
-[USASearch](http://usasearch.howto.gov) > [Admin Center](http://search.usa.gov/affiliates/home) > YourSite > Monthly Reports
+[USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites) > YourSite > Monthly Reports
 
-The Monthly Reports page in the [Admin Center](http://search.usa.gov/affiliates/home) reports on the total number of searches and click throughs. A click through is recorded each time a searcher clicks on a results link. Data start from the time your agency started using USASearch (but no further back than 2009).
+The Monthly Reports page in the [Admin Center](https://search.usa.gov/sites) reports on the total number of searches and click throughs. A click through is recorded each time a searcher clicks on a results link. Data start from the time your agency started using USASearch (but no further back than 2009).
 
 Data are shown for the present month-to-date by default. Change the time period by selecting a different year or month.
 

@@ -4,7 +4,7 @@ layout: post
 title: "How to Create Collections Within Our Index"
 tags: how-to manage-content collections
 ---
-[USASearch](http://usasearch.howto.gov) > [Admin Center](http://search.usa.gov/sites) > YourSite > Collections
+[USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites) > YourSite > Collections
 
 Would you like searchers to be able to narrow results to a specific subset of content within your site or on another site? You can create a collection across any set of domains, subdomains, or subfolders.
 
@@ -12,7 +12,7 @@ Would you like searchers to be able to narrow results to a specific subset of co
 
 Enter a name for the collection (e.g., FAQs).
 
-Enter the URLs that make up this collection. Start each URL prefix with http:// and end it in a trailing slash (/) to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov/).
+Enter the URLs that make up this collection. Start each URL prefix with http:// and end it in a trailing slash () to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov).
 
 <!-- START UPDATE -->
 

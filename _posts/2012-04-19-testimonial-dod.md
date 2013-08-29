@@ -14,4 +14,4 @@ USASearch has empowered us with more control over search results to more effecti
 
 Beyond that, we feel that USASearch values their stakeholders and we appreciate their flexibility, attention to detail, and migration assistance. They have been in constant contact with our team, and have adjusted their code numerous times to meet our core mission requirements with nothing less than superlative and reliable results. This program is a terrific example of how government agencies are finding new and creative ways to save money while still providing a much needed service.
 
-Public Web, [Defense Media Activity](http://www.dma.mil), [U.S. Department of Defense](http://www.defense.gov/)
+Public Web, [Defense Media Activity](http://www.dma.mil), [U.S. Department of Defense](http://www.defense.gov)

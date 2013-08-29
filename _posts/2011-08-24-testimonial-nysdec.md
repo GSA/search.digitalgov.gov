@@ -6,7 +6,7 @@ title: "NY State Dept of Environmental Conservation Rolls Out New Site Search"
 tags: testimonial
 ---
 
-The New York State [Department of Environmental Conservation](http://www.dec.ny.gov/) (DEC) was created on July 1,1970 to combine in a single agency all state programs designed to protect and enhance the environment. Its mission is to conserve, improve and protect New York's natural resources and environment and to prevent, abate and control water, land and air pollution, in order to enhance the health, safety and welfare of the people of the state and their overall economic and social well-being.
+The New York State [Department of Environmental Conservation](http://www.dec.ny.gov) (DEC) was created on July 1,1970 to combine in a single agency all state programs designed to protect and enhance the environment. Its mission is to conserve, improve and protect New York's natural resources and environment and to prevent, abate and control water, land and air pollution, in order to enhance the health, safety and welfare of the people of the state and their overall economic and social well-being.
 
 DEC recently rolled out a new site search functionality using USASearch. Be sure to visit <http://www.dec.ny.gov> and take a look for yourself.
 

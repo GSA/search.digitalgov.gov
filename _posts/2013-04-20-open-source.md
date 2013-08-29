@@ -5,7 +5,7 @@ title: "Our Open Source Strategy"
 tags: open, api
 ---
 
-We keep an eye on on our what our government counterparts are up to, both in the U.S. and other countries. We recently came across [Gov.UK's](https://www.gov.uk/) philosophy on and approach to [coding in the open](http://digital.cabinetoffice.gov.uk/2012/10/12/coding-in-the-open/). It caught our attention and we realized we should also articulate our open source strategy.
+We keep an eye on on our what our government counterparts are up to, both in the U.S. and other countries. We recently came across [Gov.UK's](https://www.gov.uk) philosophy on and approach to [coding in the open](http://digital.cabinetoffice.gov.uk/2012/10/12/coding-in-the-open). It caught our attention and we realized we should also articulate our open source strategy.
 
 ## Use and Contribute to Open Source Projects
 
@@ -19,7 +19,7 @@ Each of these parts is compiled into our USASearch codebase and, as we use open 
 
 We recently began to unravel our monolithic codebase so that we can share individual pieces of our code. To borrow the phrase from Gov.UK, we're now ***coding in the open***. 
 
-We recently released the code for our [Jobs](https://github.com/GSA-OCSIT/jobs_api) and [Recalls](https://github.com/GSA-OCSIT/recalls_api) API servers. They're our first foray into coding in the open. The source code for these API servers is in [our GitHub repo](https://github.com/GSA-OCSIT/) and is available for anyone to see and contribute to. 
+We recently released the code for our [Jobs](https://github.com/GSA-OCSIT/jobs_api) and [Recalls](https://github.com/GSA-OCSIT/recalls_api) API servers. They're our first foray into coding in the open. The source code for these API servers is in [our GitHub repo](https://github.com/GSA-OCSIT) and is available for anyone to see and contribute to. 
 
 The data products for this code are also open and available for anyone to consume on our [USASearch.HowTo.gov/Developer](/developer/index.html) hub.
 
@@ -43,7 +43,7 @@ That said, we hope that exposing the pieces of our system will be useful to some
 
 ## And, We're Not Alone
 
-We're not alone. Other federal agencies have embraced the approach of coding in the open and have [GitHub repos](http://gsa.github.io/federal-open-source-repos/). Below are a just a few of our many favorites.
+We're not alone. Other federal agencies have embraced the approach of coding in the open and have [GitHub repos](http://gsa.github.io/federal-open-source-repos). Below are a just a few of our many favorites.
 
 * The Consumer Finance Protection Bureau has embraced open source, including serving their public data sets through [qu](https://github.com/cfpb/qu).
 

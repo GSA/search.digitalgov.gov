@@ -143,10 +143,10 @@ Data are normalized across (1) drug and food safety recalls from the [FDA](http:
 So, we encourage you to use the five original data sources directly or via [Recalls.gov](http://www.recalls.gov).
 
 1. [FDA recalls, market withdrawals, and safety alerts](http://www.fda.gov/Safety/Recalls/default.htm)
-2. [USDA FSIS recalls and public health alerts](http://www.fsis.usda.gov/fsis_recalls/)
-3. [FoodSafety.gov recalls and alerts](http://www.foodsafety.gov/recalls/)
+2. [USDA FSIS recalls and public health alerts](http://www.fsis.usda.gov/wps/portal/fsis/topics/recalls-and-public-health-alerts)
+3. [FoodSafety.gov recalls and alerts](http://www.foodsafety.gov/recalls)
 4. [NHTSA recalls and defects](http://www.nhtsa.gov/Vehicle+Safety/Recalls+&+Defects)
-5. [CPSC recalls](http://www.cpsc.gov/Recalls/)
+5. [CPSC recalls](http://www.cpsc.gov/Recalls)
 
 <a name="what-it-returns"></a>
 

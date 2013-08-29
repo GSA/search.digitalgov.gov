@@ -15,7 +15,7 @@ When you [turn on the Jobs GovBox](/manual/results-modules.html), searchers look
 * **Federal Department Websites.** If your website is affiliated with a specific federal department (e.g., Department of Commerce), the Jobs GovBox will return relevant, location- and keyword-matched job openings *across all agencies within your department*. 
 * **Federal Agency or Office Websites.** If your website is affiliated with a specific federal agency (e.g., NOAA) or office (e.g, National Ocean Service), the Jobs GovBox will return relevant, location-and keyword-matched job openings *at your agency*. 
 
-Searchers will also see a direct link to [USAJobs.gov](http://www.usajobs.gov) for all current job openings (specific to your department or agency, if applicable), as shown in the sample below for a search on [*jobs*](http://usdasearch.usda.gov/search?affiliate=usda&query=jobs") on the USDA.gov. 
+Searchers will also see a direct link to [USAJobs.gov](https://www.usajobs.gov) for all current job openings (specific to your department or agency, if applicable), as shown in the sample below for a search on [*jobs*](http://usdasearch.usda.gov/search?affiliate=usda&query=jobs") on the USDA.gov. 
 
 ![Search results for jobs on USDA.gov](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/govbox-jobs.png)
 

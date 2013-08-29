@@ -4,7 +4,7 @@ layout: post
 title: "How to Select the Modules that Appear on Your Results Page"
 tags: how-to govbox related-searches
 ---
-[USASearch](http://usasearch.howto.gov) > [Admin Center](http://search.usa.gov/affiliates/home) > YourSite > Results Modules
+[USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites) > YourSite > Results Modules
 
 Select which modules you'd like to appear on your results page. You may choose at any time to activate a module or deactivate it.
 
@@ -22,7 +22,7 @@ USASearch currently provides three pre-built GovBoxes.
 
 ### Social Media GovBoxes
 
-[Social media](/manual/social-media.html) channels that you've provided on the Social Media page in the [Admin Center](http://search.usa.gov/affiliates/home) are listed. 
+[Social media](/manual/social-media.html) channels that you've provided on the Social Media page in the [Admin Center](https://search.usa.gov/sites) are listed. 
 
 * **Photos GovBox.** When a searcher's query matches the metadata of a photo published any time, the photo appears in the Photos GovBox. 
 * **Twitter GovBox.** When a searcher's query matches the text of a tweet published within the last three months, the tweet appears in the Twitter GovBox. 
@@ -30,7 +30,7 @@ USASearch currently provides three pre-built GovBoxes.
 
 ### News GovBox Generated from Your RSS Feeds
 
-[RSS](/manual/rss.html) feeds that you've provided on the RSS page in the [Admin Center](http://search.usa.gov/affiliates/home) are listed. To edit a feed's name, click on the hyperlink to update it.
+[RSS](/sites/manual/rss.html) feeds that you've provided on the RSS page in the [Admin Center](https://search.usa.gov/sites) are listed. To edit a feed's name, click on the hyperlink to update it.
 
 All selected feeds will be grouped and displayed in a News GovBox. When a searcher's query matches the title or description of an RSS article published within the last year, the article appears in the News GovBox. See the sample results page below that shows a News GovBox displayed on the U.S. Bureau of Economic Analysis for a search on *[gross domestic product](http://search.bea.gov/search?query=gross+domestic+product&affiliate=u.s.bureauofeconomicanalysis)*.
 
@@ -48,7 +48,7 @@ See the sample results page below that shows related searches displayed on Acces
 
 Help visitors find content relevant to their search query that resides on other websites, such as the site for your parent organization or your Spanish-language site. When searchers click on the link to the related site, they see search results for their query on the related site.
 
-Enter the [site handle](/manual/settings.html) for one of your other USASearch sites. Enter the text you'd like searchers to see for the link to the related site. Create two entries, one from the first site to the second and vice versa, if you'd like a reciprocal link.
+Enter the [site handle](/sites/manual/settings.html) for one of your other USASearch sites. Enter the text you'd like searchers to see for the link to the related site. Create two entries, one from the first site to the second and vice versa, if you'd like a reciprocal link.
 
 See the sample results page below that shows a link to GobiernoUSA.gov displayed on USA.gov for a search on *[venezuela](http://search.usa.gov/search?query=venezuela&affiliate=usagov)*.
 

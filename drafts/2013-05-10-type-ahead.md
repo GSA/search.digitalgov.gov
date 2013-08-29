@@ -4,7 +4,7 @@ layout: post
 title: "How to Implement Type-ahead Search"
 tags: type-ahead how-to
 ---
-[USASearch](http://usasearch.howto.gov) > [Admin Center](http://search.usa.gov/affiliates/home) > YourSite > Type-ahead Search
+[USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites) > YourSite > Type-ahead Search
 
 Type-ahead search is fast becoming a best practice on websites, and we've made this technology available for your site. 
 
@@ -37,4 +37,4 @@ By default, searchers see type-ahead search suggestions on your search results p
 
 ## Type-ahead on Other Web Pages
 
-You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding the USASearch JavaScript code to the head to your HTML web page. For more details, read our post on [How to Add Our Code to Your Website](/manual/get-code.html).
+You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our [JavaScript snippet](/sites/manual/code.html) before the closing `<body>` tag on your HTML web pages.

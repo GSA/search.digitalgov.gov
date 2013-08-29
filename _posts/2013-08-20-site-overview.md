@@ -4,9 +4,9 @@ layout: post
 title: "How to View a Snapshot of What's Happening on Your Site Today"
 tags: how-to analytics dashboard site-overview
 ---
-[USASearch](http://usasearch.howto.gov) > [Admin Center](http://search.usa.gov/sites) > YourSite > Dashboard > Site Overview
+[USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites) > YourSite > Dashboard > Site Overview
 
-The Site Overview page in the [Admin Center](http://search.usa.gov/sites) provides a snapshot of what has been happening on your site in the past day or so.
+The Site Overview page in the [Admin Center](https://search.usa.gov/sites) provides a snapshot of what has been happening on your site in the past day or so.
 
 ## Top Queries
 
@@ -24,11 +24,7 @@ If there are any pages that are trending, they'll appear here. Reports on up to 
 
 Use this report to identify newly popular pages on your website. Investigate why pages are trending, if the reason is not immediately apparent.
 
-<!--START UPDATE-->
-
-Note that you'll only see this list of trending URLs if you have our [Javascript snippet](/manual/get-code.html) on your web pages. Data are updated every few minutes so this is near real-time information and you may see URLs come and go quickly.
-
-<!--END UPDATE-->
+Note that you'll only see this list of trending URLs if you have our [Javascript snippet](/sites/manual/code.html) on your web pages. Data are updated every few minutes so this is near real-time information and you may see URLs come and go quickly.
 
 ## Trending Queries
 

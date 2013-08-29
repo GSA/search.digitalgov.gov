@@ -11,7 +11,7 @@ USASearch migrated to an open source platform in 2010 with the primary focus of 
 
 Let's take a student conducting a search on the White House web site for the "4th of July."  When they hit 'enter' the query will go to Akamai who determines if the query is cached within USASearch's specified period of time. (Our caching window is short as no one wants to see old search results.)
 
-![Cached](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/cdn-cached.png "Cached")
+![Cached](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/cdn-cached.png "Cached")
 
 This is the fastest possible way to serve search results as the user gets the results page from Akamai's closest geographic server. USASearch has worked over time to serve more and more content through Akamai. While this has been an evolution over the last couple years, USASearch is now offloading 90% of its content delivery through Akamai (an astounding percentage!)
 
@@ -19,7 +19,7 @@ This is the fastest possible way to serve search results as the user gets the re
 
 If USASearch doesn't have a query cached, we use Akamai's multi-homing technology. Multi-homing is fancy way of saying that the user automatically goes to the closest possible USASearch server, thus maximizing the speed that the results gets returned.
 
-![Multi](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/cdn-multi.png "Multi")
+![Multi](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/cdn-multi.png "Multi")
 
 # Other Benefits of Content Delivery for USASearch
 
