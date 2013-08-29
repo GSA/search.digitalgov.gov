@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>How to Access Your Raw Logs</title>
+  <title>How to Analyze Your Query Logs</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -62,7 +62,7 @@
       </ul>
       <ul class="nav login">
         <li>
-          <a href="http://search.usa.gov/affiliates/home"><i
+          <a href="https://search.usa.gov/sites"><i
               class="icon-user icon-white"></i>&nbsp;Login</a>
         </li>
       </ul>
@@ -75,75 +75,65 @@
   <div id="main-container"><article class="article">
   <div class='time'>
     
-    <span>Last updated on:</span>
-    
-    <a href="/manual/raw-logs.html">
-      <time>March 20, 2013</time>
+    <a href="/drafts/manual/query-logs.html">
+      <time></time>
     </a>
   </div>
 
   
   <h1>
-    <a href="/manual/raw-logs.html">How to Access Your Raw Logs</a>
+    <a href="/drafts/manual/query-logs.html">How to Analyze Your Query Logs</a>
   </h1>
   
 
   <div class='post-content'>
-    <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="http://search.usa.gov/affiliates/home">Admin Center</a> > YourSite > Raw Logs Access</p>
+    <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Query Logs</p>
 
-<p>You can directly access your raw HTTP logs. The logs include valuable data on searches, clicks, and USASearch tag page loads.</p>
+<p>The Query Logs page in the <a href="https://search.usa.gov/sites">Admin Center</a> reports on the terms and phrases your searchers have input. Data start from the time your agency started using USASearch (but no further back than 2009).</p>
 
-<p>With the raw logs, you can conduct in-depth, ad hoc analyses to answer any questions that you can't answer using the standard analytics reports in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. You can also automatically integrate your search logs with your other reports and business processes.</p>
+<h2>Specific Search Queries</h2>
 
-<p>To access your raw logs, you'll first need to upload your public key on the Raw Logs Access page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
+<p>You can limit the search for any specific query term or phrase to a specified time period during the past year.</p>
 
-<p>We'll set up your public key on our secure FTP servers and send you an email when your logs are available for download.</p>
+<p>See the sample report below that shows the number of times <em>housing</em> (or its stemmed equivalents) was searched on <a href="http://www.usa.gov">USA.gov</a> in October 2012.</p>
 
-<p>Once your key is set up, you'll be able access your log files via secure FTP. We upload your logs each day, usually within several hours after midnight GMT. After a week, we purge the older files.</p>
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mcejzpJD7c1qid15q.png" alt="Searches on housing on USA.gov" /></p>
 
-<p>We recommend that you set up a cron script to automatically download the latest files each day.</p>
+<h2>Top Queries</h2>
 
-<h2>How to Generate a Key Pair on Unix</h2>
+<p>You can also get a list, in frequency order, of (a) most popular queries and (b) top queries with no results for any time period. You may choose to display 10, 50, 100, 500, or 1,000 results in order of frequency.</p>
 
-<p>On Unix systems, you can generate a RSA public key with no passphrase by typing in the following command. Generate the key from the machine or server that you'll be using to download the logs. Once you've created a key, it'll be located at /home/user/.ssh/id_rsa.pub.</p>
+<h3>Most Popular Queries</h3>
 
-<pre><code>% cd ~
-% ssh-keygen -q -b 4096 -t rsa
-Enter file in which to save the key (/home/user/.ssh/id_rsa):
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-</code></pre>
+<p>See the sample report below that shows the 10 most popular queries on <a href="http://www.usa.gov">USA.gov</a> on October 15, 2012.</p>
 
-<h2>How to Generate a Key Pair on Windows</h2>
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mcekbcO01c1qid15q.png" alt="Top 10 searches on USA.gov" /></p>
 
-<p>You can use <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a>, a free telnet/SSH client, to generate a public key on Windows. Download PuTTYgen.exe, Pageant.exe, and PSFTP.exe from the <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY Download Page</a>.</p>
+<h2>Query Timeline</h2>
 
-<p>Run PuTTYgen.exe.</p>
+<p>Click on any linked word or the <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mceq7b8LbQ1qid15q.png" alt="New window symbol" /> new window symbol in the above lists, and you will be taken to a Query Timeline chart. There you will be able to add a second query for comparison. Note also that placing your cursor over any part of the timeline will give the search frequency for a particular date.</p>
 
-<ul>
-<li>Select SSH-2 RSA as the type of key to generate.</li>
-<li>Set the number of bits in the generated key to 2048.</li>
-<li>Select Generate. Move your mouse within the blank area to create random movements until the key is generated.</li>
-<li>Fill out your Key Comment, Key Passphrase, and Confirm Passphrase.</li>
-<li>Copy your <em>public</em> key from the string in the Public Key for Pasting into OpenSSH Authorized_keys File. Paste this key into the Raw Logs Access page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>. (Note: Don't save this public key and send us the string copied from a text file. It adds lines in the file so it doesn't work.)</li>
-<li>Save your <em>private</em> key.</li>
-</ul>
+<p>See the sample report below that shows a comparison of <em>jobs</em> and <em>employment</em> on <a href="http://www.usa.gov">USA.gov</a> for the nine months between February and November 2012, with the cursor placed over the spike on <em>jobs</em> May 30.</p>
 
+<h2>Clicked URLs</h2>
 
-<p>Run Pageant.exe. Select Add Key and upload your private key, the .ppk file.</p>
+<p>Click on the <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png" alt="Link symbol" /> link symbol in any of the lists, and you'll be taken to a list of the top clicked URLs for that term.</p>
 
-<p>Run PSFTP.exe and type in the following. You can find your site's handle on the Site Information page in the <a href="http://search.usa.gov/affiliates/home">Admin Center</a>.</p>
+<p>See the sample report below that shows the top clicked URLs for <em>jobs</em> on <a href="http://www.usa.gov">USA.gov</a> in October 2012.</p>
 
-<pre><code>open YourSiteHandle@198.61.238.46
-</code></pre>
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mceqlwdZnx1qid15q.png" alt="Top clicked URLs for jobs on USA.gov" /></p>
+
+<p>From the list of clicked URLs, you will be able to click on the <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mceqaa2dn41qid15q.png" alt="Link symbol" /> link symbol again to see the top query terms that led to that URL over the same time period.</p>
+
+<p>See the sample report below that shows the top queries that led to a click on <a href="https://www.usajobs.gov/">https://www.usajobs.gov/</a> on <a href="http://www.usa.gov">USA.gov</a> in October 2012.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mceqp4Jmoy1qid15q.png" alt="Top queries that led to a click on http://www.usajobs.gov on USA.gov" /></p>
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-    
-    <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+    <a href="/tagged/how-to analytics"><span class="label label-info">how-to analytics</span></a>
     
   </div>
 </article></div>
