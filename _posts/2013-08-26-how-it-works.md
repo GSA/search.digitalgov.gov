@@ -22,22 +22,19 @@ Browse through our [How To Manual](/tagged/how-to) and [Go-Live Punch List](/blo
 
 ### Analytics
 
-<!--START UPDATE-->
-Queries - Help file is coming soon!
-Clicks - Help file is coming soon!
-Monthly reports - Help file is coming soon!
+<!--START UPDATE HERE-->
+* Queries - Help file is coming soon!
+* Clicks - Help file is coming soon!
+* Monthly reports - Help file is coming soon!
 * [3rd party tracking](/sites/manual/third-party.html)
 * [Raw logs](/sites/manual/raw-logs.html)
-<!--END UPDATE-->
 
 ### Manage Content
 
 * [Domains](/sites/manual/domains.html)
 * [Collections](/sites/manual/collections.html)
 * [Best bets:text](/sites/manual/best-bets-text.html)
-<!--START UPDATE-->
 * Best bets: graphics - Help file is coming soon!
-<!--END UPDATE-->
 * [RSS](/sites/manual/rss.html)
 * [YouTube](/sites/manual/youtube.html)
 * [Twitter](/sites/manual/twitter.html)
@@ -45,9 +42,7 @@ Monthly reports - Help file is coming soon!
 
 ### Manage Display
 
-<!--START UPDATE-->
 Help files are coming soon!
-<!--END UPDATE-->
 
 ### Preview
 
