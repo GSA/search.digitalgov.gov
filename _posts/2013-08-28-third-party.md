@@ -25,6 +25,7 @@ The code you submit should look something like one of the following two scripts.
 
 ### Google Analytics Code (Older Format)
 
+```
      <script type="text/javascript">
      var _gaq = _gaq || []; 
      _gaq.push(['_setAccount', 'UA-########-1']); 
@@ -37,6 +38,7 @@ The code you submit should look something like one of the following two scripts.
      })();
      
      </script>
+```
 
 ### Google Analytics Code (Newer Format)
 
