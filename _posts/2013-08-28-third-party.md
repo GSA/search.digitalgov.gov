@@ -25,7 +25,7 @@ The code you submit should look something like one of the following two scripts.
 
 ### Google Analytics Code (Older Format)
 
-```
+
      <script type="text/javascript">
      var _gaq = _gaq || []; 
      _gaq.push(['_setAccount', 'UA-########-1']); 
@@ -38,15 +38,15 @@ The code you submit should look something like one of the following two scripts.
      })();
      
      </script>
-```
+
 
 ### Google Analytics Code (Newer Format)
-```
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
- (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-```
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
 ## Digital Analytics Program Tip
 
 Does your federal agency participate in the [Digital Analytics Program](http://www.howto.gov/web-content/digital-metrics/digital-analytics-program) (DAP)? 
