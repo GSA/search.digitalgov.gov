@@ -16,13 +16,13 @@ Check the option to Show as a GovBox to allow searchers to see inline, contextua
 
 USASearch currently provides three pre-built GovBoxes.
 
-* **Agency GovBox.** For more information, including a screenshot, read our post [Help Searchers Find Information for Federal Agencies](/manual/govbox-agencies.html).
-* **Health GovBox.** For more information, including a screenshot, read our post [Help Searchers Find Health Information](/manual/govbox-health.html).
-* **Jobs GovBox.** For more information, including a screenshot, read our post [Help Searchers Find	 Jobs](/manual/govbox-jobs.html).
+* **Agency GovBox.** For more information, including a screenshot, read our post [Help Searchers Find Information for Federal Agencies](/sites/manual/govbox-agencies.html).
+* **Health GovBox.** For more information, including a screenshot, read our post [Help Searchers Find Health Information](/sites/manual/govbox-health.html).
+* **Jobs GovBox.** For more information, including a screenshot, read our post [Help Searchers Find	 Jobs](/sites/manual/govbox-jobs.html).
 
 ### Social Media GovBoxes
 
-[Social media](/manual/social-media.html) channels that you've provided on the Social Media page in the [Admin Center](https://search.usa.gov/sites) are listed. 
+Social media content that you've provided on the [Flickr](/sites/manual/flickr.html), [Twitter](/sites/manual/twitter.html), and [YouTube](/sites/manual/youtube.html) pages in the [Admin Center](https://search.usa.gov/sites) are listed. 
 
 * **Photos GovBox.** When a searcher's query matches the metadata of a photo published any time, the photo appears in the Photos GovBox. 
 * **Twitter GovBox.** When a searcher's query matches the text of a tweet published within the last three months, the tweet appears in the Twitter GovBox. 

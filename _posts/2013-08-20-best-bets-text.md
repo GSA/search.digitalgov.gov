@@ -35,5 +35,6 @@ Create a comma-separated file with the following fields.
 URL, Title,  Description, StartDate, EndDate, Keywords
 
 URL, title, and description are required. Start date, end date, and keywords are optional. Save the file with .csv, .txt, or .xml extension and upload it.
-
-Note: Leveraging the bulk upload will override your existing best bets. 
+<!--START UPDATE-->
+Bulk upload appends new entries to your existing entries.
+<!--END UPDATE-->

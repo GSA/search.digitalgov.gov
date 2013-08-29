@@ -55,7 +55,7 @@ We use device detection to show mobile-friendly search results on mobile phones.
 
 ### Default mobile header
 
-By default, searchers on mobile phones see the header, *YourSiteName Mobile*. If you list only one domain on the [Domains](/manual/domains.html) page, we link your header to this domain. See the sample default mobile header below for [HowTo.gov](http://www.howto.gov).
+By default, searchers on mobile phones see the header, *YourSiteName Mobile*. If you list only one domain on the [Domains](/sites/manual/domains.html) page, we link your header to this domain. See the sample default mobile header below for [HowTo.gov](http://www.howto.gov).
 
 ![HowTo.gov mobile search results page](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_meazaml0781qid15q.png)
 

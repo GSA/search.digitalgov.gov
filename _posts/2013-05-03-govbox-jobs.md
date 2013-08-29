@@ -1,5 +1,5 @@
 ---
-permalink: /manual/govbox-jobs.html
+permalink: /sites/manual/govbox-jobs.html
 layout: post
 title: "Help Searchers Find Jobs"
 tags: govbox jobs how-to
@@ -7,7 +7,7 @@ tags: govbox jobs how-to
 
 One of the most common search tasks is to look for current job openings. To help searchers quickly find relevant jobs we've created the Jobs GovBox. 
 
-When you [turn on the Jobs GovBox](/manual/results-modules.html), searchers looking for jobs on your site will see up to three relevant jobs listings on your results page. 
+When you [turn on the Jobs GovBox](/sites/manual/display-overview.html), searchers looking for jobs on your site will see up to three relevant jobs listings on your results page. 
 
 ## Federal Government
 
