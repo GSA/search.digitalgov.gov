@@ -16,9 +16,8 @@ Some tips for commonly used third party web services follow.
 
 In your Google Analytics JavaScript, be sure to set your domain if you've requested <a href="/sites/manual/cname.html">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).
 
-```javascript
+
     _gaq.push(['_setDomainName', 'commerce.gov']);
-```
 
 For more information, read Google's tip, [Tracking Multiple Domains](https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite).
 
