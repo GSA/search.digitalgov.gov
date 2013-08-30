@@ -22,7 +22,6 @@ Browse through our [How To Manual](/tagged/how-to) and [Go-Live Punch List](/blo
 
 ### Analytics
 
-<!--START UPDATE HERE-->
 * Queries - Help file is coming soon!
 * Clicks - Help file is coming soon!
 * Monthly reports - Help file is coming soon!
@@ -31,7 +30,7 @@ Browse through our [How To Manual](/tagged/how-to) and [Go-Live Punch List](/blo
 
 ### Manage Content
 
-* [Domains](/sites/manual/domains.html)
+* [Domains](/sites/manual/domains.html) plus [advanced options to add or filter URLs](/sites/manual/domains-advanced.html)
 * [Collections](/sites/manual/collections.html)
 * [Best bets:text](/sites/manual/best-bets-text.html)
 * Best bets: graphics - Help file is coming soon!
