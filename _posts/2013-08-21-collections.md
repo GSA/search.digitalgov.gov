@@ -34,7 +34,7 @@ Searchers will see an option to narrow their search results to pages in this col
 
 ***Did you know?*** You can set up a search box on your website that limits results to your collection.
 
-Start with the standard form snippet on the [Activate Search](/sites/manual/activate.html) page. Change the form action to `action="http://search.usa.gov/search/docs` and add the following line to limit the results to your collection.
+Start with the standard form snippet on the [Code Snippets](/sites/manual/code.html) page under the Activate Search tab. Change the form action to `action="http://search.usa.gov/search/docs` and add the following line to limit the results to your collection.
 
 `<input type="hidden" name="dc" value="###">`
 

@@ -58,4 +58,4 @@ You can later use the delete option to remove the filter.
 ***Did you know?*** To help the public find your web pages when they search on Bing.com, we notify Bing about any URLs you add. While this helps with search engine optimization (SEO), it is not a cure-all. You should also register for and use commercial search engines' webmaster tools.
 
 * [Bing Webmaster Tools](http://www.bing.com/toolbox/webmaster) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif) 
-* [Google Webmaster Central](https://www.google.com/webmasters) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif)
+* [Google Webmaster Central](https://www.google.com/webmasters/tools) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif)
