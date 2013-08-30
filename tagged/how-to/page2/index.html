@@ -149,6 +149,216 @@
       
       <span>Last updated on:</span>
       
+      <a href="/sites/manual/rss.html">
+        <time datetime="2013-08-21">August 21, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/sites/manual/rss.html">How to Add Your RSS Feeds to Our Index</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Manage Content > RSS</p>
+
+<p>Would you like searchers to be able to search your news or multimedia content? Would you like them to be able to narrow results by date?</p>
+
+<p>Tell us the locations and names of your RSS feeds. We index all new and updated content on your feeds within minutes.</p>
+
+<h2>Step 1. Tell Us About Your RSS Feeds</h2>
+
+<p>We love feeds! Tell us about <em>all</em> of your RSS feeds, even if you don't opt to show them in step 2 below. Feeds are the fastest and most reliable way for us to learn about your new and updated content.</p>
+
+<p>Select the option to add a new RSS feed.</p>
+
+<h3>Name</h3>
+
+<p>Create a name for the feed. Within this 'bucket' you can list a single RSS feed or many feeds. For example, you can opt to list all of your agency's press releases separately (such as Police News, Fire News, EMS News, etc.) or you can list all three under one general name (such as News).</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/rss.png" alt="Add an RSS Feed" /></p>
+
+<h3>Feed type</h3>
+
+<p>Select the type of feed. The default option is RSS (for text content like press releases or blogs). Change it to <a href="http://www.rssboard.org/media-rss">media RSS</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> for multimedia content like images and videos.</p>
+
+<p>Each item within a RSS feed must include a title, link, description, and publication date.</p>
+
+<p>Each item within a media RSS feed must also include both a <a href="http://www.rssboard.org/media-rss#media-content">media:content URL</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to specify a direct URL to the media object and a <a href="http://www.rssboard.org/media-rss#media-thumbnails">media:thumbnail URL</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to specify a URL to the object's thumbnail.</p>
+
+<p>Any items missing a required element won't display in your search results.</p>
+
+<h3>Sample RSS Item with All Required Elements</h3>
+
+<pre><code>&lt;item&gt;
+&lt;title&gt;
+Statement from Agriculture Secretary Tom Vilsack Regarding World Organization for Animal Health (OIE) Upgrade of United States&amp;apos; BSE Risk Status
+&lt;/title&gt;
+&lt;pubDate&gt;May 29, 2013 00:00:00 CDT&lt;/pubDate&gt;
+&lt;link&gt;
+http://www.usda.gov/wps/portal/usda/usdahome?contentid=2013/05/0106.xml&amp;contentidonly=true
+&lt;/link&gt;
+&lt;description&gt;
+WASHINGTON, May 29, 2013–Agriculture Secretary Tom Vilsack made the following statement about notification received today from the World Organization for Animal Health (OIE) upgrading the United States&amp;apos; risk classification for bovine spongiform encephalopathy (BSE) to negligible risk:
+&lt;/description&gt;
+&lt;/item&gt;
+</code></pre>
+
+<h3>Sample Media RSS Item with All Required Elements</h3>
+
+<pre><code>&lt;item&gt;
+&lt;title type="html"&gt;
+&lt;![CDATA[ Great Lakes Beach Health ]]&gt;
+&lt;/title&gt;
+&lt;link&gt;
+http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
+&lt;/link&gt;
+&lt;guid&gt;
+http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
+&lt;/guid&gt;
+&lt;pubDate&gt;Fri, 24 May 2013 00:00:00 EDT&lt;/pubDate&gt;
+&lt;media:description type="html"&gt;
+&lt;![CDATA[
+&lt;p&gt;As schools close for the year and summer weather beckons, many recreationalists head to the Great Lakes' public beaches. However, these coastal areas can become     contaminated with disease-causing bacteria that threaten public health, disrupt water   recreation, and pay a toll on the Great Lakes econ
+]]&gt;
+&lt;![CDATA[
+omies that depend on summer tourism.&lt;/p&gt;
+ &lt;p&gt;The U.S. Geological Survey &lt;a href="http://greatlakesbeaches.usgs.gov/index.html"&gt;Great Lakes Beach Health&lt;/a&gt; initiative provides science-based information and methods that help beach managers make more accurate beach closure and advisory decisions, &lt;a href="http://www.usgs.gov/newsroom/article.asp?ID=3063#.UZv3pSs_87A"&gt;preventing unnecessary beach closures&lt;/a&gt; while protecting public health.&lt;/p&gt;
+]]&gt;
+&lt;/media:description&gt;
+&lt;media:thumbnail url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/thumbs/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
+&lt;media:content type="" url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/large/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
+&lt;/item&gt;
+</code></pre>
+
+<h2>Step 2. Opt to Show as a GovBox, in the Sidebar, or Both</h2>
+
+<p>Allow searchers to see inline results for the three most recent, relevant RSS results <em>across all of your RSS feeds</em> by turning on the option to show as a GovBox on the <a href="/sites/manual/display-overview.html">Display Overview</a> page. You can also edit the default title, News, on the Display Overview page.</p>
+
+<p>Allow searchers to see narrow results to a specific feed in the left-hand column of the results page by turning on the option to show in the Sidebar on the <a href="/sites/manual/display-overview.html">Display Overview</a> page. To ensure searchers don't encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a sidebar option.</p>
+
+<h2>Step 3. Check Your Search Results Page</h2>
+
+<p><strong>GovBox.</strong> If you opted to show your RSS feed(s) as a GovBox, searchers will see a News GovBox. This GovBox will highlight the three most recent, relevant results across all of your RSS feeds.</p>
+
+<p><strong>Sidebar.</strong> If you opted to show your RSS feed(s) in the sidebar, searchers can narrow their results to see your RSS-based results only.</p>
+
+<p>Within the RSS-based results, searchers can opt to limit results to the last hour, day, week, month, or year, or they can set a custom date range. They also can sort results in descending order by relevance (best match first) or date (most recent first).</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
+
+<ul>
+<li><a href="http://validator.w3.org/feed">W3C Feed Validation Service</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> (Atom &amp; RSS)</li>
+<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> and <a href="http://www.rssboard.org/rss-validator">validator</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /></li>
+<li><a href="http://www.atomenabled.org/developers/syndication">Atom syndication format</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /></li>
+</ul>
+
+
+<p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="https://search.usa.gov/sites">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don't need to coordinate with us.</p>
+
+<p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your RSS feeds.</p>
+
+<p><strong><em>Did you know?</em></strong> When you <a href="/sites/manual/youtube.html">provide us with your YouTube channel</a>, we'll automatically index the RSS feed for your YouTube channel.</p>
+
+<p><strong><em>Did you know?</em></strong> For any feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms">Dublin Core</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> property, searchers may narrow results by these facets in the <a href="/sites/manual/display-overview.html">sidebar</a> on the results page.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/rss"><span class="label label-info">rss</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
+      <a href="/sites/manual/collections.html">
+        <time datetime="2013-08-21">August 21, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/sites/manual/collections.html">How to Create Collections Within Our Index</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Collections</p>
+
+<p>Would you like searchers to be able to narrow results to a specific subset of content within your site or on another site? You can create a collection across any set of domains, subdomains, or subfolders.</p>
+
+<h2>Step 1. Create a Collection</h2>
+
+<p>Enter a name for the collection (e.g., FAQs).</p>
+
+<p>Enter the URLs that make up this collection. Start each URL prefix with http:// and end it in a trailing slash () to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov).</p>
+
+<!-- START UPDATE -->
+
+
+<h2>Step 2. Opt to Show in Sidebar</h2>
+
+<p>Click on the <a href="/sites/manual/display-overview.html">Display Overview</a> page. Check the option, Show in Sidebar, to allow searchers to see navigation options in the left-hand column of the results page.</p>
+
+<!-- END UPDATE -->
+
+
+<h2>Step 3. Check Your Search Results Page</h2>
+
+<p>Searchers will see an option to narrow their search results to pages in this collection in the left-hand navigation on the results page.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-2.png" alt="Collection on the search results page" /></p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your collections.</p>
+
+<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your collection.</p>
+
+<p>Start with the standard form snippet on the <a href="/sites/manual/activate.html">Activate Search</a> page. Change the form action to <code>action="http://search.usa.gov/search/docs</code> and add the following line to limit the results to your collection.</p>
+
+<p><code>&lt;input type="hidden" name="dc" value="###"&gt;</code></p>
+
+<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
+
+<p>See the sample search box below that is limited to news releases in <a href="http://www.ftc.gov/opa/index.shtml">FTC.gov's Newroom</a> for a search on <em>privacy</em>.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-3.png" alt="FTC.gov Newsroom search box" /><br/>
+<em>Newsroom page with a search box that is limited to news</em></p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-4.png" alt="FTC.gov search results page" /><br/>
+<em>Search results page that returns news results only</em></p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/collections"><span class="label label-info">collections</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/sites/manual/best-bets-text.html">
         <time datetime="2013-08-20">August 20, 2013</time>
       </a>
@@ -345,78 +555,6 @@
       
       <span>Last updated on:</span>
       
-      <a href="/sites/manual/domains.html">
-        <time datetime="2013-08-08">August 8, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/sites/manual/domains.html">How to Edit Your Domains</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Manage Content > Domains</p>
-
-<h2>Set Your Domains</h2>
-
-<p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
-
-<h3>Entire Site</h3>
-
-<p>List yoursite.gov (without www) to search your entire site, including all subdomains.</p>
-
-<h3>Part of Site</h3>
-
-<ul>
-<li>List www.yoursite.gov to include only the primary 'www' domain.</li>
-<li>List subdomain.yoursite.gov to include subdomains.</li>
-<li>List yoursite.gov/folder to include folders.</li>
-</ul>
-
-
-<p>You cannot specify individual URLs.</p>
-
-<h3>Filter a URL</h3>
-
-<p>You can filter a single URL from the results on your site. Use it for emergency reasons only (such as spillage of classified information or unintentional publication of a page).</p>
-
-<p>It is not meant to fix the results for entire site, such as for launch or redesign problems. For tips on how to fix these more systemic problems, read our <a href="/blog/redesign.html">Checklist for a Successful Website Redesign</a>.</p>
-
-<p>Entire the full path of the URL, e.g. use <a href="http://www.usa.gov/Citizen/Topics/Benefits.shtml">http://www.usa.gov/Citizen/Topics/Benefits.shtml</a>, not usa.gov/citizen/topics.</p>
-
-<p>You can later use the delete option to remove the filter.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
-
-<ol>
-<li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
-<li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>E-mail us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x55;&#x53;&#x41;&#83;&#101;&#97;&#114;&#x63;&#104;&#x40;&#x67;&#x73;&#97;&#x2e;&#103;&#111;&#x76;">&#85;&#x53;&#65;&#x53;&#x65;&#x61;&#x72;&#99;&#x68;&#x40;&#x67;&#115;&#x61;&#46;&#x67;&#111;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
-</ol>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
       <a href="/sites/manual/flickr.html">
         <time datetime="2013-08-08">August 8, 2013</time>
       </a>
@@ -472,64 +610,6 @@
       <a href="/tagged/flickr"><span class="label label-info">flickr</span></a>
       
       <a href="/tagged/images"><span class="label label-info">images</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/sites/manual/settings.html">
-        <time datetime="2013-08-01">August 1, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/sites/manual/settings.html">How to Edit Your Settings</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Dashboard > Settings</p>
-
-<h2>Display Name (Required)</h2>
-
-<p>Tell us the name of your website. Searchers see your site name on the results page, such as in your page title or best bets. We recommend using the plain language name for your agency or site, such as National Institutes of Health.</p>
-
-<h2>Site Handle (Required)</h2>
-
-<p>We use your site handle in the HTTP request to specify displaying your customized settings. We recommend making this handle short and unique, such as nih.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/settings.png" alt="Site name and handle on NIH.gov's search results page" /></p>
-
-<h2>Site ID (System Generated)</h2>
-
-<p>We assign a unique numeric ID to your site. We use this ID for some back-end code. You also see this ID in the URL for your site in the <a href="https://search.usa.gov/sites">Admin Center</a>.</p>
-
-<h2>Site Language (Required)</h2>
-
-<p>Choose a language for your site, English or Spanish. We will only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language.</p>
-
-<h2>Delete</h2>
-
-<p>After you've set up a site, you may want to delete it. <strong>Use caution.</strong> This action permanently deletes your site and its associated analytics and indexes. We cannot restore deleted sites.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or language, e-mail us at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#85;&#83;&#x41;&#x53;&#101;&#x61;&#114;&#x63;&#104;&#64;&#103;&#x73;&#97;&#x2e;&#x67;&#x6f;&#118;">&#85;&#83;&#x41;&#83;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#103;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#118;</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
-      
-      <a href="/tagged/settings"><span class="label label-info">settings</span></a>
       
     </div>
   </article>
@@ -633,58 +713,55 @@
       
       <span>Last updated on:</span>
       
-      <a href="/sites/manual/govbox-jobs.html">
-        <time datetime="2013-05-03">May 3, 2013</time>
+      <a href="/sites/manual/settings.html">
+        <time datetime="2013-08-01">August 1, 2013</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/sites/manual/govbox-jobs.html">Help Searchers Find Jobs</a>
+      <a href="/sites/manual/settings.html">How to Edit Your Settings</a>
     </h1>
     
 
     <div class='post-content'>
-      <p>One of the most common search tasks is to look for current job openings. To help searchers quickly find relevant jobs we've created the Jobs GovBox.</p>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Dashboard > Settings</p>
 
-<p>When you <a href="/sites/manual/display-overview.html">turn on the Jobs GovBox</a>, searchers looking for jobs on your site will see up to three relevant jobs listings on your results page.</p>
+<h2>Display Name (Required)</h2>
 
-<h2>Federal Government</h2>
+<p>Tell us the name of your website. Searchers see your site name on the results page, such as in your page title or best bets. We recommend using the plain language name for your agency or site, such as National Institutes of Health.</p>
 
-<ul>
-<li><strong>Federal Cross-Agency Portals.</strong> If your website is a federal cross-agency portal (e.g., USA.gov), the Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across all federal agencies</em>.</li>
-<li><strong>Federal Department Websites.</strong> If your website is affiliated with a specific federal department (e.g., Department of Commerce), the Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across all agencies within your department</em>.</li>
-<li><strong>Federal Agency or Office Websites.</strong> If your website is affiliated with a specific federal agency (e.g., NOAA) or office (e.g, National Ocean Service), the Jobs GovBox will return relevant, location-and keyword-matched job openings <em>at your agency</em>.</li>
-</ul>
+<h2>Site Handle (Required)</h2>
 
+<p>We use your site handle in the HTTP request to specify displaying your customized settings. We recommend making this handle short and unique, such as nih.</p>
 
-<p>Searchers will also see a direct link to <a href="https://www.usajobs.gov">USAJobs.gov</a> for all current job openings (specific to your department or agency, if applicable), as shown in the sample below for a search on <a href="http://usdasearch.usda.gov/search?affiliate=usda&amp;query=jobs" title=""><em>jobs</em></a> on the USDA.gov.</p>
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/settings.png" alt="Site name and handle on NIH.gov's search results page" /></p>
 
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/govbox-jobs.png" alt="Search results for jobs on USDA.gov" /></p>
+<h2>Site ID (System Generated)</h2>
 
-<h2>State and Local Government</h2>
+<p>We assign a unique numeric ID to your site. We use this ID for some back-end code. You also see this ID in the URL for your site in the <a href="https://search.usa.gov/sites">Admin Center</a>.</p>
 
-<p>If your website is a state or local government site that uses both USASearch and NeoGov (e.g., Michigan.gov), the Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across your agency</em>.</p>
+<h2>Site Language (Required)</h2>
 
-<p>Searchers will also see a direct link to your NeoGov page for all current job openings specific to your agency, as shown in the sample below for a search on <em><a href="http://search.ci.bloomington.mn.us/search?affiliate=cityofbloomingtonmnsearchresults&amp;query=jobs">jobs</a></em> on the City of Bloomington, MN.</p>
+<p>Choose a language for your site, English or Spanish. We will only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language.</p>
 
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/jobs-bloomington.png" alt="Search results for jobs on ci.bloomington.mn.us" /></p>
+<h2>Delete</h2>
 
-<p>Otherwise, the Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across all federal, state, and local agencies</em>.</p>
+<p>After you've set up a site, you may want to delete it. <strong>Use caution.</strong> This action permanently deletes your site and its associated analytics and indexes. We cannot restore deleted sites.</p>
 
 <hr />
 
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. E-mail us at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#x55;&#x53;&#x41;&#83;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#x67;&#115;&#x61;&#46;&#x67;&#111;&#118;">&#85;&#x53;&#x41;&#83;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x67;&#x73;&#97;&#x2e;&#103;&#x6f;&#118;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> If you later need to edit your site handle or language, e-mail us at <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#x55;&#x53;&#x41;&#x53;&#101;&#97;&#114;&#x63;&#x68;&#64;&#103;&#115;&#x61;&#x2e;&#x67;&#x6f;&#x76;">&#85;&#83;&#x41;&#x53;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#x67;&#x73;&#97;&#46;&#103;&#x6f;&#x76;</a>.</p>
 
     </div>
 
     <div class='tags'>
       
-      <a href="/tagged/govbox"><span class="label label-info">govbox</span></a>
-      
-      <a href="/tagged/jobs"><span class="label label-info">jobs</span></a>
-      
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
+      
+      <a href="/tagged/settings"><span class="label label-info">settings</span></a>
       
     </div>
   </article>
