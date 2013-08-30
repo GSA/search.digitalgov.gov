@@ -6,7 +6,7 @@ tags: how-to analytics third-party google-analytics foresee DAP
 ---
 [USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites) > YourSite > Analytics > 3rd Party Tracking
 
-Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends?
+Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?
 
 Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.
 
@@ -16,7 +16,6 @@ Some tips for commonly used third party web services follow.
 
 In your Google Analytics JavaScript, be sure to set your domain if you've requested <a href="/sites/manual/cname.html">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).
 
-
     _gaq.push(['_setDomainName', 'commerce.gov']);
 
 For more information, read Google's tip, [Tracking Multiple Domains](https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite).
@@ -24,7 +23,6 @@ For more information, read Google's tip, [Tracking Multiple Domains](https://dev
 The code you submit should look something like one of the following two scripts.
 
 ### Google Analytics Code (Older Format)
-
 
      <script type="text/javascript">
      var _gaq = _gaq || []; 
@@ -38,7 +36,6 @@ The code you submit should look something like one of the following two scripts.
      })();
      
      </script>
-
 
 ### Google Analytics Code (Newer Format)
 
@@ -80,4 +77,3 @@ Coordinate with your ForeSee representative and USASearch to implement your cust
 It should look something like the following.
 
      <script type="text/javascript" src="http://www.YourAgency.gov/library/foresee/foresee-trigger.js"></script>
-
