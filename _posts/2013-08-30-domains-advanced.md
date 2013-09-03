@@ -22,6 +22,8 @@ Note that you *must* delete the URL from your RSS feed. Otherwise, the URL will 
 
 You can also delete *all* of the URLs added via the RSS feed by deleting the RSS feed itself.
 
+USASearch will not store URLs that do not exist within your *current* feed. 
+
 ### Supplemental URLs
 
 You can also manually add a a specific URL on the Supplemental URLs page. We'll fetch each URL you add manually and we'll index the title, description, *and the full text of the document* for the link you provide. We'll display the title and description you provide (not the page's title or a snippet based on the page's content).
