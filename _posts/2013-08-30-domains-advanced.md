@@ -22,7 +22,7 @@ Note that you *must* delete the URL from your RSS feed. Otherwise, the URL will 
 
 You can also delete *all* of the URLs added via the RSS feed by deleting the RSS feed itself.
 
-USASearch will not store URLs that do not exist within your *current* feed. 
+We can't restore URLs that don't exist within your *current* feed. 
 
 ### Supplemental URLs
 
