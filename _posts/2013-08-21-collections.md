@@ -14,13 +14,9 @@ Enter a name for the collection (e.g., FAQs).
 
 Enter the URLs that make up this collection. Start each URL prefix with http:// and end it in a trailing slash () to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov).
 
-<!-- START UPDATE -->
-
 ## Step 2. Opt to Show in Sidebar
 
-Click on the [Display Overview](/sites/manual/display-overview.html) page. Check the option, Show in Sidebar, to allow searchers to see navigation options in the left-hand column of the results page.
-
-<!-- END UPDATE -->
+Click on the [Display Overview](/sites/manual/display-overview.html) page. Turn on your collection to allow searchers to see it as a navigation option in the left-hand column of the results page.
 
 ## Step 3. Check Your Search Results Page
 

@@ -18,7 +18,7 @@ Most agencies add these two [snippets of code](/sites/manual/code.html) to the t
 	 	<input name="commit" type="submit" value="Search" /> 
 	</form>
 
-<i class="icon-check"></i> **2. Do you have the USASearch Javascript tag on your webpages?** This Javascript powers the [type-ahead search](/sites/manual/display-overview.html). It also provides data on your trending URLs on the [Site Overview](/sites/manual/site-overview.html) page in the [Admin Center](https://search.usa.gov/sites).
+<i class="icon-check"></i> **2. Do you have the USASearch Javascript tag on your webpages?** This Javascript powers the suggestions for type-ahead and [related searches](/sites/manual/display-overview.html). It also provides data on your trending URLs on the [Site Overview](/sites/manual/site-overview.html) page in the [Admin Center](https://search.usa.gov/sites).
 
 	<script type="text/javascript">
 	//<![CDATA[
@@ -42,7 +42,7 @@ Most agencies add these two [snippets of code](/sites/manual/code.html) to the t
 
 <i class="icon-check"></i> **6. Have you made the search results page look like your website?** Customize the [fonts and colors](/sites/manual/font-color.html) and [image assets](/sites/manual/image-assets.html) (logo, background image, and favicon) of your search results page to create a seamless experience for users as they search and browse your website.
 
-<i class="icon-check"></i> **7. Have you told us what to show on your results page?** Turn on (or off) the modules (that is, the stuff in the center of the page) and sidebar options (that is, the facets in the left-hand column) you want to appear on your search results. You can change the default settings on the [Display Overview](/sites/manual/display-overview.html) page in the Admin Center.
+<i class="icon-check"></i> **7. Have you told us what to show on your results page?** Turn on (or off) the GovBoxes (that is, the inline results in the center of the page) and sidebar options (that is, the facets in the left-hand column) you want to appear on your search results. You can change the default settings on the [Display Overview](/sites/manual/display-overview.html) page in the Admin Center.
 
 ## Set Up Nice-to-Have Features (Optional)
 
