@@ -41,7 +41,10 @@ Browse through our [How To Manual](/tagged/how-to) and [Go-Live Punch List](/blo
 
 ### Manage Display
 
-Help files are coming soon!
+* [Display overview](/sites/manual/display-overview.html)
+* Font & color - Help file is coming soon!
+* Image assets - Help file is coming soon!
+* Advanced display - Help file is coming soon!
 
 ### Preview
 
