@@ -12,7 +12,9 @@ Would you like searchers to be able to narrow results to a specific subset of co
 
 Enter a name for the collection (e.g., FAQs).
 
-Enter the URLs that make up this collection. Start each URL prefix with http:// and end it in a trailing slash () to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov).
+Enter the URLs for the domains, subdomains, or subfolders that make up this collection. Start each URL prefix with http:// and end it in a trailing slash () to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov).
+
+You cannot specify URLs for individual web pages. 
 
 ## Step 2. Opt to Show in Sidebar
 
