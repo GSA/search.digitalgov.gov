@@ -18,7 +18,6 @@ Fill out the fields to generate a predefined header and footer.
 
 **Text.** Fill out the text you'd like to appear in your header. We've pre-populated this field with your [site name](/sites/manual/settings.html). Edit the same name, or delete it, if you don't want this text to appear in your header.
 
-**Image.** Use the Browse... option to upload the logo or image that you'd like to appear in the header, if any. If you don't have header text, the image will be center-aligned. If you do have header text, the image will be right-aligned. Click on the option, Mark header image for deletion, to delete an uploaded image.
 
 **Header and footer navigation.** Fill out the titles and URLs if you'd like to add navigation to your header and footer. Use the arrows on the left to rearrange the display order of the links. See the sample results page below that includes navigation.
 
