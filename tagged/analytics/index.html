@@ -62,7 +62,7 @@
       </ul>
       <ul class="nav login">
         <li>
-          <a href="https://search.usa.gov/affiliates/home"><i
+          <a href="https://search.usa.gov/sites"><i
               class="icon-user icon-white"></i>&nbsp;Login</a>
         </li>
       </ul>
@@ -81,98 +81,57 @@
       
       <span>Last updated on:</span>
       
-      <a href="/sites/manual/third-party.html">
-        <time datetime="2013-08-28">August 28, 2013</time>
+      <a href="/manual/monthly-reports.html">
+        <time datetime="2013-09-16">September 16, 2013</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/sites/manual/third-party.html">How to Add JavaScript for Your Third Party Web Services</a>
+      <a href="/manual/monthly-reports.html">How to Analyze Your Monthly Reports</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Analytics > 3rd Party Tracking</p>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Monthly Reports</p>
 
-<p>Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?</p>
+<p>The monthly report gives a bird's-eye view of the number of <a href="/sites/manual/queries.html">queries</a> and <a href="/sites/manual/clicks.html">clicks</a> each month.</p>
 
-<p>Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
+<p>Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.</p>
 
-<p>Some tips for commonly used third party web services follow.</p>
+<p>Data start from the time your agency started using USASearch (but no further back than 2009).</p>
 
-<h2>Google Analytics Tip</h2>
+<h2>Monthly Usage Stats</h2>
 
-<p>In your Google Analytics JavaScript, be sure to set your domain if you've requested <a href="/sites/manual/cname.html">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
+<p>Data for the total number of queries and clicks. Use this report to find and analyze the so-called <a href="http://www.searchtools.com/analysis/long-tail.html">short head</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> of your most popular search queries and clicks.</p>
 
-<pre><code>_gaq.push(['_setDomainName', 'commerce.gov']);
-</code></pre>
+<h2>Impressions and Clicks by Module</h2>
 
-<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>.</p>
+<p>Detailed data for the total number of impressions and clicks and the clickthru rate are presented for each "module" on the search results page. Use this report to inform which <a href="/sites/manual/display-overview.html">modules you opt to display</a>.</p>
 
-<p>The code you submit should look something like one of the following two scripts.</p>
+<h2>Download Top Queries</h2>
 
-<h3>Google Analytics Code (Older Format)</h3>
+<p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV link to download the list as a comma delimited file. The CSV file contains three columns: (1) query, (2) raw count, and (3) IP-deduped.</p>
 
-<pre><code> &lt;script type="text/javascript"&gt;
- var _gaq = _gaq || []; 
- _gaq.push(['_setAccount', 'UA-########-1']); 
- _gaq.push(['_trackPageview']);
+<h2>Definitions</h2>
 
- (function() { 
- var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
- ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
- var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
- })();
+<p>All data presented on this page (and other pages in the Admin Center) are IP-deduped to exclude bots and other noise in an attempt to accurately represent searchers' intent on your site. Some definitions follow.</p>
 
- &lt;/script&gt;
-</code></pre>
+<p><strong>Queries:</strong> Number of times a search query (that is, the word or the string of words) was entered in the search box by a unique searcher.</p>
 
-<h3>Google Analytics Code (Newer Format)</h3>
+<p><strong>Clicks.</strong> Number of times a searcher clicked on one of your pages within the search results for a particular query.</p>
 
-<pre><code>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-</code></pre>
+<p><strong>Impressions:</strong> Number of times a module is displayed, whether it is clicked on or not. Not all modules are displayed for all queries. Each time a module is displayed it is counted as one impression.</p>
 
-<h2>Digital Analytics Program Tip</h2>
+<p><strong>Clickthru Rate (CTR):</strong> The rate (expressed in a percentage) at which searchers click on a module. This rate is calculated by dividing the total number of clicks by the total number of impressions. CTR is useful to measure the performance of specific campaigns, such as <a href="/sites/manual/best-bets-text.html">best bets</a> for seasonal events.</p>
 
-<p>Does your federal agency participate in the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> (DAP)?</p>
+<p><strong>Raw count:</strong> Total number of times the query was submitted. The raw count is provided in the downloadable CSV files only.</p>
 
-<p>You don't need to upload the full DAP Google Analytics code. You can simply say something like, "Add DAP code."</p>
+<p><strong>IP-deduped count:</strong> Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of "real," human traffic.</p>
 
-<h2>ForeSee Tip</h2>
+<hr />
 
-<p>Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
-
-<ol>
-<li><p>Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x55;&#x53;&#x41;&#83;&#x65;&#97;&#114;&#x63;&#104;&#x40;&#x67;&#115;&#97;&#46;&#x67;&#x6f;&#118;">&#x55;&#x53;&#65;&#83;&#x65;&#x61;&#114;&#99;&#104;&#64;&#x67;&#115;&#x61;&#x2e;&#103;&#x6f;&#118;</a> to <a href="/sites/manual/cname.html">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
-<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
-
-<p> Find => 'files': '/fsrscripts/',</p>
-
-<p> and replace it with => 'files': '//{yourdomain}/fsrscripts/',</p>
-
-<p> in the following five files.</p>
-
-<ul>
-<li>foresee-trigger.js</li>
-<li>foresee-tracker.js</li>
-<li>foresee-alive.js</li>
-<li>foresee-qualifier.js</li>
-<li>foresee-test.js</li>
-</ul>
-</li>
-<li><p>Ask ForeSee to send USASearch your foresee-trigger.js file.</p></li>
-<li><p>USASearch will send you an email to confirm that we've set up your CNAME and installed your foresee-trigger.js file.</p></li>
-</ol>
-
-
-<p>It should look something like the following.</p>
-
-<pre><code> &lt;script type="text/javascript" src="http://www.YourAgency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;
-</code></pre>
+<p><strong><em>Did you know?</em></strong> On the first of each month, we email you a report with data on the previous month's queries, clicks, and top search terms.</p>
 
     </div>
 
@@ -181,14 +140,6 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
       
       <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
-      
-      <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
-      
-      <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
-      
-      <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
       
     </div>
   </article>
@@ -269,6 +220,123 @@ Enter same passphrase again:
       <a href="/tagged/raw-logs"><span class="label label-info">raw-logs</span></a>
       
       <a href="/tagged/sftp"><span class="label label-info">sftp</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
+      <a href="/sites/manual/third-party.html">
+        <time datetime="2013-08-28">August 28, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/sites/manual/third-party.html">How to Add JavaScript for Your Third Party Web Services</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Analytics > 3rd Party Tracking</p>
+
+<p>Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?</p>
+
+<p>Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
+
+<p>Some tips for commonly used third party web services follow.</p>
+
+<h2>Google Analytics Tip</h2>
+
+<p>In your Google Analytics JavaScript, be sure to set your domain if you've requested <a href="/sites/manual/cname.html">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
+
+<pre><code>_gaq.push(['_setDomainName', 'commerce.gov']);
+</code></pre>
+
+<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>.</p>
+
+<p>The code you submit should look something like one of the following two scripts.</p>
+
+<h3>Google Analytics Code (Older Format)</h3>
+
+<pre><code> &lt;script type="text/javascript"&gt;
+ var _gaq = _gaq || []; 
+ _gaq.push(['_setAccount', 'UA-########-1']); 
+ _gaq.push(['_trackPageview']);
+
+ (function() { 
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
+ })();
+
+ &lt;/script&gt;
+</code></pre>
+
+<h3>Google Analytics Code (Newer Format)</h3>
+
+<pre><code>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+</code></pre>
+
+<h2>Digital Analytics Program Tip</h2>
+
+<p>Does your federal agency participate in the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> (DAP)?</p>
+
+<p>You don't need to upload the full DAP Google Analytics code. You can simply say something like, "Add DAP code."</p>
+
+<h2>ForeSee Tip</h2>
+
+<p>Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
+
+<ol>
+<li><p>Email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#58;&#85;&#x53;&#x41;&#83;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#103;&#115;&#x61;&#x2e;&#103;&#111;&#x76;">&#85;&#83;&#x41;&#x53;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#103;&#x73;&#x61;&#x2e;&#x67;&#111;&#118;</a> to <a href="/sites/manual/cname.html">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
+<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
+
+<p> Find => 'files': '/fsrscripts/',</p>
+
+<p> and replace it with => 'files': '//{yourdomain}/fsrscripts/',</p>
+
+<p> in the following five files.</p>
+
+<ul>
+<li>foresee-trigger.js</li>
+<li>foresee-tracker.js</li>
+<li>foresee-alive.js</li>
+<li>foresee-qualifier.js</li>
+<li>foresee-test.js</li>
+</ul>
+</li>
+<li><p>Ask ForeSee to send USASearch your foresee-trigger.js file.</p></li>
+<li><p>USASearch will send you an email to confirm that we've set up your CNAME and installed your foresee-trigger.js file.</p></li>
+</ol>
+
+
+<p>It should look something like the following.</p>
+
+<pre><code> &lt;script type="text/javascript" src="http://www.YourAgency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;
+</code></pre>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
+      
+      <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
+      
+      <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
+      
+      <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
       
     </div>
   </article>
