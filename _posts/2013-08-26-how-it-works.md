@@ -24,7 +24,7 @@ Browse through our [How To Manual](/tagged/how-to) and [Go-Live Punch List](/blo
 
 * Queries - Help file is coming soon!
 * Clicks - Help file is coming soon!
-* [Monthly reports](/sites/manual/monthly-report.html)
+* [Monthly reports](/sites/manual/monthly-reports.html)
 * [3rd party tracking](/sites/manual/third-party.html)
 * [Raw logs](/sites/manual/raw-logs.html)
 
