@@ -6,7 +6,7 @@ tags: how-to analytics dashboard site-overview
 ---
 [USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites) > YourSite > Dashboard > Site Overview
 
-The Site Overview page in the [Admin Center](https://search.usa.gov/sites) provides a snapshot of what has been happening on your site in the past day or so.
+The Site Overview page provides a snapshot of what has been happening on your site in the past day or so.
 
 ## Top Queries
 
@@ -51,3 +51,7 @@ Use this alert about low click thrus to identify issues with coverage. You may o
 Reports on the total number of queries and clicks for the present month-to-date. A click  is recorded each time a searcher clicks on a results link. 
 
 A graph of your site's total search queries over time is also presented to provide an overview of how your traffic has trended from the time your agency started using USASearch (but no further back than 2010). Hover over the trend line to see the total number of queries in previous months.
+
+---
+
+***Did you know?*** The [Monthly Report](/sites/manual/monthly-reports.html) gives a bird's-eye view of the number of [queries](/sites/manual/queries.html) and [clicks](/sites/manual/clicks.html) each month.

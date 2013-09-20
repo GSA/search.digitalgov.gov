@@ -12,7 +12,7 @@ USASearch is a hosted site search service provided by the [Office of Citizen Ser
 
 ## How To Set It Up
 
-Browse through our [How To Manual](/tagged/how-to) and [Go-Live Punch List](/blog/go-live.html) for tips on how to configure the search experience for your website.
+Browse through our [Go-Live Punch List](/blog/go-live.html) and [How To Manual](/tagged/how-to) for tips on how to configure the search experience for your website.
 
 ### Dashboard
 
@@ -22,8 +22,8 @@ Browse through our [How To Manual](/tagged/how-to) and [Go-Live Punch List](/blo
 
 ### Analytics
 
-* Queries - Help file is coming soon!
-* Clicks - Help file is coming soon!
+* [Queries](/sites/manual/queries.html)
+* [Clicks](/sites/manual/clicks.html)
 * [Monthly reports](/sites/manual/monthly-reports.html)
 * [3rd party tracking](/sites/manual/third-party.html)
 * [Raw logs](/sites/manual/raw-logs.html)
@@ -33,7 +33,7 @@ Browse through our [How To Manual](/tagged/how-to) and [Go-Live Punch List](/blo
 * [Domains](/sites/manual/domains.html) plus [advanced options to add or filter URLs](/sites/manual/domains-advanced.html)
 * [Collections](/sites/manual/collections.html)
 * [Best bets:text](/sites/manual/best-bets-text.html)
-* Best bets: graphics - Help file is coming soon!
+* Best bets: graphics - Help file is coming soon.
 * [RSS](/sites/manual/rss.html)
 * [YouTube](/sites/manual/youtube.html)
 * [Twitter](/sites/manual/twitter.html)
@@ -42,9 +42,9 @@ Browse through our [How To Manual](/tagged/how-to) and [Go-Live Punch List](/blo
 ### Manage Display
 
 * [Display overview](/sites/manual/display-overview.html)
-* Font & color - Help file is coming soon!
+* Font & color - Help file is coming soon.
 * [Image assets](/sites/manual/display-images.html)
-* Advanced display - Help file is coming soon!
+* Advanced display - Help file is coming soon.
 
 ### Preview
 

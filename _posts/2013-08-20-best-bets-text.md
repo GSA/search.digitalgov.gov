@@ -38,3 +38,7 @@ URL, title, and description are required. Start date, end date, and keywords are
 <!--START UPDATE-->
 Bulk upload appends new entries to your existing entries.
 <!--END UPDATE-->
+
+--- 
+
+***Did you know?*** Use the color coding in the table on this page to see a best bet's status. Entries with green background shading are active. They're shown to searchers on your site. Entries with yellow background shading aren't shown to searchers because they're inactive, expired (by the publish end date), or both.
