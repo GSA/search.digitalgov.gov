@@ -42,7 +42,7 @@ Browse through our [Go-Live Punch List](/blog/go-live.html) and [How To Manual](
 ### Manage Display
 
 * [Display overview](/sites/manual/display-overview.html)
-* Font & color - Help file is coming soon.
+* [Font & colors](/sites/manual/font-colors.html)
 * [Image assets](/sites/manual/display-images.html)
 * Advanced display - Help file is coming soon.
 

@@ -72,3 +72,6 @@ See the sample custom mobile header below for the [USA.gov mobile search results
 ---
 
 ***Troubleshooting tip:*** You can implement a drop-down menu using CSS (and without using JavaScript). For more information, A List Apart's tips on [drop-down menus and horizontal style](http://alistapart.com/article/horizdropdowns) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif).
+
+
+***Did you know?*** We offer results through our [Search Data API](/sites/manual/api.html), if you'd like to create mash-ups or have complete control of the look and feel of your search results pages. You can access the API by clicking on the option in the left-hand menu in the Admin Center.
