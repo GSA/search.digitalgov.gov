@@ -30,7 +30,7 @@ Browse through our [Go-Live Punch List](/blog/go-live.html) and [How To Manual](
 
 ### Manage Content
 
-* [Domains](/sites/manual/domains.html) plus [advanced options to add or filter URLs](/sites/manual/domains-advanced.html)
+* [Domains](/sites/manual/domains.html) (plus [advanced options to add or filter URLs](/sites/manual/domains-advanced.html))
 * [Collections](/sites/manual/collections.html)
 * [Best bets:text](/sites/manual/best-bets-text.html)
 * Best bets: graphics - Help file is coming soon.
@@ -44,7 +44,7 @@ Browse through our [Go-Live Punch List](/blog/go-live.html) and [How To Manual](
 * [Display overview](/sites/manual/display-overview.html)
 * [Font & colors](/sites/manual/font-colors.html)
 * [Image assets](/sites/manual/display-images.html)
-* Advanced display - Help file is coming soon.
+* Header & footer - Help file is coming soon.
 
 ### Preview
 

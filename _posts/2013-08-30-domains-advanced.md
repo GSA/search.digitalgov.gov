@@ -4,7 +4,7 @@ layout: post
 title: "How to Use Advanced Options to Add or Filter Specific URLs"
 tags: how-to manage-content domains advanced supplemental-feed supplemental-urls filter-urls
 ---
-[USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites) > YourSite > Manage Content > Domains > Advanced
+[USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites) > YourSite > Manage Content > [Domains](/sites/manual/domains.html) > Advanced
 
 ## Add a URL
 
