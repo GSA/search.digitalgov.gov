@@ -44,7 +44,7 @@ Browse through our [Go-Live Punch List](/blog/go-live.html) and [How To Manual](
 * [Display overview](/sites/manual/display-overview.html)
 * [Font & colors](/sites/manual/font-colors.html)
 * [Image assets](/sites/manual/display-images.html)
-* Header & footer - Help file is coming soon.
+* [Header & footer](/sites/manual/header-footer.html)
 
 ### Preview
 
