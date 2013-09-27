@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>How to Customize the CSS and HTML for the Header and Footer of Your Results Page</title>
+  <title>How to Customize the Header and Footer of Your Results Page</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -75,47 +75,51 @@
   <div id="main-container"><article class="article">
   <div class='time'>
     
-    <a href="/drafts/sites/manual/advanced-display.html">
-      <time></time>
+    <span>Last updated on:</span>
+    
+    <a href="/sites/manual/header-footer.html">
+      <time>September 24, 2013</time>
     </a>
   </div>
 
   
   <h1>
-    <a href="/drafts/sites/manual/advanced-display.html">How to Customize the CSS and HTML for the Header and Footer of Your Results Page</a>
+    <a href="/sites/manual/header-footer.html">How to Customize the Header and Footer of Your Results Page</a>
   </h1>
   
 
   <div class='post-content'>
-    <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Manage Display > Advanced Display</p>
+    <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Manage Display > Header &amp; Footer</p>
 
-<p>Select how you'd like to customize your header and footer. The fields that appear on the page will change based on the option you select.</p>
+<p>To customize the header on your results page, we'll automatically use:</p>
 
-<h2>Option 1. Use a managed header and footer</h2>
+<ol>
+<li>The logo you provide on the <a href="/sites/manual/display-images.html">Image Assets</a> page. (Or, if you don't provide a logo, we'll use the site name you provide on the <a href="/sites/manual/settings.html">Settings</a> page.)</li>
+<li>The homepage URL you provide on the <a href="/sites/manual/settings.html">Settings</a> page.</li>
+</ol>
 
-<p>Fill out the fields to generate a predefined header and footer.</p>
 
-<p><strong>Color.</strong> Customize the color of your header background and text by clicking on the color picker text field. Enter a valid three- or six-digit hex value or pick a color by dragging the cross-hair icon  inside the color picker window. Drag the triangle icon to control the color saturation. When you are done, click anywhere outside the color picker window.</p>
+<p>You can see the custom header and mobile header we've automatically created for you on the <a href="/sites/manual/preview.html">Preview</a> page.</p>
 
-<p><strong>URL.</strong> Provide us with the URL for your website's homepage. We'll use it to provide a link back to you from your header text, image, or both.</p>
+<p>Additionally, you can further customize your header or footer using the options below.</p>
 
-<p><strong>Text.</strong> Fill out the text you'd like to appear in your header. We've pre-populated this field with your <a href="/sites/manual/settings.html">site name</a>. Edit the same name, or delete it, if you don't want this text to appear in your header.</p>
+<h2>Option 1. Add Header or Footer Links</h2>
 
-<p><strong>Header and footer navigation.</strong> Fill out the titles and URLs if you'd like to add navigation to your header and footer. Use the arrows on the left to rearrange the display order of the links. See the sample results page below that includes navigation.</p>
+<p>Fill out the titles and URLs if you'd like to add navigation "tabs" to your header and footer. Use the icon with three horizontal lines on the left to change the order.</p>
 
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_m1ar9q6nXN1qid15q.png" alt="Managed header with navigation on Sussex County's search results page" /></p>
+<p>See, for example, the options for Home, Business Tools, Business Education, Press Room, etc., in the header on the <a href="http://search.usa.gov/search?query=contracts&amp;affiliate=MBDA">Minority Business Development Agency's search results page</a>.</p>
 
-<h2>Option 2. Use CSS and HTML code to create a custom header and footer</h2>
+<h2>Option 2. Use CSS and HTML</h2>
 
 <p>Use this option to more closely replicate the exact header and footer on your website.</p>
+
+<p>Switch to Advanced Mode.</p>
 
 <p>In the first box, enter CSS to customize the header and footer of your search results page. We'll run a validation check to ensure your CSS is valid.</p>
 
 <p>In the second box, enter HTML to customize the header of your search results page. In the third box, enter HTML to customize the footer of your search results page. Be sure to enter <a href="http://webdesign.about.com/od/beginningtutorials/a/aa040502a.htm">absolute hyperlinks</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />, not relative links.</p>
 
-<p>Click on the link, Validate, to check your HTML markup at <a href="http://validator.w3.org/nu/">http://validator.w3.org/nu/</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />. On the W3C page select HTML 4.01 Strict from the Parser drop-down box.</p>
-
-<p>We'll also run a validation check to ensure that no JavaScript is included in your HTML code. We'll also check to ensure no CSS style or link elements are included. To include CSS, specify inline CSS within an opening tag.</p>
+<p>We'll run a validation check to ensure that no JavaScript is included in your HTML code. We'll also check to ensure no CSS style or link elements are included. To include CSS, specify inline CSS within an opening tag.</p>
 
 <h3>Invalid CSS</h3>
 
@@ -132,37 +136,29 @@
 <pre><code>&lt;h1 style="color: blue;"&gt;Your Heading&lt;/h1&gt;
 </code></pre>
 
-<h2><a id="mobile"></a> Customize your mobile header</h2>
-
-<p>We use device detection to show mobile-friendly search results on mobile phones. (Searchers using tablets and desktop computers see the full, classic header as you set it up above.)</p>
-
-<h3>Default mobile header</h3>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_meazaml0781qid15q.png" alt="HowTo.gov mobile search results page" /></p>
-
-<h3>Custom mobile header</h3>
-
-<p>You can customize your mobile header to include a logo. You can also edit or add your mobile homepage URL.</p>
-
-<p>The logo must be less than 56 KB. We recommend it be no wider than 320 pixels.</p>
-
-<p>You can link to your classic homepage (e.g., http://www.agency.gov) or to your specific mobile homepage (e.g., http://m.agency.gov). If you use device detection on your website, we recommend that you link to your classic homepage for a more seamless mobile experience.</p>
-
-<p>See the sample custom mobile header below for the <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=social+media&amp;m=true">USA.gov mobile search results</a> page.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_meazs7WsWk1qid15q.png" alt="USA.gov mobile search results page" /></p>
-
 <hr />
 
-<p><strong><em>Troubleshooting tip:</em></strong> You can implement a drop-down menu using CSS (and without using JavaScript). For more information, A List Apart's tips on <a href="http://alistapart.com/article/horizdropdowns">drop-down menus and horizontal style</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> You can validate your HTML markup at <a href="http://validator.w3.org/nu/">http://validator.w3.org/nu/</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />. On the W3C page, select HTML 4.01 Strict from the Parser drop-down box.</p>
 
-<p><strong><em>Did you know?</em></strong> We offer results through our <a href="/sites/manual/api.html">Search Data API</a>, if you'd like to create mash-ups or have complete control of the look and feel of your search results pages. You can access the API by clicking on the option in the left-hand menu in the Admin Center.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> You can implement a drop-down menu using CSS (and without using JavaScript). For more information, read tips from <em>A List Apart</em> on <a href="http://alistapart.com/article/horizdropdowns">drop-down menus and horizontal style</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />.</p>
+
+<p><strong><em>Did you know?</em></strong> We use device detection to show mobile-friendly search results on mobile phones. (Searchers using tablets and desktop computers see the full, classic header as you set it up above.) We'll automatically use the mobile logo you provide on the <a href="/sites/manual/display-images.html">Image Assets</a> page. The logo must be less than 56 KB. We recommend it be no wider than 320 pixels. Or, if you don't provide a logo, we'll use the site name you provide on the <a href="/sites/manual/settings.html">Settings</a> page.</p>
+
+<p><strong><em>Did you know?</em></strong> We offer results through our <a href="/sites/manual/api.html">Search Data API</a>, if you'd like to create mash-ups or have complete control of the look and feel of your search results pages. You can access the API by clicking on the Activate Search option in the left-hand menu in the Admin Center.</p>
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/how-to user-interface"><span class="label label-info">how-to user-interface</span></a>
+    <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+    
+    <a href="/tagged/manage-display"><span class="label label-info">manage-display</span></a>
+    
+    <a href="/tagged/sidebar"><span class="label label-info">sidebar</span></a>
+    
+    <a href="/tagged/govbox"><span class="label label-info">govbox</span></a>
+    
+    <a href="/tagged/related-sites"><span class="label label-info">related-sites</span></a>
     
   </div>
 </article></div>
