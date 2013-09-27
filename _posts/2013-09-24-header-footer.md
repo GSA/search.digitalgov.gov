@@ -6,6 +6,8 @@ tags: how-to manage-display sidebar govbox related-sites
 ---
 [USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites) > YourSite > Manage Display > Header & Footer
 
+## Default Custom Header
+
 To customize the header on your results page, we'll automatically use:
 
 1. The logo you provide on the [Image Assets](/sites/manual/display-images.html) page. (Or, if you don't provide a logo, we'll use the site name you provide on the [Settings](/sites/manual/settings.html) page.)
