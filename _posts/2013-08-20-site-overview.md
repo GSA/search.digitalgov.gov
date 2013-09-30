@@ -8,6 +8,8 @@ tags: how-to analytics dashboard site-overview
 
 The Site Overview page provides a snapshot of what has been happening on your site in the past day or so.
 
+You can also opt to receive this snapshot as a daily email by clicking on the envelope icon next to your selected site. 
+
 ## Top Queries
 
 Reports on the top 10 searches done by searchers on your site. If you don't have any searches, you'll see a message that there aren't enough query data available. These typically don't require any action as they don't change much from day-to-day.
