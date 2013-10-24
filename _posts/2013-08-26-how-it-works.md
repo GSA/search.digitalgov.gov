@@ -33,7 +33,7 @@ Browse through our [Go-Live Punch List](/blog/go-live.html) and [How To Manual](
 * [Domains](/sites/manual/domains.html) (plus [advanced options to add or filter URLs](/sites/manual/domains-advanced.html))
 * [Collections](/sites/manual/collections.html)
 * [Best bets:text](/sites/manual/best-bets-text.html)
-* Best bets: graphics - Help file is coming soon.
+* [Best bets: graphics](/sites/manual/best-bets-graphics.html)
 * [RSS](/sites/manual/rss.html)
 * [YouTube](/sites/manual/youtube.html)
 * [Twitter](/sites/manual/twitter.html)
