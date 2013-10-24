@@ -46,7 +46,7 @@ Use this alert about results data to help searchers find your content by adding 
 
 If there are any frequently searched terms that returned results but didn't result in a click at least 20% of the time, they'll appear here. Reports on up to the top 10 searches with low click thru rates. 
 
-Use this alert about low click thrus to identify issues with coverage. You may opt to create a [Best Bet](/sites/manual/best-bets-text.html), add pages that may be missing from the results, or do both to improve recall. Or, you may opt to incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results.
+Use this alert about low click thrus to identify issues with coverage. You may opt to create a [Best Bet: Text](/sites/manual/best-bets-text.html) or [Best Bet: Graphics](/sites/manual/best-bets-graphics.html), add pages that may be missing from the results, or do both to improve recall. Or, you may opt to incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results.
 
 ## This Month's Totals to Date
 
