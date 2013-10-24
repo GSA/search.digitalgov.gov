@@ -26,6 +26,8 @@ View a detailed report of the number of times searchers have input specific term
 
 The CSV file contains three columns: (1) query, (2) raw count, and (3) IP-deduped. 
 
+Read [Understanding Your Users' Needs By Analyzing Search Terms](http://www.howto.gov/web-content/search/analyzing-search-terms) for tips on how to create a semi-automated report for analyzing the data in this CSV file on a regular basis.
+
 ## Definitions
 
 All data presented on this page (and other pages in the Admin Center) are IP-deduped to exclude bots and other noise in an attempt to accurately represent searchers' intent on your site. Some definitions follow.
