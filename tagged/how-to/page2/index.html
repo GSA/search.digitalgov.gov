@@ -81,6 +81,302 @@
       
       <span>Last updated on:</span>
       
+      <a href="/sites/manual/raw-logs.html">
+        <time datetime="2013-08-28">August 28, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/sites/manual/raw-logs.html">How to Access Your Raw Logs</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Analytics > Raw Logs Access</p>
+
+<p>You can directly access your raw HTTP logs. The logs include valuable data on searches, clicks, and USASearch tag page loads.</p>
+
+<p>With the raw logs, you can conduct in-depth, ad hoc analyses to answer any questions that you can't answer using the standard analytics reports in the <a href="https://search.usa.gov/sites">Admin Center</a>. You can also automatically integrate your search logs with your other reports and business processes.</p>
+
+<p>To access your raw logs, you'll first need to upload your public key on the Raw Logs Access page in the <a href="https://search.usa.gov/sites">Admin Center</a>.</p>
+
+<p>We'll set up your public key on our secure FTP servers and send you an email when your logs are available for download.</p>
+
+<p>Once your key is set up, you'll be able access your log files via secure FTP. We upload your logs each day, usually within several hours after midnight GMT. After a week, we purge the older files.</p>
+
+<p>We recommend that you set up a cron script to automatically download the latest files each day.</p>
+
+<h2>How to Generate a Key Pair on Unix</h2>
+
+<p>On Unix systems, you can generate a RSA public key with no passphrase by typing in the following command. Generate the key from the machine or server that you'll be using to download the logs. Once you've created a key, it'll be located at /home/user/.ssh/id_rsa.pub.</p>
+
+<pre><code>% cd ~
+% ssh-keygen -q -b 4096 -t rsa
+Enter file in which to save the key (/home/user/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+</code></pre>
+
+<h2>How to Generate a Key Pair on Windows</h2>
+
+<p>You can use <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty">PuTTY</a>, a free telnet/SSH client, to generate a public key on Windows. Download PuTTYgen.exe, Pageant.exe, and PSFTP.exe from the <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY Download Page</a>.</p>
+
+<p>Run PuTTYgen.exe.</p>
+
+<ul>
+<li>Select SSH-2 RSA as the type of key to generate.</li>
+<li>Set the number of bits in the generated key to 2048.</li>
+<li>Select Generate. Move your mouse within the blank area to create random movements until the key is generated.</li>
+<li>Fill out your Key Comment, Key Passphrase, and Confirm Passphrase.</li>
+<li>Copy your <em>public</em> key from the string in the Public Key for Pasting into OpenSSH Authorized_keys File. Paste this key into the Raw Logs Access page in the <a href="https://search.usa.gov/sites">Admin Center</a>. (Note: Don't save this public key and send us the string copied from a text file. It adds lines in the file so it doesn't work.)</li>
+<li>Save your <em>private</em> key.</li>
+</ul>
+
+
+<p>Run Pageant.exe. Select Add Key and upload your private key, the .ppk file.</p>
+
+<p>Run PSFTP.exe and type in the following. You can find your site's handle on the Site Information page in the <a href="https://search.usa.gov/sites">Admin Center</a>.</p>
+
+<pre><code>open YourSiteHandle@198.61.238.46
+</code></pre>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/raw-logs"><span class="label label-info">raw-logs</span></a>
+      
+      <a href="/tagged/sftp"><span class="label label-info">sftp</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
+      <a href="/sites/manual/api.html">
+        <time datetime="2013-08-28">August 28, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/sites/manual/api.html">How (and When) to Use the Search API</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Activate Search > API Instructions</p>
+
+<p>We offer our search results as a hosted results page (using our <a href="/sites/manual/code.html">code snippets</a>) or as an <a href="http://www.howto.gov/mobile/apis-in-government/api-basics">application programming interface</a> (API).</p>
+
+<h2>When to Use the Hosted Results</h2>
+
+<p>Most agencies use our hosted search results page. We recommend that you to use our hosted page for the typical use case of returning search results on your website. Using the hosted page has many benefits such as allowing you to:</p>
+
+<ul>
+<li>Devote minimal development resources for the initial set up.</li>
+<li>Benefit from new features automatically as they're rolled out.</li>
+<li>Stay current with search best practices, such as type-ahead search and formatting of search results.</li>
+</ul>
+
+
+<h2>When to Use the API</h2>
+
+<p>You may need to access our search results to present them outside of a typical search results page. We offer our results as an API for these use cases.</p>
+
+<p>You can access the API and its documentation at <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Activate Search > API Instructions.</p>
+
+<p>The API returns results from each of our indexes&mdash;web, image, document (ODIE), RSS (news), video, best bets (boosted content), related searches, and <a href="/developer/jobs.html">jobs</a>&mdash;in JSON, JSON-P, or XML.</p>
+
+<p>We recommend you use our API for limited use cases such as:</p>
+
+<ul>
+<li>Displaying search results within a native mobile application (i.e., an Android or iPhone app).</li>
+<li>Integrating USASearch results within existing applications (such as your intranet or publications catalog).</li>
+<li>Creating data mashups.</li>
+</ul>
+
+
+<p>Examples of how agencies are currently using the API follow.</p>
+
+<h3>Use Case 1. Display Results in Your Mobile App</h3>
+
+<p>USA.gov and the White House use the Search API to render USASearch results within their mobile apps.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_me79cgQKOE1qid15q.jpg" alt="Screenshot of a USASearch results page in the USA.gov iPhone app" /><br/>
+<em>Screenshot of a USASearch results page in the USA.gov iPhone app</em></p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_me78zp7y4v1qid15q.jpg" alt="Screenshot of a USASearch results page in the White House iPhone app" /><br/>
+<em>Screenshot of a USASearch results page in the White House iPhone app</em></p>
+
+<p><strong>Related Links for Use Case 1</strong></p>
+
+<ul>
+<li><a href="http://apps.usa.gov/usagov.shtml">USA.gov mobile app</a></li>
+<li><a href="http://apps.usa.gov/the-white-house-app.shtml">WhiteHouse mobile app</a></li>
+<li><a href="https://github.com/whitehouse">White House Github account</a> (information on and source code for the iOS and Android mobile apps)</li>
+</ul>
+
+
+<h3>Use Case 2. Integrate USASearch Results within existing applications</h3>
+
+<p><a href="http://www.ri.gov">RI.gov</a> manages hundreds of distinct websites. The state provides a consistent search experience across all of its websites. Some sites are centrally controlled by RI.gov. Others are not. Using the Search API, RI.gov programmatically tells USASearch the site's domain from which the user searched (e.g., tmc.dot.ri.gov). RI.gov then highlights results from this specific domain within RI.gov's common look and feel.</p>
+
+<p>See the sample results page below that shows a set of results displayed on Rhode Island's <a href="http://www.tmc.dot.ri.gov">Transportation Management Center</a> for a search on <em>traffic</em>.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_me7ej38m3P1qid15q.png" alt="Step 1. Searcher on &lt;www.tmc.dot.ri.gov&gt; types traffic in the search box" /><br/>
+<em>Step 1. Searcher on <a href="http://www.tmc.dot.ri.gov">http://www.tmc.dot.ri.gov</a> types traffic in the search box</em></p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_me7el3bJin1qid15q.png" alt="Step 2. Searcher sees results on RI.gov with a common look and feel that highlights results from the original site" /><br/>
+<em>Step 2. Searcher sees results on RI.gov with a common look and feel that highlights results from the original site</em></p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> The Search API is available for government websites only. Visit our <a href="/developer/index.html">APIs page</a> for other, publicly available APIs (i.e., for use by anyone).</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
+      
+      <a href="/tagged/api"><span class="label label-info">api</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
+      <a href="/sites/manual/third-party.html">
+        <time datetime="2013-08-28">August 28, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/sites/manual/third-party.html">How to Add JavaScript for Your Third Party Web Services</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Analytics > 3rd Party Tracking</p>
+
+<p>Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?</p>
+
+<p>Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
+
+<p>Some tips for commonly used third party web services follow.</p>
+
+<h2>Google Analytics Tip</h2>
+
+<p>In your Google Analytics JavaScript, be sure to set your domain if you've requested <a href="/sites/manual/cname.html">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
+
+<pre><code>_gaq.push(['_setDomainName', 'commerce.gov']);
+</code></pre>
+
+<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>.</p>
+
+<p>The code you submit should look something like one of the following two scripts.</p>
+
+<h3>Google Analytics Code (Older Format)</h3>
+
+<pre><code> &lt;script type="text/javascript"&gt;
+ var _gaq = _gaq || []; 
+ _gaq.push(['_setAccount', 'UA-########-1']); 
+ _gaq.push(['_trackPageview']);
+
+ (function() { 
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
+ })();
+
+ &lt;/script&gt;
+</code></pre>
+
+<h3>Google Analytics Code (Newer Format)</h3>
+
+<pre><code>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+</code></pre>
+
+<h2>Digital Analytics Program Tip</h2>
+
+<p>Does your federal agency participate in the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> (DAP)?</p>
+
+<p>You don't need to upload the full DAP Google Analytics code. You can simply say something like, "Add DAP code."</p>
+
+<h2>ForeSee Tip</h2>
+
+<p>Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
+
+<ol>
+<li><p>Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x55;&#x53;&#65;&#83;&#101;&#97;&#114;&#99;&#104;&#64;&#103;&#115;&#97;&#x2e;&#103;&#x6f;&#x76;">&#85;&#83;&#65;&#83;&#101;&#x61;&#114;&#99;&#104;&#64;&#103;&#x73;&#97;&#46;&#103;&#x6f;&#118;</a> to <a href="/sites/manual/cname.html">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
+<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
+
+<p> Find => 'files': '/fsrscripts/',</p>
+
+<p> and replace it with => 'files': '//{yourdomain}/fsrscripts/',</p>
+
+<p> in the following five files.</p>
+
+<ul>
+<li>foresee-trigger.js</li>
+<li>foresee-tracker.js</li>
+<li>foresee-alive.js</li>
+<li>foresee-qualifier.js</li>
+<li>foresee-test.js</li>
+</ul>
+</li>
+<li><p>Ask ForeSee to send USASearch your foresee-trigger.js file.</p></li>
+<li><p>USASearch will send you an email to confirm that we've set up your CNAME and installed your foresee-trigger.js file.</p></li>
+</ol>
+
+
+<p>It should look something like the following.</p>
+
+<pre><code> &lt;script type="text/javascript" src="http://www.YourAgency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;
+</code></pre>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
+      
+      <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
+      
+      <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
+      
+      <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/sites/manual/code.html">
         <time datetime="2013-08-28">August 28, 2013</time>
       </a>
@@ -196,203 +492,6 @@
       <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
       
       <a href="/tagged/code-snippets"><span class="label label-info">code-snippets</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/sites/manual/raw-logs.html">
-        <time datetime="2013-08-28">August 28, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/sites/manual/raw-logs.html">How to Access Your Raw Logs</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Analytics > Raw Logs Access</p>
-
-<p>You can directly access your raw HTTP logs. The logs include valuable data on searches, clicks, and USASearch tag page loads.</p>
-
-<p>With the raw logs, you can conduct in-depth, ad hoc analyses to answer any questions that you can't answer using the standard analytics reports in the <a href="https://search.usa.gov/sites">Admin Center</a>. You can also automatically integrate your search logs with your other reports and business processes.</p>
-
-<p>To access your raw logs, you'll first need to upload your public key on the Raw Logs Access page in the <a href="https://search.usa.gov/sites">Admin Center</a>.</p>
-
-<p>We'll set up your public key on our secure FTP servers and send you an email when your logs are available for download.</p>
-
-<p>Once your key is set up, you'll be able access your log files via secure FTP. We upload your logs each day, usually within several hours after midnight GMT. After a week, we purge the older files.</p>
-
-<p>We recommend that you set up a cron script to automatically download the latest files each day.</p>
-
-<h2>How to Generate a Key Pair on Unix</h2>
-
-<p>On Unix systems, you can generate a RSA public key with no passphrase by typing in the following command. Generate the key from the machine or server that you'll be using to download the logs. Once you've created a key, it'll be located at /home/user/.ssh/id_rsa.pub.</p>
-
-<pre><code>% cd ~
-% ssh-keygen -q -b 4096 -t rsa
-Enter file in which to save the key (/home/user/.ssh/id_rsa):
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-</code></pre>
-
-<h2>How to Generate a Key Pair on Windows</h2>
-
-<p>You can use <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty">PuTTY</a>, a free telnet/SSH client, to generate a public key on Windows. Download PuTTYgen.exe, Pageant.exe, and PSFTP.exe from the <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY Download Page</a>.</p>
-
-<p>Run PuTTYgen.exe.</p>
-
-<ul>
-<li>Select SSH-2 RSA as the type of key to generate.</li>
-<li>Set the number of bits in the generated key to 2048.</li>
-<li>Select Generate. Move your mouse within the blank area to create random movements until the key is generated.</li>
-<li>Fill out your Key Comment, Key Passphrase, and Confirm Passphrase.</li>
-<li>Copy your <em>public</em> key from the string in the Public Key for Pasting into OpenSSH Authorized_keys File. Paste this key into the Raw Logs Access page in the <a href="https://search.usa.gov/sites">Admin Center</a>. (Note: Don't save this public key and send us the string copied from a text file. It adds lines in the file so it doesn't work.)</li>
-<li>Save your <em>private</em> key.</li>
-</ul>
-
-
-<p>Run Pageant.exe. Select Add Key and upload your private key, the .ppk file.</p>
-
-<p>Run PSFTP.exe and type in the following. You can find your site's handle on the Site Information page in the <a href="https://search.usa.gov/sites">Admin Center</a>.</p>
-
-<pre><code>open YourSiteHandle@198.61.238.46
-</code></pre>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/raw-logs"><span class="label label-info">raw-logs</span></a>
-      
-      <a href="/tagged/sftp"><span class="label label-info">sftp</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/sites/manual/third-party.html">
-        <time datetime="2013-08-28">August 28, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/sites/manual/third-party.html">How to Add JavaScript for Your Third Party Web Services</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Analytics > 3rd Party Tracking</p>
-
-<p>Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?</p>
-
-<p>Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
-
-<p>Some tips for commonly used third party web services follow.</p>
-
-<h2>Google Analytics Tip</h2>
-
-<p>In your Google Analytics JavaScript, be sure to set your domain if you've requested <a href="/sites/manual/cname.html">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
-
-<pre><code>_gaq.push(['_setDomainName', 'commerce.gov']);
-</code></pre>
-
-<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>.</p>
-
-<p>The code you submit should look something like one of the following two scripts.</p>
-
-<h3>Google Analytics Code (Older Format)</h3>
-
-<pre><code> &lt;script type="text/javascript"&gt;
- var _gaq = _gaq || []; 
- _gaq.push(['_setAccount', 'UA-########-1']); 
- _gaq.push(['_trackPageview']);
-
- (function() { 
- var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
- ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
- var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
- })();
-
- &lt;/script&gt;
-</code></pre>
-
-<h3>Google Analytics Code (Newer Format)</h3>
-
-<pre><code>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-</code></pre>
-
-<h2>Digital Analytics Program Tip</h2>
-
-<p>Does your federal agency participate in the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> (DAP)?</p>
-
-<p>You don't need to upload the full DAP Google Analytics code. You can simply say something like, "Add DAP code."</p>
-
-<h2>ForeSee Tip</h2>
-
-<p>Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
-
-<ol>
-<li><p>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#x55;&#x53;&#x41;&#x53;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#103;&#x73;&#x61;&#46;&#103;&#111;&#118;">&#x55;&#x53;&#x41;&#x53;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#103;&#x73;&#97;&#46;&#x67;&#x6f;&#x76;</a> to <a href="/sites/manual/cname.html">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
-<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
-
-<p> Find => 'files': '/fsrscripts/',</p>
-
-<p> and replace it with => 'files': '//{yourdomain}/fsrscripts/',</p>
-
-<p> in the following five files.</p>
-
-<ul>
-<li>foresee-trigger.js</li>
-<li>foresee-tracker.js</li>
-<li>foresee-alive.js</li>
-<li>foresee-qualifier.js</li>
-<li>foresee-test.js</li>
-</ul>
-</li>
-<li><p>Ask ForeSee to send USASearch your foresee-trigger.js file.</p></li>
-<li><p>USASearch will send you an email to confirm that we've set up your CNAME and installed your foresee-trigger.js file.</p></li>
-</ol>
-
-
-<p>It should look something like the following.</p>
-
-<pre><code> &lt;script type="text/javascript" src="http://www.YourAgency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;
-</code></pre>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
-      
-      <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
-      
-      <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
-      
-      <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
       
     </div>
   </article>
@@ -533,7 +632,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 </ol>
 
 
-<p>If you have any problem resetting your password, e-mail us at <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#58;&#x55;&#83;&#65;&#x53;&#x65;&#97;&#114;&#99;&#x68;&#64;&#103;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#x76;">&#85;&#83;&#65;&#x53;&#x65;&#97;&#114;&#99;&#104;&#x40;&#103;&#115;&#x61;&#46;&#x67;&#x6f;&#118;</a>.</p>
+<p>If you have any problem resetting your password, e-mail us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x55;&#x53;&#65;&#83;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#103;&#x73;&#97;&#x2e;&#103;&#111;&#118;">&#x55;&#x53;&#x41;&#x53;&#x65;&#97;&#x72;&#99;&#104;&#64;&#103;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#x76;</a>.</p>
 
     </div>
 
@@ -566,7 +665,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       <p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these three steps to mask your domain.</p>
 
 <ol>
-<li>E-mail us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#x55;&#x53;&#65;&#x53;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#103;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#118;">&#x55;&#x53;&#x41;&#83;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#103;&#x73;&#97;&#x2e;&#x67;&#x6f;&#x76;</a> and ask us to mask your domain.</li>
+<li>E-mail us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#85;&#83;&#65;&#83;&#101;&#97;&#114;&#x63;&#x68;&#x40;&#103;&#x73;&#x61;&#x2e;&#x67;&#111;&#118;">&#85;&#x53;&#x41;&#x53;&#101;&#97;&#114;&#99;&#x68;&#64;&#x67;&#x73;&#97;&#46;&#103;&#111;&#118;</a> and ask us to mask your domain.</li>
 <li>Create a CNAME in your DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
 <li>When the setup is complete, change the code for your form action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
 </ol>
@@ -654,7 +753,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, edit your display name on the <a href="/sites/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, e-mail us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#x55;&#83;&#x41;&#x53;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#103;&#x73;&#97;&#x2e;&#x67;&#111;&#x76;">&#x55;&#x53;&#65;&#x53;&#x65;&#97;&#x72;&#99;&#104;&#64;&#x67;&#x73;&#x61;&#46;&#x67;&#x6f;&#x76;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, edit your display name on the <a href="/sites/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, e-mail us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#85;&#x53;&#x41;&#x53;&#101;&#97;&#x72;&#99;&#x68;&#64;&#103;&#115;&#x61;&#x2e;&#103;&#x6f;&#x76;">&#85;&#x53;&#x41;&#83;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#x67;&#x73;&#x61;&#46;&#103;&#111;&#x76;</a>.</p>
 
     </div>
 
@@ -799,78 +898,6 @@ omies that depend on summer tourism.&lt;/p&gt;
       <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
       
       <a href="/tagged/rss"><span class="label label-info">rss</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/sites/manual/collections.html">
-        <time datetime="2013-08-21">August 21, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/sites/manual/collections.html">How to Create Collections Within Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Collections</p>
-
-<p>Would you like searchers to be able to narrow results to a specific subset of content within your site or on another site? You can create a collection across any set of domains, subdomains, or subfolders.</p>
-
-<h2>Step 1. Create a Collection</h2>
-
-<p>Enter a name for the collection (e.g., FAQs).</p>
-
-<p>Enter the URLs for the domains, subdomains, or subfolders that make up this collection. Start each URL prefix with http:// and end it in a trailing slash () to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov).</p>
-
-<p>You cannot specify URLs for individual web pages.</p>
-
-<h2>Step 2. Opt to Show in Sidebar</h2>
-
-<p>Click on the <a href="/sites/manual/display-overview.html">Display Overview</a> page. Turn on your collection to allow searchers to see it as a navigation option in the left-hand column of the results page.</p>
-
-<h2>Step 3. Check Your Search Results Page</h2>
-
-<p>Searchers will see an option to narrow their search results to pages in this collection in the left-hand navigation on the results page.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-2.png" alt="Collection on the search results page" /></p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your collections.</p>
-
-<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your collection.</p>
-
-<p>Start with the standard form snippet on the <a href="/sites/manual/code.html">Code Snippets</a> page under the Activate Search tab. Change the form action to <code>action="http://search.usa.gov/search/docs</code> and add the following line to limit the results to your collection.</p>
-
-<p><code>&lt;input type="hidden" name="dc" value="###"&gt;</code></p>
-
-<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
-
-<p>See the sample search box below that is limited to news releases in <a href="http://www.ftc.gov/opa/index.shtml">FTC.gov's Newroom</a> for a search on <em>privacy</em>.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-3.png" alt="FTC.gov Newsroom search box" /><br/>
-<em>Newsroom page with a search box that is limited to news</em></p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-4.png" alt="FTC.gov search results page" /><br/>
-<em>Search results page that returns news results only</em></p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/collections"><span class="label label-info">collections</span></a>
       
     </div>
   </article>
