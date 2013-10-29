@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Add a URL: Notes for the Week Ending July 7, 2013</title>
+  <title>Add a URL: Notes for July 2013</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -75,14 +75,14 @@
   <div id="main-container"><article class="article">
   <div class='time'>
     
-    <a href="/drafts/releases/2013-07-05.html">
-      <time></time>
+    <a href="/releases/2013-07-31.html">
+      <time>July 31, 2013</time>
     </a>
   </div>
 
   
   <h1>
-    <a href="/drafts/releases/2013-07-05.html">Add a URL: Notes for the Week Ending July 7, 2013</a>
+    <a href="/releases/2013-07-31.html">Add a URL: Notes for July 2013</a>
   </h1>
   
 
@@ -93,31 +93,49 @@
 
 <ol>
 <li>Add a specific URL manually.</li>
-<li>Use an RSS feed to manage URLs.</li>
+<li>Use an RSS feed to manage your URLs.</li>
 </ol>
+
+
+<p>Go to Manage Content > <a href="/sites/manual/domains.html">Domains</a> > <a href="/sites/manual/domains-advanced.html">Advanced</a>. Select Supplement URLs to add an individual URL or select Supplemental Feed to add multiple URLs via an RSS feed.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/Add_Supplemental_URL.png" alt="Add a Supplemental URL" /></p>
+
+<p>We'll fetch the URLs you add and we'll index their metadata (title, description, and URL) <strong><em>plus the full text of the web page or document</em></strong>.</p>
+
+<h2>Other Features</h2>
+
+<ul>
+<li>For supplemental URLs, searchers now see a snippet from either the metadata (description field) or full document text (body field), depending on which field matches their search term.</li>
+<li>You now see better error messages for supplemental URLs that we couldn't index.</li>
+<li>You can now access https results from our <a href="/sites/manual/api.html">Search API</a>.</li>
+<li>You now see a clickable URL for system alerts posted in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
+<li>We rolled out the first pages our new, beta Admin Center&mdash;the <a href="/sites/manual/settings.html">Settings</a> and <a href="/sites/manual/users.html">Manage Users</a> pages and their corresponding <a href="/help-desk.html">help files</a>.</li>
+<li>Developers now see unique descriptions for CPSC items in the <a href="/developer/recalls.html">Recalls API</a>.</li>
+</ul>
 
 
 <h2>Chores</h2>
 
 <ul>
-<li>We started using the Rails <a href="http://guides.rubyonrails.org/asset_pipeline.html">asset pipeline</a>. As a result of using the pipeline and some of the other chores below, we decreased the page load time by 25 percent.</li>
-<li>We upgraded to <a href="http://www.elasticsearch.org/blog/0-90-1-released/">Elasticsearch 0.90.1</a>.</li>
-<li>We upgraded to <a href="http://www.ruby-lang.org/en/news/2013/05/14/ruby-2-0-0-p195-is-released">Ruby 2.0.0</a>.</li>
-<li>We updated the way we monitor <a href="http://blog.phusion.nl/category/passenger/phusion-passenger-4">Phusion Passenger</a>.</li>
-<li>We removed some unused tables and columns from our MySQL database.</li>
-<li>We removed the legacy recalls code from our codebase now that we've released it as a standalone open source <a href="https://github.com/GSA-OCSIT/recalls_api">Recalls API Server</a>.</li>
-<li>We no longer require a valid API key to include API queries in your <a href="/tagged/analytics">site analytics</a>.</li>
-<li>We updated our list of synonyms to include fracking and hyrdofracturing as equivalent terms.</li>
-<li>The hyperlinks in the Admin Center system alerts are now clickable.</li>
+<li>We set up a new cloud server to host our <a href="http://sourceforge.net/projects/tematres/">TemaTres</a><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />-powered list of federal, state, local, tribal, and territorial <a href="http://govt-urls.usa.gov/tematres/vocab/index.php">government URLs that aren't included in the .gov or .mil top-level domains</a>.</li>
+<li>We moved the cached results for our commercial web indexes into a separate static cache subdirectory so that they (a) can be pruned at their own rate and (b) persist across production pushes.</li>
+<li>We now use a persistent file for your <a href="/sites/manual/header-footer.html">header and footer CSS</a> instead of generating it each time we load your results page.</li>
+<li>We now return a 404 not found status code for static files that we don't have. We used to return a 406.</li>
+<li>We now index <a href="http://api.usa.gov/jobs/search.json?organization_id=US-WA:CITY-SEATTLE">Seattle.gov jobs</a> in our <a href="/developer/jobs.html">Jobs API</a>.</li>
+<li>We updated our <a href="/developer/index.html">API documentation</a> to highlight the primary data sources for each API.</li>
+<li>We started collecting your feedback on our new, beta <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
+<li>We reviewed the click data for our related search results.</li>
 </ul>
 
 
 <h2>Fixes</h2>
 
 <ul>
-<li>We fixed a regression bug with <a href="https://github.com/haml">Haml</a> and Ruby 2.0.0 that made the background color of the search results the same color as the page background.</li>
-<li>We fixed the CSS for the magnifying glass on the search box so that it appears properly in IE7.</li>
-<li>We now only show unique descriptions for <a href="http://api.usa.gov/recalls/search?organization=cpsc&amp;sort=date">CPSC recalls</a>.</li>
+<li>We improved our validation check for manually added supplemental URLs.</li>
+<li>We fixed the message that you see after you upload an invalid RSS feed for the supplemental URLs so that it is more actionable.</li>
+<li>We now escape special characters like apostrophes so that searchers don't see unescaped values within the snippets of supplemental URLs.</li>
+<li>You can now add <a href="/sites/manual/rss.html">RSS feeds</a> without the http:// or https:// prefix.</li>
 </ul>
 
 
