@@ -1,0 +1,61 @@
+<p>+++ Start at August 26 iteration +++</p>
+
+<hr />
+
+<p>permalink: /releases/2013-08-31.html
+layout: post
+title: "Download Your Raw Logs: Notes for August 2013"</p>
+
+<h2>tags: releases</h2>
+
+<h2>Highlight: Download Your Raw Logs</h2>
+
+<p>Do you want to know how many searches on your site are done from mobile devices? The times of day when searches peak? What people searched for before, during, and after a natural disaster, holiday, or other event?</p>
+
+<p>These answers are now at your fingertips.</p>
+
+<p>We've added a new feature so that you can access your <a href="/sites/manual/raw-logs.html">raw HTTP logs</a> via secure FTP. The logs include valuable data on searches, clicks, and USASearch tag page loads so you can answer the questions above and any other ad hoc questions that come up.</p>
+
+<h2>Other Features</h2>
+
+<ul>
+<li>Searchers see a persistent Results by... logo above the footer on the search results page.</li>
+<li>You can now start to use our <a href="https://search.usa.gov/sites/">beta Admin Center</a>. We added a <a href="/tagged/dashboard">Dashboard</a> section to provide you with a snapshot of today's search data and manage your site's users and settings.</li>
+<li>We migrated several pages to the following sections:
+
+<ul>
+<li><a href="/tagged/manage-content/">Manage Content</a> (Domains, Collections, Best Bets: Text, RSS, Flickr, Twitter, and YouTube),</li>
+<li><a href="/tagged/analytics/">Analytics</a> (3rd Party Tracking and Raw Logs), and</li>
+<li><a href="/tagged/activate-search/">Activate Search</a> (Code Snippets and API Instructions) sections.</li>
+</ul>
+</li>
+<li>We migrated our <a href="/sites/manual/add-site.html">Add Site</a> page and the features that allows you to delete a site, add a specific URL, and filter a specific URL.</li>
+<li>You can now see text descriptions when you mouse over the icons, a coming soon message for features that haven't yet been migrated, and our phone number on all pages of the <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
+<li>Researchers can now browse and download <a href="https://explore.data.gov/Information-and-Communications/USA-gov-Search-Data/sarg-e9tw">USA.gov's search data</a> on <a href="http://www.data.gov/">Data.gov</a>.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li>We updated the images in our <a href="/help-desk.html">help files</a> to use https instead of http so that you don't see any security warnings.</li>
+<li>We added <a href="http://www.google.com/analytics">Google Analytics</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to our results pages and Admin Center so that we can see how our service is being utilized across the board.</li>
+<li>We started tracking and reporting on your <a href="/sites/manual/site-overview.html">trending URLs</a> in today's snapshot.</li>
+<li>You can no longer bulk upload domains.</li>
+<li>We added the /sites URL for our beta <a href="https://search.usa.gov/sites/">Admin Center</a> to our <a href="http://www.akamai.com/">Akamai</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> configuration so that you see consistent analytics data no matter which one of our two datacenters you're hitting.</li>
+<li>We now index <a href="http://api.usa.gov/jobs/search.json?organization_id=US-VA:CITY-ALEXANDRIA"> City of Alexandria, VA, jobs</a> in our <a href="/developer/jobs.html">Jobs API</a>.</li>
+<li>We set up an automated report to check the HTTP status of all URLs in our list of federal, state, local, tribal, and territorial <a href="http://govt-urls.usa.gov/tematres/vocab/index.php">government URLs that aren't included in the .gov or .mil top-level domains</a>.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed a bug with one our cron jobs that deleted all of our type-ahead search suggestions.</li>
+<li>We fixed a bug so that Spanish-language sites now show the correct language on the <a href="/sites/manual/settings.html">Settings</a> page in the Admin Center.</li>
+<li>We now keep your homepage URL populated on the <a href="/sites/manual/add-site.html">Add Site</a> page, even if there's an error with your site handle.</li>
+<li>We fixed two separate bugs that were making the Today's Snapshot and Best Bets:Text pages load too slowly.</li>
+<li>We fixed a bug that was causing the <a href="/sites/manual/add-site.html">Add Site</a> page to sometimes show the wrong help file.</li>
+<li>We fixed the importer for our <a href="/developer/jobs.html">jobs API</a> to look for pubDate instead of pubdate.</li>
+</ul>
+
