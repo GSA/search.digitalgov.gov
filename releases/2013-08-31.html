@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Posts tagged google-analytics</title>
+  <title>Download Your Raw Logs: Notes for August 2013</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -72,136 +72,81 @@
 
 
 <div class="container">
-  <div id="main-container"><!-- begin tag layout -->
-<p class="muted">Posts tagged <strong>google-analytics</strong></p>
-<div class='articles'>
+  <div id="main-container"><article class="article">
+  <div class='time'>
+    
+    <a href="/releases/2013-08-31.html">
+      <time>August 31, 2013</time>
+    </a>
+  </div>
+
   
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/sites/manual/third-party.html">
-        <time datetime="2013-08-28">August 28, 2013</time>
-      </a>
-    </div>
+  <h1>
+    <a href="/releases/2013-08-31.html">Download Your Raw Logs: Notes for August 2013</a>
+  </h1>
+  
 
-    
-    <h1>
-      <a href="/sites/manual/third-party.html">How to Add JavaScript for Your Third Party Web Services</a>
-    </h1>
-    
+  <div class='post-content'>
+    <h2>Highlight: Download Your Raw Logs</h2>
 
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Analytics > 3rd Party Tracking</p>
+<p>Do you want to know how many searches on your site are done from mobile devices? The times of day when searches peak? What people searched for before, during, and after a natural disaster, holiday, or other event?</p>
 
-<p>Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?</p>
+<p>These answers are now at your fingertips.</p>
 
-<p>Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
+<p>We've added a new feature so that you can access your <a href="/sites/manual/raw-logs.html">raw HTTP logs</a> via secure FTP. The logs include valuable data on searches, clicks, and USASearch tag page loads so you can answer the questions above and any other ad hoc questions that come up.</p>
 
-<p>Some tips for commonly used third party web services follow.</p>
-
-<h2>Google Analytics Tip</h2>
-
-<p>In your Google Analytics JavaScript, be sure to set your domain if you've requested <a href="/sites/manual/cname.html">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
-
-<pre><code>_gaq.push(['_setDomainName', 'commerce.gov']);
-</code></pre>
-
-<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>.</p>
-
-<p>The code you submit should look something like one of the following two scripts.</p>
-
-<h3>Google Analytics Code (Older Format)</h3>
-
-<pre><code> &lt;script type="text/javascript"&gt;
- var _gaq = _gaq || []; 
- _gaq.push(['_setAccount', 'UA-########-1']); 
- _gaq.push(['_trackPageview']);
-
- (function() { 
- var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
- ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
- var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
- })();
-
- &lt;/script&gt;
-</code></pre>
-
-<h3>Google Analytics Code (Newer Format)</h3>
-
-<pre><code>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-</code></pre>
-
-<h2>Digital Analytics Program Tip</h2>
-
-<p>Does your federal agency participate in the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> (DAP)?</p>
-
-<p>You don't need to upload the full DAP Google Analytics code. You can simply say something like, "Add DAP code."</p>
-
-<h2>ForeSee Tip</h2>
-
-<p>Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
-
-<ol>
-<li><p>Email us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#85;&#83;&#x41;&#83;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#103;&#x73;&#x61;&#x2e;&#x67;&#111;&#118;">&#x55;&#83;&#x41;&#x53;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#x67;&#115;&#97;&#46;&#103;&#111;&#x76;</a> to <a href="/sites/manual/cname.html">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
-<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
-
-<p> Find => 'files': '/fsrscripts/',</p>
-
-<p> and replace it with => 'files': '//{yourdomain}/fsrscripts/',</p>
-
-<p> in the following five files.</p>
+<h2>Other Features</h2>
 
 <ul>
-<li>foresee-trigger.js</li>
-<li>foresee-tracker.js</li>
-<li>foresee-alive.js</li>
-<li>foresee-qualifier.js</li>
-<li>foresee-test.js</li>
+<li>Searchers see a persistent Results by... logo above the footer on the search results page.</li>
+<li>You can now start to use our <a href="https://search.usa.gov/sites/">beta Admin Center</a>. We added a <a href="/tagged/dashboard">Dashboard</a> section to provide you with a snapshot of today's search data and manage your site's users and settings.</li>
+<li>We migrated several pages to the following sections:
+
+<ul>
+<li><a href="/tagged/manage-content/">Manage Content</a> (Domains, Collections, Best Bets: Text, RSS, Flickr, Twitter, and YouTube),</li>
+<li><a href="/tagged/analytics/">Analytics</a> (3rd Party Tracking and Raw Logs), and</li>
+<li><a href="/tagged/activate-search/">Activate Search</a> (Code Snippets and API Instructions) sections.</li>
 </ul>
 </li>
-<li><p>Ask ForeSee to send USASearch your foresee-trigger.js file.</p></li>
-<li><p>USASearch will send you an email to confirm that we've set up your CNAME and installed your foresee-trigger.js file.</p></li>
-</ol>
-
-
-<p>It should look something like the following.</p>
-
-<pre><code> &lt;script type="text/javascript" src="http://www.YourAgency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;
-</code></pre>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
-      
-      <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
-      
-      <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
-      
-      <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
-      
-    </div>
-  </article>
-  
-</div>
-
-
-<ul class="pager">
-  
-
-  
+<li>We migrated our <a href="/sites/manual/add-site.html">Add Site</a> page and the features that allows you to delete a site, add a specific URL, and filter a specific URL.</li>
+<li>You can now see text descriptions when you mouse over the icons, a coming soon message for features that haven't yet been migrated, and our phone number on all pages of the <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
+<li>Researchers can now browse and download <a href="https://explore.data.gov/Information-and-Communications/USA-gov-Search-Data/sarg-e9tw">USA.gov's search data</a> on <a href="http://www.data.gov/">Data.gov</a>.</li>
 </ul>
-<!-- end tag layout --></div>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li>We updated the images in our <a href="/help-desk.html">help files</a> to use https instead of http so that you don't see any security warnings.</li>
+<li>We added <a href="http://www.google.com/analytics">Google Analytics</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to our results pages and Admin Center so that we can see how our service is being utilized across the board.</li>
+<li>We started tracking and reporting on your <a href="/sites/manual/site-overview.html">trending URLs</a> in today's snapshot.</li>
+<li>You can no longer bulk upload domains.</li>
+<li>We added the /sites URL for our beta <a href="https://search.usa.gov/sites/">Admin Center</a> to our <a href="http://www.akamai.com/">Akamai</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> configuration so that you see consistent analytics data no matter which one of our two datacenters you're hitting.</li>
+<li>We now index <a href="http://api.usa.gov/jobs/search.json?organization_id=US-VA:CITY-ALEXANDRIA"> City of Alexandria, VA, jobs</a> in our <a href="/developer/jobs.html">Jobs API</a>.</li>
+<li>We set up an automated report to check the HTTP status of all URLs in our list of federal, state, local, tribal, and territorial <a href="http://govt-urls.usa.gov/tematres/vocab/index.php">government URLs that aren't included in the .gov or .mil top-level domains</a>.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed a bug with one our cron jobs that deleted all of our type-ahead search suggestions.</li>
+<li>We fixed a bug so that Spanish-language sites now show the correct language on the <a href="/sites/manual/settings.html">Settings</a> page in the Admin Center.</li>
+<li>We now keep your homepage URL populated on the <a href="/sites/manual/add-site.html">Add Site</a> page, even if there's an error with your site handle.</li>
+<li>We fixed two separate bugs that were making the Today's Snapshot and Best Bets:Text pages load too slowly.</li>
+<li>We fixed a bug that was causing the <a href="/sites/manual/add-site.html">Add Site</a> page to sometimes show the wrong help file.</li>
+<li>We fixed the importer for our <a href="/developer/jobs.html">jobs API</a> to look for pubDate instead of pubdate.</li>
+</ul>
+
+
+  </div>
+
+  <div class='tags'>
+    
+    <a href="/tagged/releases"><span class="label label-info">releases</span></a>
+    
+  </div>
+</article></div>
 </div>
 
 <footer class="footer">

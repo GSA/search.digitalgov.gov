@@ -79,6 +79,52 @@
   <article class='article'>
     <div class='time'>
       
+      <a href="/releases/2012-06-08.html">
+        <time datetime="2012-06-15">June 15, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/2012-06-08.html">Release Notes for the Week Ending June 8, 2012  </a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><strong>Features</strong></p>
+
+
+<p><em>Highlight: Flickr integration</em></p>
+
+
+<p>Do you have a Flickr photostream? Tell us the name of your photostream. Within minutes, searchers will be able to find relevant images from your Flickr photostream when they search on your website.</p>
+
+
+<ul><li>Searchers see shorter snippets for RSS-based web snippets.</li>
+<li>Searchers see a more concise statement regarding the number of results found.</li>
+</ul>
+
+
+<p><strong>Fixes</strong></p>
+
+
+<ul><li>Support relative paths for favicons when adding a new site.</li>
+<li>Set "{query} - {site} resultados de la búsqueda" as the default page title for Spanish-language sites.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
       <a href="/releases/2012-06-01.html">
         <time datetime="2012-06-06">June 6, 2012</time>
       </a>
@@ -654,87 +700,6 @@ Below are the release details for February and, as a reminder, we divide our wor
 <li>Fixed infinite loop in PDF discovery and indexing.</li>
 <li>Verified IndexedDocument URL length is &lt;= 2000 rather than accepting it and silently truncating it.</li>
 <li>Used document body for documents with a blank meta description tag.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <a href="/releases/2011-12-31.html">
-        <time datetime="2011-12-31">December 31, 2011</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/releases/2011-12-31.html">December 2011 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>We divide our work into three categories.</p>
-
-
-<ol><li>Features—Things you actually notice.</li>
-<li>Chores—Back-end improvements that you don't notice.</li>
-<li>Bugs—Fixes to any code issues that may arise.</li>
-</ol>
-
-
-<p><strong>Features</strong></p>
-
-
-<p><em>Features for Searchers</em></p>
-
-
-<ul><li>Searchers don't see duplicate results from Add URLs.</li>
-<li>Spanish searchers see stemmed equivalents.</li>
-<li>Searchers on USA.gov see FAQ GovBox higher in results.</li>
-</ul>
-
-
-<p><em>Features for Agency Customers</em></p>
-
-
-<ul><li>Customers can choose from predefined themes.</li>
-<li>Customers see a a Sitemap box on the Sitemaps page.</li>
-<li>Customers have a Discovery Tag for USASearch to proactively discover and index content from their websites.</li>
-<li>Customers can edit Header and Footer CSS.</li>
-<li>Customers can set their locale to Spanish during sign up.</li>
-<li>Customers see an updated left nav.</li>
-</ul>
-
-
-<p><strong>Chores</strong></p>
-
-
-<ul><li>Remove "locale" parameter from all models, analytics, etc.</li>
-</ul>
-
-
-<p><strong>Bugs<br/></strong></p>
-
-
-<ul><li>Add Spanish translations for Popular Links, no RSS results, and document results.</li>
-<li>Remove extra whitespace when displaying snippets.</li>
-<li>Fix buggy bold highlighting in type-ahead searches in API.</li>
-<li>Remove 0-100 scale from sparklines in search module stats and let it autoscale.</li>
-<li>Increase length of URL and title field on indexed documents.</li>
-<li>Ignore invalid IndexedDocument URL's before they get queued for fetching/indexing</li>
-<li>Ignore HTTPS URLS for on-demand index.</li>
-<li>Fix duplicate results due to domain and protocol variations.</li>
-<li>Handle 503 errors from RSS feeds more gracefully.</li>
-<li>Fix error logging around duplicate indexed docs pages.</li>
-<li>Fix deduping regression to still match exact URLs.</li>
 </ul>
 
 
