@@ -18,7 +18,7 @@ Data for the total number of queries and clicks. Use this report to find and ana
 
 ## Impressions and Clicks by Module
 
-Detailed data for the total number of impressions and clicks and your clickthru rate (CTR) are presented for each "module" on the search results page. We also provide you with the average CTR across all USASearch customers so you can see how your rate compares to the average rate. The data in the table is sorted in descending order from the most to least number of clicks. 
+Detailed data for the total number of impressions and clicks and your clickthru rate (CTR) are presented for each "module" on the search results page. We also provide the average CTR across all USASearch customers so you can see how your rate compares to the average rate. The data in the table is sorted in descending order from the most to least number of clicks. 
 
 Use this report to inform which [modules you opt to display](/sites/manual/display-overview.html) or to tweak your best bets ([text](/sites/manual/best-bets-text.html) or [graphics](/sites/manual/best-bets-graphics.html)).
 
