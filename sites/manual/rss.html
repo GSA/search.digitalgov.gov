@@ -187,6 +187,14 @@ omies that depend on summer tourism.&lt;/p&gt;
 
 <p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="https://search.usa.gov/sites">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don't need to coordinate with us.</p>
 
+<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your feed.</p>
+
+<p>Start with the standard form snippet on the <a href="/sites/manual/code.html">Code Snippets</a> page under the Activate Search tab. Change the form action to <code>action="http://search.usa.gov/search/news</code> and add the following line to limit the results to your feed.</p>
+
+<p><code>&lt;input type="hidden" name="channel" value="###"&gt;</code></p>
+
+<p>The value is the number for your feed ID, which is visible in the URL when you edit your feed in the Admin Center.</p>
+
 <p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your RSS feeds.</p>
 
 <p><strong><em>Did you know?</em></strong> When you <a href="/sites/manual/youtube.html">provide us with your YouTube channel</a>, we'll automatically index the RSS feed for your YouTube channel.</p>

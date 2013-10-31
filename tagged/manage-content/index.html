@@ -300,7 +300,7 @@
 <ol>
 <li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
 <li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>E-mail us at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#85;&#x53;&#65;&#83;&#101;&#97;&#114;&#x63;&#104;&#64;&#x67;&#x73;&#x61;&#46;&#103;&#x6f;&#x76;">&#x55;&#83;&#x41;&#x53;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#x67;&#x73;&#97;&#x2e;&#x67;&#x6f;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
+<li>E-mail us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#85;&#x53;&#x41;&#83;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#103;&#x73;&#x61;&#46;&#103;&#111;&#x76;">&#x55;&#83;&#65;&#83;&#x65;&#97;&#x72;&#x63;&#104;&#64;&#103;&#x73;&#97;&#46;&#x67;&#111;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
 </ol>
 
 
@@ -583,6 +583,14 @@ omies that depend on summer tourism.&lt;/p&gt;
 
 
 <p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="https://search.usa.gov/sites">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don't need to coordinate with us.</p>
+
+<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your feed.</p>
+
+<p>Start with the standard form snippet on the <a href="/sites/manual/code.html">Code Snippets</a> page under the Activate Search tab. Change the form action to <code>action="http://search.usa.gov/search/news</code> and add the following line to limit the results to your feed.</p>
+
+<p><code>&lt;input type="hidden" name="channel" value="###"&gt;</code></p>
+
+<p>The value is the number for your feed ID, which is visible in the URL when you edit your feed in the Admin Center.</p>
 
 <p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your RSS feeds.</p>
 
