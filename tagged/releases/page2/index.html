@@ -79,6 +79,60 @@
   <article class='article'>
     <div class='time'>
       
+      <a href="/releases/2013-02-22.html">
+        <time datetime="2013-02-22">February 22, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/2013-02-22.html">Search Notes for the Week Ending February 22, 2013</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Features</h2>
+
+<ul>
+<li>Searchers now see the most current titles and descriptions available for <a href="/sites/manual/youtube.html">YouTube videos</a> and they won't see any deleted videos.</li>
+<li>Visitors to the pages search.usa.gov and buscador.usa.gov are now automatically redirected to <a href="http://www.usa.gov">USA.gov</a> and <a href="http://www.usa.gov/gobiernousa">GobiernoUSA.gov</a>, respectively, so they see the most recent content on these homepages.</li>
+<li>Spanish searchers now see <a href="http://www.plainlanguage.gov">plain language</a> helper text.</li>
+<li>Searchers no longer see two search boxes on the search results page, which will create a more visually appealing and usable page.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li>We rewrote some query routing rules for job searches to present more precise results in the <a href="/sites/manual/govbox-jobs.html">Jobs GovBox</a>.</li>
+<li>We configured <a href="https://travis-ci.org">Travis-CI</a> to enable continuous integration for the <a href="https://github.com/GSA-OCSIT/recalls_api">Recalls Server API</a> and <a href="https://github.com/GSA-OCSIT/jobs_api">Jobs Server API</a>.</li>
+<li>We shortened the Jobs API base URL to <a href="http://api.usa.gov/recalls/search">http://api.usa.gov/recalls/search</a>.</li>
+<li>We reconfigured our RSS feed fetching to update more efficiently.</li>
+<li>We upgraded to <a href="http://weblog.rubyonrails.org/2013/2/11/SEC-ANN-Rails-3-2-12-3-1-11-and-2-3-17-have-been-released">Rails 3.2.12</a> and <a href="http://rubygems.org/gems/rack">Rack</a> 1.4.5.</li>
+<li>We upgraded our <a href="http://www.cloudera.com/content/cloudera/en/products/cdh.html">Cloudera Distribution for Hadoop</a> (CDH) cluster.</li>
+<li>We removed the outdated yellow call out boxes from the <a href="https://search.usa.gov/sites">Admin Center</a>.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>You'll no longer see an error message if you delete a site that has a YouTube profile or when adding a site that has no managed RSS feed.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
       <a href="/releases/2013-02-08.html">
         <time datetime="2013-02-08">February 8, 2013</time>
       </a>
@@ -569,54 +623,6 @@
 
 
 <p>We're always working to improve the speed of our search results. We changed some of our caching rules. We also started to leverage <a href="http://wiki.nginx.org/Main">Nginx</a> (a free, open-source, high-performance HTTP server).</p>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <a href="/releases/2012-10-12.html">
-        <time datetime="2012-10-12">October 12, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/releases/2012-10-12.html">Search Notes for the Week Ending October 12, 2012</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><strong>Features</strong></p>
-
-
-<ul><li><span>We added alerts to the Admin Center to communicate maintenance windows or other timely content with you.</span></li>
-<li>Searchers can see keyword-scoped results for collections. If you have a collection below three folder levels deep, <a href="mailto:usasearch@gsa.gov">email us</a> and we'll help you set up a keyword for your collection. </li>
-</ul>
-
-
-<p><strong>Chores</strong></p>
-
-
-<ul><li>We removed the Hosted Sitemap feature.</li>
-</ul>
-
-
-<p><strong>Fixes</strong></p>
-
-
-<ul><li>We now show dates for RSS news items on each customer's search results page only.</li>
-<li>We fixed a bug which caused highlighted terms on results pages to omit trailing spaces.</li>
-<li>We fixed a bug on how "site:" operators retrieve results.</li>
-</ul>
 
 
     </div>
