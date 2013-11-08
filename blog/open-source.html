@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Cache Me If You Can</title>
+  <title>Our Open Source Strategy</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -76,83 +76,72 @@
   <div class='time'>
     
     <a href="/blog/open-source.html">
-      <time>November 12, 2013</time>
+      <time>April 20, 2013</time>
     </a>
   </div>
 
   
   <h1>
-    <a href="/blog/open-source.html">Cache Me If You Can</a>
+    <a href="/blog/open-source.html">Our Open Source Strategy</a>
   </h1>
   
 
   <div class='post-content'>
-    <h2>Speed Is Important</h2>
+    <p>We keep an eye on on our what our government counterparts are up to, both in the U.S. and other countries. We recently came across <a href="https://www.gov.uk">Gov.UK's</a> philosophy on and approach to <a href="http://digital.cabinetoffice.gov.uk/2012/10/12/coding-in-the-open">coding in the open</a>. It caught our attention and we realized we should also articulate our open source strategy.</p>
 
-<p>Speed is the primary factor in determining customers' satisfaction with search results. If searchers think that a results page isn't loading quickly enough, they'll hit the back button and abandon their search before they even see if the results are relevant.</p>
+<h2>Use and Contribute to Open Source Projects</h2>
 
-<p>Google's <a href="https://www.google.com/search?q=Google+Gospel+of+Speed">Gospel of Speed</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> motto laid the foundation for the company's success. The need for speed is now extending beyond search and into all web sites and applications as <a href="http://www.nytimes.com/2012/03/01/technology/impatient-web-users-flee-slow-loading-sites.html">web users expect results in the blink of an eye</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />.</p>
+<p>Since 2010, we've embraced and leveraged open source software to build our site search service for federal, state, and local government websites. This use of open source has allowed us to experience enormous growth over the past few years. In March 2013 alone, over 24 million searchers received results from our service&mdash;a four-fold increase since March 2010.</p>
 
-<h2>We Focus on Speed</h2>
+<p>Our search service is now a complex system made up of many moving parts, including providing type-ahead search suggestions, serving search results, fetching, indexing, and caching content, and providing analytics.</p>
 
-<p>When we established our service's new open source architecture in 2010, we first tackled how to deliver our results in under one second. At around the same time, <a href="http://www.github.com">Github</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> was experiencing exponential growth and the company's engineers were blogging about what they did to make Github fast. To get up to speed quickly (yes, bad pun intended), we read their posts.</p>
+<p>Each of these parts is compiled into our USASearch codebase and, as we use open source components for our system, we contribute back to the projects.</p>
+
+<h2>Code in the Open</h2>
+
+<p>We recently began to unravel our monolithic codebase so that we can share individual pieces of our code. To borrow the phrase from Gov.UK, we're now <strong><em>coding in the open</em></strong>.</p>
+
+<p>We recently released the code for our <a href="https://github.com/GSA-OCSIT/jobs_api">Jobs</a> and <a href="https://github.com/GSA-OCSIT/recalls_api">Recalls</a> API servers. They're our first foray into coding in the open. The source code for these API servers is in <a href="https://github.com/GSA-OCSIT">our GitHub repo</a> and is available for anyone to see and contribute to.</p>
+
+<p>The data products for this code are also open and available for anyone to consume on our <a href="/developer/index.html">USASearch.HowTo.gov/Developer</a> hub.</p>
+
+<p>These two servers and their underlying data now operate outside of our core search codebase.</p>
+
+<p>Following this same model, moving forward, we plan to:</p>
 
 <ul>
-<li><p><a href="https://github.com/blog/530-how-we-made-github-fast">How We Made GitHub Fast</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />, October 20, 2009</p></li>
-<li><p><a href="https://github.com/blog/1252-how-we-keep-github-fast">How We Keep GitHub Fast</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />, September 5, 2012</p></li>
+<li><p>Share first&mdash;For every new feature, we'll write the code so that <em>anyone</em> can make use of the code, not just us. If the public community contributes to the codebase, we'll be able to improve this feature without taxing our developers.</p></li>
+<li><p>Expose APIs&mdash;We'll expose our data products as APIs so that <em>anyone</em> can make use of the data, not just searchers on a government websites.</p></li>
+<li><p>Be our own customer&mdash;We'll use our own public code and data just like everyone else. We'll call our own API servers to integrate the data within our search results pages.</p></li>
 </ul>
 
 
-<p>Leveraging some of their tips, we architected a service that succeeded in delivering our results in under 700 milliseconds, on average&mdash;a significant improvement from the previous vendor-owned and -operated iterations of our service.</p>
+<h2>Make Things Open to Make Things Better</h2>
 
-<p>Over the past three years, we've dug in and improved our response time. We now deliver our results in under 500 milliseconds, on average.</p>
+<p>We agree with Gov.UK that "to make things open makes things better."</p>
 
-<p>We already had an architecture optimized for speed. So, how did we speed it up by 200 milliseconds?</p>
+<p>We have finite resources and we don't want to lose our focus on serving our agency customers and improving visitors' search experience on government websites. So, we won't be spending a lot of time to build or support a vibrant community around our code.</p>
 
-<h2>We Use Cache to Lower Latency</h2>
+<p>That said, we hope that exposing the pieces of our system will be useful to someone somewhere. We'll continue to provide the "ingredients" of our search service so that others will be able to make use of the code and data in ways that we could never imagine.</p>
 
-<p>In a nutshell, speed = low latency + high bandwidth.</p>
+<h2>And, We're Not Alone</h2>
 
-<p><a href="http://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/">Latency</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> is delay. It is the amount of time it takes a packet of information to travel from our servers to a searcher's web browser. In our quest to shave precious milliseconds off of our response time, we've spent much of our time focused on the latency side of the equation.</p>
-
-<p>Caching is a key strategy that we use to lower our latency. Within each logical component of our system (as shown in the diagram below), we ask ourselves, "How we can make <em>this</em> faster?"</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/cache.png" alt="Logical system components" /></p>
-
-<h3>Optimizing Our Software Stack</h3>
-
-<p><a href="https://github.com/resque">Resque</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> serves as our first line of defense to help us reduce our latency. Resque is a <a href="http://redis.io/">Redis</a>-backed  <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> Ruby library that allows us to store our various objects and datasets without searchers ever having to access our system's components. Read <a href="https://github.com/blog/542-introducing-resque"><em>Introducing Resque</em></a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to learn more about how it works.</p>
-
-<p>Moving down through our software stack, we also monitor and preprocess popular requests to our <a href="http://www.mysql.com/">MySQL</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> database. For example, most of our agency customers view their <a href="/sites/manual/monthly-report.html">Monthly Report</a> within the first fews days of the month. Generating these reports "on the fly" during this relatively short window could strain our system. So, instead, we generate static monthly reports outside of core business hours. This preprocessing speeds up searchers' experience on our results pages plus it saves us money because we don't need extra servers to meet the burst in demand.</p>
-
-<h3>Using a Content Delivery Network</h3>
-
-<p>Our static content (such as javascripts and sytlesheets) gets served through our <a href="http://www.webopedia.com/TERM/C/CDN.html">content delivery network</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> provider, currently Akamai. Akamai serves our static content from its server that is geographically closest to the searcher. The closer, the faster.</p>
-
-<p>Using a content delivery network also allow us to optimize our service's speed by:</p>
+<p>We're not alone. Other federal agencies have embraced the approach of coding in the open and have <a href="http://gsa.github.io/federal-open-source-repos">GitHub repos</a>. Below are a just a few of our many favorites.</p>
 
 <ul>
-<li>Directing non-cached traffic between our two datacenters to create a <a href="/releases/2012-10-19.html">multihomed environment</a>. Multihoming allows us to make full use of all of our servers. By contrast, in 2010, our disaster recovery datacenter often sat idle.</li>
-<li>Reducing our need to add bandwidth or servers to handle short-term traffic spurts, such as spurts related to natural disasters.</li>
-<li>Protecting against denial of service attacks by spotting them before they reach our servers.</li>
+<li><p>The Consumer Finance Protection Bureau has embraced open source, including serving their public data sets through <a href="https://github.com/cfpb/qu">qu</a>.</p></li>
+<li><p>USA.gov recently released the code for their <a href="https://github.com/usagov/usagov-ios-app">iPhone app</a>.</p></li>
+<li><p>The White House was in the forefront of using open source software in the federal government with their use of Drupal. They're continuing to lead by example by opening up the code for their <a href="https://github.com/WhiteHouse/petitions">We the People petitions</a> and <a href="https://github.com/WhiteHouse/wh-app-ios">iOS</a> and <a href="https://github.com/WhiteHouse/wh-app-android">Android</a> mobile apps.</p></li>
 </ul>
 
-
-<h2>What's Next?</h2>
-
-<p>While the 10,000 foot view of our architecture today looks similar to our architecture in 2010, we've worked hard over the past three years to speed up the delivery of our results by optimizing each link in the chain.</p>
-
-<p>We use several monitoring tools to measure our system's performance. The quality of these tools is improving at a rapid pace, which in turn, shows us where and how we can improve our service.</p>
-
-<p>We regularly ask ourselves, "Will <em>this</em> shave some time off and help us deliver our results in <em>under</em> 500 milliseconds?"</p>
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/cache"><span class="label label-info">cache</span></a>
+    <a href="/tagged/open"><span class="label label-info">open</span></a>
     
-    <a href="/tagged/architecture"><span class="label label-info">architecture</span></a>
+    <a href="/tagged/api"><span class="label label-info">api</span></a>
     
     <a href="/tagged/about-us"><span class="label label-info">about-us</span></a>
     
