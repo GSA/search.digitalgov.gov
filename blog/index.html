@@ -80,6 +80,93 @@
   <article class='article'>
     <div class='time'>
       
+      <a href="/blog/open-source.html">
+        <time datetime="2013-11-12">November 12, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/blog/open-source.html">Cache Me If You Can</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Speed Is Important</h2>
+
+<p>Speed is the primary factor in determining customers' satisfaction with search results. If searchers think that a results page isn't loading quickly enough, they'll hit the back button and abandon their search before they even see if the results are relevant.</p>
+
+<p>Google's <a href="https://www.google.com/search?q=Google+Gospel+of+Speed">Gospel of Speed</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> motto laid the foundation for the company's success. The need for speed is now extending beyond search and into all web sites and applications as <a href="http://www.nytimes.com/2012/03/01/technology/impatient-web-users-flee-slow-loading-sites.html">web users expect results in the blink of an eye</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />.</p>
+
+<h2>We Focus on Speed</h2>
+
+<p>When we established our service's new open source architecture in 2010, we first tackled how to deliver our results in under one second. At around the same time, <a href="http://www.github.com">Github</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> was experiencing exponential growth and the company's engineers were blogging about what they did to make Github fast. To get up to speed quickly (yes, bad pun intended), we read their posts.</p>
+
+<ul>
+<li><p><a href="https://github.com/blog/530-how-we-made-github-fast">How We Made GitHub Fast</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />, October 20, 2009</p></li>
+<li><p><a href="https://github.com/blog/1252-how-we-keep-github-fast">How We Keep GitHub Fast</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />, September 5, 2012</p></li>
+</ul>
+
+
+<p>Leveraging some of their tips, we architected a service that succeeded in delivering our results in under 700 milliseconds, on average&mdash;a significant improvement from the previous vendor-owned and -operated iterations of our service.</p>
+
+<p>Over the past three years, we've dug in and improved our response time. We now deliver our results in under 500 milliseconds, on average.</p>
+
+<p>We already had an architecture optimized for speed. So, how did we speed it up by 200 milliseconds?</p>
+
+<h2>We Use Cache to Lower Latency</h2>
+
+<p>In a nutshell, speed = low latency + high bandwidth.</p>
+
+<p><a href="http://www.igvita.com/2012/07/19/latency-the-new-web-performance-bottleneck/">Latency</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> is delay. It is the amount of time it takes a packet of information to travel from our servers to a searcher's web browser. In our quest to shave precious milliseconds off of our response time, we've spent much of our time focused on the latency side of the equation.</p>
+
+<p>Caching is a key strategy that we use to lower our latency. Within each logical component of our system (as shown in the diagram below), we ask ourselves, "How we can make <em>this</em> faster?"</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/cache.png" alt="Logical system components" /></p>
+
+<h3>Optimizing Our Software Stack</h3>
+
+<p><a href="https://github.com/resque">Resque</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> serves as our first line of defense to help us reduce our latency. Resque is a <a href="http://redis.io/">Redis</a>-backed  <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> Ruby library that allows us to store our various objects and datasets without searchers ever having to access our system's components. Read <a href="https://github.com/blog/542-introducing-resque"><em>Introducing Resque</em></a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to learn more about how it works.</p>
+
+<p>Moving down through our software stack, we also monitor and preprocess popular requests to our <a href="http://www.mysql.com/">MySQL</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> database. For example, most of our agency customers view their <a href="/sites/manual/monthly-report.html">Monthly Report</a> within the first fews days of the month. Generating these reports "on the fly" during this relatively short window could strain our system. So, instead, we generate static monthly reports outside of core business hours. This preprocessing speeds up searchers' experience on our results pages plus it saves us money because we don't need extra servers to meet the burst in demand.</p>
+
+<h3>Using a Content Delivery Network</h3>
+
+<p>Our static content (such as javascripts and sytlesheets) gets served through our <a href="http://www.webopedia.com/TERM/C/CDN.html">content delivery network</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> provider, currently Akamai. Akamai serves our static content from its server that is geographically closest to the searcher. The closer, the faster.</p>
+
+<p>Using a content delivery network also allow us to optimize our service's speed by:</p>
+
+<ul>
+<li>Directing non-cached traffic between our two datacenters to create a <a href="/releases/2012-10-19.html">multihomed environment</a>. Multihoming allows us to make full use of all of our servers. By contrast, in 2010, our disaster recovery datacenter often sat idle.</li>
+<li>Reducing our need to add bandwidth or servers to handle short-term traffic spurts, such as spurts related to natural disasters.</li>
+<li>Protecting against denial of service attacks by spotting them before they reach our servers.</li>
+</ul>
+
+
+<h2>What's Next?</h2>
+
+<p>While the 10,000 foot view of our architecture today looks similar to our architecture in 2010, we've worked hard over the past three years to speed up the delivery of our results by optimizing each link in the chain.</p>
+
+<p>We use several monitoring tools to measure our system's performance. The quality of these tools is improving at a rapid pace, which in turn, shows us where and how we can improve our service.</p>
+
+<p>We regularly ask ourselves, "Will <em>this</em> shave some time off and help us deliver our results in <em>under</em> 500 milliseconds?"</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/cache"><span class="label label-info">cache</span></a>
+      
+      <a href="/tagged/architecture"><span class="label label-info">architecture</span></a>
+      
+      <a href="/tagged/about-us"><span class="label label-info">about-us</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
       <a href="/releases/2013-10-31.html">
         <time datetime="2013-10-31">October 31, 2013</time>
       </a>
@@ -126,7 +213,7 @@
 <li>We set up <a href="https://codeclimate.com/">Code Climate</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to identify areas of our code that can be improved.</li>
 <li>We phased out color schemes and now offer two options, default and custom.</li>
 <li>We updated the links in our email templates to reflect the new Admin Center.</li>
-<li>We added the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x55;&#83;&#x41;&#x53;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x67;&#x73;&#x61;&#x2e;&#103;&#x6f;&#x76;">&#x55;&#83;&#x41;&#x53;&#101;&#x61;&#114;&#x63;&#104;&#64;&#103;&#115;&#x61;&#46;&#x67;&#111;&#x76;</a> if you'd like to opt out.</li>
+<li>We added the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#85;&#83;&#x41;&#x53;&#x65;&#97;&#x72;&#x63;&#104;&#64;&#x67;&#x73;&#x61;&#46;&#x67;&#x6f;&#118;">&#85;&#x53;&#65;&#x53;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#103;&#115;&#x61;&#46;&#103;&#x6f;&#x76;</a> if you'd like to opt out.</li>
 </ul>
 
 
@@ -331,7 +418,7 @@
 
 <p>You can read our updated help by clicking on the Help? link on each page in the Admin Center, or see the full set of help files on our <a href="/help-desk.html">How It Works</a> page.</p>
 
-<p>Email us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#58;&#x55;&#83;&#65;&#83;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x67;&#x73;&#x61;&#46;&#103;&#x6f;&#x76;">&#x55;&#83;&#x41;&#83;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#x67;&#x73;&#97;&#x2e;&#103;&#111;&#x76;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
+<p>Email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#x55;&#x53;&#65;&#83;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#x67;&#115;&#97;&#x2e;&#x67;&#x6f;&#118;">&#85;&#83;&#65;&#x53;&#101;&#x61;&#x72;&#99;&#104;&#64;&#103;&#x73;&#x61;&#x2e;&#103;&#111;&#118;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
 
 <h2>Chores</h2>
 
@@ -745,89 +832,6 @@
       <a href="/tagged/images"><span class="label label-info">images</span></a>
       
       <a href="/tagged/logos"><span class="label label-info">logos</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/sites/manual/display-overview.html">
-        <time datetime="2013-09-09">September 9, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/sites/manual/display-overview.html">How to Select the Options that Appear on Your Results Page</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites">Admin Center</a> > YourSite > Manage Display > Display Overview</p>
-
-<h2>Sidebar (Faceted Navigation)</h2>
-
-<p><strong>Label for Sidebar.</strong> Determine if you want to include a heading for your navigation options. If you want a heading, type your label in the label field. Keep your label consistent with the options you're listing. If you don't want a heading, leave the label field blank.</p>
-
-<ul>
-<li>Without heading&mdash;See the sample results page below that shows the navigation options without a heading displayed for a <a href="http://search.whitehouse.gov/search?affiliate=wh&amp;query=jobs">search on <em>jobs</em> on WhiteHouse.gov</a>.</li>
-<li>With heading&mdash;See the sample results page below that shows the navigation options with a heading, labeled Search, displayed for a <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=passport">search on <em>passport</em> on USA.gov</a>.</li>
-</ul>
-
-
-<p><strong>On/off options for sidebar.</strong> Select which navigation options you'd like to appear in the left-hand sidebar on your results page. Turn an option on to allow searchers to see it. You may choose at any time to turn an option on or off.</p>
-
-<p>You can type over the text in the Name field to edit an option's display name. Click on the hyperlink in the Source field to update the option's source content. Hover over the icon with three horizontal lines on the left to change the order.</p>
-
-<h2>Modules</h2>
-
-<p><strong>On/off options for Modules.</strong> Turn on a module to allow searchers to see inline, contextually relevant results for selected content sources based on keyword matches with relevant queries. There are eight types of modules.</p>
-
-<ol>
-<li><p><strong>News.</strong> This option only appears after you've told us about your <a href="/sites/manual/rss.html">RSS</a> feeds. When a searcher's query matches the title or description of an RSS article published within the last year, the article appears in the News GovBox. Up to three articles are displayed. Type over the default name, News, in the Name field to edit the display name.</p></li>
-<li><p><strong>Videos.</strong> This option only appears after you've told us about your <a href="/sites/manual/youtube.html">YouTube</a> channel. When a searcher's query matches the metadata of a video published within the last year, the video appears in the Videos GovBox. Up to four videos are displayed.</p></li>
-<li><p><strong>Photos.</strong> This option only appears after you've told us about your <a href="/sites/manual/flickr.html">Flickr</a> photostream. When a searcher's query matches the metadata of a photo published any time, the photo appears in the Photos GovBox. Up to five photos are displayed.</p></li>
-<li><p><strong>Job openings.</strong> When a searcher's query matches the text of a job opening published on USAJobs or NeoGov, the job appears in the Job Openings GovBox. Up to three job openings are displayed. For more information, including a screenshot, read our post <a href="/sites/manual/govbox-jobs.html">Help Searchers Find Jobs</a>.</p></li>
-<li><p><strong>Agency contact information.</strong> Help searchers contact and connect with your department or bureaus. For more information, including a screenshot, read our post <a href="/sites/manual/govbox-agencies.html">Help Searchers Find Information for Federal Agencies</a>.</p></li>
-<li><p><strong>Related searches.</strong> Help visitors better define the focus of their search by offering them searches related to their current search term. Suggestions are derived from the searches performed on your website. Up to five searches related to your visitors' original search are displayed and are updated in near real time. See, for example, the sample results page below that shows related searches displayed for a <a href="http://search.usa.gov/search?affiliate=accesswashington&amp;query=tacoma">search on <em>tacoma</em> on Access Washington</a>.</p></li>
-<li><p><strong>Health topics.</strong> Help searchers find high-quality, authoritative health information from MedlinePlus and ClinicalTrials.gov. For more information, including a screenshot, read our post <a href="/sites/manual/govbox-health.html">Help Searchers Find Health Information</a>.</p></li>
-<li><p><strong>Recent tweets.</strong> This option only appears after you've told us about your <a href="/sites/manual/twitter.html">Twitter</a> account. When a searcher's query matches the text of a tweet published within the last three months, the tweet appears in the Recent Tweets GovBox. Up to three tweets are displayed.</p></li>
-<li><p><strong>Type-ahead search.</strong> Help searchers refine their query by displaying type-ahead search suggestions as a list in the search box. The list forms as a searcher begins to type in the search box. Suggestions are listed in order of most popular (that is, most searched). They're updated every 15 minutes. See, for example, the suggestions as you type di... on <a href="http://search.socialsecurity.gov/search?affiliate=ssa&amp;query=names">SocialSecurity.gov's search results page</a>.</p></li>
-</ol>
-
-
-<h2>Related Sites</h2>
-
-<p>Help visitors find content relevant to their search query that resides on other websites, such as the site for your parent organization or your Spanish-language site. When searchers click on the link to the related site, they see search results for their query on the related site.</p>
-
-<p>Enter the <a href="/sites/manual/settings.html">site handle</a> for one of your other USASearch sites. Enter the text you'd like searchers to see for the link to the related site. Create two entries, one from the first site to the second and vice versa, if you'd like a reciprocal link.</p>
-
-<p>See, for example, <a href="http://search.usa.gov/search?query=venezuela&amp;affiliate=usagov">a link to GobiernoUSA.gov displayed on USA.gov for a search on <em>venezuela</em></a>.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong>  Searchers may narrow results by time period for any <a href="/sites/manual/rss.html">RSS</a> feeds. See, for example, results for a <a href="http://search.whitehouse.gov/search/news?affiliate=wh&amp;channel=6&amp;m=false&amp;query=jobs&amp;tbs=w">search on <em>jobs</em> narrowed to press articles in the last week on WhiteHouse.gov</a>.</p>
-
-<p><strong><em>Did you know?</em></strong>  For any of your <a href="/sites/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms">Dublin Core</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#58;&#85;&#x53;&#x41;&#x53;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#103;&#115;&#97;&#x2e;&#x67;&#111;&#x76;">&#x55;&#83;&#65;&#x53;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#x67;&#x73;&#x61;&#x2e;&#x67;&#111;&#118;</a> to if you want to customize these display names.</p>
-
-<p><strong><em>Did you know?</em></strong> You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our <a href="/sites/manual/code.html">JavaScript snippet</a> before the closing <code>&lt;body&gt;</code> tag on your HTML web pages.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-display"><span class="label label-info">manage-display</span></a>
-      
-      <a href="/tagged/sidebar"><span class="label label-info">sidebar</span></a>
-      
-      <a href="/tagged/govbox"><span class="label label-info">govbox</span></a>
-      
-      <a href="/tagged/related-sites"><span class="label label-info">related-sites</span></a>
       
     </div>
   </article>
