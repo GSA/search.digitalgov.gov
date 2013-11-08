@@ -2,7 +2,7 @@
 permalink: /blog/hadoop-rubyists.html
 layout: post
 title: "Hadoop for Rubyists"
-tags: analytics big-data
+tags: analytics big-data about-us
 ---
 Is your MySQL groaning under too much data? Tired of waiting hours for analytics rake tasks?
 

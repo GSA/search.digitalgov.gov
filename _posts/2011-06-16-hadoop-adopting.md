@@ -2,7 +2,7 @@
 permalink: /blog/adopting-hadoop.html
 layout: post
 title: "Adopting Apache Hadoop in the Federal Government"
-tags: analytics big-data
+tags: analytics big-data about-us
 ---
 <p><strong>Background</strong></p>
 <p>The United States federal government's <a href="http://usasearch.howto.gov">USASearch program</a> provides hosted search services for government affiliate organizations, shares APIs and web services, and operates the government's official search engine at Search.USA.gov. The USASearch affiliate program offers free search services to any federal, state, local, tribal, or territorial government agency. Several hundred websites make use of this service, ranging from the smallest municipality to larger federal sites like <a href="http://weather.gov" target="_blank">weather.gov</a> and <a href="http://usa.gov" target="_blank">usa.gov</a>. The USASearch program leverages the Bing API as the basis for its web results and then augments the user search experience by providing a variety of government-centric information such as related search topics and highlighted editorial content. The entire system is comprised of a suite of open-source tools and resources, including Apache Solr/Lucene, OpenCalais, and Apache Hadoop. Of these, our usage of Hadoop is the most recent. We began using <a href="http://www.cloudera.com/hadoop/" target="_blank">Cloudera's Distribution including Apache Hadoop</a> (<a href="http://www.cloudera.com/hadoop" target="_blank">CDH3</a>) for the first time in the Fall, and since then we've seen our usage grow every month— not just in scale, but in scope as well. But before highlighting everything the USASearch program is doing with Hadoop today, I should explain why we began using it in the first place.</p>

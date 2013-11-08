@@ -2,7 +2,7 @@
 permalink: /blog/hadoop-bigger-ox.html
 layout: post
 title: "I Didn't Try to Grow a Bigger Ox: How I Found Hadoop"
-tags: analytics big-data
+tags: analytics big-data about-us
 ---
 <p>A year ago I rolled my first Hadoop system into production. Since then, I've spoken to quite a few people who are eager to try Hadoop themselves in order to solve their own big data problems. Despite having similar backgrounds and data problems, few of these people have sunk their teeth into Hadoop. When I go to Hadoop Meetups in San Francisco, I often meet new people who are evaluating Hadoop and have yet to launch a cluster. Based on my own background and experience, I have some ideas on why this is the case.</p>
 <p>I studied computer science in school and have worked on a wide variety of computer systems in my career, with a lot of focus on server-side Java. I learned a bit about building distributed systems and working with large amounts of data when I built a pay-per-click (PPC) ad network in 2004. The system is still in operation and at one point was handling several thousand searches per second. As the sole technical resource on the system, I had to educate myself very quickly about how to scale up.</p>
