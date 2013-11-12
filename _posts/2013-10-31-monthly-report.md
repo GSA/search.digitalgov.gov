@@ -20,7 +20,9 @@ Data for the total number of queries and clicks. Use this report to find and ana
 
 Detailed data for the total number of impressions and clicks and your clickthru rate (CTR) are presented for each "module" on the search results page. We also provide the average CTR across all USASearch customers so you can see how your rate compares to the average rate. The data in the table is sorted in descending order from the most to least number of clicks. 
 
-Use this report to inform which [modules you opt to display](/sites/manual/display-overview.html) or to tweak your best bets ([text](/sites/manual/best-bets-text.html) or [graphics](/sites/manual/best-bets-graphics.html)).
+Use this report to inform which [modules you opt to display](/sites/manual/display-overview.html).
+
+***Drill down into best bets.*** Select the option to drill down into your [Best Bets:Text](/sites/manual/best-bets-text.html) or [Best Bets: Graphics](/sites/manual/best-bets-graphics.html) to see the number of impressions, number of clicks, and CTR for each best bet. The data in the table is sorted in descending order from the highest to lowest CTR. Review and edit best bets as needed. Focus on those with a high number of impressions and low CTR to make the biggest impact on searchers' experience (and on your overall CTR).
 
 ## Download Top Queries
 
