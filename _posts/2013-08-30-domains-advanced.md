@@ -46,18 +46,18 @@ You can later use the delete option to remove the filter.
 
 ***Troubleshooting tip:*** We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:
 
-* [W3C Feed Validation Service](http://validator.w3.org/feed) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif) (Atom & RSS)
-* RSS 2.0 [specification](http://www.rssboard.org/rss-specification) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif) and [validator](http://www.rssboard.org/rss-validator) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif) 
-* [Atom syndication format](http://www.atomenabled.org/developers/syndication) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif) 
+* [W3C Feed Validation Service](http://validator.w3.org/feed/) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif) (Atom & RSS)
+* RSS 2.0 [specification](http://www.rssboard.org/rss-specification) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif) and [validator](http://www.rssboard.org/rss-validator/) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif) 
+* [Atom syndication format](http://atomenabled.org/developers/syndication/) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif) 
 
 ***Troubleshooting tip:*** Are you seeing an error message in the crawled URLs report for your PDF that says, "No content found in document"? Your PDF is likely an image-only, non-searchable file that was created from a paper document using a scanner. See the resources below for more information on how to create searchable PDF files.
 
-* [Is that PDF Searchable?](http://blogs.adobe.com/acrolaw/2007/02/is_that_pdf_sea) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif) (blog post)
+* [Is that PDF Searchable?](http://blogs.adobe.com/acrolaw/2007/02/is_that_pdf_sea/) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif) (blog post)
 * [How to Create Searchable PDF File](http://acrobatusers.com/tutorials/how-to-create-a-searchable-pdf-file) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif) (video)
 
-***Troubleshooting tip:*** Are you seeing an error message in the crawled URLs report that says your page is taking too long to load? Use [Pingdom Tools Full Page Test](http://tools.pingdom.com/fpt) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif) to test the load time of your page, analyze it, and find the bottlenecks.
+***Troubleshooting tip:*** Are you seeing an error message in the crawled URLs report that says your page is taking too long to load? Use [Pingdom Tools Full Page Test](http://tools.pingdom.com/fpt/) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif) to test the load time of your page, analyze it, and find the bottlenecks.
 
 ***Did you know?*** To help the public find your web pages when they search on Bing.com, we notify Bing about any URLs you add. While this helps with search engine optimization (SEO), it is not a cure-all. You should also register for and use commercial search engines' webmaster tools.
 
 * [Bing Webmaster Tools](http://www.bing.com/toolbox/webmaster) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif) 
-* [Google Webmaster Central](https://www.google.com/webmasters/tools) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif)
+* [Google Webmaster Central](https://www.google.com/webmasters/tools/home?hl=en) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif)

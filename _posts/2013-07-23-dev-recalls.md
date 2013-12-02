@@ -146,7 +146,7 @@ So, we encourage you to use the five original data sources directly or via [Reca
 2. [USDA FSIS recalls and public health alerts](http://www.fsis.usda.gov/wps/portal/fsis/topics/recalls-and-public-health-alerts)
 3. [FoodSafety.gov recalls and alerts](http://www.foodsafety.gov/recalls)
 4. [NHTSA recalls and defects](http://www.nhtsa.gov/Vehicle+Safety/Recalls+&+Defects)
-5. [CPSC recalls](http://www.cpsc.gov/Recalls)
+5. [CPSC recalls](http://www.cpsc.gov/Recalls/)
 
 <a name="what-it-returns"></a>
 
