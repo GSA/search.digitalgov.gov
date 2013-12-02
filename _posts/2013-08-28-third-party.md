@@ -4,7 +4,7 @@ layout: post
 title: "How to Add JavaScript for Your Third Party Web Services"
 tags: how-to analytics third-party google-analytics foresee DAP
 ---
-[USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites) > YourSite > Analytics > 3rd Party Tracking
+[USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > 3rd Party Tracking
 
 Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?
 

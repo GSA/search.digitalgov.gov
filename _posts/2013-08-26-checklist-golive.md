@@ -18,7 +18,7 @@ Most agencies add these two [snippets of code](/sites/manual/code.html) to the t
 	 	<input name="commit" type="submit" value="Search" /> 
 	</form>
 
-<i class="icon-check"></i> **2. Do you have the USASearch Javascript tag on your webpages?** This Javascript powers the suggestions for type-ahead and [related searches](/sites/manual/display-overview.html). It also provides data on your trending URLs on the [Site Overview](/sites/manual/site-overview.html) page in the [Admin Center](https://search.usa.gov/sites).
+<i class="icon-check"></i> **2. Do you have the USASearch Javascript tag on your webpages?** This Javascript powers the suggestions for type-ahead and [related searches](/sites/manual/display-overview.html). It also provides data on your trending URLs on the [Site Overview](/sites/manual/site-overview.html) page in the [Admin Center](https://search.usa.gov/sites/).
 
 	<script type="text/javascript">
 	//<![CDATA[
@@ -34,7 +34,7 @@ Most agencies add these two [snippets of code](/sites/manual/code.html) to the t
 
 <i class="icon-check"></i> **3. Have you told us which domain(s) you want to search?** List one or more [domains](/sites/manual/domains.html) that you want to search on the first page of web results. Most agencies opt to leave out the 'www' to include all subdomains (for example, list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies especially department-level portals opt to also include their bureaus' websites (for example, Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)
 
-<i class="icon-check"></i> **4. Have you told us about your RSS feeds?** We love [RSS feeds](/sites/manual/rss.html). Tell us about all of your feeds, even if you opt not to show them (see #7 below). They're the quickest way for you to tell us about your new and updated content. Feeds also have well-structured titles, URLs, descriptions, and dates that we use to improve your search results page. (Tip: Preview your feeds from the RSS page in the [Admin Center](https://search.usa.gov/sites) to confirm that we've indexed your content.)
+<i class="icon-check"></i> **4. Have you told us about your RSS feeds?** We love [RSS feeds](/sites/manual/rss.html). Tell us about all of your feeds, even if you opt not to show them (see #7 below). They're the quickest way for you to tell us about your new and updated content. Feeds also have well-structured titles, URLs, descriptions, and dates that we use to improve your search results page. (Tip: Preview your feeds from the RSS page in the [Admin Center](https://search.usa.gov/sites/) to confirm that we've indexed your content.)
 
 <i class="icon-check"></i> **5. Have you told us about your social media accounts?** [Flickr photostreams](/sites/manual/flickr.html), [tweets](/sites/manual/twitter.html), and [YouTube videos](/sites/manual/youtube.html) are a great way to highlight your recent content. Tell us about all of your social media, even if you opt not to show them (see #7 below). 
 

@@ -4,7 +4,7 @@ layout: post
 title: "How to Select the Options that Appear on Your Results Page"
 tags: how-to manage-display sidebar govbox related-sites
 ---
-[USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites) > YourSite > Manage Display > Display Overview
+[USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Display > Display Overview
 
 ## Sidebar (Faceted Navigation)
 

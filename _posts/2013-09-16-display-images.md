@@ -4,7 +4,7 @@ layout: post
 title: "How to Customize the Images for the Header and Background on Your Results Page"
 tags: how-to manage-display images logos
 ---
-[USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites) > YourSite > Manage Display > Image Assets
+[USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Display > Image Assets
 
 ## Favicon
 

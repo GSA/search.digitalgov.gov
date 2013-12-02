@@ -4,7 +4,7 @@ layout: post
 title: "How to Analyze Your Monthly Reports"
 tags: how-to analytics queries clicks
 ---
-[USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites) > YourSite > Analytics > Monthly Reports
+[USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Monthly Reports
 
 The monthly report gives a bird's-eye view of the number of [queries](/sites/manual/queries.html) and [clicks](/sites/manual/clicks.html) each month. 
 

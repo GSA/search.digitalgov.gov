@@ -4,7 +4,7 @@ layout: post
 title: "How to Customize the Header and Footer of Your Results Page"
 tags: how-to manage-display sidebar govbox related-sites
 ---
-[USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites) > YourSite > Manage Display > Header & Footer
+[USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Display > Header & Footer
 
 ## Default Custom Header
 
