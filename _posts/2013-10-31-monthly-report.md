@@ -22,7 +22,7 @@ Detailed data for the total number of impressions and clicks and your clickthru 
 
 Use this report to inform which [modules you opt to display](/sites/manual/display-overview.html).
 
-***Drill down into best bets.*** Select the option to drill down into your [Best Bets:Text](/sites/manual/best-bets-text.html) or [Best Bets: Graphics](/sites/manual/best-bets-graphics.html) to see the number of impressions, number of clicks, and CTR for each best bet. The data in the table is sorted in descending order from the highest to lowest CTR. Review and edit best bets as needed. Focus on those with a high number of impressions and low CTR to make the biggest impact on searchers' experience (and on your overall CTR).
+***Drill down into best bets.*** Select the option to drill down into your [Best Bets:Text](/sites/manual/best-bets-text.html) or [Best Bets: Graphics](/sites/manual/best-bets-graphics.html) to see the number of impressions, number of clicks, and CTR for each best bet. The data in the table is sorted in descending order from the highest to lowest CTR. Review and edit best bets as needed. Focus on those with a high number of impressions and low CTR to make the biggest impact on searchers' experience (and on your overall CTR). Select drill down again to see a pie chart of the search terms that led to an impression on each best bet.
 
 ## Download Top Queries
 
