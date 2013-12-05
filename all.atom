@@ -3,10 +3,70 @@
   <title><![CDATA[USASearch]]></title>
   <link href="http://usasearch.howto.gov/all.atom" rel="self"/>
   <link href="http://usasearch.howto.gov/"/>
-  <updated>2013-12-04T18:09:05+00:00</updated>
+  <updated>2013-12-05T13:24:05+00:00</updated>
   <id>http://usasearch.howto.gov/</id>
   <author><name><![CDATA[USASearch]]></name></author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[New, Improved Mobile Results Page: Notes for November 2013]]></title>
+    <link href="http://usasearch.howto.gov/releases/2013-11-29.html"/>
+    <updated>2013-11-29T00:00:00+00:00</updated>
+    <id>http://usasearch.howto.gov/releases/2013-11-29.html</id>
+    <content type="html"><![CDATA[<h2>Highlight: New, Improved Mobile Results Page</h2>
+
+<p>Searchers using a mobile phone now see a new, improved search results page. Visible improvements include:</p>
+
+<ul>
+<li>Wall-to-wall search box.</li>
+<li>More readable font for type-ahead suggestions and search results.</li>
+<li><a href="http://insideintercom.io/why-cards-are-the-future-of-the-web/">Card-based design</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to cluster best bets, web results, and related searches.</li>
+</ul>
+
+
+<p>See the screenshot below for <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=thanksgiving&amp;m=true">USA.gov's results for <em>thanksgiving</em> on a mobile phone</a>.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/usagov-mobile-thanksgiving.png" alt="Mobile search results page on USA.gov" /></p>
+
+<p>Under the hood, our new results page uses a responsive design to optimize searchers' experience on your site&mdash;anywhere, anytime, and on any device per the <a href="http://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html">Digital Government Strategy</a>.</p>
+
+<p>Look for even more improvements to your search results page over the next few months. And, be sure to customize your results page by uploading your <a href="/sites/manual/display-images.html">mobile logo</a> and letting us know your <a href="/sites/manual/settings.html">homepage URL</a>.</p>
+
+<h2>Other Features</h2>
+
+<ul>
+<li>You can now see clickthru rates (CTRs) for each Best Bet. View your <a href="/sites/manual/monthly-reports.html">Monthly Report</a> in the Admin Center and click drill down to access the CTR data. Drill down a second time to see the queries that lead to each Best Bet. Use the data to improve searchers' experience on your site by editing or deleting your Best Bets.</li>
+<li>Searchers now see longer URLs on larger resolutions (up to 65 characters) and shorter URLs on smaller resolutions. We previously displayed up to 42 characters, regardless of the searcher's screen resolution.</li>
+<li>Searchers on a site with a custom <a href="/sites/manual/cname.html">CNAME</a> are now redirected to the site's homepage.</li>
+<li>You can now see up to 1,000 results on the <a href="/sites/manual/clicks.html">Clicks</a> and <a href="/sites/manual/queries.html">Queries</a> pages in the Analytics section of the Admin Center. We previously showed up to 10 results.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li>We're now leveraging <a href="https://keen.io/">Keen IO</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> for some real-time analytics.</li>
+<li>We updated Rails to version <a href="http://weblog.rubyonrails.org/2013/10/16/Rails-3-2-15-has-been-released/">3.2.15</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />.</li>
+<li>We fixed some Javascript-related <a href="http://cukes.info/">Cucumber</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> scenarios that had previously been failing.</li>
+<li>We now gracefully handle our Twitter IDs so that our Twitter process is more stable.</li>
+<li>We now gracefully handle an <a href="https://github.com/eventmachine/eventmachine">EventMachine</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> failure.</li>
+<li>We tidied up some loose ends from our old, now-defunct Admin Center by removing unused code and database columns.</li>
+<li>We renewed some of our SSL certificates.</li>
+<li>We updated the operating system packages on all of our machines and we rebuilt a disk on one of our servers.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed a bug that prevented you from adding a new site in the Admin Center.</li>
+<li>We now filter invalid URLs from your <a href="/sites/manual/rss.html">RSS</a> feeds so that searchers don't see a 404 error.</li>
+<li>We fixed our <a href="/sites/manual/collections.html">Collections</a> search results page so that it no longer fails when it contains a database URL without any values set.</li>
+<li>We added <em>correctional</em> to our <a href="http://wiki.apache.org/solr/LanguageAnalysis#solr.StemmerOverrideFilterFactory">stemming override</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> file so that searchers don't see irrelevant results for correct, corrected, etc.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Compare Your Click-thru Rate: Notes for October 2013]]></title>
@@ -47,7 +107,7 @@
 <li>We set up <a href="https://codeclimate.com/">Code Climate</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to identify areas of our code that can be improved.</li>
 <li>We phased out color schemes and now offer two options, default and custom.</li>
 <li>We updated the links in our email templates to reflect the new Admin Center.</li>
-<li>We added the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#85;&#x53;&#x41;&#x53;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#x67;&#x73;&#97;&#46;&#103;&#x6f;&#118;">&#x55;&#x53;&#x41;&#x53;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#x67;&#115;&#x61;&#46;&#103;&#x6f;&#x76;</a> if you'd like to opt out.</li>
+<li>We added the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#58;&#x55;&#x53;&#x41;&#x53;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#103;&#115;&#97;&#x2e;&#103;&#111;&#118;">&#x55;&#83;&#65;&#83;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#x67;&#x73;&#x61;&#x2e;&#103;&#111;&#118;</a> if you'd like to opt out.</li>
 </ul>
 
 
@@ -191,7 +251,7 @@
 
 <p>You can read our updated help by clicking on the Help? link on each page in the Admin Center, or see the full set of help files on our <a href="/help-desk.html">How It Works</a> page.</p>
 
-<p>Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#x55;&#x53;&#x41;&#x53;&#101;&#97;&#114;&#99;&#x68;&#x40;&#x67;&#115;&#97;&#46;&#103;&#111;&#x76;">&#x55;&#83;&#65;&#83;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x67;&#x73;&#x61;&#x2e;&#103;&#111;&#118;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
+<p>Email us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x55;&#83;&#x41;&#x53;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#103;&#x73;&#x61;&#46;&#103;&#111;&#118;">&#85;&#x53;&#x41;&#x53;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#103;&#115;&#97;&#x2e;&#x67;&#111;&#x76;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
 
 <h2>Chores</h2>
 
@@ -529,7 +589,7 @@
 
 <p><strong><em>Did you know?</em></strong>  Searchers may narrow results by time period for any <a href="/sites/manual/rss.html">RSS</a> feeds. See, for example, results for a <a href="http://search.whitehouse.gov/search/news?affiliate=wh&amp;channel=6&amp;m=false&amp;query=jobs&amp;tbs=w">search on <em>jobs</em> narrowed to press articles in the last week on WhiteHouse.gov</a>.</p>
 
-<p><strong><em>Did you know?</em></strong>  For any of your <a href="/sites/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#85;&#83;&#65;&#x53;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#103;&#x73;&#97;&#46;&#x67;&#x6f;&#x76;">&#x55;&#x53;&#65;&#x53;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#103;&#115;&#x61;&#x2e;&#103;&#x6f;&#118;</a> to if you want to customize these display names.</p>
+<p><strong><em>Did you know?</em></strong>  For any of your <a href="/sites/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#85;&#83;&#x41;&#83;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#103;&#x73;&#97;&#46;&#x67;&#x6f;&#x76;">&#x55;&#83;&#x41;&#83;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#103;&#115;&#x61;&#x2e;&#103;&#x6f;&#118;</a> to if you want to customize these display names.</p>
 
 <p><strong><em>Did you know?</em></strong> You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our <a href="/sites/manual/code.html">JavaScript snippet</a> before the closing <code>&lt;body&gt;</code> tag on your HTML web pages.</p>
 ]]></content>
@@ -706,7 +766,7 @@
 <ol>
 <li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
 <li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>E-mail us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#85;&#x53;&#x41;&#x53;&#101;&#97;&#114;&#x63;&#x68;&#x40;&#103;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#118;">&#85;&#83;&#x41;&#x53;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#103;&#115;&#x61;&#46;&#103;&#111;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
+<li>E-mail us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#85;&#x53;&#65;&#x53;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#x67;&#x73;&#97;&#46;&#x67;&#x6f;&#118;">&#85;&#x53;&#65;&#x53;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#103;&#x73;&#x61;&#x2e;&#x67;&#111;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
 </ol>
 
 
@@ -783,7 +843,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <p>Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li><p>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#x55;&#83;&#x41;&#x53;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#103;&#115;&#x61;&#x2e;&#x67;&#111;&#x76;">&#85;&#x53;&#65;&#x53;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#103;&#x73;&#97;&#x2e;&#x67;&#111;&#118;</a> to <a href="/sites/manual/cname.html">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
+<li><p>Email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#x55;&#83;&#x41;&#x53;&#101;&#x61;&#x72;&#99;&#104;&#64;&#103;&#x73;&#x61;&#46;&#103;&#111;&#118;">&#x55;&#x53;&#65;&#83;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#x67;&#115;&#x61;&#x2e;&#x67;&#x6f;&#118;</a> to <a href="/sites/manual/cname.html">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
 <li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
 
 <p> Find => 'files': '/fsrscripts/',</p>
@@ -1123,7 +1183,7 @@ Enter same passphrase again:
 
 <p>Also be sure to read our <a href="/tagged/releases">release notes</a> to keep up-to-date with our new features.</p>
 
-<p>Do you have other questions or comments about how our service works? E-mail us at <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#x55;&#83;&#65;&#x53;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#x67;&#115;&#x61;&#46;&#103;&#111;&#118;">&#85;&#83;&#65;&#83;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#x67;&#x73;&#x61;&#46;&#103;&#111;&#118;</a>.</p>
+<p>Do you have other questions or comments about how our service works? E-mail us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#85;&#x53;&#x41;&#x53;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#103;&#115;&#x61;&#46;&#103;&#111;&#118;">&#85;&#83;&#x41;&#83;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x67;&#x73;&#97;&#46;&#x67;&#111;&#x76;</a>.</p>
 ]]></content>
   </entry>
   
@@ -1197,7 +1257,7 @@ Enter same passphrase again:
     <content type="html"><![CDATA[<p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these three steps to mask your domain.</p>
 
 <ol>
-<li>E-mail us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#85;&#83;&#x41;&#83;&#101;&#x61;&#114;&#99;&#x68;&#64;&#x67;&#115;&#x61;&#46;&#103;&#x6f;&#118;">&#85;&#x53;&#x41;&#83;&#101;&#97;&#114;&#99;&#x68;&#64;&#x67;&#115;&#97;&#46;&#103;&#x6f;&#x76;</a> and ask us to mask your domain.</li>
+<li>E-mail us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#85;&#x53;&#65;&#83;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#103;&#115;&#x61;&#46;&#x67;&#111;&#118;">&#85;&#83;&#x41;&#83;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#103;&#115;&#x61;&#x2e;&#103;&#111;&#118;</a> and ask us to mask your domain.</li>
 <li>Create a CNAME in your DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
 <li>When the setup is complete, change the <a href="/sites/manual/code.html">code for your form</a> action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
 </ol>
@@ -1252,7 +1312,7 @@ Enter same passphrase again:
 </ol>
 
 
-<p>If you have any problem resetting your password, e-mail us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x55;&#x53;&#x41;&#83;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#x67;&#115;&#97;&#x2e;&#103;&#111;&#118;">&#85;&#83;&#65;&#83;&#x65;&#97;&#x72;&#99;&#104;&#64;&#x67;&#115;&#x61;&#46;&#x67;&#x6f;&#118;</a>.</p>
+<p>If you have any problem resetting your password, e-mail us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#x55;&#83;&#x41;&#83;&#101;&#x61;&#x72;&#99;&#104;&#64;&#103;&#115;&#x61;&#46;&#x67;&#x6f;&#x76;">&#85;&#83;&#x41;&#83;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#x67;&#115;&#x61;&#46;&#x67;&#x6f;&#x76;</a>.</p>
 ]]></content>
   </entry>
   
@@ -1309,7 +1369,7 @@ Enter same passphrase again:
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, edit your display name on the <a href="/sites/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, e-mail us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#58;&#x55;&#x53;&#65;&#83;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x67;&#115;&#97;&#46;&#103;&#111;&#118;">&#x55;&#x53;&#x41;&#x53;&#x65;&#x61;&#114;&#99;&#104;&#64;&#103;&#x73;&#97;&#46;&#x67;&#111;&#118;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, edit your display name on the <a href="/sites/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, e-mail us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#85;&#83;&#x41;&#83;&#101;&#97;&#x72;&#99;&#104;&#64;&#103;&#115;&#97;&#x2e;&#103;&#x6f;&#118;">&#85;&#x53;&#x41;&#x53;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x67;&#x73;&#97;&#46;&#x67;&#111;&#x76;</a>.</p>
 ]]></content>
   </entry>
   
@@ -1750,7 +1810,7 @@ omies that depend on summer tourism.&lt;/p&gt;
 
 <h2>Site Handle</h2>
 
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as nih. If you'd like to edit your site handle, e-mail us at <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#85;&#x53;&#65;&#x53;&#101;&#97;&#114;&#x63;&#x68;&#64;&#103;&#115;&#97;&#x2e;&#103;&#111;&#x76;">&#x55;&#83;&#x41;&#x53;&#101;&#x61;&#114;&#99;&#x68;&#64;&#x67;&#x73;&#97;&#46;&#x67;&#111;&#118;</a>.</p>
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as nih. If you'd like to edit your site handle, e-mail us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x55;&#x53;&#65;&#x53;&#101;&#x61;&#114;&#99;&#104;&#64;&#x67;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#x76;">&#85;&#x53;&#x41;&#x53;&#x65;&#97;&#114;&#99;&#x68;&#64;&#103;&#x73;&#x61;&#x2e;&#x67;&#111;&#x76;</a>.</p>
 
 <p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/settings.png" alt="Site name and handle on NIH.gov's search results page" /></p>
 
@@ -1760,7 +1820,7 @@ omies that depend on summer tourism.&lt;/p&gt;
 
 <h2>Site Language</h2>
 
-<p>You chose the language (English or Spanish) for your site when you originally added your site. We'll only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language. If you'd like to edit your site's language, e-mail us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#85;&#x53;&#x41;&#x53;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#103;&#x73;&#x61;&#46;&#103;&#111;&#118;">&#x55;&#83;&#x41;&#x53;&#x65;&#x61;&#x72;&#99;&#x68;&#x40;&#x67;&#x73;&#x61;&#46;&#x67;&#111;&#x76;</a>.</p>
+<p>You chose the language (English or Spanish) for your site when you originally added your site. We'll only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language. If you'd like to edit your site's language, e-mail us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#85;&#83;&#x41;&#x53;&#x65;&#97;&#114;&#x63;&#104;&#x40;&#103;&#x73;&#x61;&#46;&#103;&#x6f;&#118;">&#85;&#83;&#x41;&#x53;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#103;&#115;&#97;&#x2e;&#103;&#111;&#118;</a>.</p>
 
 <h2>Delete</h2>
 
@@ -2178,7 +2238,7 @@ omies that depend on summer tourism.&lt;/p&gt;
 
 <h2>Feedback</h2>
 
-<p>E-mail us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#85;&#x53;&#x41;&#83;&#101;&#97;&#114;&#99;&#x68;&#64;&#x67;&#x73;&#x61;&#x2e;&#x67;&#111;&#x76;">&#x55;&#83;&#x41;&#83;&#x65;&#97;&#x72;&#99;&#104;&#64;&#103;&#x73;&#97;&#46;&#103;&#x6f;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>E-mail us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#58;&#x55;&#x53;&#65;&#x53;&#101;&#x61;&#114;&#99;&#x68;&#64;&#x67;&#115;&#97;&#46;&#x67;&#x6f;&#118;">&#x55;&#x53;&#65;&#x53;&#101;&#x61;&#114;&#99;&#104;&#x40;&#103;&#115;&#97;&#x2e;&#103;&#x6f;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
@@ -2385,7 +2445,7 @@ US-VA:COUNTY-FAIRFAX:CITY-FAIRFAX</p>
 
 <p>State and local government jobs are from cities, counties, and state agencies that use <a href="http://www.neogov.com">NeoGov</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />, such <a href="https://bouldercolorado.gov/jobs-and-volunteer">jobs with the the city of Boulder, Colorado</a>.</p>
 
-<p><strong><em>Are we missing your jobs data?</em></strong> E-mail us at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#85;&#x53;&#x41;&#x53;&#x65;&#97;&#114;&#x63;&#104;&#x40;&#103;&#x73;&#97;&#46;&#x67;&#111;&#x76;">&#85;&#83;&#x41;&#x53;&#101;&#97;&#114;&#x63;&#104;&#x40;&#x67;&#115;&#x61;&#x2e;&#x67;&#111;&#118;</a> to let us know where you publish the jobs data for your federal, state, or local government agency. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
+<p><strong><em>Are we missing your jobs data?</em></strong> E-mail us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#85;&#x53;&#65;&#x53;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#103;&#115;&#x61;&#46;&#103;&#x6f;&#x76;">&#x55;&#83;&#65;&#x53;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#103;&#x73;&#97;&#x2e;&#x67;&#x6f;&#x76;</a> to let us know where you publish the jobs data for your federal, state, or local government agency. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
 
 <p><a name="what-it-returns"></a></p>
 
@@ -2447,7 +2507,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <h2>Feedback</h2>
 
-<p>E-mail us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#85;&#83;&#x41;&#x53;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#x67;&#x73;&#97;&#46;&#x67;&#111;&#x76;">&#85;&#x53;&#65;&#x53;&#101;&#97;&#x72;&#99;&#x68;&#64;&#103;&#115;&#97;&#x2e;&#103;&#111;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>E-mail us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#85;&#x53;&#65;&#x53;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#x67;&#115;&#x61;&#x2e;&#x67;&#x6f;&#x76;">&#85;&#83;&#x41;&#x53;&#x65;&#97;&#114;&#99;&#104;&#64;&#103;&#115;&#x61;&#x2e;&#x67;&#x6f;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
@@ -2591,7 +2651,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <p>MRSS is the standard <a href="http://www.rssboard.org/media-rss">media RSS specification</a> for syndicating multimedia content. So, even if you don't have an MRSS feed now, it should be easy to generate one as long as your content is in a content management system or other database. MRSS is also the standard specification used by hosted multimedia services such as Flickr, Instagram, Vimeo, and YouTube.</p>
 
-<p>Email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#85;&#83;&#x41;&#x53;&#101;&#x61;&#114;&#99;&#104;&#64;&#103;&#x73;&#x61;&#46;&#103;&#x6f;&#x76;">&#85;&#83;&#x41;&#83;&#101;&#97;&#114;&#99;&#104;&#x40;&#x67;&#115;&#x61;&#46;&#103;&#x6f;&#x76;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
+<p>Email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#85;&#x53;&#x41;&#x53;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#x67;&#x73;&#97;&#x2e;&#103;&#111;&#x76;">&#x55;&#83;&#65;&#83;&#x65;&#97;&#114;&#99;&#104;&#64;&#x67;&#115;&#x61;&#46;&#x67;&#111;&#x76;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
 
 <p>(Thanks, <a href="http://www.usgs.gov">USGS.gov</a> team, for suggesting this new feature!)</p>
 
@@ -2701,7 +2761,7 @@ to contribute your changes to our project and improve this API for everyone who 
 <ul>
 <li>We updated our <a href="/tos.html">terms of service</a>.</li>
 <li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/sites/manual/domains.html">how to exclude content</a> or email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x55;&#83;&#65;&#x53;&#101;&#97;&#114;&#99;&#104;&#x40;&#103;&#x73;&#x61;&#x2e;&#103;&#111;&#118;">&#x55;&#x53;&#65;&#83;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#103;&#x73;&#97;&#46;&#103;&#x6f;&#118;</a> with any questions.</li>
+<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/sites/manual/domains.html">how to exclude content</a> or email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#58;&#85;&#x53;&#65;&#x53;&#101;&#x61;&#114;&#x63;&#104;&#64;&#103;&#115;&#97;&#46;&#x67;&#x6f;&#118;">&#x55;&#83;&#x41;&#83;&#101;&#x61;&#114;&#x63;&#104;&#64;&#x67;&#115;&#97;&#x2e;&#x67;&#111;&#x76;</a> with any questions.</li>
 <li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
 <li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
 <li>We removed the trending searches feature and widget.</li>
@@ -2763,7 +2823,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <hr />
 
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. E-mail us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x55;&#83;&#65;&#x53;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#103;&#115;&#97;&#46;&#103;&#111;&#x76;">&#85;&#x53;&#65;&#x53;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#x67;&#115;&#97;&#x2e;&#103;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
+<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. E-mail us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#85;&#83;&#x41;&#83;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#103;&#x73;&#x61;&#x2e;&#x67;&#x6f;&#x76;">&#x55;&#x53;&#x41;&#x53;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#103;&#115;&#x61;&#x2e;&#103;&#x6f;&#118;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
 ]]></content>
   </entry>
   
@@ -2788,7 +2848,7 @@ to contribute your changes to our project and improve this API for everyone who 
 </ol>
 
 
-<p>If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#x55;&#83;&#65;&#x53;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#103;&#x73;&#97;&#46;&#x67;&#111;&#x76;">&#x55;&#83;&#x41;&#x53;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#103;&#x73;&#x61;&#x2e;&#103;&#111;&#118;</a>.</p>
+<p>If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#x55;&#83;&#x41;&#x53;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#x67;&#x73;&#97;&#46;&#x67;&#x6f;&#x76;">&#85;&#x53;&#x41;&#83;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#103;&#115;&#97;&#46;&#103;&#111;&#x76;</a>.</p>
 
 <hr />
 
@@ -3033,6 +3093,10 @@ to contribute your changes to our project and improve this API for everyone who 
 
 
 <ul>
+<li><a href="/releases/2013-11-29.html">New, Improved Mobile Results Page: Notes for November 2013</a></li>
+</ul>
+
+<ul>
 <li><a href="/releases/2013-10-31.html">Compare Your Click-thru Rate: Notes for October 2013</a></li>
 </ul>
 
@@ -3046,10 +3110,6 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <ul>
 <li><a href="/releases/2013-07-31.html">Add a URL: Notes for July 2013</a></li>
-</ul>
-
-<ul>
-<li><a href="/releases/2013-06-21.html">Spring Cleaning: Notes for the Week Ending June 21, 2013</a></li>
 </ul>
 
 

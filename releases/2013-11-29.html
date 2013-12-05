@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>How to Edit Your Domains</title>
+  <title>New, Improved Mobile Results Page: Notes for November 2013</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -75,78 +75,76 @@
   <div id="main-container"><article class="article">
   <div class='time'>
     
-    <span>Last updated on:</span>
-    
-    <a href="/sites/manual/domains.html">
-      <time>August 29, 2013</time>
+    <a href="/releases/2013-11-29.html">
+      <time>November 29, 2013</time>
     </a>
   </div>
 
   
   <h1>
-    <a href="/sites/manual/domains.html">How to Edit Your Domains</a>
+    <a href="/releases/2013-11-29.html">New, Improved Mobile Results Page: Notes for November 2013</a>
   </h1>
   
 
   <div class='post-content'>
-    <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Domains</p>
+    <h2>Highlight: New, Improved Mobile Results Page</h2>
 
-<p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
-
-<h2>Entire Site(s)</h2>
+<p>Searchers using a mobile phone now see a new, improved search results page. Visible improvements include:</p>
 
 <ul>
-<li>List yoursite.gov (without www) to search your entire site, including all subdomains.</li>
-<li>List yoursite.gov and yoursite2.gov to search multiple sites.</li>
+<li>Wall-to-wall search box.</li>
+<li>More readable font for type-ahead suggestions and search results.</li>
+<li><a href="http://insideintercom.io/why-cards-are-the-future-of-the-web/">Card-based design</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to cluster best bets, web results, and related searches.</li>
 </ul>
 
 
-<h2>Specific Subdomains</h2>
+<p>See the screenshot below for <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=thanksgiving&amp;m=true">USA.gov's results for <em>thanksgiving</em> on a mobile phone</a>.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/usagov-mobile-thanksgiving.png" alt="Mobile search results page on USA.gov" /></p>
+
+<p>Under the hood, our new results page uses a responsive design to optimize searchers' experience on your site&mdash;anywhere, anytime, and on any device per the <a href="http://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html">Digital Government Strategy</a>.</p>
+
+<p>Look for even more improvements to your search results page over the next few months. And, be sure to customize your results page by uploading your <a href="/sites/manual/display-images.html">mobile logo</a> and letting us know your <a href="/sites/manual/settings.html">homepage URL</a>.</p>
+
+<h2>Other Features</h2>
 
 <ul>
-<li>List www.yoursite.gov to include only the primary 'www' domain.</li>
-<li>List subdomain.yoursite.gov to include subdomains.</li>
+<li>You can now see clickthru rates (CTRs) for each Best Bet. View your <a href="/sites/manual/monthly-reports.html">Monthly Report</a> in the Admin Center and click drill down to access the CTR data. Drill down a second time to see the queries that lead to each Best Bet. Use the data to improve searchers' experience on your site by editing or deleting your Best Bets.</li>
+<li>Searchers now see longer URLs on larger resolutions (up to 65 characters) and shorter URLs on smaller resolutions. We previously displayed up to 42 characters, regardless of the searcher's screen resolution.</li>
+<li>Searchers on a site with a custom <a href="/sites/manual/cname.html">CNAME</a> are now redirected to the site's homepage.</li>
+<li>You can now see up to 1,000 results on the <a href="/sites/manual/clicks.html">Clicks</a> and <a href="/sites/manual/queries.html">Queries</a> pages in the Analytics section of the Admin Center. We previously showed up to 10 results.</li>
 </ul>
 
 
-<h2>Specific Directories</h2>
+<h2>Chores</h2>
 
-<p>List yoursite.gov/folder to include folders. Note: this will include all sub-folders (if they exist), i.e. yoursite.gov/folder/folder2.</p>
-
-<p>You cannot specify individual URLs.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
-
-<ol>
-<li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
-<li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>E-mail us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#85;&#x53;&#65;&#x53;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#x67;&#x73;&#97;&#46;&#x67;&#x6f;&#118;">&#85;&#x53;&#65;&#x53;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#103;&#x73;&#x61;&#x2e;&#x67;&#111;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
-</ol>
+<ul>
+<li>We're now leveraging <a href="https://keen.io/">Keen IO</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> for some real-time analytics.</li>
+<li>We updated Rails to version <a href="http://weblog.rubyonrails.org/2013/10/16/Rails-3-2-15-has-been-released/">3.2.15</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />.</li>
+<li>We fixed some Javascript-related <a href="http://cukes.info/">Cucumber</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> scenarios that had previously been failing.</li>
+<li>We now gracefully handle our Twitter IDs so that our Twitter process is more stable.</li>
+<li>We now gracefully handle an <a href="https://github.com/eventmachine/eventmachine">EventMachine</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> failure.</li>
+<li>We tidied up some loose ends from our old, now-defunct Admin Center by removing unused code and database columns.</li>
+<li>We renewed some of our SSL certificates.</li>
+<li>We updated the operating system packages on all of our machines and we rebuilt a disk on one of our servers.</li>
+</ul>
 
 
-<p><a id="filter"></a><strong><em>Troubleshooting Tip:</em></strong> You can remove or filter specific URLs using any of the following options.</p>
+<h2>Fixes</h2>
 
-<ol>
-<li><p>Remove the page from your site and return a 404 (Not Found) 401 (Gone), or 301 (Permanently Moved) HTTP status.</p></li>
-<li><p>Add a <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">noindex robots metatag or x-robots tag</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
-<li><p>Request the page's removal using the <a href="http://www.bing.com/webmaster/help/block-urls-from-bing-264e560a">Block URLs option in Bing Webaster Tools</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> and <a href="https://support.google.com/webmasters/answer/1663419">Remove URLs option in Google Webmaster Tools</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />.</p></li>
-<li><p>Use the Filter URLs option under the <a href="/sites/manual/domains-advanced.html">Advanced</a> tab. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
-</ol>
+<ul>
+<li>We fixed a bug that prevented you from adding a new site in the Admin Center.</li>
+<li>We now filter invalid URLs from your <a href="/sites/manual/rss.html">RSS</a> feeds so that searchers don't see a 404 error.</li>
+<li>We fixed our <a href="/sites/manual/collections.html">Collections</a> search results page so that it no longer fails when it contains a database URL without any values set.</li>
+<li>We added <em>correctional</em> to our <a href="http://wiki.apache.org/solr/LanguageAnalysis#solr.StemmerOverrideFilterFactory">stemming override</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> file so that searchers don't see irrelevant results for correct, corrected, etc.</li>
+</ul>
 
-
-<p><strong><em>Troubleshooting Tip:</em></strong> Are specific web pages missing from your Bing web results? You can tell us about any missing URLs via an RSS feed or manually (the Supplemental Feed and Supplemental URLs options under the <a href="/sites/manual/domains-advanced.html">Advanced</a> tab, respectively). We'll fetch and index the pages and append them to your web results.</p>
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-    
-    <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-    
-    <a href="/tagged/domains"><span class="label label-info">domains</span></a>
+    <a href="/tagged/releases"><span class="label label-info">releases</span></a>
     
   </div>
 </article></div>

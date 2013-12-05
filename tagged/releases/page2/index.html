@@ -79,6 +79,79 @@
   <article class='article'>
     <div class='time'>
       
+      <a href="/releases/2013-03-08.html">
+        <time datetime="2013-03-08">March 8, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/2013-03-08.html">Search Notes for the Week Ending March 8, 2013</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlighted Feature: Limiting Results to a Subset of Your Content</h2>
+
+<p>Do you want to set up a search box (or even hundreds of search boxes) over a subset of your content?</p>
+
+<p>You can set up a <a href="/sites/manual/collections.html">Collection</a>. Or, you can now pass in a 'sitelimit' parameter to filter the results to specific folders or domains.</p>
+
+<h3>Option 1. Set Up a Collection</h3>
+
+<p>See the sample results page on <a href="http://www.nih.gov">NIH.gov</a> that shows results for a search on <a href="http://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=cancer"><em>cancer</em></a> in NIH.gov's New Releases.</p>
+
+<p>Note that the searcher sees that results are filtered to News in the left-hand menu.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/nih-collection.png" alt="Collection-based search results for cancer in NIH.gov news releases" /></p>
+
+<h3>Option 2. Use the Sitelimit Parameter</h3>
+
+<p>Compare the collection-based results above with the results for <a href="http://search.usa.gov/search?affiliate=nih&amp;query=cancer&amp;sitelimit=nih.gov/news">the same search using the sitelimit parameter</a>.</p>
+
+<p>Note that the searcher sees that results are filtered to nih.gov/news in a message under the search box, among other differences.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/nih-sitelimit.png" alt="Sitelimit-based search results for cancer in NIH.gov news releases" /></p>
+
+<h2>Other Feature</h2>
+
+<ul>
+<li>Searchers' see job openings in their state <em>before</em> the listings for jobs in other states.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li>We added sequester/sequestration as an entry in our synonym file so that searchers looking for information on the topic find all relevant results.</li>
+<li>We throttled the YouTube RSSFeedFetcher to avoid HTTP 403 errors.</li>
+<li>We added some compound indexes to speed up queries.</li>
+<li>We added JSONP support for the <a href="http://usasearch.howto.gov/developer/jobs.html">Jobs API</a> and <a href="http://usasearch.howto.gov/developer/recalls.html">Recalls API</a>.</li>
+<li>We investigated additional sources for jobs openings, such as the Department of Labor's <a href="http://developer.dol.gov/DOL-SUMMERJOBS-SERVICE.htm">Summer Jobs</a> and the National Resource Directory's <a href="https://www.nrd.gov/home/api/veterans_job_search">Veterans Jobs Bank</a>.</li>
+<li>We moved the publishing platform for <a href="http://usasearch.howto.gov">USASearch.HowTo.gov</a> from Tumblr to <a href="http://pages.github.com">Github pages</a>.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>Visitors to eForms.gov, FedForms.gov, and Forms.gov are now automatically redirected to the USA.gov's list of <a href="http://www.usa.gov/Topics/Reference-Shelf/forms.shtml">government forms by agency</a>.</li>
+<li>We tuned the redirect on search.usa.gov/images so that all needed images show up on results pages.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
       <a href="/releases/2013-02-22.html">
         <time datetime="2013-02-22">February 22, 2013</time>
       </a>
@@ -566,63 +639,6 @@
 
 
 <p>The most common results that searchers found most relevant or appealing, for specific search terms. Review these popular pages and other customer top tasks to make sure they are current, accurate, complete and compelling.</p>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <a href="/releases/2012-10-19.html">
-        <time datetime="2012-10-19">October 19, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/releases/2012-10-19.html">Search Notes for the Week Ending October 19, 2012</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>Good news! We completed a major upgrade of our search infrastructure. You likely didn't notice as we completed the upgrade without any downtime for searchers on your site. </p>
-
-
-<p>Our system is now even more secure, stable, and redundant than it was before. Plus, it is faster, too. Highlights of the upgrade follow.</p>
-
-
-<p><em><strong>Multihoming</strong></em></p>
-
-
-<p>We've always had a disaster recovery, backup datacenter, but it often sat idle. We wanted to make better use of all of our servers so we're now leveraging a content delivery network to send traffic to whichever datacenter is geographically closest to the searcher. This allows us to use both datacenters equally and serve our results quickly.</p>
-
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mcd7tbK8RD1qid15q.png"/></p>
-
-
-<p><em><strong>New Hardware</strong></em></p>
-
-
-<p>We increased our RAM and CPU resources by five times. We have room to grow and to roll out more features.</p>
-
-
-<p><em><strong>Upgraded Software</strong></em></p>
-
-
-<p>We're now on Red Hat 6 and Cloudera 4.</p>
-
-
-<p><em><strong>Speed, Speed, Speed</strong></em></p>
-
-
-<p>We're always working to improve the speed of our search results. We changed some of our caching rules. We also started to leverage <a href="http://wiki.nginx.org/Main">Nginx</a> (a free, open-source, high-performance HTTP server).</p>
 
 
     </div>

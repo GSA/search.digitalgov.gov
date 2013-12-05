@@ -79,6 +79,83 @@
   <article class='article'>
     <div class='time'>
       
+      <a href="/releases/2013-11-29.html">
+        <time datetime="2013-11-29">November 29, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/2013-11-29.html">New, Improved Mobile Results Page: Notes for November 2013</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlight: New, Improved Mobile Results Page</h2>
+
+<p>Searchers using a mobile phone now see a new, improved search results page. Visible improvements include:</p>
+
+<ul>
+<li>Wall-to-wall search box.</li>
+<li>More readable font for type-ahead suggestions and search results.</li>
+<li><a href="http://insideintercom.io/why-cards-are-the-future-of-the-web/">Card-based design</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to cluster best bets, web results, and related searches.</li>
+</ul>
+
+
+<p>See the screenshot below for <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=thanksgiving&amp;m=true">USA.gov's results for <em>thanksgiving</em> on a mobile phone</a>.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/usagov-mobile-thanksgiving.png" alt="Mobile search results page on USA.gov" /></p>
+
+<p>Under the hood, our new results page uses a responsive design to optimize searchers' experience on your site&mdash;anywhere, anytime, and on any device per the <a href="http://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html">Digital Government Strategy</a>.</p>
+
+<p>Look for even more improvements to your search results page over the next few months. And, be sure to customize your results page by uploading your <a href="/sites/manual/display-images.html">mobile logo</a> and letting us know your <a href="/sites/manual/settings.html">homepage URL</a>.</p>
+
+<h2>Other Features</h2>
+
+<ul>
+<li>You can now see clickthru rates (CTRs) for each Best Bet. View your <a href="/sites/manual/monthly-reports.html">Monthly Report</a> in the Admin Center and click drill down to access the CTR data. Drill down a second time to see the queries that lead to each Best Bet. Use the data to improve searchers' experience on your site by editing or deleting your Best Bets.</li>
+<li>Searchers now see longer URLs on larger resolutions (up to 65 characters) and shorter URLs on smaller resolutions. We previously displayed up to 42 characters, regardless of the searcher's screen resolution.</li>
+<li>Searchers on a site with a custom <a href="/sites/manual/cname.html">CNAME</a> are now redirected to the site's homepage.</li>
+<li>You can now see up to 1,000 results on the <a href="/sites/manual/clicks.html">Clicks</a> and <a href="/sites/manual/queries.html">Queries</a> pages in the Analytics section of the Admin Center. We previously showed up to 10 results.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li>We're now leveraging <a href="https://keen.io/">Keen IO</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> for some real-time analytics.</li>
+<li>We updated Rails to version <a href="http://weblog.rubyonrails.org/2013/10/16/Rails-3-2-15-has-been-released/">3.2.15</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />.</li>
+<li>We fixed some Javascript-related <a href="http://cukes.info/">Cucumber</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> scenarios that had previously been failing.</li>
+<li>We now gracefully handle our Twitter IDs so that our Twitter process is more stable.</li>
+<li>We now gracefully handle an <a href="https://github.com/eventmachine/eventmachine">EventMachine</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> failure.</li>
+<li>We tidied up some loose ends from our old, now-defunct Admin Center by removing unused code and database columns.</li>
+<li>We renewed some of our SSL certificates.</li>
+<li>We updated the operating system packages on all of our machines and we rebuilt a disk on one of our servers.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed a bug that prevented you from adding a new site in the Admin Center.</li>
+<li>We now filter invalid URLs from your <a href="/sites/manual/rss.html">RSS</a> feeds so that searchers don't see a 404 error.</li>
+<li>We fixed our <a href="/sites/manual/collections.html">Collections</a> search results page so that it no longer fails when it contains a database URL without any values set.</li>
+<li>We added <em>correctional</em> to our <a href="http://wiki.apache.org/solr/LanguageAnalysis#solr.StemmerOverrideFilterFactory">stemming override</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> file so that searchers don't see irrelevant results for correct, corrected, etc.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
       <a href="/releases/2013-10-31.html">
         <time datetime="2013-10-31">October 31, 2013</time>
       </a>
@@ -125,7 +202,7 @@
 <li>We set up <a href="https://codeclimate.com/">Code Climate</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to identify areas of our code that can be improved.</li>
 <li>We phased out color schemes and now offer two options, default and custom.</li>
 <li>We updated the links in our email templates to reflect the new Admin Center.</li>
-<li>We added the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#85;&#x53;&#x41;&#x53;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#x67;&#x73;&#97;&#46;&#103;&#x6f;&#118;">&#x55;&#x53;&#x41;&#x53;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#x67;&#115;&#x61;&#46;&#103;&#x6f;&#x76;</a> if you'd like to opt out.</li>
+<li>We added the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#58;&#x55;&#x53;&#x41;&#x53;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#103;&#115;&#97;&#x2e;&#103;&#111;&#118;">&#x55;&#83;&#65;&#83;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#x67;&#x73;&#x61;&#x2e;&#103;&#111;&#118;</a> if you'd like to opt out.</li>
 </ul>
 
 
@@ -181,7 +258,7 @@
 
 <p>You can read our updated help by clicking on the Help? link on each page in the Admin Center, or see the full set of help files on our <a href="/help-desk.html">How It Works</a> page.</p>
 
-<p>Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#x55;&#x53;&#x41;&#x53;&#101;&#97;&#114;&#99;&#x68;&#x40;&#x67;&#115;&#97;&#46;&#103;&#111;&#x76;">&#x55;&#83;&#65;&#83;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x67;&#x73;&#x61;&#x2e;&#103;&#111;&#118;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
+<p>Email us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x55;&#83;&#x41;&#x53;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#103;&#x73;&#x61;&#46;&#103;&#111;&#118;">&#85;&#x53;&#x41;&#x53;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#103;&#115;&#97;&#x2e;&#x67;&#111;&#x76;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
 
 <h2>Chores</h2>
 
@@ -435,7 +512,7 @@
 
 <p>MRSS is the standard <a href="http://www.rssboard.org/media-rss">media RSS specification</a> for syndicating multimedia content. So, even if you don't have an MRSS feed now, it should be easy to generate one as long as your content is in a content management system or other database. MRSS is also the standard specification used by hosted multimedia services such as Flickr, Instagram, Vimeo, and YouTube.</p>
 
-<p>Email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#85;&#83;&#x41;&#x53;&#101;&#x61;&#114;&#99;&#104;&#64;&#103;&#x73;&#x61;&#46;&#103;&#x6f;&#x76;">&#85;&#83;&#x41;&#83;&#101;&#97;&#114;&#99;&#104;&#x40;&#x67;&#115;&#x61;&#46;&#103;&#x6f;&#x76;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
+<p>Email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#85;&#x53;&#x41;&#x53;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#x67;&#x73;&#97;&#x2e;&#103;&#111;&#x76;">&#x55;&#83;&#65;&#83;&#x65;&#97;&#114;&#99;&#104;&#64;&#x67;&#115;&#x61;&#46;&#x67;&#111;&#x76;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
 
 <p>(Thanks, <a href="http://www.usgs.gov">USGS.gov</a> team, for suggesting this new feature!)</p>
 
@@ -579,7 +656,7 @@
 <ul>
 <li>We updated our <a href="/tos.html">terms of service</a>.</li>
 <li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/sites/manual/domains.html">how to exclude content</a> or email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x55;&#83;&#65;&#x53;&#101;&#97;&#114;&#99;&#104;&#x40;&#103;&#x73;&#x61;&#x2e;&#103;&#111;&#118;">&#x55;&#x53;&#65;&#83;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#103;&#x73;&#97;&#46;&#103;&#x6f;&#118;</a> with any questions.</li>
+<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/sites/manual/domains.html">how to exclude content</a> or email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#58;&#85;&#x53;&#65;&#x53;&#101;&#x61;&#114;&#x63;&#104;&#64;&#103;&#115;&#97;&#46;&#x67;&#x6f;&#118;">&#x55;&#83;&#x41;&#83;&#101;&#x61;&#114;&#x63;&#104;&#64;&#x67;&#115;&#97;&#x2e;&#x67;&#111;&#x76;</a> with any questions.</li>
 <li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
 <li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
 <li>We removed the trending searches feature and widget.</li>
@@ -658,79 +735,6 @@
 <li>Searchers see a tool tip for the icon that toggles the display of the header and footer.</li>
 <li>Searchers no longer see an unescaped HTML tags.</li>
 <li>We <a href="https://github.com/rails/rails/pull/4911">reduced the file name maximum size</a> in our ActiveSupport FileStore cache.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <a href="/releases/2013-03-08.html">
-        <time datetime="2013-03-08">March 8, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/releases/2013-03-08.html">Search Notes for the Week Ending March 8, 2013</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2>Highlighted Feature: Limiting Results to a Subset of Your Content</h2>
-
-<p>Do you want to set up a search box (or even hundreds of search boxes) over a subset of your content?</p>
-
-<p>You can set up a <a href="/sites/manual/collections.html">Collection</a>. Or, you can now pass in a 'sitelimit' parameter to filter the results to specific folders or domains.</p>
-
-<h3>Option 1. Set Up a Collection</h3>
-
-<p>See the sample results page on <a href="http://www.nih.gov">NIH.gov</a> that shows results for a search on <a href="http://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=cancer"><em>cancer</em></a> in NIH.gov's New Releases.</p>
-
-<p>Note that the searcher sees that results are filtered to News in the left-hand menu.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/nih-collection.png" alt="Collection-based search results for cancer in NIH.gov news releases" /></p>
-
-<h3>Option 2. Use the Sitelimit Parameter</h3>
-
-<p>Compare the collection-based results above with the results for <a href="http://search.usa.gov/search?affiliate=nih&amp;query=cancer&amp;sitelimit=nih.gov/news">the same search using the sitelimit parameter</a>.</p>
-
-<p>Note that the searcher sees that results are filtered to nih.gov/news in a message under the search box, among other differences.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/nih-sitelimit.png" alt="Sitelimit-based search results for cancer in NIH.gov news releases" /></p>
-
-<h2>Other Feature</h2>
-
-<ul>
-<li>Searchers' see job openings in their state <em>before</em> the listings for jobs in other states.</li>
-</ul>
-
-
-<h2>Chores</h2>
-
-<ul>
-<li>We added sequester/sequestration as an entry in our synonym file so that searchers looking for information on the topic find all relevant results.</li>
-<li>We throttled the YouTube RSSFeedFetcher to avoid HTTP 403 errors.</li>
-<li>We added some compound indexes to speed up queries.</li>
-<li>We added JSONP support for the <a href="http://usasearch.howto.gov/developer/jobs.html">Jobs API</a> and <a href="http://usasearch.howto.gov/developer/recalls.html">Recalls API</a>.</li>
-<li>We investigated additional sources for jobs openings, such as the Department of Labor's <a href="http://developer.dol.gov/DOL-SUMMERJOBS-SERVICE.htm">Summer Jobs</a> and the National Resource Directory's <a href="https://www.nrd.gov/home/api/veterans_job_search">Veterans Jobs Bank</a>.</li>
-<li>We moved the publishing platform for <a href="http://usasearch.howto.gov">USASearch.HowTo.gov</a> from Tumblr to <a href="http://pages.github.com">Github pages</a>.</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>Visitors to eForms.gov, FedForms.gov, and Forms.gov are now automatically redirected to the USA.gov's list of <a href="http://www.usa.gov/Topics/Reference-Shelf/forms.shtml">government forms by agency</a>.</li>
-<li>We tuned the redirect on search.usa.gov/images so that all needed images show up on results pages.</li>
 </ul>
 
 
