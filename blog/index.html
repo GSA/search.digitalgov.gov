@@ -92,13 +92,13 @@
     
 
     <div class='post-content'>
-      <h1>Slowness Hurts Web Pages</h1>
+      <h2>Slowness Hurts Web Pages</h2>
 
 <p>Have you ever been frustrated when visiting a web page that doesn't load quickly? Have you ever left a slow web page before it finished loading? You're not alone.</p>
 
 <p>Several recent studies have quantified customers' frustration with slow web pages. Customers now  <a href="http://www.nytimes.com/2012/03/01/technology/impatient-web-users-flee-slow-loading-sites.html">expect results in the blink of an eye</a>. <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> This expection means that your <a href="http://www.aberdeen.com/Aberdeen-Library/5136/RA-performance-web-application.aspx">customers are won or lost in one second</a>. <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> A one second delay in loading a web page equals 11% fewer page views, 16% decrease in customer satisfaction, and 7% loss in conversions.</p>
 
-<h1>Slowness <em>Kills</em> Search Results Pages</h1>
+<h2>Slowness <em>Kills</em> Search Results Pages</h2>
 
 <p>As little time as web sites have to keep users on their pages, search engines have even less time to keep searchers on their results pages. Speed is the primary factor in determining customers' satisfaction with search results.</p>
 
@@ -106,7 +106,7 @@
 
 <p>This gospel has also set a high bar for all search engines. Searchers expect results pages to load very, very quickly.</p>
 
-<h1>How We've Made Our Result Pages Load Faster</h1>
+<h2>How We've Made Our Result Pages Load Faster</h2>
 
 <p>So, when we established the service's open source architecture in 2010, the first thing we tackled was how to deliver our search results in under one second.</p>
 
@@ -124,7 +124,7 @@
 
 <p>We already had an architecture optimized for speed. So, how have we sped it up by 320 milliseconds?</p>
 
-<h2>We Cache When We Can</h2>
+<h3>We Cache When We Can</h3>
 
 <p>When a searcher enters a query, we go out to our various indexes, pull the information relevant to the searcher's request, and put that information together on the results page.</p>
 
@@ -132,13 +132,13 @@
 
 <p>We cache these so-called short head queries and store them on our servers. Caching helps us speed up the above process because searchers don't have to wait for us to pull the information from its original source.</p>
 
-<h2>We Use an Asset Pipeline</h2>
+<h3>We Use an Asset Pipeline</h3>
 
 <p>We have many JavaScript and CSS files on our results pages. These "assets" can be large and slow down the loading of our page. So, we use an <a href="http://guides.rubyonrails.org/asset_pipeline.html">asset pipeline</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to concatenate and compress our JavaScript and CSS assets thereby reducing the number of requests that a browser has to make to render our results page.</p>
 
 <p>We also use fingerprinting&mdash;a technique that makes a file's name dependent on its content&mdash;within our asset pipeline. When the content changes, the name changes. For content that is static or that changes infrequently, this naming helps us tell whether two versions of a file are identical. When a filename is unique, browsers keep their own copy of the content. When the content is updated, the fingerprint changes so browsers request a new copy of the content. This approach allows us to maximize our content delivery network.</p>
 
-<h2>We Use a Content Delivery Network</h2>
+<h3>We Use a Content Delivery Network</h3>
 
 <p>Our static content (such as scripts and stylesheets) gets served through our <a href="http://www.webopedia.com/TERM/C/CDN.html">content delivery network</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> provider, currently Akamai. Akamai serves our static content from its server that is geographically closest to the searcher. The closer, the faster.</p>
 
@@ -298,7 +298,7 @@
 <li>We set up <a href="https://codeclimate.com/">Code Climate</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to identify areas of our code that can be improved.</li>
 <li>We phased out color schemes and now offer two options, default and custom.</li>
 <li>We updated the links in our email templates to reflect the new Admin Center.</li>
-<li>We added the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#85;&#83;&#x41;&#x53;&#101;&#97;&#x72;&#99;&#x68;&#x40;&#103;&#115;&#x61;&#46;&#x67;&#x6f;&#x76;">&#x55;&#83;&#65;&#x53;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#103;&#115;&#97;&#x2e;&#x67;&#111;&#118;</a> if you'd like to opt out.</li>
+<li>We added the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#85;&#83;&#x41;&#83;&#101;&#97;&#114;&#99;&#x68;&#64;&#103;&#115;&#x61;&#x2e;&#103;&#x6f;&#118;">&#85;&#83;&#x41;&#83;&#101;&#97;&#x72;&#99;&#104;&#x40;&#x67;&#115;&#x61;&#46;&#103;&#x6f;&#x76;</a> if you'd like to opt out.</li>
 </ul>
 
 
@@ -507,7 +507,7 @@
 
 <p>You can read our updated help by clicking on the Help? link on each page in the Admin Center, or see the full set of help files on our <a href="/help-desk.html">How It Works</a> page.</p>
 
-<p>Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#85;&#83;&#x41;&#x53;&#101;&#x61;&#114;&#99;&#x68;&#64;&#x67;&#115;&#x61;&#x2e;&#103;&#111;&#x76;">&#85;&#x53;&#65;&#x53;&#x65;&#97;&#114;&#99;&#104;&#x40;&#103;&#115;&#x61;&#46;&#103;&#x6f;&#x76;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
+<p>Email us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#111;&#58;&#85;&#x53;&#65;&#83;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#103;&#x73;&#97;&#46;&#x67;&#x6f;&#x76;">&#85;&#x53;&#65;&#x53;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#103;&#x73;&#x61;&#46;&#x67;&#x6f;&#118;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
 
 <h2>Chores</h2>
 
