@@ -129,9 +129,9 @@
 
 <h2>We Use an Asset Pipeline</h2>
 
-<p>We have many JavaScript and CSS files on our results pages. These "assets" can be large and slow down the loading of our page. So, we use an asset pipeline to concatenate and compress our JavaScript and CSS assets thereby reducing the number of requests that a browser has to make to render our results page.</p>
+<p>We have many JavaScript and CSS files on our results pages. These "assets" can be large and slow down the loading of our page. So, we use an <a href="http://guides.rubyonrails.org/asset_pipeline.html">asset pipeline</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to concatenate and compress our JavaScript and CSS assets thereby reducing the number of requests that a browser has to make to render our results page.</p>
 
-<p>We also use fingerprinting&mdash;a technique that makes a file's name dependent on its content&mdash;within our asset pipeline. When the content changes, the name changes. For content that is static or that changes infrequently, this naming helps us tell whether two versions of a file are identical. It also helps us maximize our content delivery network.</p>
+<p>We also use fingerprinting&mdash;a technique that makes a file's name dependent on its content&mdash;within our asset pipeline. When the content changes, the name changes. For content that is static or that changes infrequently, this naming helps us tell whether two versions of a file are identical. When a filename is unique, browsers keep their own copy of the content. When the content is updated, the fingerprint changes so browsers request a new copy of the content. This approach allows us to maximize our content delivery network.</p>
 
 <h2>We Use a Content Delivery Network</h2>
 
