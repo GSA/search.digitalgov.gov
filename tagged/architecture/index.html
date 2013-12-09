@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Posts tagged architecture</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/stylesheets/font-awesome-ie7.min.css">
+  <![endif]-->
+
+  <style>
+    body {
+      padding-top: 60px;
+    }
+  </style>
+  <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+  <link href="/stylesheets/custom.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+  <link rel="shortcut icon" href="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/favicon.ico">
+  <link rel='alternate' type='application/atom+xml' title='usasearch.howto.gov Atom feed' href='/all.atom' />
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="/"><span class="usa">USA</span><span class="search">Search</span></a>
+      <ul class="nav">
+        <li><a href="/help-desk.html">How It Works</a></li>
+        <li><a href="/customers.html">Our Customers</a></li>
+      </ul>
+      <ul class="nav">
+        <li>
+          <form class="form-search" accept-charset="UTF-8" action="http://search.howto.gov/search/news/" id="search-form" method="get">
+            <input id="affiliate" name="affiliate" type="hidden" value="usasearch"/>
+            <input type="hidden" name="channel" value="1745">
+            <input type="hidden" name="sort_by" value="r">
+            <div class="input-append">
+              <label for="search-query" class="hide">Query</label>
+              <input name="query" type="text" autocomplete="off"
+                     class="usagov-search-autocomplete span search-query" id="search-query"/>
+              <input type="submit" class="btn" id="search-button" value="Search" />
+            </div>
+          </form>
+        </li>
+      </ul>
+      <ul class="nav login">
+        <li>
+          <a href="https://search.usa.gov/sites"><i
+              class="icon-user icon-white"></i>&nbsp;Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div id="main-container"><!-- begin tag layout -->
+<p class="muted">Posts tagged <strong>architecture</strong></p>
+<div class='articles'>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <a href="/blog/cache.html">
+        <time datetime="2013-12-09">December 9, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/blog/cache.html">Cache Me If You Can</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h1>Slowness Hurts Web Pages</h1>
+
+<p>Have you ever been frustrated when visiting a web page that doesn't load quickly? Have you ever left a slow web page before it finished loading?</p>
+
+<p>You're not alone. Several recent studies have quantified customers' frustration with slow web pages. Customers now  <a href="http://www.nytimes.com/2012/03/01/technology/impatient-web-users-flee-slow-loading-sites.html">expect results in the blink of an eye</a>. <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> This expection means that your <a href="http://www.aberdeen.com/Aberdeen-Library/5136/RA-performance-web-application.aspx">customers are won or lost in one second</a>. <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> A one second delay in loading a web page equals 11% fewer page views, 16% decrease in customer satisfaction, and 7% loss in conversions.</p>
+
+<h1>Slowness <em>Kills</em> Search Results Pages</h1>
+
+<p>As little time as web sites have to keep users on their pages, search engines have even less time to keep searchers on their results pages. Speed is the primary factor in determining customers' satisfaction with search results.</p>
+
+<p>Google, Microsoft, and Yahoo garner <a href="http://www.comscore.com/Insights/Press_Releases/2013/11/comScore_Releases_October_2013_US_Search_Engine_Rankings">95% of the search market</a>. <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> Google garners two-thirds of the search market. The company's <a href="https://www.google.com/search?q=Google+Gospel+of+Speed">Gospel of Speed</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> motto is one reason why Google garners the majority of the market.</p>
+
+<p>This gospel has also set a very high bar for all search engines. Searchers expect results pages to load very, very quickly.</p>
+
+<h1>How We've Made Our Result Pages Load Faster</h1>
+
+<p>So, when we established the service's open source architecture in 2010, the first thing we tackled was how to deliver our search results in under one second.</p>
+
+<p>At around the same time, <a href="http://www.github.com">Github</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> was experiencing exponential growth and the company's engineers were blogging about what they did to make Github fast. To get up to speed quickly (yes, bad pun intended), we read their posts.</p>
+
+<ul>
+<li><a href="https://github.com/blog/530-how-we-made-github-fast">How We Made GitHub Fast</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />, October 20, 2009</li>
+<li><a href="https://github.com/blog/1252-how-we-keep-github-fast">How We Keep GitHub Fast</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />, September 5, 2012</li>
+</ul>
+
+
+<p>Leveraging some of Github's best practices, we succeeded in delivering our results in under 700 milliseconds, on average. This was a significant accomplishment and improvement from the previous vendor-owned and -operated iterations of our service.</p>
+
+<p>Over the past three years, we've dug in and improved our response time even more. We now deliver our results in under 380 milliseconds, on average.</p>
+
+<p>We already had an architecture optimized for speed. So, how have we sped it up by 320 milliseconds?</p>
+
+<h2>We Cache When We Can</h2>
+
+<p>When a searcher enters a query, we go out to our various indexes, pull the information relevant to the searcher's request, and put that information together on the results page.</p>
+
+<p>Most queries (such as jobs, obama, unclaimed money, forms) aren't unique and are asked by thousands of searchers each day.</p>
+
+<p>We cache these so-called short head queries and store them on our servers. Caching helps us speed up the above process because searchers don't have to wait for us to pull the information from its original source.</p>
+
+<h2>We Use an Asset Pipeline</h2>
+
+<p>We have many JavaScript and CSS files on our results pages. These "assets" can be large and slow down the loading of our page. So, we use an asset pipeline to concatenate and compress our JavaScript and CSS assets thereby reducing the number of requests that a browser has to make to render our results page.</p>
+
+<p>We also use fingerprinting&mdash;a technique that makes a file's name dependent on its content&mdash;within our asset pipeline. When the content change, the name changes. For content that is static or changed infrequently, this naming helps us tell whether two versions of a file are identical and maximize our content delivery network.</p>
+
+<h2>We Use a Content Delivery Network</h2>
+
+<p>Our static content (such as scripts and stylesheets) gets served through our <a href="http://www.webopedia.com/TERM/C/CDN.html">content delivery network</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> provider, currently Akamai. Akamai serves our static content from its server that is geographically closest to the searcher. The closer, the faster.</p>
+
+<p>Using a content delivery network also allow us to optimize our service's speed by:</p>
+
+<ul>
+<li>Directing non-cached traffic between our two datacenters to create a <a href="/releases/2012-10-19.html">multihomed environment</a>. Multihoming allows us to make full use of all of our servers. By contrast, in 2010, our disaster recovery datacenter often sat idle.</li>
+<li>Reducing our need to add bandwidth or servers to handle short-term traffic spurts, such as spurts related to natural disasters.</li>
+<li>Protecting against denial of service attacks by spotting them before they reach our servers.</li>
+</ul>
+
+
+<h2>What's Next?</h2>
+
+<p>We've worked hard over the past three years to speed up the delivery of our results by optimizing each link in the chain.</p>
+
+<p>We use several monitoring tools to measure our system's performance. The quality of these tools is improving at a rapid pace, which in turn, shows us where and how we can improve our service.</p>
+
+<p>We regularly ask ourselves, "Will <em>this</em> shave some time off and help us deliver our results in <em>under</em> 380 milliseconds?"</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/cache"><span class="label label-info">cache</span></a>
+      
+      <a href="/tagged/architecture"><span class="label label-info">architecture</span></a>
+      
+      <a href="/tagged/about-us"><span class="label label-info">about-us</span></a>
+      
+    </div>
+  </article>
+  
+</div>
+
+
+<ul class="pager">
+  
+
+  
+</ul>
+<!-- end tag layout --></div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <ul class="footer-links unstyled inline">
+      <li><a href="/developer/index.html">APIs</a></li>
+      <li class="muted">&bull;</li>
+      <li><i class="icon-twitter"></i>&nbsp;<a href="http://www.twitter.com/usasearch">@USASearch</a></li>
+      <li class="muted">&bull;</li>
+      <li><i class="icon-envelope"></i>&nbsp;<a href="mailto:usasearch@gsa.gov">USASearch@gsa.gov</a></li>
+      <li class="muted">&bull;</li>
+      <li><i class="icon-phone"></i>&nbsp;202-505-5315</li>
+      <li class="muted">&bull;</li>
+      <li><a href="/tos.html">Terms of Service</a></li>      
+    </ul>
+    <p> An Official Website of the U.S. Government <br />
+      Sponsored by GSA's <a href="http://www.gsa.gov/portal/category/25729">Office of Citizen
+      Services &amp; Innovative Technologies</a>
+    </p>
+    <ul class="footer-links unstyled inline">
+      <li>
+        <a href="http://www.gsa.gov">
+          <img src="http://c566677.r77.cf2.rackcdn.com/logo_footer_gsa.png"
+               alt="GSA.gov logo" id="gsa-logo"></a>
+      </li>
+      <li>
+        <a href="http://www.howto.gov">
+        <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/footer_htlogo.png"
+             alt="HowTo.gov logo" id="howto-logo"></a>
+      </li>
+      <li>
+        <a href="http://www.usa.gov">
+          <img src="http://c566677.r77.cf2.rackcdn.com/logo_footer_usaGov.png"
+               alt="USA.gov logo" id="usagov-logo"></a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  //<![CDATA[
+  var usasearch_config = { siteHandle:"usasearch" };
+
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "http://search.usa.gov/javascripts/remote.loader.js";
+  document.getElementsByTagName("head")[0].appendChild(script);
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31302465-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  //]]>
+</script>
+
+
+</body>
+</html>
