@@ -136,7 +136,7 @@ Example: <http://api.usa.gov/recalls/search.json?upc=042666601627>
 
 ## Data Sources
 
-We've tailored this Recalls API for our use in the [USA.gov iPhone app](http://apps.usa.gov/usagov.shtml) and [Product Recalls Android app](http://apps.usa.gov/product-recalls-2.shtml). 
+We've tailored this Recalls API for our use in the [USA.gov iPhone app](http://apps.usa.gov/usagov.shtml). 
 
 Data are normalized across (1) drug and food safety recalls from the [FDA](http://www.fda.gov), [UDSA FSIS](http://www.fsis.usda.gov), and [FoodSafety.gov](http://www.FoodSafety.gov); (2) car safety recalls from the [NHTSA](http://www.nhtsa.gov); and (3) product safety recalls from the [CPSC](http://www.cpsc.gov).
 

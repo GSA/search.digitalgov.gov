@@ -38,7 +38,7 @@ Start with the standard form snippet on the [Code Snippets](/sites/manual/code.h
 
 The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.
 
-See the sample search box below that is limited to news releases in [FTC.gov's Newroom](http://www.ftc.gov/opa/index.shtml) for a search on *privacy*.
+See the sample search box below that is limited to news releases in [FTC.gov's Newroom](http://www.ftc.gov/news-events/press-releases) for a search on *privacy*.
 
 ![FTC.gov Newsroom search box](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-3.png)  
 *Newsroom page with a search box that is limited to news*
