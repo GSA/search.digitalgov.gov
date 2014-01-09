@@ -10,7 +10,7 @@ Do you want to promote a specific web page or collection of web pages? Create a 
 
 A best bet appears above the standard web results when a searcher's query matches the text of its title, description, or keywords.
 
-Graphics best bets have a one or two-column layout and you can add an image. Up to one relevant best bet is listed under a heading, {Best Bet Title} by {[Site Name](/sites/manual/settings.html)}.
+Graphics best bets have a one or two-column layout and you can add an image. The most relevant best bet is listed under a heading, {Best Bet Title} by {[Site Name](/sites/manual/settings.html)}.
 
 See, for example, the variety of layouts possible for graphics best bets.
 
@@ -32,9 +32,34 @@ See, for example, the variety of layouts possible for graphics best bets.
 
 ***Image.*** You can opt to add an image. Be sure to choose only images for which the display rights are not limited. Include alt text and attribution, as needed. The attribution URL links the attribution text to a webpage of your choice. Sometimes linking to the actual site where the image was found is not appropriate, so you may opt not to use this field.
 
-***Keywords.*** Keywords are optional. Add specific words or phrases that are *not* already included in the visible title or link titles. Common keywords include synonyms, acronyms, compound words, misspellings, or other variants. Each field can have up to 255 characters. Keywords are *not* visible to searchers.
+***Keywords.*** Keywords are optional and they're *not* visible to searchers. Add specific words or phrases that aren't already included in the visible title or link titles. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.
 
 ***Links.*** Enter a title and URL for each link. There is no limit on the number of links. Use the three horizontal bars on the left to rearrange the display order of the links. If you select a two-column layout above, links are displayed in newspaper-style format, with an automatic break for columns depending on how many links you list. The link titles are visible to searchers.
+
+## When Searchers See Your Best Bets
+
+Searchers see your best bets when their query:
+
+* Matches any or all words in the title,
+* Matches any of all words in the link titles, or
+* Matches a keyword exactly.
+
+Matches are made within, but not across, fields.
+
+A sample best bet entry is below.
+
+**Title:** Estate Tax  
+**Link title 1:** Transfer Property After You Pass Away
+**Link title 2:** Estate Tax Rights
+**Link title 3:** Tax Rates
+**Keyword 1:** death tax  
+**Keyword 2:** inheritance tax  
+**Keyword 3:** fair market value  
+**Keyword 4:** market value  
+
+This best bet would display for searches on estate tax (exact title match), estate (partial title match), tax on the estate (title match that includes stopwords), estate taxes (title match for singular/plural variant), property tax (partial link title match), propertey tax (link title match with a slight misspelling), and death tax (exact keyword match), among other queries.
+
+It would *not* display for searches on death, death property, taxes after death, fair value, or estate property tax as they're only partial keyword or cross field matches.
 
 --- 
 
