@@ -111,7 +111,7 @@
 
 <p><strong><em>Status and Publish Dates.</em></strong> The default start date is the day on which you create the best bet. The default end date is null, so it will stay up forever until you decide to take it down. You can opt to set a start and end date to control to specify other start and end dates. You can also opt to set its status as either active or inactive.</p>
 
-<p><strong><em>Keywords.</em></strong> Keywords are optional. Add specific words or phrases that are <em>not</em> already included in the visible title or description. Common keywords include synonyms, acronyms, compound words, misspellings, or other variants. Each field can have up to 255 characters. Keywords are <em>not</em> visible to searchers.</p>
+<p><strong><em>Keywords.</em></strong> Keywords are optional and they're <em>not</em> visible to searchers. Add specific words or phrases that aren't already included in the visible title or description. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.</p>
 
 <h3>Add Multiple Best Bets via Bulk Upload</h3>
 
@@ -121,13 +121,33 @@
 
 <p>Title, URL, and description are required. Start date, end date, and keywords are optional. Save the file with .csv, .txt, or .xml extension and upload it.</p>
 
-<!--START UPDATE-->
+<p>Bulk upload updates any existing, matching entries and appends new entries to them.</p>
+
+<h2>When Searchers See Your Best Bets</h2>
+
+<p>Searchers see your best bets when their query:</p>
+
+<ul>
+<li>Matches any or all words in the title,</li>
+<li>Matches any of all words in the description, or</li>
+<li>Matches a keyword exactly.</li>
+</ul>
 
 
-<p>Bulk upload appends new entries to your existing entries.</p>
+<p>Matches are made within, but not across, fields.</p>
 
-<!--END UPDATE-->
+<p>A sample best bet entry is below.</p>
 
+<p><strong>Title:</strong> Estate Tax<br/>
+<strong>Description:</strong> A tax on your right to transfer property after you pass away.<br/>
+<strong>Keyword 1:</strong> death tax<br/>
+<strong>Keyword 2:</strong> inheritance tax<br/>
+<strong>Keyword 3:</strong> fair market value<br/>
+<strong>Keyword 4:</strong> market value</p>
+
+<p>This best bet would display for searches on estate tax (exact title match), estate (partial title match), tax on the estate (title match that includes stopwords), estate taxes (title match for singular/plural variant), property tax (partial description match), propertey tax (description match with a slight misspelling), and death tax (exact keyword match), among other queries.</p>
+
+<p>It would <em>not</em> display for searches on death, death property, taxes after death, fair value, or estate property tax as they're only partial keyword or cross field matches.</p>
 
 <hr />
 

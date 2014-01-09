@@ -273,7 +273,7 @@
 
 <p><strong><em>Status and Publish Dates.</em></strong> The default start date is the day on which you create the best bet. The default end date is null, so it will stay up forever until you decide to take it down. You can opt to set a start and end date to control to specify other start and end dates. You can also opt to set its status as either active or inactive.</p>
 
-<p><strong><em>Keywords.</em></strong> Keywords are optional. Add specific words or phrases that are <em>not</em> already included in the visible title or description. Common keywords include synonyms, acronyms, compound words, misspellings, or other variants. Each field can have up to 255 characters. Keywords are <em>not</em> visible to searchers.</p>
+<p><strong><em>Keywords.</em></strong> Keywords are optional and they're <em>not</em> visible to searchers. Add specific words or phrases that aren't already included in the visible title or description. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.</p>
 
 <h3>Add Multiple Best Bets via Bulk Upload</h3>
 
@@ -283,13 +283,33 @@
 
 <p>Title, URL, and description are required. Start date, end date, and keywords are optional. Save the file with .csv, .txt, or .xml extension and upload it.</p>
 
-<!--START UPDATE-->
+<p>Bulk upload updates any existing, matching entries and appends new entries to them.</p>
+
+<h2>When Searchers See Your Best Bets</h2>
+
+<p>Searchers see your best bets when their query:</p>
+
+<ul>
+<li>Matches any or all words in the title,</li>
+<li>Matches any of all words in the description, or</li>
+<li>Matches a keyword exactly.</li>
+</ul>
 
 
-<p>Bulk upload appends new entries to your existing entries.</p>
+<p>Matches are made within, but not across, fields.</p>
 
-<!--END UPDATE-->
+<p>A sample best bet entry is below.</p>
 
+<p><strong>Title:</strong> Estate Tax<br/>
+<strong>Description:</strong> A tax on your right to transfer property after you pass away.<br/>
+<strong>Keyword 1:</strong> death tax<br/>
+<strong>Keyword 2:</strong> inheritance tax<br/>
+<strong>Keyword 3:</strong> fair market value<br/>
+<strong>Keyword 4:</strong> market value</p>
+
+<p>This best bet would display for searches on estate tax (exact title match), estate (partial title match), tax on the estate (title match that includes stopwords), estate taxes (title match for singular/plural variant), property tax (partial description match), propertey tax (description match with a slight misspelling), and death tax (exact keyword match), among other queries.</p>
+
+<p>It would <em>not</em> display for searches on death, death property, taxes after death, fair value, or estate property tax as they're only partial keyword or cross field matches.</p>
 
 <hr />
 
@@ -342,6 +362,8 @@
 <p>See the sample results page below that shows a recent tweet displayed on SNAP-Ed Connection for a search on <em><a href="http://search.usa.gov/search?affiliate=snap-edconnection&amp;query=nutrition">nutrition</a></em>.</p>
 
 <p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-tweets.png" alt="Search result with a tweet on SNAP-Ed Connection" /></p>
+
+<p>Searchers will see the most recent tweet (posted within the past three days) that matches their search term.</p>
 
     </div>
 
@@ -563,7 +585,7 @@
 
 <h2>Site Handle</h2>
 
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as nih. If you'd like to edit your site handle, e-mail us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#85;&#83;&#65;&#x53;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#x67;&#x73;&#x61;&#x2e;&#103;&#111;&#x76;">&#x55;&#x53;&#x41;&#83;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#x67;&#115;&#x61;&#46;&#103;&#111;&#118;</a>.</p>
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as nih. If you'd like to edit your site handle, e-mail us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#x55;&#x53;&#x41;&#x53;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#103;&#x73;&#97;&#x2e;&#103;&#x6f;&#118;">&#85;&#x53;&#65;&#x53;&#101;&#97;&#114;&#x63;&#x68;&#x40;&#103;&#x73;&#97;&#x2e;&#103;&#x6f;&#118;</a>.</p>
 
 <p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/settings.png" alt="Site name and handle on NIH.gov's search results page" /></p>
 
@@ -573,7 +595,7 @@
 
 <h2>Site Language</h2>
 
-<p>You chose the language (English or Spanish) for your site when you originally added your site. We'll only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language. If you'd like to edit your site's language, e-mail us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#85;&#x53;&#x41;&#83;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#103;&#x73;&#97;&#46;&#103;&#111;&#x76;">&#x55;&#83;&#x41;&#83;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#103;&#115;&#97;&#x2e;&#103;&#x6f;&#118;</a>.</p>
+<p>You chose the language (English or Spanish) for your site when you originally added your site. We'll only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language. If you'd like to edit your site's language, e-mail us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#85;&#83;&#65;&#x53;&#101;&#97;&#114;&#99;&#x68;&#64;&#x67;&#x73;&#97;&#x2e;&#x67;&#111;&#x76;">&#x55;&#x53;&#x41;&#83;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x67;&#115;&#97;&#x2e;&#103;&#111;&#x76;</a>.</p>
 
 <h2>Delete</h2>
 
@@ -638,7 +660,7 @@
 
 <hr />
 
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. E-mail us at <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#85;&#x53;&#65;&#x53;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#103;&#x73;&#x61;&#x2e;&#103;&#x6f;&#118;">&#x55;&#83;&#x41;&#x53;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#103;&#x73;&#x61;&#x2e;&#103;&#x6f;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
+<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. E-mail us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#58;&#85;&#x53;&#x41;&#83;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#103;&#115;&#x61;&#46;&#103;&#111;&#x76;">&#85;&#x53;&#65;&#x53;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#103;&#x73;&#97;&#46;&#x67;&#111;&#118;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
 
     </div>
 
