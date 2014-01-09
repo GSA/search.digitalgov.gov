@@ -28,7 +28,7 @@ Text best bets may be added individually or via bulk upload.
 
 ***Keywords.*** Keywords are optional and they're *not* visible to searchers. Add specific words or phrases that aren't already included in the visible title or description. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field. 
 
-### Add Multiple Best Bets via Bulk Upload
+## Add Multiple Best Bets via Bulk Upload
 
 Create a comma-separated file with the following fields (in this order).
 

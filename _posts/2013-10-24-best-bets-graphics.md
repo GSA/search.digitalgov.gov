@@ -49,9 +49,9 @@ Matches are made within, but not across, fields.
 A sample best bet entry is below.
 
 **Title:** Estate Tax  
-**Link title 1:** Transfer Property After You Pass Away
-**Link title 2:** Estate Tax Rights
-**Link title 3:** Tax Rates
+**Link title 1:** Transfer Property After You Pass Away  
+**Link title 2:** Estate Tax Rights  
+**Link title 3:** Tax Rates  
 **Keyword 1:** death tax  
 **Keyword 2:** inheritance tax  
 **Keyword 3:** fair market value  
