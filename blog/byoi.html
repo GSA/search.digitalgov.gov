@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>How to Edit Your Settings</title>
+  <title>Pilot Program: Bring Your Own Index</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -77,79 +77,87 @@
     
     <span>Last updated on:</span>
     
-    <a href="/sites/manual/settings.html">
-      <time>August 1, 2013</time>
+    <a href="/blog/byoi.html">
+      <time>January 21, 2014</time>
     </a>
   </div>
 
   
   <h1>
-    <a href="/sites/manual/settings.html">How to Edit Your Settings</a>
+    <a href="/blog/byoi.html">Pilot Program: Bring Your Own Index</a>
   </h1>
   
 
   <div class='post-content'>
-    <p><a href="http://usasearch.howto.gov">USASearch</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Settings</p>
+    <p>In 2013, we asked you for feedback about USASearch and other programs in GSA's Office of Citizen Services and Innovative Technologies. Many of you responded to our customer experience survey.</p>
 
-<h2>Display Name</h2>
+<p>We learned that, in these times of tight budgets, you value our service being free. We also heard you loud and clear that you'd like to choose which search results you use&mdash;from Bing, Google, or some other source.</p>
 
-<p>Tell us the name of your website. Searchers see your site name on the results page, such as in your page title or best bets. We recommend using the plain language name for your agency or site, such as National Institutes of Health.</p>
+<p>So, based on your feedback, we now have a pilot program that allows you to bring your own index (BYOI). This helps us make sure we continue to provide you the best, most cost-effective service possible and gives you the choice you want.</p>
 
-<h2>Homepage URL</h2>
-
-<p>Tell us the homepage URL of your website. Enter a fully qualified URL, including http://, http://www, etc.</p>
-
-<p><strong>Correct Syntax</strong></p>
+<p>You can either:</p>
 
 <ul>
-<li>http://www.whitehouse.gov</li>
-<li>http://louisiana.gov</li>
-<li>http://www.usa.gov/gobiernousa/</li>
-<li>http://nimh.nih.gov/</li>
-<li>http://www.ci.bloomington.mn.us/</li>
+<li>Provide an feed (typically from your database or content management system).</li>
+<li>Provide access to a search index you already have from a commercial provider.</li>
 </ul>
 
 
-<p><strong>Incorrect Syntax</strong></p>
+<h2>How to Participate</h2>
+
+<p>Since this is still a pilot, the setup is manual. Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#85;&#83;&#65;&#x53;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#103;&#x73;&#97;&#x2e;&#103;&#111;&#x76;">&#x55;&#83;&#65;&#x53;&#x65;&#97;&#114;&#99;&#x68;&#64;&#103;&#x73;&#97;&#x2e;&#x67;&#111;&#118;</a> to let us know you're interested in participating in the pilot.</p>
+
+<h2>Option 1. Provide an RSS Feed</h2>
+
+<p>You’ll have to set up two RSS feeds.</p>
+
+<ol>
+<li>Seed feed&mdash;a one-time, full RSS feed that provides us all of your content.</li>
+<li>Change feed&mdash;an incremental feed that tells us about deltas (new, updated, or deleted content) only.</li>
+</ol>
+
+
+<p>If you want full text search, provide the full text of your page in the feed’s description. If you want a more precise, metadata search, provide a short snippet about your page in the feed’s description.</p>
+
+<p>As long as you create structured feeds, we’ll index your content. It doesn’t matter what  underlying technology system you use. Below are a few good references to get you started for two of the more common CMS, but don't let these links confuse you if you already have a system to generate a feed in place.</p>
+
+<p><strong>Drupal</strong> has a few ways to export content as a structured feed, including:</p>
 
 <ul>
-<li>usa.gov (use http://www.usa.gov)</li>
-<li>www.nasa.gov (use http://www.nasa.gov)</li>
-<li>http://www.ftc.gov/opa/index.shtml (use the higher-level folder, http://www.ftc.gov/opa)</li>
-<li>http://www.gsa.gov/portal/category/100000?utm_source=OCM&amp;utm_medium=print-radio&amp;utm_term=&amp;utm_campaign=shortcuts (use the higher-level domain, http://www.gsa.gov)</li>
-<li>http://www.doc.gov (use the domain that resolves, http://www.commerce.gov)</li>
+<li><a href="https://drupal.org/node/83597">RSS feeds for Views</a></li>
+<li><a href="https://drupal.org/project/feeds">Feed Module to Export the Entire Site</a></li>
+<li><a href="https://drupal.org/project/node_export">Node Export</a></li>
 </ul>
 
 
-<p>We use this homepage URL to (a) populate your primary <a href="/sites/manual/domains.html">domain</a> and (b) link the default logo on your results page to your homepage.</p>
+<p><strong>WordPress</strong> provides detailed overview of <a href="http://codex.wordpress.org/WordPress_Feeds">how to handle feeds</a>.</p>
 
-<h2>Site Handle</h2>
+<h2>Option 2. Provide a Search Index</h2>
 
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as nih. If you'd like to edit your site handle, e-mail us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#85;&#x53;&#65;&#83;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#x67;&#115;&#97;&#46;&#x67;&#111;&#118;">&#85;&#83;&#65;&#83;&#101;&#97;&#x72;&#99;&#104;&#x40;&#103;&#115;&#x61;&#46;&#103;&#111;&#x76;</a>.</p>
+<p>We can leverage almost any search index directly. For each web search, we’ll send a searcher’s query to your chosen search index, and we'll render the results within our search results page.</p>
 
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/settings.png" alt="Site name and handle on NIH.gov's search results page" /></p>
+<h3>Google Search Appliance</h3>
 
-<h2>Site ID</h2>
+<p>If you already have (or plan to purchase), a Google Search Appliance, we can accept the <a href="(https://developers.google.com/search-appliance/documentation/614/xml_reference#results_xml">XML output</a>) from your appliance. You’ll be responsible for managing the number of documents indexed as this affects the cost of the appliance (such as $x for up to x documents).</p>
 
-<p>We assign a unique, system-generated numeric ID to your site. We use this ID for some back-end code. You can see this ID in the URL for your site in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+<p>See GSAAdvantage for options to <a href="https://www.gsaadvantage.gov/advantage/s/search.do?q=0:2google+search+appliance">purchase a Google Search Appliance</a>.</p>
 
-<h2>Site Language</h2>
+<h3>Google Site Search</h3>
 
-<p>You chose the language (English or Spanish) for your site when you originally added your site. We'll only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language. If you'd like to edit your site's language, e-mail us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#x55;&#83;&#x41;&#x53;&#101;&#x61;&#114;&#99;&#x68;&#64;&#103;&#115;&#97;&#x2e;&#103;&#111;&#x76;">&#x55;&#x53;&#65;&#x53;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#103;&#x73;&#x61;&#46;&#x67;&#111;&#x76;</a>.</p>
+<p>If you already have (or plan to purchase), Google Site Search, we can accept your <a href="https://developers.google.com/custom-search/json-api/v1/overview">API key</a>. You’ll be responsible for managing traffic levels as this affects the cost (such as $x per 1,000 queries).</p>
 
-<h2>Delete</h2>
+<p>See GSAAdvantage for options to [purchase Google Site Search]
+(https://www.gsaadvantage.gov/advantage/s/search.do?q=0:2google+site+search).</p>
 
-<p>After you've set up a site, you may want to delete it. <strong>Use caution.</strong> This action permanently deletes your site and its associated analytics and indexes. We cannot restore deleted sites.</p>
+<h3>Other Search Indexes</h3>
+
+<p>Most search indexes expose their results as XML. If you have another search index that renders XML, let us know and we’ll work with you to determine if it will work within our system.</p>
 
   </div>
 
   <div class='tags'>
     
     <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-    
-    <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
-    
-    <a href="/tagged/settings"><span class="label label-info">settings</span></a>
     
   </div>
 </article></div>
