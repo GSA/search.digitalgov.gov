@@ -8,14 +8,14 @@ tags: how-to manage-display sidebar govbox related-sites
 
 ## Sidebar (Faceted Navigation)
 
-**Label for Sidebar.** Determine if you want to include a heading for your navigation options. If you want a heading, type your label in the label field. Keep your label consistent with the options you're listing. If you don't want a heading, leave the label field blank.
+**Label for Sidebar.** Determine if you want to include a heading for your navigation options. If you want a heading, type your label in the label field. Keep your label short (15 or fewer characters) and consistent with the options you're listing. If you don't want a heading, leave the label field blank.
 
 * Without heading&mdash;See the sample results page below that shows the navigation options without a heading displayed for a [search on *jobs* on WhiteHouse.gov](http://search.whitehouse.gov/search?affiliate=wh&query=jobs). 
 * With heading&mdash;See the sample results page below that shows the navigation options with a heading, labeled Search, displayed for a [search on *passport* on USA.gov](http://search.usa.gov/search?affiliate=usagov&query=passport).
 
 **On/off options for sidebar.** Select which navigation options you'd like to appear in the left-hand sidebar on your results page. Turn an option on to allow searchers to see it. You may choose at any time to turn an option on or off.
 
-You can type over the text in the Name field to edit an option's display name. Click on the hyperlink in the Source field to update the option's source content. Hover over the icon with three horizontal lines on the left to change the order.
+You can type over the text in the Name field to edit an option's display name. Keep each name short (15 or fewer characters) and consistent with the content you're searching. Click on the hyperlink in the Source field to update the option's source content. Hover over the icon with three horizontal lines on the left to change the order.
 
 ## Modules
 
