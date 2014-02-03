@@ -59,7 +59,6 @@ We'll run a validation check to ensure that no JavaScript is included in your HT
 	&lt;
 	&gt;
 
-
 ***Troubleshooting tip:*** You can implement a drop-down menu using CSS (and without using JavaScript). For more information, read tips from *A List Apart* on [drop-down menus and horizontal style](http://alistapart.com/article/horizdropdowns) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif).
 
 ***Did you know?*** We use device detection to show mobile-friendly search results on mobile phones. (Searchers using tablets and desktop computers see the full, classic header as you set it up above.) We'll automatically use the mobile logo you provide on the [Image Assets](/sites/manual/display-images.html) page. The logo must be less than 56 KB. We recommend it be no wider than 320 pixels. Or, if you don't provide a logo, we'll use the site name you provide on the [Settings](/sites/manual/settings.html) page. 
