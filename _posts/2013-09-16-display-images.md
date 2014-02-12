@@ -18,6 +18,8 @@ Use the Choose File option to upload the logo, if any, that you'd like to appear
 
 Use the Choose File option to upload the logo, if any, that you'd like to appear in the header of your results page *for searchers using mobile phones*. Click on the option, Mark Mobile Logo for Deletion, to delete an uploaded logo.
 
+The optimal size is 100x50 pixels (100 pixels wide and 50 pixels high).
+
 If you don't upload a mobile logo, searchers on mobile phones will simply see the header, *YourSiteName Mobile*.
 
 ## Page Background 
