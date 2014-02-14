@@ -2,10 +2,10 @@
 permalink: /customers/bia.html
 category: quote
 layout: post
-title: " The USASearch tool is awesome. It makes finding..."
+title: "The DigitalGov | Search tool Is Awesome"
 tags: testimonial
 ---
-The USASearch tool is awesome. It makes finding things on our website easier than ever. The results that come back are both quick and relevant. My favorite feature has to be Query Logs. What our users are looking for is now crystal clear, which makes my life way easier. It provides insight into what users want that is sometimes very hard to find. It also allows us to promote the correct content.
+The DigitalGov | Search tool is awesome. It makes finding things on our website easier than ever. The results that come back are both quick and relevant. My favorite feature has to be Query Logs. What our users are looking for is now crystal clear, which makes my life way easier. It provides insight into what users want that is sometimes very hard to find. It also allows us to promote the correct content.
 
 For instance, for several months our most search terms were employment and jobs, so we created a Jobs page and put it right on our homepage. After that the search for those terms dropped dramatically, which means users no longer had to poke and search for Jobs/Employment information because it was right where it needed to be.
 

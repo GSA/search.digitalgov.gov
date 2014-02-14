@@ -2,13 +2,13 @@
 permalink: /customers/gartner.html
 category: quote
 layout: post
-title: "Gartner Case Study Commends USASearch"
+title: "Gartner Case Study Commends DigitalGov | Search"
 tags: testimonial 
 ---
 
-Gartner recently published a very positive case study on USASearch (*[Create Better, Faster Enterprise Search With a Customized Open-Source Option](http://www.gartner.com/DisplayDocument?id=1909916)*, January 2012). In the report, Gartner notes that USASearch addresses the key aspects of designing a search system.
+Gartner recently published a very positive case study on DigitalGov | Search (formerly USASearch), *[Create Better, Faster Enterprise Search With a Customized Open-Source Option](http://www.gartner.com/DisplayDocument?id=1909916)*, January 2012. In the report, Gartner notes that DigitalGov | Search addresses the key aspects of designing a search system.
 
-> Gartner identifies key stages of action in "Your Enterprise Search Project: The Outward Spiral." USASearch addressed them all:
+> Gartner identifies key stages of action in "Your Enterprise Search Project: The Outward Spiral." [DigitalGov | Search] addressed them all:
 > 
 > * *Staffing* the project with experts who had domain knowledge.
 > * *Scoping* the project using those personnel to satisfy search requirements for federal websites.

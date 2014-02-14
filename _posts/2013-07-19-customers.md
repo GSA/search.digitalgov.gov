@@ -3,7 +3,7 @@ permalink: /customers.html
 layout: article
 title: Our Customers
 ---
-We have a proven track record of delivering fast, relevant search results. Over 1,500 government websites currently use USASearch to power their search box and improve their visitors' search experience.
+We have a proven track record of delivering fast, relevant search results. Over 1,500 government websites currently use DigitalGov | Search to power their search box and improve their visitors' search experience.
 
 <table align="center" width="100%">
 <tr>
@@ -49,7 +49,7 @@ We have a proven track record of delivering fast, relevant search results. Over 
 
 ## Testimonials
 
-> We encourage the use of shared services across government agencies and we want to make [WhiteHouse.gov](http://www.whitehouse.gov) an example for others to follow. It would not be possible to match the value of GSA's free search service by procuring or building a custom solution. Previously, we needed to dedicate significant resources to configuring and tuning our internal solution, whereas with USASearch, we can now deploy these resources to enhance the features of and technology supporting the White House website.
+> We encourage the use of shared services across government agencies and we want to make [WhiteHouse.gov](http://www.whitehouse.gov) an example for others to follow. It would not be possible to match the value of GSA's free search service by procuring or building a custom solution. Previously, we needed to dedicate significant resources to configuring and tuning our internal solution, whereas with DigitalGov | Search, we can now deploy these resources to enhance the features of and technology supporting the White House website.
 
 > *&mdash;The White House*
 
@@ -57,7 +57,7 @@ Read more [testimonials](/tagged/testimonial) and [join them](https://search.usa
 
 ## Our History
 
-USASearch got its start when Internet entrepreneur Eric Brewer, whose early research was funded by the Department of Defense, offered to donate a powerful search engine to government. That gift helped accelerate the government's earlier work to create a government-wide portal.
+DigitalGov | Search (formerly USASearch) got its start when Internet entrepreneur Eric Brewer, whose early research was funded by the Department of Defense, offered to donate a powerful search engine to government. That gift helped accelerate the government's earlier work to create a government-wide portal.
 
 In June 2000, President Clinton announced the gift from the Federal Search Foundation, a nonprofit organization established by Brewer, and instructed that an official U.S. web portal be launched within 90 days. USA.gov went online on September 22, 2000 under the name FirstGov.gov with a [prominent search box](http://web.archive.org/web/20001109105200/http://www.firstgov.gov) to allow the public to search across government websites.
 

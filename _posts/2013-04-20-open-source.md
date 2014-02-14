@@ -13,7 +13,7 @@ Since 2010, we've embraced and leveraged open source software to build our site 
 
 Our search service is now a complex system made up of many moving parts, including providing type-ahead search suggestions, serving search results, fetching, indexing, and caching content, and providing analytics.
 
-Each of these parts is compiled into our USASearch codebase and, as we use open source components for our system, we contribute back to the projects.
+Each of these parts is compiled into our codebase and, as we use open source components for our system, we contribute back to the projects.
 
 ## Code in the Open
 
@@ -21,7 +21,7 @@ We recently began to unravel our monolithic codebase so that we can share indivi
 
 We recently released the code for our [Jobs](https://github.com/GSA-OCSIT/jobs_api) and [Recalls](https://github.com/GSA-OCSIT/recalls_api) API servers. They're our first foray into coding in the open. The source code for these API servers is in [our GitHub repo](https://github.com/GSA-OCSIT) and is available for anyone to see and contribute to. 
 
-The data products for this code are also open and available for anyone to consume on our [USASearch.HowTo.gov/Developer](/developer/index.html) hub.
+The data products for this code are also open and available for anyone to consume on our [Developer hub](/developer/index.html).
 
 These two servers and their underlying data now operate outside of our core search codebase.
 
