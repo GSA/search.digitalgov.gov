@@ -4,7 +4,7 @@ layout: post
 title: "How to Add JavaScript for Your Third Party Web Services"
 tags: how-to analytics third-party google-analytics foresee DAP
 ---
-[USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > 3rd Party Tracking
+[DigitalGov | Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > 3rd Party Tracking
 
 Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?
 
@@ -52,7 +52,7 @@ You don't need to upload the full DAP Google Analytics code. You can simply say 
 
 ## ForeSee Tip
 
-Coordinate with your ForeSee representative and USASearch to implement your customer satisfaction survey on your results page. The four general steps follow.
+Coordinate with your ForeSee representative and DigitalGov | Search to implement your customer satisfaction survey on your results page. The four general steps follow.
 
 1. Email us at <USASearch@gsa.gov> to <a href="/sites/manual/cname.html">set up a CNAME</a> for search.{yourdomain}.gov.
 
@@ -70,9 +70,9 @@ Coordinate with your ForeSee representative and USASearch to implement your cust
     * foresee-qualifier.js  
     * foresee-test.js
 
-3. Ask ForeSee to send USASearch your foresee-trigger.js file.
+3. Ask ForeSee to send us your foresee-trigger.js file.
 
-4. USASearch will send you an email to confirm that we've set up your CNAME and installed your foresee-trigger.js file.
+4. We'll send you an email to confirm that we've set up your CNAME and installed your foresee-trigger.js file.
 
 It should look something like the following.
 

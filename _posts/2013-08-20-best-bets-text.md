@@ -4,7 +4,7 @@ layout: post
 title: "How to Highlight Text Best Bets"
 tags: how-to manage-content best-bets
 ---
-[USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > Best Bets: Text
+[DigitalGov | Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > Best Bets: Text
 
 Do you want to promote a specific web page? Create a Text Best Bet.
 

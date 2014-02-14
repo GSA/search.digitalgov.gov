@@ -4,7 +4,7 @@ layout: post
 title: "How to Customize the Font and Colors on Your Results Page"
 tags: how-to manage-display font colors
 ---
-[USASearch](http://usasearch.howto.gov) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Display > Font & Colors
+[DigitalGov | Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Display > Font & Colors
 
 ## Font Family
 

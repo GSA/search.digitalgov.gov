@@ -4,7 +4,7 @@ layout: article
 title: "How It Works"
 ---
 
-USASearch is a hosted site search service provided by the [Office of Citizen Services and Innovative Technologies](http://www.gsa.gov/portal/category/25729), [U.S. General Services Administration](http://www.gsa.gov). You can use USASearch to power the search box on your federal, state, local, tribal, or territorial government website&mdash;at no cost.
+DigitalGov | Search is a hosted site search service provided by the [Office of Citizen Services and Innovative Technologies](http://www.gsa.gov/portal/category/25729), [U.S. General Services Administration](http://www.gsa.gov). You can use DigitalGov | Search to power the search box on your federal, state, local, tribal, or territorial government website&mdash;at no cost.
 
 * We provide a search box that searches across all of your *public-facing* digital content. We support an unlimited number of web pages across multiple domains and we integrate your RSS feeds, tweets, YouTube videos, and Flickr photos.
 * We provide a self-service Admin Center so you can review your search analytics and manage the search experience for your website, including telling us what content you want indexed, setting up the display of your results page, and curating recommendations.
