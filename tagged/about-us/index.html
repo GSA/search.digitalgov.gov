@@ -196,7 +196,7 @@
 
 <p>Our search service is now a complex system made up of many moving parts, including providing type-ahead search suggestions, serving search results, fetching, indexing, and caching content, and providing analytics.</p>
 
-<p>Each of these parts is compiled into our USASearch codebase and, as we use open source components for our system, we contribute back to the projects.</p>
+<p>Each of these parts is compiled into our codebase and, as we use open source components for our system, we contribute back to the projects.</p>
 
 <h2>Code in the Open</h2>
 
@@ -204,7 +204,7 @@
 
 <p>We recently released the code for our <a href="https://github.com/GSA-OCSIT/jobs_api">Jobs</a> and <a href="https://github.com/GSA-OCSIT/recalls_api">Recalls</a> API servers. They're our first foray into coding in the open. The source code for these API servers is in <a href="https://github.com/GSA-OCSIT">our GitHub repo</a> and is available for anyone to see and contribute to.</p>
 
-<p>The data products for this code are also open and available for anyone to consume on our <a href="/developer/index.html">USASearch.HowTo.gov/Developer</a> hub.</p>
+<p>The data products for this code are also open and available for anyone to consume on our <a href="/developer/index.html">Developer hub</a>.</p>
 
 <p>These two servers and their underlying data now operate outside of our core search codebase.</p>
 
@@ -273,7 +273,7 @@
 <p>As I contemplated how doomed I would be should traffic levels increase much more, I remember wondering to myself, "How does Google deal with all that data?" The answer came to me in the form of the Google File System (GFS) paper and later the MapReduce paper, both from Google. It dawned on me that because Google was forced to solve a much larger problem, they had come up with an elegant solution for a whole range of more modest data problems running on commodity hardware. But it wouldn't be until 2010 that I would get to work with this technology firsthand.</p>
 
 
-<p>As I wrote in an <a href="/blog/adopting-hadoop.html" target="_blank">earlier article</a>, I started re-architecting <a href="http://usasearch.howto.gov">USASearch</a>, the U.S. government's search system, in 2009 based on a solution stack of free, open source software including Ruby on Rails, Solr, and MySQL. A wave of déja vu hit me as I started worrying about what to do with the growing mountain of data piling up in MySQL and our increasing need to analyze it in different ways. I had heard that a new company called Cloudera, founded by some big data people from Yahoo!, Google, and Facebook, was making Hadoop available for the masses in a reliable distribution, much in the same way that RedHat did for Linux. Curiosity got the best of me and I bought the newly minted <em>Hadoop: The Definitive Guide</em> from O'Reilly. The most insightful part of the book to me was the very first sentence. It's a quote from Grace Hopper: "In pioneer days, they used oxen for heavy pulling, and when one ox couldn't budge a log, they didn't try to grow a bigger ox." I didn't want to grow a bigger server; I wanted to harness a bunch of small servers together to work in unison. The more I learned the more curious I got, so I started reading more. And that's when I hit my first roadblock.</p>
+<p>As I wrote in an <a href="/blog/adopting-hadoop.html" target="_blank">earlier article</a>, I started re-architecting DigitalGov | Search, the U.S. government's search system, in 2009 based on a solution stack of free, open source software including Ruby on Rails, Solr, and MySQL. A wave of déja vu hit me as I started worrying about what to do with the growing mountain of data piling up in MySQL and our increasing need to analyze it in different ways. I had heard that a new company called Cloudera, founded by some big data people from Yahoo!, Google, and Facebook, was making Hadoop available for the masses in a reliable distribution, much in the same way that RedHat did for Linux. Curiosity got the best of me and I bought the newly minted <em>Hadoop: The Definitive Guide</em> from O'Reilly. The most insightful part of the book to me was the very first sentence. It's a quote from Grace Hopper: "In pioneer days, they used oxen for heavy pulling, and when one ox couldn't budge a log, they didn't try to grow a bigger ox." I didn't want to grow a bigger server; I wanted to harness a bunch of small servers together to work in unison. The more I learned the more curious I got, so I started reading more. And that's when I hit my first roadblock.</p>
 
 
 <p>I think people who have been working with Hadoop technologies for years and years sometimes forget just how rich and diverse the big data software ecosystem has become, and how daunting it can be to folks approaching it for the first time. When people at the Meetups say they are evaluating solutions to their data scaling problem, the answers they hear sound something like this: "Just use Hadoop Hive Pig Mahout Avro HBase Cassandra Oozie Sqoop Flume ZooKeeper Cascading NoSQL RCFile. Oh, almost forgot…cloud."</p>
@@ -335,7 +335,7 @@
 
 <p><a href="http://pivotallabs.com/talks/150-hadoop-for-rubyists"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_luckbhCakH1qid15q.png" alt="Hadoop for Rubyists video" /></a></p>
 
-<p><a href="http://pivotallabs.com/talks/150-hadoop-for-rubyists">Listen to Loren</a>, USASearch's senior technical architect, as he discusses how USASearch leveraged our existing Ruby codebase by building Hadoop Map/Reduce jobs using Hive and plugging in our own Ruby mappers/reducers.</p>
+<p><a href="http://pivotallabs.com/talks/150-hadoop-for-rubyists">Listen to Loren</a>, DigitalGov | Search's senior technical architect, as he discusses how we leveraged our existing Ruby codebase by building Hadoop Map/Reduce jobs using Hive and plugging in our own Ruby mappers/reducers.</p>
 
     </div>
 
@@ -368,7 +368,7 @@
       <p><strong>Background</strong></p>
 
 
-<p>The United States federal government's <a href="http://usasearch.howto.gov">USASearch program</a> provides hosted search services for government affiliate organizations, shares APIs and web services, and operates the government's official search engine at Search.USA.gov. The USASearch affiliate program offers free search services to any federal, state, local, tribal, or territorial government agency. Several hundred websites make use of this service, ranging from the smallest municipality to larger federal sites like <a href="http://weather.gov" target="_blank">weather.gov</a> and <a href="http://usa.gov" target="_blank">usa.gov</a>. The USASearch program leverages the Bing API as the basis for its web results and then augments the user search experience by providing a variety of government-centric information such as related search topics and highlighted editorial content. The entire system is comprised of a suite of open-source tools and resources, including Apache Solr/Lucene, OpenCalais, and Apache Hadoop. Of these, our usage of Hadoop is the most recent. We began using <a href="http://www.cloudera.com/hadoop/" target="_blank">Cloudera's Distribution including Apache Hadoop</a> (<a href="http://www.cloudera.com/hadoop" target="_blank">CDH3</a>) for the first time in the Fall, and since then we've seen our usage grow every month— not just in scale, but in scope as well. But before highlighting everything the USASearch program is doing with Hadoop today, I should explain why we began using it in the first place.</p>
+<p>The United States federal government's DigitalGov | Search program provides hosted search services for government affiliate organizations, shares APIs and web services, and operates the government's official search engine at Search.USA.gov. DigitalGov | Search offers free search services to any federal, state, local, tribal, or territorial government agency. Several hundred websites make use of this service, ranging from the smallest municipality to larger federal sites like <a href="http://weather.gov" target="_blank">weather.gov</a> and <a href="http://usa.gov" target="_blank">usa.gov</a>. DigitalGov | Search leverages the Bing API as the basis for its web results and then augments the user search experience by providing a variety of government-centric information such as related search topics and highlighted editorial content. The entire system is comprised of a suite of open-source tools and resources, including Apache Solr/Lucene, OpenCalais, and Apache Hadoop. Of these, our usage of Hadoop is the most recent. We began using <a href="http://www.cloudera.com/hadoop/" target="_blank">Cloudera's Distribution including Apache Hadoop</a> (<a href="http://www.cloudera.com/hadoop" target="_blank">CDH3</a>) for the first time in the Fall, and since then we've seen our usage grow every month— not just in scale, but in scope as well. But before highlighting everything DigitalGov | Search is doing with Hadoop today, I should explain why we began using it in the first place.</p>
 
 
 <p><strong>Phase 1: Search analytics</strong></p>
@@ -398,7 +398,7 @@
 <p><strong>Phase 2: Feedback loop</strong></p>
 
 
-<p>The result of all this analysis in Hive shows up not just in various analytics dashboards, but as part of the search experience on many government websites, too. For example, compare the different type-ahead suggestions for ‘<strong>gran</strong>' on <a href="http://nps.gov/">nps.gov</a> and <a>usa.gov</a>. Both sites use the same USASearch backend system, but the suggestions differ completely. We use Hadoop to help us generate contextually relevant and timely search suggestions for hundreds of government sites like this.</p>
+<p>The result of all this analysis in Hive shows up not just in various analytics dashboards, but as part of the search experience on many government websites, too. For example, compare the different type-ahead suggestions for ‘<strong>gran</strong>' on <a href="http://nps.gov/">nps.gov</a> and <a>usa.gov</a>. Both sites use the same DigitalGov | Search backend system, but the suggestions differ completely. We use Hadoop to help us generate contextually relevant and timely search suggestions for hundreds of government sites like this.</p>
 
 
 <p><img alt="Image showing different type-ahead suggestions on NPS.gov and USA.gov" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_lle73ymed31qid15q.png"/></p>
