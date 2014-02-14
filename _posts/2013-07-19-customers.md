@@ -28,6 +28,7 @@ We have a proven track record of delivering fast, relevant search results. Over 
 <tr><td>&nbsp;</td></tr>
 <tr>
 <td valign="top" align="center"><a href="https://portal.ehawaii.gov/page/search/?q=jobs"><img alt="Hawaii" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-hawaii.png"></a><br><strong>Hawaii</strong></td>
+<td valign="top" align="center"><a href="http://www.idaho.gov/home/search_results.html?query=jobs"><img alt="Idaho" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-idaho.png"></a><br><strong>Idaho</strong></td>
 <td valign="top" align="center"><a href="http://www.kansas.gov/search/?affiliate=kansas.gov&query=jobs"><img alt="Kansas" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-kansas.png"></a><br><strong>Kansas</strong></td>
 <td valign="top" align="center"><a href="http://kentucky.gov/Pages/search.aspx?terms=jobs&affiliateId=GENERAL"><img alt="Kentucky" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-kentucky.png"></a><br><strong>Kentucky</strong></td>
 <td valign="top" align="center"><a href="http://search.usa.gov/search?affiliate=www.louisiana.gov&query=jobs"><img alt="Louisiana" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-louisiana.png"></a><br><strong>Louisiana</strong></td>
