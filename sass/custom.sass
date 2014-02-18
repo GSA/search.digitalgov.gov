@@ -20,15 +20,21 @@ body
   > .navbar
     .brand
       float: left
-      .usa
-        color: #5284C2
+      padding: 10px 15px
+      .digital, .search
+        color: #0e565d
+        margin-left: 3px
+      .gov
+        color: #ef3c39
+        font-style: italic
       .search
-        color: #FF9232
+        //border-left: 1px solid #999999
+        padding-left: 3px
     #search-form
       margin: 5px 0
     #search-query
       @include border-left-radius(0)
-      width: 370px
+      width: 320px
     #search-button
       @include border-right-radius
       background:
