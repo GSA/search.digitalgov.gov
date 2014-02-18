@@ -19,7 +19,7 @@ Each of these parts is compiled into our codebase and, as we use open source com
 
 We recently began to unravel our monolithic codebase so that we can share individual pieces of our code. To borrow the phrase from Gov.UK, we're now ***coding in the open***. 
 
-We recently released the code for our [Jobs](https://github.com/GSA-OCSIT/jobs_api) and [Recalls](https://github.com/GSA-OCSIT/recalls_api) API servers. They're our first foray into coding in the open. The source code for these API servers is in [our GitHub repo](https://github.com/GSA-OCSIT) and is available for anyone to see and contribute to. 
+We recently released the code for our [Jobs](https://github.com/GSA/jobs_api) and [Recalls](https://github.com/GSA/recalls_api) API servers. They're our first foray into coding in the open. The source code for these API servers is in [our GitHub repo](https://github.com/GSA-OCSIT) and is available for anyone to see and contribute to. 
 
 The data products for this code are also open and available for anyone to consume on our [Developer hub](/developer/index.html).
 

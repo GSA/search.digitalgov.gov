@@ -301,9 +301,9 @@ Below are three sample JSON responses for food, product, and car safety recalls.
 
 ## Open Source Code
 
-The server code that runs this API is on Github. If you're a Rails developer, fork our [Recalls Server API](https://github.com/GSA-OCSIT/recalls_api) repo to add features (such as additional datasets) or fix bugs.
+The server code that runs this API is on Github. If you're a Rails developer, fork our [Recalls Server API](https://github.com/GSA/recalls_api) repo to add features (such as additional datasets) or fix bugs.
 
-Better yet, send us a [pull request](https://github.com/GSA-OCSIT/recalls_api/pulls) to contribute your changes to our project and improve this API for everyone who is using it.
+Better yet, send us a [pull request](https://github.com/GSA/recalls_api/pulls) to contribute your changes to our project and improve this API for everyone who is using it.
 
 ## Feedback
 
