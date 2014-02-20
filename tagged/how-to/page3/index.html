@@ -84,129 +84,59 @@
       
       <span>Last updated on:</span>
       
-      <a href="/sites/manual/rss.html">
+      <a href="/sites/manual/collections.html">
         <time datetime="2013-08-21">August 21, 2013</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/sites/manual/rss.html">How to Add Your RSS Feeds to Our Index</a>
+      <a href="/sites/manual/collections.html">How to Create Collections Within Our Index</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov | Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > RSS</p>
+      <p><a href="/index.html">DigitalGov | Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Collections</p>
 
-<p>Would you like searchers to be able to search your news or multimedia content? Would you like them to be able to narrow results by date?</p>
+<p>Would you like searchers to be able to narrow results to a specific subset of content within your site or on another site? You can create a collection across any set of domains, subdomains, or subfolders.</p>
 
-<p>Tell us the locations and names of your RSS feeds. We index all new and updated content on your feeds within minutes.</p>
+<h2>Step 1. Create a Collection</h2>
 
-<h2>Step 1. Tell Us About Your RSS Feeds</h2>
+<p>Enter a name for the collection (e.g., FAQs).</p>
 
-<p>We love feeds! Tell us about <em>all</em> of your RSS feeds, even if you don't opt to show them in step 2 below. Feeds are the fastest and most reliable way for us to learn about your new and updated content.</p>
+<p>Enter the URLs for the domains, subdomains, or subfolders that make up this collection. Start each URL prefix with http:// and end it in a trailing slash () to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov).</p>
 
-<p>Select the option to add a new RSS feed.</p>
+<p>You cannot specify URLs for individual web pages.</p>
 
-<h3>Name</h3>
+<h2>Step 2. Opt to Show in Sidebar</h2>
 
-<p>Create a name for the feed. Within this 'bucket' you can list a single RSS feed or many feeds. For example, you can opt to list all of your agency's press releases separately (such as Police News, Fire News, EMS News, etc.) or you can list all three under one general name (such as News).</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/rss.png" alt="Add an RSS Feed" /></p>
-
-<h3>Feed type</h3>
-
-<p>Select the type of feed. The default option is RSS (for text content like press releases or blogs). Change it to <a href="http://www.rssboard.org/media-rss">media RSS</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> for multimedia content like images and videos.</p>
-
-<p>Each item within a RSS feed must include a title, link, description, and publication date.</p>
-
-<p>Each item within a media RSS feed must also include both a <a href="http://www.rssboard.org/media-rss#media-content">media:content URL</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to specify a direct URL to the media object and a <a href="http://www.rssboard.org/media-rss#media-thumbnails">media:thumbnail URL</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to specify a URL to the object's thumbnail.</p>
-
-<p>Any items missing a required element won't display in your search results.</p>
-
-<h3>Sample RSS Item with All Required Elements</h3>
-
-<pre><code>&lt;item&gt;
-&lt;title&gt;
-Statement from Agriculture Secretary Tom Vilsack Regarding World Organization for Animal Health (OIE) Upgrade of United States&amp;apos; BSE Risk Status
-&lt;/title&gt;
-&lt;pubDate&gt;May 29, 2013 00:00:00 CDT&lt;/pubDate&gt;
-&lt;link&gt;
-http://www.usda.gov/wps/portal/usda/usdahome?contentid=2013/05/0106.xml&amp;contentidonly=true
-&lt;/link&gt;
-&lt;description&gt;
-WASHINGTON, May 29, 2013–Agriculture Secretary Tom Vilsack made the following statement about notification received today from the World Organization for Animal Health (OIE) upgrading the United States&amp;apos; risk classification for bovine spongiform encephalopathy (BSE) to negligible risk:
-&lt;/description&gt;
-&lt;/item&gt;
-</code></pre>
-
-<h3>Sample Media RSS Item with All Required Elements</h3>
-
-<pre><code>&lt;item&gt;
-&lt;title type="html"&gt;
-&lt;![CDATA[ Great Lakes Beach Health ]]&gt;
-&lt;/title&gt;
-&lt;link&gt;
-http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
-&lt;/link&gt;
-&lt;guid&gt;
-http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
-&lt;/guid&gt;
-&lt;pubDate&gt;Fri, 24 May 2013 00:00:00 EDT&lt;/pubDate&gt;
-&lt;media:description type="html"&gt;
-&lt;![CDATA[
-&lt;p&gt;As schools close for the year and summer weather beckons, many recreationalists head to the Great Lakes' public beaches. However, these coastal areas can become     contaminated with disease-causing bacteria that threaten public health, disrupt water   recreation, and pay a toll on the Great Lakes econ
-]]&gt;
-&lt;![CDATA[
-omies that depend on summer tourism.&lt;/p&gt;
- &lt;p&gt;The U.S. Geological Survey &lt;a href="http://greatlakesbeaches.usgs.gov/index.html"&gt;Great Lakes Beach Health&lt;/a&gt; initiative provides science-based information and methods that help beach managers make more accurate beach closure and advisory decisions, &lt;a href="http://www.usgs.gov/newsroom/article.asp?ID=3063#.UZv3pSs_87A"&gt;preventing unnecessary beach closures&lt;/a&gt; while protecting public health.&lt;/p&gt;
-]]&gt;
-&lt;/media:description&gt;
-&lt;media:thumbnail url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/thumbs/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
-&lt;media:content type="" url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/large/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
-&lt;/item&gt;
-</code></pre>
-
-<h2>Step 2. Opt to Show as a GovBox, in the Sidebar, or Both</h2>
-
-<p>Allow searchers to see inline results for the three most recent, relevant RSS results <em>across all of your RSS feeds</em> by turning on the News GovBox on the <a href="/sites/manual/display-overview.html">Display Overview</a> page. You can also edit the default title, News, on the Display Overview page.</p>
-
-<p>Allow searchers to see narrow results to a specific feed in the left-hand column of the results page by turning on the option to show in the Sidebar on the <a href="/sites/manual/display-overview.html">Display Overview</a> page. To ensure searchers don't encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a sidebar option.</p>
+<p>Click on the <a href="/sites/manual/display-overview.html">Display Overview</a> page. Turn on your collection to allow searchers to see it as a navigation option in the left-hand column of the results page.</p>
 
 <h2>Step 3. Check Your Search Results Page</h2>
 
-<p><strong>GovBox.</strong> If you opted to show your RSS feed(s) as a GovBox, searchers will see a News GovBox. This GovBox will highlight the three most recent, relevant results across all of your RSS feeds.</p>
+<p>Searchers will see an option to narrow their search results to pages in this collection in the left-hand navigation on the results page.</p>
 
-<p><strong>Sidebar.</strong> If you opted to show your RSS feed(s) in the sidebar, searchers can narrow their results to see your RSS-based results only.</p>
-
-<p>Within the RSS-based results, searchers can opt to limit results to the last hour, day, week, month, or year, or they can set a custom date range. They also can sort results in descending order by relevance (best match first) or date (most recent first).</p>
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-2.png" alt="Collection on the search results page" /></p>
 
 <hr />
 
-<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
+<p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your collections.</p>
 
-<ul>
-<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> (Atom &amp; RSS)</li>
-<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> and <a href="http://www.rssboard.org/rss-validator/">validator</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /></li>
-<li><a href="http://atomenabled.org/developers/syndication/">Atom syndication format</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /></li>
-</ul>
+<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your collection.</p>
 
+<p>Start with the standard form snippet on the <a href="/sites/manual/code.html">Code Snippets</a> page under the Activate Search tab. Change the form action to <code>action="http://search.usa.gov/search/docs</code> and add the following line to limit the results to your collection.</p>
 
-<p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="https://search.usa.gov/sites/">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don't need to coordinate with us.</p>
+<p><code>&lt;input type="hidden" name="dc" value="###"&gt;</code></p>
 
-<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your feed.</p>
+<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
 
-<p>Start with the standard form snippet on the <a href="/sites/manual/code.html">Code Snippets</a> page under the Activate Search tab. Change the form action to <code>action="http://search.usa.gov/search/news</code> and add the following line to limit the results to your feed.</p>
+<p>See the sample search box below that is limited to news releases in <a href="http://www.ftc.gov/news-events/press-releases">FTC.gov's Newroom</a> for a search on <em>privacy</em>.</p>
 
-<p><code>&lt;input type="hidden" name="channel" value="###"&gt;</code></p>
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-3.png" alt="FTC.gov Newsroom search box" /><br/>
+<em>Newsroom page with a search box that is limited to news</em></p>
 
-<p>The value is the number for your feed ID, which is visible in the URL when you edit your feed in the Admin Center.</p>
-
-<p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your RSS feeds.</p>
-
-<p><strong><em>Did you know?</em></strong> When you <a href="/sites/manual/youtube.html">provide us with your YouTube channel</a>, we'll automatically index the RSS feed for your YouTube channel.</p>
-
-<p><strong><em>Did you know?</em></strong> For any feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> property, searchers may narrow results by these facets in the <a href="/sites/manual/display-overview.html">sidebar</a> on the results page.</p>
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-4.png" alt="FTC.gov search results page" /><br/>
+<em>Search results page that returns news results only</em></p>
 
     </div>
 
@@ -216,7 +146,7 @@ omies that depend on summer tourism.&lt;/p&gt;
       
       <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
       
-      <a href="/tagged/rss"><span class="label label-info">rss</span></a>
+      <a href="/tagged/collections"><span class="label label-info">collections</span></a>
       
     </div>
   </article>
@@ -285,92 +215,6 @@ omies that depend on summer tourism.&lt;/p&gt;
       <a href="/tagged/youtube"><span class="label label-info">youtube</span></a>
       
       <a href="/tagged/videos"><span class="label label-info">videos</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/sites/manual/site-overview.html">
-        <time datetime="2013-08-20">August 20, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/sites/manual/site-overview.html">How to View a Snapshot of What's Happening on Your Site Today</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov | Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Site Overview</p>
-
-<p>The Site Overview page provides a snapshot of what has been happening on your site in the past day or so.</p>
-
-<p>You can also opt to receive this snapshot as a daily email by clicking on the envelope icon next to your selected site.</p>
-
-<h2>Top Queries</h2>
-
-<p>Reports on the top 10 searches done by searchers on your site. If you don't have any searches, you'll see a message that there aren't enough query data available. These typically don't require any action as they don't change much from day-to-day.</p>
-
-<p>Note that the data are processed to present "real" searches by humans (that is, the data are de-duped by IP address to remove bot traffic and other noise).</p>
-
-<h2>Top Clicked URLs</h2>
-
-<p>Reports on the top 10 pages that were clicked thru by searchers on your search results page. If you don't have any clicks, you'll see a message that there aren't enough click data available. These typically don't require any action as they don't change much from day-to-day.</p>
-
-<h2>Trending URLs</h2>
-
-<p>If there are any pages that are trending, they'll appear here. Reports on up to the top 10 changing URLs that were <em>visited by users on your website</em>.</p>
-
-<p>Use this report to identify newly popular pages on your website. Investigate why pages are trending, if the reason is not immediately apparent.</p>
-
-<p>Note that you'll only see this list of trending URLs if you have our <a href="/sites/manual/code.html">Javascript snippet</a> on your web pages. Data are updated every few minutes so this is near real-time information and you may see URLs come and go quickly.</p>
-
-<h2>Trending Queries</h2>
-
-<p>If there are any queries that are trending, they'll appear here. Reports on up to the top 10 changing search terms with the greatest <em>gain</em> between yesterday and today.</p>
-
-<p>Use this report to identify newly popular terms. Create new content or update existing content to ensure it's current, accurate, and complete.</p>
-
-<h2>Queries with No Results</h2>
-
-<p>If there are any terms that returned no results, they'll appear here. Reports on up to the top 10 queries with no results.</p>
-
-<p>For example, on one agency's website in October 2012, a dozen searches for <em>frostline</em> returned no results. The frost line&mdash;also known as depth of frost or freezing&mdash;is the depth to which the groundwater in soil is expected to freeze. The agency's pages on the topic referred to this concept as <em>depth of freezing</em>.</p>
-
-<p>Use this alert about results data to help searchers find your content by adding a <a href="/sites/manual/best-bets-text.html">Best Bet</a>, updating your existing web pages, or both.</p>
-
-<h2>Top Queries with Low Click Thrus</h2>
-
-<p>If there are any frequently searched terms that returned results but didn't result in a click at least 20% of the time, they'll appear here. Reports on up to the top 10 searches with low click thru rates.</p>
-
-<p>Use this alert about low click thrus to identify issues with coverage. You may opt to create a <a href="/sites/manual/best-bets-text.html">Best Bet: Text</a> or <a href="/sites/manual/best-bets-graphics.html">Best Bet: Graphics</a>, add pages that may be missing from the results, or do both to improve recall. Or, you may opt to incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results.</p>
-
-<h2>This Month's Totals to Date</h2>
-
-<p>Reports on the total number of queries and clicks for the present month-to-date. A click  is recorded each time a searcher clicks on a results link.</p>
-
-<p>A graph of your site's total search queries over time is also presented to provide an overview of how your traffic has trended from the time your agency started using our service (but no further back than 2010). Hover over the trend line to see the total number of queries in previous months.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> The <a href="/sites/manual/monthly-reports.html">Monthly Report</a> gives a bird's-eye view of the number of <a href="/sites/manual/queries.html">queries</a> and <a href="/sites/manual/clicks.html">clicks</a> each month.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
-      
-      <a href="/tagged/site-overview"><span class="label label-info">site-overview</span></a>
       
     </div>
   </article>
@@ -469,6 +313,92 @@ omies that depend on summer tourism.&lt;/p&gt;
       <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
       
       <a href="/tagged/best-bets"><span class="label label-info">best-bets</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
+      <a href="/sites/manual/site-overview.html">
+        <time datetime="2013-08-20">August 20, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/sites/manual/site-overview.html">How to View a Snapshot of What's Happening on Your Site Today</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov | Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Site Overview</p>
+
+<p>The Site Overview page provides a snapshot of what has been happening on your site in the past day or so.</p>
+
+<p>You can also opt to receive this snapshot as a daily email by clicking on the envelope icon next to your selected site.</p>
+
+<h2>Top Queries</h2>
+
+<p>Reports on the top 10 searches done by searchers on your site. If you don't have any searches, you'll see a message that there aren't enough query data available. These typically don't require any action as they don't change much from day-to-day.</p>
+
+<p>Note that the data are processed to present "real" searches by humans (that is, the data are de-duped by IP address to remove bot traffic and other noise).</p>
+
+<h2>Top Clicked URLs</h2>
+
+<p>Reports on the top 10 pages that were clicked thru by searchers on your search results page. If you don't have any clicks, you'll see a message that there aren't enough click data available. These typically don't require any action as they don't change much from day-to-day.</p>
+
+<h2>Trending URLs</h2>
+
+<p>If there are any pages that are trending, they'll appear here. Reports on up to the top 10 changing URLs that were <em>visited by users on your website</em>.</p>
+
+<p>Use this report to identify newly popular pages on your website. Investigate why pages are trending, if the reason is not immediately apparent.</p>
+
+<p>Note that you'll only see this list of trending URLs if you have our <a href="/sites/manual/code.html">Javascript snippet</a> on your web pages. Data are updated every few minutes so this is near real-time information and you may see URLs come and go quickly.</p>
+
+<h2>Trending Queries</h2>
+
+<p>If there are any queries that are trending, they'll appear here. Reports on up to the top 10 changing search terms with the greatest <em>gain</em> between yesterday and today.</p>
+
+<p>Use this report to identify newly popular terms. Create new content or update existing content to ensure it's current, accurate, and complete.</p>
+
+<h2>Queries with No Results</h2>
+
+<p>If there are any terms that returned no results, they'll appear here. Reports on up to the top 10 queries with no results.</p>
+
+<p>For example, on one agency's website in October 2012, a dozen searches for <em>frostline</em> returned no results. The frost line&mdash;also known as depth of frost or freezing&mdash;is the depth to which the groundwater in soil is expected to freeze. The agency's pages on the topic referred to this concept as <em>depth of freezing</em>.</p>
+
+<p>Use this alert about results data to help searchers find your content by adding a <a href="/sites/manual/best-bets-text.html">Best Bet</a>, updating your existing web pages, or both.</p>
+
+<h2>Top Queries with Low Click Thrus</h2>
+
+<p>If there are any frequently searched terms that returned results but didn't result in a click at least 20% of the time, they'll appear here. Reports on up to the top 10 searches with low click thru rates.</p>
+
+<p>Use this alert about low click thrus to identify issues with coverage. You may opt to create a <a href="/sites/manual/best-bets-text.html">Best Bet: Text</a> or <a href="/sites/manual/best-bets-graphics.html">Best Bet: Graphics</a>, add pages that may be missing from the results, or do both to improve recall. Or, you may opt to incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results.</p>
+
+<h2>This Month's Totals to Date</h2>
+
+<p>Reports on the total number of queries and clicks for the present month-to-date. A click  is recorded each time a searcher clicks on a results link.</p>
+
+<p>A graph of your site's total search queries over time is also presented to provide an overview of how your traffic has trended from the time your agency started using our service (but no further back than 2010). Hover over the trend line to see the total number of queries in previous months.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> The <a href="/sites/manual/monthly-reports.html">Monthly Report</a> gives a bird's-eye view of the number of <a href="/sites/manual/queries.html">queries</a> and <a href="/sites/manual/clicks.html">clicks</a> each month.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
+      
+      <a href="/tagged/site-overview"><span class="label label-info">site-overview</span></a>
       
     </div>
   </article>
@@ -726,7 +656,7 @@ omies that depend on summer tourism.&lt;/p&gt;
 
 <h2>Site Handle</h2>
 
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as nih. If you'd like to edit your site handle, e-mail us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#85;&#x53;&#65;&#83;&#101;&#97;&#x72;&#99;&#104;&#64;&#103;&#x73;&#97;&#x2e;&#103;&#x6f;&#118;">&#x55;&#x53;&#x41;&#x53;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#x67;&#115;&#x61;&#46;&#x67;&#111;&#x76;</a>.</p>
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as nih. If you'd like to edit your site handle, e-mail us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#x55;&#83;&#65;&#x53;&#101;&#97;&#x72;&#99;&#104;&#x40;&#x67;&#x73;&#x61;&#x2e;&#x67;&#111;&#x76;">&#85;&#x53;&#65;&#x53;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#103;&#x73;&#x61;&#46;&#103;&#x6f;&#118;</a>.</p>
 
 <p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/settings.png" alt="Site name and handle on NIH.gov's search results page" /></p>
 
@@ -736,7 +666,7 @@ omies that depend on summer tourism.&lt;/p&gt;
 
 <h2>Site Language</h2>
 
-<p>You chose the language (English or Spanish) for your site when you originally added your site. We'll only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language. If you'd like to edit your site's language, e-mail us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#85;&#x53;&#x41;&#x53;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#103;&#115;&#x61;&#x2e;&#x67;&#x6f;&#118;">&#85;&#83;&#65;&#x53;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#103;&#x73;&#x61;&#x2e;&#103;&#111;&#x76;</a>.</p>
+<p>You chose the language (English or Spanish) for your site when you originally added your site. We'll only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language. If you'd like to edit your site's language, e-mail us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#58;&#85;&#x53;&#x41;&#83;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#103;&#115;&#x61;&#x2e;&#x67;&#x6f;&#118;">&#x55;&#83;&#x41;&#x53;&#101;&#97;&#x72;&#99;&#104;&#x40;&#103;&#x73;&#x61;&#46;&#103;&#x6f;&#x76;</a>.</p>
 
 <h2>Delete</h2>
 
@@ -801,7 +731,7 @@ omies that depend on summer tourism.&lt;/p&gt;
 
 <hr />
 
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. E-mail us at <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#x55;&#83;&#x41;&#83;&#101;&#97;&#114;&#99;&#x68;&#x40;&#103;&#x73;&#97;&#x2e;&#103;&#x6f;&#x76;">&#x55;&#83;&#x41;&#83;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#103;&#115;&#97;&#x2e;&#x67;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
+<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. E-mail us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x55;&#x53;&#x41;&#83;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#103;&#x73;&#x61;&#x2e;&#x67;&#111;&#x76;">&#85;&#83;&#65;&#x53;&#101;&#97;&#x72;&#99;&#x68;&#64;&#x67;&#x73;&#97;&#x2e;&#103;&#x6f;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
 
     </div>
 
