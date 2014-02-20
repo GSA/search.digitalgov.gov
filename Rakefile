@@ -10,8 +10,9 @@ gh_repo = 'git@usasearch-github:usasearch/usasearch.github.com.git'
 desc 'setup jekyll site for deployment'
 task :setup do
   rm_r Dir.glob("#{deploy_dir}")
-  system "git clone -b #{gh_pages_branch} --single-branch #{gh_repo} #{deploy_dir}"
+  system "git clone -b #{gh_pages_branch} #{gh_repo} #{deploy_dir}"
   cd "#{deploy_dir}" do
+    system 'git branch -rd origin/source'
     system 'git config user.name USASearch'
     system 'git config user.email "USASearch@gsa.gov"'
   end
@@ -38,7 +39,7 @@ task :deploy => :generate do
     puts "Updating #{gh_pages_branch} branch using SHA: #{current_sha}"
     system 'git add -A'
     system "git commit -m 'Update pages using SHA: #{current_sha.slice(0, 10)}'"
-    #system "git push origin #{gh_pages_branch}"
+    system "git push origin #{gh_pages_branch}"
   end
 end
 
