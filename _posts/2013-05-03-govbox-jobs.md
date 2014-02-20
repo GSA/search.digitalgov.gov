@@ -31,4 +31,4 @@ Otherwise, the Jobs GovBox will return relevant, location- and keyword-matched j
 
 ---
 
- **Did you know?** Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. E-mail us at <USASearch@gsa.gov> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.
+ **Did you know?** Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. E-mail us at <search@support.digitalgov.gov> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.

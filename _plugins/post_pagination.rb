@@ -77,7 +77,7 @@ module Jekyll
 
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), "#{layout}.html")
-      self.data['title'] = "Page #{page_number} of USASearch Blog"
+      self.data['title'] = "Page #{page_number} of DigitalGov Search Blog"
     end
   end
 end

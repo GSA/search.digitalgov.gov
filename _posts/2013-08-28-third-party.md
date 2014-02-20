@@ -54,7 +54,7 @@ You don't need to upload the full DAP Google Analytics code. You can simply say 
 
 Coordinate with your ForeSee representative and DigitalGov | Search to implement your customer satisfaction survey on your results page. The four general steps follow.
 
-1. Email us at <USASearch@gsa.gov> to <a href="/sites/manual/cname.html">set up a CNAME</a> for search.{yourdomain}.gov.
+1. Email us at <search@support.digitalgov.gov> to <a href="/sites/manual/cname.html">set up a CNAME</a> for search.{yourdomain}.gov.
 
 2. Update the files path in your Foresee code to use an absolute path instead of a relative path. 
 

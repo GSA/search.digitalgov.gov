@@ -307,7 +307,7 @@ Better yet, send us a [pull request](https://github.com/GSA/recalls_api/pulls) t
 
 ## Feedback
 
-E-mail us at <USASearch@gsa.gov> with any suggestions about what you'd like to see in the next version of API.
+E-mail us at <search@support.digitalgov.gov> with any suggestions about what you'd like to see in the next version of API.
 
 ## Terms of Use
 

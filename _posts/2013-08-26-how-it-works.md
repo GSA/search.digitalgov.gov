@@ -57,4 +57,4 @@ Browse through our [Go-Live Punch List](/blog/go-live.html) and [How To Manual](
 
 Also be sure to read our [release notes](/tagged/releases) to keep up-to-date with our new features.
 
-Do you have other questions or comments about how our service works? E-mail us at <USASearch@gsa.gov>.
+Do you have other questions or comments about how our service works? E-mail us at <search@support.digitalgov.gov>.
