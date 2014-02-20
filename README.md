@@ -1,4 +1,4 @@
-# USASearch
+# DigitalGov Search
 
 ## How to add a new post
 
