@@ -4,7 +4,7 @@ layout: post
 title: "How to Create Collections Within Our Index"
 tags: how-to manage-content collections
 ---
-[DigitalGov | Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Collections
+[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Collections
 
 Would you like searchers to be able to narrow results to a specific subset of content within your site or on another site? You can create a collection across any set of domains, subdomains, or subfolders.
 

@@ -4,7 +4,7 @@ layout: post
 title: "How to Analyze Your Monthly Reports"
 tags: how-to analytics queries clicks
 ---
-[DigitalGov | Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Monthly Reports
+[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Monthly Reports
 
 The monthly report gives a bird's-eye view of the number of [queries](/sites/manual/queries.html) and [clicks](/sites/manual/clicks.html) each month. 
 
@@ -18,7 +18,7 @@ Data for the total number of queries and clicks. Use this report to find and ana
 
 ## Impressions and Clicks by Module
 
-Detailed data for the total number of impressions and clicks and your clickthru rate (CTR) are presented for each "module" on the search results page. We also provide the average CTR across all DigitalGov | Search customers so you can see how your rate compares to the average rate. The data in the table is sorted in descending order from the most to least number of clicks. 
+Detailed data for the total number of impressions and clicks and your clickthru rate (CTR) are presented for each "module" on the search results page. We also provide the average CTR across all DigitalGov Search customers so you can see how your rate compares to the average rate. The data in the table is sorted in descending order from the most to least number of clicks. 
 
 Use this report to inform which [modules you opt to display](/sites/manual/display-overview.html).
 

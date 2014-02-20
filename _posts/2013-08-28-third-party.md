@@ -4,7 +4,7 @@ layout: post
 title: "How to Add JavaScript for Your Third Party Web Services"
 tags: how-to analytics third-party google-analytics foresee DAP
 ---
-[DigitalGov | Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > 3rd Party Tracking
+[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > 3rd Party Tracking
 
 Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?
 
@@ -52,7 +52,7 @@ You don't need to upload the full DAP Google Analytics code. You can simply say 
 
 ## ForeSee Tip
 
-Coordinate with your ForeSee representative and DigitalGov | Search to implement your customer satisfaction survey on your results page. The four general steps follow.
+Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.
 
 1. Email us at <search@support.digitalgov.gov> to <a href="/sites/manual/cname.html">set up a CNAME</a> for search.{yourdomain}.gov.
 

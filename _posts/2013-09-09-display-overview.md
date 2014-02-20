@@ -4,7 +4,7 @@ layout: post
 title: "How to Select the Options that Appear on Your Results Page"
 tags: how-to manage-display sidebar govbox related-sites
 ---
-[DigitalGov | Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Display > Display Overview
+[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Display > Display Overview
 
 ## Sidebar (Faceted Navigation)
 
@@ -43,7 +43,7 @@ You can type over the text in the Name field to edit an option's display name. K
 
 Help visitors find content relevant to their search query that resides on other websites, such as the site for your parent organization or your Spanish-language site. When searchers click on the link to the related site, they see search results for their query on the related site.
 
-Enter the [site handle](/sites/manual/settings.html) for one of your other DigitalGov | Search sites. Enter the text you'd like searchers to see for the link to the related site. Create two entries, one from the first site to the second and vice versa, if you'd like a reciprocal link.
+Enter the [site handle](/sites/manual/settings.html) for one of your other DigitalGov Search sites. Enter the text you'd like searchers to see for the link to the related site. Create two entries, one from the first site to the second and vice versa, if you'd like a reciprocal link.
 
 See, for example, [a link to GobiernoUSA.gov displayed on USA.gov for a search on *venezuela*](http://search.usa.gov/search?query=venezuela&affiliate=usagov).
 

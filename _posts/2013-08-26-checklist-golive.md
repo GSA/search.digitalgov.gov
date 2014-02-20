@@ -1,16 +1,16 @@
 ---
 permalink: /blog/go-live.html
 layout: post
-title: "A Punch List to Go Live with DigitalGov | Search"
+title: "A Punch List to Go Live with DigitalGov Search"
 tags: how-to
 ---
-Your pre-launch checklist will be unique to your agency's workflow, requirements, and deadlines. A typical punch list to go live with DigitalGov | Search follows.
+Your pre-launch checklist will be unique to your agency's workflow, requirements, and deadlines. A typical punch list to go live with DigitalGov Search follows.
 
-## Connect Your Site to DigitalGov | Search
+## Connect Your Site to DigitalGov Search
 
 Most agencies add these two [snippets of code](/sites/manual/code.html) to the template(s) in their content management systems (rather than adding them to individual pages).
 
-<i class="icon-check"></i> **1. Does your search box point to DigitalGov | Search?** Update your search box form code point to our service so that, when users execute a search, they'll see your DigitalGov | Search-hosted results page.
+<i class="icon-check"></i> **1. Does your search box point to DigitalGov Search?** Update your search box form code point to our service so that, when users execute a search, they'll see your DigitalGov Search-hosted results page.
 
 	<form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
 		 <input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /> 

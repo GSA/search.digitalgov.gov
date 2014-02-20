@@ -1,6 +1,6 @@
 ---
 layout: default
-title: DigitalGov | Search Blog
+title: DigitalGov Search Blog
 ---
 
 <!-- begin /blog/index.md content -->

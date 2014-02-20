@@ -6,7 +6,7 @@ title: "Spotlight: Broward County, Florida"
 tags: testimonial
 ---
 
-While DigitalGov | Search is for all levels of government (federal, state, local, tribal, and territorial), most of our customers come from the federal sector. So, we are showcasing a highly-trafficked county site to show how other levels of government successfully leverage our site search service.
+While DigitalGov Search is for all levels of government (federal, state, local, tribal, and territorial), most of our customers come from the federal sector. So, we are showcasing a highly-trafficked county site to show how other levels of government successfully leverage our site search service.
 
 [Broward County, Florida](http://www.broward.org) has a popular web site that serves thousands of multi-lingual users from the Miami metropolitan area.
 
@@ -14,9 +14,9 @@ While DigitalGov | Search is for all levels of government (federal, state, local
 
 We want to thank Rob Nadeau (Web Site Manager for Broward County) for being a good and supportive customer and someone who proactively implements our special features!
 
-Rob offered these kind words about DigitalGov | Search.
+Rob offered these kind words about DigitalGov Search.
 
-> When DigitalGov | Search expanded their affiliate program, [Broward County](http://www.broward.org) was fortunate to be the first County in the nation to participate in the effort. During times when budgets are limited, the partnership monetarily saved the County by not moving to a commercial search solution. As the program evolved to "new" technology and tools, the County and our visitors once again benefited from an ever-growing feature rich program that now offers a more accurate search with speed 9 times faster.
+> When DigitalGov Search expanded their affiliate program, [Broward County](http://www.broward.org) was fortunate to be the first County in the nation to participate in the effort. During times when budgets are limited, the partnership monetarily saved the County by not moving to a commercial search solution. As the program evolved to "new" technology and tools, the County and our visitors once again benefited from an ever-growing feature rich program that now offers a more accurate search with speed 9 times faster.
 > 
 > * a customized look and feel
 > * the ability to immediately boost content to showcase specific pages to appear above the main results
@@ -26,4 +26,4 @@ Rob offered these kind words about DigitalGov | Search.
 > 
 > Thank you for a program that keeps on giving.
 
-Thank you, Rob, and everyone please help us spread the word about DigitalGov | Search to all levels of government.
+Thank you, Rob, and everyone please help us spread the word about DigitalGov Search to all levels of government.

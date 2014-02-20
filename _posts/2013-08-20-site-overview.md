@@ -4,7 +4,7 @@ layout: post
 title: "How to View a Snapshot of What's Happening on Your Site Today"
 tags: how-to analytics dashboard site-overview
 ---
-[DigitalGov | Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Dashboard > Site Overview
+[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Dashboard > Site Overview
 
 The Site Overview page provides a snapshot of what has been happening on your site in the past day or so.
 

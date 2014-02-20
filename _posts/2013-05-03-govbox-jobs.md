@@ -21,7 +21,7 @@ Searchers will also see a direct link to [USAJobs.gov](https://www.usajobs.gov) 
 
 ## State and Local Government 
 
-If your website is a state or local government site that uses both DigitalGov | Search and NeoGov (e.g., Michigan.gov), the Jobs GovBox will return relevant, location- and keyword-matched job openings *across your agency*. 
+If your website is a state or local government site that uses both DigitalGov Search and NeoGov (e.g., Michigan.gov), the Jobs GovBox will return relevant, location- and keyword-matched job openings *across your agency*. 
 
 Searchers will also see a direct link to your NeoGov page for all current job openings specific to your agency, as shown in the sample below for a search on *[jobs](http://search.ci.bloomington.mn.us/search?affiliate=cityofbloomingtonmnsearchresults&query=jobs)* on the City of Bloomington, MN. 
 
