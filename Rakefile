@@ -13,7 +13,7 @@ task :setup do
   system "git clone -b #{gh_pages_branch} #{gh_repo} #{deploy_dir}"
   cd "#{deploy_dir}" do
     system 'git branch -rd origin/source'
-    system 'git config user.name USASearch'
+    system 'git config user.name "DigitalGov Search"'
     system 'git config user.email "USASearch@gsa.gov"'
   end
 end
