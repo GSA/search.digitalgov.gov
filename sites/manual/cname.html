@@ -95,13 +95,16 @@
     <p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these three steps to mask your domain.</p>
 
 <ol>
-<li>E-mail us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#x73;&#x65;&#97;&#114;&#99;&#104;&#x40;&#115;&#x75;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#115;&#101;&#97;&#x72;&#99;&#104;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#103;&#111;&#118;</a> and ask us to mask your domain.</li>
-<li>Create a CNAME in your DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
+<li>E-mail us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x73;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#x69;&#103;&#x69;&#x74;&#97;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;">&#115;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#118;&#x2e;&#x67;&#x6f;&#118;</a> and ask us to mask your domain.</li>
+<li>Create a CNAME in your external DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
 <li>When the setup is complete, change the <a href="/sites/manual/code.html">code for your form</a> action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
 </ol>
 
 
 <hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> Many agencies have both internal and external DNS. Be
+sure to update your <em>external</em> DNS records (step 2) before changing your form code (step 3).</p>
 
 <p><strong><em>Did you know?</em></strong> By default, we set up search.YOURSITE.gov (such as search.nih.gov). If this subdomain is already used by another application, you can request YOURSITEsearch.YOURSITE.gov (such as usdasearch.usda.gov) or another pattern.</p>
 
