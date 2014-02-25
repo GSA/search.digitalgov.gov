@@ -4,17 +4,17 @@ require 'yaml'
 
 deploy_dir = '_deploy'
 current_sha = nil
-gh_pages_branch = 'master'
-gh_repo = 'git@usasearch-github:usasearch/usasearch.github.com.git'
+gh_pages_branch = 'gh-pages'
+gh_repo = 'git@usasearch-github:GSA/search.digitalgov.gov.git'
 
 desc 'setup jekyll site for deployment'
 task :setup do
   rm_r Dir.glob("#{deploy_dir}")
   system "git clone -b #{gh_pages_branch} #{gh_repo} #{deploy_dir}"
   cd "#{deploy_dir}" do
-    system 'git branch -rd origin/source'
+    system 'git branch -rd origin/master'
     system 'git config user.name "DigitalGov Search"'
-    system 'git config user.email "USASearch@gsa.gov"'
+    system 'git config user.email "search@support.digitalgov.gov"'
   end
 end
 
