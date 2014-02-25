@@ -5,18 +5,13 @@
   <title>Posts tagged raw-logs</title>
   <meta name="description" content="">
   <meta name="author" content="">
-
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
   <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
   <!--[if IE 7]>
   <link rel="stylesheet" href="/stylesheets/font-awesome-ie7.min.css">
   <![endif]-->
 
-  <style>
-    body {
-      padding-top: 60px;
-    }
-  </style>
   <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
   <link href="/stylesheets/custom.css" rel="stylesheet">
 
@@ -36,6 +31,7 @@
   <link rel="shortcut icon" href="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/favicon.ico">
   <link rel='alternate' type='application/atom+xml' title='usasearch.howto.gov Atom feed' href='/all.atom' />
 </head>
+
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="navbar-inner">
@@ -45,15 +41,12 @@
         <span class="search">Search</span>
       </a>
       <ul class="nav">
-        <li><a href="/help-desk.html">How It Works</a></li>
-        <li><a href="/customers.html">Our Customers</a></li>
-      </ul>
-      <ul class="nav">
         <li>
-          <form class="form-search" accept-charset="UTF-8" action="http://search.howto.gov/search/news/" id="search-form" method="get">
+          <form class="form-search" accept-charset="UTF-8" action="http://search.usa.gov/search/news/" id="search-form" method="get">
             <input id="affiliate" name="affiliate" type="hidden" value="usasearch"/>
             <input type="hidden" name="channel" value="1745">
             <input type="hidden" name="sort_by" value="r">
+            <input type="hidden" name="m" value="true">
             <div class="input-append">
               <label for="search-query" class="hide">Query</label>
               <input name="query" type="text" autocomplete="off"
@@ -172,37 +165,17 @@ Enter same passphrase again:
 
 <footer class="footer">
   <div class="container">
-    <ul class="footer-links unstyled inline">
-      <li><a href="/developer/index.html">APIs</a></li>
-      <li class="muted">&bull;</li>
-      <li><i class="icon-twitter"></i>&nbsp;<a href="http://www.twitter.com/dg_search">@DG_Search</a></li>
-      <li class="muted">&bull;</li>
-      <li><i class="icon-envelope"></i>&nbsp;<a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a></li>
-      <li class="muted">&bull;</li>
-      <li><i class="icon-phone"></i>&nbsp;202-505-5315</li>
-      <li class="muted">&bull;</li>
-      <li><a href="/tos.html">Terms of Service</a></li>      
-    </ul>
+    <p><a href="mailto:search@support.digitalgov.gov">Email us</a>, call us at 202-505-5315, or follow <a href="http://www.twitter.com/dg_search">@DG_Search</a></p>
     <p> An Official Website of the U.S. Government <br />
-      Sponsored by GSA's <a href="http://www.gsa.gov/portal/category/25729">Office of Citizen
+      Sponsored by <a href="http://www.gsa.gov">GSA</a>'s <a href="http://www.gsa.gov/portal/category/25729">Office of Citizen
       Services &amp; Innovative Technologies</a>
     </p>
     <ul class="footer-links unstyled inline">
-      <li>
-        <a href="http://www.gsa.gov">
-          <img src="http://c566677.r77.cf2.rackcdn.com/logo_footer_gsa.png"
-               alt="GSA.gov logo" id="gsa-logo"></a>
-      </li>
-      <li>
-        <a href="http://www.DigitalGov.gov">
-        <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/footer_dglogo.png"
-             alt="DigitalGov logo" id="digitalgov-logo"></a>
-      </li>
-      <li>
-        <a href="http://www.usa.gov">
-          <img src="http://c566677.r77.cf2.rackcdn.com/logo_footer_usaGov.png"
-               alt="USA.gov logo" id="usagov-logo"></a>
-      </li>
+      <li><a href="http://www.usa.gov">USA.gov</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/tos.html">Terms of Service</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="http://www.digitalgov.gov/about/policies/">Site Policies</a></li>
     </ul>
   </div>
 </footer>
