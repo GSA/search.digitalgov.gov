@@ -87,13 +87,13 @@
 
 <p>Have you ever been frustrated when visiting a web page that doesn't load quickly? Have you ever left a slow web page before it finished loading? You're not alone.</p>
 
-<p>Several recent studies have quantified customers' frustration with slow web pages. Customers now  <a href="http://www.nytimes.com/2012/03/01/technology/impatient-web-users-flee-slow-loading-sites.html">expect results in the blink of an eye</a>. <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> This expection means that your <a href="http://www.aberdeen.com/Aberdeen-Library/5136/RA-performance-web-application.aspx">customers are won or lost in one second</a>. <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> A one second delay in loading a web page equals 11% fewer page views, 16% decrease in customer satisfaction, and 7% loss in conversions.</p>
+<p>Several recent studies have quantified customers' frustration with slow web pages. Customers now  <a href="http://www.nytimes.com/2012/03/01/technology/impatient-web-users-flee-slow-loading-sites.html">expect results in the blink of an eye</a>.&nbsp;<i class="icon-external-link"></i> This expection means that your <a href="http://www.aberdeen.com/Aberdeen-Library/5136/RA-performance-web-application.aspx">customers are won or lost in one second</a>.&nbsp;<i class="icon-external-link"></i> A one second delay in loading a web page equals 11% fewer page views, 16% decrease in customer satisfaction, and 7% loss in conversions.</p>
 
 <h2>Slowness <em>Kills</em> Search Results Pages</h2>
 
 <p>As little time as web sites have to keep users on their pages, search engines have even less time to keep searchers on their results pages. Speed is the primary factor in determining customers' satisfaction with search results.</p>
 
-<p>Google, Microsoft, and Yahoo garner <a href="http://www.comscore.com/Insights/Press_Releases/2013/11/comScore_Releases_October_2013_US_Search_Engine_Rankings">95% of the search market</a>. <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> Google garners two-thirds of the search market. The company's <a href="https://www.google.com/search?q=Google+Gospel+of+Speed">Gospel of Speed</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> motto is one reason why Google garners the majority of the market.</p>
+<p>Google, Microsoft, and Yahoo garner <a href="http://www.comscore.com/Insights/Press_Releases/2013/11/comScore_Releases_October_2013_US_Search_Engine_Rankings">95% of the search market</a>.&nbsp;<i class="icon-external-link"></i> Google garners two-thirds of the search market. The company's <a href="https://www.google.com/search?q=Google+Gospel+of+Speed">Gospel of Speed</a>&nbsp;<i class="icon-external-link"></i> motto is one reason why Google garners the majority of the market.</p>
 
 <p>This gospel has also set a high bar for all search engines. Searchers expect results pages to load very, very quickly.</p>
 
@@ -101,11 +101,11 @@
 
 <p>So, when we established the service's open source architecture in 2010, the first thing we tackled was how to deliver our search results in under one second.</p>
 
-<p>At around the same time, <a href="http://www.github.com">Github</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> was experiencing exponential growth and the company's engineers were blogging about what they did to make Github fast. To get up to speed quickly (yes, bad pun intended), we read their posts.</p>
+<p>At around the same time, <a href="http://www.github.com">Github</a>&nbsp;<i class="icon-external-link"></i> was experiencing exponential growth and the company's engineers were blogging about what they did to make Github fast. To get up to speed quickly (yes, bad pun intended), we read their posts.</p>
 
 <ul>
-<li><a href="https://github.com/blog/530-how-we-made-github-fast">How We Made GitHub Fast</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />, October 20, 2009</li>
-<li><a href="https://github.com/blog/1252-how-we-keep-github-fast">How We Keep GitHub Fast</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" />, September 5, 2012</li>
+<li><a href="https://github.com/blog/530-how-we-made-github-fast">How We Made GitHub Fast</a>&nbsp;<i class="icon-external-link"></i>, October 20, 2009</li>
+<li><a href="https://github.com/blog/1252-how-we-keep-github-fast">How We Keep GitHub Fast</a>&nbsp;<i class="icon-external-link"></i>, September 5, 2012</li>
 </ul>
 
 
@@ -127,13 +127,13 @@
 
 <h3>We Use an Asset Pipeline</h3>
 
-<p>We have many JavaScript and CSS files on our results pages. These "assets" can be large and slow down the loading of our page. So, we use an <a href="http://guides.rubyonrails.org/asset_pipeline.html">asset pipeline</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> to concatenate and compress our JavaScript and CSS assets thereby reducing the number of requests that a browser has to make to render our results page.</p>
+<p>We have many JavaScript and CSS files on our results pages. These "assets" can be large and slow down the loading of our page. So, we use an <a href="http://guides.rubyonrails.org/asset_pipeline.html">asset pipeline</a>&nbsp;<i class="icon-external-link"></i> to concatenate and compress our JavaScript and CSS assets thereby reducing the number of requests that a browser has to make to render our results page.</p>
 
 <p>We also use fingerprinting&mdash;a technique that makes a file's name dependent on its content&mdash;within our asset pipeline. When the content changes, the name changes. For content that is static or that changes infrequently, this naming helps us tell whether two versions of a file are identical. When a filename is unique, browsers keep their own copy of the content. When the content is updated, the fingerprint changes so browsers request a new copy of the content. This approach allows us to maximize our content delivery network.</p>
 
 <h3>We Use a Content Delivery Network</h3>
 
-<p>Our static content (such as scripts and stylesheets) gets served through our <a href="http://www.webopedia.com/TERM/C/CDN.html">content delivery network</a> <img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif" alt="External link" /> provider, currently Akamai. Akamai serves our static content from its server that is geographically closest to the searcher. The closer, the faster.</p>
+<p>Our static content (such as scripts and stylesheets) gets served through our <a href="http://www.webopedia.com/TERM/C/CDN.html">content delivery network</a>&nbsp;<i class="icon-external-link"></i> provider, currently Akamai. Akamai serves our static content from its server that is geographically closest to the searcher. The closer, the faster.</p>
 
 <p>Using a content delivery network also allow us to optimize our service's speed by:</p>
 
