@@ -48,8 +48,6 @@ We have a proven track record of delivering fast, relevant search results. Over 
 </tr>
 </table>
 
-Read some [testimonials](/tagged/testimonial) and [join them](https://search.usa.gov/sites/) today.
-
 ## Our History
 
 DigitalGov Search (formerly USASearch) got its start when Internet entrepreneur Eric Brewer, whose early research was funded by the Department of Defense, offered to donate a powerful search engine to government. That gift helped accelerate the government's earlier work to create a government-wide portal.
