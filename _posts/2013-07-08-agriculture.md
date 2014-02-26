@@ -9,5 +9,5 @@ tags: quote customer-federal
 >&nbsp;  
 > We are able to fully manage the tool and reduce the amount of resources needed to maintain an enterprise-wide search solution across the Department. Our employees and customers expressed immediate satisfaction. We now have the ability to work with our agencies to further the enhancements provided by this technology and to build upon our total web presence.
  
-Department of Agriculture
+Department of Agriculture  
 <http://www.usda.gov>
