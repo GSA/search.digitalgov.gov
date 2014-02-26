@@ -2,7 +2,7 @@
 permalink: /customers/wpb.html
 layout: feature
 title: City of West Palm Beach, Florida
-tags: city-customers
+tags: customer-city
 ---
 <article class="article feature feature-image">
 # City of West Palm Beach, Florida
