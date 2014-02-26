@@ -14,7 +14,7 @@ Data start from the time your agency started using our service (but no further b
 
 ## Monthly Usage Stats
 
-Data for the total number of queries and clicks. Use this report to find and analyze the so-called [short head](http://www.searchtools.com/analysis/long-tail.html) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif) of your most popular search queries and clicks, which are typically the same as your site's [top tasks](http://www.howto.gov/web-content/manage/focus-on-top-tasks). 
+Data for the total number of queries and clicks. Use this report to find and analyze the so-called [short head](http://www.searchtools.com/analysis/long-tail.html)&nbsp;<i class="icon-external-link"></i> of your most popular search queries and clicks, which are typically the same as your site's [top tasks](http://www.howto.gov/web-content/manage/focus-on-top-tasks). 
 
 ## Impressions and Clicks by Module
 
@@ -26,7 +26,7 @@ Use this report to inform which [modules you opt to display](/sites/manual/displ
 
 ## Download Top Queries
 
-View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV (comma-separated values) link to download the list as a text file. Once you've downloaded the CSV file, you can easily [import it  into Excel](http://office.microsoft.com/en-us/excel-help/import-or-export-text-txt-or-csv-files-HP010342598.aspx) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif) or another speadsheet program to analyze the data. 
+View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV (comma-separated values) link to download the list as a text file. Once you've downloaded the CSV file, you can easily [import it  into Excel](http://office.microsoft.com/en-us/excel-help/import-or-export-text-txt-or-csv-files-HP010342598.aspx)&nbsp;<i class="icon-external-link"></i> or another speadsheet program to analyze the data. 
 
 The CSV file contains three columns: (1) query, (2) raw count, and (3) IP-deduped. 
 

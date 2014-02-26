@@ -8,7 +8,7 @@ tags: how-to manage-display images logos
 
 ## Favicon
 
-Provide the URL for your agency's favicon. (A [favicon](http://webdesign.about.com/od/favicon/f/blfaqfavicon1.htm) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif), short for favorites icon, is the small image associated with your website.)
+Provide the URL for your agency's favicon. (A [favicon](http://webdesign.about.com/od/favicon/f/blfaqfavicon1.htm)&nbsp;<i class="icon-external-link"></i>, short for favorites icon, is the small image associated with your website.)
 
 ## Logo 
 

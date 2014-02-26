@@ -31,7 +31,7 @@ Switch to Advanced Mode.
 
 In the first box, enter CSS to customize the header and footer of your search results page. We'll run a validation check to ensure your CSS is valid.
 
-In the second box, enter HTML to customize the header of your search results page. In the third box, enter HTML to customize the footer of your search results page. Be sure to enter [absolute hyperlinks](http://webdesign.about.com/od/beginningtutorials/a/aa040502a.htm) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif), not relative links.
+In the second box, enter HTML to customize the header of your search results page. In the third box, enter HTML to customize the footer of your search results page. Be sure to enter [absolute hyperlinks](http://webdesign.about.com/od/beginningtutorials/a/aa040502a.htm)&nbsp;<i class="icon-external-link"></i>, not relative links.
 
 We'll run a validation check to ensure that no JavaScript is included in your HTML code. We'll also check to ensure no CSS style or link elements are included. To include CSS, specify inline CSS within an opening tag.
 
@@ -50,7 +50,7 @@ We'll run a validation check to ensure that no JavaScript is included in your HT
 
 ---
 
-***Troubleshooting tip:*** You can validate your HTML markup at <http://validator.w3.org/nu/> ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif). On the W3C page, select HTML 4.01 Strict from the Parser drop-down box.
+***Troubleshooting tip:*** You can validate your HTML markup at <http://validator.w3.org/nu/>&nbsp;<i class="icon-external-link"></i>. On the W3C page, select HTML 4.01 Strict from the Parser drop-down box.
 
 ***Troubleshooting tip:*** Your HTML has to be [encoded](http://en.wikipedia.org/wiki/Character_encodings_in_HTML). The most common issues are around the &amp;, &quot;, &lt;, &gt;. They should be input as:
 
@@ -59,7 +59,7 @@ We'll run a validation check to ensure that no JavaScript is included in your HT
 	&lt;
 	&gt;
 
-***Troubleshooting tip:*** You can implement a drop-down menu using CSS (and without using JavaScript). For more information, read tips from *A List Apart* on [drop-down menus and horizontal style](http://alistapart.com/article/horizdropdowns) ![External link](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/external_link.gif).
+***Troubleshooting tip:*** You can implement a drop-down menu using CSS (and without using JavaScript). For more information, read tips from *A List Apart* on [drop-down menus and horizontal style](http://alistapart.com/article/horizdropdowns)&nbsp;<i class="icon-external-link"></i>.
 
 ***Did you know?*** We use device detection to show mobile-friendly search results on mobile phones. (Searchers using tablets and desktop computers see the full, classic header as you set it up above.) We'll automatically use the mobile logo you provide on the [Image Assets](/sites/manual/display-images.html) page. The logo must be less than 56 KB. We recommend it be no wider than 320 pixels. Or, if you don't provide a logo, we'll use the site name you provide on the [Settings](/sites/manual/settings.html) page. 
 
