@@ -1,18 +1,14 @@
 ---
 permalink: /help-desk.html
 layout: article
-title: "How It Works"
+title: "How to Set Up Your Search Box"
 ---
 
-DigitalGov Search is a hosted site search service provided by the [Office of Citizen Services and Innovative Technologies](http://www.gsa.gov/portal/category/25729), [U.S. General Services Administration](http://www.gsa.gov). You can use DigitalGov Search to power the search box on your federal, state, local, tribal, or territorial government website&mdash;at no cost.
+We provide a search box that searches across all of your *public-facing* digital content.
 
-* We provide a search box that searches across all of your *public-facing* digital content. We support an unlimited number of web pages across multiple domains and we integrate your RSS feeds, tweets, YouTube videos, and Flickr photos.
-* We provide a self-service Admin Center so you can review your search analytics and manage the search experience for your website, including telling us what content you want indexed, setting up the display of your results page, and curating recommendations.
-* We maintain a 99.95%-plus uptime and deliver nearly all search results in less than 750 milliseconds. Our system is certified and accredited.
+We support an unlimited number of web pages across multiple domains and we integrate your RSS feeds, tweets, YouTube videos, and Flickr photos.
 
-## How To Set It Up
-
-Browse through our [Go-Live Punch List](/blog/go-live.html) and [How To Manual](/tagged/how-to) for tips on how to configure the search experience for your website.
+Browse through our [Go-Live Punch List](/blog/go-live.html) for some quick tips on how to configure the search experience for your website.
 
 ### Dashboard
 
@@ -55,6 +51,6 @@ Browse through our [Go-Live Punch List](/blog/go-live.html) and [How To Manual](
 * [Code snippets](/sites/manual/code.html)
 * [API instructions](/sites/manual/api.html)
 
-Also be sure to read our [release notes](/tagged/releases) to keep up-to-date with our new features.
+You can also set up a CNAME to [mask your domain](/sites/manual/cname.html), which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov). 
 
-Do you have other questions or comments about how our service works? E-mail us at <search@support.digitalgov.gov>.
+Do you have other questions or comments about how our service works? Email us at <search@support.digitalgov.gov>.
