@@ -1,5 +1,5 @@
 ---
-layout: feature
+layout: post
 title: Broward County, Florida
 category: quote
 tags: quote customer-local
