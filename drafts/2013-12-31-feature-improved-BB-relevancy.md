@@ -1,5 +1,11 @@
-#Send Your Searchers to Desired Content with Improved Phrases
+---
+permalink: /feature/ctr-top-queries.html
+layout: feature
+title: Improved Phrases
+tags: features relevancy
+---
+#Send Your Searchers to Desired Content with Improved Phrase Handling
 
-##"Best Bets" are a to get users to the appropriate content on your web site. Based on the keyword, you can show searchers the ideal content location above the standard search results. We have now improved handling of phrases, you may only show results based on the entire query
+##"Best Bets" are a good way to guide your users to the appropriate content based their keywords. We have implemented improved handling of phrases, so you only show results based on the user's entire query.
 
-![Improved Best Best Phrase Handling](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/feature-improved-BB-relevancy.png "Improved Best Best Phrase Handling")
+![Improved Best Best Phrase Handling](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-improved-phrasing.png "Improved Best Best Phrase Handling")

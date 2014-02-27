@@ -1,5 +1,11 @@
+---
+permalink: /feature/best-bets-trigger.html
+layout: feature
+title: Find out Which Queries Trigger Your Best Bets
+tags: features bestbets
+---
 #Find out Which Queries Trigger Your Best Bets
 
-##If you leverage Best Bets, you may have wondered what queries how often they appear. Now you can easily discover this via with a pie chart. This information can help you leverage different words, phrases, or even tell you that you may not need the best bet at all.
+##You may have wondered what queries made them appear. Now you can easily discover find out with an via a pie chart. This information will help you leverage different words, phrases, or you may see the best bet is not needed at all.
 
-![Pie Chart Rendering of Queries](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/feature-best-bet-trigger.png "Pie Chart Rendering of Queries")
+![Pie Chart Rendering of Queries](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-bb-trigger.png "Pie Chart Rendering of Queries")
