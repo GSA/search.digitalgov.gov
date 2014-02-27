@@ -18,6 +18,9 @@
 
 ## Setup development environment
 
+* Open a Terminal window
+* start homebrew ($ brew doctor)
+
 ### Ruby
 
 You will need [Ruby 1.9.3](http://www.ruby-lang.org/en/downloads).
