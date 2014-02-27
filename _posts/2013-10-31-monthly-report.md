@@ -6,7 +6,7 @@ tags: how-to analytics queries clicks
 ---
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Monthly Reports
 
-The monthly report gives a bird's-eye view of the number of [queries](/sites/manual/queries.html) and [clicks](/sites/manual/clicks.html) each month. 
+The monthly report gives a bird's-eye view of the number of [queries](/sites/manual/queries.html) and [clicks](/sites/manual/clicks.html) each month.
 
 Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.
 
@@ -14,11 +14,11 @@ Data start from the time your agency started using our service (but no further b
 
 ## Monthly Usage Stats
 
-Data for the total number of queries and clicks. Use this report to find and analyze the so-called [short head](http://www.searchtools.com/analysis/long-tail.html)&nbsp;<i class="icon-external-link"></i> of your most popular search queries and clicks, which are typically the same as your site's [top tasks](http://www.howto.gov/web-content/manage/focus-on-top-tasks). 
+Data for the total number of queries and clicks. Use this report to find and analyze the so-called [short head](http://www.searchtools.com/analysis/long-tail.html){% external_link %} of your most popular search queries and clicks, which are typically the same as your site's [top tasks](http://www.howto.gov/web-content/manage/focus-on-top-tasks).
 
 ## Impressions and Clicks by Module
 
-Detailed data for the total number of impressions and clicks and your clickthru rate (CTR) are presented for each "module" on the search results page. We also provide the average CTR across all DigitalGov Search customers so you can see how your rate compares to the average rate. The data in the table is sorted in descending order from the most to least number of clicks. 
+Detailed data for the total number of impressions and clicks and your clickthru rate (CTR) are presented for each "module" on the search results page. We also provide the average CTR across all DigitalGov Search customers so you can see how your rate compares to the average rate. The data in the table is sorted in descending order from the most to least number of clicks.
 
 Use this report to inform which [modules you opt to display](/sites/manual/display-overview.html).
 
@@ -26,9 +26,9 @@ Use this report to inform which [modules you opt to display](/sites/manual/displ
 
 ## Download Top Queries
 
-View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV (comma-separated values) link to download the list as a text file. Once you've downloaded the CSV file, you can easily [import it  into Excel](http://office.microsoft.com/en-us/excel-help/import-or-export-text-txt-or-csv-files-HP010342598.aspx)&nbsp;<i class="icon-external-link"></i> or another speadsheet program to analyze the data. 
+View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV (comma-separated values) link to download the list as a text file. Once you've downloaded the CSV file, you can easily [import it  into Excel](http://office.microsoft.com/en-us/excel-help/import-or-export-text-txt-or-csv-files-HP010342598.aspx){% external_link %} or another speadsheet program to analyze the data.
 
-The CSV file contains three columns: (1) query, (2) raw count, and (3) IP-deduped. 
+The CSV file contains three columns: (1) query, (2) raw count, and (3) IP-deduped.
 
 Read [Understanding Your Users' Needs By Analyzing Search Terms](http://www.howto.gov/web-content/search/analyzing-search-terms) for tips on how to create a semi-automated report for analyzing the data in this CSV file on a regular basis.
 
@@ -36,7 +36,7 @@ Read [Understanding Your Users' Needs By Analyzing Search Terms](http://www.howt
 
 All data presented on this page (and other pages in the Admin Center) are IP-deduped to exclude bots and other noise in an attempt to accurately represent searchers' intent on your site. Some definitions follow.
 
-**[Queries](/sites/manual/queries.html):** Number of times a search query (that is, a word or string of words) was entered in the search box by a unique searcher. 
+**[Queries](/sites/manual/queries.html):** Number of times a search query (that is, a word or string of words) was entered in the search box by a unique searcher.
 
 **[Clicks](/sites/manual/clicks.html).** Number of times a searcher clicked on one of your pages within the search results for a particular query.
 

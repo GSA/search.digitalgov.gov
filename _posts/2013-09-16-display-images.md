@@ -8,9 +8,9 @@ tags: how-to manage-display images logos
 
 ## Favicon
 
-Provide the URL for your agency's favicon. (A [favicon](http://webdesign.about.com/od/favicon/f/blfaqfavicon1.htm)&nbsp;<i class="icon-external-link"></i>, short for favorites icon, is the small image associated with your website.)
+Provide the URL for your agency's favicon. (A [favicon](http://webdesign.about.com/od/favicon/f/blfaqfavicon1.htm){% external_link %}, short for favorites icon, is the small image associated with your website.)
 
-## Logo 
+## Logo
 
 Use the Choose File option to upload the logo, if any, that you'd like to appear in the header of your results page *for searchers using desktops or tablets*. Click on the option, Mark Logo for Deletion, to delete an uploaded logo.
 
@@ -22,7 +22,7 @@ The optimal size is 100x50 pixels (100 pixels wide and 50 pixels high).
 
 If you don't upload a mobile logo, searchers on mobile phones will simply see the header, *YourSiteName Mobile*.
 
-## Page Background 
+## Page Background
 
 Use the Choose File option to upload the image that you'd like to appear in the background of your page, if any. Click on the option, Mark Page Background Image for Deletion, to delete an uploaded image.
 
