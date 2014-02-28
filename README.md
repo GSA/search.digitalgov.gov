@@ -23,7 +23,8 @@
 
 ### Ruby
 
-You will need [Ruby 1.9.3](http://www.ruby-lang.org/en/downloads).
+You will need [Ruby 2.0.0](http://www.ruby-lang.org/en/downloads).
+[RVM](http://rvm.io) is recommended to install Ruby on your development environment.
 
 ### Gems
 
