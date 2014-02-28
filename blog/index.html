@@ -106,7 +106,7 @@
 
 <h2>How to Participate</h2>
 
-<p>Since this is still a pilot, the setup is manual. Email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#58;&#x73;&#x65;&#97;&#114;&#99;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;">&#115;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#118;</a> to let us know you're interested in participating in the pilot.</p>
+<p>Since this is still a pilot, the setup is manual. Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x73;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#x76;">&#115;&#x65;&#97;&#x72;&#99;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#x74;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#97;&#x6c;&#103;&#x6f;&#118;&#46;&#103;&#111;&#x76;</a> to let us know you're interested in participating in the pilot.</p>
 
 <h2>Option 1. Provide an RSS Feed</h2>
 
@@ -158,6 +158,77 @@
     <div class='tags'>
       
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <a href="/releases/december-2013.html">
+        <time datetime="2013-12-31">December 31, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/december-2013.html">December 2013 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>3 Highlighted Features</h2>
+
+<h3>Feature 1. Analyze Searchers' Click Behavior</h3>
+
+<p>Clickthru rates (CTR) can indicate the relevance of your results for specific search terms. You can now see (a) the CTR for your top 1,000 <a href="/sites/manual/queries.html">queries</a> and (b) your top <a href="/sites/manual/clicks.html">clicked URLs</a>. The data are updated in real time.</p>
+
+<p>Use the data to find searches with low CTRs. For these queries, consider if a low CTR is good or not. (A low CTR can be good when searchers see the answer directly on the results page, eliminating the need to click on a link.) For those that aren't good, tweak your page's title or content, add a new page to your site, or add a <a href="/sites/manual/best-bets-text.html">best bet</a> to point to the relevant page on another agency's site.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-ctr-top-queries.png" title="Clickthru Rates for Top Queries" alt="Clickthru Rates for Top Queries" /></p>
+
+<h3>Feature 2. Analyze the Terms that Trigger Best Bets</h3>
+
+<p>Have you ever wondered what search terms make your <a href="/sites/manual/best-bets-text.html">best bets</a> appear? From the <a href="/sites/manual/monthly-reports.html">Monthly Reports</a> page, you can now drill down to see a pie chart of the terms that trigger each best bet. The data are updated in real time.</p>
+
+<p>Use the data to tweak your best bet's title, description, and keyword phrases. Or, use it to decide to delete the best bet altogether.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-bb-trigger.png" title="Pie Chart of Terms Triggering a Best Bet" alt="Pie Chart of Terms Triggering a Best Bet" /></p>
+
+<h3>Feature 3. Use Keyword Phrases to Show Best Bets Only When They're Relevant</h3>
+
+<p>Have you ever seen a <a href="/sites/manual/best-bets-text.html">best bet</a> when you don't expect it to appear? Best bet keywords are now <em>phrases</em>. This change allows you to show a best bet only when its keyword is an <em>exact match</em> with a searcher's query.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-improved-phrasing.png" title="Best Bets Now Use Keyword Phrases" alt="Best Bets Now Use Keyword Phrases" /></p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>We fixed some errors with URL shortening.</li>
+<li>We updated our stemming file so searchers no longer see irrelevant results for intern.</li>
+<li>We replaced Jenkins with <a href="https://travis-ci.org/">Travis CI</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We fixed a time setting on our API machine.</li>
+<li>We upgraded Java on our API and <a href="http://www.cloudera.com/content/cloudera/en/home.html">Cloudera</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> machines.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed the layout of graphic best bets so results are shown in vertical, newspaper style columns. We also added more spaces between links.</li>
+<li>Spanish language searchers no longer see spelling suggestions for terms with and without diacritics.</li>
+<li>We renamed the IP deduped column <i>Real Count (Humans Only)</i> in the downloadable CSV file on the <a href="/sites/manual/monthly-reports.html">Monthly Reports</a> page.</li>
+<li>We updated our mobile search results page to show a more/less symbol only when it is applicable.</li>
+<li>We fixed the search box on our mobile results page so searchers can easily remove previous queries from the search box and so long mobile search terms don't overlap with the 'x' on the right.</li>
+<li>Best bets now appear even when there are no web results.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
       
     </div>
   </article>
@@ -262,19 +333,19 @@
   <article class='article'>
     <div class='time'>
       
-      <a href="/releases/2013-11-29.html">
+      <a href="/releases/november-2013.html">
         <time datetime="2013-11-29">November 29, 2013</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/releases/2013-11-29.html">New, Improved Mobile Results Page</a>
+      <a href="/releases/november-2013.html">November 2013 Release Notes</a>
     </h1>
     
 
     <div class='post-content'>
-      <h2>November 2013 Highlight: New, Improved Mobile Results Page</h2>
+      <h2>Highlight: New, Improved Mobile Results Page</h2>
 
 <p>Searchers using a mobile phone now see a new, improved search results page. Visible improvements include:</p>
 
@@ -331,7 +402,7 @@
 
     <div class='tags'>
       
-      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
       
     </div>
   </article>
@@ -339,14 +410,14 @@
   <article class='article'>
     <div class='time'>
       
-      <a href="/releases/2013-10-31.html">
+      <a href="/releases.html">
         <time datetime="2013-10-31">October 31, 2013</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/releases/2013-10-31.html">Compare Your Click-thru Rate</a>
+      <a href="/releases.html">Releases</a>
     </h1>
     
 
@@ -385,7 +456,7 @@
 <li>We set up <a href="https://codeclimate.com/">Code Climate</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to identify areas of our code that can be improved.</li>
 <li>We phased out color schemes and now offer two options, default and custom.</li>
 <li>We updated the links in our email templates to reflect the new Admin Center.</li>
-<li>We added the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#115;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#x76;">&#x73;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#103;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#x67;&#x6f;&#x76;</a> if you'd like to opt out.</li>
+<li>We added the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#58;&#115;&#101;&#97;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#118;">&#115;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#103;&#x69;&#x74;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;</a> if you'd like to opt out.</li>
 </ul>
 
 
@@ -400,8 +471,6 @@
     </div>
 
     <div class='tags'>
-      
-      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
       
     </div>
   </article>
@@ -590,14 +659,14 @@
   <article class='article'>
     <div class='time'>
       
-      <a href="/releases/2013-09-30.html">
+      <a href="/releases.html">
         <time datetime="2013-09-30">September 30, 2013</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/releases/2013-09-30.html">Visit the Revamped Admin Center</a>
+      <a href="/releases.html">Releases</a>
     </h1>
     
 
@@ -622,7 +691,7 @@
 
 <p>You can read our updated help by clicking on the Help? link on each page in the Admin Center, or see the full set of help files on our <a href="/help-desk.html">How It Works</a> page.</p>
 
-<p>Email us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;">&#115;&#101;&#97;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#x61;&#108;&#x67;&#111;&#118;&#x2e;&#x67;&#x6f;&#118;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
+<p>Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;">&#115;&#x65;&#x61;&#114;&#99;&#104;&#64;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#116;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#103;&#x6f;&#x76;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
 
 <h2>Chores</h2>
 
@@ -645,8 +714,6 @@
     </div>
 
     <div class='tags'>
-      
-      <a href="/tagged/releases"><span class="label label-info">releases</span></a>
       
     </div>
   </article>
@@ -839,58 +906,6 @@
       <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
       
       <a href="/tagged/queries"><span class="label label-info">queries</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/sites/manual/font-colors.html">
-        <time datetime="2013-09-20">September 20, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/sites/manual/font-colors.html">How to Customize the Font and Colors on Your Results Page</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Display > Font &amp; Colors</p>
-
-<h2>Font Family</h2>
-
-<p>Select your preferred font family. The default option is 'Arial, sans-serif'.</p>
-
-<h2>Color Scheme</h2>
-
-<p>Leave the default color scheme as-is, or select Custom to create a customized scheme.</p>
-
-<p>Customize the color of any page element by clicking on it and entering a valid three- or six-digit hex value. You can also pick a color by dragging your mouse inside the color picker window.</p>
-
-<p><strong><em>Content border.</em></strong> Select the option, Show Content Border, to add some padding above your search results. If you don't select the option, the results will be flush against the top of the browser window.</p>
-
-<p><strong><em>Content box shadow.</em></strong> Select the option, Show Content Box Shadow, to display a drop shadow around the main 'box' of content on your results page. If you don't select the option, no drop shadow will appear. Note that the shadow isn't supported by Internet Explorer (IE) 7 or 8.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> As you change each font and color option, the mini search results page in the upper right-hand corner will update to reflect your changes. Once you click save, the changes will appear on your live site.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-display"><span class="label label-info">manage-display</span></a>
-      
-      <a href="/tagged/font"><span class="label label-info">font</span></a>
-      
-      <a href="/tagged/colors"><span class="label label-info">colors</span></a>
       
     </div>
   </article>

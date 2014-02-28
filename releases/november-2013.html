@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Search Notes for the Week Ending September 28, 2012</title>
+  <title>November 2013 Release Notes</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -71,48 +71,68 @@
   <div id="main-container"><article class="article">
   <div class='time'>
     
-    <a href="/releases/2012-09-28.html">
-      <time>September 28, 2012</time>
+    <a href="/releases/november-2013.html">
+      <time>November 29, 2013</time>
     </a>
   </div>
 
   
   <h1>
-    <a href="/releases/2012-09-28.html">Search Notes for the Week Ending September 28, 2012</a>
+    <a href="/releases/november-2013.html">November 2013 Release Notes</a>
   </h1>
   
 
   <div class='post-content'>
-    <p><em><strong>Highlighted Feature: Infinite Scrolling</strong></em></p>
+    <h2>Highlight: New, Improved Mobile Results Page</h2>
+
+<p>Searchers using a mobile phone now see a new, improved search results page. Visible improvements include:</p>
+
+<ul>
+<li>Wall-to-wall search box.</li>
+<li>More readable font for type-ahead suggestions and search results.</li>
+<li><a href="http://insideintercom.io/why-cards-are-the-future-of-the-web/">Card-based design</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to cluster best bets, web results, and related searches.</li>
+</ul>
 
 
-<p>Searchers now have the benefit of infinite scrolling on your results pages. What is infinite scrolling? You've probably used it on many commercial websites, such as <a href="http://www.bing.com/images/search?q=yosemite">Bing Images</a>, <a href="http://duckduckgo.com/?q=yosemite">Duck Duck Go</a>, <a href="http://pinterest.com/search/boards/?q=yosemite">Pinterest</a>, and <a href="https://twitter.com/i/#!/search/yosemite">Twitter</a>. It automatically allows searchers to see more results when they get to the bottom of the page, without clicking on the link for the next page of results.</p>
+<p>See the screenshot below for <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=thanksgiving&amp;m=true">USA.gov's results for <em>thanksgiving</em> on a mobile phone</a>.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/usagov-mobile-thanksgiving.png" alt="Mobile search results page on USA.gov" /></p>
+
+<p>Under the hood, our new results page uses a responsive design to optimize searchers' experience on your site&mdash;anywhere, anytime, and on any device per the <a href="http://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html">Digital Government Strategy</a>.</p>
+
+<p>Look for even more improvements to your search results page over the next few months. And, be sure to customize your results page by uploading your <a href="/sites/manual/display-images.html">mobile logo</a> and letting us know your <a href="/sites/manual/settings.html">homepage URL</a>.</p>
+
+<h2>Other Features</h2>
+
+<ul>
+<li>You can now see clickthru rates (CTRs) for each Best Bet. View your <a href="/sites/manual/monthly-reports.html">Monthly Report</a> in the Admin Center and click drill down to access the CTR data. Drill down a second time to see the queries that lead to each Best Bet. Use the data to improve searchers' experience on your site by editing or deleting your Best Bets.</li>
+<li>Searchers now see longer URLs on larger resolutions (up to 65 characters) and shorter URLs on smaller resolutions. We previously displayed up to 42 characters, regardless of the searcher's screen resolution.</li>
+<li>Searchers on a site with a custom <a href="/sites/manual/cname.html">CNAME</a> are now redirected to the site's homepage.</li>
+<li>You can now see up to 1,000 results on the <a href="/sites/manual/clicks.html">Clicks</a> and <a href="/sites/manual/queries.html">Queries</a> pages in the Analytics section of the Admin Center. We previously showed up to 10 results.</li>
+</ul>
 
 
-<p>Try it out on your site's search results page, or on <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=yosemite">USA.gov</a>.</p>
+<h2>Chores</h2>
+
+<ul>
+<li>We're now leveraging <a href="https://keen.io/">Keen IO</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> for some real-time analytics.</li>
+<li>We updated Rails to version <a href="http://weblog.rubyonrails.org/2013/10/16/Rails-3-2-15-has-been-released/">3.2.15</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We fixed some Javascript-related <a href="http://cukes.info/">Cucumber</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> scenarios that had previously been failing.</li>
+<li>We now gracefully handle our Twitter IDs so that our Twitter process is more stable.</li>
+<li>We now gracefully handle an <a href="https://github.com/eventmachine/eventmachine">EventMachine</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> failure.</li>
+<li>We tidied up some loose ends from our old, now-defunct Admin Center by removing unused code and database columns.</li>
+<li>We renewed some of our SSL certificates.</li>
+<li>We updated the operating system packages on all of our machines and we rebuilt a disk on one of our servers.</li>
+</ul>
 
 
-<p><a href="http://search.usa.gov/search?affiliate=usagov&amp;query=yosemite"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mb2awk8xwU1qid15q.png"/></a></p>
+<h2>Fixes</h2>
 
-
-<p>Infinite scrolling has many advantages, including:</p>
-
-
-<ol><li><em><em>Speed.</em><span> </span></em>The next set of new results loads quicker than a totally new page.</li>
-<li><em>Streamlining the user interface.</em> Studies show most searchers don't use the next page buttons. Proactively loading results allows searchers to see more results on one page and to compare them.</li>
-<li><em>Simplifying the indexes.</em> When and how we display results from our various web indexes is easier for us, you, and end users. </li>
-</ol>
-
-
-<p><em><strong>Other Features</strong></em></p>
-
-
-<p>We completely revamped how <a href="/sites/manual/collections.html">collections</a> work to provide you with more flexibility. We encourage you to check out this feature if you're interested in offering  navigation options in the left-hand sidebar on your results page. You can now create a collection:</p>
-
-
-<ul><li>Covering tens of thousands (or even millions) of web pages.</li>
-<li>Covering domains that aren't part of your primary <a href="/sites/manual/domains.html">domain</a> (i.e., that aren't shown on the main web results page). </li>
-<li>Without needing to add our Javascript <a href="/sites/manual/code.html">code snippet</a>.</li>
+<ul>
+<li>We fixed a bug that prevented you from adding a new site in the Admin Center.</li>
+<li>We now filter invalid URLs from your <a href="/sites/manual/rss.html">RSS</a> feeds so that searchers don't see a 404 error.</li>
+<li>We fixed our <a href="/sites/manual/collections.html">Collections</a> search results page so that it no longer fails when it contains a database URL without any values set.</li>
+<li>We added <em>correctional</em> to our <a href="http://wiki.apache.org/solr/LanguageAnalysis#solr.StemmerOverrideFilterFactory">stemming override</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file so that searchers don't see irrelevant results for correct, corrected, etc.</li>
 </ul>
 
 
@@ -120,7 +140,7 @@
 
   <div class='tags'>
     
-    <a href="/tagged/releases"><span class="label label-info">releases</span></a>
+    <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
     
   </div>
 </article></div>

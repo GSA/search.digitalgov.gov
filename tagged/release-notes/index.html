@@ -75,6 +75,296 @@
   <article class='article'>
     <div class='time'>
       
+      <a href="/releases/december-2013.html">
+        <time datetime="2013-12-31">December 31, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/december-2013.html">December 2013 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>3 Highlighted Features</h2>
+
+<h3>Feature 1. Analyze Searchers' Click Behavior</h3>
+
+<p>Clickthru rates (CTR) can indicate the relevance of your results for specific search terms. You can now see (a) the CTR for your top 1,000 <a href="/sites/manual/queries.html">queries</a> and (b) your top <a href="/sites/manual/clicks.html">clicked URLs</a>. The data are updated in real time.</p>
+
+<p>Use the data to find searches with low CTRs. For these queries, consider if a low CTR is good or not. (A low CTR can be good when searchers see the answer directly on the results page, eliminating the need to click on a link.) For those that aren't good, tweak your page's title or content, add a new page to your site, or add a <a href="/sites/manual/best-bets-text.html">best bet</a> to point to the relevant page on another agency's site.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-ctr-top-queries.png" title="Clickthru Rates for Top Queries" alt="Clickthru Rates for Top Queries" /></p>
+
+<h3>Feature 2. Analyze the Terms that Trigger Best Bets</h3>
+
+<p>Have you ever wondered what search terms make your <a href="/sites/manual/best-bets-text.html">best bets</a> appear? From the <a href="/sites/manual/monthly-reports.html">Monthly Reports</a> page, you can now drill down to see a pie chart of the terms that trigger each best bet. The data are updated in real time.</p>
+
+<p>Use the data to tweak your best bet's title, description, and keyword phrases. Or, use it to decide to delete the best bet altogether.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-bb-trigger.png" title="Pie Chart of Terms Triggering a Best Bet" alt="Pie Chart of Terms Triggering a Best Bet" /></p>
+
+<h3>Feature 3. Use Keyword Phrases to Show Best Bets Only When They're Relevant</h3>
+
+<p>Have you ever seen a <a href="/sites/manual/best-bets-text.html">best bet</a> when you don't expect it to appear? Best bet keywords are now <em>phrases</em>. This change allows you to show a best bet only when its keyword is an <em>exact match</em> with a searcher's query.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-improved-phrasing.png" title="Best Bets Now Use Keyword Phrases" alt="Best Bets Now Use Keyword Phrases" /></p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>We fixed some errors with URL shortening.</li>
+<li>We updated our stemming file so searchers no longer see irrelevant results for intern.</li>
+<li>We replaced Jenkins with <a href="https://travis-ci.org/">Travis CI</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We fixed a time setting on our API machine.</li>
+<li>We upgraded Java on our API and <a href="http://www.cloudera.com/content/cloudera/en/home.html">Cloudera</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> machines.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed the layout of graphic best bets so results are shown in vertical, newspaper style columns. We also added more spaces between links.</li>
+<li>Spanish language searchers no longer see spelling suggestions for terms with and without diacritics.</li>
+<li>We renamed the IP deduped column <i>Real Count (Humans Only)</i> in the downloadable CSV file on the <a href="/sites/manual/monthly-reports.html">Monthly Reports</a> page.</li>
+<li>We updated our mobile search results page to show a more/less symbol only when it is applicable.</li>
+<li>We fixed the search box on our mobile results page so searchers can easily remove previous queries from the search box and so long mobile search terms don't overlap with the 'x' on the right.</li>
+<li>Best bets now appear even when there are no web results.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <a href="/releases/november-2013.html">
+        <time datetime="2013-11-29">November 29, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/november-2013.html">November 2013 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlight: New, Improved Mobile Results Page</h2>
+
+<p>Searchers using a mobile phone now see a new, improved search results page. Visible improvements include:</p>
+
+<ul>
+<li>Wall-to-wall search box.</li>
+<li>More readable font for type-ahead suggestions and search results.</li>
+<li><a href="http://insideintercom.io/why-cards-are-the-future-of-the-web/">Card-based design</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to cluster best bets, web results, and related searches.</li>
+</ul>
+
+
+<p>See the screenshot below for <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=thanksgiving&amp;m=true">USA.gov's results for <em>thanksgiving</em> on a mobile phone</a>.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/usagov-mobile-thanksgiving.png" alt="Mobile search results page on USA.gov" /></p>
+
+<p>Under the hood, our new results page uses a responsive design to optimize searchers' experience on your site&mdash;anywhere, anytime, and on any device per the <a href="http://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html">Digital Government Strategy</a>.</p>
+
+<p>Look for even more improvements to your search results page over the next few months. And, be sure to customize your results page by uploading your <a href="/sites/manual/display-images.html">mobile logo</a> and letting us know your <a href="/sites/manual/settings.html">homepage URL</a>.</p>
+
+<h2>Other Features</h2>
+
+<ul>
+<li>You can now see clickthru rates (CTRs) for each Best Bet. View your <a href="/sites/manual/monthly-reports.html">Monthly Report</a> in the Admin Center and click drill down to access the CTR data. Drill down a second time to see the queries that lead to each Best Bet. Use the data to improve searchers' experience on your site by editing or deleting your Best Bets.</li>
+<li>Searchers now see longer URLs on larger resolutions (up to 65 characters) and shorter URLs on smaller resolutions. We previously displayed up to 42 characters, regardless of the searcher's screen resolution.</li>
+<li>Searchers on a site with a custom <a href="/sites/manual/cname.html">CNAME</a> are now redirected to the site's homepage.</li>
+<li>You can now see up to 1,000 results on the <a href="/sites/manual/clicks.html">Clicks</a> and <a href="/sites/manual/queries.html">Queries</a> pages in the Analytics section of the Admin Center. We previously showed up to 10 results.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li>We're now leveraging <a href="https://keen.io/">Keen IO</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> for some real-time analytics.</li>
+<li>We updated Rails to version <a href="http://weblog.rubyonrails.org/2013/10/16/Rails-3-2-15-has-been-released/">3.2.15</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We fixed some Javascript-related <a href="http://cukes.info/">Cucumber</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> scenarios that had previously been failing.</li>
+<li>We now gracefully handle our Twitter IDs so that our Twitter process is more stable.</li>
+<li>We now gracefully handle an <a href="https://github.com/eventmachine/eventmachine">EventMachine</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> failure.</li>
+<li>We tidied up some loose ends from our old, now-defunct Admin Center by removing unused code and database columns.</li>
+<li>We renewed some of our SSL certificates.</li>
+<li>We updated the operating system packages on all of our machines and we rebuilt a disk on one of our servers.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed a bug that prevented you from adding a new site in the Admin Center.</li>
+<li>We now filter invalid URLs from your <a href="/sites/manual/rss.html">RSS</a> feeds so that searchers don't see a 404 error.</li>
+<li>We fixed our <a href="/sites/manual/collections.html">Collections</a> search results page so that it no longer fails when it contains a database URL without any values set.</li>
+<li>We added <em>correctional</em> to our <a href="http://wiki.apache.org/solr/LanguageAnalysis#solr.StemmerOverrideFilterFactory">stemming override</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file so that searchers don't see irrelevant results for correct, corrected, etc.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <a href="/releases/july-2011.html">
+        <time datetime="2011-08-11">August 11, 2011</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/july-2011.html">July 2011 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>We  hope everyone is staying cool in the dog days of our August summer, but  just because it is hot doesn't mean we aren't busy. <br/> <br/>We  would like to point out an enhancement to our Add to Bing feature.  Immediately after you add a page to Bing, we automatically include it in  your Boosted Content. Once the document is added to the Bing index, we  automatically remove the entry from your Boosted Content. We hope you  enjoy this enhancement as it is something that many of you told us was a  high priority fix.<br/> <br/>As a reminder, we divide our work into three categories:<br/> <br/>1) Features—Things that you actually notice<br/>2) Bugs—Fixes to any code issues that may arise<br/>3) Chores—Back-end improvements that aren't noticed<br/> <br/>Without further adieu, below are the August release notes.<br/><br/><strong>Features </strong></p>
+
+
+<ul><li>Users may find pages added via Add to Bing, even if the pages aren't yet indexed by Bing</li>
+<li>Users see a white background color on the default search results page template. </li>
+<li>Users see an improved <a href="http://search.usa.gov/thispagedoesnotexist">404 page</a> on Search.USA.gov. </li>
+<li>Users see a fun, improved <a href="http://search.usa.gov/search?query=thisisapagewithnoresults">no results page</a> on Search.USA.gov</li>
+<li>User sees blended USA.gov FAQs on Search.USA.gov results pages</li>
+<li>Users see boosted URLs below boosted collections</li>
+<li>Users can view up to 1000 results</li>
+<li>Users don't trigger type-ahead suggestions when they use up or down arrows</li>
+<li>Users see a three-column results page with vertical navigation in left column</li>
+<li>Users go to the landing page when they click on the search button without a query </li>
+<li>Users see related clinical trials in MedlinePlus Govboxes</li>
+<li>Users see Related Topics below organic Bing web results</li>
+<li>User sees improved pagination links on results pages</li>
+<li>Users see Recommended by {affiliate_name} for URLs boosted content on affiliate results pages </li>
+</ul>
+
+
+<p><strong>Bugs </strong></p>
+
+
+<ul><li>Affiliate users see a confirmation popup when they delete a site</li>
+<li>Fixed a misspelled variable name</li>
+<li>Hide phone icon when there's no number in Agency Govboxes</li>
+<li>Words are no longer truncated in boosted content entries</li>
+<li>HTML tags no longer show up in search results description</li>
+<li>USA.gov FAQs now only appear on the first page</li>
+<li>Search terms are no longer inadvertently selected as users type in the search box</li>
+</ul>
+
+
+<p><strong>Chores</strong></p>
+
+
+<ul><li>Imaging/images is no longer stemmed in Solr</li>
+<li>Upgraded to Rails 3.0.9</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <a href="/releases/june-2011.html">
+        <time datetime="2011-07-01">July 1, 2011</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/june-2011.html">June 2011 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Happy Fourth of July. Before everyone departs for the long holiday, we wanted to post our June release notes.</p>
+
+<p>As a reminder, we divide our work into three categories:</p>
+
+<ol>
+<li>Features&mdash;things that you actually notice</li>
+<li>Bugs&mdash;fixes to any code issues that may arise</li>
+<li>Chores&mdash;back-end improvements that you don't notice</li>
+</ol>
+
+
+<h2>Features for End Users Users</h2>
+
+<ul>
+<li>Users see polished agency GovBox design</li>
+<li>Users see aligned text on SERPs</li>
+<li>Users don't see underlines on SERPs</li>
+<li>User sees health GovBoxes</li>
+<li>Users have improved accessibility for DigitalGov Search Program pages</li>
+<li>Users see consistently-aligned items on landing pages</li>
+<li>Users see added agency popular url model incl govbox view</li>
+<li>Users see PDF before serp result titles for pdf urls</li>
+<li>Users see improved basic_gray search term highlite visibility and removed</li>
+<li>Mobile users can see SMS option</li>
+<li>Spanish searchers can find web and imagenes landing pages</li>
+</ul>
+
+
+<h2>Features for Admins</h2>
+
+<ul>
+<li>USAAdmins can easily batch process new users by status</li>
+<li>Analysts see 4 column daily click module containing module name, impressions, clicks, and CTR% </li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>Users should not have letters "skipped" as they're typing in the search box</li>
+<li>Display shorter URLs on Affiliate SERPs</li>
+<li>Affiliates should not see global terms populated in type ahead</li>
+<li>Update API language</li>
+<li>Fix type ahead suggestion drop down and font size in Grey Template</li>
+<li>Modify indices on agency_urls</li>
+<li>Boosted Sites/Spotlights/GovBoxes don't have proper precedence rules.</li>
+<li>HTML shows up on affiliate confirmation screen</li>
+<li>Users don't see web vertical spotlights on forms vertical</li>
+<li>Search users should be able to see SAYT dropdown</li>
+<li>Users get page not found error when logging out from some program/admin pages</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
       <a href="/releases/may-2011.html">
         <time datetime="2011-06-03">June 3, 2011</time>
       </a>
@@ -93,7 +383,7 @@
 
 <ol>
 <li>Features&mdash;things that you actually notice</li>
-<li>Bugs&mdash;Fixes to any code issues that may arise</li>
+<li>Bugs&mdash;fixes to any code issues that may arise</li>
 <li>Chores&mdash;back-end improvements that you don't notice</li>
 </ol>
 

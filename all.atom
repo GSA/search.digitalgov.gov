@@ -3,7 +3,7 @@
   <title><![CDATA[DigitalGov Search]]></title>
   <link href="http://search.digitalgov.gov/all.atom" rel="self"/>
   <link href="http://search.digitalgov.gov/"/>
-  <updated>2014-02-27T21:30:04+00:00</updated>
+  <updated>2014-02-28T17:00:05+00:00</updated>
   <id>http://search.digitalgov.gov/</id>
   <author><name><![CDATA[DigitalGov Search]]></name></author>
 
@@ -29,7 +29,7 @@
 
 <h2>How to Participate</h2>
 
-<p>Since this is still a pilot, the setup is manual. Email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#58;&#x73;&#x65;&#97;&#114;&#99;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;">&#115;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#118;</a> to let us know you're interested in participating in the pilot.</p>
+<p>Since this is still a pilot, the setup is manual. Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x73;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#x76;">&#115;&#x65;&#97;&#x72;&#99;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#x74;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#97;&#x6c;&#103;&#x6f;&#118;&#46;&#103;&#111;&#x76;</a> to let us know you're interested in participating in the pilot.</p>
 
 <h2>Option 1. Provide an RSS Feed</h2>
 
@@ -75,6 +75,60 @@
 <h3>Other Search Indexes</h3>
 
 <p>Most search indexes expose their results as XML. If you have another search index that renders XML, let us know and we'll work with you to determine if it will work within our system.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[December 2013 Release Notes]]></title>
+    <link href="http://search.digitalgov.gov/releases/december-2013.html"/>
+    <updated>2013-12-31T00:00:00+00:00</updated>
+    <id>http://search.digitalgov.gov/releases/december-2013.html</id>
+    <content type="html"><![CDATA[<h2>3 Highlighted Features</h2>
+
+<h3>Feature 1. Analyze Searchers' Click Behavior</h3>
+
+<p>Clickthru rates (CTR) can indicate the relevance of your results for specific search terms. You can now see (a) the CTR for your top 1,000 <a href="/sites/manual/queries.html">queries</a> and (b) your top <a href="/sites/manual/clicks.html">clicked URLs</a>. The data are updated in real time.</p>
+
+<p>Use the data to find searches with low CTRs. For these queries, consider if a low CTR is good or not. (A low CTR can be good when searchers see the answer directly on the results page, eliminating the need to click on a link.) For those that aren't good, tweak your page's title or content, add a new page to your site, or add a <a href="/sites/manual/best-bets-text.html">best bet</a> to point to the relevant page on another agency's site.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-ctr-top-queries.png" title="Clickthru Rates for Top Queries" alt="Clickthru Rates for Top Queries" /></p>
+
+<h3>Feature 2. Analyze the Terms that Trigger Best Bets</h3>
+
+<p>Have you ever wondered what search terms make your <a href="/sites/manual/best-bets-text.html">best bets</a> appear? From the <a href="/sites/manual/monthly-reports.html">Monthly Reports</a> page, you can now drill down to see a pie chart of the terms that trigger each best bet. The data are updated in real time.</p>
+
+<p>Use the data to tweak your best bet's title, description, and keyword phrases. Or, use it to decide to delete the best bet altogether.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-bb-trigger.png" title="Pie Chart of Terms Triggering a Best Bet" alt="Pie Chart of Terms Triggering a Best Bet" /></p>
+
+<h3>Feature 3. Use Keyword Phrases to Show Best Bets Only When They're Relevant</h3>
+
+<p>Have you ever seen a <a href="/sites/manual/best-bets-text.html">best bet</a> when you don't expect it to appear? Best bet keywords are now <em>phrases</em>. This change allows you to show a best bet only when its keyword is an <em>exact match</em> with a searcher's query.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-improved-phrasing.png" title="Best Bets Now Use Keyword Phrases" alt="Best Bets Now Use Keyword Phrases" /></p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>We fixed some errors with URL shortening.</li>
+<li>We updated our stemming file so searchers no longer see irrelevant results for intern.</li>
+<li>We replaced Jenkins with <a href="https://travis-ci.org/">Travis CI</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We fixed a time setting on our API machine.</li>
+<li>We upgraded Java on our API and <a href="http://www.cloudera.com/content/cloudera/en/home.html">Cloudera</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> machines.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed the layout of graphic best bets so results are shown in vertical, newspaper style columns. We also added more spaces between links.</li>
+<li>Spanish language searchers no longer see spelling suggestions for terms with and without diacritics.</li>
+<li>We renamed the IP deduped column <i>Real Count (Humans Only)</i> in the downloadable CSV file on the <a href="/sites/manual/monthly-reports.html">Monthly Reports</a> page.</li>
+<li>We updated our mobile search results page to show a more/less symbol only when it is applicable.</li>
+<li>We fixed the search box on our mobile results page so searchers can easily remove previous queries from the search box and so long mobile search terms don't overlap with the 'x' on the right.</li>
+<li>Best bets now appear even when there are no web results.</li>
+</ul>
+
 ]]></content>
   </entry>
   
@@ -155,11 +209,11 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[New, Improved Mobile Results Page]]></title>
-    <link href="http://search.digitalgov.gov/releases/2013-11-29.html"/>
+    <title type="html"><![CDATA[November 2013 Release Notes]]></title>
+    <link href="http://search.digitalgov.gov/releases/november-2013.html"/>
     <updated>2013-11-29T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2013-11-29.html</id>
-    <content type="html"><![CDATA[<h2>November 2013 Highlight: New, Improved Mobile Results Page</h2>
+    <id>http://search.digitalgov.gov/releases/november-2013.html</id>
+    <content type="html"><![CDATA[<h2>Highlight: New, Improved Mobile Results Page</h2>
 
 <p>Searchers using a mobile phone now see a new, improved search results page. Visible improvements include:</p>
 
@@ -215,10 +269,10 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Compare Your Click-thru Rate]]></title>
-    <link href="http://search.digitalgov.gov/releases/2013-10-31.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2013-10-31T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2013-10-31.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<h2>October 2013 Highlight: Compare Your Click-thru Rate to the Average Rate</h2>
 
 <p>How do you stack up? You can now compare your click-thru rate (CTR) with the average rate across all sites that use DigitalGov Search. Use your CTR data to measure the performance of specific campaigns and modules.</p>
@@ -253,7 +307,7 @@
 <li>We set up <a href="https://codeclimate.com/">Code Climate</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to identify areas of our code that can be improved.</li>
 <li>We phased out color schemes and now offer two options, default and custom.</li>
 <li>We updated the links in our email templates to reflect the new Admin Center.</li>
-<li>We added the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#115;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#x76;">&#x73;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#103;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#x67;&#x6f;&#x76;</a> if you'd like to opt out.</li>
+<li>We added the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#58;&#115;&#101;&#97;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#118;">&#115;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#103;&#x69;&#x74;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;</a> if you'd like to opt out.</li>
 </ul>
 
 
@@ -401,10 +455,10 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Visit the Revamped Admin Center]]></title>
-    <link href="http://search.digitalgov.gov/releases/2013-09-30.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2013-09-30T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2013-09-30.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<h2>September 2013 Highlight: Visit the Revamped Admin Center</h2>
 
 <p>We're excited to release our newly revamped <a href="https://search.usa.gov/sites/">Admin Center</a>. Be sure to update your bookmarks!</p>
@@ -425,7 +479,7 @@
 
 <p>You can read our updated help by clicking on the Help? link on each page in the Admin Center, or see the full set of help files on our <a href="/help-desk.html">How It Works</a> page.</p>
 
-<p>Email us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;">&#115;&#101;&#97;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#x61;&#108;&#x67;&#111;&#118;&#x2e;&#x67;&#x6f;&#118;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
+<p>Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;">&#115;&#x65;&#x61;&#114;&#99;&#104;&#64;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#116;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#103;&#x6f;&#x76;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
 
 <h2>Chores</h2>
 
@@ -773,17 +827,17 @@
 
 <p><strong><em>Did you know?</em></strong>  Searchers may narrow results by time period for any <a href="/sites/manual/rss.html">RSS</a> feeds. See, for example, results for a <a href="http://search.whitehouse.gov/search/news?affiliate=wh&amp;channel=6&amp;m=false&amp;query=jobs&amp;tbs=w">search on <em>jobs</em> narrowed to press articles in the last week on WhiteHouse.gov</a>.</p>
 
-<p><strong><em>Did you know?</em></strong>  For any of your <a href="/sites/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x73;&#101;&#x61;&#114;&#x63;&#104;&#64;&#x73;&#x75;&#x70;&#112;&#111;&#114;&#x74;&#46;&#100;&#105;&#x67;&#105;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#111;&#x76;">&#115;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#x70;&#112;&#111;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#x76;</a> to if you want to customize these display names.</p>
+<p><strong><em>Did you know?</em></strong>  For any of your <a href="/sites/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#115;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#117;&#x70;&#112;&#111;&#x72;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#97;&#108;&#x67;&#111;&#118;&#46;&#x67;&#111;&#x76;">&#x73;&#101;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#x6f;&#x72;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#x74;&#97;&#108;&#x67;&#111;&#x76;&#46;&#103;&#111;&#x76;</a> to if you want to customize these display names.</p>
 
 <p><strong><em>Did you know?</em></strong> You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our <a href="/sites/manual/code.html">JavaScript snippet</a> before the closing <code>&lt;body&gt;</code> tag on your HTML web pages.</p>
 ]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Download Your Raw Logs]]></title>
-    <link href="http://search.digitalgov.gov/releases/2013-08-31.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2013-08-31T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2013-08-31.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<h2>August 2013 Highlight: Download Your Raw Logs</h2>
 
 <p>Do you want to know how many searches on your site are done from mobile devices? The times of day when searches peak? What people searched for before, during, and after a natural disaster, holiday, or other event?</p>
@@ -950,7 +1004,7 @@
 <ol>
 <li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
 <li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>Email us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#115;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
+<li>Email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#115;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#x67;&#x69;&#x74;&#x61;&#108;&#103;&#111;&#118;&#46;&#x67;&#111;&#x76;">&#x73;&#101;&#97;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
 </ol>
 
 
@@ -1027,7 +1081,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li><p>Email us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#58;&#115;&#101;&#97;&#114;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#105;&#x67;&#105;&#116;&#x61;&#108;&#103;&#111;&#118;&#46;&#x67;&#x6f;&#118;">&#x73;&#x65;&#97;&#114;&#x63;&#104;&#x40;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;</a> to <a href="/sites/manual/cname.html">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
+<li><p>Email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#116;&#46;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;">&#115;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;</a> to <a href="/sites/manual/cname.html">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
 <li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
 
 <p> Find => 'files': '/fsrscripts/',</p>
@@ -1360,7 +1414,7 @@ Enter same passphrase again:
 
 <p>You can also set up a CNAME to <a href="/sites/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
 
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#115;&#101;&#x61;&#x72;&#99;&#104;&#64;&#115;&#117;&#x70;&#x70;&#x6f;&#x72;&#x74;&#46;&#x64;&#105;&#x67;&#105;&#116;&#97;&#108;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#x76;">&#115;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#115;&#x75;&#112;&#112;&#111;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#111;&#x76;</a>.</p>
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#115;&#x65;&#97;&#x72;&#99;&#104;&#64;&#115;&#117;&#112;&#112;&#111;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#111;&#x76;&#46;&#103;&#111;&#118;">&#x73;&#101;&#97;&#114;&#99;&#104;&#64;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#x76;</a>.</p>
 ]]></content>
   </entry>
   
@@ -1434,7 +1488,7 @@ Enter same passphrase again:
     <content type="html"><![CDATA[<p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these three steps to mask your domain.</p>
 
 <ol>
-<li>Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#x73;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#x75;&#x70;&#112;&#111;&#x72;&#x74;&#46;&#100;&#105;&#x67;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;">&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#x67;&#x6f;&#x76;</a> and ask us to mask your domain.</li>
+<li>Email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#58;&#x73;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;">&#115;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#x75;&#112;&#112;&#111;&#114;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#118;</a> and ask us to mask your domain.</li>
 <li>Create a CNAME in your external DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
 <li>When the setup is complete, change the <a href="/sites/manual/code.html">code for your form</a> action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
 </ol>
@@ -1492,7 +1546,7 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
 </ol>
 
 
-<p>If you have any problem resetting your password, email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#46;&#x67;&#x6f;&#118;</a>.</p>
+<p>If you have any problem resetting your password, email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x73;&#x65;&#97;&#114;&#99;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#103;&#111;&#118;&#46;&#x67;&#x6f;&#118;">&#x73;&#101;&#x61;&#114;&#99;&#x68;&#64;&#x73;&#117;&#112;&#112;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#x69;&#116;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
 ]]></content>
   </entry>
   
@@ -1549,7 +1603,7 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, edit your display name on the <a href="/sites/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#115;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#116;&#46;&#100;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#118;&#46;&#103;&#x6f;&#118;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, edit your display name on the <a href="/sites/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;">&#x73;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#114;&#116;&#46;&#100;&#105;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#x6f;&#118;</a>.</p>
 ]]></content>
   </entry>
   
@@ -2012,7 +2066,7 @@ omies that depend on summer tourism.&lt;/p&gt;
 
 <h2>Site Handle</h2>
 
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as nih. If you'd like to edit your site handle, email us at <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#58;&#115;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#x73;&#x75;&#112;&#112;&#111;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#x61;&#108;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#118;">&#115;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;</a>.</p>
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as nih. If you'd like to edit your site handle, email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#46;&#103;&#x6f;&#x76;">&#x73;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#111;&#x72;&#x74;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
 
 <p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/settings.png" alt="Site name and handle on NIH.gov's search results page" /></p>
 
@@ -2022,7 +2076,7 @@ omies that depend on summer tourism.&lt;/p&gt;
 
 <h2>Site Language</h2>
 
-<p>You chose the language (English or Spanish) for your site when you originally added your site. We'll only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language. If you'd like to edit your site's language, email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x73;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#112;&#111;&#x72;&#116;&#46;&#100;&#x69;&#103;&#x69;&#116;&#97;&#x6c;&#103;&#111;&#118;&#46;&#x67;&#x6f;&#x76;">&#x73;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#100;&#105;&#103;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#118;</a>.</p>
+<p>You chose the language (English or Spanish) for your site when you originally added your site. We'll only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language. If you'd like to edit your site's language, email us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#x3a;&#x73;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#116;&#46;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#108;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#111;&#x76;">&#x73;&#x65;&#97;&#114;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#118;&#46;&#x67;&#111;&#x76;</a>.</p>
 
 <h2>Delete</h2>
 
@@ -2062,10 +2116,10 @@ omies that depend on summer tourism.&lt;/p&gt;
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Add a URL: Notes for July 2013]]></title>
-    <link href="http://search.digitalgov.gov/releases/2013-07-31.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2013-07-31T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2013-07-31.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<h2>Highlight: Add a URL</h2>
 
 <p>Are specific web pages missing from your Bing web results? Tell us about these pages and we'll append the pages to your web results. We offer two ways for you to tell us about the web pages that you want us to fetch and include in our web index.</p>
@@ -2440,7 +2494,7 @@ omies that depend on summer tourism.&lt;/p&gt;
 
 <h2>Feedback</h2>
 
-<p>Email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#115;&#101;&#97;&#x72;&#99;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#x76;">&#115;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#46;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#103;&#111;&#118;&#46;&#103;&#x6f;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>Email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x73;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#x67;&#x6f;&#118;">&#x73;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#115;&#117;&#112;&#112;&#x6f;&#114;&#116;&#46;&#100;&#x69;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
@@ -2647,7 +2701,7 @@ US-VA:COUNTY-FAIRFAX:CITY-FAIRFAX</p>
 
 <p>State and local government jobs are from cities, counties, and state agencies that use <a href="http://www.neogov.com">NeoGov</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, such <a href="https://bouldercolorado.gov/jobs-and-volunteer">jobs with the the city of Boulder, Colorado</a>.</p>
 
-<p><strong><em>Are we missing your jobs data?</em></strong> Email us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#115;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#112;&#111;&#114;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#118;</a> to let us know where you publish the jobs data for your federal, state, or local government agency. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
+<p><strong><em>Are we missing your jobs data?</em></strong> Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#x73;&#x75;&#x70;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#x73;&#101;&#x61;&#114;&#99;&#104;&#x40;&#x73;&#x75;&#112;&#112;&#111;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#105;&#116;&#x61;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#118;</a> to let us know where you publish the jobs data for your federal, state, or local government agency. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
 
 <p><a name="what-it-returns"></a></p>
 
@@ -2709,7 +2763,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <h2>Feedback</h2>
 
-<p>Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#115;&#117;&#x70;&#112;&#111;&#x72;&#x74;&#x2e;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#x6f;&#118;">&#115;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#117;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#111;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>Email us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#x73;&#101;&#97;&#114;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#112;&#111;&#114;&#116;&#46;&#100;&#105;&#103;&#x69;&#116;&#97;&#108;&#103;&#111;&#118;&#46;&#x67;&#x6f;&#118;">&#115;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#105;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
@@ -2802,10 +2856,10 @@ We are able to fully manage the tool and reduce the amount of resources needed t
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Spring Cleaning: Notes for the Week Ending June 21, 2013]]></title>
-    <link href="http://search.digitalgov.gov/releases/2013-06-21.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2013-06-21T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2013-06-21.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<p>We've spent the past few weeks doing some spring cleaning to improve our backend infrastructure and to lay the groundwork for a major update to our Admin Center. Stay tuned!</p>
 
 <h2>Chores</h2>
@@ -2835,10 +2889,10 @@ We are able to fully manage the tool and reduce the amount of resources needed t
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Search Your Multimedia Galleries: Notes for the Week Ending May 31, 2013]]></title>
-    <link href="http://search.digitalgov.gov/releases/2013-05-31.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2013-05-31T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2013-05-31.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<h2>Highlight: Search Your Multimedia Galleries</h2>
 
 <p>Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery?</p>
@@ -2847,7 +2901,7 @@ We are able to fully manage the tool and reduce the amount of resources needed t
 
 <p>MRSS is the standard <a href="http://www.rssboard.org/media-rss">media RSS specification</a> for syndicating multimedia content. So, even if you don't have an MRSS feed now, it should be easy to generate one as long as your content is in a content management system or other database. MRSS is also the standard specification used by hosted multimedia services such as Flickr, Instagram, Vimeo, and YouTube.</p>
 
-<p>Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;">&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#x76;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
+<p>Email us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#58;&#x73;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#115;&#117;&#x70;&#112;&#x6f;&#114;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;">&#x73;&#101;&#97;&#x72;&#99;&#104;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#118;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
 
 <p>(Thanks, <a href="http://www.usgs.gov">USGS.gov</a> team, for suggesting this new feature!)</p>
 
@@ -2886,10 +2940,10 @@ We are able to fully manage the tool and reduce the amount of resources needed t
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Search Your Twitter Lists: Notes for the Week Ending May 10, 2013]]></title>
-    <link href="http://search.digitalgov.gov/releases/2013-05-10.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2013-05-10T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2013-05-10.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<h2>Highlight: Search Your Twitter Lists</h2>
 
 <p>Does your agency have dozens of Twitter accounts? Do you have a public Twitter list for these accounts? You can now opt to <a href="/sites/manual/twitter.html">index tweets</a> from your lists. You can either:</p>
@@ -2929,10 +2983,10 @@ We are able to fully manage the tool and reduce the amount of resources needed t
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Find State and Local Jobs: Search Notes for the Week Ending May 3, 2013]]></title>
-    <link href="http://search.digitalgov.gov/releases/2013-05-03.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2013-05-03T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2013-05-03.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<h2>Highlight: Find State and Local Jobs</h2>
 
 <p>Searchers on many state and local websites can now see current job openings. We're automatically indexing and displaying job openings for all of your websites that use <a href="http://www.neogov.com">NeoGov</a>.</p>
@@ -2957,7 +3011,7 @@ We are able to fully manage the tool and reduce the amount of resources needed t
 <ul>
 <li>We updated our <a href="/tos.html">terms of service</a>.</li>
 <li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/sites/manual/domains.html">how to exclude content</a> or email us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#58;&#115;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#x73;&#x75;&#112;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#46;&#103;&#x6f;&#x76;">&#115;&#101;&#97;&#114;&#x63;&#104;&#64;&#x73;&#x75;&#x70;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#118;</a> with any questions.</li>
+<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/sites/manual/domains.html">how to exclude content</a> or email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#115;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#x69;&#103;&#x69;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#103;&#x6f;&#118;">&#x73;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#x72;&#116;&#46;&#100;&#105;&#103;&#x69;&#116;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#x67;&#111;&#118;</a> with any questions.</li>
 <li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
 <li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
 <li>We removed the trending searches feature and widget.</li>
@@ -3019,7 +3073,7 @@ We are able to fully manage the tool and reduce the amount of resources needed t
 
 <hr />
 
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. Email us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#115;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#115;&#117;&#112;&#112;&#111;&#x72;&#116;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#118;">&#115;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#x64;&#x69;&#x67;&#105;&#x74;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#x67;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
+<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. Email us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x73;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#x74;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#118;&#46;&#103;&#111;&#x76;">&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#46;&#x64;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
 ]]></content>
   </entry>
   
@@ -3044,7 +3098,7 @@ We are able to fully manage the tool and reduce the amount of resources needed t
 </ol>
 
 
-<p>If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#x73;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#x70;&#112;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#118;">&#115;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#103;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#118;</a>.</p>
+<p>If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#58;&#115;&#x65;&#97;&#114;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#x61;&#108;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#118;">&#115;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#112;&#x6f;&#x72;&#x74;&#x2e;&#100;&#105;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#x76;</a>.</p>
 
 <hr />
 
@@ -3231,10 +3285,10 @@ We are able to fully manage the tool and reduce the amount of resources needed t
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Show Your Footer: Search Notes for the Week Ending April 5, 2013]]></title>
-    <link href="http://search.digitalgov.gov/releases/2013-04-05.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2013-04-05T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2013-04-05.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<h2>Highlight: Show Your Footer</h2>
 
 <p>Do you have information in the footer of your results page that searchers need to see? Searchers can now view or hide the footer while on your search results page.</p>
@@ -3318,7 +3372,7 @@ We are able to fully manage the tool and reduce the amount of resources needed t
 
 <h2>We're here to answer your questions.</h2>
 
-<p>Email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#115;&#117;&#x70;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#111;&#x76;">&#x73;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#112;&#x6f;&#114;&#116;&#46;&#100;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#111;&#118;</a>, or give us a call at 202-505-5315.</p>
+<p>Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;">&#x73;&#101;&#97;&#114;&#99;&#104;&#64;&#115;&#x75;&#112;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#108;&#x67;&#111;&#118;&#46;&#103;&#x6f;&#x76;</a>, or give us a call at 202-505-5315.</p>
 
 <p>If you're a federal agency in the DC area, we can stop by your office for an in-person consultation. <a href="mailto:search@support.digitalgov.gov">Email us</a> to set up a time.</p>
 
@@ -3360,10 +3414,10 @@ JSON-P. This API is only available for use on official government websites.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Search Notes for the Week Ending March 8, 2013]]></title>
-    <link href="http://search.digitalgov.gov/releases/2013-03-08.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2013-03-08T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2013-03-08.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<h2>Highlighted Feature: Limiting Results to a Subset of Your Content</h2>
 
 <p>Do you want to set up a search box (or even hundreds of search boxes) over a subset of your content?</p>
@@ -3416,10 +3470,10 @@ JSON-P. This API is only available for use on official government websites.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Search Notes for the Week Ending February 22, 2013]]></title>
-    <link href="http://search.digitalgov.gov/releases/2013-02-22.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2013-02-22T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2013-02-22.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<h2>Features</h2>
 
 <ul>
@@ -3453,10 +3507,10 @@ JSON-P. This API is only available for use on official government websites.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Search Notes for the Week Ending February 8, 2013]]></title>
-    <link href="http://search.digitalgov.gov/releases/2013-02-08.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2013-02-08T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2013-02-08.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<h2>Highlighted Feature</h2>
 
 
@@ -3485,10 +3539,10 @@ JSON-P. This API is only available for use on official government websites.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Search Notes for the Week Ending February 1, 2013]]></title>
-    <link href="http://search.digitalgov.gov/releases/2013-02-01.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2013-02-01T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2013-02-01.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<h2>Highlighted Feature</h2>
 
 <p>The display of search results pages is constantly evolving. Some changes are subtle. Others are more noticeable.</p>
@@ -3516,10 +3570,10 @@ JSON-P. This API is only available for use on official government websites.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Search Notes for the Week Ending January 25, 2013]]></title>
-    <link href="http://search.digitalgov.gov/releases/2013-01-25.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2013-01-25T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2013-01-25.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<h2>Highlighted Feature</h2>
 
 
@@ -3555,10 +3609,10 @@ JSON-P. This API is only available for use on official government websites.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Search Notes for the Week Ending January 11, 2013]]></title>
-    <link href="http://search.digitalgov.gov/releases/2013-01-11.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2013-01-11T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2013-01-11.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<h2>Highlighted Feature: The Jobs GovBox</h2>
 
 <p>We're excited to announce that searchers looking for jobs on your site can now see all of your agency's current job openings.</p>
@@ -3574,10 +3628,10 @@ JSON-P. This API is only available for use on official government websites.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Release Notes for the Week Ending January 4, 2013]]></title>
-    <link href="http://search.digitalgov.gov/releases/2013-01-04.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2013-01-04T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2013-01-04.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<h2>Highlighted Feature</h2>
 
 
@@ -3613,10 +3667,10 @@ JSON-P. This API is only available for use on official government websites.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Search Notes for the Week Ending December 14, 2012]]></title>
-    <link href="http://search.digitalgov.gov/releases/2012-12-14.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2012-12-14T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2012-12-14.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<h2>Highlighted Feature</h2>
 
 
@@ -3669,10 +3723,10 @@ JSON-P. This API is only available for use on official government websites.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Search Notes for the Week Ending November 16, 2012]]></title>
-    <link href="http://search.digitalgov.gov/releases/2012-11-16.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2012-11-16T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2012-11-16.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<h2>Highlighted Feature</h2>
 
 
@@ -3721,10 +3775,10 @@ JSON-P. This API is only available for use on official government websites.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Search Notes for the Week Ending November 2, 2012]]></title>
-    <link href="http://search.digitalgov.gov/releases/2012-11-02.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2012-11-02T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2012-11-02.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<p><em>Highlighted Feature: Common Search Metrics for the Digital Strategy</em></p>
 
 
@@ -3764,10 +3818,10 @@ JSON-P. This API is only available for use on official government websites.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Search Notes for the Week Ending October 19, 2012]]></title>
-    <link href="http://search.digitalgov.gov/releases/2012-10-19.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2012-10-19T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2012-10-19.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<p>Good news! We completed a major upgrade of our search infrastructure. You likely didn't notice as we completed the upgrade without any downtime for searchers on your site. </p>
 
 
@@ -3835,10 +3889,10 @@ JSON-P. This API is only available for use on official government websites.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Search Notes for the Week Ending September 28, 2012]]></title>
-    <link href="http://search.digitalgov.gov/releases/2012-09-28.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2012-09-28T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2012-09-28.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<p><em><strong>Highlighted Feature: Infinite Scrolling</strong></em></p>
 
 
@@ -3875,10 +3929,10 @@ JSON-P. This API is only available for use on official government websites.
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Search Notes for the Week Ending September 21, 2012]]></title>
-    <link href="http://search.digitalgov.gov/releases/2012-09-21.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2012-09-21T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2012-09-21.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<p><strong>Features</strong></p>
 
 
@@ -3938,10 +3992,10 @@ What do you need to do? If your URL starts with any of the following six legacy 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Search Notes for the Week Ending August 17, 2012 ]]></title>
-    <link href="http://search.digitalgov.gov/releases/2012-08-22.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2012-08-22T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2012-08-22.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<div class="post_title"><strong>Features</strong></div>
 
 
@@ -3973,10 +4027,10 @@ What do you need to do? If your URL starts with any of the following six legacy 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Search Notes for the Week Ending August 10, 2012]]></title>
-    <link href="http://search.digitalgov.gov/releases/2012-08-10.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2012-08-15T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2012-08-10.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<p><strong>Features</strong></p>
 
 
@@ -4011,10 +4065,10 @@ What do you need to do? If your URL starts with any of the following six legacy 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Search Notes for the Week Ending August 3, 2012]]></title>
-    <link href="http://search.digitalgov.gov/releases/2012-08-03.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2012-08-08T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2012-08-03.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<p><strong>Features</strong></p>
 
 
@@ -4080,10 +4134,10 @@ What do you need to do? If your URL starts with any of the following six legacy 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Search Notes for the Week Ending July 6, 2012]]></title>
-    <link href="http://search.digitalgov.gov/releases/2012-07-06.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2012-07-13T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2012-07-06.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<p>We hope you had a good Fourth of July!</p>
 
 
@@ -4150,10 +4204,10 @@ What do you need to do? If your URL starts with any of the following six legacy 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Release Notes for the Week Ending June 29, 2012]]></title>
-    <link href="http://search.digitalgov.gov/releases/2012-06-29.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2012-07-03T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2012-06-29.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<p><strong>Features</strong></p>
 
 
@@ -4203,31 +4257,23 @@ What do you need to do? If your URL starts with any of the following six legacy 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Release Notes for the Week Ending June 15, 2012]]></title>
-    <link href="http://search.digitalgov.gov/releases/2012-06-15.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2012-06-19T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2012-06-15.html</id>
-    <content type="html"><![CDATA[<p><strong>Features</strong></p>
+    <id>http://search.digitalgov.gov/releases.html</id>
+    <content type="html"><![CDATA[<h2>Features</h2>
 
-
-<p><em>Highlight: improved PDF parser</em></p>
-
-
-<p>We have good news for those of you with lots of PDF files. We've upgraded our PDF parser to <a href="http://tika.apache.org/">Apache Tika</a> to improve our ability to index complex, non-standard PDFs. </p>
-
-
-<p><em>Other features<br/></em></p>
-
-
-<ul><li>Customers may input third party tracking (e.g., Google Analytics, WebTrends, Omniture, etc.) via a request form.</li>
+<ul>
+<li>We have good news for those of you with lots of PDF files. We've upgraded our PDF parser to <a href="http://tika.apache.org/">Apache Tika</a> to improve our ability to index complex, non-standard PDFs.</li>
+<li>Customers may input third party tracking (e.g., Google Analytics, WebTrends, Omniture, etc.) via a request form.</li>
 <li>Customers may upload up to 10,000 URLs via the bulk upload option on the URLs and Sitemaps page.</li>
 </ul>
 
 
-<p><strong>Fixes</strong></p>
+<h2>Fixes</h2>
 
-
-<ul><li>Fixed memory bloat associated with log file processing.</li>
+<ul>
+<li>Fixed memory bloat associated with log file processing.</li>
 </ul>
 
 ]]></content>
@@ -4321,62 +4367,30 @@ What do you need to do? If your URL starts with any of the following six legacy 
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Release Notes for the Week Ending May 18, 2012]]></title>
-    <link href="http://search.digitalgov.gov/releases/2012-05-18.html"/>
-    <updated>2012-05-18T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2012-05-18.html</id>
-    <content type="html"><![CDATA[<p><strong>Features</strong></p>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
+    <updated>2012-05-11T00:00:00+00:00</updated>
+    <id>http://search.digitalgov.gov/releases.html</id>
+    <content type="html"><![CDATA[<h2>Features</h2>
 
-
-<p><em>Highlight: Monthly Analytics Email</em></p>
-
-
-<p>Beginning on June 1, you won't have to log in to see your search analytics. We'll deliver a report directly to your inbox each month. Plus, it will be easier to share the data with your colleagues.</p>
-
-
-<ul><li>Searchers see video results from YouTube playlists.</li>
+<ul>
+<li>You can now change the order of the sidebar options that appear on your results page, regardless of source.</li>
+<li>You can now leverage our discovery tag over https.</li>
+<li>Beginning on June 1, you won't have to log in to see your search analytics. We'll deliver a report directly to your inbox each month. Plus, it will be easier to share the data with your colleagues.
+Searchers see video results from YouTube playlists.</li>
 <li>Searchers see a recent tweet when it matches their query.</li>
 <li>Mobile visitors to m.USA.gov see unique page titles in browser.</li>
-<li>When customers add or modify a <a href="/sites/manual/domains.html">domain</a>, their pages are automatically discovered.</li>
+<li>When customers add or modify a <a href="(/sites/manual/domains.html">domain</a>, their pages are automatically discovered.</li>
 <li>Customers have a free form text box (versus a drop-down menu) to enter related sites on the Results Modules page.</li>
 </ul>
 
 
-<p><strong>Fixes</strong></p>
+<h2>Fixes</h2>
 
-
-<ul><li>Searchers can tab to a link to skip to the main content. (Thanks, USCIS, for pointing this out.)</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Release Notes for the Week Ending May 11, 2012]]></title>
-    <link href="http://search.digitalgov.gov/releases/2012-05-11.html"/>
-    <updated>2012-05-11T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2012-05-11.html</id>
-    <content type="html"><![CDATA[<p><strong>Features</strong></p>
-
-
-<p><em>Highlight: Additional Sidebar Flexibility</em></p>
-
-
-<p>You can now change the order of the sidebar options that appear on your results page, regardless of source.</p>
-
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_m42l7i8Z251qid15q.png"/></p>
-
-
-<ul><li>Customers can leverage our discovery tag over https.</li>
-</ul>
-
-
-<p><strong>Fixes</strong></p>
-
-
-<ul><li>Fix layout of deep links.</li>
-<li>Fetch RSS feed entries without guid.</li>
+<ul>
+<li>We fixed the layout of deep links.</li>
+<li>We now fetch RSS feed entries without guid.</li>
+<li>Searchers can tab to a link to skip to the main content. (Thanks, USCIS, for pointing this out.)</li>
 </ul>
 
 ]]></content>
@@ -4551,10 +4565,10 @@ Beyond that, we feel that DigitalGov Search values their stakeholders and we app
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[March 2012 Release Notes]]></title>
-    <link href="http://search.digitalgov.gov/releases/2012-03-31.html"/>
+    <title type="html"><![CDATA[Releases]]></title>
+    <link href="http://search.digitalgov.gov/releases.html"/>
     <updated>2012-04-18T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2012-03-31.html</id>
+    <id>http://search.digitalgov.gov/releases.html</id>
     <content type="html"><![CDATA[<div>
 <p>We've moved! Our homepage is now usasearch.howto.gov.</p>
 <p><a href="http://www.howto.gov">HowTo.gov</a> is a website to help government workers deliver a better customer experience to citizens. HowTo.gov is managed by <a href="http://www.gsa.gov/portal/category/25729">GSA's Office of Citizen Services and Innovative Technologies</a> and the <a href="http://www.howto.gov/communities/federal-web-managers-council">Federal Web Managers Council</a>, and is supported by other communities of practice. Search is an important aspect of customer experience so we're happy be part of HowTo.gov.</p>
@@ -5177,14 +5191,34 @@ I almost couldn't believe that this amazing service is free. It's easy to implem
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[August 2011 Release Notes]]></title>
-    <link href="http://search.digitalgov.gov/releases/2011-09-15.html"/>
+    <title type="html"><![CDATA[DigitalGov Search Wins InformationWeek Award]]></title>
+    <link href="http://search.digitalgov.gov/blog/award-informationweek.html"/>
     <updated>2011-09-15T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2011-09-15.html</id>
-    <content type="html"><![CDATA[<p><span> </span></p>
+    <id>http://search.digitalgov.gov/blog/award-informationweek.html</id>
+    <content type="html"><![CDATA[<p><em>InformationWeek</em> yesterday <a href="http://www.informationweek.com/news/galleries/government/leadership/231600939">recognized 15 government agencies</a> for taking on ambitious IT initiatives in an effort to provide better services at a lower cost.</p>
 
+<p>Former federal CIO Vivek Kundra talked often about the technology gap that separates government workers from private-sector employees. Federal, state, and local government agencies have many initiatives under way in an effort to close that gap.</p>
 
-<p><span>While the dogs days of summer are almost over, we didn't let the weather stop us from rolling out some hot new features.</span></p>
+<p>They're employing cloud computing, software as a service, the Web, mobile technologies, and more to give government workers the tools they need to be more productive and to deliver public services more efficiently.</p>
+
+<p>GSA's DigitalGov Search (formerly USASearch) was one of those honored by <em>InformationWeek</em> for making government services in English and in Spanish more accessible online with a revamped version of DigitalGov Search and its set of advanced search technologies for <a href="http://www.usa.gov">USA.gov</a>. Noted was our use of Microsoft's Bing Index, open source technologies such MySQL, Hadoop, and OpenCalais, and employing agile development to deliver new features quickly.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_lrjk43Q2sP1qid15q.png" alt="Web results for a search on white house on USA.gov" /></p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_lrjk5nzgYz1qid15q.png" alt="Image results for a search on white house on USA.gov" /></p>
+
+<p>The award also cited our affiliate program which now includes hundreds of government websites that share our services and data through the platform. This affiliate program offers free search services to any federal, state, local, tribal, or territorial government agency. Affiliates can create a customized search experience that best fits their clients' needs through a simple, online administrative console.</p>
+
+<p>Read about DigitalGov Search and the other InformationWeek award recipients at <a href="http://www.informationweek.com/news/galleries/government/leadership/231600939">http://www.informationweek.com/news/galleries/government/leadership/231600939</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[August 2011]]></title>
+    <link href="http://search.digitalgov.gov/august-2011.html"/>
+    <updated>2011-09-15T00:00:00+00:00</updated>
+    <id>http://search.digitalgov.gov/august-2011.html</id>
+    <content type="html"><![CDATA[<p><span>While the dogs days of summer are almost over, we didn't let the weather stop us from rolling out some hot new features.</span></p>
 
 
 <p><span>We we are currently beta testing two new rendering options: iFrame and a <a href="https://drupal.org/project/USASearch">Drupal module</a> which will allow you to host the search results on your web site and gain additional control of the look and feel. If you are an affiliate and interested in beta testing, please let us know.</span></p>
@@ -5238,29 +5272,6 @@ I almost couldn't believe that this amazing service is free. It's easy to implem
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[DigitalGov Search Wins InformationWeek Award]]></title>
-    <link href="http://search.digitalgov.gov/blog/award-informationweek.html"/>
-    <updated>2011-09-15T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/blog/award-informationweek.html</id>
-    <content type="html"><![CDATA[<p><em>InformationWeek</em> yesterday <a href="http://www.informationweek.com/news/galleries/government/leadership/231600939">recognized 15 government agencies</a> for taking on ambitious IT initiatives in an effort to provide better services at a lower cost.</p>
-
-<p>Former federal CIO Vivek Kundra talked often about the technology gap that separates government workers from private-sector employees. Federal, state, and local government agencies have many initiatives under way in an effort to close that gap.</p>
-
-<p>They're employing cloud computing, software as a service, the Web, mobile technologies, and more to give government workers the tools they need to be more productive and to deliver public services more efficiently.</p>
-
-<p>GSA's DigitalGov Search (formerly USASearch) was one of those honored by <em>InformationWeek</em> for making government services in English and in Spanish more accessible online with a revamped version of DigitalGov Search and its set of advanced search technologies for <a href="http://www.usa.gov">USA.gov</a>. Noted was our use of Microsoft's Bing Index, open source technologies such MySQL, Hadoop, and OpenCalais, and employing agile development to deliver new features quickly.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_lrjk43Q2sP1qid15q.png" alt="Web results for a search on white house on USA.gov" /></p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_lrjk5nzgYz1qid15q.png" alt="Image results for a search on white house on USA.gov" /></p>
-
-<p>The award also cited our affiliate program which now includes hundreds of government websites that share our services and data through the platform. This affiliate program offers free search services to any federal, state, local, tribal, or territorial government agency. Affiliates can create a customized search experience that best fits their clients' needs through a simple, online administrative console.</p>
-
-<p>Read about DigitalGov Search and the other InformationWeek award recipients at <a href="http://www.informationweek.com/news/galleries/government/leadership/231600939">http://www.informationweek.com/news/galleries/government/leadership/231600939</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[New York State Department of Environmental Conservation]]></title>
     <link href="http://search.digitalgov.gov/quote/nysdec.html"/>
     <updated>2011-08-24T00:00:00+00:00</updated>
@@ -5273,10 +5284,10 @@ I almost couldn't believe that this amazing service is free. It's easy to implem
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[July Release Notes]]></title>
-    <link href="http://search.digitalgov.gov/releases/2011-08-11.html"/>
+    <title type="html"><![CDATA[July 2011 Release Notes]]></title>
+    <link href="http://search.digitalgov.gov/releases/july-2011.html"/>
     <updated>2011-08-11T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2011-08-11.html</id>
+    <id>http://search.digitalgov.gov/releases/july-2011.html</id>
     <content type="html"><![CDATA[<p>We  hope everyone is staying cool in the dog days of our August summer, but  just because it is hot doesn't mean we aren't busy. <br/> <br/>We  would like to point out an enhancement to our Add to Bing feature.  Immediately after you add a page to Bing, we automatically include it in  your Boosted Content. Once the document is added to the Bing index, we  automatically remove the entry from your Boosted Content. We hope you  enjoy this enhancement as it is something that many of you told us was a  high priority fix.<br/> <br/>As a reminder, we divide our work into three categories:<br/> <br/>1) Features—Things that you actually notice<br/>2) Bugs—Fixes to any code issues that may arise<br/>3) Chores—Back-end improvements that aren't noticed<br/> <br/>Without further adieu, below are the August release notes.<br/><br/><strong>Features </strong></p>
 
 
@@ -5321,26 +5332,25 @@ I almost couldn't believe that this amazing service is free. It's easy to implem
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[June Release Notes & Happy Fourth of July]]></title>
-    <link href="http://search.digitalgov.gov/releases/2011-07-01.html"/>
+    <title type="html"><![CDATA[June 2011 Release Notes]]></title>
+    <link href="http://search.digitalgov.gov/releases/june-2011.html"/>
     <updated>2011-07-01T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/releases/2011-07-01.html</id>
-    <content type="html"><![CDATA[<p><span><span>We wish everyone a safe and happy Fourth of July. Before everyone departs for the long holiday, we wanted to post our June release notes.</span><br/></span></p>
-
+    <id>http://search.digitalgov.gov/releases/june-2011.html</id>
+    <content type="html"><![CDATA[<p>Happy Fourth of July. Before everyone departs for the long holiday, we wanted to post our June release notes.</p>
 
 <p>As a reminder, we divide our work into three categories:</p>
 
-
-<p>1) Features — things that you actually notice<br/>2) Bugs — Fixes to any code issues that may arise <br/>3) Chores — back-end improvements that you don't notice </p>
-
-
-<p>Features:</p>
-
-
-<p>For End Users Users:</p>
+<ol>
+<li>Features&mdash;things that you actually notice</li>
+<li>Bugs&mdash;fixes to any code issues that may arise</li>
+<li>Chores&mdash;back-end improvements that you don't notice</li>
+</ol>
 
 
-<ul><li>Users see polished agency GovBox design</li>
+<h2>Features for End Users Users</h2>
+
+<ul>
+<li>Users see polished agency GovBox design</li>
 <li>Users see aligned text on SERPs</li>
 <li>Users don't see underlines on SERPs</li>
 <li>User sees health GovBoxes</li>
@@ -5354,18 +5364,18 @@ I almost couldn't believe that this amazing service is free. It's easy to implem
 </ul>
 
 
-<p>For Admins:</p>
+<h2>Features for Admins</h2>
 
-
-<ul><li>USAAdmins can easily batch process new users by status</li>
+<ul>
+<li>USAAdmins can easily batch process new users by status</li>
 <li>Analysts see 4 column daily click module containing module name, impressions, clicks, and CTR% </li>
 </ul>
 
 
-<p>Fixes:</p>
+<h2>Fixes</h2>
 
-
-<ul><li>Users should not have letters "skipped" as they're typing in the search box</li>
+<ul>
+<li>Users should not have letters "skipped" as they're typing in the search box</li>
 <li>Display shorter URLs on Affiliate SERPs</li>
 <li>Affiliates should not see global terms populated in type ahead</li>
 <li>Update API language</li>
@@ -5388,7 +5398,7 @@ I almost couldn't believe that this amazing service is free. It's easy to implem
     <id>http://search.digitalgov.gov/blog/adopting-hadoop.html</id>
     <content type="html"><![CDATA[<h2>Background</h2>
 
-<p>The United States federal government's DigitalGov Search program provides hosted search services for government affiliate organizations, shares APIs and web services, and operates the government's official search engine on <a href="http://www.usa.gov">USA.gov</a>. DigitalGov Search offers free search services to any federal, state, local, tribal, or territorial government agency. Several hundred websites make use of this service, ranging from the smallest municipality to larger federal sites like <a href="http://www.weather.gov">http://www.weather.gov</a> and <a href="http://www.usa.gov">http://www.usa.gov</a>. DigitalGov Search leverages the Bing API as the basis for its web results and then augments the user search experience by providing a variety of government-centric information such as related search topics and highlighted editorial content. The entire system is comprised of a suite of open-source tools and resources, including Apache Solr/Lucene, OpenCalais, and Apache Hadoop. Of these, our usage of Hadoop is the most recent. We began using <a href="http://www.cloudera.com/hadoop/">Cloudera's Distribution including Apache Hadoop</a> &nbsp;<i class="icon-external-link"><span>(External link)</span></i> (CDH3) for the first time in the Fall, and since then we've seen our usage grow every month&mdash;not just in scale, but in scope as well. But before highlighting everything DigitalGov Search is doing with Hadoop today, I should explain why we began using it in the first place.</p>
+<p>The United States federal government's DigitalGov Search program provides hosted search services for government affiliate organizations, shares APIs and web services, and operates the government's official search engine on <a href="http://www.usa.gov">USA.gov</a>. DigitalGov Search offers free search services to any federal, state, local, tribal, or territorial government agency. Several hundred websites make use of this service, ranging from the smallest municipality to larger federal sites like <a href="http://www.weather.gov">http://www.weather.gov</a> and <a href="http://www.usa.gov">http://www.usa.gov</a>. DigitalGov Search leverages the Bing API as the basis for its web results and then augments the user search experience by providing a variety of government-centric information such as related search topics and highlighted editorial content. The entire system is comprised of a suite of open-source tools and resources, including Apache Solr/Lucene, OpenCalais, and Apache Hadoop. Of these, our usage of Hadoop is the most recent. We began using <a href="http://www.cloudera.com/hadoop/">Cloudera's Distribution including Apache Hadoop</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (CDH3) for the first time in the Fall, and since then we've seen our usage grow every month&mdash;not just in scale, but in scope as well. But before highlighting everything DigitalGov Search is doing with Hadoop today, I should explain why we began using it in the first place.</p>
 
 <h2>Phase 1: Search analytics</h2>
 
@@ -5424,7 +5434,7 @@ I almost couldn't believe that this amazing service is free. It's easy to implem
 
 <p>In the space of a few months, we've gone from having a brittle and hard-to-scale RDBMS-based analytics platform to a much more agile Hadoop-based system that was designed to scale intrinsically. We continue to see our Hadoop usage grow in scope with each new data source we add, and it's clear that we'll be relying on it more and more in the future as the suite of tools and resources around Hadoop grows and matures.</p>
 
-<p><strong><em>This post is cross-posted from <a href="http://www.cloudera.com/blog/2011/04/adopting-apache-hadoop-in-the-federal-government">Cloudera</a> &nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</em></strong></p>
+<p><strong><em>This post is cross-posted from <a href="http://www.cloudera.com/blog/2011/04/adopting-apache-hadoop-in-the-federal-government">Cloudera</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</em></strong></p>
 ]]></content>
   </entry>
   
@@ -5439,7 +5449,7 @@ I almost couldn't believe that this amazing service is free. It's easy to implem
 
 <ol>
 <li>Features&mdash;things that you actually notice</li>
-<li>Bugs&mdash;Fixes to any code issues that may arise</li>
+<li>Bugs&mdash;fixes to any code issues that may arise</li>
 <li>Chores&mdash;back-end improvements that you don't notice</li>
 </ol>
 

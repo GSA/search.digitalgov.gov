@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Search Notes for the Week Ending August 17, 2012 </title>
+  <title>December 2013 Release Notes</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -71,43 +71,62 @@
   <div id="main-container"><article class="article">
   <div class='time'>
     
-    <a href="/releases/2012-08-22.html">
-      <time>August 22, 2012</time>
+    <a href="/releases/december-2013.html">
+      <time>December 31, 2013</time>
     </a>
   </div>
 
   
   <h1>
-    <a href="/releases/2012-08-22.html">Search Notes for the Week Ending August 17, 2012 </a>
+    <a href="/releases/december-2013.html">December 2013 Release Notes</a>
   </h1>
   
 
   <div class='post-content'>
-    <div class="post_title"><strong>Features</strong></div>
+    <h2>3 Highlighted Features</h2>
 
+<h3>Feature 1. Analyze Searchers' Click Behavior</h3>
 
-<p><em>Coming soon! Forms GovBox </em></p>
+<p>Clickthru rates (CTR) can indicate the relevance of your results for specific search terms. You can now see (a) the CTR for your top 1,000 <a href="/sites/manual/queries.html">queries</a> and (b) your top <a href="/sites/manual/clicks.html">clicked URLs</a>. The data are updated in real time.</p>
 
+<p>Use the data to find searches with low CTRs. For these queries, consider if a low CTR is good or not. (A low CTR can be good when searchers see the answer directly on the results page, eliminating the need to click on a link.) For those that aren't good, tweak your page's title or content, add a new page to your site, or add a <a href="/sites/manual/best-bets-text.html">best bet</a> to point to the relevant page on another agency's site.</p>
 
-<p>Similar to our existing <a href="/sites/manual/govbox-agencies.html">agency</a> and <a href="/sites/manual/govbox-health.html">health</a> GovBoxes, we're currently working on rolling out a forms GovBox to help searchers find federal government forms.</p>
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-ctr-top-queries.png" title="Clickthru Rates for Top Queries" alt="Clickthru Rates for Top Queries" /></p>
 
+<h3>Feature 2. Analyze the Terms that Trigger Best Bets</h3>
 
-<p>If you have forms metadata in a structured format, and want to have your visitors see them in search results, please <a href="mailto:search@support.digitalgov.gov">send us an email</a>.</p>
+<p>Have you ever wondered what search terms make your <a href="/sites/manual/best-bets-text.html">best bets</a> appear? From the <a href="/sites/manual/monthly-reports.html">Monthly Reports</a> page, you can now drill down to see a pie chart of the terms that trigger each best bet. The data are updated in real time.</p>
 
+<p>Use the data to tweak your best bet's title, description, and keyword phrases. Or, use it to decide to delete the best bet altogether.</p>
 
-<p><strong>Chores</strong></p>
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-bb-trigger.png" title="Pie Chart of Terms Triggering a Best Bet" alt="Pie Chart of Terms Triggering a Best Bet" /></p>
 
+<h3>Feature 3. Use Keyword Phrases to Show Best Bets Only When They're Relevant</h3>
 
-<ul><li>We upgraded to <a href="http://weblog.rubyonrails.org/2012/8/9/ann-rails-3-2-8-has-been-released/">Rails 3.2.8</a>.</li>
-<li>We upgraded to Ruby 1.9.3.</li>
+<p>Have you ever seen a <a href="/sites/manual/best-bets-text.html">best bet</a> when you don't expect it to appear? Best bet keywords are now <em>phrases</em>. This change allows you to show a best bet only when its keyword is an <em>exact match</em> with a searcher's query.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-improved-phrasing.png" title="Best Bets Now Use Keyword Phrases" alt="Best Bets Now Use Keyword Phrases" /></p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>We fixed some errors with URL shortening.</li>
+<li>We updated our stemming file so searchers no longer see irrelevant results for intern.</li>
+<li>We replaced Jenkins with <a href="https://travis-ci.org/">Travis CI</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We fixed a time setting on our API machine.</li>
+<li>We upgraded Java on our API and <a href="http://www.cloudera.com/content/cloudera/en/home.html">Cloudera</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> machines.</li>
 </ul>
 
 
-<p><strong>Fixes</strong></p>
+<h2>Fixes</h2>
 
-
-<ul><li>We fixed broken URLs for YouTube thumbnails.</li>
-<li>We fixed an invalid byte sequence in UTF-8.</li>
+<ul>
+<li>We fixed the layout of graphic best bets so results are shown in vertical, newspaper style columns. We also added more spaces between links.</li>
+<li>Spanish language searchers no longer see spelling suggestions for terms with and without diacritics.</li>
+<li>We renamed the IP deduped column <i>Real Count (Humans Only)</i> in the downloadable CSV file on the <a href="/sites/manual/monthly-reports.html">Monthly Reports</a> page.</li>
+<li>We updated our mobile search results page to show a more/less symbol only when it is applicable.</li>
+<li>We fixed the search box on our mobile results page so searchers can easily remove previous queries from the search box and so long mobile search terms don't overlap with the 'x' on the right.</li>
+<li>Best bets now appear even when there are no web results.</li>
 </ul>
 
 
@@ -115,7 +134,7 @@
 
   <div class='tags'>
     
-    <a href="/tagged/releases"><span class="label label-info">releases</span></a>
+    <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
     
   </div>
 </article></div>
