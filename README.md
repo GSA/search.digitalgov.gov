@@ -18,13 +18,16 @@
 
 ## Setup development environment
 
-* Open a Terminal window
-* start homebrew ($ brew doctor)
+Open a Terminal window. Start homebrew.
+    
+    $ brew doctor
 
 ### Ruby
 
 You will need [Ruby 2.0.0](http://www.ruby-lang.org/en/downloads).
 [RVM](http://rvm.io) is recommended to install Ruby on your development environment.
+
+    $ rvm install ruby-2.0.0
 
 ### Gems
 
