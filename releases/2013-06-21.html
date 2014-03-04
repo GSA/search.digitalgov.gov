@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Spring Cleaning: Notes for the Week Ending June 21, 2013</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/stylesheets/font-awesome-ie7.min.css">
+  <![endif]-->
+
+  <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+  <link href="/stylesheets/custom.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+  <link rel="shortcut icon" href="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/favicon.ico">
+  <link rel='alternate' type='application/atom+xml' title='usasearch.howto.gov Atom feed' href='/all.atom' />
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="/">
+        <span class="digital">Digital</span><span class="gov">Gov</span>
+        <span class="search">Search</span>
+      </a>
+      <ul class="nav">
+        <li>
+          <form class="form-search" accept-charset="UTF-8" action="http://search.usa.gov/search/news/" id="search-form" method="get">
+            <input id="affiliate" name="affiliate" type="hidden" value="usasearch"/>
+            <input type="hidden" name="channel" value="1745">
+            <input type="hidden" name="sort_by" value="r">
+            <input type="hidden" name="m" value="true">
+            <div class="input-append">
+              <label for="search-query" class="hide">Query</label>
+              <input name="query" type="text" autocomplete="off"
+                     class="usagov-search-autocomplete span search-query" id="search-query"/>
+              <input type="submit" class="btn" id="search-button" value="Search" />
+            </div>
+          </form>
+        </li>
+      </ul>
+      <ul class="nav login">
+        <li>
+          <a href="https://search.usa.gov/sites"><i
+              class="icon-user icon-white"></i>&nbsp;Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div id="main-container"><article class="article">
+  <div class='time'>
+    
+    <a href="/releases/2013-06-21.html">
+      <time>June 21, 2013</time>
+    </a>
+  </div>
+
+  
+  <h1>
+    <a href="/releases/2013-06-21.html">Spring Cleaning: Notes for the Week Ending June 21, 2013</a>
+  </h1>
+  
+
+  <div class='post-content'>
+    <p>We've spent the past few weeks doing some spring cleaning to improve our backend infrastructure and to lay the groundwork for a major update to our Admin Center. Stay tuned!</p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>We started using the Rails <a href="http://guides.rubyonrails.org/asset_pipeline.html">asset pipeline</a>. As a result of using the pipeline and some of the other chores below, we decreased the page load time by 25 percent.</li>
+<li>We upgraded to <a href="http://www.elasticsearch.org/blog/0-90-1-released/">Elasticsearch 0.90.1</a>.</li>
+<li>We upgraded to <a href="https://www.ruby-lang.org/en/news/2013/05/14/ruby-2-0-0-p195-is-released/">Ruby 2.0.0</a>.</li>
+<li>We updated the way we monitor <a href="http://blog.phusion.nl/category/passenger/phusion-passenger-4/">Phusion Passenger</a>.</li>
+<li>We removed some unused tables and columns from our MySQL database.</li>
+<li>We removed the legacy recalls code from our codebase now that we've released it as a standalone open source <a href="https://github.com/GSA/recalls_api">Recalls API Server</a>.</li>
+<li>We no longer require a valid API key to include API queries in your <a href="/tagged/analytics">site analytics</a>.</li>
+<li>We updated our list of synonyms to include fracking and hyrdofracturing as equivalent terms.</li>
+<li>The hyperlinks in the Admin Center system alerts are now clickable.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed a regression bug with <a href="https://github.com/haml">Haml</a> and Ruby 2.0.0 that made the background color of the search results the same color as the page background.</li>
+<li>We fixed the CSS for the magnifying glass on the search box so that it appears properly in IE7.</li>
+<li>We now only show unique descriptions for <a href="http://api.usa.gov/recalls/search?organization=cpsc&amp;sort=date">CPSC recalls</a>.</li>
+</ul>
+
+
+  </div>
+
+  <div class='tags'>
+    
+    <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+    
+  </div>
+</article></div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p><a href="mailto:search@support.digitalgov.gov">Email us</a>, call us at 202-505-5315, or follow <a href="http://www.twitter.com/dg_search">@DG_Search</a></p>
+    <p> An Official Website of the U.S. Government <br />
+      <a href="http://www.gsa.gov/portal/category/25729">Office of Citizen Services &amp; Innovative Technologies</a>, <a href="http://www.gsa.gov">U.S. General Services Administration</a>
+    </p>
+    <ul class="footer-links unstyled inline">
+      <li><a href="http://www.usa.gov">USA.gov</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/tos.html">Terms of Service</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="http://www.digitalgov.gov/about/policies/">Site Policies</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  //<![CDATA[
+  var usasearch_config = { siteHandle:"usasearch" };
+
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "http://search.usa.gov/javascripts/remote.loader.js";
+  document.getElementsByTagName("head")[0].appendChild(script);
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31302465-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  //]]>
+</script>
+
+
+</body>
+</html>
