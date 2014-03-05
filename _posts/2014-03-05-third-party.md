@@ -47,22 +47,22 @@ The code you submit should look something like one of the following two scripts.
 
 ## Digital Analytics Program Tip
 
-Does your federal agency participate in the [Digital Analytics Program](http://www.howto.gov/web-content/digital-metrics/digital-analytics-program) (DAP)? 
-
-You don't need to upload the full DAP Google Analytics code. You can simply say something like, "Add DAP code."
+Does your federal agency participate in the [Digital Analytics Program](https://www.digitalgov.gov/services/dap/) (DAP)?  You don't need to do anything. We're already fully integrated with DAP.
 
 ## ForeSee Tip
 
 Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.
 
-1. Email us at <search@support.digitalgov.gov> to <a href="/manual/cname.html">set up a CNAME</a> for search.{yourdomain}.gov.
+1. Email us at <search@support.digitalgov.gov> to <a href="/manual/cname.html">set up a CNAME</a> for search.youragency.gov.
 
-2. Update the files path in your Foresee code to use an absolute path instead of a relative path. 
+1. Update the files path in your Foresee code to use an absolute path instead of a relative path. 
 
-    Find => 'files': '/fsrscripts/',
-    
-    and replace it with => 'files': '//{yourdomain}/fsrscripts/',
-  
+    **Find =>** 'files': '/fsrscripts/',  
+
+    **and replace it with =>** 'files': '//www.youragency.gov/fsrscripts/',  
+
+    *(Or, find => 'files': '/foresee/', and replace it with => 'files': '//www.youragency/foresee/',)*
+
     in the following five files.
 
     * foresee-trigger.js  
@@ -71,10 +71,8 @@ Coordinate with your ForeSee representative and DigitalGov Search to implement y
     * foresee-qualifier.js  
     * foresee-test.js
 
-3. Ask ForeSee to send us your foresee-trigger.js file.
+1. Submit your foresee-trigger.js via our Admin Center. It should look something like the following.
 
-4. We'll send you an email to confirm that we've set up your CNAME and installed your foresee-trigger.js file.
+          <script type="text/javascript" src="http://www.youragency.gov/library/foresee/foresee-trigger.js"></script>
 
-It should look something like the following.
-
-     <script type="text/javascript" src="http://www.YourAgency.gov/library/foresee/foresee-trigger.js"></script>
+1. We'll send you an email to confirm that we've set up both your CNAME and added the script for your foresee-trigger.js file.
