@@ -77,6 +77,121 @@
       
       <span>Last updated on:</span>
       
+      <a href="/manual/third-party.html">
+        <time datetime="2014-03-05">March 5, 2014</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/third-party.html">How to Add JavaScript for Your Third Party Web Services</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > 3rd Party Tracking</p>
+
+<p>Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?</p>
+
+<p>Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
+
+<p>Some tips for commonly used third party web services follow.</p>
+
+<h2>Google Analytics Tip</h2>
+
+<p>In your Google Analytics JavaScript, be sure to set your domain if you've requested <a href="/manual/cname.html">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
+
+<pre><code>_gaq.push(['_setDomainName', 'commerce.gov']);
+</code></pre>
+
+<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>.</p>
+
+<p>The code you submit should look something like one of the following two scripts.</p>
+
+<h3>Google Analytics Code (Older Format)</h3>
+
+<pre><code> &lt;script type="text/javascript"&gt;
+ var _gaq = _gaq || []; 
+ _gaq.push(['_setAccount', 'UA-########-1']); 
+ _gaq.push(['_trackPageview']);
+
+ (function() { 
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
+ })();
+
+ &lt;/script&gt;
+</code></pre>
+
+<h3>Google Analytics Code (Newer Format)</h3>
+
+<pre><code>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+</code></pre>
+
+<h2>Digital Analytics Program Tip</h2>
+
+<p>Does your federal agency participate in the <a href="https://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> (DAP)?  You don't need to do anything. We're already fully integrated with DAP.</p>
+
+<h2>ForeSee Tip</h2>
+
+<p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
+
+<ol>
+<li><p>Email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#115;&#x65;&#x61;&#114;&#99;&#104;&#64;&#115;&#117;&#x70;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#x2e;&#x67;&#111;&#118;">&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#x67;&#111;&#x76;</a> to <a href="/manual/cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
+<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
+
+<p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
+
+<p> <strong>and replace it with =></strong> 'files': '//www.youragency.gov/fsrscripts/',</p>
+
+<p> <em>(Or, find => 'files': '/foresee/', and replace it with => 'files': '//www.youragency/foresee/',)</em></p>
+
+<p> in the following five files.</p>
+
+<ul>
+<li>foresee-trigger.js</li>
+<li>foresee-tracker.js</li>
+<li>foresee-alive.js</li>
+<li>foresee-qualifier.js</li>
+<li>foresee-test.js</li>
+</ul>
+</li>
+<li><p>Submit your foresee-trigger.js via our Admin Center. It should look something like the following.</p>
+
+<pre><code>   &lt;script type="text/javascript" src="http://www.youragency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;
+</code></pre></li>
+<li><p>We'll send you an email to confirm that we've set up both your CNAME and added the script for your foresee-trigger.js file.</p></li>
+</ol>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
+      
+      <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
+      
+      <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
+      
+      <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/manual/monthly-reports.html">
         <time datetime="2013-10-31">October 31, 2013</time>
       </a>
@@ -359,6 +474,58 @@
       
       <span>Last updated on:</span>
       
+      <a href="/manual/font-colors.html">
+        <time datetime="2013-09-20">September 20, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/font-colors.html">How to Customize the Font and Colors on Your Results Page</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Display > Font &amp; Colors</p>
+
+<h2>Font Family</h2>
+
+<p>Select your preferred font family. The default option is 'Arial, sans-serif'.</p>
+
+<h2>Color Scheme</h2>
+
+<p>Leave the default color scheme as-is, or select Custom to create a customized scheme.</p>
+
+<p>Customize the color of any page element by clicking on it and entering a valid three- or six-digit hex value. You can also pick a color by dragging your mouse inside the color picker window.</p>
+
+<p><strong><em>Content border.</em></strong> Select the option, Show Content Border, to add some padding above your search results. If you don't select the option, the results will be flush against the top of the browser window.</p>
+
+<p><strong><em>Content box shadow.</em></strong> Select the option, Show Content Box Shadow, to display a drop shadow around the main 'box' of content on your results page. If you don't select the option, no drop shadow will appear. Note that the shadow isn't supported by Internet Explorer (IE) 7 or 8.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> As you change each font and color option, the mini search results page in the upper right-hand corner will update to reflect your changes. Once you click save, the changes will appear on your live site.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/manage-display"><span class="label label-info">manage-display</span></a>
+      
+      <a href="/tagged/font"><span class="label label-info">font</span></a>
+      
+      <a href="/tagged/colors"><span class="label label-info">colors</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/manual/queries.html">
         <time datetime="2013-09-20">September 20, 2013</time>
       </a>
@@ -541,58 +708,6 @@
       
       <span>Last updated on:</span>
       
-      <a href="/manual/font-colors.html">
-        <time datetime="2013-09-20">September 20, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/font-colors.html">How to Customize the Font and Colors on Your Results Page</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Display > Font &amp; Colors</p>
-
-<h2>Font Family</h2>
-
-<p>Select your preferred font family. The default option is 'Arial, sans-serif'.</p>
-
-<h2>Color Scheme</h2>
-
-<p>Leave the default color scheme as-is, or select Custom to create a customized scheme.</p>
-
-<p>Customize the color of any page element by clicking on it and entering a valid three- or six-digit hex value. You can also pick a color by dragging your mouse inside the color picker window.</p>
-
-<p><strong><em>Content border.</em></strong> Select the option, Show Content Border, to add some padding above your search results. If you don't select the option, the results will be flush against the top of the browser window.</p>
-
-<p><strong><em>Content box shadow.</em></strong> Select the option, Show Content Box Shadow, to display a drop shadow around the main 'box' of content on your results page. If you don't select the option, no drop shadow will appear. Note that the shadow isn't supported by Internet Explorer (IE) 7 or 8.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> As you change each font and color option, the mini search results page in the upper right-hand corner will update to reflect your changes. Once you click save, the changes will appear on your live site.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-display"><span class="label label-info">manage-display</span></a>
-      
-      <a href="/tagged/font"><span class="label label-info">font</span></a>
-      
-      <a href="/tagged/colors"><span class="label label-info">colors</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
       <a href="/manual/display-images.html">
         <time datetime="2013-09-16">September 16, 2013</time>
       </a>
@@ -714,7 +829,7 @@
 
 <p><strong><em>Did you know?</em></strong>  Searchers may narrow results by time period for any <a href="/manual/rss.html">RSS</a> feeds. See, for example, results for a <a href="http://search.whitehouse.gov/search/news?affiliate=wh&amp;channel=6&amp;m=false&amp;query=jobs&amp;tbs=w">search on <em>jobs</em> narrowed to press articles in the last week on WhiteHouse.gov</a>.</p>
 
-<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#115;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;">&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#x75;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#103;&#111;&#x76;</a> to if you want to customize these display names.</p>
+<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#115;&#101;&#97;&#114;&#99;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#111;&#114;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#118;">&#115;&#101;&#97;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#46;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#118;</a> to if you want to customize these display names.</p>
 
 <p><strong><em>Did you know?</em></strong> You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our <a href="/manual/code.html">JavaScript snippet</a> before the closing <code>&lt;body&gt;</code> tag on your HTML web pages.</p>
 
@@ -836,85 +951,6 @@
       <a href="/tagged/supplemental-urls"><span class="label label-info">supplemental-urls</span></a>
       
       <a href="/tagged/filter-urls"><span class="label label-info">filter-urls</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/manual/domains.html">
-        <time datetime="2013-08-29">August 29, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/domains.html">How to Edit Your Domains</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Domains</p>
-
-<p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
-
-<h2>Entire Site(s)</h2>
-
-<ul>
-<li>List yoursite.gov (without www) to search your entire site, including all subdomains.</li>
-<li>List yoursite.gov and yoursite2.gov to search multiple sites.</li>
-</ul>
-
-
-<h2>Specific Subdomains</h2>
-
-<ul>
-<li>List www.yoursite.gov to include only the primary 'www' domain.</li>
-<li>List subdomain.yoursite.gov to include subdomains.</li>
-</ul>
-
-
-<h2>Specific Directories</h2>
-
-<p>List yoursite.gov/folder to include folders. Note: this will include all sub-folders (if they exist), i.e. yoursite.gov/folder/folder2.</p>
-
-<p>You cannot specify individual URLs.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
-
-<ol>
-<li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
-<li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#x73;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#103;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#115;&#101;&#97;&#x72;&#99;&#104;&#x40;&#x73;&#x75;&#112;&#112;&#111;&#114;&#116;&#46;&#100;&#x69;&#103;&#x69;&#x74;&#x61;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
-</ol>
-
-
-<p><a id="filter"></a><strong><em>Troubleshooting Tip:</em></strong> You can remove or filter specific URLs using any of the following options.</p>
-
-<ol>
-<li><p>Remove the page from your site and return a 404 (Not Found) 401 (Gone), or 301 (Permanently Moved) HTTP status.</p></li>
-<li><p>Add a <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">noindex robots metatag or x-robots tag</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
-<li><p>Request the page's removal using the <a href="http://www.bing.com/webmaster/help/block-urls-from-bing-264e560a">Block URLs option in Bing Webaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/1663419">Remove URLs option in Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p></li>
-<li><p>Use the Filter URLs option under the <a href="/manual/domains-advanced.html">Advanced</a> tab. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
-</ol>
-
-
-<p><strong><em>Troubleshooting Tip:</em></strong> Are specific web pages missing from your Bing web results? You can tell us about any missing URLs via an RSS feed or manually (the Supplemental Feed and Supplemental URLs options under the <a href="/manual/domains-advanced.html">Advanced</a> tab, respectively). We'll fetch and index the pages and append them to your web results.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
       
     </div>
   </article>

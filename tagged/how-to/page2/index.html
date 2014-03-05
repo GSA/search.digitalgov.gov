@@ -77,98 +77,66 @@
       
       <span>Last updated on:</span>
       
-      <a href="/manual/third-party.html">
-        <time datetime="2013-08-28">August 28, 2013</time>
+      <a href="/manual/domains.html">
+        <time datetime="2013-08-29">August 29, 2013</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/manual/third-party.html">How to Add JavaScript for Your Third Party Web Services</a>
+      <a href="/manual/domains.html">How to Edit Your Domains</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > 3rd Party Tracking</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Domains</p>
 
-<p>Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?</p>
+<p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
 
-<p>Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
-
-<p>Some tips for commonly used third party web services follow.</p>
-
-<h2>Google Analytics Tip</h2>
-
-<p>In your Google Analytics JavaScript, be sure to set your domain if you've requested <a href="/manual/cname.html">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
-
-<pre><code>_gaq.push(['_setDomainName', 'commerce.gov']);
-</code></pre>
-
-<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>.</p>
-
-<p>The code you submit should look something like one of the following two scripts.</p>
-
-<h3>Google Analytics Code (Older Format)</h3>
-
-<pre><code> &lt;script type="text/javascript"&gt;
- var _gaq = _gaq || []; 
- _gaq.push(['_setAccount', 'UA-########-1']); 
- _gaq.push(['_trackPageview']);
-
- (function() { 
- var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
- ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
- var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
- })();
-
- &lt;/script&gt;
-</code></pre>
-
-<h3>Google Analytics Code (Newer Format)</h3>
-
-<pre><code>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-</code></pre>
-
-<h2>Digital Analytics Program Tip</h2>
-
-<p>Does your federal agency participate in the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> (DAP)?</p>
-
-<p>You don't need to upload the full DAP Google Analytics code. You can simply say something like, "Add DAP code."</p>
-
-<h2>ForeSee Tip</h2>
-
-<p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
-
-<ol>
-<li><p>Email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x73;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#115;&#117;&#x70;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;">&#115;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#117;&#112;&#112;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#118;</a> to <a href="/manual/cname.html">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
-<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
-
-<p> Find => 'files': '/fsrscripts/',</p>
-
-<p> and replace it with => 'files': '//{yourdomain}/fsrscripts/',</p>
-
-<p> in the following five files.</p>
+<h2>Entire Site(s)</h2>
 
 <ul>
-<li>foresee-trigger.js</li>
-<li>foresee-tracker.js</li>
-<li>foresee-alive.js</li>
-<li>foresee-qualifier.js</li>
-<li>foresee-test.js</li>
+<li>List yoursite.gov (without www) to search your entire site, including all subdomains.</li>
+<li>List yoursite.gov and yoursite2.gov to search multiple sites.</li>
 </ul>
-</li>
-<li><p>Ask ForeSee to send us your foresee-trigger.js file.</p></li>
-<li><p>We'll send you an email to confirm that we've set up your CNAME and installed your foresee-trigger.js file.</p></li>
+
+
+<h2>Specific Subdomains</h2>
+
+<ul>
+<li>List www.yoursite.gov to include only the primary 'www' domain.</li>
+<li>List subdomain.yoursite.gov to include subdomains.</li>
+</ul>
+
+
+<h2>Specific Directories</h2>
+
+<p>List yoursite.gov/folder to include folders. Note: this will include all sub-folders (if they exist), i.e. yoursite.gov/folder/folder2.</p>
+
+<p>You cannot specify individual URLs.</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
+
+<ol>
+<li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
+<li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
+<li>Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#58;&#115;&#101;&#97;&#x72;&#99;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#x64;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#111;&#x76;">&#115;&#101;&#x61;&#114;&#x63;&#104;&#64;&#115;&#117;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#111;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
 </ol>
 
 
-<p>It should look something like the following.</p>
+<p><a id="filter"></a><strong><em>Troubleshooting Tip:</em></strong> You can remove or filter specific URLs using any of the following options.</p>
 
-<pre><code> &lt;script type="text/javascript" src="http://www.YourAgency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;
-</code></pre>
+<ol>
+<li><p>Remove the page from your site and return a 404 (Not Found) 401 (Gone), or 301 (Permanently Moved) HTTP status.</p></li>
+<li><p>Add a <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">noindex robots metatag or x-robots tag</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
+<li><p>Request the page's removal using the <a href="http://www.bing.com/webmaster/help/block-urls-from-bing-264e560a">Block URLs option in Bing Webaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/1663419">Remove URLs option in Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p></li>
+<li><p>Use the Filter URLs option under the <a href="/manual/domains-advanced.html">Advanced</a> tab. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
+</ol>
+
+
+<p><strong><em>Troubleshooting Tip:</em></strong> Are specific web pages missing from your Bing web results? You can tell us about any missing URLs via an RSS feed or manually (the Supplemental Feed and Supplemental URLs options under the <a href="/manual/domains-advanced.html">Advanced</a> tab, respectively). We'll fetch and index the pages and append them to your web results.</p>
 
     </div>
 
@@ -176,15 +144,9 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
       
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
       
-      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
-      
-      <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
-      
-      <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
-      
-      <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
+      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
       
     </div>
   </article>
@@ -497,101 +459,6 @@ Enter same passphrase again:
       
       <span>Last updated on:</span>
       
-      <a href="/manual/index.html">
-        <time datetime="2013-08-26">August 26, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/manual/index.html">How to Set Up Your Search Box</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>We provide a search box that searches across all of your <em>public-facing</em> digital content.</p>
-
-<p>We support an unlimited number of web pages across multiple domains and we integrate your RSS feeds, tweets, YouTube videos, and Flickr photos.</p>
-
-<p>Browse through our <a href="/blog/go-live.html">Go-Live Punch List</a> for some quick tips on how to configure the search experience for your website.</p>
-
-<h3>Dashboard</h3>
-
-<ul>
-<li><a href="/manual/site-overview.html">Site overview</a></li>
-<li><a href="/manual/users.html">Manage users</a></li>
-<li><a href="/manual/settings.html">Settings</a></li>
-</ul>
-
-
-<h3>Analytics</h3>
-
-<ul>
-<li><a href="/manual/queries.html">Queries</a></li>
-<li><a href="/manual/clicks.html">Clicks</a></li>
-<li><a href="/manual/monthly-reports.html">Monthly reports</a></li>
-<li><a href="/manual/third-party.html">3rd party tracking</a></li>
-<li><a href="/manual/raw-logs.html">Raw logs</a></li>
-</ul>
-
-
-<h3>Manage Content</h3>
-
-<ul>
-<li><a href="/manual/domains.html">Domains</a> (plus <a href="/manual/domains-advanced.html">advanced options to add or filter URLs</a>)</li>
-<li><a href="/manual/collections.html">Collections</a></li>
-<li><a href="/manual/best-bets-text.html">Best bets:text</a></li>
-<li><a href="/manual/best-bets-graphics.html">Best bets: graphics</a></li>
-<li><a href="/manual/rss.html">RSS</a></li>
-<li><a href="/manual/youtube.html">YouTube</a></li>
-<li><a href="/manual/twitter.html">Twitter</a></li>
-<li><a href="/manual/flickr.html">Flickr</a></li>
-</ul>
-
-
-<h3>Manage Display</h3>
-
-<ul>
-<li><a href="/manual/display-overview.html">Display overview</a></li>
-<li><a href="/manual/font-colors.html">Font &amp; colors</a></li>
-<li><a href="/manual/display-images.html">Image assets</a></li>
-<li><a href="/manual/header-footer.html">Header &amp; footer</a></li>
-</ul>
-
-
-<h3>Preview</h3>
-
-<ul>
-<li><a href="/manual/preview.html">Preview</a></li>
-</ul>
-
-
-<h3>Activate Search</h3>
-
-<ul>
-<li><a href="/manual/code.html">Code snippets</a></li>
-<li><a href="/manual/api.html">API instructions</a></li>
-</ul>
-
-
-<p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
-
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#112;&#111;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#x69;&#116;&#97;&#x6c;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;">&#115;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#x61;&#108;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#x76;</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
       <a href="/blog/go-live.html">
         <time datetime="2013-08-26">August 26, 2013</time>
       </a>
@@ -673,43 +540,92 @@ Enter same passphrase again:
       
       <span>Last updated on:</span>
       
-      <a href="/manual/cname.html">
-        <time datetime="2013-08-23">August 23, 2013</time>
+      <a href="/manual/index.html">
+        <time datetime="2013-08-26">August 26, 2013</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/manual/cname.html">How to Mask Your Domain</a>
+      <a href="/manual/index.html">How to Set Up Your Search Box</a>
     </h1>
     
 
     <div class='post-content'>
-      <p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these three steps to mask your domain.</p>
+      <p>We provide a search box that searches across all of your <em>public-facing</em> digital content.</p>
 
-<ol>
-<li>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#115;&#101;&#97;&#114;&#99;&#x68;&#64;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#x6c;&#x67;&#x6f;&#118;&#46;&#103;&#x6f;&#x76;">&#115;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a> and ask us to mask your domain.</li>
-<li>Create a CNAME in your external DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
-<li>When the setup is complete, change the <a href="/manual/code.html">code for your form</a> action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
-</ol>
+<p>We support an unlimited number of web pages across multiple domains and we integrate your RSS feeds, tweets, YouTube videos, and Flickr photos.</p>
+
+<p>Browse through our <a href="/blog/go-live.html">Go-Live Punch List</a> for some quick tips on how to configure the search experience for your website.</p>
+
+<h3>Dashboard</h3>
+
+<ul>
+<li><a href="/manual/site-overview.html">Site overview</a></li>
+<li><a href="/manual/users.html">Manage users</a></li>
+<li><a href="/manual/settings.html">Settings</a></li>
+</ul>
 
 
-<hr />
+<h3>Analytics</h3>
 
-<p><strong><em>Troubleshooting tip:</em></strong> Many agencies have both internal and external DNS. Be
-sure to update your <em>external</em> DNS records (step 2) before changing your form code (step 3).</p>
+<ul>
+<li><a href="/manual/queries.html">Queries</a></li>
+<li><a href="/manual/clicks.html">Clicks</a></li>
+<li><a href="/manual/monthly-reports.html">Monthly reports</a></li>
+<li><a href="/manual/third-party.html">3rd party tracking</a></li>
+<li><a href="/manual/raw-logs.html">Raw logs</a></li>
+</ul>
 
-<p><strong><em>Did you know?</em></strong> By default, we set up search.YOURSITE.gov (such as search.nih.gov). If this subdomain is already used by another application, you can request YOURSITEsearch.YOURSITE.gov (such as usdasearch.usda.gov) or another pattern.</p>
+
+<h3>Manage Content</h3>
+
+<ul>
+<li><a href="/manual/domains.html">Domains</a> (plus <a href="/manual/domains-advanced.html">advanced options to add or filter URLs</a>)</li>
+<li><a href="/manual/collections.html">Collections</a></li>
+<li><a href="/manual/best-bets-text.html">Best bets:text</a></li>
+<li><a href="/manual/best-bets-graphics.html">Best bets: graphics</a></li>
+<li><a href="/manual/rss.html">RSS</a></li>
+<li><a href="/manual/youtube.html">YouTube</a></li>
+<li><a href="/manual/twitter.html">Twitter</a></li>
+<li><a href="/manual/flickr.html">Flickr</a></li>
+</ul>
+
+
+<h3>Manage Display</h3>
+
+<ul>
+<li><a href="/manual/display-overview.html">Display overview</a></li>
+<li><a href="/manual/font-colors.html">Font &amp; colors</a></li>
+<li><a href="/manual/display-images.html">Image assets</a></li>
+<li><a href="/manual/header-footer.html">Header &amp; footer</a></li>
+</ul>
+
+
+<h3>Preview</h3>
+
+<ul>
+<li><a href="/manual/preview.html">Preview</a></li>
+</ul>
+
+
+<h3>Activate Search</h3>
+
+<ul>
+<li><a href="/manual/code.html">Code snippets</a></li>
+<li><a href="/manual/api.html">API instructions</a></li>
+</ul>
+
+
+<p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
+
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#58;&#115;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#105;&#103;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#x6f;&#118;">&#x73;&#x65;&#97;&#114;&#99;&#x68;&#64;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#46;&#100;&#105;&#x67;&#105;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;</a>.</p>
 
     </div>
 
     <div class='tags'>
       
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
-      
-      <a href="/tagged/cname"><span class="label label-info">cname</span></a>
       
     </div>
   </article>
@@ -769,7 +685,7 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
 </ol>
 
 
-<p>If you have any problem resetting your password, email us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#46;&#x64;&#105;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;">&#115;&#x65;&#97;&#x72;&#99;&#104;&#64;&#x73;&#117;&#112;&#112;&#111;&#x72;&#116;&#46;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#x6c;&#103;&#111;&#x76;&#x2e;&#103;&#111;&#118;</a>.</p>
+<p>If you have any problem resetting your password, email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#x73;&#101;&#97;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#x69;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;">&#115;&#101;&#x61;&#114;&#99;&#104;&#x40;&#115;&#117;&#x70;&#x70;&#111;&#114;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#116;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#x76;</a>.</p>
 
     </div>
 
@@ -778,6 +694,52 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
       
       <a href="/tagged/my-account"><span class="label label-info">my-account</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
+      <a href="/manual/cname.html">
+        <time datetime="2013-08-23">August 23, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/cname.html">How to Mask Your Domain</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these three steps to mask your domain.</p>
+
+<ol>
+<li>Email us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#115;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#x73;&#101;&#97;&#114;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#118;&#46;&#103;&#111;&#x76;</a> and ask us to mask your domain.</li>
+<li>Create a CNAME in your external DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
+<li>When the setup is complete, change the <a href="/manual/code.html">code for your form</a> action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
+</ol>
+
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> Many agencies have both internal and external DNS. Be
+sure to update your <em>external</em> DNS records (step 2) before changing your form code (step 3).</p>
+
+<p><strong><em>Did you know?</em></strong> By default, we set up search.YOURSITE.gov (such as search.nih.gov). If this subdomain is already used by another application, you can request YOURSITEsearch.YOURSITE.gov (such as usdasearch.usda.gov) or another pattern.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
+      
+      <a href="/tagged/cname"><span class="label label-info">cname</span></a>
       
     </div>
   </article>
@@ -847,7 +809,7 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#117;&#x70;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#111;&#x76;&#46;&#x67;&#111;&#118;">&#x73;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#97;&#x72;&#99;&#104;&#64;&#115;&#117;&#112;&#112;&#x6f;&#114;&#116;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;">&#115;&#101;&#x61;&#114;&#99;&#104;&#64;&#x73;&#117;&#112;&#x70;&#111;&#114;&#x74;&#46;&#100;&#105;&#103;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#118;</a>.</p>
 
     </div>
 
@@ -867,135 +829,51 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
       
       <span>Last updated on:</span>
       
-      <a href="/manual/rss.html">
+      <a href="/manual/youtube.html">
         <time datetime="2013-08-21">August 21, 2013</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/manual/rss.html">How to Add Your RSS Feeds to Our Index</a>
+      <a href="/manual/youtube.html">How to Add Your YouTube Videos to Our Index</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > RSS</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > YouTube</p>
 
-<p>Would you like searchers to be able to search your news or multimedia content? Would you like them to be able to narrow results by date?</p>
+<h2>Tell Us About Your YouTube Channel</h2>
 
-<p>Tell us the locations and names of your RSS feeds. We index all new and updated content on your feeds within minutes.</p>
+<p>Provide us with the username for your YouTube channel(s). When you're on YouTube's website, you can see your username in the URL at http://www.youtube.com/user/YourUserName.</p>
 
-<h2>Step 1. Tell Us About Your RSS Feeds</h2>
+<p>For example, the username for NASA's YouTube channel is <a href="http://www.youtube.com/user/NASAtelevision">NASAtelevision</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
 
-<p>We love feeds! Tell us about <em>all</em> of your RSS feeds, even if you don't opt to show them in step 2 below. Feeds are the fastest and most reliable way for us to learn about your new and updated content.</p>
+<!-- START UPDATE -->
 
-<p>Select the option to add a new RSS feed.</p>
 
-<h3>Name</h3>
+<h2>Opt to Display Your Videos</h2>
 
-<p>Create a name for the feed. Within this 'bucket' you can list a single RSS feed or many feeds. For example, you can opt to list all of your agency's press releases separately (such as Police News, Fire News, EMS News, etc.) or you can list all three under one general name (such as News).</p>
+<p>When you add the username for your YouTube channel, we'll automatically index your videos&mdash;both your uploaded videos and playlists.</p>
 
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/rss.png" alt="Add an RSS Feed" /></p>
+<p>You can control the display of the videos on the <a href="/manual/display-overview.html">Display Overview</a> page. You can show the videos as a (a) facet by turning on the option to show in the Sidebar, (b) GovBox on your main web results page by turning on the option to show as a GovBox, or both.</p>
 
-<h3>Feed type</h3>
+<p>You can edit the default title, Videos, on the RSS feed on the <a href="/manual/rss.html">RSS</a> page.</p>
 
-<p>Select the type of feed. The default option is RSS (for text content like press releases or blogs). Change it to <a href="http://www.rssboard.org/media-rss">media RSS</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> for multimedia content like images and videos.</p>
+<!-- END UPDATE -->
 
-<p>Each item within a RSS feed must include a title, link, description, and publication date.</p>
 
-<p>Each item within a media RSS feed must also include both a <a href="http://www.rssboard.org/media-rss#media-content">media:content URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a direct URL to the media object and a <a href="http://www.rssboard.org/media-rss#media-thumbnails">media:thumbnail URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a URL to the object's thumbnail.</p>
+<p>See the sample results page below that shows video results displayed on the National Institute of Justice for a search on <em><a href="http://search.usa.gov/search?query=violence&amp;affiliate=nationalinstituteofjustice">violence</a></em>.</p>
 
-<p>Any items missing a required element won't display in your search results.</p>
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-video1.png" alt="Results page with videos shown as a GovBox" />
+<em>Results page with videos shown as a GovBox</em></p>
 
-<h3>Sample RSS Item with All Required Elements</h3>
-
-<pre><code>&lt;item&gt;
-&lt;title&gt;
-Statement from Agriculture Secretary Tom Vilsack Regarding World Organization for Animal Health (OIE) Upgrade of United States&amp;apos; BSE Risk Status
-&lt;/title&gt;
-&lt;pubDate&gt;May 29, 2013 00:00:00 CDT&lt;/pubDate&gt;
-&lt;link&gt;
-http://www.usda.gov/wps/portal/usda/usdahome?contentid=2013/05/0106.xml&amp;contentidonly=true
-&lt;/link&gt;
-&lt;description&gt;
-WASHINGTON, May 29, 2013–Agriculture Secretary Tom Vilsack made the following statement about notification received today from the World Organization for Animal Health (OIE) upgrading the United States&amp;apos; risk classification for bovine spongiform encephalopathy (BSE) to negligible risk:
-&lt;/description&gt;
-&lt;/item&gt;
-</code></pre>
-
-<h3>Sample Media RSS Item with All Required Elements</h3>
-
-<pre><code>&lt;item&gt;
-&lt;title type="html"&gt;
-&lt;![CDATA[ Great Lakes Beach Health ]]&gt;
-&lt;/title&gt;
-&lt;link&gt;
-http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
-&lt;/link&gt;
-&lt;guid&gt;
-http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
-&lt;/guid&gt;
-&lt;pubDate&gt;Fri, 24 May 2013 00:00:00 EDT&lt;/pubDate&gt;
-&lt;media:description type="html"&gt;
-&lt;![CDATA[
-</code></pre>
-
-<p>As schools close for the year and summer weather beckons, many recreationalists head to the Great Lakes' public beaches. However, these coastal areas can become    contaminated with disease-causing bacteria that threaten public health, disrupt water   recreation, and pay a toll on the Great Lakes econ</p>
-
-<pre><code>]]&gt;
-&lt;![CDATA[
-omies that depend on summer tourism.
-</code></pre>
-
-<p>The U.S. Geological Survey <a href="http://greatlakesbeaches.usgs.gov/index.html">Great Lakes Beach Health</a> initiative provides science-based information and methods that help beach managers make more accurate beach closure and advisory decisions, <a href="http://www.usgs.gov/newsroom/article.asp?ID=3063#.UZv3pSs_87A">preventing unnecessary beach closures</a> while protecting public health.</p>
-
-<pre><code>]]&gt;
-&lt;/media:description&gt;
-&lt;media:thumbnail url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/thumbs/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
-&lt;media:content type="" url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/large/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
-&lt;/item&gt;
-</code></pre>
-
-<h2>Step 2. Opt to Show as a GovBox, in the Sidebar, or Both</h2>
-
-<p>Allow searchers to see inline results for the three most recent, relevant RSS results <em>across all of your RSS feeds</em> by turning on the News GovBox on the <a href="/manual/display-overview.html">Display Overview</a> page. You can also edit the default title, News, on the Display Overview page.</p>
-
-<p>Allow searchers to see narrow results to a specific feed in the left-hand column of the results page by turning on the option to show in the Sidebar on the <a href="/manual/display-overview.html">Display Overview</a> page. To ensure searchers don't encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a sidebar option.</p>
-
-<h2>Step 3. Check Your Search Results Page</h2>
-
-<p><strong>GovBox.</strong> If you opted to show your RSS feed(s) as a GovBox, searchers will see a News GovBox. This GovBox will highlight the three most recent, relevant results across all of your RSS feeds.</p>
-
-<p><strong>Sidebar.</strong> If you opted to show your RSS feed(s) in the sidebar, searchers can narrow their results to see your RSS-based results only.</p>
-
-<p>Within the RSS-based results, searchers can opt to limit results to the last hour, day, week, month, or year, or they can set a custom date range. They also can sort results in descending order by relevance (best match first) or date (most recent first).</p>
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-video2.png" alt="Video results page shown when searcher opts to view videos" />
+<em>Video results page shown when searcher opts to view videos</em></p>
 
 <hr />
 
-<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
-
-<ul>
-<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
-<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-<li><a href="http://atomenabled.org/developers/syndication/">Atom syndication format</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-</ul>
-
-
-<p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="https://search.usa.gov/sites/">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don't need to coordinate with us.</p>
-
-<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your feed.</p>
-
-<p>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab. Change the form action to <code>action="http://search.usa.gov/search/news</code> and add the following line to limit the results to your feed.</p>
-
-<p><code>&lt;input type="hidden" name="channel" value="###"&gt;</code></p>
-
-<p>The value is the number for your feed ID, which is visible in the URL when you edit your feed in the Admin Center.</p>
-
-<p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your RSS feeds.</p>
-
-<p><strong><em>Did you know?</em></strong> When you <a href="/manual/youtube.html">provide us with your YouTube channel</a>, we'll automatically index the RSS feed for your YouTube channel.</p>
-
-<p><strong><em>Did you know?</em></strong> For any feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by these facets in the <a href="/manual/display-overview.html">sidebar</a> on the results page.</p>
+<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
 
     </div>
 
@@ -1005,7 +883,11 @@ omies that depend on summer tourism.
       
       <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
       
-      <a href="/tagged/rss"><span class="label label-info">rss</span></a>
+      <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
+      
+      <a href="/tagged/youtube"><span class="label label-info">youtube</span></a>
+      
+      <a href="/tagged/videos"><span class="label label-info">videos</span></a>
       
     </div>
   </article>

@@ -76,6 +76,121 @@
   <article class='article'>
     <div class='time'>
       
+      <span>Last updated on:</span>
+      
+      <a href="/manual/third-party.html">
+        <time datetime="2014-03-05">March 5, 2014</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/third-party.html">How to Add JavaScript for Your Third Party Web Services</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > 3rd Party Tracking</p>
+
+<p>Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?</p>
+
+<p>Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
+
+<p>Some tips for commonly used third party web services follow.</p>
+
+<h2>Google Analytics Tip</h2>
+
+<p>In your Google Analytics JavaScript, be sure to set your domain if you've requested <a href="/manual/cname.html">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
+
+<pre><code>_gaq.push(['_setDomainName', 'commerce.gov']);
+</code></pre>
+
+<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>.</p>
+
+<p>The code you submit should look something like one of the following two scripts.</p>
+
+<h3>Google Analytics Code (Older Format)</h3>
+
+<pre><code> &lt;script type="text/javascript"&gt;
+ var _gaq = _gaq || []; 
+ _gaq.push(['_setAccount', 'UA-########-1']); 
+ _gaq.push(['_trackPageview']);
+
+ (function() { 
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
+ })();
+
+ &lt;/script&gt;
+</code></pre>
+
+<h3>Google Analytics Code (Newer Format)</h3>
+
+<pre><code>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+</code></pre>
+
+<h2>Digital Analytics Program Tip</h2>
+
+<p>Does your federal agency participate in the <a href="https://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> (DAP)?  You don't need to do anything. We're already fully integrated with DAP.</p>
+
+<h2>ForeSee Tip</h2>
+
+<p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
+
+<ol>
+<li><p>Email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#115;&#x65;&#x61;&#114;&#99;&#104;&#64;&#115;&#117;&#x70;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#x2e;&#x67;&#111;&#118;">&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#x67;&#111;&#x76;</a> to <a href="/manual/cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
+<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
+
+<p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
+
+<p> <strong>and replace it with =></strong> 'files': '//www.youragency.gov/fsrscripts/',</p>
+
+<p> <em>(Or, find => 'files': '/foresee/', and replace it with => 'files': '//www.youragency/foresee/',)</em></p>
+
+<p> in the following five files.</p>
+
+<ul>
+<li>foresee-trigger.js</li>
+<li>foresee-tracker.js</li>
+<li>foresee-alive.js</li>
+<li>foresee-qualifier.js</li>
+<li>foresee-test.js</li>
+</ul>
+</li>
+<li><p>Submit your foresee-trigger.js via our Admin Center. It should look something like the following.</p>
+
+<pre><code>   &lt;script type="text/javascript" src="http://www.youragency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;
+</code></pre></li>
+<li><p>We'll send you an email to confirm that we've set up both your CNAME and added the script for your foresee-trigger.js file.</p></li>
+</ol>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
+      
+      <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
+      
+      <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
+      
+      <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
       <a href="/quote/ers.html">
         <time datetime="2014-03-04">March 4, 2014</time>
       </a>
@@ -191,7 +306,7 @@
 
 <h2>How to Participate</h2>
 
-<p>Since this is still a pilot, the setup is manual. Email us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#115;&#101;&#97;&#x72;&#99;&#104;&#x40;&#x73;&#x75;&#112;&#112;&#111;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#115;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#111;&#118;&#46;&#x67;&#x6f;&#118;</a> to let us know you're interested in participating in the pilot.</p>
+<p>Since this is still a pilot, the setup is manual. Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#46;&#x64;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#x67;&#111;&#x76;">&#115;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#117;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#118;</a> to let us know you're interested in participating in the pilot.</p>
 
 <h2>Option 1. Provide an RSS Feed</h2>
 
@@ -539,7 +654,7 @@
 <li>We set up <a href="https://codeclimate.com/">Code Climate</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to identify areas of our code that can be improved.</li>
 <li>We phased out color schemes and now offer two options, default and custom.</li>
 <li>We updated the links in our email templates to reflect the new Admin Center.</li>
-<li>We added the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#118;&#46;&#103;&#111;&#x76;">&#x73;&#x65;&#x61;&#114;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#112;&#111;&#x72;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#103;&#x6f;&#118;&#46;&#x67;&#x6f;&#118;</a> if you'd like to opt out.</li>
+<li>We added the <a href="http://www.howto.gov/web-content/digital-metrics/digital-analytics-program">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#x73;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#x67;&#x6f;&#118;">&#115;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#118;</a> if you'd like to opt out.</li>
 </ul>
 
 
@@ -737,70 +852,6 @@
       <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
       
       <a href="/tagged/best-bets"><span class="label label-info">best-bets</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <a href="/releases/september-2013.html">
-        <time datetime="2013-09-30">September 30, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/releases/september-2013.html">September 2013 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2>Highlight: Visit the Revamped Admin Center</h2>
-
-<p>We're excited to release our newly revamped <a href="https://search.usa.gov/sites/">Admin Center</a>. Be sure to update your bookmarks!</p>
-
-<p>After you log in, the new Default Site feature lets you set the site you see by default. We've automatically set it as your highest-traffic site. You can change the default site by clicking on the pin icon next to your selected site.</p>
-
-<p>Among the new features are Today's Snapshot, where we've placed the snapshot of today's search data front and center.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/todays-snapshot.png" alt="Today's Snapshot" /></p>
-
-<p>On <a href="/manual/site-overview.html">Today's Snapshot</a>, you can view top queries and clicks, trending queries and URLs, queries with no results, and queries with low click thrus.</p>
-
-<p><a href="/manual/monthly-reports.html">Monthly reports</a> and <a href="/manual/queries.html">query</a> and <a href="/manual/clicks.html">click</a> stats are also available through the new Analytics section.</p>
-
-<p>We've also made it easier for you to manage the content that displays on your search results page by placing it all within one section, Manage Content.</p>
-
-<p>Another section, Manage Display, makes it easier for you to select your <a href="/manual/font-colors.html">font and color scheme</a>, manage your <a href="/manual/display-images.html">image assets</a>, and turn other <a href="/manual/display-overview.html">display features</a> on and off. Plus, you can now edit the 'News' label on the News Govbox.</p>
-
-<p>You can read our updated help by clicking on the Help? link on each page in the Admin Center, or see the full set of help files on our <a href="/manual/index.html">How to Set Up Your Search Box</a> page.</p>
-
-<p>Email us at <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#x73;&#101;&#x61;&#114;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#112;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#x61;&#108;&#103;&#111;&#118;&#46;&#103;&#111;&#118;">&#x73;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#x69;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#118;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
-
-<h2>Chores</h2>
-
-<ul>
-<li>We made <a href="/manual/twitter.html">tweet</a> queries two orders of magnitude, or 130ms, faster and pruned older tweets from our index to increase retrieval speeds.</li>
-<li>We upgraded our <a href="https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/6.3_Release_Notes/index.html">RedHat channel</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> from 6.2 to 6.3.</li>
-<li>We moved some servers to a new datacenter and resolved a bandwidth issue between our datacenters.</li>
-<li>We sent Microsoft an updated list of federal, state, and local government domains that aren't .gov or .mil so that searchers can get results from these websites on <a href="http://www.usa.gov">USA.gov</a>.</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>We updated our stemming file to fix a stemming issue with organ* so that searches on organic no longer find results for organizations, organisms, or other irrelevant terms.</li>
-<li>We removed the 'www' for newly added sites so the default <a href="/manual/domains.html">domain</a> is now agency.gov, not www.agency.gov.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
       
     </div>
   </article>
