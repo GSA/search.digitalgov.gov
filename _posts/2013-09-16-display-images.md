@@ -1,7 +1,7 @@
 ---
-permalink: /sites/manual/display-images.html
 layout: post
-title: "How to Customize the Images for the Header and Background on Your Results Page"
+title: How to Customize the Images for the Header and Background on Your Results Page
+category: manual
 tags: how-to manage-display images logos
 ---
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Display > Image Assets

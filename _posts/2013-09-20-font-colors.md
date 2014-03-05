@@ -1,9 +1,10 @@
 ---
-permalink: /sites/manual/font-colors.html
 layout: post
-title: "How to Customize the Font and Colors on Your Results Page"
+title: How to Customize the Font and Colors on Your Results Page
+category: manual
 tags: how-to manage-display font colors
 ---
+
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Display > Font & Colors
 
 ## Font Family

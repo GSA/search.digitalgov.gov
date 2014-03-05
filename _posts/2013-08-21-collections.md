@@ -1,7 +1,7 @@
 ---
-permalink: /sites/manual/collections.html
 layout: post
-title: "How to Create Collections Within Our Index"
+title: How to Create Collections Within Our Index
+category: manual
 tags: how-to manage-content collections
 ---
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Collections
@@ -18,7 +18,7 @@ You cannot specify URLs for individual web pages.
 
 ## Step 2. Opt to Show in Sidebar
 
-Click on the [Display Overview](/sites/manual/display-overview.html) page. Turn on your collection to allow searchers to see it as a navigation option in the left-hand column of the results page.
+Click on the [Display Overview](/manual/display-overview.html) page. Turn on your collection to allow searchers to see it as a navigation option in the left-hand column of the results page.
 
 ## Step 3. Check Your Search Results Page
 
@@ -32,7 +32,7 @@ Searchers will see an option to narrow their search results to pages in this col
 
 ***Did you know?*** You can set up a search box on your website that limits results to your collection.
 
-Start with the standard form snippet on the [Code Snippets](/sites/manual/code.html) page under the Activate Search tab. Change the form action to `action="http://search.usa.gov/search/docs` and add the following line to limit the results to your collection.
+Start with the standard form snippet on the [Code Snippets](/manual/code.html) page under the Activate Search tab. Change the form action to `action="http://search.usa.gov/search/docs` and add the following line to limit the results to your collection.
 
 `<input type="hidden" name="dc" value="###">`
 

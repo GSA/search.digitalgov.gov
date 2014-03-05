@@ -1,10 +1,10 @@
 ---
-permalink: /sites/manual/domains-advanced.html
 layout: post
-title: "How to Use Advanced Options to Add or Filter Specific URLs"
+title: How to Use Advanced Options to Add or Filter Specific URLs
+category: manual
 tags: how-to manage-content domains advanced supplemental-feed supplemental-urls filter-urls
 ---
-[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > [Domains](/sites/manual/domains.html) > Advanced
+[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > [Domains](/manual/domains.html) > Advanced
 
 ## Add a URL
 
@@ -34,7 +34,7 @@ The source column in the crawl report shows how you added the URL, via an RSS fe
 
 ## Filter a URL
 
-You can filter *a single URL* from the results on your site. Use it for emergency reasons only (such as spillage of classified information or unintentional publication of a page). Note that this option should be used only if the [other options](/sites/manual/domains.html#filter) aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.
+You can filter *a single URL* from the results on your site. Use it for emergency reasons only (such as spillage of classified information or unintentional publication of a page). Note that this option should be used only if the [other options](/manual/domains.html#filter) aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.
 
 It is not meant to fix the results for entire site, such as for launch or redesign problems. For tips on how to fix these more systemic problems, read our [Checklist for a Successful Website Redesign](/blog/redesign.html).
 

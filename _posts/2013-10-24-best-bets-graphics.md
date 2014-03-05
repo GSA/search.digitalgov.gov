@@ -1,16 +1,17 @@
 ---
-permalink: /sites/manual/best-bets-graphics.html
 layout: post
-title: "How to Highlight Graphics Best Bets"
+title: How to Highlight Graphics Best Bets
+category: manual
 tags: how-to manage-content best-bets
 ---
+
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > Best Bets: Graphics
 
 Do you want to promote a specific web page or collection of web pages? Create a Graphics Best Bet.
 
 A best bet appears above the standard web results when a searcher's query matches the text of its title, description, or keywords.
 
-Graphics best bets have a one or two-column layout and you can add an image. The most relevant best bet is listed under a heading, {Best Bet Title} by {[Site Name](/sites/manual/settings.html)}.
+Graphics best bets have a one or two-column layout and you can add an image. The most relevant best bet is listed under a heading, {Best Bet Title} by {[Site Name](/manual/settings.html)}.
 
 See, for example, the variety of layouts possible for graphics best bets.
 
@@ -63,8 +64,8 @@ It would *not* display for searches on death, death property, taxes after death,
 
 --- 
 
-***Did you know?*** See also our closely related feature that allows you to create a [Text Best Best](/sites/manual/best-bets-text.html).
+***Did you know?*** See also our closely related feature that allows you to create a [Text Best Best](/manual/best-bets-text.html).
 
-***Did you know?*** Analyze the number of impressions and clicks and clickthru rate for each best bet on the [Monthly Reports](/sites/manual/monthly-reports.html) page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.
+***Did you know?*** Analyze the number of impressions and clicks and clickthru rate for each best bet on the [Monthly Reports](/manual/monthly-reports.html) page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.
 
 ***Did you know?*** Use the color coding in the table on this page to see a best bet's status. Entries with green background shading are active. They're shown to searchers on your site. Entries with yellow background shading aren't shown to searchers because they're inactive, expired (by the publish end date), or both.

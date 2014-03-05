@@ -1,8 +1,8 @@
 ---
-permalink: /blog/award-informationweek.html
 layout: post
 title: "DigitalGov Search Wins InformationWeek Award"
-tags: research-and-news
+category: blog
+tags: about-us
 ---
 
 *InformationWeek* yesterday [recognized 15 government agencies](http://www.informationweek.com/news/galleries/government/leadership/231600939) for taking on ambitious IT initiatives in an effort to provide better services at a lower cost.

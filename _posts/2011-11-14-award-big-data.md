@@ -1,8 +1,8 @@
 ---
-permalink: /blog/award-big-data.html
 layout: post
-title: "DigitalGov Search Wins Government Big Data Solutions Award"
-tags: analytics research-and-news big-data 
+title: DigitalGov Search Wins Government Big Data Solutions Award
+category: blog
+tags: analytics about-us
 ---
 
 DigitalGov Search (formerly USASearch) is the [winner of the 2011 Government Big Data Solutions Award](http://ctolabs.com/gsa-usasearch-wins-2011-government-big-data-solutions-award), announced at [Hadoop World](http://www.hadoopworld.com) in New York City on November 8, 2011.

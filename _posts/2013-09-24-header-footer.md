@@ -1,19 +1,20 @@
 ---
-permalink: /sites/manual/header-footer.html
 layout: post
-title: "How to Customize the Header and Footer of Your Results Page"
+title: How to Customize the Header and Footer of Your Results Page
+category: manual
 tags: how-to manage-display sidebar govbox related-sites
 ---
+
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Display > Header & Footer
 
 ## Default Custom Header
 
 To customize the header on your results page, we'll automatically use:
 
-1. The logo you provide on the [Image Assets](/sites/manual/display-images.html) page. (Or, if you don't provide a logo, we'll use the site name you provide on the [Settings](/sites/manual/settings.html) page.)
-2. The homepage URL you provide on the [Settings](/sites/manual/settings.html) page.
+1. The logo you provide on the [Image Assets](/manual/display-images.html) page. (Or, if you don't provide a logo, we'll use the site name you provide on the [Settings](/manual/settings.html) page.)
+2. The homepage URL you provide on the [Settings](/manual/settings.html) page.
 
-You can see the custom header and mobile header we've automatically created for you on the [Preview](/sites/manual/preview.html) page.
+You can see the custom header and mobile header we've automatically created for you on the [Preview](/manual/preview.html) page.
 
 Additionally, you can further customize your header or footer using the options below.
 
@@ -61,6 +62,6 @@ We'll run a validation check to ensure that no JavaScript is included in your HT
 
 ***Troubleshooting tip:*** You can implement a drop-down menu using CSS (and without using JavaScript). For more information, read tips from *A List Apart* on [drop-down menus and horizontal style](http://alistapart.com/article/horizdropdowns){% external_link %}.
 
-***Did you know?*** We use device detection to show mobile-friendly search results on mobile phones. (Searchers using tablets and desktop computers see the full, classic header as you set it up above.) We'll automatically use the mobile logo you provide on the [Image Assets](/sites/manual/display-images.html) page. The logo must be less than 56 KB. We recommend it be no wider than 320 pixels. Or, if you don't provide a logo, we'll use the site name you provide on the [Settings](/sites/manual/settings.html) page.
+***Did you know?*** We use device detection to show mobile-friendly search results on mobile phones. (Searchers using tablets and desktop computers see the full, classic header as you set it up above.) We'll automatically use the mobile logo you provide on the [Image Assets](/manual/display-images.html) page. The logo must be less than 56 KB. We recommend it be no wider than 320 pixels. Or, if you don't provide a logo, we'll use the site name you provide on the [Settings](/manual/settings.html) page.
 
-***Did you know?*** We offer results through our [Search Data API](/sites/manual/api.html), if you'd like to create mash-ups or have complete control of the look and feel of your search results pages. You can access the API by clicking on the Activate Search option in the left-hand menu in the Admin Center.
+***Did you know?*** We offer results through our [Search Data API](/manual/api.html), if you'd like to create mash-ups or have complete control of the look and feel of your search results pages. You can access the API by clicking on the Activate Search option in the left-hand menu in the Admin Center.

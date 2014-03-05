@@ -3,6 +3,7 @@ permalink: /customers.html
 layout: article
 title: Our Customers
 ---
+
 We have a proven track record of delivering fast, relevant search results. Over 1,500 government websites currently use DigitalGov Search to power their search box and improve their visitors' search experience.
 
 <table align="center" width="100%">
