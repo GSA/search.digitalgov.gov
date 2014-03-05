@@ -47,7 +47,7 @@ The code you submit should look something like one of the following two scripts.
 
 ## Digital Analytics Program Tip
 
-Does your federal agency participate in the [Digital Analytics Program](https://www.digitalgov.gov/services/dap/) (DAP)?  You don't need to do anything. We're already fully integrated with DAP.
+Does your federal agency participate in the [Digital Analytics Program](http://www.digitalgov.gov/services/dap/) (DAP)?  You don't need to do anything. We're already fully integrated with DAP.
 
 ## ForeSee Tip
 
