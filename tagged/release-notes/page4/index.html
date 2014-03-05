@@ -75,6 +75,591 @@
   <article class='article'>
     <div class='time'>
       
+      <a href="/releases/2012-09-21.html">
+        <time datetime="2012-09-21">September 21, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/2012-09-21.html">Search Notes for the Week Ending September 21, 2012</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><strong>Features</strong></p>
+
+
+<p><em>Helping searchers find forms</em></p>
+
+
+<p>Similar to our existing <a href="http://search.usa.gov/search?query=census+bureau&amp;affiliate=usagov">agency</a> and <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=diabetes">health</a> GovBoxes, we created a <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=i9+form">forms</a> GovBox to help searchers find federal government forms. So far, we've included forms from the Department of Defense, General Services Administration, Social Security Administration, U.S. Citizenship and Immigration Services, and Department of Veterans Affairs.</p>
+
+
+<p>We've also published the forms data as a <a href="http://www.usa.gov/About/developer-resources/forms.shtml">Federal Forms API</a> for third-party developers.</p>
+
+
+<p><strong>Chores</strong></p>
+
+
+<ul><li>We upgraded our robots.txt parser to account for comments and varying cases.</li>
+<li>We eliminated support for six <a href="/blog/legacy-domains.html">legacy domains</a> as part of the .gov web reform project.</li>
+</ul>
+
+
+<p><strong>Fixes</strong></p>
+
+
+<ul><li>We fixed broken URLs for Best Bets image files.</li>
+<li>We fixed a bug with our browser user agent so that Internet Explorer users no longer sometimes see a blank results page.</li>
+<li>We fixed a CSS validation bug so you don't see an error message when editing your header or footer.</li>
+<li>We updated a broken link for Explore Topics on m.USA.gov.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <a href="/releases/august-2012.html">
+        <time datetime="2012-08-22">August 22, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/august-2012.html">August 2012 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlighted Feature: Drupal 7 module now available</h2>
+
+<p>If you're using Drupal, be sure to check out our updated <a href="https://drupal.org/project/USASearch">Drupal module</a>. It includes a new development branch for version 6 and and a release for version 7. Thanks, <a href="http://drupal.org/user/457434">Tim Wood</a> at the Department of Commerce!</p>
+
+<h2>Other features</h2>
+
+<ul>
+<li>Searchers can now narrow their results by up to three additional facets&mdash;contributor, publisher, or subject. To start using this feature, simply update any of your <a href="/manual/rss.html">RSS feeds</a> to include these Dublin Core properties.</li>
+<li>Searchers are able to show and hide options (e.g., the time filter) from the sidebar on the results page.</li>
+<li>You can now add only one <a href="/manual/code.html">Javascript snippet</a> to your web pages (versus two separate snippets).</li>
+<li><em>Coming soon, a Forms GovBox.</em> Similar to our existing <a href="/manual/govbox-agencies.html">agency</a> and <a href="/manual/govbox-health.html">health</a> GovBoxes, we're currently working on rolling out a forms GovBox to help searchers find federal government forms. If you have forms metadata in a structured format, and want to have your visitors see them in search results, please <a href="mailto:search@support.digitalgov.gov">send us an email</a>.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<p>Over the past few weeks, we finished a long list of summer chores and we're happy to have a clear deck to offer you more features in the coming months.</p>
+
+<p>We upgraded our environment to <a href="http://weblog.rubyonrails.org/2012/1/20/rails-3-2-0-faster-dev-mode-routing-explain-queries-tagged-logger-store">Rails 3.2</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. This upgrade ensures continued stability and allows us to maintain our record of exceeding our service level agreements.</p>
+
+<p>We also changed our back-end logic for indexing your content. We now index secure (https) content. We also now allow you to give instructions to our user agent in your <a href="http://www.robotstxt.org/robotstxt.html">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file.</p>
+
+<p>Don't forget to check out your July search stats&mdash;in your email inbox or via the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+
+<h2>Other Chores</h2>
+
+<ul>
+<li>We upgraded to Ruby 1.9.3.</li>
+<li>We updated the <a href="/manual/govbox-health.html">health GovBox</a> to account for changes in the <a href="http://www.nlm.nih.gov/medlineplus/xml.html">MedlinePlus XML files</a>.</li>
+<li>We investigated features and functionality of <a href="https://developers.google.com/bigquery/">Google BigQuery</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We investigated additional tools to monitor our application and the speed of our results.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed broken URLs for YouTube thumbnails.</li>
+<li>We fixed an invalid byte sequence in UTF-8.</li>
+<li>We fixed the alt text on our Results by images.</li>
+<li>We fixed the z-index so that type-ahead suggestions always appear on top of other page elements. We also updated the CSS for our type-ahead to ensure it doesn't conflict with your CSS.</li>
+<li>We fixed our recalls API to return the expected response and to handle null values for recalled_on.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <a href="/releases/2012-08-22.html">
+        <time datetime="2012-08-22">August 22, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/2012-08-22.html">Search Notes for the Week Ending August 17, 2012 </a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <div class="post_title"><strong>Features</strong></div>
+
+
+<p><em>Coming soon! Forms GovBox </em></p>
+
+
+<p>Similar to our existing <a href="/sites/manual/govbox-agencies.html">agency</a> and <a href="/sites/manual/govbox-health.html">health</a> GovBoxes, we're currently working on rolling out a forms GovBox to help searchers find federal government forms.</p>
+
+
+<p>If you have forms metadata in a structured format, and want to have your visitors see them in search results, please <a href="mailto:search@support.digitalgov.gov">send us an email</a>.</p>
+
+
+<p><strong>Chores</strong></p>
+
+
+<ul><li>We upgraded to <a href="http://weblog.rubyonrails.org/2012/8/9/ann-rails-3-2-8-has-been-released/">Rails 3.2.8</a>.</li>
+<li>We upgraded to Ruby 1.9.3.</li>
+</ul>
+
+
+<p><strong>Fixes</strong></p>
+
+
+<ul><li>We fixed broken URLs for YouTube thumbnails.</li>
+<li>We fixed an invalid byte sequence in UTF-8.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <a href="/releases/2012-08-10.html">
+        <time datetime="2012-08-15">August 15, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/2012-08-10.html">Search Notes for the Week Ending August 10, 2012</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><strong>Features</strong></p>
+
+
+<p><em>Highlight: More Faceted Navigation Options </em></p>
+
+
+<p><span>Searchers can now narrow their results by up to three additional facets</span>—contributor, publisher, or subject. To start using this feature, simply update any of your <a href="/sites/manual/rss.html">RSS feeds</a> to include these Dublin Core properties. </p>
+
+
+<p><em>Other features</em></p>
+
+
+<ul><li><span>Searchers are able to show and hide options (e.g., the time filter) from the sidebar on the results page.</span></li>
+</ul>
+
+
+<p><strong>Chores</strong></p>
+
+
+<ul><li>We investigated additional tools to monitor our application and the speed of our results.</li>
+</ul>
+
+
+<p><strong>Fixes</strong></p>
+
+
+<ul><li>We fixed the z-index so that type-ahead suggestions always appear on top of other page elements. We also updated the CSS for our type-ahead to ensure it doesn't conflict with your CSS.</li>
+<li>We fixed our recalls API to return the expected response and to handle null values for recalled_on.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <a href="/releases/2012-08-03.html">
+        <time datetime="2012-08-08">August 8, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/2012-08-03.html">Search Notes for the Week Ending August 3, 2012</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><strong>Features</strong></p>
+
+
+<p><em>Highlight: Drupal 7 module now available</em></p>
+
+
+<p>If you're using Drupal, be sure to check out our updated <a href="https://drupal.org/project/USASearch">Drupal module</a>. It includes a new development branch for version 6 and and a release for version 7. Thanks, <a href="http://drupal.org/user/457434">Tim Wood</a> at the Department of Commerce!</p>
+
+
+<p><em>Other features</em></p>
+
+
+<ul><li>You can now add only one <a href="/sites/manual/code.html">Javascript snippet</a> to your web pages (versus two separate snippets).</li>
+</ul>
+
+
+<p><strong>Chores</strong></p>
+
+
+<ul><li>We updated the <a href="/sites/manual/govbox-health.html">health GovBox</a> to account for changes in the MedlinePlus <a href="http://www.nlm.nih.gov/medlineplus/xml.html">XML files</a>.</li>
+<li>We investigated features and functionality of <a href="https://developers.google.com/bigquery/">Google BigQuery</a>.</li>
+</ul>
+
+
+<p><strong>Fixes</strong></p>
+
+
+<ul><li>We fixed the alt text on our Results by &#8230; images.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <a href="/releases/july-2012.html">
+        <time datetime="2012-07-27">July 27, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/july-2012.html">July 2012 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>One of your most frequently asked questions is, "What's your roadmap?" We decided to use the halfway point of the year to expand our release notes to include notes on our upcoming features.</p>
+
+<h2>Features</h2>
+
+<h3>Highlight: searchers see recent tweets when they search on your website</h3>
+
+<p>We're now displaying Twitter results in the third rail. Searchers like Twitter results because they often contain your latest information. The third rail increases the  visibility of your tweets and it allows searchers to see both Twitter and YouTube results above the fold in the browser.</p>
+
+<p>See the sample results page below that shows social media results on Commerce.gov for a search on <em><a href="http://search.commerce.gov/search?query=innovation&amp;amp;affiliate=commerce.gov">innovation</a></em>.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_m71vk4FInR1qid15q.jpg"/></p>
+
+<p>If you have a Twitter account, tell us the name of your profile and searchers will be able to find relevant, recent tweets when they search on your website.</p>
+
+<ol>
+<li>Log in to the <a href="https://search.usa.gov/sites/">Admin Center</a>. Select your site.</li>
+<li>Click on the Social Media option. Enter the name of your Twitter account and click save.</li>
+<li>Click on the Results Modules option and opt to show your tweets in a GovBox.</li>
+</ol>
+
+
+<p>Wait until you post your next tweet. Then, go to your website and do a search for a word or phrase in the tweet. You'll see it as a GovBox intermingled with your web results.</p>
+
+<h2>Other features</h2>
+
+<ul>
+<li>Customers with lots of documents will have them indexed more quickly.</li>
+<li>You may now enter multiple handles if you have more than one social media account for Flickr, Twitter, or YouTube.</li>
+<li>Mobile searchers can see image results.</li>
+<li>You may now see whether we've indexed your Twitter or Flickr content.</li>
+<li>We now index Microsoft Office documents (Excel, Word, and PowerPoint).</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>Address memory bloat.</li>
+<li>Searchers can no longer see multiple sidebar items selected.</li>
+<li>Launch jumpstart index for newly added sites with a single site domain.</li>
+<li>We now label Office documents.</li>
+<li>We fixed an issue with Flickr indexing.</li>
+</ul>
+
+
+<h2>Our Roadmap</h2>
+
+<h3>Coming Up in July</h3>
+
+<p>We "celebrated" during the Fourth of July holiday by focusing on some general housekeeping to ensure stability for the rest of the year. We'll release new features to index secure (https) content. We'll also update our discovery tag to power both type-ahead and fetching (eliminating the need for you to have put two sets of javascript on your web pages).</p>
+
+<h3>Coming Up Next Quarter</h3>
+
+<p>We divide our roadmap into four categories, and we complete one major feature in each category per quarter.</p>
+
+<ol>
+<li><em>Customer Services.</em> We plan to improve and facilitate our signup process. We're going to automatically populate more content when you add a site so it is easier for you to take advantage of new features. We also plan to create a dashboard to allow you to see what has changed within your search configuration.</li>
+<li><em>Content Sources.</em> You've requested more control to divide search results into content sources, topics, etc. We plan to offer more flexibility to allow you to divide your content as it makes sense for your searchers.</li>
+<li><em>Core Search.</em> One good (or bad) aspect about search is that there is always more work to do in terms of relevancy, speed, scaling, etc. We plan to focus on tuning these aspects, especially for our newer content sources.</li>
+<li><em>Search Analytics.</em> We have a growing amount of data, and we want to expose more of it to you. In parallel with providing you just a dashboard in the Admin Center, we plan to proactively notify you of any potential issues.</li>
+</ol>
+
+
+<p>We hope that this glimpse into our recently released features and our short- and long-term roadmap helps you understand what we're working on and what's coming down the road.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <a href="/releases/2012-07-06.html">
+        <time datetime="2012-07-13">July 13, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/2012-07-06.html">Search Notes for the Week Ending July 6, 2012</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>We hope you had a good Fourth of July!</p>
+
+
+<p>One of your most frequently asked questions is, "What's your roadmap?" We decided to use the halfway point of the year to expand our release notes to include notes on our upcoming features.</p>
+
+
+<p><strong>Last Week's New Features</strong></p>
+
+
+<p>We're now displaying Twitter results in the third rail. Searchers like Twitter results because they often contain your latest information. The third rail increases the  visibility of your tweets and it allows searchers to see both Twitter and YouTube results above the fold in the browser.</p>
+
+
+<p>See the sample results page below that shows social media results on Commerce.gov for a search on<em> <a href="http://search.commerce.gov/search?query=innovation&amp;affiliate=commerce.gov">innovation</a></em>.</p>
+
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_m71vk4FInR1qid15q.jpg"/></p>
+
+
+<p><strong>Other Features</strong></p>
+
+
+<ul><li>You may now enter multiple handles if you have more than one social media account for Flickr, Twitter, or YouTube.</li>
+<li>Mobile searchers can see image results.</li>
+<li>You may now see whether we've indexed your Twitter or Flickr content.</li>
+<li>We now index Microsoft Office documents (Excel, Word, and PowerPoint).</li>
+</ul>
+
+
+<p><strong>Fixes</strong></p>
+
+
+<ul><li>We now label Office documents.</li>
+<li>We fixed an issue with Flickr indexing.</li>
+</ul>
+
+
+<p><strong>Coming Up in July</strong></p>
+
+
+<p>We "celebrated" during the Fourth of July holiday by focusing on some general housekeeping to ensure stability for the rest of the year. We'll release new features to index secure (https) content. We'll also update our discovery tag to power both type-ahead and fetching (eliminating the need for you to have put two sets of javascript on your web pages).</p>
+
+
+<p><strong>Coming Up Next Quarter</strong></p>
+
+
+<p>We divide our roadmap into four categories, and we complete one major feature in each category per quarter.</p>
+
+
+<p><em>1. Customer Services. </em>We plan to improve and facilitate our signup process. We're going to automatically populate more content when you add a site so it is easier for you to take advantage of new features. We also plan to create a dashboard to allow you to see what has changed within your search configuration.</p>
+
+
+<p><em>2. Content Sources. </em>You've requested more control to divide search results into content sources, topics, etc. We plan to offer more flexibility to allow you to divide your content as it makes sense for your searchers.</p>
+
+
+<p><em>3. Core Search. </em>One good (or bad) aspect about search is that there is always more work to do in terms of relevancy, speed, scaling, etc. We plan to focus on tuning these aspects, especially for our newer content sources.</p>
+
+
+<p><em>4. Search Analytics. </em>We have a growing amount of data, and we want to expose more of it to you. In parallel with providing you just a dashboard in the Admin Center, we plan to proactively notify you of any potential issues.</p>
+
+
+<p>We hope that this glimpse into our recently released features and our short- and long-term roadmap helps you understand what we're working on and what's coming down the road.</p>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <a href="/releases/2012-06-29.html">
+        <time datetime="2012-07-03">July 3, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/2012-06-29.html">Release Notes for the Week Ending June 29, 2012</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><strong>Features</strong></p>
+
+
+<p><em>Highlight: searchers see recent tweets when they search on your website</em></p>
+
+
+<p>If you have a Twitter account, tell us the name of your profile and searchers will be able to find relevant, recent tweets when they search on your website.</p>
+
+
+<ol><li>Log in to the [Admin Center](https://search.usa.gov/sites/). Select your site.</li>
+<li>Click on the Social Media option. Enter the name of your Twitter account and click save.</li>
+<li>Click on the Results Modules option and opt to show your tweets in a GovBox.</li>
+</ol>
+
+
+<p>Wait until you post your next tweet. Then, go to your website and do a search for a word or phrase in the tweet. You'll see it as a GovBox intermingled with your web results.</p>
+
+
+<p><em>Other features</em></p>
+
+
+<ul><li>Customers with lots of documents will have them indexed more quickly.</li>
+</ul>
+
+
+<p><strong>Fixes</strong></p>
+
+
+<ul><li>Address memory bloat.</li>
+<li>Searchers can no longer see multiple sidebar items selected.</li>
+<li>Launch jumpstart index for newly added sites with a single site domain.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <a href="/releases/june-2012.html">
+        <time datetime="2012-06-29">June 29, 2012</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/releases/june-2012.html">June 2012 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>2 Highlighted Features</h2>
+
+<h3>1. Customers Receive a Monthly Analytics Report</h3>
+
+<p>Now it is easier than ever for you to glean insight from your search logs on what visitors are searching for&mdash;in their own words&mdash;on your site. On the first of each month, we'll now email you an analytics report. Hopefully, you  already received one on June 1.</p>
+
+<h3>2. Flickr Image Search</h3>
+
+<p>Do you have a Flickr photostream? Tell us the name of your photostream. Within minutes, searchers will be able to find relevant images from your Flickr photostream when they search on your website.</p>
+
+<p>We've found that those of you who have a Flickr photostream have higher quality image results from your photostream than from your web pages. So, if you've told us about your Flickr account, it now powers the default image search on your results page. We also now index the tags for your photostream to improve retrieval and relevance of your images.</p>
+
+<h2>Other Features</h2>
+
+<ul>
+<li>Searchers see improved titles and descriptions for web results that match RSS news items.</li>
+<li>Searchers have faster load times on results pages with large CSS in their header or footer.</li>
+<li>Customers see a new error message when there is malformed HTML in their header or footer.</li>
+<li>Searchers see shorter snippets for RSS-based web snippets.</li>
+<li>Searchers see a more concise statement regarding the number of results found.</li>
+<li>We have good news for those of you with lots of PDF files. We've upgraded our PDF parser to <a href="http://tika.apache.org/">Apache Tika</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to improve our ability to index complex, non-standard PDFs.</li>
+<li>Customers may input third party tracking (e.g., Google Analytics, WebTrends, Omniture, etc.) via a request form.</li>
+<li>Customers may upload up to 10,000 URLs via the bulk upload option on the URLs and Sitemaps page.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>Support relative paths for favicons when adding a new site.</li>
+<li>Set "{query} - {site} resultados de la búsqueda" as the default page title for Spanish-language sites.</li>
+<li>Fixed memory bloat associated with log file processing.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li>Limit PDF file size to 50 MB.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
       <a href="/releases/releases.html">
         <time datetime="2012-06-19">June 19, 2012</time>
       </a>
@@ -112,400 +697,6 @@
     </div>
   </article>
   
-  <article class='article'>
-    <div class='time'>
-      
-      <a href="/releases/releases.html">
-        <time datetime="2012-05-11">May 11, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/releases/releases.html">May 2012 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2>Features</h2>
-
-<ul>
-<li>You can now change the order of the sidebar options that appear on your results page, regardless of source.</li>
-<li>You can now leverage our discovery tag over https.</li>
-<li>Beginning on June 1, you won't have to log in to see your search analytics. We'll deliver a report directly to your inbox each month. Plus, it will be easier to share the data with your colleagues.
-Searchers see video results from YouTube playlists.</li>
-<li>Searchers see a recent tweet when it matches their query.</li>
-<li>Mobile visitors to m.USA.gov see unique page titles in browser.</li>
-<li>When customers add or modify a <a href="(/sites/manual/domains.html">domain</a>, their pages are automatically discovered.</li>
-<li>Customers have a free form text box (versus a drop-down menu) to enter related sites on the Results Modules page.</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>We fixed the layout of deep links.</li>
-<li>We now fetch RSS feed entries without guid.</li>
-<li>Searchers can tab to a link to skip to the main content. (Thanks, USCIS, for pointing this out.)</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <a href="/releases/releases.html">
-        <time datetime="2012-04-18">April 18, 2012</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/releases/releases.html">March 2012 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <div>
-<p>We've moved! Our homepage is now usasearch.howto.gov.</p>
-<p><a href="http://www.howto.gov">HowTo.gov</a> is a website to help government workers deliver a better customer experience to citizens. HowTo.gov is managed by <a href="http://www.gsa.gov/portal/category/25729">GSA's Office of Citizen Services and Innovative Technologies</a> and the <a href="http://www.howto.gov/communities/federal-web-managers-council">Federal Web Managers Council</a>, and is supported by other communities of practice. Search is an important aspect of customer experience so we're happy be part of HowTo.gov.</p>
-<p>Below are the release details for March and, as a reminder, we divide our work into three categories.</p>
-<ol><li>Features—Things you actually notice.</li>
-<li>Chores—Back-end improvements that you don't notice.</li>
-<li>Fixes—Fixes to any code issues that may arise.</li>
-</ol><p><strong>Features</strong></p>
-<p><em>For Agency Customers</em></p>
-<ul><li>Customers can add an optional header for the sidebar options on the results page.</li>
-<li>Customers can add header and footer navigation on the results page by entering label and URL pairs.</li>
-<li>Customer can toggle display of RSS feeds as a GovBox.</li>
-<li>Customers who enter a <a href="/sites/manual/youtube.html">YouTube</a> handle automatically have a RSS feed created for their videos.</li>
-<li>Customers see new Sidebar and Results Modules pages in the Admin Center.</li>
-<li>Customers see Page Views page in the Admin Center to provide usage data on results page.</li>
-<li>Customers are redirected from old URLs to new URLs.</li>
-<li>Customers can access feature-specific help via the Admin Center.</li>
-</ul><p><em>For Searchers</em></p>
-<ul><li>Searchers see results from RSS feeds in a GovBox.</li>
-<li>Searchers see logical links for image results.</li>
-<li>Searchers see a GovBox for videos with a multimedia-friendly UI.</li>
-<li>Searchers who don't enter a query term on RSS-based results pages see results in reverse chronological order.</li>
-<li>Searchers see results from all time when they click on RSS GovBox titles.</li>
-<li>Searchers who modify their query (but don't execute it) see results for their new query term when they click on a sidebar option.</li>
-<li>Searchers see plain language text on the Spanish-language no results found page.</li>
-</ul><p><strong>Chores</strong></p>
-<ul><li>Revised the on-page Admin Center help text.</li>
-<li>Increased speed of returning search results, especially for RSS feeds.</li>
-<li>Implemented Spanish stop words.</li>
-</ul><p><strong>Fixes</strong></p>
-<ul><li>No error page seen when searching across RSS feeds.</li>
-<li>No error page seen when accessing RSS- or collection-based results pages from a mobile device.</li>
-<li>Increased font size for title of RSS GovBox.</li>
-<li>Fixed link so that clicking on Images on the results page stays within that site.</li>
-<li>Improved handling of fetching HTML content for slower customer websites.</li>
-<li>Removed ability to enter enter CSS or JavaScript tags in the managed header or footer fields.</li>
-<li>Fixed Push Changes to trigger an email with header and footer changes.</li>
-</ul></div>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <a href="/releases/august-2011.html">
-        <time datetime="2011-09-15">September 15, 2011</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/releases/august-2011.html">August 2011 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><span>While the dogs days of summer are almost over, we didn't let the weather stop us from rolling out some hot new features.</span></p>
-
-
-<p><span>We we are currently beta testing two new rendering options: iFrame and a <a href="https://drupal.org/project/USASearch">Drupal module</a> which will allow you to host the search results on your web site and gain additional control of the look and feel. If you are an affiliate and interested in beta testing, please let us know.</span></p>
-
-
-<p><span> </span>As a reminder, we divide our work into three categories:</p>
-
-
-<p>1) Features—Things that you actually notice</p>
-
-
-<p>2) Bugs—Fixes to any code issues that may arise</p>
-
-
-<p>3) Chores—Back-end improvements that users don't notice</p>
-
-
-<p><span> </span></p>
-
-
-<p><strong>Features:</strong></p>
-
-
-<ul><li>Users can view Featured Collections in Affiliate SERPs</li>
-<li>Mobile users see boosted sites</li>
-<li>Affiliates have option to embed iFrame that renders search results</li>
-<li>Improve monthly reporting process</li>
-<li>Update Popular Pages for Affiliates</li>
-<li>Affiliates may assign published start and end date to a Featured Collection</li>
-<li>User sees Popular Pages in Agency Govbox</li>
-</ul>
-
-
-<p><strong>Bugs:</strong></p>
-
-
-<ul><li><span>Fix accessibility issues</span></li>
-<li><span>User see error page when the request contains unrecognized extension </span></li>
-</ul>
-
-
-<p><strong>Chores:</strong></p>
-
-
-<ul><li><span>Improve monthly reporting process</span></li>
-<li><span>Affiliate admin can assign published start and end date to a Featured Collection</span></li>
-<li><span>Click table housekeeping</span></li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <a href="/releases/july-2011.html">
-        <time datetime="2011-08-11">August 11, 2011</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/releases/july-2011.html">July 2011 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>We  hope everyone is staying cool in the dog days of our August summer, but  just because it is hot doesn't mean we aren't busy. <br/> <br/>We  would like to point out an enhancement to our Add to Bing feature.  Immediately after you add a page to Bing, we automatically include it in  your Boosted Content. Once the document is added to the Bing index, we  automatically remove the entry from your Boosted Content. We hope you  enjoy this enhancement as it is something that many of you told us was a  high priority fix.<br/> <br/>As a reminder, we divide our work into three categories:<br/> <br/>1) Features—Things that you actually notice<br/>2) Bugs—Fixes to any code issues that may arise<br/>3) Chores—Back-end improvements that aren't noticed<br/> <br/>Without further adieu, below are the August release notes.<br/><br/><strong>Features </strong></p>
-
-
-<ul><li>Users may find pages added via Add to Bing, even if the pages aren't yet indexed by Bing</li>
-<li>Users see a white background color on the default search results page template. </li>
-<li>Users see an improved <a href="http://search.usa.gov/thispagedoesnotexist">404 page</a> on Search.USA.gov. </li>
-<li>Users see a fun, improved <a href="http://search.usa.gov/search?query=thisisapagewithnoresults">no results page</a> on Search.USA.gov</li>
-<li>User sees blended USA.gov FAQs on Search.USA.gov results pages</li>
-<li>Users see boosted URLs below boosted collections</li>
-<li>Users can view up to 1000 results</li>
-<li>Users don't trigger type-ahead suggestions when they use up or down arrows</li>
-<li>Users see a three-column results page with vertical navigation in left column</li>
-<li>Users go to the landing page when they click on the search button without a query </li>
-<li>Users see related clinical trials in MedlinePlus Govboxes</li>
-<li>Users see Related Topics below organic Bing web results</li>
-<li>User sees improved pagination links on results pages</li>
-<li>Users see Recommended by {affiliate_name} for URLs boosted content on affiliate results pages </li>
-</ul>
-
-
-<p><strong>Bugs </strong></p>
-
-
-<ul><li>Affiliate users see a confirmation popup when they delete a site</li>
-<li>Fixed a misspelled variable name</li>
-<li>Hide phone icon when there's no number in Agency Govboxes</li>
-<li>Words are no longer truncated in boosted content entries</li>
-<li>HTML tags no longer show up in search results description</li>
-<li>USA.gov FAQs now only appear on the first page</li>
-<li>Search terms are no longer inadvertently selected as users type in the search box</li>
-</ul>
-
-
-<p><strong>Chores</strong></p>
-
-
-<ul><li>Imaging/images is no longer stemmed in Solr</li>
-<li>Upgraded to Rails 3.0.9</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <a href="/releases/june-2011.html">
-        <time datetime="2011-07-01">July 1, 2011</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/releases/june-2011.html">June 2011 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>Happy Fourth of July. Before everyone departs for the long holiday, we wanted to post our June release notes.</p>
-
-<p>As a reminder, we divide our work into three categories:</p>
-
-<ol>
-<li>Features&mdash;things that you actually notice</li>
-<li>Bugs&mdash;fixes to any code issues that may arise</li>
-<li>Chores&mdash;back-end improvements that you don't notice</li>
-</ol>
-
-
-<h2>Features for End Users Users</h2>
-
-<ul>
-<li>Users see polished agency GovBox design</li>
-<li>Users see aligned text on SERPs</li>
-<li>Users don't see underlines on SERPs</li>
-<li>User sees health GovBoxes</li>
-<li>Users have improved accessibility for DigitalGov Search Program pages</li>
-<li>Users see consistently-aligned items on landing pages</li>
-<li>Users see added agency popular url model incl govbox view</li>
-<li>Users see PDF before serp result titles for pdf urls</li>
-<li>Users see improved basic_gray search term highlite visibility and removed</li>
-<li>Mobile users can see SMS option</li>
-<li>Spanish searchers can find web and imagenes landing pages</li>
-</ul>
-
-
-<h2>Features for Admins</h2>
-
-<ul>
-<li>USAAdmins can easily batch process new users by status</li>
-<li>Analysts see 4 column daily click module containing module name, impressions, clicks, and CTR% </li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>Users should not have letters "skipped" as they're typing in the search box</li>
-<li>Display shorter URLs on Affiliate SERPs</li>
-<li>Affiliates should not see global terms populated in type ahead</li>
-<li>Update API language</li>
-<li>Fix type ahead suggestion drop down and font size in Grey Template</li>
-<li>Modify indices on agency_urls</li>
-<li>Boosted Sites/Spotlights/GovBoxes don't have proper precedence rules.</li>
-<li>HTML shows up on affiliate confirmation screen</li>
-<li>Users don't see web vertical spotlights on forms vertical</li>
-<li>Search users should be able to see SAYT dropdown</li>
-<li>Users get page not found error when logging out from some program/admin pages</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <a href="/releases/may-2011.html">
-        <time datetime="2011-06-03">June 3, 2011</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/releases/may-2011.html">May 2011 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>In the ongoing government effort for transparency, we are going to use our blog to post our release notes on a monthly basis. While they may not be the most exciting posts ever, it seems the logical place to publish our activities. Search, as many know, is difficult with many of the improvements happening behind the scenes.</p>
-
-<p>We divide our work into three categories:</p>
-
-<ol>
-<li>Features&mdash;things that you actually notice</li>
-<li>Bugs&mdash;fixes to any code issues that may arise</li>
-<li>Chores&mdash;back-end improvements that you don't notice</li>
-</ol>
-
-
-<p>We did complete a big chore this month by upgrading to Rails 3 which will be invisible to you, but it will bring additional stability for our search environment and allow us to have longer feature list in the coming months.</p>
-
-<h2>Features</h2>
-
-<ul>
-<li>Searchers see new second-level top navigation on landing pages and SERPs on Search.USA.gov and Buscador.USA.gov.</li>
-<li>Spanish searchers see improved web and image landing pages.</li>
-<li>Spanish searchers see brown color scheme.</li>
-<li>Visitors sees <a href="http://www.usa.gov">USA.gov</a>-branded search box on all pages.</li>
-<li>Searchers see updated affiliate and mobile type-ahead search suggestions.</li>
-<li>Mobile visitors can see SMS option on m.USA.gov.</li>
-<li>Searchers see updated affiliate and mobile page.</li>
-</ul>
-
-
-<h2>Bugs</h2>
-
-<ul>
-<li>Fixed bugs/display problems with monthly clicks/queries.</li>
-<li>Inconsistent autocomplete on images landing page and image SERPs.</li>
-<li>Spanish searchers see updated text on Buscador.USA.gov advanced search page.</li>
-</ul>
-
-
-<h2>Chores</h2>
-
-<ul>
-<li>Upgraded to Rails 3&mdash;the chore list would be long, but let us know if anyone is interested in hearing about the upgrade.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-  </article>
-  
 </div>
 
 
@@ -518,6 +709,10 @@ Searchers see video results from YouTube playlists.</li>
   </li>
   
 
+  
+  <li class="next">
+    <a href="/tagged/release-notes/page5">Older &rarr;</a>
+  </li>
   
 </ul>
 <!-- end tag layout --></div>

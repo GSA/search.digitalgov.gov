@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>How to Customize the Header and Footer of Your Results Page</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/stylesheets/font-awesome-ie7.min.css">
+  <![endif]-->
+
+  <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+  <link href="/stylesheets/custom.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+  <link rel="shortcut icon" href="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/favicon.ico">
+  <link rel='alternate' type='application/atom+xml' title='usasearch.howto.gov Atom feed' href='/all.atom' />
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="/">
+        <span class="digital">Digital</span><span class="gov">Gov</span>
+        <span class="search">Search</span>
+      </a>
+      <ul class="nav">
+        <li>
+          <form class="form-search" accept-charset="UTF-8" action="http://search.usa.gov/search/news/" id="search-form" method="get">
+            <input id="affiliate" name="affiliate" type="hidden" value="usasearch"/>
+            <input type="hidden" name="channel" value="1745">
+            <input type="hidden" name="sort_by" value="r">
+            <input type="hidden" name="m" value="true">
+            <div class="input-append">
+              <label for="search-query" class="hide">Query</label>
+              <input name="query" type="text" autocomplete="off"
+                     class="usagov-search-autocomplete span search-query" id="search-query"/>
+              <input type="submit" class="btn" id="search-button" value="Search" />
+            </div>
+          </form>
+        </li>
+      </ul>
+      <ul class="nav login">
+        <li>
+          <a href="https://search.usa.gov/sites"><i
+              class="icon-user icon-white"></i>&nbsp;Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div id="main-container"><article class="article">
+  <div class='time'>
+    
+    <span>Last updated on:</span>
+    
+    <a href="/manual/header-footer.html">
+      <time>September 24, 2013</time>
+    </a>
+  </div>
+
+  
+  <h1>
+    <a href="/manual/header-footer.html">How to Customize the Header and Footer of Your Results Page</a>
+  </h1>
+  
+
+  <div class='post-content'>
+    <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Display > Header &amp; Footer</p>
+
+<h2>Default Custom Header</h2>
+
+<p>To customize the header on your results page, we'll automatically use:</p>
+
+<ol>
+<li>The logo you provide on the <a href="/manual/display-images.html">Image Assets</a> page. (Or, if you don't provide a logo, we'll use the site name you provide on the <a href="/manual/settings.html">Settings</a> page.)</li>
+<li>The homepage URL you provide on the <a href="/manual/settings.html">Settings</a> page.</li>
+</ol>
+
+
+<p>You can see the custom header and mobile header we've automatically created for you on the <a href="/manual/preview.html">Preview</a> page.</p>
+
+<p>Additionally, you can further customize your header or footer using the options below.</p>
+
+<h2>Option 1. Add Header or Footer Links</h2>
+
+<p>Fill out the titles and URLs if you'd like to add navigation "tabs" to your header and footer. Use the icon with three horizontal lines on the left to change the order.</p>
+
+<p>See, for example, the options for Home, Business Tools, Business Education, Press Room, etc., in the header on the <a href="http://search.usa.gov/search?query=contracts&amp;affiliate=MBDA">Minority Business Development Agency's search results page</a>.</p>
+
+<h2>Option 2. Use CSS and HTML</h2>
+
+<p>Use this option to more closely replicate the exact header and footer on your website.</p>
+
+<p>Switch to Advanced Mode.</p>
+
+<p>In the first box, enter CSS to customize the header and footer of your search results page. We'll run a validation check to ensure your CSS is valid.</p>
+
+<p>In the second box, enter HTML to customize the header of your search results page. In the third box, enter HTML to customize the footer of your search results page. Be sure to enter <a href="http://webdesign.about.com/od/beginningtutorials/a/aa040502a.htm">absolute hyperlinks</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, not relative links.</p>
+
+<p>We'll run a validation check to ensure that no JavaScript is included in your HTML code. We'll also check to ensure no CSS style or link elements are included. To include CSS, specify inline CSS within an opening tag.</p>
+
+<h3>Invalid CSS</h3>
+
+<pre><code>&lt;html&gt;
+&lt;body&gt;
+&lt;style&gt; h1 { color: blue } &lt;/style&gt;
+&lt;link href="http://www.yoursite.gov/custom.css" type="text/css" /&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<h3>Valid CSS</h3>
+
+<pre><code>&lt;h1 style="color: blue;"&gt;Your Heading&lt;/h1&gt;
+</code></pre>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> You can validate your HTML markup at <a href="http://validator.w3.org/nu/">http://validator.w3.org/nu/</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. On the W3C page, select HTML 4.01 Strict from the Parser drop-down box.</p>
+
+<p><strong><em>Troubleshooting tip:</em></strong> Your HTML has to be <a href="http://en.wikipedia.org/wiki/Character_encodings_in_HTML">encoded</a>. The most common issues are around the &amp;, &quot;, &lt;, &gt;. They should be input as:</p>
+
+<pre><code>&amp;amp;
+&amp;quot;
+&amp;lt;
+&amp;gt;
+</code></pre>
+
+<p><strong><em>Troubleshooting tip:</em></strong> You can implement a drop-down menu using CSS (and without using JavaScript). For more information, read tips from <em>A List Apart</em> on <a href="http://alistapart.com/article/horizdropdowns">drop-down menus and horizontal style</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<p><strong><em>Did you know?</em></strong> We use device detection to show mobile-friendly search results on mobile phones. (Searchers using tablets and desktop computers see the full, classic header as you set it up above.) We'll automatically use the mobile logo you provide on the <a href="/manual/display-images.html">Image Assets</a> page. The logo must be less than 56 KB. We recommend it be no wider than 320 pixels. Or, if you don't provide a logo, we'll use the site name you provide on the <a href="/manual/settings.html">Settings</a> page.</p>
+
+<p><strong><em>Did you know?</em></strong> We offer results through our <a href="/manual/api.html">Search Data API</a>, if you'd like to create mash-ups or have complete control of the look and feel of your search results pages. You can access the API by clicking on the Activate Search option in the left-hand menu in the Admin Center.</p>
+
+  </div>
+
+  <div class='tags'>
+    
+    <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+    
+    <a href="/tagged/manage-display"><span class="label label-info">manage-display</span></a>
+    
+    <a href="/tagged/sidebar"><span class="label label-info">sidebar</span></a>
+    
+    <a href="/tagged/govbox"><span class="label label-info">govbox</span></a>
+    
+    <a href="/tagged/related-sites"><span class="label label-info">related-sites</span></a>
+    
+  </div>
+</article></div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p><a href="mailto:search@support.digitalgov.gov">Email us</a>, call us at 202-505-5315, or follow <a href="http://www.twitter.com/dg_search">@DG_Search</a></p>
+    <p> An Official Website of the U.S. Government <br />
+      <a href="http://www.gsa.gov/portal/category/25729">Office of Citizen Services &amp; Innovative Technologies</a>, <a href="http://www.gsa.gov">U.S. General Services Administration</a>
+    </p>
+    <ul class="footer-links unstyled inline">
+      <li><a href="http://www.usa.gov">USA.gov</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/tos.html">Terms of Service</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="http://www.digitalgov.gov/about/policies/">Site Policies</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  //<![CDATA[
+  var usasearch_config = { siteHandle:"usasearch" };
+
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "http://search.usa.gov/javascripts/remote.loader.js";
+  document.getElementsByTagName("head")[0].appendChild(script);
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31302465-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  //]]>
+</script>
+
+
+</body>
+</html>

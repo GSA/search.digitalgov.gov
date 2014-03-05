@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>February 2012 Release Notes</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/stylesheets/font-awesome-ie7.min.css">
+  <![endif]-->
+
+  <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+  <link href="/stylesheets/custom.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+  <link rel="shortcut icon" href="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/favicon.ico">
+  <link rel='alternate' type='application/atom+xml' title='usasearch.howto.gov Atom feed' href='/all.atom' />
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="/">
+        <span class="digital">Digital</span><span class="gov">Gov</span>
+        <span class="search">Search</span>
+      </a>
+      <ul class="nav">
+        <li>
+          <form class="form-search" accept-charset="UTF-8" action="http://search.usa.gov/search/news/" id="search-form" method="get">
+            <input id="affiliate" name="affiliate" type="hidden" value="usasearch"/>
+            <input type="hidden" name="channel" value="1745">
+            <input type="hidden" name="sort_by" value="r">
+            <input type="hidden" name="m" value="true">
+            <div class="input-append">
+              <label for="search-query" class="hide">Query</label>
+              <input name="query" type="text" autocomplete="off"
+                     class="usagov-search-autocomplete span search-query" id="search-query"/>
+              <input type="submit" class="btn" id="search-button" value="Search" />
+            </div>
+          </form>
+        </li>
+      </ul>
+      <ul class="nav login">
+        <li>
+          <a href="https://search.usa.gov/sites"><i
+              class="icon-user icon-white"></i>&nbsp;Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div id="main-container"><article class="article">
+  <div class='time'>
+    
+    <a href="/releases/february-2012.html">
+      <time>March 8, 2012</time>
+    </a>
+  </div>
+
+  
+  <h1>
+    <a href="/releases/february-2012.html">February 2012 Release Notes</a>
+  </h1>
+  
+
+  <div class='post-content'>
+    <p>February was an exciting month for us. We rolled out a brand new look to emphasize our focus on helping you create a great search experience on your websites.</p>
+
+<p>Our blog will now serve as our home page. It also will answer your questions about how our features work so be sure to browse through our <a href="/tagged/how-to">How To Manual</a> for tips on how to configure your search settings.</p>
+
+<p>Below are the release details for February and, as a reminder, we divide our work into three categories.</p>
+
+<ol>
+<li>Features: Things you actually notice.</li>
+<li>Chores: Back-end improvements that you don't notice.</li>
+<li>Fixes: Fixes to any code issues that may arise.</li>
+</ol>
+
+
+<h2>Features for Searchers</h2>
+
+<ul>
+<li>Searchers don't see narrow by date on Everything or Images pages (i.e., on Bing-based results pages).</li>
+<li>Searchers see a longer search box on the results page.</li>
+<li>Searchers see near-real-time <a href="/tagged/type-ahead">type-ahead</a> suggestions.</li>
+<li>Searchers see a custom header image on results pages.</li>
+<li>Searchers may narrow results by <a href="/tagged/collections">collections</a> in left nav.</li>
+<li>Searchers see a Results by DigitalGov Search logo.</li>
+<li>Mobile visitors can find more <a href="http://www.usa.gov/gobiernousa">GobiernoUSA.gov</a> pages.</li>
+</ul>
+
+
+<h2>Features for Agency Customers</h2>
+
+<ul>
+<li>Customers see new Add New Site wizard.</li>
+<li>Customers see raw and processed query analytics in downloaded CSV files.</li>
+<li>Customers with legacy results pages can preview template-based results pages.</li>
+<li>Customers have an Export to CSV option for indexed URLs.</li>
+<li>Customers see updated Look &amp; Feel and Header &amp; Footer pages.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li>Fix Sunspot library to remove orphans.</li>
+<li>Adjust default CSS for theme-based templates.</li>
+<li>Move customers with legacy templates and without header/footer to theme-based templates.</li>
+<li>Allow assignment of priorities to background (Resque) jobs.</li>
+<li>Set default index to Bing + DigitalGov Search.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>Fix occasional errors highlighting phrases.</li>
+<li>Fix layout on theme-based templates.</li>
+<li>Fix URL prefixes with trailing spaces to not append slash.</li>
+<li>Update error message when customers upload a .txt file.</li>
+<li>Fix images to have same results page title as other verticals.</li>
+<li>Automatically down case terms in site handle field.</li>
+<li>Fix bug where the header image filename was getting longer and longer when saving.</li>
+<li>Fix Agency GovBox to point to new USA.gov results page.</li>
+</ul>
+
+
+  </div>
+
+  <div class='tags'>
+    
+    <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+    
+  </div>
+</article></div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p><a href="mailto:search@support.digitalgov.gov">Email us</a>, call us at 202-505-5315, or follow <a href="http://www.twitter.com/dg_search">@DG_Search</a></p>
+    <p> An Official Website of the U.S. Government <br />
+      <a href="http://www.gsa.gov/portal/category/25729">Office of Citizen Services &amp; Innovative Technologies</a>, <a href="http://www.gsa.gov">U.S. General Services Administration</a>
+    </p>
+    <ul class="footer-links unstyled inline">
+      <li><a href="http://www.usa.gov">USA.gov</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/tos.html">Terms of Service</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="http://www.digitalgov.gov/about/policies/">Site Policies</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  //<![CDATA[
+  var usasearch_config = { siteHandle:"usasearch" };
+
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "http://search.usa.gov/javascripts/remote.loader.js";
+  document.getElementsByTagName("head")[0].appendChild(script);
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31302465-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  //]]>
+</script>
+
+
+</body>
+</html>

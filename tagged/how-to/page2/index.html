@@ -77,217 +77,14 @@
       
       <span>Last updated on:</span>
       
-      <a href="/sites/manual/domains.html">
-        <time datetime="2013-08-29">August 29, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/sites/manual/domains.html">How to Edit Your Domains</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Domains</p>
-
-<p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
-
-<h2>Entire Site(s)</h2>
-
-<ul>
-<li>List yoursite.gov (without www) to search your entire site, including all subdomains.</li>
-<li>List yoursite.gov and yoursite2.gov to search multiple sites.</li>
-</ul>
-
-
-<h2>Specific Subdomains</h2>
-
-<ul>
-<li>List www.yoursite.gov to include only the primary 'www' domain.</li>
-<li>List subdomain.yoursite.gov to include subdomains.</li>
-</ul>
-
-
-<h2>Specific Directories</h2>
-
-<p>List yoursite.gov/folder to include folders. Note: this will include all sub-folders (if they exist), i.e. yoursite.gov/folder/folder2.</p>
-
-<p>You cannot specify individual URLs.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
-
-<ol>
-<li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
-<li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>Email us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x73;&#101;&#97;&#114;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#118;">&#115;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#112;&#112;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#x67;&#105;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
-</ol>
-
-
-<p><a id="filter"></a><strong><em>Troubleshooting Tip:</em></strong> You can remove or filter specific URLs using any of the following options.</p>
-
-<ol>
-<li><p>Remove the page from your site and return a 404 (Not Found) 401 (Gone), or 301 (Permanently Moved) HTTP status.</p></li>
-<li><p>Add a <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">noindex robots metatag or x-robots tag</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
-<li><p>Request the page's removal using the <a href="http://www.bing.com/webmaster/help/block-urls-from-bing-264e560a">Block URLs option in Bing Webaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/1663419">Remove URLs option in Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p></li>
-<li><p>Use the Filter URLs option under the <a href="/sites/manual/domains-advanced.html">Advanced</a> tab. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
-</ol>
-
-
-<p><strong><em>Troubleshooting Tip:</em></strong> Are specific web pages missing from your Bing web results? You can tell us about any missing URLs via an RSS feed or manually (the Supplemental Feed and Supplemental URLs options under the <a href="/sites/manual/domains-advanced.html">Advanced</a> tab, respectively). We'll fetch and index the pages and append them to your web results.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/sites/manual/code.html">
+      <a href="/manual/third-party.html">
         <time datetime="2013-08-28">August 28, 2013</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/sites/manual/code.html">How to Activate Your Search by Adding Our Code Snippets to Your Website</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search > Code Snippets</p>
-
-<p>Visit our <a href="https://search.usa.gov/sites/">Admin Center</a>, select your site, and click on the Activate Search option in the left-hand menu.</p>
-
-<p>Add the following two snippets of code to your website to "hook" your website and our hosted search service together. You can add this code to your individual web pages or to the template(s) in your content management system.</p>
-
-<h2>1. Form Snippet</h2>
-
-<p>Include this snippet of code where the form for your search box appears. It should look something like this:</p>
-
-<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;
-    &lt;div style="margin:0;padding:0;display:inline"&gt;
-    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
-    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
-    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
-    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
-    &lt;input name="commit" type="submit" value="Search" /&gt;
-&lt;/form&gt;
-</code></pre>
-
-<h2>2. Javascript Snippet</h2>
-
-<p>Include this snippet of code before the closing <code>&lt;body&gt;</code> tag. This tag enables type-ahead search in the search box on your web pages and powers the data on trending URLs on the <a href="/sites/manual/site-overview.html">Site Overview</a> page in the Admin Center. It should look something like this:</p>
-
-<pre><code>&lt;script type="text/javascript"&gt;
-//&lt;![CDATA[
-      var usasearch_config = { siteHandle:"YourSiteHandle" };
-
-      var script = document.createElement("script");
-      script.type = "text/javascript";
-      script.src = "http://search.usa.gov/javascripts/remote.loader.js";
-      document.getElementsByTagName("head")[0].appendChild(script);
-
-//]]&gt;
-&lt;/script&gt;
-</code></pre>
-
-<h2>Setting Up a Search Box for Specific Folders or Subdomains</h2>
-
-<p>You can limit results to specific folders or subdomains by creating a collection, setting up an RSS feed, or passing in a hidden value.</p>
-
-<h3>Collection</h3>
-
-<p>Create a <a href="/sites/manual/collections.html">collection</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/docs/</code> and (b) add an input for this collection, <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>. It should look something like this:</p>
-
-<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search/docs/" id="search_form" method="get"&gt;
-    &lt;div style="margin:0;padding:0;display:inline"&gt;
-    &lt;input type="hidden" name="dc" value="###"&gt;
-    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
-    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
-    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
-    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
-    &lt;input name="commit" type="submit" value="Search" /&gt;
-&lt;/form&gt;
-</code></pre>
-
-<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center as shown in the sample below.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/get-code-collection.png" alt="Value for the collection ID" /></p>
-
-<h3>RSS Feed</h3>
-
-<p>Set up an <a href="/sites/manual/rss.html">RSS feed</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/news/</code> and (b) add an input for this feed, <code>&lt;input type="hidden" name="channel" value="###"&gt;</code>.  It should look something like this:</p>
-
-<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search/news/" id="search_form" method="get"&gt;
-    &lt;div style="margin:0;padding:0;display:inline"&gt;
-    &lt;input type="hidden" name="channel" value="###"&gt;
-    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
-    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
-    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
-    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
-    &lt;input name="commit" type="submit" value="Search" /&gt;
-&lt;/form&gt;
-</code></pre>
-
-<p>The value is the number for your RSS ID, which is visible in the URL when you edit or preview your feed in the Admin Center.</p>
-
-<h3>Hidden Value</h3>
-
-<p>Leave your domain blank on the <a href="/sites/manual/domains.html">Domains</a> page and, instead, passing a hidden value for the domain in the search form code.</p>
-
-<p>See, for example, <a href="http://www.ri.gov">RI.gov</a>, <a href="http://www.dmv.ri.gov/">DMV.RI.gov</a>, <a href="http://www.health.ri.gov/">Health.RI.gov</a>. On Health.RI.gov, the following hidden value is added to limit to only the health subdomain.</p>
-
-<pre><code>&lt;input type="hidden" name="site" value="www.health.ri.gov" &gt;
-</code></pre>
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> If your website is secured with https, you can add 's' to the two URLs above (i.e., <a href="https://search.usa.gov/search">https://search.usa.gov/search</a> and <a href="https://search.usa.gov/javascripts/remote.loader.js">https://search.usa.gov/javascripts/remote.loader.js</a>, respectively) so that searchers don't receive a security message in Internet Explorer.</p>
-
-<p><strong><em>Did you know?</em></strong> If you're using Drupal, be sure to check out our <a href="https://drupal.org/project/USASearch">Drupal module</a>.</p>
-
-<p><strong><em>Did you know?</em></strong> We offer <a href="/sites/manual/cname.html">DNS masking</a>, which allows you to show searchers your domain (instead of USA.gov).</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
-      
-      <a href="/tagged/code-snippets"><span class="label label-info">code-snippets</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/sites/manual/third-party.html">
-        <time datetime="2013-08-28">August 28, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/sites/manual/third-party.html">How to Add JavaScript for Your Third Party Web Services</a>
+      <a href="/manual/third-party.html">How to Add JavaScript for Your Third Party Web Services</a>
     </h1>
     
 
@@ -302,7 +99,7 @@
 
 <h2>Google Analytics Tip</h2>
 
-<p>In your Google Analytics JavaScript, be sure to set your domain if you've requested <a href="/sites/manual/cname.html">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
+<p>In your Google Analytics JavaScript, be sure to set your domain if you've requested <a href="/manual/cname.html">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
 
 <pre><code>_gaq.push(['_setDomainName', 'commerce.gov']);
 </code></pre>
@@ -346,7 +143,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li><p>Email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x73;&#101;&#97;&#114;&#99;&#104;&#64;&#115;&#x75;&#112;&#112;&#111;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;">&#x73;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#x75;&#x70;&#112;&#111;&#x72;&#116;&#46;&#100;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;</a> to <a href="/sites/manual/cname.html">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
+<li><p>Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#115;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;">&#x73;&#x65;&#97;&#114;&#99;&#x68;&#64;&#x73;&#117;&#112;&#112;&#x6f;&#114;&#116;&#x2e;&#x64;&#x69;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;</a> to <a href="/manual/cname.html">set up a CNAME</a> for search.{yourdomain}.gov.</p></li>
 <li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
 
 <p> Find => 'files': '/fsrscripts/',</p>
@@ -397,14 +194,138 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       
       <span>Last updated on:</span>
       
-      <a href="/sites/manual/raw-logs.html">
+      <a href="/manual/code.html">
         <time datetime="2013-08-28">August 28, 2013</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/sites/manual/raw-logs.html">How to Access Your Raw Logs</a>
+      <a href="/manual/code.html">How to Activate Your Search by Adding Our Code Snippets to Your Website</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search > Code Snippets</p>
+
+<p>Visit our <a href="https://search.usa.gov/sites/">Admin Center</a>, select your site, and click on the Activate Search option in the left-hand menu.</p>
+
+<p>Add the following two snippets of code to your website to "hook" your website and our hosted search service together. You can add this code to your individual web pages or to the template(s) in your content management system.</p>
+
+<h2>1. Form Snippet</h2>
+
+<p>Include this snippet of code where the form for your search box appears. It should look something like this:</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<h2>2. Javascript Snippet</h2>
+
+<p>Include this snippet of code before the closing <code>&lt;body&gt;</code> tag. This tag enables type-ahead search in the search box on your web pages and powers the data on trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the Admin Center. It should look something like this:</p>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+      var usasearch_config = { siteHandle:"YourSiteHandle" };
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "http://search.usa.gov/javascripts/remote.loader.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+//]]&gt;
+&lt;/script&gt;
+</code></pre>
+
+<h2>Setting Up a Search Box for Specific Folders or Subdomains</h2>
+
+<p>You can limit results to specific folders or subdomains by creating a collection, setting up an RSS feed, or passing in a hidden value.</p>
+
+<h3>Collection</h3>
+
+<p>Create a <a href="/manual/collections.html">collection</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/docs/</code> and (b) add an input for this collection, <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>. It should look something like this:</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search/docs/" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input type="hidden" name="dc" value="###"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center as shown in the sample below.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/get-code-collection.png" alt="Value for the collection ID" /></p>
+
+<h3>RSS Feed</h3>
+
+<p>Set up an <a href="/manual/rss.html">RSS feed</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/news/</code> and (b) add an input for this feed, <code>&lt;input type="hidden" name="channel" value="###"&gt;</code>.  It should look something like this:</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search/news/" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input type="hidden" name="channel" value="###"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>The value is the number for your RSS ID, which is visible in the URL when you edit or preview your feed in the Admin Center.</p>
+
+<h3>Hidden Value</h3>
+
+<p>Leave your domain blank on the <a href="/manual/domains.html">Domains</a> page and, instead, passing a hidden value for the domain in the search form code.</p>
+
+<p>See, for example, <a href="http://www.ri.gov">RI.gov</a>, <a href="http://www.dmv.ri.gov/">DMV.RI.gov</a>, <a href="http://www.health.ri.gov/">Health.RI.gov</a>. On Health.RI.gov, the following hidden value is added to limit to only the health subdomain.</p>
+
+<pre><code>&lt;input type="hidden" name="site" value="www.health.ri.gov" &gt;
+</code></pre>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> If your website is secured with https, you can add 's' to the two URLs above (i.e., <a href="https://search.usa.gov/search">https://search.usa.gov/search</a> and <a href="https://search.usa.gov/javascripts/remote.loader.js">https://search.usa.gov/javascripts/remote.loader.js</a>, respectively) so that searchers don't receive a security message in Internet Explorer.</p>
+
+<p><strong><em>Did you know?</em></strong> If you're using Drupal, be sure to check out our <a href="https://drupal.org/project/USASearch">Drupal module</a>.</p>
+
+<p><strong><em>Did you know?</em></strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers your domain (instead of USA.gov).</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
+      
+      <a href="/tagged/code-snippets"><span class="label label-info">code-snippets</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
+      <a href="/manual/raw-logs.html">
+        <time datetime="2013-08-28">August 28, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/raw-logs.html">How to Access Your Raw Logs</a>
     </h1>
     
 
@@ -477,21 +398,21 @@ Enter same passphrase again:
       
       <span>Last updated on:</span>
       
-      <a href="/sites/manual/api.html">
+      <a href="/manual/api.html">
         <time datetime="2013-08-28">August 28, 2013</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/sites/manual/api.html">How (and When) to Use the Search API</a>
+      <a href="/manual/api.html">How (and When) to Use the Search API</a>
     </h1>
     
 
     <div class='post-content'>
       <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search > API Instructions</p>
 
-<p>We offer our search results as a hosted results page (using our <a href="/sites/manual/code.html">code snippets</a>) or as an <a href="http://www.howto.gov/mobile/apis-in-government/api-basics">application programming interface</a> (API).</p>
+<p>We offer our search results as a hosted results page (using our <a href="/manual/code.html">code snippets</a>) or as an <a href="http://www.howto.gov/mobile/apis-in-government/api-basics">application programming interface</a> (API).</p>
 
 <h2>When to Use the Hosted Results</h2>
 
@@ -576,6 +497,101 @@ Enter same passphrase again:
       
       <span>Last updated on:</span>
       
+      <a href="/manual/index.html">
+        <time datetime="2013-08-26">August 26, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/index.html">How to Set Up Your Search Box</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>We provide a search box that searches across all of your <em>public-facing</em> digital content.</p>
+
+<p>We support an unlimited number of web pages across multiple domains and we integrate your RSS feeds, tweets, YouTube videos, and Flickr photos.</p>
+
+<p>Browse through our <a href="/blog/go-live.html">Go-Live Punch List</a> for some quick tips on how to configure the search experience for your website.</p>
+
+<h3>Dashboard</h3>
+
+<ul>
+<li><a href="/manual/site-overview.html">Site overview</a></li>
+<li><a href="/manual/users.html">Manage users</a></li>
+<li><a href="/manual/settings.html">Settings</a></li>
+</ul>
+
+
+<h3>Analytics</h3>
+
+<ul>
+<li><a href="/manual/queries.html">Queries</a></li>
+<li><a href="/manual/clicks.html">Clicks</a></li>
+<li><a href="/manual/monthly-reports.html">Monthly reports</a></li>
+<li><a href="/manual/third-party.html">3rd party tracking</a></li>
+<li><a href="/manual/raw-logs.html">Raw logs</a></li>
+</ul>
+
+
+<h3>Manage Content</h3>
+
+<ul>
+<li><a href="/manual/domains.html">Domains</a> (plus <a href="/manual/domains-advanced.html">advanced options to add or filter URLs</a>)</li>
+<li><a href="/manual/collections.html">Collections</a></li>
+<li><a href="/manual/best-bets-text.html">Best bets:text</a></li>
+<li><a href="/manual/best-bets-graphics.html">Best bets: graphics</a></li>
+<li><a href="/manual/rss.html">RSS</a></li>
+<li><a href="/manual/youtube.html">YouTube</a></li>
+<li><a href="/manual/twitter.html">Twitter</a></li>
+<li><a href="/manual/flickr.html">Flickr</a></li>
+</ul>
+
+
+<h3>Manage Display</h3>
+
+<ul>
+<li><a href="/manual/display-overview.html">Display overview</a></li>
+<li><a href="/manual/font-colors.html">Font &amp; colors</a></li>
+<li><a href="/manual/display-images.html">Image assets</a></li>
+<li><a href="/manual/header-footer.html">Header &amp; footer</a></li>
+</ul>
+
+
+<h3>Preview</h3>
+
+<ul>
+<li><a href="/manual/preview.html">Preview</a></li>
+</ul>
+
+
+<h3>Activate Search</h3>
+
+<ul>
+<li><a href="/manual/code.html">Code snippets</a></li>
+<li><a href="/manual/api.html">API instructions</a></li>
+</ul>
+
+
+<p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
+
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#58;&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#x73;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#118;</a>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
       <a href="/blog/go-live.html">
         <time datetime="2013-08-26">August 26, 2013</time>
       </a>
@@ -592,7 +608,7 @@ Enter same passphrase again:
 
 <h2>Connect Your Site to DigitalGov Search</h2>
 
-<p>Most agencies add these two <a href="/sites/manual/code.html">snippets of code</a> to the template(s) in their content management systems (rather than adding them to individual pages).</p>
+<p>Most agencies add these two <a href="/manual/code.html">snippets of code</a> to the template(s) in their content management systems (rather than adding them to individual pages).</p>
 
 <p><i class="icon-check"></i> <strong>1. Does your search box point to DigitalGov Search?</strong> Update your search box form code point to our service so that, when users execute a search, they'll see your DigitalGov Search-hosted results page.</p>
 
@@ -604,7 +620,7 @@ Enter same passphrase again:
 &lt;/form&gt;
 </code></pre>
 
-<p><i class="icon-check"></i> <strong>2. Do you have the our Javascript tag on your webpages?</strong> This Javascript powers the suggestions for type-ahead and <a href="/sites/manual/display-overview.html">related searches</a>. It also provides data on your trending URLs on the <a href="/sites/manual/site-overview.html">Site Overview</a> page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+<p><i class="icon-check"></i> <strong>2. Do you have the our Javascript tag on your webpages?</strong> This Javascript powers the suggestions for type-ahead and <a href="/manual/display-overview.html">related searches</a>. It also provides data on your trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
 
 <pre><code>&lt;script type="text/javascript"&gt;
 //&lt;![CDATA[
@@ -619,23 +635,23 @@ Enter same passphrase again:
 
 <h2>Double Check Your Content Sources</h2>
 
-<p><i class="icon-check"></i> <strong>3. Have you told us which domain(s) you want to search?</strong> List one or more <a href="/sites/manual/domains.html">domains</a> that you want to search on the first page of web results. Most agencies opt to leave out the 'www' to include all subdomains (for example, list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies especially department-level portals opt to also include their bureaus' websites (for example, Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)</p>
+<p><i class="icon-check"></i> <strong>3. Have you told us which domain(s) you want to search?</strong> List one or more <a href="/manual/domains.html">domains</a> that you want to search on the first page of web results. Most agencies opt to leave out the 'www' to include all subdomains (for example, list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies especially department-level portals opt to also include their bureaus' websites (for example, Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)</p>
 
-<p><i class="icon-check"></i> <strong>4. Have you told us about your RSS feeds?</strong> We love <a href="/sites/manual/rss.html">RSS feeds</a>. Tell us about all of your feeds, even if you opt not to show them (see #7 below). They're the quickest way for you to tell us about your new and updated content. Feeds also have well-structured titles, URLs, descriptions, and dates that we use to improve your search results page. (Tip: Preview your feeds from the RSS page in the <a href="https://search.usa.gov/sites/">Admin Center</a> to confirm that we've indexed your content.)</p>
+<p><i class="icon-check"></i> <strong>4. Have you told us about your RSS feeds?</strong> We love <a href="/manual/rss.html">RSS feeds</a>. Tell us about all of your feeds, even if you opt not to show them (see #7 below). They're the quickest way for you to tell us about your new and updated content. Feeds also have well-structured titles, URLs, descriptions, and dates that we use to improve your search results page. (Tip: Preview your feeds from the RSS page in the <a href="https://search.usa.gov/sites/">Admin Center</a> to confirm that we've indexed your content.)</p>
 
-<p><i class="icon-check"></i> <strong>5. Have you told us about your social media accounts?</strong> <a href="/sites/manual/flickr.html">Flickr photostreams</a>, <a href="/sites/manual/twitter.html">tweets</a>, and <a href="/sites/manual/youtube.html">YouTube videos</a> are a great way to highlight your recent content. Tell us about all of your social media, even if you opt not to show them (see #7 below).</p>
+<p><i class="icon-check"></i> <strong>5. Have you told us about your social media accounts?</strong> <a href="/manual/flickr.html">Flickr photostreams</a>, <a href="/manual/twitter.html">tweets</a>, and <a href="/manual/youtube.html">YouTube videos</a> are a great way to highlight your recent content. Tell us about all of your social media, even if you opt not to show them (see #7 below).</p>
 
 <h2>Customize the Display of Your Search Results Page</h2>
 
-<p><i class="icon-check"></i> <strong>6. Have you made the search results page look like your website?</strong> Customize the <a href="/sites/manual/font-colors.html">fonts and colors</a> and <a href="/sites/manual/display-images.html">image assets</a> (logo, background image, and favicon) of your search results page to create a seamless experience for users as they search and browse your website.</p>
+<p><i class="icon-check"></i> <strong>6. Have you made the search results page look like your website?</strong> Customize the <a href="/manual/font-colors.html">fonts and colors</a> and <a href="/manual/display-images.html">image assets</a> (logo, background image, and favicon) of your search results page to create a seamless experience for users as they search and browse your website.</p>
 
-<p><i class="icon-check"></i> <strong>7. Have you told us what to show on your results page?</strong> Turn on (or off) the GovBoxes (that is, the inline results in the center of the page) and sidebar options (that is, the facets in the left-hand column) you want to appear on your search results. You can change the default settings on the <a href="/sites/manual/display-overview.html">Display Overview</a> page in the Admin Center.</p>
+<p><i class="icon-check"></i> <strong>7. Have you told us what to show on your results page?</strong> Turn on (or off) the GovBoxes (that is, the inline results in the center of the page) and sidebar options (that is, the facets in the left-hand column) you want to appear on your search results. You can change the default settings on the <a href="/manual/display-overview.html">Display Overview</a> page in the Admin Center.</p>
 
 <h2>Set Up Nice-to-Have Features (Optional)</h2>
 
-<p><i class="icon-check"></i> <strong>8. Have you masked your domain?</strong> We offer <a href="/sites/manual/cname.html">DNS masking</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov.</p>
+<p><i class="icon-check"></i> <strong>8. Have you masked your domain?</strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov.</p>
 
-<p><i class="icon-check"></i> <strong>9. Have you added the Javascripts for your other third party web services to your results page?</strong> If you have a <a href="/sites/manual/third-party.html">third party service</a> running on your website, you likely want it to run on your results page. Agencies often include their 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends code, among others.</p>
+<p><i class="icon-check"></i> <strong>9. Have you added the Javascripts for your other third party web services to your results page?</strong> If you have a <a href="/manual/third-party.html">third party service</a> running on your website, you likely want it to run on your results page. Agencies often include their 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends code, among others.</p>
 
 <h2>Don't Forget SEO (Optional)</h2>
 
@@ -657,82 +673,14 @@ Enter same passphrase again:
       
       <span>Last updated on:</span>
       
-      <a href="/sites/manual/account.html">
+      <a href="/manual/cname.html">
         <time datetime="2013-08-23">August 23, 2013</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/sites/manual/account.html">How to Create an Account</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > My Account</p>
-
-<p>You can use DigitalGov Search to power the search box on your federal, state, local, tribal, or territorial government website at no cost.</p>
-
-<p>Access to our hosted search service requires authentication and verification that you're a government employee or contractor.</p>
-
-<h2>Log In</h2>
-
-<p>Log in to an existing account <a href="http://search.digitalgov.gov/login">http://search.digitalgov.gov/login</a> or register for a new account at <a href="http://search.digitalgov.gov/signup">http://search.digitalgov.gov/signup</a>.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/login.png" alt="Login from search.digitalgov.gov" /></p>
-
-<p>After you register, you'll receive an automatic email. Click on the link in the email to verify that your email address belongs to you.</p>
-
-<p>If you have a .gov or .mil address, you'll be able to access your account immediately after you verify your email.</p>
-
-<p>If you don't have a .gov or .mil address, we'll ask for additional information to confirm that you're a government employee or contractor. We'll notify you when your account is approved.</p>
-
-<h2>Add a Site</h2>
-
-<p>Once your account is approved, you can <a href="/sites/manual/add-site.html">add a site</a> in our <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-<h2>Update Your Contact Information</h2>
-
-<p>You can edit your name, agency, or email by selecting the option, My Account, in the drop-down menu in the upper-right hand corner.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> We cannot retrieve any passwords for any account, because we don't have access to passwords. To reset your password:</p>
-
-<ol>
-<li>Go to our Login page at <a href="https://search.usa.gov/login">https://search.usa.gov/login</a></li>
-<li>Enter your email address.</li>
-<li>Click on Forgot your password?</li>
-<li>You will be prompted to reset your password and it will be emailed to you.</li>
-</ol>
-
-
-<p>If you have any problem resetting your password, email us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#117;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#108;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;">&#x73;&#101;&#97;&#114;&#x63;&#x68;&#x40;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/my-account"><span class="label label-info">my-account</span></a>
-      
-    </div>
-  </article>
-  
-  <article class='article'>
-    <div class='time'>
-      
-      <span>Last updated on:</span>
-      
-      <a href="/sites/manual/cname.html">
-        <time datetime="2013-08-23">August 23, 2013</time>
-      </a>
-    </div>
-
-    
-    <h1>
-      <a href="/sites/manual/cname.html">How to Mask Your Domain</a>
+      <a href="/manual/cname.html">How to Mask Your Domain</a>
     </h1>
     
 
@@ -740,9 +688,9 @@ Enter same passphrase again:
       <p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these three steps to mask your domain.</p>
 
 <ol>
-<li>Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#115;&#101;&#97;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#112;&#111;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#105;&#116;&#97;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#x6f;&#x76;">&#115;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#x72;&#116;&#46;&#100;&#x69;&#103;&#105;&#116;&#97;&#108;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;</a> and ask us to mask your domain.</li>
+<li>Email us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;">&#x73;&#x65;&#97;&#114;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#46;&#100;&#x69;&#103;&#x69;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;</a> and ask us to mask your domain.</li>
 <li>Create a CNAME in your external DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
-<li>When the setup is complete, change the <a href="/sites/manual/code.html">code for your form</a> action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
+<li>When the setup is complete, change the <a href="/manual/code.html">code for your form</a> action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
 </ol>
 
 
@@ -771,14 +719,82 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
       
       <span>Last updated on:</span>
       
-      <a href="/sites/manual/add-site.html">
+      <a href="/manual/account.html">
+        <time datetime="2013-08-23">August 23, 2013</time>
+      </a>
+    </div>
+
+    
+    <h1>
+      <a href="/manual/account.html">How to Create an Account</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > My Account</p>
+
+<p>You can use DigitalGov Search to power the search box on your federal, state, local, tribal, or territorial government website at no cost.</p>
+
+<p>Access to our hosted search service requires authentication and verification that you're a government employee or contractor.</p>
+
+<h2>Log In</h2>
+
+<p>Log in to an existing account <a href="http://search.digitalgov.gov/login">http://search.digitalgov.gov/login</a> or register for a new account at <a href="http://search.digitalgov.gov/signup">http://search.digitalgov.gov/signup</a>.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/login.png" alt="Login from search.digitalgov.gov" /></p>
+
+<p>After you register, you'll receive an automatic email. Click on the link in the email to verify that your email address belongs to you.</p>
+
+<p>If you have a .gov or .mil address, you'll be able to access your account immediately after you verify your email.</p>
+
+<p>If you don't have a .gov or .mil address, we'll ask for additional information to confirm that you're a government employee or contractor. We'll notify you when your account is approved.</p>
+
+<h2>Add a Site</h2>
+
+<p>Once your account is approved, you can <a href="/manual/add-site.html">add a site</a> in our <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+
+<h2>Update Your Contact Information</h2>
+
+<p>You can edit your name, agency, or email by selecting the option, My Account, in the drop-down menu in the upper-right hand corner.</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> We cannot retrieve any passwords for any account, because we don't have access to passwords. To reset your password:</p>
+
+<ol>
+<li>Go to our Login page at <a href="https://search.usa.gov/login">https://search.usa.gov/login</a></li>
+<li>Enter your email address.</li>
+<li>Click on Forgot your password?</li>
+<li>You will be prompted to reset your password and it will be emailed to you.</li>
+</ol>
+
+
+<p>If you have any problem resetting your password, email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#115;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#112;&#111;&#114;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#x6f;&#118;">&#115;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#118;</a>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/my-account"><span class="label label-info">my-account</span></a>
+      
+    </div>
+  </article>
+  
+  <article class='article'>
+    <div class='time'>
+      
+      <span>Last updated on:</span>
+      
+      <a href="/manual/add-site.html">
         <time datetime="2013-08-22">August 22, 2013</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/sites/manual/add-site.html">How to Add a New Site</a>
+      <a href="/manual/add-site.html">How to Add a New Site</a>
     </h1>
     
 
@@ -811,7 +827,7 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
 </ul>
 
 
-<p>We use this homepage URL to (a) populate your primary <a href="/sites/manual/domains.html">domain</a> and (b) link the default logo on your results page to your homepage.</p>
+<p>We use this homepage URL to (a) populate your primary <a href="/manual/domains.html">domain</a> and (b) link the default logo on your results page to your homepage.</p>
 
 <h2>Display Name</h2>
 
@@ -831,7 +847,7 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, edit your display name on the <a href="/sites/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#58;&#x73;&#101;&#97;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;">&#x73;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#111;&#x72;&#x74;&#46;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x73;&#101;&#97;&#114;&#99;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#46;&#x67;&#111;&#x76;">&#x73;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#118;</a>.</p>
 
     </div>
 
@@ -851,14 +867,14 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
       
       <span>Last updated on:</span>
       
-      <a href="/sites/manual/rss.html">
+      <a href="/manual/rss.html">
         <time datetime="2013-08-21">August 21, 2013</time>
       </a>
     </div>
 
     
     <h1>
-      <a href="/sites/manual/rss.html">How to Add Your RSS Feeds to Our Index</a>
+      <a href="/manual/rss.html">How to Add Your RSS Feeds to Our Index</a>
     </h1>
     
 
@@ -922,12 +938,18 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
 &lt;pubDate&gt;Fri, 24 May 2013 00:00:00 EDT&lt;/pubDate&gt;
 &lt;media:description type="html"&gt;
 &lt;![CDATA[
-&lt;p&gt;As schools close for the year and summer weather beckons, many recreationalists head to the Great Lakes' public beaches. However, these coastal areas can become     contaminated with disease-causing bacteria that threaten public health, disrupt water   recreation, and pay a toll on the Great Lakes econ
-]]&gt;
+</code></pre>
+
+<p>As schools close for the year and summer weather beckons, many recreationalists head to the Great Lakes' public beaches. However, these coastal areas can become    contaminated with disease-causing bacteria that threaten public health, disrupt water   recreation, and pay a toll on the Great Lakes econ</p>
+
+<pre><code>]]&gt;
 &lt;![CDATA[
-omies that depend on summer tourism.&lt;/p&gt;
- &lt;p&gt;The U.S. Geological Survey &lt;a href="http://greatlakesbeaches.usgs.gov/index.html"&gt;Great Lakes Beach Health&lt;/a&gt; initiative provides science-based information and methods that help beach managers make more accurate beach closure and advisory decisions, &lt;a href="http://www.usgs.gov/newsroom/article.asp?ID=3063#.UZv3pSs_87A"&gt;preventing unnecessary beach closures&lt;/a&gt; while protecting public health.&lt;/p&gt;
-]]&gt;
+omies that depend on summer tourism.
+</code></pre>
+
+<p>The U.S. Geological Survey <a href="http://greatlakesbeaches.usgs.gov/index.html">Great Lakes Beach Health</a> initiative provides science-based information and methods that help beach managers make more accurate beach closure and advisory decisions, <a href="http://www.usgs.gov/newsroom/article.asp?ID=3063#.UZv3pSs_87A">preventing unnecessary beach closures</a> while protecting public health.</p>
+
+<pre><code>]]&gt;
 &lt;/media:description&gt;
 &lt;media:thumbnail url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/thumbs/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
 &lt;media:content type="" url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/large/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
@@ -936,9 +958,9 @@ omies that depend on summer tourism.&lt;/p&gt;
 
 <h2>Step 2. Opt to Show as a GovBox, in the Sidebar, or Both</h2>
 
-<p>Allow searchers to see inline results for the three most recent, relevant RSS results <em>across all of your RSS feeds</em> by turning on the News GovBox on the <a href="/sites/manual/display-overview.html">Display Overview</a> page. You can also edit the default title, News, on the Display Overview page.</p>
+<p>Allow searchers to see inline results for the three most recent, relevant RSS results <em>across all of your RSS feeds</em> by turning on the News GovBox on the <a href="/manual/display-overview.html">Display Overview</a> page. You can also edit the default title, News, on the Display Overview page.</p>
 
-<p>Allow searchers to see narrow results to a specific feed in the left-hand column of the results page by turning on the option to show in the Sidebar on the <a href="/sites/manual/display-overview.html">Display Overview</a> page. To ensure searchers don't encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a sidebar option.</p>
+<p>Allow searchers to see narrow results to a specific feed in the left-hand column of the results page by turning on the option to show in the Sidebar on the <a href="/manual/display-overview.html">Display Overview</a> page. To ensure searchers don't encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a sidebar option.</p>
 
 <h2>Step 3. Check Your Search Results Page</h2>
 
@@ -963,7 +985,7 @@ omies that depend on summer tourism.&lt;/p&gt;
 
 <p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your feed.</p>
 
-<p>Start with the standard form snippet on the <a href="/sites/manual/code.html">Code Snippets</a> page under the Activate Search tab. Change the form action to <code>action="http://search.usa.gov/search/news</code> and add the following line to limit the results to your feed.</p>
+<p>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab. Change the form action to <code>action="http://search.usa.gov/search/news</code> and add the following line to limit the results to your feed.</p>
 
 <p><code>&lt;input type="hidden" name="channel" value="###"&gt;</code></p>
 
@@ -971,9 +993,9 @@ omies that depend on summer tourism.&lt;/p&gt;
 
 <p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your RSS feeds.</p>
 
-<p><strong><em>Did you know?</em></strong> When you <a href="/sites/manual/youtube.html">provide us with your YouTube channel</a>, we'll automatically index the RSS feed for your YouTube channel.</p>
+<p><strong><em>Did you know?</em></strong> When you <a href="/manual/youtube.html">provide us with your YouTube channel</a>, we'll automatically index the RSS feed for your YouTube channel.</p>
 
-<p><strong><em>Did you know?</em></strong> For any feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by these facets in the <a href="/sites/manual/display-overview.html">sidebar</a> on the results page.</p>
+<p><strong><em>Did you know?</em></strong> For any feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by these facets in the <a href="/manual/display-overview.html">sidebar</a> on the results page.</p>
 
     </div>
 
