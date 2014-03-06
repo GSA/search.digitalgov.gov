@@ -527,26 +527,37 @@
   <article class='article'>
  
     
+    <h1>
+      <a href="/blog/legacy-domains.html">Six legacy domains are expiring</a>
+    </h1>
+    
 
     <div class='post-content'>
-      <p>Gartner recently published a very positive case study on DigitalGov Search (formerly USASearch), <em><a href="http://www.gartner.com/DisplayDocument?id=1909916">Create Better, Faster Enterprise Search With a Customized Open-Source Option</a></em>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, January 2012. In the report, Gartner notes that DigitalGov Search addresses the key aspects of designing a search system.</p>
+      <p>As part of the federal <a href="http://www.usa.gov/WebReform.shtml">.gov web reform</a> project, we're eliminating six of our legacy domains. Going forward, our only supported domain is search.usa.gov (or search.yoursite.gov, if you've requested <a href="/manual/cname.html">DNS masking</a>).</p>
 
-<blockquote><p>Gartner identifies key stages of action in "Your Enterprise Search Project: The Outward Spiral." [DigitalGov Search] addressed them all:</p>
+<p>What do you need to do? If your URL starts with any of the following six legacy domains, you must update your HTML form code.</p>
 
-<ul>
-<li><em>Staffing</em> the project with experts who had domain knowledge.</li>
-<li><em>Scoping</em> the project using those personnel to satisfy search requirements for federal websites.</li>
-<li><em>Selecting</em> the right technology.</li>
-<li><em>Implementing</em> it effectively with workers who have the right skill sets.</li>
-<li><em>Measuring</em> results as effectively as possible.</li>
-</ul>
-</blockquote>
+<ol>
+<li>firstgovsearch.gov</li>
+<li>searchusa.gov</li>
+<li>usasearch.gov</li>
+<li>(Spanish) buscador.gov</li>
+<li>(Spanish) buscadorusa.gov</li>
+<li>(Spanish) usabuscador.gov</li>
+</ol>
+
+
+<p>Specifically, you have to update the action of your <a href="/manual/code.html">form code</a> to call search.usa.gov (or search.yoursite.gov).</p>
+
+<p><code>&lt;form method="get" action="http://search.usa.gov/search"&gt;</code></p>
+
+<p>Note that, if you don't update your form code, your search results page will no longer work.</p>
 
     </div>
 
     <div class='tags'>
       
-      <a href="/tagged/quote"><span class="label label-info">quote</span></a>
+      <a href="/tagged/get-code"><span class="label label-info">get-code</span></a>
       
       <a href="/tagged/about-us"><span class="label label-info">about-us</span></a>
       
@@ -558,10 +569,8 @@
       </br><span>Page last reviewed or updated:</span>
       
       
-      </br><span>Page last reviewed or updated:</span>
-      
-      <a href="/quote/gartner.html">
-        <time datetime="2012-03-14">March 14, 2012</time>
+      <a href="/blog/legacy-domains.html">
+        <time datetime="2012-09-11">September 11, 2012</time>
       </a>
     </div>
     </article>
