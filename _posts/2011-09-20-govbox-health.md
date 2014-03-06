@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Help Searchers Find Health Information"
+title: Help Searchers Find Health Information
 category: manual
 tags: how-to display govbox
 ---

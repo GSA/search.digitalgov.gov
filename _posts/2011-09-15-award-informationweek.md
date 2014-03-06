@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "DigitalGov Search Wins InformationWeek Award"
+title: DigitalGov Search Wins InformationWeek Award
 category: blog
 tags: about-us
 ---

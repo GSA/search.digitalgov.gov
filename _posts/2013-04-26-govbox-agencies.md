@@ -2,7 +2,7 @@
 layout: post
 title: Help Searchers Find Information for Federal Agencies
 category: manual
-tags: govbox
+tags: govbox how-to
 ---
 Searches for government agencies are very common. So we created the Agency GovBox to help you provide searchers with easy-to-find, authoritative contact information for federal agencies.
 

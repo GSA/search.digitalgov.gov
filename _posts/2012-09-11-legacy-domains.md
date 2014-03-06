@@ -2,7 +2,7 @@
 layout: post
 title: Six legacy domains are expiring
 category: blog
-tags: get-code
+tags: get-code about-us
 ---
 
 As part of the federal [.gov web reform](http://www.usa.gov/WebReform.shtml) project, we're eliminating six of our legacy domains. Going forward, our only supported domain is search.usa.gov (or search.yoursite.gov, if you've requested [DNS masking](/manual/cname.html)).
