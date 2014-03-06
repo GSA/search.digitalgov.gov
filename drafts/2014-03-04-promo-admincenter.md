@@ -1,5 +1,8 @@
-# Admin Center
+---
+category: promo
+layout: feature
+title: "Easy to Use Admin Center"
+---
+# Easy to Use Admin Center
 
-## Customize and control your site through the Admin Center. See a daily snapshot of activity, check clicks and queries, manage content, organize display, preview features before activation, and activate search, all through the Admin Center. Plus, you can manage multiple sites with one login. 
-
-[![Admin Center screenshot](...)](/sites.html)
+![Admin Center](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/promo-admincenter.png "Admin Center")

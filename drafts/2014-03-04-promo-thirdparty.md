@@ -1,5 +1,8 @@
-# Third Party Tracking
+---
+category: promo
+layout: feature
+title: "Third party Tracking"
+---
+# Integrate Your Search Pages with Your Other Services 
 
-## Use Google Analytics? Forsee? 4Q? Tell us about the [third party web services](/sites/manual/third-party.html) you would like to run, and we'll add in the Javascript. 
-
-[![...screenshot](...)](/sites/third_party_tracking_request/new/htlm)
+![Third Party Tracking](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/promo-thirdparty.png "Third Party Tracking")

@@ -1,5 +1,8 @@
-# Gov Boxes
+---
+category: promo
+layout: feature
+title: "Show Available Jobs"
+---
+# Integrate Your Openings from USAJobs 
 
-## Use Gov Boxes to highlight recommendations, news, tweets, job openings, and media. Our modules appear based on keyword matches, and showcase selected content.
-
-[![...screenshot](...)](/sites/display/edit.html)
+![USAJobs Integration](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/promo-govbox.png "USAJobs Integration")
