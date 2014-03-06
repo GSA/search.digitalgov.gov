@@ -5,7 +5,7 @@ layout: default
 <article class="article">
   <div class='time'>
     {% for tag in page.tags %}{% if tag == 'how-to' %}
-    <span>Last updated on:</span>
+    <span>Page last reviewed or updated:</span>
     {% endif %}{% endfor %}
     <a href="{{ page.url }}">
       <time>{{ page.date | date: "%B %-d, %Y" }}</time>
