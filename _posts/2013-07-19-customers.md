@@ -1,7 +1,7 @@
 ---
-permalink: /customers.html
-layout: article
+layout: post
 title: Our Customers
+tags: about-us customer-federal customer-state
 ---
 
 We have a proven track record of delivering fast, relevant search results. Over 1,500 government websites currently use DigitalGov Search to power their search box and improve their visitors' search experience.
