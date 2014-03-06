@@ -1,6 +1,6 @@
 ---
 layout: post
-title: I Didn't Try to Grow a Bigger Ox: How I Found Hadoop
+title: I Didn't Try to Grow a Bigger Ox -- How I Found Hadoop
 category: blog
 tags: analytics about-us
 ---
