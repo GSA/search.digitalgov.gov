@@ -29,6 +29,9 @@ layout: default
     {% for tag in page.tags %}{% if tag == 'about-us' %}
     </br><span>Page last reviewed or updated:</span>
     {% endif %}{% endfor %}
+    {% for tag in page.tags %}{% if tag == 'quote' %}
+    </br><span>Page last reviewed or updated:</span>
+    {% endif %}{% endfor %}
     <a href="{{ page.url }}">
       <time>{{ page.date | date: "%B %-d, %Y" }}</time>
     </a>
