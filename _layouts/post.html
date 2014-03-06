@@ -3,15 +3,6 @@ layout: default
 ---
 
 <article class="article">
-  <div class='time'>
-    {% for tag in page.tags %}{% if tag == 'how-to' %}
-    <span>Page last reviewed or updated:</span>
-    {% endif %}{% endfor %}
-    <a href="{{ page.url }}">
-      <time>{{ page.date | date: "%B %-d, %Y" }}</time>
-    </a>
-  </div>
-
   {% unless page.category == 'quote' %}
   <h1>
     <a href="{{ page.url }}">{{ page.title }}</a>
@@ -27,4 +18,14 @@ layout: default
     <a href="/tagged/{{ tag }}"><span class="label label-info">{{ tag }}</span></a>
     {% endfor %}
   </div>
+
+  <div class='time'>
+    {% for tag in page.tags %}{% if tag == 'how-to' %}
+    <span>Page last reviewed or updated:</span>
+    {% endif %}{% endfor %}
+    <a href="{{ page.url }}">
+      <time>{{ page.date | date: "%B %-d, %Y" }}</time>
+    </a>
+  </div>
+
 </article>
