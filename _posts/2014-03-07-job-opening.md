@@ -1,13 +1,11 @@
 ---
 layout: post
-title: Job opening on DigitalGov Search Team
+title: Job Opening on DigitalGov Search Team
 category: blog
 tags: about-us
 ---
 
-**+++++  
-This is a preliminary announcement for a soon-to-be-posted job as a Search Analyst on the DigitalGov Search Team, General Services Administration (GSA).  
-+++++**
+**This is a preliminary announcement for a soon-to-be-posted job as a Search Analyst on the DigitalGov Search Team, General Services Administration (GSA).**
 
 Do you have a passion for search and helping the public find good, relevant search results? Do you enjoy being part of a small, innovative team? If so, apply for the position working on DigitalGov Search, GSA's award-winning hosted service that powers the search box on 1,500 government websites.
 
