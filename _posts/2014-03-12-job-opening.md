@@ -9,7 +9,7 @@ tags: about-us
 
 Do you have a passion for search and helping the public find good, relevant search results? Do you enjoy being part of a small, innovative team? If so, apply for the position working on DigitalGov Search, GSA's award-winning hosted service that powers the search box on 1,500 government websites.
 
-The job announcement will appear on [USAJOBS.gov](http://www.usajobs.gov) in late March. The position is in the Office of Citizen Services and Innovative Technologies at GSA. It will be posted as an IT Specialist, GS-2210-11/12.
+The job announcement will appear on [USAJOBS.gov](http://www.usajobs.gov) in late March. The position is in the Office of Citizen Services and Innovative Technologies at GSA in the Washington, DC, metropolitan area. It will be posted as an IT Specialist, GS-2210-11/12.
 
 We're looking for an enthusiastic, talented person to help support DigitalGov Search. The position will support efforts to develop, maintain, and improve DigitalGov Search. It will focus on understanding information access and retrieval, especially search, to guide the information architecture, user interface, and policy decisions that enhance searchers' experience on sites that use DigitalGov Search. It will also focus on designing and implementing processes to ensure that our agency customers have the best possible experience with our service.
 
