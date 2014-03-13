@@ -1,4 +1,4 @@
-# President's Cancer Panel HPV Vaccine, National Cancer Institute 
+# President's Cancer Panel, National Cancer Institute 
 
 ## Helping spread awareness of the HPV vaccine through [The President's Cancer Panel's Annual Report](http://deainfo.nci.nih.gov/advisory/pcp/annualreports/hpv/index.htm). 
 
