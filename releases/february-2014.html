@@ -115,20 +115,20 @@
 <ul>
 <li>We migrated our indexes for (a) RSS (news) and (b) type-ahead search suggestions from Solr to <a href="http://www.elasticsearch.org/">Elasticsearch</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
 <li>We collapsed overlapping synonyms in our Elasticsearch indexes.</li>
-<li>We automated detection of understemmed terms.</li>
+<li>We now automatically detect understemmed terms.</li>
 <li>We migrated our GitHub account from GSA-OCSIT to <a href="https://github.com/GSA">https://github.com/GSA</a>.</li>
 <li>We addressed some sporadic indexing issues with our Twitter and YouTube feeds.</li>
-<li>We now remove extraneous tabs or newlines in the titles of some RSS items.</li>
+<li>We now remove extraneous tabs or newlines in the titles RSS items.</li>
 </ul>
 
 
 <h2>Fixes</h2>
 
 <ul>
-<li>We now ignore all apostrophes in our indexes.</li>
-<li>We fixed a bug with bulk uploading text Best Bets so it no longer dropps the last two columns.</li>
-<li>We fixed issue a bug so searches on RSS feeds that are limited to the last hour no longer pull up items from 24 hours ago.</li>
-<li>We fixed an issues so searchers using an iPad no longer see an error on advanced search page.</li>
+<li>We now ignore all apostrophes in our Elasticsearch indexes.</li>
+<li>When you bulk upload text Best Bets, it no longer drops the last two columns.</li>
+<li>Searchers that limit search results to the last hour no longer pull up items from 24 hours ago.</li>
+<li>Searchers using an iPad no longer see an error on advanced search page.</li>
 </ul>
 
 
