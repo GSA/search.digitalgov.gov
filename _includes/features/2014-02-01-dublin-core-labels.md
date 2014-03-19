@@ -1,3 +1,3 @@
-* You can now customize your Dublin Core labels
+You can now customize the labels for the subject, publisher, and contributor on any [RSS feeds](/manual/rss.html) that you've extended with Dublin Core. (Thanks, [Corporation for National and Community Service](http://www.nationalservice.gov/)!)
 
-![Dublin Core Labels](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-serp-jobs.png "Dublin Core Labels")
+![Dublin Core Labels](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-2014-02-01-dublin-core.png "Dublin Core Labels")

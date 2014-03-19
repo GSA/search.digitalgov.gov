@@ -1,3 +1,3 @@
-* You may now view even more data in your monthly downloads.
+You can now see even more data in your weekly and monthly CSV downloads on the [Monthly Reports](/manual/monthly-reports.html) page in the Admin Center. (We'd previously shown up to 1,000 rows. We now show up to one million rows.)
 
-![More Data in CSV Files](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-2014-02-01-analytics-queries.png "More Data in CSV Files")
+![See up to 1M rows of data in your CSV files](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-2014-02-01-analytics-queries.png "See up to 1M rows of data in your CSV files")
