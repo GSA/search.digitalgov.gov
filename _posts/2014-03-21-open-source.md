@@ -45,8 +45,8 @@ That said, we hope that exposing the pieces of our system will be useful to some
 
 We're not alone. Other federal agencies have embraced the approach of coding in the open and have [GitHub repos](http://gsa.github.io/federal-open-source-repos). Below are a just a few of our many favorites.
 
-* The Consumer Finance Protection Bureau has embraced open source, including serving their public data sets through [qu](https://github.com/cfpb/qu).
+* The [Consumer Financial Protection Bureau](http://www.cfpb.gov) has embraced open source, including serving their public data sets through [qu](https://github.com/cfpb/qu).
 
-* USA.gov recently released the code for their [iPhone app](https://github.com/usagov/usagov-ios-app).
+* [USA.gov](http://www.usa.gov) recently released the code for their [iPhone app](https://github.com/usagov/usagov-ios-app).
 
-* The White House was in the forefront of using open source software in the federal government with their use of Drupal. They're continuing to lead by example by opening up the code for their [We the People petitions](https://github.com/WhiteHouse/petitions) and [iOS](https://github.com/WhiteHouse/wh-app-ios) and [Android](https://github.com/WhiteHouse/wh-app-android) mobile apps.
+* The [White House](http://www.whitehouse.gov) was in the forefront of using open source software in the federal government with their use of Drupal. They're continuing to lead by example by opening up the code for their [We the People petitions](https://github.com/WhiteHouse/petitions) and [iOS](https://github.com/WhiteHouse/wh-app-ios) and [Android](https://github.com/WhiteHouse/wh-app-android) mobile apps.
