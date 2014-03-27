@@ -30,8 +30,6 @@ You can type over the text in the Name field to edit an option's display name. K
 
 1. **Job openings.** When a searcher's query matches the text of a job opening published on USAJobs or NeoGov, the job appears in the Job Openings GovBox. Up to three job openings are displayed. For more information, including a screenshot, read our post [Help Searchers Find Jobs](/manual/govbox-jobs.html).
 
-1. **Agency contact information.** Help searchers contact and connect with your department or bureaus. For more information, including a screenshot, read our post [Help Searchers Find Information for Federal Agencies](/manual/govbox-agencies.html).
-
 1. **Related searches.** Help visitors better define the focus of their search by offering them searches related to their current search term. Suggestions are derived from the searches performed on your website. Up to five searches related to your visitors' original search are displayed and are updated in near real time. See, for example, the sample results page below that shows related searches displayed for a [search on *tacoma* on Access Washington](http://search.usa.gov/search?affiliate=accesswashington&query=tacoma).
 
 1. **Health topics.** Help searchers find high-quality, authoritative health information from MedlinePlus and ClinicalTrials.gov. For more information, including a screenshot, read our post [Help Searchers Find Health Information](/manual/govbox-health.html).
