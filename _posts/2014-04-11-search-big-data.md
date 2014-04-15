@@ -1,13 +1,11 @@
 ---
 layout: post
-title: Search is the New Big Data
+title: Search Is the New Big Data
 category: blog
 tags: open analytics about-us
 ---
 
-Search is easy, right? You type a term in a search box and the exact page you're looking for appears at the top of the list of results.
-
-But search is hard and has many shades of grey.
+Search is easy, right? You type a term in a search box and the exact page you're looking for appears at the top of the list of results. But search is hard and has many shades of grey.
 
 On April 10, 2014, Loren Siebert, our senior search architect, presented on:
 
@@ -21,5 +19,5 @@ Download the [slide deck](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b199
 * Download the [Snowball](http://snowball.tartarus.org/){% external_link %} stemmer, or learn about other stemmers.
 * Read [how synonyms are handled in Lucene](http://nolanlawson.com/tag/query-expansion/){% external_link %}.
 * Download or use [WordNet](http://wordnet.princeton.edu/){% external_link %} online.
-* Connect with the American Society for Indexing's [Taxonomies & Controlled Vocabularies Special Interest Group](http://www.taxonomies-sig.org/){% external_link %}, [SLA Taxonomy Division](http://taxonomy.sla.org/){% external_link %}	, or Taxonomy Tuesdays ([email Nikkia Anderson](mailto:nanderson@iiaweb.com), co-chair).
+* Connect with the American Society for Indexing's [Taxonomies & Controlled Vocabularies Special Interest Group](http://www.taxonomies-sig.org/){% external_link %}, [SLA Taxonomy Division](http://taxonomy.sla.org/){% external_link %}, or Taxonomy Tuesdays ([email Nikkia Anderson](mailto:nanderson@iiaweb.com), co-chair).
 * Contribute to our [Jobs API](https://github.com/GSA/jobs_api).
