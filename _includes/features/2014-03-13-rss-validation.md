@@ -1,1 +1,1 @@
-* We have intelligence behind [RSS Feeds](http://search.usa.gov/search/docs?affiliate=usagov&dc=7&m=false&query=faqs) so searchers will never receive get a 404 error. We previously trusted that all RSS URLs were valid.
+* We have intelligence behind [RSS Feeds](http://search.usa.gov/search/docs?affiliate=usagov&dc=7&m=false&query=faqs) so searchers will never receive a 404 error. We previously trusted that all RSS URLs were valid.
