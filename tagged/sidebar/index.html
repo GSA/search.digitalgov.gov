@@ -125,7 +125,7 @@
 
 <p><strong><em>Did you know?</em></strong>  Searchers may narrow results by time period for any <a href="/manual/rss.html">RSS</a> feeds. See, for example, results for a <a href="http://search.whitehouse.gov/search/news?affiliate=wh&amp;channel=6&amp;m=false&amp;query=jobs&amp;tbs=w">search on <em>jobs</em> narrowed to press articles in the last week on WhiteHouse.gov</a>.</p>
 
-<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#115;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#x2e;&#103;&#111;&#x76;">&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;</a> to if you want to customize these display names.</p>
+<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#115;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#115;&#117;&#x70;&#112;&#111;&#114;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#108;&#103;&#111;&#x76;&#x2e;&#103;&#111;&#x76;">&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#x40;&#x73;&#117;&#x70;&#x70;&#x6f;&#114;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#111;&#118;&#46;&#x67;&#x6f;&#118;</a> to if you want to customize these display names.</p>
 
 <p><strong><em>Did you know?</em></strong> You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our <a href="/manual/code.html">JavaScript snippet</a> before the closing <code>&lt;body&gt;</code> tag on your HTML web pages.</p>
 
@@ -153,110 +153,6 @@
       
       <a href="/manual/display-overview.html">
         <time datetime="2014-03-27">March 27, 2014</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/header-footer.html">How to Customize the Header and Footer of Your Results Page</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Display > Header &amp; Footer</p>
-
-<h2>Default Custom Header</h2>
-
-<p>To customize the header on your results page, we'll automatically use:</p>
-
-<ol>
-<li>The logo you provide on the <a href="/manual/display-images.html">Image Assets</a> page. (Or, if you don't provide a logo, we'll use the site name you provide on the <a href="/manual/settings.html">Settings</a> page.)</li>
-<li>The homepage URL you provide on the <a href="/manual/settings.html">Settings</a> page.</li>
-</ol>
-
-
-<p>You can see the custom header and mobile header we've automatically created for you on the <a href="/manual/preview.html">Preview</a> page.</p>
-
-<p>Additionally, you can further customize your header or footer using the options below.</p>
-
-<h2>Option 1. Add Header or Footer Links</h2>
-
-<p>Fill out the titles and URLs if you'd like to add navigation "tabs" to your header and footer. Use the icon with three horizontal lines on the left to change the order.</p>
-
-<p>See, for example, the options for Home, Business Tools, Business Education, Press Room, etc., in the header on the <a href="http://search.usa.gov/search?query=contracts&amp;affiliate=MBDA">Minority Business Development Agency's search results page</a>.</p>
-
-<h2>Option 2. Use CSS and HTML</h2>
-
-<p>Use this option to more closely replicate the exact header and footer on your website.</p>
-
-<p>Switch to Advanced Mode.</p>
-
-<p>In the first box, enter CSS to customize the header and footer of your search results page. We'll run a validation check to ensure your CSS is valid.</p>
-
-<p>In the second box, enter HTML to customize the header of your search results page. In the third box, enter HTML to customize the footer of your search results page. Be sure to enter <a href="http://webdesign.about.com/od/beginningtutorials/a/aa040502a.htm">absolute hyperlinks</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, not relative links.</p>
-
-<p>We'll run a validation check to ensure that no JavaScript is included in your HTML code. We'll also check to ensure no CSS style or link elements are included. To include CSS, specify inline CSS within an opening tag.</p>
-
-<h3>Invalid CSS</h3>
-
-<pre><code>&lt;html&gt;
-&lt;body&gt;
-&lt;style&gt; h1 { color: blue } &lt;/style&gt;
-&lt;link href="http://www.yoursite.gov/custom.css" type="text/css" /&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-
-<h3>Valid CSS</h3>
-
-<pre><code>&lt;h1 style="color: blue;"&gt;Your Heading&lt;/h1&gt;
-</code></pre>
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> You can validate your HTML markup at <a href="http://validator.w3.org/nu/">http://validator.w3.org/nu/</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. On the W3C page, select HTML 4.01 Strict from the Parser drop-down box.</p>
-
-<p><strong><em>Troubleshooting tip:</em></strong> Your HTML has to be <a href="http://en.wikipedia.org/wiki/Character_encodings_in_HTML">encoded</a>. The most common issues are around the &amp;, &quot;, &lt;, &gt;. They should be input as:</p>
-
-<pre><code>&amp;amp;
-&amp;quot;
-&amp;lt;
-&amp;gt;
-</code></pre>
-
-<p><strong><em>Troubleshooting tip:</em></strong> You can implement a drop-down menu using CSS (and without using JavaScript). For more information, read tips from <em>A List Apart</em> on <a href="http://alistapart.com/article/horizdropdowns">drop-down menus and horizontal style</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<p><strong><em>Did you know?</em></strong> We use device detection to show mobile-friendly search results on mobile phones. (Searchers using tablets and desktop computers see the full, classic header as you set it up above.) We'll automatically use the mobile logo you provide on the <a href="/manual/display-images.html">Image Assets</a> page. The logo must be less than 56 KB. We recommend it be no wider than 320 pixels. Or, if you don't provide a logo, we'll use the site name you provide on the <a href="/manual/settings.html">Settings</a> page.</p>
-
-<p><strong><em>Did you know?</em></strong> We offer results through our <a href="/manual/api.html">Search Data API</a>, if you'd like to create mash-ups or have complete control of the look and feel of your search results pages. You can access the API by clicking on the Activate Search option in the left-hand menu in the Admin Center.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-display"><span class="label label-info">manage-display</span></a>
-      
-      <a href="/tagged/sidebar"><span class="label label-info">sidebar</span></a>
-      
-      <a href="/tagged/govbox"><span class="label label-info">govbox</span></a>
-      
-      <a href="/tagged/related-sites"><span class="label label-info">related-sites</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/header-footer.html">
-        <time datetime="2013-09-24">September 24, 2013</time>
       </a>
     </div>
     </article>
