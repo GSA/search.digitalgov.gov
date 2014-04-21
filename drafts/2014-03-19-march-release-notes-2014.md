@@ -21,7 +21,7 @@ Some of the tasks to complete this include, but is not limited to:
 
 ### Feature 2. We're continuing to go responsive module by module.
 
-{% include 2014-03-06-newserp-health-gb.md %}
+{% include features/2014-03-06-newserp-health-gb.md %}
 
 We have valued your feedback and made your logo langer on desktop search. 
  
