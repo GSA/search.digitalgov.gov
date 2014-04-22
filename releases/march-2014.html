@@ -71,68 +71,57 @@
   <div id="main-container"><article class="article">
   
   <h1>
-    <a href="/drafts/2014-03-31-march-release-notes-2014.html">March 2014 Release Notes</a>
+    <a href="/releases/march-2014.html">March 2014 Release Notes</a>
   </h1>
   
 
   <div class='post-content'>
     <h2>Highlighted Features</h2>
 
-<h3>Feature 1. We are very excited to have migrated from Solr to Elastic Search and gave a <a href="http://search.digitalgov.gov/blog/search-big-data.html">presentation</a> on the topic.</h3>
+<h3>Feature 1. We migrated from Solr to Elasticsearch.</h3>
 
-<p>Some of the tasks to complete this include, but is not limited to:</p>
+<p>Open source search technology has improved rapidly in recent years. To keep pace, we upgraded from Solr to <a href="http://www.elasticsearch.org/">Elasticsearch</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<p>We've realized many benefits. Loren Siebert, one of our software engineers, <a href="http://search.digitalgov.gov/blog/search-big-data.html">recently presented</a> on some lessons we've learned and the evolution of open source search technology in general.</p>
+
+<h3>Feature 2. We're continuing to go responsive.</h3>
+
+<p>Based your feedback, searchers now see a larger logo when they search from their desktop computers.</p>
+
+<p>Searchers now see the <a href="/manual/govbox-health.html">Health GovBox</a> when they search from a mobile phone or tablet.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-2014-02-01-newserp-health-gb.png" title="Health GovBox for a search on diabetes on USA.gov" alt="Health GovBox for a search on diabetes on USA.gov" /></p>
+
+<h3>Feature 3. Searchers now see higher quality RSS search results.</h3>
+
+<p>We're working to improve the search experience for your <a href="/manual/rss.html">RSS feeds</a>. Below are the first two improvements we made. Many more are on there way soon.</p>
 
 <ul>
-<li>We migrated our indexes from Solr</li>
-<li>We upgrade our elastic search to 1.0.1</li>
-<li>We are leveraging separate elastic search clusters in our data centers</li>
-<li>We are prototype Logstash-based ingestion of search logs</li>
+<li>Searchers now see only unique URLs in the News GovBox. (We previously didn't dedupe URLs that belonged to multiple feeds.)</li>
+<li>Searchers now see only valid, resolving URLs. (We previously didn't revisit your older URLs to remove those with 404 errors.)</li>
 </ul>
 
 
-<h3>Feature 2. We're continuing to go responsive module by module.</h3>
-
-<h3>You may view our health GovBox on the new search results page.</h3>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-2014-02-01-newserp-health-gb.png" title="Health GovBox Added to New Results Pages" alt="Health GovBox Added to New Results Pages" /></p>
-
-<p>We have valued your feedback and made your logo langer on desktop search.</p>
-
-<p>Please keep the feedback coming to our <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#114;&#99;&#104;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#46;&#100;&#x69;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#118;">&#115;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#103;&#111;&#118;</a></p>
-
-<h3>Feature 3. We now leverage Flickr image search by default.</h3>
-
-<p>You can now see even more data in your weekly and monthly CSV downloads on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page in the Admin Center. (We'd previously shown up to 1,000 rows. We now show up to one million rows.)</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-2014-02-01-analytics-queries.png" title="See up to 1M rows of data in your CSV files" alt="See up to 1M rows of data in your CSV files" /></p>
-
-<p><a href="http://search.digitalgov.gov/manual/flickr.html">More on Flick image search</a></p>
-
-<h3>Feature 4. We are improving RSS intelligence.</h3>
-
-<ul>
-<li>We have intelligence behind <a href="http://search.usa.gov/search/docs?affiliate=usagov&amp;dc=7&amp;m=false&amp;query=faqs">RSS Feeds</a> so searchers will never receive a 404 error. We previously trusted that all RSS URLs were valid.</li>
-</ul>
-
-
-<p>And we only show unique URLs in our News GovBox. Previously, it was possible to have identical URLs appear.</p>
+<p>See, for example, the Most recent... results for a <a href="http://search.ers.usda.gov/search?affiliate=ers&amp;query=corn&amp;m=true">search on corn on ERS.gov</a>.</p>
 
 <h2>Chores</h2>
 
 <ul>
-<li>We fixed our Travis builds</li>
-<li>We investigated if IE8 is o.k. using our new SERP</li>
-<li>We routed traffic evenly between our two datacenters</li>
-<li>We fixed monthly/weekly CSV downloads</li>
+<li>By default, searchers no longer see the option to narrow results to images only.  To override the default, turn on the images sidebar option on the <a href="/manual/display-overview.html">Display Overview</a> page in the Admin Center.</li>
+<li>We sped up the cron job that generates the monthly and weekly CSV files on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page in the Admin Center.</li>
+<li>We prototyped using the <a href="http://www.elasticsearch.org/overview/">ELK stack</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> ( <a href="http://www.elasticsearch.org/overview/elasticsearch">Elasticsearch</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, <a href="http://www.elasticsearch.org/overview/logstash">Logstash</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.elasticsearch.org/overview/kibana">Kibana</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>) for our search analytics.</li>
+<li>We fixed our <a href="https://travis-ci.org/">Travis CI</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> builds.</li>
+<li>We upgraded to <a href="http://www.elasticsearch.org/downloads/1-0-1/">Elasticsearch 1.0.1</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We now route traffic evenly between our two datacenters.</li>
 </ul>
 
 
 <h2>Fixes</h2>
 
 <ul>
-<li>We fixed Best Bets Bulk Uploading dropping last two columns\</li>
-<li>Searchers sometimes got "stuck" on infinite scroll</li>
-<li>Searchers lost their spot when they opted to see more</li>
+<li>The last two columns are no longer dropped when you bulk upload <a href="/manual/best-bets-text.html">text best bets</a>.</li>
+<li>Searchers no longer get intermittently "stuck" on page one of the results.</li>
+<li>Searchers no longer lose their spot on the results page after they opt to see more job openings.</li>
 </ul>
 
 
@@ -151,8 +140,8 @@
     
     
     
-    <a href="/drafts/2014-03-31-march-release-notes-2014.html">
-      <time></time>
+    <a href="/releases/march-2014.html">
+      <time>April 22, 2014</time>
     </a>
   </div>
 

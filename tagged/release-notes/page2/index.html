@@ -76,6 +76,61 @@
  
     
     <h1>
+      <a href="/releases/june-2013.html">June 2013 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>We've spent the past few weeks doing some spring cleaning to improve our backend infrastructure and to lay the groundwork for a major update to our Admin Center. Stay tuned!</p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>We started using the Rails <a href="http://guides.rubyonrails.org/asset_pipeline.html">asset pipeline</a>. As a result of using the pipeline and some of the other chores below, we decreased the page load time by 25 percent.</li>
+<li>We upgraded to <a href="http://www.elasticsearch.org/blog/0-90-1-released/">Elasticsearch 0.90.1</a>.</li>
+<li>We upgraded to <a href="https://www.ruby-lang.org/en/news/2013/05/14/ruby-2-0-0-p195-is-released/">Ruby 2.0.0</a>.</li>
+<li>We updated the way we monitor <a href="http://blog.phusion.nl/category/passenger/phusion-passenger-4/">Phusion Passenger</a>.</li>
+<li>We removed some unused tables and columns from our MySQL database.</li>
+<li>We removed the legacy recalls code from our codebase now that we've released it as a standalone open source <a href="https://github.com/GSA/recalls_api">Recalls API Server</a>.</li>
+<li>We no longer require a valid API key to include API queries in your <a href="/tagged/analytics">site analytics</a>.</li>
+<li>We updated our list of synonyms to include fracking and hyrdofracturing as equivalent terms.</li>
+<li>The hyperlinks in the Admin Center system alerts are now clickable.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed a regression bug with <a href="https://github.com/haml">Haml</a> and Ruby 2.0.0 that made the background color of the search results the same color as the page background.</li>
+<li>We fixed the CSS for the magnifying glass on the search box so that it appears properly in IE7.</li>
+<li>We now only show unique descriptions for <a href="http://api.usa.gov/recalls/search?organization=cpsc&amp;sort=date">CPSC recalls</a>.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/june-2013.html">
+        <time datetime="2013-06-21">June 21, 2013</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/may-2013.html">May 2013 Release Notes</a>
     </h1>
     
@@ -103,7 +158,7 @@
 
 <p>MRSS is the standard <a href="http://www.rssboard.org/media-rss">media RSS specification</a> for syndicating multimedia content. So, even if you don't have an MRSS feed now, it should be easy to generate one as long as your content is in a content management system or other database. MRSS is also the standard specification used by hosted multimedia services such as Flickr, Instagram, Vimeo, and YouTube.</p>
 
-<p>Email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#x74;&#x2e;&#x64;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#103;&#x6f;&#118;&#46;&#103;&#x6f;&#x76;">&#115;&#x65;&#97;&#114;&#x63;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#46;&#100;&#105;&#103;&#x69;&#116;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#x67;&#111;&#118;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
+<p>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#58;&#115;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#116;&#x2e;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#115;&#101;&#x61;&#114;&#99;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#111;&#x76;&#46;&#x67;&#111;&#118;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
 
 <p>(Thanks, <a href="http://www.usgs.gov">USGS.gov</a> team, for suggesting this new feature!)</p>
 
@@ -198,7 +253,7 @@
 <ul>
 <li>We updated our <a href="/tos.html">terms of service</a>.</li>
 <li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#x75;&#x70;&#112;&#111;&#114;&#x74;&#x2e;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#118;">&#115;&#101;&#x61;&#114;&#x63;&#104;&#64;&#115;&#x75;&#x70;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#97;&#108;&#103;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#x76;</a> with any questions.</li>
+<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#x73;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#x76;">&#x73;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#117;&#x70;&#x70;&#111;&#114;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a> with any questions.</li>
 <li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
 <li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
 <li>We removed the trending searches feature and widget.</li>
@@ -604,7 +659,7 @@
 <li>Searchers can narrow RSS news results by custom date ranges.</li>
 <li>Searchers now see more images above the fold on image results pages.</li>
 <li>Searchers see integrated image results across both the images on your website and in your Flickr photostream.</li>
-<li>You can now add the <a href="http://www.digitalgov.gov/services/dap/">Digtital Analytics Program's</a> government-wide analytics tag to your search results pages. Email the Digital Analytics Program at <a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#x44;&#65;&#x50;&#64;&#x67;&#x73;&#97;&#x2e;&#x67;&#111;&#118;">&#x44;&#x41;&#80;&#64;&#103;&#115;&#x61;&#x2e;&#x67;&#x6f;&#118;</a> for more information on setting up the government-wide analytics tag.</li>
+<li>You can now add the <a href="http://www.digitalgov.gov/services/dap/">Digtital Analytics Program's</a> government-wide analytics tag to your search results pages. Email the Digital Analytics Program at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#68;&#65;&#80;&#x40;&#103;&#115;&#97;&#x2e;&#x67;&#111;&#x76;">&#x44;&#65;&#80;&#x40;&#x67;&#115;&#97;&#46;&#x67;&#x6f;&#118;</a> for more information on setting up the government-wide analytics tag.</li>
 <li>When you <a href="/manual/twitter.html">add your Twitter handle</a> in the Admin Center, we now show the Twitter GovBox by default.</li>
 </ul>
 
@@ -798,100 +853,6 @@
       
       <a href="/releases/september-2012.html">
         <time datetime="2012-09-28">September 28, 2012</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/july-2012.html">July 2012 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>One of your most frequently asked questions is, "What's your roadmap?" We decided to use the halfway point of the year to expand our release notes to include notes on our upcoming features.</p>
-
-<h2>Features</h2>
-
-<h3>Highlight: searchers see recent tweets when they search on your website</h3>
-
-<p>We're now displaying Twitter results in the third rail. Searchers like Twitter results because they often contain your latest information. The third rail increases the  visibility of your tweets and it allows searchers to see both Twitter and YouTube results above the fold in the browser.</p>
-
-<p>See the sample results page below that shows social media results on Commerce.gov for a search on <em><a href="http://search.commerce.gov/search?query=innovation&amp;amp;affiliate=commerce.gov">innovation</a></em>.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_m71vk4FInR1qid15q.jpg"/></p>
-
-<p>If you have a Twitter account, tell us the name of your profile and searchers will be able to find relevant, recent tweets when they search on your website.</p>
-
-<ol>
-<li>Log in to the <a href="https://search.usa.gov/sites/">Admin Center</a>. Select your site.</li>
-<li>Click on the Social Media option. Enter the name of your Twitter account and click save.</li>
-<li>Click on the Results Modules option and opt to show your tweets in a GovBox.</li>
-</ol>
-
-
-<p>Wait until you post your next tweet. Then, go to your website and do a search for a word or phrase in the tweet. You'll see it as a GovBox intermingled with your web results.</p>
-
-<h2>Other features</h2>
-
-<ul>
-<li>Customers with lots of documents will have them indexed more quickly.</li>
-<li>You may now enter multiple handles if you have more than one social media account for Flickr, Twitter, or YouTube.</li>
-<li>Mobile searchers can see image results.</li>
-<li>You may now see whether we've indexed your Twitter or Flickr content.</li>
-<li>We now index Microsoft Office documents (Excel, Word, and PowerPoint).</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>Address memory bloat.</li>
-<li>Searchers can no longer see multiple sidebar items selected.</li>
-<li>Launch jumpstart index for newly added sites with a single site domain.</li>
-<li>We now label Office documents.</li>
-<li>We fixed an issue with Flickr indexing.</li>
-</ul>
-
-
-<h2>Our Roadmap</h2>
-
-<h3>Coming Up in July</h3>
-
-<p>We "celebrated" during the Fourth of July holiday by focusing on some general housekeeping to ensure stability for the rest of the year. We'll release new features to index secure (https) content. We'll also update our discovery tag to power both type-ahead and fetching (eliminating the need for you to have put two sets of javascript on your web pages).</p>
-
-<h3>Coming Up Next Quarter</h3>
-
-<p>We divide our roadmap into four categories, and we complete one major feature in each category per quarter.</p>
-
-<ol>
-<li><em>Customer Services.</em> We plan to improve and facilitate our signup process. We're going to automatically populate more content when you add a site so it is easier for you to take advantage of new features. We also plan to create a dashboard to allow you to see what has changed within your search configuration.</li>
-<li><em>Content Sources.</em> You've requested more control to divide search results into content sources, topics, etc. We plan to offer more flexibility to allow you to divide your content as it makes sense for your searchers.</li>
-<li><em>Core Search.</em> One good (or bad) aspect about search is that there is always more work to do in terms of relevancy, speed, scaling, etc. We plan to focus on tuning these aspects, especially for our newer content sources.</li>
-<li><em>Search Analytics.</em> We have a growing amount of data, and we want to expose more of it to you. In parallel with providing you just a dashboard in the Admin Center, we plan to proactively notify you of any potential issues.</li>
-</ol>
-
-
-<p>We hope that this glimpse into our recently released features and our short- and long-term roadmap helps you understand what we're working on and what's coming down the road.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/july-2012.html">
-        <time datetime="2012-07-27">July 27, 2012</time>
       </a>
     </div>
     </article>

@@ -76,6 +76,84 @@
  
     
     <h1>
+      <a href="/releases/march-2014.html">March 2014 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlighted Features</h2>
+
+<h3>Feature 1. We migrated from Solr to Elasticsearch.</h3>
+
+<p>Open source search technology has improved rapidly in recent years. To keep pace, we upgraded from Solr to <a href="http://www.elasticsearch.org/">Elasticsearch</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<p>We've realized many benefits. Loren Siebert, one of our software engineers, <a href="http://search.digitalgov.gov/blog/search-big-data.html">recently presented</a> on some lessons we've learned and the evolution of open source search technology in general.</p>
+
+<h3>Feature 2. We're continuing to go responsive.</h3>
+
+<p>Based your feedback, searchers now see a larger logo when they search from their desktop computers.</p>
+
+<p>Searchers now see the <a href="/manual/govbox-health.html">Health GovBox</a> when they search from a mobile phone or tablet.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-2014-02-01-newserp-health-gb.png" title="Health GovBox for a search on diabetes on USA.gov" alt="Health GovBox for a search on diabetes on USA.gov" /></p>
+
+<h3>Feature 3. Searchers now see higher quality RSS search results.</h3>
+
+<p>We're working to improve the search experience for your <a href="/manual/rss.html">RSS feeds</a>. Below are the first two improvements we made. Many more are on there way soon.</p>
+
+<ul>
+<li>Searchers now see only unique URLs in the News GovBox. (We previously didn't dedupe URLs that belonged to multiple feeds.)</li>
+<li>Searchers now see only valid, resolving URLs. (We previously didn't revisit your older URLs to remove those with 404 errors.)</li>
+</ul>
+
+
+<p>See, for example, the Most recent... results for a <a href="http://search.ers.usda.gov/search?affiliate=ers&amp;query=corn&amp;m=true">search on corn on ERS.gov</a>.</p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>By default, searchers no longer see the option to narrow results to images only.  To override the default, turn on the images sidebar option on the <a href="/manual/display-overview.html">Display Overview</a> page in the Admin Center.</li>
+<li>We sped up the cron job that generates the monthly and weekly CSV files on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page in the Admin Center.</li>
+<li>We prototyped using the <a href="http://www.elasticsearch.org/overview/">ELK stack</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> ( <a href="http://www.elasticsearch.org/overview/elasticsearch">Elasticsearch</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, <a href="http://www.elasticsearch.org/overview/logstash">Logstash</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.elasticsearch.org/overview/kibana">Kibana</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>) for our search analytics.</li>
+<li>We fixed our <a href="https://travis-ci.org/">Travis CI</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> builds.</li>
+<li>We upgraded to <a href="http://www.elasticsearch.org/downloads/1-0-1/">Elasticsearch 1.0.1</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We now route traffic evenly between our two datacenters.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>The last two columns are no longer dropped when you bulk upload <a href="/manual/best-bets-text.html">text best bets</a>.</li>
+<li>Searchers no longer get intermittently "stuck" on page one of the results.</li>
+<li>Searchers no longer lose their spot on the results page after they opt to see more job openings.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/march-2014.html">
+        <time datetime="2014-04-22">April 22, 2014</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/august-2012.html">August 2012 Release Notes</a>
     </h1>
     
@@ -497,7 +575,7 @@
 <li>We set up <a href="https://codeclimate.com/">Code Climate</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to identify areas of our code that can be improved.</li>
 <li>We phased out color schemes and now offer two options, default and custom.</li>
 <li>We updated the links in our email templates to reflect the new Admin Center.</li>
-<li>We added the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x73;&#101;&#97;&#114;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#x67;&#111;&#118;">&#115;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#46;&#103;&#x6f;&#x76;</a> if you'd like to opt out.</li>
+<li>We added the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#115;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#x69;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#x76;">&#x73;&#101;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#100;&#x69;&#103;&#x69;&#x74;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#x67;&#x6f;&#118;</a> if you'd like to opt out.</li>
 </ul>
 
 
@@ -558,7 +636,7 @@
 
 <p>You can read our updated help by clicking on the Help? link on each page in the Admin Center, or see the full set of help files on our <a href="/manual/index.html">How to Set Up Your Search Box</a> page.</p>
 
-<p>Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#x73;&#101;&#97;&#114;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#x6c;&#103;&#x6f;&#x76;&#46;&#103;&#111;&#118;">&#x73;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#112;&#111;&#x72;&#x74;&#46;&#100;&#x69;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
+<p>Email us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#x73;&#x65;&#97;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#46;&#100;&#105;&#x67;&#105;&#116;&#x61;&#108;&#x67;&#111;&#118;&#46;&#103;&#x6f;&#x76;">&#x73;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#118;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
 
 <h2>Chores</h2>
 
@@ -756,61 +834,6 @@
       
       <a href="/releases/july-2013.html">
         <time datetime="2013-07-31">July 31, 2013</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/june-2013.html">June 2013 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>We've spent the past few weeks doing some spring cleaning to improve our backend infrastructure and to lay the groundwork for a major update to our Admin Center. Stay tuned!</p>
-
-<h2>Chores</h2>
-
-<ul>
-<li>We started using the Rails <a href="http://guides.rubyonrails.org/asset_pipeline.html">asset pipeline</a>. As a result of using the pipeline and some of the other chores below, we decreased the page load time by 25 percent.</li>
-<li>We upgraded to <a href="http://www.elasticsearch.org/blog/0-90-1-released/">Elasticsearch 0.90.1</a>.</li>
-<li>We upgraded to <a href="https://www.ruby-lang.org/en/news/2013/05/14/ruby-2-0-0-p195-is-released/">Ruby 2.0.0</a>.</li>
-<li>We updated the way we monitor <a href="http://blog.phusion.nl/category/passenger/phusion-passenger-4/">Phusion Passenger</a>.</li>
-<li>We removed some unused tables and columns from our MySQL database.</li>
-<li>We removed the legacy recalls code from our codebase now that we've released it as a standalone open source <a href="https://github.com/GSA/recalls_api">Recalls API Server</a>.</li>
-<li>We no longer require a valid API key to include API queries in your <a href="/tagged/analytics">site analytics</a>.</li>
-<li>We updated our list of synonyms to include fracking and hyrdofracturing as equivalent terms.</li>
-<li>The hyperlinks in the Admin Center system alerts are now clickable.</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>We fixed a regression bug with <a href="https://github.com/haml">Haml</a> and Ruby 2.0.0 that made the background color of the search results the same color as the page background.</li>
-<li>We fixed the CSS for the magnifying glass on the search box so that it appears properly in IE7.</li>
-<li>We now only show unique descriptions for <a href="http://api.usa.gov/recalls/search?organization=cpsc&amp;sort=date">CPSC recalls</a>.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/june-2013.html">
-        <time datetime="2013-06-21">June 21, 2013</time>
       </a>
     </div>
     </article>

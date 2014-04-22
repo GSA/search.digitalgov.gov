@@ -76,6 +76,85 @@
   <article class='article'>
     
     <h1>
+      <a href="/releases/march-2014.html">March 2014 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlighted Features</h2>
+
+<h3>Feature 1. We migrated from Solr to Elasticsearch.</h3>
+
+<p>Open source search technology has improved rapidly in recent years. To keep pace, we upgraded from Solr to <a href="http://www.elasticsearch.org/">Elasticsearch</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<p>We've realized many benefits. Loren Siebert, one of our software engineers, <a href="http://search.digitalgov.gov/blog/search-big-data.html">recently presented</a> on some lessons we've learned and the evolution of open source search technology in general.</p>
+
+<h3>Feature 2. We're continuing to go responsive.</h3>
+
+<p>Based your feedback, searchers now see a larger logo when they search from their desktop computers.</p>
+
+<p>Searchers now see the <a href="/manual/govbox-health.html">Health GovBox</a> when they search from a mobile phone or tablet.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-2014-02-01-newserp-health-gb.png" title="Health GovBox for a search on diabetes on USA.gov" alt="Health GovBox for a search on diabetes on USA.gov" /></p>
+
+<h3>Feature 3. Searchers now see higher quality RSS search results.</h3>
+
+<p>We're working to improve the search experience for your <a href="/manual/rss.html">RSS feeds</a>. Below are the first two improvements we made. Many more are on there way soon.</p>
+
+<ul>
+<li>Searchers now see only unique URLs in the News GovBox. (We previously didn't dedupe URLs that belonged to multiple feeds.)</li>
+<li>Searchers now see only valid, resolving URLs. (We previously didn't revisit your older URLs to remove those with 404 errors.)</li>
+</ul>
+
+
+<p>See, for example, the Most recent... results for a <a href="http://search.ers.usda.gov/search?affiliate=ers&amp;query=corn&amp;m=true">search on corn on ERS.gov</a>.</p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>By default, searchers no longer see the option to narrow results to images only.  To override the default, turn on the images sidebar option on the <a href="/manual/display-overview.html">Display Overview</a> page in the Admin Center.</li>
+<li>We sped up the cron job that generates the monthly and weekly CSV files on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page in the Admin Center.</li>
+<li>We prototyped using the <a href="http://www.elasticsearch.org/overview/">ELK stack</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> ( <a href="http://www.elasticsearch.org/overview/elasticsearch">Elasticsearch</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, <a href="http://www.elasticsearch.org/overview/logstash">Logstash</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.elasticsearch.org/overview/kibana">Kibana</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>) for our search analytics.</li>
+<li>We fixed our <a href="https://travis-ci.org/">Travis CI</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> builds.</li>
+<li>We upgraded to <a href="http://www.elasticsearch.org/downloads/1-0-1/">Elasticsearch 1.0.1</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We now route traffic evenly between our two datacenters.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>The last two columns are no longer dropped when you bulk upload <a href="/manual/best-bets-text.html">text best bets</a>.</li>
+<li>Searchers no longer get intermittently "stuck" on page one of the results.</li>
+<li>Searchers no longer lose their spot on the results page after they opt to see more job openings.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/march-2014.html">
+        <time datetime="2014-04-22">April 22, 2014</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
       <a href="/blog/search-big-data.html">Search Is the New Big Data</a>
     </h1>
     
@@ -204,7 +283,7 @@
 
 <p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
 
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#115;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#112;&#112;&#111;&#114;&#x74;&#46;&#x64;&#105;&#103;&#105;&#116;&#x61;&#108;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#118;">&#115;&#101;&#97;&#114;&#x63;&#104;&#64;&#115;&#x75;&#x70;&#112;&#111;&#114;&#116;&#46;&#x64;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#103;&#111;&#118;&#46;&#x67;&#111;&#x76;</a>.</p>
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#115;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#118;">&#x73;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#115;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#118;</a>.</p>
 
     </div>
 
@@ -435,7 +514,7 @@
 
 <h2>We're here to answer your questions.</h2>
 
-<p>Email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;">&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#x73;&#117;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;</a>, or give us a call at 202-505-5315.</p>
+<p>Email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#117;&#x70;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;">&#115;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#100;&#105;&#103;&#105;&#x74;&#97;&#108;&#103;&#111;&#x76;&#46;&#x67;&#111;&#118;</a>, or give us a call at 202-505-5315.</p>
 
 <p>If you're a federal agency in the DC area, we can stop by your office for an in-person consultation. <a href="mailto:search@support.digitalgov.gov">Email us</a> to set up a time.</p>
 
@@ -544,7 +623,7 @@
 
 <p><strong><em>Did you know?</em></strong>  Searchers may narrow results by time period for any <a href="/manual/rss.html">RSS</a> feeds. See, for example, results for a <a href="http://search.whitehouse.gov/search/news?affiliate=wh&amp;channel=6&amp;m=false&amp;query=jobs&amp;tbs=w">search on <em>jobs</em> narrowed to press articles in the last week on WhiteHouse.gov</a>.</p>
 
-<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#115;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#114;&#x74;&#x2e;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#x6f;&#118;">&#115;&#101;&#x61;&#114;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#x67;&#111;&#118;</a> to if you want to customize these display names.</p>
+<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#x73;&#101;&#97;&#114;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#105;&#103;&#105;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#118;">&#115;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#x76;</a> to if you want to customize these display names.</p>
 
 <p><strong><em>Did you know?</em></strong> You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our <a href="/manual/code.html">JavaScript snippet</a> before the closing <code>&lt;body&gt;</code> tag on your HTML web pages.</p>
 
@@ -648,88 +727,6 @@
       
       <a href="/releases/august-2012.html">
         <time datetime="2014-03-27">March 27, 2014</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/blog/open-source.html">Our Open Source Strategy</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>We keep an eye on on our what our government counterparts are up to, both in the U.S. and other countries. We recently came across <a href="https://www.gov.uk">Gov.UK's</a> philosophy on and approach to <a href="http://digital.cabinetoffice.gov.uk/2012/10/12/coding-in-the-open">coding in the open</a>. It caught our attention and we realized we should also articulate our open source strategy.</p>
-
-<h2>Use and Contribute to Open Source Projects</h2>
-
-<p>Since 2010, we've embraced and leveraged open source software to build our site search service for federal, state, and local government websites. This use of open source has allowed us to experience enormous growth over the past few years. In March 2013 alone, over 24 million searchers received results from our service&mdash;a four-fold increase since March 2010.</p>
-
-<p>Our search service is now a complex system made up of many moving parts, including providing type-ahead search suggestions, serving search results, fetching, indexing, and caching content, and providing analytics.</p>
-
-<p>Each of these parts is compiled into our codebase and, as we use open source components for our system, we contribute back to the projects.</p>
-
-<h2>Code in the Open</h2>
-
-<p>We recently began to unravel our monolithic codebase so that we can share individual pieces of our code. To borrow the phrase from Gov.UK, we're now <strong><em>coding in the open</em></strong>.</p>
-
-<p>We recently released the code for our <a href="https://github.com/GSA/jobs_api">Jobs</a> and <a href="https://github.com/GSA/recalls_api">Recalls</a> API servers. They're our first foray into coding in the open. The source code for these API servers is in <a href="https://github.com/GSA">our GitHub repo</a> and is available for anyone to see and contribute to.</p>
-
-<p>The data products for this code are also open and available for anyone to consume on our <a href="/developer/index.html">Developer hub</a>.</p>
-
-<p>These two servers and their underlying data now operate outside of our core search codebase.</p>
-
-<p>Following this same model, moving forward, we plan to:</p>
-
-<ul>
-<li><p>Share first&mdash;For every new feature, we'll write the code so that <em>anyone</em> can make use of the code, not just us. If the public community contributes to the codebase, we'll be able to improve this feature without taxing our developers.</p></li>
-<li><p>Expose APIs&mdash;We'll expose our data products as APIs so that <em>anyone</em> can make use of the data, not just searchers on a government websites.</p></li>
-<li><p>Be our own customer&mdash;We'll use our own public code and data just like everyone else. We'll call our own API servers to integrate the data within our search results pages.</p></li>
-</ul>
-
-
-<h2>Make Things Open to Make Things Better</h2>
-
-<p>We agree with Gov.UK that "to make things open makes things better."</p>
-
-<p>We have finite resources and we don't want to lose our focus on serving our agency customers and improving visitors' search experience on government websites. So, we won't be spending a lot of time to build or support a vibrant community around our code.</p>
-
-<p>That said, we hope that exposing the pieces of our system will be useful to someone somewhere. We'll continue to provide the "ingredients" of our search service so that others will be able to make use of the code and data in ways that we could never imagine.</p>
-
-<h2>And, We're Not Alone</h2>
-
-<p>We're not alone. Other federal agencies have embraced the approach of coding in the open and have <a href="http://gsa.github.io/federal-open-source-repos">GitHub repos</a>. Below are a just a few of our many favorites.</p>
-
-<ul>
-<li><p>The <a href="http://www.cfpb.gov">Consumer Financial Protection Bureau</a> has embraced open source, including serving their public data sets through <a href="https://github.com/cfpb/qu">qu</a>.</p></li>
-<li><p><a href="http://www.usa.gov">USA.gov</a> recently released the code for their <a href="https://github.com/usagov/usagov-ios-app">iPhone app</a>.</p></li>
-<li><p>The <a href="http://www.whitehouse.gov">White House</a> was in the forefront of using open source software in the federal government with their use of Drupal. They're continuing to lead by example by opening up the code for their <a href="https://github.com/WhiteHouse/petitions">We the People petitions</a> and <a href="https://github.com/WhiteHouse/wh-app-ios">iOS</a> and <a href="https://github.com/WhiteHouse/wh-app-android">Android</a> mobile apps.</p></li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/open"><span class="label label-info">open</span></a>
-      
-      <a href="/tagged/api"><span class="label label-info">api</span></a>
-      
-      <a href="/tagged/about-us"><span class="label label-info">about-us</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      <a href="/blog/open-source.html">
-        <time datetime="2014-03-21">March 21, 2014</time>
       </a>
     </div>
 
