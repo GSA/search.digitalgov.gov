@@ -11,13 +11,10 @@ tags: release-notes
 
 Some of the tasks to complete this include, but is not limited to:
 
-* Upgrade ES to 1.0.1 (Accepted)
-* Remove migrated indexes from Solr (Accepted)
-* Separate ES cluster into CHI and IAD (Accepted)
-* Migrate Flickr photos from Solr to ES (Accepted)
-* Prototype Logstash-based ingestion of search/click logs (Accepted)
-* Migrate tweets from Solr to ES (Accepted)
-* Remove remaining files/references to Solr from codebase (Accepted)
+* We migrated our indexes from Solr
+* We upgrade our elastic search to 1.0.1
+* We are leveraging separate elastic search clusters in our data centers
+* We are prototype Logstash-based ingestion of search logs
 
 ### Feature 2. We're continuing to go responsive module by module.
 
@@ -41,7 +38,7 @@ And we only show unique URLs in our News GovBox. Previously, it was possible to 
 
 ## Chores
 
-* We fixed our Travis builds (Accepted)
+* We fixed our Travis builds 
 * We investigated if IE8 is o.k. using our new SERP 
 * We routed traffic evenly between our two datacenters
 * We fixed monthly/weekly CSV downloads 
