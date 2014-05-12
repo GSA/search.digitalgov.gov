@@ -15,5 +15,3 @@ Do you have a passion for search and helping the public find good, relevant sear
 This brief posting period is because of our interest in accelerating the hiring process and shouldn't be interpreted as an indication that someone has already been selected.
 
 About Us: We're a commercial-grade service that gives the public a great search experience on government websites. With about 20 million searches each month, we power the search box on some of the most visited government websites, including NASA.gov, SocialSecurity.gov, USA.gov, USCIS.gov, WhiteHouse.gov, and 12 states' websites. It's so easy to take for granted. You go to a website, enter a term in the search box, and find the results you're looking for. But imagine the cost and time involved if every government agency and website had to acquire and run its own search engine. We take that burden off agencies' hands. By using free or low-cost commercial APIs and open source software, we currently provide the service free to any federal, state, or local agency.
-
-Contact Ammie Farraj Feijoo, DigitalGov Search Manager, at ammie[dot]farrajfeijoo[at]gsa[dot]gov for further information about the position.
