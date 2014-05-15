@@ -5,7 +5,7 @@ category: blog
 tags: ux about-us
 ---
 
-[Bing](http://techcrunch.com/2013/09/17/bing-reveals-its-redesign-and-latest-improvements/){% external_link %}, [Google](http://www.fastcodesign.com/3027704/how-googles-redesigned-search-results-augur-a-more-beautiful-web){% external_link %}, and [Yahoo](http://mashable.com/2013/06/05/yahoo-redesigns-its-search-page/){% external_link %} have all rolled out major redesigns to their search results pages in the past year.
+[Bing](http://techcrunch.com/2013/09/17/bing-reveals-its-redesign-and-latest-improvements/), [Google](http://www.fastcodesign.com/3027704/how-googles-redesigned-search-results-augur-a-more-beautiful-web), and [Yahoo](http://mashable.com/2013/06/05/yahoo-redesigns-its-search-page/) have all rolled out major redesigns to their search results pages in the past year.
 
 The last time we did a major redesign of our results page was in January 2012. It was long overdue for a facelift.
 
