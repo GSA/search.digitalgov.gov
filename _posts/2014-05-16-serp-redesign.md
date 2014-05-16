@@ -31,7 +31,7 @@ We've done away with the wordiness and boldface. The suggestion and its correspo
 
 ## Search Verticals
 
-Here's the before and after for a search on *jobs* on USA.gov.
+Through [usability tests](http://www.digitalgov.gov/resources/digitalgov-user-experience-program/digitalgov-user-experience-program-test-support/), we found that searchers didn't see the options to change the scope of their results in the left-hand column. Data also supports this finding as very, very few searchers clicked on these options. Here's the before and after for a search on *jobs* on USA.gov.
 
 ![Search verticals on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-verticals.png "Search verticals on USA.gov")
 
@@ -39,11 +39,21 @@ The new format clusters all options to narrow, broaden, or change the scope of t
 
 ## Videos
 
-Here's the before and after for a search on *careers* on USA.gov.
+Eye tracking studies have shown searchers gravitate to video thumbnails. Snippets are also very important to increase clickthru rates. Searchers are more likely to view a video if they understand how it is relevant to what they're looking for. Here's the before and after for a search on *careers* on USA.gov.
 
 ![Video search result for careers on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-video.png "Video search result for careers on USA.gov")
 
-The new video format shows one video plus a clearly labeled "More videos about ..." link. It also shows the video's source (in this case YouTube), the length of the video, and a short snippet. The video is now separated from basic search results by thin grey lines.
+The new video format shows one video plus a clearly labeled "More videos about ..." link. It also shows the video's source (in this case YouTube), the length of the video, and a short snippet. The video is now separated from basic search results by thin grey lines. 
+
+Searchers now see inline videos from the past 13 months only. (It used to be forever.) There's a spike in video views at around one year so this time period allows searchers to see recent inline videos for annual events like tax season, national health observances, and holidays.
+
+## News
+
+Here's the before and after for a search on *tornadoes* on USA.gov.
+
+![News search results for tornado on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-news.png "News search results for tornado on USA.gov")
+
+The new news format now matches the look of the basic search results to provide a more seamless experience. Searchers now see news from the last four months only. (It used to be forever, which showed stale content from several years ago in some cases.) Very recent news (less than five days) shows above the top of the basic search results. Less recent but still timely news (greater than five days and less than four months) shows below the basic search results. The old format always showed news results after the third web result.
 
 ## Tweets
 
@@ -51,7 +61,7 @@ Here's the before and after for a search on *social security* on USA.gov.
 
 ![Tweet for social security on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-tweet.png "Tweet for social security on USA.gov")
 
-The new tweet format shows one tweet inline with the results. It now shows the agency's Twitter profile image and the tweet is separated from basic search results by thin grey lines and doesn't have a separate heading. Searchers now see tweets from the last three days only. (It used to be 30 days.) The old format showed tweets in a right-hand column that was often mistaken for an ad.
+The new tweet format shows one tweet inline with the results. It now shows the agency's Twitter profile image and the tweet is separated from basic search results by thin grey lines and doesn't have a separate heading. As tweets tend to be very time-sensitive, searchers now see tweets from the last three days only. (It used to be 30 days.) The old format showed tweets in a right-hand column that was often mistaken for an ad.
 
 ## Job Openings
 
