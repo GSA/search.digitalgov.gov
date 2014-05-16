@@ -9,7 +9,7 @@ tags: ux about-us
 
 The last time we did a major redesign of our results page was in January 2012. It was long overdue for a facelift.
 
-So, we've redesigned our search results page. We've kept an eye on best practices in the search industry and what media websites (like NPR.org and NYTimes.com) are up to, But, we're not simply following the leaders. We've also [analyzed our search data](http://www.digitalgov.gov/2014/05/07/analyzing-search-data-in-real-time-to-drive-decisions/) to make data-driven decisions that, ultimately, aim to make searchers' experience better on your site.
+So, we've redesigned our search results page. We've kept an eye on best practices in the search industry and what media websites (like NPR.org and NYTimes.com) are up to, But, we're not simply following the leaders. We've also [analyzed our search data](http://www.digitalgov.gov/2014/05/07/analyzing-search-data-in-real-time-to-drive-decisions/) to make data-driven decisions that, ultimately, aim to improve searchers' experience on your site.
 
 Below are some of the highlights.
 
@@ -36,6 +36,16 @@ Through [usability tests](http://www.digitalgov.gov/resources/digitalgov-user-ex
 ![Search verticals on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-verticals.png "Search verticals on USA.gov")
 
 The new format clusters all options to narrow, broaden, or change the scope of the results together, and places these options directly above the search box. Searchers see up to three options and have the ability to show More &hellip;. The old format separated them, showing the option to search on related sites in the right-hand column above the box and verticals in the left-hand column below the box.
+
+## Site Navigation
+
+Once visitors have opted to type a term in the search box, they're in search mode. Some have already tried and abandoned browsing the website. 
+
+To reflect visitors' shift from browsing to searching, search results pages on many commercial media websites prominently show the search verticals. They either remove or downplay the site's navigation. Here's the before and after for a search on *veterans affairs* on USA.gov.
+
+![Site brand and navigation on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-navigation.png "Site brand and navigation on USA.gov")
+
+The new format prominently displays the search verticals above the search box. Searchers can click the logo to return to homepage, or expand the "hamburger" menu to view additional options to browse the site. Searchers can also navigate the site using links in the footer.
 
 ## Videos
 
@@ -71,7 +81,7 @@ Here's the before and after for a search on *communications jobs* on USA.gov.
 
 ![Job results for communications jobs on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-jobs.png "Job results for communications jobs on USA.gov")
 
-The new job opening format shows one up to three job openings inline with the results. Searchers can now click or touch the down arrow to see up to 10 listings inline. For federal agencies, it now shows the USAJobs logo to clearly identify that as the data source. The job openings are separated from basic search results by thin grey lines. The old format showed jobs in a right-hand column that was often mistaken for an ad and didn't give searchers the option to see more listings on the results page.
+The new job opening format shows up to three job openings inline with the results. Searchers can now click or touch the down arrow to see up to 10 listings inline. For federal agencies, it now shows the USAJobs logo to clearly identify that as the data source. The job openings are separated from basic search results by thin grey lines. The old format showed jobs in a right-hand column that was often mistaken for an ad and didn't give searchers the option to see more listings on the results page.
 
 ## Health Topics
 
