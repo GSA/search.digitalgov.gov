@@ -41,11 +41,11 @@ The new format clusters all options to narrow, broaden, or change the scope of t
 
 Once visitors have opted to type a term in the search box, they're in search mode. Some have already tried and abandoned browsing the website. 
 
-To reflect visitors' shift from browsing to searching, search results pages on many commercial media websites prominently show the search verticals. They either remove or downplay the site's navigation. Here's the before and after for a search on *veterans affairs* on USA.gov.
+To reflect visitors' shift from browsing to searching, search results pages on many commercial media websites highlight the search verticals and either remove or downplay the site's navigation. Here's the before and after for a search on *veterans affairs* on USA.gov.
 
 ![Site brand and navigation on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-navigation.png "Site brand and navigation on USA.gov")
 
-The new format prominently displays the search verticals above the search box. Searchers can click the logo to return to homepage, or expand the "hamburger" menu to view additional options to browse the site. Searchers can also navigate the site using links in the footer.
+The new format prominently shows the search verticals above the search box. Searchers can click the logo to return to homepage, or expand the "hamburger" menu to view additional options to browse the site. Searchers can also browse the site using links in the footer.
 
 ## Videos
 
