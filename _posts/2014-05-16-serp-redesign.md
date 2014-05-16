@@ -15,13 +15,21 @@ Below are some of the highlights.
 
 ## Basic Search Results
 
-We started with the basic search result. Here's the before and after for a search on *passport* on USA.gov.
+We started with the basic search results because they're the meat of the page. They also have the highest clickthru rate among the various items shown on the page. Here's the before and after for a search on *passport* on USA.gov.
 
 ![Search result for passport on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-search-result.png "Search result for passport on USA.gov")
 
 We've done away with the underlining on the title. The snippet is wider and has more space. Clicking or touching anywhere on the snippet (not just the title) opens the link.
 
-## Video Results
+## Spelling Suggestions
+
+Spelling suggestions have the second highest clickthru rate so we focused on those next. Here's the before and after for a search on *manual noriega* (sic) on USA.gov.
+
+![Spelling suggestion for manual noriega (sic) on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-spelling.png "Spelling suggestion for manual noriega (sic) on USA.gov")
+
+We've done away with the wordiness and boldface. The suggestion and its corresponding option to override the automatic correction now use plain language and are shown on two lines. We now only use boldface to highlight keyword matches for searchers' queries.
+
+## Videos
 
 Here's the before and after for a search on *careers* on USA.gov.
 
@@ -35,7 +43,15 @@ Here's the before and after for a search on *social security* on USA.gov.
 
 ![Tweet for social security on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-tweet.png "Tweet for social security on USA.gov")
 
-The new tweet format shows one tweet inline with the results. It now shows the agency's Twitter profile image and the tweet is separated from basic search results by thin grey lines and doesn't have a separate heading. The old format had tweets in a right-hand column that was often mistaken for an ad.
+The new tweet format shows one tweet inline with the results. It now shows the agency's Twitter profile image and the tweet is separated from basic search results by thin grey lines and doesn't have a separate heading. The old format showed tweets in a right-hand column that was often mistaken for an ad.
+
+## Job Openings
+
+Here's the before and after for a search on *communications jobs* on USA.gov.
+
+![Job results for communications jobs on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-jobs.png "Job results for communications jobs on USA.gov")
+
+The new job opening format shows one up to three job openings inline with the results. Searchers can now click or touch the down arrow to see up to 10 listings inline. For federal agencies, it now shows the USAJobs logo to clearly identify that as the data source. The job openings are separated from basic search results by thin grey lines. The old format showed jobs in a right-hand column that was often mistaken for an ad and didn't give searchers the option to see more listings on the results page.
 
 ## Search Verticals
 
