@@ -29,6 +29,14 @@ Spelling suggestions have the second highest clickthru rate so we focused on tho
 
 We've done away with the wordiness and boldface. The suggestion and its corresponding option to override the automatic correction now use plain language and are shown on two lines. We now only use boldface to highlight keyword matches for searchers' queries.
 
+## Search Verticals
+
+Here's the before and after for a search on *jobs* on USA.gov.
+
+![Search verticals on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-verticals.png "Search verticals on USA.gov")
+
+The new format clusters all options to narrow, broaden, or change the scope of the results together, and places these options directly above the search box. It also shows up to three options with ability to show More &hellip;. The old format placed verticals in the left-hand column below the box and the option to search on related sites in the right-hand column above the box.
+
 ## Videos
 
 Here's the before and after for a search on *careers* on USA.gov.
@@ -43,7 +51,7 @@ Here's the before and after for a search on *social security* on USA.gov.
 
 ![Tweet for social security on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-tweet.png "Tweet for social security on USA.gov")
 
-The new tweet format shows one tweet inline with the results. It now shows the agency's Twitter profile image and the tweet is separated from basic search results by thin grey lines and doesn't have a separate heading. The old format showed tweets in a right-hand column that was often mistaken for an ad.
+The new tweet format shows one tweet inline with the results. It now shows the agency's Twitter profile image and the tweet is separated from basic search results by thin grey lines and doesn't have a separate heading. Searchers now see tweets from the last three days only. (It used to be 30 days.) The old format showed tweets in a right-hand column that was often mistaken for an ad.
 
 ## Job Openings
 
@@ -53,13 +61,13 @@ Here's the before and after for a search on *communications jobs* on USA.gov.
 
 The new job opening format shows one up to three job openings inline with the results. Searchers can now click or touch the down arrow to see up to 10 listings inline. For federal agencies, it now shows the USAJobs logo to clearly identify that as the data source. The job openings are separated from basic search results by thin grey lines. The old format showed jobs in a right-hand column that was often mistaken for an ad and didn't give searchers the option to see more listings on the results page.
 
-## Search Verticals
+## Health Topics
 
-Here's the before and after for a search on *jobs* on USA.gov.
+Here's the before and after for a search on *diabetes* on USA.gov.
 
-![Search verticals on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-verticals.png "Search verticals on USA.gov")
+![Health topic result for diabetes on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-health-govbox.png "Health topic result for diabetes on USA.gov")
 
-The new format clusters all options to narrow, broaden, or change the scope of the results together, and places these options directly above the search box. It also shows up to three options with ability to show More &hellip;. The old format placed verticals in the left-hand column below the box and the option to search on related sites in the right-hand column above the box.
+The new health topics format shows a shorter, more concise snippet and the snippet doesn't have any embedded links. The result now takes up less vertical space as the links for related topics and clinical trials are each listed in a line. The MedlinePlus logo now links to <http://www.nlm.nih.gov/medlineplus/>.
 
 ## By Government, for Government
 
