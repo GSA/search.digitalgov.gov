@@ -35,11 +35,11 @@ Through [usability tests](http://www.digitalgov.gov/resources/digitalgov-user-ex
 
 ![Search verticals on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-verticals.png "Search verticals on USA.gov")
 
-The new format clusters all options to narrow, broaden, or change the scope of the results together, and places these options directly above the search box. It also shows up to three options with ability to show More &hellip;. The old format placed verticals in the left-hand column below the box and the option to search on related sites in the right-hand column above the box.
+The new format clusters all options to narrow, broaden, or change the scope of the results together, and places these options directly above the search box. Searchers see up to three options and have the ability to show More &hellip;. The old format separated them, showing the option to search on related sites in the right-hand column above the box and verticals in the left-hand column below the box.
 
 ## Videos
 
-Eye tracking studies have shown searchers gravitate to video thumbnails. Snippets are also very important to increase clickthru rates. Searchers are more likely to view a video if they understand how it is relevant to what they're looking for. Here's the before and after for a search on *careers* on USA.gov.
+Eye tracking studies have shown searchers gravitate to video thumbnails. Snippets are also very important to increase clickthru rates. Searchers are more likely to view a video if they understand how it relates to what they're looking for. Here's the before and after for a search on *careers* on USA.gov.
 
 ![Video search result for careers on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-video.png "Video search result for careers on USA.gov")
 
@@ -53,7 +53,9 @@ Here's the before and after for a search on *tornadoes* on USA.gov.
 
 ![News search results for tornado on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-news.png "News search results for tornado on USA.gov")
 
-The new news format now matches the look of the basic search results to provide a more seamless experience. Searchers now see news from the last four months only. (It used to be forever, which showed stale content from several years ago in some cases.) Very recent news (less than five days) shows above the top of the basic search results. Less recent but still timely news (greater than five days and less than four months) shows below the basic search results. The old format always showed news results after the third web result.
+The new news format now matches the look of the basic search results to provide a more seamless experience.
+
+Searchers now see inline news from the last four months only. (It used to be forever, which showed stale content from several years ago in some cases.) Very recent news (less than five days) shows above the basic search results. Less recent but still timely news (greater than five days and less than four months) shows below the basic search results. The old format always showed news results after the third web result.
 
 ## Tweets
 
