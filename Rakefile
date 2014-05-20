@@ -40,7 +40,7 @@ task :deploy => :generate do
     File.new('.nojekyll', 'w').close
     system 'git add -A'
     system "git commit -m 'Update pages using SHA: #{current_sha.slice(0, 10)}'"
-#    system "git push origin #{gh_pages_branch}"
+    system "git push origin #{gh_pages_branch}"
   end
 end
 
