@@ -7,10 +7,7 @@ tags: about-us
 
 Do you have a passion for search and helping the public find good, relevant search results? Do you enjoy being part of a small, innovative team? Apply to work with us on DigitalGov Search, GSA's award-winning hosted service that powers the search box on 1,500 government websites.
 
-***Applications are being accepted now through May 23, 2014.*** Apply online at:
-
-* <https://www.usajobs.gov/GetJob/ViewDetails/369615300> (for all US citizens and nationals)
-* <https://www.usajobs.gov/GetJob/ViewDetails/369621100> (for current or former federal employees only)
+***Applications are being accepted now through Friday, May 30, 2014.*** Apply online at <https://www.usajobs.gov/GetJob/ViewDetails/369621100> (for current or former federal employees only).
 
 This brief posting period is because of our interest in accelerating the hiring process and shouldn't be interpreted as an indication that someone has already been selected.
 
