@@ -76,6 +76,55 @@
  
     
     <h1>
+      <a href="/manual/cname.html">How to Mask Your Domain</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these three steps to mask your domain.</p>
+
+<ol>
+<li>Email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#115;&#117;&#x70;&#x70;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#x76;">&#x73;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#115;&#117;&#x70;&#112;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#103;&#105;&#116;&#x61;&#108;&#103;&#111;&#x76;&#46;&#103;&#x6f;&#118;</a> and ask us to mask your domain.</li>
+<li>Create a CNAME in your external DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
+<li>When the setup is complete, change the <a href="/manual/code.html">code for your form</a> action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
+</ol>
+
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> Many agencies have both internal and external DNS. Be
+sure to update your <em>external</em> DNS records (step 2) before changing your form code (step 3).</p>
+
+<p><strong><em>Did you know?</em></strong> By default, we set up search.YOURSITE.gov (such as search.nih.gov). If this subdomain is already used by another application, you can request YOURSITEsearch.YOURSITE.gov (such as usdasearch.usda.gov) or another pattern.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
+      
+      <a href="/tagged/cname"><span class="label label-info">cname</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/cname.html">
+        <time datetime="2013-08-23">August 23, 2013</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/add-site.html">How to Add a New Site</a>
     </h1>
     
@@ -129,7 +178,7 @@
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#x73;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#x6f;&#118;&#46;&#103;&#x6f;&#118;">&#115;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#x67;&#111;&#118;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#115;&#x65;&#97;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#118;">&#115;&#101;&#97;&#x72;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#112;&#111;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#118;</a>.</p>
 
     </div>
 
@@ -310,6 +359,77 @@ omies that depend on summer tourism.
  
     
     <h1>
+      <a href="/manual/youtube.html">How to Add Your YouTube Videos to Our Index</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > YouTube</p>
+
+<h2>Tell Us About Your YouTube Channel</h2>
+
+<p>Provide us with the username for your YouTube channel(s). When you're on YouTube's website, you can see your username in the URL at http://www.youtube.com/user/YourUserName.</p>
+
+<p>For example, the username for NASA's YouTube channel is <a href="http://www.youtube.com/user/NASAtelevision">NASAtelevision</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<!-- START UPDATE -->
+
+
+<h2>Opt to Display Your Videos</h2>
+
+<p>When you add the username for your YouTube channel, we'll automatically index your videos&mdash;both your uploaded videos and playlists.</p>
+
+<p>You can control the display of the videos on the <a href="/manual/display-overview.html">Display Overview</a> page. You can show the videos as a (a) facet by turning on the option to show in the Sidebar, (b) GovBox on your main web results page by turning on the option to show as a GovBox, or both.</p>
+
+<p>You can edit the default title, Videos, on the RSS feed on the <a href="/manual/rss.html">RSS</a> page.</p>
+
+<!-- END UPDATE -->
+
+
+<p>See the sample results page below that shows video results displayed on the National Institute of Justice for a search on <em><a href="http://search.usa.gov/search?query=violence&amp;affiliate=nationalinstituteofjustice">violence</a></em>.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-video1.png" alt="Results page with videos shown as a GovBox" />
+<em>Results page with videos shown as a GovBox</em></p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-video2.png" alt="Video results page shown when searcher opts to view videos" />
+<em>Video results page shown when searcher opts to view videos</em></p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
+      
+      <a href="/tagged/youtube"><span class="label label-info">youtube</span></a>
+      
+      <a href="/tagged/videos"><span class="label label-info">videos</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/youtube.html">
+        <time datetime="2013-08-21">August 21, 2013</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/collections.html">How to Create Collections Within Our Index</a>
     </h1>
     
@@ -376,77 +496,6 @@ omies that depend on summer tourism.
       
       
       <a href="/manual/collections.html">
-        <time datetime="2013-08-21">August 21, 2013</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/youtube.html">How to Add Your YouTube Videos to Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > YouTube</p>
-
-<h2>Tell Us About Your YouTube Channel</h2>
-
-<p>Provide us with the username for your YouTube channel(s). When you're on YouTube's website, you can see your username in the URL at http://www.youtube.com/user/YourUserName.</p>
-
-<p>For example, the username for NASA's YouTube channel is <a href="http://www.youtube.com/user/NASAtelevision">NASAtelevision</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<!-- START UPDATE -->
-
-
-<h2>Opt to Display Your Videos</h2>
-
-<p>When you add the username for your YouTube channel, we'll automatically index your videos&mdash;both your uploaded videos and playlists.</p>
-
-<p>You can control the display of the videos on the <a href="/manual/display-overview.html">Display Overview</a> page. You can show the videos as a (a) facet by turning on the option to show in the Sidebar, (b) GovBox on your main web results page by turning on the option to show as a GovBox, or both.</p>
-
-<p>You can edit the default title, Videos, on the RSS feed on the <a href="/manual/rss.html">RSS</a> page.</p>
-
-<!-- END UPDATE -->
-
-
-<p>See the sample results page below that shows video results displayed on the National Institute of Justice for a search on <em><a href="http://search.usa.gov/search?query=violence&amp;affiliate=nationalinstituteofjustice">violence</a></em>.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-video1.png" alt="Results page with videos shown as a GovBox" />
-<em>Results page with videos shown as a GovBox</em></p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-video2.png" alt="Video results page shown when searcher opts to view videos" />
-<em>Video results page shown when searcher opts to view videos</em></p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
-      
-      <a href="/tagged/youtube"><span class="label label-info">youtube</span></a>
-      
-      <a href="/tagged/videos"><span class="label label-info">videos</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/youtube.html">
         <time datetime="2013-08-21">August 21, 2013</time>
       </a>
     </div>
@@ -646,26 +695,22 @@ omies that depend on summer tourism.
  
     
     <h1>
-      <a href="/manual/twitter.html">How to Add Your Tweets to Our Index</a>
+      <a href="/manual/users.html">How to Manage Your Site's Users</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Twitter</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Manage Users</p>
 
-<p>Provide us with the @handle for your Twitter account(s). Your @handle is your agency's username used within Twitter. When you're logged into Twitter, you can see your username at <a href="https://twitter.com/settings/account">https://twitter.com/settings/account</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+<p>After you've <a href="https://search.usa.gov/sites/">logged in</a> and <a href="/manual/add-site.html">added a site</a> with your official government email, you can add your coworkers to your site.</p>
 
-<p>For example, the Twitter username for the USDA's Food Safety and Inspection Service is <a href="https://twitter.com/USDAFoodSafety">@USDAFoodSafety</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+<p>You can add anyone you'd like to your site&mdash;with or without a .gov or .mil email address.</p>
 
-<p>When you add your Twitter @handle, we'll automatically index and display <em>your</em> tweets. Select the option, Show tweets from my lists, to index the tweets for all members of your lists.</p>
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/user.png" alt="Add a user" /></p>
 
-<p>If you don't want to display your tweets, simply delete your Twitter handle.</p>
+<hr />
 
-<p>See the sample results page below that shows a recent tweet displayed on SNAP-Ed Connection for a search on <em><a href="http://search.usa.gov/search?affiliate=snap-edconnection&amp;query=nutrition">nutrition</a></em>.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-tweets.png" alt="Search result with a tweet on SNAP-Ed Connection" /></p>
-
-<p>Searchers will see the most recent tweet (posted within the past three days) that matches their search term.</p>
+<p><strong><em>Did you know?</em></strong> We recommend adding a generic email account (such as webteam@agency.gov) as a user to ensure ongoing access to your account as individuals come and go.</p>
 
     </div>
 
@@ -673,11 +718,9 @@ omies that depend on summer tourism.
       
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
       
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
       
-      <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
-      
-      <a href="/tagged/twitter"><span class="label label-info">twitter</span></a>
+      <a href="/tagged/users"><span class="label label-info">users</span></a>
       
     </div>
    <div class='time'>
@@ -687,8 +730,8 @@ omies that depend on summer tourism.
       
       
       
-      <a href="/manual/twitter.html">
-        <time datetime="2013-08-09">August 9, 2013</time>
+      <a href="/manual/users.html">
+        <time datetime="2013-08-01">August 1, 2013</time>
       </a>
     </div>
     </article>
@@ -738,7 +781,7 @@ omies that depend on summer tourism.
 
 <h2>Site Handle</h2>
 
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as nih. If you'd like to edit your site handle, email us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#58;&#115;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#x61;&#108;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#118;">&#115;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#x70;&#112;&#111;&#114;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#x76;</a>.</p>
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as nih. If you'd like to edit your site handle, email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#115;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#117;&#112;&#x70;&#111;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#118;">&#115;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#116;&#46;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#118;&#x2e;&#x67;&#111;&#118;</a>.</p>
 
 <p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/settings.png" alt="Site name and handle on NIH.gov's search results page" /></p>
 
@@ -748,7 +791,7 @@ omies that depend on summer tourism.
 
 <h2>Site Language</h2>
 
-<p>You chose the language (English or Spanish) for your site when you originally added your site. We'll only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language. If you'd like to edit your site's language, email us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#58;&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#115;&#x75;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#97;&#108;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#118;">&#115;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
+<p>You chose the language (English or Spanish) for your site when you originally added your site. We'll only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language. If you'd like to edit your site's language, email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#x76;&#46;&#103;&#111;&#118;">&#x73;&#x65;&#97;&#x72;&#x63;&#104;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#118;</a>.</p>
 
 <h2>Delete</h2>
 
@@ -773,51 +816,6 @@ omies that depend on summer tourism.
       
       
       <a href="/manual/settings.html">
-        <time datetime="2013-08-01">August 1, 2013</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/users.html">How to Manage Your Site's Users</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Manage Users</p>
-
-<p>After you've <a href="https://search.usa.gov/sites/">logged in</a> and <a href="/manual/add-site.html">added a site</a> with your official government email, you can add your coworkers to your site.</p>
-
-<p>You can add anyone you'd like to your site&mdash;with or without a .gov or .mil email address.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/user.png" alt="Add a user" /></p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> We recommend adding a generic email account (such as webteam@agency.gov) as a user to ensure ongoing access to your account as individuals come and go.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
-      
-      <a href="/tagged/users"><span class="label label-info">users</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/users.html">
         <time datetime="2013-08-01">August 1, 2013</time>
       </a>
     </div>
@@ -861,7 +859,7 @@ omies that depend on summer tourism.
 
 <hr />
 
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#115;&#101;&#97;&#114;&#99;&#104;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#x64;&#x69;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
+<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#115;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#x74;&#46;&#100;&#x69;&#103;&#x69;&#x74;&#97;&#x6c;&#103;&#111;&#118;&#46;&#103;&#x6f;&#118;">&#115;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#116;&#46;&#100;&#105;&#103;&#x69;&#x74;&#x61;&#108;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
 
     </div>
 
