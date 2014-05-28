@@ -15,7 +15,7 @@ A logo that has both the seal and agency name can provide a stronger identity th
 
 The addition of a name can also give the same seal two very different identities.
 
-* [NOAA National Marine Sanctuary](http://search.usa.gov/search?&m=&affiliate=nmfs.noaa.gov&query=fisheries)
+* [NOAA Fisheries](http://search.usa.gov/search?&m=&affiliate=nmfs.noaa.gov&query=fisheries)
 * [NOAA National Oceanographic Data Center](http://search.usa.gov/search?affiliate=nodc.noaa.gov&query=wilmington) 
 
 ## Fonts & Colors
@@ -45,7 +45,7 @@ Use the footer to add navigation and required links.
 
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Display Overview
 
-Shorter display names look best for the faceted search and related sites. Try to keep names under 15 characters
+Shorter display names look best for the faceted search and related sites. Try to keep names under 15 characters.
 
 * [USA.gov](http://search.usa.gov/search?affiliate=usagov&query=visas) has multiple faceted topics, and a related site for Spanish.
 
