@@ -96,3 +96,9 @@ The new health topics format shows a shorter, more concise snippet and the snipp
 Our search results page now ensures the public has a common search experience anywhere, anytime, and on any device. This meets a key objective of the federal government's [Digital Government Strategy](http://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html).
 
 It has also been tested to ensure it is [accessible to people with disabilities](https://www.section508.gov/).
+
+## Are You Ready to Turn It On?
+
+Are you ready to turn on the new results page? [Tell us](mailto:search@support.digitalgov.gov) if you're ready now, or if you need some more time or help. 
+
+Read our [favorite tips](/blog/serp-redesign-tips.html) to see how other sites have customized their results pages and for some ideas on how to [brand the results page](/manual/brand.html) for your site.
