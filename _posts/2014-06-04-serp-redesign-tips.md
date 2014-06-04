@@ -22,7 +22,7 @@ The addition of a name can also give the same seal two very different identities
 
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Display > Fonts & Colors
 
-Use a background color on either the header, the body of the page, or both. For best results, don't use the same color for both the header and the body.  
+Use a background color on the header, page body, or both. For best results, use different colors for the header and body.  
 
 * See contrasting background colors for both the header and body on [Broward County](http://search.broward.org/search?affiliate=co.broward.fl.us&query=everglades).
 * See a background color for the body only on the [City of Bloomington, MN](http://search.bloomingtonmn.gov/search?&affiliate=cityofbloomingtonmnsearchresults&query=farmers+market).
@@ -55,6 +55,6 @@ Shorter display names look best for the faceted search and related sites. Try to
 
 Tell us about your social media content. Add your Flickr and Instagram accounts so high-quality images appear in your search results.
 
-* [Louisiana.gov](http://search.usa.gov/search/images?affiliate=www.louisiana.gov&query=hurricanes) displays images from its Flickr photostream.
+* [BLM California](http://search.usa.gov/search/images?affiliate=blmca&query=piedras+blancas) and [Louisiana.gov](http://search.usa.gov/search/images?affiliate=www.louisiana.gov&query=hurricanes) display images from its Flickr photostreams.
 
 Don't forget about adding Twitter and YouTube, too.
