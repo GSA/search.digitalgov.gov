@@ -53,8 +53,9 @@ Shorter display names look best for the faceted search and related sites. Try to
 
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content
 
-Tell us about your social media content. Add your Flickr and Instagram accounts so high-quality images appear in your search results.
+Tell us about your social media content. Add your Flickr and Instagram accounts (or media RSS) so high-quality images appear in your search results.
 
-* [BLM California](http://search.usa.gov/search/images?affiliate=blmca&query=piedras+blancas) and [Louisiana.gov](http://search.usa.gov/search/images?affiliate=www.louisiana.gov&query=hurricanes) display images from its Flickr photostreams.
+* [BLM California](http://search.usa.gov/search/images?affiliate=blmca&query=piedras+blancas) and [Louisiana.gov](http://search.usa.gov/search/images?affiliate=www.louisiana.gov&query=hurricanes) display images from their Flickr photostreams.
+* [USGS.gov](http://search.usa.gov/search/news?&affiliate=usgs&channel=1438&query=polar+bear) displays images from its [image gallery](http://gallery.usgs.gov/) (via media RSS feeds).
 
 Don't forget about adding Twitter and YouTube, too.
