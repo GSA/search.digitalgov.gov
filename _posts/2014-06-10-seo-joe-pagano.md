@@ -18,7 +18,7 @@ Ammie Farraj Feijoo, our program manager, presented on SEO for government websit
 * Conducting keyword research; and
 * Eliminating ROT (redundant, outdated, and trivial content).
 
-Download the [slide deck](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/seo-joe-pagano.pdf) [PDF] and visit the resources below to learn more.
+Download the [slide deck](/pdf/seo-joe-pagano.pdf) [PDF] and visit the resources below to learn more.
 
 ## Webmaster Tools
 * [Bing Webmaster Tools](http://www.bing.com/toolbox/webmaster){% external_link %}
