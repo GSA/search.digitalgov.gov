@@ -25,7 +25,7 @@ Download the [slide deck](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b199
 * [Google Webmaster Tools](https://www.google.com/webmasters/tools/home?hl=en){% external_link %}
 
 ## A Few (of Many) SEO Resources
-* [Bing's Collection of SEO-related documents](http://www.bing.com/blogs/site_blogs/b/webmaster/archive/2011/04/13/collection-of-seo-related-documents-from-the-bing-ecosystem.aspx){% external_link %}
+* [Bing's Collection of SEO-related documents](http://blogs.bing.com/webmaster/2011/04/13/collection-of-seo-related-documents-from-the-bing-ecosystem/){% external_link %}
 * [Google's SEO Starter Guide](http://static.googleusercontent.com/media/www.google.com/en/us/webmasters/docs/search-engine-optimization-starter-guide.pdf) [PDF]{% external_link %} & [How Search Works](http://www.google.com/insidesearch/howsearchworks/thestory/index.html){% external_link %}
-* [Moz's The Beginner's Guide to SEO](http://www.moz.org/beginners-guide-to-seo){% external_link %}
+* [Moz's The Beginner's Guide to SEO](http://moz.com/beginners-guide-to-seo){% external_link %}
 * [Search Engine Land's Guide to SEO](http://searchengineland.com/guide/seo){% external_link %}
