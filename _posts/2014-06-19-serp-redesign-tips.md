@@ -18,10 +18,10 @@ The addition of a name can also give the same seal two very different identities
 * [NOAA Fisheries](http://search.usa.gov/search?&m=&affiliate=nmfs.noaa.gov&query=fisheries)
 * [NOAA National Oceanographic Data Center](http://search.usa.gov/search?affiliate=nodc.noaa.gov&query=wilmington)
 
-Align your logo so that is is consistent with its placement on your website.
+Align your logo so its alignment is consistent with your website.
 
-* [USA.gov](http://search.usa.gov/search?&m=&affiliate=usagov&query=passports) left aligns its logo on both its homepage and search results page.
-* [BSEE.gov](http://search.usa.gov/search?affiliate=bsee.gov&query=deepwater+horizon) center aligns its logo on both pages.
+* [GobiernoUSA.gov](http://search.usa.gov/search?&m=&affiliate=gobiernousa&query=visas) has a left-aligned logo on its homepage and search results page.
+* [BSEE.gov](http://search.usa.gov/search?affiliate=bsee.gov&query=deepwater+horizon) has a center-aligned logo on both of its pages.
 
 ## Fonts & Colors
 
