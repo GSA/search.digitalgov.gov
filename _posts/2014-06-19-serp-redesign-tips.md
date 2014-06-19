@@ -16,7 +16,12 @@ A logo that has both the seal and agency name can provide a stronger identity th
 The addition of a name can also give the same seal two very different identities.
 
 * [NOAA Fisheries](http://search.usa.gov/search?&m=&affiliate=nmfs.noaa.gov&query=fisheries)
-* [NOAA National Oceanographic Data Center](http://search.usa.gov/search?affiliate=nodc.noaa.gov&query=wilmington) 
+* [NOAA National Oceanographic Data Center](http://search.usa.gov/search?affiliate=nodc.noaa.gov&query=wilmington)
+
+Align your logo so that is is consistent with its placement on your website.
+
+* [USA.gov](http://search.usa.gov/search?&m=&affiliate=usagov&query=passports) left aligns its logo on both its homepage and search results page.
+* [BSEE.gov](http://search.usa.gov/search?affiliate=bsee.gov&query=deepwater+horizon) center aligns its logo on both pages.
 
 ## Fonts & Colors
 
