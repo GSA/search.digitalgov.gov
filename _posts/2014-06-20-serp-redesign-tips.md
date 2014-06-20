@@ -44,7 +44,7 @@ Use the footer to add navigation and required links.
 
 * [USA.gov](http://search.usa.gov/search?&m=&affiliate=usagov&query=congress) is an example of a federal government website using this option.
 * The [City of Minnetonka](http://search.usa.gov/search?&affiliate=thecityofminnnetonkasearchresults&query=lakes) is using the same set-up for a local government site.
-* It's also possible to add an email address to the footer or header by using mailto:info@agency.gov within the URL.
+* It's also possible to add an email address to the footer or header by using mailto:info@agency.gov within the URL as [USPTO.gov](http://search.uspto.gov/search?affiliate=web-sdmg-uspto.gov&query=patents) has done for its option to email the USPTO Webmaster.
 
 ## Display Overview
 
