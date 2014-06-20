@@ -76,6 +76,145 @@
  
     
     <h1>
+      <a href="/manual/rss.html">How to Add Your RSS Feeds to Our Index</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > RSS</p>
+
+<p>Would you like searchers to be able to search your news or multimedia content? Would you like them to be able to narrow results by date?</p>
+
+<p>Tell us the locations and names of your RSS feeds. We index all new and updated content on your feeds within minutes.</p>
+
+<h2>Step 1. Tell Us About Your RSS Feeds</h2>
+
+<p>We love feeds! Tell us about <em>all</em> of your RSS feeds, even if you don't opt to show them in step 2 below. Feeds are the fastest and most reliable way for us to learn about your new and updated content.</p>
+
+<p>Select the option to add a new RSS feed.</p>
+
+<h3>Name</h3>
+
+<p>Create a name for the feed. Within this 'bucket' you can list a single RSS feed or many feeds. For example, you can opt to list all of your agency's press releases separately (such as Police News, Fire News, EMS News, etc.) or you can list all three under one general name (such as News).</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/rss.png" alt="Add an RSS Feed" /></p>
+
+<h3>Feed type</h3>
+
+<p>Select the type of feed. The default option is RSS (for text content like press releases or blogs). Change it to <a href="http://www.rssboard.org/media-rss">media RSS</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> for multimedia content like images and videos.</p>
+
+<p>Each item within a RSS feed must include a title, link, description, and publication date.</p>
+
+<p>Each item within a media RSS feed must also include both a <a href="http://www.rssboard.org/media-rss#media-content">media:content URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a direct URL to the media object and a <a href="http://www.rssboard.org/media-rss#media-thumbnails">media:thumbnail URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a URL to the object's thumbnail.</p>
+
+<p>Any items missing a required element won't display in your search results.</p>
+
+<h3>Sample RSS Item with All Required Elements</h3>
+
+<pre><code>&lt;item&gt;
+&lt;title&gt;
+Statement from Agriculture Secretary Tom Vilsack Regarding World Organization for Animal Health (OIE) Upgrade of United States&amp;apos; BSE Risk Status
+&lt;/title&gt;
+&lt;pubDate&gt;May 29, 2013 00:00:00 CDT&lt;/pubDate&gt;
+&lt;link&gt;
+http://www.usda.gov/wps/portal/usda/usdahome?contentid=2013/05/0106.xml&amp;contentidonly=true
+&lt;/link&gt;
+&lt;description&gt;
+WASHINGTON, May 29, 2013–Agriculture Secretary Tom Vilsack made the following statement about notification received today from the World Organization for Animal Health (OIE) upgrading the United States&amp;apos; risk classification for bovine spongiform encephalopathy (BSE) to negligible risk:
+&lt;/description&gt;
+&lt;/item&gt;
+</code></pre>
+
+<h3>Sample Media RSS Item with All Required Elements</h3>
+
+<pre><code>&lt;item&gt;
+&lt;title type="html"&gt;
+&lt;![CDATA[ Great Lakes Beach Health ]]&gt;
+&lt;/title&gt;
+&lt;link&gt;
+http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
+&lt;/link&gt;
+&lt;guid&gt;
+http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
+&lt;/guid&gt;
+&lt;pubDate&gt;Fri, 24 May 2013 00:00:00 EDT&lt;/pubDate&gt;
+&lt;media:description type="html"&gt;
+&lt;![CDATA[ As schools close for the year and summer weather beckons, many recreationalists head to the Great Lakes' public beaches. However, these coastal areas can become  contaminated with disease-causing bacteria that threaten public health, disrupt water   recreation, and pay a toll on the Great Lakes economies that depend on summer tourism. ]]&gt;
+&lt;/media:description&gt;
+&lt;media:thumbnail url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/thumbs/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
+&lt;media:content type="" url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/large/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
+&lt;/item&gt;
+</code></pre>
+
+<h2>Step 2. Opt to Show as a GovBox, in the Sidebar, or Both</h2>
+
+<p>Allow searchers to see inline results for the three most recent, relevant RSS results <em>across all of your RSS feeds</em> by turning on the News GovBox on the <a href="/manual/display-overview.html">Display Overview</a> page. You can also edit the default title, News, on the Display Overview page.</p>
+
+<p>Allow searchers to see narrow results to a specific feed in the left-hand column of the results page by turning on the option to show in the Sidebar on the <a href="/manual/display-overview.html">Display Overview</a> page. To ensure searchers don't encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a sidebar option.</p>
+
+<h2>Step 3. Check Your Search Results Page</h2>
+
+<p><strong>GovBox.</strong> If you opted to show your RSS feed(s) as a GovBox, searchers will see a News GovBox. This GovBox will highlight the three most recent, relevant results across all of your RSS feeds.</p>
+
+<p><strong>Sidebar.</strong> If you opted to show your RSS feed(s) in the sidebar, searchers can narrow their results to see your RSS-based results only.</p>
+
+<p>Within the RSS-based results, searchers can opt to limit results to the last hour, day, week, month, or year, or they can set a custom date range. They also can sort results in descending order by relevance (best match first) or date (most recent first).</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
+
+<ul>
+<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
+<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+<li><a href="http://atomenabled.org/developers/syndication/">Atom syndication format</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+</ul>
+
+
+<p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="https://search.usa.gov/sites/">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don't need to coordinate with us.</p>
+
+<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your feed.</p>
+
+<p>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab. Change the form action to <code>action="http://search.usa.gov/search/news</code> and add the following line to limit the results to your feed.</p>
+
+<p><code>&lt;input type="hidden" name="channel" value="###"&gt;</code></p>
+
+<p>The value is the number for your feed ID, which is visible in the URL when you edit your feed in the Admin Center.</p>
+
+<p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your RSS feeds.</p>
+
+<p><strong><em>Did you know?</em></strong> When you <a href="/manual/youtube.html">provide us with your YouTube channel</a>, we'll automatically index the RSS feed for your YouTube channel.</p>
+
+<p><strong><em>Did you know?</em></strong> For any feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by these facets in the <a href="/manual/display-overview.html">sidebar</a> on the results page.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/rss"><span class="label label-info">rss</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/rss.html">
+        <time datetime="2014-06-20">June 20, 2014</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/brand.html">How to Brand Your Results Page</a>
     </h1>
     
@@ -195,7 +334,7 @@ URL: mailto:info@agency.gov</p>
 
 <hr />
 
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#x74;&#46;&#100;&#105;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#x67;&#111;&#x76;">&#x73;&#101;&#97;&#x72;&#99;&#x68;&#64;&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#103;&#111;&#118;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
+<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. Email us at <a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#x73;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#x73;&#117;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;">&#x73;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#111;&#118;&#46;&#x67;&#x6f;&#118;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
 
     </div>
 
@@ -398,7 +537,7 @@ URL: mailto:info@agency.gov</p>
 
 <p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
 
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#58;&#115;&#x65;&#x61;&#114;&#99;&#104;&#64;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#46;&#100;&#105;&#103;&#105;&#x74;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#118;">&#115;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#115;&#117;&#x70;&#x70;&#111;&#114;&#x74;&#x2e;&#100;&#105;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x73;&#101;&#x61;&#114;&#x63;&#104;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#46;&#x67;&#x6f;&#118;">&#115;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#103;&#105;&#116;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#118;</a>.</p>
 
     </div>
 
@@ -415,63 +554,6 @@ URL: mailto:info@agency.gov</p>
       
       
       <a href="/manual/index.html">
-        <time datetime="2014-05-14">May 14, 2014</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/instagram.html">How to Add Your Instagram Photos to Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Instagram</p>
-
-<h2>Tell Us About Your Instagram Account</h2>
-
-<p>Provide us with the <em>username</em> for your Instagram Account.</p>
-
-<p>When you're logged into Instagram, you can see your username at <a href="https://instagram.com/accounts/edit/">https://instagram.com/accounts/edit/</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<p>For example, the Instagram username for the Department of Interior is <a href="http://instagram.com/usinterior">usinterior</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<h2>Opt to Display Your Instagram Photos</h2>
-
-<p>Coming soon! When you add the username for your Instagram account, we'll automatically index all of the photos in your account.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
-
-<p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/flickr.html">Flickr</a> photostream.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
-      
-      <a href="/tagged/instagram"><span class="label label-info">instagram</span></a>
-      
-      <a href="/tagged/images"><span class="label label-info">images</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/instagram.html">
         <time datetime="2014-05-14">May 14, 2014</time>
       </a>
     </div>
@@ -544,6 +626,63 @@ URL: mailto:info@agency.gov</p>
  
     
     <h1>
+      <a href="/manual/instagram.html">How to Add Your Instagram Photos to Our Index</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Instagram</p>
+
+<h2>Tell Us About Your Instagram Account</h2>
+
+<p>Provide us with the <em>username</em> for your Instagram Account.</p>
+
+<p>When you're logged into Instagram, you can see your username at <a href="https://instagram.com/accounts/edit/">https://instagram.com/accounts/edit/</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<p>For example, the Instagram username for the Department of Interior is <a href="http://instagram.com/usinterior">usinterior</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<h2>Opt to Display Your Instagram Photos</h2>
+
+<p>Coming soon! When you add the username for your Instagram account, we'll automatically index all of the photos in your account.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
+
+<p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/flickr.html">Flickr</a> photostream.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
+      
+      <a href="/tagged/instagram"><span class="label label-info">instagram</span></a>
+      
+      <a href="/tagged/images"><span class="label label-info">images</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/instagram.html">
+        <time datetime="2014-05-14">May 14, 2014</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/display-overview.html">How to Select the Options that Appear on Your Results Page</a>
     </h1>
     
@@ -593,7 +732,7 @@ URL: mailto:info@agency.gov</p>
 
 <p><strong><em>Did you know?</em></strong>  Searchers may narrow results by time period for any <a href="/manual/rss.html">RSS</a> feeds. See, for example, results for a <a href="http://search.whitehouse.gov/search/news?affiliate=wh&amp;channel=6&amp;m=false&amp;query=jobs&amp;tbs=w">search on <em>jobs</em> narrowed to press articles in the last week on WhiteHouse.gov</a>.</p>
 
-<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#115;&#101;&#x61;&#114;&#x63;&#104;&#64;&#x73;&#117;&#112;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#108;&#103;&#111;&#x76;&#46;&#x67;&#111;&#x76;">&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#108;&#x67;&#111;&#x76;&#x2e;&#x67;&#x6f;&#118;</a> to if you want to customize these display names.</p>
+<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#x73;&#x65;&#97;&#114;&#99;&#104;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#100;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#118;&#46;&#x67;&#111;&#118;">&#x73;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;</a> to if you want to customize these display names.</p>
 
 <p><strong><em>Did you know?</em></strong> You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our <a href="/manual/code.html">JavaScript snippet</a> before the closing <code>&lt;body&gt;</code> tag on your HTML web pages.</p>
 
@@ -652,7 +791,7 @@ URL: mailto:info@agency.gov</p>
 
 <h2>How to Participate</h2>
 
-<p>Since this is still a pilot, the setup is manual. Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#x73;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#x73;&#x75;&#112;&#112;&#x6f;&#x72;&#x74;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#x61;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;">&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#118;</a> to let us know you're interested in participating in the pilot.</p>
+<p>Since this is still a pilot, the setup is manual. Email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x73;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#x73;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#108;&#x67;&#111;&#118;&#46;&#103;&#111;&#118;">&#x73;&#x65;&#97;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#x61;&#108;&#103;&#111;&#x76;&#46;&#103;&#111;&#x76;</a> to let us know you're interested in participating in the pilot.</p>
 
 <h2>Option 1. Provide an RSS Feed</h2>
 
@@ -717,124 +856,6 @@ URL: mailto:info@agency.gov</p>
       
       <a href="/blog/byoi.html">
         <time datetime="2014-03-06">March 6, 2014</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/third-party.html">How to Add JavaScript for Your Third Party Web Services</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > 3rd Party Tracking</p>
-
-<p>Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?</p>
-
-<p>Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
-
-<p>Some tips for commonly used third party web services follow.</p>
-
-<h2>Google Analytics Tip</h2>
-
-<p>In your Google Analytics JavaScript, be sure to set your domain if you've requested <a href="/manual/cname.html">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).</p>
-
-<pre><code>_gaq.push(['_setDomainName', 'commerce.gov']);
-</code></pre>
-
-<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>.</p>
-
-<p>The code you submit should look something like one of the following two scripts.</p>
-
-<h3>Google Analytics Code (Older Format)</h3>
-
-<pre><code> &lt;script type="text/javascript"&gt;
- var _gaq = _gaq || []; 
- _gaq.push(['_setAccount', 'UA-########-1']); 
- _gaq.push(['_trackPageview']);
-
- (function() { 
- var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
- ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
- var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
- })();
-
- &lt;/script&gt;
-</code></pre>
-
-<h3>Google Analytics Code (Newer Format)</h3>
-
-<pre><code>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-</code></pre>
-
-<h2>Digital Analytics Program Tip</h2>
-
-<p>Does your federal agency participate in the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> (DAP)?  You don't need to do anything. We're already fully integrated with DAP.</p>
-
-<h2>ForeSee Tip</h2>
-
-<p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
-
-<ol>
-<li><p>Email us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#115;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;">&#x73;&#x65;&#97;&#114;&#x63;&#104;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#118;&#46;&#103;&#111;&#x76;</a> to <a href="/manual/cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
-<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
-
-<p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
-
-<p> <strong>and replace it with =></strong> 'files': '//www.youragency.gov/fsrscripts/',</p>
-
-<p> <em>(Or, find => 'files': '/foresee/', and replace it with => 'files': '//www.youragency/foresee/',)</em></p>
-
-<p> in the following five files.</p>
-
-<ul>
-<li>foresee-trigger.js</li>
-<li>foresee-tracker.js</li>
-<li>foresee-alive.js</li>
-<li>foresee-qualifier.js</li>
-<li>foresee-test.js</li>
-</ul>
-</li>
-<li><p>Submit your foresee-trigger.js via our Admin Center. It should look something like the following.</p>
-
-<pre><code>   &lt;script type="text/javascript" src="http://www.youragency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;
-</code></pre></li>
-<li><p>We'll send you an email to confirm that we've set up both your CNAME and added the script for your foresee-trigger.js file.</p></li>
-</ol>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
-      
-      <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
-      
-      <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
-      
-      <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/third-party.html">
-        <time datetime="2014-03-05">March 5, 2014</time>
       </a>
     </div>
     </article>
