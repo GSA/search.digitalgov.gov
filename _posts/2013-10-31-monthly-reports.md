@@ -15,7 +15,7 @@ Data start from the time your agency started using our service (but no further b
 
 ## Monthly Usage Stats
 
-Data for the total number of queries and clicks. Use this report to find and analyze the so-called [short head](http://www.searchtools.com/analysis/long-tail.html){% external_link %} of your most popular search queries and clicks, which are typically the same as your site's [top tasks](http://www.howto.gov/web-content/manage/focus-on-top-tasks).
+Data for the total number of queries and clicks. Use this report to find and analyze the so-called [short head](http://www.searchtools.com/analysis/long-tail.html){% external_link %} of your most popular search queries and clicks, which are typically the same as your site's [top tasks](http://www.usability.gov/tags/task-analysis/).
 
 ## Impressions and Clicks by Module
 
@@ -31,7 +31,7 @@ View a detailed report of the number of times searchers have input specific term
 
 The CSV file contains three columns: (1) query, (2) raw count, and (3) IP-deduped.
 
-Read [Understanding Your Users' Needs By Analyzing Search Terms](http://www.howto.gov/web-content/search/analyzing-search-terms) for tips on how to create a semi-automated report for analyzing the data in this CSV file on a regular basis.
+Read [Understanding Your Users' Needs By Analyzing Search Terms](https://www.digitalgov.gov/2013/10/24/understanding-your-users-needs-by-analyzing-search-terms/) for tips on how to create a semi-automated report for analyzing the data in this CSV file on a regular basis.
 
 ## Definitions
 
