@@ -133,7 +133,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li><p>Email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#x73;&#101;&#97;&#114;&#99;&#104;&#x40;&#x73;&#117;&#112;&#112;&#x6f;&#114;&#116;&#46;&#100;&#105;&#x67;&#105;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;">&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#117;&#112;&#112;&#111;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;</a> to <a href="/manual/cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
+<li><p>Email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#115;&#101;&#97;&#114;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#118;">&#115;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#x69;&#103;&#x69;&#116;&#x61;&#108;&#103;&#111;&#118;&#46;&#x67;&#111;&#118;</a> to <a href="/manual/cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
 <li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
 
 <p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
@@ -715,7 +715,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <ol>
 <li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
 <li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#115;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#116;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#x76;">&#x73;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#111;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
+<li>Email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#115;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#x67;&#x69;&#x74;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#x67;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
 </ol>
 
 
@@ -751,6 +751,108 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       
       <a href="/manual/domains.html">
         <time datetime="2013-08-29">August 29, 2013</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/api.html">How (and When) to Use the Search API</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search > API Instructions</p>
+
+<p>We offer our search results as a hosted results page (using our <a href="/manual/code.html">code snippets</a>) or as an <a href="http://www.digitalgov.gov/category/code/api/">application programming interface</a> (API).</p>
+
+<h2>When to Use the Hosted Results</h2>
+
+<p>Most agencies use our hosted search results page. We recommend that you to use our hosted page for the typical use case of returning search results on your website. Using the hosted page has many benefits such as allowing you to:</p>
+
+<ul>
+<li>Devote minimal development resources for the initial set up.</li>
+<li>Benefit from new features automatically as they're rolled out.</li>
+<li>Stay current with search best practices, such as type-ahead search and formatting of search results.</li>
+</ul>
+
+
+<h2>When to Use the API</h2>
+
+<p>You may need to access our search results to present them outside of a typical search results page. We offer our results as an API for these use cases.</p>
+
+<p>You can access the API and its documentation at <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search > API Instructions.</p>
+
+<p>The API returns results from each of our indexes&mdash;web, image, document (ODIE), RSS (news), video, best bets (boosted content), related searches, and <a href="/developer/jobs.html">jobs</a>&mdash;in JSON, JSON-P, or XML.</p>
+
+<p>We recommend you use our API for limited use cases such as:</p>
+
+<ul>
+<li>Displaying search results within a native mobile application (i.e., an Android or iPhone app).</li>
+<li>Integrating DigitalGov Search results within existing applications (such as your intranet or publications catalog).</li>
+<li>Creating data mashups.</li>
+</ul>
+
+
+<p>Examples of how agencies are currently using the API follow.</p>
+
+<h3>Use Case 1. Display Results in Your Mobile App</h3>
+
+<p>USA.gov and the White House use the Search API to render DigitalGov Search results within their mobile apps.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_me79cgQKOE1qid15q.jpg" alt="Screenshot of a DigitalGov Search results page in the USA.gov iPhone app" /><br/>
+<em>Screenshot of a DigitalGov Search results page in the USA.gov iPhone app</em></p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_me78zp7y4v1qid15q.jpg" alt="Screenshot of a DigitalGov Search results page in the White House iPhone app" /><br/>
+<em>Screenshot of a DigitalGov Search results page in the White House iPhone app</em></p>
+
+<p><strong>Related Links for Use Case 1</strong></p>
+
+<ul>
+<li><a href="http://apps.usa.gov/usagov.shtml">USA.gov mobile app</a></li>
+<li><a href="http://apps.usa.gov/the-white-house-app.shtml">WhiteHouse mobile app</a></li>
+<li><a href="https://github.com/whitehouse">White House Github account</a> (information on and source code for the iOS and Android mobile apps)</li>
+</ul>
+
+
+<h3>Use Case 2. Integrate DigitalGov Search results within existing applications</h3>
+
+<p><a href="http://www.ri.gov">RI.gov</a> manages hundreds of distinct websites. The state provides a consistent search experience across all of its websites. Some sites are centrally controlled by RI.gov. Others are not. Using the Search API, RI.gov programmatically tells us the site's domain from which the user searched (e.g., tmc.dot.ri.gov). RI.gov then highlights results from this specific domain within RI.gov's common look and feel.</p>
+
+<p>See the sample results page below that shows a set of results displayed on Rhode Island's <a href="http://www.tmc.dot.ri.gov">Transportation Management Center</a> for a search on <em>traffic</em>.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_me7ej38m3P1qid15q.png" alt="Step 1. Searcher on &lt;www.tmc.dot.ri.gov&gt; types traffic in the search box" /><br/>
+<em>Step 1. Searcher on <a href="http://www.tmc.dot.ri.gov">http://www.tmc.dot.ri.gov</a> types traffic in the search box</em></p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_me7el3bJin1qid15q.png" alt="Step 2. Searcher sees results on RI.gov with a common look and feel that highlights results from the original site" /><br/>
+<em>Step 2. Searcher sees results on RI.gov with a common look and feel that highlights results from the original site</em></p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> The Search API is available for government websites only. Visit our <a href="/developer/index.html">APIs page</a> for other, publicly available APIs (i.e., for use by anyone).</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
+      
+      <a href="/tagged/api"><span class="label label-info">api</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/api.html">
+        <time datetime="2013-08-28">August 28, 2013</time>
       </a>
     </div>
     </article>
@@ -886,89 +988,71 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
  
     
     <h1>
-      <a href="/manual/api.html">How (and When) to Use the Search API</a>
+      <a href="/blog/go-live.html">A Punch List to Go Live with DigitalGov Search</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search > API Instructions</p>
+      <p>Your pre-launch checklist will be unique to your agency's workflow, requirements, and deadlines. A typical punch list to go live with DigitalGov Search follows.</p>
 
-<p>We offer our search results as a hosted results page (using our <a href="/manual/code.html">code snippets</a>) or as an <a href="http://www.digitalgov.gov/category/code/api/">application programming interface</a> (API).</p>
+<h2>Connect Your Site to DigitalGov Search</h2>
 
-<h2>When to Use the Hosted Results</h2>
+<p>Most agencies add these two <a href="/manual/code.html">snippets of code</a> to the template(s) in their content management systems (rather than adding them to individual pages).</p>
 
-<p>Most agencies use our hosted search results page. We recommend that you to use our hosted page for the typical use case of returning search results on your website. Using the hosted page has many benefits such as allowing you to:</p>
+<p><i class="icon-check"></i> <strong>1. Does your search box point to DigitalGov Search?</strong> Update your search box form code point to our service so that, when users execute a search, they'll see your DigitalGov Search-hosted results page.</p>
 
-<ul>
-<li>Devote minimal development resources for the initial set up.</li>
-<li>Benefit from new features automatically as they're rolled out.</li>
-<li>Stay current with search best practices, such as type-ahead search and formatting of search results.</li>
-</ul>
+<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+     &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
 
+<p><i class="icon-check"></i> <strong>2. Do you have the our Javascript tag on your webpages?</strong> This Javascript powers the suggestions for type-ahead and <a href="/manual/display-overview.html">related searches</a>. It also provides data on your trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
 
-<h2>When to Use the API</h2>
+<pre><code>&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+     var usasearch_config = { siteHandle:"YourSiteHandle" };
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "http://search.usa.gov/javascripts/remote.loader.js";
+    document.getElementsByTagName("head")[0].appendChild(script);
+//]]&gt;
+&lt;/script&gt;
+</code></pre>
 
-<p>You may need to access our search results to present them outside of a typical search results page. We offer our results as an API for these use cases.</p>
+<h2>Double Check Your Content Sources</h2>
 
-<p>You can access the API and its documentation at <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search > API Instructions.</p>
+<p><i class="icon-check"></i> <strong>3. Have you told us which domain(s) you want to search?</strong> List one or more <a href="/manual/domains.html">domains</a> that you want to search on the first page of web results. Most agencies opt to leave out the 'www' to include all subdomains (for example, list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies especially department-level portals opt to also include their bureaus' websites (for example, Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)</p>
 
-<p>The API returns results from each of our indexes&mdash;web, image, document (ODIE), RSS (news), video, best bets (boosted content), related searches, and <a href="/developer/jobs.html">jobs</a>&mdash;in JSON, JSON-P, or XML.</p>
+<p><i class="icon-check"></i> <strong>4. Have you told us about your RSS feeds?</strong> We love <a href="/manual/rss.html">RSS feeds</a>. Tell us about all of your feeds, even if you opt not to show them (see #7 below). They're the quickest way for you to tell us about your new and updated content. Feeds also have well-structured titles, URLs, descriptions, and dates that we use to improve your search results page. (Tip: Preview your feeds from the RSS page in the <a href="https://search.usa.gov/sites/">Admin Center</a> to confirm that we've indexed your content.)</p>
 
-<p>We recommend you use our API for limited use cases such as:</p>
+<p><i class="icon-check"></i> <strong>5. Have you told us about your social media accounts?</strong> <a href="/manual/flickr.html">Flickr photostreams</a>, <a href="/manual/twitter.html">tweets</a>, and <a href="/manual/youtube.html">YouTube videos</a> are a great way to highlight your recent content. Tell us about all of your social media, even if you opt not to show them (see #7 below).</p>
 
-<ul>
-<li>Displaying search results within a native mobile application (i.e., an Android or iPhone app).</li>
-<li>Integrating DigitalGov Search results within existing applications (such as your intranet or publications catalog).</li>
-<li>Creating data mashups.</li>
-</ul>
+<h2>Customize the Display of Your Search Results Page</h2>
 
+<p><i class="icon-check"></i> <strong>6. Have you made the search results page look like your website?</strong> Customize the <a href="/manual/brand.html">brand</a> (font, colors, logo, favicon, and navigation links) of your search results page to create a seamless experience for users as they search and browse your website.</p>
 
-<p>Examples of how agencies are currently using the API follow.</p>
+<p><i class="icon-check"></i> <strong>7. Have you told us what to show on your results page?</strong> Turn on (or off) the GovBoxes (that is, the inline results in the center of the page) and sidebar options (that is, the facets in the left-hand column) you want to appear on your search results. You can change the default settings on the <a href="/manual/display-overview.html">Display Overview</a> page in the Admin Center.</p>
 
-<h3>Use Case 1. Display Results in Your Mobile App</h3>
+<h2>Set Up Nice-to-Have Features (Optional)</h2>
 
-<p>USA.gov and the White House use the Search API to render DigitalGov Search results within their mobile apps.</p>
+<p><i class="icon-check"></i> <strong>8. Have you masked your domain?</strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov.</p>
 
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_me79cgQKOE1qid15q.jpg" alt="Screenshot of a DigitalGov Search results page in the USA.gov iPhone app" /><br/>
-<em>Screenshot of a DigitalGov Search results page in the USA.gov iPhone app</em></p>
+<p><i class="icon-check"></i> <strong>9. Have you added the Javascripts for your other third party web services to your results page?</strong> If you have a <a href="/manual/third-party.html">third party service</a> running on your website, you likely want it to run on your results page. Agencies often include their 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends code, among others.</p>
 
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_me78zp7y4v1qid15q.jpg" alt="Screenshot of a DigitalGov Search results page in the White House iPhone app" /><br/>
-<em>Screenshot of a DigitalGov Search results page in the White House iPhone app</em></p>
+<h2>Don't Forget SEO (Optional)</h2>
 
-<p><strong>Related Links for Use Case 1</strong></p>
+<p><i class="icon-check"></i> <strong>10. Have you optimized your site so we can find your content?</strong> We follow <a href="http://www.digitalgov.gov/2013/05/31/four-steps-to-achieve-good-seo/">search engine optimization</a> (SEO) best practices. Verify that you have a <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and an <a href="http://www.sitemaps.org">XML sitemap</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. These two files are typically located in the root directory of your website (i.e., agency.gov/robots.txt and agency.gov/sitemap.xml, respectively). Also verify that your robots.txt file allows our user agent (usasearch) to access your public content.</p>
 
-<ul>
-<li><a href="http://apps.usa.gov/usagov.shtml">USA.gov mobile app</a></li>
-<li><a href="http://apps.usa.gov/the-white-house-app.shtml">WhiteHouse mobile app</a></li>
-<li><a href="https://github.com/whitehouse">White House Github account</a> (information on and source code for the iOS and Android mobile apps)</li>
-</ul>
-
-
-<h3>Use Case 2. Integrate DigitalGov Search results within existing applications</h3>
-
-<p><a href="http://www.ri.gov">RI.gov</a> manages hundreds of distinct websites. The state provides a consistent search experience across all of its websites. Some sites are centrally controlled by RI.gov. Others are not. Using the Search API, RI.gov programmatically tells us the site's domain from which the user searched (e.g., tmc.dot.ri.gov). RI.gov then highlights results from this specific domain within RI.gov's common look and feel.</p>
-
-<p>See the sample results page below that shows a set of results displayed on Rhode Island's <a href="http://www.tmc.dot.ri.gov">Transportation Management Center</a> for a search on <em>traffic</em>.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_me7ej38m3P1qid15q.png" alt="Step 1. Searcher on &lt;www.tmc.dot.ri.gov&gt; types traffic in the search box" /><br/>
-<em>Step 1. Searcher on <a href="http://www.tmc.dot.ri.gov">http://www.tmc.dot.ri.gov</a> types traffic in the search box</em></p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_me7el3bJin1qid15q.png" alt="Step 2. Searcher sees results on RI.gov with a common look and feel that highlights results from the original site" /><br/>
-<em>Step 2. Searcher sees results on RI.gov with a common look and feel that highlights results from the original site</em></p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> The Search API is available for government websites only. Visit our <a href="/developer/index.html">APIs page</a> for other, publicly available APIs (i.e., for use by anyone).</p>
+<p><i class="icon-check"></i> <strong>11. Have you registered your site with the major commercial search engines?</strong> Register for both <a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to maximize the coverage of your content in their search results.</p>
 
     </div>
 
     <div class='tags'>
       
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
-      
-      <a href="/tagged/api"><span class="label label-info">api</span></a>
       
     </div>
    <div class='time'>
@@ -978,91 +1062,8 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       
       
       
-      <a href="/manual/api.html">
-        <time datetime="2013-08-28">August 28, 2013</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/raw-logs.html">How to Access Your Raw Logs</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Raw Logs Access</p>
-
-<p>You can directly access your raw HTTP logs. The logs include valuable data on searches, clicks, and discovery tag page loads.</p>
-
-<p>With the raw logs, you can conduct in-depth, ad hoc analyses to answer any questions that you can't answer using the standard analytics reports in the <a href="https://search.usa.gov/sites/">Admin Center</a>. You can also automatically integrate your search logs with your other reports and business processes.</p>
-
-<p>To access your raw logs, you'll first need to upload your public key on the Raw Logs Access page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-<p>We'll set up your public key on our secure FTP servers and send you an email when your logs are available for download.</p>
-
-<p>Once your key is set up, you'll be able access your log files via secure FTP. We upload your logs each day, usually within several hours after midnight GMT. After a week, we purge the older files.</p>
-
-<p>We recommend that you set up a cron script to automatically download the latest files each day.</p>
-
-<h2>How to Generate a Key Pair on Unix</h2>
-
-<p>On Unix systems, you can generate a RSA public key with no passphrase by typing in the following command. Generate the key from the machine or server that you'll be using to download the logs. Once you've created a key, it'll be located at /home/user/.ssh/id_rsa.pub.</p>
-
-<pre><code>% cd ~
-% ssh-keygen -q -b 4096 -t rsa
-Enter file in which to save the key (/home/user/.ssh/id_rsa):
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-</code></pre>
-
-<h2>How to Generate a Key Pair on Windows</h2>
-
-<p>You can use <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a>, a free telnet/SSH client, to generate a public key on Windows. Download PuTTYgen.exe, Pageant.exe, and PSFTP.exe from the <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">PuTTY Download Page</a>.</p>
-
-<p>Run PuTTYgen.exe.</p>
-
-<ul>
-<li>Select SSH-2 RSA as the type of key to generate.</li>
-<li>Set the number of bits in the generated key to 2048.</li>
-<li>Select Generate. Move your mouse within the blank area to create random movements until the key is generated.</li>
-<li>Fill out your Key Comment, Key Passphrase, and Confirm Passphrase.</li>
-<li>Copy your <em>public</em> key from the string in the Public Key for Pasting into OpenSSH Authorized_keys File. Paste this key into the Raw Logs Access page in the <a href="https://search.usa.gov/sites/">Admin Center</a>. (Note: Don't save this public key and send us the string copied from a text file. It adds lines in the file so it doesn't work.)</li>
-<li>Save your <em>private</em> key.</li>
-</ul>
-
-
-<p>Run Pageant.exe. Select Add Key and upload your private key, the .ppk file.</p>
-
-<p>Run PSFTP.exe and type in the following. You can find your site's handle on the Site Information page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-<pre><code>open YourSiteHandle@198.61.238.46
-</code></pre>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/raw-logs"><span class="label label-info">raw-logs</span></a>
-      
-      <a href="/tagged/sftp"><span class="label label-info">sftp</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/raw-logs.html">
-        <time datetime="2013-08-28">August 28, 2013</time>
+      <a href="/blog/go-live.html">
+        <time datetime="2013-08-26">August 26, 2013</time>
       </a>
     </div>
     </article>
