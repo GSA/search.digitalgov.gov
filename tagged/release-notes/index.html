@@ -168,60 +168,47 @@
  
     
     <h1>
-      <a href="/releases/august-2013.html">August 2013 Release Notes</a>
+      <a href="/releases/may-2014.html">May 2014 Release Notes</a>
     </h1>
     
 
     <div class='post-content'>
-      <h2>Highlight: Download Your Raw Logs</h2>
+      <h2>Features</h2>
 
-<p>Do you want to know how many searches on your site are done from mobile devices? The times of day when searches peak? What people searched for before, during, and after a natural disaster, holiday, or other event?</p>
+<p>We officially rolled our newly <a href="http://localhost:4000/blog/serp-redesign.html">redesigned results page</a>.</p>
 
-<p>These answers are now at your fingertips.</p>
+<p>As we continue to add features to our search results page, you can see small, incremental changes. We added a thin, visible border around the search box to improve its visibility, especially against a white background. We changed the color of the query term in the search box from gray to black. We also added more padding around <a href="/manual/best-bets-text.html">Best Bets</a> so that searchers can more readily distinguish them from web results. At the bottom of page, we added "Page 1" to "Next >>" to more clearly indicate that more results are available.</p>
 
-<p>We've added a new feature so that you can access your raw HTTP logs via secure FTP. The logs include valuable data on searches, clicks, and discovery tag page loads so you can answer the questions above and any other ad hoc questions that come up.</p>
+<p><a href="http://search.usa.gov/search?affiliate=usagov&amp;query=huricane"><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/release-05-2014-usa-huricane.png" title="Tweaks to the redesigned USA.gov results page" alt="Tweaks to the redesigned USA.gov results page" /></a></p>
 
-<h2>Other Features</h2>
+<p>Additionally, searchers can now see image and video results. Searchers can filter results to images or videos only. They can also see up to one inline video result with a link to see more videos.</p>
 
-<ul>
-<li>Searchers see a persistent Results by... logo above the footer on the search results page.</li>
-<li>You can now start to use our <a href="https://search.usa.gov/sites/">beta Admin Center</a>. We added a <a href="/tagged/dashboard">Dashboard</a> section to provide you with a snapshot of today's search data and manage your site's users and settings.</li>
-<li>We migrated several pages to the following sections:
+<p>To improve the quality of the image search results, we now display images from <a href="/manual/flickr.html">your Flickr photostream</a> by default.</p>
 
-<ul>
-<li><a href="/tagged/manage-content/">Manage Content</a> (Domains, Collections, Best Bets: Text, RSS, Flickr, Twitter, and YouTube),</li>
-<li><a href="/tagged/analytics/">Analytics</a> (3rd Party Tracking and Raw Logs), and</li>
-<li><a href="/tagged/activate-search/">Activate Search</a> (Code Snippets and API Instructions) sections.</li>
-</ul>
-</li>
-<li>We migrated our <a href="/manual/add-site.html">Add Site</a> page and the features that allows you to delete a site, add a specific URL, and filter a specific URL.</li>
-<li>You can now see text descriptions when you mouse over the icons, a coming soon message for features that haven't yet been migrated, and our phone number on all pages of the <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
-<li>Researchers can now browse and download <a href="https://explore.data.gov/Information-and-Communications/USA-gov-Search-Data/sarg-e9tw">USA.gov's search data</a> on <a href="http://www.data.gov/">Data.gov</a>.</li>
-</ul>
+<p>We realized that our results page was getting a bit top-heavy so we now display inline results only when they're most relevant&mdash;capping the display of inline videos at 13 months and inline RSS-based news results at four months. Additionally, we display very recent news results (less than five days) at the top of the page and less recent news results closer to the bottom.</p>
 
+<p>It is also now possible to include an email address as a header or footer link by using mailto:info@agency.gov within the URL.</p>
 
 <h2>Chores</h2>
 
 <ul>
-<li>We updated the images in our <a href="/manual/index.html">help files</a> to use https instead of http so that you don't see any security warnings.</li>
-<li>We added <a href="http://www.google.com/analytics/">Google Analytics</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to our results pages and Admin Center so that we can see how our service is being utilized across the board.</li>
-<li>We started tracking and reporting on your <a href="/manual/site-overview.html">trending URLs</a> in today's snapshot.</li>
-<li>You can no longer bulk upload domains.</li>
-<li>We added the /sites URL for our beta <a href="https://search.usa.gov/sites/">Admin Center</a> to our <a href="http://www.akamai.com/">Akamai</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> configuration so that you see consistent analytics data no matter which one of our two datacenters you're hitting.</li>
-<li>We now index <a href="http://api.usa.gov/jobs/search.json?organization_id=US-VA:CITY-ALEXANDRIA"> City of Alexandria, VA, jobs</a> in our <a href="/developer/jobs.html">Jobs API</a>.</li>
-<li>We set up an automated report to check the HTTP status of all URLs in our list of federal, state, local, tribal, and territorial <a href="http://govt-urls.usa.gov/tematres/vocab/index.php">government URLs that aren't included in the .gov or .mil top-level domains</a>.</li>
+<li>We added support for .com <a href="http://search.digitalgov.gov/manual/cname.html">CNAMEs</a>.</li>
+<li>We increased the maximum mobile logo size from 50KB to 64KB.</li>
+<li>We updated <a href="https://travis-ci.org/">Travis-CI</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to use <a href="https://www.ruby-lang.org/en/downloads/">Ruby 2.0</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We added robots.txt files to all sites that use a CNAME to block crawlers from their search results pages.</li>
+<li>We updated <a href="http://logstash.net/">logstash</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and upgraded <a href="http://www.elasticsearch.org/downloads/1-2-0/">ElasticSearch to 1.2.0</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We investigated <a href="http://www.drupal.org">Drupal</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> modules that publish content APIs for our <a href="http://search.digitalgov.gov/blog/byoi.html">bring your own index</a> pilot.</li>
+<li>We updated our SSL certificate.</li>
+<li>We added a page in the Admin Center for you to let us know about your <a href="/manual/instagram.html">Instagram</a> account. We also registered for the <a href="http://instagram.com/developer/">Instagram API</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. (We're planning to display image results Instagram soon.)</li>
 </ul>
 
 
 <h2>Fixes</h2>
 
 <ul>
-<li>We fixed a bug with one our cron jobs that deleted all of our type-ahead search suggestions.</li>
-<li>We fixed a bug so that Spanish-language sites now show the correct language on the <a href="/manual/settings.html">Settings</a> page in the Admin Center.</li>
-<li>We now keep your homepage URL populated on the <a href="/manual/add-site.html">Add Site</a> page, even if there's an error with your site handle.</li>
-<li>We fixed two separate bugs that were making the Today's Snapshot and Best Bets:Text pages load too slowly.</li>
-<li>We fixed a bug that was causing the <a href="/manual/add-site.html">Add Site</a> page to sometimes show the wrong help file.</li>
-<li>We fixed the importer for our <a href="/developer/jobs.html">jobs API</a> to look for pubDate instead of pubdate.</li>
+<li>Searchers no longer see duplicate video results.</li>
+<li>We fixed the spacing between web results on mobile phones.</li>
+<li>We now automatically populate the homepage URL for newly added sites.</li>
 </ul>
 
 
@@ -239,8 +226,8 @@
       
       
       
-      <a href="/releases/august-2013.html">
-        <time datetime="2014-06-30">June 30, 2014</time>
+      <a href="/releases/may-2014.html">
+        <time datetime="2014-07-09">July 9, 2014</time>
       </a>
     </div>
     </article>
@@ -323,6 +310,87 @@
       
       
       <a href="/releases/february-2013.html">
+        <time datetime="2014-06-30">June 30, 2014</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/releases/august-2013.html">August 2013 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlight: Download Your Raw Logs</h2>
+
+<p>Do you want to know how many searches on your site are done from mobile devices? The times of day when searches peak? What people searched for before, during, and after a natural disaster, holiday, or other event?</p>
+
+<p>These answers are now at your fingertips.</p>
+
+<p>We've added a new feature so that you can access your raw HTTP logs via secure FTP. The logs include valuable data on searches, clicks, and discovery tag page loads so you can answer the questions above and any other ad hoc questions that come up.</p>
+
+<h2>Other Features</h2>
+
+<ul>
+<li>Searchers see a persistent Results by... logo above the footer on the search results page.</li>
+<li>You can now start to use our <a href="https://search.usa.gov/sites/">beta Admin Center</a>. We added a <a href="/tagged/dashboard">Dashboard</a> section to provide you with a snapshot of today's search data and manage your site's users and settings.</li>
+<li>We migrated several pages to the following sections:
+
+<ul>
+<li><a href="/tagged/manage-content/">Manage Content</a> (Domains, Collections, Best Bets: Text, RSS, Flickr, Twitter, and YouTube),</li>
+<li><a href="/tagged/analytics/">Analytics</a> (3rd Party Tracking and Raw Logs), and</li>
+<li><a href="/tagged/activate-search/">Activate Search</a> (Code Snippets and API Instructions) sections.</li>
+</ul>
+</li>
+<li>We migrated our <a href="/manual/add-site.html">Add Site</a> page and the features that allows you to delete a site, add a specific URL, and filter a specific URL.</li>
+<li>You can now see text descriptions when you mouse over the icons, a coming soon message for features that haven't yet been migrated, and our phone number on all pages of the <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
+<li>Researchers can now browse and download <a href="https://explore.data.gov/Information-and-Communications/USA-gov-Search-Data/sarg-e9tw">USA.gov's search data</a> on <a href="http://www.data.gov/">Data.gov</a>.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li>We updated the images in our <a href="/manual/index.html">help files</a> to use https instead of http so that you don't see any security warnings.</li>
+<li>We added <a href="http://www.google.com/analytics/">Google Analytics</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to our results pages and Admin Center so that we can see how our service is being utilized across the board.</li>
+<li>We started tracking and reporting on your <a href="/manual/site-overview.html">trending URLs</a> in today's snapshot.</li>
+<li>You can no longer bulk upload domains.</li>
+<li>We added the /sites URL for our beta <a href="https://search.usa.gov/sites/">Admin Center</a> to our <a href="http://www.akamai.com/">Akamai</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> configuration so that you see consistent analytics data no matter which one of our two datacenters you're hitting.</li>
+<li>We now index <a href="http://api.usa.gov/jobs/search.json?organization_id=US-VA:CITY-ALEXANDRIA"> City of Alexandria, VA, jobs</a> in our <a href="/developer/jobs.html">Jobs API</a>.</li>
+<li>We set up an automated report to check the HTTP status of all URLs in our list of federal, state, local, tribal, and territorial <a href="http://govt-urls.usa.gov/tematres/vocab/index.php">government URLs that aren't included in the .gov or .mil top-level domains</a>.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed a bug with one our cron jobs that deleted all of our type-ahead search suggestions.</li>
+<li>We fixed a bug so that Spanish-language sites now show the correct language on the <a href="/manual/settings.html">Settings</a> page in the Admin Center.</li>
+<li>We now keep your homepage URL populated on the <a href="/manual/add-site.html">Add Site</a> page, even if there's an error with your site handle.</li>
+<li>We fixed two separate bugs that were making the Today's Snapshot and Best Bets:Text pages load too slowly.</li>
+<li>We fixed a bug that was causing the <a href="/manual/add-site.html">Add Site</a> page to sometimes show the wrong help file.</li>
+<li>We fixed the importer for our <a href="/developer/jobs.html">jobs API</a> to look for pubDate instead of pubdate.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/august-2013.html">
         <time datetime="2014-06-30">June 30, 2014</time>
       </a>
     </div>
@@ -784,81 +852,6 @@
       
       <a href="/releases/november-2013.html">
         <time datetime="2013-11-29">November 29, 2013</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/october-2013.html">October 2013 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2>Highlight: Compare Your Click-thru Rate to the Average Rate</h2>
-
-<p>How do you stack up? You can now compare your click-thru rate (CTR) with the average rate across all sites that use DigitalGov Search. Use your CTR data to measure the performance of specific campaigns and modules.</p>
-
-<p>For example, October's Monthly Report for <a href="http://kids.usa.gov/">Kids.gov</a> shows the average CTR for Best Bets: Graphics on Kids.gov is 26.8%, while the average CTR across all DigitalGov Search sites is 14.0%. Their <a href="/manual/best-bets-graphics.html">graphic best bets</a> are very effective compared to other sites.</p>
-
-<p>See how Kids.gov's other modules stack up against the average below.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/releases-kidsgov-ctr.png" alt="Average CTR" /></p>
-
-<p>This means that the graphic best bets (such as seen for a <a href="http://search.usa.gov/search?affiliate=kidsgov&amp;query=george+washington">search on <em>George Washington</em> on Kids.gov</a>) are almost twice as likely to be clicked on Kids.gov than other sites.</p>
-
-<p>It's important to remember your audience. <a href="http://www.digitalgov.gov/2012/08/06/how-kids-search/">Kids use search differently than adults</a> and they're probably more attracted to graphic images.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/releases-kidsgov-bbg.png" alt="George Washington Best Bets: Graphic" /></p>
-
-<p>Go to the <a href="/manual/monthly-reports.html">Monthly Reports</a> page in the <a href="https://search.usa.gov/sites/">Admin Center</a> to see how you stack up.</p>
-
-<h2>Other Features</h2>
-
-<ul>
-<li>We made the final cutover to our new Admin Center. As part of the cutover, we updated all of our <a href="/manual/index.html">help files</a> and removed 404 pages from our search results. We also migrated our <a href="/manual/best-bets-graphics.html">Best Bets: Graphics</a> and My Account pages.</li>
-<li>You're no longer asked to provide a phone number or address when you <a href="https://search.usa.gov/signup">register for a new account</a>.</li>
-<li>Librarians, developers, and others can see a list of federal, state, local, tribal, and territorial <a href="http://govt-urls.usa.gov/tematres/">government URLs</a> that aren't .gov or .mil.</li>
-</ul>
-
-
-<h2>Chores</h2>
-
-<ul>
-<li>We applied updates to our operating system from <a href="http://ezix.org/project/wiki/HardwareLiSter">Hardware Lister</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, <a href="http://jenkins-ci.org/">Jenkins</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, <a href="http://www.python.org/">Python</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, <a href="http://www.redhat.com">Red Hat</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, and our <a href="http://rpmfind.net/linux/rpm2html/search.php?query=tzdata">Time Zone data</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We set up <a href="https://codeclimate.com/">Code Climate</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to identify areas of our code that can be improved.</li>
-<li>We phased out color schemes and now offer two options, default and custom.</li>
-<li>We updated the links in our email templates to reflect the new Admin Center.</li>
-<li>We added the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#115;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#x70;&#112;&#111;&#114;&#x74;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#103;&#111;&#x76;&#x2e;&#103;&#111;&#118;">&#115;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#100;&#x69;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#x2e;&#x67;&#111;&#118;</a> if you'd like to opt out.</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>We fixed a display issue with the icons in the Admin Center so that customers using Internet Explorer can now see them.</li>
-<li>We now show a link to <a href="http://validator.w3.org/nu/">validate</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> your CSS and HTML on the advanced header and footer page.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/october-2013.html">
-        <time datetime="2013-10-31">October 31, 2013</time>
       </a>
     </div>
     </article>

@@ -76,6 +76,75 @@
   <article class='article'>
     
     <h1>
+      <a href="/releases/may-2014.html">May 2014 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Features</h2>
+
+<p>We officially rolled our newly <a href="http://localhost:4000/blog/serp-redesign.html">redesigned results page</a>.</p>
+
+<p>As we continue to add features to our search results page, you can see small, incremental changes. We added a thin, visible border around the search box to improve its visibility, especially against a white background. We changed the color of the query term in the search box from gray to black. We also added more padding around <a href="/manual/best-bets-text.html">Best Bets</a> so that searchers can more readily distinguish them from web results. At the bottom of page, we added "Page 1" to "Next >>" to more clearly indicate that more results are available.</p>
+
+<p><a href="http://search.usa.gov/search?affiliate=usagov&amp;query=huricane"><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/release-05-2014-usa-huricane.png" title="Tweaks to the redesigned USA.gov results page" alt="Tweaks to the redesigned USA.gov results page" /></a></p>
+
+<p>Additionally, searchers can now see image and video results. Searchers can filter results to images or videos only. They can also see up to one inline video result with a link to see more videos.</p>
+
+<p>To improve the quality of the image search results, we now display images from <a href="/manual/flickr.html">your Flickr photostream</a> by default.</p>
+
+<p>We realized that our results page was getting a bit top-heavy so we now display inline results only when they're most relevant&mdash;capping the display of inline videos at 13 months and inline RSS-based news results at four months. Additionally, we display very recent news results (less than five days) at the top of the page and less recent news results closer to the bottom.</p>
+
+<p>It is also now possible to include an email address as a header or footer link by using mailto:info@agency.gov within the URL.</p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>We added support for .com <a href="http://search.digitalgov.gov/manual/cname.html">CNAMEs</a>.</li>
+<li>We increased the maximum mobile logo size from 50KB to 64KB.</li>
+<li>We updated <a href="https://travis-ci.org/">Travis-CI</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to use <a href="https://www.ruby-lang.org/en/downloads/">Ruby 2.0</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We added robots.txt files to all sites that use a CNAME to block crawlers from their search results pages.</li>
+<li>We updated <a href="http://logstash.net/">logstash</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and upgraded <a href="http://www.elasticsearch.org/downloads/1-2-0/">ElasticSearch to 1.2.0</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We investigated <a href="http://www.drupal.org">Drupal</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> modules that publish content APIs for our <a href="http://search.digitalgov.gov/blog/byoi.html">bring your own index</a> pilot.</li>
+<li>We updated our SSL certificate.</li>
+<li>We added a page in the Admin Center for you to let us know about your <a href="/manual/instagram.html">Instagram</a> account. We also registered for the <a href="http://instagram.com/developer/">Instagram API</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. (We're planning to display image results Instagram soon.)</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>Searchers no longer see duplicate video results.</li>
+<li>We fixed the spacing between web results on mobile phones.</li>
+<li>We now automatically populate the homepage URL for newly added sites.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/may-2014.html">
+        <time datetime="2014-07-09">July 9, 2014</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
       <a href="/releases/june-2014.html">June 2014 Release Notes</a>
     </h1>
     
@@ -342,7 +411,7 @@
 
 <p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
 
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#115;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#118;">&#x73;&#x65;&#97;&#x72;&#99;&#104;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#x67;&#x69;&#116;&#97;&#108;&#103;&#111;&#x76;&#46;&#x67;&#111;&#118;</a>.</p>
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#115;&#x65;&#97;&#114;&#99;&#x68;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#118;">&#115;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#111;&#118;</a>.</p>
 
     </div>
 
@@ -969,76 +1038,6 @@ URL: mailto:info@agency.gov</p>
       
       <a href="/manual/brand.html">
         <time datetime="2014-06-18">June 18, 2014</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/blog/seo-joe-pagano.html">Search Engine Optimization for Government Websites</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>On June 10, 2014, the Metrics Community of Practice of the Federal Web Managers Council and <a href="http://www.digitalgov.gov/digitalgov-university/">DigitalGov University</a> hosted an event to honor the memory of Joe Pagano, a former co-chair of the Web Metrics Sub-Council.</p>
-
-<p>This third lecture honoring Joe focused on search engine optimization (SEO).</p>
-
-<p>While commercial search engines do a remarkable job of helping the public find our government information, as web professionals, it's also our job to help the public make sense of what they find.</p>
-
-<p>Ammie Farraj Feijoo, our program manager, presented on SEO for government websites and specifically talked about:</p>
-
-<ul>
-<li>What SEO is and why it is important;</li>
-<li>SEO building blocks for writing content;</li>
-<li>Conducting keyword research; and</li>
-<li>Eliminating ROT (redundant, outdated, and trivial content).</li>
-</ul>
-
-
-<p>Download the <a href="/pdf/seo-joe-pagano.pdf">slide deck</a> [PDF] and visit the resources below to learn more.</p>
-
-<h2>Webmaster Tools</h2>
-
-<ul>
-<li><a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-<li><a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-</ul>
-
-
-<h2>A Few (of Many) SEO Resources</h2>
-
-<ul>
-<li><a href="http://blogs.bing.com/webmaster/2011/04/13/collection-of-seo-related-documents-from-the-bing-ecosystem/">Bing's Collection of SEO-related documents</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-<li><a href="http://static.googleusercontent.com/media/www.google.com/en/us/webmasters/docs/search-engine-optimization-starter-guide.pdf">Google's SEO Starter Guide</a> [PDF]&nbsp;<i class="icon-external-link"><span>(External link)</span></i> &amp; <a href="http://www.google.com/insidesearch/howsearchworks/thestory/index.html">How Search Works</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-<li><a href="http://moz.com/beginners-guide-to-seo">Moz's The Beginner's Guide to SEO</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-<li><a href="http://searchengineland.com/guide/seo">Search Engine Land's Guide to SEO</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/seo"><span class="label label-info">seo</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/about-us"><span class="label label-info">about-us</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      <a href="/blog/seo-joe-pagano.html">
-        <time datetime="2014-06-13">June 13, 2014</time>
       </a>
     </div>
 

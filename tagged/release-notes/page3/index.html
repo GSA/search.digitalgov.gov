@@ -76,6 +76,75 @@
  
     
     <h1>
+      <a href="/releases/october-2012.html">October 2012 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlight: Upgraded Search Infrastructure</h2>
+
+<p>Good news! We completed a major upgrade of our search infrastructure. You likely didn't notice as we completed the upgrade without any downtime for searchers on your site.</p>
+
+<p>Our system is now even more secure, stable, and redundant than it was before. Plus, it is faster, too. Highlights of the upgrade follow.</p>
+
+<p><strong>Multihoming.</strong> We've always had a disaster recovery, backup datacenter, but it often sat idle. We wanted to make better use of all of our servers so we're now leveraging a content delivery network to send traffic to whichever datacenter is geographically closest to the searcher. This allows us to use both datacenters equally and serve our results quickly.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mcd7tbK8RD1qid15q.png" alt="Multihomed" /></p>
+
+<p><strong>New Hardware.</strong> We increased our RAM and CPU resources by five times. We have room to grow and to roll out more features.</p>
+
+<p><strong>Upgraded Software.</strong> We're now on Red Hat 6 and Cloudera 4.</p>
+
+<p><strong>Speed, Speed, Speed.</strong> We're always working to improve the speed of our search results. We changed some of our caching rules. We also started to leverage <a href="http://wiki.nginx.org/Main">Nginx</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (a free, open-source, high-performance HTTP server).</p>
+
+<h2>Other Chores</h2>
+
+<ul>
+<li>We removed the Hosted Sitemap feature.</li>
+</ul>
+
+
+<h2>Features</h2>
+
+<ul>
+<li>We added alerts to the Admin Center to communicate maintenance windows or other timely content with you.</li>
+<li>Searchers can see keyword-scoped results for collections. If you have a collection below three folder levels deep, <a href="mailto:search@support.digitalgov.gov">email us</a> and we'll help you set up a keyword for your collection.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We now show dates for RSS news items on each customer's search results page only.</li>
+<li>We fixed a bug which caused highlighted terms on results pages to omit trailing spaces.</li>
+<li>We fixed a bug on how "site:" operators retrieve results.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/october-2012.html">
+        <time datetime="2012-11-02">November 2, 2012</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/september-2012.html">September 2012 Release Notes</a>
     </h1>
     
@@ -865,96 +934,6 @@ Searchers see video results from YouTube playlists.</li>
       
       <a href="/releases/december-2011.html">
         <time datetime="2011-12-31">December 31, 2011</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/november-2011.html">November 2011 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>Happy holidays! We're happy to let you know more about our on-demand indexing features. You can now let us know where your new content lives (by submitting your new URLs, RSS feeds, or sitemaps), and we'll immediately display it on your results pages. You've been asking for on-demand indexing, so we're happy to officially announce this capability. Please check it out and let us know what you think.</p>
-
-<p>As a reminder, we divide our work into three categories.</p>
-
-<ol>
-<li>Features: Things you actually notice.</li>
-<li>Chores: Back-end improvements that you don't notice.</li>
-<li>Bugs: Fixes to any code issues that may arise.</li>
-</ol>
-
-
-<h2>Features for Searchers</h2>
-
-<ul>
-<li>Searchers see site-specific favicon.</li>
-<li>Searchers may narrow results to see images only.</li>
-<li>Searchers may use SSL.</li>
-<li>Searchers see related searches based on type-ahead suggestions at the bottom of results pages.</li>
-<li>Spanish searchers retrieve tokenized variants.</li>
-<li>USA.gov visitors can consume recalls as an <a href="http://www.usa.gov/rss/index.shtml">RSS feed</a>.</li>
-<li>Mobile tablet visitors to m.USA.gov see the classic view for results pages.</li>
-</ul>
-
-
-<h2>Features for Affiliate Center Users</h2>
-
-<ul>
-<li>Affiliate Center users can populate and display top or trending searches.</li>
-<li>Affiliate Center users may submit sitemaps for on-demand indexing.</li>
-<li>URLs added by Affiliate Center users are refreshed periodically.</li>
-<li>Affiliate Center users may emergency delete a URL.</li>
-<li>Affiliate Center users may bulk delete type-ahead suggestions.</li>
-<li>Affiliate Center users receive an audit-trail email when their header or footer changes.</li>
-<li>Affiliate Center users may delete URLs they've added as content sources.</li>
-<li>Affiliate Center users may customize font colors and families on their results pages via themes.</li>
-<li>Affiliate may enable Images tab on Affiliate SERP.</li>
-<li>Affiliates may submit social media handles.</li>
-</ul>
-
-
-<h2>Chores</h2>
-
-<ul>
-<li>Added 'a' as a stopword.</li>
-<li>Updated search analytics in Affiliate Center to search on today's data.</li>
-<li>Changed label in Affiliate Center from HTTP Parameter Site Name to Site Handle.</li>
-<li>Investigated document fetching and indexing errors.</li>
-</ul>
-
-
-<p>Bugs</p>
-
-<ul>
-<li>Added Spanish translations for Everything, Images, and time filters on results pages.</li>
-<li>Removed garbage characters for indexed PDF files.</li>
-<li>Added support to parse password-protected PDF files.</li>
-<li>Truncated descriptions for indexed PDF files at 250 characters.</li>
-<li>Added support to allow sitemaps can reference other sitemaps.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/november-2011.html">
-        <time datetime="2011-12-06">December 6, 2011</time>
       </a>
     </div>
     </article>
