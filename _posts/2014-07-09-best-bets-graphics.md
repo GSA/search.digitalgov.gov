@@ -31,7 +31,7 @@ See, for example, the variety of layouts possible for graphics best bets.
 
 ***Layout.*** Select a one- or two-column layout. 
 
-***Image.*** You can opt to add an image. Be sure to choose only images for which the display rights are not limited. Include alt text and attribution, as needed. The attribution URL links the attribution text to a webpage of your choice. Sometimes linking to the actual site where the image was found is not appropriate, so you may opt not to use this field.
+***Image.*** You can opt to add an image.
 
 ***Keywords.*** Keywords are optional and they're *not* visible to searchers. Add specific words or phrases that aren't already included in the visible title or link titles. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.
 
