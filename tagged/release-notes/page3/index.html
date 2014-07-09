@@ -76,6 +76,88 @@
  
     
     <h1>
+      <a href="/releases/september-2012.html">September 2012 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>2 Highlighted Features</h2>
+
+<h3>1. Infinite scrolling</h3>
+
+<p>Searchers now have the benefit of infinite scrolling on your results pages. What is infinite scrolling? You've probably used it on many commercial websites, such as <a href="http://www.bing.com/images/search?q=yosemite">Bing Images</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, <a href="http://duckduckgo.com/?q=yosemite">Duck Duck Go</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, <a href="http://pinterest.com/search/boards/?q=yosemite">Pinterest</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, and <a href="https://twitter.com/i/#!/search/yosemite">Twitter</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. It automatically allows searchers to see more results when they get to the bottom of the page, without clicking on the link for the next page of results.</p>
+
+<p>Try it out on your site's search results page, or on <a href="http://search.usa.gov/search?affiliate=usagov&amp;amp;query=yosemite">USA.gov</a>.</p>
+
+<p><a href="http://search.usa.gov/search?affiliate=usagov&amp;amp;query=yosemite"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_mb2awk8xwU1qid15q.png" alt="Infinite scroll on USA.gov's search results page" /></a></p>
+
+<p>Infinite scrolling has many advantages, including:</p>
+
+<ol>
+<li><em>Speed.</em> The next set of new results loads quicker than a totally new page.</li>
+<li><em>Streamlining the user interface.</em> Studies show most searchers don't use the next page buttons. Proactively loading results allows searchers to see more results on one page and to compare them.</li>
+<li><em>Simplifying the indexes.</em> When and how we display results from our various web indexes is easier for us, you, and end users.</li>
+</ol>
+
+
+<h3>2. Helping searchers find forms.</h3>
+
+<p>Similar to our existing agency and <a href="http://search.usa.gov/search?affiliate=usagov&amp;amp;query=diabetes">health</a> GovBoxes, we created a forms GovBox to help searchers find federal government forms. So far, we've included forms from the Department of Defense, General Services Administration, Social Security Administration, U.S. Citizenship and Immigration Services, and Department of Veterans Affairs.</p>
+
+<p>We've also published the forms data as a Federal Forms API for third-party developers.</p>
+
+<h2>Other Features</h2>
+
+<ul>
+<li>We completely revamped how <a href="/manual/collections.html">collections</a> work to provide you with more flexibility. We encourage you to check out this feature if you're interested in offering  navigation options in the left-hand sidebar on your results page. You can now create a collection:</li>
+<li>Covering tens of thousands (or even millions) of web pages.</li>
+<li>Covering domains that aren't part of your primary <a href="/manual/domains.html">domain</a> (i.e., that aren't shown on the main web results page).</li>
+<li>Without needing to add our Javascript <a href="/manual/code.html">code snippet</a>.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li>We upgraded our robots.txt parser to account for comments and varying cases.</li>
+<li>We eliminated support for six <a href="/blog/legacy-domains.html">legacy domains</a> as part of the .gov web reform project.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed broken URLs for Best Bets image files.</li>
+<li>We fixed a bug with our browser user agent so that Internet Explorer users no longer sometimes see a blank results page.</li>
+<li>We fixed a CSS validation bug so you don't see an error message when editing your header or footer.</li>
+<li>We updated a broken link for Explore Topics on m.USA.gov.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/september-2012.html">
+        <time datetime="2012-09-28">September 28, 2012</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/july-2012.html">July 2012 Release Notes</a>
     </h1>
     
@@ -873,97 +955,6 @@ Searchers see video results from YouTube playlists.</li>
       
       <a href="/releases/november-2011.html">
         <time datetime="2011-12-06">December 6, 2011</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/october-2011.html">October 2011 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>October wasn't scary for us. We enhanced your ability to immediately add content to your search results. You can now tell us about a URL or RSS feed in the <a href="http://search.usa.gov/sites">Admin Center</a> and we will immediately index the content and display it on your results page.</p>
-
-<p>Additionally, we now offer real-time reporting for your search queries in the Affiliate Center, allowing you to see your website's search activity throughout the day.</p>
-
-<p>As a reminder, we divide our work into three categories.</p>
-
-<ol>
-<li>Features: Things that you actually notice;</li>
-<li>Chores: Back-end improvements that you don't notice</li>
-<li>Bugs: Fixes to any code issues that may arise.</li>
-</ol>
-
-
-<h2>Features for Searchers</h2>
-
-<ul>
-<li>Searchers see polished look and feel for results pages with RSS elements.</li>
-<li>Searchers see option to filter results by last 24 hours, last week, and last month on results pages with RSS elements.</li>
-<li>Searchers see option to remove all filters when no results are found for RSS results.</li>
-<li>Searchers see indexed documents/pages from the DigitalGov Search index on results pages.</li>
-<li><blockquote><p>m.USA.gov visitors see new homepage options.</p></blockquote></li>
-<li>m.USA.gov visitors may click anywhere on row to select a homepage option.</li>
-</ul>
-
-
-<h2>Features for Affiliate Center Users</h2>
-
-<ul>
-<li>Affiliate Center users may input RSS feeds.</li>
-<li>Affiliate Center users see crawl information for DigitalGov Search crawler.</li>
-<li>URLs added by Affiliate Center users and fetched by DigitalGov Search go into Add to Bing feed transparently.</li>
-<li>Affiliate Center users may add URLs not in their domain list.</li>
-<li>Affiliate Center users may bulk upload Best Bets in CSV format.</li>
-<li>Affiliate Center users may view today's analytics data.</li>
-</ul>
-
-
-<h2>Chores</h2>
-
-<ul>
-<li>Report RSS feed processing errors.</li>
-<li>Precede Bing logo with "Results by."</li>
-<li>Searchers see attribution to DigitalGov Search in HTML code.</li>
-<li>Ignore case when RSS feeds are busy or unavailable.</li>
-<li>Update Affiliate Center navigation and text.</li>
-<li>Implement near zero-downtime deployments.</li>
-</ul>
-
-
-<p><strong>Bugs</strong></p>
-
-<ul>
-<li>Add flag to determine whether older items from an RSS feed are ignored or processed.</li>
-<li>Affiliate Center users using IE9 may cancel a delete request.</li>
-<li>Publications does not stem to public(s).</li>
-<li>Affiliate Center users may upload Atom RSS feeds.</li>
-<li>Searchers don't see "!!!sep" after an Affiliate Center user deletes a row in a Best Bet.</li>
-<li>RSS searches don't cause an error when the affiliate name is invalid.</li>
-<li>Indexed document results highlight keywords.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/october-2011.html">
-        <time datetime="2011-11-02">November 2, 2011</time>
       </a>
     </div>
     </article>

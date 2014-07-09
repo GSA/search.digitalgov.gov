@@ -76,6 +76,202 @@
   <article class='article'>
     
     <h1>
+      <a href="/releases/june-2014.html">June 2014 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlighted Features</h2>
+
+<h3>Feature 1. We incorporated your feedback into our redesigned results page.</h3>
+
+<p>We're continuing to work on our redesigned search results page to incorporate your feedback. Searchers now see a more prominent option to browse your site.</p>
+
+<p><a href="http://search.usa.gov/search?affiliate=usagov"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/release-06-14-usagov-browse.png" title="Redesigned option to browse site" alt="Redesigned option to browse site" /></a></p>
+
+<p>Additionally, you can now:</p>
+
+<ul>
+<li>Left align your logo;</li>
+<li>Add a direct link to your advanced search page (using the syntax http://search.usa.gov/search/advanced?affiliate=<a href="/manual/settings.html">YourSiteHandle</a>); and</li>
+<li>Display images from <a href="/manual/rss.html">media RSS feeds</a>.</li>
+</ul>
+
+
+<p>All job openings (beyond those for U.S. citizens only) now appear when searchers click on the link to see all the openings on <a href="https://www.usajobs.gov/">USAJobs</a>.</p>
+
+<p><a href="http://search.usa.gov/search?affiliate=usagov&amp;query=jobs"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/release-06-2014-USAgov.png" title="Tweaks to the redesigned USA.gov  results page" alt="Tweaks to the redesigned USA.gov results page" /></a></p>
+
+<h3>Feature 2. You can access real-time, unfiltered analytics.</h3>
+
+<p>We recently upgraded our underlying analytics framework to use the <a href="http://www.elasticsearch.org/overview/">ELK stack</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. We've gained many benefits with the upgrade. There are also two big benefits for you.</p>
+
+<p><strong>Benefit #1: Real-time Data.</strong> You can now instantaneously see the searches and clicks that are performed on your site. We previously processed some of your analytics via nightly cron jobs so there was a delay before you saw the data. Try it out. Do a search on your site and then go to <a href="https://search.usa.gov/sites/">Admin Center</a>. You'll see your search query on the dashboard.</p>
+
+<p><strong>Benefit #2: Unfiltered Data.</strong> You can now access your unfiltered analytics via the Admin Center so you can more easily manipulate the data. We previously only provided unfiltered data in the CSV downloads or via secure FTP.</p>
+
+<p>You still see filtered data by default. You can toggle between a filtered or unfiltered view by going to the <a href="https://search.usa.gov/sites/">Admin Center</a> > Analytics > Settings.</p>
+
+<ul>
+<li><em>Filtered.</em> Several rules are applied to remove bot and other non-human looking traffic. The filtered data represent our best effort to show you real searches performed by your site's visitors.</li>
+<li><em>Unfiltered.</em> Nearly all searches and clicks are included. Only known spiders (such as Bingbot and Googlebot) are excluded. Some of you may see dramatically more data in the unfiltered view.</li>
+</ul>
+
+
+<p><a href="https://search.usa.gov/sites/"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/release-04-2014-Analytics.png" title="Toggle between a filtered or unfiltered view" alt="Toggle between a filtered or unfiltered view" /></a></p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>We now diplay images from Flickr only by default. <a href="mailto:search@support.digitalgov.gov">Email us</a> if you'd like to request displaying images from Bing, too.</li>
+<li>We now <a href="http://code.flickr.net/2014/04/30/flickr-api-going-ssl-only-on-june-27th-2014/">use SSL to access the Flickr API</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We upgraded to <a href="http://www.elasticsearch.org/blog/elasticsearch-1-2-1-released/">ElasticSearch 1.2.1</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We now handle some error messages from the <a href="https://dev.twitter.com/">Twitter API</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> more gracefully.</li>
+<li>We added agency IDs from the <a href="https://www.federalregister.gov/">Federal Register</a> to our database in preparation for using <a href="https://www.federalregister.gov/learn/developers">their API</a> to display Federal Register documents in our search results.</li>
+<li>As we now have a single, responsive search results page, we no longer use 'Mobile Logo' in the Admin Center. We now use just 'Logo.'</li>
+<li>We removed the fields for image attribution for <a href="/manual/best-bets-graphics.html">Graphics Best Bets</a> from our database.</li>
+<li>We updated our cron-based emails to use our new analytics framework.</li>
+<li>We backfilled the data in our Admin Center so that you see analytics from 13 months ago.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed our parser for <a href="http://tools.ietf.org/html/rfc4287">Atom</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> RSS feeds to use atom:summary when atom:content isn't present.</li>
+<li>We fixed a bug so that the options to filter search results now appears in Internet Explorer 8.</li>
+<li>We now use a <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/method-reference#named">named tracker</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> so that, when you use the default tracker, you can see pageviews and other data in your Google Analytics accounts.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/june-2014.html">
+        <time datetime="2014-07-09">July 9, 2014</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
+      <a href="/manual/best-bets-graphics.html">How to Highlight Graphics Best Bets</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Best Bets: Graphics</p>
+
+<p>Do you want to promote a specific web page or collection of web pages? Create a Graphics Best Bet.</p>
+
+<p>A best bet appears above the standard web results when a searcher's query matches the text of its title, description, or keywords.</p>
+
+<p>Graphics best bets have a one or two-column layout and you can add an image. The most relevant best bet is listed under a heading, {Best Bet Title} by {<a href="/manual/settings.html">Site Name</a>}.</p>
+
+<p>See, for example, the variety of layouts possible for graphics best bets.</p>
+
+<ul>
+<li><p><strong>One column with a collection of links and an image</strong> displayed on USA.gov for a search on <em><a href="http://search.usa.gov/search?query=wildfires&amp;affiliate=usa.gov">wildfires</a></em>.</p></li>
+<li><p><strong>One column with a link to a specific web page and an image</strong> displayed on WhiteHouse.gov for a search on <em><a href="http://search.usa.gov/search?affiliate=wh&amp;query=jobs">jobs</a></em>.</p></li>
+<li><p><strong>Two columns with a collection of links only</strong> displayed on USA.gov for a search on <em><a href="http://search.usa.gov/search?query=holidays&amp;affiliate=usa.gov">holidays</a></em>.</p></li>
+</ul>
+
+
+<h2>Add a Graphics Best Bet</h2>
+
+<p><strong><em>Title.</em></strong> Add the title (up to 255 characters) of the web page or collection of web pages that you want to promote. The title is visible to searchers.</p>
+
+<p><strong><em>Title URL.</em></strong> Add the URL of the primary web page that you want to promote. This field is optional.</p>
+
+<p><strong><em>Status and Publish Dates.</em></strong> The default start date is the day on which you create the best bet. The default end date is null, so it will stay up forever until you decide to take it down. You can opt to set a start and end date to control to specify other start and end dates. You can also opt to set its status as either active or inactive.</p>
+
+<p><strong><em>Layout.</em></strong> Select a one- or two-column layout.</p>
+
+<p><strong><em>Image.</em></strong> You can opt to add an image.</p>
+
+<p><strong><em>Keywords.</em></strong> Keywords are optional and they're <em>not</em> visible to searchers. Add specific words or phrases that aren't already included in the visible title or link titles. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.</p>
+
+<p><strong><em>Links.</em></strong> Enter a title and URL for each link. There is no limit on the number of links. Use the three horizontal bars on the left to rearrange the display order of the links. If you select a two-column layout above, links are displayed in newspaper-style format, with an automatic break for columns depending on how many links you list. The link titles are visible to searchers.</p>
+
+<h2>When Searchers See Your Best Bets</h2>
+
+<p>Searchers see your best bets when their query:</p>
+
+<ul>
+<li>Matches any or all words in the title,</li>
+<li>Matches any of all words in the link titles, or</li>
+<li>Matches a keyword exactly.</li>
+</ul>
+
+
+<p>Matches are made within, but not across, fields.</p>
+
+<p>A sample best bet entry is below.</p>
+
+<p><strong>Title:</strong> Estate Tax<br/>
+<strong>Link title 1:</strong> Transfer Property After You Pass Away<br/>
+<strong>Link title 2:</strong> Estate Tax Rights<br/>
+<strong>Link title 3:</strong> Tax Rates<br/>
+<strong>Keyword 1:</strong> death tax<br/>
+<strong>Keyword 2:</strong> inheritance tax<br/>
+<strong>Keyword 3:</strong> fair market value<br/>
+<strong>Keyword 4:</strong> market value</p>
+
+<p>This best bet would display for searches on estate tax (exact title match), estate (partial title match), tax on the estate (title match that includes stopwords), estate taxes (title match for singular/plural variant), property tax (partial link title match), propertey tax (link title match with a slight misspelling), and death tax (exact keyword match), among other queries.</p>
+
+<p>It would <em>not</em> display for searches on death, death property, taxes after death, fair value, or estate property tax as they're only partial keyword or cross field matches.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> See also our closely related feature that allows you to create a <a href="/manual/best-bets-text.html">Text Best Best</a>.</p>
+
+<p><strong><em>Did you know?</em></strong> Analyze the number of impressions and clicks and clickthru rate for each best bet on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.</p>
+
+<p><strong><em>Did you know?</em></strong> Use the color coding in the table on this page to see a best bet's status. Entries with green background shading are active. They're shown to searchers on your site. Entries with yellow background shading aren't shown to searchers because they're inactive, expired (by the publish end date), or both.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/best-bets"><span class="label label-info">best-bets</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/best-bets-graphics.html">
+        <time datetime="2014-07-09">July 9, 2014</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
       <a href="/manual/index.html">How to Set Up Your Search Box</a>
     </h1>
     
@@ -146,7 +342,7 @@
 
 <p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
 
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#58;&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#111;&#114;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#116;&#97;&#108;&#x67;&#111;&#118;&#46;&#x67;&#111;&#118;">&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#100;&#105;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;</a>.</p>
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#115;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#118;">&#x73;&#x65;&#97;&#x72;&#99;&#104;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#x67;&#x69;&#116;&#97;&#108;&#103;&#111;&#x76;&#46;&#x67;&#111;&#118;</a>.</p>
 
     </div>
 
@@ -843,188 +1039,6 @@ URL: mailto:info@agency.gov</p>
       
       <a href="/blog/seo-joe-pagano.html">
         <time datetime="2014-06-13">June 13, 2014</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/manual/twitter.html">How to Add Your Tweets to Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Twitter</p>
-
-<p>Provide us with the @handle for your Twitter account(s). Your @handle is your agency's username used within Twitter. When you're logged into Twitter, you can see your username at <a href="https://twitter.com/settings/account">https://twitter.com/settings/account</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<p>For example, the Twitter username for the Federal Student Aid, a part of the U.S. Department of Education, is <a href="https://twitter.com/FAFSA">@FAFSA</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<p>When you add your Twitter @handle, we'll automatically index and display <em>your</em> tweets. Select the option, Show tweets from my lists, to index the tweets for all members of your lists.</p>
-
-<p>If you don't want to display your tweets, simply delete your Twitter handle.</p>
-
-<p>See the sample results page below that shows a recent tweet displayed on Federal Student Aid for a search on <em><a href="http://search.usa.gov/search?query=loans&amp;op=Search&amp;affiliate=federalstudentaid&amp;m=true">loans</a></em>.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-tweets.png" alt="Search result with a tweet on Federal Student Aid" /></p>
-
-<p>Searchers will see the most recent tweet (posted within the past three days) that matches their search term.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
-      
-      <a href="/tagged/twitter"><span class="label label-info">twitter</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/twitter.html">
-        <time datetime="2014-05-28">May 28, 2014</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/blog/serp-redesign.html">Our Redesign: Before and After</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="http://techcrunch.com/2013/09/17/bing-reveals-its-redesign-and-latest-improvements/">Bing</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, <a href="http://techcrunch.com/2014/05/20/privacy-focused-search-engine-duckduckgo-gets-a-new-look-smarter-search-with-instant-answers/">DuckDuckGo</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, <a href="http://www.fastcodesign.com/3027704/how-googles-redesigned-search-results-augur-a-more-beautiful-web">Google</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, and <a href="http://mashable.com/2013/06/05/yahoo-redesigns-its-search-page/">Yahoo</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> have all rolled out major redesigns to their search results pages in the past year.</p>
-
-<p>The last time we did a major redesign of our results page was in January 2012. It was long overdue for a facelift.</p>
-
-<p>So, we've redesigned our search results page. We've kept an eye on best practices in the search industry and what media websites (like NPR.org and NYTimes.com) are up to, But, we're not simply following the leaders. We've also <a href="http://www.digitalgov.gov/2014/05/07/analyzing-search-data-in-real-time-to-drive-decisions/">analyzed our search data</a> to make data-driven decisions that, ultimately, aim to improve searchers' experience on your site.</p>
-
-<p>Below are some of the highlights.</p>
-
-<h2>Basic Search Results</h2>
-
-<p>We started with the basic search results because they're the meat of the page. They also have the highest clickthru rate among the various items shown on the page. Here's the before and after for a search on <em>passport</em> on USA.gov.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-search-result.png" title="Search result for passport on USA.gov" alt="Search result for passport on USA.gov" /></p>
-
-<p>We've done away with the underlining on the title. The snippet is wider and has more space. Clicking or touching anywhere on the snippet (not just the title) opens the link.</p>
-
-<h2>Spelling Suggestions</h2>
-
-<p>Spelling suggestions have the second highest clickthru rate so we focused on those next. Here's the before and after for a search on <em>manual noriega</em> (sic) on USA.gov.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-spelling.png" title="Spelling suggestion for manual noriega (sic) on USA.gov" alt="Spelling suggestion for manual noriega (sic) on USA.gov" /></p>
-
-<p>We've done away with the wordiness and boldface. The suggestion and its corresponding option to override the automatic correction now use plain language and are shown on two lines. We now only use boldface to highlight keyword matches for searchers' queries.</p>
-
-<h2>Search Verticals</h2>
-
-<p>Through <a href="http://www.digitalgov.gov/resources/digitalgov-user-experience-program/digitalgov-user-experience-program-test-support/">usability tests</a>, we found that searchers didn't see the options to change the scope of their results in the left-hand column. Data also supports this finding as very, very few searchers clicked on these options. Here's the before and after for a search on <em>jobs</em> on USA.gov.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-verticals.png" title="Search verticals on USA.gov" alt="Search verticals on USA.gov" /></p>
-
-<p>The new format clusters all options to narrow, broaden, or change the scope of the results together, and places these options directly above the search box. Searchers see up to three options and have the ability to show More &hellip;. The old format separated them, showing the option to search on related sites in the right-hand column above the box and verticals in the left-hand column below the box.</p>
-
-<h2>Site Navigation</h2>
-
-<p>Once visitors have opted to type a term in the search box, they're in search mode. Some have already tried and abandoned browsing the website.</p>
-
-<p>To reflect visitors' shift from browsing to searching, search results pages on many commercial media websites highlight the search verticals and either remove or downplay the site's navigation. Here's the before and after for a search on <em>veterans affairs</em> on USA.gov.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-navigation.png" title="Site brand and navigation on USA.gov" alt="Site brand and navigation on USA.gov" /></p>
-
-<p>The new format prominently shows the search verticals above the search box. Searchers can click the logo to return to homepage, or expand the "hamburger" menu to view additional options to browse the site. Searchers can also browse the site using links in the footer.</p>
-
-<h2>Videos</h2>
-
-<p>Eye tracking studies have shown searchers gravitate to video thumbnails. Snippets are also very important to increase clickthru rates. Searchers are more likely to view a video if they understand how it relates to what they're looking for. Here's the before and after for a search on <em>careers</em> on USA.gov.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-video.png" title="Video search result for careers on USA.gov" alt="Video search result for careers on USA.gov" /></p>
-
-<p>The new video format shows one video plus a clearly labeled "More videos about ..." link. It also shows the video's source (in this case YouTube), the length of the video, and a short snippet. The video is now separated from basic search results by thin grey lines.</p>
-
-<p>Searchers now see inline videos from the past 13 months only. (It used to be forever.) There's a spike in video views at around one year so this time period allows searchers to see recent inline videos for annual events like tax season, national health observances, and holidays.</p>
-
-<h2>News</h2>
-
-<p>Here's the before and after for a search on <em>tornadoes</em> on USA.gov.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-news.png" title="News search results for tornado on USA.gov" alt="News search results for tornado on USA.gov" /></p>
-
-<p>The new news format now matches the look of the basic search results to provide a more seamless experience.</p>
-
-<p>Searchers now see inline news from the last four months only. (It used to be forever, which showed stale content from several years ago in some cases.) Very recent news (less than five days) shows above the basic search results. Less recent but still timely news (greater than five days and less than four months) shows below the basic search results. The old format always showed news results after the third web result.</p>
-
-<h2>Tweets</h2>
-
-<p>Here's the before and after for a search on <em>social security</em> on USA.gov.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-tweet.png" title="Tweet for social security on USA.gov" alt="Tweet for social security on USA.gov" /></p>
-
-<p>The new tweet format shows one tweet inline with the results. It now shows the agency's Twitter profile image and the tweet is separated from basic search results by thin grey lines and doesn't have a separate heading. As tweets tend to be very time-sensitive, searchers now see tweets from the last three days only. (It used to be 30 days.) The old format showed tweets in a right-hand column that was often mistaken for an ad.</p>
-
-<h2>Job Openings</h2>
-
-<p>Here's the before and after for a search on <em>communications jobs</em> on USA.gov.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-jobs.png" title="Job results for communications jobs on USA.gov" alt="Job results for communications jobs on USA.gov" /></p>
-
-<p>The new job opening format shows up to three job openings inline with the results. Searchers can now click or touch the down arrow to see up to 10 listings inline. For federal agencies, it now shows the USAJobs logo to clearly identify that as the data source. The job openings are separated from basic search results by thin grey lines. The old format showed jobs in a right-hand column that was often mistaken for an ad and didn't give searchers the option to see more listings on the results page.</p>
-
-<h2>Health Topics</h2>
-
-<p>Here's the before and after for a search on <em>diabetes</em> on USA.gov.</p>
-
-<p><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-health-govbox.png" title="Health topic result for diabetes on USA.gov" alt="Health topic result for diabetes on USA.gov" /></p>
-
-<p>The new health topics format shows a shorter, more concise snippet and the snippet doesn't have any embedded links. The result now takes up less vertical space as the links for related topics and clinical trials are each listed in a line. The MedlinePlus logo now links to <a href="http://www.nlm.nih.gov/medlineplus/">http://www.nlm.nih.gov/medlineplus/</a>.</p>
-
-<h2>By Government, for Government</h2>
-
-<p>Our search results page now ensures the public has a common search experience anywhere, anytime, and on any device. This meets a key objective of the federal government's <a href="http://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html">Digital Government Strategy</a>.</p>
-
-<p>It has also been tested to ensure it is <a href="https://www.section508.gov/">accessible to people with disabilities</a>.</p>
-
-<h2>Are You Ready to Turn It On?</h2>
-
-<p>Are you ready to turn on the new results page? <a href="mailto:search@support.digitalgov.gov">Tell us</a> if you're ready now, or if you need some more time or help.</p>
-
-<p>Read our <a href="/blog/serp-redesign-tips.html">favorite tips</a> to see how other sites have customized their results pages and for some ideas on how to <a href="/manual/brand.html">brand the results page</a> for your site.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/ux"><span class="label label-info">ux</span></a>
-      
-      <a href="/tagged/about-us"><span class="label label-info">about-us</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      <a href="/blog/serp-redesign.html">
-        <time datetime="2014-05-28">May 28, 2014</time>
       </a>
     </div>
 

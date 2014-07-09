@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>June 2014 Release Notes</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/stylesheets/font-awesome-ie7.min.css">
+  <![endif]-->
+
+  <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+  <link href="/stylesheets/custom.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+  <link rel="shortcut icon" href="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/favicon.ico">
+  <link rel='alternate' type='application/atom+xml' title='usasearch.howto.gov Atom feed' href='/all.atom' />
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="/">
+        <span class="digital">Digital</span><span class="gov">Gov</span>
+        <span class="search">Search</span>
+      </a>
+      <ul class="nav">
+        <li>
+          <form class="form-search" accept-charset="UTF-8" action="http://search.usa.gov/search/news/" id="search-form" method="get">
+            <input id="affiliate" name="affiliate" type="hidden" value="usasearch"/>
+            <input type="hidden" name="channel" value="1745">
+            <input type="hidden" name="sort_by" value="r">
+            <input type="hidden" name="m" value="true">
+            <div class="input-append">
+              <label for="search-query" class="hide">Query</label>
+              <input name="query" type="text" autocomplete="off"
+                     class="usagov-search-autocomplete span search-query" id="search-query"/>
+              <input type="submit" class="btn" id="search-button" value="Search" />
+            </div>
+          </form>
+        </li>
+      </ul>
+      <ul class="nav login">
+        <li>
+          <a href="https://search.usa.gov/sites"><i
+              class="icon-user icon-white"></i>&nbsp;Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div id="main-container"><article class="article">
+  
+  <h1>
+    <a href="/releases/june-2014.html">June 2014 Release Notes</a>
+  </h1>
+  
+
+  <div class='post-content'>
+    <h2>Highlighted Features</h2>
+
+<h3>Feature 1. We incorporated your feedback into our redesigned results page.</h3>
+
+<p>We're continuing to work on our redesigned search results page to incorporate your feedback. Searchers now see a more prominent option to browse your site.</p>
+
+<p><a href="http://search.usa.gov/search?affiliate=usagov"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/release-06-14-usagov-browse.png" title="Redesigned option to browse site" alt="Redesigned option to browse site" /></a></p>
+
+<p>Additionally, you can now:</p>
+
+<ul>
+<li>Left align your logo;</li>
+<li>Add a direct link to your advanced search page (using the syntax http://search.usa.gov/search/advanced?affiliate=<a href="/manual/settings.html">YourSiteHandle</a>); and</li>
+<li>Display images from <a href="/manual/rss.html">media RSS feeds</a>.</li>
+</ul>
+
+
+<p>All job openings (beyond those for U.S. citizens only) now appear when searchers click on the link to see all the openings on <a href="https://www.usajobs.gov/">USAJobs</a>.</p>
+
+<p><a href="http://search.usa.gov/search?affiliate=usagov&amp;query=jobs"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/release-06-2014-USAgov.png" title="Tweaks to the redesigned USA.gov  results page" alt="Tweaks to the redesigned USA.gov results page" /></a></p>
+
+<h3>Feature 2. You can access real-time, unfiltered analytics.</h3>
+
+<p>We recently upgraded our underlying analytics framework to use the <a href="http://www.elasticsearch.org/overview/">ELK stack</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. We've gained many benefits with the upgrade. There are also two big benefits for you.</p>
+
+<p><strong>Benefit #1: Real-time Data.</strong> You can now instantaneously see the searches and clicks that are performed on your site. We previously processed some of your analytics via nightly cron jobs so there was a delay before you saw the data. Try it out. Do a search on your site and then go to <a href="https://search.usa.gov/sites/">Admin Center</a>. You'll see your search query on the dashboard.</p>
+
+<p><strong>Benefit #2: Unfiltered Data.</strong> You can now access your unfiltered analytics via the Admin Center so you can more easily manipulate the data. We previously only provided unfiltered data in the CSV downloads or via secure FTP.</p>
+
+<p>You still see filtered data by default. You can toggle between a filtered or unfiltered view by going to the <a href="https://search.usa.gov/sites/">Admin Center</a> > Analytics > Settings.</p>
+
+<ul>
+<li><em>Filtered.</em> Several rules are applied to remove bot and other non-human looking traffic. The filtered data represent our best effort to show you real searches performed by your site's visitors.</li>
+<li><em>Unfiltered.</em> Nearly all searches and clicks are included. Only known spiders (such as Bingbot and Googlebot) are excluded. Some of you may see dramatically more data in the unfiltered view.</li>
+</ul>
+
+
+<p><a href="https://search.usa.gov/sites/"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/release-04-2014-Analytics.png" title="Toggle between a filtered or unfiltered view" alt="Toggle between a filtered or unfiltered view" /></a></p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>We now diplay images from Flickr only by default. <a href="mailto:search@support.digitalgov.gov">Email us</a> if you'd like to request displaying images from Bing, too.</li>
+<li>We now <a href="http://code.flickr.net/2014/04/30/flickr-api-going-ssl-only-on-june-27th-2014/">use SSL to access the Flickr API</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We upgraded to <a href="http://www.elasticsearch.org/blog/elasticsearch-1-2-1-released/">ElasticSearch 1.2.1</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We now handle some error messages from the <a href="https://dev.twitter.com/">Twitter API</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> more gracefully.</li>
+<li>We added agency IDs from the <a href="https://www.federalregister.gov/">Federal Register</a> to our database in preparation for using <a href="https://www.federalregister.gov/learn/developers">their API</a> to display Federal Register documents in our search results.</li>
+<li>As we now have a single, responsive search results page, we no longer use 'Mobile Logo' in the Admin Center. We now use just 'Logo.'</li>
+<li>We removed the fields for image attribution for <a href="/manual/best-bets-graphics.html">Graphics Best Bets</a> from our database.</li>
+<li>We updated our cron-based emails to use our new analytics framework.</li>
+<li>We backfilled the data in our Admin Center so that you see analytics from 13 months ago.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed our parser for <a href="http://tools.ietf.org/html/rfc4287">Atom</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> RSS feeds to use atom:summary when atom:content isn't present.</li>
+<li>We fixed a bug so that the options to filter search results now appears in Internet Explorer 8.</li>
+<li>We now use a <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/method-reference#named">named tracker</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> so that, when you use the default tracker, you can see pageviews and other data in your Google Analytics accounts.</li>
+</ul>
+
+
+  </div>
+
+  <div class='tags'>
+    
+    <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+    
+  </div>
+
+  <div class='time'>
+    
+    
+    </br><span>Page last reviewed or updated:</span>
+    
+    
+    
+    <a href="/releases/june-2014.html">
+      <time>July 9, 2014</time>
+    </a>
+  </div>
+
+</article></div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p><a href="mailto:search@support.digitalgov.gov">Email us</a>, call us at 202-505-5315, or follow <a href="http://www.twitter.com/dg_search">@DG_Search</a></p>
+    <p> An Official Website of the U.S. Government <br />
+      <a href="http://www.gsa.gov/portal/category/25729">Office of Citizen Services &amp; Innovative Technologies</a>, <a href="http://www.gsa.gov">U.S. General Services Administration</a>
+    </p>
+    <ul class="footer-links unstyled inline">
+      <li><a href="http://www.usa.gov">USA.gov</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/tos.html">Terms of Service</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="http://www.digitalgov.gov/about/policies/">Site Policies</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/developer">Developers</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  //<![CDATA[
+  var usasearch_config = { siteHandle:"usasearch" };
+
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "http://search.usa.gov/javascripts/remote.loader.js";
+  document.getElementsByTagName("head")[0].appendChild(script);
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31302465-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  //]]>
+</script>
+
+
+</body>
+</html>

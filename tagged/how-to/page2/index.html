@@ -76,6 +76,102 @@
  
     
     <h1>
+      <a href="/blog/byoi.html">Pilot Program: Bring Your Own Index</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>About the Pilot</h2>
+
+<p>In 2013, we asked you for feedback about DigitalGov Search and other programs in GSA's <a href="http://www.gsa.gov/portal/category/25729">Office of Citizen Services and Innovative Technologies</a>. Many of you responded to our customer experience survey.</p>
+
+<p>We learned that, in these times of tight budgets, you value our service being free. We also heard you loud and clear that you'd like to choose which search results you use&mdash;from Bing, Google, or some other source.</p>
+
+<p>So, based on your feedback, we now have a pilot program that allows you to bring your own index (BYOI). This helps us make sure we continue to provide you the best, most cost-effective service possible and gives you the choice you want.</p>
+
+<p>You can either:</p>
+
+<ul>
+<li>Provide a feed (typically from your database or content management system).</li>
+<li>Provide access to a search index you already have from a commercial provider.</li>
+</ul>
+
+
+<h2>How to Participate</h2>
+
+<p>Since this is still a pilot, the setup is manual. Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#115;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#x67;&#111;&#118;&#46;&#x67;&#x6f;&#x76;">&#115;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#x72;&#x74;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#118;</a> to let us know you're interested in participating in the pilot.</p>
+
+<h2>Option 1. Provide an RSS Feed</h2>
+
+<p>You'll have to set up two RSS feeds.</p>
+
+<ol>
+<li>Seed feed&mdash;a one-time, full RSS feed that provides us all of your content.</li>
+<li>Change feed&mdash;an incremental feed that tells us about deltas (new, updated, or deleted content) only.</li>
+</ol>
+
+
+<p>If you want full text search, provide the full text of your page in the feed's description. If you want a more precise, metadata search, provide a short snippet about your page in the feed's description.</p>
+
+<p>As long as you create structured feeds, we'll index your content. It doesn't matter what  underlying technology system you use. Below are a few good references to get you started for two of the more common CMS, but don't let these links confuse you if you already have a feed generation system in place.</p>
+
+<p><strong>Drupal</strong> has a few ways to export content as a structured feed, including:</p>
+
+<ul>
+<li><a href="https://drupal.org/node/83597">RSS Feeds for Views</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+<li><a href="https://drupal.org/project/feeds">Feeds (module to export your entire site)</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+<li><a href="https://drupal.org/project/node_export">Node Export</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+</ul>
+
+
+<p><strong>WordPress</strong> provides detailed overview of <a href="http://codex.wordpress.org/WordPress_Feeds">how to handle its feeds</a>.&nbsp;<i class="icon-external-link"><span>(External link)</span></i></p>
+
+<h2>Option 2. Provide a Search Index</h2>
+
+<p>We can leverage almost any search index directly. For each web search, we'll send a searcher's query to your chosen search index, and we'll render the results within our search results page.</p>
+
+<h3>Google Search Appliance</h3>
+
+<p>If you already have (or plan to purchase), a Google Search Appliance, we can accept the <a href="https://developers.google.com/search-appliance/documentation/614/xml_reference#results_xml">XML output</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> from your appliance. You'll be responsible for managing the number of documents indexed as this affects the cost of the appliance (such as $x for up to x documents).</p>
+
+<p>See GSAAdvantage for options to <a href="https://www.gsaadvantage.gov/advantage/s/search.do?q=0:2google+search+appliance">purchase a Google Search Appliance</a>.</p>
+
+<h3>Google Site Search</h3>
+
+<p>If you already have (or plan to purchase), Google Site Search, we can accept your <a href="https://developers.google.com/custom-search/json-api/v1/overview">API key</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. You'll be responsible for managing traffic levels as this affects the cost (such as $x per 1,000 queries).</p>
+
+<p>See GSAAdvantage for options to <a href="https://www.gsaadvantage.gov/advantage/s/search.do?q=0:2google+site+search">purchase Google Site Search</a>.</p>
+
+<h3>Other Search Indexes</h3>
+
+<p>Most search indexes expose their results as XML. If you have another search index that renders XML, let us know and we'll work with you to determine if it will work within our system.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/blog/byoi.html">
+        <time datetime="2014-03-06">March 6, 2014</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/third-party.html">How to Add JavaScript for Your Third Party Web Services</a>
     </h1>
     
@@ -133,7 +229,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li><p>Email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#115;&#101;&#97;&#114;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#118;">&#115;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#x69;&#103;&#x69;&#116;&#x61;&#108;&#103;&#111;&#118;&#46;&#x67;&#111;&#118;</a> to <a href="/manual/cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
+<li><p>Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#115;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#103;&#111;&#x76;&#x2e;&#103;&#111;&#118;">&#x73;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#111;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#97;&#108;&#103;&#x6f;&#118;&#46;&#103;&#x6f;&#118;</a> to <a href="/manual/cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
 <li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
 
 <p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
@@ -271,108 +367,6 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       
       <a href="/manual/monthly-reports.html">
         <time datetime="2013-10-31">October 31, 2013</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/best-bets-graphics.html">How to Highlight Graphics Best Bets</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Best Bets: Graphics</p>
-
-<p>Do you want to promote a specific web page or collection of web pages? Create a Graphics Best Bet.</p>
-
-<p>A best bet appears above the standard web results when a searcher's query matches the text of its title, description, or keywords.</p>
-
-<p>Graphics best bets have a one or two-column layout and you can add an image. The most relevant best bet is listed under a heading, {Best Bet Title} by {<a href="/manual/settings.html">Site Name</a>}.</p>
-
-<p>See, for example, the variety of layouts possible for graphics best bets.</p>
-
-<ul>
-<li><p><strong>One column with a collection of links and an image</strong> displayed on USA.gov for a search on <em><a href="http://search.usa.gov/search?query=wildfires&amp;affiliate=usa.gov">wildfires</a></em>.</p></li>
-<li><p><strong>One column with a link to a specific web page and an image</strong> displayed on WhiteHouse.gov for a search on <em><a href="http://search.usa.gov/search?affiliate=wh&amp;query=jobs">jobs</a></em>.</p></li>
-<li><p><strong>Two columns with a collection of links only</strong> displayed on USA.gov for a search on <em><a href="http://search.usa.gov/search?query=holidays&amp;affiliate=usa.gov">holidays</a></em>.</p></li>
-</ul>
-
-
-<h2>Add a Graphics Best Bet</h2>
-
-<p><strong><em>Title.</em></strong> Add the title (up to 255 characters) of the web page or collection of web pages that you want to promote. The title is visible to searchers.</p>
-
-<p><strong><em>Title URL.</em></strong> Add the URL of the primary web page that you want to promote. This field is optional.</p>
-
-<p><strong><em>Status and Publish Dates.</em></strong> The default start date is the day on which you create the best bet. The default end date is null, so it will stay up forever until you decide to take it down. You can opt to set a start and end date to control to specify other start and end dates. You can also opt to set its status as either active or inactive.</p>
-
-<p><strong><em>Layout.</em></strong> Select a one- or two-column layout.</p>
-
-<p><strong><em>Image.</em></strong> You can opt to add an image. Be sure to choose only images for which the display rights are not limited. Include alt text and attribution, as needed. The attribution URL links the attribution text to a webpage of your choice. Sometimes linking to the actual site where the image was found is not appropriate, so you may opt not to use this field.</p>
-
-<p><strong><em>Keywords.</em></strong> Keywords are optional and they're <em>not</em> visible to searchers. Add specific words or phrases that aren't already included in the visible title or link titles. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.</p>
-
-<p><strong><em>Links.</em></strong> Enter a title and URL for each link. There is no limit on the number of links. Use the three horizontal bars on the left to rearrange the display order of the links. If you select a two-column layout above, links are displayed in newspaper-style format, with an automatic break for columns depending on how many links you list. The link titles are visible to searchers.</p>
-
-<h2>When Searchers See Your Best Bets</h2>
-
-<p>Searchers see your best bets when their query:</p>
-
-<ul>
-<li>Matches any or all words in the title,</li>
-<li>Matches any of all words in the link titles, or</li>
-<li>Matches a keyword exactly.</li>
-</ul>
-
-
-<p>Matches are made within, but not across, fields.</p>
-
-<p>A sample best bet entry is below.</p>
-
-<p><strong>Title:</strong> Estate Tax<br/>
-<strong>Link title 1:</strong> Transfer Property After You Pass Away<br/>
-<strong>Link title 2:</strong> Estate Tax Rights<br/>
-<strong>Link title 3:</strong> Tax Rates<br/>
-<strong>Keyword 1:</strong> death tax<br/>
-<strong>Keyword 2:</strong> inheritance tax<br/>
-<strong>Keyword 3:</strong> fair market value<br/>
-<strong>Keyword 4:</strong> market value</p>
-
-<p>This best bet would display for searches on estate tax (exact title match), estate (partial title match), tax on the estate (title match that includes stopwords), estate taxes (title match for singular/plural variant), property tax (partial link title match), propertey tax (link title match with a slight misspelling), and death tax (exact keyword match), among other queries.</p>
-
-<p>It would <em>not</em> display for searches on death, death property, taxes after death, fair value, or estate property tax as they're only partial keyword or cross field matches.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> See also our closely related feature that allows you to create a <a href="/manual/best-bets-text.html">Text Best Best</a>.</p>
-
-<p><strong><em>Did you know?</em></strong> Analyze the number of impressions and clicks and clickthru rate for each best bet on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.</p>
-
-<p><strong><em>Did you know?</em></strong> Use the color coding in the table on this page to see a best bet's status. Entries with green background shading are active. They're shown to searchers on your site. Entries with yellow background shading aren't shown to searchers because they're inactive, expired (by the publish end date), or both.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/best-bets"><span class="label label-info">best-bets</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/best-bets-graphics.html">
-        <time datetime="2013-10-24">October 24, 2013</time>
       </a>
     </div>
     </article>
@@ -715,7 +709,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <ol>
 <li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
 <li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>Email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#115;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#x67;&#x69;&#x74;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#x67;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
+<li>Email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#115;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#117;&#112;&#112;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;">&#115;&#101;&#x61;&#114;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#x74;&#46;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
 </ol>
 
 
@@ -751,108 +745,6 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       
       <a href="/manual/domains.html">
         <time datetime="2013-08-29">August 29, 2013</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/api.html">How (and When) to Use the Search API</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search > API Instructions</p>
-
-<p>We offer our search results as a hosted results page (using our <a href="/manual/code.html">code snippets</a>) or as an <a href="http://www.digitalgov.gov/category/code/api/">application programming interface</a> (API).</p>
-
-<h2>When to Use the Hosted Results</h2>
-
-<p>Most agencies use our hosted search results page. We recommend that you to use our hosted page for the typical use case of returning search results on your website. Using the hosted page has many benefits such as allowing you to:</p>
-
-<ul>
-<li>Devote minimal development resources for the initial set up.</li>
-<li>Benefit from new features automatically as they're rolled out.</li>
-<li>Stay current with search best practices, such as type-ahead search and formatting of search results.</li>
-</ul>
-
-
-<h2>When to Use the API</h2>
-
-<p>You may need to access our search results to present them outside of a typical search results page. We offer our results as an API for these use cases.</p>
-
-<p>You can access the API and its documentation at <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search > API Instructions.</p>
-
-<p>The API returns results from each of our indexes&mdash;web, image, document (ODIE), RSS (news), video, best bets (boosted content), related searches, and <a href="/developer/jobs.html">jobs</a>&mdash;in JSON, JSON-P, or XML.</p>
-
-<p>We recommend you use our API for limited use cases such as:</p>
-
-<ul>
-<li>Displaying search results within a native mobile application (i.e., an Android or iPhone app).</li>
-<li>Integrating DigitalGov Search results within existing applications (such as your intranet or publications catalog).</li>
-<li>Creating data mashups.</li>
-</ul>
-
-
-<p>Examples of how agencies are currently using the API follow.</p>
-
-<h3>Use Case 1. Display Results in Your Mobile App</h3>
-
-<p>USA.gov and the White House use the Search API to render DigitalGov Search results within their mobile apps.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_me79cgQKOE1qid15q.jpg" alt="Screenshot of a DigitalGov Search results page in the USA.gov iPhone app" /><br/>
-<em>Screenshot of a DigitalGov Search results page in the USA.gov iPhone app</em></p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_me78zp7y4v1qid15q.jpg" alt="Screenshot of a DigitalGov Search results page in the White House iPhone app" /><br/>
-<em>Screenshot of a DigitalGov Search results page in the White House iPhone app</em></p>
-
-<p><strong>Related Links for Use Case 1</strong></p>
-
-<ul>
-<li><a href="http://apps.usa.gov/usagov.shtml">USA.gov mobile app</a></li>
-<li><a href="http://apps.usa.gov/the-white-house-app.shtml">WhiteHouse mobile app</a></li>
-<li><a href="https://github.com/whitehouse">White House Github account</a> (information on and source code for the iOS and Android mobile apps)</li>
-</ul>
-
-
-<h3>Use Case 2. Integrate DigitalGov Search results within existing applications</h3>
-
-<p><a href="http://www.ri.gov">RI.gov</a> manages hundreds of distinct websites. The state provides a consistent search experience across all of its websites. Some sites are centrally controlled by RI.gov. Others are not. Using the Search API, RI.gov programmatically tells us the site's domain from which the user searched (e.g., tmc.dot.ri.gov). RI.gov then highlights results from this specific domain within RI.gov's common look and feel.</p>
-
-<p>See the sample results page below that shows a set of results displayed on Rhode Island's <a href="http://www.tmc.dot.ri.gov">Transportation Management Center</a> for a search on <em>traffic</em>.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_me7ej38m3P1qid15q.png" alt="Step 1. Searcher on &lt;www.tmc.dot.ri.gov&gt; types traffic in the search box" /><br/>
-<em>Step 1. Searcher on <a href="http://www.tmc.dot.ri.gov">http://www.tmc.dot.ri.gov</a> types traffic in the search box</em></p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_me7el3bJin1qid15q.png" alt="Step 2. Searcher sees results on RI.gov with a common look and feel that highlights results from the original site" /><br/>
-<em>Step 2. Searcher sees results on RI.gov with a common look and feel that highlights results from the original site</em></p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> The Search API is available for government websites only. Visit our <a href="/developer/index.html">APIs page</a> for other, publicly available APIs (i.e., for use by anyone).</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
-      
-      <a href="/tagged/api"><span class="label label-info">api</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/api.html">
-        <time datetime="2013-08-28">August 28, 2013</time>
       </a>
     </div>
     </article>
@@ -979,6 +871,108 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       
       
       <a href="/manual/code.html">
+        <time datetime="2013-08-28">August 28, 2013</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/api.html">How (and When) to Use the Search API</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search > API Instructions</p>
+
+<p>We offer our search results as a hosted results page (using our <a href="/manual/code.html">code snippets</a>) or as an <a href="http://www.digitalgov.gov/category/code/api/">application programming interface</a> (API).</p>
+
+<h2>When to Use the Hosted Results</h2>
+
+<p>Most agencies use our hosted search results page. We recommend that you to use our hosted page for the typical use case of returning search results on your website. Using the hosted page has many benefits such as allowing you to:</p>
+
+<ul>
+<li>Devote minimal development resources for the initial set up.</li>
+<li>Benefit from new features automatically as they're rolled out.</li>
+<li>Stay current with search best practices, such as type-ahead search and formatting of search results.</li>
+</ul>
+
+
+<h2>When to Use the API</h2>
+
+<p>You may need to access our search results to present them outside of a typical search results page. We offer our results as an API for these use cases.</p>
+
+<p>You can access the API and its documentation at <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search > API Instructions.</p>
+
+<p>The API returns results from each of our indexes&mdash;web, image, document (ODIE), RSS (news), video, best bets (boosted content), related searches, and <a href="/developer/jobs.html">jobs</a>&mdash;in JSON, JSON-P, or XML.</p>
+
+<p>We recommend you use our API for limited use cases such as:</p>
+
+<ul>
+<li>Displaying search results within a native mobile application (i.e., an Android or iPhone app).</li>
+<li>Integrating DigitalGov Search results within existing applications (such as your intranet or publications catalog).</li>
+<li>Creating data mashups.</li>
+</ul>
+
+
+<p>Examples of how agencies are currently using the API follow.</p>
+
+<h3>Use Case 1. Display Results in Your Mobile App</h3>
+
+<p>USA.gov and the White House use the Search API to render DigitalGov Search results within their mobile apps.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_me79cgQKOE1qid15q.jpg" alt="Screenshot of a DigitalGov Search results page in the USA.gov iPhone app" /><br/>
+<em>Screenshot of a DigitalGov Search results page in the USA.gov iPhone app</em></p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_me78zp7y4v1qid15q.jpg" alt="Screenshot of a DigitalGov Search results page in the White House iPhone app" /><br/>
+<em>Screenshot of a DigitalGov Search results page in the White House iPhone app</em></p>
+
+<p><strong>Related Links for Use Case 1</strong></p>
+
+<ul>
+<li><a href="http://apps.usa.gov/usagov.shtml">USA.gov mobile app</a></li>
+<li><a href="http://apps.usa.gov/the-white-house-app.shtml">WhiteHouse mobile app</a></li>
+<li><a href="https://github.com/whitehouse">White House Github account</a> (information on and source code for the iOS and Android mobile apps)</li>
+</ul>
+
+
+<h3>Use Case 2. Integrate DigitalGov Search results within existing applications</h3>
+
+<p><a href="http://www.ri.gov">RI.gov</a> manages hundreds of distinct websites. The state provides a consistent search experience across all of its websites. Some sites are centrally controlled by RI.gov. Others are not. Using the Search API, RI.gov programmatically tells us the site's domain from which the user searched (e.g., tmc.dot.ri.gov). RI.gov then highlights results from this specific domain within RI.gov's common look and feel.</p>
+
+<p>See the sample results page below that shows a set of results displayed on Rhode Island's <a href="http://www.tmc.dot.ri.gov">Transportation Management Center</a> for a search on <em>traffic</em>.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_me7ej38m3P1qid15q.png" alt="Step 1. Searcher on &lt;www.tmc.dot.ri.gov&gt; types traffic in the search box" /><br/>
+<em>Step 1. Searcher on <a href="http://www.tmc.dot.ri.gov">http://www.tmc.dot.ri.gov</a> types traffic in the search box</em></p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/tumblr_me7el3bJin1qid15q.png" alt="Step 2. Searcher sees results on RI.gov with a common look and feel that highlights results from the original site" /><br/>
+<em>Step 2. Searcher sees results on RI.gov with a common look and feel that highlights results from the original site</em></p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> The Search API is available for government websites only. Visit our <a href="/developer/index.html">APIs page</a> for other, publicly available APIs (i.e., for use by anyone).</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
+      
+      <a href="/tagged/api"><span class="label label-info">api</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/api.html">
         <time datetime="2013-08-28">August 28, 2013</time>
       </a>
     </div>
