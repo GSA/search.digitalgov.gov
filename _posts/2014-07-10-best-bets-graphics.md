@@ -13,11 +13,15 @@ A best bet appears above the standard web results when a searcher's query matche
 
 Graphics best bets have a one or two-column layout and you can add an image. The most relevant best bet is listed under a heading, {Best Bet Title} by {[Site Name](/manual/settings.html)}.
 
-See, for example, the variety of layouts possible for graphics best bets.
+See the sample results page below that shows a text best bet displayed on [USGS.gov for a search on tsunamis](http://search.usa.gov/search?affiliate=usgs&utf8=%E2%9C%93&query=tsunamis).
+
+[![Graphics best bet highlighting tsunami links on USGS.gov](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/best-bets-graphics.png "Graphics best bet highlighting tsunami links on USGS.gov")](http://search.usa.gov/search?affiliate=usgs&utf8=%E2%9C%93&query=tsunamis)
+
+There are a variety of layouts possible for graphics best bets.
 
 * **One column with a collection of links and an image** displayed on USA.gov for a search on *[wildfires](http://search.usa.gov/search?query=wildfires&affiliate=usa.gov)*. 
 
-* **One column with a link to a specific web page and an image** displayed on WhiteHouse.gov for a search on *[jobs](http://search.usa.gov/search?affiliate=wh&query=jobs)*.
+* **One column with a link to a specific web page and an image** displayed on WhiteHouse.gov for a search on *[jobs](http://search.whitehouse.gov/search?affiliate=wh&query=jobs)*.
 
 * **Two columns with a collection of links only** displayed on USA.gov for a search on *[holidays](http://search.usa.gov/search?query=holidays&affiliate=usa.gov)*. 
 

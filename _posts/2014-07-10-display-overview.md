@@ -44,7 +44,7 @@ Help visitors find content relevant to their search query that resides on other 
 
 Enter the [site handle](/manual/settings.html) for one of your other DigitalGov Search sites. Enter the text you'd like searchers to see for the link to the related site. Create two entries, one from the first site to the second and vice versa, if you'd like a reciprocal link.
 
-See, for example, [a link to GobiernoUSA.gov displayed on USA.gov for a search on *venezuela*](http://search.usa.gov/search?query=venezuela&affiliate=usagov).
+See, for example, the Español option displayed on [USA.gov for a search on *venezuela*](http://search.usa.gov/search?query=venezuela&affiliate=usagov). When searchers click this option, they see results for [*venezuela* on GobiernoUSA.gov](http://search.usa.gov/search?query=venezuela&affiliate=gobiernousa).
 
 ---
 
