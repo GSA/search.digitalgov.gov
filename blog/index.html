@@ -76,75 +76,6 @@
   <article class='article'>
     
     <h1>
-      <a href="/releases/may-2014.html">May 2014 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2>Features</h2>
-
-<p>We officially rolled our newly <a href="http://localhost:4000/blog/serp-redesign.html">redesigned results page</a>.</p>
-
-<p>As we continue to add features to our search results page, you can see small, incremental changes. We added a thin, visible border around the search box to improve its visibility, especially against a white background. We changed the color of the query term in the search box from gray to black. We also added more padding around <a href="/manual/best-bets-text.html">Best Bets</a> so that searchers can more readily distinguish them from web results. At the bottom of page, we added "Page 1" to "Next >>" to more clearly indicate that more results are available.</p>
-
-<p><a href="http://search.usa.gov/search?affiliate=usagov&amp;query=huricane"><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/release-05-2014-usa-huricane.png" title="Tweaks to the redesigned USA.gov results page" alt="Tweaks to the redesigned USA.gov results page" /></a></p>
-
-<p>Additionally, searchers can now see image and video results. Searchers can filter results to images or videos only. They can also see up to one inline video result with a link to see more videos.</p>
-
-<p>To improve the quality of the image search results, we now display images from <a href="/manual/flickr.html">your Flickr photostream</a> by default.</p>
-
-<p>We realized that our results page was getting a bit top-heavy so we now display inline results only when they're most relevant&mdash;capping the display of inline videos at 13 months and inline RSS-based news results at four months. Additionally, we display very recent news results (less than five days) at the top of the page and less recent news results closer to the bottom.</p>
-
-<p>It is also now possible to include an email address as a header or footer link by using mailto:info@agency.gov within the URL.</p>
-
-<h2>Chores</h2>
-
-<ul>
-<li>We added support for .com <a href="http://search.digitalgov.gov/manual/cname.html">CNAMEs</a>.</li>
-<li>We increased the maximum mobile logo size from 50KB to 64KB.</li>
-<li>We updated <a href="https://travis-ci.org/">Travis-CI</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to use <a href="https://www.ruby-lang.org/en/downloads/">Ruby 2.0</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We added robots.txt files to all sites that use a CNAME to block crawlers from their search results pages.</li>
-<li>We updated <a href="http://logstash.net/">logstash</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and upgraded <a href="http://www.elasticsearch.org/downloads/1-2-0/">ElasticSearch to 1.2.0</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We investigated <a href="http://www.drupal.org">Drupal</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> modules that publish content APIs for our <a href="http://search.digitalgov.gov/blog/byoi.html">bring your own index</a> pilot.</li>
-<li>We updated our SSL certificate.</li>
-<li>We added a page in the Admin Center for you to let us know about your <a href="/manual/instagram.html">Instagram</a> account. We also registered for the <a href="http://instagram.com/developer/">Instagram API</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. (We're planning to display image results Instagram soon.)</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>Searchers no longer see duplicate video results.</li>
-<li>We fixed the spacing between web results on mobile phones.</li>
-<li>We now automatically populate the homepage URL for newly added sites.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/may-2014.html">
-        <time datetime="2014-07-09">July 9, 2014</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
       <a href="/releases/june-2014.html">June 2014 Release Notes</a>
     </h1>
     
@@ -156,7 +87,7 @@
 
 <p>We're continuing to work on our redesigned search results page to incorporate your feedback. Searchers now see a more prominent option to browse your site.</p>
 
-<p><a href="http://search.usa.gov/search?affiliate=usagov"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/release-06-14-usagov-browse.png" title="Redesigned option to browse site" alt="Redesigned option to browse site" /></a></p>
+<p><a href="http://search.usa.gov/search?affiliate=federalstudentaid"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/release-06-2014-fedaid-browse.png" title="Redesigned option to browse site" alt="Redesigned option to browse site" /></a></p>
 
 <p>Additionally, you can now:</p>
 
@@ -229,6 +160,203 @@
       
       
       <a href="/releases/june-2014.html">
+        <time datetime="2014-07-10">July 10, 2014</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
+      <a href="/manual/settings.html">How to Edit Your Settings</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Settings</p>
+
+<h2>Display Name</h2>
+
+<p>Tell us the name of your website. Searchers see your site name on the results page, such as in your page title or best bets. We recommend using the plain language name for your agency or site, such as <em>Social Security Administration</em>.</p>
+
+<h2>Homepage URL</h2>
+
+<p>Tell us the homepage URL of your website. Enter a fully qualified URL, including http://, http://www, etc.</p>
+
+<p><strong>Correct Syntax</strong></p>
+
+<ul>
+<li>http://www.whitehouse.gov</li>
+<li>http://louisiana.gov</li>
+<li>http://www.usa.gov/gobiernousa/</li>
+<li>http://nimh.nih.gov/</li>
+<li>http://www.ci.bloomington.mn.us/</li>
+</ul>
+
+
+<p><strong>Incorrect Syntax</strong></p>
+
+<ul>
+<li>usa.gov (use http://www.usa.gov)</li>
+<li>www.nasa.gov (use http://www.nasa.gov)</li>
+<li>http://www.ftc.gov/opa/index.shtml (use the higher-level folder, http://www.ftc.gov/opa)</li>
+<li>http://www.gsa.gov/portal/category/100000?utm_source=OCM&amp;utm_medium=print-radio&amp;utm_term=&amp;utm_campaign=shortcuts (use the higher-level domain, http://www.gsa.gov)</li>
+<li>http://www.doc.gov (use the domain that resolves, http://www.commerce.gov)</li>
+</ul>
+
+
+<p>We use this homepage URL to (a) populate your primary <a href="/manual/domains.html">domain</a> and (b) link the default logo on your results page to your homepage.</p>
+
+<h2>Site Handle</h2>
+
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#97;&#x72;&#99;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#111;&#114;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#x67;&#111;&#118;">&#x73;&#101;&#97;&#x72;&#99;&#x68;&#x40;&#115;&#117;&#112;&#x70;&#111;&#114;&#x74;&#46;&#100;&#105;&#x67;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#x76;</a>.</p>
+
+<p><a href="http://search.socialsecurity.gov/search?query=office+locations&amp;affiliate=ssa"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/settings.png" title="Site name and handle on SocialSecurity.gov's search results page" alt="Site name and handle on SocialSecurity.gov's search results page" /></a></p>
+
+<h2>Site ID</h2>
+
+<p>We assign a unique, system-generated numeric ID to your site. We use this ID for some back-end code. You can see this ID in the URL for your site in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+
+<h2>Site Language</h2>
+
+<p>You chose the language (English or Spanish) for your site when you originally added your site. We'll only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language. If you'd like to edit your site's language, email us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#115;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#117;&#x70;&#112;&#111;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;">&#x73;&#101;&#x61;&#114;&#x63;&#104;&#64;&#115;&#x75;&#112;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#x67;&#x69;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#111;&#x76;</a>.</p>
+
+<h2>Delete</h2>
+
+<p>After you've set up a site, you may want to delete it. <strong>Use caution.</strong> This action permanently deletes your site and its associated analytics and indexes. We cannot restore deleted sites.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
+      
+      <a href="/tagged/settings"><span class="label label-info">settings</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/settings.html">
+        <time datetime="2014-07-09">July 9, 2014</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
+      <a href="/releases/may-2014.html">May 2014 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Features</h2>
+
+<p>We officially rolled our newly <a href="http://localhost:4000/blog/serp-redesign.html">redesigned results page</a>.</p>
+
+<p>As we continue to add features to our search results page, you can see small, incremental changes. We added a thin, visible border around the search box to improve its visibility, especially against a white background. We changed the color of the query term in the search box from gray to black. We also added more padding around <a href="/manual/best-bets-text.html">Best Bets</a> so that searchers can more readily distinguish them from web results. At the bottom of page, we added "Page 1" to "Next >>" to more clearly indicate that more results are available.</p>
+
+<p><a href="http://search.usa.gov/search?affiliate=usagov&amp;query=huricane"><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/release-05-2014-usa-huricane.png" title="Tweaks to the redesigned USA.gov results page" alt="Tweaks to the redesigned USA.gov results page" /></a></p>
+
+<p>Additionally, searchers can now see image and video results. Searchers can filter results to images or videos only. They can also see up to one inline video result with a link to see more videos.</p>
+
+<p>To improve the quality of the image search results, we now display images from <a href="/manual/flickr.html">your Flickr photostream</a> by default.</p>
+
+<p>We realized that our results page was getting a bit top-heavy so we now display inline results only when they're most relevant&mdash;capping the display of inline videos at 13 months and inline RSS-based news results at four months. Additionally, we display very recent news results (less than five days) at the top of the page and less recent news results closer to the bottom.</p>
+
+<p>It is also now possible to include an email address as a header or footer link by using mailto:info@agency.gov within the URL.</p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>We added support for .com <a href="http://search.digitalgov.gov/manual/cname.html">CNAMEs</a>.</li>
+<li>We increased the maximum mobile logo size from 50KB to 64KB.</li>
+<li>We updated <a href="https://travis-ci.org/">Travis-CI</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to use <a href="https://www.ruby-lang.org/en/downloads/">Ruby 2.0</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We added robots.txt files to all sites that use a CNAME to block crawlers from their search results pages.</li>
+<li>We updated <a href="http://logstash.net/">logstash</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and upgraded <a href="http://www.elasticsearch.org/downloads/1-2-0/">ElasticSearch to 1.2.0</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We investigated <a href="http://www.drupal.org">Drupal</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> modules that publish content APIs for our <a href="http://search.digitalgov.gov/blog/byoi.html">bring your own index</a> pilot.</li>
+<li>We updated our SSL certificate.</li>
+<li>We added a page in the Admin Center for you to let us know about your <a href="/manual/instagram.html">Instagram</a> account. We also registered for the <a href="http://instagram.com/developer/">Instagram API</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. (We're planning to display image results Instagram soon.)</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>Searchers no longer see duplicate video results.</li>
+<li>We fixed the spacing between web results on mobile phones.</li>
+<li>We now automatically populate the homepage URL for newly added sites.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/may-2014.html">
+        <time datetime="2014-07-09">July 9, 2014</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
+      <a href="/manual/govbox-health.html">Help Searchers Find Health Information</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Searches for health-related information are very common. We created the Health Topics GovBox to help you provide searchers with high-quality, authoritative health information.</p>
+
+<p>This GovBox offers direct access to <a href="http://www.nlm.nih.gov/medlineplus/healthtopics.html">MedlinePlus Health Topics</a> and open clinical studies and trials on <a href="http://clinicaltrials.gov">ClinicalTrials.gov</a>. To provide timely information across all health topics, we pull the data from the <a href="http://www.nlm.nih.gov/medlineplus/xml.html">MedlinePlus XML files</a>, which cover both the English and Spanish health topics.</p>
+
+<p>If you <a href="/manual/display-overview.html">opt to show the Health Topics GovBox</a>, searchers looking for health topics on your site can readily find high-quality health information, as shown in the sample below for a search on <a href="http://search.usa.gov/search?affiliate=nc.gov&amp;query=ovarian+cancer&amp;m=true"><em>ovarian cancer</em> on NC.gov</a>.</p>
+
+<p><a href="http://search.usa.gov/search?affiliate=nc.gov&amp;query=ovarian+cancer&amp;m=true"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/govbox-health.png" title="Health GovBox on NC.gov" alt="Health GovBox on NC.gov" /></a></p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/display"><span class="label label-info">display</span></a>
+      
+      <a href="/tagged/govbox"><span class="label label-info">govbox</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/govbox-health.html">
         <time datetime="2014-07-09">July 9, 2014</time>
       </a>
     </div>
@@ -411,7 +539,7 @@
 
 <p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
 
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#115;&#x65;&#97;&#114;&#99;&#x68;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#118;">&#115;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#111;&#118;</a>.</p>
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#58;&#115;&#101;&#x61;&#114;&#99;&#104;&#x40;&#115;&#117;&#112;&#112;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#x6f;&#118;">&#x73;&#x65;&#97;&#x72;&#99;&#104;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#97;&#108;&#x67;&#111;&#118;&#46;&#103;&#111;&#x76;</a>.</p>
 
     </div>
 
@@ -812,232 +940,6 @@
       
       <a href="/blog/serp-redesign-tips.html">
         <time datetime="2014-06-20">June 20, 2014</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/manual/rss.html">How to Add Your RSS Feeds to Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > RSS</p>
-
-<p>Would you like searchers to be able to search your news or multimedia content? Would you like them to be able to narrow results by date?</p>
-
-<p>Tell us the locations and names of your RSS feeds. We index all new and updated content on your feeds within minutes.</p>
-
-<h2>Step 1. Tell Us About Your RSS Feeds</h2>
-
-<p>We love feeds! Tell us about <em>all</em> of your RSS feeds, even if you don't opt to show them in step 2 below. Feeds are the fastest and most reliable way for us to learn about your new and updated content.</p>
-
-<p>Select the option to add a new RSS feed.</p>
-
-<h3>Name</h3>
-
-<p>Create a name for the feed. Within this 'bucket' you can list a single RSS feed or many feeds. For example, you can opt to list all of your agency's press releases separately (such as Police News, Fire News, EMS News, etc.) or you can list all three under one general name (such as News).</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/rss.png" alt="Add an RSS Feed" /></p>
-
-<h3>Feed type</h3>
-
-<p>Select the type of feed. The default option is RSS (for text content like press releases or blogs). Change it to <a href="http://www.rssboard.org/media-rss">media RSS</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> for multimedia content like images and videos.</p>
-
-<p>Each item within a RSS feed must include a title, link, description, and publication date.</p>
-
-<p>Each item within a media RSS feed must also include both a <a href="http://www.rssboard.org/media-rss#media-content">media:content URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a direct URL to the media object and a <a href="http://www.rssboard.org/media-rss#media-thumbnails">media:thumbnail URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a URL to the object's thumbnail.</p>
-
-<p>Any items missing a required element won't display in your search results.</p>
-
-<h3>Sample RSS Item with All Required Elements</h3>
-
-<pre><code>&lt;item&gt;
-&lt;title&gt;
-Statement from Agriculture Secretary Tom Vilsack Regarding World Organization for Animal Health (OIE) Upgrade of United States&amp;apos; BSE Risk Status
-&lt;/title&gt;
-&lt;pubDate&gt;May 29, 2013 00:00:00 CDT&lt;/pubDate&gt;
-&lt;link&gt;
-http://www.usda.gov/wps/portal/usda/usdahome?contentid=2013/05/0106.xml&amp;contentidonly=true
-&lt;/link&gt;
-&lt;description&gt;
-WASHINGTON, May 29, 2013–Agriculture Secretary Tom Vilsack made the following statement about notification received today from the World Organization for Animal Health (OIE) upgrading the United States&amp;apos; risk classification for bovine spongiform encephalopathy (BSE) to negligible risk:
-&lt;/description&gt;
-&lt;/item&gt;
-</code></pre>
-
-<h3>Sample Media RSS Item with All Required Elements</h3>
-
-<pre><code>&lt;item&gt;
-&lt;title type="html"&gt;
-&lt;![CDATA[ Great Lakes Beach Health ]]&gt;
-&lt;/title&gt;
-&lt;link&gt;
-http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
-&lt;/link&gt;
-&lt;guid&gt;
-http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
-&lt;/guid&gt;
-&lt;pubDate&gt;Fri, 24 May 2013 00:00:00 EDT&lt;/pubDate&gt;
-&lt;media:description type="html"&gt;
-&lt;![CDATA[ As schools close for the year and summer weather beckons, many recreationalists head to the Great Lakes' public beaches. However, these coastal areas can become  contaminated with disease-causing bacteria that threaten public health, disrupt water   recreation, and pay a toll on the Great Lakes economies that depend on summer tourism. ]]&gt;
-&lt;/media:description&gt;
-&lt;media:thumbnail url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/thumbs/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
-&lt;media:content type="" url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/large/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
-&lt;/item&gt;
-</code></pre>
-
-<h2>Step 2. Opt to Show as a GovBox, in the Sidebar, or Both</h2>
-
-<p>Allow searchers to see inline results for the three most recent, relevant RSS results <em>across all of your RSS feeds</em> by turning on the News GovBox on the <a href="/manual/display-overview.html">Display Overview</a> page. You can also edit the default title, News, on the Display Overview page.</p>
-
-<p>Allow searchers to see narrow results to a specific feed in the left-hand column of the results page by turning on the option to show in the Sidebar on the <a href="/manual/display-overview.html">Display Overview</a> page. To ensure searchers don't encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a sidebar option.</p>
-
-<h2>Step 3. Check Your Search Results Page</h2>
-
-<p><strong>GovBox.</strong> If you opted to show your RSS feed(s) as a GovBox, searchers will see a News GovBox. This GovBox will highlight the three most recent, relevant results across all of your RSS feeds.</p>
-
-<p><strong>Sidebar.</strong> If you opted to show your RSS feed(s) in the sidebar, searchers can narrow their results to see your RSS-based results only.</p>
-
-<p>Within the RSS-based results, searchers can opt to limit results to the last hour, day, week, month, or year, or they can set a custom date range. They also can sort results in descending order by relevance (best match first) or date (most recent first).</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
-
-<ul>
-<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
-<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-<li><a href="http://atomenabled.org/developers/syndication/">Atom syndication format</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-</ul>
-
-
-<p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="https://search.usa.gov/sites/">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don't need to coordinate with us.</p>
-
-<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your feed.</p>
-
-<p>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab. Change the form action to <code>action="http://search.usa.gov/search/news</code> and add the following line to limit the results to your feed.</p>
-
-<p><code>&lt;input type="hidden" name="channel" value="###"&gt;</code></p>
-
-<p>The value is the number for your feed ID, which is visible in the URL when you edit your feed in the Admin Center.</p>
-
-<p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your RSS feeds.</p>
-
-<p><strong><em>Did you know?</em></strong> When you <a href="/manual/youtube.html">provide us with your YouTube channel</a>, we'll automatically index the RSS feed for your YouTube channel.</p>
-
-<p><strong><em>Did you know?</em></strong> For any feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by these facets in the <a href="/manual/display-overview.html">sidebar</a> on the results page.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/rss"><span class="label label-info">rss</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/rss.html">
-        <time datetime="2014-06-20">June 20, 2014</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/manual/brand.html">How to Brand Your Results Page</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Display</p>
-
-<p>To customize your search results page and match your site's brand:</p>
-
-<ol>
-<li>Define your color scheme on the Fonts &amp; Colors page.</li>
-<li>Upload your logo on the Image Assets page. (We'll also link your logo to your homepage using the homepage URL you provide on the <a href="/manual/settings.html">Settings</a> page.)</li>
-<li>Add your navigation links on the Header &amp; Footer page.</li>
-</ol>
-
-
-<p>Read our <a href="/blog/serp-redesign-tips.html">favorite tips</a> to see how other sites have customized their results pages and for some ideas on how to optimize the <a href="/blog/serp-redesign.html">newly redesigned results page</a> for your site.</p>
-
-<h2>Font &amp; Colors</h2>
-
-<p><strong>Font Family.</strong> Leave the default font as-is, or select your preferred font family.</p>
-
-<p><strong>Color Scheme.</strong> Leave the default color scheme as-is, or select Custom to create a customized scheme. Customize the color of any page element by clicking on it and entering a valid three- or six-digit hex value. You can also pick a color by dragging your mouse inside the color picker window.</p>
-
-<h2>Image Assets</h2>
-
-<p><strong>Favicon.</strong> Provide the URL for your agency's favicon. (A <a href="http://webdesign.about.com/od/favicon/f/blfaqfavicon1.htm">favicon</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, short for favorites icon, is the small image associated with your website.)</p>
-
-<p><strong>Logo.</strong> Use the Choose File option to upload the logo that you'd like to appear in the header of your results page. Click on the option, Mark Logo for Deletion, to delete an uploaded logo. There isn't a required dimension. That said, images less than 550 pixels wide and 100 pixels high tend to work best.</p>
-
-<p>If you don't upload a logo, searchers will simply see the header, <em>Your Site Name</em>. We'll use the site name you provide on the <a href="/manual/settings.html">Settings</a> page.</p>
-
-<p><strong>Logo Alignment.</strong> Leave the logo center-aligned, or select the Left option to make it left-aligned.</p>
-
-<h2>Header &amp; Footer</h2>
-
-<p>Fill out the titles and URLs for the navigation links you'd like to appear in your header and footer. You can add an email address by specifying <em>mailto:</em> within the URL field, such as:</p>
-
-<p>Title: Contact us<br/>
-URL: mailto:info@agency.gov</p>
-
-<p>Use the icon with three horizontal lines on the left to change the order.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> As you change each font and color option, the mini search results page in the upper right-hand corner will update to reflect your changes. Once you click save, the changes will appear on your live site.</p>
-
-<p><strong><em>Did you know?</em></strong> Our search results page uses a <a href="http://alistapart.com/topic/responsive-design">responsive design</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to ensure it is optimized for searchers anywhere, anytime, and on any device.</p>
-
-<p><strong><em>Did you know?</em></strong> We offer results through our <a href="/manual/api.html">Search Data API</a>, if you'd like to create mash-ups or have complete control of the look and feel of your search results pages. You can access the API by clicking on the Activate Search option in the left-hand menu in the Admin Center.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-display"><span class="label label-info">manage-display</span></a>
-      
-      <a href="/tagged/font"><span class="label label-info">font</span></a>
-      
-      <a href="/tagged/colors"><span class="label label-info">colors</span></a>
-      
-      <a href="/tagged/header"><span class="label label-info">header</span></a>
-      
-      <a href="/tagged/footer"><span class="label label-info">footer</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/brand.html">
-        <time datetime="2014-06-18">June 18, 2014</time>
       </a>
     </div>
 
