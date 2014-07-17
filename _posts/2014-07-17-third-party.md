@@ -1,25 +1,25 @@
 ---
 layout: post
-title: How to Add JavaScript for Your Third Party Web Services
+title: How to Add JavaScript for Your Third-party Web Services
 category: manual
 tags: how-to analytics third-party google-analytics foresee DAP
 ---
 
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > 3rd Party Tracking
 
-Do you want your search results page to run web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?
+Do you want your search results page to run third-party web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?
 
 Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.
 
-Some tips for commonly used third party web services follow.
+Some tips for commonly used third-party web services follow.
 
 ## Google Analytics Tip
 
-In your Google Analytics JavaScript, be sure to set your domain if you've requested <a href="/manual/cname.html">domain masking</a> and you want to include your search subdomain (e.g., search.commerce.gov) with your main domain (e.g., commerce.gov).
+Within your Google Analytics account, select the option, *Do Track Site Search*. Set the query parameter as *query*. For more information, read Google's tip, [Set Up and Configure Site Search](https://support.google.com/analytics/answer/1012264?hl=en&ref_topic=1031951){% external_link %}.
 
-    _gaq.push(['_setDomainName', 'commerce.gov']);
+Additionally, if you've requested <a href="/manual/cname.html">domain masking</a> and you want to include the analytics for your *search.agency.gov* subdomain with your main *agency.gov* domain, you'll need to set your domain in your Google Analytics JavaScript by including `_gaq.push(['_setDomainName', 'agency.gov']);`.
 
-For more information, read Google's tip, [Tracking Multiple Domains](https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite).
+For more information, read Google's tip, [Tracking Multiple Domains](https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite){% external_link %}.
 
 The code you submit should look something like one of the following two scripts.
 
