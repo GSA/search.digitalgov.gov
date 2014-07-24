@@ -5,7 +5,7 @@ category: manual
 tags: how-to display govbox
 ---
 
-Searches for health-related information are very common. We created the Health Topics GovBox to help you provide searchers with high-quality, authoritative health information.
+Searches for health-related information are very common. We created the Health Topics GovBox to help searchers find high-quality, authoritative health information.
 
 This GovBox offers direct access to [MedlinePlus Health Topics](http://www.nlm.nih.gov/medlineplus/healthtopics.html) and open clinical studies and trials on [ClinicalTrials.gov](http://clinicaltrials.gov). To provide timely information across all health topics, we pull the data from the [MedlinePlus XML files](http://www.nlm.nih.gov/medlineplus/xml.html), which cover both the English and Spanish health topics.
 

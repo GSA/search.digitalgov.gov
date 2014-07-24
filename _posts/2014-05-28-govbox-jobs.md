@@ -5,7 +5,7 @@ category: manual
 tags: govbox jobs how-to
 ---
 
-One of the most common search tasks is to look for current job openings. To help searchers quickly find relevant jobs we've created the Jobs GovBox. 
+One of the most common search tasks is to look for current job openings. We created the Jobs GovBox to help searchers quickly find relevant jobs. 
 
 When you [turn on the Job Openings GovBox](/manual/display-overview.html), searchers looking for jobs on your site will see up to three relevant jobs listings on your results page. 
 

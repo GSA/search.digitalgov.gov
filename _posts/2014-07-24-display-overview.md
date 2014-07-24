@@ -28,7 +28,9 @@ You can type over the text in the Name field to edit an option's display name. K
 
 1. **Photos.** This option only appears after you've told us about your [Flickr](/manual/flickr.html) photostream. When a searcher's query matches the metadata of a photo published any time, the photo appears in the Photos GovBox. Up to five photos are displayed.
 
-1. **Job openings.** When a searcher's query matches the text of a job opening published on USAJobs or NeoGov, the job appears in the Job Openings GovBox. Up to three job openings are displayed. For more information, including a screenshot, read our post [Help Searchers Find Jobs](/manual/govbox-jobs.html).
+1. **Job openings.** When a searcher's query matches the text of a job opening published by your agency on USAJobs or NeoGov, the job appears in the Job Openings GovBox. Up to three job openings are displayed. For more information, including a screenshot, read our post [Help Searchers Find Jobs](/manual/govbox-jobs.html).
+
+1. ***Federal Register* documents.** When a searcher's query matches the text of a notice or rule published by your agency in the *Federal Register*, the document appears in the *Federal Register* GovBox. Up to three documents are displayed. For more information, including a screenshot, read our post [Help Searchers Find Federal Register Documents](/manual/govbox-federal-register.html).
 
 1. **Related searches.** Help visitors better define the focus of their search by offering them searches related to their current search term. Suggestions are derived from the searches performed on your website. Up to five searches related to your visitors' original search are displayed and are updated in near real time. See, for example, the sample results page below that shows related searches displayed for a [search on *tacoma* on Access Washington](http://search.usa.gov/search?affiliate=accesswashington&query=tacoma).
 
