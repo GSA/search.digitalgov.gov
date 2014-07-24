@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>How to Mask Your Domain</title>
+  <title>How to Toggle Your Analytics Settings to View Unfiltered Data</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -71,26 +71,26 @@
   <div id="main-container"><article class="article">
   
   <h1>
-    <a href="/manual/cname.html">How to Mask Your Domain</a>
+    <a href="/manual/analytics-settings.html">How to Toggle Your Analytics Settings to View Unfiltered Data</a>
   </h1>
   
 
   <div class='post-content'>
-    <p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these three steps to mask your domain.</p>
+    <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Settings</p>
 
-<ol>
-<li>Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#x73;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#x6f;&#x76;">&#x73;&#101;&#97;&#114;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#x67;&#111;&#x76;</a> and ask us to mask your domain.</li>
-<li>Create a CNAME in your external DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
-<li>When the setup is complete, change the <a href="/manual/code.html">code for your form</a> action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
-</ol>
+<p>All of the analytics in the Admin Center are updated in real-time, which means that you  instantaneously see the searches and clicks that are performed on your site.</p>
+
+<p>You see filtered data by default. You can toggle between a filtered or unfiltered view.</p>
+
+<ul>
+<li><strong>Filtered.</strong> Several rules are applied to remove bot and other non-human looking traffic. The filtered data represent our best effort to show you real searches performed by your site's visitors.</li>
+<li><strong>Unfiltered.</strong> Nearly all searches and clicks are included. Only known spiders (such as Bingbot and Googlebot) are excluded. Some of you may see dramatically more data in the unfiltered view.</li>
+</ul>
 
 
 <hr />
 
-<p><strong><em>Troubleshooting tip:</em></strong> Many agencies have both internal and external DNS. Be
-sure to update your <em>external</em> DNS records (step 2) before changing your form code (step 3).</p>
-
-<p><strong><em>Did you know?</em></strong> By default, we set up search.YOURSITE.gov (such as search.nih.gov). If this subdomain is already used by another application, you can request YOURSITEsearch.YOURSITE.gov (such as usdasearch.usda.gov) or another pattern.</p>
+<p><strong><em>Did you know?</em></strong> The option to view (un)filtered data is a per-user, "sticky" setting. It applies to you only (not any other users on your agency's account). It applies across all of your sites (not just the site you're currently viewing).</p>
 
   </div>
 
@@ -98,9 +98,7 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
     
     <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
     
-    <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
-    
-    <a href="/tagged/cname"><span class="label label-info">cname</span></a>
+    <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
     
   </div>
 
@@ -111,8 +109,8 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
     
     
     
-    <a href="/manual/cname.html">
-      <time>August 23, 2013</time>
+    <a href="/manual/analytics-settings.html">
+      <time>July 22, 2014</time>
     </a>
   </div>
 
