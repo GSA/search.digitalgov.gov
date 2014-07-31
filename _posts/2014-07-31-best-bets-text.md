@@ -30,7 +30,7 @@ Text best bets may be added individually or via bulk upload.
 
 ## Add Multiple Best Bets via Bulk Upload
 
-Create a comma-separated file with the following fields (in this order).
+Create a comma-separated file with the following fields (in this order). Download our [sample template for uploading best bets](/files/best-bets-template.csv) [CSV] to see the correct format.
 
 Title, URL, Description, StartDate, EndDate, Keywords
 
