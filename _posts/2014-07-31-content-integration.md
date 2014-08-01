@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to Directly Integrate Your Content with DG Search
-category: developer
+category: post
 tags: how-to integrate-content api
 ---
 
