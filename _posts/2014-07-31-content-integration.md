@@ -5,8 +5,6 @@ category: blog
 tags: how-to integrate-content api
 ---
 
-[DigitalGov Search](/index.html) > [APIs for Developers](/developer/index.html) > Content Integration
-
 # How to Directly Integrate Your Content with DG Search
 
 Content management systems (CMS) have made it easier for us to fetch and index your web site’s content directly. The best way for you to give us your content is through a full-text content API or RSS feed. 
