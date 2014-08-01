@@ -13,12 +13,12 @@ Content management systems (CMS) have made it easier for us to fetch and index y
 
 ## Give Us Your Content
 
-The best way for you to give us your content is through either a content API or RSS feed. It doesn't matter what underlying technology you use to publish your content. Provide us with the following information.
+The best way for you to give us your content is through either a content API or RSS feed. It doesn't matter what underlying technology you use to publish your content as long as you can provide us with the following four fields.
 
-* **Title.** Provide the page's title.
-* **Description.** Provide the page's full text in the description for a full text search. Or, provide a short snippet about the page for a more precise search.
-* **URL.** Provide the page's URL.
-* **Date.** Provide either the page's publication or revision date. Use whichever date you'd like to searchers to see.
+1. **Title.** The page's title.
+1. **Description.** The page's full text in the description for a full text search. Or, provide a short snippet about the page for a more precise search.
+1. **URL.** The page's URL.
+1. **Date.** The page's publication or revision date. Provide whichever date you'd like searchers to see.
 
 We also support custom fields. [Let us know](mailto:search@support.digitalgov.gov) if you have any custom fields that you'd like us to index.
 
