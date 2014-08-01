@@ -42,7 +42,11 @@ Once you've added your web pages, you can create [collections](/manual/collectio
 
 Create best bets ([text](/manual/best-bets-text.html) or [graphics](/manual/best-bets-graphics.html)) to promote specific web pages. Best bets appear above the standard web results when a searcher's query matches the text of their titles, descriptions, or keywords.
 
-## Turn on Your Government-specific Content
+## Turn It All On
+
+After you've added your content, be sure to [set the display options](/manual/display-overview.html) to control how each index appears on your search results page.
+
+We also have three pre-built, government-centric content modules that you can opt to turn on, too.
 
 * **Job Openings.** [Toggle on the Jobs module](/manual/govbox-jobs.html) to show your agency’s job openings from USAJobs.gov (federal) or NeoGov (applicable local and state). 
 * ***Federal Register* Documents.** [Toggle on the *Federal Register* module](/manual/govbox-federal-register.html) to show your agency’s documents posted on FederalRegister.gov. 
@@ -51,5 +55,3 @@ Create best bets ([text](/manual/best-bets-text.html) or [graphics](/manual/best
 ---
 
 ***Troubleshooting tip:*** We’ve connected your site to your agency on the backend. If you’re not seeing jobs or *Federal Register* documents specific to your agency, [email us](mailto:search@support.digitalgov.gov) so we can fix the agency setting for your site.
-
-***Did you know?*** After you've added your content, be sure to [set the display options](/manual/display-overview.html) to control how each index appears on your search results page.
