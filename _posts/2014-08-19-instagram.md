@@ -29,3 +29,5 @@ See the sample results page below that shows image results displayed on [DOL.gov
 ***Did you know?*** Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index [MRSS feeds](/manual/rss.html) so that your multimedia content is automatically included in your search results.
 
 ***Did you know?*** You can also tell us about your [Flickr](/manual/flickr.html) photostream.
+
+***Troubleshooting tip:*** Note that, if you use both [Flickr](/manual/flickr.html) and Instagram, we show searchers results from both services. If you have a lot of duplicate images in your Flickr and Instagram accounts, you may want to list only one in the Admin Center. 
