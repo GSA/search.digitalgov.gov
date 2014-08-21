@@ -35,16 +35,17 @@ The code you submit should look something like one of the following two scripts.
      ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
      })();
-     
      </script>
 
 ### Google Analytics Code (Newer Format)
 
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+     <script type="text/javascript">
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
+     </script>
+     
 ## Digital Analytics Program Tip
 
 Does your federal agency participate in the [Digital Analytics Program](http://www.digitalgov.gov/services/dap/) (DAP)?  You don't need to do anything. We're already fully integrated with DAP.
@@ -71,8 +72,6 @@ Coordinate with your ForeSee representative and DigitalGov Search to implement y
     * foresee-qualifier.js  
     * foresee-test.js
 
-1. Submit your foresee-trigger.js via our Admin Center. It should look something like the following.
-
-          <script type="text/javascript" src="http://www.youragency.gov/library/foresee/foresee-trigger.js"></script>
+1. Submit your foresee-trigger.js via our Admin Center. It should look something like the following script. `<script type="text/javascript" src="http://www.youragency.gov/library/foresee/foresee-trigger.js"></script>`
 
 1. We'll send you an email to confirm that we've set up both your CNAME and added the script for your foresee-trigger.js file.
