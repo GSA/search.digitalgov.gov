@@ -76,88 +76,26 @@
  
     
     <h1>
-      <a href="/manual/third-party.html">How to Add JavaScript for Your Third-party Web Services</a>
+      <a href="/manual/analytics-settings.html">How to Toggle Your Analytics Settings to View Unfiltered Data</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > 3rd Party Tracking</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Settings</p>
 
-<p>Do you want your search results page to run third-party web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?</p>
+<p>All of the analytics in the Admin Center are updated in real-time, which means that you  instantaneously see the searches and clicks that are performed on your site.</p>
 
-<p>Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
-
-<p>Some tips for commonly used third-party web services follow.</p>
-
-<h2>Google Analytics Tip</h2>
-
-<p>Within your Google Analytics account, select the option, <em>Do Track Site Search</em>. Set the query parameter as <em>query</em>. For more information, read Google's tip, <a href="https://support.google.com/analytics/answer/1012264?hl=en&amp;ref_topic=1031951">Set Up and Configure Site Search</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<p>Additionally, if you've requested <a href="/manual/cname.html">domain masking</a> and you want to include the analytics for your <em>search.agency.gov</em> subdomain with your main <em>agency.gov</em> domain, you'll need to set your domain in your Google Analytics JavaScript by including <code>_gaq.push(['_setDomainName', 'agency.gov']);</code>.</p>
-
-<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<p>The code you submit should look something like one of the following two scripts.</p>
-
-<h3>Google Analytics Code (Older Format)</h3>
-
-<pre><code> &lt;script type="text/javascript"&gt;
- var _gaq = _gaq || []; 
- _gaq.push(['_setAccount', 'UA-########-1']); 
- _gaq.push(['_trackPageview']);
-
- (function() { 
- var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
- ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
- var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
- })();
-
- &lt;/script&gt;
-</code></pre>
-
-<h3>Google Analytics Code (Newer Format)</h3>
-
-<pre><code>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-</code></pre>
-
-<h2>Digital Analytics Program Tip</h2>
-
-<p>Does your federal agency participate in the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> (DAP)?  You don't need to do anything. We're already fully integrated with DAP.</p>
-
-<h2>ForeSee Tip</h2>
-
-<p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
-
-<ol>
-<li><p>Email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x73;&#101;&#97;&#114;&#99;&#104;&#x40;&#x73;&#x75;&#112;&#112;&#111;&#114;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;">&#115;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#x73;&#117;&#112;&#112;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#105;&#116;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#118;</a> to <a href="/manual/cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
-<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
-
-<p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
-
-<p> <strong>and replace it with =></strong> 'files': '//www.youragency.gov/fsrscripts/',</p>
-
-<p> <em>(Or, find => 'files': '/foresee/', and replace it with => 'files': '//www.youragency/foresee/',)</em></p>
-
-<p> in the following five files.</p>
+<p>You see filtered data by default. You can toggle between a filtered or unfiltered view.</p>
 
 <ul>
-<li>foresee-trigger.js</li>
-<li>foresee-tracker.js</li>
-<li>foresee-alive.js</li>
-<li>foresee-qualifier.js</li>
-<li>foresee-test.js</li>
+<li><strong>Filtered.</strong> Several rules are applied to remove bot and other non-human looking traffic. The filtered data represent our best effort to show you real searches performed by your site's visitors.</li>
+<li><strong>Unfiltered.</strong> Nearly all searches and clicks are included. Only known spiders (such as Bingbot and Googlebot) are excluded. Some of you may see dramatically more data in the unfiltered view.</li>
 </ul>
-</li>
-<li><p>Submit your foresee-trigger.js via our Admin Center. It should look something like the following.</p>
 
-<pre><code>   &lt;script type="text/javascript" src="http://www.youragency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;
-</code></pre></li>
-<li><p>We'll send you an email to confirm that we've set up both your CNAME and added the script for your foresee-trigger.js file.</p></li>
-</ol>
 
+<hr />
+
+<p><strong><em>Did you know?</em></strong> The option to view (un)filtered data is a per-user, "sticky" setting. It applies to you only (not any other users on your agency's account). It applies across all of your sites (not just the site you're currently viewing).</p>
 
     </div>
 
@@ -167,14 +105,6 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       
       <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
       
-      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
-      
-      <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
-      
-      <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
-      
-      <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
-      
     </div>
    <div class='time'>
       
@@ -183,8 +113,8 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       
       
       
-      <a href="/manual/third-party.html">
-        <time datetime="2014-07-17">July 17, 2014</time>
+      <a href="/manual/analytics-settings.html">
+        <time datetime="2014-07-22">July 22, 2014</time>
       </a>
     </div>
     </article>
@@ -258,6 +188,71 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       
       
       <a href="/manual/collections.html">
+        <time datetime="2014-07-10">July 10, 2014</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/youtube.html">How to Add Your YouTube Videos to Our Index</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > YouTube</p>
+
+<h2>Tell Us About Your YouTube Channel</h2>
+
+<p>Provide us with the username for your YouTube channel(s). When you're on YouTube's website, you can see your username in the URL at http://www.youtube.com/user/<strong>YourUserName</strong>.</p>
+
+<p>For example, the username for NASA's YouTube channel is <a href="http://www.youtube.com/user/NASAtelevision">NASAtelevision</a>s.</p>
+
+<h2>Opt to Display Your Videos</h2>
+
+<p>When you add the username for your YouTube channel, we'll automatically index your videos&mdash;both your uploaded videos and playlists.</p>
+
+<p>You can control the display of the videos on the <a href="/manual/display-overview.html">Display Overview</a> page. You can show the videos (a) as a facet by turning on the sidebar, (b) inline on your main web results page by turning on the module, or both.</p>
+
+<p>You can edit the default label, Videos, on the RSS feed on the <a href="/manual/rss.html">RSS</a> page.</p>
+
+<p>See the sample results page below that shows video results for the <a href="http://search.tpwd.texas.gov/search?affiliate=tpwd&amp;query=mussels">Texas Parks and Wildlife Department for a search on <em>mussels</em></a>.</p>
+
+<p><a href="http://search.tpwd.texas.gov/search?affiliate=tpwd&amp;query=mussels"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-video1.png" title="Results page with inline videos" alt="Results page with inline videos" /></a>
+<em>Results page with videos shown as a GovBox</em></p>
+
+<p><a href="http://search.tpwd.texas.gov/search/news?affiliate=tpwd&amp;channel=1900&amp;query=mussels"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-video2.png" title="Video results page shown when searcher opts to view videos" alt="Video results page shown when searcher opts to view videos" /></a>
+<em>Video results page shown when searcher opts to view videos</em></p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
+      
+      <a href="/tagged/youtube"><span class="label label-info">youtube</span></a>
+      
+      <a href="/tagged/videos"><span class="label label-info">videos</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/youtube.html">
         <time datetime="2014-07-10">July 10, 2014</time>
       </a>
     </div>
@@ -471,112 +466,6 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
  
     
     <h1>
-      <a href="/manual/youtube.html">How to Add Your YouTube Videos to Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > YouTube</p>
-
-<h2>Tell Us About Your YouTube Channel</h2>
-
-<p>Provide us with the username for your YouTube channel(s). When you're on YouTube's website, you can see your username in the URL at http://www.youtube.com/user/<strong>YourUserName</strong>.</p>
-
-<p>For example, the username for NASA's YouTube channel is <a href="http://www.youtube.com/user/NASAtelevision">NASAtelevision</a>s.</p>
-
-<h2>Opt to Display Your Videos</h2>
-
-<p>When you add the username for your YouTube channel, we'll automatically index your videos&mdash;both your uploaded videos and playlists.</p>
-
-<p>You can control the display of the videos on the <a href="/manual/display-overview.html">Display Overview</a> page. You can show the videos (a) as a facet by turning on the sidebar, (b) inline on your main web results page by turning on the module, or both.</p>
-
-<p>You can edit the default label, Videos, on the RSS feed on the <a href="/manual/rss.html">RSS</a> page.</p>
-
-<p>See the sample results page below that shows video results for the <a href="http://search.tpwd.texas.gov/search?affiliate=tpwd&amp;query=mussels">Texas Parks and Wildlife Department for a search on <em>mussels</em></a>.</p>
-
-<p><a href="http://search.tpwd.texas.gov/search?affiliate=tpwd&amp;query=mussels"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-video1.png" title="Results page with inline videos" alt="Results page with inline videos" /></a>
-<em>Results page with videos shown as a GovBox</em></p>
-
-<p><a href="http://search.tpwd.texas.gov/search/news?affiliate=tpwd&amp;channel=1900&amp;query=mussels"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-video2.png" title="Video results page shown when searcher opts to view videos" alt="Video results page shown when searcher opts to view videos" /></a>
-<em>Video results page shown when searcher opts to view videos</em></p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
-      
-      <a href="/tagged/youtube"><span class="label label-info">youtube</span></a>
-      
-      <a href="/tagged/videos"><span class="label label-info">videos</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/youtube.html">
-        <time datetime="2014-07-10">July 10, 2014</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/govbox-health.html">Help Searchers Find Health Information</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>Searches for health-related information are very common. We created the Health Topics GovBox to help searchers find high-quality, authoritative health information.</p>
-
-<p>This GovBox offers direct access to <a href="http://www.nlm.nih.gov/medlineplus/healthtopics.html">MedlinePlus Health Topics</a> and open clinical studies and trials on <a href="http://clinicaltrials.gov">ClinicalTrials.gov</a>. To provide timely information across all health topics, we pull the data from the <a href="http://www.nlm.nih.gov/medlineplus/xml.html">MedlinePlus XML files</a>, which cover both the English and Spanish health topics.</p>
-
-<p>If you <a href="/manual/display-overview.html">opt to show the Health Topics GovBox</a>, searchers looking for health topics on your site can readily find high-quality health information, as shown in the sample below for a search on <a href="http://search.usa.gov/search?affiliate=nc.gov&amp;query=ovarian+cancer&amp;m=true"><em>ovarian cancer</em> on NC.gov</a>.</p>
-
-<p><a href="http://search.usa.gov/search?affiliate=nc.gov&amp;query=ovarian+cancer&amp;m=true"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/govbox-health.png" title="Health GovBox on NC.gov" alt="Health GovBox on NC.gov" /></a></p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/display"><span class="label label-info">display</span></a>
-      
-      <a href="/tagged/govbox"><span class="label label-info">govbox</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/govbox-health.html">
-        <time datetime="2014-07-09">July 9, 2014</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
       <a href="/manual/settings.html">How to Edit Your Settings</a>
     </h1>
     
@@ -618,7 +507,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 <h2>Site Handle</h2>
 
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#58;&#115;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#117;&#x70;&#112;&#111;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#108;&#103;&#111;&#x76;&#46;&#103;&#x6f;&#x76;</a>.</p>
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#115;&#101;&#97;&#114;&#99;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#118;">&#115;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;</a>.</p>
 
 <p><a href="http://search.socialsecurity.gov/search?query=office+locations&amp;affiliate=ssa"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/settings.png" title="Site name and handle on SocialSecurity.gov's search results page" alt="Site name and handle on SocialSecurity.gov's search results page" /></a></p>
 
@@ -628,7 +517,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 <h2>Site Language</h2>
 
-<p>You chose the language (English or Spanish) for your site when you originally added your site. We'll only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language. If you'd like to edit your site's language, email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#58;&#115;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;">&#x73;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#105;&#116;&#97;&#x6c;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#118;</a>.</p>
+<p>You chose the language (English or Spanish) for your site when you originally added your site. We'll only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language. If you'd like to edit your site's language, email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#115;&#101;&#x61;&#114;&#x63;&#104;&#64;&#x73;&#117;&#112;&#x70;&#111;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#108;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#x76;">&#x73;&#x65;&#97;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#103;&#111;&#118;&#46;&#103;&#111;&#x76;</a>.</p>
 
 <h2>Delete</h2>
 
@@ -653,6 +542,47 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       
       
       <a href="/manual/settings.html">
+        <time datetime="2014-07-09">July 9, 2014</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/govbox-health.html">Help Searchers Find Health Information</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Searches for health-related information are very common. We created the Health Topics GovBox to help searchers find high-quality, authoritative health information.</p>
+
+<p>This GovBox offers direct access to <a href="http://www.nlm.nih.gov/medlineplus/healthtopics.html">MedlinePlus Health Topics</a> and open clinical studies and trials on <a href="http://clinicaltrials.gov">ClinicalTrials.gov</a>. To provide timely information across all health topics, we pull the data from the <a href="http://www.nlm.nih.gov/medlineplus/xml.html">MedlinePlus XML files</a>, which cover both the English and Spanish health topics.</p>
+
+<p>If you <a href="/manual/display-overview.html">opt to show the Health Topics GovBox</a>, searchers looking for health topics on your site can readily find high-quality health information, as shown in the sample below for a search on <a href="http://search.usa.gov/search?affiliate=nc.gov&amp;query=ovarian+cancer&amp;m=true"><em>ovarian cancer</em> on NC.gov</a>.</p>
+
+<p><a href="http://search.usa.gov/search?affiliate=nc.gov&amp;query=ovarian+cancer&amp;m=true"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/govbox-health.png" title="Health GovBox on NC.gov" alt="Health GovBox on NC.gov" /></a></p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/display"><span class="label label-info">display</span></a>
+      
+      <a href="/tagged/govbox"><span class="label label-info">govbox</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/govbox-health.html">
         <time datetime="2014-07-09">July 9, 2014</time>
       </a>
     </div>
@@ -886,38 +816,51 @@ URL: mailto:info@agency.gov</p>
  
     
     <h1>
-      <a href="/manual/twitter.html">How to Add Your Tweets to Our Index</a>
+      <a href="/manual/govbox-jobs.html">Help Searchers Find Jobs</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Twitter</p>
+      <p>One of the most common search tasks is to look for current job openings. We created the Jobs GovBox to help searchers quickly find relevant jobs.</p>
 
-<p>Provide us with the @handle for your Twitter account(s). Your @handle is your agency's username used within Twitter. When you're logged into Twitter, you can see your username at <a href="https://twitter.com/settings/account">https://twitter.com/settings/account</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+<p>When you <a href="/manual/display-overview.html">turn on the Job Openings GovBox</a>, searchers looking for jobs on your site will see up to three relevant jobs listings on your results page.</p>
 
-<p>For example, the Twitter username for the Federal Student Aid, a part of the U.S. Department of Education, is <a href="https://twitter.com/FAFSA">@FAFSA</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+<h2>Federal Government</h2>
 
-<p>When you add your Twitter @handle, we'll automatically index and display <em>your</em> tweets. Select the option, Show tweets from my lists, to index the tweets for all members of your lists.</p>
+<ul>
+<li><strong>Federal Cross-Agency Portals.</strong> If your website is a federal cross-agency portal (e.g., USA.gov), the Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across all federal agencies</em>.</li>
+<li><strong>Federal Department Websites.</strong> If your website is affiliated with a specific federal department (e.g., Department of Commerce), the Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across all agencies within your department</em>.</li>
+<li><strong>Federal Agency or Office Websites.</strong> If your website is affiliated with a specific federal agency (e.g., NOAA) or office (e.g, National Ocean Service), the Jobs GovBox will return relevant, location-and keyword-matched job openings <em>at your agency</em>.</li>
+</ul>
 
-<p>If you don't want to display your tweets, simply delete your Twitter handle.</p>
 
-<p>See the sample results page below that shows a recent tweet displayed on Federal Student Aid for a search on <em><a href="http://search.usa.gov/search?query=loans&amp;op=Search&amp;affiliate=federalstudentaid&amp;m=true">loans</a></em>.</p>
+<p>Searchers will also see a direct link to <a href="https://www.usajobs.gov">USAJobs.gov</a> for all current job openings (specific to your department or agency, if applicable), as shown in the sample below for a search on <a href="http://search.doi.gov/search?utf8=%E2%9C%93&amp;affiliate=doi.gov&amp;query=jobs" title=""><em>jobs</em></a> on DOI.gov.</p>
 
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-tweets.png" alt="Search result with a tweet on Federal Student Aid" /></p>
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/govbox-jobs.png" alt="Search results for jobs on DOI.gov" /></p>
 
-<p>Searchers will see the most recent tweet (posted within the past three days) that matches their search term.</p>
+<h2>State and Local Government</h2>
+
+<p>If your website is a state or local government site that uses both DigitalGov Search and NeoGov (e.g., Michigan.gov), the Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across your agency</em>.</p>
+
+<p>Searchers will also see a direct link to your NeoGov page for all current job openings specific to your agency, as shown in the sample below for a search on <em><a href="http://search.ci.bloomington.mn.us/search?affiliate=cityofbloomingtonmnsearchresults&amp;query=jobs">jobs</a></em> on the City of Bloomington, MN.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/jobs-bloomington.png" alt="Search results for jobs on ci.bloomington.mn.us" /></p>
+
+<p>Otherwise, the Jobs GovBox will return relevant, location- and keyword-matched job openings <em>across all federal, state, and local agencies</em>.</p>
+
+<hr />
+
+<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. Email us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#115;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#115;&#117;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;">&#x73;&#101;&#97;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#103;&#111;&#118;&#x2e;&#103;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
 
     </div>
 
     <div class='tags'>
       
+      <a href="/tagged/govbox"><span class="label label-info">govbox</span></a>
+      
+      <a href="/tagged/jobs"><span class="label label-info">jobs</span></a>
+      
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
-      
-      <a href="/tagged/twitter"><span class="label label-info">twitter</span></a>
       
     </div>
    <div class='time'>
@@ -927,7 +870,7 @@ URL: mailto:info@agency.gov</p>
       
       
       
-      <a href="/manual/twitter.html">
+      <a href="/manual/govbox-jobs.html">
         <time datetime="2014-05-28">May 28, 2014</time>
       </a>
     </div>

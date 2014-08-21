@@ -76,6 +76,122 @@
   <article class='article'>
     
     <h1>
+      <a href="/manual/third-party.html">How to Add JavaScript for Your Third-party Web Services</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > 3rd Party Tracking</p>
+
+<p>Do you want your search results page to run third-party web services such as 4Q, AddThis, Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?</p>
+
+<p>Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
+
+<p>Some tips for commonly used third-party web services follow.</p>
+
+<h2>Google Analytics Tip</h2>
+
+<p>Within your Google Analytics account, select the option, <em>Do Track Site Search</em>. Set the query parameter as <em>query</em>. For more information, read Google's tip, <a href="https://support.google.com/analytics/answer/1012264?hl=en&amp;ref_topic=1031951">Set Up and Configure Site Search</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<p>Additionally, if you've requested <a href="/manual/cname.html">domain masking</a> and you want to include the analytics for your <em>search.agency.gov</em> subdomain with your main <em>agency.gov</em> domain, you'll need to set your domain in your Google Analytics JavaScript by including <code>_gaq.push(['_setDomainName', 'agency.gov']);</code>.</p>
+
+<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<p>The code you submit should look something like one of the following two scripts.</p>
+
+<h3>Google Analytics Code (Older Format)</h3>
+
+<pre><code> &lt;script type="text/javascript"&gt;
+ var _gaq = _gaq || []; 
+ _gaq.push(['_setAccount', 'UA-########-1']); 
+ _gaq.push(['_trackPageview']);
+
+ (function() { 
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
+ })();
+ &lt;/script&gt;
+</code></pre>
+
+<h3>Google Analytics Code (Newer Format)</h3>
+
+<pre><code> &lt;script type="text/javascript"&gt;
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ &lt;/script&gt;
+</code></pre>
+
+<h2>Digital Analytics Program Tip</h2>
+
+<p>Does your federal agency participate in the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> (DAP)?  You don't need to do anything. We're already fully integrated with DAP.</p>
+
+<h2>ForeSee Tip</h2>
+
+<p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
+
+<ol>
+<li><p>Email us at <a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#115;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#116;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;">&#115;&#101;&#97;&#114;&#99;&#x68;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#118;</a> to <a href="/manual/cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
+<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
+
+<p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
+
+<p> <strong>and replace it with =></strong> 'files': '//www.youragency.gov/fsrscripts/',</p>
+
+<p> <em>(Or, find => 'files': '/foresee/', and replace it with => 'files': '//www.youragency/foresee/',)</em></p>
+
+<p> in the following five files.</p>
+
+<ul>
+<li>foresee-trigger.js</li>
+<li>foresee-tracker.js</li>
+<li>foresee-alive.js</li>
+<li>foresee-qualifier.js</li>
+<li>foresee-test.js</li>
+</ul>
+</li>
+<li><p>Submit your foresee-trigger.js via our Admin Center. It should look something like the following script. <code>&lt;script type="text/javascript" src="http://www.youragency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;</code></p></li>
+<li><p>We'll send you an email to confirm that we've set up both your CNAME and added the script for your foresee-trigger.js file.</p></li>
+</ol>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
+      
+      <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
+      
+      <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
+      
+      <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/third-party.html">
+        <time datetime="2014-08-21">August 21, 2014</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
       <a href="/manual/instagram.html">How to Add Your Instagram Pictures to Our Index</a>
     </h1>
     
@@ -107,7 +223,7 @@
 
 <p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/flickr.html">Flickr</a> photostream. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.</p>
 
-<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#115;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#118;">&#x73;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#x72;&#x74;&#46;&#100;&#105;&#x67;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;</a> if you're ready to turn on the new results page.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#115;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#100;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#103;&#x6f;&#118;">&#115;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#x75;&#x70;&#112;&#x6f;&#114;&#116;&#46;&#100;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;</a> if you're ready to turn on the new results page.</p>
 
     </div>
 
@@ -171,7 +287,7 @@
 
 <p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/instagram.html">Instagram</a> account. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.</p>
 
-<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#115;&#101;&#97;&#x72;&#99;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#x69;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;">&#115;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#46;&#100;&#x69;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#46;&#103;&#111;&#x76;</a> if you're ready to turn on the new results page.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#115;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;">&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#117;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;</a> if you're ready to turn on the new results page.</p>
 
     </div>
 
@@ -238,7 +354,7 @@
 
 <p>What is a content API? It is an application programming interface (API) to your website's content. It is output directly from your site's CMS. Content APIs are relatively easy to create from CMS such as Drupal or WordPress.</p>
 
-<p>If you already have a content API, email us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#115;&#117;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#x6f;&#118;">&#x73;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#115;&#117;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#118;</a> so we can get you up and running.</p>
+<p>If you already have a content API, email us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#115;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#x75;&#112;&#112;&#x6f;&#x72;&#x74;&#x2e;&#100;&#x69;&#103;&#x69;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#x67;&#111;&#x76;">&#x73;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#117;&#x70;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#103;&#105;&#116;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#111;&#x76;</a> so we can get you up and running.</p>
 
 <p>If you don't have one yet, below are a few good references to get you started.</p>
 
@@ -260,7 +376,7 @@
 </ul>
 
 
-<p>Most RSS feeds show the latest 10 items by default. This means that you'll need to create a one-time "baseline" feed to give us <em>all</em> of your existing content. Email us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#115;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#112;&#112;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#118;&#46;&#103;&#111;&#x76;">&#x73;&#101;&#x61;&#114;&#x63;&#104;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;</a> so we can coordinate the indexing of your baseline feed with you. After we've indexed your existing content, we'll use the 10 items in your standard RSS feed to index your new and updated content.</p>
+<p>Most RSS feeds show the latest 10 items by default. This means that you'll need to create a one-time "baseline" feed to give us <em>all</em> of your existing content. Email us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#115;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#97;&#108;&#x67;&#111;&#118;&#46;&#x67;&#x6f;&#118;">&#115;&#101;&#97;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#112;&#112;&#x6f;&#114;&#116;&#x2e;&#x64;&#x69;&#103;&#x69;&#116;&#97;&#108;&#103;&#111;&#x76;&#46;&#103;&#x6f;&#x76;</a> so we can coordinate the indexing of your baseline feed with you. After we've indexed your existing content, we'll use the 10 items in your standard RSS feed to index your new and updated content.</p>
 
 <hr />
 
@@ -378,7 +494,7 @@
 
 <p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
 
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#115;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#105;&#103;&#105;&#116;&#97;&#108;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#118;">&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;</a>.</p>
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#112;&#111;&#114;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#97;&#108;&#x67;&#111;&#118;&#x2e;&#x67;&#x6f;&#118;">&#115;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#116;&#46;&#100;&#x69;&#103;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#118;</a>.</p>
 
     </div>
 
@@ -726,7 +842,7 @@
 
 <h2>How to Participate</h2>
 
-<p>Since this is still a pilot, the setup is manual. Email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#x73;&#101;&#97;&#x72;&#99;&#104;&#64;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#46;&#100;&#x69;&#x67;&#105;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#103;&#111;&#x76;">&#115;&#101;&#97;&#114;&#99;&#x68;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#118;</a> to let us know you're interested in participating in the pilot.</p>
+<p>Since this is still a pilot, the setup is manual. Email us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#x3a;&#115;&#x65;&#97;&#114;&#99;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;">&#115;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#103;&#111;&#x76;&#x2e;&#103;&#111;&#118;</a> to let us know you're interested in participating in the pilot.</p>
 
 <p>We can leverage almost any search index directly. For each web search, we'll send a searcher's query to your chosen search index, and we'll render the results within our search results page.</p>
 
@@ -806,93 +922,6 @@
       
       
       <a href="/manual/govbox-federal-register.html">
-        <time datetime="2014-07-24">July 24, 2014</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/manual/display-overview.html">How to Select the Options that Appear on Your Results Page</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Display > Display Overview</p>
-
-<h2>Sidebar (Faceted Navigation)</h2>
-
-<p><strong>Label for Sidebar.</strong> Determine if you want to include a heading for your navigation options. If you want a heading, type your label in the label field. Keep your label short (15 or fewer characters) and consistent with the options you're listing. If you don't want a heading, leave the label field blank.</p>
-
-<ul>
-<li>Without heading&mdash;See the sample results page below that shows the navigation options without a heading displayed for a <a href="http://search.whitehouse.gov/search?affiliate=wh&amp;query=jobs">search on <em>jobs</em> on WhiteHouse.gov</a>.</li>
-<li>With heading&mdash;See the sample results page below that shows the navigation options with a heading, labeled Search, displayed for a <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=passport">search on <em>passport</em> on USA.gov</a>.</li>
-</ul>
-
-
-<p><strong>On/off options for sidebar.</strong> Select which navigation options you'd like to appear in the left-hand sidebar on your results page. Turn an option on to allow searchers to see it. You may choose at any time to turn an option on or off.</p>
-
-<p>You can type over the text in the Name field to edit an option's display name. Keep each name short (15 or fewer characters) and consistent with the content you're searching. Click on the hyperlink in the Source field to update the option's source content. Hover over the icon with three horizontal lines on the left to change the order.</p>
-
-<h2>Modules</h2>
-
-<p><strong>On/off options for Modules.</strong> Turn on a module to allow searchers to see inline, contextually relevant results for selected content sources based on keyword matches with relevant queries. There are eight types of modules.</p>
-
-<ol>
-<li><p><strong>News.</strong> This option only appears after you've told us about your <a href="/manual/rss.html">RSS</a> feeds. When a searcher's query matches the title or description of an RSS article published within the last year, the article appears in the News GovBox. Up to three articles are displayed. Type over the default name, News, in the Name field to edit the display name.</p></li>
-<li><p><strong>Videos.</strong> This option only appears after you've told us about your <a href="/manual/youtube.html">YouTube</a> channel. When a searcher's query matches the metadata of a video published within the last year, the video appears in the Videos GovBox. Up to four videos are displayed.</p></li>
-<li><p><strong>Photos.</strong> This option only appears after you've told us about your <a href="/manual/flickr.html">Flickr</a> photostream. When a searcher's query matches the metadata of a photo published any time, the photo appears in the Photos GovBox. Up to five photos are displayed.</p></li>
-<li><p><strong>Job openings.</strong> When a searcher's query matches the text of a job opening published by your agency on USAJobs or NeoGov, the job appears in the Job Openings GovBox. Up to three job openings are displayed. For more information, including a screenshot, read our post <a href="/manual/govbox-jobs.html">Help Searchers Find Jobs</a>.</p></li>
-<li><p><strong><em>Federal Register</em> documents.</strong> When a searcher's query matches the text of a notice or rule published by your agency in the <em>Federal Register</em>, the document appears in the <em>Federal Register</em> GovBox. Up to three documents are displayed. For more information, including a screenshot, read our post <a href="/manual/govbox-federal-register.html">Help Searchers Find Federal Register Documents</a>.</p></li>
-<li><p><strong>Related searches.</strong> Help visitors better define the focus of their search by offering them searches related to their current search term. Suggestions are derived from the searches performed on your website. Up to five searches related to your visitors' original search are displayed and are updated in near real time. See, for example, the sample results page below that shows related searches displayed for a <a href="http://search.usa.gov/search?affiliate=accesswashington&amp;query=tacoma">search on <em>tacoma</em> on Access Washington</a>.</p></li>
-<li><p><strong>Health topics.</strong> Help searchers find high-quality, authoritative health information from MedlinePlus and ClinicalTrials.gov. For more information, including a screenshot, read our post <a href="/manual/govbox-health.html">Help Searchers Find Health Information</a>.</p></li>
-<li><p><strong>Recent tweets.</strong> This option only appears after you've told us about your <a href="/manual/twitter.html">Twitter</a> account. When a searcher's query matches the text of a tweet published within the last three months, the tweet appears in the Recent Tweets GovBox. Up to three tweets are displayed.</p></li>
-<li><p><strong>Type-ahead search.</strong> Help searchers refine their query by displaying type-ahead search suggestions as a list in the search box. The list forms as a searcher begins to type in the search box. Suggestions are listed in order of most popular (that is, most searched). They're updated every 15 minutes. See, for example, the suggestions as you type di... on <a href="http://search.socialsecurity.gov/search?affiliate=ssa&amp;query=names">SocialSecurity.gov's search results page</a>.</p></li>
-</ol>
-
-
-<h2>Related Sites</h2>
-
-<p>Help visitors find content relevant to their search query that resides on other websites, such as the site for your parent organization or your Spanish-language site. When searchers click on the link to the related site, they see search results for their query on the related site.</p>
-
-<p>Enter the <a href="/manual/settings.html">site handle</a> for one of your other DigitalGov Search sites. Enter the text you'd like searchers to see for the link to the related site. Create two entries, one from the first site to the second and vice versa, if you'd like a reciprocal link.</p>
-
-<p>See, for example, the Español option displayed on <a href="http://search.usa.gov/search?query=venezuela&amp;affiliate=usagov">USA.gov for a search on <em>venezuela</em></a>. When searchers click this option, they see results for <a href="http://search.usa.gov/search?query=venezuela&amp;affiliate=gobiernousa"><em>venezuela</em> on GobiernoUSA.gov</a>.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong>  Searchers may narrow results by time period for any <a href="/manual/rss.html">RSS</a> feeds. See, for example, results for a <a href="http://search.whitehouse.gov/search/news?affiliate=wh&amp;channel=6&amp;m=false&amp;query=jobs&amp;tbs=w">search on <em>jobs</em> narrowed to press articles in the last week on WhiteHouse.gov</a>.</p>
-
-<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#112;&#111;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#x74;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;">&#115;&#x65;&#97;&#x72;&#99;&#104;&#64;&#115;&#117;&#112;&#112;&#x6f;&#114;&#116;&#46;&#100;&#x69;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;</a> to if you want to customize these display names.</p>
-
-<p><strong><em>Did you know?</em></strong> You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our <a href="/manual/code.html">JavaScript snippet</a> before the closing <code>&lt;body&gt;</code> tag on your HTML web pages.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-display"><span class="label label-info">manage-display</span></a>
-      
-      <a href="/tagged/sidebar"><span class="label label-info">sidebar</span></a>
-      
-      <a href="/tagged/govbox"><span class="label label-info">govbox</span></a>
-      
-      <a href="/tagged/related-sites"><span class="label label-info">related-sites</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/display-overview.html">
         <time datetime="2014-07-24">July 24, 2014</time>
       </a>
     </div>
