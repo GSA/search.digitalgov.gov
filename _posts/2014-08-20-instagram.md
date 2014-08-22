@@ -10,7 +10,7 @@ tags: how-to manage-content social-media instagram images
 
 Provide us with the *username* for your Instagram Account.
 
-When you're logged into Instagram, you can see your username at <https://instagram.com/accounts/edit/>{% external_link %}.
+When you're logged into Instagram, you can see your username at <https://instagram.com/accounts/login/?next=/accounts/edit/>{% external_link %}.
 
 For example, the Instagram username for the Department of Labor is [usdol](http://instagram.com/usdol){% external_link %}.
 

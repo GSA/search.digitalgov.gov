@@ -30,7 +30,7 @@ If you already have a content API, email us at <search@support.digitalgov.gov> s
 
 If you don't have one yet, below are a few good references to get you started. 
 
-* **Drupal APIs.** The [Services Entity](https://drupal.org/project/services_entity){% external_link %} and [Content API](https://drupal.org/project/contentapi){% external_link %} modules both create content APIs from Drupal.
+* **Drupal APIs.** The [Services Entity](https://www.drupal.org/project/services_entity){% external_link %} and [Content API](https://www.drupal.org/project/contentapi){% external_link %} modules both create content APIs from Drupal.
 * **WordPress APIs.** The [JSON API](https://wordpress.org/plugins/json-api/){% external_link %} and [WordPress API](https://github.com/WP-API/WP-API){% external_link %} plugins both create content APIs from WordPress. 
 
 ### Via RSS Feeds
