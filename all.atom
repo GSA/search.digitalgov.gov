@@ -3,10 +3,66 @@
   <title><![CDATA[DigitalGov Search]]></title>
   <link href="http://search.digitalgov.gov/all.atom" rel="self"/>
   <link href="http://search.digitalgov.gov/"/>
-  <updated>2014-08-21T14:30:05+00:00</updated>
+  <updated>2014-08-22T11:45:05+00:00</updated>
   <id>http://search.digitalgov.gov/</id>
   <author><name><![CDATA[DigitalGov Search]]></name></author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Our Open Source Strategy]]></title>
+    <link href="http://search.digitalgov.gov/blog/open-source.html"/>
+    <updated>2014-08-22T00:00:00+00:00</updated>
+    <id>http://search.digitalgov.gov/blog/open-source.html</id>
+    <content type="html"><![CDATA[<p>We keep an eye on on our what our government counterparts are up to, both in the U.S. and other countries. We first came across <a href="https://www.gov.uk">Gov.UK's</a> philosophy on and approach to <a href="http://digital.cabinetoffice.gov.uk/2012/10/12/coding-in-the-open">coding in the open</a> a couple of years ago. It caught our attention and we realized we should also articulate our open source strategy.</p>
+
+<h2>Use and Contribute to Open Source Projects</h2>
+
+<p>Since 2010, we've embraced and leveraged open source software to build our site search service for federal, state, and local government websites. This use of open source has allowed us to experience enormous growth over the past few years. In July 2014 alone, over 23 million searchers received results from our service&mdash;a five-fold increase since July 2010.</p>
+
+<p>Our search service is now a complex system made up of many moving parts, including providing type-ahead search suggestions, serving search results, fetching, indexing, and caching content, and providing analytics.</p>
+
+<p>Each of these parts is compiled into our codebase and, as we use open source components for our system, we contribute back to the projects.</p>
+
+<h2>Code in the Open</h2>
+
+<p>We recently began to unravel our monolithic codebase so that we can share individual pieces of our code. To borrow the phrase from Gov.UK, we're now <strong><em>coding in the open</em></strong>.</p>
+
+<p>We recently released the code for our <a href="https://github.com/gsa/oasis">social media image</a>, <a href="https://github.com/GSA/jobs_api">jobs</a> and <a href="https://github.com/GSA/recalls_api">recalls</a> API servers. They're our first foray into coding in the open. The source code for these API servers is in <a href="https://github.com/GSA">our GitHub repo</a> and is available for anyone to see and contribute to.</p>
+
+<p>The data products for the jobs and recalls code are also open and available for anyone to consume on our <a href="/developer/index.html">Developer hub</a>.</p>
+
+<p>These three servers and their underlying data now operate outside of our core search codebase.</p>
+
+<p>Following this same model, moving forward, we plan to:</p>
+
+<ul>
+<li>Share first&mdash;For every new feature, we'll write the code so that <em>anyone</em> can make use of the code, not just us. If the public community contributes to the codebase, we'll be able to improve this feature without taxing our developers.</li>
+<li>Expose APIs&mdash;We'll expose our data products as APIs so that <em>anyone</em> can make use of the data, not just searchers on a government websites.</li>
+<li>Be our own customer&mdash;We'll use our own public code and data just like everyone else. We'll call our own API servers to integrate the data within our search results pages.</li>
+</ul>
+
+
+<h2>Make Things Open to Make Things Better</h2>
+
+<p>We agree with Gov.UK that "to make things open makes things better."</p>
+
+<p>We have finite resources and we don't want to lose our focus on serving our agency customers and improving visitors' search experience on government websites. So, we won't be spending a lot of time to build or support a vibrant community around our code.</p>
+
+<p>That said, we hope that exposing the pieces of our system will be useful to someone somewhere. We'll continue to provide the "ingredients" of our search service so that others will be able to make use of the code and data in ways that we could never imagine.</p>
+
+<h2>And, We're Not Alone</h2>
+
+<p>We're not alone. Other federal agencies have embraced the approach of coding in the open and have <a href="http://gsa.github.io/federal-open-source-repos">GitHub repos</a>. Below are a just a few of our many favorites.</p>
+
+<ul>
+<li>The <a href="http://www.cfpb.gov">Consumer Financial Protection Bureau</a> has embraced open source, including serving their public data sets through <a href="https://github.com/cfpb/qu">qu</a> and sharing their work at <a href="http://cfpb.github.io">http://cfpb.github.io</a>.</li>
+<li>The <a href="http://www.fda.gov">Food and Drug Administration</a> recently made public FDA datasets more accessible at <a href="https://open.fda.gov">openFDA</a>.</li>
+<li>GSA's newly-created <a href="https://18f.gsa.gov">18F</a> has committed to <a href="http://18fblog.tumblr.com/post/93415834296/working-in-public-from-day-1">working in the open from day 1</a>.</li>
+<li>The <a href="http://www.whitehouse.gov">White House</a> was in the forefront of using open source software in the federal government with their use of Drupal. They're continuing to lead by example by opening up the code for their <a href="https://github.com/WhiteHouse/petitions">We the People petitions</a> and <a href="https://github.com/WhiteHouse/wh-app-ios">iOS</a> and <a href="https://github.com/WhiteHouse/wh-app-android">Android</a> mobile apps.</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Add JavaScript for Your Third-party Web Services]]></title>
@@ -65,7 +121,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li><p>Email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x73;&#101;&#97;&#114;&#99;&#x68;&#x40;&#115;&#117;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#108;&#103;&#111;&#118;&#46;&#103;&#x6f;&#118;">&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#118;</a> to <a href="/manual/cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
+<li><p>Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#115;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#x70;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#x61;&#108;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;</a> to <a href="/manual/cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
 <li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
 
 <p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
@@ -92,6 +148,61 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   </entry>
   
   <entry>
+    <title type="html"><![CDATA[How to Select the Options that Appear on Your Results Page]]></title>
+    <link href="http://search.digitalgov.gov/manual/display-overview.html"/>
+    <updated>2014-08-21T00:00:00+00:00</updated>
+    <id>http://search.digitalgov.gov/manual/display-overview.html</id>
+    <content type="html"><![CDATA[<p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Display > Display Overview</p>
+
+<h2>Sidebar (Faceted Navigation)</h2>
+
+<p><strong>Label for Sidebar.</strong> Determine if you want to include a heading for your navigation options. If you want a heading, type your label in the label field. Keep your label short (15 or fewer characters) and consistent with the options you're listing. If you don't want a heading, leave the label field blank.</p>
+
+<ul>
+<li>Without heading&mdash;See the sample results page below that shows the navigation options without a heading displayed for a <a href="http://search.whitehouse.gov/search?affiliate=wh&amp;query=jobs">search on <em>jobs</em> on WhiteHouse.gov</a>.</li>
+<li>With heading&mdash;See the sample results page below that shows the navigation options with a heading, labeled Search, displayed for a <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=passport">search on <em>passport</em> on USA.gov</a>.</li>
+</ul>
+
+
+<p><strong>On/off options for sidebar.</strong> Select which navigation options you'd like to appear in the left-hand sidebar on your results page. Turn an option on to allow searchers to see it. You may choose at any time to turn an option on or off.</p>
+
+<p>You can type over the text in the Name field to edit an option's display name. Keep each name short (15 or fewer characters) and consistent with the content you're searching. Click on the hyperlink in the Source field to update the option's source content. Hover over the icon with three horizontal lines on the left to change the order.</p>
+
+<h2>Modules</h2>
+
+<p><strong>On/off options for Modules.</strong> Turn on a module to allow searchers to see inline, contextually relevant results for selected content sources based on keyword matches with relevant queries. There are eight types of modules.</p>
+
+<ol>
+<li><p><strong>News.</strong> This option only appears after you've told us about your <a href="/manual/rss.html">RSS</a> feeds. When a searcher's query matches the title or description of an RSS article published within the last year, the article appears in the News GovBox. Up to three articles are displayed. Type over the default name, News, in the Name field to edit the display name.</p></li>
+<li><p><strong>Videos.</strong> This option only appears after you've told us about your <a href="/manual/youtube.html">YouTube</a> channel. When a searcher's query matches the metadata of a video published within the last year, the video appears in the Videos GovBox. Up to four videos are displayed.</p></li>
+<li><p><strong>Job openings.</strong> When a searcher's query matches the text of a job opening published by your agency on USAJobs or NeoGov, the job appears in the Job Openings GovBox. Up to three job openings are displayed. For more information, including a screenshot, read our post <a href="/manual/govbox-jobs.html">Help Searchers Find Jobs</a>.</p></li>
+<li><p><strong><em>Federal Register</em> documents.</strong> When a searcher's query matches the text of a notice or rule published by your agency in the <em>Federal Register</em>, the document appears in the <em>Federal Register</em> GovBox. Up to three documents are displayed. For more information, including a screenshot, read our post <a href="/manual/govbox-federal-register.html">Help Searchers Find Federal Register Documents</a>.</p></li>
+<li><p><strong>Related searches.</strong> Help visitors better define the focus of their search by offering them searches related to their current search term. Suggestions are derived from the searches performed on your website. Up to five searches related to your visitors' original search are displayed and are updated in near real time. See, for example, the sample results page below that shows related searches displayed for a <a href="http://search.usa.gov/search?affiliate=accesswashington&amp;query=tacoma">search on <em>tacoma</em> on Access Washington</a>.</p></li>
+<li><p><strong>Health topics.</strong> Help searchers find high-quality, authoritative health information from MedlinePlus and ClinicalTrials.gov. For more information, including a screenshot, read our post <a href="/manual/govbox-health.html">Help Searchers Find Health Information</a>.</p></li>
+<li><p><strong>Recent tweets.</strong> This option only appears after you've told us about your <a href="/manual/twitter.html">Twitter</a> account. When a searcher's query matches the text of a tweet published within the last three months, the tweet appears in the Recent Tweets GovBox. Up to three tweets are displayed.</p></li>
+<li><p><strong>Type-ahead search.</strong> Help searchers refine their query by displaying type-ahead search suggestions as a list in the search box. The list forms as a searcher begins to type in the search box. Suggestions are listed in order of most popular (that is, most searched). They're updated every 15 minutes. See, for example, the suggestions as you type di... on <a href="http://search.socialsecurity.gov/search?affiliate=ssa&amp;query=names">SocialSecurity.gov's search results page</a>.</p></li>
+</ol>
+
+
+<h2>Related Sites</h2>
+
+<p>Help visitors find content relevant to their search query that resides on other websites, such as the site for your parent organization or your Spanish-language site. When searchers click on the link to the related site, they see search results for their query on the related site.</p>
+
+<p>Enter the <a href="/manual/settings.html">site handle</a> for one of your other DigitalGov Search sites. Enter the text you'd like searchers to see for the link to the related site. Create two entries, one from the first site to the second and vice versa, if you'd like a reciprocal link.</p>
+
+<p>See, for example, the Español option displayed on <a href="http://search.usa.gov/search?query=venezuela&amp;affiliate=usagov">USA.gov for a search on <em>venezuela</em></a>. When searchers click this option, they see results for <a href="http://search.usa.gov/search?query=venezuela&amp;affiliate=gobiernousa"><em>venezuela</em> on GobiernoUSA.gov</a>.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong>  Searchers may narrow results by time period for any <a href="/manual/rss.html">RSS</a> feeds. See, for example, results for a <a href="http://search.whitehouse.gov/search/news?affiliate=wh&amp;channel=6&amp;m=false&amp;query=jobs&amp;tbs=w">search on <em>jobs</em> narrowed to press articles in the last week on WhiteHouse.gov</a>.</p>
+
+<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#115;&#x75;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#115;&#101;&#97;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#103;&#x6f;&#118;&#46;&#103;&#111;&#118;</a> to if you want to customize these display names.</p>
+
+<p><strong><em>Did you know?</em></strong> You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our <a href="/manual/code.html">JavaScript snippet</a> before the closing <code>&lt;body&gt;</code> tag on your HTML web pages.</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[How to Mask Your Domain]]></title>
     <link href="http://search.digitalgov.gov/manual/cname.html"/>
     <updated>2014-08-21T00:00:00+00:00</updated>
@@ -99,7 +210,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     <content type="html"><![CDATA[<p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these three steps to mask your domain.</p>
 
 <ol>
-<li>Email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#112;&#111;&#114;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#118;">&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;</a> and ask us to mask your domain.</li>
+<li>Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#115;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#112;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#46;&#x67;&#x6f;&#118;">&#115;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#111;&#118;</a> and ask us to mask your domain.</li>
 <li>Create a CNAME in your external DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
 <li>When the setup is complete, change the <a href="/manual/code.html">code for your form</a> action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
 </ol>
@@ -147,7 +258,7 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
 
 <p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/flickr.html">Flickr</a> photostream. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.</p>
 
-<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#x73;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#115;&#117;&#x70;&#112;&#111;&#x72;&#x74;&#46;&#100;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;">&#115;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#x76;</a> if you're ready to turn on the new results page.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#x73;&#101;&#97;&#x72;&#99;&#x68;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;">&#115;&#101;&#x61;&#114;&#99;&#104;&#64;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#x2e;&#100;&#x69;&#103;&#x69;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#118;</a> if you're ready to turn on the new results page.</p>
 ]]></content>
   </entry>
   
@@ -180,7 +291,7 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
 
 <p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/instagram.html">Instagram</a> account. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.</p>
 
-<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#58;&#115;&#101;&#97;&#x72;&#99;&#104;&#x40;&#x73;&#x75;&#x70;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#111;&#118;">&#115;&#101;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#111;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#x67;&#x6f;&#x76;</a> if you're ready to turn on the new results page.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;">&#x73;&#x65;&#97;&#114;&#99;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;</a> if you're ready to turn on the new results page.</p>
 ]]></content>
   </entry>
   
@@ -216,7 +327,7 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
 
 <p>What is a content API? It is an application programming interface (API) to your website's content. It is output directly from your site's CMS. Content APIs are relatively easy to create from CMS such as Drupal or WordPress.</p>
 
-<p>If you already have a content API, email us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#58;&#115;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#x76;">&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#x6c;&#x67;&#x6f;&#118;&#46;&#x67;&#111;&#118;</a> so we can get you up and running.</p>
+<p>If you already have a content API, email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#x73;&#101;&#97;&#x72;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;</a> so we can get you up and running.</p>
 
 <p>If you don't have one yet, below are a few good references to get you started.</p>
 
@@ -238,7 +349,7 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
 </ul>
 
 
-<p>Most RSS feeds show the latest 10 items by default. This means that you'll need to create a one-time "baseline" feed to give us <em>all</em> of your existing content. Email us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#115;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#117;&#112;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#118;&#46;&#x67;&#x6f;&#118;">&#115;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#115;&#117;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#118;</a> so we can coordinate the indexing of your baseline feed with you. After we've indexed your existing content, we'll use the 10 items in your standard RSS feed to index your new and updated content.</p>
+<p>Most RSS feeds show the latest 10 items by default. This means that you'll need to create a one-time "baseline" feed to give us <em>all</em> of your existing content. Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#115;&#101;&#x61;&#x72;&#99;&#104;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#103;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#x6f;&#x76;">&#115;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#x72;&#116;&#46;&#100;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#103;&#111;&#118;</a> so we can coordinate the indexing of your baseline feed with you. After we've indexed your existing content, we'll use the 10 items in your standard RSS feed to index your new and updated content.</p>
 
 <hr />
 
@@ -325,7 +436,7 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
 
 <p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
 
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#115;&#101;&#97;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#x69;&#103;&#x69;&#116;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;">&#115;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#114;&#116;&#46;&#100;&#x69;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;</a>.</p>
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#x73;&#101;&#x61;&#114;&#x63;&#104;&#64;&#x73;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#111;&#118;">&#115;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#112;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#103;&#x69;&#x74;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#x76;</a>.</p>
 ]]></content>
   </entry>
   
@@ -571,7 +682,7 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
 
 <h2>How to Participate</h2>
 
-<p>Since this is still a pilot, the setup is manual. Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#x69;&#x74;&#97;&#x6c;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#118;">&#x73;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;</a> to let us know you're interested in participating in the pilot.</p>
+<p>Since this is still a pilot, the setup is manual. Email us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#x74;&#x61;&#108;&#103;&#x6f;&#118;&#46;&#103;&#111;&#118;">&#x73;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#x2e;&#100;&#105;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;</a> to let us know you're interested in participating in the pilot.</p>
 
 <p>We can leverage almost any search index directly. For each web search, we'll send a searcher's query to your chosen search index, and we'll render the results within our search results page.</p>
 
@@ -605,62 +716,6 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
 <p>If you <a href="/manual/display-overview.html">opt to show the Federal Register GovBox</a>, searchers looking for health topics on your site can readily find the notices and rules that your agency has published in the <em>Federal Register</em>, as shown in the sample below for a search on <a href="http://search.nih.gov/search?affiliate=nih&amp;query=autoimmune+diseases"><em>autoimmune diseases</em> on NIH.gov</a>.</p>
 
 <p><a href="http://search.usa.gov/search?affiliate=nc.gov&amp;query=ovarian+cancer&amp;m=true"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/govbox-fr.png" title="Federal Register GovBox on NIH.gov" alt="Federal Register GovBox on NIH.gov" /></a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to Select the Options that Appear on Your Results Page]]></title>
-    <link href="http://search.digitalgov.gov/manual/display-overview.html"/>
-    <updated>2014-07-24T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/manual/display-overview.html</id>
-    <content type="html"><![CDATA[<p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Display > Display Overview</p>
-
-<h2>Sidebar (Faceted Navigation)</h2>
-
-<p><strong>Label for Sidebar.</strong> Determine if you want to include a heading for your navigation options. If you want a heading, type your label in the label field. Keep your label short (15 or fewer characters) and consistent with the options you're listing. If you don't want a heading, leave the label field blank.</p>
-
-<ul>
-<li>Without heading&mdash;See the sample results page below that shows the navigation options without a heading displayed for a <a href="http://search.whitehouse.gov/search?affiliate=wh&amp;query=jobs">search on <em>jobs</em> on WhiteHouse.gov</a>.</li>
-<li>With heading&mdash;See the sample results page below that shows the navigation options with a heading, labeled Search, displayed for a <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=passport">search on <em>passport</em> on USA.gov</a>.</li>
-</ul>
-
-
-<p><strong>On/off options for sidebar.</strong> Select which navigation options you'd like to appear in the left-hand sidebar on your results page. Turn an option on to allow searchers to see it. You may choose at any time to turn an option on or off.</p>
-
-<p>You can type over the text in the Name field to edit an option's display name. Keep each name short (15 or fewer characters) and consistent with the content you're searching. Click on the hyperlink in the Source field to update the option's source content. Hover over the icon with three horizontal lines on the left to change the order.</p>
-
-<h2>Modules</h2>
-
-<p><strong>On/off options for Modules.</strong> Turn on a module to allow searchers to see inline, contextually relevant results for selected content sources based on keyword matches with relevant queries. There are eight types of modules.</p>
-
-<ol>
-<li><p><strong>News.</strong> This option only appears after you've told us about your <a href="/manual/rss.html">RSS</a> feeds. When a searcher's query matches the title or description of an RSS article published within the last year, the article appears in the News GovBox. Up to three articles are displayed. Type over the default name, News, in the Name field to edit the display name.</p></li>
-<li><p><strong>Videos.</strong> This option only appears after you've told us about your <a href="/manual/youtube.html">YouTube</a> channel. When a searcher's query matches the metadata of a video published within the last year, the video appears in the Videos GovBox. Up to four videos are displayed.</p></li>
-<li><p><strong>Photos.</strong> This option only appears after you've told us about your <a href="/manual/flickr.html">Flickr</a> photostream. When a searcher's query matches the metadata of a photo published any time, the photo appears in the Photos GovBox. Up to five photos are displayed.</p></li>
-<li><p><strong>Job openings.</strong> When a searcher's query matches the text of a job opening published by your agency on USAJobs or NeoGov, the job appears in the Job Openings GovBox. Up to three job openings are displayed. For more information, including a screenshot, read our post <a href="/manual/govbox-jobs.html">Help Searchers Find Jobs</a>.</p></li>
-<li><p><strong><em>Federal Register</em> documents.</strong> When a searcher's query matches the text of a notice or rule published by your agency in the <em>Federal Register</em>, the document appears in the <em>Federal Register</em> GovBox. Up to three documents are displayed. For more information, including a screenshot, read our post <a href="/manual/govbox-federal-register.html">Help Searchers Find Federal Register Documents</a>.</p></li>
-<li><p><strong>Related searches.</strong> Help visitors better define the focus of their search by offering them searches related to their current search term. Suggestions are derived from the searches performed on your website. Up to five searches related to your visitors' original search are displayed and are updated in near real time. See, for example, the sample results page below that shows related searches displayed for a <a href="http://search.usa.gov/search?affiliate=accesswashington&amp;query=tacoma">search on <em>tacoma</em> on Access Washington</a>.</p></li>
-<li><p><strong>Health topics.</strong> Help searchers find high-quality, authoritative health information from MedlinePlus and ClinicalTrials.gov. For more information, including a screenshot, read our post <a href="/manual/govbox-health.html">Help Searchers Find Health Information</a>.</p></li>
-<li><p><strong>Recent tweets.</strong> This option only appears after you've told us about your <a href="/manual/twitter.html">Twitter</a> account. When a searcher's query matches the text of a tweet published within the last three months, the tweet appears in the Recent Tweets GovBox. Up to three tweets are displayed.</p></li>
-<li><p><strong>Type-ahead search.</strong> Help searchers refine their query by displaying type-ahead search suggestions as a list in the search box. The list forms as a searcher begins to type in the search box. Suggestions are listed in order of most popular (that is, most searched). They're updated every 15 minutes. See, for example, the suggestions as you type di... on <a href="http://search.socialsecurity.gov/search?affiliate=ssa&amp;query=names">SocialSecurity.gov's search results page</a>.</p></li>
-</ol>
-
-
-<h2>Related Sites</h2>
-
-<p>Help visitors find content relevant to their search query that resides on other websites, such as the site for your parent organization or your Spanish-language site. When searchers click on the link to the related site, they see search results for their query on the related site.</p>
-
-<p>Enter the <a href="/manual/settings.html">site handle</a> for one of your other DigitalGov Search sites. Enter the text you'd like searchers to see for the link to the related site. Create two entries, one from the first site to the second and vice versa, if you'd like a reciprocal link.</p>
-
-<p>See, for example, the Español option displayed on <a href="http://search.usa.gov/search?query=venezuela&amp;affiliate=usagov">USA.gov for a search on <em>venezuela</em></a>. When searchers click this option, they see results for <a href="http://search.usa.gov/search?query=venezuela&amp;affiliate=gobiernousa"><em>venezuela</em> on GobiernoUSA.gov</a>.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong>  Searchers may narrow results by time period for any <a href="/manual/rss.html">RSS</a> feeds. See, for example, results for a <a href="http://search.whitehouse.gov/search/news?affiliate=wh&amp;channel=6&amp;m=false&amp;query=jobs&amp;tbs=w">search on <em>jobs</em> narrowed to press articles in the last week on WhiteHouse.gov</a>.</p>
-
-<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#115;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#111;&#114;&#116;&#46;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;">&#115;&#x65;&#97;&#114;&#x63;&#104;&#64;&#115;&#x75;&#x70;&#112;&#111;&#x72;&#116;&#46;&#100;&#105;&#x67;&#105;&#116;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;</a> to if you want to customize these display names.</p>
-
-<p><strong><em>Did you know?</em></strong> You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our <a href="/manual/code.html">JavaScript snippet</a> before the closing <code>&lt;body&gt;</code> tag on your HTML web pages.</p>
 ]]></content>
   </entry>
   
@@ -1033,7 +1088,7 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
 
 <h2>Site Handle</h2>
 
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#58;&#115;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#112;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#x69;&#x67;&#x69;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#118;">&#x73;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#100;&#x69;&#103;&#x69;&#116;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;</a>.</p>
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#115;&#101;&#x61;&#114;&#99;&#104;&#x40;&#x73;&#117;&#112;&#112;&#111;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#118;">&#x73;&#x65;&#97;&#x72;&#99;&#104;&#64;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;</a>.</p>
 
 <p><a href="http://search.socialsecurity.gov/search?query=office+locations&amp;affiliate=ssa"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/settings.png" title="Site name and handle on SocialSecurity.gov's search results page" alt="Site name and handle on SocialSecurity.gov's search results page" /></a></p>
 
@@ -1043,7 +1098,7 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
 
 <h2>Site Language</h2>
 
-<p>You chose the language (English or Spanish) for your site when you originally added your site. We'll only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language. If you'd like to edit your site's language, email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x73;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#115;&#x75;&#112;&#112;&#111;&#x72;&#116;&#46;&#100;&#105;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#111;&#x76;">&#x73;&#101;&#97;&#114;&#99;&#104;&#x40;&#115;&#x75;&#x70;&#x70;&#111;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#x61;&#108;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;</a>.</p>
+<p>You chose the language (English or Spanish) for your site when you originally added your site. We'll only index and provide results for pages in your selected language. All display text on the results page will also be in your selected language. If you'd like to edit your site's language, email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#x73;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#114;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#116;&#x61;&#x6c;&#103;&#111;&#x76;&#46;&#x67;&#111;&#x76;">&#115;&#x65;&#97;&#114;&#99;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#103;&#x69;&#x74;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#118;</a>.</p>
 
 <h2>Delete</h2>
 
@@ -1768,7 +1823,7 @@ URL: mailto:info@agency.gov</p>
 
 <h2>We're here to answer your questions.</h2>
 
-<p>Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#x73;&#101;&#97;&#x72;&#99;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#x6f;&#114;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#46;&#103;&#111;&#118;">&#x73;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#x73;&#117;&#x70;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#111;&#118;</a>, or give us a call at 202-505-5315.</p>
+<p>Email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#x73;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#x67;&#111;&#x76;">&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#x67;&#105;&#116;&#x61;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#118;</a>, or give us a call at 202-505-5315.</p>
 
 <p>If you're a federal agency in the DC area, we can stop by your office for an in-person consultation. <a href="mailto:search@support.digitalgov.gov">Email us</a> to set up a time.</p>
 
@@ -1810,7 +1865,7 @@ URL: mailto:info@agency.gov</p>
 
 <hr />
 
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. Email us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#x73;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#115;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
+<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. Email us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#58;&#x73;&#x65;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#x6f;&#118;">&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#112;&#111;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#111;&#118;&#x2e;&#103;&#111;&#118;</a> to let us know where you publish your job openings so that we can include them in the Jobs GovBox.</p>
 ]]></content>
   </entry>
   
@@ -1986,61 +2041,6 @@ URL: mailto:info@agency.gov</p>
 <li>We fixed the alt text on our Results by images.</li>
 <li>We fixed the z-index so that type-ahead suggestions always appear on top of other page elements. We also updated the CSS for our type-ahead to ensure it doesn't conflict with your CSS.</li>
 <li>We fixed our recalls API to return the expected response and to handle null values for recalled_on.</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Our Open Source Strategy]]></title>
-    <link href="http://search.digitalgov.gov/blog/open-source.html"/>
-    <updated>2014-03-21T00:00:00+00:00</updated>
-    <id>http://search.digitalgov.gov/blog/open-source.html</id>
-    <content type="html"><![CDATA[<p>We keep an eye on on our what our government counterparts are up to, both in the U.S. and other countries. We recently came across <a href="https://www.gov.uk">Gov.UK's</a> philosophy on and approach to <a href="http://digital.cabinetoffice.gov.uk/2012/10/12/coding-in-the-open">coding in the open</a>. It caught our attention and we realized we should also articulate our open source strategy.</p>
-
-<h2>Use and Contribute to Open Source Projects</h2>
-
-<p>Since 2010, we've embraced and leveraged open source software to build our site search service for federal, state, and local government websites. This use of open source has allowed us to experience enormous growth over the past few years. In March 2013 alone, over 24 million searchers received results from our service&mdash;a four-fold increase since March 2010.</p>
-
-<p>Our search service is now a complex system made up of many moving parts, including providing type-ahead search suggestions, serving search results, fetching, indexing, and caching content, and providing analytics.</p>
-
-<p>Each of these parts is compiled into our codebase and, as we use open source components for our system, we contribute back to the projects.</p>
-
-<h2>Code in the Open</h2>
-
-<p>We recently began to unravel our monolithic codebase so that we can share individual pieces of our code. To borrow the phrase from Gov.UK, we're now <strong><em>coding in the open</em></strong>.</p>
-
-<p>We recently released the code for our <a href="https://github.com/GSA/jobs_api">Jobs</a> and <a href="https://github.com/GSA/recalls_api">Recalls</a> API servers. They're our first foray into coding in the open. The source code for these API servers is in <a href="https://github.com/GSA">our GitHub repo</a> and is available for anyone to see and contribute to.</p>
-
-<p>The data products for this code are also open and available for anyone to consume on our <a href="/developer/index.html">Developer hub</a>.</p>
-
-<p>These two servers and their underlying data now operate outside of our core search codebase.</p>
-
-<p>Following this same model, moving forward, we plan to:</p>
-
-<ul>
-<li><p>Share first&mdash;For every new feature, we'll write the code so that <em>anyone</em> can make use of the code, not just us. If the public community contributes to the codebase, we'll be able to improve this feature without taxing our developers.</p></li>
-<li><p>Expose APIs&mdash;We'll expose our data products as APIs so that <em>anyone</em> can make use of the data, not just searchers on a government websites.</p></li>
-<li><p>Be our own customer&mdash;We'll use our own public code and data just like everyone else. We'll call our own API servers to integrate the data within our search results pages.</p></li>
-</ul>
-
-
-<h2>Make Things Open to Make Things Better</h2>
-
-<p>We agree with Gov.UK that "to make things open makes things better."</p>
-
-<p>We have finite resources and we don't want to lose our focus on serving our agency customers and improving visitors' search experience on government websites. So, we won't be spending a lot of time to build or support a vibrant community around our code.</p>
-
-<p>That said, we hope that exposing the pieces of our system will be useful to someone somewhere. We'll continue to provide the "ingredients" of our search service so that others will be able to make use of the code and data in ways that we could never imagine.</p>
-
-<h2>And, We're Not Alone</h2>
-
-<p>We're not alone. Other federal agencies have embraced the approach of coding in the open and have <a href="http://gsa.github.io/federal-open-source-repos">GitHub repos</a>. Below are a just a few of our many favorites.</p>
-
-<ul>
-<li><p>The <a href="http://www.cfpb.gov">Consumer Financial Protection Bureau</a> has embraced open source, including serving their public data sets through <a href="https://github.com/cfpb/qu">qu</a>.</p></li>
-<li><p><a href="http://www.usa.gov">USA.gov</a> recently released the code for their <a href="https://github.com/usagov/usagov-ios-app">iPhone app</a>.</p></li>
-<li><p>The <a href="http://www.whitehouse.gov">White House</a> was in the forefront of using open source software in the federal government with their use of Drupal. They're continuing to lead by example by opening up the code for their <a href="https://github.com/WhiteHouse/petitions">We the People petitions</a> and <a href="https://github.com/WhiteHouse/wh-app-ios">iOS</a> and <a href="https://github.com/WhiteHouse/wh-app-android">Android</a> mobile apps.</p></li>
 </ul>
 
 ]]></content>
@@ -2520,7 +2520,7 @@ URL: mailto:info@agency.gov</p>
 <li>We set up <a href="https://codeclimate.com/">Code Climate</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to identify areas of our code that can be improved.</li>
 <li>We phased out color schemes and now offer two options, default and custom.</li>
 <li>We updated the links in our email templates to reflect the new Admin Center.</li>
-<li>We added the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#115;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#103;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;">&#115;&#x65;&#x61;&#114;&#99;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#46;&#100;&#x69;&#103;&#105;&#116;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#x76;</a> if you'd like to opt out.</li>
+<li>We added the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#115;&#x75;&#112;&#x70;&#111;&#114;&#116;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#x76;">&#x73;&#x65;&#97;&#114;&#99;&#104;&#64;&#x73;&#117;&#x70;&#112;&#111;&#114;&#116;&#46;&#100;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#46;&#x67;&#111;&#x76;</a> if you'd like to opt out.</li>
 </ul>
 
 
@@ -2616,7 +2616,7 @@ URL: mailto:info@agency.gov</p>
 
 <p>You can read our updated help by clicking on the Help? link on each page in the Admin Center, or see the full set of help files on our <a href="/manual/index.html">How to Set Up Your Search Box</a> page.</p>
 
-<p>Email us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#58;&#115;&#101;&#x61;&#114;&#99;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;">&#115;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#103;&#x69;&#x74;&#x61;&#108;&#103;&#111;&#x76;&#46;&#103;&#111;&#118;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
+<p>Email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#115;&#x65;&#97;&#114;&#99;&#104;&#x40;&#115;&#x75;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#100;&#x69;&#103;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#46;&#103;&#111;&#118;">&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#117;&#x70;&#x70;&#111;&#114;&#116;&#46;&#x64;&#x69;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
 
 <h2>Chores</h2>
 
@@ -2886,7 +2886,7 @@ URL: mailto:info@agency.gov</p>
 <ol>
 <li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
 <li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#x6f;&#118;">&#115;&#101;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#x6f;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
+<li>Email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;">&#x73;&#101;&#97;&#114;&#x63;&#x68;&#x40;&#115;&#117;&#x70;&#112;&#111;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
 </ol>
 
 
@@ -3110,7 +3110,7 @@ URL: mailto:info@agency.gov</p>
 </ol>
 
 
-<p>If you have any problem resetting your password, email us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#x73;&#101;&#97;&#114;&#99;&#104;&#x40;&#115;&#117;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#105;&#116;&#x61;&#108;&#x67;&#111;&#118;&#46;&#103;&#111;&#x76;">&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#111;&#118;</a>.</p>
+<p>If you have any problem resetting your password, email us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#x67;&#x69;&#x74;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;">&#115;&#x65;&#x61;&#114;&#99;&#104;&#64;&#115;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#x2e;&#100;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#103;&#x6f;&#118;</a>.</p>
 ]]></content>
   </entry>
   
@@ -3167,7 +3167,7 @@ URL: mailto:info@agency.gov</p>
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#115;&#101;&#97;&#114;&#99;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#x74;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#118;">&#115;&#101;&#97;&#114;&#99;&#104;&#64;&#x73;&#x75;&#112;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#x69;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#58;&#x73;&#101;&#x61;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#x70;&#112;&#111;&#114;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#x76;">&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#108;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a>.</p>
 ]]></content>
   </entry>
   
@@ -3627,7 +3627,7 @@ URL: mailto:info@agency.gov</p>
 
 <h2>Feedback</h2>
 
-<p>Email us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#x73;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#117;&#x70;&#x70;&#x6f;&#x72;&#x74;&#46;&#100;&#x69;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#x76;">&#115;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#97;&#108;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#x73;&#x65;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#112;&#111;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#118;">&#115;&#101;&#x61;&#x72;&#99;&#104;&#64;&#115;&#x75;&#112;&#112;&#x6f;&#114;&#116;&#x2e;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#x6c;&#103;&#x6f;&#118;&#46;&#103;&#x6f;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
@@ -3831,7 +3831,7 @@ US-VA:COUNTY-FAIRFAX:CITY-FAIRFAX</p>
 
 <p>State and local government jobs are from cities, counties, and state agencies that use <a href="http://www.neogov.com">NeoGov</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, such <a href="https://bouldercolorado.gov/jobs-and-volunteer">jobs with the the city of Boulder, Colorado</a>.</p>
 
-<p><strong><em>Are we missing your jobs data?</em></strong> Email us at <a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#115;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#115;&#117;&#112;&#112;&#111;&#x72;&#x74;&#46;&#100;&#105;&#103;&#x69;&#x74;&#97;&#x6c;&#103;&#x6f;&#118;&#46;&#103;&#x6f;&#x76;</a> to let us know where you publish the jobs data for your federal, state, or local government agency. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
+<p><strong><em>Are we missing your jobs data?</em></strong> Email us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#115;&#101;&#x61;&#114;&#99;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#x67;&#x6f;&#118;">&#x73;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#118;</a> to let us know where you publish the jobs data for your federal, state, or local government agency. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
 
 <p><a name="what-it-returns"></a></p>
 
@@ -3893,7 +3893,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <h2>Feedback</h2>
 
-<p>Email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#115;&#101;&#97;&#114;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#103;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#118;&#46;&#103;&#111;&#118;">&#x73;&#101;&#97;&#x72;&#99;&#104;&#x40;&#115;&#117;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#115;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#115;&#117;&#112;&#x70;&#111;&#114;&#116;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#118;">&#115;&#101;&#97;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#46;&#103;&#111;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
@@ -3975,7 +3975,7 @@ We are able to fully manage the tool and reduce the amount of resources needed t
 
 <p>MRSS is the standard <a href="http://www.rssboard.org/media-rss">media RSS specification</a> for syndicating multimedia content. So, even if you don't have an MRSS feed now, it should be easy to generate one as long as your content is in a content management system or other database. MRSS is also the standard specification used by hosted multimedia services such as Flickr, Instagram, Vimeo, and YouTube.</p>
 
-<p>Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x73;&#101;&#97;&#114;&#x63;&#x68;&#64;&#115;&#x75;&#112;&#x70;&#111;&#114;&#116;&#46;&#100;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#103;&#x6f;&#118;&#46;&#103;&#x6f;&#x76;">&#115;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#114;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#x6f;&#x76;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
+<p>Email us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#x73;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#46;&#100;&#105;&#x67;&#x69;&#116;&#x61;&#108;&#103;&#111;&#x76;&#46;&#103;&#111;&#x76;">&#x73;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#118;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
 
 <p>(Thanks, <a href="http://www.usgs.gov">USGS.gov</a> team, for suggesting this new feature!)</p>
 
@@ -4048,7 +4048,7 @@ We are able to fully manage the tool and reduce the amount of resources needed t
 <ul>
 <li>We updated our <a href="/tos.html">terms of service</a>.</li>
 <li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#x73;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#46;&#100;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#118;">&#115;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#105;&#103;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;</a> with any questions.</li>
+<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#115;&#x65;&#97;&#114;&#x63;&#104;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#x67;&#105;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;</a> with any questions.</li>
 <li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
 <li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
 <li>We removed the trending searches feature and widget.</li>
@@ -4097,7 +4097,7 @@ We are able to fully manage the tool and reduce the amount of resources needed t
 </ol>
 
 
-<p>If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#118;">&#115;&#x65;&#x61;&#114;&#99;&#104;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#116;&#46;&#x64;&#105;&#103;&#105;&#116;&#97;&#108;&#103;&#x6f;&#118;&#46;&#103;&#111;&#x76;</a>.</p>
+<p>If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#115;&#x65;&#97;&#114;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#118;">&#x73;&#101;&#97;&#114;&#99;&#104;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#105;&#116;&#x61;&#108;&#103;&#111;&#x76;&#46;&#x67;&#111;&#118;</a>.</p>
 
 <hr />
 
@@ -4215,7 +4215,7 @@ JSON-P. This API is only available for use on official government websites.
 
 <p>We're excited to announce that searchers looking for jobs on your site can now see all of your agency's current job openings.</p>
 
-<p>Our new <a href="/manual/govbox-jobs.html">Job Openings Govbox</a> displays up to three location- and keyword-matched job openings on your results page. For more information on how to turn on this GovBox, see <a href="/manual/display-overview.html">How To Select The Modules That Appear On Your Results Page</a>.</p>
+<p>Our new <a href="/manual/govbox-jobs.html">Job Openings GovBox</a> displays up to three location- and keyword-matched job openings on your results page. For more information on how to turn on this GovBox, see <a href="/manual/display-overview.html">How To Select The Modules That Appear On Your Results Page</a>.</p>
 
 <p>We've open sourced all of the code that powers our <a href="https://github.com/GSA/jobs_api">Jobs Server API</a> in Github.</p>
 
@@ -4348,7 +4348,7 @@ JSON-P. This API is only available for use on official government websites.
 <li>Searchers can narrow RSS news results by custom date ranges.</li>
 <li>Searchers now see more images above the fold on image results pages.</li>
 <li>Searchers see integrated image results across both the images on your website and in your Flickr photostream.</li>
-<li>You can now add the <a href="http://www.digitalgov.gov/services/dap/">Digtital Analytics Program's</a> government-wide analytics tag to your search results pages. Email the Digital Analytics Program at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#68;&#65;&#x50;&#x40;&#103;&#115;&#x61;&#46;&#103;&#x6f;&#118;">&#68;&#x41;&#80;&#x40;&#103;&#x73;&#97;&#46;&#x67;&#x6f;&#118;</a> for more information on setting up the government-wide analytics tag.</li>
+<li>You can now add the <a href="http://www.digitalgov.gov/services/dap/">Digtital Analytics Program's</a> government-wide analytics tag to your search results pages. Email the Digital Analytics Program at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x44;&#65;&#x50;&#64;&#103;&#115;&#x61;&#x2e;&#103;&#111;&#x76;">&#68;&#x41;&#x50;&#x40;&#x67;&#x73;&#x61;&#46;&#103;&#x6f;&#x76;</a> for more information on setting up the government-wide analytics tag.</li>
 <li>When you <a href="/manual/twitter.html">add your Twitter handle</a> in the Admin Center, we now show the Twitter GovBox by default.</li>
 </ul>
 
