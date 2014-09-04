@@ -73,58 +73,71 @@
  
     
     <h1>
-      <a href="/manual/account.html">How to Create an Account</a>
+      <a href="/blog/go-live.html">A Punch List to Go Live with DigitalGov Search</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > My Account</p>
+      <p>Your pre-launch checklist will be unique to your agency's workflow, requirements, and deadlines. A typical punch list to go live with DigitalGov Search follows.</p>
 
-<p>You can use DigitalGov Search to power the search box on your federal, state, local, tribal, or territorial government website at no cost.</p>
+<h2>Connect Your Site to DigitalGov Search</h2>
 
-<p>Access to our hosted search service requires authentication and verification that you're a government employee or contractor.</p>
+<p>Most agencies add these two <a href="/manual/code.html">snippets of code</a> to the template(s) in their content management systems (rather than adding them to individual pages).</p>
 
-<h2>Log In</h2>
+<p><i class="icon-check"></i> <strong>1. Does your search box point to DigitalGov Search?</strong> Update your search box form code point to our service so that, when users execute a search, they'll see your DigitalGov Search-hosted results page.</p>
 
-<p>Log in to an existing account <a href="http://search.digitalgov.gov/login">http://search.digitalgov.gov/login</a> or register for a new account at <a href="http://search.digitalgov.gov/signup">http://search.digitalgov.gov/signup</a>.</p>
+<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+     &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
 
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/login.png" alt="Login from search.digitalgov.gov" /></p>
+<p><i class="icon-check"></i> <strong>2. Do you have the our Javascript tag on your webpages?</strong> This Javascript powers the suggestions for type-ahead and <a href="/manual/display-overview.html">related searches</a>. It also provides data on your trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
 
-<p>After you register, you'll receive an automatic email. Click on the link in the email to verify that your email address belongs to you.</p>
+<pre><code>&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+     var usasearch_config = { siteHandle:"YourSiteHandle" };
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "http://search.usa.gov/javascripts/remote.loader.js";
+    document.getElementsByTagName("head")[0].appendChild(script);
+//]]&gt;
+&lt;/script&gt;
+</code></pre>
 
-<p>If you have a .gov or .mil address, you'll be able to access your account immediately after you verify your email.</p>
+<h2>Double Check Your Content Sources</h2>
 
-<p>If you don't have a .gov or .mil address, we'll ask for additional information to confirm that you're a government employee or contractor. We'll notify you when your account is approved.</p>
+<p><i class="icon-check"></i> <strong>3. Have you told us which domain(s) you want to search?</strong> List one or more <a href="/manual/domains.html">domains</a> that you want to search on the first page of web results. Most agencies opt to leave out the 'www' to include all subdomains (for example, list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies especially department-level portals opt to also include their bureaus' websites (for example, Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)</p>
 
-<h2>Add a Site</h2>
+<p><i class="icon-check"></i> <strong>4. Have you told us about your RSS feeds?</strong> We love <a href="/manual/rss.html">RSS feeds</a>. Tell us about all of your feeds, even if you opt not to show them (see #7 below). They're the quickest way for you to tell us about your new and updated content. Feeds also have well-structured titles, URLs, descriptions, and dates that we use to improve your search results page. (Tip: Preview your feeds from the RSS page in the <a href="https://search.usa.gov/sites/">Admin Center</a> to confirm that we've indexed your content.)</p>
 
-<p>Once your account is approved, you can <a href="/manual/add-site.html">add a site</a> in our <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+<p><i class="icon-check"></i> <strong>5. Have you told us about your social media accounts?</strong> <a href="/manual/flickr.html">Flickr photostreams</a>, <a href="/manual/twitter.html">tweets</a>, and <a href="/manual/youtube.html">YouTube videos</a> are a great way to highlight your recent content. Tell us about all of your social media, even if you opt not to show them (see #7 below).</p>
 
-<h2>Update Your Contact Information</h2>
+<h2>Customize the Display of Your Search Results Page</h2>
 
-<p>You can edit your name, agency, or email by selecting the option, My Account, in the drop-down menu in the upper-right hand corner.</p>
+<p><i class="icon-check"></i> <strong>6. Have you made the search results page look like your website?</strong> Customize the <a href="/manual/brand.html">brand</a> (font, colors, logo, favicon, and navigation links) of your search results page to create a seamless experience for users as they search and browse your website.</p>
 
-<hr />
+<p><i class="icon-check"></i> <strong>7. Have you told us what to show on your results page?</strong> Turn on (or off) the GovBoxes (that is, the inline results in the center of the page) and sidebar options (that is, the facets in the left-hand column) you want to appear on your search results. You can change the default settings on the <a href="/manual/display-overview.html">Display Overview</a> page in the Admin Center.</p>
 
-<p><strong><em>Troubleshooting tip:</em></strong> We cannot retrieve any passwords for any account, because we don't have access to passwords. To reset your password:</p>
+<h2>Set Up Nice-to-Have Features (Optional)</h2>
 
-<ol>
-<li>Go to our Login page at <a href="https://search.usa.gov/login">https://search.usa.gov/login</a></li>
-<li>Enter your email address.</li>
-<li>Click on Forgot your password?</li>
-<li>You will be prompted to reset your password and it will be emailed to you.</li>
-</ol>
+<p><i class="icon-check"></i> <strong>8. Have you masked your domain?</strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov.</p>
 
+<p><i class="icon-check"></i> <strong>9. Have you added the Javascripts for your other third-party web services to your results page?</strong> If you have a <a href="/manual/third-party.html">third-party service</a> running on your website, you likely want it to run on your results page. Agencies often include their 4Q, AddThis, Foresee, Google Analytics, Omniture, or WebTrends code, among others.</p>
 
-<p>If you have any problem resetting your password, email us at <a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#115;&#101;&#x61;&#114;&#99;&#104;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#x6f;&#118;">&#x73;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
+<h2>Don't Forget SEO (Optional)</h2>
+
+<p><i class="icon-check"></i> <strong>10. Have you optimized your site so we can find your content?</strong> We follow <a href="http://www.digitalgov.gov/2013/05/31/four-steps-to-achieve-good-seo/">search engine optimization</a> (SEO) best practices. Verify that you have a <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and an <a href="http://www.sitemaps.org">XML sitemap</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. These two files are typically located in the root directory of your website (i.e., agency.gov/robots.txt and agency.gov/sitemap.xml, respectively). Also verify that your robots.txt file allows our user agent (usasearch) to access your public content.</p>
+
+<p><i class="icon-check"></i> <strong>11. Have you registered your site with the major commercial search engines?</strong> Register for both <a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to maximize the coverage of your content in their search results.</p>
 
     </div>
 
     <div class='tags'>
       
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/my-account"><span class="label label-info">my-account</span></a>
       
     </div>
    <div class='time'>
@@ -134,8 +147,8 @@
       
       
       
-      <a href="/manual/account.html">
-        <time datetime="2013-08-23">August 23, 2013</time>
+      <a href="/blog/go-live.html">
+        <time datetime="2013-08-26">August 26, 2013</time>
       </a>
     </div>
     </article>
@@ -197,7 +210,7 @@
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#115;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#117;&#x70;&#112;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#97;&#x6c;&#x67;&#x6f;&#118;&#46;&#x67;&#x6f;&#118;">&#x73;&#101;&#97;&#x72;&#99;&#x68;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#118;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#97;&#114;&#99;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#111;&#118;&#46;&#x67;&#111;&#x76;">&#115;&#x65;&#97;&#114;&#99;&#104;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#x6c;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#x76;</a>.</p>
 
     </div>
 
@@ -382,7 +395,7 @@
 </ol>
 
 
-<p>If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#58;&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#112;&#111;&#114;&#x74;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#97;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#118;">&#115;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#111;&#x72;&#x74;&#46;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#118;</a>.</p>
+<p>If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#115;&#101;&#97;&#114;&#x63;&#x68;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#x67;&#x6f;&#x76;">&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#118;</a>.</p>
 
 <hr />
 
