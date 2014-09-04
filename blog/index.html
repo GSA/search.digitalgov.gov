@@ -119,7 +119,7 @@
 
 <h2>We're here to answer your questions.</h2>
 
-<p>Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#115;&#117;&#112;&#x70;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#103;&#111;&#x76;">&#115;&#101;&#97;&#x72;&#99;&#x68;&#64;&#x73;&#x75;&#x70;&#112;&#x6f;&#114;&#116;&#46;&#x64;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#111;&#118;</a>, or give us a call at 202-505-5315.</p>
+<p>Email us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x73;&#101;&#97;&#114;&#99;&#104;&#64;&#x73;&#117;&#112;&#112;&#111;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#105;&#116;&#97;&#108;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#x76;">&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#112;&#111;&#114;&#116;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#103;&#111;&#x76;</a>, or give us a call at 202-505-5315.</p>
 
 <p>If you're a federal agency in the DC area, we can stop by your office for an in-person consultation. <a href="mailto:search@support.digitalgov.gov">Email us</a> to set up a time.</p>
 
@@ -234,6 +234,80 @@ URL: mailto:info@agency.gov</p>
   <article class='article'>
     
     <h1>
+      <a href="/releases/august-2014.html">August 2014 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Add Instagram Pictures to Your Image Results</h2>
+
+<p>Does your agency have an Instagram account? Your pictures can now appear in your site's search results.</p>
+
+<p>Simply <a href="/manual/instagram.html">tell us your Instagram username</a> at <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Instagram. We'll automatically index all of the pictures in your account within minutes.</p>
+
+<p>See the sample results below for a search on <a href="http://search.doi.gov/search/images?affiliate=doi.gov&amp;query=moon"><em>moon</em> on DOI.gov</a>.</p>
+
+<p><a href="http://search.doi.gov/search/images?&amp;affiliate=doi.gov&amp;query=moon"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/release-08-2014-doi-instagram.png" title="DOI Instagram results for moon" alt="DOI Instagram Results" /></a></p>
+
+<p>This feature is reflective of our commitment to bring your content, <a href="http://www.digitalgov.gov/2014/08/26/help-the-public-find-your-information-wherever-and-however-youve-published-it/">wherever it lives</a>, to your searchers.</p>
+
+<h2>Other Features</h2>
+
+<ul>
+<li>Searchers now see results for Instagram pictures, regardless of spacing. For example, Apollo11 now returns the same results as Apollo 11. [<a href="https://github.com/GSA/oasis/commit/9a29de80dd22978581af4b0e460e439b78e614d7">Commit 9a29de8</a>]</li>
+<li>Searchers now see better spelling suggestions for image searches. [<a href="https://github.com/GSA/oasis/commit/1ae0c7e7fff3a4eb02f3e09e8c8d7c030fd50e14">Commit 1ae0c7e7ff</a>]</li>
+<li>Searchers now see images from all known government Flickr and Instagram accounts when searching for images on <a href="http://search.usa.gov/search/images?affiliate=usagov&amp;query=hoover">USA.gov</a>.</li>
+<li>Searchers now see <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> facets on the <a href="/blog/serp-redesign.html">newly redesigned search results page</a>.</li>
+<li>Searchers now see a consistent look and phrasing for the See more&hellip; option on the various modules on the results page.</li>
+<li>You can now toggle the display of <a href="/manual/govbox-federal-register.html"><em>Federal Register</em> results</a> in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
+<li>To improve the accessibility of the <a href="https://search.usa.gov/sites/">Admin Center</a>, you now see an outline defining the area of focus, and you can access the links for My Account and Sign Out when navigating with the keyboard.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li>We upgraded to <a href="http://www.elasticsearch.org/downloads/1-3-2/">ElasticSearch 1.3.2</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We added a notice of upcoming changes to the API Instructions page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed the spacing between titles and descriptions so it is consistent on all of our results pages.</li>
+<li>To improve the quality of type-ahead suggestions, we decreased the number of times a term must be searched before appearing as a suggestion.</li>
+<li>The option to drill down into detailed data for Best Bets now remains when you change the date on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page.</li>
+<li>Searchers no longer see deleted RSS items with 404 http status codes in their results.</li>
+<li>We now pre-validate social media account handles.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/august-2014.html">
+        <time datetime="2014-09-04">September 4, 2014</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
       <a href="/manual/account.html">How to Create and Edit Your Account</a>
     </h1>
     
@@ -285,7 +359,7 @@ URL: mailto:info@agency.gov</p>
 </ol>
 
 
-<p>If you have any problem resetting your password, email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#x74;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#103;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;">&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#x72;&#x74;&#46;&#100;&#x69;&#103;&#105;&#116;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#118;</a>.</p>
+<p>If you have any problem resetting your password, email us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#58;&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#115;&#x75;&#112;&#112;&#x6f;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#103;&#111;&#x76;">&#115;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#100;&#x69;&#103;&#x69;&#116;&#x61;&#108;&#x67;&#111;&#118;&#x2e;&#103;&#111;&#x76;</a>.</p>
 
     </div>
 
@@ -565,7 +639,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li><p>Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#115;&#101;&#97;&#x72;&#99;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#x76;">&#x73;&#101;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#112;&#112;&#111;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#x69;&#x74;&#x61;&#108;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a> to <a href="/manual/cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
+<li><p>Email us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#58;&#115;&#101;&#97;&#114;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#x69;&#103;&#x69;&#116;&#x61;&#108;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#111;&#x76;">&#115;&#101;&#x61;&#114;&#99;&#104;&#x40;&#115;&#117;&#112;&#x70;&#111;&#114;&#116;&#46;&#100;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#x76;&#46;&#103;&#111;&#x76;</a> to <a href="/manual/cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
 <li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
 
 <p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
@@ -673,7 +747,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 <p><strong><em>Did you know?</em></strong>  Searchers may narrow results by time period for any <a href="/manual/rss.html">RSS</a> feeds. See, for example, results for a <a href="http://search.whitehouse.gov/search/news?affiliate=wh&amp;channel=6&amp;m=false&amp;query=jobs&amp;tbs=w">search on <em>jobs</em> narrowed to press articles in the last week on WhiteHouse.gov</a>.</p>
 
-<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#x73;&#101;&#x61;&#114;&#x63;&#104;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#x6f;&#118;&#46;&#103;&#111;&#x76;">&#x73;&#x65;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#118;</a> to if you want to customize these display names.</p>
+<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x73;&#101;&#97;&#114;&#99;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;">&#115;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#115;&#117;&#112;&#112;&#x6f;&#114;&#116;&#46;&#100;&#105;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;</a> to if you want to customize these display names.</p>
 
 <p><strong><em>Did you know?</em></strong> You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our <a href="/manual/code.html">JavaScript snippet</a> before the closing <code>&lt;body&gt;</code> tag on your HTML web pages.</p>
 
@@ -718,7 +792,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       <p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these three steps to mask your domain.</p>
 
 <ol>
-<li>Email us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#115;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#118;">&#115;&#101;&#97;&#114;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#112;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#x2e;&#x67;&#111;&#x76;</a> and ask us to mask your domain.</li>
+<li>Email us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x73;&#x65;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#117;&#x70;&#112;&#x6f;&#114;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#x76;">&#115;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#115;&#x75;&#112;&#112;&#111;&#114;&#116;&#46;&#100;&#x69;&#103;&#x69;&#x74;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#103;&#111;&#x76;</a> and ask us to mask your domain.</li>
 <li>Create a CNAME in your external DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
 <li>When the setup is complete, change the <a href="/manual/code.html">code for your form</a> action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
 </ol>
@@ -754,72 +828,6 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
       
       <a href="/manual/cname.html">
         <time datetime="2014-08-21">August 21, 2014</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/manual/instagram.html">How to Add Your Instagram Pictures to Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Instagram</p>
-
-<h2>Tell Us About Your Instagram Account</h2>
-
-<p>Provide us with the <em>username</em> for your Instagram Account.</p>
-
-<p>When you're logged into Instagram, you can see your username at <a href="https://instagram.com/accounts/login/?next=/accounts/edit/">https://instagram.com/accounts/login/?next=/accounts/edit/</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<p>For example, the Instagram username for the Department of Labor is <a href="http://instagram.com/usdol">usdol</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<h2>Opt to Display Your Instagram Pictures</h2>
-
-<p>When you add the username for your Instagram account, we'll automatically index all of the pictures in your account.</p>
-
-<p>On the image results page, we'll display the pictures from your Instagram account by default. If you'd like to backfill them with the standard image results from your website, <a href="mailto:search@support.digitalgov.gov">email us</a> and we'll turn on your web images for you.</p>
-
-<p>See the sample results page below that shows image results displayed on <a href="http://search.usa.gov/search/images?affiliate=u.s.departmentoflabor&amp;query=minimum+wage">DOL.gov for a search on <em>minimum wage</em></a>.</p>
-
-<p><a href="http://search.usa.gov/search/images?affiliate=u.s.departmentoflabor&amp;query=minimum+wage"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-instagram.png" title="Image results from Flickr &amp; Instagram" alt="Image results from Flickr &amp; Instagram" /></a></p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
-
-<p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/flickr.html">Flickr</a> photostream. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.</p>
-
-<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#x6f;&#x76;">&#115;&#x65;&#97;&#114;&#99;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#111;&#114;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#108;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#111;&#x76;</a> if you're ready to turn on the new results page.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
-      
-      <a href="/tagged/instagram"><span class="label label-info">instagram</span></a>
-      
-      <a href="/tagged/images"><span class="label label-info">images</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/instagram.html">
-        <time datetime="2014-08-20">August 20, 2014</time>
       </a>
     </div>
 

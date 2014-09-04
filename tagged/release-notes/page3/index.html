@@ -73,6 +73,70 @@
  
     
     <h1>
+      <a href="/releases/january-2013.html">January 2013 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlighted Feature: Jobs GovBox</h2>
+
+<p>We're excited to announce that searchers looking for jobs on your site can now see all of your agency's current job openings.</p>
+
+<p>Our new <a href="/manual/govbox-jobs.html">Job Openings GovBox</a> displays up to three location- and keyword-matched job openings on your results page. For more information on how to turn on this GovBox, see <a href="/manual/display-overview.html">How To Select The Modules That Appear On Your Results Page</a>.</p>
+
+<p>We've open sourced all of the code that powers our <a href="https://github.com/GSA/jobs_api">Jobs Server API</a> in Github.</p>
+
+<p>We analyzed data on jobs-related searches to ensure that the new federal <a href="/manual/govbox-jobs.html">Jobs GovBox</a> lists the most relevant job openings.</p>
+
+<p>Searchers can now effectively search for jobs by keyword, agency, state, or work schedule (part-or full-time).</p>
+
+<p>We also focused on not showing the Jobs GovBox when it isn't relevant (for example, it is no longer shown when searchers look for job safety posters or employment verification forms).</p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>We added our posting channel ID to all USAJobs links.</li>
+<li>We set up a cron job to fetch and process job files from USAJobs.</li>
+<li>We added impression and click tracking for the Jobs GovBox module.</li>
+<li>We resolved performance discrepancy between our <a href="/releases/october-2012.html">two datacenters</a>.</li>
+<li>We no longer use XML sitemaps to add documents to our web index.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>You can now delete keywords from text best bets.</li>
+<li>Newly added misspellings are now being applied to type-ahead suggestions.</li>
+<li>Searchers can now find jobs in non-standard state locations (for example someone searching for jobs in Washington, DC, will find postings the the location of Washington DC Metro Area, District of Columbia).</li>
+<li>We've already pushed two bug fixes for the Jobs GovBox to production. Searchers no longer see yet-to-be-opened or already closed jobs.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/january-2013.html">
+        <time datetime="2013-01-25">January 25, 2013</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/december-2012.html">December 2012 Release Notes</a>
     </h1>
     
@@ -195,7 +259,7 @@
 <li>Searchers can narrow RSS news results by custom date ranges.</li>
 <li>Searchers now see more images above the fold on image results pages.</li>
 <li>Searchers see integrated image results across both the images on your website and in your Flickr photostream.</li>
-<li>You can now add the <a href="http://www.digitalgov.gov/services/dap/">Digtital Analytics Program's</a> government-wide analytics tag to your search results pages. Email the Digital Analytics Program at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x44;&#65;&#x50;&#x40;&#103;&#115;&#97;&#46;&#x67;&#x6f;&#118;">&#x44;&#x41;&#x50;&#64;&#103;&#x73;&#97;&#x2e;&#x67;&#111;&#118;</a> for more information on setting up the government-wide analytics tag.</li>
+<li>You can now add the <a href="http://www.digitalgov.gov/services/dap/">Digtital Analytics Program's</a> government-wide analytics tag to your search results pages. Email the Digital Analytics Program at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#68;&#x41;&#x50;&#64;&#103;&#x73;&#x61;&#46;&#103;&#x6f;&#x76;">&#x44;&#x41;&#x50;&#x40;&#103;&#115;&#x61;&#x2e;&#103;&#111;&#x76;</a> for more information on setting up the government-wide analytics tag.</li>
 <li>When you <a href="/manual/twitter.html">add your Twitter handle</a> in the Admin Center, we now show the Twitter GovBox by default.</li>
 </ul>
 
@@ -816,97 +880,6 @@ Searchers see video results from YouTube playlists.</li>
       
       <a href="/releases/march-2012.html">
         <time datetime="2012-04-18">April 18, 2012</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/february-2012.html">February 2012 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>February was an exciting month for us. We rolled out a brand new look to emphasize our focus on helping you create a great search experience on your websites.</p>
-
-<p>Our blog will now serve as our home page. It also will answer your questions about how our features work so be sure to browse through our <a href="/tagged/how-to">How To Manual</a> for tips on how to configure your search settings.</p>
-
-<p>Below are the release details for February and, as a reminder, we divide our work into three categories.</p>
-
-<ol>
-<li>Features: Things you actually notice.</li>
-<li>Chores: Back-end improvements that you don't notice.</li>
-<li>Fixes: Fixes to any code issues that may arise.</li>
-</ol>
-
-
-<h2>Features for Searchers</h2>
-
-<ul>
-<li>Searchers don't see narrow by date on Everything or Images pages (i.e., on Bing-based results pages).</li>
-<li>Searchers see a longer search box on the results page.</li>
-<li>Searchers see near-real-time <a href="/tagged/type-ahead">type-ahead</a> suggestions.</li>
-<li>Searchers see a custom header image on results pages.</li>
-<li>Searchers may narrow results by <a href="/tagged/collections">collections</a> in left nav.</li>
-<li>Searchers see a Results by DigitalGov Search logo.</li>
-<li>Mobile visitors can find more <a href="http://www.usa.gov/gobiernousa">GobiernoUSA.gov</a> pages.</li>
-</ul>
-
-
-<h2>Features for Agency Customers</h2>
-
-<ul>
-<li>Customers see new Add New Site wizard.</li>
-<li>Customers see raw and processed query analytics in downloaded CSV files.</li>
-<li>Customers with legacy results pages can preview template-based results pages.</li>
-<li>Customers have an Export to CSV option for indexed URLs.</li>
-<li>Customers see updated Look &amp; Feel and Header &amp; Footer pages.</li>
-</ul>
-
-
-<h2>Chores</h2>
-
-<ul>
-<li>Fix Sunspot library to remove orphans.</li>
-<li>Adjust default CSS for theme-based templates.</li>
-<li>Move customers with legacy templates and without header/footer to theme-based templates.</li>
-<li>Allow assignment of priorities to background (Resque) jobs.</li>
-<li>Set default index to Bing + DigitalGov Search.</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>Fix occasional errors highlighting phrases.</li>
-<li>Fix layout on theme-based templates.</li>
-<li>Fix URL prefixes with trailing spaces to not append slash.</li>
-<li>Update error message when customers upload a .txt file.</li>
-<li>Fix images to have same results page title as other verticals.</li>
-<li>Automatically down case terms in site handle field.</li>
-<li>Fix bug where the header image filename was getting longer and longer when saving.</li>
-<li>Fix Agency GovBox to point to new USA.gov results page.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/february-2012.html">
-        <time datetime="2012-03-08">March 8, 2012</time>
       </a>
     </div>
     </article>

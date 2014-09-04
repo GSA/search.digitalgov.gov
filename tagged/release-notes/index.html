@@ -73,6 +73,79 @@
  
     
     <h1>
+      <a href="/releases/august-2014.html">August 2014 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Add Instagram Pictures to Your Image Results</h2>
+
+<p>Does your agency have an Instagram account? Your pictures can now appear in your site's search results.</p>
+
+<p>Simply <a href="/manual/instagram.html">tell us your Instagram username</a> at <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Instagram. We'll automatically index all of the pictures in your account within minutes.</p>
+
+<p>See the sample results below for a search on <a href="http://search.doi.gov/search/images?affiliate=doi.gov&amp;query=moon"><em>moon</em> on DOI.gov</a>.</p>
+
+<p><a href="http://search.doi.gov/search/images?&amp;affiliate=doi.gov&amp;query=moon"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/release-08-2014-doi-instagram.png" title="DOI Instagram results for moon" alt="DOI Instagram Results" /></a></p>
+
+<p>This feature is reflective of our commitment to bring your content, <a href="http://www.digitalgov.gov/2014/08/26/help-the-public-find-your-information-wherever-and-however-youve-published-it/">wherever it lives</a>, to your searchers.</p>
+
+<h2>Other Features</h2>
+
+<ul>
+<li>Searchers now see results for Instagram pictures, regardless of spacing. For example, Apollo11 now returns the same results as Apollo 11. [<a href="https://github.com/GSA/oasis/commit/9a29de80dd22978581af4b0e460e439b78e614d7">Commit 9a29de8</a>]</li>
+<li>Searchers now see better spelling suggestions for image searches. [<a href="https://github.com/GSA/oasis/commit/1ae0c7e7fff3a4eb02f3e09e8c8d7c030fd50e14">Commit 1ae0c7e7ff</a>]</li>
+<li>Searchers now see images from all known government Flickr and Instagram accounts when searching for images on <a href="http://search.usa.gov/search/images?affiliate=usagov&amp;query=hoover">USA.gov</a>.</li>
+<li>Searchers now see <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> facets on the <a href="/blog/serp-redesign.html">newly redesigned search results page</a>.</li>
+<li>Searchers now see a consistent look and phrasing for the See more&hellip; option on the various modules on the results page.</li>
+<li>You can now toggle the display of <a href="/manual/govbox-federal-register.html"><em>Federal Register</em> results</a> in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
+<li>To improve the accessibility of the <a href="https://search.usa.gov/sites/">Admin Center</a>, you now see an outline defining the area of focus, and you can access the links for My Account and Sign Out when navigating with the keyboard.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li>We upgraded to <a href="http://www.elasticsearch.org/downloads/1-3-2/">ElasticSearch 1.3.2</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We added a notice of upcoming changes to the API Instructions page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed the spacing between titles and descriptions so it is consistent on all of our results pages.</li>
+<li>To improve the quality of type-ahead suggestions, we decreased the number of times a term must be searched before appearing as a suggestion.</li>
+<li>The option to drill down into detailed data for Best Bets now remains when you change the date on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page.</li>
+<li>Searchers no longer see deleted RSS items with 404 http status codes in their results.</li>
+<li>We now pre-validate social media account handles.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/august-2014.html">
+        <time datetime="2014-09-04">September 4, 2014</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/july-2014.html">July 2014 Release Notes</a>
     </h1>
     
@@ -240,6 +313,74 @@
  
     
     <h1>
+      <a href="/releases/may-2014.html">May 2014 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Features</h2>
+
+<p>We officially rolled our newly <a href="http://localhost:4000/blog/serp-redesign.html">redesigned results page</a>.</p>
+
+<p>As we continue to add features to our search results page, you can see small, incremental changes. We added a thin, visible border around the search box to improve its visibility, especially against a white background. We changed the color of the query term in the search box from gray to black. We also added more padding around <a href="/manual/best-bets-text.html">Best Bets</a> so that searchers can more readily distinguish them from web results. At the bottom of page, we added "Page 1" to "Next >>" to more clearly indicate that more results are available.</p>
+
+<p><a href="http://search.usa.gov/search?affiliate=usagov&amp;query=huricane"><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/release-05-2014-usa-huricane.png" title="Tweaks to the redesigned USA.gov results page" alt="Tweaks to the redesigned USA.gov results page" /></a></p>
+
+<p>Additionally, searchers can now see image and video results. Searchers can filter results to images or videos only. They can also see up to one inline video result with a link to see more videos.</p>
+
+<p>To improve the quality of the image search results, we now display images from <a href="/manual/flickr.html">your Flickr photostream</a> by default.</p>
+
+<p>We realized that our results page was getting a bit top-heavy so we now display inline results only when they're most relevant&mdash;capping the display of inline videos at 13 months and inline RSS-based news results at four months. Additionally, we display very recent news results (less than five days) at the top of the page and less recent news results closer to the bottom.</p>
+
+<p>It is also now possible to include an email address as a header or footer link by using mailto:info@agency.gov within the URL.</p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>We added support for .com <a href="http://search.digitalgov.gov/manual/cname.html">CNAMEs</a>.</li>
+<li>We increased the maximum mobile logo size from 50KB to 64KB.</li>
+<li>We updated <a href="https://travis-ci.org/">Travis-CI</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to use <a href="https://www.ruby-lang.org/en/downloads/">Ruby 2.0</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We added robots.txt files to all sites that use a CNAME to block crawlers from their search results pages.</li>
+<li>We updated <a href="http://logstash.net/">logstash</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and upgraded <a href="http://www.elasticsearch.org/downloads/1-2-0/">ElasticSearch to 1.2.0</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We investigated <a href="http://www.drupal.org">Drupal</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> modules that publish content APIs for our <a href="http://search.digitalgov.gov/blog/byoi.html">bring your own index</a> pilot.</li>
+<li>We updated our SSL certificate.</li>
+<li>We added a page in the Admin Center for you to let us know about your <a href="/manual/instagram.html">Instagram</a> account. We also registered for the <a href="http://instagram.com/developer/">Instagram API</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. (We're planning to display image results Instagram soon.)</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>Searchers no longer see duplicate video results.</li>
+<li>We fixed the spacing between web results on mobile phones.</li>
+<li>We now automatically populate the homepage URL for newly added sites.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/may-2014.html">
+        <time datetime="2014-07-09">July 9, 2014</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/april-2014.html">April 2014 Release Notes</a>
     </h1>
     
@@ -310,74 +451,6 @@
       
       
       <a href="/releases/april-2014.html">
-        <time datetime="2014-07-09">July 9, 2014</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/may-2014.html">May 2014 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2>Features</h2>
-
-<p>We officially rolled our newly <a href="http://localhost:4000/blog/serp-redesign.html">redesigned results page</a>.</p>
-
-<p>As we continue to add features to our search results page, you can see small, incremental changes. We added a thin, visible border around the search box to improve its visibility, especially against a white background. We changed the color of the query term in the search box from gray to black. We also added more padding around <a href="/manual/best-bets-text.html">Best Bets</a> so that searchers can more readily distinguish them from web results. At the bottom of page, we added "Page 1" to "Next >>" to more clearly indicate that more results are available.</p>
-
-<p><a href="http://search.usa.gov/search?affiliate=usagov&amp;query=huricane"><img src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/release-05-2014-usa-huricane.png" title="Tweaks to the redesigned USA.gov results page" alt="Tweaks to the redesigned USA.gov results page" /></a></p>
-
-<p>Additionally, searchers can now see image and video results. Searchers can filter results to images or videos only. They can also see up to one inline video result with a link to see more videos.</p>
-
-<p>To improve the quality of the image search results, we now display images from <a href="/manual/flickr.html">your Flickr photostream</a> by default.</p>
-
-<p>We realized that our results page was getting a bit top-heavy so we now display inline results only when they're most relevant&mdash;capping the display of inline videos at 13 months and inline RSS-based news results at four months. Additionally, we display very recent news results (less than five days) at the top of the page and less recent news results closer to the bottom.</p>
-
-<p>It is also now possible to include an email address as a header or footer link by using mailto:info@agency.gov within the URL.</p>
-
-<h2>Chores</h2>
-
-<ul>
-<li>We added support for .com <a href="http://search.digitalgov.gov/manual/cname.html">CNAMEs</a>.</li>
-<li>We increased the maximum mobile logo size from 50KB to 64KB.</li>
-<li>We updated <a href="https://travis-ci.org/">Travis-CI</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to use <a href="https://www.ruby-lang.org/en/downloads/">Ruby 2.0</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We added robots.txt files to all sites that use a CNAME to block crawlers from their search results pages.</li>
-<li>We updated <a href="http://logstash.net/">logstash</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and upgraded <a href="http://www.elasticsearch.org/downloads/1-2-0/">ElasticSearch to 1.2.0</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We investigated <a href="http://www.drupal.org">Drupal</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> modules that publish content APIs for our <a href="http://search.digitalgov.gov/blog/byoi.html">bring your own index</a> pilot.</li>
-<li>We updated our SSL certificate.</li>
-<li>We added a page in the Admin Center for you to let us know about your <a href="/manual/instagram.html">Instagram</a> account. We also registered for the <a href="http://instagram.com/developer/">Instagram API</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. (We're planning to display image results Instagram soon.)</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>Searchers no longer see duplicate video results.</li>
-<li>We fixed the spacing between web results on mobile phones.</li>
-<li>We now automatically populate the homepage URL for newly added sites.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/may-2014.html">
         <time datetime="2014-07-09">July 9, 2014</time>
       </a>
     </div>
@@ -780,71 +853,6 @@
       
       <a href="/releases/february-2014.html">
         <time datetime="2014-03-19">March 19, 2014</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/january-2014.html">January 2014 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2>Highlighted Feature: New, Responsive Search Results Page</h2>
-
-<p>Our mobile search results page is now responsive. The new, <a href="http://alistapart.com/topic/responsive-design">responsive design</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> ensures it is optimized for searchers on mobile phones and tablets.</p>
-
-<p>Use our customizable display options to <a href="/manual/brand.html">brand</a> this responsive results page for your agency.</p>
-
-<p>See the sample results page below for a search on <em><a href="http://search.usa.gov/search?affiliate=usagov&amp;query=tax&amp;m=true">tax on USA.gov</a></em>.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-mobile-results-pages.png" title="Responsive Search Results Page" alt="Responsive Search Results Page" /></p>
-
-<h2>Other Features</h2>
-
-<ul>
-<li>Searchers now see tweets from the last three days only. (It used to be 30 days.)</li>
-<li>Searchers now see shorter (up to 15 characters) sidebar labels.</li>
-<li>The HTML 4.01 transitional parser is now selected for you when you validate the HTML code for your header and footer in the Admin Center.</li>
-</ul>
-
-
-<h2>Chores</h2>
-
-<ul>
-<li>We migrated two indexes (best bets and supplemental URLs) from Solr to <a href="http://www.elasticsearch.org/">Elasticsearch</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We added more storage to our Hadoop cluster.</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>We now show the menu icon on the mobile results page only when it is relevant.</li>
-<li>We fixed a bug with custom color schemes so that they're now kept when you upload images in the Admin Center.</li>
-<li>We fixed our advanced search operators so an exact phrase search now works for supplemental URLs.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/january-2014.html">
-        <time datetime="2014-01-31">January 31, 2014</time>
       </a>
     </div>
     </article>

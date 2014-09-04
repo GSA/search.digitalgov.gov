@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>September 2013 Release Notes</title>
+  <title>August 2014 Release Notes</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -68,48 +68,52 @@
   <div id="main-container"><article class="article">
   
   <h1>
-    <a href="/releases/september-2013.html">September 2013 Release Notes</a>
+    <a href="/releases/august-2014.html">August 2014 Release Notes</a>
   </h1>
   
 
   <div class='post-content'>
-    <h2>Highlight: Visit the Revamped Admin Center</h2>
+    <h2>Add Instagram Pictures to Your Image Results</h2>
 
-<p>We're excited to release our newly revamped <a href="https://search.usa.gov/sites/">Admin Center</a>. Be sure to update your bookmarks!</p>
+<p>Does your agency have an Instagram account? Your pictures can now appear in your site's search results.</p>
 
-<p>After you log in, the new Default Site feature lets you set the site you see by default. We've automatically set it as your highest-traffic site. You can change the default site by clicking on the pin icon next to your selected site.</p>
+<p>Simply <a href="/manual/instagram.html">tell us your Instagram username</a> at <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Instagram. We'll automatically index all of the pictures in your account within minutes.</p>
 
-<p>Among the new features are Today's Snapshot, where we've placed the snapshot of today's search data front and center.</p>
+<p>See the sample results below for a search on <a href="http://search.doi.gov/search/images?affiliate=doi.gov&amp;query=moon"><em>moon</em> on DOI.gov</a>.</p>
 
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/todays-snapshot.png" alt="Today's Snapshot" /></p>
+<p><a href="http://search.doi.gov/search/images?&amp;affiliate=doi.gov&amp;query=moon"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/release-08-2014-doi-instagram.png" title="DOI Instagram results for moon" alt="DOI Instagram Results" /></a></p>
 
-<p>On <a href="/manual/site-overview.html">Today's Snapshot</a>, you can view top queries and clicks, trending queries and URLs, queries with no results, and queries with low click thrus.</p>
+<p>This feature is reflective of our commitment to bring your content, <a href="http://www.digitalgov.gov/2014/08/26/help-the-public-find-your-information-wherever-and-however-youve-published-it/">wherever it lives</a>, to your searchers.</p>
 
-<p><a href="/manual/monthly-reports.html">Monthly reports</a> and <a href="/manual/queries.html">query</a> and <a href="/manual/clicks.html">click</a> stats are also available through the new Analytics section.</p>
+<h2>Other Features</h2>
 
-<p>We've also made it easier for you to manage the content that displays on your search results page by placing it all within one section, Manage Content.</p>
+<ul>
+<li>Searchers now see results for Instagram pictures, regardless of spacing. For example, Apollo11 now returns the same results as Apollo 11. [<a href="https://github.com/GSA/oasis/commit/9a29de80dd22978581af4b0e460e439b78e614d7">Commit 9a29de8</a>]</li>
+<li>Searchers now see better spelling suggestions for image searches. [<a href="https://github.com/GSA/oasis/commit/1ae0c7e7fff3a4eb02f3e09e8c8d7c030fd50e14">Commit 1ae0c7e7ff</a>]</li>
+<li>Searchers now see images from all known government Flickr and Instagram accounts when searching for images on <a href="http://search.usa.gov/search/images?affiliate=usagov&amp;query=hoover">USA.gov</a>.</li>
+<li>Searchers now see <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> facets on the <a href="/blog/serp-redesign.html">newly redesigned search results page</a>.</li>
+<li>Searchers now see a consistent look and phrasing for the See more&hellip; option on the various modules on the results page.</li>
+<li>You can now toggle the display of <a href="/manual/govbox-federal-register.html"><em>Federal Register</em> results</a> in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
+<li>To improve the accessibility of the <a href="https://search.usa.gov/sites/">Admin Center</a>, you now see an outline defining the area of focus, and you can access the links for My Account and Sign Out when navigating with the keyboard.</li>
+</ul>
 
-<p>Another section, Manage Display, makes it easier for you turn <a href="/manual/display-overview.html">display features</a> on and off and to <a href="/manual/brand.html">brand</a> your results page by selecting your font and color scheme, managing your image assets, and adding header and footer links. Plus, you can now edit the 'News' label on the News Govbox.</p>
-
-<p>You can read our updated help by clicking on the Help? link on each page in the Admin Center, or see the full set of help files on our <a href="/manual/index.html">How to Set Up Your Search Box</a> page.</p>
-
-<p>Email us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x73;&#101;&#97;&#114;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#116;&#46;&#100;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;">&#115;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#x61;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
 
 <h2>Chores</h2>
 
 <ul>
-<li>We made <a href="/manual/twitter.html">tweet</a> queries two orders of magnitude, or 130ms, faster and pruned older tweets from our index to increase retrieval speeds.</li>
-<li>We upgraded our <a href="https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/6.3_Release_Notes/index.html">RedHat channel</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> from 6.2 to 6.3.</li>
-<li>We moved some servers to a new datacenter and resolved a bandwidth issue between our datacenters.</li>
-<li>We sent Microsoft an updated list of federal, state, and local government domains that aren't .gov or .mil so that searchers can get results from these websites on <a href="http://www.usa.gov">USA.gov</a>.</li>
+<li>We upgraded to <a href="http://www.elasticsearch.org/downloads/1-3-2/">ElasticSearch 1.3.2</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We added a notice of upcoming changes to the API Instructions page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
 </ul>
 
 
 <h2>Fixes</h2>
 
 <ul>
-<li>We updated our stemming file to fix a stemming issue with organ* so that searches on organic no longer find results for organizations, organisms, or other irrelevant terms.</li>
-<li>We removed the 'www' for newly added sites so the default <a href="/manual/domains.html">domain</a> is now agency.gov, not www.agency.gov.</li>
+<li>We fixed the spacing between titles and descriptions so it is consistent on all of our results pages.</li>
+<li>To improve the quality of type-ahead suggestions, we decreased the number of times a term must be searched before appearing as a suggestion.</li>
+<li>The option to drill down into detailed data for Best Bets now remains when you change the date on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page.</li>
+<li>Searchers no longer see deleted RSS items with 404 http status codes in their results.</li>
+<li>We now pre-validate social media account handles.</li>
 </ul>
 
 
@@ -128,8 +132,8 @@
     
     
     
-    <a href="/releases/september-2013.html">
-      <time>September 30, 2013</time>
+    <a href="/releases/august-2014.html">
+      <time>September 4, 2014</time>
     </a>
   </div>
 
