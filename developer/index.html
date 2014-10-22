@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>APIs for Developers</title>
+  <title>Resources for Developers</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -68,40 +68,43 @@
   <div id="main-container"><article class="article">
   
   <h1>
-    <a href="/developer/index.html">APIs for Developers</a>
+    <a href="/developer/index.html">Resources for Developers</a>
   </h1>
   
 
   <div class='post-content'>
     <p><a href="https://github.com/GSA"><img style="position: absolute; top: 41px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a></p>
 
-<p>Data underpins everything we do to provide a great search experience on government websites.
-In line with the White House's
-<a href="http://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html">Digital Government Strategy</a>, we're making our data open through APIs.</p>
+<p>Data underpins everything we do to provide a great search experience on government websites. In line with the White House's
+<a href="http://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html">Digital Government Strategy</a>, we're making our code and data more open.</p>
 
-<p>Our developer hub connects you&mdash;software developers, researchers, and our
-government customers&mdash;with the tools you need to unlock the government data that
-underpins our hosted search service.</p>
+<h2>Server Code</h2>
 
-<h2>For the Public</h2>
+<p><strong><a href="https://github.com/GSA/oasis">ASIS (Advanced Social Image Search) Server</a></strong>&mdash;The server code that runs the image search component of our service is on Github. ASIS indexes Flickr and Instagram images and provides a search API across both indexes.</p>
 
-<p><strong><a href="jobs.html">Jobs</a></strong>&mdash;This API returns job openings across federal, state, and local government agencies.</p>
+<p><strong><a href="https://github.com/GSA/jobs_api">Jobs Server</a></strong>&mdash;The server code that runs our <a href="jobs.html">Jobs API</a> is on Github. It taps into a list of current jobs openings with federal, state, and local government agencies. Jobs are searchable by keyword, location, agency, schedule, or any combination of these.</p>
 
-<p><strong><a href="recalls.html">Recalls</a></strong>&mdash;This API returns food, car, and product safety data and recalls.</p>
+<p><strong><a href="https://github.com/GSA/recalls_api">Recalls Server</a></strong>&mdash;The server code that runs our <a href="recalls.html">Recalls API</a> is on Github. It taps into a list of car, drug, food, and product safety recalls. Recalls are searchable by keyword, issuing agency, date, UPC code, vehicle-specific attributes, or any combination of these.</p>
+
+<h2>API Endpoints</h2>
+
+<p><strong><a href="jobs.html">Jobs API</a></strong>&mdash;This API returns job openings across federal, state, and local government agencies.</p>
+
+<p><strong><a href="recalls.html">Recalls API</a></strong>&mdash;This API returns food, car, and product safety data and recalls.</p>
+
+<h2>Data Feeds</h2>
+
+<p><strong><a href="https://github.com/GSA/govt-urls">List of Non-.gov URLs</a></strong>&mdash;<a href="http://www.usa.gov">USA.gov</a> searches across all federal, state, local, tribal, and territorial government websites. Most government websites end in .gov or .mil, but many do not. This is a list of all government URLs that do not end in .gov or .mil.</p>
 
 <p>Visit <a href="http://www.usa.gov/About/developer-resources/developers.shtml">USA.gov/Developer</a> for a full list of USA.gov's APIs and data feeds available to the public.</p>
-
-<h2>For Government Customers</h2>
-
-<p><strong><a href="/manual/api.html">Search Results</a></strong>&mdash;Provides DigitalGov Search customers their search results in XML, JSON, or
-JSON-P. This API is only available for use on official government websites.
-<a href="https://search.usa.gov/signup">Sign up</a> is required.</p>
 
   </div>
 
   <div class='tags'>
     
     <a href="/tagged/api"><span class="label label-info">api</span></a>
+    
+    <a href="/tagged/open"><span class="label label-info">open</span></a>
     
   </div>
 
@@ -111,7 +114,7 @@ JSON-P. This API is only available for use on official government websites.
     
     
     <a href="/developer/index.html">
-      <time>March 27, 2013</time>
+      <time>October 22, 2014</time>
     </a>
   </div>
 
