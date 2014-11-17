@@ -73,6 +73,85 @@
   <article class='article'>
     
     <h1>
+      <a href="/releases/september-2014.html">September 2014 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Promote Related Content as Value-Added Links</h2>
+
+<p>To help searchers more easily find what they're looking for, you can now promote related content by listing it as a set of value-added links under your organic web results. See the sample results page below that shows value-added links for EDGAR filings for a search on <em>apple</em> on SEC.gov.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/sitelink.png" title="Sitelink-generated links for EDGAR filings on SEC.gov" alt="Sitelink-generated links for EDGAR filings on SEC.gov" /></p>
+
+<p>Do you have related content that you'd like to display as value-added links that searchers should see within the context of each other (such as related forms, instructions, and publications)? If your related content follows a discernable URL pattern, email us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#117;&#x70;&#x70;&#111;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#x73;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#x67;&#x6f;&#x76;</a> and we'll work with you to promote the related content on your site.</p>
+
+<p>We've open sourced the <a href="https://github.com/GSA/sitelink_generator">code for the sitelink generator</a> on Github so you can <a href="https://github.com/GSA/sitelink_generator/fork">fork the code</a> and contribute to it directly. We've also <a href="http://rubygems.org/gems/sitelink_generator">published it as Ruby gem</a>.</p>
+
+<p>Thanks, <a href="http://www.sec.gov">SEC.gov</a> team, for helping us build this new feature!</p>
+
+<h2>Other Features</h2>
+
+<ul>
+<li>Searchers now see underlined links when they hover over them on the results page.</li>
+<li>Searchers using screen readers now see an <a href="http://www.w3.org/TR/wai-aria/">ARIA</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> alert for type-ahead search suggestions to let them know the number of available suggestions and how to access them.</li>
+<li>You can now add a tagline at the top of your results page. See the sample tagline, <em>NIJ.gov - Strengthen Science. Advance Justice.</em>, on <a href="http://search.usa.gov/search?affiliate=national-institute-of-justice&amp;query=dna">NIJ.gov's results page</a>.</li>
+<li>You can now left-align your hamburger menu. See the sample left-aligned menu on <a href="http://search.whitehouse.gov/search?affiliate=wh&amp;query=bo">WhiteHouse.gov's results page</a>. (Perhaps needed because <a href="http://time.com/3107557/top-10-lefties/">Obama is a leftie</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>?)</li>
+<li>You can now add an alt tag to your logo on the <a href="/manual/brand.html">Image Assets</a> page in the Admin Center.</li>
+<li>To improve its accessibility, you now see legends and instructional text for all radio button options in the Admin Center. You can also tab logically through all menu items.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li>We upgraded to version 4.0 of the <a href="https://rubygems.org/gems/airbrake">Airbrake gem</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and version 6.5 of <a href="http://www.redhat.com/en/technologies/linux-platforms/enterprise-linux">Red Hat Enterprise Linux</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. We also installed patches to address the <a href="https://www.us-cert.gov/ncas/alerts/TA14-268A">Shellshock vulnerability</a>.</li>
+<li>We gained 40% more capacity in our main Elasticsearch cluster by upgrading our hardware.</li>
+<li>We removed infinite scroll on the results page.</li>
+<li>We now redirect searchers to USA.gov's 404 page when they use a null or incorrect 'affiliate' parameter.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We've added a user agent to our request headers so you can see it when we poll your RSS feeds.</li>
+<li>If you've opted to turn off web tracking, we now turn off the tags for both our own Google Analytics and the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a>.</li>
+<li>We now show fewer similar or duplicate pictures in our image results. [<a href="https://github.com/GSA/asis/commit/f6ab91539efa965325dbe02b6c67ff68a7dff431">Commit f6ab915</a>]</li>
+<li>We fixed our image search pagination to account for really old pictures and how we group photos into albums. [<a href="https://github.com/GSA/asis/commit/b12eb198c900d0d1a00c06a017477114b003489c">Commit b12eb19</a>]</li>
+<li>We also fixed our indexing of images with circa dates. [<a href="https://github.com/GSA/asis/commit/f7b577c21daed4ac5b00711a70028602c4117d72">Commit f7b577c</a>]</li>
+<li>We lessened the complexity of the importer logic for Instagram. [<a href="https://github.com/GSA/asis/commit/5f828e3e426d66300fcff574ffecff262e9b4d73">Commit 5f828e3</a>]</li>
+<li>The option to narrow results to images only now appears by default for sites with an Instagram account. It had previously displayed only for sites with a Flickr account.</li>
+<li>Searchers no longer see government-wide image results on sites without a Flickr or Instagram account. They now see site-specific image results.</li>
+<li>Image searches without a search term no longer cause an error.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/september-2014.html">
+        <time datetime="2014-11-17">November 17, 2014</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
       <a href="/developer/index.html">Resources for Developers</a>
     </h1>
     
@@ -332,7 +411,7 @@ Securities and Exchange Commission<br/>
 </ol>
 
 
-<p>If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#115;&#x65;&#97;&#114;&#99;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#46;&#100;&#105;&#x67;&#x69;&#116;&#97;&#108;&#103;&#111;&#118;&#46;&#x67;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#x72;&#99;&#x68;&#x40;&#x73;&#x75;&#x70;&#112;&#111;&#114;&#116;&#46;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#111;&#118;</a>.</p>
+<p>If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;">&#115;&#101;&#97;&#114;&#99;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#46;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#x67;&#111;&#118;</a>.</p>
 
 <hr />
 
@@ -416,7 +495,7 @@ Securities and Exchange Commission<br/>
 
 <h2>We're here to answer your questions.</h2>
 
-<p>Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#115;&#101;&#97;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#x76;">&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#111;&#118;</a>, or give us a call at 202-505-5315.</p>
+<p>Email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#105;&#116;&#x61;&#108;&#103;&#111;&#118;&#46;&#103;&#x6f;&#x76;">&#115;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;</a>, or give us a call at 202-505-5315.</p>
 
 <p>If you're a federal agency in the DC area, we can stop by your office for an in-person consultation. <a href="mailto:search@support.digitalgov.gov">Email us</a> to set up a time.</p>
 
@@ -656,7 +735,7 @@ URL: mailto:info@agency.gov</p>
 </ol>
 
 
-<p>If you have any problem resetting your password, email us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#115;&#x65;&#97;&#x72;&#x63;&#104;&#64;&#115;&#x75;&#112;&#112;&#111;&#x72;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#x61;&#108;&#103;&#111;&#118;&#46;&#103;&#x6f;&#118;">&#x73;&#101;&#x61;&#x72;&#99;&#104;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;</a>.</p>
+<p>If you have any problem resetting your password, email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x73;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#118;">&#x73;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#x76;</a>.</p>
 
     </div>
 
@@ -677,82 +756,6 @@ URL: mailto:info@agency.gov</p>
       
       <a href="/manual/account.html">
         <time datetime="2014-09-04">September 4, 2014</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/releases/july-2014.html">July 2014 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2>Federal Register Documents Are Now Available</h2>
-
-<p>Federal agencies publish notices, proposed rules, and final rules in the <em><a href="https://www.federalregister.gov/">Federal Register</a></em>. To make it easier for citizens and communities to understand the regulatory process and to participate in government decision-making, we created the <em>Federal Register</em> GovBox to help searchers find these notices and rules.</p>
-
-<p>This GovBox offers direct access to <em>Federal Register</em> documents. We pull the data from the <a href="https://www.federalregister.gov/learn/developers">Federal Register API</a> to provide timely information across all documents.</p>
-
-<p>If you <a href="http://search.digitalgov.gov/manual/display-overview.html">opt to show the Federal Register GovBox</a>, searchers looking for topics on your site can readily find the notices and rules that your agency has published in the <em>Federal Register</em>.</p>
-
-<p>The full title will be shown within the search results and when <em>Federal Register</em> documents have been posted by multiple agencies, searchers will see both agencies listed.</p>
-
-<p>Documents with open comment periods will appear before relevant documents with closed comment periods. The status of the comment period will be noted in the results. At the bottom of the page, there is a link to see more <em>Federal Register</em> documents.</p>
-
-<p><a href="http://search.doi.gov/search?utf8=%E2%9C%93&amp;affiliate=doi.gov&amp;query=grand+canyon"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/release-07-2014-FR.png" title="Federal Register results for grand canyon on DOI.gov" alt="Federal Register results for grand canyon on DOI.gov" /></a></p>
-
-<h2>Other Features</h2>
-
-<ul>
-<li>Migration done! All of our features are now present on the newly <a href="/blog/serp-redesign.html">redesigned search results page</a>.</li>
-<li>Visitors to our <a href="https://twitter.com/DG_Search">Twitter account</a> now see a new background photo.</li>
-<li>Developers can now access our open-sourced <a href="https://github.com/GSA/oasis">social image search code</a>.</li>
-<li>Librarians, developers, and others can see this quarter's updated list of federal, state, local, tribal, and territorial <a href="https://github.com/GSA/govt-urls">government URLs</a> that aren't .gov or .mil.</li>
-</ul>
-
-
-<h2>Chores</h2>
-
-<ul>
-<li>We upgraded to <a href="https://www.ruby-lang.org/en/news/2014/05/09/ruby-2-1-2-is-released/">Ruby 2.1.2</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.elasticsearch.org/blog/elasticsearch-1-3-1-released/">Elasticsearch 1.3.1</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We began to fetch and index <a href="http://instagram.com/">Instagram</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> pictures and signed up for <a href="https://www.pinterest.com/">Pinterest</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We investigated the overlap between the agency classifications for USAJobs and the <em>Federal Register</em> at <a href="https://schemas.usajobs.gov/Enumerations/AgencySubElement.xml">https://schemas.usajobs.gov/Enumerations/AgencySubElement.xml</a> and <a href="https://www.federalregister.gov/agencies">https://www.federalregister.gov/agencies</a>, respectively.</li>
-<li>We improved our operational efficiency by removing our old  analytics tables and <a href="http://hadoop.apache.org/">Hadoop</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> clusters.</li>
-<li>We migrated the previous 13 months of data into <a href="http://www.elasticsearch.org/">Elasticsearch</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We updated all of our data products (like daily emails) to use <a href="http://www.elasticsearch.org/">Elasticsearch</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We started to use <a href="http://www.elasticsearch.org/overview/kibana/">Kibana</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to visualize our search data.</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>Quoted searches now work for our <a href="http://www.elasticsearch.org/">Elasticsearch</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> indexes.</li>
-<li>Daily Snapshot emails now report data the correct date.</li>
-<li>Searchers now see better type-ahead suggestions.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/july-2014.html">
-        <time datetime="2014-08-26">August 26, 2014</time>
       </a>
     </div>
 
