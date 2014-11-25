@@ -73,6 +73,204 @@
   <article class='article'>
     
     <h1>
+      <a href="/releases/october-2014.html">October 2014 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>New Feature: Check the Status of Your RSS Feeds</h2>
+
+<p>You now see better, more complete messages about the status of your RSS feeds in the <a href="https://search.usa.gov/sites/">Admin Center</a> under Manage Content > RSS.</p>
+
+<p>Yellow indicates the status is pending. Green indicates the feed has been crawled and the status is OK. Red indicates there's an issue with your feed or at least one item within your feed.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/rss-status.png" title="RSS status messages and colors" alt="RSS status messages and colors" /></p>
+
+<p>Possible error message follow.</p>
+
+<ul>
+<li>404 Not Found</li>
+<li>Feed looks empty</li>
+<li>Description can't be blank</li>
+<li>Title can't be blank</li>
+<li>Missing link field</li>
+<li>Missing pubDate field</li>
+<li>Link is not a valid URL</li>
+<li>Linked URL does not exist (HTTP 404)</li>
+</ul>
+
+
+<h2>Other Features</h2>
+
+<ul>
+<li>Searchers now see the search box and navigation options within the body of the results page, not the header.</li>
+<li>Searchers now see results from <a href="/manual/rss.html">RSS feeds</a> when their search term matches text within the feed's <code>content:encoded</code> element. The <code>content:encoded</code> element is optional and defines the full content of an item. Read recommendations for this element in the RSS Advisory Board's <a href="http://www.rssboard.org/rss-profile#namespace-elements-content-encoded"><em>Really Simple Syndication Best Practices Profile</em> for content:encoded</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>Searchers now see updated results from <a href="/manual/domains-advanced.html">supplemental RSS feeds</a> that include a <code>pubDate</code> element. Read recommendations for this element in the RSS Advisory Board's <a href="http://www.rssboard.org/rss-profile#data-types-datetime"><em>Really Simple Syndication Best Practices Profile</em> for dates and times</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>Searchers now see results for pictures in Flickr groups.  [<a href="https://github.com/GSA/asis/commit/8ffde0cde7d334964c48991300b26687870717db">Commit 8ffde0c</a>]</li>
+<li>Searchers now see images with an exact phrase match above those with the words scattered throughout their metadata. For example, visitors searching on a multi-word term like <em>jefferson memorial</em> now see the result for "county event at Jefferson Memorial" above the one for "memorial event in Jefferson County." [<a href="https://github.com/GSA/asis/commit/9a0ab9c3a44da931d8aee2595ff35053381870e2">Commit 9a0ab9c</a>]</li>
+<li>Searchers now see image results from <a href="/manual/rss.html">media RSS feeds</a> along with results from Flickr and Instagram. [<a href="https://github.com/GSA/asis/commit/7a4917c6dd6cdb9fafa8eb364f23eb2ef19c6f5e">Commit 7a4917c</a>]</li>
+<li>Searchers on USA.gov now see government-wide video results. See, for example, <a href="http://search.usa.gov/search/news?affiliate=usagov&amp;channel=617&amp;query=lincoln">video results for <em>lincoln</em> on USA.gov</a>.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li>We disabled norms and term frequencies in our logs as they're not needed and save a significant amount of memory.</li>
+<li>We upgraded to <a href="http://www.elasticsearch.org/blog/elasticsearch-1-3-4-released/">Elasticsearch 1.3.4</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and applied <a href="http://www.redhat.com/en/technologies/linux-platforms/enterprise-linux">Red Hat Enterprise Linux</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> updates to our operating system.</li>
+<li>We now reindex images with zero downtime. [<a href="https://github.com/GSA/asis/commit/6387825883ba17f75916019480019ed31cfb1a9c">Commit 6387825</a>]</li>
+<li>We updated the synonyms for our image index to improve recall and return even more relevant pictures. [<a href="https://github.com/GSA/asis/commit/7de29e528aab2bb031576107829f5981fc2af6f9">Commit 7de29e5</a>]</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>Searchers on Spanish sites like <a href="http://www.usa.gov/gobiernousa/">GobiernoUSA.gov</a> now see translations for the <a href="/releases/september-2014.html">value-added EDGAR links</a>.</li>
+<li>Searchers that select a custom date range for videos now see a magnifying glass icon when you've set its color to white on the <a href="/manual/brand.html">Fonts &amp; Colors</a> page in the Admin Center. It had previously been invisible.</li>
+<li>Searchers now see only the most recent <a href="/manual/govbox-federal-register.html"><em>Federal Register</em> document</a> from a docket. They'd previously seen multiple documents from the same docket.</li>
+<li>Searchers now see spelling suggestions on results pages for <a href="/manual/collections.html">Collections</a>. They'd previously seen them on the main results page only.</li>
+<li>We now re-import Flickr and Instagram photos for up to 30 days to update their popularity. [<a href="https://github.com/GSA/asis/commit/02f0a83887e02d5d11fc50caed6547dcaf1461ba">Commit 02f0a83</a>]</li>
+<li>We reduced the font size for the tagline (which you can set on the Display > <a href="/manual/brand.html">Header &amp; Footer</a> page in the Admin Center).</li>
+<li>We changed the color of the selected item&mdash;visible when you tab through the search results page or Admin Center&mdash;to a lighter orange.</li>
+<li>We updated <a href="/manual/youtube.html">YouTube</a> thumbnails to use https, not http.</li>
+<li>We no longer return web results for searches that are too long (> 60 characters), use an asterisk, or use placeholder text (such as <em>What are you looking for?</em> and <em>Search Our Site</em>).</li>
+<li><a href="/manual/best-bets-text.html">Best bets</a> must include a description. The field can't be blank.</li>
+<li>We fixed a bug that prevented you from updating your password on the <a href="/manual/account.html">My Account</a> page in the Admin Center.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/october-2014.html">
+        <time datetime="2014-11-25">November 25, 2014</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
+      <a href="/manual/index.html">How to Set Up Your Search Box</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>We provide a search box that searches across all of your <em>public-facing</em> digital content.</p>
+
+<p>We support an unlimited number of web pages across multiple domains and we integrate your RSS feeds, tweets, YouTube videos, and Flickr photos.</p>
+
+<p>Browse through our <a href="/blog/go-live.html">Go-Live Punch List</a> for some quick tips on how to configure the search experience for your website.</p>
+
+<h3><i class="icon-dashboard"></i> Dashboard</h3>
+
+<ul>
+<li><a href="/manual/site-overview.html">Site overview</a></li>
+<li><a href="/manual/users.html">Manage users</a></li>
+<li><a href="/manual/settings.html">Settings</a></li>
+</ul>
+
+
+<h3><i class="icon-bar-chart"></i> Analytics</h3>
+
+<ul>
+<li><a href="/manual/queries.html">Queries</a></li>
+<li><a href="/manual/clicks.html">Clicks</a></li>
+<li><a href="/manual/monthly-reports.html">Monthly reports</a></li>
+<li><a href="/manual/third-party.html">3rd party tracking</a></li>
+<li><a href="/manual/analytics-settings.html">Analytics settings</a></li>
+</ul>
+
+
+<h3><i class="icon-file"></i> Manage Content</h3>
+
+<ul>
+<li><a href="/manual/content-overview.html">Content overview</a></li>
+<li><a href="/manual/domains.html">Domains</a> (plus <a href="/manual/domains-advanced.html">advanced options to add or filter URLs</a>)</li>
+<li><a href="/manual/collections.html">Collections</a></li>
+<li><a href="/manual/best-bets-text.html">Best bets:text</a></li>
+<li><a href="/manual/best-bets-graphics.html">Best bets: graphics</a></li>
+<li><a href="/manual/rss.html">RSS</a></li>
+<li><a href="/manual/youtube.html">YouTube</a></li>
+<li><a href="/manual/twitter.html">Twitter</a></li>
+<li><a href="/manual/flickr.html">Flickr</a></li>
+<li><a href="/manual/instagram.html">Instagram</a></li>
+</ul>
+
+
+<h3><i class="icon-desktop"></i> Manage Display</h3>
+
+<ul>
+<li><a href="/manual/display-overview.html">Display overview</a>
+
+<ul>
+<li><a href="/manual/govbox-jobs.html">Job openings GovBox</a></li>
+<li><a href="/manual/govbox-federal-register.html"><em>Federal Register</em> GovBox</a></li>
+<li><a href="/manual/govbox-health.html">Health topics GovBox</a></li>
+</ul>
+</li>
+<li><a href="/manual/brand.html">Brand</a> (font &amp; colors, image assets, and header &amp; footer)</li>
+</ul>
+
+
+<h3><i class="icon-eye-open"></i> Preview</h3>
+
+<ul>
+<li><a href="/manual/preview.html">Preview</a></li>
+</ul>
+
+
+<h3><i class="icon-code"></i> Activate Search</h3>
+
+<ul>
+<li><a href="/manual/code.html">Code snippets</a></li>
+<li><a href="/manual/api.html">API access key and instructions</a></li>
+</ul>
+
+
+<p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
+
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x73;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#115;&#117;&#112;&#112;&#x6f;&#114;&#116;&#46;&#x64;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#118;&#46;&#x67;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#114;&#99;&#104;&#64;&#115;&#x75;&#112;&#112;&#x6f;&#114;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;</a>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/index.html">
+        <time datetime="2014-11-25">November 25, 2014</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
       <a href="/releases/september-2014.html">September 2014 Release Notes</a>
     </h1>
     
@@ -84,7 +282,7 @@
 
 <p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/sitelink.png" title="Sitelink-generated links for EDGAR filings on SEC.gov" alt="Sitelink-generated links for EDGAR filings on SEC.gov" /></p>
 
-<p>Do you have related content that you'd like to display as value-added links that searchers should see within the context of each other (such as related forms, instructions, and publications)? If your related content follows a discernable URL pattern, email us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#117;&#x70;&#x70;&#111;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#x73;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#x67;&#x6f;&#x76;</a> and we'll work with you to promote the related content on your site.</p>
+<p>Do you have related content that you'd like to display as value-added links that searchers should see within the context of each other (such as related forms, instructions, and publications)? If your related content follows a discernable URL pattern, email us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#58;&#x73;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#x61;&#108;&#103;&#111;&#118;&#46;&#x67;&#111;&#x76;">&#x73;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;</a> and we'll work with you to promote the related content on your site.</p>
 
 <p>We've open sourced the <a href="https://github.com/GSA/sitelink_generator">code for the sitelink generator</a> on Github so you can <a href="https://github.com/GSA/sitelink_generator/fork">fork the code</a> and contribute to it directly. We've also <a href="http://rubygems.org/gems/sitelink_generator">published it as Ruby gem</a>.</p>
 
@@ -411,7 +609,7 @@ Securities and Exchange Commission<br/>
 </ol>
 
 
-<p>If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;">&#115;&#101;&#97;&#114;&#99;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#46;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#x67;&#111;&#118;</a>.</p>
+<p>If you've undergone a redesign, followed these four steps, and you still don't see your content updated in your site search results, please notify us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#115;&#101;&#97;&#114;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#112;&#111;&#x72;&#x74;&#46;&#100;&#x69;&#103;&#x69;&#116;&#x61;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#115;&#101;&#x61;&#114;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;</a>.</p>
 
 <hr />
 
@@ -495,7 +693,7 @@ Securities and Exchange Commission<br/>
 
 <h2>We're here to answer your questions.</h2>
 
-<p>Email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#105;&#116;&#x61;&#108;&#103;&#111;&#118;&#46;&#103;&#x6f;&#x76;">&#115;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;</a>, or give us a call at 202-505-5315.</p>
+<p>Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#115;&#101;&#x61;&#114;&#99;&#104;&#x40;&#115;&#117;&#x70;&#112;&#111;&#114;&#x74;&#46;&#100;&#105;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#111;&#118;&#46;&#x67;&#x6f;&#118;">&#x73;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#x6f;&#118;</a>, or give us a call at 202-505-5315.</p>
 
 <p>If you're a federal agency in the DC area, we can stop by your office for an in-person consultation. <a href="mailto:search@support.digitalgov.gov">Email us</a> to set up a time.</p>
 
@@ -601,160 +799,6 @@ URL: mailto:info@agency.gov</p>
       
       
       <a href="/manual/brand.html">
-        <time datetime="2014-09-04">September 4, 2014</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/releases/august-2014.html">August 2014 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2>Add Instagram Pictures to Your Image Results</h2>
-
-<p>Does your agency have an Instagram account? Your pictures can now appear in your site's search results.</p>
-
-<p>Simply <a href="/manual/instagram.html">tell us your Instagram username</a> at <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Instagram. We'll automatically index all of the pictures in your account within minutes.</p>
-
-<p>See the sample results below for a search for <a href="http://search.doi.gov/search/images?affiliate=doi.gov&amp;query=moon"><em>moon</em> on DOI.gov</a>.</p>
-
-<p><a href="http://search.doi.gov/search/images?&amp;affiliate=doi.gov&amp;query=moon"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/release-08-2014-doi-instagram.png" title="DOI Instagram results for moon" alt="DOI Instagram Results" /></a></p>
-
-<p>This feature is reflective of our commitment to bring your content, <a href="http://www.digitalgov.gov/2014/08/26/help-the-public-find-your-information-wherever-and-however-youve-published-it/">wherever it lives</a>, to your searchers.</p>
-
-<h2>Other Features</h2>
-
-<ul>
-<li>Searchers now see results for Instagram pictures, regardless of spacing. For example, Apollo11 now returns the same results as Apollo 11. [<a href="https://github.com/GSA/oasis/commit/9a29de80dd22978581af4b0e460e439b78e614d7">Commit 9a29de8</a>]</li>
-<li>Searchers now see better spelling suggestions for image searches. [<a href="https://github.com/GSA/oasis/commit/1ae0c7e7fff3a4eb02f3e09e8c8d7c030fd50e14">Commit 1ae0c7e7ff</a>]</li>
-<li>Searchers now see images from all known government Flickr and Instagram accounts when <a href="http://search.usa.gov/search/images?affiliate=usagov&amp;query=hoover">searching for images on USA.gov</a>.</li>
-<li>Searchers now see <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> facets on the <a href="/blog/serp-redesign.html">newly redesigned search results page</a>.</li>
-<li>Searchers now see a consistent look and phrasing for the See more&hellip; option on the various modules on the results page.</li>
-<li>You can now toggle the display of <a href="/manual/govbox-federal-register.html"><em>Federal Register</em> results</a> in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
-<li>To improve the accessibility of the <a href="https://search.usa.gov/sites/">Admin Center</a>, you now see an outline defining the area of focus, and you can access the links for My Account and Sign Out when navigating with the keyboard.</li>
-</ul>
-
-
-<h2>Chores</h2>
-
-<ul>
-<li>We upgraded to <a href="http://www.elasticsearch.org/downloads/1-3-2/">ElasticSearch 1.3.2</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We added a notice of upcoming changes to the API Instructions page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>We fixed the spacing between titles and descriptions so it is consistent on all of our results pages.</li>
-<li>To improve the quality of type-ahead suggestions, we decreased the number of times a term must be searched before appearing as a suggestion.</li>
-<li>The option to drill down into detailed data for Best Bets now remains when you change the date on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page.</li>
-<li>Searchers no longer see deleted RSS items with 404 http status codes in their results.</li>
-<li>We now pre-validate social media account handles.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/august-2014.html">
-        <time datetime="2014-09-04">September 4, 2014</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/manual/account.html">How to Create and Edit Your Account</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > My Account</p>
-
-<p>You can use DigitalGov Search to power the search box on your federal, state, local, tribal, or territorial government website&mdash;at no cost.</p>
-
-<h2>Log In</h2>
-
-<p>Log in to an existing account <a href="https://search.usa.gov/login">https://search.usa.gov/login</a> or register for a new account at <a href="https://search.usa.gov/signup">https://search.usa.gov/signup</a>.</p>
-
-<p><a href="https://search.usa.gov/login"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/login.png" title="Login from search.digitalgov.gov" alt="Login from search.digitalgov.gov" /></a></p>
-
-<p>Access to our service requires agreement with our <a href="/tos.html">Terms of Service</a> and verification that you're a government employee or contractor acting within the scope of your government contract.</p>
-
-<p>After you register, you'll receive an automatic email. Click on the link in the email to verify that your email address belongs to you.</p>
-
-<p>If you have a .gov or .mil address, you'll be able to access your account immediately after you verify your email.</p>
-
-<p>If you don't have a .gov or .mil address, we'll ask for additional information to confirm that you're a government employee or contractor. We'll notify you when your account is approved.</p>
-
-<h2>Add a Site</h2>
-
-<p>Once your account is approved, you can <a href="/manual/add-site.html">add a site</a> in our <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-<h2>Edit Your Contact Information</h2>
-
-<p>If you need to update your email address, name, or agency for any reason, it's easy to change your them in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-<p>In the upper right-hand corner, there is a drop-down menu. Click on <em>My account</em>.</p>
-
-<p><a href="https://search.usa.gov/sites/"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/blog-edit-email1.png" title="Edit your account" alt="Edit your account" /></a></p>
-
-<p>Once on this page you can edit your email address.</p>
-
-<p><a href="https://search.usa.gov/account"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/blog-edit-email2.png" title="Edit your email address" alt="Edit your email address" /></a></p>
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> We cannot retrieve any passwords for any account, because we don't have access to passwords. To reset your password:</p>
-
-<ol>
-<li>Go to our Login page at <a href="https://search.usa.gov/login">https://search.usa.gov/login</a></li>
-<li>Enter your email address.</li>
-<li>Click on <em>Forgot your password?</em></li>
-<li>You'll be prompted to reset your password and it'll be emailed to you.</li>
-</ol>
-
-
-<p>If you have any problem resetting your password, email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x73;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#118;">&#x73;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#x76;</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/my-account"><span class="label label-info">my-account</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/account.html">
         <time datetime="2014-09-04">September 4, 2014</time>
       </a>
     </div>

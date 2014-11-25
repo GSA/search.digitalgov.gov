@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>How to Add Your Flickr Images to Our Index</title>
+  <title>Providing Us Your Content in JSON</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -68,62 +68,77 @@
   <div id="main-container"><article class="article">
   
   <h1>
-    <a href="/manual/flickr.html">How to Add Your Flickr Images to Our Index</a>
+    <a href="/drafts/2014-11-25-json-format.html">Providing Us Your Content in JSON</a>
   </h1>
   
 
   <div class='post-content'>
-    <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Flickr</p>
+    <p>While we can work with you on the formatting, we wanted to provide some documentation of what JSON we would like to receive .</p>
 
-<h2>Tell Us About Your Flickr Photostream</h2>
+<h1>Fields</h1>
 
-<p>Provide us with the <em>full URL</em> for your Flickr photostream. Most photostreams are in the photos folder (e.g., <a href="https://www.flickr.com/photos/hudopa">https://www.flickr.com/photos/hudopa</a> for HUD). Some photostreams are in the groups folder (such as <a href="https://www.flickr.com/groups/usagov">https://www.flickr.com/groups/usagov</a> for USA.gov).</p>
+<p>At a minimum, we would require the following fields:</p>
 
-<p>The URL must be for your overall photostream. You cannot specify individual photos, sets, favorites, or maps.</p>
+<p>title: title of content
+url: url of the document
+summary: summary of the document
+description: full content body
+updated_at: change date of document in YYYY-MM-DD-HH if possible</p>
 
-<h2>Opt to Display Your Flickr Images</h2>
+<h1>Reverse Chronological Order</h1>
 
-<p>When you add the URL for your Flickr photostream, we'll automatically index all of the images in your photostream.</p>
+<p>We ask that the you display the results in reverse chronological order. This will allow us to discover your new content easily.</p>
 
-<p>On the image results page, we'll display the images from your Flickr photostream by default. If you'd like to backfill them with the standard image results from your website, <a href="mailto:search@support.digitalgov.gov">email us</a> and we'll turn on your web images for you.</p>
+<h1>Pagination</h1>
 
-<p>See the sample results page below that shows photo results displayed on <a href="http://search.usa.gov/search/images?affiliate=www.louisiana.gov&amp;query=hurricanes">Louisiana.gov for a search on <em>hurricanes</em></a>.</p>
+<p>We recommend of 100 results per page, and we will handle navigating through the content.</p>
 
-<p><a href="http://search.usa.gov/search/images?affiliate=www.louisiana.gov&amp;query=hurricanes"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-flickr.png" title="Image results from Flickr" alt="Image results from Flickr" /></a></p>
+<h1>Update Cycle</h1>
 
-<hr />
+<p>Set to 24 hours. We can update more or less frequently as desired.</p>
 
-<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
+<h1>Example Endpoint</h1>
 
-<p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/instagram.html">Instagram</a> account. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.</p>
+<p>URL: <a href="http://yourdomain.com/content.json">http://yourdomain.com/content.json</a></p>
 
-<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#115;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;">&#115;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#118;&#46;&#x67;&#111;&#118;</a> if you're ready to turn on the new results page.</p>
+<pre><code>{
+  "total": 99,
+   "offset": 10,
+   "next_url": "http://yourdomain.com/content.json?offset=10&amp;limit=2",
+"items": [
+  {
+  "title": "title 1",
+  "url": "http://yourdomain.com/news/1",
+  "summary": "news summary",
+  "content": "news 1 content without template",
+  "updated_at": "2014-10-30T15:39:37-04:00"
+},
+{
+  "title": "title 2",
+  "url": "http://yourdomain.com/news/2",
+  "summary": "news summary",
+  "content": "news 2 content without template",
+  "updated_at": "2014-10-29T12:19:17-04:00"
+   }
+  ]
+ }
+</code></pre>
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-    
-    <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-    
-    <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
-    
-    <a href="/tagged/flickr"><span class="label label-info">flickr</span></a>
-    
-    <a href="/tagged/images"><span class="label label-info">images</span></a>
+    <a href="/tagged/how-to manage-content json content-api api"><span class="label label-info">how-to manage-content json content-api api</span></a>
     
   </div>
 
   <div class='time'>
     
-    </br><span>Page last reviewed or updated:</span>
     
     
     
-    
-    <a href="/manual/flickr.html">
-      <time>August 20, 2014</time>
+    <a href="/drafts/2014-11-25-json-format.html">
+      <time></time>
     </a>
   </div>
 
