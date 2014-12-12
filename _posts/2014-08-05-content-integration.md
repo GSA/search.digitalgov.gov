@@ -16,10 +16,10 @@ Content management systems (CMS) have made it easier for us to fetch and index y
 The best way for you to give us your content is through either a content API or RSS feed. It doesn't matter what underlying technology you use to publish your content as long as you can provide us with the following four fields.
 
 1. **Title.** The page's title.
-1. **Description.** The page's full text in the description for a full text search.
+1. **Page Content.** The page's full text in the description for a full text search.
 1. **Summary.** The desired summary of the page.
 1. **URL.** The page's URL.
-1. **Date.** The page's publication or revision date. Provide whichever date you'd like searchers to see.
+1. **Update Date.** The page's publication or revision date. Provide whichever date you'd like searchers to see.
 
 Below is sample JSON:
 
@@ -31,20 +31,20 @@ Below is sample JSON:
      "items": [
      {
       "title": "title 1",
-      "url": "http://yourdomain.com/news/1",
-      "summary": "news summary",
-      "content": "news 1 content without template",
+      "url": "http://yourdomain.gov/pages/1",
+      "summary": "page summary",
+      "content": "page content without HTML template (header / footer / navition, etc.)",
       "updated_at": "2014-10-30T15:39:37-04:00"
     },
     {
       "title": "title 2",
-      "url": "http://yourdomain.com/news/2",
-      "summary": "news summary",
-      "content": "news 2 content without template",
+      "url": "http://yourdomain.gov/pages/2",
+      "summary": "page summary",
+      "content": "page content without template",
       "updated_at": "2014-10-29T12:19:17-04:00"
+      }
+     ]
     }
-    ]
-    }`
 
 We also support custom fields. [Let us know](mailto:search@support.digitalgov.gov) if you have any custom fields that you'd like us to index.
 
