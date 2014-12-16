@@ -72,4 +72,4 @@ Most RSS feeds show the latest 10 items by default. This means that you'll need 
 
 ---
 
-***Did you know?*** If you'd like to choose which search results you use (from Bing, Google, or some other source), we support [bringing your own index](/blog/byoi.html).
+***Did you know?*** You can [choose which web index you use](/manual/content-overview.html#choose-an-index) for your default search results&mdash;Bing, Google, DigitalGov Search, or another source.
