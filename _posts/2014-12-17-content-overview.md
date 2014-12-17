@@ -30,7 +30,7 @@ Once you've added your web pages, you can create [collections](/manual/collectio
 * **Flickr.** When you [fill out your Flickr URL](/manual/flickr.html), we'll index your Flickr photostream.
 * **Instagram.** When you [fill out your Instagram account](/manual/instagram.html), we'll index your Instagram photos.
 * **Photo Galleries on Your Site.** Do you have a multimedia gallery on your website for your agency's images? When you [provide us with a media RSS](/manual/rss.html) (MRSS) for your gallery, we'll index its images.
-* **Images on Your Web Pages.** If your Flickr, Instagram, and photo galleries are sparse, you can [email us](mailto:search@support.digitalgov.gov) to request that we backfill these image results with the images published on the web pages of the [domain you've filled out](/manual/domains.html). Note that these images tend to be lower quality than those in your social media accounts or curated galleries, which is why they're not turned on by default.
+* **Images on Your Web Pages.** We backfill the image results from social media and photo galleries with the images published on the web pages of the [domain you've filled out](/manual/domains.html).
 
 ## Add Your Videos
 
@@ -57,5 +57,7 @@ We also have three pre-built, government-centric content modules that you can op
 * **Health Topics.** [Toggle on the Health Topics module](/manual/govbox-health.html) to show authoritative health information from MedlinePlus and ClinicalTrials.gov.
 
 ---
+
+***Did you know?*** When you first [add a site](/manual/add-site.html), we populate any social media accounts ([Flickr](/manual/flickr.html), [Instagram](/manual/instagram.html), [Twitter](/manual/twitter.html), and [YouTube](/manual/youtube.html)) and [RSS feeds](/manual/rss.html) that are linked from your homepage. Use the Discover option on this Content Overview page to automatically (re)discover the RSS and social media accounts from your site's homepage.
 
 ***Troubleshooting tip:*** We've connected your site to your agency on the backend. If you're not seeing jobs or *Federal Register* documents specific to your agency, [email us](mailto:search@support.digitalgov.gov) so we can fix the agency setting for your site.

@@ -16,6 +16,8 @@ You can use an RSS feed to add URLs. The feed is useful if you'd like to automat
 
 Enter the URL of your RSS feed. Click submit. We'll fetch each URL in your feed and index the title, description, *and the full text of the document* for the items you provide. We'll display the title and description you provide (not the page's title or a snippet based on the page's content).
 
+We'll update any items that include a publication date.
+
 Delete a URL added via RSS feed by deleting it as an item in your RSS feed. We'll remove the URL from our index the next time we fetch your RSS feed. If you need to remove it from our index immediately, you can take the additional step of deleting the URL by selecting Delete within the list of URLs on the Supplemental URLs page.
 
 Note that you *must* delete the URL from your RSS feed. Otherwise, the URL will reappear the next time we fetch your RSS feed.
