@@ -95,7 +95,7 @@
 
 <p>MRSS is the standard <a href="http://www.rssboard.org/media-rss">media RSS specification</a> for syndicating multimedia content. So, even if you don't have an MRSS feed now, it should be easy to generate one as long as your content is in a content management system or other database. MRSS is also the standard specification used by hosted multimedia services such as Flickr, Instagram, Vimeo, and YouTube.</p>
 
-<p>Email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x73;&#x65;&#x61;&#114;&#99;&#104;&#64;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#46;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#108;&#x67;&#111;&#x76;&#x2e;&#x67;&#111;&#x76;">&#x73;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#x74;&#97;&#108;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#x76;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
+<p>Email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#115;&#101;&#x61;&#114;&#99;&#x68;&#64;&#115;&#x75;&#112;&#x70;&#111;&#114;&#116;&#46;&#x64;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#118;">&#115;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#112;&#111;&#114;&#116;&#46;&#100;&#105;&#x67;&#105;&#x74;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#111;&#118;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
 
 <p>(Thanks, <a href="http://www.usgs.gov">USGS.gov</a> team, for suggesting this new feature!)</p>
 
@@ -115,7 +115,7 @@
 
 <ul>
 <li>We updated how we index and store <a href="/manual/rss.html">RSS feeds</a>, including YouTube feeds, so that we index each feed only one time.</li>
-<li>We now return a Bad Request message for <a href="/developer/recalls.html">recalls API</a> searches that specify a page greater than 20, which is <a href="https://github.com/GSA/recalls_api/commit/0539ce559cae7c4f9360f56dba91932bc48ebb4c">outside of the allowed range</a>.</li>
+<li>We now return a Bad Request message for recalls API searches that specify a page greater than 20, which is <a href="https://github.com/GSA/recalls_api/commit/0539ce559cae7c4f9360f56dba91932bc48ebb4c">outside of the allowed range</a>.</li>
 <li>When available, we now <a href="https://github.com/GSA/recalls_api/commit/74ff28198b2e09418d9d0826fffdcb99bd7fd22f">pull CPSC's URLs</a> for their recalls from their 301 or 302 response headers.</li>
 <li>We now filter out federal jobs with more than 20 locations.</li>
 <li>We removed the code for our forms feature on <a href="http://www.usa.gov">USA.gov</a> and federal forms API. Follow <a href="https://twitter.com/ProjectMyUSA">@ProjectMyUSA</a> to see how the MyUSA team is working to improve the public's experience with federal forms.</li>
@@ -131,8 +131,8 @@
 <li>We fixed the pagination in our search API so that the API now consistently returns 10 results (1-10, 11-20, 21-30, etc).</li>
 <li>We tweaked the Spanish translations for the <a href="/manual/govbox-jobs.html">jobs GovBox</a>.</li>
 <li>We fixed the link for the advanced search operators on the <a href="http://search.usa.gov/search/advanced?affiliate=gobiernousa">Spanish-language advanced search page</a> to point to the corresponding Spanish-language help.</li>
-<li>We now correctly identify the Food and Drug Administration or Food Safety and Inspection Service as the data sources in our <a href="/developer/recalls.html">Recalls API</a>.</li>
-<li>We fixed how we handle registered trademarks in the <a href="/developer/recalls.html">Recalls API</a> so that searchers can now find items such as Zicam&reg;.</li>
+<li>We now correctly identify the Food and Drug Administration or Food Safety and Inspection Service as the data sources in our recalls API.</li>
+<li>We fixed how we handle registered trademarks in the recalls API so that searchers can now find items such as Zicam&reg;.</li>
 <li>We now provide a better response when an API call specifies the 'doc' index but doesn't include the required, complementary 'dc' parameter.</li>
 </ul>
 
