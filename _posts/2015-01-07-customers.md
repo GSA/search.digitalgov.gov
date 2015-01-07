@@ -49,7 +49,6 @@ We have a [proven track record](/tagged/quote) of delivering fast, relevant sear
 <td valign="top" align="center"><a href="http://search.usa.gov/search?affiliate=nc.gov&query=jobs"><img alt="North Carolina" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-nc.png"></a><br><strong>North Carolina</strong></td>
 <td valign="top" align="center"><a href="http://www.pa.gov/Pages/Search.aspx?terms=jobs&affiliateId=PA"><img alt="Pennsylvania" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-pa.png"></a><br><strong>Pennsylvania</strong></td>
 <td valign="top" align="center"><a href="http://www.ri.gov/search/?q=jobs"><img alt="Rhode Island" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-ri.png"></a><br><strong>Rhode Island</strong></td>
-<td valign="top" align="center"><a href="http://www.sc.gov/Pages/Search.aspx?q=jobs"><img alt="South Carolina" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-sc.png" height="70"></a><br><strong>South Carolina</strong></td>
 <td valign="top" align="center"><a href="http://search.usa.gov/search?affiliate=accesswashington&query=jobs"><img alt="Washington" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-washington.png" height="70"></a><br><strong>Washington</strong></td>
 </tr>
 </table>
