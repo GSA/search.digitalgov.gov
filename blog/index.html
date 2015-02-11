@@ -73,6 +73,211 @@
   <article class='article'>
     
     <h1>
+      <a href="/manual/third-party.html">How to Add JavaScript for Your Third-party Web Services</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > 3rd Party Tracking</p>
+
+<p>Do you want your search results page to run third-party web services such as Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?</p>
+
+<p>Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
+
+<p>Some tips for commonly used third-party web services follow.</p>
+
+<h2>Google Analytics Tip</h2>
+
+<p>Within your Google Analytics account, select the option, <em>Do Track Site Search</em>. Set the query parameter as <em>query</em>. For more information, read Google's tip, <a href="https://support.google.com/analytics/answer/1012264?hl=en&amp;ref_topic=1031951">Set Up and Configure Site Search</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<p>Additionally, if you've requested <a href="cname.html">domain masking</a> and you want to include the analytics for your <em>search.agency.gov</em> subdomain with your main <em>agency.gov</em> domain, you'll need to set your domain in your Google Analytics JavaScript by including <code>_gaq.push(['_setDomainName', 'agency.gov']);</code>.</p>
+
+<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<p>The code you submit should look something like one of the following two scripts.</p>
+
+<h3>Google Analytics Code (Older Format)</h3>
+
+<pre><code> &lt;script type="text/javascript"&gt;
+ var _gaq = _gaq || []; 
+ _gaq.push(['_setAccount', 'UA-########-1']); 
+ _gaq.push(['_trackPageview']);
+
+ (function() { 
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
+ })();
+ &lt;/script&gt;
+</code></pre>
+
+<h3>Google Analytics Code (Newer Format)</h3>
+
+<pre><code> &lt;script type="text/javascript"&gt;
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ &lt;/script&gt;
+</code></pre>
+
+<h2>Digital Analytics Program Tip</h2>
+
+<p>Does your federal agency participate in the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> (DAP)?  You don't need to do anything. We're already fully integrated with DAP.</p>
+
+<h2>ForeSee Tip</h2>
+
+<p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
+
+<ol>
+<li><p>Email us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#112;&#111;&#x72;&#116;&#46;&#x64;&#105;&#103;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#118;&#46;&#x67;&#111;&#118;">&#x73;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#105;&#116;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#111;&#118;</a> to <a href="cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
+<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
+
+<p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
+
+<p> <strong>and replace it with =></strong> 'files': '//www.youragency.gov/fsrscripts/',</p>
+
+<p> <em>(Or, find => 'files': '/foresee/', and replace it with => 'files': '//www.youragency/foresee/',)</em></p>
+
+<p> in the following five files.</p>
+
+<ul>
+<li>foresee-trigger.js</li>
+<li>foresee-tracker.js</li>
+<li>foresee-alive.js</li>
+<li>foresee-qualifier.js</li>
+<li>foresee-test.js</li>
+</ul>
+</li>
+<li><p>Submit your foresee-trigger.js via our Admin Center. It should look something like the following script. <code>&lt;script type="text/javascript" src="http://www.youragency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;</code></p></li>
+<li><p>We'll send you an email to confirm that we've set up both your CNAME and added the script for your foresee-trigger.js file.</p></li>
+</ol>
+
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> We use Google Analytics Web analytics software&mdash;our own tag plus the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag&mdash;by default. Email us at <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#115;&#101;&#97;&#114;&#x63;&#104;&#64;&#115;&#117;&#x70;&#112;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#46;&#103;&#111;&#x76;">&#115;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#118;</a> if you'd like to opt out. Learn more about our <a href="http://www.digitalgov.gov/about/policies/">site policies</a> and <a href="../tos.html">terms of service</a>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
+      
+      <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
+      
+      <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
+      
+      <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/third-party.html">
+        <time datetime="2015-02-11">February 11, 2015</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
+      <a href="/blog/go-live.html">A Punch List to Go Live with DigitalGov Search</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Your pre-launch checklist will be unique to your agency's workflow, requirements, and deadlines. A typical punch list to go live with DigitalGov Search follows.</p>
+
+<h2>Connect Your Site to DigitalGov Search</h2>
+
+<p>Most agencies add these two <a href="/manual/code.html">snippets of code</a> to the template(s) in their content management systems (rather than adding them to individual pages).</p>
+
+<p><i class="icon-check"></i> <strong>1. Does your search box point to DigitalGov Search?</strong> Update your search box form code point to our service so that, when users execute a search, they'll see your DigitalGov Search-hosted results page.</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+     &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p><i class="icon-check"></i> <strong>2. Do you have the our Javascript tag on your webpages?</strong> This Javascript powers the suggestions for type-ahead and <a href="/manual/display-overview.html">related searches</a>. It also provides data on your trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+     var usasearch_config = { siteHandle:"YourSiteHandle" };
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "http://search.usa.gov/javascripts/remote.loader.js";
+    document.getElementsByTagName("head")[0].appendChild(script);
+//]]&gt;
+&lt;/script&gt;
+</code></pre>
+
+<h2>Double Check Your Content Sources</h2>
+
+<p><i class="icon-check"></i> <strong>3. Have you told us which domain(s) you want to search?</strong> List one or more <a href="/manual/domains.html">domains</a> that you want to search on the first page of web results. Most agencies opt to leave out the 'www' to include all subdomains (for example, list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies especially department-level portals opt to also include their bureaus' websites (for example, Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)</p>
+
+<p><i class="icon-check"></i> <strong>4. Have you told us about your RSS feeds?</strong> We love <a href="/manual/rss.html">RSS feeds</a>. Tell us about all of your feeds, even if you opt not to show them (see #7 below). They're the quickest way for you to tell us about your new and updated content. Feeds also have well-structured titles, URLs, descriptions, and dates that we use to improve your search results page. (Tip: Preview your feeds from the RSS page in the <a href="https://search.usa.gov/sites/">Admin Center</a> to confirm that we've indexed your content.)</p>
+
+<p><i class="icon-check"></i> <strong>5. Have you told us about your social media accounts?</strong> <a href="/manual/flickr.html">Flickr photostreams</a>, <a href="/manual/twitter.html">tweets</a>, and <a href="/manual/youtube.html">YouTube videos</a> are a great way to highlight your recent content. Tell us about all of your social media, even if you opt not to show them (see #7 below).</p>
+
+<h2>Customize the Display of Your Search Results Page</h2>
+
+<p><i class="icon-check"></i> <strong>6. Have you made the search results page look like your website?</strong> Customize the <a href="/manual/brand.html">brand</a> (font, colors, logo, favicon, and navigation links) of your search results page to create a seamless experience for users as they search and browse your website.</p>
+
+<p><i class="icon-check"></i> <strong>7. Have you told us what to show on your results page?</strong> Turn on (or off) the inline modules and facets you want to appear on your search results. You can change the default settings on the <a href="/manual/display-overview.html">Display Overview</a> page in the Admin Center.</p>
+
+<h2>Set Up Nice-to-Have Features (Optional)</h2>
+
+<p><i class="icon-check"></i> <strong>8. Have you masked your domain?</strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov.</p>
+
+<p><i class="icon-check"></i> <strong>9. Have you added the Javascripts for your other third-party web services to your results page?</strong> If you have a <a href="/manual/third-party.html">third-party service</a> running on your website, you likely want it to run on your results page. Agencies often include their Foresee, Google Analytics, Omniture, or WebTrends code, among others.</p>
+
+<h2>Don't Forget SEO (Optional)</h2>
+
+<p><i class="icon-check"></i> <strong>10. Have you optimized your site so we can find your content?</strong> We follow <a href="http://www.digitalgov.gov/2013/05/31/four-steps-to-achieve-good-seo/">search engine optimization</a> (SEO) best practices. Verify that you have a <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and an <a href="http://www.sitemaps.org">XML sitemap</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. These two files are typically located in the root directory of your website (i.e., agency.gov/robots.txt and agency.gov/sitemap.xml, respectively). Also verify that your robots.txt file allows our user agent (usasearch) to access your public content.</p>
+
+<p><i class="icon-check"></i> <strong>11. Have you registered your site with the major commercial search engines?</strong> Register for both <a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to maximize the coverage of your content in their search results.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/blog/go-live.html">
+        <time datetime="2015-02-11">February 11, 2015</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
       <a href="/developer/recalls.html">Recalls API</a>
     </h1>
     
@@ -383,7 +588,7 @@
 
 <h2>Feedback</h2>
 
-<p>Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#x73;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#x73;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#103;&#x6f;&#118;&#46;&#x67;&#x6f;&#x76;">&#115;&#x65;&#97;&#114;&#x63;&#104;&#x40;&#115;&#117;&#112;&#x70;&#111;&#114;&#116;&#46;&#x64;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>Email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#x73;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#x74;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#x67;&#111;&#118;">&#x73;&#101;&#x61;&#114;&#x63;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#118;&#46;&#103;&#111;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
@@ -945,7 +1150,7 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
 
 <p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
 
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x73;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#x6c;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#118;">&#115;&#101;&#x61;&#114;&#99;&#104;&#x40;&#115;&#117;&#x70;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#118;</a>.</p>
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x73;&#101;&#97;&#x72;&#99;&#104;&#x40;&#115;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#x61;&#108;&#103;&#111;&#118;&#46;&#x67;&#111;&#x76;">&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#46;&#100;&#105;&#x67;&#105;&#116;&#x61;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#118;</a>.</p>
 
     </div>
 
@@ -1006,7 +1211,7 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
 
 <hr />
 
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. Email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x73;&#101;&#97;&#114;&#99;&#104;&#64;&#115;&#x75;&#112;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#105;&#103;&#105;&#116;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;">&#x73;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#111;&#118;</a> to let us know where you publish your job openings so that we can include them in the Job Openings module.</p>
+<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. Email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#58;&#115;&#x65;&#97;&#114;&#x63;&#104;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#114;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#x73;&#117;&#112;&#112;&#111;&#114;&#x74;&#46;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Job Openings module.</p>
 
     </div>
 
@@ -1028,90 +1233,6 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
       
       
       <a href="/manual/govbox-jobs.html">
-        <time datetime="2014-12-17">December 17, 2014</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/manual/govbox-health.html">Help Searchers Find Health Information</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>Searches for health-related information are very common. We created the Health Topics module to help searchers find high-quality, authoritative health information.</p>
-
-<p>This module offers direct access to <a href="http://www.nlm.nih.gov/medlineplus/healthtopics.html">MedlinePlus Health Topics</a> and open clinical studies and trials on <a href="http://clinicaltrials.gov">ClinicalTrials.gov</a>. To provide timely information across all health topics, we pull the data from the <a href="http://www.nlm.nih.gov/medlineplus/xml.html">MedlinePlus XML files</a>, which cover both the English and Spanish health topics.</p>
-
-<p>If you <a href="/manual/display-overview.html">opt to show the Health Topics</a> module, searchers looking for health topics on your site can readily find high-quality health information, as shown in the sample below for a search on <a href="http://search.usa.gov/search?affiliate=nc.gov&amp;query=ovarian+cancer&amp;m=true"><em>ovarian cancer</em> on NC.gov</a>.</p>
-
-<p><a href="http://search.usa.gov/search?affiliate=nc.gov&amp;query=ovarian+cancer&amp;m=true"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/govbox-health.png" title="Health Topics Module on NC.gov" alt="Health Topics Module on NC.gov" /></a></p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/display"><span class="label label-info">display</span></a>
-      
-      <a href="/tagged/modules"><span class="label label-info">modules</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/govbox-health.html">
-        <time datetime="2014-12-17">December 17, 2014</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/manual/govbox-federal-register.html">Help Searchers Find Federal Register Documents</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>Federal agencies publish notices, proposed rules, and final rules in the <a href="https://www.federalregister.gov"><em>Federal Register</em></a>. To make it easier for citizens and communities to understand the regulatory process and to participate in government decision-making, we created the <em>Federal Register</em> module to help searchers find these notices and rules.</p>
-
-<p>This module offers direct access to <em>Federal Register</em> documents. We pull the data from the <a href="https://www.federalregister.gov/learn/developers">Federal Register API</a> to provide timely information across all documents.</p>
-
-<p>If you <a href="/manual/display-overview.html">opt to show the Federal Register</a> module, searchers on your site can readily find the notices and rules that your agency has published in the <em>Federal Register</em>, as shown in the sample below for a search on <a href="http://search.nih.gov/search?affiliate=nih&amp;query=autoimmune+diseases"><em>autoimmune diseases</em> on NIH.gov</a>.</p>
-
-<p><a href="http://search.nih.gov/search?affiliate=nih&amp;query=autoimmune+diseases"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/govbox-fr.png" title="Federal Register Module on NIH.gov" alt="Federal Register Module on NIH.gov" /></a></p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/display"><span class="label label-info">display</span></a>
-      
-      <a href="/tagged/modules"><span class="label label-info">modules</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/govbox-federal-register.html">
         <time datetime="2014-12-17">December 17, 2014</time>
       </a>
     </div>
