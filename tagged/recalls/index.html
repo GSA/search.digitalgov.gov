@@ -82,7 +82,7 @@
 
 <p><a href="https://github.com/GSA"><img style="position: absolute; top: 41px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a></p>
 
-<blockquote class="caution"><strong>Note:</strong> This Recalls API will be deprecated on January 31, 2015. Please refer to our <a href="http://www.usa.gov/About/developer-resources/terms-of-service.shtml">Terms of Service for Developer Resources</a> for more information. The source code will remain on Github at <a href="https://github.com/gsa/recalls_api">https://github.com/gsa/recalls_api</a>, if you'd like to clone or fork it.</blockquote>
+<blockquote class="caution"><strong>Note:</strong> This Recalls API will be deprecated in March 2015. Please refer to our <a href="http://www.usa.gov/About/developer-resources/terms-of-service.shtml">Terms of Service for Developer Resources</a> for more information. The source code will remain on Github at <a href="https://github.com/gsa/recalls_api">https://github.com/gsa/recalls_api</a>, if you'd like to clone or fork it.</blockquote>
 
 
 <h2>Overview</h2>
@@ -103,21 +103,21 @@
 
 <p>Recalls are searchable by keyword, issuing agency, date, UPC code, vehicle-specific attributes, or any combination of these.</p>
 
-<p>The base URL is http://api.usa.gov/recalls/search.json?<strong>parameters</strong></p>
+<p>The base URL is https://api.usa.gov/recalls/search.json?<strong>parameters</strong></p>
 
 <p>Sample API requests follow.</p>
 
 <p>All recalls<br/>
-<a href="http://api.usa.gov/recalls/search.json?">http://api.usa.gov/recalls/search.json?</a></p>
+<a href="https://api.usa.gov/recalls/search.json?">https://api.usa.gov/recalls/search.json?</a></p>
 
 <p>All cribs<br/>
-<a href="http://api.usa.gov/recalls/search.json?query=cribs">http://api.usa.gov/recalls/search.json?query=cribs</a></p>
+<a href="https://api.usa.gov/recalls/search.json?query=cribs">https://api.usa.gov/recalls/search.json?query=cribs</a></p>
 
 <p>All cribs that pose a choking hazard<br/>
-<a href="http://api.usa.gov/recalls/search.json?query=cribs+choking">http://api.usa.gov/recalls/search.json?query=cribs+choking</a></p>
+<a href="https://api.usa.gov/recalls/search.json?query=cribs+choking">https://api.usa.gov/recalls/search.json?query=cribs+choking</a></p>
 
 <p>All cribs that pose a choking hazard sorted by date<br/>
-<a href="http://api.usa.gov/recalls/search.json?query=cribs+choking&amp;sort=date">http://api.usa.gov/recalls/search.json?query=cribs+choking&amp;sort=date</a></p>
+<a href="https://api.usa.gov/recalls/search.json?query=cribs+choking&amp;sort=date">https://api.usa.gov/recalls/search.json?query=cribs+choking&amp;sort=date</a></p>
 
 <p><a name="parameters"></a></p>
 
@@ -146,59 +146,59 @@
 
 <p>Specifies which agency issued the recall. Possible values are <code>CPSC</code>, <code>FDA</code>, <code>NHTSA</code>, or <code>USDA</code>.</p>
 
-<p>Example (one agency): <a href="http://api.usa.gov/recalls/search.json?organization=nhtsa">http://api.usa.gov/recalls/search.json?organization=nhtsa</a></p>
+<p>Example (one agency): <a href="https://api.usa.gov/recalls/search.json?organization=nhtsa">https://api.usa.gov/recalls/search.json?organization=nhtsa</a></p>
 
-<p>Example (multiple agencies): <a href="http://api.usa.gov/recalls/search.json?organization=fda+usda">http://api.usa.gov/recalls/search.json?organization=fda+usda</a></p>
+<p>Example (multiple agencies): <a href="https://api.usa.gov/recalls/search.json?organization=fda+usda">https://api.usa.gov/recalls/search.json?organization=fda+usda</a></p>
 
 <h3>start_date</h3>
 
 <p>Specifies the start date of the recall.</p>
 
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?start_date=2012-01-01">http://api.usa.gov/recalls/search.json?start_date=2012-01-01</a></p>
+<p>Example: <a href="https://api.usa.gov/recalls/search.json?start_date=2012-01-01">https://api.usa.gov/recalls/search.json?start_date=2012-01-01</a></p>
 
 <h3>end_date</h3>
 
 <p>Specifies the end date of the recall.</p>
 
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?end_date=2012-12-31">http://api.usa.gov/recalls/search.json?end_date=2012-12-31</a></p>
+<p>Example: <a href="https://api.usa.gov/recalls/search.json?end_date=2012-12-31">https://api.usa.gov/recalls/search.json?end_date=2012-12-31</a></p>
 
 <h3>page</h3>
 
 <p>Specifies the pagination of search results. Possible values are <code>1</code> to <code>20</code>.</p>
 
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?page=3">http://api.usa.gov/recalls/search.json?page=3</a></p>
+<p>Example: <a href="https://api.usa.gov/recalls/search.json?page=3">https://api.usa.gov/recalls/search.json?page=3</a></p>
 
 <h3>per_page</h3>
 
 <p>Specifies the number of search results for each page. Possible values are <code>1</code> to <code>50</code>.</p>
 
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?per_page=10">http://api.usa.gov/recalls/search.json?per_page=10</a></p>
+<p>Example: <a href="https://api.usa.gov/recalls/search.json?per_page=10">https://api.usa.gov/recalls/search.json?per_page=10</a></p>
 
 <h3>sort</h3>
 
 <p>Results are sorted by relevance by default. Possible values are <code>rel</code> or <code>date</code>. Use 'sort=date' to sort results by date with the most recent listed first.</p>
 
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?sort=date">http://api.usa.gov/recalls/search.json?sort=date</a></p>
+<p>Example: <a href="https://api.usa.gov/recalls/search.json?sort=date">https://api.usa.gov/recalls/search.json?sort=date</a></p>
 
 <h3>food_type</h3>
 
 <p>Only for drug and food safety recalls. Possible values are <code>food</code> or <code>drug</code>.</p>
 
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?food_type=drug">http://api.usa.gov/recalls/search.json?food_type=drug</a></p>
+<p>Example: <a href="https://api.usa.gov/recalls/search.json?food_type=drug">https://api.usa.gov/recalls/search.json?food_type=drug</a></p>
 
 <h3>upc</h3>
 
 <p>Only for CPSC recalls. Specifies the UPC code when available. Not all products have UPC codes.</p>
 
-<p>Example: <a href="http://api.usa.gov/recalls/search.json?upc=042666601627">http://api.usa.gov/recalls/search.json?upc=042666601627</a></p>
+<p>Example: <a href="https://api.usa.gov/recalls/search.json?upc=042666601627">https://api.usa.gov/recalls/search.json?upc=042666601627</a></p>
 
 <h3>make, model, year, and code (only for NHTSA recalls)</h3>
 
 <ul>
-<li><code>make</code> specifies the make of the vehicle or equipment. Example: <a href="http://api.usa.gov/recalls/search?make=winnebago">http://api.usa.gov/recalls/search?make=winnebago</a></li>
-<li><code>model</code> specifies the model of the vehicle or equipment. Example: <a href="http://api.usa.gov/recalls/search?model=ellipse">http://api.usa.gov/recalls/search?model=ellipse</a></li>
-<li><code>year</code> specifies the year of the vehicle or equipment. Example: <a href="http://api.usa.gov/recalls/search?year=2010">http://api.usa.gov/recalls/search?year=2010</a></li>
-<li><code>code</code> specifies the NHTSA code. Possible values are <code>E</code>, <code>V</code> [for vehicles], <code>I</code>, <code>T</code>, <code>C</code>, or <code>X</code>. Example: <a href="http://api.usa.gov/recalls/search?code=v">http://api.usa.gov/recalls/search?code=v</a></li>
+<li><code>make</code> specifies the make of the vehicle or equipment. Example: <a href="https://api.usa.gov/recalls/search?make=winnebago">https://api.usa.gov/recalls/search?make=winnebago</a></li>
+<li><code>model</code> specifies the model of the vehicle or equipment. Example: <a href="https://api.usa.gov/recalls/search?model=ellipse">https://api.usa.gov/recalls/search?model=ellipse</a></li>
+<li><code>year</code> specifies the year of the vehicle or equipment. Example: <a href="https://api.usa.gov/recalls/search?year=2010">https://api.usa.gov/recalls/search?year=2010</a></li>
+<li><code>code</code> specifies the NHTSA code. Possible values are <code>E</code>, <code>V</code> [for vehicles], <code>I</code>, <code>T</code>, <code>C</code>, or <code>X</code>. Example: <a href="https://api.usa.gov/recalls/search?code=v">https://api.usa.gov/recalls/search?code=v</a></li>
 </ul>
 
 
@@ -383,7 +383,7 @@
 
 <h2>Feedback</h2>
 
-<p>Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x73;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#118;">&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#115;&#101;&#x61;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#x69;&#103;&#x69;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#118;">&#115;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x73;&#117;&#112;&#112;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
@@ -404,7 +404,7 @@
       
       
       <a href="/developer/recalls.html">
-        <time datetime="2015-01-07">January 7, 2015</time>
+        <time datetime="2015-02-23">February 23, 2015</time>
       </a>
     </div>
     </article>
