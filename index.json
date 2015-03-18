@@ -1,0 +1,20 @@
+---
+layout: null
+---
+{% assign first = true %}
+[
+{% for post in site.posts %}
+    {% if post.title != null and post.title != empty %}
+    {% unless first %},{% endunless %}{
+        "title": "{{post.title | jsonify}}",
+        "description": "{{ post.snippet }}",
+        "date": "{{ post.date }}",
+		"link": "{{ site.url }}{{ post.url }}",
+        "tag": "{{ post.tags }}",
+        "category": "{{ post.category }}",
+        "content": {{post.content | markdownify | strip_html | jsonify}}
+    }
+    {% assign first = false %}
+    {% endif %}
+{% endfor %}
+]
