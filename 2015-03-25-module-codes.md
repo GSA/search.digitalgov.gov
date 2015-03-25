@@ -1,6 +1,6 @@
 ## DigitalGov Search Module Codes
 
-DigitalGov Search calls several different indexes when serving search requests, and the results from each of these indexes is presented in a separate module. Each module will load when there are relevant search results to display. The Query Details csv downloads available through the Admin Center analytics section report the modules that loaded in response to a query using the following codes. 
+DigitalGov Search calls several different indexes when serving search requests, and we present results from each of these indexes in a separate module. Each module will load when there are relevant search results to display. Each module has a code, to make it easy on the system, and you will see these codes in the Query Details csv downloads available through the Admin Center analytics section. This page lists all the DigitalGov Search module codes and their full names. 
 
 | Code  | Module Name                                     |                            |
 |-------|-------------------------------------------------|:--------------------------:|
