@@ -2,11 +2,8 @@
 
 DigitalGov Search calls several different indexes when serving search requests, and the results from each of these indexes is presented in a separate module. Each module will load when there are relevant search results to display. The Query Details csv downloads available through the Admin Center analytics section report the modules that loaded in response to a query using the following codes. 
 
-| Tables   |      Are      |  Cool |
-|----------|:-------------:|------:|
-| col 1 is |  left-aligned | $1600 |
-| col 2 is |    centered   |   $12 |
-| col 3 is | right-aligned |    $1 |
+| Code  | Module Name                                     |
+|-------|:-----------------------------------------------:|
 | OVER  | Spelling Overrides (Bing/Google)                |
 | IMAG  | Image Results (Bing)                            |
 | BOOS  | Best Bets: Text                                 |
