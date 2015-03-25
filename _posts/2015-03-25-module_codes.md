@@ -11,7 +11,7 @@ DigitalGov Search calls several different indexes when serving search requests, 
 This page lists all the DigitalGov Search module codes and their full names. 
 
 | Code  | Module Name |
-|-------|:------------|
+|-------|-------------|
 | AIDOC | Collections |
 | AWEB  | Web Results Only (Azure) |
 | BBG   | Best Bets: Graphics |
