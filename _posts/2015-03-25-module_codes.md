@@ -29,7 +29,8 @@ This page lists all the DigitalGov Search module codes and their full names.
 | NIMAG | Image Results (MRSS)                            |                            |
 | OASIS | Image Results (DigitalGov Search)               |                            |
 | OSPEL | Spelling Suggestions (DigitalGov Search Images) |                            |
-| OVER  | Spelling Overrides (Bing/Google)                |                            |                            | SPEL  | Spelling Suggestions (DigitalGov Search)        |                            |
+| OVER  | Spelling Overrides (Bing/Google)                |                            |    
+| SPEL  | Spelling Suggestions (DigitalGov Search)        |                            |
 | SREL  | Related Searches                                |                            |
 | TWEET | Tweets                                          |                            |
 | VIDS  | Video Results (YouTube)                         |                            |
