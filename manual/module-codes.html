@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>How to Edit Your Domains</title>
+  <title>Key for Search Module Codes and Names</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -68,59 +68,116 @@
   <div id="main-container"><article class="article">
   
   <h1>
-    <a href="/manual/domains.html">How to Edit Your Domains</a>
+    <a href="/manual/module-codes.html">Key for Search Module Codes and Names</a>
   </h1>
   
 
   <div class='post-content'>
-    <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Domains</p>
+    <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics</p>
 
-<p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
+<p>We call several different indexes when serving search results, and we present results from each of these indexes in a separate module. Each module loads when there are relevant search results to display. Each module has a code, and you'll see these codes in the Download Details csv files available through the <a href="/manual/queries.html">Queries</a> or <a href="/manual/clicks.html">Clicks</a> pages of the the Admin Center analytics section.</p>
 
-<h2>Entire Site(s)</h2>
+<p>This page lists all the module codes and their full names.</p>
 
-<ul>
-<li>List yoursite.gov (without www) to search your entire site, including all subdomains.</li>
-<li>List yoursite.gov and yoursite2.gov to search multiple sites.</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Code  </th>
+<th> Module Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AIDOC </td>
+<td> Collections</td>
+</tr>
+<tr>
+<td>AWEB  </td>
+<td> Web Results Only (Azure)</td>
+</tr>
+<tr>
+<td>BBG   </td>
+<td> Best Bets: Graphics</td>
+</tr>
+<tr>
+<td>BOOS  </td>
+<td> Best Bets: Text</td>
+</tr>
+<tr>
+<td>BSPEL </td>
+<td> Spelling Suggestions (Bing/Google)</td>
+</tr>
+<tr>
+<td>BWEB  </td>
+<td> Web Results (Bing)</td>
+</tr>
+<tr>
+<td>DECOR </td>
+<td> Value-added Links for SEC Filings</td>
+</tr>
+<tr>
+<td>FRDOC </td>
+<td> Federal Register Documents</td>
+</tr>
+<tr>
+<td>GWEB  </td>
+<td> Web Results (Google)</td>
+</tr>
+<tr>
+<td>IMAG  </td>
+<td> Image Results (Bing)</td>
+</tr>
+<tr>
+<td>JOBS  </td>
+<td> Jobs</td>
+</tr>
+<tr>
+<td>LOVER </td>
+<td> Spelling Overrides (DigitalGov Search)</td>
+</tr>
+<tr>
+<td>MEDL  </td>
+<td> Health Topics</td>
+</tr>
+<tr>
+<td>NEWS  </td>
+<td> RSS Feeds</td>
+</tr>
+<tr>
+<td>NIMAG </td>
+<td> Image Results (MRSS)</td>
+</tr>
+<tr>
+<td>OASIS </td>
+<td> Image Results (DigitalGov Search)</td>
+</tr>
+<tr>
+<td>OSPEL </td>
+<td> Spelling Suggestions (DigitalGov Search Images)</td>
+</tr>
+<tr>
+<td>OVER  </td>
+<td> Spelling Overrides (Bing/Google)</td>
+</tr>
+<tr>
+<td>SPEL  </td>
+<td> Spelling Suggestions (DigitalGov Search)</td>
+</tr>
+<tr>
+<td>SREL  </td>
+<td> Related Searches</td>
+</tr>
+<tr>
+<td>TWEET </td>
+<td> Tweets</td>
+</tr>
+<tr>
+<td>VIDS  </td>
+<td> Video Results (YouTube)</td>
+</tr>
+</tbody>
+</table>
 
-
-<h2>Specific Subdomains</h2>
-
-<ul>
-<li>List www.yoursite.gov to include only the primary 'www' domain.</li>
-<li>List subdomain.yoursite.gov to include subdomains.</li>
-</ul>
-
-
-<h2>Specific Directories</h2>
-
-<p>List yoursite.gov/folder to include folders. Note: this will include all sub-folders (if they exist), i.e. yoursite.gov/folder/folder2.</p>
-
-<p>You cannot specify individual URLs.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
-
-<ol>
-<li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
-<li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>Email us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#115;&#101;&#97;&#x72;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#x6f;&#x72;&#x74;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#x67;&#111;&#x76;">&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#x73;&#x75;&#x70;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
-</ol>
-
-
-<p><a id="filter"></a><strong><em>Troubleshooting Tip:</em></strong> You can remove or filter specific URLs using any of the following options.</p>
-
-<ol>
-<li><p>Remove the page from your site and return a 404 (Not Found) 401 (Gone), or 301 (Permanently Moved) HTTP status.</p></li>
-<li><p>Add a <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">noindex robots metatag or x-robots tag</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
-<li><p>Request the page's removal using the <a href="http://www.bing.com/webmaster/help/block-urls-from-bing-264e560a">Block URLs option in Bing Webaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/1663419">Remove URLs option in Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p></li>
-<li><p>Use the Filter URLs option under the <a href="/manual/domains-advanced.html">Advanced</a> tab. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
-</ol>
-
-
-<p><strong><em>Troubleshooting Tip:</em></strong> Are specific web pages missing from your Bing web results? You can tell us about any missing URLs via an RSS feed or manually (the Supplemental Feed and Supplemental URLs options under the <a href="/manual/domains-advanced.html">Advanced</a> tab, respectively). We'll fetch and index the pages and append them to your web results.</p>
 
   </div>
 
@@ -128,9 +185,15 @@
     
     <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
     
-    <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+    <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
     
-    <a href="/tagged/domains"><span class="label label-info">domains</span></a>
+    <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
+    
+    <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
+    
+    <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
+    
+    <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
     
   </div>
 
@@ -141,8 +204,8 @@
     
     
     
-    <a href="/manual/domains.html">
-      <time>August 29, 2013</time>
+    <a href="/manual/module-codes.html">
+      <time>March 26, 2015</time>
     </a>
   </div>
 
