@@ -17,7 +17,7 @@ When you [fill out your domains](/manual/domains.html), we'll show results for a
 
 If you don't like the default web results, you can choose to use another index. Options follow.
 
-**Option 1. Use Our DigitalGov Search Web Index.** We can fetch and index your all of web site's content directly. The most common way for you to [give us your content is through a full-text content API or RSS feed](/blog/content-integration.html).
+**Option 1. Use Our DigitalGov Search Web Index.** We can fetch and index your all of web site's content directly. Email us at <search@support.digitalgov.gov> and we'll work with you to determine the best way for you to tell us about your content.
 
 **Option 2. Buy and Use Google Site Search.** If you already have (or plan to purchase), [Google Site Search](https://www.google.com/work/search/products/gss.html), we'll send a searcher's query to the search index you've provided and we'll render the results within our search results page. 
 
