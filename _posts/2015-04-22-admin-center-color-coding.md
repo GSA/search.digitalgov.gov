@@ -10,24 +10,24 @@ We use color coding the Admin Center to indicate the status of a few types of it
 
 [### Manage Users](/manual/users.html)
 
-|: Color |: Status |
-|---------|--------------------------------------------|
-|: Green |: Approved |
-|: Yellow |: Pending |
-|: Red |: Unverified or Not Approved |
+| Color | Status |
+|:---------|:--------------------------------------------|
+| Green&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Approved |
+| Yellow | Pending |
+| Red | Unverified or Not Approved |
 
 [### RSS Feeds](/manual/rss.html)
 
-|: Color |: Status |
-|---------|--------------------------------------------|
-|: Green |: Indexed |
-|: Yellow |: Pending Indexing |
-|: Red |: Feed indexed, but Error in one or more items |
+| Color | Status |
+|:---------|:--------------------------------------------|
+| Green&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Feed indexed, no errors |
+| Yellow | Pending Indexing |
+| Red | Feed indexed, but error in one or more items |
 
 ### Best Bets: [Text](/manual/best-bets-text.html) or [Graphics](/manual/best-bets-graphics.html)
 
-|: Color |: Status |
-|---------|--------------------------------------------|
-|: Green |: Active |
-|: Yellow |: Inactive |
-|: Red |: Unverified or Not Approved |
+| Color | Status |
+|:---------|"--------------------------------------------|
+| Green&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Active |
+| Yellow | Inactive |
+| Red | Unverified or Not Approved |
