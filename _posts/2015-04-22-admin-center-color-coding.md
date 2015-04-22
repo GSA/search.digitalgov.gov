@@ -24,7 +24,7 @@ We use color coding the Admin Center to indicate the status of a few types of it
 | Yellow | Pending Indexing |
 | Red | Feed indexed, but error in one or more items |
 
-### Best Bets: [Text](/manual/best-bets-text.html) or [Graphics](/manual/best-bets-graphics.html)
+Best Bets: [Text](/manual/best-bets-text.html) or [Graphics](/manual/best-bets-graphics.html)
 
 | Color | Status |
 |:---------|"--------------------------------------------|
