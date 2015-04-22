@@ -8,7 +8,7 @@ published: false
 
 We use color coding the Admin Center to indicate the status of a few types of items. 
 
-[### Manage Users](/manual/users.html)
+[Manage Users](/manual/users.html)
 
 | Color | Status |
 |:---------|:--------------------------------------------|
@@ -16,7 +16,7 @@ We use color coding the Admin Center to indicate the status of a few types of it
 | Yellow | Pending |
 | Red | Unverified or Not Approved |
 
-[### RSS Feeds](/manual/rss.html)
+[RSS Feeds](/manual/rss.html)
 
 | Color | Status |
 |:---------|:--------------------------------------------|
