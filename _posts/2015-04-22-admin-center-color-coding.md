@@ -9,7 +9,7 @@ tags: "how-to manage-users best-bets rss"
 
 We use color coding the Admin Center to indicate the status of a few types of items. 
 
-#### [Manage Users](/manual/users.html)
+## [Manage Users](/manual/users.html)
 
 | Color | Status |
 |:---------|:--------------------------------------------|
@@ -17,7 +17,7 @@ We use color coding the Admin Center to indicate the status of a few types of it
 | Yellow | Pending |
 | Red | Unverified or Not Approved |
 
-#### [RSS Feeds](/manual/rss.html)
+## [RSS Feeds](/manual/rss.html)
 
 | Color | Status |
 |:---------|:--------------------------------------------|
@@ -25,7 +25,7 @@ We use color coding the Admin Center to indicate the status of a few types of it
 | Yellow | Pending Indexing |
 | Red | Feed indexed, but error in one or more items |
 
-#### Best Bets: [Text](/manual/best-bets-text.html) or [Graphics](/manual/best-bets-graphics.html)
+## Best Bets: [Text](/manual/best-bets-text.html) or [Graphics](/manual/best-bets-graphics.html)
 
 | Color | Status |
 |:---------|:--------------------------------------------|
