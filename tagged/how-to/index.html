@@ -73,6 +73,114 @@
  
     
     <h1>
+      <a href="/blog/power-users-recap.html">DigitalGov Search for Power Users: Recap</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Our April 2015 training session looked into the nooks and crannies of the <a href="https://search.usa.gov/sites/">Admin Center</a>, and provided other advanced tips for optimizing your search. We used the scenario of a site redesign to ground these tips in a common experience. This is a summary and cheat sheet. Since we know that some of these tips won’t be relevant until they’re relevant, please hang on to this for future reference.</p>
+
+<p>Watch the <a href="https://www.youtube.com/watch?v=Z1Eg9LhhFcY">recorded session</a> on YouTube.</p>
+
+<p>The launch of a new or redesigned site is a great time to think about refreshing your search as well. Come along on a journey through a search refresh before, during, and just after your new site goes live. You need not wait for a new site, though - these steps can be taken at any time.</p>
+
+<p><a href="#commercial">Tell search engines to (re-)index your site</a>
+<a href="#direct">Let us index your site directly</a>
+<a href="#ac">Update your search settings in the Admin Center</a>
+<a href="#emergency">Break Glass In Case of Emergency</a>
+<a href="#fancy">Get Fancy</a></p>
+
+<p><a name="commercial"></a>## Tell Search Engines to (Re-)Index Your Site</p>
+
+<p>DigitalGov Search does not crawl. Crawling is hard and expensive, and others have systems in place that do this very well, so we rely on commercial search engines’ indexes of your site. Search engines create <strong>indexes</strong> of the websites they crawl, and search queries are run against those indexes. If a website is restructured but the search indexes are not updated, the old structure will be presented in search results.</p>
+
+<ul>
+<li><strong>Robots.txt</strong> files declare what can and cannot be indexed by crawlers. Tip: Set up a robots.txt file on your <em>beta</em> site to <em>disallow</em> indexing. When you switch your beta site to <strong>production</strong>, update the robots.txt to <strong>allow</strong> indexing. <a href="https://www.google.com/search?q=robots.txt+example">Resources and Examples</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>
+..<em> Put your file at the root of your site, <code>http://www.YOURSITE.gov/robots.txt</code>.
+..</em> If you didn’t disallow indexing of your beta site and it has already been indexed, request it be removed via Google and Bing’s webmaster tools sites. A robots.txt file won’t proactively <em>remove</em> content from search engines’ indexes.</li>
+<li><strong>301 redirects</strong> allow crawlers to find their way around your new structure, and expedite the reindexing process. A 404 page is a dead end, and the new location or version of that file can’t be found from there.
+..<em> If the volume of 301s to place is daunting, consider setting a general 301 for all the content in a location pointing to the new index page for that type of content. You can also prioritize your 301 placement based on your site usage analytics, starting with the most popular pages.
+..</em> If you’re not sure which of your pages are throwing 404s, you can run your list of URLs through an <a href="https://duckduckgo.com/?q=http+status+checker">online http status checker</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, or you could install SEO auditing software on your computer, if your IT policies allow it.</li>
+<li><strong>XML sitemaps</strong> tell crawlers how often to reindex your site, or portions of your site. The protocol and examples are available at [Sitemaps.org(http://www.sitemaps.org/protocol.html)&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. The crucial element is to set the <code>&lt;changefreq&gt;</code> tag to the appropriate frequency for your content. You can set the frequency at the site, folder, or even individual item level.
+..* Put your file at the root of your site, <code>http://www.YOURSITE.gov/sitemap.xml</code>.</li>
+<li>See also our <a href="/blog/redesign.html">tips on preparing for a site redesign</a>.</li>
+</ul>
+
+
+<p><a name="direct"></a>## And, Tell Us about Your Content and We’ll Index It Directly</p>
+
+<p>While we don’t crawl, we will index any pages you tell us about. The steps mentioned above will be useful for searchers out on the web looking for your information and services. By default we leverage the commercial indexes for your site search, but we have our own indexes as well.  If you’re having a hard time getting search engines to index your new site, re-index your old site, or you just prefer our indexes, there are a couple of ways you can tell us about your content.</p>
+
+<ul>
+<li>You can <a href="/manual/rss.html"><strong>send us all of your content</strong> via RSS</a> for direct indexing. We’ll need the URL, title, description, update date, and the full content or body of each item. Sort by update date in descending order. This can be an RSS or Atom feed. <a href="mailto:search@support.digitalgov.gov">Let us know</a> you created this feed. There are a few different options for indexing feeds so we’ll make sure it’s set up in the best way possible.</li>
+<li>Better yet, <strong>publish your content via API</strong>. We are in the beginning stages of development for a bootstrap API and a CRUD API. If you’d like to be part of our beta testing group and give feedback on the product, <a href="mailto:search@support.digitalgov.gov">let us know</a>. We want to get people kicking the tires on the prototype early, in the coming weeks. (note, this is current as of April 2015)</li>
+</ul>
+
+
+<p><a name="ac"></a>## Update Your Search Settings in the Admin Center</p>
+
+<p>Don’t forget to update your content settings in the Admin Center to point to your new content. This is an important, but often overlooked step.</p>
+
+<ul>
+<li>Set up your domains list to <strong>include entire domains</strong>. Example: nih.gov - not www.nih.gov. Specifying www will limit your search to that particular subdomain. If you do specify a subdomain, do so with the intent to limit your search. <code>[DigitalGov Search](/index.html) &gt; [Admin Center](https://search.usa.gov/sites/) &gt; YourSite &gt; Content &gt; Domains</code></li>
+<li>If a particular <strong>new item</strong> is not showing up in search results and you need it there ASAP, you can create a Best Bet pointing to it, or add it as a Supplemental URL.
+..<em> <strong>Best Bets</strong> can be managed at <code>[DigitalGov Search](/index.html) &gt; [Admin Center](https://search.usa.gov/sites/) &gt; YourSite &gt; Content &gt; Best Bets: Text or Best Bets: Graphics</code> </em>(Recommended)<em>
+..</em> <strong>Supplemental URLs</strong> can be added at <code>[DigitalGov Search](/index.html) &gt; [Admin Center](https://search.usa.gov/sites/) &gt; YourSite &gt; Content &gt; Domains &gt; Advanced &gt; Supplemental URLs</code></li>
+<li>When undergoing a <a href="/blog/redesign.html">site redesign</a>, be sure to <strong>update</strong> Collections, Best Bets, RSS Feeds, Header and Footer links, related sites, image assets, and results page colors, as appropriate.</li>
+<li>If you set up a <strong>test search site</strong> to go with your beta site, we recommend you <strong>transfer</strong> all the new settings over to your old site when you take your beta site into production, in order to maintain continuity of analytics. The test search site will have separate analytics from your existing, live search. If you would like help transferring your settings, <a href="mailto:search@support.digitalgov.gov">let us know</a>.</li>
+</ul>
+
+
+<p><a name="emergency"></a>## Break Glass In Case of Emergency</p>
+
+<p>We have a stopgap measure available to <a href="/manual/domains-advanced.html">filter certain results</a> directly in the Admin Center. Under <code>[DigitalGov Search](/index.html) &gt; [Admin Center](https://search.usa.gov/sites/) &gt; YourSite &gt; Analytics &gt; Queries</code> you’ll see an option for Filter URLs.
+<strong>Important Note!</strong> This is meant to be a <strong>stopgap measure</strong> until search engines’ indexes have caught up. After they’re updated there, the urls you’ve filtered here <strong>should be removed</strong>. They are appended to your query and are counted against the byte limit we can include in any one query. Please don’t forget to remove them after you no longer need them.
+<a name="fancy"></a>## Get Fancy</p>
+
+<p>At any time, you can use some of our more advanced options to get the most out of your search. Don’t wait for a redesign to take advantage of these features.</p>
+
+<ul>
+<li><strong>3rd party tracking</strong> allows you to include search traffic in your broader website and customer experience monitoring, such as Google Analytics and Foresee.
+..<em> If you are sending <strong>more than one code</strong>, or an additional code, for a given tracking service, please either send both together in the same submission, or include a note with your second code snippet that it should be appended to what you had submitted before.
+..</em> <strong>ForeSee</strong> requires you set up a <a href="/manual/cname.html">cname</a> in order for it to work (see below).
+..<em> You can also put in any other analytics or customer satisfaction tools you use.
+..</em> The <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> is already integrated with DigitalGov Search, so you don’t need to do anything.</li>
+<li><strong>Domain Masking</strong> is available for your hosted search results page. Create a <strong>CNAME</strong> record in your external DNS records. Example: <code>NAME: search.YOURSITE.gov</code> ; <code>CNAME: search.usa.gov.edgekey.net</code>. Other subdomain options are ‘find’ and ‘findit.’ <strong>Alert us in writing</strong> of your choice and we’ll get our side set up. When both sides are ready, <strong>update the form code</strong> on your search box to point to <code>search.YOURSITE.gov</code>.</li>
+<li><strong>Search box setup</strong>. You can get fancy with your search box, pointing it to a particular collection, or adding options for people to set their search scope.
+..<em> Start your <strong>search in a collection</strong>: add <code>&lt;input type="hidden" name="dc" value="INSERT_COLLECTION_ID_#" /&gt;</code> to your form code. The collection ID can be found in the URL of the collection’s edit screen.
+..</em> Create an <strong>isolated search</strong> experience by searching a hidden collection: add <code>&lt;input type="hidden" name="dc" value="INSERT_COLLECTION_ID_#" /&gt;</code>, as above, but make sure the collection display is set to OFF.
+..<em> Provide <strong>options</strong> that allow the user to set their search scope from the get-go. For example, <a href="http://lawrenceks.org/">Lawrence, Kansas</a> has developed a nice modern approach to radio buttons.
+..</em> Pass a <strong>site limit parameter</strong> from your search box: add <code>&lt;input type="hidden" name="sitelimit" id="sitelimit" value="http://www.agency.gov/limittothisfolder"&gt;</code> to your form code.</li>
+<li>The <strong>API key</strong> for displaying search results on your own site is available under <code>[DigitalGov Search](/index.html) &gt; [Admin Center](https://search.usa.gov/sites/) &gt; YourSite &gt; Activate &gt; API Access Key</code>. We recommend you <strong>use the hosted results page</strong> whenever possible, to take advantage of all of the features of our service.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/training"><span class="label label-info">training</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/blog/power-users-recap.html">
+        <time datetime="2015-04-26">April 26, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/content-overview.html">How to Add Your Content to Our Indexes: An Overview</a>
     </h1>
     
@@ -91,7 +199,7 @@
 
 <p>If you don't like the default web results, you can choose to use another index. Options follow.</p>
 
-<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can fetch and index your all of web site's content directly. Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#x73;&#101;&#97;&#114;&#x63;&#104;&#64;&#115;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#100;&#105;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;">&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#46;&#100;&#x69;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;</a> and we'll work with you to determine the best way for you to tell us about your content.</p>
+<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can fetch and index your all of web site's content directly. Email us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#115;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#117;&#112;&#112;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#x67;&#105;&#116;&#97;&#108;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#118;">&#x73;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#100;&#105;&#x67;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#x76;</a> and we'll work with you to determine the best way for you to tell us about your content.</p>
 
 <p><strong>Option 2. Buy and Use Google Site Search.</strong> If you already have (or plan to purchase), <a href="https://www.google.com/work/search/products/gss.html">Google Site Search</a>, we'll send a searcher's query to the search index you've provided and we'll render the results within our search results page.</p>
 
@@ -166,6 +274,113 @@
       
       <a href="/manual/content-overview.html">
         <time datetime="2015-04-16">April 16, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/clicks.html">How to Analyze Your Clicks</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Clicks</p>
+
+<p>The Clicks page reports on the number of times a unique searcher clicked on one of your pages within the search results for a particular query.</p>
+
+<p>Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.</p>
+
+<p>Data start from the time your agency started using our service (but no further back than 2009).</p>
+
+<h2>Top Clicks</h2>
+
+<p><strong><em>Top 1,000.</em></strong> You'll see a list, in frequency order, of top 1,000 most popular clicks for your selected time period.</p>
+
+<p>For example, below are the top 10 clicked URLs for USA.gov in August 2013.</p>
+
+<ol>
+<li>www.usajobs.gov</li>
+<li>travel.state.gov/visa/immigrants/types/types_1322.html</li>
+<li>www.usa.gov/shopping/shopping.shtml</li>
+<li>www.usa.gov/Citizen/Topics/Government-Unclaimed-Money.shtml</li>
+<li>www.annualcreditreport.com/</li>
+<li>www.travel.state.gov/passport/passport_1738.html</li>
+<li>www.ssa.gov</li>
+<li>travel.state.gov/visa/immigrants/types/types_1318.html</li>
+<li>www.usajobs.gov/</li>
+<li>travel.state.gov/passport/renew/renew_833.html</li>
+</ol>
+
+
+<h2>Download Details</h2>
+
+<p>You can download a detailed CSV (comma separated values) file for any clicked URL. There's one line for each time this URL was clicked. This CSV file gives you access to the raw click logs, including:</p>
+
+<ul>
+<li>The date and time of the click,</li>
+<li>The clicked URL (It is embedded in the request URL. Look for the text following ‘u=’.) and its position on the page,</li>
+<li>Where the person was when they ran the search and the search term used,</li>
+<li>The modules loaded in response to the query (Our <a href="/manual/module-codes.html">Module Codes</a> tip provides a key of the codes and names.), and</li>
+<li>The kind of device and browser they were using.</li>
+</ul>
+
+
+<h2>Click Queries &amp; Query Clicks</h2>
+
+<p>Select the hyperlinked number in the # of Clicks column to view the top queries that led to a click for each URL.</p>
+
+<p>If you click on the first-listed <em>www.usajobs.gov</em> in the example above, you'll see that the top queries leading to a click on that URL are:</p>
+
+<ol>
+<li>jobs</li>
+<li>jobs openings</li>
+<li>usa jobs</li>
+<li>employment</li>
+<li>job search</li>
+</ol>
+
+
+<p>From this list of top queries leading to a click, you'll be able select the hyperlinked number in the # of Clicks column to view the top clicks for each query.</p>
+
+<p>If you click on the fourth-listed <em>employment</em> in the example above, you'll see that the the top URLs clicked for that query are:</p>
+
+<ol>
+<li>www.usajobs.gov</li>
+<li>www.usajobs.gov/JobSearch/Search/GetResults</li>
+<li>www.bls.gov/ces</li>
+<li>www.cdc.gov/employment</li>
+</ol>
+
+
+<p>You can loop through or drill down into this list for any set of clicks and queries.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and clicks each month. The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site in the past day or so.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/clicks"><span class="label label-info">clicks</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/clicks.html">
+        <time datetime="2015-03-26">March 26, 2015</time>
       </a>
     </div>
     </article>
@@ -361,113 +576,6 @@
  
     
     <h1>
-      <a href="/manual/clicks.html">How to Analyze Your Clicks</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Clicks</p>
-
-<p>The Clicks page reports on the number of times a unique searcher clicked on one of your pages within the search results for a particular query.</p>
-
-<p>Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.</p>
-
-<p>Data start from the time your agency started using our service (but no further back than 2009).</p>
-
-<h2>Top Clicks</h2>
-
-<p><strong><em>Top 1,000.</em></strong> You'll see a list, in frequency order, of top 1,000 most popular clicks for your selected time period.</p>
-
-<p>For example, below are the top 10 clicked URLs for USA.gov in August 2013.</p>
-
-<ol>
-<li>www.usajobs.gov</li>
-<li>travel.state.gov/visa/immigrants/types/types_1322.html</li>
-<li>www.usa.gov/shopping/shopping.shtml</li>
-<li>www.usa.gov/Citizen/Topics/Government-Unclaimed-Money.shtml</li>
-<li>www.annualcreditreport.com/</li>
-<li>www.travel.state.gov/passport/passport_1738.html</li>
-<li>www.ssa.gov</li>
-<li>travel.state.gov/visa/immigrants/types/types_1318.html</li>
-<li>www.usajobs.gov/</li>
-<li>travel.state.gov/passport/renew/renew_833.html</li>
-</ol>
-
-
-<h2>Download Details</h2>
-
-<p>You can download a detailed CSV (comma separated values) file for any clicked URL. There's one line for each time this URL was clicked. This CSV file gives you access to the raw click logs, including:</p>
-
-<ul>
-<li>The date and time of the click,</li>
-<li>The clicked URL (It is embedded in the request URL. Look for the text following ‘u=’.) and its position on the page,</li>
-<li>Where the person was when they ran the search and the search term used,</li>
-<li>The modules loaded in response to the query (Our <a href="/manual/module-codes.html">Module Codes</a> tip provides a key of the codes and names.), and</li>
-<li>The kind of device and browser they were using.</li>
-</ul>
-
-
-<h2>Click Queries &amp; Query Clicks</h2>
-
-<p>Select the hyperlinked number in the # of Clicks column to view the top queries that led to a click for each URL.</p>
-
-<p>If you click on the first-listed <em>www.usajobs.gov</em> in the example above, you'll see that the top queries leading to a click on that URL are:</p>
-
-<ol>
-<li>jobs</li>
-<li>jobs openings</li>
-<li>usa jobs</li>
-<li>employment</li>
-<li>job search</li>
-</ol>
-
-
-<p>From this list of top queries leading to a click, you'll be able select the hyperlinked number in the # of Clicks column to view the top clicks for each query.</p>
-
-<p>If you click on the fourth-listed <em>employment</em> in the example above, you'll see that the the top URLs clicked for that query are:</p>
-
-<ol>
-<li>www.usajobs.gov</li>
-<li>www.usajobs.gov/JobSearch/Search/GetResults</li>
-<li>www.bls.gov/ces</li>
-<li>www.cdc.gov/employment</li>
-</ol>
-
-
-<p>You can loop through or drill down into this list for any set of clicks and queries.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and clicks each month. The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site in the past day or so.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/clicks"><span class="label label-info">clicks</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/clicks.html">
-        <time datetime="2015-03-26">March 26, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
       <a href="/manual/queries.html">How to Analyze Your Queries</a>
     </h1>
     
@@ -575,125 +683,6 @@
  
     
     <h1>
-      <a href="/manual/third-party.html">How to Add JavaScript for Your Third-party Web Services</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > 3rd Party Tracking</p>
-
-<p>Do you want your search results page to run third-party web services such as Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?</p>
-
-<p>Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
-
-<p>Some tips for commonly used third-party web services follow.</p>
-
-<h2>Google Analytics Tip</h2>
-
-<p>Within your Google Analytics account, select the option, <em>Do Track Site Search</em>. Set the query parameter as <em>query</em>. For more information, read Google's tip, <a href="https://support.google.com/analytics/answer/1012264?hl=en&amp;ref_topic=1031951">Set Up and Configure Site Search</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<p>Additionally, if you've requested <a href="cname.html">domain masking</a> and you want to include the analytics for your <em>search.agency.gov</em> subdomain with your main <em>agency.gov</em> domain, you'll need to set your domain in your Google Analytics JavaScript by including <code>_gaq.push(['_setDomainName', 'agency.gov']);</code>.</p>
-
-<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<p>The code you submit should look something like one of the following two scripts.</p>
-
-<h3>Google Analytics Code (Older Format)</h3>
-
-<pre><code> &lt;script type="text/javascript"&gt;
- var _gaq = _gaq || []; 
- _gaq.push(['_setAccount', 'UA-########-1']); 
- _gaq.push(['_trackPageview']);
-
- (function() { 
- var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
- ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
- var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
- })();
- &lt;/script&gt;
-</code></pre>
-
-<h3>Google Analytics Code (Newer Format)</h3>
-
-<pre><code> &lt;script type="text/javascript"&gt;
- (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
- &lt;/script&gt;
-</code></pre>
-
-<h2>Digital Analytics Program Tip</h2>
-
-<p>Does your federal agency participate in the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> (DAP)?  You don't need to do anything. We're already fully integrated with DAP.</p>
-
-<h2>ForeSee Tip</h2>
-
-<p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
-
-<ol>
-<li><p>Email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#x73;&#101;&#97;&#x72;&#99;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#x67;&#111;&#118;&#x2e;&#103;&#111;&#118;">&#115;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#x6f;&#118;</a> to <a href="cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
-<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
-
-<p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
-
-<p> <strong>and replace it with =></strong> 'files': '//www.youragency.gov/fsrscripts/',</p>
-
-<p> <em>(Or, find => 'files': '/foresee/', and replace it with => 'files': '//www.youragency/foresee/',)</em></p>
-
-<p> in the following five files.</p>
-
-<ul>
-<li>foresee-trigger.js</li>
-<li>foresee-tracker.js</li>
-<li>foresee-alive.js</li>
-<li>foresee-qualifier.js</li>
-<li>foresee-test.js</li>
-</ul>
-</li>
-<li><p>Submit your foresee-trigger.js via our Admin Center. It should look something like the following script. <code>&lt;script type="text/javascript" src="http://www.youragency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;</code></p></li>
-<li><p>We'll send you an email to confirm that we've set up both your CNAME and added the script for your foresee-trigger.js file.</p></li>
-</ol>
-
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> We use Google Analytics Web analytics software&mdash;our own tag plus the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag&mdash;by default. Email us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#112;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#x67;&#111;&#x76;">&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#112;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#108;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#118;</a> if you'd like to opt out. Learn more about our <a href="http://www.digitalgov.gov/about/policies/">site policies</a> and <a href="../tos.html">terms of service</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
-      
-      <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
-      
-      <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
-      
-      <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/third-party.html">
-        <time datetime="2015-02-11">February 11, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
       <a href="/blog/go-live.html">A Punch List to Go Live with DigitalGov Search</a>
     </h1>
     
@@ -778,58 +767,90 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
  
     
     <h1>
-      <a href="/manual/display-overview.html">How to Select the Options that Appear on Your Results Page</a>
+      <a href="/manual/third-party.html">How to Add JavaScript for Your Third-party Web Services</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Display > Display Overview</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > 3rd Party Tracking</p>
 
-<h2>Facets</h2>
+<p>Do you want your search results page to run third-party web services such as Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?</p>
 
-<p><strong>Label.</strong> Determine if you want to include a heading for your facets. If you want a heading, type your label in the label field. Keep your label short (15 or fewer characters) and consistent with the options you're listing. If you don't want a heading, leave the label field blank.</p>
+<p>Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
 
-<ul>
-<li>Without heading&mdash;See the sample results page below that shows the facets without a heading displayed for a <a href="http://search.whitehouse.gov/search?affiliate=wh&amp;query=jobs">search on <em>jobs</em> on WhiteHouse.gov</a>.</li>
-<li>With heading&mdash;See the sample results page below that shows the facets with a heading, labeled Search, displayed for a <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=passport">search on <em>passport</em> on USA.gov</a>.</li>
-</ul>
+<p>Some tips for commonly used third-party web services follow.</p>
 
+<h2>Google Analytics Tip</h2>
 
-<p><strong>On/off options for facets.</strong> Select which facets you'd like to appear on your results page. Turn an option on to allow searchers to see it. Turn an option on or off at any time.</p>
+<p>Within your Google Analytics account, select the option, <em>Do Track Site Search</em>. Set the query parameter as <em>query</em>. For more information, read Google's tip, <a href="https://support.google.com/analytics/answer/1012264?hl=en&amp;ref_topic=1031951">Set Up and Configure Site Search</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
 
-<p>Type over the text in the Name field to edit a facet's display name. Keep each name short (15 or fewer characters) and consistent with the content you're searching. Click on the hyperlink in the Source field to update the facet's source content. Hover over the icon with three horizontal lines on the left to change the order.</p>
+<p>Additionally, if you've requested <a href="cname.html">domain masking</a> and you want to include the analytics for your <em>search.agency.gov</em> subdomain with your main <em>agency.gov</em> domain, you'll need to set your domain in your Google Analytics JavaScript by including <code>_gaq.push(['_setDomainName', 'agency.gov']);</code>.</p>
 
-<h2>Modules</h2>
+<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
 
-<p><strong>On/off options for modules.</strong> Turn on a module to allow searchers to see inline, contextually relevant results for selected content sources based on keyword matches with relevant queries. There are eight types of modules.</p>
+<p>The code you submit should look something like one of the following two scripts.</p>
+
+<h3>Google Analytics Code (Older Format)</h3>
+
+<pre><code> &lt;script type="text/javascript"&gt;
+ var _gaq = _gaq || []; 
+ _gaq.push(['_setAccount', 'UA-########-1']); 
+ _gaq.push(['_trackPageview']);
+
+ (function() { 
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
+ })();
+ &lt;/script&gt;
+</code></pre>
+
+<h3>Google Analytics Code (Newer Format)</h3>
+
+<pre><code> &lt;script type="text/javascript"&gt;
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ &lt;/script&gt;
+</code></pre>
+
+<h2>Digital Analytics Program Tip</h2>
+
+<p>Does your federal agency participate in the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> (DAP)?  You don't need to do anything. We're already fully integrated with DAP.</p>
+
+<h2>ForeSee Tip</h2>
+
+<p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li><p><strong>News.</strong> This option only appears after you've told us about your <a href="/manual/rss.html">RSS</a> feeds. When a searcher's query matches the title or description of an RSS article published within the last year, the article appears in the News module. Up to three articles are displayed. Type over the default name, News, in the Name field to edit the display name.</p></li>
-<li><p><strong>Videos.</strong> This option only appears after you've told us about your <a href="/manual/youtube.html">YouTube</a> channel. When a searcher's query matches the metadata of a video published within the 13 months, the video appears in the Videos module. One inline video is displayed with a link to see more videos for the searcher's query.</p></li>
-<li><p><strong>Job openings.</strong> When a searcher's query matches the text of a job opening published by your agency on USAJobs or NeoGov, the job appears in the Job Openings module. Up to three job openings are displayed. For more information, including a screenshot, read our post <a href="/manual/govbox-jobs.html">Help Searchers Find Jobs</a>.</p></li>
-<li><p><strong><em>Federal Register</em> documents.</strong> When a searcher's query matches the text of a notice or rule published by your agency in the <em>Federal Register</em>, the document appears in the <em>Federal Register</em> module. Up to three documents are displayed. For more information, including a screenshot, read our post <a href="/manual/govbox-federal-register.html">Help Searchers Find Federal Register Documents</a>.</p></li>
-<li><p><strong>Related searches.</strong> Help visitors better define the focus of their search by offering them searches related to their current search term. Suggestions are derived from the searches performed on your website. Up to five searches related to your visitors' original search are displayed and are updated in near real time. See, for example, the sample results page below that shows related searches displayed for a <a href="http://search.usa.gov/search?affiliate=accesswashington&amp;query=tacoma">search on <em>tacoma</em> on Access Washington</a>.</p></li>
-<li><p><strong>Health topics.</strong> Help searchers find high-quality, authoritative health information from MedlinePlus and ClinicalTrials.gov. For more information, including a screenshot, read our post <a href="/manual/govbox-health.html">Help Searchers Find Health Information</a>.</p></li>
-<li><p><strong>Recent tweets.</strong> This option only appears after you've told us about your <a href="/manual/twitter.html">Twitter</a> account. When a searcher's query matches the text of a tweet published within the past three days, the tweet appears in the Recent Tweets module.</p></li>
-<li><p><strong>Type-ahead search.</strong> Help searchers refine their query by displaying type-ahead search suggestions as a list in the search box. The list forms as a searcher begins to type in the search box. Suggestions are listed in order of most popular (that is, most searched). They're updated every few seconds. See, for example, the suggestions as you type di... on <a href="http://search.socialsecurity.gov/search?affiliate=ssa&amp;query=names">SocialSecurity.gov's search results page</a>.</p></li>
+<li><p>Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#115;&#101;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#112;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;">&#115;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#118;&#46;&#103;&#111;&#x76;</a> to <a href="cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
+<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
+
+<p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
+
+<p> <strong>and replace it with =></strong> 'files': '//www.youragency.gov/fsrscripts/',</p>
+
+<p> <em>(Or, find => 'files': '/foresee/', and replace it with => 'files': '//www.youragency/foresee/',)</em></p>
+
+<p> in the following five files.</p>
+
+<ul>
+<li>foresee-trigger.js</li>
+<li>foresee-tracker.js</li>
+<li>foresee-alive.js</li>
+<li>foresee-qualifier.js</li>
+<li>foresee-test.js</li>
+</ul>
+</li>
+<li><p>Submit your foresee-trigger.js via our Admin Center. It should look something like the following script. <code>&lt;script type="text/javascript" src="http://www.youragency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;</code></p></li>
+<li><p>We'll send you an email to confirm that we've set up both your CNAME and added the script for your foresee-trigger.js file.</p></li>
 </ol>
 
 
-<h2>Related Sites</h2>
-
-<p>Help visitors find content relevant to their search query that resides on other websites, such as the site for your parent organization or your Spanish-language site. When searchers click on the link to the related site, they see search results for their query on the related site.</p>
-
-<p>Enter the <a href="/manual/settings.html">site handle</a> for one of your other DigitalGov Search sites. Enter the text you'd like searchers to see for the link to the related site. Create two entries, one from the first site to the second and vice versa, if you'd like a reciprocal link.</p>
-
-<p>See, for example, the Español option displayed on <a href="http://search.usa.gov/search?query=venezuela&amp;affiliate=usagov">USA.gov for a search on <em>venezuela</em></a>. When searchers click this option, they see results for <a href="http://search.usa.gov/search?query=venezuela&amp;affiliate=gobiernousa"><em>venezuela</em> on GobiernoUSA.gov</a>.</p>
-
 <hr />
 
-<p><strong><em>Did you know?</em></strong>  Searchers may narrow results by time period for any <a href="/manual/rss.html">RSS</a> feeds. See, for example, results for a <a href="http://search.whitehouse.gov/search/news?affiliate=wh&amp;channel=6&amp;m=false&amp;query=jobs&amp;tbs=w">search on <em>jobs</em> narrowed to press articles in the last week on WhiteHouse.gov</a>.</p>
-
-<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#115;&#101;&#97;&#114;&#99;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#118;">&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#118;&#46;&#x67;&#111;&#118;</a> to if you want to customize these display names.</p>
-
-<p><strong><em>Did you know?</em></strong> You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our <a href="/manual/code.html">JavaScript snippet</a> before the closing <code>&lt;body&gt;</code> tag on your HTML web pages.</p>
+<p><strong><em>Did you know?</em></strong> We use Google Analytics Web analytics software&mdash;our own tag plus the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag&mdash;by default. Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#118;">&#115;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#x61;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#118;</a> if you'd like to opt out. Learn more about our <a href="http://www.digitalgov.gov/about/policies/">site policies</a> and <a href="../tos.html">terms of service</a>.</p>
 
     </div>
 
@@ -837,13 +858,15 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       
       <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
       
-      <a href="/tagged/manage-display"><span class="label label-info">manage-display</span></a>
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
       
-      <a href="/tagged/facets"><span class="label label-info">facets</span></a>
+      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
       
-      <a href="/tagged/modules"><span class="label label-info">modules</span></a>
+      <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
       
-      <a href="/tagged/related-sites"><span class="label label-info">related-sites</span></a>
+      <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
+      
+      <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
       
     </div>
    <div class='time'>
@@ -853,7 +876,48 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       
       
       
-      <a href="/manual/display-overview.html">
+      <a href="/manual/third-party.html">
+        <time datetime="2015-02-11">February 11, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/govbox-federal-register.html">Help Searchers Find Federal Register Documents</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Federal agencies publish notices, proposed rules, and final rules in the <a href="https://www.federalregister.gov"><em>Federal Register</em></a>. To make it easier for citizens and communities to understand the regulatory process and to participate in government decision-making, we created the <em>Federal Register</em> module to help searchers find these notices and rules.</p>
+
+<p>This module offers direct access to <em>Federal Register</em> documents. We pull the data from the <a href="https://www.federalregister.gov/learn/developers">Federal Register API</a> to provide timely information across all documents.</p>
+
+<p>If you <a href="/manual/display-overview.html">opt to show the Federal Register</a> module, searchers on your site can readily find the notices and rules that your agency has published in the <em>Federal Register</em>, as shown in the sample below for a search on <a href="http://search.nih.gov/search?affiliate=nih&amp;query=autoimmune+diseases"><em>autoimmune diseases</em> on NIH.gov</a>.</p>
+
+<p><a href="http://search.nih.gov/search?affiliate=nih&amp;query=autoimmune+diseases"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/govbox-fr.png" title="Federal Register Module on NIH.gov" alt="Federal Register Module on NIH.gov" /></a></p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/display"><span class="label label-info">display</span></a>
+      
+      <a href="/tagged/modules"><span class="label label-info">modules</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/govbox-federal-register.html">
         <time datetime="2014-12-17">December 17, 2014</time>
       </a>
     </div>
@@ -1104,70 +1168,6 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
       
       
       <a href="/manual/rss.html">
-        <time datetime="2014-12-17">December 17, 2014</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/govbox-jobs.html">Help Searchers Find Jobs</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>One of the most common search tasks is to look for current job openings. We created the Jobs module to help searchers quickly find relevant jobs.</p>
-
-<p>When you <a href="/manual/display-overview.html">turn on the Job Openings</a> module, searchers looking for jobs on your site will see up to three relevant jobs listings on your results page.</p>
-
-<h2>Federal Government</h2>
-
-<ul>
-<li><strong>Federal Cross-Agency Portals.</strong> If your website is a federal cross-agency portal (e.g., USA.gov), the Job Openings module will return relevant, location- and keyword-matched job openings <em>across all federal agencies</em>.</li>
-<li><strong>Federal Department Websites.</strong> If your website is affiliated with a specific federal department (e.g., Department of Commerce), the Job Openings module will return relevant, location- and keyword-matched job openings <em>across all agencies within your department</em>.</li>
-<li><strong>Federal Agency or Office Websites.</strong> If your website is affiliated with a specific federal agency (e.g., NOAA) or office (e.g, National Ocean Service), the Job Openings module will return relevant, location-and keyword-matched job openings <em>at your agency</em>.</li>
-</ul>
-
-
-<p>Searchers will also see a direct link to <a href="https://www.usajobs.gov">USAJobs.gov</a> for all current job openings (specific to your department or agency, if applicable), as shown in the sample below for a search on <a href="http://search.doi.gov/search?utf8=%E2%9C%93&amp;affiliate=doi.gov&amp;query=jobs" title=""><em>jobs</em></a> on DOI.gov.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/govbox-jobs.png" title="Search results for jobs on DOI.gov" alt="Search results for jobs on DOI.gov" /></p>
-
-<h2>State and Local Government</h2>
-
-<p>If your website is a state or local government site that uses both DigitalGov Search and NeoGov (e.g., Michigan.gov), the Job Openings module will return relevant, location- and keyword-matched job openings <em>across your agency</em>.</p>
-
-<p>Searchers will also see a direct link to your NeoGov page for all current job openings specific to your agency, as shown in the sample below for a search on <em><a href="http://search.ci.bloomington.mn.us/search?affiliate=cityofbloomingtonmnsearchresults&amp;query=jobs">jobs</a></em> on the City of Bloomington, MN.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/jobs-bloomington.png" alt="Search results for jobs on ci.bloomington.mn.us" /></p>
-
-<p>Otherwise, the Job Openings module will return relevant, location- and keyword-matched job openings <em>across all federal, state, and local agencies</em>.</p>
-
-<hr />
-
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#115;&#x65;&#x61;&#114;&#99;&#104;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#97;&#108;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#118;">&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#x69;&#103;&#x69;&#x74;&#97;&#108;&#103;&#111;&#118;&#46;&#103;&#x6f;&#118;</a> to let us know where you publish your job openings so that we can include them in the Job Openings module.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/modules"><span class="label label-info">modules</span></a>
-      
-      <a href="/tagged/jobs"><span class="label label-info">jobs</span></a>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/govbox-jobs.html">
         <time datetime="2014-12-17">December 17, 2014</time>
       </a>
     </div>
