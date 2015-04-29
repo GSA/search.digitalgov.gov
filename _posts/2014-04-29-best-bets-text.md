@@ -10,7 +10,7 @@ Do you want to promote a specific web page? Create a Text Best Bet.
 
 A best bet appears above the standard web results when a searcher's query matches the text of its title, description, or keywords.
 
-Text best bets have the same look as standard web results. Up to three relevant best bets are listed under a heading, Recommended by YourSite.
+Text best bets have the same look as standard web results. Up to two relevant best bets are listed under a heading, Recommended by YourSite.
 
 See the sample results page below that shows a text best bet displayed on TSA.gov for a search on *[razors](http://search.usa.gov/search?query=razors&affiliate=tsa.gov)*.
 
@@ -63,7 +63,7 @@ It would *not* display for searches on death, death property, taxes after death,
 
 --- 
 
-***Did you know?*** See also our closely related feature that allows you to create a [Graphics Best Best](/manual/best-bets-graphics.html).
+***Did you know?*** See also our closely related feature that allows you to create a [Graphics Best Best](/manual/best-bets-graphics.html). We recommend creating a graphics best bet&mdashwith or without an image&mdashwhen you have three or more closely related links on a topic.
 
 ***Did you know?*** Analyze the number of impressions and clicks and clickthru rate for each best bet on the [Monthly Reports](/manual/monthly-reports.html) page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.
 
