@@ -83,6 +83,8 @@ Active best bets are shown to searchers on your site. Inactive entries aren't sh
 
 --- 
 
+Watch the recording of our February 2015 webinar [**Straight to the Top: Best Bets in DigitalGov Search**](https://www.youtube.com/embed/WzQocKYK0t4) (55 mins)
+
 ***Did you know?*** See also our closely related feature that allows you to create a [Graphics Best Best](/manual/best-bets-graphics.html). We recommend creating a graphics best bet&mdash;with or without an image&mdash;when you have three or more closely related links on a topic.
 
 ***Did you know?*** Analyze the number of impressions and clicks and clickthru rate for each best bet on the [Monthly Reports](/manual/monthly-reports.html) page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.
