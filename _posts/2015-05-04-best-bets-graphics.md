@@ -11,19 +11,17 @@ Do you want to promote a specific web page or collection of web pages? Create a 
 
 A best bet appears above the standard web results when a searcher's query matches the text of its title, description, or keywords.
 
-Graphics best bets have a one or two-column layout and you can add an image. The most relevant best bet is listed under a heading, {Best Bet Title} by {[Site Name](/manual/settings.html)}.
+Graphics best bets have a one or two-column layout and you can add an image. The most relevant best bet is listed under a heading, Recommended by YourSite.
 
-See the sample results page below that shows a text best bet displayed on [USGS.gov for a search on tsunamis](http://search.usa.gov/search?affiliate=usgs&utf8=%E2%9C%93&query=tsunamis).
+See the sample results page below that shows a text best bet displayed on [USGS.gov for a search on tsunamis](http://search.usa.gov/search?affiliate=usgs&query=tsunamis).
 
-[![Graphics best bet highlighting tsunami links on USGS.gov](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/best-bets-graphics.png "Graphics best bet highlighting tsunami links on USGS.gov")](http://search.usa.gov/search?affiliate=usgs&utf8=%E2%9C%93&query=tsunamis)
+[![Graphics best bet highlighting tsunami links on USGS.gov](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/best-bets-graphics.png "Graphics best bet highlighting tsunami links on USGS.gov")](http://search.usa.gov/search?affiliate=usgs&query=tsunamis)
 
 There are a variety of layouts possible for graphics best bets.
 
-* **One column with a collection of links and an image** displayed on USA.gov for a search on *[wildfires](http://search.usa.gov/search?query=wildfires&affiliate=usa.gov)*. 
-
+* **Two columns with a collection of links and an image** displayed on USA.gov for a search on *[wildfires](http://search.usa.gov/search?query=wildfires&affiliate=usagov)*. 
+* **Two columns with a collection of links only** displayed on USA.gov for a search on *[holidays](http://search.usa.gov/search?query=holidays&affiliate=usagov)*. 
 * **One column with a link to a specific web page and an image** displayed on WhiteHouse.gov for a search on *[jobs](http://search.whitehouse.gov/search?affiliate=wh&query=jobs)*.
-
-* **Two columns with a collection of links only** displayed on USA.gov for a search on *[holidays](http://search.usa.gov/search?query=holidays&affiliate=usa.gov)*. 
 
 ## Add a Graphics Best Bet
 
@@ -43,6 +41,10 @@ There are a variety of layouts possible for graphics best bets.
 
 ## When Searchers See Your Best Bets
 
+For searchers to see a best bet on your site, it must match their query and be relevant and active.
+
+### It Matches Their Query
+
 Searchers see your best bets when their query:
 
 * Matches any or all words in the title,
@@ -53,23 +55,37 @@ Matches are made within, but not across, fields.
 
 A sample best bet entry is below.
 
-**Title:** Estate Tax  
-**Link title 1:** Transfer Property After You Pass Away  
-**Link title 2:** Estate Tax Rights  
-**Link title 3:** Tax Rates  
-**Keyword 1:** death tax  
-**Keyword 2:** inheritance tax  
-**Keyword 3:** fair market value  
-**Keyword 4:** market value  
+    Title: Estate Tax  
+    Link title 1: Transfer Property After You Pass Away  
+    Link title 2: Estate Tax Rights  
+    Link title 3: Tax Rates  
+    Keyword 1: death tax  
+    Keyword 2: inheritance tax  
+    Keyword 3: fair market value  
+    Keyword 4: market value  
 
 This best bet would display for searches on estate tax (exact title match), estate (partial title match), tax on the estate (title match that includes stopwords), estate taxes (title match for singular/plural variant), property tax (partial link title match), propertey tax (link title match with a slight misspelling), and death tax (exact keyword match), among other queries.
 
 It would *not* display for searches on death, death property, taxes after death, fair value, or estate property tax as they're only partial keyword or cross field matches.
+
+### It Is Very Relevant
+
+After we determine best bets match the searcher's query, we determine their relevance and display only the most relevant best bet. Relevance is determined, in order, first by title, then by link titles, and lastly by keywords. Date is used as a tiebreaker if the entries' scores based on the above three factors are equal. 
+
+### It Is Active
+
+We use [color coding](/manual/color-codes.html) to indicate each entry's status. 
+
+| Color | Status | 
+| :------------ | :---------------------------------- |
+| Green&nbsp;&nbsp;&nbsp;  | Active&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+| Yellow   | Inactive |
+| &nbsp; | &nbsp; |
+
+Active best bets are shown to searchers on your site. Inactive entries aren't shown to searchers because they're inactive, expired (by the publish end date), or both.
 
 --- 
 
 ***Did you know?*** See also our closely related feature that allows you to create a [Text Best Best](/manual/best-bets-text.html).
 
 ***Did you know?*** Analyze the number of impressions and clicks and clickthru rate for each best bet on the [Monthly Reports](/manual/monthly-reports.html) page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.
-
-***Did you know?*** Use the color coding in the table on this page to see a best bet's status. Entries with green background shading are active. They're shown to searchers on your site. Entries with yellow background shading aren't shown to searchers because they're inactive, expired (by the publish end date), or both.
