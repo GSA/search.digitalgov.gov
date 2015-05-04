@@ -84,7 +84,7 @@
 
 <p>A best bet appears above the standard web results when a searcher's query matches the text of its title, description, or keywords.</p>
 
-<p>Text best bets have the same look as standard web results. Up to two relevant best bets are listed under a heading, Recommended by YourSite.</p>
+<p>Text best bets have the same look as standard web results. They're listed under a heading, Recommended by YourSite.</p>
 
 <p>See the sample results page below that shows a text best bet displayed on TSA.gov for a search on <em><a href="http://search.usa.gov/search?query=razors&amp;affiliate=tsa.gov">razors</a></em>.</p>
 
@@ -114,6 +114,10 @@
 
 <h2>When Searchers See Your Best Bets</h2>
 
+<p>For searchers to see a best bet on your site, it must match their query and be relevant and active.</p>
+
+<h3>It Matches Their Query</h3>
+
 <p>Searchers see your best bets when their query:</p>
 
 <ul>
@@ -127,24 +131,65 @@
 
 <p>A sample best bet entry is below.</p>
 
-<p><strong>Title:</strong> Estate Tax<br/>
-<strong>Description:</strong> A tax on your right to transfer property after you pass away.<br/>
-<strong>Keyword 1:</strong> death tax<br/>
-<strong>Keyword 2:</strong> inheritance tax<br/>
-<strong>Keyword 3:</strong> fair market value<br/>
-<strong>Keyword 4:</strong> market value</p>
+<pre><code>Title: Estate Tax  
+Description: A tax on your right to transfer property after you pass away.  
+Keyword 1: death tax  
+Keyword 2: inheritance tax  
+Keyword 3: fair market value  
+Keyword 4: market value  
+</code></pre>
 
 <p>This best bet would display for searches on estate tax (exact title match), estate (partial title match), tax on the estate (title match that includes stopwords), estate taxes (title match for singular/plural variant), property tax (partial description match), propertey tax (description match with a slight misspelling), and death tax (exact keyword match), among other queries.</p>
 
 <p>It would <em>not</em> display for searches on death, death property, taxes after death, fair value, or estate property tax as they're only partial keyword or cross field matches.</p>
+
+<h3>It Is Very Relevant</h3>
+
+<p>After we determine best bets match the searcher's query, we determine their relevance and display only the two most relevant best bets. Relevance is determined, in order, first by title, then by description, and lastly by keywords. Date is used as a tiebreaker if the entries' scores based on the above three factors are equal.</p>
+
+<h3>It Is Active</h3>
+
+<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each entry's status.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left"> Color </th>
+<th align="left"> Status </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left"> Green&nbsp;&nbsp;&nbsp;  </td>
+<td align="left"> Active&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> Yellow   </td>
+<td align="left"> Inactive </td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> &nbsp; </td>
+<td align="left"> &nbsp; </td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Active best bets are shown to searchers on your site. Inactive entries aren't shown to searchers because they're inactive, expired (by the publish end date), or both.</p>
 
 <hr />
 
 <p><strong><em>Did you know?</em></strong> See also our closely related feature that allows you to create a <a href="/manual/best-bets-graphics.html">Graphics Best Best</a>. We recommend creating a graphics best bet&mdash;with or without an image&mdash;when you have three or more closely related links on a topic.</p>
 
 <p><strong><em>Did you know?</em></strong> Analyze the number of impressions and clicks and clickthru rate for each best bet on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.</p>
-
-<p><strong><em>Did you know?</em></strong> Use the color coding in the table on this page to see a best bet's status. Entries with green background shading are active. They're shown to searchers on your site. Entries with yellow background shading aren't shown to searchers because they're inactive, expired (by the publish end date), or both.</p>
 
     </div>
 
@@ -165,7 +210,597 @@
       
       
       <a href="/manual/best-bets-text.html">
-        <time datetime="2015-04-29">April 29, 2015</time>
+        <time datetime="2015-05-04">May 4, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/color-codes.html">Key to Color Coding in the Admin Center</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite</p>
+
+<p>We use color coding the Admin Center to indicate the status of a few types of items.</p>
+
+<h2><a href="/manual/users.html">Manage Users</a></h2>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left"> Color </th>
+<th align="left"> Status </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left"> No color&nbsp;&nbsp;&nbsp; </td>
+<td align="left"> Approved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> Yellow  </td>
+<td align="left"> Pending, approval or email verification </td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> Red   </td>
+<td align="left"> Not approved </td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<h2><a href="/manual/rss.html">RSS Feeds</a></h2>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left"> Color </th>
+<th align="left"> Status </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left"> Green&nbsp;&nbsp;&nbsp; </td>
+<td align="left"> Feed indexed, no errors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> Yellow  </td>
+<td align="left"> Pending Indexing </td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> Red   </td>
+<td align="left"> Feed indexed, but error in one or more items </td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> &nbsp; </td>
+<td align="left"> &nbsp; </td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Click on the name of the feed to see more detailed information about its status. Possible error messages follow.</p>
+
+<ul>
+<li>404 Not Found</li>
+<li>Feed looks empty</li>
+<li>Description can't be blank</li>
+<li>Title can't be blank</li>
+<li>Missing link field</li>
+<li>Missing pubDate field</li>
+<li>Link is not a valid URL</li>
+<li>Linked URL does not exist (HTTP 404)</li>
+</ul>
+
+
+<h2>Best Bets: <a href="/manual/best-bets-text.html">Text</a> or <a href="/manual/best-bets-graphics.html">Graphics</a></h2>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left"> Color </th>
+<th align="left"> Status </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left"> Green&nbsp;&nbsp;&nbsp;  </td>
+<td align="left"> Active&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> Yellow   </td>
+<td align="left"> Inactive </td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> &nbsp; </td>
+<td align="left"> &nbsp; </td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Active best bets are shown to searchers on your site. Inactive entries aren't shown to searchers because they're inactive, expired (by the publish end date), or both.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/manage-users"><span class="label label-info">manage-users</span></a>
+      
+      <a href="/tagged/best-bets"><span class="label label-info">best-bets</span></a>
+      
+      <a href="/tagged/rss"><span class="label label-info">rss</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/color-codes.html">
+        <time datetime="2015-05-04">May 4, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/rss.html">How to Add Your RSS Feeds to Our Index</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > RSS</p>
+
+<p>Would you like searchers to be able to search your news or multimedia content? Would you like them to be able to narrow results by date?</p>
+
+<p>Tell us the locations and names of your RSS feeds. We index all new and updated content on your feeds within minutes.</p>
+
+<h2>Step 1. Tell Us About Your RSS Feeds</h2>
+
+<p>We love feeds! Tell us about <em>all</em> of your RSS feeds, even if you don't opt to show them in step 2 below. Feeds are the fastest and most reliable way for us to learn about your new and updated content.</p>
+
+<p>Select the option to add a new RSS feed.</p>
+
+<h3>Name</h3>
+
+<p>Create a name for the feed. Within this 'bucket' you can list a single RSS feed or many feeds. For example, you can opt to list all of your agency's press releases separately (such as Police News, Fire News, EMS News, etc.) or you can list all three under one general name (such as News).</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/rss.png" alt="Add an RSS Feed" /></p>
+
+<h3>Feed type</h3>
+
+<p>Select the type of feed. The default option is RSS (for text content like press releases or blogs). Change it to <a href="http://www.rssboard.org/media-rss">media RSS</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> for multimedia content like images and videos.</p>
+
+<p>Each item within a RSS feed must include a title, link, description, and publication date.</p>
+
+<p>Each item within a media RSS feed must also include both a <a href="http://www.rssboard.org/media-rss#media-content">media:content URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a direct URL to the media object and a <a href="http://www.rssboard.org/media-rss#media-thumbnails">media:thumbnail URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a URL to the object's thumbnail.</p>
+
+<p>Any items missing a required element won't display in your search results.</p>
+
+<h3>Sample RSS Item with All Required Elements</h3>
+
+<pre><code>&lt;item&gt;
+&lt;title&gt;
+Statement from Agriculture Secretary Tom Vilsack Regarding World Organization for Animal Health (OIE) Upgrade of United States&amp;apos; BSE Risk Status
+&lt;/title&gt;
+&lt;pubDate&gt;May 29, 2013 00:00:00 CDT&lt;/pubDate&gt;
+&lt;link&gt;
+http://www.usda.gov/wps/portal/usda/usdahome?contentid=2013/05/0106.xml&amp;contentidonly=true
+&lt;/link&gt;
+&lt;description&gt;
+WASHINGTON, May 29, 2013–Agriculture Secretary Tom Vilsack made the following statement about notification received today from the World Organization for Animal Health (OIE) upgrading the United States&amp;apos; risk classification for bovine spongiform encephalopathy (BSE) to negligible risk:
+&lt;/description&gt;
+&lt;/item&gt;
+</code></pre>
+
+<h3>Sample Media RSS Item with All Required Elements</h3>
+
+<pre><code>&lt;item&gt;
+&lt;title type="html"&gt;
+&lt;![CDATA[ Great Lakes Beach Health ]]&gt;
+&lt;/title&gt;
+&lt;link&gt;
+http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
+&lt;/link&gt;
+&lt;guid&gt;
+http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
+&lt;/guid&gt;
+&lt;pubDate&gt;Fri, 24 May 2013 00:00:00 EDT&lt;/pubDate&gt;
+&lt;media:description type="html"&gt;
+&lt;![CDATA[ As schools close for the year and summer weather beckons, many recreationalists head to the Great Lakes' public beaches. However, these coastal areas can become  contaminated with disease-causing bacteria that threaten public health, disrupt water   recreation, and pay a toll on the Great Lakes economies that depend on summer tourism. ]]&gt;
+&lt;/media:description&gt;
+&lt;media:thumbnail url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/thumbs/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
+&lt;media:content type="" url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/large/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
+&lt;/item&gt;
+</code></pre>
+
+<h2>Step 2. Opt to Show as a Facet, Inline Module, or Both</h2>
+
+<p>Allow searchers to see inline results for the three most recent, relevant RSS results <em>across all of your RSS feeds</em> by turning on the News module on the <a href="/manual/display-overview.html">Display Overview</a> page. You can also edit the default title, News, on the Display Overview page.</p>
+
+<p>Allow searchers to narrow results to a specific feed by turning on the option to show the facet on the <a href="/manual/display-overview.html">Display Overview</a> page. To ensure searchers don't encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a facet.</p>
+
+<h2>Step 3. Check Your Search Results Page</h2>
+
+<p><strong>Module.</strong> If you opted to show your RSS feed(s) as a module, searchers will see inline news results. It'll will highlight the three most recent, relevant results across all of your RSS feeds.</p>
+
+<p><strong>Facet.</strong> If you opted to show your RSS feed(s) as a facet, searchers can narrow their results to see your RSS-based results only.</p>
+
+<p>Within the RSS-based results, searchers can opt to limit results to the last hour, day, week, month, or year, or they can set a custom date range. They also can sort results in descending order by relevance (best match first) or date (most recent first).</p>
+
+<h2>Step 4. Check the Status of Your Feeds</h2>
+
+<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each feed's status.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/rss-status.png" title="RSS status messages and colors" alt="RSS status messages and colors" /></p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left"> Color </th>
+<th align="left"> Status </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left"> Green&nbsp;&nbsp;&nbsp; </td>
+<td align="left"> Feed indexed, no errors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> Yellow </td>
+<td align="left"> Pending Indexing </td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> Red </td>
+<td align="left"> Feed indexed, but error in one or more items </td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> &nbsp; </td>
+<td align="left"> &nbsp; </td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Click on the name of any feed with an error to see more detailed information about it. Possible error messages follow.</p>
+
+<ul>
+<li>404 Not Found</li>
+<li>Feed looks empty</li>
+<li>Description can't be blank</li>
+<li>Title can't be blank</li>
+<li>Missing link field</li>
+<li>Missing pubDate field</li>
+<li>Link is not a valid URL</li>
+<li>Linked URL does not exist (HTTP 404)</li>
+</ul>
+
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
+
+<ul>
+<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
+<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+<li><a href="http://atomenabled.org/developers/syndication/">Atom syndication format</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+</ul>
+
+
+<p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="https://search.usa.gov/sites/">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don't need to coordinate with us.</p>
+
+<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your feed.</p>
+
+<p>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab. Change the form action to <code>action="http://search.usa.gov/search/news</code> and add the following line to limit the results to your feed.</p>
+
+<p><code>&lt;input type="hidden" name="channel" value="###"&gt;</code></p>
+
+<p>The value is the number for your feed ID, which is visible in the URL when you edit your feed in the Admin Center.</p>
+
+<p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your RSS feeds.</p>
+
+<p><strong><em>Did you know?</em></strong> When you <a href="/manual/youtube.html">provide us with your YouTube channel</a>, we'll automatically index the RSS feed for your YouTube channel.</p>
+
+<p><strong><em>Did you know?</em></strong> For any feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by these facets in the <a href="/manual/display-overview.html">sidebar</a> on the results page.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/rss"><span class="label label-info">rss</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/rss.html">
+        <time datetime="2015-05-04">May 4, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/best-bets-graphics.html">How to Highlight Graphics Best Bets</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Best Bets: Graphics</p>
+
+<p>Do you want to promote a specific web page or collection of web pages? Create a Graphics Best Bet.</p>
+
+<p>A best bet appears above the standard web results when a searcher's query matches the text of its title, description, or keywords.</p>
+
+<p>Graphics best bets have a one or two-column layout and you can add an image. The most relevant best bet is listed under a heading, Recommended by YourSite.</p>
+
+<p>See the sample results page below that shows a text best bet displayed on <a href="http://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis">USGS.gov for a search on tsunamis</a>.</p>
+
+<p><a href="http://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/best-bets-graphics.png" title="Graphics best bet highlighting tsunami links on USGS.gov" alt="Graphics best bet highlighting tsunami links on USGS.gov" /></a></p>
+
+<p>There are a variety of layouts possible for graphics best bets.</p>
+
+<ul>
+<li><strong>Two columns with a collection of links and an image</strong> displayed on USA.gov for a search on <em><a href="http://search.usa.gov/search?query=wildfires&amp;affiliate=usagov">wildfires</a></em>.</li>
+<li><strong>Two columns with a collection of links only</strong> displayed on USA.gov for a search on <em><a href="http://search.usa.gov/search?query=holidays&amp;affiliate=usagov">holidays</a></em>.</li>
+<li><strong>One column with a link to a specific web page and an image</strong> displayed on WhiteHouse.gov for a search on <em><a href="http://search.whitehouse.gov/search?affiliate=wh&amp;query=jobs">jobs</a></em>.</li>
+</ul>
+
+
+<h2>Add a Graphics Best Bet</h2>
+
+<p><strong><em>Title.</em></strong> Add the title (up to 255 characters) of the web page or collection of web pages that you want to promote. The title is visible to searchers.</p>
+
+<p><strong><em>Title URL.</em></strong> Add the URL of the primary web page that you want to promote. This field is optional.</p>
+
+<p><strong><em>Status and Publish Dates.</em></strong> The default start date is the day on which you create the best bet. The default end date is null, so it will stay up forever until you decide to take it down. You can opt to set a start and end date to control to specify other start and end dates. You can also opt to set its status as either active or inactive.</p>
+
+<p><strong><em>Layout.</em></strong> Select a one- or two-column layout.</p>
+
+<p><strong><em>Image.</em></strong> You can opt to add an image.</p>
+
+<p><strong><em>Keywords.</em></strong> Keywords are optional and they're <em>not</em> visible to searchers. Add specific words or phrases that aren't already included in the visible title or link titles. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.</p>
+
+<p><strong><em>Links.</em></strong> Enter a title and URL for each link. There is no limit on the number of links. Use the three horizontal bars on the left to rearrange the display order of the links. If you select a two-column layout above, links are displayed in newspaper-style format, with an automatic break for columns depending on how many links you list. The link titles are visible to searchers.</p>
+
+<h2>When Searchers See Your Best Bets</h2>
+
+<p>For searchers to see a best bet on your site, it must match their query and be relevant and active.</p>
+
+<h3>It Matches Their Query</h3>
+
+<p>Searchers see your best bets when their query:</p>
+
+<ul>
+<li>Matches any or all words in the title,</li>
+<li>Matches any of all words in the link titles, or</li>
+<li>Matches a keyword exactly.</li>
+</ul>
+
+
+<p>Matches are made within, but not across, fields.</p>
+
+<p>A sample best bet entry is below.</p>
+
+<pre><code>Title: Estate Tax  
+Link title 1: Transfer Property After You Pass Away  
+Link title 2: Estate Tax Rights  
+Link title 3: Tax Rates  
+Keyword 1: death tax  
+Keyword 2: inheritance tax  
+Keyword 3: fair market value  
+Keyword 4: market value  
+</code></pre>
+
+<p>This best bet would display for searches on estate tax (exact title match), estate (partial title match), tax on the estate (title match that includes stopwords), estate taxes (title match for singular/plural variant), property tax (partial link title match), propertey tax (link title match with a slight misspelling), and death tax (exact keyword match), among other queries.</p>
+
+<p>It would <em>not</em> display for searches on death, death property, taxes after death, fair value, or estate property tax as they're only partial keyword or cross field matches.</p>
+
+<h3>It Is Very Relevant</h3>
+
+<p>After we determine best bets match the searcher's query, we determine their relevance and display only the most relevant best bet. Relevance is determined, in order, first by title, then by link titles, and lastly by keywords. Date is used as a tiebreaker if the entries' scores based on the above three factors are equal.</p>
+
+<h3>It Is Active</h3>
+
+<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each entry's status.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left"> Color </th>
+<th align="left"> Status </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left"> Green&nbsp;&nbsp;&nbsp;  </td>
+<td align="left"> Active&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> Yellow   </td>
+<td align="left"> Inactive </td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> &nbsp; </td>
+<td align="left"> &nbsp; </td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Active best bets are shown to searchers on your site. Inactive entries aren't shown to searchers because they're inactive, expired (by the publish end date), or both.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> See also our closely related feature that allows you to create a <a href="/manual/best-bets-text.html">Text Best Best</a>.</p>
+
+<p><strong><em>Did you know?</em></strong> Analyze the number of impressions and clicks and clickthru rate for each best bet on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/best-bets"><span class="label label-info">best-bets</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/best-bets-graphics.html">
+        <time datetime="2015-05-04">May 4, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/users.html">How to Manage Your Site's Users</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Manage Users</p>
+
+<p>After you've <a href="https://search.usa.gov/sites/">logged in</a> and <a href="/manual/add-site.html">added a site</a> with your official government email, you can add your coworkers to your site.</p>
+
+<p>You can add anyone you'd like to your site&mdash;with or without a .gov or .mil email address.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/user.png" alt="Add a user" /></p>
+
+<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each user's status.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left"> Color </th>
+<th align="left"> Status </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left"> No color&nbsp;&nbsp;&nbsp; </td>
+<td align="left"> Approved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> Yellow  </td>
+<td align="left"> Pending, approval or email verification </td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> Red   </td>
+<td align="left"> Not approved </td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> We recommend adding a generic email account (such as webteam@agency.gov) as a user to ensure ongoing access to your account as individuals come and go.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
+      
+      <a href="/tagged/users"><span class="label label-info">users</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/users.html">
+        <time datetime="2015-05-04">May 4, 2015</time>
       </a>
     </div>
     </article>
@@ -242,7 +877,7 @@
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#115;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#116;&#46;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#118;">&#115;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#118;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#114;&#x74;&#46;&#x64;&#105;&#103;&#105;&#116;&#97;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;">&#115;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#46;&#x64;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#x76;</a>.</p>
 
     </div>
 
@@ -437,7 +1072,7 @@
 
 <p>If you don't like the default web results, you can choose to use another index. Options follow.</p>
 
-<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can fetch and index your all of web site's content directly. Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#105;&#103;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#100;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#118;</a> and we'll work with you to determine the best way for you to tell us about your content.</p>
+<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can fetch and index your all of web site's content directly. Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#116;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#115;&#117;&#112;&#x70;&#111;&#114;&#116;&#46;&#100;&#x69;&#103;&#105;&#116;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#x6f;&#x76;</a> and we'll work with you to determine the best way for you to tell us about your content.</p>
 
 <p><strong>Option 2. Buy and Use Google Site Search.</strong> If you already have (or plan to purchase), <a href="https://www.google.com/work/search/products/gss.html">Google Site Search</a>, we'll send a searcher's query to the search index you've provided and we'll render the results within our search results page.</p>
 
@@ -512,113 +1147,6 @@
       
       <a href="/manual/content-overview.html">
         <time datetime="2015-04-16">April 16, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/clicks.html">How to Analyze Your Clicks</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Clicks</p>
-
-<p>The Clicks page reports on the number of times a unique searcher clicked on one of your pages within the search results for a particular query.</p>
-
-<p>Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.</p>
-
-<p>Data start from the time your agency started using our service (but no further back than 2009).</p>
-
-<h2>Top Clicks</h2>
-
-<p><strong><em>Top 1,000.</em></strong> You'll see a list, in frequency order, of top 1,000 most popular clicks for your selected time period.</p>
-
-<p>For example, below are the top 10 clicked URLs for USA.gov in August 2013.</p>
-
-<ol>
-<li>www.usajobs.gov</li>
-<li>travel.state.gov/visa/immigrants/types/types_1322.html</li>
-<li>www.usa.gov/shopping/shopping.shtml</li>
-<li>www.usa.gov/Citizen/Topics/Government-Unclaimed-Money.shtml</li>
-<li>www.annualcreditreport.com/</li>
-<li>www.travel.state.gov/passport/passport_1738.html</li>
-<li>www.ssa.gov</li>
-<li>travel.state.gov/visa/immigrants/types/types_1318.html</li>
-<li>www.usajobs.gov/</li>
-<li>travel.state.gov/passport/renew/renew_833.html</li>
-</ol>
-
-
-<h2>Download Details</h2>
-
-<p>You can download a detailed CSV (comma separated values) file for any clicked URL. There's one line for each time this URL was clicked. This CSV file gives you access to the raw click logs, including:</p>
-
-<ul>
-<li>The date and time of the click,</li>
-<li>The clicked URL (It is embedded in the request URL. Look for the text following ‘u=’.) and its position on the page,</li>
-<li>Where the person was when they ran the search and the search term used,</li>
-<li>The modules loaded in response to the query (Our <a href="/manual/module-codes.html">Module Codes</a> tip provides a key of the codes and names.), and</li>
-<li>The kind of device and browser they were using.</li>
-</ul>
-
-
-<h2>Click Queries &amp; Query Clicks</h2>
-
-<p>Select the hyperlinked number in the # of Clicks column to view the top queries that led to a click for each URL.</p>
-
-<p>If you click on the first-listed <em>www.usajobs.gov</em> in the example above, you'll see that the top queries leading to a click on that URL are:</p>
-
-<ol>
-<li>jobs</li>
-<li>jobs openings</li>
-<li>usa jobs</li>
-<li>employment</li>
-<li>job search</li>
-</ol>
-
-
-<p>From this list of top queries leading to a click, you'll be able select the hyperlinked number in the # of Clicks column to view the top clicks for each query.</p>
-
-<p>If you click on the fourth-listed <em>employment</em> in the example above, you'll see that the the top URLs clicked for that query are:</p>
-
-<ol>
-<li>www.usajobs.gov</li>
-<li>www.usajobs.gov/JobSearch/Search/GetResults</li>
-<li>www.bls.gov/ces</li>
-<li>www.cdc.gov/employment</li>
-</ol>
-
-
-<p>You can loop through or drill down into this list for any set of clicks and queries.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and clicks each month. The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site in the past day or so.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/clicks"><span class="label label-info">clicks</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/clicks.html">
-        <time datetime="2015-03-26">March 26, 2015</time>
       </a>
     </div>
     </article>
@@ -913,368 +1441,6 @@
       
       <a href="/manual/module-codes.html">
         <time datetime="2015-03-26">March 26, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/blog/go-live.html">A Punch List to Go Live with DigitalGov Search</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>Your pre-launch checklist will be unique to your agency's workflow, requirements, and deadlines. A typical punch list to go live with DigitalGov Search follows.</p>
-
-<h2>Connect Your Site to DigitalGov Search</h2>
-
-<p>Most agencies add these two <a href="/manual/code.html">snippets of code</a> to the template(s) in their content management systems (rather than adding them to individual pages).</p>
-
-<p><i class="icon-check"></i> <strong>1. Does your search box point to DigitalGov Search?</strong> Update your search box form code point to our service so that, when users execute a search, they'll see your DigitalGov Search-hosted results page.</p>
-
-<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
-     &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
-    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
-    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
-    &lt;input name="commit" type="submit" value="Search" /&gt;
-&lt;/form&gt;
-</code></pre>
-
-<p><i class="icon-check"></i> <strong>2. Do you have the our Javascript tag on your webpages?</strong> This Javascript powers the suggestions for type-ahead and <a href="/manual/display-overview.html">related searches</a>. It also provides data on your trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-<pre><code>&lt;script type="text/javascript"&gt;
-//&lt;![CDATA[
-     var usasearch_config = { siteHandle:"YourSiteHandle" };
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "http://search.usa.gov/javascripts/remote.loader.js";
-    document.getElementsByTagName("head")[0].appendChild(script);
-//]]&gt;
-&lt;/script&gt;
-</code></pre>
-
-<h2>Double Check Your Content Sources</h2>
-
-<p><i class="icon-check"></i> <strong>3. Have you told us which domain(s) you want to search?</strong> List one or more <a href="/manual/domains.html">domains</a> that you want to search on the first page of web results. Most agencies opt to leave out the 'www' to include all subdomains (for example, list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies especially department-level portals opt to also include their bureaus' websites (for example, Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)</p>
-
-<p><i class="icon-check"></i> <strong>4. Have you told us about your RSS feeds?</strong> We love <a href="/manual/rss.html">RSS feeds</a>. Tell us about all of your feeds, even if you opt not to show them (see #7 below). They're the quickest way for you to tell us about your new and updated content. Feeds also have well-structured titles, URLs, descriptions, and dates that we use to improve your search results page. (Tip: Preview your feeds from the RSS page in the <a href="https://search.usa.gov/sites/">Admin Center</a> to confirm that we've indexed your content.)</p>
-
-<p><i class="icon-check"></i> <strong>5. Have you told us about your social media accounts?</strong> <a href="/manual/flickr.html">Flickr photostreams</a>, <a href="/manual/twitter.html">tweets</a>, and <a href="/manual/youtube.html">YouTube videos</a> are a great way to highlight your recent content. Tell us about all of your social media, even if you opt not to show them (see #7 below).</p>
-
-<h2>Customize the Display of Your Search Results Page</h2>
-
-<p><i class="icon-check"></i> <strong>6. Have you made the search results page look like your website?</strong> Customize the <a href="/manual/brand.html">brand</a> (font, colors, logo, favicon, and navigation links) of your search results page to create a seamless experience for users as they search and browse your website.</p>
-
-<p><i class="icon-check"></i> <strong>7. Have you told us what to show on your results page?</strong> Turn on (or off) the inline modules and facets you want to appear on your search results. You can change the default settings on the <a href="/manual/display-overview.html">Display Overview</a> page in the Admin Center.</p>
-
-<h2>Set Up Nice-to-Have Features (Optional)</h2>
-
-<p><i class="icon-check"></i> <strong>8. Have you masked your domain?</strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov.</p>
-
-<p><i class="icon-check"></i> <strong>9. Have you added the Javascripts for your other third-party web services to your results page?</strong> If you have a <a href="/manual/third-party.html">third-party service</a> running on your website, you likely want it to run on your results page. Agencies often include their Foresee, Google Analytics, Omniture, or WebTrends code, among others.</p>
-
-<h2>Don't Forget SEO (Optional)</h2>
-
-<p><i class="icon-check"></i> <strong>10. Have you optimized your site so we can find your content?</strong> We follow <a href="http://www.digitalgov.gov/2013/05/31/four-steps-to-achieve-good-seo/">search engine optimization</a> (SEO) best practices. Verify that you have a <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and an <a href="http://www.sitemaps.org">XML sitemap</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. These two files are typically located in the root directory of your website (i.e., agency.gov/robots.txt and agency.gov/sitemap.xml, respectively). Also verify that your robots.txt file allows our user agent (usasearch) to access your public content.</p>
-
-<p><i class="icon-check"></i> <strong>11. Have you registered your site with the major commercial search engines?</strong> Register for both <a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to maximize the coverage of your content in their search results.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/blog/go-live.html">
-        <time datetime="2015-02-11">February 11, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/third-party.html">How to Add JavaScript for Your Third-party Web Services</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > 3rd Party Tracking</p>
-
-<p>Do you want your search results page to run third-party web services such as Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?</p>
-
-<p>Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
-
-<p>Some tips for commonly used third-party web services follow.</p>
-
-<h2>Google Analytics Tip</h2>
-
-<p>Within your Google Analytics account, select the option, <em>Do Track Site Search</em>. Set the query parameter as <em>query</em>. For more information, read Google's tip, <a href="https://support.google.com/analytics/answer/1012264?hl=en&amp;ref_topic=1031951">Set Up and Configure Site Search</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<p>Additionally, if you've requested <a href="cname.html">domain masking</a> and you want to include the analytics for your <em>search.agency.gov</em> subdomain with your main <em>agency.gov</em> domain, you'll need to set your domain in your Google Analytics JavaScript by including <code>_gaq.push(['_setDomainName', 'agency.gov']);</code>.</p>
-
-<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<p>The code you submit should look something like one of the following two scripts.</p>
-
-<h3>Google Analytics Code (Older Format)</h3>
-
-<pre><code> &lt;script type="text/javascript"&gt;
- var _gaq = _gaq || []; 
- _gaq.push(['_setAccount', 'UA-########-1']); 
- _gaq.push(['_trackPageview']);
-
- (function() { 
- var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
- ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
- var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
- })();
- &lt;/script&gt;
-</code></pre>
-
-<h3>Google Analytics Code (Newer Format)</h3>
-
-<pre><code> &lt;script type="text/javascript"&gt;
- (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
- &lt;/script&gt;
-</code></pre>
-
-<h2>Digital Analytics Program Tip</h2>
-
-<p>Does your federal agency participate in the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> (DAP)?  You don't need to do anything. We're already fully integrated with DAP.</p>
-
-<h2>ForeSee Tip</h2>
-
-<p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
-
-<ol>
-<li><p>Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#x76;">&#x73;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#115;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;</a> to <a href="cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
-<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
-
-<p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
-
-<p> <strong>and replace it with =></strong> 'files': '//www.youragency.gov/fsrscripts/',</p>
-
-<p> <em>(Or, find => 'files': '/foresee/', and replace it with => 'files': '//www.youragency/foresee/',)</em></p>
-
-<p> in the following five files.</p>
-
-<ul>
-<li>foresee-trigger.js</li>
-<li>foresee-tracker.js</li>
-<li>foresee-alive.js</li>
-<li>foresee-qualifier.js</li>
-<li>foresee-test.js</li>
-</ul>
-</li>
-<li><p>Submit your foresee-trigger.js via our Admin Center. It should look something like the following script. <code>&lt;script type="text/javascript" src="http://www.youragency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;</code></p></li>
-<li><p>We'll send you an email to confirm that we've set up both your CNAME and added the script for your foresee-trigger.js file.</p></li>
-</ol>
-
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> We use Google Analytics Web analytics software&mdash;our own tag plus the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag&mdash;by default. Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x73;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#105;&#116;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#111;&#118;">&#115;&#101;&#x61;&#114;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#100;&#x69;&#103;&#105;&#116;&#97;&#108;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#x76;</a> if you'd like to opt out. Learn more about our <a href="http://www.digitalgov.gov/about/policies/">site policies</a> and <a href="../tos.html">terms of service</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
-      
-      <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
-      
-      <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
-      
-      <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/third-party.html">
-        <time datetime="2015-02-11">February 11, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/rss.html">How to Add Your RSS Feeds to Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > RSS</p>
-
-<p>Would you like searchers to be able to search your news or multimedia content? Would you like them to be able to narrow results by date?</p>
-
-<p>Tell us the locations and names of your RSS feeds. We index all new and updated content on your feeds within minutes.</p>
-
-<h2>Step 1. Tell Us About Your RSS Feeds</h2>
-
-<p>We love feeds! Tell us about <em>all</em> of your RSS feeds, even if you don't opt to show them in step 2 below. Feeds are the fastest and most reliable way for us to learn about your new and updated content.</p>
-
-<p>Select the option to add a new RSS feed.</p>
-
-<h3>Name</h3>
-
-<p>Create a name for the feed. Within this 'bucket' you can list a single RSS feed or many feeds. For example, you can opt to list all of your agency's press releases separately (such as Police News, Fire News, EMS News, etc.) or you can list all three under one general name (such as News).</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/rss.png" alt="Add an RSS Feed" /></p>
-
-<h3>Feed type</h3>
-
-<p>Select the type of feed. The default option is RSS (for text content like press releases or blogs). Change it to <a href="http://www.rssboard.org/media-rss">media RSS</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> for multimedia content like images and videos.</p>
-
-<p>Each item within a RSS feed must include a title, link, description, and publication date.</p>
-
-<p>Each item within a media RSS feed must also include both a <a href="http://www.rssboard.org/media-rss#media-content">media:content URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a direct URL to the media object and a <a href="http://www.rssboard.org/media-rss#media-thumbnails">media:thumbnail URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a URL to the object's thumbnail.</p>
-
-<p>Any items missing a required element won't display in your search results.</p>
-
-<h3>Sample RSS Item with All Required Elements</h3>
-
-<pre><code>&lt;item&gt;
-&lt;title&gt;
-Statement from Agriculture Secretary Tom Vilsack Regarding World Organization for Animal Health (OIE) Upgrade of United States&amp;apos; BSE Risk Status
-&lt;/title&gt;
-&lt;pubDate&gt;May 29, 2013 00:00:00 CDT&lt;/pubDate&gt;
-&lt;link&gt;
-http://www.usda.gov/wps/portal/usda/usdahome?contentid=2013/05/0106.xml&amp;contentidonly=true
-&lt;/link&gt;
-&lt;description&gt;
-WASHINGTON, May 29, 2013–Agriculture Secretary Tom Vilsack made the following statement about notification received today from the World Organization for Animal Health (OIE) upgrading the United States&amp;apos; risk classification for bovine spongiform encephalopathy (BSE) to negligible risk:
-&lt;/description&gt;
-&lt;/item&gt;
-</code></pre>
-
-<h3>Sample Media RSS Item with All Required Elements</h3>
-
-<pre><code>&lt;item&gt;
-&lt;title type="html"&gt;
-&lt;![CDATA[ Great Lakes Beach Health ]]&gt;
-&lt;/title&gt;
-&lt;link&gt;
-http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
-&lt;/link&gt;
-&lt;guid&gt;
-http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
-&lt;/guid&gt;
-&lt;pubDate&gt;Fri, 24 May 2013 00:00:00 EDT&lt;/pubDate&gt;
-&lt;media:description type="html"&gt;
-&lt;![CDATA[ As schools close for the year and summer weather beckons, many recreationalists head to the Great Lakes' public beaches. However, these coastal areas can become  contaminated with disease-causing bacteria that threaten public health, disrupt water   recreation, and pay a toll on the Great Lakes economies that depend on summer tourism. ]]&gt;
-&lt;/media:description&gt;
-&lt;media:thumbnail url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/thumbs/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
-&lt;media:content type="" url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/large/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
-&lt;/item&gt;
-</code></pre>
-
-<h2>Step 2. Opt to Show as a Facet, Inline Module, or Both</h2>
-
-<p>Allow searchers to see inline results for the three most recent, relevant RSS results <em>across all of your RSS feeds</em> by turning on the News module on the <a href="/manual/display-overview.html">Display Overview</a> page. You can also edit the default title, News, on the Display Overview page.</p>
-
-<p>Allow searchers to narrow results to a specific feed by turning on the option to show the facet on the <a href="/manual/display-overview.html">Display Overview</a> page. To ensure searchers don't encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a facet.</p>
-
-<h2>Step 3. Check Your Search Results Page</h2>
-
-<p><strong>Module.</strong> If you opted to show your RSS feed(s) as a module, searchers will see inline news results. It'll will highlight the three most recent, relevant results across all of your RSS feeds.</p>
-
-<p><strong>Facet.</strong> If you opted to show your RSS feed(s) as a facet, searchers can narrow their results to see your RSS-based results only.</p>
-
-<p>Within the RSS-based results, searchers can opt to limit results to the last hour, day, week, month, or year, or they can set a custom date range. They also can sort results in descending order by relevance (best match first) or date (most recent first).</p>
-
-<h2>Step 4. Check the Status of Your Feeds</h2>
-
-<p>Yellow indicates the status is pending. Green indicates the feed has been crawled and the status is OK. Red indicates there's an issue with your feed or at least one item within your feed.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/rss-status.png" title="RSS status messages and colors" alt="RSS status messages and colors" /></p>
-
-<p>Click on the name of the feed to see more detailed information about its status. Possible error messages follow.</p>
-
-<ul>
-<li>404 Not Found</li>
-<li>Feed looks empty</li>
-<li>Description can't be blank</li>
-<li>Title can't be blank</li>
-<li>Missing link field</li>
-<li>Missing pubDate field</li>
-<li>Link is not a valid URL</li>
-<li>Linked URL does not exist (HTTP 404)</li>
-</ul>
-
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
-
-<ul>
-<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
-<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-<li><a href="http://atomenabled.org/developers/syndication/">Atom syndication format</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-</ul>
-
-
-<p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="https://search.usa.gov/sites/">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don't need to coordinate with us.</p>
-
-<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your feed.</p>
-
-<p>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab. Change the form action to <code>action="http://search.usa.gov/search/news</code> and add the following line to limit the results to your feed.</p>
-
-<p><code>&lt;input type="hidden" name="channel" value="###"&gt;</code></p>
-
-<p>The value is the number for your feed ID, which is visible in the URL when you edit your feed in the Admin Center.</p>
-
-<p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your RSS feeds.</p>
-
-<p><strong><em>Did you know?</em></strong> When you <a href="/manual/youtube.html">provide us with your YouTube channel</a>, we'll automatically index the RSS feed for your YouTube channel.</p>
-
-<p><strong><em>Did you know?</em></strong> For any feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by these facets in the <a href="/manual/display-overview.html">sidebar</a> on the results page.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/rss"><span class="label label-info">rss</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      
-      <a href="/manual/rss.html">
-        <time datetime="2014-12-17">December 17, 2014</time>
       </a>
     </div>
     </article>

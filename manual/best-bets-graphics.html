@@ -79,18 +79,18 @@
 
 <p>A best bet appears above the standard web results when a searcher's query matches the text of its title, description, or keywords.</p>
 
-<p>Graphics best bets have a one or two-column layout and you can add an image. The most relevant best bet is listed under a heading, {Best Bet Title} by {<a href="/manual/settings.html">Site Name</a>}.</p>
+<p>Graphics best bets have a one or two-column layout and you can add an image. The most relevant best bet is listed under a heading, Recommended by YourSite.</p>
 
-<p>See the sample results page below that shows a text best bet displayed on <a href="http://search.usa.gov/search?affiliate=usgs&amp;utf8=%E2%9C%93&amp;query=tsunamis">USGS.gov for a search on tsunamis</a>.</p>
+<p>See the sample results page below that shows a text best bet displayed on <a href="http://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis">USGS.gov for a search on tsunamis</a>.</p>
 
-<p><a href="http://search.usa.gov/search?affiliate=usgs&amp;utf8=%E2%9C%93&amp;query=tsunamis"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/best-bets-graphics.png" title="Graphics best bet highlighting tsunami links on USGS.gov" alt="Graphics best bet highlighting tsunami links on USGS.gov" /></a></p>
+<p><a href="http://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/best-bets-graphics.png" title="Graphics best bet highlighting tsunami links on USGS.gov" alt="Graphics best bet highlighting tsunami links on USGS.gov" /></a></p>
 
 <p>There are a variety of layouts possible for graphics best bets.</p>
 
 <ul>
-<li><p><strong>One column with a collection of links and an image</strong> displayed on USA.gov for a search on <em><a href="http://search.usa.gov/search?query=wildfires&amp;affiliate=usa.gov">wildfires</a></em>.</p></li>
-<li><p><strong>One column with a link to a specific web page and an image</strong> displayed on WhiteHouse.gov for a search on <em><a href="http://search.whitehouse.gov/search?affiliate=wh&amp;query=jobs">jobs</a></em>.</p></li>
-<li><p><strong>Two columns with a collection of links only</strong> displayed on USA.gov for a search on <em><a href="http://search.usa.gov/search?query=holidays&amp;affiliate=usa.gov">holidays</a></em>.</p></li>
+<li><strong>Two columns with a collection of links and an image</strong> displayed on USA.gov for a search on <em><a href="http://search.usa.gov/search?query=wildfires&amp;affiliate=usagov">wildfires</a></em>.</li>
+<li><strong>Two columns with a collection of links only</strong> displayed on USA.gov for a search on <em><a href="http://search.usa.gov/search?query=holidays&amp;affiliate=usagov">holidays</a></em>.</li>
+<li><strong>One column with a link to a specific web page and an image</strong> displayed on WhiteHouse.gov for a search on <em><a href="http://search.whitehouse.gov/search?affiliate=wh&amp;query=jobs">jobs</a></em>.</li>
 </ul>
 
 
@@ -112,6 +112,10 @@
 
 <h2>When Searchers See Your Best Bets</h2>
 
+<p>For searchers to see a best bet on your site, it must match their query and be relevant and active.</p>
+
+<h3>It Matches Their Query</h3>
+
 <p>Searchers see your best bets when their query:</p>
 
 <ul>
@@ -125,26 +129,67 @@
 
 <p>A sample best bet entry is below.</p>
 
-<p><strong>Title:</strong> Estate Tax<br/>
-<strong>Link title 1:</strong> Transfer Property After You Pass Away<br/>
-<strong>Link title 2:</strong> Estate Tax Rights<br/>
-<strong>Link title 3:</strong> Tax Rates<br/>
-<strong>Keyword 1:</strong> death tax<br/>
-<strong>Keyword 2:</strong> inheritance tax<br/>
-<strong>Keyword 3:</strong> fair market value<br/>
-<strong>Keyword 4:</strong> market value</p>
+<pre><code>Title: Estate Tax  
+Link title 1: Transfer Property After You Pass Away  
+Link title 2: Estate Tax Rights  
+Link title 3: Tax Rates  
+Keyword 1: death tax  
+Keyword 2: inheritance tax  
+Keyword 3: fair market value  
+Keyword 4: market value  
+</code></pre>
 
 <p>This best bet would display for searches on estate tax (exact title match), estate (partial title match), tax on the estate (title match that includes stopwords), estate taxes (title match for singular/plural variant), property tax (partial link title match), propertey tax (link title match with a slight misspelling), and death tax (exact keyword match), among other queries.</p>
 
 <p>It would <em>not</em> display for searches on death, death property, taxes after death, fair value, or estate property tax as they're only partial keyword or cross field matches.</p>
+
+<h3>It Is Very Relevant</h3>
+
+<p>After we determine best bets match the searcher's query, we determine their relevance and display only the most relevant best bet. Relevance is determined, in order, first by title, then by link titles, and lastly by keywords. Date is used as a tiebreaker if the entries' scores based on the above three factors are equal.</p>
+
+<h3>It Is Active</h3>
+
+<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each entry's status.</p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="left"> Color </th>
+<th align="left"> Status </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td align="left"> Green&nbsp;&nbsp;&nbsp;  </td>
+<td align="left"> Active&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> Yellow   </td>
+<td align="left"> Inactive </td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td align="left"> &nbsp; </td>
+<td align="left"> &nbsp; </td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Active best bets are shown to searchers on your site. Inactive entries aren't shown to searchers because they're inactive, expired (by the publish end date), or both.</p>
 
 <hr />
 
 <p><strong><em>Did you know?</em></strong> See also our closely related feature that allows you to create a <a href="/manual/best-bets-text.html">Text Best Best</a>.</p>
 
 <p><strong><em>Did you know?</em></strong> Analyze the number of impressions and clicks and clickthru rate for each best bet on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.</p>
-
-<p><strong><em>Did you know?</em></strong> Use the color coding in the table on this page to see a best bet's status. Entries with green background shading are active. They're shown to searchers on your site. Entries with yellow background shading aren't shown to searchers because they're inactive, expired (by the publish end date), or both.</p>
 
   </div>
 
@@ -166,7 +211,7 @@
     
     
     <a href="/manual/best-bets-graphics.html">
-      <time>July 10, 2014</time>
+      <time>May 4, 2015</time>
     </a>
   </div>
 
