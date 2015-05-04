@@ -14,7 +14,7 @@ We use color coding the Admin Center to indicate the status of a few types of it
 | Color | Status | 
 | :------------ | :---------------------------------- |
 | No color&nbsp;&nbsp;&nbsp; | Approved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-| Yellow  | Pending, approval or email verification |
+| Yellow  | Pending - requires approval or email verification |
 | Red   | Not approved |
 
 ## [RSS Feeds](/manual/rss.html)
