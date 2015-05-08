@@ -2,7 +2,7 @@
 layout: post
 title: Help Searchers Find Federal Register Documents
 category: manual
-tags: how-to display modules
+tags: help-manual display modules
 ---
 
 Federal agencies publish notices, proposed rules, and final rules in the [*Federal Register*](https://www.federalregister.gov). To make it easier for citizens and communities to understand the regulatory process and to participate in government decision-making, we created the *Federal Register* module to help searchers find these notices and rules.

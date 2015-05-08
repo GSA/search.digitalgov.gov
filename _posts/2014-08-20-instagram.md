@@ -2,7 +2,7 @@
 layout: post
 title: How to Add Your Instagram Pictures to Our Index
 category: manual
-tags: how-to manage-content social-media instagram images
+tags: help-manual manage-content social-media instagram images
 ---
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > Instagram
 

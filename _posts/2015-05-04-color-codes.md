@@ -2,7 +2,7 @@
 layout: post
 title: Key to Color Coding in the Admin Center
 category: manual
-tags: how-to manage-users best-bets rss
+tags: help-manual manage-users best-bets rss
 ---
 
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite

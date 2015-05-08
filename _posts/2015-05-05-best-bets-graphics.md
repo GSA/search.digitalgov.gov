@@ -2,7 +2,7 @@
 layout: post
 title: How to Highlight Graphics Best Bets
 category: manual
-tags: how-to manage-content best-bets
+tags: help-manual manage-content best-bets
 ---
 
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > Best Bets: Graphics

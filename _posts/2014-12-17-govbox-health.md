@@ -2,7 +2,7 @@
 layout: post
 title: Help Searchers Find Health Information
 category: manual
-tags: how-to display modules
+tags: help-manual display modules
 ---
 
 Searches for health-related information are very common. We created the Health Topics module to help searchers find high-quality, authoritative health information.

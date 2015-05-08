@@ -2,7 +2,7 @@
 layout: post
 title: How to Create Collections Within Our Index
 category: manual
-tags: how-to manage-content collections
+tags: help-manual manage-content collections
 ---
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Collections
 

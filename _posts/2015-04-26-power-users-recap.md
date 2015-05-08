@@ -2,7 +2,7 @@
 layout: post
 title: "DigitalGov Search for Power Users: Recap"
 category: blog
-tags: how-to training
+tags: help-manual training
 ---
 
 Our April 2015 training session looked into the nooks and crannies of the [Admin Center](https://search.usa.gov/sites/), and provided other advanced tips for optimizing your search. We used the scenario of a site redesign to ground these tips in a common experience. This is a summary and cheat sheet. Since we know that some of these tips won’t be relevant until they’re relevant, please hang on to this for future reference.

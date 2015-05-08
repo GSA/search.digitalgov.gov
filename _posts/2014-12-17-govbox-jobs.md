@@ -2,7 +2,7 @@
 layout: post
 title: Help Searchers Find Jobs
 category: manual
-tags: modules jobs how-to
+tags: help-manual modules jobs
 ---
 
 One of the most common search tasks is to look for current job openings. We created the Jobs module to help searchers quickly find relevant jobs. 

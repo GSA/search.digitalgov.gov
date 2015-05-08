@@ -2,7 +2,7 @@
 layout: post
 title: How to Use Advanced Options to Add or Filter Specific URLs
 category: manual
-tags: how-to manage-content domains advanced supplemental-feed supplemental-urls filter-urls
+tags: help-manual manage-content domains advanced supplemental-feed supplemental-urls filter-urls
 ---
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > [Domains](/manual/domains.html) > Advanced
 

@@ -2,7 +2,7 @@
 layout: post
 title: How to Select the Options that Appear on Your Results Page
 category: manual
-tags: how-to manage-display facets modules related-sites
+tags: help-manual manage-display facets modules related-sites
 ---
 
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Display > Display Overview

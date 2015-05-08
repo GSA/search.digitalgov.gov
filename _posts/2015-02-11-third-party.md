@@ -2,7 +2,7 @@
 layout: post
 title: How to Add JavaScript for Your Third-party Web Services
 category: manual
-tags: how-to analytics third-party google-analytics foresee DAP
+tags: help-manual analytics third-party google-analytics foresee DAP
 ---
 
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > 3rd Party Tracking

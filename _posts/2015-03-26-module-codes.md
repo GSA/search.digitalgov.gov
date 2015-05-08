@@ -2,7 +2,7 @@
 layout: post
 title: Key for Search Module Codes and Names
 category: manual
-tags: how-to analytics clicks queries
+tags: help-manual analytics clicks queries
 ---
 
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics

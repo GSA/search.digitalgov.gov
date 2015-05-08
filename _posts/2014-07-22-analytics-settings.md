@@ -2,7 +2,7 @@
 layout: post
 title: How to Toggle Your Analytics Settings to View Unfiltered Data
 category: manual
-tags: how-to analytics
+tags: help-manual analytics
 ---
 
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Settings

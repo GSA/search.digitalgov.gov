@@ -2,7 +2,7 @@
 layout: post
 title: How to Analyze Your Monthly Reports
 category: manual
-tags: how-to analytics queries clicks
+tags: help-manual analytics queries clicks
 ---
 
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Monthly Reports

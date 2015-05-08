@@ -2,7 +2,7 @@
 layout: post
 title: "How to Add Your Content to Our Indexes: An Overview"
 category: manual
-tags: how-to manage-content
+tags: help-manual manage-content
 ---
 
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > Content Overview
