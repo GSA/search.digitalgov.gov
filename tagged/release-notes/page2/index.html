@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   <title>Posts tagged release-notes</title>
   <meta name="description" content="">
@@ -68,6 +69,84 @@
   <div id="main-container"><!-- begin tag layout -->
 <p class="muted">Posts tagged <strong>release-notes</strong></p>
 <div class='articles'>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/releases/march-2014.html">March 2014 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlighted Features</h2>
+
+<h3>Feature 1. We migrated from Solr to Elasticsearch.</h3>
+
+<p>Open source search technology has improved rapidly in recent years. To keep pace, we upgraded from Solr to <a href="http://www.elasticsearch.org/">Elasticsearch</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<p>We've realized many benefits. Loren Siebert, one of our software engineers, <a href="http://search.digitalgov.gov/blog/search-big-data.html">recently presented</a> on some lessons we've learned and the evolution of open source search technology in general.</p>
+
+<h3>Feature 2. We're continuing to go responsive.</h3>
+
+<p>Based your feedback, searchers now see a larger logo when they search from their desktop computers.</p>
+
+<p>Searchers now see the <a href="/manual/govbox-health.html">Health GovBox</a> when they search from a mobile phone or tablet.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/feature-2014-02-01-newserp-health-gb.png" title="Health GovBox for a search on diabetes on USA.gov" alt="Health GovBox for a search on diabetes on USA.gov" /></p>
+
+<h3>Feature 3. Searchers now see higher quality RSS search results.</h3>
+
+<p>We're working to improve the search experience for your <a href="/manual/rss.html">RSS feeds</a>. Below are the first two improvements we made. Many more are on the way over the next few months.</p>
+
+<ul>
+<li>Searchers now see only unique URLs in the News GovBox. (We previously didn't dedupe URLs that belonged to multiple feeds.)</li>
+<li>Searchers now see only valid, resolving URLs. (We previously didn't revisit your older URLs to remove those with 404 errors.)</li>
+</ul>
+
+
+<p>See, for example, the Most recent... results for a <a href="http://search.ers.usda.gov/search?affiliate=ers&amp;query=corn&amp;m=true">search on corn on ERS.gov</a>.</p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>The option to narrow results to images only is now opt-in. To override the default, turn on the images sidebar option on the <a href="/manual/display-overview.html">Display Overview</a> page in the Admin Center.</li>
+<li>We sped up the cron job that generates the monthly and weekly CSV files on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page in the Admin Center.</li>
+<li>We prototyped using the <a href="http://www.elasticsearch.org/overview/">ELK stack</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> ( <a href="http://www.elasticsearch.org/overview/elasticsearch">Elasticsearch</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, <a href="http://www.elasticsearch.org/overview/logstash">Logstash</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.elasticsearch.org/overview/kibana">Kibana</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>) for our search analytics.</li>
+<li>We fixed our <a href="https://travis-ci.org/">Travis CI</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> builds.</li>
+<li>We upgraded to <a href="http://www.elasticsearch.org/downloads/1-0-1/">Elasticsearch 1.0.1</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We now route traffic evenly between our two datacenters.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>The last two columns are no longer dropped when you bulk upload <a href="/manual/best-bets-text.html">text best bets</a>.</li>
+<li>Searchers no longer get intermittently "stuck" on page one of the results.</li>
+<li>Searchers no longer lose their spot on the results page after they opt to see more job openings.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/march-2014.html">
+        <time datetime="2014-04-22">April 22, 2014</time>
+      </a>
+    </div>
+    </article>
   
   <article class='article'>
  
@@ -494,7 +573,7 @@
 <li>We set up <a href="https://codeclimate.com/">Code Climate</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to identify areas of our code that can be improved.</li>
 <li>We phased out color schemes and now offer two options, default and custom.</li>
 <li>We updated the links in our email templates to reflect the new Admin Center.</li>
-<li>We added the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#103;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#x6f;&#118;">&#x73;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#x76;</a> if you'd like to opt out.</li>
+<li>We added the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;">&#x73;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#115;&#117;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#111;&#118;</a> if you'd like to opt out.</li>
 </ul>
 
 
@@ -555,7 +634,7 @@
 
 <p>You can read our updated help by clicking on the Help? link on each page in the Admin Center, or see the full set of help files on our <a href="/manual/index.html">How to Set Up Your Search Box</a> page.</p>
 
-<p>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#x76;">&#115;&#x65;&#97;&#114;&#x63;&#104;&#64;&#115;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#46;&#103;&#111;&#x76;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
+<p>Email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#115;&#x65;&#97;&#114;&#x63;&#104;&#64;&#115;&#x75;&#112;&#112;&#111;&#114;&#116;&#46;&#100;&#105;&#x67;&#x69;&#116;&#97;&#108;&#103;&#111;&#118;&#46;&#x67;&#x6f;&#118;">&#x73;&#101;&#97;&#114;&#99;&#104;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
 
 <h2>Chores</h2>
 
@@ -727,99 +806,6 @@
       
       <a href="/releases/june-2013.html">
         <time datetime="2013-06-21">June 21, 2013</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/may-2013.html">May 2013 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2>2 Highlighted Features</h2>
-
-<h3>1. Search Your Twitter Lists</h3>
-
-<p>Does your agency have dozens of Twitter accounts? Do you have a public Twitter list for these accounts? You can now opt to <a href="/manual/twitter.html">index tweets</a> from your lists. You can either:</p>
-
-<ul>
-<li>Show tweets from your Twitter account only (for example, index and show tweets from <a href="https://twitter.com/USDA">@USDA</a> only)</li>
-<li>Show tweets from your account's public lists (for example, index and show tweets from the all members of @USDA's list, <a href="https://twitter.com/USDA/lists/usda-twitter-accounts">USDA Twitter accounts</a>).</li>
-</ul>
-
-
-<p>(Thanks, <a href="http://www.nih.gov">NIH.gov</a> team, for suggesting this new feature!)</p>
-
-<h3>2. Search Your Multimedia Galleries</h3>
-
-<p>Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery?</p>
-
-<p>You can now opt to <a href="/manual/rss.html">index MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
-
-<p>MRSS is the standard <a href="http://www.rssboard.org/media-rss">media RSS specification</a> for syndicating multimedia content. So, even if you don't have an MRSS feed now, it should be easy to generate one as long as your content is in a content management system or other database. MRSS is also the standard specification used by hosted multimedia services such as Flickr, Instagram, Vimeo, and YouTube.</p>
-
-<p>Email us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#58;&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#x72;&#116;&#46;&#x64;&#105;&#103;&#105;&#116;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#118;">&#x73;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#46;&#103;&#111;&#118;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
-
-<p>(Thanks, <a href="http://www.usgs.gov">USGS.gov</a> team, for suggesting this new feature!)</p>
-
-<h2>Other Features</h2>
-
-<ul>
-<li>For each result, searchers now see the URL directly under the title. The order is now title-URL-description. It had previously been title-description-URL.</li>
-<li>Searchers using screen readers now hear plain language labels for the search box&mdash;Enter your search term (English) and Ingrese su búsqueda (Spanish).</li>
-<li>When searchers opt to allow us to use their location, they now see <a href="/manual/govbox-jobs.html">jobs</a> that are geographically closest them.</li>
-<li>Mobile searchers now see your site's display name as the alt tag for your mobile logo.</li>
-<li>You can now access jobs data in our search API so that, if you use our API, you can display jobs in your search results.</li>
-<li>Searchers on Spanish-language websites now see the <a href="/manual/govbox-jobs.html">Jobs GovBox</a> when they search on jobs-related terms. For example, a Jobs GovBox appears on GobiernoUSA.gov for a search on <a href="http://search.usa.gov/search?affiliate=gobiernousa&amp;query=trabajos"><em>trabajos</em></a>.</li>
-</ul>
-
-
-<h2>Chores</h2>
-
-<ul>
-<li>We updated how we index and store <a href="/manual/rss.html">RSS feeds</a>, including YouTube feeds, so that we index each feed only one time.</li>
-<li>We now return a Bad Request message for recalls API searches that specify a page greater than 20, which is <a href="https://github.com/GSA/recalls_api/commit/0539ce559cae7c4f9360f56dba91932bc48ebb4c">outside of the allowed range</a>.</li>
-<li>When available, we now <a href="https://github.com/GSA/recalls_api/commit/74ff28198b2e09418d9d0826fffdcb99bd7fd22f">pull CPSC's URLs</a> for their recalls from their 301 or 302 response headers.</li>
-<li>We now filter out federal jobs with more than 20 locations.</li>
-<li>We removed the code for our forms feature on <a href="http://www.usa.gov">USA.gov</a> and federal forms API. Follow <a href="https://twitter.com/ProjectMyUSA">@ProjectMyUSA</a> to see how the MyUSA team is working to improve the public's experience with federal forms.</li>
-<li>We removed the code that created a separate mobile version of USA.gov. Visit  <a href="http://www.USA.gov">http://www.USA.gov</a> to see its new, responsive design.</li>
-<li>We updated the cron script for our monthly analytics emails.</li>
-<li>We updated our stemming file.</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>We fixed the pagination in our search API so that the API now consistently returns 10 results (1-10, 11-20, 21-30, etc).</li>
-<li>We tweaked the Spanish translations for the <a href="/manual/govbox-jobs.html">jobs GovBox</a>.</li>
-<li>We fixed the link for the advanced search operators on the <a href="http://search.usa.gov/search/advanced?affiliate=gobiernousa">Spanish-language advanced search page</a> to point to the corresponding Spanish-language help.</li>
-<li>We now correctly identify the Food and Drug Administration or Food Safety and Inspection Service as the data sources in our recalls API.</li>
-<li>We fixed how we handle registered trademarks in the recalls API so that searchers can now find items such as Zicam&reg;.</li>
-<li>We now provide a better response when an API call specifies the 'doc' index but doesn't include the required, complementary 'dc' parameter.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/may-2013.html">
-        <time datetime="2013-05-31">May 31, 2013</time>
       </a>
     </div>
     </article>
