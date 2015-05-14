@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <title>i14y API</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/stylesheets/font-awesome-ie7.min.css">
+  <![endif]-->
+
+  <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+  <link href="/stylesheets/custom.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+  <link rel="shortcut icon" href="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/favicon.ico">
+  <link rel='alternate' type='application/atom+xml' title='usasearch.howto.gov Atom feed' href='/all.atom' />
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="/">
+        <span class="digital">Digital</span><span class="gov">Gov</span>
+        <span class="search">Search</span>
+      </a>
+      <ul class="nav">
+        <li>
+          <form class="form-search" accept-charset="UTF-8" action="http://find.digitalgov.gov/search/" id="search-form" method="get">
+            <input id="affiliate" name="affiliate" type="hidden" value="usasearch"/>
+            <div class="input-append">
+              <label for="search-query" class="hide">Query</label>
+              <input name="query" type="text" autocomplete="off"
+                     class="usagov-search-autocomplete span search-query" id="search-query"/>
+              <input type="submit" class="btn" id="search-button" value="Search" />
+            </div>
+          </form>
+        </li>
+      </ul>
+      <ul class="nav login">
+        <li>
+          <a href="https://search.usa.gov/sites"><i
+              class="icon-user icon-white"></i>&nbsp;Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div id="main-container"><article class="article">
+  
+  <h1>
+    <a href="/drafts/2015-05-14-i14y-faq.html">i14y API</a>
+  </h1>
+  
+
+  <div class='post-content'>
+    <p><a href="/index.html">DigitalGov Search</a> > <a href="/developer/index.html">APIs for Developers</a> > i14y Beta API FAQ</p>
+
+<p>Our i14y API allows you to send content directly from your content management system (CMS) into our search system for real-time indexing.</p>
+
+<p>Here are some of the Frequently Asked Questions:</p>
+
+<p>  <li><a href="#what">What is i14y?</a>
+  <li><a href="#why">Why would I use i14y?</a>
+  <li><a href="#where">Where is the documentation?</a>
+  <li><a href="#cms">What if I don't have a CMS?</a>
+  <li><a href="#future">Do I have to use 14y to use DigitalGov Search now or in the future?</a>
+  <li><a href="#drupal">Is there a Drupal module?</a>
+  <li><a href="#other-cms">Will you support other CMS?</a>
+  <li><a href="#beta">What do you mean by beta?</a>
+  <li><a href="#signup">How do I sign up?</a>
+  <li><a href="#signup">How does it work?</a>
+  <li><a href="#support">How do I get support?</a>
+  <li><a href="#support">How does i14y mean?</a></p>
+
+<p><a name="what"></a></p>
+
+<h2>What is i14y?</h2>
+
+<p>Our i14y API allows you to send content directly from your content management system (CMS) into DigitalGov Search for real-time indexing. By hooking into your CMS workflow, you can immediately create, update, and delete the associated documents in our search indexes via this API.</p>
+
+<p><a name="why"></a></p>
+
+<h2>Why would I use i14y?</h2>
+
+<p>By a long shot, the two features we get asked for most are:</p>
+
+<ol>
+<li>Immediate inclusion of new or updated content in search results.</li>
+<li>Control over which documents are (or are not) in your search index.</li>
+</ol>
+
+
+<p>i14y answers both of these requests.</p>
+
+<p><a name="where"></a></p>
+
+<h2>Where is the documentation?</h2>
+
+<p>You may find the documentation here:</p>
+
+<p>http://gsa.github.io/slate/</p>
+
+<p><a name="cms"></a></p>
+
+<h2>What if I don't have a CMS?</h2>
+
+<p>Even if you don’t have a CMS, you can develop an API of your content that meets the i14y specs and send it to us. Using the i14y API is optional. The rest of our service offering will continue as-is, providing the default web results from commercial indexes.</p>
+
+<p><a name="future"></a></p>
+
+<h2>Do I have to use 14y to use DigitalGov Search now or in the future?</h2>
+
+<p>Using i14y is optional. The rest of our service offering will continue as-is, providing the default web results from commercial indexes.</p>
+
+<p><a name="drupal"></a></p>
+
+<h2>Is there a Drupal module?</h2>
+
+<p>Yes. In addition to i14y generally, we’ll soon update our existing Drupal module to work directly with it. If you use Drupal and want to help test the module, please let us know. The Drupal module beta will be released shortly after the Content API beta.</p>
+
+<p><a name="other-cms"></a></p>
+
+<h2>Will you support other CMS?</h2>
+
+<p>Our Drupal customers have taken the lead in updating our Drupal module. We know many of you use other CMS like Wordpress, Percussion, Sharepoint, and Joomla, and we’re planning to develop specific hooks into them. If you use one of these CMS and want to partner with us on this effort, drop us a line!</p>
+
+<p><a name="beta"></a></p>
+
+<h2>What do you mean by beta?</h2>
+
+<p>Beta, to us, means that we have software that works, but we need customers to test it out and provide feedback before we rolling it out a larger customer base.</p>
+
+<p>Also, there may be some time lags in expected features. As this moment, we have purely focused on creating an API that will accept content from you, our customers. Components such as integration with the Admin Center and statistics are not yet available.</p>
+
+<p><a name="signup"></a></p>
+
+<h2>How do I sign up?</h2>
+
+<p>You must receive an email from us providing you a key. The keys for the i14y API Beta are not in the Admin Center. If you were forwarded this email, please contact us.</p>
+
+<p><a name="signup"></a></p>
+
+<h2>How does it work?</h2>
+
+<p>Our API is currently a single document "listener." In essence, you will send us one document at a time, and it is up to you on the best way to send your documents over.</p>
+
+<p>Our past indexing techniques relied on feeds where we grab a URL from your servers and parse the documents from the feed. So this is, in a way, an opposite approach where you have the control.</p>
+
+<p><a name="get-support"></a></p>
+
+<h2>How do I get support?</h2>
+
+<p>You may use our standard support email <a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#97;&#114;&#x63;&#104;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#118;">&#x73;&#x65;&#97;&#114;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#112;&#111;&#114;&#116;&#46;&#x64;&#105;&#103;&#x69;&#116;&#97;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;</a>.</p>
+
+<p><a name="meaning"></a></p>
+
+<h2>What does i14y mean?</h2>
+
+<p>Nerd Quiz: Can you figure out the two possible meanings of i14y? Hint: one is hacker speak, one is patriotic.</p>
+
+<p>Tell us if you figure it out! <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#x3a;&#115;&#101;&#97;&#114;&#99;&#104;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#111;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#x73;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#105;&#x67;&#x69;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#x67;&#111;&#118;</a>.</p>
+
+<h2>Terms of Use</h2>
+
+<p>By accessing the i14y API, you agree to <a href="http://www.usa.gov/About/developer-resources/terms-of-service.shtml">USA.gov's Terms of Service for Developer Resources</a>.</p>
+
+  </div>
+
+  <div class='tags'>
+    
+    <a href="/tagged/api"><span class="label label-info">api</span></a>
+    
+  </div>
+
+  <div class='time'>
+    
+    
+    
+    
+    <a href="/drafts/2015-05-14-i14y-faq.html">
+      <time></time>
+    </a>
+  </div>
+
+</article></div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p><a href="mailto:search@support.digitalgov.gov">Email us</a>, call us at 202-505-5315, or follow <a href="http://www.twitter.com/dg_search">@DG_Search</a></p>
+    <p> An Official Website of the U.S. Government <br />
+      <a href="http://www.gsa.gov/portal/category/25729">Office of Citizen Services &amp; Innovative Technologies</a>, <a href="http://www.gsa.gov/portal/category/100000">U.S. General Services Administration</a>
+    </p>
+    <ul class="footer-links unstyled inline">
+      <li><a href="http://www.usa.gov">USA.gov</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/tos.html">Terms of Service</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="http://www.digitalgov.gov/about/policies/">Site Policies</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/developer/">Developers</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  //<![CDATA[
+  var usasearch_config = { siteHandle:"usasearch" };
+
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "http://search.usa.gov/javascripts/remote.loader.js";
+  document.getElementsByTagName("head")[0].appendChild(script);
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31302465-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  //]]>
+</script>
+
+
+</body>
+</html>
