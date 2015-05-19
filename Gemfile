@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rake'
-gem 'jekyll'
-gem 'sass'
 gem 'compass'
+gem 'jekyll'
+gem 'rake'
 gem 'rdiscount'
-gem 'RedCloth'
+gem 'rspec'
+gem 'sass', '~> 3.2.19'

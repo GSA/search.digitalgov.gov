@@ -1,5 +1,5 @@
 ---
-permalink: /feature/best-bets-trigger.html
+permalink: /drafts/feature/best-bets-trigger.html
 layout: feature
 title: Find out Which Queries Trigger Your Best Bets
 tags: features bestbets

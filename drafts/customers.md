@@ -1,5 +1,5 @@
 ---
-permalink: /customers/index.html
+permalink: /drafts/customers/index.html
 layout: feature
 title: City of West Palm Beach, Florida
 tags: city-customers

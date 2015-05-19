@@ -31,7 +31,7 @@ We use bundler to manage gems. Install bundler and other required gems.
 Start a server and try it out.
 
     $ bundle exec compass watch (ctrl+c to stop)
-    $ bundle exec jekyll
+    $ bundle exec jekyll serve
 
 Go to <http://localhost:4000>.
 

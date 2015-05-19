@@ -27,12 +27,16 @@ task :generate do
   if !current_sha.empty? && previous_sha != current_sha
     system 'bundle exec compass clean'
     system 'bundle exec compass compile'
-    system 'bundle exec jekyll --no-auto --no-server'
+    system 'bundle exec jekyll build'
     File.open('last_commit.yml', 'w') { |f|  f.write({ sha: current_sha }.to_yaml) }
   end
 end
 
 task :deploy => :generate do
+  cd("#{deploy_dir}") do
+    system 'git fetch origin gh-pages'
+    system 'git reset --hard origin/gh-pages'
+  end
   rm_r Dir.glob("#{deploy_dir}/*")
   cp_r '_site/.', "#{deploy_dir}"
   cd "#{deploy_dir}" do
@@ -44,3 +48,12 @@ task :deploy => :generate do
   end
 end
 
+begin
+  require 'rspec/core/rake_task'
+
+  RSpec::Core::RakeTask.new(:spec)
+
+  task :default => :spec
+rescue LoadError
+  # no rspec available
+end

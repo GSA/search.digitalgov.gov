@@ -1,5 +1,5 @@
 ---
-permalink: /feature/ctr-top-queries.html
+permalink: /drafts/feature/ctr-top-queries.html
 layout: feature
 title: Find out Which Queries Trigger Your Best Bets
 tags: features bestbets

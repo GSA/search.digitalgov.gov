@@ -1,5 +1,5 @@
 ---
-permalink: /feature/mobile-responsive.html
+permalink: /drafts/feature/mobile-responsive.html
 layout: feature
 title: Improved Phrases
 tags: features serp
