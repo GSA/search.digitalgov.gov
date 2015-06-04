@@ -37,16 +37,15 @@ We have a [proven track record](/tagged/quote) of delivering fast, relevant sear
 <td valign="top" align="center"><a href="http://www.kansas.gov/search/?affiliate=kansas.gov&query=jobs"><img alt="Kansas" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-kansas.png"></a><br><strong>Kansas</strong></td>
 <td valign="top" align="center"><a href="http://kentucky.gov/Pages/search.aspx?terms=jobs&affiliateId=GENERAL"><img alt="Kentucky" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-kentucky.png"></a><br><strong>Kentucky</strong></td>
 <td valign="top" align="center"><a href="http://search.usa.gov/search?affiliate=www.louisiana.gov&query=jobs"><img alt="Louisiana" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-louisiana.png"></a><br><strong>Louisiana</strong></td>
-<td valign="top" align="center"><a href="http://www.maine.gov/searchme/search?searchquery=jobs"><img alt="Maine" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-maine.png"></a><br><strong>Maine</strong></td>
 </tr>
 </table>
 
 <table align="center" width="100%">
 <tr><td>&nbsp;</td></tr>
 <tr>
+<td valign="top" align="center"><a href="http://www.maine.gov/searchme/search?searchquery=jobs"><img alt="Maine" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-maine.png"></a><br><strong>Maine</strong></td>
 <td valign="top" align="center"><a href="http://search.michigan.gov/search?affiliate=mi-som&query=jobs"><img alt="Michigan" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-michigan.png"></a><br><strong>Michigan</strong></td>
 <td valign="top" align="center"><a href="http://nv.gov/search.aspx?q=jobs&t=state"><img alt="Nevada" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-nevada.png"></a><br><strong>Nevada</strong></td>
-<td valign="top" align="center"><a href="http://search.usa.gov/search?affiliate=nc.gov&query=jobs"><img alt="North Carolina" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-nc.png"></a><br><strong>North Carolina</strong></td>
 <td valign="top" align="center"><a href="http://www.ri.gov/search/?q=jobs"><img alt="Rhode Island" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-ri.png"></a><br><strong>Rhode Island</strong></td>
 <td valign="top" align="center"><a href="http://search.usa.gov/search?affiliate=accesswashington&query=jobs"><img alt="Washington" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-washington.png" height="70"></a><br><strong>Washington</strong></td>
 </tr>
