@@ -11,7 +11,7 @@ The monthly report gives a bird's-eye view of the number of [queries](/manual/qu
 
 Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.
 
-Data start from the time your agency started using our service (but no further back than 2009).
+Data are available for the past 13 months.
 
 ## Monthly Usage Stats
 
