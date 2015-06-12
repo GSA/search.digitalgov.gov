@@ -91,9 +91,9 @@
 
 <p>You cannot specify URLs for individual web pages.</p>
 
-<h2>Step 2. Opt to Show in Sidebar</h2>
+<h2>Step 2. Opt to Show as a Facet</h2>
 
-<p>Click on the <a href="/manual/display-overview.html">Display Overview</a> page. Turn on your collection to allow searchers to see it as a navigation option above the search box on the results page.</p>
+<p>Click on the <a href="/manual/display-overview.html">Display Overview</a> page. Turn on your collection to allow searchers to see it as a faceted navigation option above the search box on the results page.</p>
 
 <h2>Step 3. Check Your Search Results Page</h2>
 
@@ -120,6 +120,16 @@
 
 <p><a href="http://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=autism"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-4.png" title="NIH.gov news-only search results page" alt="NIH.gov news-only search results page" /></a></p>
 
+<p><a name="sitelimit"></a></p>
+
+<p><strong><em>Did you know?</em></strong> If you don't want to set up a Collection, you can use the <code>sitelimit</code> parameter to search a subset of your content. Compare the collection-based results above with the results for <a href="http://search.usa.gov/search?affiliate=nih&amp;query=autism&amp;sitelimit=nih.gov/news">the same search using the sitelimit parameter</a>.</p>
+
+<p>Note that the searcher sees that results are filtered to nih.gov/news in a message under the search box, among other differences.</p>
+
+<p>Simply add the following line to your form code on your search box to use the <code>sitelimit</code> parameter.</p>
+
+<p><code>&lt;input type="hidden" name="sitelimit" id="sitelimit" value="http://www.agency.gov/limittothisfolder"&gt;</code></p>
+
     </div>
 
     <div class='tags'>
@@ -137,7 +147,7 @@
       
       
       <a href="/manual/collections.html">
-        <time datetime="2014-07-10">July 10, 2014</time>
+        <time datetime="2015-06-12">June 12, 2015</time>
       </a>
     </div>
     </article>
