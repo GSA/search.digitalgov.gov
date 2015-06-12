@@ -16,9 +16,9 @@ Enter the URLs for the domains, subdomains, or subfolders that make up this coll
 
 You cannot specify URLs for individual web pages. 
 
-## Step 2. Opt to Show in Sidebar
+## Step 2. Opt to Show as a Facet
 
-Click on the [Display Overview](/manual/display-overview.html) page. Turn on your collection to allow searchers to see it as a navigation option above the search box on the results page.
+Click on the [Display Overview](/manual/display-overview.html) page. Turn on your collection to allow searchers to see it as a faceted navigation option above the search box on the results page.
 
 ## Step 3. Check Your Search Results Page
 
@@ -41,3 +41,13 @@ See the sample search box below that is limited to news on [NIH.gov for a search
 [![News-only search box on NIH.gov's News Releases page](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-3.png "News-only search box on NIH.gov's News Releases page")](http://www.nih.gov/news/releases.htm)
   
 [![NIH.gov news-only search results page](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-4.png "NIH.gov news-only search results page")](http://search.nih.gov/search/docs?affiliate=nih&dc=565&query=autism)
+
+<a name="sitelimit"></a>
+
+***Did you know?*** If you don't want to set up a Collection, you can use the `sitelimit` parameter to search a subset of your content. Compare the collection-based results above with the results for [the same search using the sitelimit parameter](http://search.usa.gov/search?affiliate=nih&query=autism&sitelimit=nih.gov/news).
+
+Note that the searcher sees that results are filtered to nih.gov/news in a message under the search box, among other differences.
+
+Simply add the following line to your form code on your search box to use the `sitelimit` parameter.
+
+`<input type="hidden" name="sitelimit" id="sitelimit" value="http://www.agency.gov/limittothisfolder">` 

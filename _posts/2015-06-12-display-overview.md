@@ -9,14 +9,16 @@ tags: help-manual manage-display facets modules related-sites
 
 ## Facets
 
-**Label.** Determine if you want to include a heading for your facets. If you want a heading, type your label in the label field. Keep your label short (15 or fewer characters) and consistent with the options you're listing. If you don't want a heading, leave the label field blank.
+**Label.** By default, we use the label 'Search' for your facets. Enter a label in the label field if you'd like something other than this default. Keep your label consistent with the options you're listing and under 15 characters.
 
-* Without heading&mdash;See the sample results page below that shows the facets without a heading displayed for a [search on *jobs* on WhiteHouse.gov](http://search.whitehouse.gov/search?affiliate=wh&query=jobs).
-* With heading&mdash;See the sample results page below that shows the facets with a heading, labeled Search, displayed for a [search on *passport* on USA.gov](http://search.usa.gov/search?affiliate=usagov&query=passport).
+See the sample results page below that shows the facets with the default label, Search, displayed for a [search on *passport* on USA.gov](http://search.usa.gov/search?affiliate=usagov&query=passport). (It is most easily seen by clicking on the menu option from a mobile phone.)
 
 **On/off options for facets.** Select which facets you'd like to appear on your results page. Turn an option on to allow searchers to see it. Turn an option on or off at any time.
 
 Type over the text in the Name field to edit a facet's display name. Keep each name short (15 or fewer characters) and consistent with the content you're searching. Click on the hyperlink in the Source field to update the facet's source content. Hover over the icon with three horizontal lines on the left to change the order.
+
+**More.** We show up to four facets above your search box. If you turn on the display of more than four facets, you'll see them listed under a 'More' dropdown menu. Email us at <search@support.digitalgov.gov> if you'd like to use a custom label instead of the default 'More'.
+
 
 ## Modules
 
@@ -45,6 +47,21 @@ Help visitors find content relevant to their search query that resides on other 
 Enter the [site handle](/manual/settings.html) for one of your other DigitalGov Search sites. Enter the text you'd like searchers to see for the link to the related site. Create two entries, one from the first site to the second and vice versa, if you'd like a reciprocal link.
 
 See, for example, the Español option displayed on [USA.gov for a search on *venezuela*](http://search.usa.gov/search?query=venezuela&affiliate=usagov). When searchers click this option, they see results for [*venezuela* on GobiernoUSA.gov](http://search.usa.gov/search?query=venezuela&affiliate=gobiernousa).
+
+If you list more than two related sites, searchers will see them listed under a dropdown menu, View Topic. See, for example, the related sites displayed on [Broward.org for a search on *jobs*](http://search.broward.org/search?affiliate=co.broward.fl.us&query=jobs).
+
+Email us at <search@support.digitalgov.gov> if you'd like to use a custom label instead of the default 'View Topic' label.
+
+## Pointer to Kick Off New Search
+
+Your site's visitors sometimes don't realize the scope of the content they're searching against. This is especially true when you set up a search box for a subsection of your site only or when you have separate options for searching your web pages and databases.
+
+See, for example, the custom messages on IRS.gov's Forms & Pubs beta search encouraging visitors to try their search again to see tax materials for prior years.
+
+* [Custom message on IRS.gov's Forms & Pubs beta search when there aren't any results](http://find.irs.gov/search?affiliate=irs-fp&query=no-results-message)
+* [Custom message when there are results](http://find.irs.gov/search?affiliate=irs-fp&query=2014+form+1040)
+
+Email us at <search@support.digitalgov.gov> if you'd provide searchers with a custom message to encourage them to search another section of your site, your database, or both.
 
 ---
 
