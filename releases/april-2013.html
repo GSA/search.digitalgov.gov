@@ -34,34 +34,52 @@
 </head>
 
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="brand" href="/">
-        <span class="digital">Digital</span><span class="gov">Gov</span>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        <span class="digital">Digital</span><em>Gov</em></span>
         <span class="search">Search</span>
       </a>
-      <ul class="nav">
-        <li>
-          <form class="form-search" accept-charset="UTF-8" action="http://find.digitalgov.gov/search/" id="search-form" method="get">
-            <input id="affiliate" name="affiliate" type="hidden" value="usasearch"/>
-            <div class="input-append">
-              <label for="search-query" class="hide">Query</label>
-              <input name="query" type="text" autocomplete="off"
-                     class="usagov-search-autocomplete span search-query" id="search-query"/>
-              <input type="submit" class="btn" id="search-button" value="Search" />
-            </div>
-          </form>
-        </li>
-      </ul>
-      <ul class="nav login">
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">     
+      <form class="navbar-form navbar-left form-search" accept-charset="UTF-8" action="http://find.digitalgov.gov/search/" id="search-form" method="get">
+        <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+        <div class="input-group">
+          
+          <input name="query" id="search-query" type="text" class="form-control"  autocomplete="off" style="width:360px;">
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-primary" aria-label="Left Align" id="">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+          </span>
+        </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
         <li>
           <a href="https://search.usa.gov/sites"><i
               class="icon-user icon-white"></i>&nbsp;Login</a>
-        </li>
+        </li>        
       </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="col-xs-offset-2 col-xs-8  hidden-sm hidden-md hidden-lg">
+  <form class="form-search" accept-charset="UTF-8" action="http://find.digitalgov.gov/search/" id="search-form" method="get">
+    <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+    <div class="input-group">
+      
+      <input name="query" id="search-query" type="text" class="form-control"  autocomplete="off" style="">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" aria-label="Left Align" id="">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </span>
     </div>
-  </div>
+  </form>
 </div>
 
 
@@ -98,7 +116,7 @@
 <ul>
 <li>We updated our <a href="/tos.html">terms of service</a>.</li>
 <li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#x73;&#x65;&#97;&#114;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#108;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;">&#x73;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;</a> with any questions.</li>
+<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#115;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#97;&#108;&#103;&#111;&#x76;&#46;&#103;&#111;&#118;">&#115;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#117;&#x70;&#112;&#111;&#114;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a> with any questions.</li>
 <li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
 <li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
 <li>We removed the trending searches feature and widget.</li>
@@ -144,7 +162,8 @@
     </a>
   </div>
 
-</article></div>
+</article>
+</div>
 </div>
 
 <footer class="footer">
@@ -153,7 +172,7 @@
     <p> An Official Website of the U.S. Government <br />
       <a href="http://www.gsa.gov/portal/category/25729">Office of Citizen Services &amp; Innovative Technologies</a>, <a href="http://www.gsa.gov/portal/category/100000">U.S. General Services Administration</a>
     </p>
-    <ul class="footer-links unstyled inline">
+    <ul class="footer-links list-unstyled list-inline">
       <li><a href="http://www.usa.gov">USA.gov</a></li>
       <li class="muted">&bull;</li>
       <li><a href="/tos.html">Terms of Service</a></li>

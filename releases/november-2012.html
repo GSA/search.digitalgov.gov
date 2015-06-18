@@ -34,34 +34,52 @@
 </head>
 
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="brand" href="/">
-        <span class="digital">Digital</span><span class="gov">Gov</span>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        <span class="digital">Digital</span><em>Gov</em></span>
         <span class="search">Search</span>
       </a>
-      <ul class="nav">
-        <li>
-          <form class="form-search" accept-charset="UTF-8" action="http://find.digitalgov.gov/search/" id="search-form" method="get">
-            <input id="affiliate" name="affiliate" type="hidden" value="usasearch"/>
-            <div class="input-append">
-              <label for="search-query" class="hide">Query</label>
-              <input name="query" type="text" autocomplete="off"
-                     class="usagov-search-autocomplete span search-query" id="search-query"/>
-              <input type="submit" class="btn" id="search-button" value="Search" />
-            </div>
-          </form>
-        </li>
-      </ul>
-      <ul class="nav login">
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">     
+      <form class="navbar-form navbar-left form-search" accept-charset="UTF-8" action="http://find.digitalgov.gov/search/" id="search-form" method="get">
+        <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+        <div class="input-group">
+          
+          <input name="query" id="search-query" type="text" class="form-control"  autocomplete="off" style="width:360px;">
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-primary" aria-label="Left Align" id="">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+          </span>
+        </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
         <li>
           <a href="https://search.usa.gov/sites"><i
               class="icon-user icon-white"></i>&nbsp;Login</a>
-        </li>
+        </li>        
       </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="col-xs-offset-2 col-xs-8  hidden-sm hidden-md hidden-lg">
+  <form class="form-search" accept-charset="UTF-8" action="http://find.digitalgov.gov/search/" id="search-form" method="get">
+    <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+    <div class="input-group">
+      
+      <input name="query" id="search-query" type="text" class="form-control"  autocomplete="off" style="">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" aria-label="Left Align" id="">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </span>
     </div>
-  </div>
+  </form>
 </div>
 
 
@@ -106,7 +124,7 @@
 <li>Searchers can narrow RSS news results by custom date ranges.</li>
 <li>Searchers now see more images above the fold on image results pages.</li>
 <li>Searchers see integrated image results across both the images on your website and in your Flickr photostream.</li>
-<li>You can now add the <a href="http://www.digitalgov.gov/services/dap/">Digtital Analytics Program's</a> government-wide analytics tag to your search results pages. Email the Digital Analytics Program at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#68;&#x41;&#x50;&#64;&#103;&#115;&#x61;&#x2e;&#x67;&#111;&#118;">&#68;&#x41;&#80;&#x40;&#103;&#x73;&#x61;&#46;&#x67;&#111;&#x76;</a> for more information on setting up the government-wide analytics tag.</li>
+<li>You can now add the <a href="http://www.digitalgov.gov/services/dap/">Digtital Analytics Program's</a> government-wide analytics tag to your search results pages. Email the Digital Analytics Program at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#68;&#x41;&#x50;&#x40;&#103;&#115;&#97;&#x2e;&#x67;&#111;&#118;">&#x44;&#x41;&#x50;&#x40;&#103;&#115;&#97;&#46;&#103;&#x6f;&#118;</a> for more information on setting up the government-wide analytics tag.</li>
 <li>When you <a href="/manual/twitter.html">add your Twitter handle</a> in the Admin Center, we now show the Twitter GovBox by default.</li>
 </ul>
 
@@ -153,7 +171,8 @@
     </a>
   </div>
 
-</article></div>
+</article>
+</div>
 </div>
 
 <footer class="footer">
@@ -162,7 +181,7 @@
     <p> An Official Website of the U.S. Government <br />
       <a href="http://www.gsa.gov/portal/category/25729">Office of Citizen Services &amp; Innovative Technologies</a>, <a href="http://www.gsa.gov/portal/category/100000">U.S. General Services Administration</a>
     </p>
-    <ul class="footer-links unstyled inline">
+    <ul class="footer-links list-unstyled list-inline">
       <li><a href="http://www.usa.gov">USA.gov</a></li>
       <li class="muted">&bull;</li>
       <li><a href="/tos.html">Terms of Service</a></li>
