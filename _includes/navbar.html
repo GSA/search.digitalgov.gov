@@ -1,29 +1,47 @@
-<div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="brand" href="/">
-        <span class="digital">Digital</span><span class="gov">Gov</span>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        <span class="digital">Digital</span><em>Gov</em></span>
         <span class="search">Search</span>
       </a>
-      <ul class="nav">
-        <li>
-          <form class="form-search" accept-charset="UTF-8" action="http://find.digitalgov.gov/search/" id="search-form" method="get">
-            <input id="affiliate" name="affiliate" type="hidden" value="usasearch"/>
-            <div class="input-append">
-              <label for="search-query" class="hide">Query</label>
-              <input name="query" type="text" autocomplete="off"
-                     class="usagov-search-autocomplete span search-query" id="search-query"/>
-              <input type="submit" class="btn" id="search-button" value="Search" />
-            </div>
-          </form>
-        </li>
-      </ul>
-      <ul class="nav login">
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">     
+      <form class="navbar-form navbar-left form-search" accept-charset="UTF-8" action="http://find.digitalgov.gov/search/" id="search-form" method="get">
+        <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+        <div class="input-group">
+          
+          <input name="query" id="search-query" type="text" class="form-control"  autocomplete="off" style="width:360px;">
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-primary" aria-label="Left Align" id="">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+          </span>
+        </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
         <li>
           <a href="https://search.usa.gov/sites"><i
               class="icon-user icon-white"></i>&nbsp;Login</a>
-        </li>
+        </li>        
       </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="col-xs-offset-2 col-xs-8  hidden-sm hidden-md hidden-lg">
+  <form class="form-search" accept-charset="UTF-8" action="http://find.digitalgov.gov/search/" id="search-form" method="get">
+    <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+    <div class="input-group">
+      
+      <input name="query" id="search-query" type="text" class="form-control"  autocomplete="off" style="">
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" aria-label="Left Align" id="">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </span>
     </div>
-  </div>
+  </form>
 </div>
