@@ -11,11 +11,12 @@
       
       <form class="navbar-form navbar-left form-search" accept-charset="UTF-8" action="http://find.digitalgov.gov/search/" id="search-form" method="get">
         <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
-        <div class="input-group">
+        <div class="input-group input-append">
+          <label for="search-query" class="hide">Query</label>      
           
-          <input name="query" id="search-query" type="text" class="form-control usagov-search-autocomplete"  autocomplete="off" style="width:360px;">
+          <input name="query" id="search-query" type="text" class="form-control search-query usagov-search-autocomplete" autocomplete="off" style="width:360px;">
           <span class="input-group-btn">
-            <button type="submit" class="btn btn-primary" aria-label="Left Align" id="">
+            <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
               <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
             </button>
           </span>
@@ -33,16 +34,20 @@
 
 
 <div class="col-md-offset-2 col-md-8  hidden-sm hidden-md hidden-lg">
+
   <form class="form-search" accept-charset="UTF-8" action="http://find.digitalgov.gov/search/" id="search-form" method="get">
     <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
-    <div class="input-group">
-      
-      <input name="query" id="search-query" type="text" class="form-control usagov-search-autocomplete"  autocomplete="off" style="">
+    <div class="input-group input-append">
+      <label for="search-query" class="hide">Query</label>      
+
+      <input name="query" id="search-query" type="text" class="form-control search-query usagov-search-autocomplete" autocomplete="off" style="">
       <span class="input-group-btn">
-        <button type="submit" class="btn btn-primary" aria-label="Left Align" id="">
+        <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
           <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
         </button>
       </span>
     </div>
   </form>
 </div>
+
+ 
