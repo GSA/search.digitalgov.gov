@@ -47,11 +47,12 @@
       
       <form class="navbar-form navbar-left form-search" accept-charset="UTF-8" action="http://find.digitalgov.gov/search/" id="search-form" method="get">
         <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
-        <div class="input-group">
+        <div class="input-group input-append">
+          <label for="search-query" class="hide">Query</label>      
           
-          <input name="query" id="search-query" type="text" class="form-control usagov-search-autocomplete"  autocomplete="off" style="width:360px;">
+          <input name="query" id="search-query" type="text" class="form-control search-query usagov-search-autocomplete" autocomplete="off" style="width:360px;">
           <span class="input-group-btn">
-            <button type="submit" class="btn btn-primary" aria-label="Left Align" id="">
+            <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
               <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
             </button>
           </span>
@@ -69,13 +70,15 @@
 
 
 <div class="col-md-offset-2 col-md-8  hidden-sm hidden-md hidden-lg">
+
   <form class="form-search" accept-charset="UTF-8" action="http://find.digitalgov.gov/search/" id="search-form" method="get">
     <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
-    <div class="input-group">
-      
-      <input name="query" id="search-query" type="text" class="form-control usagov-search-autocomplete"  autocomplete="off" style="">
+    <div class="input-group input-append">
+      <label for="search-query" class="hide">Query</label>      
+
+      <input name="query" id="search-query" type="text" class="form-control search-query usagov-search-autocomplete" autocomplete="off" style="">
       <span class="input-group-btn">
-        <button type="submit" class="btn btn-primary" aria-label="Left Align" id="">
+        <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
           <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
         </button>
       </span>
@@ -83,6 +86,7 @@
   </form>
 </div>
 
+ 
 
 <div class="container-fluid">
   <div class="col-md-8 col-md-offset-2">
@@ -130,7 +134,7 @@
 <li>We set up <a href="https://codeclimate.com/">Code Climate</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to identify areas of our code that can be improved.</li>
 <li>We phased out color schemes and now offer two options, default and custom.</li>
 <li>We updated the links in our email templates to reflect the new Admin Center.</li>
-<li>We added the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#58;&#115;&#x65;&#97;&#x72;&#99;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;">&#115;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#x75;&#x70;&#112;&#111;&#114;&#116;&#46;&#100;&#x69;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a> if you'd like to opt out.</li>
+<li>We added the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#x73;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#46;&#x64;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#118;">&#115;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#100;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#118;</a> if you'd like to opt out.</li>
 </ul>
 
 
