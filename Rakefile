@@ -34,8 +34,8 @@ end
 
 task :deploy => :generate do
   cd("#{deploy_dir}") do
-    system 'git fetch origin gh-pages'
     system 'git reset --hard origin/gh-pages'
+    system 'git pull origin gh-pages'
   end
   rm_r Dir.glob("#{deploy_dir}/*")
   cp_r '_site/.', "#{deploy_dir}"
