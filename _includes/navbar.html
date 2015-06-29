@@ -7,14 +7,15 @@
         <span class="search">Search</span>
       </a>
     </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">     
-      
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
       <form class="navbar-form navbar-left form-search" accept-charset="UTF-8" action="http://find.digitalgov.gov/search/" id="search-form" method="get">
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
         <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
         <div class="input-group input-append">
-          <label for="search-query" class="hide">Query</label>      
-          
-          <input name="query" id="search-query" type="text" class="form-control search-query usagov-search-autocomplete" autocomplete="off" style="width:360px;">
+          <label for="search-query" class="hide">Query</label>
+
+          <input name="query" autocomplete="off"  type="text" class="typeahead form-control search-query" id="search-query" data-provide="typeahead" >
           <span class="input-group-btn">
             <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
               <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -26,7 +27,7 @@
         <li>
           <a href="https://search.usa.gov/sites"><i
               class="icon-user icon-white"></i>&nbsp;Login</a>
-        </li>        
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -38,9 +39,9 @@
   <form class="form-search" accept-charset="UTF-8" action="http://find.digitalgov.gov/search/" id="search-form" method="get">
     <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
     <div class="input-group input-append">
-      <label for="search-query" class="hide">Query</label>      
+      <label for="search-query" class="hide">Query</label>
 
-      <input name="query" id="search-query" type="text" class="form-control search-query usagov-search-autocomplete" autocomplete="off" style="">
+      <input name="query" autocomplete="off"  type="text" class=" form-control search-query" id="search-query"  >
       <span class="input-group-btn">
         <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
           <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -49,5 +50,3 @@
     </div>
   </form>
 </div>
-
- 
