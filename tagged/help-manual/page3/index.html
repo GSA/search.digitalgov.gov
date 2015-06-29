@@ -31,6 +31,8 @@
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
   <link rel="shortcut icon" href="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/favicon.ico">
   <link rel='alternate' type='application/atom+xml' title='usasearch.howto.gov Atom feed' href='/all.atom' />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="/javascripts/bootstrap3-typeahead.js"></script>
 </head>
 
 <body>
@@ -43,14 +45,15 @@
         <span class="search">Search</span>
       </a>
     </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">     
-      
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
       <form class="navbar-form navbar-left form-search" accept-charset="UTF-8" action="http://find.digitalgov.gov/search/" id="search-form" method="get">
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
         <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
         <div class="input-group input-append">
-          <label for="search-query" class="hide">Query</label>      
-          
-          <input name="query" id="search-query" type="text" class="form-control search-query usagov-search-autocomplete" autocomplete="off" style="width:360px;">
+          <label for="search-query" class="hide">Query</label>
+
+          <input name="query" autocomplete="off"  type="text" class="typeahead form-control search-query" id="search-query" data-provide="typeahead" >
           <span class="input-group-btn">
             <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
               <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -62,7 +65,7 @@
         <li>
           <a href="https://search.usa.gov/sites"><i
               class="icon-user icon-white"></i>&nbsp;Login</a>
-        </li>        
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -74,9 +77,9 @@
   <form class="form-search" accept-charset="UTF-8" action="http://find.digitalgov.gov/search/" id="search-form" method="get">
     <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
     <div class="input-group input-append">
-      <label for="search-query" class="hide">Query</label>      
+      <label for="search-query" class="hide">Query</label>
 
-      <input name="query" id="search-query" type="text" class="form-control search-query usagov-search-autocomplete" autocomplete="off" style="">
+      <input name="query" autocomplete="off"  type="text" class=" form-control search-query" id="search-query"  >
       <span class="input-group-btn">
         <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
           <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -86,7 +89,6 @@
   </form>
 </div>
 
- 
 
 <div class="container-fluid">
   <div class="col-md-8 col-md-offset-2">
@@ -264,7 +266,7 @@
 
 <p>If you don't like the default web results, you can choose to use another index. Options follow.</p>
 
-<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can fetch and index your all of web site's content directly. Email us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x73;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#112;&#111;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#x6c;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;">&#x73;&#101;&#97;&#x72;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#103;&#111;&#x76;</a> and we'll work with you to determine the best way for you to tell us about your content.</p>
+<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can fetch and index your all of web site's content directly. Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#111;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#x67;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#x73;&#x75;&#x70;&#112;&#111;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;</a> and we'll work with you to determine the best way for you to tell us about your content.</p>
 
 <p><strong>Option 2. Buy and Use Google Site Search.</strong> If you already have (or plan to purchase), <a href="https://www.google.com/work/search/products/gss.html">Google Site Search</a>, we'll send a searcher's query to the search index you've provided and we'll render the results within our search results page.</p>
 
@@ -541,7 +543,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li><p>Email us at <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#58;&#x73;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#x76;">&#x73;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#46;&#103;&#111;&#x76;</a> to <a href="cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
+<li><p>Email us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#115;&#x65;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#x67;&#x6f;&#x76;">&#x73;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#x76;</a> to <a href="cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
 <li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
 
 <p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
@@ -567,7 +569,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 <hr />
 
-<p><strong><em>Did you know?</em></strong> We use Google Analytics Web analytics software&mdash;our own tag plus the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag&mdash;by default. Email us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#115;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#115;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#46;&#100;&#x69;&#103;&#x69;&#x74;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#x67;&#111;&#118;</a> if you'd like to opt out. Learn more about our <a href="http://www.digitalgov.gov/about/policies/">site policies</a> and <a href="../tos.html">terms of service</a>.</p>
+<p><strong><em>Did you know?</em></strong> We use Google Analytics Web analytics software&mdash;our own tag plus the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag&mdash;by default. Email us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#x73;&#x65;&#97;&#x72;&#99;&#104;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#x76;&#x2e;&#x67;&#111;&#x76;">&#x73;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#x67;&#111;&#118;&#46;&#x67;&#x6f;&#x76;</a> if you'd like to opt out. Learn more about our <a href="http://www.digitalgov.gov/about/policies/">site policies</a> and <a href="../tos.html">terms of service</a>.</p>
 
     </div>
 
@@ -713,7 +715,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 <hr />
 
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#115;&#x65;&#97;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#x76;">&#115;&#101;&#97;&#x72;&#99;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#103;&#111;&#118;&#46;&#103;&#x6f;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Job Openings module.</p>
+<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x73;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#118;">&#x73;&#101;&#97;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#112;&#112;&#x6f;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#111;&#118;&#46;&#x67;&#111;&#118;</a> to let us know where you publish your job openings so that we can include them in the Job Openings module.</p>
 
     </div>
 
@@ -843,7 +845,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 </ol>
 
 
-<p>If you have any problem resetting your password, email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#115;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#x74;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#118;">&#115;&#101;&#97;&#114;&#99;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#x74;&#46;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#103;&#111;&#x76;</a>.</p>
+<p>If you have any problem resetting your password, email us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#x65;&#97;&#114;&#99;&#x68;&#64;&#x73;&#117;&#112;&#112;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#x69;&#x74;&#97;&#x6c;&#103;&#111;&#118;&#46;&#103;&#x6f;&#x76;">&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#118;</a>.</p>
 
     </div>
 
@@ -877,7 +879,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       <p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these three steps to mask your domain.</p>
 
 <ol>
-<li>Email us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#x3a;&#x73;&#101;&#97;&#114;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#x69;&#x74;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#103;&#x6f;&#118;">&#115;&#101;&#x61;&#114;&#99;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#111;&#114;&#x74;&#x2e;&#100;&#105;&#x67;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#111;&#118;</a> and ask us to mask your domain.</li>
+<li>Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#115;&#x65;&#97;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#115;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#105;&#103;&#105;&#116;&#97;&#108;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#118;</a> and ask us to mask your domain.</li>
 <li>Create a CNAME in your external DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
 <li>When the setup is complete, change the <a href="/manual/code.html">code for your form</a> action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
 </ol>
@@ -959,10 +961,21 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
   //<![CDATA[
   var usasearch_config = { siteHandle:"usasearch" };
 
-  var script = document.createElement("script");
-  script.type = "text/javascript";
-  script.src = "http://search.usa.gov/javascripts/remote.loader.js";
-  document.getElementsByTagName("head")[0].appendChild(script);
+jQuery(document).ready(function() {
+  $('.typeahead').typeahead({
+      source: function (query, process) {
+          return $.get('https://search.usa.gov/sayt?name=usasearch&q=' + query, function (data) {
+              return process(data);
+          });
+      }, minLength: 2
+  });
+})
+
+
+  // var script = document.createElement("script");
+  // script.type = "text/javascript";
+  // script.src = "http://search.usa.gov/javascripts/remote.loader.js";
+  // document.getElementsByTagName("head")[0].appendChild(script);
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-31302465-1']);
@@ -973,6 +986,7 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+
   //]]>
 </script>
 

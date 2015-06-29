@@ -31,6 +31,8 @@
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
   <link rel="shortcut icon" href="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/favicon.ico">
   <link rel='alternate' type='application/atom+xml' title='usasearch.howto.gov Atom feed' href='/all.atom' />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="/javascripts/bootstrap3-typeahead.js"></script>
 </head>
 
 <body>
@@ -43,14 +45,15 @@
         <span class="search">Search</span>
       </a>
     </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">     
-      
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
       <form class="navbar-form navbar-left form-search" accept-charset="UTF-8" action="http://find.digitalgov.gov/search/" id="search-form" method="get">
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
         <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
         <div class="input-group input-append">
-          <label for="search-query" class="hide">Query</label>      
-          
-          <input name="query" id="search-query" type="text" class="form-control search-query usagov-search-autocomplete" autocomplete="off" style="width:360px;">
+          <label for="search-query" class="hide">Query</label>
+
+          <input name="query" autocomplete="off"  type="text" class="typeahead form-control search-query" id="search-query" data-provide="typeahead" >
           <span class="input-group-btn">
             <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
               <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -62,7 +65,7 @@
         <li>
           <a href="https://search.usa.gov/sites"><i
               class="icon-user icon-white"></i>&nbsp;Login</a>
-        </li>        
+        </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -74,9 +77,9 @@
   <form class="form-search" accept-charset="UTF-8" action="http://find.digitalgov.gov/search/" id="search-form" method="get">
     <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
     <div class="input-group input-append">
-      <label for="search-query" class="hide">Query</label>      
+      <label for="search-query" class="hide">Query</label>
 
-      <input name="query" id="search-query" type="text" class="form-control search-query usagov-search-autocomplete" autocomplete="off" style="">
+      <input name="query" autocomplete="off"  type="text" class=" form-control search-query" id="search-query"  >
       <span class="input-group-btn">
         <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
           <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
@@ -86,7 +89,6 @@
   </form>
 </div>
 
- 
 
 <div class="container-fluid">
   <div class="col-md-8 col-md-offset-2">
@@ -181,10 +183,21 @@
   //<![CDATA[
   var usasearch_config = { siteHandle:"usasearch" };
 
-  var script = document.createElement("script");
-  script.type = "text/javascript";
-  script.src = "http://search.usa.gov/javascripts/remote.loader.js";
-  document.getElementsByTagName("head")[0].appendChild(script);
+jQuery(document).ready(function() {
+  $('.typeahead').typeahead({
+      source: function (query, process) {
+          return $.get('https://search.usa.gov/sayt?name=usasearch&q=' + query, function (data) {
+              return process(data);
+          });
+      }, minLength: 2
+  });
+})
+
+
+  // var script = document.createElement("script");
+  // script.type = "text/javascript";
+  // script.src = "http://search.usa.gov/javascripts/remote.loader.js";
+  // document.getElementsByTagName("head")[0].appendChild(script);
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-31302465-1']);
@@ -195,6 +208,7 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+
   //]]>
 </script>
 
