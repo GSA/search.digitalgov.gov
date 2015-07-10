@@ -3,7 +3,7 @@
 <head>
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <title>May 2013 Release Notes</title>
+  <title>Posts tagged routed-queries</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -94,100 +94,92 @@
   <div class="col-md-8 col-md-offset-2">
     <!-- do not remove as used to parse in usasearch -->
     <div id="main-container">    
-      <article class="article feature" style="padding:0 30px; margin-top: 10px;">
+      <!-- begin tag layout -->
+<p class="muted">Posts tagged <strong>routed-queries</strong></p>
+
+<div class='articles'>
   
-  <h1>
-    <a href="/releases/may-2013.html">May 2013 Release Notes</a>
-  </h1>
-  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/routed-queries.html">How to Route Queries</a>
+    </h1>
+    
 
-  <div class='post-content'>
-    <h2>2 Highlighted Features</h2>
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Routed Queries</p>
 
-<h3>1. Search Your Twitter Lists</h3>
+<p>Do you want to get searchers to specific web page as quickly as possible? Create a Routed Query.</p>
 
-<p>Does your agency have dozens of Twitter accounts? Do you have a public Twitter list for these accounts? You can now opt to <a href="/manual/twitter.html">index tweets</a> from your lists. You can either:</p>
+<p>A routed query skips the search results page and automatically directs visitors to a web page of your choice for very specific queries. Use query routing to save visitors the extra step of reading through search results links by taking them directly to your content pages.</p>
+
+<p>We recommend creating a routed query for <a href="http://www.digitalgov.gov/2015/02/06/top-task-usability-design-for-your-users/">top tasks</a> that have a good content page but less-than-ideal search results.</p>
+
+<h2>Add a Routed Query</h2>
+
+<p><strong><em>Routed Query URL.</em></strong> Add the URL of the web page that you want to direct visitors to.</p>
+
+<p><strong><em>Routed Query Description.</em></strong> Add a brief description to help you remember why you created this entry and what it does. Descriptions aren't used for indexing or visible to searchers.</p>
+
+<p><strong><em>Keywords.</em></strong> Add the specific words or phrases used to trigger the routing. Searchers will only be directed to the URL above when their query term exactly matches one of the listed keywords. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.</p>
+
+<h2>Examples of How It Works</h2>
+
+<p>Private industry has been using query routing for some time. If you go to <a href="http://www.homedepot.com/">Home Depot</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and search for a general term like <em>carpet</em>, you're routed to their carpet navigation page. If you search for a more specific term like <em>vanities</em>, you get standard search results.</p>
+
+<p>Using Kids.gov an as example, every time someone goes to <a href="https://kids.usa.gov">Kids.gov</a> and searches for any of the following terms (must be exact matches), they'll automatically be directed to the Kids.gov <a href="https://kids.usa.gov/three-branches-of-government/index.shtml">Three Branches of Government</a> page.</p>
 
 <ul>
-<li>Show tweets from your Twitter account only (for example, index and show tweets from <a href="https://twitter.com/USDA">@USDA</a> only)</li>
-<li>Show tweets from your account's public lists (for example, index and show tweets from the all members of @USDA's list, <a href="https://twitter.com/USDA/lists/usda-twitter-accounts">USDA Twitter accounts</a>).</li>
+<li>3 branches</li>
+<li>3 branches of government</li>
+<li>branches of government</li>
+<li>executive branch</li>
+<li>government branches</li>
+<li>judicial branch</li>
+<li>legislative branch</li>
+<li>the three levels of government</li>
+<li>three branches of government</li>
 </ul>
 
 
-<p>(Thanks, <a href="http://www.nih.gov">NIH.gov</a> team, for suggesting this new feature!)</p>
+<p>If they get routed to the <a href="https://kids.usa.gov/three-branches-of-government/index.shtml">Three Branches of Government</a> and search again for one of these terms, they'll get the standard list of search results. We won't take people in an endless loop.</p>
 
-<h3>2. Search Your Multimedia Galleries</h3>
+<p>If they search for something not on the above list, like <em>what are the branches of government</em>, they'll still get the normal search results.</p>
 
-<p>Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery?</p>
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/routed-queries.png" alt="Standard search results for 'what are the branches of government' on Kids.gov" /></p>
 
-<p>You can now opt to <a href="/manual/rss.html">index MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
+    </div>
 
-<p>MRSS is the standard <a href="http://www.rssboard.org/media-rss">media RSS specification</a> for syndicating multimedia content. So, even if you don't have an MRSS feed now, it should be easy to generate one as long as your content is in a content management system or other database. MRSS is also the standard specification used by hosted multimedia services such as Flickr, Instagram, Vimeo, and YouTube.</p>
-
-<p>Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#x74;&#46;&#x64;&#x69;&#103;&#x69;&#116;&#97;&#x6c;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#118;">&#x73;&#101;&#97;&#114;&#x63;&#104;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#46;&#100;&#105;&#x67;&#105;&#116;&#x61;&#108;&#103;&#111;&#118;&#46;&#x67;&#111;&#x76;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
-
-<p>(Thanks, <a href="http://www.usgs.gov">USGS.gov</a> team, for suggesting this new feature!)</p>
-
-<h2>Other Features</h2>
-
-<ul>
-<li>For each result, searchers now see the URL directly under the title. The order is now title-URL-description. It had previously been title-description-URL.</li>
-<li>Searchers using screen readers now hear plain language labels for the search box&mdash;Enter your search term (English) and Ingrese su búsqueda (Spanish).</li>
-<li>When searchers opt to allow us to use their location, they now see <a href="/manual/govbox-jobs.html">jobs</a> that are geographically closest them.</li>
-<li>Mobile searchers now see your site's display name as the alt tag for your mobile logo.</li>
-<li>You can now access jobs data in our search API so that, if you use our API, you can display jobs in your search results.</li>
-<li>Searchers on Spanish-language websites now see the <a href="/manual/govbox-jobs.html">Jobs GovBox</a> when they search on jobs-related terms. For example, a Jobs GovBox appears on GobiernoUSA.gov for a search on <a href="http://search.usa.gov/search?affiliate=gobiernousa&amp;query=trabajos"><em>trabajos</em></a>.</li>
-</ul>
-
-
-<h2>Chores</h2>
-
-<ul>
-<li>We updated how we index and store <a href="/manual/rss.html">RSS feeds</a>, including YouTube feeds, so that we index each feed only one time.</li>
-<li>We now return a Bad Request message for recalls API searches that specify a page greater than 20, which is <a href="https://github.com/GSA/recalls_api/commit/0539ce559cae7c4f9360f56dba91932bc48ebb4c">outside of the allowed range</a>.</li>
-<li>When available, we now <a href="https://github.com/GSA/recalls_api/commit/74ff28198b2e09418d9d0826fffdcb99bd7fd22f">pull CPSC's URLs</a> for their recalls from their 301 or 302 response headers.</li>
-<li>We now filter out federal jobs with more than 20 locations.</li>
-<li>We removed the code for our forms feature on <a href="http://www.usa.gov">USA.gov</a> and federal forms API. Follow <a href="https://twitter.com/ProjectMyUSA">@ProjectMyUSA</a> to see how the MyUSA team is working to improve the public's experience with federal forms.</li>
-<li>We removed the code that created a separate mobile version of USA.gov. Visit  <a href="http://www.USA.gov">http://www.USA.gov</a> to see its new, responsive design.</li>
-<li>We updated the cron script for our monthly analytics emails.</li>
-<li>We updated our stemming file.</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>We fixed the pagination in our search API so that the API now consistently returns 10 results (1-10, 11-20, 21-30, etc).</li>
-<li>We tweaked the Spanish translations for the <a href="/manual/govbox-jobs.html">jobs GovBox</a>.</li>
-<li>We fixed the link for the advanced search operators on the <a href="http://search.usa.gov/search/advanced?affiliate=gobiernousa">Spanish-language advanced search page</a> to point to the corresponding Spanish-language help.</li>
-<li>We now correctly identify the Food and Drug Administration or Food Safety and Inspection Service as the data sources in our recalls API.</li>
-<li>We fixed how we handle registered trademarks in the recalls API so that searchers can now find items such as Zicam&reg;.</li>
-<li>We now provide a better response when an API call specifies the 'doc' index but doesn't include the required, complementary 'dc' parameter.</li>
-</ul>
-
-
-  </div>
-
-  <div class='tags'>
-    
-    <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-    
-  </div>
-
-  <div class='time'>
-    
-    
-    </br><span>Page last reviewed or updated:</span>
-    
-    
-    
-    <a href="/releases/may-2013.html">
-      <time>May 31, 2013</time>
-    </a>
-  </div>
-
-</article>
+    <div class='tags'>
       
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/routed-queries"><span class="label label-info">routed-queries</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/routed-queries.html">
+        <time datetime="2015-07-10">July 10, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+</div>
+
+
+<ul class="pager">
+  
+
+  
+</ul>
+<!-- end tag layout -->      
     </div>
   </div>
 </div>
