@@ -6,7 +6,7 @@ tags: help-manual manage-content routed-queries
 ---
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > Routed Queries
 
-Do you want to get searchers to specific web page as quickly as possible? Create a Routed Query.
+Do you want to get searchers to a specific web page as quickly as possible? Create a Routed Query.
 
 A routed query skips the search results page and automatically directs visitors to a web page of your choice for very specific queries. Use query routing to save visitors the extra step of reading through search results links by taking them directly to your content pages.
 
