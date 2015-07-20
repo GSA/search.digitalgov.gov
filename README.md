@@ -2,7 +2,7 @@
 
 ## How to add a new post
 
-1. Clone the `source` branch.
+1. Clone the `master` branch.
 1. Create a new file in the [drafts directory](https://github.com/GSA/search.digitalgov.gov/tree/master/drafts)
    using the following naming convention: `YYYY-MM-DD-post-filename-title.md`
 1. Add the YAML block to the top of the file.
