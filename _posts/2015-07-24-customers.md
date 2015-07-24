@@ -4,7 +4,7 @@ title: Our Customers
 tags: about-us customer-federal customer-state
 ---
 
-We have a [proven track record](/tagged/quote) of delivering fast, relevant search results. Over 1,500 government websites currently use DigitalGov Search to power their search box and improve their visitors' search experience.
+We have a [proven track record](/tagged/quote) of delivering fast, relevant search results. Thousands of government websites currently use DigitalGov Search to power their search box and improve their visitors' search experience.
 
 <table align="center" width="100%">
 <tr>
