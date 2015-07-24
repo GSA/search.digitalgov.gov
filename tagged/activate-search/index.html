@@ -143,13 +143,19 @@
 
 //]]&gt;
 &lt;/script&gt;
+
+**Quick Tip**
+If your website is secured with https, we support secure search on https://search.usa.gov/. Add 's' to your form action: `https://search.usa.gov/search` and also to your typeahead script: `https://search.usa.gov/javascripts/remote.loader.js`. If you don't specify these as https, searchers using Internet Explorer will receive a security message.
+
+**Quick Tip**
+If you'd prefer to use your own version of jQuery, change `var usasearch_config = { siteHandle:"YourSiteHandle" };` to `usasearch_config = { siteHandle:"YourSiteHandle", use_my_jquery: true };`.
 </code></pre>
 
-<h2>Setting Up a Search Box for Specific Folders or Subdomains</h2>
+<h2>Advanced: Options for Limiting a Search Box to Specific Folders or Subdomains</h2>
 
 <p>You can limit results to specific folders or subdomains by creating a collection, setting up an RSS feed, or passing in a hidden value.</p>
 
-<h3>Collection</h3>
+<h3>Option 1. Limit to Collections</h3>
 
 <p>Create a <a href="/manual/collections.html">collection</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/docs/</code> and (b) add an input for this collection, <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>. It should look something like this:</p>
 
@@ -168,7 +174,7 @@
 
 <p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/get-code-collection.png" alt="Value for the collection ID" /></p>
 
-<h3>RSS Feed</h3>
+<h3>Option 2. Limit to RSS Feeds</h3>
 
 <p>Set up an <a href="/manual/rss.html">RSS feed</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/news/</code> and (b) add an input for this feed, <code>&lt;input type="hidden" name="channel" value="###"&gt;</code>.  It should look something like this:</p>
 
@@ -185,7 +191,7 @@
 
 <p>The value is the number for your RSS ID, which is visible in the URL when you edit or preview your feed in the Admin Center.</p>
 
-<h3>Hidden Value</h3>
+<h3>Option 3. Limit to a Hidden Domain Value</h3>
 
 <p>Leave your domain blank on the <a href="/manual/domains.html">Domains</a> page and, instead, passing a hidden value for the domain in the search form code.</p>
 
@@ -195,8 +201,6 @@
 </code></pre>
 
 <hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> If your website is secured with https, we support secure search on https://search.usa.gov/. Add 's' to your form action: <code>https://search.usa.gov/search</code> and also to your typeahead script: <code>https://search.usa.gov/javascripts/remote.loader.js</code>. If you don't specify these as https, searchers using Internet Explorer will receive a security message.</p>
 
 <p><strong><em>Did you know?</em></strong> If you're using Drupal, be sure to check out our <a href="https://www.drupal.org/project/USASearch">Drupal module</a>.</p>
 
@@ -219,7 +223,7 @@
       
       
       <a href="/manual/code.html">
-        <time datetime="2015-05-22">May 22, 2015</time>
+        <time datetime="2015-07-24">July 24, 2015</time>
       </a>
     </div>
     </article>
@@ -236,7 +240,7 @@
       <p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these three steps to mask your domain.</p>
 
 <ol>
-<li>Email us at <a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#115;&#101;&#97;&#x72;&#99;&#x68;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#x72;&#116;&#46;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#x6f;&#118;">&#115;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#111;&#x76;</a> and ask us to mask your domain.</li>
+<li>Email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#115;&#x65;&#97;&#114;&#99;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#114;&#116;&#46;&#100;&#x69;&#103;&#105;&#x74;&#97;&#x6c;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;">&#115;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#115;&#117;&#112;&#x70;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#108;&#103;&#111;&#118;&#46;&#103;&#111;&#118;</a> and ask us to mask your domain.</li>
 <li>Create a CNAME in your external DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
 <li>When the setup is complete, change the <a href="/manual/code.html">code for your form</a> action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
 </ol>
