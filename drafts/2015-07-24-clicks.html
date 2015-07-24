@@ -3,7 +3,7 @@
 <head>
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <title>Help Manual: How to Set Up Your Search Box</title>
+  <title>How to Analyze Your Clicks</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -97,99 +97,62 @@
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/manual/index.html">Help Manual: How to Set Up Your Search Box</a>
+    <a href="/drafts/2015-07-24-clicks.html">How to Analyze Your Clicks</a>
   </h1>
   
 
   <div class='post-content'>
-    <p>We provide a search box that searches across all of your <em>public-facing</em> digital content. We support an unlimited number of web pages across multiple domains and we integrate your RSS feeds, tweets, YouTube videos, and Flickr and Instagram photos.</p>
+    <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Clicks</p>
 
-<p>Browse through our <a href="/blog/go-live.html">Go-Live Punch List</a> for some quick tips on how to configure the search experience for your website, or watch our <a href="/manual/training.html">training videos</a>.</p>
+<p>The Clicks page shows what searchers clicked on from your search results, and the number of times each of those items was clicked during the selected date range. The current month is shown by default, and the date can be adjusted using the date selectors at the top of the page and re-generating the report.</p>
 
-<p>Watch our <a href="http://youtu.be/TnlpuudK_WY">Getting Started video</a> (4 mins)&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+<p>Filtered data are available in the Admin Center from August 2014, unfiltered data are available for 13 months.</p>
 
-<h3><i class="icon-dashboard"></i> Dashboard</h3>
+<h2>Reading the Report Table</h2>
+
+<h3>Top URLs Clicked</h3>
+
+<p>The top 1,000 most clicked-on URLs from your results page for the selected time period, with the most popular first. URLs of equal popularity are listed in <strong><em>ABCXYZ - What?</em></strong> order.</p>
+
+<p>INSERT SCREENSHOT</p>
+
+<h3>Download Details</h3>
+
+<p>You can download the raw click logs for any URL in the list. The CSV (comma separated values) file has one line for each time this URL was clicked. Details avialable include:</p>
 
 <ul>
-<li><a href="/manual/site-overview.html">Site overview</a></li>
-<li><a href="/manual/users.html">Manage users</a></li>
-<li><a href="/manual/settings.html">Settings</a></li>
+<li><em>Date</em> and <em>Time</em> of the click,</li>
+<li><em>Query</em>: The query they ran before clicking the search result,</li>
+<li><em>Position</em>: Where in the results page was the result they clicked, e.g. <strong>5</strong> means the searcher clicked the fifth result in the list,</li>
+<li><em>Request</em>: The clicked URL (It is embedded in the request URL. Look for the text following ‘u=’.) and its position on the page,</li>
+<li><em>Referrer</em>: The webpage the person was on when they ran the search, this column also includes the query,</li>
+<li><em>Vertical</em> and <em>Modules</em>: The modules loaded in response to the query (Our <a href="/manual/module-codes.html">Module Codes</a> tip provides a key of the codes and names.),</li>
+<li><em>Device</em>, <em>Browser</em>, and <em>OS</em>: The kind of device and browser they were using, and</li>
+<li><em>Country Code</em> and <em>Region</em>: Where the user was, physically.</li>
 </ul>
 
 
-<h3><i class="icon-bar-chart"></i> Analytics</h3>
+<h3># of Clicks</h3>
 
-<ul>
-<li><a href="/manual/queries.html">Queries</a></li>
-<li><a href="/manual/clicks.html">Clicks</a></li>
-<li><a href="/manual/monthly-reports.html">Monthly reports</a></li>
-<li><a href="/manual/third-party.html">3rd party tracking</a></li>
-<li><a href="/manual/analytics-settings.html">Analytics settings</a></li>
-</ul>
+<p>Select the hyperlinked number in the <code># of Clicks</code> column to view the queries that led to a click for each URL (the <strong>Click Queries</strong> report).</p>
 
+<p>INSERT DOUBLE WIDE SCREENSHOT WITH ARROW FROM A # OF CLICKS LINK TO THE CORRESPONDING CLICK QUERIES PAGE</p>
 
-<h3><i class="icon-file"></i> Manage Content</h3>
+<p>If you click on a number in the <code># of Clicks</code> column on the Click Queries page, you will see all the URLs that were clicked on from that query's results (the <strong>Query Clicks</strong> report). This is the same report you see when you follow a <code># of Clicks</code> link from the <a href="/manual/queries.html">Queries page</a>.</p>
 
-<ul>
-<li><a href="/manual/content-overview.html">Content overview</a></li>
-<li><a href="/manual/domains.html">Domains</a> (plus <a href="/manual/domains-advanced.html">advanced options to add or filter URLs</a>)</li>
-<li><a href="/manual/collections.html">Collections</a></li>
-<li>i14y drawers (Coming soon!)</li>
-<li><a href="/manual/best-bets-text.html">Best bets:text</a></li>
-<li><a href="/manual/best-bets-graphics.html">Best bets: graphics</a></li>
-<li><a href="/manual/routed-queries.html">Routed queries</a></li>
-<li><a href="/manual/rss.html">RSS</a></li>
-<li><a href="/manual/youtube.html">YouTube</a></li>
-<li><a href="/manual/twitter.html">Twitter</a></li>
-<li><a href="/manual/flickr.html">Flickr</a></li>
-<li><a href="/manual/instagram.html">Instagram</a></li>
-</ul>
+<p>INSERT DOUBLE WIDE SCREENSHOT WITH ARROW FROM A # OF CLICKS LINK TO THE CORRESPONDING QUERY CLICKS PAGE</p>
 
+<p>You can loop through or drill down into this list for any set of clicks and queries.</p>
 
-<h3><i class="icon-desktop"></i> Manage Display</h3>
+<hr />
 
-<ul>
-<li><a href="/manual/display-overview.html">Display overview</a>
-
-<ul>
-<li><a href="/manual/govbox-jobs.html">Job openings</a></li>
-<li><a href="/manual/govbox-federal-register.html"><em>Federal Register</em></a></li>
-<li><a href="/manual/govbox-health.html">Health topics</a></li>
-</ul>
-</li>
-<li><a href="/manual/brand.html">Brand</a> (font &amp; colors, image assets, and header &amp; footer)</li>
-</ul>
-
-
-<h3><i class="icon-eye-open"></i> Preview</h3>
-
-<ul>
-<li><a href="/manual/preview.html">Preview</a></li>
-</ul>
-
-
-<h3><i class="icon-code"></i> Activate Search</h3>
-
-<ul>
-<li><a href="/manual/code.html">Code snippets</a></li>
-<li>Search API access key*</li>
-<li>Search API instructions*</li>
-<li>Type-ahead API instructions*</li>
-<li>i14y (Beta) API instructions*</li>
-</ul>
-
-
-<p>* These APIs are available for use on official government websites only. You must be a DigitalGov Search customer. <a href="https://search.usa.gov/sites">Sign in</a> is required. Keys and instructions for each can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search.</p>
-
-<p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
-
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#x73;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#112;&#111;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#115;&#x65;&#97;&#x72;&#99;&#104;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#118;</a>.</p>
+<p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and clicks each month. The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site today.</p>
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+    <a href="/tagged/help-manual analytics clicks"><span class="label label-info">help-manual analytics clicks</span></a>
     
   </div>
 
@@ -198,8 +161,8 @@
     
     
     
-    <a href="/manual/index.html">
-      <time>July 10, 2015</time>
+    <a href="/drafts/2015-07-24-clicks.html">
+      <time></time>
     </a>
   </div>
 

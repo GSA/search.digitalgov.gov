@@ -3,7 +3,7 @@
 <head>
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <title>Help Manual: How to Set Up Your Search Box</title>
+  <title>Checklist for a Successful Website Redesign</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -97,99 +97,53 @@
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/manual/index.html">Help Manual: How to Set Up Your Search Box</a>
+    <a href="/drafts/2015-07-24-redesign.html">Checklist for a Successful Website Redesign</a>
   </h1>
   
 
   <div class='post-content'>
-    <p>We provide a search box that searches across all of your <em>public-facing</em> digital content. We support an unlimited number of web pages across multiple domains and we integrate your RSS feeds, tweets, YouTube videos, and Flickr and Instagram photos.</p>
+    <p>We often receive questions when an affiliate undergoes a major website upgrade, changes content management systems, or both. We created this checklist to share with you five steps to ensure your redesign is successful.</p>
 
-<p>Browse through our <a href="/blog/go-live.html">Go-Live Punch List</a> for some quick tips on how to configure the search experience for your website, or watch our <a href="/manual/training.html">training videos</a>.</p>
+<p>We strongly encourage you to publish the content of your new site as an API, pointing to our <a href="/developer/i14y.html">indexing API, <em>i14y</em></a>. This will ensure that your site's search index is updated in real time as you publish, update, or delete content.</p>
 
-<p>Watch our <a href="http://youtu.be/TnlpuudK_WY">Getting Started video</a> (4 mins)&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+<p>The following steps will facilitate faster re-indexing with commercial search engines.</p>
 
-<h3><i class="icon-dashboard"></i> Dashboard</h3>
-
-<ul>
-<li><a href="/manual/site-overview.html">Site overview</a></li>
-<li><a href="/manual/users.html">Manage users</a></li>
-<li><a href="/manual/settings.html">Settings</a></li>
-</ul>
-
-
-<h3><i class="icon-bar-chart"></i> Analytics</h3>
+<ol>
+<li>Keep the file name and directory structure the same, if possible. If it isn't possible, use 301 redirects to send visitors to the appropriate new pages. For more on 301 redirects, read tips from <a href="http://blogs.bing.com/webmaster/2011/10/06/managing-redirects-301s-302s-and-canonicals/">Bing</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/93633">Google</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. Notify other websites that link to you of the changes.</li>
+<li>Register for the commercial search engines' webmaster tools.
 
 <ul>
-<li><a href="/manual/queries.html">Queries</a></li>
-<li><a href="/manual/clicks.html">Clicks</a></li>
-<li><a href="/manual/monthly-reports.html">Monthly reports</a></li>
-<li><a href="/manual/third-party.html">3rd party tracking</a></li>
-<li><a href="/manual/analytics-settings.html">Analytics settings</a></li>
-</ul>
-
-
-<h3><i class="icon-file"></i> Manage Content</h3>
-
-<ul>
-<li><a href="/manual/content-overview.html">Content overview</a></li>
-<li><a href="/manual/domains.html">Domains</a> (plus <a href="/manual/domains-advanced.html">advanced options to add or filter URLs</a>)</li>
-<li><a href="/manual/collections.html">Collections</a></li>
-<li>i14y drawers (Coming soon!)</li>
-<li><a href="/manual/best-bets-text.html">Best bets:text</a></li>
-<li><a href="/manual/best-bets-graphics.html">Best bets: graphics</a></li>
-<li><a href="/manual/routed-queries.html">Routed queries</a></li>
-<li><a href="/manual/rss.html">RSS</a></li>
-<li><a href="/manual/youtube.html">YouTube</a></li>
-<li><a href="/manual/twitter.html">Twitter</a></li>
-<li><a href="/manual/flickr.html">Flickr</a></li>
-<li><a href="/manual/instagram.html">Instagram</a></li>
-</ul>
-
-
-<h3><i class="icon-desktop"></i> Manage Display</h3>
-
-<ul>
-<li><a href="/manual/display-overview.html">Display overview</a>
-
-<ul>
-<li><a href="/manual/govbox-jobs.html">Job openings</a></li>
-<li><a href="/manual/govbox-federal-register.html"><em>Federal Register</em></a></li>
-<li><a href="/manual/govbox-health.html">Health topics</a></li>
+<li><a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+<li><a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
 </ul>
 </li>
-<li><a href="/manual/brand.html">Brand</a> (font &amp; colors, image assets, and header &amp; footer)</li>
-</ul>
-
-
-<h3><i class="icon-eye-open"></i> Preview</h3>
+<li>Update the <a href="http://www.sitemaps.org">XML sitemap</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> on your website and notify the search engines via the webmaster tools. Modern CMSs usually have a feature that will build an XML sitemap automatically.
 
 <ul>
-<li><a href="/manual/preview.html">Preview</a></li>
+<li>Be sure your sitemap includes both the <code>&lt;changefreq&gt;</code> and <code>&lt;updated&gt;</code> tags. <code>&lt;changefreq&gt;</code> cues the search engines as to how frequently they should re-crawl your site, and <code>&lt;updated&gt;</code> lets them know if any changes have been made since the last indexing.</li>
 </ul>
+</li>
+<li>Notify the search engines of the content that has been removed via the webmaster tools. Specifically, in Bing, use the <a href="https://www.bing.com/webmaster/diagnostics/site/move">Site Move tool</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>Within the <a href="https://search.usa.gov/sites/">Admin Center</a>, update your <a href="/manual/domains.html">Domains</a> and <a href="/manual/rss.html">RSS feeds</a> to reflect your new design. If you have set up <a href="/manual/collections.html">Collections</a>, be sure to update the URLs there as well.</li>
+</ol>
 
 
-<h3><i class="icon-code"></i> Activate Search</h3>
+<p>If you've undergone a redesign and are not using i14y, if you've followed these five steps, and your site search results are not what you'd expect, notify us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#115;&#x65;&#97;&#114;&#99;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#x6f;&#118;">&#115;&#101;&#97;&#114;&#x63;&#x68;&#64;&#115;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;</a>.</p>
+
+<hr />
+
+<p><strong><em>Additional Resource</em></strong></p>
 
 <ul>
-<li><a href="/manual/code.html">Code snippets</a></li>
-<li>Search API access key*</li>
-<li>Search API instructions*</li>
-<li>Type-ahead API instructions*</li>
-<li>i14y (Beta) API instructions*</li>
+<li><em><a href="http://googlewebmastercentral.blogspot.com/2012/04/how-to-move-your-content-to-new.html">How to move your content to a new location</a></em>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, Google Webmaster Central Blog</li>
 </ul>
 
-
-<p>* These APIs are available for use on official government websites only. You must be a DigitalGov Search customer. <a href="https://search.usa.gov/sites">Sign in</a> is required. Keys and instructions for each can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search.</p>
-
-<p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
-
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#x73;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#112;&#111;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#115;&#x65;&#97;&#x72;&#99;&#104;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#118;</a>.</p>
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+    <a href="/tagged/seo"><span class="label label-info">seo</span></a>
     
   </div>
 
@@ -198,8 +152,8 @@
     
     
     
-    <a href="/manual/index.html">
-      <time>July 10, 2015</time>
+    <a href="/drafts/2015-07-24-redesign.html">
+      <time></time>
     </a>
   </div>
 

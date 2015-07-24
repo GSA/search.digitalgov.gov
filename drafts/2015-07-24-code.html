@@ -3,7 +3,7 @@
 <head>
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <title>Posts tagged activate-search</title>
+  <title>How to Activate Your Search by Adding Our Code Snippets to Your Website</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -94,23 +94,17 @@
   <div class="col-md-8 col-md-offset-2">
     <!-- do not remove as used to parse in usasearch -->
     <div id="main-container">    
-      <!-- begin tag layout -->
-<p class="muted">Posts tagged <strong>activate-search</strong></p>
-
-<div class='articles'>
+      <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/code.html">How to Activate Your Search by Adding Our Code Snippets to Your Website</a>
-    </h1>
-    
+  <h1>
+    <a href="/drafts/2015-07-24-code.html">How to Activate Your Search by Adding Our Code Snippets to Your Website</a>
+  </h1>
+  
 
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search > Code Snippets</p>
+  <div class='post-content'>
+    <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search > Code Snippets</p>
 
-<p>Visit our <a href="https://search.usa.gov/sites/">Admin Center</a>, select your site, and click on the Activate Search option in the left-hand menu.</p>
+<p>Visit our <a href="https://search.usa.gov/sites/">Admin Center</a>, select your site, and click on the Activate option, or <code>&lt;/&gt;</code> icon, in the left-hand menu.</p>
 
 <p>Add the following two snippets of code to your website to "hook" your website and our hosted search service together. You can add this code to your individual web pages or to the template(s) in your content management system.</p>
 
@@ -145,15 +139,11 @@
 &lt;/script&gt;
 </code></pre>
 
-<blockquote><p><strong><em>HTTPS Quick Tip:</em></strong> If your website is secured with https, we support secure search on https://search.usa.gov/. Add 's' to your form action: <code>https://search.usa.gov/search</code> and also to your typeahead script: <code>https://search.usa.gov/javascripts/remote.loader.js</code>. If you don't specify these as https, searchers using Internet Explorer will receive a security message.</p>
+<h2>Setting Up a Search Box for Specific Folders or Subdomains</h2>
 
-<p><strong><em>jQuery Quick Tip:</em></strong> If you'd prefer to use your own version of jQuery, change <code>var usasearch_config = { siteHandle:"YourSiteHandle" };</code> to <code>usasearch_config = { siteHandle:"YourSiteHandle", use_my_jquery: true };</code>.</p></blockquote>
+<p>You can limit results to specific folders or subdomains in a few ways: set up a <a href="/manual/collections.html">collection</a>, add an <a href="/manual/rss.html">RSS feed</a>, or pass in a hidden value.</p>
 
-<h2>Advanced: Options for Limiting a Search Box to Specific Folders or Subdomains</h2>
-
-<p>You can limit results to specific folders or subdomains by creating a collection, setting up an RSS feed, or passing in a hidden value.</p>
-
-<h3>Option 1. Limit to Collections</h3>
+<h3>Collection</h3>
 
 <p>Create a <a href="/manual/collections.html">collection</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/docs/</code> and (b) add an input for this collection, <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>. It should look something like this:</p>
 
@@ -172,7 +162,7 @@
 
 <p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/get-code-collection.png" alt="Value for the collection ID" /></p>
 
-<h3>Option 2. Limit to RSS Feeds</h3>
+<h3>RSS Feed</h3>
 
 <p>Set up an <a href="/manual/rss.html">RSS feed</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/news/</code> and (b) add an input for this feed, <code>&lt;input type="hidden" name="channel" value="###"&gt;</code>.  It should look something like this:</p>
 
@@ -189,9 +179,9 @@
 
 <p>The value is the number for your RSS ID, which is visible in the URL when you edit or preview your feed in the Admin Center.</p>
 
-<h3>Option 3. Limit to a Hidden Domain Value</h3>
+<h3>Hidden Value</h3>
 
-<p>Leave your domain blank on the <a href="/manual/domains.html">Domains</a> page and, instead, passing a hidden value for the domain in the search form code.</p>
+<p>You can override your default Domains search scope by passing a hidden value for the domain in the search form code.</p>
 
 <p>See, for example, <a href="http://www.ri.gov">RI.gov</a>, <a href="http://www.dmv.ri.gov/">DMV.RI.gov</a>, <a href="http://www.health.ri.gov/">Health.RI.gov</a>. On Health.RI.gov, the following hidden value is added to limit to only the health subdomain.</p>
 
@@ -200,90 +190,32 @@
 
 <hr />
 
-<p><strong><em>Did you know?</em></strong> If you're using Drupal, be sure to check out our <a href="https://www.drupal.org/project/USASearch">Drupal module</a>.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> If your website is secured with https, add 's' to your form action: <code>https://search.usa.gov/search</code> and also to your typeahead script: <code>https://search.usa.gov/javascripts/remote.loader.js</code>. If you don't specify these as https, searchers using Internet Explorer will receive a security message.</p>
 
-<p><strong><em>Did you know?</em></strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers your domain (instead of USA.gov).</p>
+<p><strong><em>Did you know?</em></strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers your domain (instead of USA.gov). If you use a <a href="/manual/cname.html">domain mask</a> for your search results page, to use https you will need to provide the SSL certificate for our infrastructure, including purchasing, renewal, and validation with certificate authorities.</p>
 
-    </div>
+<p><strong><em>Did you know?</em></strong> If you're using Drupal, be sure to check out our <a href="https://www.drupal.org/project/USASearch">Drupal module</a>. If you're using WordPress on Sites.USA.gov, you can use our search and i14y indexing plug-ins. LINK TO PLUGINS?</p>
 
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
-      
-      <a href="/tagged/code-snippets"><span class="label label-info">code-snippets</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/code.html">
-        <time datetime="2015-07-24">July 24, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
+  </div>
+
+  <div class='tags'>
     
-    <h1>
-      <a href="/manual/cname.html">How to Mask Your Domain</a>
-    </h1>
+    <a href="/tagged/help-manual activate-search code-snippets"><span class="label label-info">help-manual activate-search code-snippets</span></a>
     
+  </div>
 
-    <div class='post-content'>
-      <p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these three steps to mask your domain.</p>
+  <div class='time'>
+    
+    
+    
+    
+    <a href="/drafts/2015-07-24-code.html">
+      <time></time>
+    </a>
+  </div>
 
-<ol>
-<li>Email us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#115;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#115;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#x70;&#112;&#x6f;&#x72;&#116;&#x2e;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#118;</a> and ask us to mask your domain.</li>
-<li>Create a CNAME in your external DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
-<li>When the setup is complete, change the <a href="/manual/code.html">code for your form</a> action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
-</ol>
-
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> Many agencies have both internal and external DNS. Be
-sure to update your <em>external</em> DNS records (step 2) before changing your form code (step 3).</p>
-
-<p><strong><em>Troubleshooting tip:</em></strong>  Once the CNAME is set up, if visitors to your site happen to truncate the URL in the browser bar to http://search.yoursite.gov (without any parameters), they're automatically redirected to your homepage at http://www.yoursite.gov.</p>
-
-<p><strong><em>Did you know?</em></strong> By default, we set up search.YOURSITE.gov (such as search.nih.gov). If this subdomain is already used by another application, you can request YOURSITEsearch.YOURSITE.gov (such as usdasearch.usda.gov) or another pattern.</p>
-
-    </div>
-
-    <div class='tags'>
+</article>
       
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
-      
-      <a href="/tagged/cname"><span class="label label-info">cname</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/cname.html">
-        <time datetime="2014-08-21">August 21, 2014</time>
-      </a>
-    </div>
-    </article>
-  
-</div>
-
-
-<ul class="pager">
-  
-
-  
-</ul>
-<!-- end tag layout -->      
     </div>
   </div>
 </div>

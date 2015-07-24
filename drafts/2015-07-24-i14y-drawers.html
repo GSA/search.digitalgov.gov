@@ -3,7 +3,7 @@
 <head>
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <title>Help Manual: How to Set Up Your Search Box</title>
+  <title>How to Work with i14y Drawers</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -97,99 +97,48 @@
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/manual/index.html">Help Manual: How to Set Up Your Search Box</a>
+    <a href="/drafts/2015-07-24-i14y-drawers.html">How to Work with i14y Drawers</a>
   </h1>
   
 
   <div class='post-content'>
-    <p>We provide a search box that searches across all of your <em>public-facing</em> digital content. We support an unlimited number of web pages across multiple domains and we integrate your RSS feeds, tweets, YouTube videos, and Flickr and Instagram photos.</p>
+    <p><a href="http://search.digitalgov.gov/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers</p>
 
-<p>Browse through our <a href="/blog/go-live.html">Go-Live Punch List</a> for some quick tips on how to configure the search experience for your website, or watch our <a href="/manual/training.html">training videos</a>.</p>
+<p>An <a href="http://search.digitalgov.gov/developer/i14y.html">i14y</a> Drawer is an index receiving content via the i14y API. We have called them <strong>drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of the site’s search.</p>
 
-<p>Watch our <a href="http://youtu.be/TnlpuudK_WY">Getting Started video</a> (4 mins)&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+<h2>Step 1. Make sure your site is connected to i14y</h2>
 
-<h3><i class="icon-dashboard"></i> Dashboard</h3>
+<p>If your site Admin Center has the following page: <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, your site is connected to i14y. If you do not see this page in the Admin Center, <a href="mailto:search@support.digitalgov.gov">email us</a>. You can also read about <a href="/manual/i14y-getting-started.html">Getting Started with i14y</a>.</p>
 
-<ul>
-<li><a href="/manual/site-overview.html">Site overview</a></li>
-<li><a href="/manual/users.html">Manage users</a></li>
-<li><a href="/manual/settings.html">Settings</a></li>
-</ul>
+<h2>Step 2. Add one or more Drawers</h2>
 
+<p>On <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, Click <code>Add i14y Drawer</code> in the upper right corner.</p>
 
-<h3><i class="icon-bar-chart"></i> Analytics</h3>
+<h3>Handle</h3>
 
-<ul>
-<li><a href="/manual/queries.html">Queries</a></li>
-<li><a href="/manual/clicks.html">Clicks</a></li>
-<li><a href="/manual/monthly-reports.html">Monthly reports</a></li>
-<li><a href="/manual/third-party.html">3rd party tracking</a></li>
-<li><a href="/manual/analytics-settings.html">Analytics settings</a></li>
-</ul>
+<p>Let us know what the handle for your drawer should be - the handle must be all lowercase alphanumeric, all one word, and can include underscores but no other special characters (e.g., agency_drawer_handle2).</p>
 
+<p>The Drawer <em>Description</em> is optional</p>
 
-<h3><i class="icon-file"></i> Manage Content</h3>
+<p>INSERT SCREENSHOT OF DRAWER ADD SCREEN</p>
 
-<ul>
-<li><a href="/manual/content-overview.html">Content overview</a></li>
-<li><a href="/manual/domains.html">Domains</a> (plus <a href="/manual/domains-advanced.html">advanced options to add or filter URLs</a>)</li>
-<li><a href="/manual/collections.html">Collections</a></li>
-<li>i14y drawers (Coming soon!)</li>
-<li><a href="/manual/best-bets-text.html">Best bets:text</a></li>
-<li><a href="/manual/best-bets-graphics.html">Best bets: graphics</a></li>
-<li><a href="/manual/routed-queries.html">Routed queries</a></li>
-<li><a href="/manual/rss.html">RSS</a></li>
-<li><a href="/manual/youtube.html">YouTube</a></li>
-<li><a href="/manual/twitter.html">Twitter</a></li>
-<li><a href="/manual/flickr.html">Flickr</a></li>
-<li><a href="/manual/instagram.html">Instagram</a></li>
-</ul>
+<h2>Step 3. Send Content to Fill your Drawer</h2>
 
+<p>After you have created your Drawer(s), click <code>Show</code> from the i14y Drawers list to find that Drawer’s API key. Use this key in your API call or your CMS module to <a href="http://gsa.github.io/slate/#authentication">send your content to the right place</a>.</p>
 
-<h3><i class="icon-desktop"></i> Manage Display</h3>
+<p>INSERT SCREENSHOT OF API KEY</p>
 
-<ul>
-<li><a href="/manual/display-overview.html">Display overview</a>
+<h2>Step 4. Review your Index</h2>
 
-<ul>
-<li><a href="/manual/govbox-jobs.html">Job openings</a></li>
-<li><a href="/manual/govbox-federal-register.html"><em>Federal Register</em></a></li>
-<li><a href="/manual/govbox-health.html">Health topics</a></li>
-</ul>
-</li>
-<li><a href="/manual/brand.html">Brand</a> (font &amp; colors, image assets, and header &amp; footer)</li>
-</ul>
+<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list. We also send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes. Response codes are also available in your CMS module.</p>
 
-
-<h3><i class="icon-eye-open"></i> Preview</h3>
-
-<ul>
-<li><a href="/manual/preview.html">Preview</a></li>
-</ul>
-
-
-<h3><i class="icon-code"></i> Activate Search</h3>
-
-<ul>
-<li><a href="/manual/code.html">Code snippets</a></li>
-<li>Search API access key*</li>
-<li>Search API instructions*</li>
-<li>Type-ahead API instructions*</li>
-<li>i14y (Beta) API instructions*</li>
-</ul>
-
-
-<p>* These APIs are available for use on official government websites only. You must be a DigitalGov Search customer. <a href="https://search.usa.gov/sites">Sign in</a> is required. Keys and instructions for each can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search.</p>
-
-<p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
-
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#x73;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#112;&#111;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#115;&#x65;&#97;&#x72;&#99;&#104;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#118;</a>.</p>
+<p>INSERT SCREENSHOT OF DRAWERS LIST WITH THE DOC COUNT CIRCLED.</p>
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+    <a href="/tagged/help-manual manage-content i14y"><span class="label label-info">help-manual manage-content i14y</span></a>
     
   </div>
 
@@ -198,8 +147,8 @@
     
     
     
-    <a href="/manual/index.html">
-      <time>July 10, 2015</time>
+    <a href="/drafts/2015-07-24-i14y-drawers.html">
+      <time></time>
     </a>
   </div>
 

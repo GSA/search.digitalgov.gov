@@ -3,7 +3,7 @@
 <head>
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <title>Getting Started With i14y</title>
+  <title>Key to Color Coding in the Admin Center</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -97,64 +97,118 @@
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/drafts/2015-06-12-i14y-getting-started.html">Getting Started With i14y</a>
+    <a href="/drafts/2015-07-24-color-codes.html">Key to Color Coding in the Admin Center</a>
   </h1>
   
 
   <div class='post-content'>
-    <p><a href="https://github.com/GSA/i14y">i14y Github repo</a> | <a href="http://gsa.github.io/slate/">Technical Documentation</a></p>
+    <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite</p>
 
-<p>Do you want to have real-time updates to your search index, and full control over your page titles and descriptions? Then our <a href="https://github.com/GSA/i14y">i14y content ingestion API</a> is for you! Take a look at our <a href="http://search.digitalgov.gov/developer/i14y.html">i14y FAQ</a>, and then jump right in!</p>
+<p>We use color coded background shading in the Admin Center to indicate the status of a few types of items.</p>
 
-<h2>Step 1. Create a new site for your i14y content search</h2>
+<h2><a href="/manual/users.html">Manage Users</a></h2>
 
-<p>To send content for indexing via i14y, you will need to know what site you are sending it to. You can</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;"> Color </th>
+<th style="text-align:left;"> Status </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> No color&nbsp;&nbsp;&nbsp; </td>
+<td style="text-align:left;"> Approved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+</tr>
+<tr>
+<td style="text-align:left;"> Yellow  </td>
+<td style="text-align:left;"> Pending - requires approval or email verification </td>
+</tr>
+<tr>
+<td style="text-align:left;"> Red   </td>
+<td style="text-align:left;"> Not approved </td>
+</tr>
+</tbody>
+</table>
+
+
+<h2><a href="/manual/rss.html">RSS Feeds</a></h2>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;"> Color </th>
+<th style="text-align:left;"> Status </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> Green&nbsp;&nbsp;&nbsp; </td>
+<td style="text-align:left;"> Feed indexed, no errors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+</tr>
+<tr>
+<td style="text-align:left;"> Yellow  </td>
+<td style="text-align:left;"> Pending Indexing </td>
+</tr>
+<tr>
+<td style="text-align:left;"> Red   </td>
+<td style="text-align:left;"> Feed indexed, but error in one or more items </td>
+</tr>
+<tr>
+<td style="text-align:left;"> &nbsp; </td>
+<td style="text-align:left;"> &nbsp; </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Click on the name of the feed to see more detailed information about its status. Possible error messages follow.</p>
 
 <ul>
-<li><a href="http://search.digitalgov.gov/manual/add-site.html">add a brand new site</a>, or</li>
-<li><a href="mailto:search@support.digitalgov.gov">email us</a> to request we copy one of your existing site’s settings to a new site. Note we cannot copy into an existing site, so don't set one up first.</li>
+<li>404 Not Found</li>
+<li>Feed looks empty</li>
+<li>Description can't be blank</li>
+<li>Title can't be blank</li>
+<li>Missing link field</li>
+<li>Missing pubDate field</li>
+<li>Link is not a valid URL</li>
+<li>Linked URL does not exist (HTTP 404)</li>
 </ul>
 
 
-<h2>Step 2. Ask us to assign this new site to i14y</h2>
+<h2>Best Bets: <a href="/manual/best-bets-text.html">Text</a> or <a href="/manual/best-bets-graphics.html">Graphics</a></h2>
 
-<p>When requesting a site copy, let us know you want the new site to connect to i14y. If you have created a brand new site, <a href="mailto:search@support.digitalgov.gov">email us</a> to request it be connected to i14y.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;"> Color </th>
+<th style="text-align:left;"> Status </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> Green&nbsp;&nbsp;&nbsp;  </td>
+<td style="text-align:left;"> Active&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+</tr>
+<tr>
+<td style="text-align:left;"> Yellow   </td>
+<td style="text-align:left;"> Inactive </td>
+</tr>
+<tr>
+<td style="text-align:left;"> &nbsp; </td>
+<td style="text-align:left;"> &nbsp; </td>
+</tr>
+</tbody>
+</table>
 
-<h2>Step 3. Add one or more Drawers</h2>
 
-<p>After a search site has been connected to i14y, a new page will appear: <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers.</p>
-
-<p>Click <code>Add i14y Drawer</code> in the upper right corner, create a handle, give it an optional description, and click Add to save. <a href="/i14y-drawers.html">Read more about working with Drawers</a>.</p>
-
-<h2>Step 4. Fill your Drawer</h2>
-
-<p>Here’s where the rubber hits the road: use the i14y API to add content to your drawer. You can do this in two ways:</p>
-
-<ul>
-<li>Use i14y directly. <a href="https://github.com/GSA/i14y">Github repo</a> | <a href="http://gsa.github.io/slate/">Technical Documentation</a></li>
-<li>Use a module plugged into your CMS. At this time there is a <a href="https://www.drupal.org/project/usasearch">Drupal module</a> and a <a href="https://github.com/GSA/sites-digitalgov-search">Wordpress plugin</a> available.</li>
-</ul>
-
-
-<h2>Step 5. Review your index</h2>
-
-<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list. We also send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes. Response codes are also available in your CMS module.</p>
-
-<h2>Step 5. Configure your search</h2>
-
-<p>Once you have your index populated, you will <a href="http://search.digitalgov.gov/manual/content-overview.html">set up the rest of your search</a> as you would for a traditional DigitalGov Search site. Set your default search scope on your <a href="http://search.digitalgov.gov/manual/domains.html">Domains</a> page, add Social Media accounts (<a href="http://search.digitalgov.gov/manual/flickr.html">Flickr</a>, <a href="http://search.digitalgov.gov/manual/instagram.html">Instagram</a>, <a href="http://search.digitalgov.gov/manual/twitter.html">Twitter</a>, and <a href="http://search.digitalgov.gov/manual/youtube.html">YouTube</a>, create <a href="http://search.digitalgov.gov/manual/collections.html">Collections</a>, and set your results page Display (both <a href="http://search.digitalgov.gov/manual/display-overview.html">search features</a> and <a href="http://search.digitalgov.gov/manual/brand.html">branding</a>).</p>
-
-<p>If you have any <a href="http://search.digitalgov.gov/manual/rss.html">RSS content</a> that will not be included in your i14y drawer, you can add those feeds as well.</p>
-
-<h2>Step 6. Update your search box</h2>
-
-<p>Update your website’s search box form code to point to <code>affiliate=**yournewi14ysite**</code></p>
+<p>Active best bets are shown to searchers on your site. Inactive entries aren't shown to searchers because they're set to inactive manually, they have expired (by the publish end date), or both.</p>
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/help-manual manage-content i14y"><span class="label label-info">help-manual manage-content i14y</span></a>
+    <a href="/tagged/help-manual manage-users best-bets rss"><span class="label label-info">help-manual manage-users best-bets rss</span></a>
     
   </div>
 
@@ -163,7 +217,7 @@
     
     
     
-    <a href="/drafts/2015-06-12-i14y-getting-started.html">
+    <a href="/drafts/2015-07-24-color-codes.html">
       <time></time>
     </a>
   </div>

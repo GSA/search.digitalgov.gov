@@ -3,7 +3,7 @@
 <head>
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <title>Help Manual: How to Set Up Your Search Box</title>
+  <title>Resources for Developers</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -97,99 +97,60 @@
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/manual/index.html">Help Manual: How to Set Up Your Search Box</a>
+    <a href="/drafts/2015-07-23-index.html">Resources for Developers</a>
   </h1>
   
 
   <div class='post-content'>
-    <p>We provide a search box that searches across all of your <em>public-facing</em> digital content. We support an unlimited number of web pages across multiple domains and we integrate your RSS feeds, tweets, YouTube videos, and Flickr and Instagram photos.</p>
+    <p>In line with the White House's <a href="http://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html">Digital Government Strategy</a>, we're making our code and data more open.</p>
 
-<p>Browse through our <a href="/blog/go-live.html">Go-Live Punch List</a> for some quick tips on how to configure the search experience for your website, or watch our <a href="/manual/training.html">training videos</a>.</p>
+<h2>APIs for DigitalGov Search Customers</h2>
 
-<p>Watch our <a href="http://youtu.be/TnlpuudK_WY">Getting Started video</a> (4 mins)&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+<p>These APIs are available for use on official government websites only. You must be a DigitalGov Search customer. <a href="https://search.usa.gov/sites">Sign in</a> is required. Full instructions for each can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search.</p>
 
-<h3><i class="icon-dashboard"></i> Dashboard</h3>
+<p><strong>i14y (Beta)</strong>&mdash;This API allows you to send content directly from your content management system (CMS) into DigitalGov Search for real-time indexing.</p>
 
-<ul>
-<li><a href="/manual/site-overview.html">Site overview</a></li>
-<li><a href="/manual/users.html">Manage users</a></li>
-<li><a href="/manual/settings.html">Settings</a></li>
-</ul>
+<p><strong>Results Display API</strong>&mdash;This API exposes all relevant results "modules" in a single JSON call, including: web results, best bets, health topics, job openings, recent tweets, recent news, recent videos, <em>Federal Register</em> documents, and related searches. Use it to <strong><em>pull search results</em></strong> from our service to display on your agency's website or mobile applications.</p>
 
+<p><strong>Type-ahead API</strong>&mdash;This API exposes the type-ahead suggestions that often appear below your search box as searchers enter their search terms.</p>
 
-<h3><i class="icon-bar-chart"></i> Analytics</h3>
+<h2>APIs and Data Feeds for the Public</h2>
 
-<ul>
-<li><a href="/manual/queries.html">Queries</a></li>
-<li><a href="/manual/clicks.html">Clicks</a></li>
-<li><a href="/manual/monthly-reports.html">Monthly reports</a></li>
-<li><a href="/manual/third-party.html">3rd party tracking</a></li>
-<li><a href="/manual/analytics-settings.html">Analytics settings</a></li>
-</ul>
+<p><strong><a href="jobs.html">Jobs API</a></strong>&mdash;Taps into a list of current jobs openings with federal, state, and local government agencies. Jobs are searchable by keyword, location, agency, schedule, or any combination of these.</p>
 
+<p><strong><a href="https://github.com/GSA/govt-urls">List of Non-.gov URLs</a></strong>&mdash;<a href="http://www.usa.gov">USA.gov</a> searches across all federal, state, local, tribal, and territorial government websites. Most government websites end in .gov or .mil, but many do not. This is a list of all government URLs that do not end in .gov or .mil.</p>
 
-<h3><i class="icon-file"></i> Manage Content</h3>
+<p>Visit <a href="http://www.usa.gov/About/developer-resources/developers.shtml">USA.gov/Developer</a> for a full list of USA.gov's APIs and data feeds available to the public.</p>
 
-<ul>
-<li><a href="/manual/content-overview.html">Content overview</a></li>
-<li><a href="/manual/domains.html">Domains</a> (plus <a href="/manual/domains-advanced.html">advanced options to add or filter URLs</a>)</li>
-<li><a href="/manual/collections.html">Collections</a></li>
-<li>i14y drawers (Coming soon!)</li>
-<li><a href="/manual/best-bets-text.html">Best bets:text</a></li>
-<li><a href="/manual/best-bets-graphics.html">Best bets: graphics</a></li>
-<li><a href="/manual/routed-queries.html">Routed queries</a></li>
-<li><a href="/manual/rss.html">RSS</a></li>
-<li><a href="/manual/youtube.html">YouTube</a></li>
-<li><a href="/manual/twitter.html">Twitter</a></li>
-<li><a href="/manual/flickr.html">Flickr</a></li>
-<li><a href="/manual/instagram.html">Instagram</a></li>
-</ul>
+<h2>Source Code (Public Github Repositories)</h2>
 
+<p><strong><a href="https://github.com/GSA/asis">ASIS (Advanced Social Image Search)</a></strong>&mdash;The source code that runs our image search. ASIS indexes Flickr and Instagram images and provides a search API across the combined index.</p>
 
-<h3><i class="icon-desktop"></i> Manage Display</h3>
+<p><strong><a href="https://github.com/GSA/i14y">i14y</a></strong>&mdash;The source code that indexes agencies' published content.</p>
 
-<ul>
-<li><a href="/manual/display-overview.html">Display overview</a>
+<p><strong><a href="https://github.com/GSA/jobs_api">Jobs</a></strong>&mdash;The source code that runs our jobs search and <a href="jobs.html">Jobs API</a>. Indexes current jobs openings with federal agencies and select state and local government agencies, too.</p>
 
-<ul>
-<li><a href="/manual/govbox-jobs.html">Job openings</a></li>
-<li><a href="/manual/govbox-federal-register.html"><em>Federal Register</em></a></li>
-<li><a href="/manual/govbox-health.html">Health topics</a></li>
-</ul>
-</li>
-<li><a href="/manual/brand.html">Brand</a> (font &amp; colors, image assets, and header &amp; footer)</li>
-</ul>
+<p><strong><a href="https://github.com/GSA/punchcard">Punchcard</a></strong>&mdash;The repository of synonyms, protected words, stop words, localizations, and other vocabularies that we use to improve the precision, recall, and usability of search results.</p>
 
+<p><strong><a href="https://github.com/GSA/activerecord-validate_unique_child_attribute">activerecord-validate_unique_child_attribute</a></strong>&mdash;ActiveRecord extension to enforce uniqueness validations when accepting nested attributes. Works around <a href="https://github.com/rails/rails/issues/4568">Rails issue #4568</a>.</p>
 
-<h3><i class="icon-eye-open"></i> Preview</h3>
+<p><strong><a href="https://github.com/gsa/search.digitalgov.gov">search.digitalgov.gov</a></strong>&mdash;Pages and layout for our website, <a href="http://search.digitalgov.gov">http://search.digitalgov.gov</a>.</p>
 
-<ul>
-<li><a href="/manual/preview.html">Preview</a></li>
-</ul>
+<p><strong><a href="https://github.com/GSA/sitelink_generator">Site Links</a></strong>&mdash;The source code that "decorates" organic web results to provide additional, value-added links to help searchers find what they're looking for. Currently provides one-click links to EDGAR filings for relevant SEC.gov results. Also published as a Ruby gem at <a href="https://rubygems.org/gems/sitelink_generator">https://rubygems.org/gems/sitelink_generator</a>.</p>
 
+<h2>CMS Modules and Plugins</h2>
 
-<h3><i class="icon-code"></i> Activate Search</h3>
+<p>These modules and plugins were developed by DigitalGov Search customers, not us, but we're linking to them here so you have easy access to them. Use their respective platforms to connect with their developers and submit issues.</p>
 
-<ul>
-<li><a href="/manual/code.html">Code snippets</a></li>
-<li>Search API access key*</li>
-<li>Search API instructions*</li>
-<li>Type-ahead API instructions*</li>
-<li>i14y (Beta) API instructions*</li>
-</ul>
+<p><strong><a href="https://www.drupal.org/project/usasearch">Drupal Module</a></strong>&mdash;Allows you to override the default Drupal search and connect your Drupal website and DigitalGov Search search configuration. Version 7.x-5.x adds realtime indexing via DigitalGov Search's i14y content ingestion API.</p>
 
-
-<p>* These APIs are available for use on official government websites only. You must be a DigitalGov Search customer. <a href="https://search.usa.gov/sites">Sign in</a> is required. Keys and instructions for each can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search.</p>
-
-<p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
-
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#x73;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#112;&#111;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#115;&#x65;&#97;&#x72;&#99;&#104;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#118;</a>.</p>
+<p><strong><a href="https://github.com/GSA/sites-digitalgov-search">WordPress Plugin</a></strong>&mdash;Allows you to override the default WordPress search and connect your <a href="http://sites.usa.gov/">Sites.USA.gov</a>-powered website and DigitalGov Search search configuration.</p>
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+    <a href="/tagged/api open"><span class="label label-info">api open</span></a>
     
   </div>
 
@@ -198,8 +159,8 @@
     
     
     
-    <a href="/manual/index.html">
-      <time>July 10, 2015</time>
+    <a href="/drafts/2015-07-23-index.html">
+      <time></time>
     </a>
   </div>
 
