@@ -17,6 +17,10 @@ Data are available in the Admin Center from August 2014.
 
 Data for the total number of queries and clicks. Use this report to find and analyze the so-called [short head](http://www.searchtools.com/analysis/long-tail.html){% external_link %} of your most popular search queries and clicks, which are typically the same as your site's [top tasks](http://www.usability.gov/tags/task-analysis/).
 
+### Queries with No Results
+
+A list of queries that returned no results. Sometimes searchers look for information on the wrong website, and sometimes they use different words than what are used on the page, and so they get no results from the search index. Use this list of Queries with No Results to help searchers get to the information they're looking for. You can set up Best Bets ([Text](/manual/best-bets-text.html) or [Graphics](/manual/best-bets-graphics.html)), or a [Routed Query](/manual/routed-queries.html). You can also [customize the No Results message](/manual/no-results.html) displayed on your results page.
+
 ## Impressions and Clicks by Module
 
 Detailed data for the total number of impressions and clicks and your clickthru rate (CTR) are presented for each "module" on the search results page. We also provide the average CTR across all DigitalGov Search customers so you can see how your rate compares to the average rate. The data in the table is sorted in descending order from the most to least number of clicks.
