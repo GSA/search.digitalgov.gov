@@ -88,6 +88,8 @@ Active best bets are shown to searchers on your site. Inactive entries aren't sh
 
 Watch the recording of our February 2015 webinar [**Straight to the Top: Best Bets in DigitalGov Search**](https://www.youtube.com/embed/WzQocKYK0t4) (55 mins)
 
-***Did you know?*** See also our closely related feature that allows you to create a [Text Best Best](/manual/best-bets-text.html).
+***Did you know?*** See also our closely related feature that allows you to create a [Text Best Bets](/manual/best-bets-text.html).
+
+***Did you know?*** Use the [Search Page Alert](/manual/system-alert.html) feature to add a text message to your search results page, which will appear at all times above all search results, *regardless of the query*.
 
 ***Did you know?*** Analyze the number of impressions and clicks and clickthru rate for each best bet on the [Monthly Reports](/manual/monthly-reports.html) page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.
