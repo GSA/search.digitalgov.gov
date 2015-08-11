@@ -17,4 +17,4 @@ See, for example, the custom alert on Defense.gov announcing their migration to 
 
 ---
 
-***Did you know?*** See also our closely related features that allow you to create [Text Best Bets](/manual/best-bets-text.html) and [Graphics Best Bets](/manual/best-bets-graphics.html), which appear **only when a searcher's query matches** the text of their titles, descriptions, or keywords.
+***Did you know?*** See also our closely related features that allow you to create [Text Best Bets](/manual/best-bets-text.html) and [Graphics Best Bets](/manual/best-bets-graphics.html), which appear *only when a searcher's query matches* the text of their titles, descriptions, or keywords.
