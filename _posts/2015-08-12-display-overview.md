@@ -24,7 +24,7 @@ Type over the text in the Name field to edit a facet's display name. Keep each n
 
 **On/off options for modules.** Turn on a module to allow searchers to see inline, contextually relevant results for selected content sources based on keyword matches with relevant queries. There are eight types of modules.
 
-1. **News.** This option only appears after you've told us about your [RSS](/manual/rss.html) feeds. When a searcher's query matches the title or description of an RSS article published within the past four months, the article appears in the News module. Very recent news results (less than five days) appear at the top of the page and less recent news results appear at the bottom. Up to three articles are displayed. Type over the default name, News, in the Name field to edit the display name.
+1. **News.** This option only appears after you've told us about your [RSS](/manual/rss.html) feeds. When a searcher's query matches the title of an RSS article published within the past four months, the article appears in the News module. Very recent news results (less than five days) appear at the top of the page and less recent news results appear at the bottom. Up to three articles are displayed. Type over the default name, News, in the Name field to edit the display name.
 
 1. **Videos.** This option only appears after you've told us about your [YouTube](/manual/youtube.html) channel. When a searcher's query matches the metadata of a video published within the 13 months, the video appears in the Videos module. One inline video is displayed with a link to see more videos for the searcher's query.
 
