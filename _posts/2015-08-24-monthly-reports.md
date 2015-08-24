@@ -11,6 +11,8 @@ The monthly report gives a bird's-eye view of the number of [queries](/manual/qu
 
 Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.
 
+You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.
+
 Data are available in the Admin Center from August 2014.
 
 ## Monthly Usage Stats

@@ -6,9 +6,11 @@ tags: help-manual analytics dashboard site-overview
 ---
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Dashboard > Site Overview
 
-The Site Overview page provides a snapshot of what has been happening on your site in the past day or so.
+The Site Overview page provides a snapshot of what has been happening on your site in the past day. All of the analytics in the [Admin Center](https://search.usa.gov/sites/) are updated in real-time, which means that you instantaneously see the searches and clicks as they're performed on your site.
 
-You can also opt to receive this snapshot as a daily email by clicking on the envelope icon next to your selected site. 
+You can opt to receive this snapshot as a daily email by clicking on the envelope icon (<i class="icon-envelope"></i>) in the top navigation bar next to your selected site. 
+
+You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.
 
 ## Top Queries
 
@@ -57,3 +59,5 @@ A graph of your site's total search queries over time is also presented to provi
 ---
 
 ***Did you know?*** The [Monthly Report](/manual/monthly-reports.html) gives a bird's-eye view of the number of [queries](/manual/queries.html) and [clicks](/manual/clicks.html) each month.
+
+***Did you know?***  Click the pushpin icon in the top navigation bar to change the default site that appears when you first log in to the [Admin Center](https://search.usa.gov/sites/). 
