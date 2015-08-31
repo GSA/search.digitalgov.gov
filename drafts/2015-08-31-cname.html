@@ -3,7 +3,7 @@
 <head>
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <title>Posts tagged my-account</title>
+  <title>How to Mask Your Domain</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -94,97 +94,54 @@
   <div class="col-md-8 col-md-offset-2">
     <!-- do not remove as used to parse in usasearch -->
     <div id="main-container">    
-      <!-- begin tag layout -->
-<p class="muted">Posts tagged <strong>my-account</strong></p>
-
-<div class='articles'>
+      <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/account.html">How to Create and Edit Your Account</a>
-    </h1>
-    
+  <h1>
+    <a href="/drafts/2015-08-31-cname.html">How to Mask Your Domain</a>
+  </h1>
+  
 
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > My Account</p>
-
-<p>You can use DigitalGov Search to power the search box on your federal, state, local, tribal, or territorial government website&mdash;at no cost.</p>
-
-<h2>Log In</h2>
-
-<p>Log in to an existing account <a href="https://search.usa.gov/login">https://search.usa.gov/login</a> or register for a new account at <a href="https://search.usa.gov/signup">https://search.usa.gov/signup</a>.</p>
-
-<p><a href="https://search.usa.gov/login"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/login.png" title="Login from search.digitalgov.gov" alt="Login from search.digitalgov.gov" /></a></p>
-
-<p>Access to our service requires agreement with our <a href="/tos.html">Terms of Service</a> and verification that you're a government employee or contractor acting within the scope of your government contract.</p>
-
-<p>After you register, you'll receive an automatic email. Click on the link in the email to verify that your email address belongs to you.</p>
-
-<p>If you have a .gov or .mil address, you'll be able to access your account immediately after you verify your email.</p>
-
-<p>If you don't have a .gov or .mil address, we'll ask for additional information to confirm that you're a government employee or contractor. We'll notify you when your account is approved.</p>
-
-<h2>Add a Site</h2>
-
-<p>Once your account is approved, you can <a href="/manual/add-site.html">add a site</a> in our <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-<h2>Edit Your Contact Information</h2>
-
-<p>If you need to update your email address, name, or agency for any reason, it's easy to change your them in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-<p>In the upper right-hand corner, there is a drop-down menu. Click on <em>My account</em>.</p>
-
-<p><a href="https://search.usa.gov/sites/"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/blog-edit-email1.png" title="Edit your account" alt="Edit your account" /></a></p>
-
-<p>Once on this page you can edit your email address.</p>
-
-<p><a href="https://search.usa.gov/account"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/blog-edit-email2.png" title="Edit your email address" alt="Edit your email address" /></a></p>
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> We cannot retrieve any passwords for any account, because we don't have access to passwords. To reset your password:</p>
+  <div class='post-content'>
+    <p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these three steps to mask your domain.</p>
 
 <ol>
-<li>Go to our Login page at <a href="https://search.usa.gov/login">https://search.usa.gov/login</a></li>
-<li>Enter your email address.</li>
-<li>Click on <em>Forgot your password?</em></li>
-<li>You'll be prompted to reset your password and it'll be emailed to you.</li>
+<li>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#115;&#101;&#97;&#114;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;">&#x73;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#103;&#105;&#x74;&#97;&#x6c;&#103;&#111;&#x76;&#x2e;&#x67;&#x6f;&#118;</a> and ask us to mask your domain.</li>
+<li>Create a CNAME in your external DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
+<li>When the setup is complete, change the <a href="/manual/code.html">code for your form</a> action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
 </ol>
 
 
-<p>If you have any problem resetting your password, email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#x73;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#103;&#111;&#x76;&#x2e;&#103;&#111;&#118;">&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;</a>.</p>
+<p>If you would like to use DNS masking over https, your agency will provide the SSL certificate (purchasing, renewing, validating with certificate authorities) that we will put on our infrastructure.</p>
 
-    </div>
+<hr />
 
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/my-account"><span class="label label-info">my-account</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/account.html">
-        <time datetime="2014-09-04">September 4, 2014</time>
-      </a>
-    </div>
-    </article>
-  
-</div>
+<p><strong><em>Troubleshooting tip:</em></strong> Many agencies have both internal and external DNS. Be
+sure to update your <em>external</em> DNS records (step 2) before changing your form code (step 3).</p>
 
+<p><strong><em>Troubleshooting tip:</em></strong>  Once the CNAME is set up, if visitors to your site happen to truncate the URL in the browser bar to http://search.yoursite.gov (without any parameters), they're automatically redirected to your homepage at http://www.yoursite.gov.</p>
 
-<ul class="pager">
-  
+<p><strong><em>Did you know?</em></strong> By default, we set up search.YOURSITE.gov (such as search.nih.gov). If this subdomain is already used by another application, you can request find.YOURSITE.gov (such as find.usda.gov) or findit.YOURSITE.gov.</p>
 
-  
-</ul>
-<!-- end tag layout -->      
+  </div>
+
+  <div class='tags'>
+    
+    <a href="/tagged/help-manual activate-search cname"><span class="label label-info">help-manual activate-search cname</span></a>
+    
+  </div>
+
+  <div class='time'>
+    
+    
+    
+    
+    <a href="/drafts/2015-08-31-cname.html">
+      <time></time>
+    </a>
+  </div>
+
+</article>
+      
     </div>
   </div>
 </div>

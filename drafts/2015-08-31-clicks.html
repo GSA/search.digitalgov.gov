@@ -3,7 +3,7 @@
 <head>
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <title>Posts tagged my-account</title>
+  <title>How to Analyze Your Clicks</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -94,97 +94,85 @@
   <div class="col-md-8 col-md-offset-2">
     <!-- do not remove as used to parse in usasearch -->
     <div id="main-container">    
-      <!-- begin tag layout -->
-<p class="muted">Posts tagged <strong>my-account</strong></p>
-
-<div class='articles'>
+      <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/account.html">How to Create and Edit Your Account</a>
-    </h1>
-    
+  <h1>
+    <a href="/drafts/2015-08-31-clicks.html">How to Analyze Your Clicks</a>
+  </h1>
+  
 
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > My Account</p>
+  <div class='post-content'>
+    <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Clicks</p>
 
-<p>You can use DigitalGov Search to power the search box on your federal, state, local, tribal, or territorial government website&mdash;at no cost.</p>
+<p>The Clicks page reports the pages that searchers clicked on from your search results pages, and the number of times each of those pages was clicked for the selected date range.</p>
 
-<h2>Log In</h2>
+<p>Data are shown for the present month-to-date by default. You can change the time period by using the date pickers at the top and re-generating the report.</p>
 
-<p>Log in to an existing account <a href="https://search.usa.gov/login">https://search.usa.gov/login</a> or register for a new account at <a href="https://search.usa.gov/signup">https://search.usa.gov/signup</a>.</p>
+<p>You can toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks, though still excluding known spiders such as Bingbot and Googlebot.</p>
 
-<p><a href="https://search.usa.gov/login"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/login.png" title="Login from search.digitalgov.gov" alt="Login from search.digitalgov.gov" /></a></p>
+<p>Data are available in the Admin Center for 13 months, currently from August 2014.</p>
 
-<p>Access to our service requires agreement with our <a href="/tos.html">Terms of Service</a> and verification that you're a government employee or contractor acting within the scope of your government contract.</p>
+<h2>Reading the Report Table</h2>
 
-<p>After you register, you'll receive an automatic email. Click on the link in the email to verify that your email address belongs to you.</p>
+<h3>Top URLs Clicked</h3>
 
-<p>If you have a .gov or .mil address, you'll be able to access your account immediately after you verify your email.</p>
+<p>The top 1,000 most clicked-on URLs from your results page for the selected time period, with the most popular first.</p>
 
-<p>If you don't have a .gov or .mil address, we'll ask for additional information to confirm that you're a government employee or contractor. We'll notify you when your account is approved.</p>
+<h3>Download Details</h3>
 
-<h2>Add a Site</h2>
+<p>You can download the raw click logs for any URL in the list. The CSV (comma separated values) file has one line for each time this URL was clicked. Details avialable include:</p>
 
-<p>Once your account is approved, you can <a href="/manual/add-site.html">add a site</a> in our <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+<ul>
+<li><em>Date</em></li>
+<li><em>Time</em></li>
+<li><em>Query</em></li>
+<li>Position : Shows where in the list of search results was the page that was clicked on. Ex: 1 means the searcher clicked on the first result in the list.</li>
+<li><em>Request</em> : Shows the full query URL as it was sent from the search box.</li>
+<li><em>Referrer</em> : Shows the page of your website the searcher was on when he or she ran the search.</li>
+<li><em>Vertical</em> : Shows what results page tab the searcher was on when he or she ran the search (e.g., Everything, RSS news items, Images, Videos, etc.)</li>
+<li><em>Modules</em> : Shows which index served the item the searcher clicked on, such as Web results, RSS items, tweets, etc. See also the <a href="/manual/module-codes.html">Key for Search Module Codes and Names</a></li>
+<li><em>Device</em> : Shows the device the searcher was using. "Other" means either a desktop or laptop computer.</li>
+<li><em>Browser</em></li>
+<li><em>OS</em> : Shows what operating system the searcher was using.</li>
+<li><em>Country Code</em></li>
+<li><em>Region</em> : Region will most times show abbreviations for states. If you would like help locating an unfamiliar region code, <a href="mailto:search@support.digitalgov.gov">reach out to us</a>.</li>
+<li><em>Client IP</em></li>
+<li><em>User Agent</em> : Shows specific information about the computer being used</li>
+</ul>
 
-<h2>Edit Your Contact Information</h2>
 
-<p>If you need to update your email address, name, or agency for any reason, it's easy to change your them in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+<h3># of Clicks</h3>
 
-<p>In the upper right-hand corner, there is a drop-down menu. Click on <em>My account</em>.</p>
+<p>Select the hyperlinked number in the <em># of Clicks</em> column to view the queries that led to the clicks on that URL (the <strong>Queries Leading to a Click</strong> report).</p>
 
-<p><a href="https://search.usa.gov/sites/"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/blog-edit-email1.png" title="Edit your account" alt="Edit your account" /></a></p>
+<p>Note: If you click on a number in the # of Clicks column on the <strong>Queries Leading to a Click</strong> page, you will see all the URLs that were clicked on from that query's results (the Clicks from a Query report). This is the same report you see when you view the # of Clicks from the <a href="/manual/queries.html">Queries page</a>.</p>
 
-<p>Once on this page you can edit your email address.</p>
-
-<p><a href="https://search.usa.gov/account"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/blog-edit-email2.png" title="Edit your email address" alt="Edit your email address" /></a></p>
+<p>You can loop through or drill down into this list for any set of clicks and queries.</p>
 
 <hr />
 
-<p><strong><em>Troubleshooting tip:</em></strong> We cannot retrieve any passwords for any account, because we don't have access to passwords. To reset your password:</p>
+<p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and clicks each month. The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site on the current day.</p>
 
-<ol>
-<li>Go to our Login page at <a href="https://search.usa.gov/login">https://search.usa.gov/login</a></li>
-<li>Enter your email address.</li>
-<li>Click on <em>Forgot your password?</em></li>
-<li>You'll be prompted to reset your password and it'll be emailed to you.</li>
-</ol>
+  </div>
 
+  <div class='tags'>
+    
+    <a href="/tagged/help-manual analytics clicks"><span class="label label-info">help-manual analytics clicks</span></a>
+    
+  </div>
 
-<p>If you have any problem resetting your password, email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#x73;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#103;&#111;&#x76;&#x2e;&#103;&#111;&#118;">&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;</a>.</p>
+  <div class='time'>
+    
+    
+    
+    
+    <a href="/drafts/2015-08-31-clicks.html">
+      <time></time>
+    </a>
+  </div>
 
-    </div>
-
-    <div class='tags'>
+</article>
       
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/my-account"><span class="label label-info">my-account</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/account.html">
-        <time datetime="2014-09-04">September 4, 2014</time>
-      </a>
-    </div>
-    </article>
-  
-</div>
-
-
-<ul class="pager">
-  
-
-  
-</ul>
-<!-- end tag layout -->      
     </div>
   </div>
 </div>

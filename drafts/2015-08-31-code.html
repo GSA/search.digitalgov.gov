@@ -97,7 +97,7 @@
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/drafts/2015-07-24-code.html">How to Activate Your Search by Adding Our Code Snippets to Your Website</a>
+    <a href="/drafts/2015-08-31-code.html">How to Activate Your Search by Adding Our Code Snippets to Your Website</a>
   </h1>
   
 
@@ -139,11 +139,13 @@
 &lt;/script&gt;
 </code></pre>
 
-<h2>Setting Up a Search Box for Specific Folders or Subdomains</h2>
+<blockquote><p><strong><em>HTTPS Quick Tip:</em></strong> If your website is secured with https, we support secure search on https://search.usa.gov. Simply add 's' to both your form action <code>https://search.usa.gov/search</code> and type-ahead script <code>https://search.usa.gov/javascripts/remote.loader.js</code>.</p></blockquote>
+
+<h2>Advanced: Options for Limiting a Search Box to Specific Folders or Subdomains</h2>
 
 <p>You can limit results to specific folders or subdomains in a few ways: set up a <a href="/manual/collections.html">collection</a>, add an <a href="/manual/rss.html">RSS feed</a>, or pass in a hidden value.</p>
 
-<h3>Collection</h3>
+<h3>Option 1. Limit to Collections</h3>
 
 <p>Create a <a href="/manual/collections.html">collection</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/docs/</code> and (b) add an input for this collection, <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>. It should look something like this:</p>
 
@@ -162,7 +164,7 @@
 
 <p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/get-code-collection.png" alt="Value for the collection ID" /></p>
 
-<h3>RSS Feed</h3>
+<h3>Option 2. Limit to RSS Feeds</h3>
 
 <p>Set up an <a href="/manual/rss.html">RSS feed</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/news/</code> and (b) add an input for this feed, <code>&lt;input type="hidden" name="channel" value="###"&gt;</code>.  It should look something like this:</p>
 
@@ -179,22 +181,20 @@
 
 <p>The value is the number for your RSS ID, which is visible in the URL when you edit or preview your feed in the Admin Center.</p>
 
-<h3>Hidden Value</h3>
+<h3>Option 3. Limit to a Hidden Domain Value</h3>
 
-<p>You can override your default Domains search scope by passing a hidden value for the domain in the search form code.</p>
+<p>Pass a hidden value for the domain in the search form code. This can be done in addition to configuring your Domains list, as that will be used for any queries from the results page search box.</p>
 
-<p>See, for example, <a href="http://www.ri.gov">RI.gov</a>, <a href="http://www.dmv.ri.gov/">DMV.RI.gov</a>, <a href="http://www.health.ri.gov/">Health.RI.gov</a>. On Health.RI.gov, the following hidden value is added to limit to only the health subdomain.</p>
+<p>See, for example, <a href="http://www.ri.gov">RI.gov</a>, <a href="http://www.dmv.ri.gov/">DMV.RI.gov</a>, and <a href="http://www.health.ri.gov/">Health.RI.gov</a>. On Health.RI.gov, the following hidden value is added to limit to only the health subdomain.</p>
 
-<pre><code>&lt;input type="hidden" name="site" value="www.health.ri.gov" &gt;
+<pre><code>`&lt;input type="hidden" name="site" value="www.health.ri.gov" &gt;`
 </code></pre>
 
 <hr />
 
-<p><strong><em>Troubleshooting tip:</em></strong> If your website is secured with https, add 's' to your form action: <code>https://search.usa.gov/search</code> and also to your typeahead script: <code>https://search.usa.gov/javascripts/remote.loader.js</code>. If you don't specify these as https, searchers using Internet Explorer will receive a security message.</p>
+<p><strong><em>Did you know?</em></strong> If you're using Drupal, be sure to check out our <a href="https://www.drupal.org/project/USASearch">Drupal module</a>.</p>
 
-<p><strong><em>Did you know?</em></strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers your domain (instead of USA.gov). If you use a <a href="/manual/cname.html">domain mask</a> for your search results page, to use https you will need to provide the SSL certificate for our infrastructure, including purchasing, renewal, and validation with certificate authorities.</p>
-
-<p><strong><em>Did you know?</em></strong> If you're using Drupal, be sure to check out our <a href="https://www.drupal.org/project/USASearch">Drupal module</a>. If you're using WordPress on Sites.USA.gov, you can use our search and i14y indexing plug-ins. LINK TO PLUGINS?</p>
+<p><strong><em>Did you know?</em></strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers your domain (instead of USA.gov).</p>
 
   </div>
 
@@ -209,7 +209,7 @@
     
     
     
-    <a href="/drafts/2015-07-24-code.html">
+    <a href="/drafts/2015-08-31-code.html">
       <time></time>
     </a>
   </div>
