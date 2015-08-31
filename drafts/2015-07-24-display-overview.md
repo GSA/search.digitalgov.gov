@@ -48,6 +48,19 @@ There are eight types of modules.
 
 1. **Type-ahead search.** Help searchers refine their query by displaying type-ahead search suggestions as a list in the search box. The list forms as a searcher begins to type in the search box. Suggestions are listed in order of most popular (that is, most searched). They're updated every few seconds. See, for example, the suggestions appear as you type "di" on [SocialSecurity.gov's search results page](http://search.socialsecurity.gov/search?affiliate=ssa&query=names).
 
+Modules are displayed in the following order:
+
+Best Bets (text, then graphics)
+Health Topics
+Jobs
+Tweets
+Videos
+RSS (if fresh)
+Web results
+Federal Register
+RSS (if older than 5 days)
+Related Searches
+
 ## Related Sites
 
 Help visitors find content relevant to their search query that resides on other websites, such as the site for your parent organization or your Spanish-language site. When searchers click on the link to the related site, they see search results for their query on the related site.

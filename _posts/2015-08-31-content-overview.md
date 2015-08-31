@@ -9,7 +9,9 @@ tags: help-manual manage-content
 
 To display the results on your search results page, we index content from various sources. Each time a searcher does a query on your site, we determine which index best answers the searcher's question and display results from it. This means a single search results page is often comprised of several indexes.
 
-You need to add your content to each of our indexes, if you'd like results from that index to appear.
+When you first [add a site](/manual/add-site.html), we pull your homepage into your [domains](/manual/domains.html) list, and populate any social media accounts ([Flickr](/manual/flickr.html), [Instagram](/manual/instagram.html), [Twitter](/manual/twitter.html), and [YouTube](/manual/youtube.html)) and [RSS feeds](/manual/rss.html) that are linked from your homepage. Use the Discover option on this Content Overview page to automatically (re)discover the RSS and social media accounts on your site's homepage, or any other page you want to scan.
+
+You can also add content manually to each of our indexes.
 <a name="choose-an-index"></a>
 ## Add Your Web Pages
 
@@ -57,7 +59,5 @@ We also have three pre-built, government-centric content modules that you can op
 * **Health Topics.** [Toggle on the Health Topics module](/manual/govbox-health.html) to show authoritative health information from MedlinePlus and ClinicalTrials.gov.
 
 ---
-
-***Did you know?*** When you first [add a site](/manual/add-site.html), we populate any social media accounts ([Flickr](/manual/flickr.html), [Instagram](/manual/instagram.html), [Twitter](/manual/twitter.html), and [YouTube](/manual/youtube.html)) and [RSS feeds](/manual/rss.html) that are linked from your homepage. Use the Discover option on this Content Overview page to automatically (re)discover the RSS and social media accounts from your site's homepage.
 
 ***Troubleshooting tip:*** We've connected your site to your agency on the backend. If you're not seeing jobs or *Federal Register* documents specific to your agency, [email us](mailto:search@support.digitalgov.gov) so we can fix the agency setting for your site.
