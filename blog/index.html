@@ -102,24 +102,315 @@
   <article class='article'>
     
     <h1>
+      <a href="/developer/jobs.html">Jobs API</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="/developer/index.html">APIs for Developers</a> > Jobs API</p>
+
+<p>Helping job seekers land a job with the government.</p>
+
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#using-the-api">Using the API</a></li>
+<li><a href="#parameters">Parameters</a></li>
+<li><a href="#data-sources">Data Sources</a></li>
+<li><a href="#what-it-returns">What it Returns</a></li>
+<li><a href="#code-samples">Code Samples</a></li>
+</ul>
+
+
+<p><a name="overview"></a></p>
+
+<h2>Overview</h2>
+
+<p>Federal, state, and local government agencies are hiring and have thousands of job openings across the country, posted on USAJobs.gov and local government jobs sites.</p>
+
+<p>This Jobs API allows you to tap into a list of current jobs openings with the government. Jobs are searchable by keyword, location, agency, schedule, or any combination of these.</p>
+
+<p>This API is great for job websites or applications, job banks, and career counseling and placement applications.</p>
+
+<p><a name="using-the-api"></a></p>
+
+<h2>Using the API</h2>
+
+<p>The current default version of the API is v3. To explicitly specify an older version of the API, see the <a href="https://github.com/GSA/jobs_api">Jobs API code documentation</a>.</p>
+
+<p>This Jobs API accepts a GET request.</p>
+
+<p>Jobs are searchable by keyword, location, agency, schedule, or any combination of these.</p>
+
+<p>The base URL is https://api.usa.gov/jobs/search.json?<strong>parameters</strong></p>
+
+<p>Sample API requests follow.</p>
+
+<p>All nursing jobs
+<a href="https://api.usa.gov/jobs/search.json?query=nursing+jobs">https://api.usa.gov/jobs/search.json?query=nursing+jobs</a></p>
+
+<p>Nursing jobs in NY
+<a href="https://api.usa.gov/jobs/search.json?query=nursing+jobs+in+ny">https://api.usa.gov/jobs/search.json?query=nursing+jobs+in+ny</a></p>
+
+<p>Nursing jobs with a state government agency
+<a href="https://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=state">https://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=state</a></p>
+
+<p>Nursing jobs with a federal government agency
+<a href="https://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=federal">https://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=federal</a></p>
+
+<p>Nursing jobs with Veterans Affairs in NY
+<a href="https://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+ny">https://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+ny</a></p>
+
+<p>Part-time nursing jobs with Veterans Affairs in NY
+<a href="https://api.usa.gov/jobs/search.json?query=parttime+nursing+jobs+with+veterans+affairs+in+ny">https://api.usa.gov/jobs/search.json?query=parttime+nursing+jobs+with+veterans+affairs+in+ny</a></p>
+
+<p><a name="parameters"></a></p>
+
+<h2>Parameters</h2>
+
+<p>Seven parameters are accepted.</p>
+
+<ol>
+<li>query</li>
+<li>organization_ids (comma-separated)</li>
+<li>hl (for highlighting)</li>
+<li>size</li>
+<li>from</li>
+<li>tags (comma-separated)</li>
+<li>lat_lon</li>
+</ol>
+
+
+<h3>Query</h3>
+
+<p>Attempts to extract as much "signal" as possible from the input text. Handles word variants, so a search on "nursing jobs" will find a job titled "nurse practitioner" and "RN." When parts of the query parameter are used to search against the position title, the results are ordered by relevance. When no query parameter is specified, they are ordered by date with the most recent listed first.  For generic jobs searches (e.g., 'jobs', 'internships') where the <strong>lat_lon</strong> parameter is passed in, the results will be sorted by distance to the searcher's geographic location.</p>
+
+<p>Sample query formats follow.</p>
+
+<h4>All jobs (by date or by proximity)</h4>
+
+<ul>
+<li>jobs</li>
+<li>positions</li>
+<li>vacancies</li>
+<li>opportunities</li>
+<li>postings</li>
+</ul>
+
+
+<h4>Location-based (by date)</h4>
+
+<ul>
+<li>jobs in fulton</li>
+<li>jobs in fulton, md</li>
+<li>jobs in fulton, maryland</li>
+<li>jobs in md</li>
+<li>pentagon jobs</li>
+<li>jobs fayetteville</li>
+<li>fayetteville nc jobs</li>
+<li>jobs atlanta georgia</li>
+</ul>
+
+
+<h4>Agency-based (by date)</h4>
+
+<ul>
+<li>job opportunities at the cia</li>
+<li>jobs at the treasury dept</li>
+<li>tsa job openings</li>
+<li>va jobs # will match jobs in Virginia</li>
+</ul>
+
+
+<h4>Keyword-based (by relevance)</h4>
+
+<ul>
+<li>nursing jobs</li>
+<li>summer internship position</li>
+</ul>
+
+
+<h4>Schedule-based (by date)</h4>
+
+<ul>
+<li>part-time jobs</li>
+<li>full-time positions</li>
+</ul>
+
+
+<h4>Combinations (by relevance)</h4>
+
+<ul>
+<li>part-time security guard job openings at the tsa in los angeles, ca</li>
+</ul>
+
+
+<h3>Organization_ids</h3>
+
+<p>A comma-separated string specifying which federal, state, or local agencies to use as a filter.</p>
+
+<p>For federal agencies, the ID is based on <a href="https://schemas.usajobs.gov/Enumerations/AgencySubElement.xml">USAJobs' agency schema</a>. Two letter codes are used to span entire departments, while four letter codes are generally used for independent agencies or agencies within a department.</p>
+
+<p>For state and local agencies, a sample of the format follows.</p>
+
+<p><em>State of Virginia</em>
+US-VA</p>
+
+<p><em>State of Virginia Department of Taxation</em>
+US-VA:DEPT-TAX</p>
+
+<p><em>Fairfax County, VA</em>
+US-VA:COUNTY-FAIRFAX</p>
+
+<p><em>Fairfax County Sheriff</em>
+US-VA:COUNTY-FAIRFAX:SHERIFF</p>
+
+<p><em>City of Fairfax, VA</em>
+US-VA:COUNTY-FAIRFAX:CITY-FAIRFAX</p>
+
+<p><em>Air Force or State of Virginia</em>
+AF,US-VA</p>
+
+<p>If you specify <code>organization_ids</code> in your API call but the searcher types in another agency, the searchers' agency overrides the <code>organization_ids</code> parameter. For example, VA jobs are returned when you specify Air Force jobs, but the searcher looks for jobs at the VA (<a href="https://api.usa.gov/jobs/search.json?query=jobs+at+the+va&amp;organization_ids=AF">https://api.usa.gov/jobs/search.json?query=jobs+at+the+va&amp;organization_ids=AF</a>).</p>
+
+<h3>Hl [highlighting]</h3>
+
+<p>No highlighting is included by default. Use 'hl=1' to highlight terms in the position title that match terms in the user's search. Highlighted terms are surrounded with <code>&lt;em&gt;</code> tags.</p>
+
+<h3>Size</h3>
+
+<p>Specifies how many results are returned (up to 100 at a time).</p>
+
+<h3>From</h3>
+
+<p>Specifies the starting record.</p>
+
+<h3>Tags</h3>
+
+<p>A comma-separated string specifying the level of government. Current tags are <code>federal</code>, <code>state</code>, <code>county</code>, and <code>city</code>. To get federal and state listings, you would pass in <code>federal,state</code> for the <strong>tags</strong> parameter.</p>
+
+<h3>Lat_lon</h3>
+
+<p>Comma-separated pair denoting the position of the searcher looking for a job. For example, 'lat_lon=37.783333,-122.416667' is the value for San Francisco, CA. For generic job searches (e.g., 'jobs', 'internships') where this parameter is passed in, the Jobs API server will sort jobs results and return those that are closest to the searcher's location. For jobs that have multiple locations associated with the position, the distance to the closest location is used to determine the overall geo-distance for the job. Note that for keyword-based job searches (e.g., 'jobs in NY', 'nursing jobs'), this parameter has no effect and is ignored.</p>
+
+<p><a name="data-sources"></a></p>
+
+<h2>Data Sources</h2>
+
+<p>We've tailored this Jobs API for our use in our search results. Data are normalized across government job listings and we don't include all jobs from all data sources. So, we encourage you to use the original data sources directly.</p>
+
+<p>Federal government jobs are from <a href="https://www.usajobs.gov">USAJobs</a>. The USAJobs API for job opportunity announcements is at <a href="https://data.usajobs.gov/Rest">https://data.usajobs.gov/Rest</a>.</p>
+
+<p>State and local government jobs are from cities, counties, and state agencies that use <a href="http://www.neogov.com">NeoGov</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, such as <a href="https://bouldercolorado.gov/jobs-and-volunteer">jobs with the the city of Boulder, Colorado</a>.</p>
+
+<p><strong><em>Are we missing your jobs data?</em></strong> Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#115;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#x70;&#112;&#111;&#x72;&#116;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;">&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#115;&#117;&#x70;&#x70;&#x6f;&#x72;&#x74;&#46;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#x67;&#111;&#x76;</a> to let us know where you publish the jobs data for your federal, state, or local government agency. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
+
+<p><a name="what-it-returns"></a></p>
+
+<h2>What it Returns</h2>
+
+<p>Below is a sample JSON response for <a href="https://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+albany+ny">https://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+albany+ny</a>.</p>
+
+<pre><code>[
+  {
+    id: "usajobs:340537800",
+    position_title: "Nursing Assistant Float Pool",
+    organization_name: "Veterans Affairs, Veterans Health Administration",
+    rate_interval_code: "PA",
+    minimum: 31315,
+    maximum: 40706,
+    start_date: "2013-03-27",
+    end_date: "2013-05-31",
+    locations: [
+        "Albany, NY"
+    ],
+    url: "https://www.usajobs.gov/GetJob/ViewDetails/340537800"
+  },
+  {
+    id: "usajobs:342782900",
+    position_title: "Registered Nurse - Endoscopy",
+    organization_name: "Veterans Affairs, Veterans Health Administration",
+    rate_interval_code: "PA",
+    minimum: 0,
+    maximum: 0,
+    start_date: "2013-05-02",
+    end_date: "2013-05-13",
+    locations: [
+        "Albany, NY"
+    ],
+    url: "https://www.usajobs.gov/GetJob/ViewDetails/342782900"
+  }
+]
+</code></pre>
+
+<p><a name="code-samples"></a></p>
+
+<h2>Code Samples</h2>
+
+<p>We "eat our own dog food" and use this Jobs API to display the job openings on the government websites that use DigitalGov Search.</p>
+
+<p>See the sample results page below that shows current jobs openings across the Department of Homeland Security for a search on
+<em><a href="http://search.dhs.gov/search?query=security+jobs&amp;affiliate=dhs">jobs</a></em> on DHS.gov.</p>
+
+<p><a href="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/jobsModule_800.png" target="_blank" alt="Search results for Jobs on DHS.gov"><img style="float: right;" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/jobsModule_175.png"></a></p>
+
+<h2>Open Source Code</h2>
+
+<p>The server code that runs this API is on Github. If you're a Rails developer, fork our
+<a href="https://github.com/GSA/jobs_api">Jobs Server API</a> repo to add features (such
+as additional datasets) or fix bugs.</p>
+
+<p>Better yet, send us a <a href="https://github.com/GSA/jobs_api/pulls">pull request</a>
+to contribute your changes to our project and improve this API for everyone who is using it.</p>
+
+<h2>Feedback</h2>
+
+<p>Email us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#x73;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#118;">&#115;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#105;&#103;&#105;&#116;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+
+<h2>Terms of Use</h2>
+
+<p>By accessing the Jobs API, you agree to <a href="http://www.usa.gov/About/developer-resources/terms-of-service.shtml">USA.gov's Terms of Service for Developer Resources</a>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/jobs"><span class="label label-info">jobs</span></a>
+      
+      <a href="/tagged/api"><span class="label label-info">api</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      
+      
+      <a href="/developer/jobs.html">
+        <time datetime="2015-09-17">September 17, 2015</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
       <a href="/developer/index.html">Resources for Developers</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="https://github.com/GSA"><img style="position: absolute; top: 41px; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a></p>
-
-<p>In line with the White House's <a href="http://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html">Digital Government Strategy</a>, we're making our code and data more open.</p>
+      <p>In line with the White House's <a href="http://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html">Digital Government Strategy</a>, we're making our code and data more open.</p>
 
 <h2>APIs for DigitalGov Search Customers</h2>
 
-<p>These APIs are available for use on official government websites only. You must be a DigitalGov Search customer. <a href="https://search.usa.gov/sites">Sign in</a> is required. Full instructions for each can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search.</p>
+<p>These APIs are available for use on official government websites only. You must be a DigitalGov Search customer. <a href="https://search.usa.gov/sites">Sign in</a> is required.</p>
 
-<p><strong>i14y (Beta)</strong>&mdash;This API allows you to send content directly from your content management system (CMS) into DigitalGov Search for real-time indexing.</p>
+<p><strong>i14y (Beta)</strong>&mdash;This API allows you to send content directly from your content management system (CMS) into DigitalGov Search for real-time indexing. Instructions can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Content > i14y. Request your site be activated for i14y to enable this section.</p>
 
-<p><strong>Search Results API</strong>&mdash;This API exposes all relevant results "modules" in a single JSON call, including: web results, best bets, health topics, job openings, recent tweets, recent news, recent videos, <em>Federal Register</em> documents, and related searches. Use it to control the display of the results on your agency's website or mobile applications.</p>
+<p><strong>Search Results API</strong>&mdash;This API exposes all relevant results "modules" in a single JSON call, including: web results, best bets, health topics, job openings, recent tweets, recent news, recent videos, <em>Federal Register</em> documents, and related searches. Use it to <strong><em>pull search results</em></strong> from our service to display on your agency's website or mobile applications. Instructions can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search.</p>
 
-<p><strong>Type-ahead API</strong>&mdash;This API exposes the type-ahead suggestions that usually appear below your search box as searchers enter their search terms.</p>
+<p><strong>Type-ahead API</strong>&mdash;This API exposes the type-ahead suggestions that often appear below your search box as searchers enter their search terms. Instructions can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search.</p>
 
 <h2>APIs and Data Feeds for the Public</h2>
 
@@ -131,9 +422,9 @@
 
 <h2>Source Code (Public Github Repositories)</h2>
 
-<p><strong><a href="https://github.com/GSA/asis">ASIS (Advanced Social Image Search)</a></strong>&mdash;The source code that runs our image search. ASIS indexes Flickr and Instagram images and provides a search API across both indexes.</p>
+<p><strong><a href="https://github.com/GSA/asis">ASIS (Advanced Social Image Search)</a></strong>&mdash;The source code that runs our image search. ASIS indexes images from Flickr, Instagram, and media RSS to provide a combined search API.</p>
 
-<p><strong><a href="https://github.com/GSA/i14y">i14y</a></strong>&mdash;The source code that runs our search engine for agencies' published content. i14y indexes web pages and provides a search API across both indexes.</p>
+<p><strong><a href="https://github.com/GSA/i14y">i14y</a></strong>&mdash;The source code that runs our search engine for agencies' published content. i14y indexes agencies' published content in real time, for search through our regular search channels.</p>
 
 <p><strong><a href="https://github.com/GSA/jobs_api">Jobs</a></strong>&mdash;The source code that runs our jobs search and <a href="jobs.html">Jobs API</a>. Indexes current jobs openings with federal agencies and select state and local government agencies, too.</p>
 
@@ -151,7 +442,7 @@
 
 <p>These modules and plugins were developed by DigitalGov Search customers, not us, but we're linking to them here so you have easy access to them. Use their respective platforms to connect with their developers and submit issues.</p>
 
-<p><strong><a href="https://www.drupal.org/project/usasearch">Drupal Module</a></strong>&mdash;Allows you to override the default Drupal search and connect your Drupal website and DigitalGov Search search configuration.</p>
+<p><strong><a href="https://www.drupal.org/project/usasearch">Drupal Module</a></strong>&mdash;Allows you to override the default Drupal search and connect your Drupal website to your DigitalGov Search search configuration. Version 7.x-5.x adds realtime indexing via DigitalGov Search's i14y content indexing API.</p>
 
 <p><strong><a href="https://github.com/GSA/sites-digitalgov-search">WordPress Plugin</a></strong>&mdash;Allows you to override the default WordPress search and connect your <a href="http://sites.usa.gov/">Sites.USA.gov</a>-powered website and DigitalGov Search search configuration.</p>
 
@@ -171,7 +462,178 @@
       
       
       <a href="/developer/index.html">
-        <time datetime="2015-09-15">September 15, 2015</time>
+        <time datetime="2015-09-17">September 17, 2015</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
+      <a href="/manual/clicks.html">How to Analyze Your Clicks</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Clicks</p>
+
+<p>The Clicks page shows what searchers clicked on from your search results pages, and the number of times each of those items was clicked during the selected date range. The current month is shown by default, and the date can be adjusted using the date selectors at the top of the page and re-generating the report.</p>
+
+<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
+
+<p>Data are available in the Admin Center from August 2014 (13 months).</p>
+
+<h2>Reading the Report Table</h2>
+
+<h3>Top URLs Clicked</h3>
+
+<p><a href="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/Analytics_Clicks_800.png" target="_blank" alt="Top clicks from results pages"><img style="float: right;" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/Analytics_Clicks_175.png"></a>The top 1,000 most clicked-on URLs from your results page for the selected time period, with the most popular first.</p>
+
+<h3>Download Details</h3>
+
+<p>You can download the raw click logs for any URL in the list. The CSV (comma separated values) file has one line for each time this URL was clicked. Details avialable include:</p>
+
+<ul>
+<li><em>Date</em> and <em>Time</em> of the click,</li>
+<li><em>Query</em>: The query they ran before clicking the search result,</li>
+<li><em>Position</em>: Where in the results page was the result they clicked, e.g. <strong>5</strong> means the searcher clicked the fifth result in the list,</li>
+<li><em>Request</em>: The clicked URL (It is embedded in the request URL. Look for the text following ‘u=’.) and its position on the page,</li>
+<li><em>Referrer</em>: The webpage the person was on when they ran the search, this column also includes the query,</li>
+<li><em>Vertical</em> and <em>Modules</em>: The modules loaded in response to the query (Our <a href="/manual/module-codes.html">Module Codes</a> tip provides a key of the codes and names.),</li>
+<li><em>Device</em>, <em>Browser</em>, and <em>OS</em>: The kind of device and browser they were using, and</li>
+<li><em>Country Code</em> and <em>Region</em>: Where the user was, physically.</li>
+</ul>
+
+
+<h3># of Clicks</h3>
+
+<p><a href="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ClicksQueries_800.png" target="_blank" alt="Report of Queries that people ran before clicking on a particular page"><img style="float: right;" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ClicksQueries_175.png"></a>Select a hyperlinked number in the <code># of Clicks</code> column to view the queries that led to the clicks for that URL (the <strong>Queries leading to a Click</strong> report).</p>
+
+<p>If you then click on a number in the <code># of Clicks</code> column for a query on the Queries leading to a Click page, you will see all the URLs <a href="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ClicksfromQuery_800.png" target="_blank" alt="Report of pages people clicked on after searching for a given term"><img style="float: right;" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ClicksfromQuery_175.png"></a>that were clicked on from that query's results pages (the <strong>Clicks from a Query</strong> report). This is the same report you see when you follow a <code># of Clicks</code> link from the <a href="/manual/queries.html">Queries page</a>.</p>
+
+<p>You can loop through or drill down into this list for any set of clicks and queries.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and clicks each month. The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site today.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/clicks"><span class="label label-info">clicks</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/clicks.html">
+        <time datetime="2015-09-17">September 17, 2015</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
+      <a href="/manual/add-site.html">How to Add a New Site</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > Add Site</p>
+
+<h2>Homepage URL</h2>
+
+<p>Tell us the homepage URL of your website. Enter a fully qualified URL, including http://, http://www, etc.</p>
+
+<p><strong>Correct Syntax</strong></p>
+
+<ul>
+<li>http://www.whitehouse.gov</li>
+<li>http://louisiana.gov</li>
+<li>http://www.usa.gov/gobiernousa/</li>
+<li>http://nimh.nih.gov/</li>
+<li>http://www.ci.bloomington.mn.us/</li>
+</ul>
+
+
+<p><strong>Incorrect Syntax</strong></p>
+
+<ul>
+<li>usa.gov (use http://www.usa.gov)</li>
+<li>www.nasa.gov (use http://www.nasa.gov)</li>
+<li>http://www.ftc.gov/opa/index.shtml (use the higher-level folder, http://www.ftc.gov/opa)</li>
+<li>http://www.gsa.gov/portal/category/100000?utm_source=OCM&amp;utm_medium=print-radio&amp;utm_term=&amp;utm_campaign=shortcuts (use the higher-level domain, http://www.gsa.gov)</li>
+<li>http://www.doc.gov (use the domain that resolves, http://www.commerce.gov)</li>
+</ul>
+
+
+<p>We use this homepage URL to:</p>
+
+<ol>
+<li>Populate your primary <a href="/manual/domains.html">domain</a>.</li>
+<li>Scan for any social media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/instagram.html">Instagram</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>), your favicon to use on your search results browser tab, and <a href="/manual/rss.html">RSS feeds</a> that are linked from your homepage, or another page you specify on the Display Overview page.</li>
+<li>Link the default <a href="/manual/brand.html">logo</a> on your results page to your homepage.</li>
+</ol>
+
+
+<h2>Display Name</h2>
+
+<p><a href="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/DisplayName_SiteHandle_800.png"><img style="float: right;" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/DisplayName_SiteHandle_175.png" alt="Display Name and Site Handle on NIH.gov's search results page"></a>Tell us the name of your website. Searchers see your site name on the results page, such as in your page title or best bets. We recommend using the plain language name for your agency or site, such as National Institutes of Health.</p>
+
+<h2>Site Handle</h2>
+
+<p>We use your site handle in the HTTP request to specify displaying your customized settings. We recommend making this handle short and unique, such as nih.</p>
+
+<p>Handles can have lowercase letters, numbers, periods, hyphens, and underscores only. They can't have spaces and other punctuation.</p>
+
+<h2>Site Language (Required)</h2>
+
+<p>Choose a language for your site, English, Spanish, or another <a href="/manual/supported-languages.html">supported language</a>.</p>
+
+<p>If you select English, results will primarily include English language pages. All display text on the results page will also be in English.</p>
+
+<p>If you select Spanish, results will primarily include Spanish language pages. All display text on the results page will also be in Spanish. (Localizations are provided by GSA's <a href="http://www.usa.gov/gobiernousa/">GobiernoUSA.gov</a> team.)</p>
+
+<p>If you select one of the other <a href="/manual/supported-languages.html">66 languages</a>, results will primarily include pages from the selected language when possible. Display text will be in the selected language when localizations are available, and in English when they're not available.</p>
+
+<p>We've published the <a href="https://github.com/GSA/punchcard/tree/master/localizations">localization files</a> on Github, and we encourage you to <a href="https://github.com/GSA/punchcard/blob/master/CONTRIBUTING.md">contribute</a> to them.</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting Tip:</em></strong> For non-English sites, some agencies opt to include the specific location of the language's content (such as agency.gov/language or language.agency.gov) in their <a href="/manual/domains.html">Domains</a> to further refine the search results. Test the results for your non-English site with both the general agency.gov and the language-specific location to determine which setting gives you the best results.</p>
+
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;">&#x73;&#101;&#x61;&#114;&#x63;&#104;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#103;&#111;&#x76;</a>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/settings"><span class="label label-info">settings</span></a>
+      
+      <a href="/tagged/add-site"><span class="label label-info">add-site</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/add-site.html">
+        <time datetime="2015-09-17">September 17, 2015</time>
       </a>
     </div>
 
@@ -286,7 +748,7 @@
 
 <p>The original, searchable database for these URLs is publicly available at <a href="http://govt-urls.usa.gov/tematres">http://govt-urls.usa.gov/tematres</a>.</p>
 
-<p>We make periodic updates as we come across changes and welcome comments and additions. <a href="https://github.com/GSA/govt-urls/issues">Submit a new issue</a> to contribute directly to this list or email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#115;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#x76;">&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
+<p>We make periodic updates as we come across changes and welcome comments and additions. <a href="https://github.com/GSA/govt-urls/issues">Submit a new issue</a> to contribute directly to this list or email us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#x73;&#101;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#117;&#112;&#112;&#111;&#114;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#x76;">&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;</a>.</p>
 
 <p><a name="what-it-returns"></a></p>
 
@@ -364,7 +826,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <h2>Feedback</h2>
 
-<p>Email us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#115;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#114;&#116;&#46;&#100;&#105;&#x67;&#105;&#x74;&#x61;&#108;&#103;&#111;&#x76;&#46;&#x67;&#111;&#x76;">&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#x76;</a> with any suggestions about what you'd like to see in the next version of this API.</p>
+<p>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#115;&#101;&#97;&#114;&#x63;&#x68;&#x40;&#115;&#117;&#112;&#x70;&#111;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#46;&#x67;&#x6f;&#118;">&#115;&#101;&#97;&#x72;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#112;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#103;&#105;&#116;&#97;&#108;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#x76;</a> with any suggestions about what you'd like to see in the next version of this API.</p>
 
 <h2>A Tip of the Hat</h2>
 
@@ -511,7 +973,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <p>If you don't like the default web results, you can choose to use another index. Options follow.</p>
 
-<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can fetch and index your all of web site's content directly. Email us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#115;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#46;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#108;&#103;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#114;&#x74;&#x2e;&#100;&#105;&#x67;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#x6f;&#118;</a> and we'll work with you to determine the best way for you to tell us about your content.</p>
+<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can fetch and index your all of web site's content directly. Email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#115;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#112;&#112;&#111;&#114;&#x74;&#x2e;&#x64;&#x69;&#x67;&#x69;&#x74;&#97;&#108;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#118;">&#115;&#x65;&#97;&#114;&#x63;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#46;&#100;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#103;&#x6f;&#118;&#46;&#103;&#x6f;&#x76;</a> and we'll work with you to determine the best way for you to tell us about your content.</p>
 
 <p><strong>Option 2. Buy and Use Google Site Search.</strong> If you already have (or plan to purchase), <a href="https://www.google.com/work/search/products/gss.html">Google Site Search</a>, we'll send a searcher's query to the search index you've provided and we'll render the results within our search results page.</p>
 
@@ -724,7 +1186,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <h2>Site Handle</h2>
 
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#58;&#115;&#101;&#97;&#114;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#x76;">&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#x74;&#97;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;</a>.</p>
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#111;&#114;&#x74;&#46;&#100;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#46;&#x67;&#x6f;&#118;">&#x73;&#101;&#97;&#x72;&#99;&#x68;&#64;&#115;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#x67;&#x69;&#116;&#x61;&#x6c;&#103;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;</a>.</p>
 
 <p><a href="http://search.socialsecurity.gov/search?query=office+locations&amp;affiliate=ssa"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/settings.png" title="Site name and handle on SocialSecurity.gov's search results page" alt="Site name and handle on SocialSecurity.gov's search results page" /></a></p>
 
@@ -734,7 +1196,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <h2>Site Language</h2>
 
-<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">66 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#58;&#x73;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;">&#x73;&#101;&#97;&#114;&#x63;&#104;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#x67;&#x69;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#x76;</a>.</p>
+<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">66 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#x73;&#x65;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#100;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#118;">&#x73;&#x65;&#97;&#114;&#99;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#x76;</a>.</p>
 
 <h2>Delete</h2>
 
@@ -870,290 +1332,6 @@ to contribute your changes to our project and improve this API for everyone who 
       
       
       <a href="/manual/queries.html">
-        <time datetime="2015-08-24">August 24, 2015</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/manual/monthly-reports.html">How to Analyze Your Monthly Reports</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Monthly Reports</p>
-
-<p>The monthly report gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and <a href="/manual/clicks.html">clicks</a> each month.</p>
-
-<p>Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.</p>
-
-<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
-
-<p>Data are available in the Admin Center from August 2014.</p>
-
-<h2>Monthly Usage Stats</h2>
-
-<p>Data for the total number of queries and clicks. Use this report to find and analyze the so-called <a href="http://www.searchtools.com/analysis/long-tail.html">short head</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> of your most popular search queries and clicks, which are typically the same as your site's <a href="http://www.usability.gov/tags/task-analysis/">top tasks</a>.</p>
-
-<h3>Queries with No Results</h3>
-
-<p>A list of queries that returned no results. Sometimes searchers look for information on the wrong website, and sometimes they use different words than what are used on the page, and so they get no results from the search index. Use this list of Queries with No Results to help searchers get to the information they're looking for. You can set up Best Bets (<a href="/manual/best-bets-text.html">Text</a> or <a href="/manual/best-bets-graphics.html">Graphics</a>), or a <a href="/manual/routed-queries.html">Routed Query</a>. You can also <a href="/manual/no-results.html">customize the No Results message</a> displayed on your results page.</p>
-
-<h2>Impressions and Clicks by Module</h2>
-
-<p>Detailed data for the total number of impressions and clicks and your clickthru rate (CTR) are presented for each "module" on the search results page. We also provide the average CTR across all DigitalGov Search customers so you can see how your rate compares to the average rate. The data in the table is sorted in descending order from the most to least number of clicks.</p>
-
-<p>Use this report to inform which <a href="/manual/display-overview.html">modules you opt to display</a>.</p>
-
-<p><strong><em>Drill down into best bets.</em></strong> Select the option to drill down into your <a href="/manual/best-bets-text.html">Best Bets:Text</a> or <a href="/manual/best-bets-graphics.html">Best Bets: Graphics</a> to see the number of impressions, number of clicks, and CTR for each best bet. The data in the table is sorted in descending order from the highest to lowest CTR. Review and edit best bets as needed. Focus on those with a high number of impressions and low CTR to make the biggest impact on searchers' experience (and on your overall CTR). Select drill down again to see a pie chart of the search terms that led to an impression on each best bet.</p>
-
-<h2>Download Top Queries</h2>
-
-<p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV (comma-separated values) link to download the list as a text file. Once you've downloaded the CSV file, you can easily <a href="http://office.microsoft.com/en-us/excel-help/import-or-export-text-txt-or-csv-files-HP010342598.aspx">import it  into Excel</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> or another speadsheet program to analyze the data.</p>
-
-<p>The CSV file contains three columns: (1) query, (2) raw count, and (3) IP-deduped.</p>
-
-<p>Read <a href="https://www.digitalgov.gov/2013/10/24/understanding-your-users-needs-by-analyzing-search-terms/">Understanding Your Users' Needs By Analyzing Search Terms</a> for tips on how to create a semi-automated report for analyzing the data in this CSV file on a regular basis.</p>
-
-<h2>Definitions</h2>
-
-<p>All data presented on this page (and other pages in the Admin Center) are IP-deduped to exclude bots and other noise in an attempt to accurately represent searchers' intent on your site. Some definitions follow.</p>
-
-<p><strong><a href="/manual/queries.html">Queries</a>:</strong> Number of times a search query (that is, a word or string of words) was entered in the search box by a unique searcher.</p>
-
-<p><strong><a href="/manual/clicks.html">Clicks</a>.</strong> Number of times a searcher clicked on one of your pages within the search results for a particular query.</p>
-
-<p><strong>Impressions:</strong> Number of times a module is displayed, whether it is clicked on or not. Not all modules are displayed for all queries. Each time a module is displayed it is counted as one impression.</p>
-
-<p><strong>Clickthru Rate (CTR):</strong> The rate (expressed in a percentage) at which searchers click on a module. This rate is calculated by dividing the total number of clicks by the total number of impressions. CTR is useful to measure the performance of specific campaigns, such as <a href="/manual/best-bets-text.html">best bets</a> for seasonal events.</p>
-
-<p><strong>Raw count:</strong> Total number of times the query was submitted. The raw count is provided in the downloadable CSV files only.</p>
-
-<p><strong>IP-deduped count:</strong> Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of "real," human traffic.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> On the first of each month, we email you a report with data on the previous month's queries, clicks, and top search terms.</p>
-
-<p><strong><em>Did you know?</em></strong> The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site in the past day or so.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/queries"><span class="label label-info">queries</span></a>
-      
-      <a href="/tagged/clicks"><span class="label label-info">clicks</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/monthly-reports.html">
-        <time datetime="2015-08-24">August 24, 2015</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/manual/index.html">Help Manual: How to Set Up Your Search Box</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>We provide a search box that searches across all of your <em>public-facing</em> digital content. We support an unlimited number of web pages across multiple domains and we integrate your RSS feeds, tweets, YouTube videos, and Flickr and Instagram photos.</p>
-
-<p>Browse through our <a href="/blog/go-live.html">Go-Live Punch List</a> for some quick tips on how to configure the search experience for your website, or watch our <a href="/manual/training.html">training videos</a>.</p>
-
-<p>Watch our <a href="http://youtu.be/TnlpuudK_WY">Getting Started video</a> (4 mins)&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<h3><i class="icon-dashboard"></i> Dashboard</h3>
-
-<p><a href="/manual/site-overview.html">Site overview</a>  <br/>
-<a href="/manual/users.html">Manage users</a>  <br/>
-<a href="/manual/settings.html">Settings</a></p>
-
-<h3><i class="icon-bar-chart"></i> Analytics</h3>
-
-<p><a href="/manual/queries.html">Queries</a>  <br/>
-<a href="/manual/clicks.html">Clicks</a>  <br/>
-<a href="/manual/monthly-reports.html">Monthly reports</a>  <br/>
-<a href="/manual/third-party.html">3rd party tracking</a></p>
-
-<h3><i class="icon-file"></i> Manage Content</h3>
-
-<p><a href="/manual/content-overview.html">Content overview</a>  <br/>
-<a href="/manual/domains.html">Domains</a> (plus <a href="/manual/domains-advanced.html">advanced options to add or filter URLs</a>)  <br/>
-<a href="/manual/collections.html">Collections</a>  <br/>
-i14y drawers (Coming soon!)  <br/>
-Best bets: <a href="/manual/best-bets-text.html">text</a> and <a href="/manual/best-bets-graphics.html">graphics</a>  <br/>
-<a href="/manual/routed-queries.html">Routed queries</a>  <br/>
-<a href="/manual/rss.html">RSS</a>  <br/>
-<a href="/manual/youtube.html">YouTube</a>  <br/>
-<a href="/manual/twitter.html">Twitter</a>  <br/>
-<a href="/manual/flickr.html">Flickr</a>  <br/>
-<a href="/manual/instagram.html">Instagram</a></p>
-
-<h3><i class="icon-desktop"></i> Manage Display</h3>
-
-<p><a href="/manual/display-overview.html">Display overview</a> (including <a href="/manual/govbox-jobs.html">job openings</a>, <a href="/manual/govbox-federal-register.html"><em>Federal Register</em></a>, and <a href="/manual/govbox-health.html">health topics</a>)  <br/>
-<a href="/manual/brand.html">Brand</a> (font &amp; colors, image assets, and header &amp; footer)  <br/>
-Custom <a href="/manual/no-results.html">No Results</a> page  <br/>
-Custom <a href="/manual/system-alert.html">Search Page Alert</a></p>
-
-<h3><i class="icon-eye-open"></i> Preview</h3>
-
-<p><a href="/manual/preview.html">Preview</a></p>
-
-<h3><i class="icon-code"></i> Activate Search</h3>
-
-<p><a href="/manual/code.html">Code snippets</a>  <br/>
-Search API access key*  <br/>
-Search Results API instructions*  <br/>
-Type-ahead API instructions*  <br/>
-i14y (Beta) API instructions*</p>
-
-<p>* These APIs are available for use on official government websites only. You must be a DigitalGov Search customer. <a href="https://search.usa.gov/sites">Sign in</a> is required. Keys and instructions for each can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search.</p>
-
-<p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
-
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#112;&#111;&#114;&#x74;&#46;&#100;&#105;&#x67;&#105;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#118;">&#115;&#101;&#97;&#114;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#x67;&#x69;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#x76;</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/index.html">
-        <time datetime="2015-08-24">August 24, 2015</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/manual/clicks.html">How to Analyze Your Clicks</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Clicks</p>
-
-<p>The Clicks page reports on the number of times a unique searcher clicked on one of your pages within the search results for a particular query.</p>
-
-<p>Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.</p>
-
-<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
-
-<p>Data are available in the Admin Center from August 2014.</p>
-
-<h2>Top Clicks</h2>
-
-<p><strong><em>Top 1,000.</em></strong> You'll see a list, in frequency order, of top 1,000 most popular clicks for your selected time period.</p>
-
-<p>For example, below are the top 10 clicked URLs for USA.gov in August 2013.</p>
-
-<ol>
-<li>www.usajobs.gov</li>
-<li>travel.state.gov/visa/immigrants/types/types_1322.html</li>
-<li>www.usa.gov/shopping/shopping.shtml</li>
-<li>www.usa.gov/Citizen/Topics/Government-Unclaimed-Money.shtml</li>
-<li>www.annualcreditreport.com/</li>
-<li>www.travel.state.gov/passport/passport_1738.html</li>
-<li>www.ssa.gov</li>
-<li>travel.state.gov/visa/immigrants/types/types_1318.html</li>
-<li>www.usajobs.gov/</li>
-<li>travel.state.gov/passport/renew/renew_833.html</li>
-</ol>
-
-
-<h2>Download Details</h2>
-
-<p>You can download a detailed CSV (comma separated values) file for any clicked URL. There's one line for each time this URL was clicked. This CSV file gives you access to the raw click logs, including:</p>
-
-<ul>
-<li>The date and time of the click,</li>
-<li>The clicked URL (It is embedded in the request URL. Look for the text following ‘u=’.) and its position on the page,</li>
-<li>Where the person was when they ran the search and the search term used,</li>
-<li>The modules loaded in response to the query (Our <a href="/manual/module-codes.html">Module Codes</a> tip provides a key of the codes and names.), and</li>
-<li>The kind of device and browser they were using.</li>
-</ul>
-
-
-<h2>Click Queries &amp; Query Clicks</h2>
-
-<p>Select the hyperlinked number in the # of Clicks column to view the top queries that led to a click for each URL.</p>
-
-<p>If you click on the first-listed <em>www.usajobs.gov</em> in the example above, you'll see that the top queries leading to a click on that URL are:</p>
-
-<ol>
-<li>jobs</li>
-<li>jobs openings</li>
-<li>usa jobs</li>
-<li>employment</li>
-<li>job search</li>
-</ol>
-
-
-<p>From this list of top queries leading to a click, you'll be able select the hyperlinked number in the # of Clicks column to view the top clicks for each query.</p>
-
-<p>If you click on the fourth-listed <em>employment</em> in the example above, you'll see that the the top URLs clicked for that query are:</p>
-
-<ol>
-<li>www.usajobs.gov</li>
-<li>www.usajobs.gov/JobSearch/Search/GetResults</li>
-<li>www.bls.gov/ces</li>
-<li>www.cdc.gov/employment</li>
-</ol>
-
-
-<p>You can loop through or drill down into this list for any set of clicks and queries.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and clicks each month. The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site in the past day or so.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/clicks"><span class="label label-info">clicks</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/clicks.html">
         <time datetime="2015-08-24">August 24, 2015</time>
       </a>
     </div>
