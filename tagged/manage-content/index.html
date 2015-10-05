@@ -103,6 +103,143 @@
  
     
     <h1>
+      <a href="/manual/i14y-getting-started.html">Getting Started With i14y</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="https://github.com/GSA/i14y">i14y Github repo</a> | <a href="http://gsa.github.io/slate/">Technical Documentation</a></p>
+
+<p>Do you want to have real-time updates to your search index, and full control over your page titles and descriptions? Then <a href="https://github.com/GSA/i14y">i14y, our content indexing API</a> is for you! Take a look at our <a href="http://search.digitalgov.gov/developer/i14y.html">i14y FAQ</a>, and then jump right in!</p>
+
+<h2>Step 1. Connect one of your sites to i14y</h2>
+
+<p>i14y needs to be enabled in the back end for a site to be able to receive content through it. You can</p>
+
+<ul>
+<li><a href="http://search.digitalgov.gov/manual/add-site.html">Add a brand new site</a>,</li>
+<li>Use the Clone Site tool to copy one of your existing site’s settings to a new site (<code>YourSite &gt; Dashboard &gt; Clone Site</code>), or</li>
+<li>use an existing site.</li>
+</ul>
+
+
+<p><a href="mailto:search@support.digitalgov.com">Email us</a> and let us know which site you want enabled for i14y.</p>
+
+<h2>Step 2. Add a Drawer</h2>
+
+<p>After a search site has been connected to i14y, a new page will appear: <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers.</p>
+
+<p>Click <code>Add i14y Drawer</code> in the upper right corner, create a handle, give it an optional description, and click Add to save. <a href="/i14y-drawers.html">Read more about working with Drawers</a>.</p>
+
+<p>If you have more than one website that will be sending content, add a separate Drawer for each of these sites.</p>
+
+<h2>Step 3. Fill your Drawer</h2>
+
+<p>Here’s where the rubber hits the road: use <a href="https://github.com/GSA/i14y">i14y</a> to add content to your drawer. You can do this in two ways:</p>
+
+<ul>
+<li>Use i14y directly. <a href="https://github.com/GSA/i14y">Github repo</a> | <a href="http://gsa.github.io/slate/">Technical Documentation</a></li>
+<li>Use a module plugged into your CMS. At this time there is a <a href="https://www.drupal.org/project/usasearch">Drupal module</a> and a <a href="https://github.com/GSA/digitalsearch-wp-i4y-indexer">Wordpress plugin</a> available.</li>
+</ul>
+
+
+<h2>Step 4. Review your index</h2>
+
+<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list. We also send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
+
+<h2>Step 5. Configure your search</h2>
+
+<p>Once you have your index populated, you will <a href="http://search.digitalgov.gov/manual/content-overview.html">set up the rest of your search</a> as you would for a traditional DigitalGov Search site. Set your default search scope on your <a href="http://search.digitalgov.gov/manual/domains.html">Domains</a> page, add Social Media accounts (<a href="http://search.digitalgov.gov/manual/flickr.html">Flickr</a>, <a href="http://search.digitalgov.gov/manual/instagram.html">Instagram</a>, <a href="http://search.digitalgov.gov/manual/twitter.html">Twitter</a>, and <a href="http://search.digitalgov.gov/manual/youtube.html">YouTube</a>, create <a href="http://search.digitalgov.gov/manual/collections.html">Collections</a>, and set your results page Display (both <a href="http://search.digitalgov.gov/manual/display-overview.html">search features</a> and <a href="http://search.digitalgov.gov/manual/brand.html">branding</a>).</p>
+
+<p>If you have any <a href="http://search.digitalgov.gov/manual/rss.html">RSS content</a> that will not be sent to your i14y drawer, you can add those feeds as well.</p>
+
+<h2>Step 6. Update your search box</h2>
+
+<p>Update your website’s search box form code to point to <code>affiliate=youri14ysitehandle</code>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/i14y"><span class="label label-info">i14y</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/i14y-getting-started.html">
+        <time datetime="2015-10-05">October 5, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/i14y-drawers.html">How to Work with i14y Drawers</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="http://search.digitalgov.gov/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers</p>
+
+<p>An <a href="http://search.digitalgov.gov/developer/i14y.html">i14y</a> Drawer is an index receiving content via the i14y API. We've called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
+
+<h2>Step 1. Make sure your site is connected to i14y</h2>
+
+<p>If your site Admin Center has the following page: <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, your site is connected to i14y. If you don't see this page in the Admin Center, <a href="mailto:search@support.digitalgov.gov">email us</a>. You can also read about <a href="/manual/i14y-getting-started.html">Getting Started with i14y</a>.</p>
+
+<h2>Step 2. Add one or more Drawers</h2>
+
+<p>On <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, Click <code>Add i14y Drawer</code> in the upper right corner. If you have more than one website that will be sending content, add a separate Drawer for each of these sites.</p>
+
+<h3>Handle</h3>
+
+<p>Let us know what the handle for your drawer should be - the handle must be all lowercase alphanumeric, all one word, and can include underscores but no other special characters (e.g., agency_drawer_handle2).</p>
+
+<p>The Drawer <em>Description</em> is optional</p>
+
+<h2>Step 3. Send Content to Fill your Drawer</h2>
+
+<p>After you have created your Drawer(s), click <code>Show</code> from the i14y Drawers list to find that Drawer’s secret API key. Use this secret key with your drawer handle in your API call or your CMS module to <a href="http://gsa.github.io/slate/#authentication">send your content to the right place</a>.</p>
+
+<h2>Step 4. Review your Index</h2>
+
+<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list. We also send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/i14y"><span class="label label-info">i14y</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/i14y-drawers.html">
+        <time datetime="2015-10-05">October 5, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/content-overview.html">How to Add Your Content to Our Indexes: An Overview</a>
     </h1>
     
@@ -123,7 +260,7 @@
 
 <p>If you don't like the default web results, you can choose to use another index. Options follow.</p>
 
-<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can fetch and index your all of web site's content directly. Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#58;&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#112;&#x70;&#111;&#x72;&#116;&#46;&#100;&#x69;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#46;&#103;&#x6f;&#x76;">&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#116;&#46;&#100;&#105;&#103;&#105;&#116;&#97;&#x6c;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a> and we'll work with you to determine the best way for you to tell us about your content.</p>
+<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can fetch and index your all of web site's content directly. Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#115;&#x65;&#97;&#114;&#x63;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#111;&#114;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#x6f;&#x76;</a> and we'll work with you to determine the best way for you to tell us about your content.</p>
 
 <p><strong>Option 2. Buy and Use Google Site Search.</strong> If you already have (or plan to purchase), <a href="https://www.google.com/work/search/products/gss.html">Google Site Search</a>, we'll send a searcher's query to the search index you've provided and we'll render the results within our search results page.</p>
 
@@ -643,6 +780,114 @@ Keyword 4: market value
  
     
     <h1>
+      <a href="/manual/domains-advanced.html">How to Use Advanced Options to Add or Filter Specific URLs</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > <a href="/manual/domains.html">Domains</a> > Advanced</p>
+
+<h2>Add a URL</h2>
+
+<p>Are specific web pages missing from your Bing web results? Tell us about these URLs and we'll append them to your web results. We offer two ways for you to tell us about the web pages that you want us to fetch and include in our web index, via an RSS feed (Supplemental Feed) or manually (Supplemental URLs).</p>
+
+<h3>Supplemental Feed</h3>
+
+<p>You can use an RSS feed to add URLs. The feed is useful if you'd like to automate the process, add multiple URLs, or both.</p>
+
+<p>Enter the URL of your RSS feed. Click submit. We'll fetch each URL in your feed and index the title, description, <em>and the full text of the document</em> for the items you provide. We'll display the title and description you provide (not the page's title or a snippet based on the page's content), as well as a results count.</p>
+
+<p>We'll update any items that include a publication date.</p>
+
+<p>Delete a URL added via RSS feed by deleting it as an item in your RSS feed. We'll remove the URL from our index the next time we fetch your RSS feed. If you need to remove it from our index immediately, you can take the additional step of deleting the URL by selecting Delete within the list of URLs on the Supplemental URLs page.</p>
+
+<p>Note that you <em>must</em> delete the URL from your RSS feed. Otherwise, the URL will reappear the next time we fetch your RSS feed.</p>
+
+<p>You can also delete <em>all</em> of the URLs added via the RSS feed by deleting the RSS feed itself.</p>
+
+<p>We can't restore URLs that don't exist within your <em>current</em> feed.</p>
+
+<h3>Supplemental URLs</h3>
+
+<p>You can also manually add a a specific URL on the Supplemental URLs page. We'll fetch each URL you add manually and we'll index the title, description, <em>and the full text of the document</em> for the link you provide. We'll display the title and description you provide (not the page's title or a snippet based on the page's content).</p>
+
+<p>Delete a manually added URL by selecting Delete within the list of supplemental URLs.</p>
+
+<p>The source column in the crawl report shows how you added the URL, via an RSS feed or manually.</p>
+
+<h2>Filter a URL</h2>
+
+<p>You can filter <em>a single URL</em> from the results on your site. Use it for emergency reasons only (such as spillage of classified information or unintentional publication of a page). Note that this option should be used only if the <a href="/manual/domains.html#filter">other options</a> aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p>
+
+<p>It is not meant to fix the results for entire site, such as for launch or redesign problems. For tips on how to fix these more systemic problems, read our <a href="/blog/redesign.html">Checklist for a Successful Website Redesign</a>.</p>
+
+<p>Entire the full path of the URL, e.g. use http://www.usa.gov/Citizen/Topics/Benefits.shtml, not usa.gov/citizen/topics.</p>
+
+<p>You can later use the delete option to remove the filter.</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
+
+<ul>
+<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
+<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+<li><a href="http://atomenabled.org/developers/syndication/">Atom syndication format</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+</ul>
+
+
+<p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report for your PDF that says, "No content found in document"? Your PDF is likely an image-only, non-searchable file that was created from a paper document using a scanner. See the resources below for more information on how to create searchable PDF files.</p>
+
+<ul>
+<li><a href="http://blogs.adobe.com/acrolaw/2007/02/is_that_pdf_sea/">Is that PDF Searchable?</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (blog post)</li>
+<li><a href="http://acrobatusers.com/tutorials/how-to-create-a-searchable-pdf-file">How to Create Searchable PDF File</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (video)</li>
+</ul>
+
+
+<p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report that says your page is taking too long to load? Use <a href="http://tools.pingdom.com/fpt/">Pingdom Tools Full Page Test</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to test the load time of your page, analyze it, and find the bottlenecks.</p>
+
+<p><strong><em>Did you know?</em></strong> To help the public find your web pages when they search on Bing.com, we notify Bing about any URLs you add. While this helps with search engine optimization (SEO), it is not a cure-all. You should also register for and use commercial search engines' webmaster tools.</p>
+
+<ul>
+<li><a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+<li><a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Central</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
+      
+      <a href="/tagged/advanced"><span class="label label-info">advanced</span></a>
+      
+      <a href="/tagged/supplemental-feed"><span class="label label-info">supplemental-feed</span></a>
+      
+      <a href="/tagged/supplemental-urls"><span class="label label-info">supplemental-urls</span></a>
+      
+      <a href="/tagged/filter-urls"><span class="label label-info">filter-urls</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/domains-advanced.html">
+        <time datetime="2015-06-02">June 2, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/rss.html">How to Add Your RSS Feeds to Our Index</a>
     </h1>
     
@@ -832,114 +1077,6 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
  
     
     <h1>
-      <a href="/manual/domains-advanced.html">How to Use Advanced Options to Add or Filter Specific URLs</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > <a href="/manual/domains.html">Domains</a> > Advanced</p>
-
-<h2>Add a URL</h2>
-
-<p>Are specific web pages missing from your Bing web results? Tell us about these URLs and we'll append them to your web results. We offer two ways for you to tell us about the web pages that you want us to fetch and include in our web index, via an RSS feed (Supplemental Feed) or manually (Supplemental URLs).</p>
-
-<h3>Supplemental Feed</h3>
-
-<p>You can use an RSS feed to add URLs. The feed is useful if you'd like to automate the process, add multiple URLs, or both.</p>
-
-<p>Enter the URL of your RSS feed. Click submit. We'll fetch each URL in your feed and index the title, description, <em>and the full text of the document</em> for the items you provide. We'll display the title and description you provide (not the page's title or a snippet based on the page's content), as well as a results count.</p>
-
-<p>We'll update any items that include a publication date.</p>
-
-<p>Delete a URL added via RSS feed by deleting it as an item in your RSS feed. We'll remove the URL from our index the next time we fetch your RSS feed. If you need to remove it from our index immediately, you can take the additional step of deleting the URL by selecting Delete within the list of URLs on the Supplemental URLs page.</p>
-
-<p>Note that you <em>must</em> delete the URL from your RSS feed. Otherwise, the URL will reappear the next time we fetch your RSS feed.</p>
-
-<p>You can also delete <em>all</em> of the URLs added via the RSS feed by deleting the RSS feed itself.</p>
-
-<p>We can't restore URLs that don't exist within your <em>current</em> feed.</p>
-
-<h3>Supplemental URLs</h3>
-
-<p>You can also manually add a a specific URL on the Supplemental URLs page. We'll fetch each URL you add manually and we'll index the title, description, <em>and the full text of the document</em> for the link you provide. We'll display the title and description you provide (not the page's title or a snippet based on the page's content).</p>
-
-<p>Delete a manually added URL by selecting Delete within the list of supplemental URLs.</p>
-
-<p>The source column in the crawl report shows how you added the URL, via an RSS feed or manually.</p>
-
-<h2>Filter a URL</h2>
-
-<p>You can filter <em>a single URL</em> from the results on your site. Use it for emergency reasons only (such as spillage of classified information or unintentional publication of a page). Note that this option should be used only if the <a href="/manual/domains.html#filter">other options</a> aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p>
-
-<p>It is not meant to fix the results for entire site, such as for launch or redesign problems. For tips on how to fix these more systemic problems, read our <a href="/blog/redesign.html">Checklist for a Successful Website Redesign</a>.</p>
-
-<p>Entire the full path of the URL, e.g. use http://www.usa.gov/Citizen/Topics/Benefits.shtml, not usa.gov/citizen/topics.</p>
-
-<p>You can later use the delete option to remove the filter.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
-
-<ul>
-<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
-<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-<li><a href="http://atomenabled.org/developers/syndication/">Atom syndication format</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-</ul>
-
-
-<p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report for your PDF that says, "No content found in document"? Your PDF is likely an image-only, non-searchable file that was created from a paper document using a scanner. See the resources below for more information on how to create searchable PDF files.</p>
-
-<ul>
-<li><a href="http://blogs.adobe.com/acrolaw/2007/02/is_that_pdf_sea/">Is that PDF Searchable?</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (blog post)</li>
-<li><a href="http://acrobatusers.com/tutorials/how-to-create-a-searchable-pdf-file">How to Create Searchable PDF File</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (video)</li>
-</ul>
-
-
-<p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report that says your page is taking too long to load? Use <a href="http://tools.pingdom.com/fpt/">Pingdom Tools Full Page Test</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to test the load time of your page, analyze it, and find the bottlenecks.</p>
-
-<p><strong><em>Did you know?</em></strong> To help the public find your web pages when they search on Bing.com, we notify Bing about any URLs you add. While this helps with search engine optimization (SEO), it is not a cure-all. You should also register for and use commercial search engines' webmaster tools.</p>
-
-<ul>
-<li><a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-<li><a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Central</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
-      
-      <a href="/tagged/advanced"><span class="label label-info">advanced</span></a>
-      
-      <a href="/tagged/supplemental-feed"><span class="label label-info">supplemental-feed</span></a>
-      
-      <a href="/tagged/supplemental-urls"><span class="label label-info">supplemental-urls</span></a>
-      
-      <a href="/tagged/filter-urls"><span class="label label-info">filter-urls</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/domains-advanced.html">
-        <time datetime="2015-06-02">June 2, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
       <a href="/manual/youtube.html">How to Add Your YouTube Videos to Our Index</a>
     </h1>
     
@@ -999,130 +1136,6 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
       
       <a href="/manual/youtube.html">
         <time datetime="2015-05-04">May 4, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/instagram.html">How to Add Your Instagram Pictures to Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Instagram</p>
-
-<h2>Tell Us About Your Instagram Account</h2>
-
-<p>Provide us with the <em>username</em> for your Instagram Account.</p>
-
-<p>When you're logged into Instagram, you can see your username at <a href="https://instagram.com/accounts/login/?next=/accounts/edit/">https://instagram.com/accounts/login/?next=/accounts/edit/</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<p>For example, the Instagram username for the Department of Labor is <a href="http://instagram.com/usdol">usdol</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<h2>Opt to Display Your Instagram Pictures</h2>
-
-<p>When you add the username for your Instagram account, we'll automatically index all of the pictures in your account.</p>
-
-<p>On the image results page, we'll display the pictures from your Instagram account by default. If you'd like to backfill them with the standard image results from your website, <a href="mailto:search@support.digitalgov.gov">email us</a> and we'll turn on your web images for you.</p>
-
-<p>See the sample results page below that shows image results displayed on <a href="http://search.usa.gov/search/images?affiliate=u.s.departmentoflabor&amp;query=minimum+wage">DOL.gov for a search on <em>minimum wage</em></a>.</p>
-
-<p><a href="http://search.usa.gov/search/images?affiliate=u.s.departmentoflabor&amp;query=minimum+wage"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-instagram.png" title="Image results from Flickr &amp; Instagram" alt="Image results from Flickr &amp; Instagram" /></a></p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
-
-<p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/flickr.html">Flickr</a> photostream. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.</p>
-
-<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#x6c;&#103;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;">&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#118;</a> if you're ready to turn on the new results page.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
-      
-      <a href="/tagged/instagram"><span class="label label-info">instagram</span></a>
-      
-      <a href="/tagged/images"><span class="label label-info">images</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/instagram.html">
-        <time datetime="2014-08-20">August 20, 2014</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/flickr.html">How to Add Your Flickr Images to Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Flickr</p>
-
-<h2>Tell Us About Your Flickr Photostream</h2>
-
-<p>Provide us with the <em>full URL</em> for your Flickr photostream. Most photostreams are in the photos folder (e.g., <a href="https://www.flickr.com/photos/hudopa">https://www.flickr.com/photos/hudopa</a> for HUD). Some photostreams are in the groups folder (such as <a href="https://www.flickr.com/groups/usagov">https://www.flickr.com/groups/usagov</a> for USA.gov).</p>
-
-<p>The URL must be for your overall photostream. You cannot specify individual photos, sets, favorites, or maps.</p>
-
-<h2>Opt to Display Your Flickr Images</h2>
-
-<p>When you add the URL for your Flickr photostream, we'll automatically index all of the images in your photostream.</p>
-
-<p>On the image results page, we'll display the images from your Flickr photostream by default. If you'd like to backfill them with the standard image results from your website, <a href="mailto:search@support.digitalgov.gov">email us</a> and we'll turn on your web images for you.</p>
-
-<p>See the sample results page below that shows photo results displayed on <a href="http://search.usa.gov/search/images?affiliate=www.louisiana.gov&amp;query=hurricanes">Louisiana.gov for a search on <em>hurricanes</em></a>.</p>
-
-<p><a href="http://search.usa.gov/search/images?affiliate=www.louisiana.gov&amp;query=hurricanes"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-flickr.png" title="Image results from Flickr" alt="Image results from Flickr" /></a></p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
-
-<p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/instagram.html">Instagram</a> account. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.</p>
-
-<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#58;&#115;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#x73;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#111;&#118;">&#115;&#x65;&#97;&#114;&#x63;&#104;&#64;&#115;&#x75;&#x70;&#112;&#111;&#x72;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#97;&#108;&#103;&#x6f;&#118;&#46;&#103;&#x6f;&#x76;</a> if you're ready to turn on the new results page.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
-      
-      <a href="/tagged/flickr"><span class="label label-info">flickr</span></a>
-      
-      <a href="/tagged/images"><span class="label label-info">images</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/flickr.html">
-        <time datetime="2014-08-20">August 20, 2014</time>
       </a>
     </div>
     </article>
