@@ -89,11 +89,11 @@ Here's the before and after for a search on *diabetes* on USA.gov.
 
 ![Health topic result for diabetes on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-health-govbox.png "Health topic result for diabetes on USA.gov")
 
-The new health topics format shows a shorter, more concise snippet and the snippet doesn't have any embedded links. The result now takes up less vertical space as the links for related topics and clinical trials are each listed in a line. The MedlinePlus logo now links to <http://www.nlm.nih.gov/medlineplus/>.
+The new health topics format shows a shorter, more concise snippet and the snippet doesn't have any embedded links. The result now takes up less vertical space as the links for related topics and clinical trials are each listed in a line. The MedlinePlus logo now links to <https://www.nlm.nih.gov/medlineplus/>.
 
 ## By Government, for Government
 
-Our search results page now ensures the public has a common search experience anywhere, anytime, and on any device. This meets a key objective of the federal government's [Digital Government Strategy](http://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html).
+Our search results page now ensures the public has a common search experience anywhere, anytime, and on any device. This meets a key objective of the federal government's [Digital Government Strategy](https://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html).
 
 It has also been tested to ensure it is [accessible to people with disabilities](https://www.section508.gov/).
 

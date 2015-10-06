@@ -13,7 +13,7 @@ tags: help-manual
 <table cellpadding="10" style="border-collapse: collapse;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
 	<tbody>
 		<tr>
-			<td align="center" bgcolor="#0088cc" height="50" style="-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #ffffff;display: block;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="200"><a href="http://youtu.be/TnlpuudK_WY" style="font-size: 18px;font-weight: bold;font-family: Helvetica, Arial, sans-serif;text-decoration: none;line-height: 25px;width: 100%;display: inline-block;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #0088cc;"><span style="color:#FFFFFF">Watch a 3 min intro video</span></a></td>
+			<td align="center" bgcolor="#0088cc" height="50" style="-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;color: #ffffff;display: block;mso-table-lspace: 0pt;mso-table-rspace: 0pt;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;" width="200"><a href="https://www.youtube.com/watch?v=TnlpuudK_WY" style="font-size: 18px;font-weight: bold;font-family: Helvetica, Arial, sans-serif;text-decoration: none;line-height: 25px;width: 100%;display: inline-block;word-wrap: break-word;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #0088cc;"><span style="color:#FFFFFF">Watch a 3 min intro video</span></a></td>
 		</tr>
 	</tbody>
 </table>

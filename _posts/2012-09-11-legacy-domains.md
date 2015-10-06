@@ -5,7 +5,7 @@ category: blog
 tags: get-code about-us
 ---
 
-As part of the federal [.gov web reform](http://www.usa.gov/WebReform.shtml) project, we're eliminating six of our legacy domains. Going forward, our only supported domain is search.usa.gov (or search.yoursite.gov, if you've requested [DNS masking](/manual/cname.html)).
+As part of the federal [.gov web reform](https://www.usa.gov/WebReform.shtml) project, we're eliminating six of our legacy domains. Going forward, our only supported domain is search.usa.gov (or search.yoursite.gov, if you've requested [DNS masking](/manual/cname.html)).
 
 What do you need to do? If your URL starts with any of the following six legacy domains, you must update your HTML form code.
 

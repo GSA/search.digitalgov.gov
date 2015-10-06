@@ -33,7 +33,7 @@ Use this report to inform which [modules you opt to display](/manual/display-ove
 
 ## Download Top Queries
 
-View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV (comma-separated values) link to download the list as a text file. Once you've downloaded the CSV file, you can easily [import it  into Excel](http://office.microsoft.com/en-us/excel-help/import-or-export-text-txt-or-csv-files-HP010342598.aspx){% external_link %} or another speadsheet program to analyze the data.
+View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV (comma-separated values) link to download the list as a text file. Once you've downloaded the CSV file, you can easily [import it  into Excel](https://support.office.com/en-us/article/Import-or-export-text-txt-or-csv-files-e8ab9ff3-be8d-43f1-9d52-b5e8a008ba5c){% external_link %} or another speadsheet program to analyze the data.
 
 The CSV file contains three columns: (1) query, (2) raw count, and (3) IP-deduped.
 

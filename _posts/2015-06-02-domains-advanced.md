@@ -42,7 +42,7 @@ You can filter *a single URL* from the results on your site. Use it for emergenc
 
 It is not meant to fix the results for entire site, such as for launch or redesign problems. For tips on how to fix these more systemic problems, read our [Checklist for a Successful Website Redesign](/blog/redesign.html).
 
-Entire the full path of the URL, e.g. use http://www.usa.gov/Citizen/Topics/Benefits.shtml, not usa.gov/citizen/topics.
+Entire the full path of the URL, e.g. use https://www.usa.gov/Citizen/Topics/Benefits.shtml, not usa.gov/citizen/topics.
 
 You can later use the delete option to remove the filter.
 
@@ -57,7 +57,7 @@ You can later use the delete option to remove the filter.
 ***Troubleshooting tip:*** Are you seeing an error message in the crawled URLs report for your PDF that says, "No content found in document"? Your PDF is likely an image-only, non-searchable file that was created from a paper document using a scanner. See the resources below for more information on how to create searchable PDF files.
 
 * [Is that PDF Searchable?](http://blogs.adobe.com/acrolaw/2007/02/is_that_pdf_sea/){% external_link %} (blog post)
-* [How to Create Searchable PDF File](http://acrobatusers.com/tutorials/how-to-create-a-searchable-pdf-file){% external_link %} (video)
+* [How to Create Searchable PDF File](https://acrobatusers.com/tutorials/how-to-create-a-searchable-pdf-file){% external_link %} (video)
 
 ***Troubleshooting tip:*** Are you seeing an error message in the crawled URLs report that says your page is taking too long to load? Use [Pingdom Tools Full Page Test](http://tools.pingdom.com/fpt/){% external_link %} to test the load time of your page, analyze it, and find the bottlenecks.
 
