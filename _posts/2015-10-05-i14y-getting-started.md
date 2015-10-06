@@ -8,13 +8,13 @@ published: true
 
 [i14y Github repo](https://github.com/GSA/i14y) | [Technical Documentation](http://gsa.github.io/slate/)
 
-Do you want to have real-time updates to your search index, and full control over your page titles and descriptions? Then [i14y, our content indexing API](https://github.com/GSA/i14y) is for you! Take a look at our [i14y FAQ](http://search.digitalgov.gov/developer/i14y.html), and then jump right in!
+Do you want to have real-time updates to your search index, and full control over your page titles and descriptions? Then [i14y, our content indexing API](https://github.com/GSA/i14y) is for you! Take a look at our [i14y FAQ](/developer/i14y.html), and then jump right in!
 
 ## Step 1. Connect one of your sites to i14y
 
 i14y needs to be enabled in the back end for a site to be able to receive content through it. You can 
 
-* [Add a brand new site](http://search.digitalgov.gov/manual/add-site.html), 
+* [Add a brand new site](/manual/add-site.html), 
 * Use the Clone Site tool to copy one of your existing site’s settings to a new site (`YourSite > Dashboard > Clone Site`), or 
 * use an existing site.
 
@@ -24,7 +24,7 @@ i14y needs to be enabled in the back end for a site to be able to receive conten
 
 After a search site has been connected to i14y, a new page will appear: [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > i14y Drawers.
 
-Click `Add i14y Drawer` in the upper right corner, create a handle, give it an optional description, and click Add to save. [Read more about working with Drawers](/i14y-drawers.html).
+Click `Add i14y Drawer` in the upper right corner, create a handle, give it an optional description, and click Add to save. [Read more about working with Drawers](/manual/i14y-drawers.html).
 
 If you have more than one website that will be sending content, add a separate Drawer for each of these sites.
 
@@ -41,10 +41,10 @@ You can view the number of documents indexed for each drawer on the main i14y Dr
 
 ## Step 5. Configure your search
 
-Once you have your index populated, you will [set up the rest of your search](http://search.digitalgov.gov/manual/content-overview.html) as you would for a traditional DigitalGov Search site. Set your default search scope on your [Domains](http://search.digitalgov.gov/manual/domains.html) page, add Social Media accounts ([Flickr](http://search.digitalgov.gov/manual/flickr.html), [Instagram](http://search.digitalgov.gov/manual/instagram.html), [Twitter](http://search.digitalgov.gov/manual/twitter.html), and [YouTube](http://search.digitalgov.gov/manual/youtube.html), create [Collections](http://search.digitalgov.gov/manual/collections.html), and set your results page Display (both [search features](http://search.digitalgov.gov/manual/display-overview.html) and [branding](http://search.digitalgov.gov/manual/brand.html)).
+Once you have your index populated, you will [set up the rest of your search](/manual/content-overview.html) as you would for a traditional DigitalGov Search site. Set your default search scope on your [Domains](/manual/domains.html) page, add Social Media accounts ([Flickr](/manual/flickr.html), [Instagram](/manual/instagram.html), [Twitter](/manual/twitter.html), and [YouTube](/manual/youtube.html), create [Collections](/manual/collections.html), and set your results page Display (both [search features](/manual/display-overview.html) and [branding](/manual/brand.html)).
 
-If you have any [RSS content](http://search.digitalgov.gov/manual/rss.html) that will not be sent to your i14y drawer, you can add those feeds as well.
+If you have any [RSS content](/manual/rss.html) that will not be sent to your i14y drawer, you can add those feeds as well.
 
 ## Step 6. Update your search box
 
-Update your website’s search box form code to point to `affiliate=youri14ysitehandle`.
+Update your website’s search box [form code](/manual/code.html) to point to `affiliate=youri14ysitehandle`.
