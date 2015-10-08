@@ -103,86 +103,6 @@
  
     
     <h1>
-      <a href="/manual/i14y-getting-started.html">Getting Started With i14y</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="https://github.com/GSA/i14y">i14y Github repo</a> | <a href="http://gsa.github.io/slate/">Technical Documentation</a></p>
-
-<p>Do you want to have real-time updates to your search index, and full control over your page titles and descriptions? Then <a href="https://github.com/GSA/i14y">i14y, our content indexing API</a> is for you! Take a look at our <a href="/developer/i14y.html">i14y FAQ</a>, and then jump right in!</p>
-
-<h2>Step 1. Connect one of your sites to i14y</h2>
-
-<p>i14y needs to be enabled in the back end for a site to be able to receive content through it. You can</p>
-
-<ul>
-<li><a href="/manual/add-site.html">Add a brand new site</a>,</li>
-<li>Use the Clone Site tool to copy one of your existing site’s settings to a new site (<code>YourSite &gt; Dashboard &gt; Clone Site</code>), or</li>
-<li>use an existing site.</li>
-</ul>
-
-
-<p><a href="mailto:search@support.digitalgov.com">Email us</a> and let us know which site you want enabled for i14y.</p>
-
-<h2>Step 2. Add a Drawer</h2>
-
-<p>After a search site has been connected to i14y, a new page will appear: <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers.</p>
-
-<p>Click <code>Add i14y Drawer</code> in the upper right corner, create a handle, give it an optional description, and click Add to save. <a href="/manual/i14y-drawers.html">Read more about working with Drawers</a>.</p>
-
-<p>If you have more than one website that will be sending content, add a separate Drawer for each of these sites.</p>
-
-<h2>Step 3. Fill your Drawer</h2>
-
-<p>Here’s where the rubber hits the road: use <a href="https://github.com/GSA/i14y">i14y</a> to add content to your drawer. You can do this in two ways:</p>
-
-<ul>
-<li>Use i14y directly. <a href="https://github.com/GSA/i14y">Github repo</a> | <a href="http://gsa.github.io/slate/">Technical Documentation</a></li>
-<li>Use a module plugged into your CMS. At this time there is a <a href="https://www.drupal.org/project/usasearch">Drupal module</a> and a <a href="https://github.com/GSA/digitalsearch-wp-i4y-indexer">Wordpress plugin</a> available.</li>
-</ul>
-
-
-<h2>Step 4. Review your index</h2>
-
-<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list. We also send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
-
-<h2>Step 5. Configure your search</h2>
-
-<p>Once you have your index populated, you will <a href="/manual/content-overview.html">set up the rest of your search</a> as you would for a traditional DigitalGov Search site. Set your default search scope on your <a href="/manual/domains.html">Domains</a> page, add Social Media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/instagram.html">Instagram</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>, create <a href="/manual/collections.html">Collections</a>, and set your results page Display (both <a href="/manual/display-overview.html">search features</a> and <a href="/manual/brand.html">branding</a>).</p>
-
-<p>If you have any <a href="/manual/rss.html">RSS content</a> that will not be sent to your i14y drawer, you can add those feeds as well.</p>
-
-<h2>Step 6. Update your search box</h2>
-
-<p>Update your website’s search box <a href="/manual/code.html">form code</a> to point to <code>affiliate=youri14ysitehandle</code>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/i14y"><span class="label label-info">i14y</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/i14y-getting-started.html">
-        <time datetime="2015-10-05">October 5, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
       <a href="/manual/i14y-drawers.html">How to Work with i14y Drawers</a>
     </h1>
     
@@ -232,6 +152,79 @@
       
       <a href="/manual/i14y-drawers.html">
         <time datetime="2015-10-05">October 5, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/clicks.html">How to Analyze Your Clicks</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Clicks</p>
+
+<p>The Clicks page shows what searchers clicked on from your search results pages, and the number of times each of those items was clicked during the selected date range. The current month is shown by default, and the date can be adjusted using the date selectors at the top of the page and re-generating the report.</p>
+
+<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
+
+<p>Data are available in the Admin Center from August 2014 (13 months).</p>
+
+<h2>Reading the Report Table</h2>
+
+<h3>Top URLs Clicked</h3>
+
+<p><a href="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/Analytics_Clicks_800.png" target="_blank" alt="Top clicks from results pages"><img style="float: right;" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/Analytics_Clicks_175.png"></a>The top 1,000 most clicked-on URLs from your results page for the selected time period, with the most popular first.</p>
+
+<h3>Download Details</h3>
+
+<p>You can download the raw click logs for any URL in the list. The CSV (comma separated values) file has one line for each time this URL was clicked. Details avialable include:</p>
+
+<ul>
+<li><em>Date</em> and <em>Time</em> of the click,</li>
+<li><em>Query</em>: The query they ran before clicking the search result,</li>
+<li><em>Position</em>: Where in the results page was the result they clicked, e.g. <strong>5</strong> means the searcher clicked the fifth result in the list,</li>
+<li><em>Request</em>: The clicked URL (It is embedded in the request URL. Look for the text following ‘u=’.) and its position on the page,</li>
+<li><em>Referrer</em>: The webpage the person was on when they ran the search, this column also includes the query,</li>
+<li><em>Vertical</em> and <em>Modules</em>: The modules loaded in response to the query (Our <a href="/manual/module-codes.html">Module Codes</a> tip provides a key of the codes and names.),</li>
+<li><em>Device</em>, <em>Browser</em>, and <em>OS</em>: The kind of device and browser they were using, and</li>
+<li><em>Country Code</em> and <em>Region</em>: Where the user was, physically.</li>
+</ul>
+
+
+<h3># of Clicks</h3>
+
+<p><a href="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ClicksQueries_800.png" target="_blank" alt="Report of Queries that people ran before clicking on a particular page"><img style="float: right;" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ClicksQueries_175.png"></a>Select a hyperlinked number in the <code># of Clicks</code> column to view the queries that led to the clicks for that URL (the <strong>Queries leading to a Click</strong> report).</p>
+
+<p>If you then click on a number in the <code># of Clicks</code> column for a query on the Queries leading to a Click page, you will see all the URLs <a href="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ClicksfromQuery_800.png" target="_blank" alt="Report of pages people clicked on after searching for a given term"><img style="float: right;" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ClicksfromQuery_175.png"></a>that were clicked on from that query's results pages (the <strong>Clicks from a Query</strong> report). This is the same report you see when you follow a <code># of Clicks</code> link from the <a href="/manual/queries.html">Queries page</a>.</p>
+
+<p>You can loop through or drill down into this list for any set of clicks and queries.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and clicks each month. The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site today.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/clicks"><span class="label label-info">clicks</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/clicks.html">
+        <time datetime="2015-09-17">September 17, 2015</time>
       </a>
     </div>
     </article>
@@ -308,7 +301,7 @@
 
 <p><strong><em>Troubleshooting Tip:</em></strong> For non-English sites, some agencies opt to include the specific location of the language's content (such as agency.gov/language or language.agency.gov) in their <a href="/manual/domains.html">Domains</a> to further refine the search results. Test the results for your non-English site with both the general agency.gov and the language-specific location to determine which setting gives you the best results.</p>
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#114;&#116;&#46;&#x64;&#105;&#x67;&#x69;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#x67;&#111;&#118;">&#x73;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#x75;&#x70;&#112;&#111;&#x72;&#x74;&#46;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#x76;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#115;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#117;&#112;&#x70;&#111;&#114;&#116;&#x2e;&#x64;&#x69;&#x67;&#x69;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;">&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#x74;&#46;&#x64;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#118;</a>.</p>
 
     </div>
 
@@ -327,79 +320,6 @@
       
       
       <a href="/manual/add-site.html">
-        <time datetime="2015-09-17">September 17, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/clicks.html">How to Analyze Your Clicks</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Clicks</p>
-
-<p>The Clicks page shows what searchers clicked on from your search results pages, and the number of times each of those items was clicked during the selected date range. The current month is shown by default, and the date can be adjusted using the date selectors at the top of the page and re-generating the report.</p>
-
-<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
-
-<p>Data are available in the Admin Center from August 2014 (13 months).</p>
-
-<h2>Reading the Report Table</h2>
-
-<h3>Top URLs Clicked</h3>
-
-<p><a href="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/Analytics_Clicks_800.png" target="_blank" alt="Top clicks from results pages"><img style="float: right;" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/Analytics_Clicks_175.png"></a>The top 1,000 most clicked-on URLs from your results page for the selected time period, with the most popular first.</p>
-
-<h3>Download Details</h3>
-
-<p>You can download the raw click logs for any URL in the list. The CSV (comma separated values) file has one line for each time this URL was clicked. Details avialable include:</p>
-
-<ul>
-<li><em>Date</em> and <em>Time</em> of the click,</li>
-<li><em>Query</em>: The query they ran before clicking the search result,</li>
-<li><em>Position</em>: Where in the results page was the result they clicked, e.g. <strong>5</strong> means the searcher clicked the fifth result in the list,</li>
-<li><em>Request</em>: The clicked URL (It is embedded in the request URL. Look for the text following ‘u=’.) and its position on the page,</li>
-<li><em>Referrer</em>: The webpage the person was on when they ran the search, this column also includes the query,</li>
-<li><em>Vertical</em> and <em>Modules</em>: The modules loaded in response to the query (Our <a href="/manual/module-codes.html">Module Codes</a> tip provides a key of the codes and names.),</li>
-<li><em>Device</em>, <em>Browser</em>, and <em>OS</em>: The kind of device and browser they were using, and</li>
-<li><em>Country Code</em> and <em>Region</em>: Where the user was, physically.</li>
-</ul>
-
-
-<h3># of Clicks</h3>
-
-<p><a href="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ClicksQueries_800.png" target="_blank" alt="Report of Queries that people ran before clicking on a particular page"><img style="float: right;" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ClicksQueries_175.png"></a>Select a hyperlinked number in the <code># of Clicks</code> column to view the queries that led to the clicks for that URL (the <strong>Queries leading to a Click</strong> report).</p>
-
-<p>If you then click on a number in the <code># of Clicks</code> column for a query on the Queries leading to a Click page, you will see all the URLs <a href="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ClicksfromQuery_800.png" target="_blank" alt="Report of pages people clicked on after searching for a given term"><img style="float: right;" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ClicksfromQuery_175.png"></a>that were clicked on from that query's results pages (the <strong>Clicks from a Query</strong> report). This is the same report you see when you follow a <code># of Clicks</code> link from the <a href="/manual/queries.html">Queries page</a>.</p>
-
-<p>You can loop through or drill down into this list for any set of clicks and queries.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and clicks each month. The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site today.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/clicks"><span class="label label-info">clicks</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/clicks.html">
         <time datetime="2015-09-17">September 17, 2015</time>
       </a>
     </div>
@@ -520,7 +440,7 @@
 
 <p>If you don't like the default web results, you can choose to use another index. Options follow.</p>
 
-<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can fetch and index your all of web site's content directly. Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#115;&#x65;&#97;&#114;&#x63;&#104;&#64;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;">&#115;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#105;&#103;&#105;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#118;</a> and we'll work with you to determine the best way for you to tell us about your content.</p>
+<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can fetch and index your all of web site's content directly. Email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x73;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#111;&#x76;">&#115;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#x74;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#x76;</a> and we'll work with you to determine the best way for you to tell us about your content.</p>
 
 <p><strong>Option 2. Buy and Use Google Site Search.</strong> If you already have (or plan to purchase), <a href="https://www.google.com/work/search/products/gss.html">Google Site Search</a>, we'll send a searcher's query to the search index you've provided and we'll render the results within our search results page.</p>
 
@@ -731,7 +651,7 @@
 
 <h2>Site Handle</h2>
 
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#115;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#100;&#105;&#x67;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;">&#115;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#117;&#x70;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#x73;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#x75;&#x70;&#112;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#46;&#x67;&#111;&#118;">&#x73;&#101;&#x61;&#114;&#x63;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
 
 <p><a href="http://search.socialsecurity.gov/search?query=office+locations&amp;affiliate=ssa"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/settings.png" title="Site name and handle on SocialSecurity.gov's search results page" alt="Site name and handle on SocialSecurity.gov's search results page" /></a></p>
 
@@ -741,7 +661,7 @@
 
 <h2>Site Language</h2>
 
-<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">66 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#115;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;">&#x73;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#112;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;</a>.</p>
+<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">66 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#115;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;">&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#108;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
 
 <h2>Delete</h2>
 
@@ -964,6 +884,91 @@
       
       
       <a href="/manual/monthly-reports.html">
+        <time datetime="2015-08-24">August 24, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/index.html">Help Manual: How to Set Up Your Search Box</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>We provide a search box that searches across all of your <em>public-facing</em> digital content. We support an unlimited number of web pages across multiple domains and we integrate your RSS feeds, tweets, YouTube videos, and Flickr and Instagram photos.</p>
+
+<p>Browse through our <a href="/blog/go-live.html">Go-Live Punch List</a> for some quick tips on how to configure the search experience for your website, or watch our <a href="/manual/training.html">training videos</a>.</p>
+
+<p>Watch our <a href="https://www.youtube.com/watch?v=TnlpuudK_WY">Getting Started video</a> (4 mins)&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<h3><i class="icon-dashboard"></i> Dashboard</h3>
+
+<p><a href="/manual/site-overview.html">Site overview</a>  <br/>
+<a href="/manual/users.html">Manage users</a>  <br/>
+<a href="/manual/settings.html">Settings</a></p>
+
+<h3><i class="icon-bar-chart"></i> Analytics</h3>
+
+<p><a href="/manual/queries.html">Queries</a>  <br/>
+<a href="/manual/clicks.html">Clicks</a>  <br/>
+<a href="/manual/monthly-reports.html">Monthly reports</a>  <br/>
+<a href="/manual/third-party.html">3rd party tracking</a></p>
+
+<h3><i class="icon-file"></i> Manage Content</h3>
+
+<p><a href="/manual/content-overview.html">Content overview</a>  <br/>
+<a href="/manual/domains.html">Domains</a> (plus <a href="/manual/domains-advanced.html">advanced options to add or filter URLs</a>)  <br/>
+<a href="/manual/collections.html">Collections</a>  <br/>
+i14y drawers (Coming soon!)  <br/>
+Best bets: <a href="/manual/best-bets-text.html">text</a> and <a href="/manual/best-bets-graphics.html">graphics</a>  <br/>
+<a href="/manual/routed-queries.html">Routed queries</a>  <br/>
+<a href="/manual/rss.html">RSS</a>  <br/>
+<a href="/manual/youtube.html">YouTube</a>  <br/>
+<a href="/manual/twitter.html">Twitter</a>  <br/>
+<a href="/manual/flickr.html">Flickr</a>  <br/>
+<a href="/manual/instagram.html">Instagram</a></p>
+
+<h3><i class="icon-desktop"></i> Manage Display</h3>
+
+<p><a href="/manual/display-overview.html">Display overview</a> (including <a href="/manual/govbox-jobs.html">job openings</a>, <a href="/manual/govbox-federal-register.html"><em>Federal Register</em></a>, and <a href="/manual/govbox-health.html">health topics</a>)  <br/>
+<a href="/manual/brand.html">Brand</a> (font &amp; colors, image assets, and header &amp; footer)  <br/>
+Custom <a href="/manual/no-results.html">No Results</a> page  <br/>
+Custom <a href="/manual/system-alert.html">Search Page Alert</a></p>
+
+<h3><i class="icon-eye-open"></i> Preview</h3>
+
+<p><a href="/manual/preview.html">Preview</a></p>
+
+<h3><i class="icon-code"></i> Activate Search</h3>
+
+<p><a href="/manual/code.html">Code snippets</a>  <br/>
+Search API access key*  <br/>
+Search Results API instructions*  <br/>
+Type-ahead API instructions*  <br/>
+i14y (Beta) API instructions*</p>
+
+<p>* These APIs are available for use on official government websites only. You must be a DigitalGov Search customer. <a href="https://search.usa.gov/sites">Sign in</a> is required. Keys and instructions for each can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search.</p>
+
+<p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
+
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#111;&#118;&#46;&#x67;&#x6f;&#x76;">&#x73;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#115;&#117;&#112;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/index.html">
         <time datetime="2015-08-24">August 24, 2015</time>
       </a>
     </div>

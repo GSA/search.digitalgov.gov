@@ -3,7 +3,7 @@
 <head>
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <title>i14y API</title>
+  <title>Getting Started with i14y</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -97,162 +97,69 @@
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/developer/i14y.html">i14y API</a>
+    <a href="/developer/i14y.html">Getting Started with i14y</a>
   </h1>
   
 
   <div class='post-content'>
-    <p><a href="/index.html">DigitalGov Search</a> > <a href="/developer/index.html">APIs for Developers</a> > i14y Beta API</p>
+    <p><a href="/index.html">DigitalGov Search</a> > <a href="/developer/index.html">APIs for Developers</a> > i14y API</p>
 
-<p>Our i14y API allows you to send content directly from your content management system (CMS) into our search system for real-time indexing.</p>
+<p><a href="https://github.com/GSA/i14y">i14y Github repo</a> | <a href="http://gsa.github.io/slate/">Technical Documentation</a></p>
 
-<p>Here are some of the Frequently Asked Questions:</p>
+<p>Do you want to have real-time updates to your search index, and full control over your page titles and descriptions? Then <a href="https://github.com/GSA/i14y">i14y, our content indexing API</a> is for you! We currently have a <a href="http://www.drupal.org/project/usasearch">Drupal module</a> and a <a href="https://github.com/GSA/sites-digitalgov-search">WordPress plugin</a> that will hook your CMS into <em>i14y</em>. If you use a different CMS, or don't have one at all, you still can develop an API of your content that meets the i14y specs and send it to us. We plan to develop more CMS hooks in the future, and welcome your partnership if there's a particular hook you need.</p>
 
-<h2>General i14y Questions</h2>
+<h2>Step 1. Connect one of your sites to i14y</h2>
+
+<p>i14y needs to be enabled in the back end for a site to be able to receive content through it. You can</p>
 
 <ul>
-<li><a href="#what">What is i14y?</a></li>
-<li><a href="#why">Why would I use i14y?</a></li>
-<li><a href="#where">Where is the documentation?</a></li>
-<li><a href="#cms">What if I don't have a CMS?</a></li>
-<li><a href="#signup">How do I sign up?</a></li>
-<li><a href="#beta">What do you mean by beta?</a></li>
+<li><a href="/manual/add-site.html">Add a brand new site</a>,</li>
+<li>Use the Clone Site tool to copy one of your existing site’s settings to a new site (<code>YourSite &gt; Dashboard &gt; Clone Site</code>), or</li>
+<li>use an existing site.</li>
 </ul>
 
 
-<h2>i14y Beta Questions</h2>
+<p><a href="mailto:search@support.digitalgov.com">Email us</a> and let us know which site you want enabled for i14y.</p>
+
+<h2>Step 2. Add a Drawer</h2>
+
+<p>After a search site has been connected to i14y, a new page will appear: <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers.</p>
+
+<p>Click <code>Add i14y Drawer</code> in the upper right corner, create a handle, give it an optional description, and click Add to save. <a href="/manual/i14y-drawers.html">Read more about working with Drawers</a>.</p>
+
+<p>If you have more than one website that will be sending content, add a separate Drawer for each of these sites.</p>
+
+<h2>Step 3. Fill your Drawer</h2>
+
+<p>Here’s where the rubber hits the road: use <a href="https://github.com/GSA/i14y">i14y</a> to add content to your drawer. You can do this in two ways:</p>
 
 <ul>
-<li><a href="#drupal">Is there a Drupal module?</a></li>
-<li><a href="#other-cms">Will you support other CMS?</a></li>
-<li><a href="#work">How does it work?</a></li>
-<li><a href="#clone">Why have you cloned my site?</a></li>
-<li><a href="#token">What is a secret token?</a></li>
-<li><a href="#drawer">What is a drawer?</a></li>
-<li><a href="#metadata">Can I send my metadata?</a></li>
-<li><a href="#display">Can I control the display of my content?</a></li>
-<li><a href="#support">How do I get support or give feedback?</a></li>
-<li><a href="#meaning">How does i14y mean?</a></li>
+<li>Use i14y directly. <a href="https://github.com/GSA/i14y">Github repo</a> | <a href="http://gsa.github.io/slate/">Technical Documentation</a></li>
+<li>Use a module plugged into your CMS. At this time there is a <a href="https://www.drupal.org/project/usasearch">Drupal module</a> and a <a href="https://github.com/GSA/digitalsearch-wp-i4y-indexer">Wordpress plugin</a> available.</li>
 </ul>
 
 
-<p><a name="what"></a></p>
+<h2>Step 4. Review your index</h2>
 
-<h2>What is i14y?</h2>
+<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list. We also send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
 
-<p>Our i14y API allows you to send content directly from your content management system (CMS) into DigitalGov Search for real-time indexing. By hooking into your CMS workflow, you can immediately create, update, and delete the associated documents in our search indexes via this API.</p>
+<h2>Step 5. Configure your search</h2>
 
-<p><a name="why"></a></p>
+<p>Once you have your index populated, you will <a href="/manual/content-overview.html">set up the rest of your search</a> as you would for a traditional DigitalGov Search site. Set your default search scope on your <a href="/manual/domains.html">Domains</a> page, add Social Media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/instagram.html">Instagram</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>, create <a href="/manual/collections.html">Collections</a>, and set your results page Display (both <a href="/manual/display-overview.html">search features</a> and <a href="/manual/brand.html">branding</a>).</p>
 
-<h2>Why would I use i14y?</h2>
+<p>If you have any <a href="/manual/rss.html">RSS content</a> that will not be sent to your i14y drawer, you can add those feeds as well.</p>
 
-<p>By a long shot, the two features we get asked for most are:</p>
+<h2>Step 6. Update your search box</h2>
 
-<ol>
-<li>Immediate inclusion of new or updated content in search results.</li>
-<li>Control over which documents are (or are not) in your search index.</li>
-</ol>
-
-
-<p>i14y answers both of these requests.</p>
-
-<p><a name="where"></a></p>
-
-<h2>Where is the documentation?</h2>
-
-<p>You may find the documentation here:</p>
-
-<p><a href="http://gsa.github.io/slate/">http://gsa.github.io/slate/</a></p>
-
-<p><a name="cms"></a></p>
-
-<h2>What if I don't have a CMS?</h2>
-
-<p>Even if you don’t have a CMS, you can develop an API of your content that meets the i14y specs and send it to us. Using the i14y API is optional. The rest of our service offering will continue as-is, providing the default web results from commercial indexes.</p>
-
-<p><a name="signup"></a></p>
-
-<h2>How do I sign up?</h2>
-
-<p>If you want to participate in the beta program, you must proactively let us know. We have to setup a cloned site for with the flag for i14y content enabled.</p>
-
-<p><a name="beta"></a></p>
-
-<h2>What do you mean by beta?</h2>
-
-<p>Beta, to us, means that we have software that works, but we need some of our customers to test it out and provide feedback before we roll it out to our entire user base.</p>
-
-<p>We also don't have all of our features developed. Tasks such as reporting about your content in the Admin Center is not yet available.</p>
-
-<p><a name="drupal"></a></p>
-
-<h2>Is there a Drupal module?</h2>
-
-<p>Um, sort of? Alpha is a strong word for it. It is not plug and play and definitely for power users. But, if you are up for it and interested in helping / working on the module, you may fork it here:</p>
-
-<p><a href="https://github.com/grasmash/drupal-usasearch/tree/content-api">https://github.com/grasmash/drupal-usasearch/tree/content-api</a></p>
-
-<p>Special thanks to Matt Grasmick for bringing the module this far.</p>
-
-<p><a name="other-cms"></a></p>
-
-<h2>Will you support other CMS?</h2>
-
-<p>Yes that is our plan. We know many of you use other CMS systems including but not limited to GitHub Pages, Joomla, Percussion, Sharepoint, and Wordpress. We plan develop specific hooks as demand warrants. If you use one of these CMS systems and want to help develop deeper integration with a specific CMS, please let us know.</p>
-
-<p><a name="work"></a></p>
-
-<h2>How does i14y work?</h2>
-
-<p>i14y is a single document "listener." You will send us one JSON document at a time which enables you to schedule / determine the best way to send your documents to us.</p>
-
-<p><a name="clone"></a></p>
-
-<h2>Why have you cloned my site?</h2>
-
-<p>We decided to clone your site to keep your i14y content testing separate from your live site. When you are satisfied with the progress we can either move the drawer for you or you can re-send the content to your live site when ready.</p>
-
-<p><a name="token"></a></p>
-
-<h2>What is the secret token?</h2>
-
-<p>The secret token allows you to write and delete content directly to our i14y indexes. It is important that you do not share it, and this token differs from our current Search Results API key.</p>
-
-<p><a name="drawer"></a></p>
-
-<h2>What is a drawer?</h2>
-
-<p>A drawer is where your content is stored in our system. We used this approach to offer the concept of shareable content. With your drawers, you will have the ability to share them  with other DigitalGov Search sites. For example, if the General Services Administration (GSA) wanted to search across all GSA search sites, they may chose to show all GSA related drawers as part of their search results.</p>
-
-<p><a name="metadata"></a></p>
-
-<h2>Can I send my metadata?</h2>
-
-<p>Down the road, we plan to offer support for your metadata, but we don't want to over promise support for it in the near term. As part of the beta, we are solely focused on ensuring that our content processing features work well enough to roll it out to our entire customer base.</p>
-
-<p><a name="display"></a></p>
-
-<h2>Can I control the display of my content?</h2>
-
-<p>i14y only focuses on the indexing and updating of your content.</p>
-
-<p><a name="support"></a></p>
-
-<h2>How do I get support or give feedback?</h2>
-
-<p>Just use our standard support email <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#115;&#x65;&#97;&#114;&#99;&#104;&#64;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#46;&#100;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#x67;&#111;&#x76;">&#x73;&#101;&#x61;&#114;&#99;&#104;&#64;&#115;&#117;&#112;&#x70;&#111;&#114;&#116;&#46;&#x64;&#105;&#103;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#118;</a>. We will be adding  easier ways to submit feedback from within the Admin Center shortly.</p>
-
-<p><a name="meaning"></a></p>
-
-<h2>What does i14y mean?</h2>
-
-<p>Nerd Quiz: Can you figure out the two possible meanings of i14y? Hint: one is hacker speak, one is patriotic.</p>
-
-<p>Tell us if you figure it out! <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#115;&#101;&#97;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#100;&#105;&#x67;&#x69;&#116;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#118;">&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#46;&#100;&#x69;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#x67;&#x6f;&#x76;</a>.</p>
+<p>Update your website’s search box <a href="/manual/code.html">form code</a> to point to <code>affiliate=youri14ysitehandle</code>.</p>
 
 <h2>Terms of Use</h2>
 
 <p>By accessing the i14y API, you agree to <a href="https://www.usa.gov/About/developer-resources/terms-of-service.shtml">USA.gov's Terms of Service for Developer Resources</a>.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> i14y is hacker shorthand for interoperability, because there are 14 characters between the first and last letters. i14y can also be shorthand for Independence Day.</p>
 
   </div>
 
@@ -262,6 +169,8 @@
     
     <a href="/tagged/api"><span class="label label-info">api</span></a>
     
+    <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+    
   </div>
 
   <div class='time'>
@@ -270,7 +179,7 @@
     
     
     <a href="/developer/i14y.html">
-      <time>August 13, 2015</time>
+      <time>October 8, 2015</time>
     </a>
   </div>
 
