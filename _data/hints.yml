@@ -29,12 +29,11 @@ image_asset:
   logo_alt_text: "If you leave this blank, we'll use the site name provided on the Settings page as the default alt text."
 
 watcher:
-  name: "Enter a short, meaningful name."
-  throttle_period: "Period of time in between successive alerts getting sent to you. (e.g., 30m, 8h, 2d, 1w)"
+  name: "Enter a short, meaningful name - this will appear in the subject line of your alert."
+  throttle_period: "Period of time in between successive alert messages. (e.g., 30m, 8h, 2d, 1w)"
   check_interval: "Period of time in between checks. (e.g., 30m, 8h, 2d, 1w)"
-  time_window: "How far back in time to consider. (e.g., 30m, 8h, 2d, 1w)"
-  query_blocklist: "Ignore alerts around these query terms (separate multiple terms with a comma)"
-  distinct_user_total: "Minimum number of likely human searches on a given term over the specified time window"
-  search_click_total: "Minimum number of likely human searches and clicks on a given term over the specified time window"
-  low_ctr_threshold: "Minimum CTR percentage on a given term over the specified time window (e.g., 15.5)"
-  
+  time_window: "How far back in time to look, in each check. (e.g., 30m, 8h, 2d, 1w)"
+  query_blocklist: "Enter terms to ignore in this alert (separate multiple terms with a comma)"
+  distinct_user_total: "Queries on a given term must be above this level to fire the alert."
+  search_click_total: "Activity (searches and clicks) on a given term must be above this level to fire the alert."
+  low_ctr_threshold: "CTR percentage must be below this level to fire the alert. (e.g., 15.5)"
