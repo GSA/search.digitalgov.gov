@@ -42,13 +42,13 @@ If there are any terms that returned no results, they'll appear here. Reports on
 
 For example, on one agency's website in October 2012, a dozen searches for *frostline* returned no results. The frost line&mdash;also known as depth of frost or freezing&mdash;is the depth to which the groundwater in soil is expected to freeze. The agency's pages on the topic referred to this concept as *depth of freezing*. 
 
-Use this alert about results data to help searchers find your content by adding a [Best Bet](/manual/best-bets-text.html), updating your existing web pages, or both.
+Use this alert about results data to help searchers find your content by adding a [Best Bet](/manual/best-bets.html), updating your existing web pages, or both.
 
 ## Top Queries with Low Click Thrus
 
 If there are any frequently searched terms that returned results but didn't result in a click at least 20% of the time, they'll appear here. Reports on up to the top 10 searches with low click thru rates. 
 
-Use this alert about low click thrus to identify issues with coverage. You may opt to create a [Best Bet: Text](/manual/best-bets-text.html) or [Best Bet: Graphics](/manual/best-bets-graphics.html), add pages that may be missing from the results, or do both to improve recall. Or, you may opt to incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results.
+Use this alert about low click thrus to identify issues with coverage. You may opt to create a [Best Bet (Text or Graphics)](/manual/best-bets.html), add pages that may be missing from the results, or do both to improve recall. Or, you may opt to incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results, or enter common search terms as keywords, verbatim.
 
 ## This Month's Totals to Date
 

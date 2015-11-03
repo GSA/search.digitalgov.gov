@@ -46,7 +46,7 @@ Once you've added your web pages, you can create [collections](/manual/collectio
 
 ## Add Your Recommendations
 
-Create best bets ([text](/manual/best-bets-text.html) or [graphics](/manual/best-bets-graphics.html)) to promote specific web pages. Best bets appear above the standard web results when a searcher's query matches the text of their titles, descriptions, or keywords.
+Create [best bets (text or graphics)](/manual/best-bets.html)) to promote specific web pages. Best bets appear at the top of the results page when a searcher's query matches the text of their titles, descriptions, or keywords.
 
 ## Turn It All On
 

@@ -37,7 +37,7 @@ Click on the name of the feed to see more detailed information about its status.
 * Link is not a valid URL
 * Linked URL does not exist (HTTP 404)
 
-## Best Bets: [Text](/manual/best-bets-text.html) or [Graphics](/manual/best-bets-graphics.html)
+## [Best Bets](/manual/best-bets.html): Text or Graphics
 
 | Color | Status | 
 | :------------ | :---------------------------------- |
