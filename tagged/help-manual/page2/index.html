@@ -103,6 +103,200 @@
  
     
     <h1>
+      <a href="/manual/queries.html">How to Analyze Your Queries</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Queries</p>
+
+<p>The Queries page reports on the number of times a search query (that is, a word or string of words) was entered in the search box on your site by a unique searcher.</p>
+
+<p>Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.</p>
+
+<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
+
+<p>Data are available in the Admin Center from August 2014.</p>
+
+<h2>Top Queries</h2>
+
+<p><strong><em>Top 1,000.</em></strong> You'll see a list, in frequency order, of top 1,000 most popular queries for your selected time period.</p>
+
+<p><strong><em>Top 1,000 by query.</em></strong> Enter any specific term or phrase into the Query search box. Re-generate the report to see the top 1,000 queries that contain that term or phrase and its stemmed equivalents.</p>
+
+<p>For example, below are the top 10 queries related to <em>housing</em> on USA.gov in August 2013.</p>
+
+<ol>
+<li>house of representatives</li>
+<li>housing</li>
+<li>speaker of the house</li>
+<li>white house</li>
+<li>house minority leader</li>
+<li>housing assistance</li>
+<li>house majority leader</li>
+<li>speaker of the house 2013</li>
+<li>the white house</li>
+<li>houses</li>
+</ol>
+
+
+<h2>Download Details</h2>
+
+<p>You can download a detailed CSV (comma separated values) file for any search term. There's one line for each time this query was run. This CSV file gives you access to the raw search logs, including:</p>
+
+<ul>
+<li>The date and time of the query,</li>
+<li>The query (It is embedded in the request URL. Look for the text following ‘query=’.),</li>
+<li>Where the person was when they ran the search,</li>
+<li>The modules loaded in response to the query (Our <a href="/manual/module-codes.html">Module Codes</a> tip provides a key of the codes and names.), and</li>
+<li>The kind of device and browser they were using.</li>
+</ul>
+
+
+<h2>Query Clicks &amp; Click Queries</h2>
+
+<p>Select the hyperlinked number in the # of Queries column to view the top clicked URLs for each query.</p>
+
+<p>If you click on the first-listed <em>house of representatives</em> in the example above, you'll see that the top URLs clicked for that query are:</p>
+
+<ol>
+<li>www.house.gov</li>
+<li>www.house.gov/representatives</li>
+<li>www.house.gov/representatives/find</li>
+</ol>
+
+
+<p>From this list of clicked URLs, you'll be able select the hyperlinked number in the # of Clicks column to view the top queries that led to a click for each URL.</p>
+
+<p>If you click on the first-listed <em>www.house.gov</em> in the example above, you'll see that the top queries leading to a click on that URL are:</p>
+
+<ol>
+<li>house of representatives</li>
+<li>congress</li>
+<li>congress members</li>
+<li>congress representatives</li>
+</ol>
+
+
+<p>You can loop through or drill down into this list for any set of clicks and queries.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> gives a bird's-eye view of the number of queries and <a href="/manual/clicks.html">clicks</a> each month. The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site in the past day or so.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/queries"><span class="label label-info">queries</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/queries.html">
+        <time datetime="2015-08-24">August 24, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/settings.html">How to Edit Your Settings</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Settings</p>
+
+<h2>Display Name</h2>
+
+<p>Tell us the name of your website. Searchers see your site name on the results page, such as in your page title or best bets. We recommend using the plain language name for your agency or site, such as <em>Social Security Administration</em>.</p>
+
+<h2>Homepage URL</h2>
+
+<p>Tell us the homepage URL of your website. Enter a fully qualified URL, including http://, http://www, etc.</p>
+
+<p><strong>Correct Syntax</strong></p>
+
+<ul>
+<li>http://www.whitehouse.gov</li>
+<li>http://louisiana.gov</li>
+<li>https://gobierno.usa.gov/</li>
+<li>http://nimh.nih.gov/</li>
+<li>http://www.ci.bloomington.mn.us/</li>
+</ul>
+
+
+<p><strong>Incorrect Syntax</strong></p>
+
+<ul>
+<li>usa.gov (use http://www.usa.gov)</li>
+<li>www.nasa.gov (use http://www.nasa.gov)</li>
+<li>http://www.ftc.gov/opa/index.shtml (use the higher-level folder, http://www.ftc.gov/opa)</li>
+<li>http://www.gsa.gov/portal/category/100000?utm_source=OCM&amp;utm_medium=print-radio&amp;utm_term=&amp;utm_campaign=shortcuts (use the higher-level domain, http://www.gsa.gov)</li>
+<li>http://www.doc.gov (use the domain that resolves, http://www.commerce.gov)</li>
+</ul>
+
+
+<p>We use this homepage URL to (a) populate your primary <a href="/manual/domains.html">domain</a> and (b) link the default logo on your results page to your homepage.</p>
+
+<h2>Site Handle</h2>
+
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#115;&#101;&#97;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#x69;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#118;">&#x73;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#x75;&#112;&#112;&#111;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#118;</a>.</p>
+
+<p><a href="http://search.socialsecurity.gov/search?query=office+locations&amp;affiliate=ssa"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/settings.png" title="Site name and handle on SocialSecurity.gov's search results page" alt="Site name and handle on SocialSecurity.gov's search results page" /></a></p>
+
+<h2>Site ID</h2>
+
+<p>We assign a unique, system-generated numeric ID to your site. We use this ID for some back-end code. You can see this ID in the URL for your site in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+
+<h2>Site Language</h2>
+
+<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">66 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#116;&#97;&#108;&#103;&#111;&#118;&#46;&#103;&#x6f;&#118;">&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#111;&#x76;</a>.</p>
+
+<h2>Delete</h2>
+
+<p>After you've set up a site, you may want to delete it. <strong>Use caution.</strong> This action permanently deletes your site and its associated analytics and indexes. We cannot restore deleted sites.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong>  Click the pushpin icon in the top navigation bar to change the default site that appears when you first log in to the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
+      
+      <a href="/tagged/settings"><span class="label label-info">settings</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/settings.html">
+        <time datetime="2015-08-24">August 24, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/brand.html">How to Brand Your Results Page</a>
     </h1>
     
@@ -143,7 +337,7 @@
 
 <p><strong>Tagline.</strong> Fill out text for a "tagline" if you'd like one to appear at the very top of your results page header.</p>
 
-<p>The default tagline style uses Georgia (font family), 1.3 em (size), and italic (style). Email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#115;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#118;">&#x73;&#x65;&#97;&#114;&#x63;&#104;&#64;&#115;&#x75;&#x70;&#112;&#111;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#103;&#x6f;&#118;&#46;&#103;&#111;&#118;</a> if you'd like to change the default font family, size, or style.</p>
+<p>The default tagline style uses Georgia (font family), 1.3 em (size), and italic (style). Email us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#58;&#115;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#111;&#118;&#46;&#x67;&#111;&#118;">&#115;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#x70;&#112;&#x6f;&#x72;&#x74;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#x6c;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#x76;</a> if you'd like to change the default font family, size, or style.</p>
 
 <p><strong>Menu Button Alignment.</strong> Leave the Browse Site "hamburger" menu right-aligned, or select the Left option to make it left-aligned.</p>
 
@@ -211,7 +405,7 @@ URL: mailto:info@agency.gov</p>
 
 <p>Type over the text in the Name field to edit a facet's display name. Keep each name short (15 or fewer characters) and consistent with the content you're searching. Click on the hyperlink in the Source field to update the facet's source content. Hover over the icon with three horizontal lines on the left to change the order.</p>
 
-<p><strong>More.</strong> We show up to four facets above your search box. If you turn on the display of more than four facets, you'll see them listed under a 'More' dropdown menu. Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#115;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#115;&#x75;&#112;&#112;&#111;&#x72;&#116;&#46;&#100;&#105;&#103;&#x69;&#x74;&#97;&#108;&#103;&#x6f;&#118;&#x2e;&#x67;&#111;&#118;">&#x73;&#101;&#97;&#114;&#x63;&#104;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#114;&#116;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#118;</a> if you'd like to use a custom label instead of the default 'More'.</p>
+<p><strong>More.</strong> We show up to four facets above your search box. If you turn on the display of more than four facets, you'll see them listed under a 'More' dropdown menu. Email us at <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#x73;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#x69;&#103;&#x69;&#116;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#x76;">&#115;&#101;&#97;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;</a> if you'd like to use a custom label instead of the default 'More'.</p>
 
 <h2>Modules</h2>
 
@@ -239,7 +433,7 @@ URL: mailto:info@agency.gov</p>
 
 <p>If you list more than two related sites, searchers will see them listed under a dropdown menu, View Topic. See, for example, the related sites displayed on <a href="http://search.broward.org/search?affiliate=co.broward.fl.us&amp;query=jobs">Broward.org for a search on <em>jobs</em></a>.</p>
 
-<p>Email us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#x73;&#x65;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#x6f;&#118;">&#115;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#112;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#105;&#116;&#97;&#108;&#x67;&#111;&#118;&#46;&#x67;&#111;&#118;</a> if you'd like to use a custom label instead of the default 'View Topic' label.</p>
+<p>Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#x73;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#x73;&#117;&#x70;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#103;&#105;&#116;&#97;&#108;&#103;&#111;&#118;&#x2e;&#103;&#111;&#118;">&#115;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#100;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#x76;</a> if you'd like to use a custom label instead of the default 'View Topic' label.</p>
 
 <h2>Pointer to Kick Off New Search</h2>
 
@@ -253,13 +447,13 @@ URL: mailto:info@agency.gov</p>
 </ul>
 
 
-<p>Email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#115;&#101;&#97;&#114;&#x63;&#104;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#105;&#116;&#97;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;">&#115;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#x75;&#112;&#112;&#111;&#114;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#97;&#108;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;</a> if you'd provide searchers with a custom message to encourage them to search another section of your site, your database, or both.</p>
+<p>Email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#115;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#46;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;">&#115;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#103;&#111;&#x76;</a> if you'd provide searchers with a custom message to encourage them to search another section of your site, your database, or both.</p>
 
 <hr />
 
 <p><strong><em>Did you know?</em></strong>  Searchers may narrow results by time period for any <a href="/manual/rss.html">RSS</a> feeds. See, for example, results for a <a href="http://search.whitehouse.gov/search/news?affiliate=wh&amp;channel=6&amp;m=false&amp;query=jobs&amp;tbs=w">search on <em>jobs</em> narrowed to press articles in the last week on WhiteHouse.gov</a>.</p>
 
-<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#118;&#46;&#x67;&#x6f;&#118;">&#115;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;</a> to if you want to customize these display names.</p>
+<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#x73;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#100;&#x69;&#103;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#111;&#118;">&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#100;&#105;&#103;&#105;&#x74;&#97;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#118;</a> to if you want to customize these display names.</p>
 
 <p><strong><em>Did you know?</em></strong> You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our <a href="/manual/code.html">JavaScript snippet</a> before the closing <code>&lt;body&gt;</code> tag on your HTML web pages.</p>
 
@@ -310,7 +504,7 @@ URL: mailto:info@agency.gov</p>
 
 <hr />
 
-<p><strong><em>Did you know?</em></strong> See also our closely related features that allow you to create <a href="/manual/best-bets-text.html">Text Best Bets</a> and <a href="/manual/best-bets-graphics.html">Graphics Best Bets</a>, which appear <em>only when a searcher's query matches</em> the text of their titles, descriptions, or keywords.</p>
+<p><strong><em>Did you know?</em></strong> See also our closely related feature <a href="/manual/best-bets.html">Best Bets</a>, which allows you to recommend individual results or sets of results, which will appear <em>only when a searcher's query matches</em> the text of their titles, descriptions, or keywords.</p>
 
     </div>
 
@@ -474,148 +668,6 @@ Keyword 4: market value
       
       
       <a href="/manual/best-bets-graphics.html">
-        <time datetime="2015-08-11">August 11, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/best-bets-text.html">How to Highlight Text Best Bets</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Best Bets: Text</p>
-
-<p>Do you want to promote a specific web page? Create a Text Best Bet.</p>
-
-<p>A best bet appears above the standard web results when a searcher's query matches the text of its title, description, or keywords.</p>
-
-<p>Text best bets have the same look as standard web results. They're listed under a heading, Recommended by YourSite.</p>
-
-<p>See the sample results page below that shows a text best bet displayed on TSA.gov for a search on <em><a href="http://search.usa.gov/search?query=razors&amp;affiliate=tsa.gov">razors</a></em>.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/best-bets-text.png" alt="Text best bets for 'razors' on TSA.gov" /></p>
-
-<p>Text best bets may be added individually or via bulk upload.</p>
-
-<h2>Add an Individual Text Best Bet</h2>
-
-<p><strong><em>URL.</em></strong> Add the URL of the web page that you want to promote.</p>
-
-<p><strong><em>Title and Description.</em></strong> Add the title and description of the web page that you want to promote. Each field can have up to 255 characters. Titles and descriptions are visible to searchers.</p>
-
-<p><strong><em>Status and Publish Dates.</em></strong> The default start date is the day on which you create the best bet. The default end date is null, so it will stay up forever until you decide to take it down. You can opt to set a start and end date to control to specify other start and end dates. You can also opt to set its status as either active or inactive.</p>
-
-<p><strong><em>Keywords.</em></strong> Keywords are optional and they're <em>not</em> visible to searchers. Add specific words or phrases that aren't already included in the visible title or description. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.</p>
-
-<h2>Add Multiple Best Bets via Bulk Upload</h2>
-
-<p>Create a comma-separated file with the following fields (in this order). Download our <a href="/files/best-bets-template.csv">sample template for uploading best bets</a> [CSV] to see the correct format.</p>
-
-<p>Title, URL, Description, StartDate, EndDate, Keywords</p>
-
-<p>Title, URL, and description are required. Start date, end date, and keywords are optional. Save the file with .csv, .txt, or .xml extension and upload it.</p>
-
-<p>Bulk upload updates any existing, matching entries and appends new entries to them.</p>
-
-<h2>When Searchers See Your Best Bets</h2>
-
-<p>For searchers to see a best bet on your site, it must match their query and be relevant and active.</p>
-
-<h3>It Matches Their Query</h3>
-
-<p>Searchers see your best bets when their query:</p>
-
-<ul>
-<li>Matches any or all words in the title,</li>
-<li>Matches any of all words in the description, or</li>
-<li>Matches a keyword exactly.</li>
-</ul>
-
-
-<p>Matches are made within, but not across, fields.</p>
-
-<p>A sample best bet entry is below.</p>
-
-<pre><code>Title: Estate Tax  
-Description: A tax on your right to transfer property after you pass away.  
-Keyword 1: death tax  
-Keyword 2: inheritance tax  
-Keyword 3: fair market value  
-Keyword 4: market value  
-</code></pre>
-
-<p>This best bet would display for searches on estate tax (exact title match), estate (partial title match), tax on the estate (title match that includes stopwords), estate taxes (title match for singular/plural variant), property tax (partial description match), propertey tax (description match with a slight misspelling), and death tax (exact keyword match), among other queries.</p>
-
-<p>It would <em>not</em> display for searches on death, death property, taxes after death, fair value, or estate property tax as they're only partial keyword or cross field matches.</p>
-
-<h3>It Is Very Relevant</h3>
-
-<p>After we determine best bets match the searcher's query, we determine their relevance and display only the two most relevant best bets. Relevance is determined, in order, first by title, then by description, and lastly by keywords. Date is used as a tiebreaker if the entries' scores based on the above three factors are equal.</p>
-
-<h3>It Is Active</h3>
-
-<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each entry's status.</p>
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;"> Color </th>
-<th style="text-align:left;"> Status </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;"> Green&nbsp;&nbsp;&nbsp;  </td>
-<td style="text-align:left;"> Active&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Yellow   </td>
-<td style="text-align:left;"> Inactive </td>
-</tr>
-<tr>
-<td style="text-align:left;"> &nbsp; </td>
-<td style="text-align:left;"> &nbsp; </td>
-</tr>
-</tbody>
-</table>
-
-
-<p>Active best bets are shown to searchers on your site. Inactive entries aren't shown to searchers because they're inactive, expired (by the publish end date), or both.</p>
-
-<hr />
-
-<p>Watch the recording of our February 2015 webinar <a href="https://www.youtube.com/embed/WzQocKYK0t4"><strong>Straight to the Top: Best Bets in DigitalGov Search</strong></a> (55 mins)</p>
-
-<p><strong><em>Did you know?</em></strong> See also our closely related feature that allows you to create a <a href="/manual/best-bets-graphics.html">Graphics Best Bets</a>. We recommend creating a graphics best bet&mdash;with or without an image&mdash;when you have three or more closely related links on a topic.</p>
-
-<p><strong><em>Did you know?</em></strong> Use the <a href="/manual/system-alert.html">Search Page Alert</a> feature to add a text message to your search results page, which will appear at all times above all search results, <em>regardless of the query</em>.</p>
-
-<p><strong><em>Did you know?</em></strong> Analyze the number of impressions and clicks and clickthru rate for each best bet on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.</p>
-
-<p><strong><em>Did you know?</em></strong> When you use the <a href="/manual/collections.html#sitelimit">sitelimit parameter</a> to scope the search to a subsection of your website, we'll apply this sitelimit to your Best Bets so searchers see recommended pages from within that folder or subdomain only.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/best-bets"><span class="label label-info">best-bets</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/best-bets-text.html">
         <time datetime="2015-08-11">August 11, 2015</time>
       </a>
     </div>
@@ -1048,88 +1100,6 @@ Keyword 4: market value
       
       <a href="/manual/routed-queries.html">
         <time datetime="2015-07-10">July 10, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/collections.html">How to Create Collections Within Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Collections</p>
-
-<p>Would you like searchers to be able to narrow results to a specific subset of content within your site or on another site? You can create a collection across any set of domains, subdomains, or subfolders.</p>
-
-<h2>Step 1. Create a Collection</h2>
-
-<p>Enter a name for the collection (such as FAQs, Archive, or News).</p>
-
-<p>Enter the URLs for the domains, subdomains, or subfolders that make up this collection. Start each URL prefix with http:// and end it in a trailing slash () to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov).</p>
-
-<p>You cannot specify URLs for individual web pages.</p>
-
-<h2>Step 2. Opt to Show as a Facet</h2>
-
-<p>Click on the <a href="/manual/display-overview.html">Display Overview</a> page. Turn on your collection to allow searchers to see it as a faceted navigation option above the search box on the results page.</p>
-
-<h2>Step 3. Check Your Search Results Page</h2>
-
-<p>Searchers will see an option to narrow their search results to pages in this collection above the search box on the results page.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-2.png" alt="Collection on the search results page" /></p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your collection.</p>
-
-<ol>
-<li>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab.</li>
-<li>Change the form action from <code>action="http://search.usa.gov/search/"</code> to <code>action="http://search.usa.gov/search/docs"</code>.</li>
-<li>Add the following line to limit the results to your collection: <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>.</li>
-</ol>
-
-
-<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
-
-<p>See the sample search box below that is limited to news on <a href="http://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=autism">NIH.gov for a search on <em>autism</em></a>.</p>
-
-<p><a href="http://www.nih.gov/news/releases.htm"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-3.png" title="News-only search box on NIH.gov's News Releases page" alt="News-only search box on NIH.gov's News Releases page" /></a></p>
-
-<p><a href="http://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=autism"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-4.png" title="NIH.gov news-only search results page" alt="NIH.gov news-only search results page" /></a></p>
-
-<p><a name="sitelimit"></a></p>
-
-<p><strong><em>Did you know?</em></strong> If you don't want to set up a Collection, you can use the <code>sitelimit</code> parameter to search a subset of your content. Compare the collection-based results above with the results for <a href="http://search.usa.gov/search?affiliate=nih&amp;query=autism&amp;sitelimit=nih.gov/news">the same search using the sitelimit parameter</a>.</p>
-
-<p>Note that the searcher sees that results are filtered to nih.gov/news in a message under the search box, among other differences.</p>
-
-<p>Simply add the following line to your form code on your search box to use the <code>sitelimit</code> parameter.</p>
-
-<p><code>&lt;input type="hidden" name="sitelimit" id="sitelimit" value="http://www.agency.gov/limittothisfolder"&gt;</code></p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/collections"><span class="label label-info">collections</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/collections.html">
-        <time datetime="2015-06-12">June 12, 2015</time>
       </a>
     </div>
     </article>
