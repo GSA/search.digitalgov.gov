@@ -108,23 +108,31 @@
     
 
     <div class='post-content'>
-      <p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these three steps to mask your domain.</p>
+      <p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these steps to mask your domain.</p>
 
 <ol>
-<li>Email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#115;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#115;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#46;&#103;&#111;&#x76;</a> and ask us to mask your domain.</li>
-<li>Create a CNAME in your external DNS records for <em>search.yoursite.gov</em>. Point it to <em>search.usa.gov.edgekey.net</em>.</li>
-<li>When the setup is complete, change the <a href="/manual/code.html">code for your form</a> action from <em>search.usa.gov</em> to <em>search.yoursite.gov</em>.</li>
+<li><p>Create a CNAME in your external DNS records for <code>search.yoursite.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>.</p>
+
+<p> NOTE: if your site handle contains a <code>.</code>, please replace it with a <code>-</code> in your DNS record,  e.g., for site handle <code>yoursite.gov.search</code> the DNS record would look like this:</p>
+
+<pre><code> search.yoursite.gov   CNAME  yoursite-gov-search.sites.infr.search.usa.gov
+</code></pre></li>
+<li><p>When the setup is complete, change your search box's <a href="/manual/code.html">form code</a> action from <code>search.usa.gov/search</code> to <code>search.yoursite.gov/search</code>.</p></li>
 </ol>
 
+
+<p>Your domain mask will work as soon as this DNS update is complete.</p>
 
 <hr />
 
 <p><strong><em>Troubleshooting tip:</em></strong> Many agencies have both internal and external DNS. Be
-sure to update your <em>external</em> DNS records (step 2) before changing your form code (step 3).</p>
+sure to update your <em>external</em> DNS records (step 1) before changing your form code (step 2).</p>
 
-<p><strong><em>Troubleshooting tip:</em></strong>  Once the CNAME is set up, if visitors to your site happen to truncate the URL in the browser bar to http://search.yoursite.gov (without any parameters), they're automatically redirected to your homepage at http://www.yoursite.gov.</p>
+<p><strong><em>Did you know?</em></strong> Any search site within your domain may use the same domain mask and CNAME record, even if the CNAME is not associated with that particular site's handle. To implement an existing mask for a search box, just do Step 2, above.</p>
 
-<p><strong><em>Did you know?</em></strong> By default, we set up search.YOURSITE.gov (such as search.nih.gov). If this subdomain is already used by another application, you can request YOURSITEsearch.YOURSITE.gov (such as usdasearch.usda.gov) or another pattern.</p>
+<p><strong><em>Did you know?</em></strong> Once the CNAME is set up, if visitors to your site happen to truncate the URL in the browser bar to http://search.yoursite.gov (without any parameters), they're automatically redirected to your homepage at http://www.yoursite.gov.</p>
+
+<p><strong><em>Did you know?</em></strong> Most of our customers use a mask like <code>search.yoursite.gov</code> (such as search.nih.gov). If the <code>search</code> subdomain is already used by another application, you can use <code>find</code> or <code>findit</code>, such as <code>find.irs.gov</code> or <code>findit.state.gov</code>. We no longer support other subdomain patterns.</p>
 
     </div>
 
@@ -143,7 +151,7 @@ sure to update your <em>external</em> DNS records (step 2) before changing your 
       
       
       <a href="/manual/cname.html">
-        <time datetime="2014-08-21">August 21, 2014</time>
+        <time datetime="2016-02-19">February 19, 2016</time>
       </a>
     </div>
     </article>
