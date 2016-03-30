@@ -122,7 +122,7 @@
 
 <h3>Add an Individual Text Best Bet</h3>
 
-<p><strong><em>URL.</em></strong> Add the URL of the web page that you want to promote.</p>
+<p><strong><em>URL.</em></strong> Add the URL of the web page that you want to promote. Make sure the URL is properly formatted, and includes the protocol (either <code>http://</code> or <code>https://</code>).</p>
 
 <p><strong><em>Title and Description.</em></strong> Add the title and description of the web page that you want to promote. Each field can have up to 255 characters. Titles and descriptions are visible to searchers.</p>
 
@@ -134,13 +134,35 @@
 
 <h3>Add Multiple Best Bets via Bulk Upload</h3>
 
-<p>Create a comma-separated file with the following fields (in this order). Download our <a href="/files/best-bets-template.csv">sample template for uploading best bets</a> [CSV] to see the correct format.</p>
+<p>Create a comma-separated file with the following fields (in this order). Download our <a href="/files/best-bets-template-201603.csv">sample template for uploading best bets</a> [CSV] to see the correct format.</p>
 
-<p>Title, URL, Description, StartDate, EndDate, Keywords</p>
+<p>Title, URL, Description, StartDate, EndDate, Keywords, Status, Match_Keywords_Only</p>
 
-<p>Title, URL, and description are required. Start date, end date, and keywords are optional. Save the file with .csv, .txt, or .xml extension and upload it.</p>
+<ul>
+<li>Required fields:
 
-<p>Bulk upload updates existing, matching entries and appends new entries to them.</p>
+<ul>
+<li>Title</li>
+<li>URL. Make sure the URL is properly formatted, and includes the protocol (either <code>http://</code> or <code>https://</code>).</li>
+<li>Description</li>
+</ul>
+</li>
+<li>Optional fields:
+
+<ul>
+<li>Start date</li>
+<li>End date</li>
+<li>Keywords</li>
+<li>Status. If you leave this column blank, the Best Bet will default to <code>Active</code> and will display to users. Enter <code>0</code> to set the Best Bet to <code>Inactive</code>.</li>
+<li>Match_Keywords_Only. Enter a <code>1</code> in this column if you want the Best Bet to respond only to the query terms and phrases you've specified in this column. Note that selecting this option means you need to list <em>all</em> terms or phrases you want the Best Bet to respond to.</li>
+</ul>
+</li>
+</ul>
+
+
+<p>Save the file with a .csv extension and upload it.</p>
+
+<p>Bulk upload updates existing Best Bets (matching on the URL field) and adds new Best Bets. To turn off Best Bets, either use the <code>Remove</code> button in the Admin Center Best Bets list view, or set the Best Bet to <code>Inactive</code> in the edit view.</p>
 
 <p><a name="bbg"></a></p>
 
@@ -269,7 +291,7 @@ Keyword 4: market value
     
     
     <a href="/manual/best-bets.html">
-      <time>November 2, 2015</time>
+      <time>March 30, 2016</time>
     </a>
   </div>
 
