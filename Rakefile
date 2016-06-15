@@ -32,6 +32,7 @@ task :generate do
   end
 end
 
+task :publish => :deploy
 task :deploy => :generate do
   cd("#{deploy_dir}") do
     system 'git reset --hard origin/gh-pages'
