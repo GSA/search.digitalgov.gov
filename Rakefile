@@ -5,7 +5,7 @@ require 'yaml'
 deploy_dir = '_deploy'
 current_sha = nil
 gh_pages_branch = 'gh-pages'
-gh_repo = 'git@usasearch-github:GSA/search.digitalgov.gov.git'
+gh_repo = 'git@github.com:GSA/search.digitalgov.gov.git'
 
 desc 'setup jekyll site for deployment'
 task :setup do
