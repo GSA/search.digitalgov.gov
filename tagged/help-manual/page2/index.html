@@ -171,7 +171,7 @@
 
 <p><strong><em>Troubleshooting Tip:</em></strong> For non-English sites, some agencies opt to include the specific location of the language's content (such as agency.gov/language or language.agency.gov) in their <a href="/manual/domains.html">Domains</a> to further refine the search results. Test the results for your non-English site with both the general agency.gov and the language-specific location to determine which setting gives you the best results.</p>
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#115;&#101;&#97;&#114;&#99;&#104;&#64;&#115;&#117;&#x70;&#112;&#111;&#x72;&#x74;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#x61;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#x6f;&#118;">&#x73;&#101;&#97;&#x72;&#99;&#104;&#64;&#115;&#117;&#112;&#112;&#111;&#114;&#x74;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#58;&#115;&#x65;&#97;&#114;&#99;&#104;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#46;&#103;&#111;&#118;">&#115;&#101;&#97;&#114;&#x63;&#104;&#64;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;</a>.</p>
 
     </div>
 
@@ -190,6 +190,79 @@
       
       
       <a href="/manual/add-site.html">
+        <time datetime="2015-09-17">September 17, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/clicks.html">How to Analyze Your Clicks</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Clicks</p>
+
+<p>The Clicks page shows what searchers clicked on from your search results pages, and the number of times each of those items was clicked during the selected date range. The current month is shown by default, and the date can be adjusted using the date selectors at the top of the page and re-generating the report.</p>
+
+<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
+
+<p>Data are available in the Admin Center from August 2014 (13 months).</p>
+
+<h2>Reading the Report Table</h2>
+
+<h3>Top URLs Clicked</h3>
+
+<p><a href="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/Analytics_Clicks_800.png" target="_blank" alt="Top clicks from results pages"><img style="float: right;" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/Analytics_Clicks_175.png"></a>The top 1,000 most clicked-on URLs from your results page for the selected time period, with the most popular first.</p>
+
+<h3>Download Details</h3>
+
+<p>You can download the raw click logs for any URL in the list. The CSV (comma separated values) file has one line for each time this URL was clicked. Details avialable include:</p>
+
+<ul>
+<li><em>Date</em> and <em>Time</em> of the click,</li>
+<li><em>Query</em>: The query they ran before clicking the search result,</li>
+<li><em>Position</em>: Where in the results page was the result they clicked, e.g. <strong>5</strong> means the searcher clicked the fifth result in the list,</li>
+<li><em>Request</em>: The clicked URL (It is embedded in the request URL. Look for the text following ‘u=’.) and its position on the page,</li>
+<li><em>Referrer</em>: The webpage the person was on when they ran the search, this column also includes the query,</li>
+<li><em>Vertical</em> and <em>Modules</em>: The modules loaded in response to the query (Our <a href="/manual/module-codes.html">Module Codes</a> tip provides a key of the codes and names.),</li>
+<li><em>Device</em>, <em>Browser</em>, and <em>OS</em>: The kind of device and browser they were using, and</li>
+<li><em>Country Code</em> and <em>Region</em>: Where the user was, physically.</li>
+</ul>
+
+
+<h3># of Clicks</h3>
+
+<p><a href="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ClicksQueries_800.png" target="_blank" alt="Report of Queries that people ran before clicking on a particular page"><img style="float: right;" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ClicksQueries_175.png"></a>Select a hyperlinked number in the <code># of Clicks</code> column to view the queries that led to the clicks for that URL (the <strong>Queries leading to a Click</strong> report).</p>
+
+<p>If you then click on a number in the <code># of Clicks</code> column for a query on the Queries leading to a Click page, you will see all the URLs <a href="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ClicksfromQuery_800.png" target="_blank" alt="Report of pages people clicked on after searching for a given term"><img style="float: right;" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ClicksfromQuery_175.png"></a>that were clicked on from that query's results pages (the <strong>Clicks from a Query</strong> report). This is the same report you see when you follow a <code># of Clicks</code> link from the <a href="/manual/queries.html">Queries page</a>.</p>
+
+<p>You can loop through or drill down into this list for any set of clicks and queries.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and clicks each month. The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site today.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/clicks"><span class="label label-info">clicks</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/clicks.html">
         <time datetime="2015-09-17">September 17, 2015</time>
       </a>
     </div>
@@ -240,7 +313,7 @@
 
 <h2>Site Handle</h2>
 
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#115;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#117;&#x70;&#x70;&#111;&#114;&#x74;&#x2e;&#x64;&#105;&#x67;&#x69;&#x74;&#97;&#x6c;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#118;">&#115;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#111;&#x72;&#x74;&#46;&#100;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#111;&#x76;&#x2e;&#103;&#111;&#118;</a>.</p>
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;">&#115;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#117;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;</a>.</p>
 
 <p><a href="http://search.socialsecurity.gov/search?query=office+locations&amp;affiliate=ssa"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/settings.png" title="Site name and handle on SocialSecurity.gov's search results page" alt="Site name and handle on SocialSecurity.gov's search results page" /></a></p>
 
@@ -250,7 +323,7 @@
 
 <h2>Site Language</h2>
 
-<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">66 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#97;&#114;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#x67;&#x69;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;">&#x73;&#101;&#97;&#114;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#x6f;&#118;&#46;&#103;&#111;&#118;</a>.</p>
+<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">66 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#115;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#116;&#x61;&#x6c;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#x76;">&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#112;&#112;&#x6f;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#97;&#x6c;&#103;&#111;&#118;&#46;&#x67;&#x6f;&#x76;</a>.</p>
 
 <h2>Delete</h2>
 
@@ -433,7 +506,7 @@
 
 <p><strong>Tagline.</strong> Fill out text for a "tagline" if you'd like one to appear at the very top of your results page header.</p>
 
-<p>The default tagline style uses Georgia (font family), 1.3 em (size), and italic (style). Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#115;&#101;&#97;&#114;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#112;&#111;&#x72;&#116;&#46;&#100;&#105;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#111;&#118;&#46;&#103;&#111;&#x76;">&#x73;&#101;&#x61;&#x72;&#99;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#108;&#103;&#111;&#x76;&#46;&#103;&#x6f;&#x76;</a> if you'd like to change the default font family, size, or style.</p>
+<p>The default tagline style uses Georgia (font family), 1.3 em (size), and italic (style). Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#114;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#116;&#97;&#108;&#x67;&#111;&#118;&#46;&#103;&#111;&#x76;">&#115;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#118;</a> if you'd like to change the default font family, size, or style.</p>
 
 <p><strong>Menu Button Alignment.</strong> Leave the Browse Site "hamburger" menu right-aligned, or select the Left option to make it left-aligned.</p>
 
@@ -501,7 +574,7 @@ URL: mailto:info@agency.gov</p>
 
 <p>Type over the text in the Name field to edit a facet's display name. Keep each name short (15 or fewer characters) and consistent with the content you're searching. Click on the hyperlink in the Source field to update the facet's source content. Hover over the icon with three horizontal lines on the left to change the order.</p>
 
-<p><strong>More.</strong> We show up to four facets above your search box. If you turn on the display of more than four facets, you'll see them listed under a 'More' dropdown menu. Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#x73;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#117;&#x70;&#112;&#111;&#114;&#116;&#46;&#x64;&#x69;&#103;&#105;&#x74;&#97;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#118;">&#x73;&#x65;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#117;&#112;&#112;&#x6f;&#114;&#116;&#46;&#100;&#105;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#103;&#111;&#118;</a> if you'd like to use a custom label instead of the default 'More'.</p>
+<p><strong>More.</strong> We show up to four facets above your search box. If you turn on the display of more than four facets, you'll see them listed under a 'More' dropdown menu. Email us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#x70;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;">&#115;&#x65;&#x61;&#114;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#108;&#103;&#111;&#x76;&#46;&#x67;&#111;&#x76;</a> if you'd like to use a custom label instead of the default 'More'.</p>
 
 <h2>Modules</h2>
 
@@ -529,7 +602,7 @@ URL: mailto:info@agency.gov</p>
 
 <p>If you list more than two related sites, searchers will see them listed under a dropdown menu, View Topic. See, for example, the related sites displayed on <a href="http://search.broward.org/search?affiliate=co.broward.fl.us&amp;query=jobs">Broward.org for a search on <em>jobs</em></a>.</p>
 
-<p>Email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#58;&#x73;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#97;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#x6f;&#118;">&#x73;&#x65;&#x61;&#114;&#99;&#104;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#x69;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#118;</a> if you'd like to use a custom label instead of the default 'View Topic' label.</p>
+<p>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#115;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#x69;&#103;&#x69;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#118;">&#115;&#101;&#97;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#118;&#46;&#103;&#111;&#118;</a> if you'd like to use a custom label instead of the default 'View Topic' label.</p>
 
 <h2>Pointer to Kick Off New Search</h2>
 
@@ -543,13 +616,13 @@ URL: mailto:info@agency.gov</p>
 </ul>
 
 
-<p>Email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#117;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#97;&#108;&#x67;&#111;&#118;&#46;&#103;&#x6f;&#x76;">&#115;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;</a> if you'd provide searchers with a custom message to encourage them to search another section of your site, your database, or both.</p>
+<p>Email us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#x3a;&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#105;&#116;&#97;&#108;&#103;&#111;&#118;&#46;&#x67;&#111;&#x76;">&#x73;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#117;&#x70;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#x69;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;</a> if you'd provide searchers with a custom message to encourage them to search another section of your site, your database, or both.</p>
 
 <hr />
 
 <p><strong><em>Did you know?</em></strong>  Searchers may narrow results by time period for any <a href="/manual/rss.html">RSS</a> feeds. See, for example, results for a <a href="http://search.whitehouse.gov/search/news?affiliate=wh&amp;channel=6&amp;m=false&amp;query=jobs&amp;tbs=w">search on <em>jobs</em> narrowed to press articles in the last week on WhiteHouse.gov</a>.</p>
 
-<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#115;&#101;&#97;&#114;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#x67;&#x6f;&#x76;">&#115;&#101;&#97;&#114;&#99;&#104;&#x40;&#115;&#117;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#100;&#105;&#x67;&#105;&#116;&#x61;&#108;&#x67;&#111;&#118;&#x2e;&#103;&#111;&#118;</a> to if you want to customize these display names.</p>
+<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#115;&#101;&#97;&#114;&#x63;&#104;&#64;&#x73;&#117;&#112;&#112;&#x6f;&#114;&#116;&#46;&#100;&#105;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#x73;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#105;&#x67;&#105;&#x74;&#x61;&#108;&#103;&#111;&#118;&#46;&#x67;&#x6f;&#x76;</a> to if you want to customize these display names.</p>
 
 <p><strong><em>Did you know?</em></strong> You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our <a href="/manual/code.html">JavaScript snippet</a> before the closing <code>&lt;body&gt;</code> tag on your HTML web pages.</p>
 
@@ -999,131 +1072,6 @@ Keyword 4: market value
       
       <a href="/manual/no-results.html">
         <time datetime="2015-07-27">July 27, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/code.html">How to Activate Your Search by Adding Our Code Snippets to Your Website</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search > Code Snippets</p>
-
-<p>Visit our <a href="https://search.usa.gov/sites/">Admin Center</a>, select your site, and click on the Activate Search option in the left-hand menu.</p>
-
-<p>Add the following two snippets of code to your website to "hook" your website and our hosted search service together. You can add this code to your individual web pages or to the template(s) in your content management system.</p>
-
-<h2>1. Form Snippet</h2>
-
-<p>Include this snippet of code where the form for your search box appears. It should look something like this:</p>
-
-<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;
-    &lt;div style="margin:0;padding:0;display:inline"&gt;
-    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
-    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
-    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
-    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
-    &lt;input name="commit" type="submit" value="Search" /&gt;
-&lt;/form&gt;
-</code></pre>
-
-<h2>2. Javascript Snippet</h2>
-
-<p>Include this snippet of code before the closing <code>&lt;body&gt;</code> tag. This tag enables type-ahead search in the search box on your web pages and powers the data on trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the Admin Center. It should look something like this:</p>
-
-<pre><code>&lt;script type="text/javascript"&gt;
-//&lt;![CDATA[
-      var usasearch_config = { siteHandle:"YourSiteHandle" };
-
-      var script = document.createElement("script");
-      script.type = "text/javascript";
-      script.src = "http://search.usa.gov/javascripts/remote.loader.js";
-      document.getElementsByTagName("head")[0].appendChild(script);
-
-//]]&gt;
-&lt;/script&gt;
-</code></pre>
-
-<blockquote><p><strong><em>HTTPS Quick Tip:</em></strong> If your website is secured with https, we support secure search on https://search.usa.gov. Simply add 's' to both your form action <code>https://search.usa.gov/search</code> and type-ahead script <code>https://search.usa.gov/javascripts/remote.loader.js</code>.</p></blockquote>
-
-<h2>Advanced: Options for Limiting a Search Box to Specific Folders or Subdomains</h2>
-
-<p>You can limit results to specific folders or subdomains by creating a collection, setting up an RSS feed, or passing in a hidden value.</p>
-
-<h3>Option 1. Limit to Collections</h3>
-
-<p>Create a <a href="/manual/collections.html">collection</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/docs/</code> and (b) add an input for this collection, <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>. It should look something like this:</p>
-
-<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search/docs/" id="search_form" method="get"&gt;
-    &lt;div style="margin:0;padding:0;display:inline"&gt;
-    &lt;input type="hidden" name="dc" value="###"&gt;
-    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
-    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
-    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
-    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
-    &lt;input name="commit" type="submit" value="Search" /&gt;
-&lt;/form&gt;
-</code></pre>
-
-<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center as shown in the sample below.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/get-code-collection.png" alt="Value for the collection ID" /></p>
-
-<h3>Option 2. Limit to RSS Feeds</h3>
-
-<p>Set up an <a href="/manual/rss.html">RSS feed</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/news/</code> and (b) add an input for this feed, <code>&lt;input type="hidden" name="channel" value="###"&gt;</code>.  It should look something like this:</p>
-
-<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search/news/" id="search_form" method="get"&gt;
-    &lt;div style="margin:0;padding:0;display:inline"&gt;
-    &lt;input type="hidden" name="channel" value="###"&gt;
-    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
-    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
-    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
-    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
-    &lt;input name="commit" type="submit" value="Search" /&gt;
-&lt;/form&gt;
-</code></pre>
-
-<p>The value is the number for your RSS ID, which is visible in the URL when you edit or preview your feed in the Admin Center.</p>
-
-<h3>Option 3. Limit to a Hidden Domain Value</h3>
-
-<p>Leave your domain blank on the <a href="/manual/domains.html">Domains</a> page and, instead, passing a hidden value for the domain in the search form code.</p>
-
-<p>See, for example, <a href="http://www.ri.gov">RI.gov</a>, <a href="http://www.dmv.ri.gov/">DMV.RI.gov</a>, <a href="http://www.health.ri.gov/">Health.RI.gov</a>. On Health.RI.gov, the following hidden value is added to limit to only the health subdomain.</p>
-
-<pre><code>&lt;input type="hidden" name="site" value="www.health.ri.gov" &gt;
-</code></pre>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> If you're using Drupal, be sure to check out our <a href="https://www.drupal.org/project/usasearch">Drupal module</a>.</p>
-
-<p><strong><em>Did you know?</em></strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers your domain (instead of USA.gov).</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
-      
-      <a href="/tagged/code-snippets"><span class="label label-info">code-snippets</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/code.html">
-        <time datetime="2015-07-25">July 25, 2015</time>
       </a>
     </div>
     </article>

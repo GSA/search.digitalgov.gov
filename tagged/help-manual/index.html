@@ -103,6 +103,131 @@
  
     
     <h1>
+      <a href="/manual/code.html">How to Activate Your Search by Adding Our Code Snippets to Your Website</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search > Code Snippets</p>
+
+<p>Visit our <a href="https://search.usa.gov/sites/">Admin Center</a>, select your site, and click on the Activate Search option in the left-hand menu.</p>
+
+<p>Add the following two snippets of code to your website to "hook" your website and our hosted search service together. You can add this code to your individual web pages or to the template(s) in your content management system.</p>
+
+<h2>1. Form Snippet</h2>
+
+<p>Include this snippet of code where the form for your search box appears. It should look something like this:</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<h2>2. Javascript Snippet</h2>
+
+<p>Include this snippet of code before the closing <code>&lt;body&gt;</code> tag. This tag enables type-ahead search in the search box on your web pages and powers the data on trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the Admin Center. It should look something like this:</p>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+      var usasearch_config = { siteHandle:"YourSiteHandle" };
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "http://search.usa.gov/javascripts/remote.loader.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+//]]&gt;
+&lt;/script&gt;
+</code></pre>
+
+<blockquote><p><strong><em>HTTPS Quick Tip:</em></strong> If your website is secured with https, we support secure search on https://search.usa.gov. Simply add 's' to both your form action <code>https://search.usa.gov/search</code> and type-ahead script <code>https://search.usa.gov/javascripts/remote.loader.js</code>.</p></blockquote>
+
+<h2>Advanced: Options for Limiting a Search Box to Specific Folders or Subdomains</h2>
+
+<p>You can limit results to specific folders or subdomains by creating a collection, setting up an RSS feed, or passing in a hidden value.</p>
+
+<h3>Option 1. Limit to Collections</h3>
+
+<p>Create a <a href="/manual/collections.html">collection</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/docs/</code> and (b) add an input for this collection, <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>. It should look something like this:</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search/docs/" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input type="hidden" name="dc" value="###"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center as shown in the sample below.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/get-code-collection.png" alt="Value for the collection ID" /></p>
+
+<h3>Option 2. Limit to RSS Feeds</h3>
+
+<p>Set up an <a href="/manual/rss.html">RSS feed</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/news/</code> and (b) add an input for this feed, <code>&lt;input type="hidden" name="channel" value="###"&gt;</code>.  It should look something like this:</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search/news/" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input type="hidden" name="channel" value="###"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>The value is the number for your RSS ID, which is visible in the URL when you edit or preview your feed in the Admin Center.</p>
+
+<h3>Option 3. Limit to a Hidden Domain Value</h3>
+
+<p>Leave your domain blank on the <a href="/manual/domains.html">Domains</a> page and, instead, passing a hidden value for the domain in the search form code.</p>
+
+<p>See, for example, <a href="http://www.ri.gov">RI.gov</a>, <a href="http://www.dmv.ri.gov/">DMV.RI.gov</a>, <a href="http://www.health.ri.gov/">Health.RI.gov</a>. On Health.RI.gov, the following hidden value is added to limit to only the health subdomain.</p>
+
+<pre><code>&lt;input type="hidden" name="sitelimit" id="sitelimit" value="www.health.ri.gov" &gt;
+</code></pre>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> If you're using Drupal, be sure to check out our <a href="https://www.drupal.org/project/usasearch">Drupal module</a>.</p>
+
+<p><strong><em>Did you know?</em></strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers your domain (instead of USA.gov).</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
+      
+      <a href="/tagged/code-snippets"><span class="label label-info">code-snippets</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/code.html">
+        <time datetime="2016-06-22">June 22, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/training.html">DigitalGov Search Training</a>
     </h1>
     
@@ -561,95 +686,6 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
  
     
     <h1>
-      <a href="/manual/monthly-reports.html">How to Analyze Your Monthly Reports</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Monthly Reports</p>
-
-<p>The monthly report gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and <a href="/manual/clicks.html">clicks</a> each month.</p>
-
-<p>Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.</p>
-
-<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
-
-<p>Data are available in the Admin Center from August 2014.</p>
-
-<h2>Monthly Usage Stats</h2>
-
-<p>Data for the total number of queries and clicks. Use this report to find and analyze the so-called <a href="http://www.searchtools.com/analysis/long-tail.html">short head</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> of your most popular search queries and clicks, which are typically the same as your site's <a href="http://www.usability.gov/tags/task-analysis/">top tasks</a>.</p>
-
-<h3>Queries with No Results</h3>
-
-<p>A list of queries that returned no results. Sometimes searchers look for information on the wrong website, and sometimes they use different words than what are used on the page, and so they get no results from the search index. Use this list of Queries with No Results to help searchers get to the information they're looking for. You can set up <a href="/manual/best-bets.html">Best Bets (Text or Graphics)</a>), or a <a href="/manual/routed-queries.html">Routed Query</a>. You can also <a href="/manual/no-results.html">customize the No Results message</a> displayed on your results page.</p>
-
-<h2>Impressions and Clicks by Module</h2>
-
-<p>Detailed data for the total number of impressions and clicks and your clickthru rate (CTR) are presented for each "module" on the search results page. We also provide the average CTR across all DigitalGov Search customers so you can see how your rate compares to the average rate. The data in the table is sorted in descending order from the most to least number of clicks.</p>
-
-<p>Use this report to inform which <a href="/manual/display-overview.html">modules you opt to display</a>.</p>
-
-<p><strong><em>Drill down into best bets.</em></strong> Select the option to drill down into your <a href="/manual/best-bets.html">Best Bets (Text or Graphics)</a> to see the number of impressions, number of clicks, and CTR for each best bet. The data in the table is sorted in descending order from the highest to lowest CTR. Review and edit best bets as needed. Focus on those with a high number of impressions and low CTR to make the biggest impact on searchers' experience (and on your overall CTR). Select drill down again to see a pie chart of the search terms that led to an impression on each best bet.</p>
-
-<h2>Download Top Queries</h2>
-
-<p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV (comma-separated values) link to download the list as a text file. Once you've downloaded the CSV file, you can easily <a href="https://support.office.com/en-us/article/Import-or-export-text-txt-or-csv-files-e8ab9ff3-be8d-43f1-9d52-b5e8a008ba5c">import it  into Excel</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> or another speadsheet program to analyze the data.</p>
-
-<p>The CSV file contains three columns: (1) query, (2) raw count, and (3) IP-deduped.</p>
-
-<p>Read <a href="https://www.digitalgov.gov/2013/10/24/understanding-your-users-needs-by-analyzing-search-terms/">Understanding Your Users' Needs By Analyzing Search Terms</a> for tips on how to create a semi-automated report for analyzing the data in this CSV file on a regular basis.</p>
-
-<h2>Definitions</h2>
-
-<p>All data presented on this page (and other pages in the Admin Center) are IP-deduped to exclude bots and other noise in an attempt to accurately represent searchers' intent on your site. Some definitions follow.</p>
-
-<p><strong><a href="/manual/queries.html">Queries</a>:</strong> Number of times a search query (that is, a word or string of words) was entered in the search box by a unique searcher.</p>
-
-<p><strong><a href="/manual/clicks.html">Clicks</a>.</strong> Number of times a searcher clicked on one of your pages within the search results for a particular query.</p>
-
-<p><strong>Impressions:</strong> Number of times a module is displayed, whether it is clicked on or not. Not all modules are displayed for all queries. Each time a module is displayed it is counted as one impression.</p>
-
-<p><strong>Clickthru Rate (CTR):</strong> The rate (expressed in a percentage) at which searchers click on a module. This rate is calculated by dividing the total number of clicks by the total number of impressions. CTR is useful to measure the performance of specific campaigns, such as <a href="/manual/best-bets.html">best bets</a> for seasonal events.</p>
-
-<p><strong>Raw count:</strong> Total number of times the query was submitted. The raw count is provided in the downloadable CSV files only.</p>
-
-<p><strong>IP-deduped count:</strong> Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of "real," human traffic.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> On the first of each month, we email you a report with data on the previous month's queries, clicks, and top search terms.</p>
-
-<p><strong><em>Did you know?</em></strong> The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site in the past day or so.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/queries"><span class="label label-info">queries</span></a>
-      
-      <a href="/tagged/clicks"><span class="label label-info">clicks</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/monthly-reports.html">
-        <time datetime="2015-11-02">November 2, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
       <a href="/manual/color-codes.html">Key to Color Coding in the Admin Center</a>
     </h1>
     
@@ -785,6 +821,91 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
  
     
     <h1>
+      <a href="/manual/index.html">Help Manual: How to Set Up Your Search Box</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>We provide a search box that searches across all of your <em>public-facing</em> digital content. We support an unlimited number of web pages across multiple domains and we integrate your RSS feeds, tweets, YouTube videos, and Flickr and Instagram photos.</p>
+
+<p>Browse through our <a href="/blog/go-live.html">Go-Live Punch List</a> for some quick tips on how to configure the search experience for your website, or watch our <a href="/manual/training.html">training videos</a>.</p>
+
+<p>Watch our <a href="https://www.youtube.com/watch?v=TnlpuudK_WY">Getting Started video</a> (4 mins)&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<h3><i class="icon-dashboard"></i> Dashboard</h3>
+
+<p><a href="/manual/site-overview.html">Site overview</a>  <br/>
+<a href="/manual/users.html">Manage users</a>  <br/>
+<a href="/manual/settings.html">Settings</a></p>
+
+<h3><i class="icon-bar-chart"></i> Analytics</h3>
+
+<p><a href="/manual/queries.html">Queries</a>  <br/>
+<a href="/manual/clicks.html">Clicks</a>  <br/>
+<a href="/manual/monthly-reports.html">Monthly reports</a>  <br/>
+<a href="/manual/third-party.html">3rd party tracking</a></p>
+
+<h3><i class="icon-file"></i> Manage Content</h3>
+
+<p><a href="/manual/content-overview.html">Content overview</a>  <br/>
+<a href="/manual/domains.html">Domains</a> (plus <a href="/manual/domains-advanced.html">advanced options to add or filter URLs</a>)  <br/>
+<a href="/manual/collections.html">Collections</a>  <br/>
+<a href="/manual/i14y-drawers.html">i14y drawers</a> <br/>
+<a href="/manual/best-bets.html">Best bets: text and/or graphics</a>  <br/>
+<a href="/manual/routed-queries.html">Routed queries</a>  <br/>
+<a href="/manual/rss.html">RSS</a>  <br/>
+<a href="/manual/youtube.html">YouTube</a>  <br/>
+<a href="/manual/twitter.html">Twitter</a>  <br/>
+<a href="/manual/flickr.html">Flickr</a>  <br/>
+<a href="/manual/instagram.html">Instagram</a></p>
+
+<h3><i class="icon-desktop"></i> Manage Display</h3>
+
+<p><a href="/manual/display-overview.html">Display overview</a> (including <a href="/manual/govbox-jobs.html">job openings</a>, <a href="/manual/govbox-federal-register.html"><em>Federal Register</em></a>, and <a href="/manual/govbox-health.html">health topics</a>)  <br/>
+<a href="/manual/brand.html">Brand</a> (font &amp; colors, image assets, and header &amp; footer)  <br/>
+Custom <a href="/manual/no-results.html">No Results</a> page  <br/>
+Custom <a href="/manual/system-alert.html">Search Page Alert</a></p>
+
+<h3><i class="icon-eye-open"></i> Preview</h3>
+
+<p><a href="/manual/preview.html">Preview</a></p>
+
+<h3><i class="icon-code"></i> Activate Search</h3>
+
+<p><a href="/manual/code.html">Code snippets</a>  <br/>
+Search API access key*  <br/>
+Search Results API instructions*  <br/>
+Type-ahead API instructions*  <br/>
+i14y (Beta) API instructions*</p>
+
+<p>* These APIs are available for use on official government websites only. You must be a DigitalGov Search customer. <a href="https://search.usa.gov/sites">Sign in</a> is required. Keys and instructions for each can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search.</p>
+
+<p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
+
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#97;&#114;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#46;&#100;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#x6f;&#118;&#46;&#x67;&#x6f;&#x76;">&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#118;</a>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/index.html">
+        <time datetime="2015-11-02">November 2, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/content-overview.html">How to Add Your Content to Our Indexes: An Overview</a>
     </h1>
     
@@ -805,7 +926,7 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
 
 <p>If you don't like the default web results, you can choose to use another index. Options follow.</p>
 
-<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can fetch and index your all of web site's content directly. Email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x73;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#118;">&#115;&#101;&#x61;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#118;</a> and we'll work with you to determine the best way for you to tell us about your content.</p>
+<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can fetch and index your all of web site's content directly. Email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#115;&#101;&#97;&#x72;&#99;&#x68;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#118;">&#x73;&#101;&#97;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#112;&#111;&#x72;&#116;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#108;&#103;&#111;&#x76;&#46;&#x67;&#111;&#118;</a> and we'll work with you to determine the best way for you to tell us about your content.</p>
 
 <p><strong>Option 2. Buy and Use Google Site Search.</strong> If you already have (or plan to purchase), <a href="https://www.google.com/work/search/products/gss.html">Google Site Search</a>, we'll send a searcher's query to the search index you've provided and we'll render the results within our search results page.</p>
 
@@ -884,68 +1005,66 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
  
     
     <h1>
-      <a href="/manual/index.html">Help Manual: How to Set Up Your Search Box</a>
+      <a href="/manual/monthly-reports.html">How to Analyze Your Monthly Reports</a>
     </h1>
     
 
     <div class='post-content'>
-      <p>We provide a search box that searches across all of your <em>public-facing</em> digital content. We support an unlimited number of web pages across multiple domains and we integrate your RSS feeds, tweets, YouTube videos, and Flickr and Instagram photos.</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Monthly Reports</p>
 
-<p>Browse through our <a href="/blog/go-live.html">Go-Live Punch List</a> for some quick tips on how to configure the search experience for your website, or watch our <a href="/manual/training.html">training videos</a>.</p>
+<p>The monthly report gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and <a href="/manual/clicks.html">clicks</a> each month.</p>
 
-<p>Watch our <a href="https://www.youtube.com/watch?v=TnlpuudK_WY">Getting Started video</a> (4 mins)&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+<p>Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.</p>
 
-<h3><i class="icon-dashboard"></i> Dashboard</h3>
+<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
 
-<p><a href="/manual/site-overview.html">Site overview</a>  <br/>
-<a href="/manual/users.html">Manage users</a>  <br/>
-<a href="/manual/settings.html">Settings</a></p>
+<p>Data are available in the Admin Center from August 2014.</p>
 
-<h3><i class="icon-bar-chart"></i> Analytics</h3>
+<h2>Monthly Usage Stats</h2>
 
-<p><a href="/manual/queries.html">Queries</a>  <br/>
-<a href="/manual/clicks.html">Clicks</a>  <br/>
-<a href="/manual/monthly-reports.html">Monthly reports</a>  <br/>
-<a href="/manual/third-party.html">3rd party tracking</a></p>
+<p>Data for the total number of queries and clicks. Use this report to find and analyze the so-called <a href="http://www.searchtools.com/analysis/long-tail.html">short head</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> of your most popular search queries and clicks, which are typically the same as your site's <a href="http://www.usability.gov/tags/task-analysis/">top tasks</a>.</p>
 
-<h3><i class="icon-file"></i> Manage Content</h3>
+<h3>Queries with No Results</h3>
 
-<p><a href="/manual/content-overview.html">Content overview</a>  <br/>
-<a href="/manual/domains.html">Domains</a> (plus <a href="/manual/domains-advanced.html">advanced options to add or filter URLs</a>)  <br/>
-<a href="/manual/collections.html">Collections</a>  <br/>
-<a href="/manual/i14y-drawers.html">i14y drawers</a> <br/>
-<a href="/manual/best-bets.html">Best bets: text and/or graphics</a>  <br/>
-<a href="/manual/routed-queries.html">Routed queries</a>  <br/>
-<a href="/manual/rss.html">RSS</a>  <br/>
-<a href="/manual/youtube.html">YouTube</a>  <br/>
-<a href="/manual/twitter.html">Twitter</a>  <br/>
-<a href="/manual/flickr.html">Flickr</a>  <br/>
-<a href="/manual/instagram.html">Instagram</a></p>
+<p>A list of queries that returned no results. Sometimes searchers look for information on the wrong website, and sometimes they use different words than what are used on the page, and so they get no results from the search index. Use this list of Queries with No Results to help searchers get to the information they're looking for. You can set up <a href="/manual/best-bets.html">Best Bets (Text or Graphics)</a>), or a <a href="/manual/routed-queries.html">Routed Query</a>. You can also <a href="/manual/no-results.html">customize the No Results message</a> displayed on your results page.</p>
 
-<h3><i class="icon-desktop"></i> Manage Display</h3>
+<h2>Impressions and Clicks by Module</h2>
 
-<p><a href="/manual/display-overview.html">Display overview</a> (including <a href="/manual/govbox-jobs.html">job openings</a>, <a href="/manual/govbox-federal-register.html"><em>Federal Register</em></a>, and <a href="/manual/govbox-health.html">health topics</a>)  <br/>
-<a href="/manual/brand.html">Brand</a> (font &amp; colors, image assets, and header &amp; footer)  <br/>
-Custom <a href="/manual/no-results.html">No Results</a> page  <br/>
-Custom <a href="/manual/system-alert.html">Search Page Alert</a></p>
+<p>Detailed data for the total number of impressions and clicks and your clickthru rate (CTR) are presented for each "module" on the search results page. We also provide the average CTR across all DigitalGov Search customers so you can see how your rate compares to the average rate. The data in the table is sorted in descending order from the most to least number of clicks.</p>
 
-<h3><i class="icon-eye-open"></i> Preview</h3>
+<p>Use this report to inform which <a href="/manual/display-overview.html">modules you opt to display</a>.</p>
 
-<p><a href="/manual/preview.html">Preview</a></p>
+<p><strong><em>Drill down into best bets.</em></strong> Select the option to drill down into your <a href="/manual/best-bets.html">Best Bets (Text or Graphics)</a> to see the number of impressions, number of clicks, and CTR for each best bet. The data in the table is sorted in descending order from the highest to lowest CTR. Review and edit best bets as needed. Focus on those with a high number of impressions and low CTR to make the biggest impact on searchers' experience (and on your overall CTR). Select drill down again to see a pie chart of the search terms that led to an impression on each best bet.</p>
 
-<h3><i class="icon-code"></i> Activate Search</h3>
+<h2>Download Top Queries</h2>
 
-<p><a href="/manual/code.html">Code snippets</a>  <br/>
-Search API access key*  <br/>
-Search Results API instructions*  <br/>
-Type-ahead API instructions*  <br/>
-i14y (Beta) API instructions*</p>
+<p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV (comma-separated values) link to download the list as a text file. Once you've downloaded the CSV file, you can easily <a href="https://support.office.com/en-us/article/Import-or-export-text-txt-or-csv-files-e8ab9ff3-be8d-43f1-9d52-b5e8a008ba5c">import it  into Excel</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> or another speadsheet program to analyze the data.</p>
 
-<p>* These APIs are available for use on official government websites only. You must be a DigitalGov Search customer. <a href="https://search.usa.gov/sites">Sign in</a> is required. Keys and instructions for each can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search.</p>
+<p>The CSV file contains three columns: (1) query, (2) raw count, and (3) IP-deduped.</p>
 
-<p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
+<p>Read <a href="https://www.digitalgov.gov/2013/10/24/understanding-your-users-needs-by-analyzing-search-terms/">Understanding Your Users' Needs By Analyzing Search Terms</a> for tips on how to create a semi-automated report for analyzing the data in this CSV file on a regular basis.</p>
 
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#115;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#114;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#x67;&#x6f;&#118;">&#115;&#101;&#97;&#114;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#x76;&#46;&#103;&#111;&#x76;</a>.</p>
+<h2>Definitions</h2>
+
+<p>All data presented on this page (and other pages in the Admin Center) are IP-deduped to exclude bots and other noise in an attempt to accurately represent searchers' intent on your site. Some definitions follow.</p>
+
+<p><strong><a href="/manual/queries.html">Queries</a>:</strong> Number of times a search query (that is, a word or string of words) was entered in the search box by a unique searcher.</p>
+
+<p><strong><a href="/manual/clicks.html">Clicks</a>.</strong> Number of times a searcher clicked on one of your pages within the search results for a particular query.</p>
+
+<p><strong>Impressions:</strong> Number of times a module is displayed, whether it is clicked on or not. Not all modules are displayed for all queries. Each time a module is displayed it is counted as one impression.</p>
+
+<p><strong>Clickthru Rate (CTR):</strong> The rate (expressed in a percentage) at which searchers click on a module. This rate is calculated by dividing the total number of clicks by the total number of impressions. CTR is useful to measure the performance of specific campaigns, such as <a href="/manual/best-bets.html">best bets</a> for seasonal events.</p>
+
+<p><strong>Raw count:</strong> Total number of times the query was submitted. The raw count is provided in the downloadable CSV files only.</p>
+
+<p><strong>IP-deduped count:</strong> Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of "real," human traffic.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> On the first of each month, we email you a report with data on the previous month's queries, clicks, and top search terms.</p>
+
+<p><strong><em>Did you know?</em></strong> The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site in the past day or so.</p>
 
     </div>
 
@@ -953,13 +1072,19 @@ i14y (Beta) API instructions*</p>
       
       <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
       
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/queries"><span class="label label-info">queries</span></a>
+      
+      <a href="/tagged/clicks"><span class="label label-info">clicks</span></a>
+      
     </div>
    <div class='time'>
       
       
       
       
-      <a href="/manual/index.html">
+      <a href="/manual/monthly-reports.html">
         <time datetime="2015-11-02">November 2, 2015</time>
       </a>
     </div>
@@ -1018,79 +1143,6 @@ i14y (Beta) API instructions*</p>
       
       <a href="/manual/i14y-drawers.html">
         <time datetime="2015-10-05">October 5, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/clicks.html">How to Analyze Your Clicks</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Clicks</p>
-
-<p>The Clicks page shows what searchers clicked on from your search results pages, and the number of times each of those items was clicked during the selected date range. The current month is shown by default, and the date can be adjusted using the date selectors at the top of the page and re-generating the report.</p>
-
-<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
-
-<p>Data are available in the Admin Center from August 2014 (13 months).</p>
-
-<h2>Reading the Report Table</h2>
-
-<h3>Top URLs Clicked</h3>
-
-<p><a href="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/Analytics_Clicks_800.png" target="_blank" alt="Top clicks from results pages"><img style="float: right;" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/Analytics_Clicks_175.png"></a>The top 1,000 most clicked-on URLs from your results page for the selected time period, with the most popular first.</p>
-
-<h3>Download Details</h3>
-
-<p>You can download the raw click logs for any URL in the list. The CSV (comma separated values) file has one line for each time this URL was clicked. Details avialable include:</p>
-
-<ul>
-<li><em>Date</em> and <em>Time</em> of the click,</li>
-<li><em>Query</em>: The query they ran before clicking the search result,</li>
-<li><em>Position</em>: Where in the results page was the result they clicked, e.g. <strong>5</strong> means the searcher clicked the fifth result in the list,</li>
-<li><em>Request</em>: The clicked URL (It is embedded in the request URL. Look for the text following ‘u=’.) and its position on the page,</li>
-<li><em>Referrer</em>: The webpage the person was on when they ran the search, this column also includes the query,</li>
-<li><em>Vertical</em> and <em>Modules</em>: The modules loaded in response to the query (Our <a href="/manual/module-codes.html">Module Codes</a> tip provides a key of the codes and names.),</li>
-<li><em>Device</em>, <em>Browser</em>, and <em>OS</em>: The kind of device and browser they were using, and</li>
-<li><em>Country Code</em> and <em>Region</em>: Where the user was, physically.</li>
-</ul>
-
-
-<h3># of Clicks</h3>
-
-<p><a href="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ClicksQueries_800.png" target="_blank" alt="Report of Queries that people ran before clicking on a particular page"><img style="float: right;" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ClicksQueries_175.png"></a>Select a hyperlinked number in the <code># of Clicks</code> column to view the queries that led to the clicks for that URL (the <strong>Queries leading to a Click</strong> report).</p>
-
-<p>If you then click on a number in the <code># of Clicks</code> column for a query on the Queries leading to a Click page, you will see all the URLs <a href="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ClicksfromQuery_800.png" target="_blank" alt="Report of pages people clicked on after searching for a given term"><img style="float: right;" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/ClicksfromQuery_175.png"></a>that were clicked on from that query's results pages (the <strong>Clicks from a Query</strong> report). This is the same report you see when you follow a <code># of Clicks</code> link from the <a href="/manual/queries.html">Queries page</a>.</p>
-
-<p>You can loop through or drill down into this list for any set of clicks and queries.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and clicks each month. The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site today.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/clicks"><span class="label label-info">clicks</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/clicks.html">
-        <time datetime="2015-09-17">September 17, 2015</time>
       </a>
     </div>
     </article>
