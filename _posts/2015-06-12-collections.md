@@ -16,6 +16,8 @@ Enter the URLs for the domains, subdomains, or subfolders that make up this coll
 
 You cannot specify URLs for individual web pages. 
 
+Paths that are three or more subfolders deep may not return results immediately. [Email us](mailto:search@support.digitalgov.gov) if you are not seeing search results for these paths.
+
 ## Step 2. Opt to Show as a Facet
 
 Click on the [Display Overview](/manual/display-overview.html) page. Turn on your collection to allow searchers to see it as a faceted navigation option above the search box on the results page.
