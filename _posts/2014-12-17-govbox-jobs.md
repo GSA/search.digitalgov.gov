@@ -7,7 +7,7 @@ tags: help-manual modules jobs
 
 One of the most common search tasks is to look for current job openings. We created the Jobs module to help searchers quickly find relevant jobs. 
 
-When you [turn on the Job Openings](/manual/display-overview.html) module, searchers looking for jobs on your site will see up to three relevant jobs listings on your results page. 
+When you [turn on the Job Openings](/manual/display-overview.html) module, searchers looking for jobs on your site will see up to three relevant jobs listings on your results page. You will need to [contact us](mailto:search@support.digitalgov.gov) to get the Jobs module enabled for your site.
 
 ## Federal Government
 
