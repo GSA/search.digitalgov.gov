@@ -112,14 +112,14 @@
 
 <p><a href="https://github.com/GSA/i14y">i14y Github repo</a> | <a href="http://gsa.github.io/slate/">Technical Documentation</a></p>
 
-<p>Do you want to have real-time updates to your search index, and full control over your page titles and descriptions? Then <a href="https://github.com/GSA/i14y">i14y, our content indexing API</a> is for you! We currently have a <a href="http://www.drupal.org/project/usasearch">Drupal module</a> and a <a href="https://github.com/GSA/wp-digitalgov-i14y-indexer">WordPress plugin</a> that will hook your CMS into <em>i14y</em>. If you use a different CMS, or don't have one at all, you still can develop an API of your content that meets the i14y specs and send it to us. We plan to develop more CMS hooks in the future, and welcome your partnership if there's a particular hook you need.</p>
+<p>Do you want to have real-time updates to your search index, and full control over your page titles and descriptions? Then <a href="https://github.com/GSA/i14y">i14y, our content indexing API</a> is for you! We currently have a <a href="http://www.drupal.org/project/usasearch">Drupal module</a> and a <a href="https://github.com/GSA/wp-digitalgov-i14y-indexer">WordPress plugin</a> that will hook your CMS into i14y. If you use a different CMS, or don't have one at all, you still can develop an API of your content that meets the i14y specs and send it to us. We plan to develop more CMS hooks in the future, and welcome your partnership if there's a particular hook you need.</p>
 
 <h2>Step 1. Connect one of your sites to i14y</h2>
 
 <p>i14y needs to be enabled in the back end for a site to be able to receive content through it. You can</p>
 
 <ul>
-<li><a href="/manual/add-site.html">Add a brand new site</a>,</li>
+<li><a href="/manual/add-site.html">Add a brand new search site</a>,</li>
 <li>Use the Clone Site tool to copy one of your existing site’s settings to a new site (<code>YourSite &gt; Dashboard &gt; Clone Site</code>), or</li>
 <li>use an existing site.</li>
 </ul>
@@ -129,17 +129,21 @@
 
 <h2>Step 2. Add a Drawer</h2>
 
+<p>An i14y Drawer is an index receiving content via the i14y API. We've called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
+
 <p>After we have enabled i14y for your search site, a new page will appear: <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers.</p>
 
-<p>Click <code>Add i14y Drawer</code> in the upper right corner, create a handle, give it an optional description, and click Add to save. <a href="/manual/i14y-drawers.html">Read more about working with Drawers</a>.</p>
+<p>Click <code>Add i14y Drawer</code> in the upper right corner. Create a handle for your drawer - the handle must be all lowercase alphanumeric, all one word, and can include underscores but no other special characters (e.g., agency_drawer_handle2).</p>
+
+<p>The Drawer <em>Description</em> is optional.</p>
 
 <p>If you have more than one website that will be sending content, add a separate Drawer for each of these sites.</p>
 
-<p>We can attach each i14y drawer to multiple search configurations: if you have a drawer that you’d like to use for multiple search sites, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
-
 <h2>Step 3. Fill your Drawer</h2>
 
-<p>Here’s where the rubber hits the road: use <a href="https://github.com/GSA/i14y">i14y</a> to add content to your drawer. You can do this in two ways:</p>
+<p>After you have created your Drawer(s), click <code>Show</code> from the i14y Drawers list to find that Drawer’s secret API key. Use this secret key with your drawer handle in your API call or your CMS module to send your content to the right place.</p>
+
+<p>You are now ready to add content to your drawer. You can do this in two ways:</p>
 
 <ul>
 <li>Use i14y directly. <a href="https://github.com/GSA/i14y">Github repo</a> | <a href="http://gsa.github.io/slate/">Technical Documentation</a></li>
@@ -150,6 +154,8 @@
 <h2>Step 4. Review your index</h2>
 
 <p>You can view the number of documents indexed for each drawer on the main i14y Drawers list. We also send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
+
+<p>We can attach each i14y drawer to multiple search configurations: if you have a drawer that you’d like to use for multiple search sites, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
 
 <h2>Step 5. Configure your search</h2>
 
