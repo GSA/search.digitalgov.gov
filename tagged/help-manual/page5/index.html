@@ -103,61 +103,26 @@
  
     
     <h1>
-      <a href="/manual/domains.html">How to Edit Your Domains</a>
+      <a href="/manual/twitter.html">How to Add Your Tweets to Our Index</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Domains</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Twitter</p>
 
-<p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
+<p>Provide us with the @handle for your Twitter account(s). Your @handle is your agency's username used within Twitter. When you're logged into Twitter, you can see your username at <a href="https://twitter.com/login?redirect_after_login=/settings/account">https://twitter.com/login?redirect_after_login=/settings/account</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
 
-<h2>Entire Site(s)</h2>
+<p>For example, the Twitter username for the Federal Student Aid, a part of the U.S. Department of Education, is <a href="https://twitter.com/FAFSA">@FAFSA</a>.</p>
 
-<ul>
-<li>List yoursite.gov (without www) to search your entire site, including all subdomains.</li>
-<li>List yoursite.gov and yoursite2.gov to search multiple sites.</li>
-</ul>
+<p>When you add your Twitter @handle, we'll automatically index and display <em>your</em> tweets. Select the option, Show tweets from my lists, to index the tweets for all members of your lists.</p>
 
+<p>If you don't want to display your tweets, simply delete your Twitter handle.</p>
 
-<h2>Specific Subdomains</h2>
+<p>See the sample results page below that shows a recent tweet displayed on Federal Student Aid for a search on <em><a href="http://search.usa.gov/search?query=loans&amp;op=Search&amp;affiliate=federalstudentaid&amp;m=true">loans</a></em>.</p>
 
-<ul>
-<li>List www.yoursite.gov to include only the primary 'www' domain.</li>
-<li>List subdomain.yoursite.gov to include subdomains.</li>
-</ul>
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-tweets.png" alt="Search result with a tweet on Federal Student Aid" /></p>
 
-
-<h2>Specific Directories</h2>
-
-<p>List yoursite.gov/folder to include folders. Note: this will include all sub-folders (if they exist), i.e. yoursite.gov/folder/folder2.</p>
-
-<p>You cannot specify individual URLs.</p>
-
-<p>Searches that start three or more subfolders deep cannot use our default configuration. <a href="mailto:search@support.digitalgov.gov">Email us</a> for assistance.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
-
-<ol>
-<li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
-<li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#x73;&#101;&#97;&#114;&#99;&#104;&#64;&#115;&#117;&#x70;&#x70;&#111;&#114;&#116;&#46;&#100;&#x69;&#103;&#x69;&#x74;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#118;">&#115;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#116;&#46;&#x64;&#105;&#103;&#105;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#46;&#x67;&#x6f;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
-</ol>
-
-
-<p><a id="filter"></a><strong><em>Troubleshooting Tip:</em></strong> You can remove or filter specific URLs using any of the following options.</p>
-
-<ol>
-<li><p>Remove the page from your site and return a 404 (Not Found) 401 (Gone), or 301 (Permanently Moved) HTTP status.</p></li>
-<li><p>Add a <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">noindex robots metatag or x-robots tag</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
-<li><p>Request the page's removal using the <a href="http://www.bing.com/webmaster/help/block-urls-from-bing-264e560a">Block URLs option in Bing Webaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/1663419">Remove URLs option in Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p></li>
-<li><p>Use the Filter URLs option under the <a href="/manual/domains-advanced.html">Advanced</a> tab. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
-</ol>
-
-
-<p><strong><em>Troubleshooting Tip:</em></strong> Are specific web pages missing from your Bing web results? You can tell us about any missing URLs via an RSS feed or manually (the Supplemental Feed and Supplemental URLs options under the <a href="/manual/domains-advanced.html">Advanced</a> tab, respectively). We'll fetch and index the pages and append them to your web results.</p>
+<p>Searchers will see the most recent tweet (posted within the past three days) that matches their search term.</p>
 
     </div>
 
@@ -167,7 +132,9 @@
       
       <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
       
-      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
+      <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
+      
+      <a href="/tagged/twitter"><span class="label label-info">twitter</span></a>
       
     </div>
    <div class='time'>
@@ -175,8 +142,8 @@
       
       
       
-      <a href="/manual/domains.html">
-        <time datetime="2013-08-29">August 29, 2013</time>
+      <a href="/manual/twitter.html">
+        <time datetime="2014-05-28">May 28, 2014</time>
       </a>
     </div>
     </article>

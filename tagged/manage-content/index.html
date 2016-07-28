@@ -201,6 +201,172 @@
  
     
     <h1>
+      <a href="/manual/domains.html">How to Edit Your Domains</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Domains</p>
+
+<p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
+
+<h2>Entire Site(s)</h2>
+
+<ul>
+<li>List yoursite.gov (without www) to search your entire site, including all subdomains.</li>
+<li>List yoursite.gov and yoursite2.gov to search multiple sites.</li>
+</ul>
+
+
+<h2>Specific Subdomains</h2>
+
+<ul>
+<li>List www.yoursite.gov to include only the primary 'www' domain.</li>
+<li>List subdomain.yoursite.gov to include subdomains.</li>
+</ul>
+
+
+<h2>Specific Directories</h2>
+
+<p>List yoursite.gov/folder to include folders. Note: this will include all sub-folders (if they exist), i.e. yoursite.gov/folder/folder2.</p>
+
+<p>You cannot specify individual URLs.</p>
+
+<p>Searches that start three or more subfolders deep cannot use our default configuration. <a href="mailto:search@support.digitalgov.gov">Email us</a> for assistance.</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
+
+<ol>
+<li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
+<li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
+<li>Email us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#115;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#x69;&#103;&#x69;&#x74;&#97;&#x6c;&#x67;&#x6f;&#118;&#46;&#103;&#x6f;&#x76;">&#x73;&#x65;&#97;&#114;&#x63;&#104;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#100;&#105;&#x67;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#x76;&#x2e;&#x67;&#111;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
+</ol>
+
+
+<p><a id="filter"></a><strong><em>Troubleshooting Tip:</em></strong> You can remove or filter specific URLs using any of the following options.</p>
+
+<ol>
+<li><p>Remove the page from your site and return a 404 (Not Found) 401 (Gone), or 301 (Permanently Moved) HTTP status.</p></li>
+<li><p>Add a <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">noindex robots metatag or x-robots tag</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
+<li><p>Request the page's removal using the <a href="http://www.bing.com/webmaster/help/block-urls-from-bing-264e560a">Block URLs option in Bing Webaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/1663419">Remove URLs option in Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p></li>
+<li><p>Use the Filter URLs option under the <a href="/manual/domains-advanced.html">Advanced</a> tab. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
+</ol>
+
+
+<p><strong><em>Troubleshooting Tip:</em></strong> Are specific web pages missing from your Bing web results? You can tell us about any missing URLs via an RSS feed or manually (the Supplemental Feed and Supplemental URLs options under the <a href="/manual/domains-advanced.html">Advanced</a> tab, respectively). We'll fetch and index the pages and append them to your web results.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/domains.html">
+        <time datetime="2016-07-28">July 28, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/collections.html">How to Create Collections Within Our Index</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Collections</p>
+
+<p>Would you like searchers to be able to change where they are searching, either to a particular place within your site, or to another site? You can create a collection that will search in any set of domains, subdomains, or subfolders.</p>
+
+<h2>Step 1. Create a Collection</h2>
+
+<p>Enter a name for the collection (such as FAQs, Archive, or News).</p>
+
+<p>Enter the domains, subdomains, or subfolders that you want this collection to search in. Start each URL prefix with http:// and end it in a trailing slash to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov).</p>
+
+<p>You cannot specify URLs for individual web pages. If you are including a subfolder, be sure to include the folder(s) where the files are actually stored, not the folder where the index page lives.</p>
+
+<p>Paths that are three or more subfolders deep may not return results immediately. <a href="mailto:search@support.digitalgov.gov">Email us</a> if you are not seeing search results for these paths.</p>
+
+<h2>Step 2. Opt to Show as a Facet</h2>
+
+<p>Click on the <a href="/manual/display-overview.html">Display Overview</a> page. Turn on your collection to allow searchers to see it as a search facet in the navigation bar above the search box on the results page (in the desktop view), or in the search menu (on smaller screens).</p>
+
+<h2>Step 3. Check Your Search Results Page</h2>
+
+<p>Searchers will see the collection name as an option that they can select in order to focus their search.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-2.png" alt="Collection on the search results page" /></p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your collection.</p>
+
+<ol>
+<li>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab.</li>
+<li>Change the form action from <code>action="http://search.usa.gov/search/"</code> to <code>action="http://search.usa.gov/search/docs"</code>.</li>
+<li>Add the following line to limit the results to your collection: <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>.</li>
+</ol>
+
+
+<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
+
+<p>See the sample search box below that is limited to news on <a href="http://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=autism">NIH.gov for a search on <em>autism</em></a>.</p>
+
+<p><a href="http://www.nih.gov/news/releases.htm"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-3.png" title="News-only search box on NIH.gov's News Releases page" alt="News-only search box on NIH.gov's News Releases page" /></a></p>
+
+<p><a href="http://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=autism"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-4.png" title="NIH.gov news-only search results page" alt="NIH.gov news-only search results page" /></a></p>
+
+<p><a name="sitelimit"></a></p>
+
+<p><strong><em>Did you know?</em></strong> If you don't want to set up a Collection, you can use the <code>sitelimit</code> parameter to search a subset of your content. Compare the collection-based results above with the results for <a href="http://search.usa.gov/search?affiliate=nih&amp;query=autism&amp;sitelimit=nih.gov/news">the same search using the sitelimit parameter</a>.</p>
+
+<p>Note that the searcher sees that results are filtered to nih.gov/news in a message under the search box, among other differences.</p>
+
+<p>Simply add the following line to your form code on your search box to use the <code>sitelimit</code> parameter.</p>
+
+<p><code>&lt;input type="hidden" name="sitelimit" id="sitelimit" value="http://www.agency.gov/limittothisfolder"&gt;</code></p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/collections"><span class="label label-info">collections</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/collections.html">
+        <time datetime="2016-07-28">July 28, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/best-bets.html">How to Boost Certain Results using Best Bets</a>
     </h1>
     
@@ -423,7 +589,7 @@ Keyword 4: market value
 
 <p>If you don't like the default web results, you can choose to use another index. Options follow.</p>
 
-<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can fetch and index your all of web site's content directly. Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x73;&#101;&#97;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#103;&#x69;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;">&#115;&#101;&#97;&#114;&#99;&#104;&#64;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#116;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;</a> and we'll work with you to determine the best way for you to tell us about your content.</p>
+<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can fetch and index your all of web site's content directly. Email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#58;&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#112;&#112;&#111;&#114;&#x74;&#46;&#100;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#103;&#x6f;&#118;">&#115;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#x61;&#108;&#103;&#x6f;&#118;&#46;&#103;&#x6f;&#118;</a> and we'll work with you to determine the best way for you to tell us about your content.</p>
 
 <p><strong>Option 2. Buy and Use Google Site Search.</strong> If you already have (or plan to purchase), <a href="https://www.google.com/work/search/products/gss.html">Google Site Search</a>, we'll send a searcher's query to the search index you've provided and we'll render the results within our search results page.</p>
 
@@ -780,198 +946,6 @@ Keyword 4: market value
  
     
     <h1>
-      <a href="/manual/collections.html">How to Create Collections Within Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Collections</p>
-
-<p>Would you like searchers to be able to change where they are searching, either to a particular place within your site, or to another site? You can create a collection that will search in any set of domains, subdomains, or subfolders.</p>
-
-<h2>Step 1. Create a Collection</h2>
-
-<p>Enter a name for the collection (such as FAQs, Archive, or News).</p>
-
-<p>Enter the domains, subdomains, or subfolders that you want this collection to search in. Start each URL prefix with http:// and end it in a trailing slash to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov).</p>
-
-<p>You cannot specify URLs for individual web pages. If you are including a subfolder, be sure to include the folder(s) where the files are actually stored, not the folder where the index page lives.</p>
-
-<p>Paths that are three or more subfolders deep may not return results immediately. <a href="mailto:search@support.digitalgov.gov">Email us</a> if you are not seeing search results for these paths.</p>
-
-<h2>Step 2. Opt to Show as a Facet</h2>
-
-<p>Click on the <a href="/manual/display-overview.html">Display Overview</a> page. Turn on your collection to allow searchers to see it as a search facet in the navigation bar above the search box on the results page (in the desktop view), or in the search menu (on smaller screens).</p>
-
-<h2>Step 3. Check Your Search Results Page</h2>
-
-<p>Searchers will see the collection name as an option that they can select in order to focus their search.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-2.png" alt="Collection on the search results page" /></p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your collection.</p>
-
-<ol>
-<li>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab.</li>
-<li>Change the form action from <code>action="http://search.usa.gov/search/"</code> to <code>action="http://search.usa.gov/search/docs"</code>.</li>
-<li>Add the following line to limit the results to your collection: <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>.</li>
-</ol>
-
-
-<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
-
-<p>See the sample search box below that is limited to news on <a href="http://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=autism">NIH.gov for a search on <em>autism</em></a>.</p>
-
-<p><a href="http://www.nih.gov/news/releases.htm"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-3.png" title="News-only search box on NIH.gov's News Releases page" alt="News-only search box on NIH.gov's News Releases page" /></a></p>
-
-<p><a href="http://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=autism"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-4.png" title="NIH.gov news-only search results page" alt="NIH.gov news-only search results page" /></a></p>
-
-<p><a name="sitelimit"></a></p>
-
-<p><strong><em>Did you know?</em></strong> If you don't want to set up a Collection, you can use the <code>sitelimit</code> parameter to search a subset of your content. Compare the collection-based results above with the results for <a href="http://search.usa.gov/search?affiliate=nih&amp;query=autism&amp;sitelimit=nih.gov/news">the same search using the sitelimit parameter</a>.</p>
-
-<p>Note that the searcher sees that results are filtered to nih.gov/news in a message under the search box, among other differences.</p>
-
-<p>Simply add the following line to your form code on your search box to use the <code>sitelimit</code> parameter.</p>
-
-<p><code>&lt;input type="hidden" name="sitelimit" id="sitelimit" value="http://www.agency.gov/limittothisfolder"&gt;</code></p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/collections"><span class="label label-info">collections</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/collections.html">
-        <time datetime="2015-06-12">June 12, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/domains-advanced.html">How to Use Advanced Options to Add or Filter Specific URLs</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > <a href="/manual/domains.html">Domains</a> > Advanced</p>
-
-<h2>Add a URL</h2>
-
-<p>Are specific web pages missing from your Bing web results? Tell us about these URLs and we'll append them to your web results. We offer two ways for you to tell us about the web pages that you want us to fetch and include in our web index, via an RSS feed (Supplemental Feed) or manually (Supplemental URLs).</p>
-
-<h3>Supplemental Feed</h3>
-
-<p>You can use an RSS feed to add URLs. The feed is useful if you'd like to automate the process, add multiple URLs, or both.</p>
-
-<p>Enter the URL of your RSS feed. Click submit. We'll fetch each URL in your feed and index the title, description, <em>and the full text of the document</em> for the items you provide. We'll display the title and description you provide (not the page's title or a snippet based on the page's content), as well as a results count.</p>
-
-<p>We'll update any items that include a publication date.</p>
-
-<p>Delete a URL added via RSS feed by deleting it as an item in your RSS feed. We'll remove the URL from our index the next time we fetch your RSS feed. If you need to remove it from our index immediately, you can take the additional step of deleting the URL by selecting Delete within the list of URLs on the Supplemental URLs page.</p>
-
-<p>Note that you <em>must</em> delete the URL from your RSS feed. Otherwise, the URL will reappear the next time we fetch your RSS feed.</p>
-
-<p>You can also delete <em>all</em> of the URLs added via the RSS feed by deleting the RSS feed itself.</p>
-
-<p>We can't restore URLs that don't exist within your <em>current</em> feed.</p>
-
-<h3>Supplemental URLs</h3>
-
-<p>You can also manually add a a specific URL on the Supplemental URLs page. We'll fetch each URL you add manually and we'll index the title, description, <em>and the full text of the document</em> for the link you provide. We'll display the title and description you provide (not the page's title or a snippet based on the page's content).</p>
-
-<p>Delete a manually added URL by selecting Delete within the list of supplemental URLs.</p>
-
-<p>The source column in the crawl report shows how you added the URL, via an RSS feed or manually.</p>
-
-<h2>Filter a URL</h2>
-
-<p>You can filter <em>a single URL</em> from the results on your site. Use it for emergency reasons only (such as spillage of classified information or unintentional publication of a page). Note that this option should be used only if the <a href="/manual/domains.html#filter">other options</a> aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p>
-
-<p>It is not meant to fix the results for entire site, such as for launch or redesign problems. For tips on how to fix these more systemic problems, read our <a href="/blog/redesign.html">Checklist for a Successful Website Redesign</a>.</p>
-
-<p>Entire the full path of the URL, e.g. use https://www.usa.gov/Citizen/Topics/Benefits.shtml, not usa.gov/citizen/topics.</p>
-
-<p>You can later use the delete option to remove the filter.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
-
-<ul>
-<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
-<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-<li><a href="http://atomenabled.org/developers/syndication/">Atom syndication format</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-</ul>
-
-
-<p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report for your PDF that says, "No content found in document"? Your PDF is likely an image-only, non-searchable file that was created from a paper document using a scanner. See the resources below for more information on how to create searchable PDF files.</p>
-
-<ul>
-<li><a href="http://blogs.adobe.com/acrolaw/2007/02/is_that_pdf_sea/">Is that PDF Searchable?</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (blog post)</li>
-<li><a href="https://acrobatusers.com/tutorials/how-to-create-a-searchable-pdf-file">How to Create Searchable PDF File</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (video)</li>
-</ul>
-
-
-<p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report that says your page is taking too long to load? Use <a href="http://tools.pingdom.com/fpt/">Pingdom Tools Full Page Test</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to test the load time of your page, analyze it, and find the bottlenecks.</p>
-
-<p><strong><em>Did you know?</em></strong> To help the public find your web pages when they search on Bing.com, we notify Bing about any URLs you add. While this helps with search engine optimization (SEO), it is not a cure-all. You should also register for and use commercial search engines' webmaster tools.</p>
-
-<ul>
-<li><a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-<li><a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Central</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
-      
-      <a href="/tagged/advanced"><span class="label label-info">advanced</span></a>
-      
-      <a href="/tagged/supplemental-feed"><span class="label label-info">supplemental-feed</span></a>
-      
-      <a href="/tagged/supplemental-urls"><span class="label label-info">supplemental-urls</span></a>
-      
-      <a href="/tagged/filter-urls"><span class="label label-info">filter-urls</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/domains-advanced.html">
-        <time datetime="2015-06-02">June 2, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
       <a href="/manual/rss.html">How to Add Your RSS Feeds to Our Index</a>
     </h1>
     
@@ -1161,42 +1135,79 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
  
     
     <h1>
-      <a href="/manual/youtube.html">How to Add Your YouTube Videos to Our Index</a>
+      <a href="/manual/domains-advanced.html">How to Use Advanced Options to Add or Filter Specific URLs</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > YouTube</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > <a href="/manual/domains.html">Domains</a> > Advanced</p>
 
-<h2>Tell Us About Your YouTube Channel</h2>
+<h2>Add a URL</h2>
 
-<p>Provide us with the <em>full URL</em> for your YouTube channel.</p>
+<p>Are specific web pages missing from your Bing web results? Tell us about these URLs and we'll append them to your web results. We offer two ways for you to tell us about the web pages that you want us to fetch and include in our web index, via an RSS feed (Supplemental Feed) or manually (Supplemental URLs).</p>
 
-<p>Some channels use a visitor-friendly name and are in the user folder (such as <a href="https://www.youtube.com/user/NASAtelevision">https://www.youtube.com/user/NASAtelevision</a> for NASA).</p>
+<h3>Supplemental Feed</h3>
 
-<p>Others use an alphanumeric string and are in the channel folder (such as <a href="https://www.youtube.com/channel/UCryGec9PdUCLjpJW2mgCuLw">https://www.youtube.com/channel/UCryGec9PdUCLjpJW2mgCuLw</a> for NASA Jet Propulsion Laboratory).</p>
+<p>You can use an RSS feed to add URLs. The feed is useful if you'd like to automate the process, add multiple URLs, or both.</p>
 
-<p>Either URL format works.</p>
+<p>Enter the URL of your RSS feed. Click submit. We'll fetch each URL in your feed and index the title, description, <em>and the full text of the document</em> for the items you provide. We'll display the title and description you provide (not the page's title or a snippet based on the page's content), as well as a results count.</p>
 
-<h2>Opt to Display Your Videos</h2>
+<p>We'll update any items that include a publication date.</p>
 
-<p>When you add the URL for your YouTube channel, we'll automatically index your videos&mdash;both your uploaded videos and playlists.</p>
+<p>Delete a URL added via RSS feed by deleting it as an item in your RSS feed. We'll remove the URL from our index the next time we fetch your RSS feed. If you need to remove it from our index immediately, you can take the additional step of deleting the URL by selecting Delete within the list of URLs on the Supplemental URLs page.</p>
 
-<p>We'll show the videos by default. You can toggle the settings for showing your videos on the <a href="/manual/display-overview.html">Display Overview</a> page, choosing to show them as a facet, inline module, or both.</p>
+<p>Note that you <em>must</em> delete the URL from your RSS feed. Otherwise, the URL will reappear the next time we fetch your RSS feed.</p>
 
-<p>You can edit the default label, Videos, on the RSS feed on the <a href="/manual/rss.html">RSS</a> page.</p>
+<p>You can also delete <em>all</em> of the URLs added via the RSS feed by deleting the RSS feed itself.</p>
 
-<p>See the sample results page below that shows video results for the <a href="http://search.tpwd.texas.gov/search?affiliate=tpwd&amp;query=mussels">Texas Parks and Wildlife Department for a search on <em>mussels</em></a>.</p>
+<p>We can't restore URLs that don't exist within your <em>current</em> feed.</p>
 
-<p><a href="http://search.tpwd.texas.gov/search?affiliate=tpwd&amp;query=mussels"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-video1.png" title="Results page with inline videos" alt="Results page with inline videos" /></a>
-<em>Results page with videos shown as an inline module</em></p>
+<h3>Supplemental URLs</h3>
 
-<p><a href="http://search.tpwd.texas.gov/search/news?affiliate=tpwd&amp;channel=1900&amp;query=mussels"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/social-media-video2.png" title="Video results page shown when searcher opts to view videos" alt="Video results page shown when searcher opts to view videos" /></a>
-<em>Video results page shown when searcher opts to view videos</em></p>
+<p>You can also manually add a a specific URL on the Supplemental URLs page. We'll fetch each URL you add manually and we'll index the title, description, <em>and the full text of the document</em> for the link you provide. We'll display the title and description you provide (not the page's title or a snippet based on the page's content).</p>
+
+<p>Delete a manually added URL by selecting Delete within the list of supplemental URLs.</p>
+
+<p>The source column in the crawl report shows how you added the URL, via an RSS feed or manually.</p>
+
+<h2>Filter a URL</h2>
+
+<p>You can filter <em>a single URL</em> from the results on your site. Use it for emergency reasons only (such as spillage of classified information or unintentional publication of a page). Note that this option should be used only if the <a href="/manual/domains.html#filter">other options</a> aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p>
+
+<p>It is not meant to fix the results for entire site, such as for launch or redesign problems. For tips on how to fix these more systemic problems, read our <a href="/blog/redesign.html">Checklist for a Successful Website Redesign</a>.</p>
+
+<p>Entire the full path of the URL, e.g. use https://www.usa.gov/Citizen/Topics/Benefits.shtml, not usa.gov/citizen/topics.</p>
+
+<p>You can later use the delete option to remove the filter.</p>
 
 <hr />
 
-<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
+
+<ul>
+<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
+<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+<li><a href="http://atomenabled.org/developers/syndication/">Atom syndication format</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+</ul>
+
+
+<p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report for your PDF that says, "No content found in document"? Your PDF is likely an image-only, non-searchable file that was created from a paper document using a scanner. See the resources below for more information on how to create searchable PDF files.</p>
+
+<ul>
+<li><a href="http://blogs.adobe.com/acrolaw/2007/02/is_that_pdf_sea/">Is that PDF Searchable?</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (blog post)</li>
+<li><a href="https://acrobatusers.com/tutorials/how-to-create-a-searchable-pdf-file">How to Create Searchable PDF File</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (video)</li>
+</ul>
+
+
+<p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report that says your page is taking too long to load? Use <a href="http://tools.pingdom.com/fpt/">Pingdom Tools Full Page Test</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to test the load time of your page, analyze it, and find the bottlenecks.</p>
+
+<p><strong><em>Did you know?</em></strong> To help the public find your web pages when they search on Bing.com, we notify Bing about any URLs you add. While this helps with search engine optimization (SEO), it is not a cure-all. You should also register for and use commercial search engines' webmaster tools.</p>
+
+<ul>
+<li><a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+<li><a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Central</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+</ul>
+
 
     </div>
 
@@ -1206,11 +1217,15 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
       
       <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
       
-      <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
+      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
       
-      <a href="/tagged/youtube"><span class="label label-info">youtube</span></a>
+      <a href="/tagged/advanced"><span class="label label-info">advanced</span></a>
       
-      <a href="/tagged/videos"><span class="label label-info">videos</span></a>
+      <a href="/tagged/supplemental-feed"><span class="label label-info">supplemental-feed</span></a>
+      
+      <a href="/tagged/supplemental-urls"><span class="label label-info">supplemental-urls</span></a>
+      
+      <a href="/tagged/filter-urls"><span class="label label-info">filter-urls</span></a>
       
     </div>
    <div class='time'>
@@ -1218,8 +1233,8 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
       
       
       
-      <a href="/manual/youtube.html">
-        <time datetime="2015-05-04">May 4, 2015</time>
+      <a href="/manual/domains-advanced.html">
+        <time datetime="2015-06-02">June 2, 2015</time>
       </a>
     </div>
     </article>
