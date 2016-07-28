@@ -103,6 +103,131 @@
  
     
     <h1>
+      <a href="/manual/code.html">How to Activate Your Search by Adding Our Code Snippets to Your Website</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search > Code Snippets</p>
+
+<p>Visit our <a href="https://search.usa.gov/sites/">Admin Center</a>, select your site, and click on the Activate Search option in the left-hand menu.</p>
+
+<p>Add the following two snippets of code to your website to "hook" your website and our hosted search service together. You can add this code to your individual web pages or to the template(s) in your content management system.</p>
+
+<h2>1. Form Snippet</h2>
+
+<p>Include this snippet of code where the form for your search box appears. It should look something like this:</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<h2>2. Javascript Snippet</h2>
+
+<p>Include this snippet of code before the closing <code>&lt;body&gt;</code> tag. This tag enables type-ahead search in the search box on your web pages and powers the data on trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the Admin Center. It should look something like this:</p>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+      var usasearch_config = { siteHandle:"YourSiteHandle" };
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "http://search.usa.gov/javascripts/remote.loader.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+//]]&gt;
+&lt;/script&gt;
+</code></pre>
+
+<blockquote><p><strong><em>HTTPS Quick Tip:</em></strong> If your website is secured with https, we support secure search on https://search.usa.gov. Simply add 's' to both your form action <code>https://search.usa.gov/search</code> and type-ahead script <code>https://search.usa.gov/javascripts/remote.loader.js</code>.</p></blockquote>
+
+<h2>Advanced: Options for Limiting a Search Box to Specific Folders or Subdomains</h2>
+
+<p>You can limit results to specific folders or subdomains by creating a collection, setting up an RSS feed, or passing in a hidden value.</p>
+
+<h3>Option 1. Limit to Collections</h3>
+
+<p>Create a <a href="/manual/collections.html">collection</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/docs/</code> and (b) add an input for this collection, <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>. It should look something like this:</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search/docs/" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input type="hidden" name="dc" value="###"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center as shown in the sample below.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/get-code-collection.png" alt="Value for the collection ID" /></p>
+
+<h3>Option 2. Limit to RSS Feeds</h3>
+
+<p>Set up an <a href="/manual/rss.html">RSS feed</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/news/</code> and (b) add an input for this feed, <code>&lt;input type="hidden" name="channel" value="###"&gt;</code>.  It should look something like this:</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search/news/" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input type="hidden" name="channel" value="###"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>The value is the number for your RSS ID, which is visible in the URL when you edit or preview your feed in the Admin Center.</p>
+
+<h3>Option 3. Limit to a Hidden Domain Value</h3>
+
+<p>Leave your domain blank on the <a href="/manual/domains.html">Domains</a> page and, instead, passing a hidden value for the domain in the search form code.</p>
+
+<p>See, for example, <a href="http://www.ri.gov">RI.gov</a>, <a href="http://www.dmv.ri.gov/">DMV.RI.gov</a>, <a href="http://www.health.ri.gov/">Health.RI.gov</a>. On Health.RI.gov, the following hidden value is added to limit to only the health subdomain.</p>
+
+<pre><code>&lt;input type="hidden" name="sitelimit" id="sitelimit" value="www.health.ri.gov" &gt;
+</code></pre>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> If you're using Drupal, be sure to check out our <a href="https://www.drupal.org/project/usasearch">Drupal module</a>.</p>
+
+<p><strong><em>Did you know?</em></strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers your domain (instead of USA.gov).</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
+      
+      <a href="/tagged/code-snippets"><span class="label label-info">code-snippets</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/code.html">
+        <time datetime="2016-06-22">June 22, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/best-bets.html">How to Boost Certain Results using Best Bets</a>
     </h1>
     
@@ -546,7 +671,7 @@ i14y (Beta) API instructions*</p>
 
 <p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
 
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#115;&#117;&#112;&#x70;&#111;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#111;&#118;&#46;&#x67;&#111;&#118;">&#x73;&#101;&#97;&#114;&#99;&#104;&#x40;&#115;&#x75;&#112;&#112;&#111;&#x72;&#116;&#46;&#100;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;</a>.</p>
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#115;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#x75;&#x70;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#46;&#103;&#111;&#118;">&#115;&#101;&#97;&#x72;&#99;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#x74;&#97;&#108;&#103;&#x6f;&#118;&#46;&#103;&#111;&#118;</a>.</p>
 
     </div>
 
@@ -561,105 +686,6 @@ i14y (Beta) API instructions*</p>
       
       
       <a href="/manual/index.html">
-        <time datetime="2015-11-02">November 2, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/content-overview.html">How to Add Your Content to Our Indexes: An Overview</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Content Overview</p>
-
-<p>To display the results on your search results page, we index content from various sources. Each time a searcher does a query on your site, we determine which index best answers the searcher's question and display results from it. This means a single search results page is often comprised of several indexes.</p>
-
-<p>When you first <a href="/manual/add-site.html">add a site</a>, we pull your homepage into your <a href="/manual/domains.html">domains</a> list, and populate any social media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/instagram.html">Instagram</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>) and <a href="/manual/rss.html">RSS feeds</a> that are linked from your homepage. Use the Discover option on this Content Overview page to automatically (re)discover the RSS and social media accounts on your site's homepage, or any other page you want to scan.</p>
-
-<p>You can also add content manually to each of our indexes.
-<a name="choose-an-index"></a></p>
-
-<h2>Add Your Web Pages</h2>
-
-<p>When you <a href="/manual/domains.html">fill out your domains</a>, we'll show results for all of your web pages listed within these domains. <strong><em>By default, these web results are powered by Bing.</em></strong></p>
-
-<p>If you don't like the default web results, you can choose to use another index. Options follow.</p>
-
-<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can fetch and index your all of web site's content directly. Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#x73;&#117;&#x70;&#112;&#x6f;&#x72;&#x74;&#46;&#100;&#105;&#103;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;">&#115;&#x65;&#97;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#x70;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#118;&#46;&#103;&#111;&#x76;</a> and we'll work with you to determine the best way for you to tell us about your content.</p>
-
-<p><strong>Option 2. Buy and Use Google Site Search.</strong> If you already have (or plan to purchase), <a href="https://www.google.com/work/search/products/gss.html">Google Site Search</a>, we'll send a searcher's query to the search index you've provided and we'll render the results within our search results page.</p>
-
-<p><strong>Option 3. Use Another Web Index of Your Choice.</strong> Most search indexes (like Google Search Appliance) expose their results as XML. If you have another search index that renders XML, let us know and we'll work with you to determine if you can use it.</p>
-
-<p>Once you've added your web pages, you can create <a href="/manual/collections.html">collections</a> to give searchers the option to narrow (or, less frequently, broaden) the results to a specific subset of pages.</p>
-
-<h2>Add Your Images</h2>
-
-<ul>
-<li><strong>Flickr.</strong> When you <a href="/manual/flickr.html">fill out your Flickr URL</a>, we'll index your Flickr photostream.</li>
-<li><strong>Instagram.</strong> When you <a href="/manual/instagram.html">fill out your Instagram account</a>, we'll index your Instagram photos.</li>
-<li><strong>Photo Galleries on Your Site.</strong> Do you have a multimedia gallery on your website for your agency's images? When you <a href="/manual/rss.html">provide us with a media RSS</a> (MRSS) for your gallery, we'll index its images.</li>
-<li><strong>Images on Your Web Pages.</strong> We backfill the image results from social media and photo galleries with the images published on the web pages of the <a href="/manual/domains.html">domain you've filled out</a>.</li>
-</ul>
-
-
-<h2>Add Your Videos</h2>
-
-<ul>
-<li><strong>YouTube.</strong> When you <a href="/manual/youtube.html">fill out your YouTube account</a>, we'll index your YouTube videos.</li>
-<li><strong>Video Galleries on Your Site.</strong> Do you have a multimedia gallery on your website for your agency's videos? When you <a href="/manual/rss.html">provide us with a media RSS</a> (MRSS) for your gallery, we'll index its videos.</li>
-</ul>
-
-
-<h2>Add Your News</h2>
-
-<ul>
-<li><strong>RSS Feeds.</strong> Do you have RSS feeds set up for your press releases, blog posts, or other newsworthy content? When you <a href="/manual/rss.html">provide us with an RSS</a>, we'll index the news items on that feed.</li>
-<li><strong>Twitter.</strong> Do you use Twitter to communicate about your agency's newsworthy content? When you <a href="/manual/twitter.html">fill out your Twitter account</a>, we'll index your tweets.</li>
-</ul>
-
-
-<h2>Add Your Recommendations</h2>
-
-<p>Create <a href="/manual/best-bets.html">best bets (text or graphics)</a>) to promote specific web pages. Best bets appear at the top of the results page when a searcher's query matches the text of their titles, descriptions, or keywords.</p>
-
-<h2>Turn It All On</h2>
-
-<p>After you've added your content, be sure to <a href="/manual/display-overview.html">set the display options</a> to control how each index appears on your search results page.</p>
-
-<p>We also have three pre-built, government-centric content modules that you can opt to turn on, too.</p>
-
-<ul>
-<li><strong>Job Openings.</strong> <a href="/manual/govbox-jobs.html">Toggle on the Jobs module</a> to show your agency's job openings from USAJobs (federal government) or NeoGov (applicable local and state governments).</li>
-<li><strong><em>Federal Register</em> Documents.</strong> <a href="/manual/govbox-federal-register.html">Toggle on the <em>Federal Register</em> module</a> to show your agency's documents posted on FederalRegister.gov.</li>
-<li><strong>Health Topics.</strong> <a href="/manual/govbox-health.html">Toggle on the Health Topics module</a> to show authoritative health information from MedlinePlus and ClinicalTrials.gov.</li>
-</ul>
-
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> We've connected your site to your agency on the backend. If you're not seeing jobs or <em>Federal Register</em> documents specific to your agency, <a href="mailto:search@support.digitalgov.gov">email us</a> so we can fix the agency setting for your site.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/content-overview.html">
         <time datetime="2015-11-02">November 2, 2015</time>
       </a>
     </div>
@@ -945,7 +971,7 @@ i14y (Beta) API instructions*</p>
 
 <p><strong><em>Troubleshooting Tip:</em></strong> For non-English sites, some agencies opt to include the specific location of the language's content (such as agency.gov/language or language.agency.gov) in their <a href="/manual/domains.html">Domains</a> to further refine the search results. Test the results for your non-English site with both the general agency.gov and the language-specific location to determine which setting gives you the best results.</p>
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x73;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#118;">&#115;&#101;&#x61;&#114;&#99;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#x64;&#x69;&#x67;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#118;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#x73;&#x65;&#97;&#x72;&#x63;&#104;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#97;&#108;&#103;&#111;&#118;&#46;&#103;&#111;&#x76;">&#x73;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#x76;</a>.</p>
 
     </div>
 
@@ -1014,7 +1040,7 @@ i14y (Beta) API instructions*</p>
 
 <h2>Site Handle</h2>
 
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#115;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;">&#115;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#115;&#117;&#x70;&#112;&#111;&#114;&#x74;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#118;</a>.</p>
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#103;&#x6f;&#118;&#46;&#x67;&#x6f;&#x76;">&#x73;&#101;&#97;&#114;&#99;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#118;</a>.</p>
 
 <p><a href="http://search.socialsecurity.gov/search?query=office+locations&amp;affiliate=ssa"><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/settings.png" title="Site name and handle on SocialSecurity.gov's search results page" alt="Site name and handle on SocialSecurity.gov's search results page" /></a></p>
 
@@ -1024,7 +1050,7 @@ i14y (Beta) API instructions*</p>
 
 <h2>Site Language</h2>
 
-<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">66 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#x73;&#x65;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#118;">&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#x76;</a>.</p>
+<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">66 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#115;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#x72;&#x74;&#46;&#100;&#105;&#103;&#105;&#x74;&#x61;&#108;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;">&#115;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;</a>.</p>
 
 <h2>Delete</h2>
 
