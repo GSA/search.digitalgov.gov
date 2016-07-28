@@ -3,7 +3,7 @@
 <head>
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <title>September 2014 Release Notes</title>
+  <title>Preparing Your Site for HTTPS</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -97,77 +97,108 @@
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/releases/september-2014.html">September 2014 Release Notes</a>
+    <a href="/manual/https-transition.html">Preparing Your Site for HTTPS</a>
   </h1>
   
 
   <div class='post-content'>
-    <h2>Promote Related Content as Value-Added Links</h2>
+    <p><a href="https://https.cio.gov/">OMB memo M-15-13</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> requires all publicly available federal websites and web services to <a href="https://www.digitalgov.gov/2015/07/21/an-introduction-to-https-by-18f-and-digitalgov-university/">implement HTTPS</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> by December 31, 2016.</p>
 
-<p>To help searchers more easily find what they're looking for, you can now promote related content by listing it as a set of value-added links under your organic web results. See the sample results page below that shows value-added links for EDGAR filings for a search on <em>apple</em> on SEC.gov.</p>
+<p>Below is a checklist of action items that should be completed in order for your search site to function as expected in HTTPS.</p>
 
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/sitelink.png" title="Sitelink-generated links for EDGAR filings on SEC.gov" alt="Sitelink-generated links for EDGAR filings on SEC.gov" /></p>
+<h2>1. The Admin Center</h2>
 
-<p>Do you have related content that you'd like to display as value-added links that searchers should see within the context of each other (such as related forms, instructions, and publications)? If your related content follows a discernable URL pattern, email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#115;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#x67;&#111;&#x76;">&#115;&#101;&#97;&#x72;&#99;&#x68;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#97;&#x6c;&#103;&#111;&#118;&#46;&#x67;&#111;&#118;</a> and we'll work with you to promote the related content on your site.</p>
+<p>Update all URLs that are listed in the Search Admin Center for each of your search configurations. <em>You will need to update the links for all of your search configurations.</em></p>
 
-<p>We've open sourced the <a href="https://github.com/GSA/sitelink_generator">code for the sitelink generator</a> on Github so you can <a href="https://github.com/GSA/sitelink_generator/fork">fork the code</a> and contribute to it directly. We've also <a href="http://rubygems.org/gems/sitelink_generator">published it as Ruby gem</a>.</p>
+<h3>Everyone:</h3>
 
-<p>Thanks, <a href="http://www.sec.gov">SEC.gov</a> team, for helping us build this new feature!</p>
-
-<h2>Other Features</h2>
+<p><strong>Dashboard:</strong></p>
 
 <ul>
-<li>Searchers now see underlined links when they hover over them on the results page.</li>
-<li>Searchers using screen readers now see an <a href="http://www.w3.org/TR/wai-aria/">ARIA</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> alert for type-ahead search suggestions to let them know the number of available suggestions and how to access them.</li>
-<li>You can now add a tagline at the top of your results page. See the sample tagline, <em>NIJ.gov - Strengthen Science. Advance Justice.</em>, on <a href="http://search.usa.gov/search?affiliate=national-institute-of-justice&amp;query=dna">NIJ.gov's results page</a>.</li>
-<li>You can now left-align your hamburger menu. See the sample left-aligned menu on <a href="http://search.whitehouse.gov/search?affiliate=wh&amp;query=bo">WhiteHouse.gov's results page</a>. (Perhaps needed because <a href="http://time.com/3107557/top-10-lefties/">Obama is a leftie</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>?)</li>
-<li>You can now add an alt tag to your logo on the <a href="/manual/brand.html">Image Assets</a> page in the Admin Center.</li>
-<li>To improve its accessibility, you now see legends and instructional text for all radio button options in the Admin Center. You can also tab logically through all menu items.</li>
+<li><strong>Settings:</strong> Update your Homepage URL.</li>
 </ul>
 
 
-<h2>Chores</h2>
+<p><strong>Content:</strong></p>
 
 <ul>
-<li>We upgraded to version 4.0 of the <a href="https://rubygems.org/gems/airbrake">Airbrake gem</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and version 6.5 of <a href="http://www.redhat.com/en/technologies/linux-platforms/enterprise-linux">Red Hat Enterprise Linux</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. We also installed patches to address the <a href="https://www.us-cert.gov/ncas/alerts/TA14-268A">Shellshock vulnerability</a>.</li>
-<li>We gained 40% more capacity in our main Elasticsearch cluster by upgrading our hardware.</li>
-<li>We removed infinite scroll on the results page.</li>
-<li>We now redirect searchers to USA.gov's 404 page when they use a null or incorrect 'affiliate' parameter.</li>
+<li><strong>Content Overview:</strong> No action needed. The URL that we scan for social media accounts is synced with the homepage you have listed in the Dashboard section.</li>
+<li><strong>Domains:</strong> No action needed, as this list isn’t protocol-specific.</li>
+<li><strong>Collections:</strong> Update all URL paths in your collections; if you have mixed collections, leave any HTTP sites as-is.</li>
+<li><strong>Routed Queries:</strong> Update routed query URLs.</li>
+<li><strong>RSS feeds:</strong> Update RSS feed URLs. The indexing will error if the protocol listed in our system for the feed URL does not match the feed URL on your site, or if you’ve placed a 301 redirect on your old HTTP version of the feed pointing to the new HTTPS version of the feed. We will also need to update the URLs for all items that are already in our index. <a href="mailto:search@support.digitalgov.gov">Email us</a> and we will do a global update to change HTTP to HTTPS for you. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS.</li>
 </ul>
 
 
-<h2>Fixes</h2>
+<p><strong>Display:</strong></p>
 
 <ul>
-<li>We've added a user agent to our request headers so you can see it when we poll your RSS feeds.</li>
-<li>If you've opted to turn off web tracking, we now turn off the tags for both our own Google Analytics and the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a>.</li>
-<li>We now show fewer similar or duplicate pictures in our image results. [<a href="https://github.com/GSA/asis/commit/f6ab91539efa965325dbe02b6c67ff68a7dff431">Commit f6ab915</a>]</li>
-<li>We fixed our image search pagination to account for really old pictures and how we group photos into albums. [<a href="https://github.com/GSA/asis/commit/b12eb198c900d0d1a00c06a017477114b003489c">Commit b12eb19</a>]</li>
-<li>We also fixed our indexing of images with circa dates. [<a href="https://github.com/GSA/asis/commit/f7b577c21daed4ac5b00711a70028602c4117d72">Commit f7b577c</a>]</li>
-<li>We lessened the complexity of the importer logic for Instagram. [<a href="https://github.com/GSA/asis/commit/5f828e3e426d66300fcff574ffecff262e9b4d73">Commit 5f828e3</a>]</li>
-<li>The option to narrow results to images only now appears by default for sites with an Instagram account. It had previously displayed only for sites with a Flickr account.</li>
-<li>Searchers no longer see government-wide image results on sites without a Flickr or Instagram account. They now see site-specific image results.</li>
-<li>Image searches without a search term no longer cause an error.</li>
+<li><strong>Image Assets:</strong> Update the Favicon URL.</li>
+<li><strong>Header &amp; Footer:</strong> Update header and footer links.</li>
+<li><strong>No Results Page:</strong> Update alternative links.</li>
 </ul>
 
+
+<h3>Only those using <code>Domains &gt; Advanced</code> features:</h3>
+
+<ul>
+<li><strong>Supplemental Feed:</strong> Update RSS feed URLs. The indexing will error if the protocol listed in our system for the feed URL does not match the feed URL on your site, or if you’ve placed a 301 redirect on your old HTTP version of the feed pointing to the new HTTPS version of the feed. We will also need to update the URLs for all items that are already in our index. <a href="mailto:search@support.digitalgov.gov">Email us</a> and we will do a global update to change HTTP to HTTPS for you. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS.</li>
+<li><strong>Supplemental URLs:</strong> Update supplemental URLs.</li>
+<li><strong>Filter URLs:</strong> Update filtered URLs.</li>
+</ul>
+
+
+<h2>2. Masked Domains</h2>
+
+<p>If your site uses <a href="http://search.digitalgov.gov/manual/cname.html">domain masking</a>: <a href="mailto:search@support.digitalgov.gov">contact our team</a> to be added to our SSL certificate. While this step doesn't apply to everyone, it does need to be done before step 3.</p>
+
+<h2>3. Form Code Action on Your Website</h2>
+
+<p>Update your form code action: An <code>s</code> must be added to your site’s form action in order for the request to be made over HTTPS, and for the results page to be served over HTTPS. Example:</p>
+
+<p><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;</code></p>
+
+<h2>4. Commercial Search Engines</h2>
+
+<p>Notify Google and Bing about the change; Google and Bing treat a migration from HTTP to HTTPS as a site move.</p>
+
+<ul>
+<li>Google has a step-by-step guide, <a href="https://support.google.com/webmasters/answer/6033049">Move a Site with URL changes</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>For Bing, review <a href="https://www.bing.com/webmaster/help/how-to-use-the-site-move-tool-bb8f5112">How to Use the Site Move tool</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+</ul>
+
+
+<p>Additional SEO best practices:</p>
+
+<ul>
+<li>Update your XML sitemap with HTTPS URLs.</li>
+<li>Use <code>rel canonical</code> to <a href="https://support.google.com/webmasters/answer/139066?hl=en#https">declare HTTPS the preferred version</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>Update internal website links.</li>
+<li>Update links to your website from social media and other platforms managed by your agency.</li>
+</ul>
+
+
+<hr />
+
+<p><strong><em>Additional Information:</em></strong> Read more about the <a href="https://https.cio.gov/">HTTPS-Only Standard</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> from the Federal CIO Council.</p>
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+    <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+    
+    <a href="/tagged/https"><span class="label label-info">https</span></a>
     
   </div>
 
   <div class='time'>
     
     
-    </br><span>Page last reviewed or updated:</span>
     
     
-    
-    <a href="/releases/september-2014.html">
-      <time>November 17, 2014</time>
+    <a href="/manual/https-transition.html">
+      <time>July 28, 2016</time>
     </a>
   </div>
 

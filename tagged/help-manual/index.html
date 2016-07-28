@@ -218,6 +218,115 @@
  
     
     <h1>
+      <a href="/manual/https-transition.html">Preparing Your Site for HTTPS</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="https://https.cio.gov/">OMB memo M-15-13</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> requires all publicly available federal websites and web services to <a href="https://www.digitalgov.gov/2015/07/21/an-introduction-to-https-by-18f-and-digitalgov-university/">implement HTTPS</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> by December 31, 2016.</p>
+
+<p>Below is a checklist of action items that should be completed in order for your search site to function as expected in HTTPS.</p>
+
+<h2>1. The Admin Center</h2>
+
+<p>Update all URLs that are listed in the Search Admin Center for each of your search configurations. <em>You will need to update the links for all of your search configurations.</em></p>
+
+<h3>Everyone:</h3>
+
+<p><strong>Dashboard:</strong></p>
+
+<ul>
+<li><strong>Settings:</strong> Update your Homepage URL.</li>
+</ul>
+
+
+<p><strong>Content:</strong></p>
+
+<ul>
+<li><strong>Content Overview:</strong> No action needed. The URL that we scan for social media accounts is synced with the homepage you have listed in the Dashboard section.</li>
+<li><strong>Domains:</strong> No action needed, as this list isn’t protocol-specific.</li>
+<li><strong>Collections:</strong> Update all URL paths in your collections; if you have mixed collections, leave any HTTP sites as-is.</li>
+<li><strong>Routed Queries:</strong> Update routed query URLs.</li>
+<li><strong>RSS feeds:</strong> Update RSS feed URLs. The indexing will error if the protocol listed in our system for the feed URL does not match the feed URL on your site, or if you’ve placed a 301 redirect on your old HTTP version of the feed pointing to the new HTTPS version of the feed. We will also need to update the URLs for all items that are already in our index. <a href="mailto:search@support.digitalgov.gov">Email us</a> and we will do a global update to change HTTP to HTTPS for you. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS.</li>
+</ul>
+
+
+<p><strong>Display:</strong></p>
+
+<ul>
+<li><strong>Image Assets:</strong> Update the Favicon URL.</li>
+<li><strong>Header &amp; Footer:</strong> Update header and footer links.</li>
+<li><strong>No Results Page:</strong> Update alternative links.</li>
+</ul>
+
+
+<h3>Only those using <code>Domains &gt; Advanced</code> features:</h3>
+
+<ul>
+<li><strong>Supplemental Feed:</strong> Update RSS feed URLs. The indexing will error if the protocol listed in our system for the feed URL does not match the feed URL on your site, or if you’ve placed a 301 redirect on your old HTTP version of the feed pointing to the new HTTPS version of the feed. We will also need to update the URLs for all items that are already in our index. <a href="mailto:search@support.digitalgov.gov">Email us</a> and we will do a global update to change HTTP to HTTPS for you. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS.</li>
+<li><strong>Supplemental URLs:</strong> Update supplemental URLs.</li>
+<li><strong>Filter URLs:</strong> Update filtered URLs.</li>
+</ul>
+
+
+<h2>2. Masked Domains</h2>
+
+<p>If your site uses <a href="http://search.digitalgov.gov/manual/cname.html">domain masking</a>: <a href="mailto:search@support.digitalgov.gov">contact our team</a> to be added to our SSL certificate. While this step doesn't apply to everyone, it does need to be done before step 3.</p>
+
+<h2>3. Form Code Action on Your Website</h2>
+
+<p>Update your form code action: An <code>s</code> must be added to your site’s form action in order for the request to be made over HTTPS, and for the results page to be served over HTTPS. Example:</p>
+
+<p><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;</code></p>
+
+<h2>4. Commercial Search Engines</h2>
+
+<p>Notify Google and Bing about the change; Google and Bing treat a migration from HTTP to HTTPS as a site move.</p>
+
+<ul>
+<li>Google has a step-by-step guide, <a href="https://support.google.com/webmasters/answer/6033049">Move a Site with URL changes</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>For Bing, review <a href="https://www.bing.com/webmaster/help/how-to-use-the-site-move-tool-bb8f5112">How to Use the Site Move tool</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+</ul>
+
+
+<p>Additional SEO best practices:</p>
+
+<ul>
+<li>Update your XML sitemap with HTTPS URLs.</li>
+<li>Use <code>rel canonical</code> to <a href="https://support.google.com/webmasters/answer/139066?hl=en#https">declare HTTPS the preferred version</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>Update internal website links.</li>
+<li>Update links to your website from social media and other platforms managed by your agency.</li>
+</ul>
+
+
+<hr />
+
+<p><strong><em>Additional Information:</em></strong> Read more about the <a href="https://https.cio.gov/">HTTPS-Only Standard</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> from the Federal CIO Council.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/https"><span class="label label-info">https</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/https-transition.html">
+        <time datetime="2016-07-28">July 28, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/code.html">How to Activate Your Search by Adding Our Code Snippets to Your Website</a>
     </h1>
     
@@ -695,6 +804,279 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
  
     
     <h1>
+      <a href="/manual/monthly-reports.html">How to Analyze Your Monthly Reports</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Monthly Reports</p>
+
+<p>The monthly report gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and <a href="/manual/clicks.html">clicks</a> each month.</p>
+
+<p>Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.</p>
+
+<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
+
+<p>Data are available in the Admin Center from August 2014.</p>
+
+<h2>Monthly Usage Stats</h2>
+
+<p>Data for the total number of queries and clicks. Use this report to find and analyze the so-called <a href="http://www.searchtools.com/analysis/long-tail.html">short head</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> of your most popular search queries and clicks, which are typically the same as your site's <a href="http://www.usability.gov/tags/task-analysis/">top tasks</a>.</p>
+
+<h3>Queries with No Results</h3>
+
+<p>A list of queries that returned no results. Sometimes searchers look for information on the wrong website, and sometimes they use different words than what are used on the page, and so they get no results from the search index. Use this list of Queries with No Results to help searchers get to the information they're looking for. You can set up <a href="/manual/best-bets.html">Best Bets (Text or Graphics)</a>), or a <a href="/manual/routed-queries.html">Routed Query</a>. You can also <a href="/manual/no-results.html">customize the No Results message</a> displayed on your results page.</p>
+
+<h2>Impressions and Clicks by Module</h2>
+
+<p>Detailed data for the total number of impressions and clicks and your clickthru rate (CTR) are presented for each "module" on the search results page. We also provide the average CTR across all DigitalGov Search customers so you can see how your rate compares to the average rate. The data in the table is sorted in descending order from the most to least number of clicks.</p>
+
+<p>Use this report to inform which <a href="/manual/display-overview.html">modules you opt to display</a>.</p>
+
+<p><strong><em>Drill down into best bets.</em></strong> Select the option to drill down into your <a href="/manual/best-bets.html">Best Bets (Text or Graphics)</a> to see the number of impressions, number of clicks, and CTR for each best bet. The data in the table is sorted in descending order from the highest to lowest CTR. Review and edit best bets as needed. Focus on those with a high number of impressions and low CTR to make the biggest impact on searchers' experience (and on your overall CTR). Select drill down again to see a pie chart of the search terms that led to an impression on each best bet.</p>
+
+<h2>Download Top Queries</h2>
+
+<p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV (comma-separated values) link to download the list as a text file. Once you've downloaded the CSV file, you can easily <a href="https://support.office.com/en-us/article/Import-or-export-text-txt-or-csv-files-e8ab9ff3-be8d-43f1-9d52-b5e8a008ba5c">import it  into Excel</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> or another speadsheet program to analyze the data.</p>
+
+<p>The CSV file contains three columns: (1) query, (2) raw count, and (3) IP-deduped.</p>
+
+<p>Read <a href="https://www.digitalgov.gov/2013/10/24/understanding-your-users-needs-by-analyzing-search-terms/">Understanding Your Users' Needs By Analyzing Search Terms</a> for tips on how to create a semi-automated report for analyzing the data in this CSV file on a regular basis.</p>
+
+<h2>Definitions</h2>
+
+<p>All data presented on this page (and other pages in the Admin Center) are IP-deduped to exclude bots and other noise in an attempt to accurately represent searchers' intent on your site. Some definitions follow.</p>
+
+<p><strong><a href="/manual/queries.html">Queries</a>:</strong> Number of times a search query (that is, a word or string of words) was entered in the search box by a unique searcher.</p>
+
+<p><strong><a href="/manual/clicks.html">Clicks</a>.</strong> Number of times a searcher clicked on one of your pages within the search results for a particular query.</p>
+
+<p><strong>Impressions:</strong> Number of times a module is displayed, whether it is clicked on or not. Not all modules are displayed for all queries. Each time a module is displayed it is counted as one impression.</p>
+
+<p><strong>Clickthru Rate (CTR):</strong> The rate (expressed in a percentage) at which searchers click on a module. This rate is calculated by dividing the total number of clicks by the total number of impressions. CTR is useful to measure the performance of specific campaigns, such as <a href="/manual/best-bets.html">best bets</a> for seasonal events.</p>
+
+<p><strong>Raw count:</strong> Total number of times the query was submitted. The raw count is provided in the downloadable CSV files only.</p>
+
+<p><strong>IP-deduped count:</strong> Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of "real," human traffic.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> On the first of each month, we email you a report with data on the previous month's queries, clicks, and top search terms.</p>
+
+<p><strong><em>Did you know?</em></strong> The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site in the past day or so.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/queries"><span class="label label-info">queries</span></a>
+      
+      <a href="/tagged/clicks"><span class="label label-info">clicks</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/monthly-reports.html">
+        <time datetime="2015-11-02">November 2, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/index.html">Help Manual: How to Set Up Your Search Box</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>We provide a search box that searches across all of your <em>public-facing</em> digital content. We support an unlimited number of web pages across multiple domains and we integrate your RSS feeds, tweets, YouTube videos, and Flickr and Instagram photos.</p>
+
+<p>Browse through our <a href="/blog/go-live.html">Go-Live Punch List</a> for some quick tips on how to configure the search experience for your website, or watch our <a href="/manual/training.html">training videos</a>.</p>
+
+<p>Watch our <a href="https://www.youtube.com/watch?v=TnlpuudK_WY">Getting Started video</a> (4 mins)&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<h3><i class="icon-dashboard"></i> Dashboard</h3>
+
+<p><a href="/manual/site-overview.html">Site overview</a>  <br/>
+<a href="/manual/users.html">Manage users</a>  <br/>
+<a href="/manual/settings.html">Settings</a></p>
+
+<h3><i class="icon-bar-chart"></i> Analytics</h3>
+
+<p><a href="/manual/queries.html">Queries</a>  <br/>
+<a href="/manual/clicks.html">Clicks</a>  <br/>
+<a href="/manual/monthly-reports.html">Monthly reports</a>  <br/>
+<a href="/manual/third-party.html">3rd party tracking</a></p>
+
+<h3><i class="icon-file"></i> Manage Content</h3>
+
+<p><a href="/manual/content-overview.html">Content overview</a>  <br/>
+<a href="/manual/domains.html">Domains</a> (plus <a href="/manual/domains-advanced.html">advanced options to add or filter URLs</a>)  <br/>
+<a href="/manual/collections.html">Collections</a>  <br/>
+<a href="/manual/i14y-drawers.html">i14y drawers</a> <br/>
+<a href="/manual/best-bets.html">Best bets: text and/or graphics</a>  <br/>
+<a href="/manual/routed-queries.html">Routed queries</a>  <br/>
+<a href="/manual/rss.html">RSS</a>  <br/>
+<a href="/manual/youtube.html">YouTube</a>  <br/>
+<a href="/manual/twitter.html">Twitter</a>  <br/>
+<a href="/manual/flickr.html">Flickr</a>  <br/>
+<a href="/manual/instagram.html">Instagram</a></p>
+
+<h3><i class="icon-desktop"></i> Manage Display</h3>
+
+<p><a href="/manual/display-overview.html">Display overview</a> (including <a href="/manual/govbox-jobs.html">job openings</a>, <a href="/manual/govbox-federal-register.html"><em>Federal Register</em></a>, and <a href="/manual/govbox-health.html">health topics</a>)  <br/>
+<a href="/manual/brand.html">Brand</a> (font &amp; colors, image assets, and header &amp; footer)  <br/>
+Custom <a href="/manual/no-results.html">No Results</a> page  <br/>
+Custom <a href="/manual/system-alert.html">Search Page Alert</a></p>
+
+<h3><i class="icon-eye-open"></i> Preview</h3>
+
+<p><a href="/manual/preview.html">Preview</a></p>
+
+<h3><i class="icon-code"></i> Activate Search</h3>
+
+<p><a href="/manual/code.html">Code snippets</a>  <br/>
+Search API access key*  <br/>
+Search Results API instructions*  <br/>
+Type-ahead API instructions*  <br/>
+i14y (Beta) API instructions*</p>
+
+<p>* These APIs are available for use on official government websites only. You must be a DigitalGov Search customer. <a href="https://search.usa.gov/sites">Sign in</a> is required. Keys and instructions for each can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search.</p>
+
+<p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
+
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#111;&#118;">&#115;&#x65;&#97;&#114;&#99;&#104;&#64;&#115;&#117;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/index.html">
+        <time datetime="2015-11-02">November 2, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/content-overview.html">How to Add Your Content to Our Indexes: An Overview</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Content Overview</p>
+
+<p>To display the results on your search results page, we index content from various sources. Each time a searcher does a query on your site, we determine which index best answers the searcher's question and display results from it. This means a single search results page is often comprised of several indexes.</p>
+
+<p>When you first <a href="/manual/add-site.html">add a site</a>, we pull your homepage into your <a href="/manual/domains.html">domains</a> list, and populate any social media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/instagram.html">Instagram</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>) and <a href="/manual/rss.html">RSS feeds</a> that are linked from your homepage. Use the Discover option on this Content Overview page to automatically (re)discover the RSS and social media accounts on your site's homepage, or any other page you want to scan.</p>
+
+<p>You can also add content manually to each of our indexes.
+<a name="choose-an-index"></a></p>
+
+<h2>Add Your Web Pages</h2>
+
+<p>When you <a href="/manual/domains.html">fill out your domains</a>, we'll show results for all of your web pages listed within these domains. <strong><em>By default, these web results are powered by Bing.</em></strong></p>
+
+<p>If you don't like the default web results, you can choose to use another index. Options follow.</p>
+
+<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can fetch and index your all of web site's content directly. Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#58;&#x73;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#116;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;">&#115;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#x67;&#111;&#x76;</a> and we'll work with you to determine the best way for you to tell us about your content.</p>
+
+<p><strong>Option 2. Buy and Use Google Site Search.</strong> If you already have (or plan to purchase), <a href="https://www.google.com/work/search/products/gss.html">Google Site Search</a>, we'll send a searcher's query to the search index you've provided and we'll render the results within our search results page.</p>
+
+<p><strong>Option 3. Use Another Web Index of Your Choice.</strong> Most search indexes (like Google Search Appliance) expose their results as XML. If you have another search index that renders XML, let us know and we'll work with you to determine if you can use it.</p>
+
+<p>Once you've added your web pages, you can create <a href="/manual/collections.html">collections</a> to give searchers the option to narrow (or, less frequently, broaden) the results to a specific subset of pages.</p>
+
+<h2>Add Your Images</h2>
+
+<ul>
+<li><strong>Flickr.</strong> When you <a href="/manual/flickr.html">fill out your Flickr URL</a>, we'll index your Flickr photostream.</li>
+<li><strong>Instagram.</strong> When you <a href="/manual/instagram.html">fill out your Instagram account</a>, we'll index your Instagram photos.</li>
+<li><strong>Photo Galleries on Your Site.</strong> Do you have a multimedia gallery on your website for your agency's images? When you <a href="/manual/rss.html">provide us with a media RSS</a> (MRSS) for your gallery, we'll index its images.</li>
+<li><strong>Images on Your Web Pages.</strong> We backfill the image results from social media and photo galleries with the images published on the web pages of the <a href="/manual/domains.html">domain you've filled out</a>.</li>
+</ul>
+
+
+<h2>Add Your Videos</h2>
+
+<ul>
+<li><strong>YouTube.</strong> When you <a href="/manual/youtube.html">fill out your YouTube account</a>, we'll index your YouTube videos.</li>
+<li><strong>Video Galleries on Your Site.</strong> Do you have a multimedia gallery on your website for your agency's videos? When you <a href="/manual/rss.html">provide us with a media RSS</a> (MRSS) for your gallery, we'll index its videos.</li>
+</ul>
+
+
+<h2>Add Your News</h2>
+
+<ul>
+<li><strong>RSS Feeds.</strong> Do you have RSS feeds set up for your press releases, blog posts, or other newsworthy content? When you <a href="/manual/rss.html">provide us with an RSS</a>, we'll index the news items on that feed.</li>
+<li><strong>Twitter.</strong> Do you use Twitter to communicate about your agency's newsworthy content? When you <a href="/manual/twitter.html">fill out your Twitter account</a>, we'll index your tweets.</li>
+</ul>
+
+
+<h2>Add Your Recommendations</h2>
+
+<p>Create <a href="/manual/best-bets.html">best bets (text or graphics)</a>) to promote specific web pages. Best bets appear at the top of the results page when a searcher's query matches the text of their titles, descriptions, or keywords.</p>
+
+<h2>Turn It All On</h2>
+
+<p>After you've added your content, be sure to <a href="/manual/display-overview.html">set the display options</a> to control how each index appears on your search results page.</p>
+
+<p>We also have three pre-built, government-centric content modules that you can opt to turn on, too.</p>
+
+<ul>
+<li><strong>Job Openings.</strong> <a href="/manual/govbox-jobs.html">Toggle on the Jobs module</a> to show your agency's job openings from USAJobs (federal government) or NeoGov (applicable local and state governments).</li>
+<li><strong><em>Federal Register</em> Documents.</strong> <a href="/manual/govbox-federal-register.html">Toggle on the <em>Federal Register</em> module</a> to show your agency's documents posted on FederalRegister.gov.</li>
+<li><strong>Health Topics.</strong> <a href="/manual/govbox-health.html">Toggle on the Health Topics module</a> to show authoritative health information from MedlinePlus and ClinicalTrials.gov.</li>
+</ul>
+
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> We've connected your site to your agency on the backend. If you're not seeing jobs or <em>Federal Register</em> documents specific to your agency, <a href="mailto:search@support.digitalgov.gov">email us</a> so we can fix the agency setting for your site.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/content-overview.html">
+        <time datetime="2015-11-02">November 2, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/color-codes.html">Key to Color Coding in the Admin Center</a>
     </h1>
     
@@ -822,340 +1204,6 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
       
       <a href="/manual/color-codes.html">
         <time datetime="2015-11-02">November 2, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/index.html">Help Manual: How to Set Up Your Search Box</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>We provide a search box that searches across all of your <em>public-facing</em> digital content. We support an unlimited number of web pages across multiple domains and we integrate your RSS feeds, tweets, YouTube videos, and Flickr and Instagram photos.</p>
-
-<p>Browse through our <a href="/blog/go-live.html">Go-Live Punch List</a> for some quick tips on how to configure the search experience for your website, or watch our <a href="/manual/training.html">training videos</a>.</p>
-
-<p>Watch our <a href="https://www.youtube.com/watch?v=TnlpuudK_WY">Getting Started video</a> (4 mins)&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<h3><i class="icon-dashboard"></i> Dashboard</h3>
-
-<p><a href="/manual/site-overview.html">Site overview</a>  <br/>
-<a href="/manual/users.html">Manage users</a>  <br/>
-<a href="/manual/settings.html">Settings</a></p>
-
-<h3><i class="icon-bar-chart"></i> Analytics</h3>
-
-<p><a href="/manual/queries.html">Queries</a>  <br/>
-<a href="/manual/clicks.html">Clicks</a>  <br/>
-<a href="/manual/monthly-reports.html">Monthly reports</a>  <br/>
-<a href="/manual/third-party.html">3rd party tracking</a></p>
-
-<h3><i class="icon-file"></i> Manage Content</h3>
-
-<p><a href="/manual/content-overview.html">Content overview</a>  <br/>
-<a href="/manual/domains.html">Domains</a> (plus <a href="/manual/domains-advanced.html">advanced options to add or filter URLs</a>)  <br/>
-<a href="/manual/collections.html">Collections</a>  <br/>
-<a href="/manual/i14y-drawers.html">i14y drawers</a> <br/>
-<a href="/manual/best-bets.html">Best bets: text and/or graphics</a>  <br/>
-<a href="/manual/routed-queries.html">Routed queries</a>  <br/>
-<a href="/manual/rss.html">RSS</a>  <br/>
-<a href="/manual/youtube.html">YouTube</a>  <br/>
-<a href="/manual/twitter.html">Twitter</a>  <br/>
-<a href="/manual/flickr.html">Flickr</a>  <br/>
-<a href="/manual/instagram.html">Instagram</a></p>
-
-<h3><i class="icon-desktop"></i> Manage Display</h3>
-
-<p><a href="/manual/display-overview.html">Display overview</a> (including <a href="/manual/govbox-jobs.html">job openings</a>, <a href="/manual/govbox-federal-register.html"><em>Federal Register</em></a>, and <a href="/manual/govbox-health.html">health topics</a>)  <br/>
-<a href="/manual/brand.html">Brand</a> (font &amp; colors, image assets, and header &amp; footer)  <br/>
-Custom <a href="/manual/no-results.html">No Results</a> page  <br/>
-Custom <a href="/manual/system-alert.html">Search Page Alert</a></p>
-
-<h3><i class="icon-eye-open"></i> Preview</h3>
-
-<p><a href="/manual/preview.html">Preview</a></p>
-
-<h3><i class="icon-code"></i> Activate Search</h3>
-
-<p><a href="/manual/code.html">Code snippets</a>  <br/>
-Search API access key*  <br/>
-Search Results API instructions*  <br/>
-Type-ahead API instructions*  <br/>
-i14y (Beta) API instructions*</p>
-
-<p>* These APIs are available for use on official government websites only. You must be a DigitalGov Search customer. <a href="https://search.usa.gov/sites">Sign in</a> is required. Keys and instructions for each can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search.</p>
-
-<p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
-
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#115;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#115;&#x75;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;">&#115;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#118;</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/index.html">
-        <time datetime="2015-11-02">November 2, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/content-overview.html">How to Add Your Content to Our Indexes: An Overview</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Content Overview</p>
-
-<p>To display the results on your search results page, we index content from various sources. Each time a searcher does a query on your site, we determine which index best answers the searcher's question and display results from it. This means a single search results page is often comprised of several indexes.</p>
-
-<p>When you first <a href="/manual/add-site.html">add a site</a>, we pull your homepage into your <a href="/manual/domains.html">domains</a> list, and populate any social media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/instagram.html">Instagram</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>) and <a href="/manual/rss.html">RSS feeds</a> that are linked from your homepage. Use the Discover option on this Content Overview page to automatically (re)discover the RSS and social media accounts on your site's homepage, or any other page you want to scan.</p>
-
-<p>You can also add content manually to each of our indexes.
-<a name="choose-an-index"></a></p>
-
-<h2>Add Your Web Pages</h2>
-
-<p>When you <a href="/manual/domains.html">fill out your domains</a>, we'll show results for all of your web pages listed within these domains. <strong><em>By default, these web results are powered by Bing.</em></strong></p>
-
-<p>If you don't like the default web results, you can choose to use another index. Options follow.</p>
-
-<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can fetch and index your all of web site's content directly. Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#111;&#114;&#116;&#46;&#x64;&#x69;&#103;&#105;&#116;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#x67;&#111;&#118;">&#115;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#118;</a> and we'll work with you to determine the best way for you to tell us about your content.</p>
-
-<p><strong>Option 2. Buy and Use Google Site Search.</strong> If you already have (or plan to purchase), <a href="https://www.google.com/work/search/products/gss.html">Google Site Search</a>, we'll send a searcher's query to the search index you've provided and we'll render the results within our search results page.</p>
-
-<p><strong>Option 3. Use Another Web Index of Your Choice.</strong> Most search indexes (like Google Search Appliance) expose their results as XML. If you have another search index that renders XML, let us know and we'll work with you to determine if you can use it.</p>
-
-<p>Once you've added your web pages, you can create <a href="/manual/collections.html">collections</a> to give searchers the option to narrow (or, less frequently, broaden) the results to a specific subset of pages.</p>
-
-<h2>Add Your Images</h2>
-
-<ul>
-<li><strong>Flickr.</strong> When you <a href="/manual/flickr.html">fill out your Flickr URL</a>, we'll index your Flickr photostream.</li>
-<li><strong>Instagram.</strong> When you <a href="/manual/instagram.html">fill out your Instagram account</a>, we'll index your Instagram photos.</li>
-<li><strong>Photo Galleries on Your Site.</strong> Do you have a multimedia gallery on your website for your agency's images? When you <a href="/manual/rss.html">provide us with a media RSS</a> (MRSS) for your gallery, we'll index its images.</li>
-<li><strong>Images on Your Web Pages.</strong> We backfill the image results from social media and photo galleries with the images published on the web pages of the <a href="/manual/domains.html">domain you've filled out</a>.</li>
-</ul>
-
-
-<h2>Add Your Videos</h2>
-
-<ul>
-<li><strong>YouTube.</strong> When you <a href="/manual/youtube.html">fill out your YouTube account</a>, we'll index your YouTube videos.</li>
-<li><strong>Video Galleries on Your Site.</strong> Do you have a multimedia gallery on your website for your agency's videos? When you <a href="/manual/rss.html">provide us with a media RSS</a> (MRSS) for your gallery, we'll index its videos.</li>
-</ul>
-
-
-<h2>Add Your News</h2>
-
-<ul>
-<li><strong>RSS Feeds.</strong> Do you have RSS feeds set up for your press releases, blog posts, or other newsworthy content? When you <a href="/manual/rss.html">provide us with an RSS</a>, we'll index the news items on that feed.</li>
-<li><strong>Twitter.</strong> Do you use Twitter to communicate about your agency's newsworthy content? When you <a href="/manual/twitter.html">fill out your Twitter account</a>, we'll index your tweets.</li>
-</ul>
-
-
-<h2>Add Your Recommendations</h2>
-
-<p>Create <a href="/manual/best-bets.html">best bets (text or graphics)</a>) to promote specific web pages. Best bets appear at the top of the results page when a searcher's query matches the text of their titles, descriptions, or keywords.</p>
-
-<h2>Turn It All On</h2>
-
-<p>After you've added your content, be sure to <a href="/manual/display-overview.html">set the display options</a> to control how each index appears on your search results page.</p>
-
-<p>We also have three pre-built, government-centric content modules that you can opt to turn on, too.</p>
-
-<ul>
-<li><strong>Job Openings.</strong> <a href="/manual/govbox-jobs.html">Toggle on the Jobs module</a> to show your agency's job openings from USAJobs (federal government) or NeoGov (applicable local and state governments).</li>
-<li><strong><em>Federal Register</em> Documents.</strong> <a href="/manual/govbox-federal-register.html">Toggle on the <em>Federal Register</em> module</a> to show your agency's documents posted on FederalRegister.gov.</li>
-<li><strong>Health Topics.</strong> <a href="/manual/govbox-health.html">Toggle on the Health Topics module</a> to show authoritative health information from MedlinePlus and ClinicalTrials.gov.</li>
-</ul>
-
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> We've connected your site to your agency on the backend. If you're not seeing jobs or <em>Federal Register</em> documents specific to your agency, <a href="mailto:search@support.digitalgov.gov">email us</a> so we can fix the agency setting for your site.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/content-overview.html">
-        <time datetime="2015-11-02">November 2, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/monthly-reports.html">How to Analyze Your Monthly Reports</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Monthly Reports</p>
-
-<p>The monthly report gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and <a href="/manual/clicks.html">clicks</a> each month.</p>
-
-<p>Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.</p>
-
-<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
-
-<p>Data are available in the Admin Center from August 2014.</p>
-
-<h2>Monthly Usage Stats</h2>
-
-<p>Data for the total number of queries and clicks. Use this report to find and analyze the so-called <a href="http://www.searchtools.com/analysis/long-tail.html">short head</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> of your most popular search queries and clicks, which are typically the same as your site's <a href="http://www.usability.gov/tags/task-analysis/">top tasks</a>.</p>
-
-<h3>Queries with No Results</h3>
-
-<p>A list of queries that returned no results. Sometimes searchers look for information on the wrong website, and sometimes they use different words than what are used on the page, and so they get no results from the search index. Use this list of Queries with No Results to help searchers get to the information they're looking for. You can set up <a href="/manual/best-bets.html">Best Bets (Text or Graphics)</a>), or a <a href="/manual/routed-queries.html">Routed Query</a>. You can also <a href="/manual/no-results.html">customize the No Results message</a> displayed on your results page.</p>
-
-<h2>Impressions and Clicks by Module</h2>
-
-<p>Detailed data for the total number of impressions and clicks and your clickthru rate (CTR) are presented for each "module" on the search results page. We also provide the average CTR across all DigitalGov Search customers so you can see how your rate compares to the average rate. The data in the table is sorted in descending order from the most to least number of clicks.</p>
-
-<p>Use this report to inform which <a href="/manual/display-overview.html">modules you opt to display</a>.</p>
-
-<p><strong><em>Drill down into best bets.</em></strong> Select the option to drill down into your <a href="/manual/best-bets.html">Best Bets (Text or Graphics)</a> to see the number of impressions, number of clicks, and CTR for each best bet. The data in the table is sorted in descending order from the highest to lowest CTR. Review and edit best bets as needed. Focus on those with a high number of impressions and low CTR to make the biggest impact on searchers' experience (and on your overall CTR). Select drill down again to see a pie chart of the search terms that led to an impression on each best bet.</p>
-
-<h2>Download Top Queries</h2>
-
-<p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV (comma-separated values) link to download the list as a text file. Once you've downloaded the CSV file, you can easily <a href="https://support.office.com/en-us/article/Import-or-export-text-txt-or-csv-files-e8ab9ff3-be8d-43f1-9d52-b5e8a008ba5c">import it  into Excel</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> or another speadsheet program to analyze the data.</p>
-
-<p>The CSV file contains three columns: (1) query, (2) raw count, and (3) IP-deduped.</p>
-
-<p>Read <a href="https://www.digitalgov.gov/2013/10/24/understanding-your-users-needs-by-analyzing-search-terms/">Understanding Your Users' Needs By Analyzing Search Terms</a> for tips on how to create a semi-automated report for analyzing the data in this CSV file on a regular basis.</p>
-
-<h2>Definitions</h2>
-
-<p>All data presented on this page (and other pages in the Admin Center) are IP-deduped to exclude bots and other noise in an attempt to accurately represent searchers' intent on your site. Some definitions follow.</p>
-
-<p><strong><a href="/manual/queries.html">Queries</a>:</strong> Number of times a search query (that is, a word or string of words) was entered in the search box by a unique searcher.</p>
-
-<p><strong><a href="/manual/clicks.html">Clicks</a>.</strong> Number of times a searcher clicked on one of your pages within the search results for a particular query.</p>
-
-<p><strong>Impressions:</strong> Number of times a module is displayed, whether it is clicked on or not. Not all modules are displayed for all queries. Each time a module is displayed it is counted as one impression.</p>
-
-<p><strong>Clickthru Rate (CTR):</strong> The rate (expressed in a percentage) at which searchers click on a module. This rate is calculated by dividing the total number of clicks by the total number of impressions. CTR is useful to measure the performance of specific campaigns, such as <a href="/manual/best-bets.html">best bets</a> for seasonal events.</p>
-
-<p><strong>Raw count:</strong> Total number of times the query was submitted. The raw count is provided in the downloadable CSV files only.</p>
-
-<p><strong>IP-deduped count:</strong> Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of "real," human traffic.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> On the first of each month, we email you a report with data on the previous month's queries, clicks, and top search terms.</p>
-
-<p><strong><em>Did you know?</em></strong> The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site in the past day or so.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/queries"><span class="label label-info">queries</span></a>
-      
-      <a href="/tagged/clicks"><span class="label label-info">clicks</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/monthly-reports.html">
-        <time datetime="2015-11-02">November 2, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/i14y-drawers.html">How to Work with i14y Drawers</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers</p>
-
-<p>An <a href="/developer/i14y.html">i14y</a> Drawer is an index receiving content via the i14y API. We've called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
-
-<h2>Step 1. Make sure your site is connected to i14y</h2>
-
-<p>If your site Admin Center has the following page: <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, your site is connected to i14y. If you don't see this page in the Admin Center, <a href="mailto:search@support.digitalgov.gov">email us</a>. You can also read about <a href="/developer/i14y.html">Getting Started with i14y</a>.</p>
-
-<h2>Step 2. Add one or more Drawers</h2>
-
-<p>On <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, Click <code>Add i14y Drawer</code> in the upper right corner. If you have more than one website that will be sending content, add a separate Drawer for each of these sites.</p>
-
-<h3>Handle</h3>
-
-<p>Let us know what the handle for your drawer should be - the handle must be all lowercase alphanumeric, all one word, and can include underscores but no other special characters (e.g., agency_drawer_handle2).</p>
-
-<p>The Drawer <em>Description</em> is optional</p>
-
-<h2>Step 3. Send Content to Fill your Drawer</h2>
-
-<p>After you have created your Drawer(s), click <code>Show</code> from the i14y Drawers list to find that Drawer’s secret API key. Use this secret key with your drawer handle in your API call or your CMS module to <a href="http://gsa.github.io/slate/#authentication">send your content to the right place</a>.</p>
-
-<h2>Step 4. Review your Index</h2>
-
-<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list, and when the most recent document was received. We also send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting Tip:</em></strong> We can attach each i14y drawer to multiple search configurations: if you have a drawer that you’d like to use for multiple search sites, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/i14y"><span class="label label-info">i14y</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/i14y-drawers.html">
-        <time datetime="2015-10-05">October 5, 2015</time>
       </a>
     </div>
     </article>

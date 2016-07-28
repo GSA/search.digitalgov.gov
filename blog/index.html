@@ -308,7 +308,117 @@
       
       
       <a href="/developer/i14y.html">
-        <time datetime="2016-07-18">July 18, 2016</time>
+        <time datetime="2016-07-28">July 28, 2016</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
+      <a href="/manual/https-transition.html">Preparing Your Site for HTTPS</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="https://https.cio.gov/">OMB memo M-15-13</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> requires all publicly available federal websites and web services to <a href="https://www.digitalgov.gov/2015/07/21/an-introduction-to-https-by-18f-and-digitalgov-university/">implement HTTPS</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> by December 31, 2016.</p>
+
+<p>Below is a checklist of action items that should be completed in order for your search site to function as expected in HTTPS.</p>
+
+<h2>1. The Admin Center</h2>
+
+<p>Update all URLs that are listed in the Search Admin Center for each of your search configurations. <em>You will need to update the links for all of your search configurations.</em></p>
+
+<h3>Everyone:</h3>
+
+<p><strong>Dashboard:</strong></p>
+
+<ul>
+<li><strong>Settings:</strong> Update your Homepage URL.</li>
+</ul>
+
+
+<p><strong>Content:</strong></p>
+
+<ul>
+<li><strong>Content Overview:</strong> No action needed. The URL that we scan for social media accounts is synced with the homepage you have listed in the Dashboard section.</li>
+<li><strong>Domains:</strong> No action needed, as this list isn’t protocol-specific.</li>
+<li><strong>Collections:</strong> Update all URL paths in your collections; if you have mixed collections, leave any HTTP sites as-is.</li>
+<li><strong>Routed Queries:</strong> Update routed query URLs.</li>
+<li><strong>RSS feeds:</strong> Update RSS feed URLs. The indexing will error if the protocol listed in our system for the feed URL does not match the feed URL on your site, or if you’ve placed a 301 redirect on your old HTTP version of the feed pointing to the new HTTPS version of the feed. We will also need to update the URLs for all items that are already in our index. <a href="mailto:search@support.digitalgov.gov">Email us</a> and we will do a global update to change HTTP to HTTPS for you. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS.</li>
+</ul>
+
+
+<p><strong>Display:</strong></p>
+
+<ul>
+<li><strong>Image Assets:</strong> Update the Favicon URL.</li>
+<li><strong>Header &amp; Footer:</strong> Update header and footer links.</li>
+<li><strong>No Results Page:</strong> Update alternative links.</li>
+</ul>
+
+
+<h3>Only those using <code>Domains &gt; Advanced</code> features:</h3>
+
+<ul>
+<li><strong>Supplemental Feed:</strong> Update RSS feed URLs. The indexing will error if the protocol listed in our system for the feed URL does not match the feed URL on your site, or if you’ve placed a 301 redirect on your old HTTP version of the feed pointing to the new HTTPS version of the feed. We will also need to update the URLs for all items that are already in our index. <a href="mailto:search@support.digitalgov.gov">Email us</a> and we will do a global update to change HTTP to HTTPS for you. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS.</li>
+<li><strong>Supplemental URLs:</strong> Update supplemental URLs.</li>
+<li><strong>Filter URLs:</strong> Update filtered URLs.</li>
+</ul>
+
+
+<h2>2. Masked Domains</h2>
+
+<p>If your site uses <a href="http://search.digitalgov.gov/manual/cname.html">domain masking</a>: <a href="mailto:search@support.digitalgov.gov">contact our team</a> to be added to our SSL certificate. While this step doesn't apply to everyone, it does need to be done before step 3.</p>
+
+<h2>3. Form Code Action on Your Website</h2>
+
+<p>Update your form code action: An <code>s</code> must be added to your site’s form action in order for the request to be made over HTTPS, and for the results page to be served over HTTPS. Example:</p>
+
+<p><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;</code></p>
+
+<h2>4. Commercial Search Engines</h2>
+
+<p>Notify Google and Bing about the change; Google and Bing treat a migration from HTTP to HTTPS as a site move.</p>
+
+<ul>
+<li>Google has a step-by-step guide, <a href="https://support.google.com/webmasters/answer/6033049">Move a Site with URL changes</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>For Bing, review <a href="https://www.bing.com/webmaster/help/how-to-use-the-site-move-tool-bb8f5112">How to Use the Site Move tool</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+</ul>
+
+
+<p>Additional SEO best practices:</p>
+
+<ul>
+<li>Update your XML sitemap with HTTPS URLs.</li>
+<li>Use <code>rel canonical</code> to <a href="https://support.google.com/webmasters/answer/139066?hl=en#https">declare HTTPS the preferred version</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>Update internal website links.</li>
+<li>Update links to your website from social media and other platforms managed by your agency.</li>
+</ul>
+
+
+<hr />
+
+<p><strong><em>Additional Information:</em></strong> Read more about the <a href="https://https.cio.gov/">HTTPS-Only Standard</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> from the Federal CIO Council.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/https"><span class="label label-info">https</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/https-transition.html">
+        <time datetime="2016-07-28">July 28, 2016</time>
       </a>
     </div>
 
@@ -1025,7 +1135,7 @@ i14y (Beta) API instructions*</p>
 
 <p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
 
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#115;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#115;&#x75;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;">&#115;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#118;</a>.</p>
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#111;&#118;">&#115;&#x65;&#97;&#114;&#99;&#104;&#64;&#115;&#117;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
 
     </div>
 
@@ -1041,106 +1151,6 @@ i14y (Beta) API instructions*</p>
       
       
       <a href="/manual/index.html">
-        <time datetime="2015-11-02">November 2, 2015</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/manual/content-overview.html">How to Add Your Content to Our Indexes: An Overview</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Content Overview</p>
-
-<p>To display the results on your search results page, we index content from various sources. Each time a searcher does a query on your site, we determine which index best answers the searcher's question and display results from it. This means a single search results page is often comprised of several indexes.</p>
-
-<p>When you first <a href="/manual/add-site.html">add a site</a>, we pull your homepage into your <a href="/manual/domains.html">domains</a> list, and populate any social media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/instagram.html">Instagram</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>) and <a href="/manual/rss.html">RSS feeds</a> that are linked from your homepage. Use the Discover option on this Content Overview page to automatically (re)discover the RSS and social media accounts on your site's homepage, or any other page you want to scan.</p>
-
-<p>You can also add content manually to each of our indexes.
-<a name="choose-an-index"></a></p>
-
-<h2>Add Your Web Pages</h2>
-
-<p>When you <a href="/manual/domains.html">fill out your domains</a>, we'll show results for all of your web pages listed within these domains. <strong><em>By default, these web results are powered by Bing.</em></strong></p>
-
-<p>If you don't like the default web results, you can choose to use another index. Options follow.</p>
-
-<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can fetch and index your all of web site's content directly. Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#111;&#114;&#116;&#46;&#x64;&#x69;&#103;&#105;&#116;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#x67;&#111;&#118;">&#115;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#118;</a> and we'll work with you to determine the best way for you to tell us about your content.</p>
-
-<p><strong>Option 2. Buy and Use Google Site Search.</strong> If you already have (or plan to purchase), <a href="https://www.google.com/work/search/products/gss.html">Google Site Search</a>, we'll send a searcher's query to the search index you've provided and we'll render the results within our search results page.</p>
-
-<p><strong>Option 3. Use Another Web Index of Your Choice.</strong> Most search indexes (like Google Search Appliance) expose their results as XML. If you have another search index that renders XML, let us know and we'll work with you to determine if you can use it.</p>
-
-<p>Once you've added your web pages, you can create <a href="/manual/collections.html">collections</a> to give searchers the option to narrow (or, less frequently, broaden) the results to a specific subset of pages.</p>
-
-<h2>Add Your Images</h2>
-
-<ul>
-<li><strong>Flickr.</strong> When you <a href="/manual/flickr.html">fill out your Flickr URL</a>, we'll index your Flickr photostream.</li>
-<li><strong>Instagram.</strong> When you <a href="/manual/instagram.html">fill out your Instagram account</a>, we'll index your Instagram photos.</li>
-<li><strong>Photo Galleries on Your Site.</strong> Do you have a multimedia gallery on your website for your agency's images? When you <a href="/manual/rss.html">provide us with a media RSS</a> (MRSS) for your gallery, we'll index its images.</li>
-<li><strong>Images on Your Web Pages.</strong> We backfill the image results from social media and photo galleries with the images published on the web pages of the <a href="/manual/domains.html">domain you've filled out</a>.</li>
-</ul>
-
-
-<h2>Add Your Videos</h2>
-
-<ul>
-<li><strong>YouTube.</strong> When you <a href="/manual/youtube.html">fill out your YouTube account</a>, we'll index your YouTube videos.</li>
-<li><strong>Video Galleries on Your Site.</strong> Do you have a multimedia gallery on your website for your agency's videos? When you <a href="/manual/rss.html">provide us with a media RSS</a> (MRSS) for your gallery, we'll index its videos.</li>
-</ul>
-
-
-<h2>Add Your News</h2>
-
-<ul>
-<li><strong>RSS Feeds.</strong> Do you have RSS feeds set up for your press releases, blog posts, or other newsworthy content? When you <a href="/manual/rss.html">provide us with an RSS</a>, we'll index the news items on that feed.</li>
-<li><strong>Twitter.</strong> Do you use Twitter to communicate about your agency's newsworthy content? When you <a href="/manual/twitter.html">fill out your Twitter account</a>, we'll index your tweets.</li>
-</ul>
-
-
-<h2>Add Your Recommendations</h2>
-
-<p>Create <a href="/manual/best-bets.html">best bets (text or graphics)</a>) to promote specific web pages. Best bets appear at the top of the results page when a searcher's query matches the text of their titles, descriptions, or keywords.</p>
-
-<h2>Turn It All On</h2>
-
-<p>After you've added your content, be sure to <a href="/manual/display-overview.html">set the display options</a> to control how each index appears on your search results page.</p>
-
-<p>We also have three pre-built, government-centric content modules that you can opt to turn on, too.</p>
-
-<ul>
-<li><strong>Job Openings.</strong> <a href="/manual/govbox-jobs.html">Toggle on the Jobs module</a> to show your agency's job openings from USAJobs (federal government) or NeoGov (applicable local and state governments).</li>
-<li><strong><em>Federal Register</em> Documents.</strong> <a href="/manual/govbox-federal-register.html">Toggle on the <em>Federal Register</em> module</a> to show your agency's documents posted on FederalRegister.gov.</li>
-<li><strong>Health Topics.</strong> <a href="/manual/govbox-health.html">Toggle on the Health Topics module</a> to show authoritative health information from MedlinePlus and ClinicalTrials.gov.</li>
-</ul>
-
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> We've connected your site to your agency on the backend. If you're not seeing jobs or <em>Federal Register</em> documents specific to your agency, <a href="mailto:search@support.digitalgov.gov">email us</a> so we can fix the agency setting for your site.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/content-overview.html">
         <time datetime="2015-11-02">November 2, 2015</time>
       </a>
     </div>
