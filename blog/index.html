@@ -102,6 +102,76 @@
   <article class='article'>
     
     <h1>
+      <a href="/manual/users.html">How to Manage Your Site's Users</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Manage Users</p>
+
+<p>After you've <a href="https://search.usa.gov/sites/">logged in</a> and <a href="/manual/add-site.html">added a site</a> with your official government email, you can add your coworkers to your site.</p>
+
+<p>You can add anyone you'd like to your site&mdash;with or without a .gov or .mil email address. Email addresses outside the .gov or .mil domains must be associated with a business. Personal emails, such as @gmail.com or @yahoo.com, are not allowed.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/user.png" alt="Add a user" /></p>
+
+<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each user's status.</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;"> Color </th>
+<th style="text-align:left;"> Status </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> No color&nbsp;&nbsp;&nbsp; </td>
+<td style="text-align:left;"> Approved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+</tr>
+<tr>
+<td style="text-align:left;"> Yellow  </td>
+<td style="text-align:left;"> Pending - requires approval or email verification </td>
+</tr>
+<tr>
+<td style="text-align:left;"> Red   </td>
+<td style="text-align:left;"> Not approved </td>
+</tr>
+</tbody>
+</table>
+
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> We recommend adding a generic email account (such as webteam@agency.gov) as a user to ensure ongoing access to your account as individuals come and go.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
+      
+      <a href="/tagged/users"><span class="label label-info">users</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/users.html">
+        <time datetime="2016-07-28">July 28, 2016</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
       <a href="/manual/training.html">DigitalGov Search Training</a>
     </h1>
     
@@ -418,6 +488,66 @@
       
       
       <a href="/manual/https-transition.html">
+        <time datetime="2016-07-28">July 28, 2016</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
+      <a href="/manual/cname.html">How to Mask Your Domain</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these steps to mask your domain.</p>
+
+<ol>
+<li><p>Create a CNAME in your external DNS records for <code>search.yoursite.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>. Your site handle is listed on the <a href="http://search.digitalgov.gov/manual/settings.html">settings page</a> in the Search Admin Center.</p>
+
+<p> NOTE: if your site handle contains a <code>.</code>, please replace it with a <code>-</code> in your DNS record,  e.g., for site handle <code>yoursite.gov.search</code> the DNS record would look like this:</p>
+
+<pre><code> search.yoursite.gov   CNAME  yoursite-gov-search.sites.infr.search.usa.gov
+</code></pre>
+
+<p> To use a CNAME with <code>HTTPS</code>, you will need to <a href="mailto:search@support.digitalgov.gov">email us</a> after your DNS records have been updated in order to be added to our SSL certificate.</p></li>
+<li><p>When the setup is complete, change your search box's <a href="/manual/code.html">form code</a> action from <code>search.usa.gov/search</code> to <code>search.yoursite.gov/search</code>.</p></li>
+</ol>
+
+
+<p>Your domain mask will work as soon as this DNS update is complete.</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> Many agencies have both internal and external DNS. Be
+sure to update your <em>external</em> DNS records (step 1) before changing your form code (step 2).</p>
+
+<p><strong><em>Did you know?</em></strong> Any search site within your domain may use the same domain mask and CNAME record, even if the CNAME is not associated with that particular site's handle. To implement an existing mask for a search box, just do Step 2, above.</p>
+
+<p><strong><em>Did you know?</em></strong> Once the CNAME is set up, if visitors to your site happen to truncate the URL in the browser bar to http://search.yoursite.gov (without any parameters), they're automatically redirected to your homepage at http://www.yoursite.gov.</p>
+
+<p><strong><em>Did you know?</em></strong> Most of our customers use a mask like <code>search.yoursite.gov</code> (such as search.nih.gov). If the <code>search</code> subdomain is already used by another application, you can use <code>find</code> or <code>findit</code>, such as <code>find.irs.gov</code> or <code>findit.state.gov</code>. We no longer support other subdomain patterns.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
+      
+      <a href="/tagged/cname"><span class="label label-info">cname</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/cname.html">
         <time datetime="2016-07-28">July 28, 2016</time>
       </a>
     </div>
@@ -756,66 +886,6 @@ Keyword 4: market value
   <article class='article'>
     
     <h1>
-      <a href="/manual/cname.html">How to Mask Your Domain</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these steps to mask your domain.</p>
-
-<ol>
-<li><p>Create a CNAME in your external DNS records for <code>search.yoursite.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>. Your site handle is listed on the <a href="http://search.digitalgov.gov/manual/settings.html">settings page</a> in the Search Admin Center.</p>
-
-<p> NOTE: if your site handle contains a <code>.</code>, please replace it with a <code>-</code> in your DNS record,  e.g., for site handle <code>yoursite.gov.search</code> the DNS record would look like this:</p>
-
-<pre><code> search.yoursite.gov   CNAME  yoursite-gov-search.sites.infr.search.usa.gov
-</code></pre>
-
-<p> To use a CNAME with <code>HTTPS</code>, you will need to <a href="mailto:search@support.digitalgov.gov">email us</a> after your DNS records have been updated in order to be added to our SSL certificate.</p></li>
-<li><p>When the setup is complete, change your search box's <a href="/manual/code.html">form code</a> action from <code>search.usa.gov/search</code> to <code>search.yoursite.gov/search</code>.</p></li>
-</ol>
-
-
-<p>Your domain mask will work as soon as this DNS update is complete.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> Many agencies have both internal and external DNS. Be
-sure to update your <em>external</em> DNS records (step 1) before changing your form code (step 2).</p>
-
-<p><strong><em>Did you know?</em></strong> Any search site within your domain may use the same domain mask and CNAME record, even if the CNAME is not associated with that particular site's handle. To implement an existing mask for a search box, just do Step 2, above.</p>
-
-<p><strong><em>Did you know?</em></strong> Once the CNAME is set up, if visitors to your site happen to truncate the URL in the browser bar to http://search.yoursite.gov (without any parameters), they're automatically redirected to your homepage at http://www.yoursite.gov.</p>
-
-<p><strong><em>Did you know?</em></strong> Most of our customers use a mask like <code>search.yoursite.gov</code> (such as search.nih.gov). If the <code>search</code> subdomain is already used by another application, you can use <code>find</code> or <code>findit</code>, such as <code>find.irs.gov</code> or <code>findit.state.gov</code>. We no longer support other subdomain patterns.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
-      
-      <a href="/tagged/cname"><span class="label label-info">cname</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/cname.html">
-        <time datetime="2016-02-19">February 19, 2016</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
       <a href="/developer/index.html">Resources for Developers</a>
     </h1>
     
@@ -1065,92 +1135,6 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
       
       
       <a href="/manual/monthly-reports.html">
-        <time datetime="2015-11-02">November 2, 2015</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/manual/index.html">Help Manual: How to Set Up Your Search Box</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>We provide a search box that searches across all of your <em>public-facing</em> digital content. We support an unlimited number of web pages across multiple domains and we integrate your RSS feeds, tweets, YouTube videos, and Flickr and Instagram photos.</p>
-
-<p>Browse through our <a href="/blog/go-live.html">Go-Live Punch List</a> for some quick tips on how to configure the search experience for your website, or watch our <a href="/manual/training.html">training videos</a>.</p>
-
-<p>Watch our <a href="https://www.youtube.com/watch?v=TnlpuudK_WY">Getting Started video</a> (4 mins)&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<h3><i class="icon-dashboard"></i> Dashboard</h3>
-
-<p><a href="/manual/site-overview.html">Site overview</a>  <br/>
-<a href="/manual/users.html">Manage users</a>  <br/>
-<a href="/manual/settings.html">Settings</a></p>
-
-<h3><i class="icon-bar-chart"></i> Analytics</h3>
-
-<p><a href="/manual/queries.html">Queries</a>  <br/>
-<a href="/manual/clicks.html">Clicks</a>  <br/>
-<a href="/manual/monthly-reports.html">Monthly reports</a>  <br/>
-<a href="/manual/third-party.html">3rd party tracking</a></p>
-
-<h3><i class="icon-file"></i> Manage Content</h3>
-
-<p><a href="/manual/content-overview.html">Content overview</a>  <br/>
-<a href="/manual/domains.html">Domains</a> (plus <a href="/manual/domains-advanced.html">advanced options to add or filter URLs</a>)  <br/>
-<a href="/manual/collections.html">Collections</a>  <br/>
-<a href="/manual/i14y-drawers.html">i14y drawers</a> <br/>
-<a href="/manual/best-bets.html">Best bets: text and/or graphics</a>  <br/>
-<a href="/manual/routed-queries.html">Routed queries</a>  <br/>
-<a href="/manual/rss.html">RSS</a>  <br/>
-<a href="/manual/youtube.html">YouTube</a>  <br/>
-<a href="/manual/twitter.html">Twitter</a>  <br/>
-<a href="/manual/flickr.html">Flickr</a>  <br/>
-<a href="/manual/instagram.html">Instagram</a></p>
-
-<h3><i class="icon-desktop"></i> Manage Display</h3>
-
-<p><a href="/manual/display-overview.html">Display overview</a> (including <a href="/manual/govbox-jobs.html">job openings</a>, <a href="/manual/govbox-federal-register.html"><em>Federal Register</em></a>, and <a href="/manual/govbox-health.html">health topics</a>)  <br/>
-<a href="/manual/brand.html">Brand</a> (font &amp; colors, image assets, and header &amp; footer)  <br/>
-Custom <a href="/manual/no-results.html">No Results</a> page  <br/>
-Custom <a href="/manual/system-alert.html">Search Page Alert</a></p>
-
-<h3><i class="icon-eye-open"></i> Preview</h3>
-
-<p><a href="/manual/preview.html">Preview</a></p>
-
-<h3><i class="icon-code"></i> Activate Search</h3>
-
-<p><a href="/manual/code.html">Code snippets</a>  <br/>
-Search API access key*  <br/>
-Search Results API instructions*  <br/>
-Type-ahead API instructions*  <br/>
-i14y (Beta) API instructions*</p>
-
-<p>* These APIs are available for use on official government websites only. You must be a DigitalGov Search customer. <a href="https://search.usa.gov/sites">Sign in</a> is required. Keys and instructions for each can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search.</p>
-
-<p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
-
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#111;&#118;">&#115;&#x65;&#97;&#114;&#99;&#104;&#64;&#115;&#117;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/index.html">
         <time datetime="2015-11-02">November 2, 2015</time>
       </a>
     </div>
