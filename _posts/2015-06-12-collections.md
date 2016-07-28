@@ -6,25 +6,25 @@ tags: help-manual manage-content collections
 ---
 [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Collections
 
-Would you like searchers to be able to narrow results to a specific subset of content within your site or on another site? You can create a collection across any set of domains, subdomains, or subfolders.
+Would you like searchers to be able to change where they are searching, either to a particular place within your site, or to another site? You can create a collection that will search in any set of domains, subdomains, or subfolders.
 
 ## Step 1. Create a Collection
 
 Enter a name for the collection (such as FAQs, Archive, or News).
 
-Enter the URLs for the domains, subdomains, or subfolders that make up this collection. Start each URL prefix with http:// and end it in a trailing slash () to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov).
+Enter the domains, subdomains, or subfolders that you want this collection to search in. Start each URL prefix with http:// and end it in a trailing slash to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov).
 
-You cannot specify URLs for individual web pages. 
+You cannot specify URLs for individual web pages. If you are including a subfolder, be sure to include the folder(s) where the files are actually stored, not the folder where the index page lives.
 
 Paths that are three or more subfolders deep may not return results immediately. [Email us](mailto:search@support.digitalgov.gov) if you are not seeing search results for these paths.
 
 ## Step 2. Opt to Show as a Facet
 
-Click on the [Display Overview](/manual/display-overview.html) page. Turn on your collection to allow searchers to see it as a faceted navigation option above the search box on the results page.
+Click on the [Display Overview](/manual/display-overview.html) page. Turn on your collection to allow searchers to see it as a search facet in the navigation bar above the search box on the results page (in the desktop view), or in the search menu (on smaller screens).
 
 ## Step 3. Check Your Search Results Page
 
-Searchers will see an option to narrow their search results to pages in this collection above the search box on the results page.
+Searchers will see the collection name as an option that they can select in order to focus their search.
 
 ![Collection on the search results page](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-2.png)
 
