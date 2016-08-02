@@ -166,61 +166,75 @@
  
     
     <h1>
-      <a href="/manual/domains.html">How to Edit Your Domains</a>
+      <a href="/manual/add-site.html">How to Add a New Site</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Domains</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > Add Site</p>
 
-<p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
+<h2>Homepage URL</h2>
 
-<h2>Entire Site(s)</h2>
+<p>Tell us the homepage URL of your website. Enter a fully qualified URL, including http://, http://www, etc.</p>
+
+<p><strong>Correct Syntax</strong></p>
 
 <ul>
-<li>List yoursite.gov (without www) to search your entire site, including all subdomains.</li>
-<li>List yoursite.gov and yoursite2.gov to search multiple sites.</li>
+<li>http://www.whitehouse.gov</li>
+<li>http://louisiana.gov</li>
+<li>https://gobierno.usa.gov/</li>
+<li>http://nimh.nih.gov/</li>
+<li>http://www.ci.bloomington.mn.us/</li>
 </ul>
 
 
-<h2>Specific Subdomains</h2>
+<p><strong>Incorrect Syntax</strong></p>
 
 <ul>
-<li>List www.yoursite.gov to include only the primary 'www' domain.</li>
-<li>List subdomain.yoursite.gov to include subdomains.</li>
+<li>usa.gov (use http://www.usa.gov)</li>
+<li>www.nasa.gov (use http://www.nasa.gov)</li>
+<li>http://www.ftc.gov/opa/index.shtml (use the higher-level folder, http://www.ftc.gov/opa)</li>
+<li>http://www.gsa.gov/portal/category/100000?utm_source=OCM&amp;utm_medium=print-radio&amp;utm_term=&amp;utm_campaign=shortcuts (use the higher-level domain, http://www.gsa.gov)</li>
+<li>http://www.doc.gov (use the domain that resolves, http://www.commerce.gov)</li>
 </ul>
 
 
-<h2>Specific Directories</h2>
+<p>We use this homepage URL to:</p>
 
-<p>List yoursite.gov/folder to include folders. Note: this will include all sub-folders (if they exist), i.e. yoursite.gov/folder/folder2.</p>
+<ol>
+<li>Seed your <a href="/manual/domains.html">domains</a> list.</li>
+<li>Scan for any social media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/instagram.html">Instagram</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>), your favicon to use on your search results browser tab, and <a href="/manual/rss.html">RSS feeds</a> that are linked from your homepage, or another page you specify on the Display Overview page.</li>
+<li>Link the default <a href="/manual/brand.html">logo</a> on your results page to your homepage.</li>
+</ol>
 
-<p>You cannot specify individual URLs.</p>
 
-<p>Searches that start three or more subfolders deep cannot use our default configuration. <a href="mailto:search@support.digitalgov.gov">Email us</a> for assistance.</p>
+<h2>Display Name</h2>
+
+<p><a href="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/DisplayName_SiteHandle_800.png"><img style="float: right;" src="http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/DisplayName_SiteHandle_175.png" alt="Display Name and Site Handle on NIH.gov's search results page"></a>Tell us the name of your website. Searchers see your display name on the results page, such as in your page title or best bets. We recommend using the plain language name for your agency or site, such as National Institutes of Health.</p>
+
+<h2>Site Handle</h2>
+
+<p>Your site handle is a unique identifier for your site. The site handle is included in the request you send us from your search box, to let us know which search site to use. We also include it in the URL of your search results page, again, to show which search site is being used. We recommend making this handle short and unique, such as <code>nih</code>.</p>
+
+<p>Handles can have lowercase letters, numbers, periods, hyphens, and underscores only. They can't have spaces and other punctuation.</p>
+
+<h2>Site Language</h2>
+
+<p>English is the default language for our results pages. If you will be searching against content in another language, you should choose another language for your search site - we support English, Spanish, and <a href="/manual/supported-languages.html">66 other languages</a>.</p>
+
+<p>When English is selected, results will primarily include English language pages. All display text on the results page will also be in English.</p>
+
+<p>If you select Spanish, results will primarily include Spanish language pages. All display text on the results page will also be in Spanish. (Localizations are provided by GSA's <a href="https://gobierno.usa.gov/">GobiernoUSA.gov</a> team.)</p>
+
+<p>If you select one of the other <a href="/manual/supported-languages.html">66 languages</a>, results will primarily include pages from the selected language when possible. Display text will be in the selected language when localizations are available, and in English when they're not available.</p>
+
+<p>We've published the <a href="https://github.com/GSA/punchcard/tree/master/localizations">localization files</a> on Github, and we encourage you to <a href="https://github.com/GSA/punchcard/blob/master/CONTRIBUTING.md">contribute</a> to them.</p>
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> For non-English sites, some agencies opt to include the specific location of the language's content (such as agency.gov/language or language.agency.gov) in their <a href="/manual/domains.html">Domains</a> to further refine the search results. Test the results for your non-English site with both the general agency.gov and the language-specific location to determine which setting gives you the best results.</p>
 
-<ol>
-<li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
-<li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#x73;&#x65;&#x61;&#114;&#99;&#104;&#64;&#115;&#117;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#x76;">&#x73;&#x65;&#97;&#114;&#99;&#x68;&#64;&#115;&#x75;&#112;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#x67;&#111;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
-</ol>
-
-
-<p><a id="filter"></a><strong><em>Troubleshooting Tip:</em></strong> You can remove or filter specific URLs using any of the following options.</p>
-
-<ol>
-<li><p>Remove the page from your site and return a 404 (Not Found) 401 (Gone), or 301 (Permanently Moved) HTTP status.</p></li>
-<li><p>Add a <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">noindex robots metatag or x-robots tag</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
-<li><p>Request the page's removal using the <a href="http://www.bing.com/webmaster/help/block-urls-from-bing-264e560a">Block URLs option in Bing Webaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/1663419">Remove URLs option in Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p></li>
-<li><p>Use the Filter URLs option under the <a href="/manual/domains-advanced.html">Advanced</a> tab. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
-</ol>
-
-
-<p><strong><em>Troubleshooting Tip:</em></strong> Are specific web pages missing from your Bing web results? You can tell us about any missing URLs via an RSS feed or manually (the Supplemental Feed and Supplemental URLs options under the <a href="/manual/domains-advanced.html">Advanced</a> tab, respectively). We'll fetch and index the pages and append them to your web results.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#x6f;&#x72;&#116;&#46;&#100;&#x69;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#118;">&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#x6f;&#118;</a>.</p>
 
     </div>
 
@@ -228,9 +242,9 @@
       
       <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
       
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      <a href="/tagged/settings"><span class="label label-info">settings</span></a>
       
-      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
+      <a href="/tagged/add-site"><span class="label label-info">add-site</span></a>
       
     </div>
    <div class='time'>
@@ -238,7 +252,69 @@
       
       
       
-      <a href="/manual/domains.html">
+      <a href="/manual/add-site.html">
+        <time datetime="2016-08-02">August 2, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/govbox-jobs.html">Help Searchers Find Jobs</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>One of the most common search tasks is to look for current job openings. We created the Jobs module to help searchers quickly find relevant jobs.</p>
+
+<p>When you <a href="/manual/display-overview.html">turn on the Job Openings</a> module, searchers looking for jobs on your site will see up to three relevant jobs listings on your results page. You will need to <a href="mailto:search@support.digitalgov.gov">contact us</a> to get the Jobs module enabled for your site.</p>
+
+<h2>Federal Government</h2>
+
+<ul>
+<li><strong>Federal Cross-Agency Portals.</strong> If your website is a federal cross-agency portal (e.g., USA.gov), the Job Openings module will return relevant, location- and keyword-matched job openings <em>across all federal agencies</em>.</li>
+<li><strong>Federal Department Websites.</strong> If your website is affiliated with a specific federal department (e.g., Department of Commerce), the Job Openings module will return relevant, location- and keyword-matched job openings <em>across all agencies within your department</em>.</li>
+<li><strong>Federal Agency or Office Websites.</strong> If your website is affiliated with a specific federal agency (e.g., NOAA) or office (e.g, National Ocean Service), the Job Openings module will return relevant, location-and keyword-matched job openings <em>at your agency</em>.</li>
+</ul>
+
+
+<p>Searchers will also see a direct link to <a href="https://www.usajobs.gov">USAJobs.gov</a> for all current job openings (specific to your department or agency, if applicable), as shown in the sample below for a search on <a href="http://search.doi.gov/search?utf8=%E2%9C%93&amp;affiliate=doi.gov&amp;query=jobs" title=""><em>jobs</em></a> on DOI.gov.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/govbox-jobs.png" title="Search results for jobs on DOI.gov" alt="Search results for jobs on DOI.gov" /></p>
+
+<h2>State and Local Government</h2>
+
+<p>If your website is a state or local government site that uses both DigitalGov Search and NeoGov (e.g., Michigan.gov), the Job Openings module will return relevant, location- and keyword-matched job openings <em>across your agency</em>.</p>
+
+<p>Searchers will also see a direct link to your NeoGov page for all current job openings specific to your agency, as shown in the sample below for a search on <em><a href="http://search.ci.bloomington.mn.us/search?affiliate=cityofbloomingtonmnsearchresults&amp;query=jobs">jobs</a></em> on the City of Bloomington, MN.</p>
+
+<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/jobs-bloomington.png" alt="Search results for jobs on ci.bloomington.mn.us" /></p>
+
+<p>Otherwise, the Job Openings module will return relevant, location- and keyword-matched job openings <em>across all federal, state, and local agencies</em>.</p>
+
+<hr />
+
+<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x73;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#x2e;&#100;&#x69;&#103;&#x69;&#x74;&#97;&#108;&#103;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;">&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#46;&#100;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#103;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Job Openings module.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/modules"><span class="label label-info">modules</span></a>
+      
+      <a href="/tagged/jobs"><span class="label label-info">jobs</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/govbox-jobs.html">
         <time datetime="2016-07-28">July 28, 2016</time>
       </a>
     </div>
@@ -472,68 +548,6 @@
  
     
     <h1>
-      <a href="/manual/govbox-jobs.html">Help Searchers Find Jobs</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>One of the most common search tasks is to look for current job openings. We created the Jobs module to help searchers quickly find relevant jobs.</p>
-
-<p>When you <a href="/manual/display-overview.html">turn on the Job Openings</a> module, searchers looking for jobs on your site will see up to three relevant jobs listings on your results page. You will need to <a href="mailto:search@support.digitalgov.gov">contact us</a> to get the Jobs module enabled for your site.</p>
-
-<h2>Federal Government</h2>
-
-<ul>
-<li><strong>Federal Cross-Agency Portals.</strong> If your website is a federal cross-agency portal (e.g., USA.gov), the Job Openings module will return relevant, location- and keyword-matched job openings <em>across all federal agencies</em>.</li>
-<li><strong>Federal Department Websites.</strong> If your website is affiliated with a specific federal department (e.g., Department of Commerce), the Job Openings module will return relevant, location- and keyword-matched job openings <em>across all agencies within your department</em>.</li>
-<li><strong>Federal Agency or Office Websites.</strong> If your website is affiliated with a specific federal agency (e.g., NOAA) or office (e.g, National Ocean Service), the Job Openings module will return relevant, location-and keyword-matched job openings <em>at your agency</em>.</li>
-</ul>
-
-
-<p>Searchers will also see a direct link to <a href="https://www.usajobs.gov">USAJobs.gov</a> for all current job openings (specific to your department or agency, if applicable), as shown in the sample below for a search on <a href="http://search.doi.gov/search?utf8=%E2%9C%93&amp;affiliate=doi.gov&amp;query=jobs" title=""><em>jobs</em></a> on DOI.gov.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/govbox-jobs.png" title="Search results for jobs on DOI.gov" alt="Search results for jobs on DOI.gov" /></p>
-
-<h2>State and Local Government</h2>
-
-<p>If your website is a state or local government site that uses both DigitalGov Search and NeoGov (e.g., Michigan.gov), the Job Openings module will return relevant, location- and keyword-matched job openings <em>across your agency</em>.</p>
-
-<p>Searchers will also see a direct link to your NeoGov page for all current job openings specific to your agency, as shown in the sample below for a search on <em><a href="http://search.ci.bloomington.mn.us/search?affiliate=cityofbloomingtonmnsearchresults&amp;query=jobs">jobs</a></em> on the City of Bloomington, MN.</p>
-
-<p><img src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/jobs-bloomington.png" alt="Search results for jobs on ci.bloomington.mn.us" /></p>
-
-<p>Otherwise, the Job Openings module will return relevant, location- and keyword-matched job openings <em>across all federal, state, and local agencies</em>.</p>
-
-<hr />
-
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. Email us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#x73;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#111;&#118;">&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#117;&#112;&#112;&#111;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#x6f;&#118;</a> to let us know where you publish your job openings so that we can include them in the Job Openings module.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/modules"><span class="label label-info">modules</span></a>
-      
-      <a href="/tagged/jobs"><span class="label label-info">jobs</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/govbox-jobs.html">
-        <time datetime="2016-07-28">July 28, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
       <a href="/manual/users.html">How to Manage Your Site's Users</a>
     </h1>
     
@@ -603,6 +617,88 @@
  
     
     <h1>
+      <a href="/manual/domains.html">How to Edit Your Domains</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Domains</p>
+
+<p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
+
+<h2>Entire Site(s)</h2>
+
+<ul>
+<li>List yoursite.gov (without www) to search your entire site, including all subdomains.</li>
+<li>List yoursite.gov and yoursite2.gov to search multiple sites.</li>
+</ul>
+
+
+<h2>Specific Subdomains</h2>
+
+<ul>
+<li>List www.yoursite.gov to include only the primary 'www' domain.</li>
+<li>List subdomain.yoursite.gov to include subdomains.</li>
+</ul>
+
+
+<h2>Specific Directories</h2>
+
+<p>List yoursite.gov/folder to include folders. Note: this will include all sub-folders (if they exist), i.e. yoursite.gov/folder/folder2.</p>
+
+<p>You cannot specify individual URLs.</p>
+
+<p>Searches that start three or more subfolders deep cannot use our default configuration. <a href="mailto:search@support.digitalgov.gov">Email us</a> for assistance.</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
+
+<ol>
+<li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
+<li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
+<li>Email us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#115;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#x76;">&#115;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#x72;&#x74;&#46;&#100;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#46;&#x67;&#111;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
+</ol>
+
+
+<p><a id="filter"></a><strong><em>Troubleshooting Tip:</em></strong> You can remove or filter specific URLs using any of the following options.</p>
+
+<ol>
+<li><p>Remove the page from your site and return a 404 (Not Found) 401 (Gone), or 301 (Permanently Moved) HTTP status.</p></li>
+<li><p>Add a <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">noindex robots metatag or x-robots tag</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
+<li><p>Request the page's removal using the <a href="http://www.bing.com/webmaster/help/block-urls-from-bing-264e560a">Block URLs option in Bing Webaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/1663419">Remove URLs option in Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p></li>
+<li><p>Use the Filter URLs option under the <a href="/manual/domains-advanced.html">Advanced</a> tab. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
+</ol>
+
+
+<p><strong><em>Troubleshooting Tip:</em></strong> Are specific web pages missing from your Bing web results? You can tell us about any missing URLs via an RSS feed or manually (the Supplemental Feed and Supplemental URLs options under the <a href="/manual/domains-advanced.html">Advanced</a> tab, respectively). We'll fetch and index the pages and append them to your web results.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/domains.html">
+        <time datetime="2016-07-28">July 28, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/display-overview.html">How to Select the Options that Appear on Your Results Page</a>
     </h1>
     
@@ -620,7 +716,7 @@
 
 <p>Type over the text in the Name field to edit a facet's display name. Keep each name short (15 or fewer characters) and consistent with the content you're searching. Click on the hyperlink in the Source field to update the facet's source content. Hover over the icon with three horizontal lines on the left to change the order.</p>
 
-<p><strong>More.</strong> We show up to four facets above your search box. If you turn on the display of more than four facets, you'll see them listed under a 'More' dropdown menu. Email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#115;&#101;&#97;&#114;&#x63;&#x68;&#x40;&#115;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#103;&#111;&#x76;&#46;&#103;&#x6f;&#x76;">&#x73;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;</a> if you'd like to use a custom label instead of the default 'More'.</p>
+<p><strong>More.</strong> We show up to four facets above your search box. If you turn on the display of more than four facets, you'll see them listed under a 'More' dropdown menu. Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x73;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#105;&#116;&#97;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#118;">&#x73;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#115;&#117;&#x70;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#x69;&#x67;&#x69;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#118;</a> if you'd like to use a custom label instead of the default 'More'.</p>
 
 <h2>Modules</h2>
 
@@ -648,7 +744,7 @@
 
 <p>If you list more than two related sites, searchers will see them listed under a dropdown menu, View Topic. See, for example, the related sites displayed on <a href="http://search.broward.org/search?affiliate=co.broward.fl.us&amp;query=jobs">Broward.org for a search on <em>jobs</em></a>.</p>
 
-<p>Email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x73;&#x65;&#97;&#x72;&#99;&#104;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#118;">&#x73;&#101;&#97;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#100;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#118;</a> if you'd like to use a custom label instead of the default 'View Topic' label.</p>
+<p>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#116;&#46;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#x76;">&#x73;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#114;&#x74;&#46;&#100;&#x69;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#118;</a> if you'd like to use a custom label instead of the default 'View Topic' label.</p>
 
 <h2>Pointer to Kick Off New Search</h2>
 
@@ -662,13 +758,13 @@
 </ul>
 
 
-<p>Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#115;&#101;&#97;&#x72;&#99;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#x64;&#x69;&#x67;&#x69;&#x74;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;">&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#x74;&#x61;&#108;&#x67;&#111;&#118;&#46;&#103;&#111;&#x76;</a> if you'd provide searchers with a custom message to encourage them to search another section of your site, your database, or both.</p>
+<p>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#115;&#x65;&#x61;&#114;&#99;&#104;&#64;&#115;&#x75;&#x70;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;">&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#117;&#x70;&#x70;&#x6f;&#x72;&#x74;&#46;&#100;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#46;&#x67;&#x6f;&#118;</a> if you'd provide searchers with a custom message to encourage them to search another section of your site, your database, or both.</p>
 
 <hr />
 
 <p><strong><em>Did you know?</em></strong>  Searchers may narrow results by time period for any <a href="/manual/rss.html">RSS</a> feeds. See, for example, results for a <a href="http://search.whitehouse.gov/search/news?affiliate=wh&amp;channel=6&amp;m=false&amp;query=jobs&amp;tbs=w">search on <em>jobs</em> narrowed to press articles in the last week on WhiteHouse.gov</a>.</p>
 
-<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#x73;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x73;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;">&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#118;&#46;&#x67;&#x6f;&#x76;</a> to if you want to customize these display names.</p>
+<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#116;&#46;&#100;&#105;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#103;&#111;&#x76;">&#115;&#x65;&#97;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#x70;&#112;&#x6f;&#114;&#116;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#x6c;&#103;&#111;&#118;&#46;&#x67;&#111;&#118;</a> to if you want to customize these display names.</p>
 
 <p><strong><em>Did you know?</em></strong> You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our <a href="/manual/code.html">JavaScript snippet</a> before the closing <code>&lt;body&gt;</code> tag on your HTML web pages.</p>
 
@@ -722,7 +818,7 @@
 
 <p>If you don't like the default web results, you can choose to use another index. Options follow.</p>
 
-<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can index content that is sent to us by API or RSS. Email us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#114;&#99;&#104;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#x69;&#103;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#111;&#118;">&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#111;&#x76;</a> and we'll work with you to determine the best way for us to get your content.</p>
+<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can index content that is sent to us by API or RSS. Email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#58;&#x73;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#x73;&#x65;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#105;&#103;&#105;&#116;&#97;&#108;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#118;</a> and we'll work with you to determine the best way for us to get your content.</p>
 
 <p><strong>Option 2. Buy and Use Google Site Search.</strong> If you already have (or plan to purchase), <a href="https://www.google.com/work/search/products/gss.html">Google Site Search</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, we'll send a searcher's query to the search index you've provided and we'll render the results within our search results page.</p>
 
@@ -876,65 +972,6 @@
       
       
       <a href="/manual/collections.html">
-        <time datetime="2016-07-28">July 28, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/cname.html">How to Mask Your Domain</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these steps to mask your domain.</p>
-
-<ol>
-<li><p>Create a CNAME in your external DNS records for <code>search.yoursite.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>. Your site handle is listed on the <a href="http://search.digitalgov.gov/manual/settings.html">settings page</a> in the Search Admin Center.</p>
-
-<p> NOTE: if your site handle contains a <code>.</code>, please replace it with a <code>-</code> in your DNS record,  e.g., for site handle <code>yoursite.gov.search</code> the DNS record would look like this:</p>
-
-<pre><code> search.yoursite.gov   CNAME  yoursite-gov-search.sites.infr.search.usa.gov
-</code></pre>
-
-<p> To use a CNAME with <code>HTTPS</code>, you will need to <a href="mailto:search@support.digitalgov.gov">email us</a> after your DNS records have been updated in order to be added to our SSL certificate.</p></li>
-<li><p>When the setup is complete, change your search box's <a href="/manual/code.html">form code</a> action from <code>search.usa.gov/search</code> to <code>search.yoursite.gov/search</code>.</p></li>
-</ol>
-
-
-<p>Your domain mask will work as soon as this DNS update is complete.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> Many agencies have both internal and external DNS. Be
-sure to update your <em>external</em> DNS records (step 1) before changing your form code (step 2).</p>
-
-<p><strong><em>Did you know?</em></strong> Any search site within your domain may use the same domain mask and CNAME record, even if the CNAME is not associated with that particular site's handle. To implement an existing mask for a search box, just do Step 2, above.</p>
-
-<p><strong><em>Did you know?</em></strong> Once the CNAME is set up, if visitors to your site happen to truncate the URL in the browser bar to http://search.yoursite.gov (without any parameters), they're automatically redirected to your homepage at http://www.yoursite.gov.</p>
-
-<p><strong><em>Did you know?</em></strong> Most of our customers use a mask like <code>search.yoursite.gov</code> (such as search.nih.gov). If the <code>search</code> subdomain is already used by another application, you can use <code>find</code> or <code>findit</code>, such as <code>find.irs.gov</code> or <code>findit.state.gov</code>. We no longer support other subdomain patterns.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
-      
-      <a href="/tagged/cname"><span class="label label-info">cname</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/cname.html">
         <time datetime="2016-07-28">July 28, 2016</time>
       </a>
     </div>
