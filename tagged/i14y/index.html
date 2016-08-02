@@ -103,6 +103,84 @@
  
     
     <h1>
+      <a href="/developer/i14y-testing.html">cURL Commands for i14y Testing</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>If you experience difficulty sending documents to our index via <a href="http://search.digitalgov.gov/developer/i14y.html">i14y</a>, it is possible your firewall is not letting you communicate with the i14y server. Adding a test document to your i14y drawer can help you diagnose a firewall issue.
+Windows users may need to <a href="https://curl.haxx.se/download.html">install cURL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> in order to run this test from the command line.</p>
+
+<h2>Adding the Test Document</h2>
+
+<p>From the command line, enter:</p>
+
+<pre><code>curl "https://i14y.usa.gov/api/v1/documents" -XPOST -H "Content-Type:application/json" -u your_drawer_handle:your_secret_token -d '{"document_id":"1", "title":"Test Document", "path": "http://www.gov.gov/cms/doc1.html", "created": "2015-05-12T22:35:09Z", "description":"The summary of the document goes here.", "content":"This is placeholder text, and in a real document would be paragraphs long.", "promote": false, "language" : "en", "tags" : "tag1, another tag"}'
+</code></pre>
+
+<p>Note: you need to replace <strong>your_drawer_handle</strong> with your i14y drawer handle, found in the i14y drawers section in the Search Admin Center (<a href="http://search.digitalgov.gov/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers). You will also need to replace <strong>your_secret_token</strong> with the drawer’s secret token, which can be found by hitting “Show” in the 14y drawer list. The drawer handle and token should be separated by a colon (:) with no spaces on either side of the colon.</p>
+
+<p>The above command returns JSON structured like this:
+<code>
+{
+"status":200,
+"developer_message":"OK",
+"user_message":"Your document was successfully created."
+}
+</code></p>
+
+<p>If you do not see a 200 status, <a href="mailto:search@support.digitalgov.gov">contact our team</a>.</p>
+
+<p>After successfully sending a document, you should see an increase (by 1) in the number of documents in your <a href="http://search.digitalgov.gov/manual/i14y-drawers.html">i14y drawer</a>.</p>
+
+<h2>Removing the Test Document</h2>
+
+<p>Once you have successfully added the test document to your drawer, you will need to delete it, or it will appear in your site’s search results.</p>
+
+<p>From the command line, enter:</p>
+
+<pre><code>curl "https://i14y.usa.gov/api/v1/documents/1" -XDELETE -u your_drawer_handle:your_secret_token
+</code></pre>
+
+<p>The above command returns JSON structured like this:</p>
+
+<pre><code>{
+"status":200,
+"developer_message":"OK",
+"user_message":"Your document was successfully deleted."
+}
+</code></pre>
+
+<hr />
+
+<p><strong><em>Resources:</em></strong> Read tips on <a href="http://search.digitalgov.gov/developer/i14y.html">Getting Started With i14y</a>, or view the full <a href="http://gsa.github.io/slate/">i14y technical documentation</a> on Github.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/i14y"><span class="label label-info">i14y</span></a>
+      
+      <a href="/tagged/api"><span class="label label-info">api</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/developer/i14y-testing.html">
+        <time datetime="2016-08-02">August 2, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/i14y-drawers.html">How to Work with i14y Drawers</a>
     </h1>
     
