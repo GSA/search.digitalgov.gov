@@ -17,7 +17,7 @@ Below are some of the highlights.
 
 We started with the basic search results because they're the meat of the page. They also have the highest clickthru rate among the various items shown on the page. Here's the before and after for a search on *passport* on USA.gov.
 
-![Search result for passport on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-search-result.png "Search result for passport on USA.gov")
+![Search result for passport on USA.gov](/img//redesign-search-result.png "Search result for passport on USA.gov")
 
 We've done away with the underlining on the title. The snippet is wider and has more space. Clicking or touching anywhere on the snippet (not just the title) opens the link.
 
@@ -25,7 +25,7 @@ We've done away with the underlining on the title. The snippet is wider and has 
 
 Spelling suggestions have the second highest clickthru rate so we focused on those next. Here's the before and after for a search on *manual noriega* (sic) on USA.gov.
 
-![Spelling suggestion for manual noriega (sic) on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-spelling.png "Spelling suggestion for manual noriega (sic) on USA.gov")
+![Spelling suggestion for manual noriega (sic) on USA.gov](/img//redesign-spelling.png "Spelling suggestion for manual noriega (sic) on USA.gov")
 
 We've done away with the wordiness and boldface. The suggestion and its corresponding option to override the automatic correction now use plain language and are shown on two lines. We now only use boldface to highlight keyword matches for searchers' queries.
 
@@ -33,7 +33,7 @@ We've done away with the wordiness and boldface. The suggestion and its correspo
 
 Through [usability tests](http://www.digitalgov.gov/resources/digitalgov-user-experience-program/digitalgov-user-experience-program-test-support/), we found that searchers didn't see the options to change the scope of their results in the left-hand column. Data also supports this finding as very, very few searchers clicked on these options. Here's the before and after for a search on *jobs* on USA.gov.
 
-![Search verticals on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-verticals.png "Search verticals on USA.gov")
+![Search verticals on USA.gov](/img//redesign-verticals.png "Search verticals on USA.gov")
 
 The new format clusters all options to narrow, broaden, or change the scope of the results together, and places these options directly above the search box. Searchers see up to three options and have the ability to show More &hellip;. The old format separated them, showing the option to search on related sites in the right-hand column above the box and verticals in the left-hand column below the box.
 
@@ -43,7 +43,7 @@ Once visitors have opted to type a term in the search box, they're in search mod
 
 To reflect visitors' shift from browsing to searching, search results pages on many commercial media websites highlight the search verticals and either remove or downplay the site's navigation. Here's the before and after for a search on *veterans affairs* on USA.gov.
 
-![Site brand and navigation on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-navigation.png "Site brand and navigation on USA.gov")
+![Site brand and navigation on USA.gov](/img//redesign-navigation.png "Site brand and navigation on USA.gov")
 
 The new format prominently shows the search verticals above the search box. Searchers can click the logo to return to homepage, or expand the "hamburger" menu to view additional options to browse the site. Searchers can also browse the site using links in the footer.
 
@@ -51,7 +51,7 @@ The new format prominently shows the search verticals above the search box. Sear
 
 Eye tracking studies have shown searchers gravitate to video thumbnails. Snippets are also very important to increase clickthru rates. Searchers are more likely to view a video if they understand how it relates to what they're looking for. Here's the before and after for a search on *careers* on USA.gov.
 
-![Video search result for careers on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-video.png "Video search result for careers on USA.gov")
+![Video search result for careers on USA.gov](/img//redesign-video.png "Video search result for careers on USA.gov")
 
 The new video format shows one video plus a clearly labeled "More videos about ..." link. It also shows the video's source (in this case YouTube), the length of the video, and a short snippet. The video is now separated from basic search results by thin grey lines. 
 
@@ -61,7 +61,7 @@ Searchers now see inline videos from the past 13 months only. (It used to be for
 
 Here's the before and after for a search on *tornadoes* on USA.gov.
 
-![News search results for tornado on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-news.png "News search results for tornado on USA.gov")
+![News search results for tornado on USA.gov](/img//redesign-news.png "News search results for tornado on USA.gov")
 
 The new news format now matches the look of the basic search results to provide a more seamless experience.
 
@@ -71,7 +71,7 @@ Searchers now see inline news from the last four months only. (It used to be for
 
 Here's the before and after for a search on *social security* on USA.gov.
 
-![Tweet for social security on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-tweet.png "Tweet for social security on USA.gov")
+![Tweet for social security on USA.gov](/img//redesign-tweet.png "Tweet for social security on USA.gov")
 
 The new tweet format shows one tweet inline with the results. It now shows the agency's Twitter profile image and the tweet is separated from basic search results by thin grey lines and doesn't have a separate heading. As tweets tend to be very time-sensitive, searchers now see tweets from the last three days only. (It used to be 30 days.) The old format showed tweets in a right-hand column that was often mistaken for an ad.
 
@@ -79,7 +79,7 @@ The new tweet format shows one tweet inline with the results. It now shows the a
 
 Here's the before and after for a search on *communications jobs* on USA.gov.
 
-![Job results for communications jobs on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-jobs.png "Job results for communications jobs on USA.gov")
+![Job results for communications jobs on USA.gov](/img//redesign-jobs.png "Job results for communications jobs on USA.gov")
 
 The new job opening format shows up to three job openings inline with the results. Searchers can now click or touch the down arrow to see up to 10 listings inline. For federal agencies, it now shows the USAJobs logo to clearly identify that as the data source. The job openings are separated from basic search results by thin grey lines. The old format showed jobs in a right-hand column that was often mistaken for an ad and didn't give searchers the option to see more listings on the results page.
 
@@ -87,7 +87,7 @@ The new job opening format shows up to three job openings inline with the result
 
 Here's the before and after for a search on *diabetes* on USA.gov.
 
-![Health topic result for diabetes on USA.gov](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com//redesign-health-govbox.png "Health topic result for diabetes on USA.gov")
+![Health topic result for diabetes on USA.gov](/img//redesign-health-govbox.png "Health topic result for diabetes on USA.gov")
 
 The new health topics format shows a shorter, more concise snippet and the snippet doesn't have any embedded links. The result now takes up less vertical space as the links for related topics and clinical trials are each listed in a line. The MedlinePlus logo now links to <https://www.nlm.nih.gov/medlineplus/>.
 

@@ -26,7 +26,7 @@ Click on the [Display Overview](/manual/display-overview.html) page. Turn on you
 
 Searchers will see the collection name as an option that they can select in order to focus their search.
 
-![Collection on the search results page](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-2.png)
+![Collection on the search results page](/img/manual-collection-2.png)
 
 ---
 
@@ -40,9 +40,9 @@ The value is the number for your collection ID, which is visible in the URL when
 
 See the sample search box below that is limited to news on [NIH.gov for a search on *autism*](http://search.nih.gov/search/docs?affiliate=nih&dc=565&query=autism).
 
-[![News-only search box on NIH.gov's News Releases page](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-3.png "News-only search box on NIH.gov's News Releases page")](http://www.nih.gov/news/releases.htm)
+[![News-only search box on NIH.gov's News Releases page](/img/manual-collection-3.png "News-only search box on NIH.gov's News Releases page")](http://www.nih.gov/news/releases.htm)
   
-[![NIH.gov news-only search results page](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/manual-collection-4.png "NIH.gov news-only search results page")](http://search.nih.gov/search/docs?affiliate=nih&dc=565&query=autism)
+[![NIH.gov news-only search results page](/img/manual-collection-4.png "NIH.gov news-only search results page")](http://search.nih.gov/search/docs?affiliate=nih&dc=565&query=autism)
 
 <a name="sitelimit"></a>
 

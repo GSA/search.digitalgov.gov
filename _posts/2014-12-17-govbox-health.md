@@ -11,4 +11,4 @@ This module offers direct access to [MedlinePlus Health Topics](https://www.nlm.
 
 If you [opt to show the Health Topics](/manual/display-overview.html) module, searchers looking for health topics on your site can readily find high-quality health information, as shown in the sample below for a search on [*ovarian cancer* on NC.gov](http://search.usa.gov/search?affiliate=nc.gov&query=ovarian+cancer&m=true).
 
-[![Health Topics Module on NC.gov](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/govbox-health.png "Health Topics Module on NC.gov")](http://search.usa.gov/search?affiliate=nc.gov&query=ovarian+cancer&m=true)
+[![Health Topics Module on NC.gov](/img/govbox-health.png "Health Topics Module on NC.gov")](http://search.usa.gov/search?affiliate=nc.gov&query=ovarian+cancer&m=true)
