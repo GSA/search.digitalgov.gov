@@ -8,11 +8,11 @@ We have a [proven track record](/tagged/quote) of delivering fast, relevant sear
 
 <table align="center" width="100%">
 <tr>
-<td valign="top" align="center" width="20%"><a href="http://usdasearch.usda.gov/search?affiliate=usda&query=jobs"><img alt="Agriculture" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-usda.png"></a><br><strong>Agriculture</strong></td>
-<td valign="top" align="center" width="20%"><a href="http://search.commerce.gov/search?affiliate=commerce.gov&query=jobs"><img alt="Commerce" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-commerce.png"></a><br><strong>Commerce</strong></td>
-<td valign="top" align="center" width="20%"><a href="http://search.defense.gov/search?affiliate=defense_gov&query=jobs"><img alt="Defense" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-defense.png"></a><br><strong>Defense</strong></td>
-<td valign="top" align="center" width="20%"><a href="http://findit.ed.gov/search?affiliate=ed.gov&query=jobs"><img alt="Education" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-education.png"></a><br><strong>Education</strong></td>
-<td valign="top" align="center" width="20%"><a href="http://search.dhs.gov/search?affiliate=dhs&query=jobs"><img alt="Homeland Security" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-dhs.png"></a><br><strong>Homeland Security</strong></td>
+<td valign="top" align="center" width="20%"><a href="http://usdasearch.usda.gov/search?affiliate=usda&query=jobs"><img alt="Agriculture" src="/img/customers-usda.png"></a><br><strong>Agriculture</strong></td>
+<td valign="top" align="center" width="20%"><a href="http://search.commerce.gov/search?affiliate=commerce.gov&query=jobs"><img alt="Commerce" src="/img/customers-commerce.png"></a><br><strong>Commerce</strong></td>
+<td valign="top" align="center" width="20%"><a href="http://search.defense.gov/search?affiliate=defense_gov&query=jobs"><img alt="Defense" src="/img/customers-defense.png"></a><br><strong>Defense</strong></td>
+<td valign="top" align="center" width="20%"><a href="http://findit.ed.gov/search?affiliate=ed.gov&query=jobs"><img alt="Education" src="/img/customers-education.png"></a><br><strong>Education</strong></td>
+<td valign="top" align="center" width="20%"><a href="http://search.dhs.gov/search?affiliate=dhs&query=jobs"><img alt="Homeland Security" src="/img/customers-dhs.png"></a><br><strong>Homeland Security</strong></td>
 
 </tr>
 </table>
@@ -20,35 +20,35 @@ We have a [proven track record](/tagged/quote) of delivering fast, relevant sear
 <table align="center" width="96%">
 <tr>
 <tr><td>&nbsp;</td></tr>
-<td valign="top" align="center" width="16%"><a href="http://search.usa.gov/search?affiliate=housingandurbandevelopment&query=jobs"><img alt="HUD" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-hud.png"></a><br><strong>HUD</strong></td>
-<td valign="top" align="center" width="16%"><a href="http://search.usa.gov/search?affiliate=doi.gov&query=jobs"><img alt="Interior" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-interior.png"></a><br><strong>Interior</strong></td>
-<td valign="top" align="center" width="16%"><a href="http://search.usa.gov/search?affiliate=u.s.departmentoflabor&query=jobs"><img alt="Labor" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-labor.png"></a><br><strong>Labor</strong></td>
-<td valign="top" align="center" width="16%"><a href="http://findit.state.gov/search?affiliate=dos_stategov&query=jobs"><img alt="State" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-state.png"></a><br><strong>State</strong></td>
-<td valign="top" align="center" width="16%"><a href="http://search.usa.gov/search?affiliate=usdot&query=jobs"><img alt="Transportation" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-dot.png"></a><br><strong>Transportation</strong></td>
-<td valign="top" align="center" width="16%"><a href="http://search.treasury.gov/search?affiliate=treasury&query=jobs"><img alt="Treasury" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-treasury.png"></a><br><strong>Treasury</strong></td>
+<td valign="top" align="center" width="16%"><a href="http://search.usa.gov/search?affiliate=housingandurbandevelopment&query=jobs"><img alt="HUD" src="/img/customers-hud.png"></a><br><strong>HUD</strong></td>
+<td valign="top" align="center" width="16%"><a href="http://search.usa.gov/search?affiliate=doi.gov&query=jobs"><img alt="Interior" src="/img/customers-interior.png"></a><br><strong>Interior</strong></td>
+<td valign="top" align="center" width="16%"><a href="http://search.usa.gov/search?affiliate=u.s.departmentoflabor&query=jobs"><img alt="Labor" src="/img/customers-labor.png"></a><br><strong>Labor</strong></td>
+<td valign="top" align="center" width="16%"><a href="http://findit.state.gov/search?affiliate=dos_stategov&query=jobs"><img alt="State" src="/img/customers-state.png"></a><br><strong>State</strong></td>
+<td valign="top" align="center" width="16%"><a href="http://search.usa.gov/search?affiliate=usdot&query=jobs"><img alt="Transportation" src="/img/customers-dot.png"></a><br><strong>Transportation</strong></td>
+<td valign="top" align="center" width="16%"><a href="http://search.treasury.gov/search?affiliate=treasury&query=jobs"><img alt="Treasury" src="/img/customers-treasury.png"></a><br><strong>Treasury</strong></td>
 </tr>
 </table>
 
 <table align="center" width="100%">
 <tr><td>&nbsp;</td></tr>
 <tr>
-<td valign="top" align="center"><a href="https://portal.ehawaii.gov/page/search/?q=jobs"><img alt="Hawaii" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-hawaii.png"></a><br><strong>Hawaii</strong></td>
-<td valign="top" align="center"><a href="http://www.idaho.gov/home/search_results.html?query=jobs"><img alt="Idaho" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-idaho.png"></a><br><strong>Idaho</strong></td>
-<td valign="top" align="center"><a href="http://search.kansas.gov/search?affiliate=kansas.gov&query=jobs"><img alt="Kansas" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-kansas.png"></a><br><strong>Kansas</strong></td>
-<td valign="top" align="center"><a href="http://kentucky.gov/Pages/search.aspx?terms=jobs&affiliateId=GENERAL"><img alt="Kentucky" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-kentucky.png"></a><br><strong>Kentucky</strong></td>
-<td valign="top" align="center"><a href="http://search.usa.gov/search?affiliate=www.louisiana.gov&query=jobs"><img alt="Louisiana" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-louisiana.png"></a><br><strong>Louisiana</strong></td>
+<td valign="top" align="center"><a href="https://portal.ehawaii.gov/page/search/?q=jobs"><img alt="Hawaii" src="/img/customers-hawaii.png"></a><br><strong>Hawaii</strong></td>
+<td valign="top" align="center"><a href="http://www.idaho.gov/home/search_results.html?query=jobs"><img alt="Idaho" src="/img/customers-idaho.png"></a><br><strong>Idaho</strong></td>
+<td valign="top" align="center"><a href="http://search.kansas.gov/search?affiliate=kansas.gov&query=jobs"><img alt="Kansas" src="/img/customers-kansas.png"></a><br><strong>Kansas</strong></td>
+<td valign="top" align="center"><a href="http://kentucky.gov/Pages/search.aspx?terms=jobs&affiliateId=GENERAL"><img alt="Kentucky" src="/img/customers-kentucky.png"></a><br><strong>Kentucky</strong></td>
+<td valign="top" align="center"><a href="http://search.usa.gov/search?affiliate=www.louisiana.gov&query=jobs"><img alt="Louisiana" src="/img/customers-louisiana.png"></a><br><strong>Louisiana</strong></td>
 </tr>
 </table>
 
 <table align="center" width="100%">
 <tr><td>&nbsp;</td></tr>
 <tr>
-<td valign="top" align="center"><a href="http://www.maine.gov/searchme/search?searchquery=jobs"><img alt="Maine" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-maine.png"></a><br><strong>Maine</strong></td>
-<td valign="top" align="center"><a href="http://search.michigan.gov/search?affiliate=mi-som&query=jobs"><img alt="Michigan" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-michigan.png"></a><br><strong>Michigan</strong></td>
-<td valign="top" align="center"><a href="http://nvsearch.nv.gov/search?affiliate=stateofnevada&query=jobs"><img alt="Nevada" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-nevada.png"></a><br><strong>Nevada</strong></td>
-<td valign="top" align="center"><a href="https://search.usa.gov/search?affiliate=ri.gov&query=jobs"><img alt="Rhode Island" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-ri.png"></a><br><strong>Rhode Island</strong></td>
-<td valign="top" align="center"><a href="http://search.usa.gov/search?affiliate=vagov&query=jobs"><img alt="Virginia" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-virginia.png" height="70"></a><br><strong>Virginia</strong></td>
-<td valign="top" align="center"><a href="http://search.usa.gov/search?affiliate=accesswashington&query=jobs"><img alt="Washington" src="https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/customers-washington.png" height="70"></a><br><strong>Washington</strong></td>
+<td valign="top" align="center"><a href="http://www.maine.gov/searchme/search?searchquery=jobs"><img alt="Maine" src="/img/customers-maine.png"></a><br><strong>Maine</strong></td>
+<td valign="top" align="center"><a href="http://search.michigan.gov/search?affiliate=mi-som&query=jobs"><img alt="Michigan" src="/img/customers-michigan.png"></a><br><strong>Michigan</strong></td>
+<td valign="top" align="center"><a href="http://nvsearch.nv.gov/search?affiliate=stateofnevada&query=jobs"><img alt="Nevada" src="/img/customers-nevada.png"></a><br><strong>Nevada</strong></td>
+<td valign="top" align="center"><a href="https://search.usa.gov/search?affiliate=ri.gov&query=jobs"><img alt="Rhode Island" src="/img/customers-ri.png"></a><br><strong>Rhode Island</strong></td>
+<td valign="top" align="center"><a href="http://search.usa.gov/search?affiliate=vagov&query=jobs"><img alt="Virginia" src="/img/customers-virginia.png" height="70"></a><br><strong>Virginia</strong></td>
+<td valign="top" align="center"><a href="http://search.usa.gov/search?affiliate=accesswashington&query=jobs"><img alt="Washington" src="/img/customers-washington.png" height="70"></a><br><strong>Washington</strong></td>
 </tr>
 </table>
 <a name="history"></a>

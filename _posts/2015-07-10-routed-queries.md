@@ -40,4 +40,4 @@ If they get routed to the [Three Branches of Government](https://kids.usa.gov/th
 
 If they search for something not on the above list, like *what are the branches of government*, they'll still get the normal search results. 
 
-![Standard search results for 'what are the branches of government' on Kids.gov](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/routed-queries.png)
+![Standard search results for 'what are the branches of government' on Kids.gov](/img/routed-queries.png)

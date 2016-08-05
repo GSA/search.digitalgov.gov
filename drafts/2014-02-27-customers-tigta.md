@@ -2,4 +2,4 @@
 
 ## Providing search results for [www.treasury.gov/tigta/](http://www.treasury.gov/tigta/).
 
-[![TIGTA screenshot](http://f22818b4dfc10241d8a3-f1564c64756a8cfee25b6b19953b1d23.r31.cf2.rackcdn.com/customer-tigta.png "TIGTA screenshot")](http://search.usa.gov/search?affiliate=tigta&query=declaration+statement&x=0&y=0&m=true)
+[![TIGTA screenshot](/img/customer-tigta.png "TIGTA screenshot")](http://search.usa.gov/search?affiliate=tigta&query=declaration+statement&x=0&y=0&m=true)

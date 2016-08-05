@@ -11,4 +11,4 @@ This module offers direct access to *Federal Register* documents. We pull the da
 
 If you [opt to show the Federal Register](/manual/display-overview.html) module, searchers on your site can readily find the notices and rules that your agency has published in the *Federal Register*, as shown in the sample below for a search on [*autoimmune diseases* on NIH.gov](http://search.nih.gov/search?affiliate=nih&query=autoimmune+diseases).
 
-[![Federal Register Module on NIH.gov](https://9fddeb862c037f6d2190-f1564c64756a8cfee25b6b19953b1d23.ssl.cf2.rackcdn.com/govbox-fr.png "Federal Register Module on NIH.gov")](http://search.nih.gov/search?affiliate=nih&query=autoimmune+diseases)
+[![Federal Register Module on NIH.gov](/img/govbox-fr.png "Federal Register Module on NIH.gov")](http://search.nih.gov/search?affiliate=nih&query=autoimmune+diseases)
