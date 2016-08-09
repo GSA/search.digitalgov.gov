@@ -22,7 +22,7 @@ On the image results page, we'll display the pictures from your Instagram accoun
 
 See the sample results page below that shows image results displayed on [DOL.gov for a search on *minimum wage*](http://search.usa.gov/search/images?affiliate=u.s.departmentoflabor&query=minimum+wage).
 
-[![Image results from Flickr & Instagram](/img/social-media-instagram.png "Image results from Flickr & Instagram")](http://search.usa.gov/search/images?affiliate=u.s.departmentoflabor&query=minimum+wage)
+[![Image results from Flickr & Instagram](https://d3qcdigd1fhos0.cloudfront.net/blog/img/social-media-instagram.png "Image results from Flickr & Instagram")](http://search.usa.gov/search/images?affiliate=u.s.departmentoflabor&query=minimum+wage)
 
 ---
 

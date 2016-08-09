@@ -9,6 +9,6 @@ tags: spotlight customer-local
 
 ## We look forward to providing to your 100,000 residents and your beach visitors a great search experience on [WPB.org](http://www.wpb.org).
 
-[![WPB.org search results for waterfront](/img/customers-wpb.png)](http://search.usa.gov/search?affiliate=wpb.org&query=waterfront&m=true)
+[![WPB.org search results for waterfront](https://d3qcdigd1fhos0.cloudfront.net/blog/img/customers-wpb.png)](http://search.usa.gov/search?affiliate=wpb.org&query=waterfront&m=true)
 
 </article>

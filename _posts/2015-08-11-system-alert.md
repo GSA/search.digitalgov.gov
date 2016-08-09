@@ -13,7 +13,7 @@ Use the Search Page Alert feature to add a text message to your search results p
 
 See, for example, the custom alert on Defense.gov announcing their migration to a new system.
 
-![Custom System Alert on Defense.gov](/img/system-alert.png "Custom System Alert on Defense.gov")
+![Custom System Alert on Defense.gov](https://d3qcdigd1fhos0.cloudfront.net/blog/img/system-alert.png "Custom System Alert on Defense.gov")
 
 ---
 

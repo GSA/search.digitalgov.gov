@@ -15,7 +15,7 @@ Graphics best bets have a one or two-column layout and you can add an image. The
 
 See the sample results page below that shows a text best bet displayed on [USGS.gov for a search on tsunamis](http://search.usa.gov/search?affiliate=usgs&query=tsunamis).
 
-[![Graphics best bet highlighting tsunami links on USGS.gov](/img/best-bets-graphics.png "Graphics best bet highlighting tsunami links on USGS.gov")](http://search.usa.gov/search?affiliate=usgs&query=tsunamis)
+[![Graphics best bet highlighting tsunami links on USGS.gov](https://d3qcdigd1fhos0.cloudfront.net/blog/img/best-bets-graphics.png "Graphics best bet highlighting tsunami links on USGS.gov")](http://search.usa.gov/search?affiliate=usgs&query=tsunamis)
 
 There are a variety of layouts possible for graphics best bets.
 

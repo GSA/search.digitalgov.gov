@@ -14,7 +14,7 @@ All of the search and API traffic across hundreds of affiliate sites, iPhone app
 
 The initial system, like many initial systems, was fairly simple and did just enough to address our most pressing analytics needs. We took the logs from Apache and Ruby on Rails, put them in a big MySQL database on a separate machine, ran nightly and monthly jobs on them, and then exported the summary results to the main database cluster to be served up via a low-latency Rails web interface for analytics. We used a separate physical database machine with lots of memory and disk for the batch processing to keep our production MySQL instances from being impacted by this resource-intensive batch processing.
 
-![Initial dataflow of raw logfiles to analytics apps](/img/tumblr_lle73iJ2Ts1qid15q.png)
+![Initial dataflow of raw logfiles to analytics apps](https://d3qcdigd1fhos0.cloudfront.net/blog/img/tumblr_lle73iJ2Ts1qid15q.png)
 
 As we watched the main database tables grow and the nightly batch jobs take longer and longer, it became clear that we would soon exhaust the resources available on the single database analytics processing node. We looked at scaling up the hardware vertically and sharding the database horizontally, but both options seemed like we were just kicking the can down the road. Larger database hardware would be both costly and eventually insufficient for our needs, and sharding promised to take all the usual issues associated with a single database system (backups, master/slaves, schema management) and multiply them. We wanted the system to be able to grow cost effectively and without downtime, be naturally resilient to failures, and have backups handled sensibly. It was at this point that we started investigating HDFS, Hadoop, and Apache Hive.
 
@@ -22,13 +22,13 @@ HDFS offered us a distributed, resilient, and scalable filesystem while Hadoop p
 
 But best of all, we could layer the entire Cloudera stack on top of a subset of our existing production machines. By making use of each machine's excess reserve capacity of disk, CPU, and RAM, we were able to get a small proof-of-concept cluster stood up without purchasing any new hardware. The initial results confirmed that our workload lent itself well to distributed processing, as one job went from taking over an hour on a MySQL node to 20 minutes on a three machine Hadoop cluster. Within a week of getting the prototype up and running, we had transitioned all the remaining nightly analytics batch SQL jobs into Hive scripts. The job output fed into a collection of intermediate Hive tables, from which we generated summary data to export to MySQL as low-latency tables for the Rails web interface to use. To prove the scaling point, we spent five minutes adding another datanode/tasktracker to the mix, kicked off the cluster rebalancer, and the whole process ran faster the next day.
 
-![Current dataflow of raw logfiles to analytics apps](/img/tumblr_lle73rea1K1qid15q.png)
+![Current dataflow of raw logfiles to analytics apps](https://d3qcdigd1fhos0.cloudfront.net/blog/img/tumblr_lle73rea1K1qid15q.png)
 
 ## Phase 2: Feedback loop
 
 The result of all this analysis in Hive shows up not just in various analytics dashboards, but as part of the search experience on many government websites, too. For example, compare the different type-ahead suggestions for '**gran**' on <http://www.nps.gov> and <http://www.usa.gov>. Both sites use the same DigitalGov Search backend system, but the suggestions differ completely. We use Hadoop to help us generate contextually relevant and timely search suggestions for hundreds of government sites like this.
 
-![Different type-ahead suggestions on NPS.gov and USA.gov](/img/tumblr_lle73ymed31qid15q.png)
+![Different type-ahead suggestions on NPS.gov and USA.gov](https://d3qcdigd1fhos0.cloudfront.net/blog/img/tumblr_lle73ymed31qid15q.png)
 
 ## Phase 3: Internal monitoring</strong>
 

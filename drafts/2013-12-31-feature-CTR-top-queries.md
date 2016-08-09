@@ -8,4 +8,4 @@ tags: features bestbets
 
 ##Click-through rates (CTR) are an indicator whether or not your results are relevant for specific query terms. You can view your users' CTR for your top 1,000 queries and see the the top clicked URLs in real time.
 
-![Click-through Rates for Top Queries](/img/feature-ctr-top-queries.png "Click-through Rates for Top Queries")
+![Click-through Rates for Top Queries](https://d3qcdigd1fhos0.cloudfront.net/blog/img/feature-ctr-top-queries.png "Click-through Rates for Top Queries")

@@ -8,4 +8,4 @@ tags: features relevancy
 
 ##"Best Bets" are a good way to guide your users to the appropriate content based their keywords. We have implemented improved handling of phrases, so you only show results based on the user's entire query.
 
-![Improved Best Best Phrase Handling](/img/feature-improved-phrasing.png "Improved Best Best Phrase Handling")
+![Improved Best Best Phrase Handling](https://d3qcdigd1fhos0.cloudfront.net/blog/img/feature-improved-phrasing.png "Improved Best Best Phrase Handling")
