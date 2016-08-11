@@ -162,6 +162,90 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
  
     
     <h1>
+      <a href="/manual/collections.html">How to Create Collections Within Our Index</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Collections</p>
+
+<p>Would you like searchers to be able to change where they are searching, either to a particular place within your site, or to another site? You can create a collection that will search in any set of domains, subdomains, or subfolders.</p>
+
+<h2>Step 1. Create a Collection</h2>
+
+<p>Enter a name for the collection (such as FAQs, Archive, or News).</p>
+
+<p>Enter the domains, subdomains, or subfolders that you want this collection to search in. Start each URL prefix with http:// and end it in a trailing slash to avoid unintended matches (e.g., http://publications.agency.gov/docs/ and http://answers.agency.gov).</p>
+
+<p>You cannot specify URLs for individual web pages. If you are including a subfolder, be sure to include the folder(s) where the files are actually stored, not the folder where the index page lives.</p>
+
+<p>Paths that are three or more subfolders deep may not return results immediately. <a href="mailto:search@support.digitalgov.gov">Email us</a> if you are not seeing search results for these paths.</p>
+
+<h2>Step 2. Opt to Show as a Facet</h2>
+
+<p>Click on the <a href="/manual/display-overview.html">Display Overview</a> page. Turn on your collection to allow searchers to see it as a search facet in the navigation bar above the search box on the results page (in the desktop view), or in the search menu (on smaller screens).</p>
+
+<h2>Step 3. Check Your Search Results Page</h2>
+
+<p>Searchers will see the collection name as an option that they can select in order to focus their search.</p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-2.png" alt="Collection on the search results page" /></p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your collection.</p>
+
+<ol>
+<li>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab.</li>
+<li>Change the form action from <code>action="http://search.usa.gov/search/"</code> to <code>action="http://search.usa.gov/search/docs"</code>.</li>
+<li>Add the following line to limit the results to your collection: <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>.</li>
+</ol>
+
+
+<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
+
+<p>See the sample search box below that is limited to news on <a href="http://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=autism">NIH.gov for a search on <em>autism</em></a>.</p>
+
+<p><a href="http://www.nih.gov/news/releases.htm"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-3.png" title="News-only search box on NIH.gov's News Releases page" alt="News-only search box on NIH.gov's News Releases page" /></a></p>
+
+<p><a href="http://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=autism"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-4.png" title="NIH.gov news-only search results page" alt="NIH.gov news-only search results page" /></a></p>
+
+<p><a name="sitelimit"></a></p>
+
+<p><strong><em>Did you know?</em></strong> If you don't want to set up a Collection, you can use the <code>sitelimit</code> parameter to search a subset of your content. Compare the collection-based results above with the results for <a href="http://search.usa.gov/search?affiliate=nih&amp;query=autism&amp;sitelimit=nih.gov/news">the same search using the sitelimit parameter</a>.</p>
+
+<p>Note that the searcher sees that results are filtered to nih.gov/news in a message under the search box, among other differences.</p>
+
+<p>Simply add the following line to your form code on your search box to use the <code>sitelimit</code> parameter.</p>
+
+<p><code>&lt;input type="hidden" name="sitelimit" id="sitelimit" value="http://www.agency.gov/limittothisfolder"&gt;</code></p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/collections"><span class="label label-info">collections</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/collections.html">
+        <time datetime="2016-07-28">July 28, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/code.html">How to Activate Your Search by Adding Our Code Snippets to Your Website</a>
     </h1>
     
@@ -865,7 +949,7 @@ i14y (Beta) API instructions*</p>
 
 <p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
 
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#x73;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#46;&#100;&#105;&#x67;&#105;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#x67;&#111;&#x76;">&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#x69;&#x74;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#118;</a>.</p>
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#x73;&#101;&#97;&#x72;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#100;&#x69;&#x67;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#x76;">&#x73;&#101;&#97;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#x70;&#112;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#x67;&#x69;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;</a>.</p>
 
     </div>
 
@@ -1003,7 +1087,7 @@ i14y (Beta) API instructions*</p>
 
 <h2>Site Handle</h2>
 
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#115;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#118;">&#115;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#x67;&#x6f;&#118;</a>.</p>
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#115;&#101;&#97;&#114;&#x63;&#104;&#64;&#x73;&#117;&#112;&#x70;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#x76;">&#x73;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#x6c;&#103;&#111;&#x76;&#x2e;&#x67;&#x6f;&#118;</a>.</p>
 
 <p><a href="http://search.socialsecurity.gov/search?query=office+locations&amp;affiliate=ssa"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/settings.png" title="Site name and handle on SocialSecurity.gov's search results page" alt="Site name and handle on SocialSecurity.gov's search results page" /></a></p>
 
@@ -1013,7 +1097,7 @@ i14y (Beta) API instructions*</p>
 
 <h2>Site Language</h2>
 
-<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">66 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#115;&#x65;&#x61;&#114;&#99;&#104;&#64;&#115;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#97;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#x76;">&#x73;&#101;&#x61;&#114;&#x63;&#104;&#64;&#x73;&#117;&#112;&#x70;&#111;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#118;&#46;&#x67;&#x6f;&#x76;</a>.</p>
+<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">66 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#x73;&#101;&#97;&#114;&#x63;&#104;&#64;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#111;&#x76;&#46;&#103;&#111;&#x76;">&#115;&#101;&#97;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#46;&#103;&#111;&#x76;</a>.</p>
 
 <h2>Delete</h2>
 
@@ -1040,113 +1124,6 @@ i14y (Beta) API instructions*</p>
       
       
       <a href="/manual/settings.html">
-        <time datetime="2015-08-24">August 24, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/queries.html">How to Analyze Your Queries</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Queries</p>
-
-<p>The Queries page reports on the number of times a search query (that is, a word or string of words) was entered in the search box on your site by a unique searcher.</p>
-
-<p>Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.</p>
-
-<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
-
-<p>Data are available in the Admin Center from August 2014.</p>
-
-<h2>Top Queries</h2>
-
-<p><strong><em>Top 1,000.</em></strong> You'll see a list, in frequency order, of top 1,000 most popular queries for your selected time period.</p>
-
-<p><strong><em>Top 1,000 by query.</em></strong> Enter any specific term or phrase into the Query search box. Re-generate the report to see the top 1,000 queries that contain that term or phrase and its stemmed equivalents.</p>
-
-<p>For example, below are the top 10 queries related to <em>housing</em> on USA.gov in August 2013.</p>
-
-<ol>
-<li>house of representatives</li>
-<li>housing</li>
-<li>speaker of the house</li>
-<li>white house</li>
-<li>house minority leader</li>
-<li>housing assistance</li>
-<li>house majority leader</li>
-<li>speaker of the house 2013</li>
-<li>the white house</li>
-<li>houses</li>
-</ol>
-
-
-<h2>Download Details</h2>
-
-<p>You can download a detailed CSV (comma separated values) file for any search term. There's one line for each time this query was run. This CSV file gives you access to the raw search logs, including:</p>
-
-<ul>
-<li>The date and time of the query,</li>
-<li>The query (It is embedded in the request URL. Look for the text following ‘query=’.),</li>
-<li>Where the person was when they ran the search,</li>
-<li>The modules loaded in response to the query (Our <a href="/manual/module-codes.html">Module Codes</a> tip provides a key of the codes and names.), and</li>
-<li>The kind of device and browser they were using.</li>
-</ul>
-
-
-<h2>Query Clicks &amp; Click Queries</h2>
-
-<p>Select the hyperlinked number in the # of Queries column to view the top clicked URLs for each query.</p>
-
-<p>If you click on the first-listed <em>house of representatives</em> in the example above, you'll see that the top URLs clicked for that query are:</p>
-
-<ol>
-<li>www.house.gov</li>
-<li>www.house.gov/representatives</li>
-<li>www.house.gov/representatives/find</li>
-</ol>
-
-
-<p>From this list of clicked URLs, you'll be able select the hyperlinked number in the # of Clicks column to view the top queries that led to a click for each URL.</p>
-
-<p>If you click on the first-listed <em>www.house.gov</em> in the example above, you'll see that the top queries leading to a click on that URL are:</p>
-
-<ol>
-<li>house of representatives</li>
-<li>congress</li>
-<li>congress members</li>
-<li>congress representatives</li>
-</ol>
-
-
-<p>You can loop through or drill down into this list for any set of clicks and queries.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> gives a bird's-eye view of the number of queries and <a href="/manual/clicks.html">clicks</a> each month. The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site in the past day or so.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/queries"><span class="label label-info">queries</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/queries.html">
         <time datetime="2015-08-24">August 24, 2015</time>
       </a>
     </div>
