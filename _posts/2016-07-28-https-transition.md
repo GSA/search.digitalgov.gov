@@ -70,5 +70,8 @@ Additional SEO best practices:
 
 ----
 
-***Additional Information:*** Read more about the [HTTPS-Only Standard](https://https.cio.gov/){% external_link %} from the Federal CIO Council.
+***Additional Information:*** 
+
+* Read more about the [HTTPS-Only Standard](https://https.cio.gov/){% external_link %} from the Federal CIO Council.
+* View a [SEO Checklist](https://docs.google.com/spreadsheets/d/1XB26X_wFoBBlQEqecj7HB79hQ7DTLIPo97SS5irwsK8/edit#gid=1975121463) {% external_link %} created by Aleyda Solís.
 
