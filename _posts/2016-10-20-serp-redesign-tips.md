@@ -20,8 +20,8 @@ The addition of a name can also give the same seal two very different identities
 
 Align your logo so its alignment is consistent with your website.
 
-* [GobiernoUSA.gov](http://search.usa.gov/search?&m=&affiliate=gobiernousa&query=visas) has a left-aligned logo on its homepage and search results page.
-* [BSEE.gov](http://search.usa.gov/search?affiliate=bsee.gov&query=deepwater+horizon) has a center-aligned logo on both of its pages.
+* [GobiernoUSA.gov](http://search.usa.gov/search?&m=&affiliate=gobiernousa&query=visas) has a center-aligned logo on its homepage and search results page.
+* [NIH.gov](https://search.nih.gov/search?utf8=%E2%9C%93&affiliate=nih&query=health) has a left-aligned logo on both of its pages.
 
 ## Fonts & Colors
 
@@ -30,8 +30,6 @@ Align your logo so its alignment is consistent with your website.
 Use a background color on the header, page body, or both. For best results, use different colors for the header and body.  
 
 * See contrasting background colors for both the header and body on [Broward County](http://search.broward.org/search?affiliate=co.broward.fl.us&query=everglades).
-* See a background color for the body only on the [City of Bloomington, MN](http://search.bloomingtonmn.gov/search?&affiliate=cityofbloomingtonmnsearchresults&query=farmers+market).
-* And, for the header only on [DOI.gov](http://search.doi.gov/search?affiliate=doi.gov&query=washington+monument).
 * Your background doesn't have to be a strong color. A light gray can provide subtle definition as seen on [NIH.gov](http://search.nih.gov/search?&affiliate=nih&query=library).
 * A good, strong color for the search button can go a long way, as seen [Kids.gov](http://search.usa.gov/search?&affiliate=kidsgov&query=washington).
 * Especially buttons with a contrasting accent color like on [TreasuryDirect](http://search.usa.gov/search?query=gold&affiliate=treasurydirect).
