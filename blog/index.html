@@ -102,6 +102,225 @@
   <article class='article'>
     
     <h1>
+      <a href="/developer/govturls.html">Non-.gov URLs API</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="/developer/index.html">APIs for Developers</a> > Non-.gov URLs API</p>
+
+<p>Helping the public find timely, needed government information and services on USA.gov&mdash;from <em>all</em> government websites.</p>
+
+<p>  <li class="overview current"><a href="#overview">Overview</a>
+  <li class="api"><a href="#using-the-api">Using the API</a>
+  <li class="parameters"><a href="#parameters">Parameters</a>
+  <li class="sources"><a href="#data-sources">Data Sources</a>
+  <li class="returns"><a href="#what-it-returns">What it Returns</a></p>
+
+<p><a name="overview"></a></p>
+
+<h2>Overview</h2>
+
+<p>As the U.S. government's official web portal, <a href="https://www.usa.gov/">USA.gov</a> and its Spanish counterpart <a href="https://gobierno.usa.gov/">GobiernoUSA.gov</a> search across all federal, state, local, tribal, and territorial government websites. Most government websites end in .gov or .mil, but many end in .com, .org, .edu, or other top-level domains.</p>
+
+<p>This API allows you to tap into a list of all government URLs that don't end in .gov or .mil. URLs are searchable by keyword, state, or scope.</p>
+
+<h3>What's Included in This List?</h3>
+
+<ul>
+<li>Federal, state, local, <a href="https://www.usa.gov/tribes">tribal</a>, commonwealth, and territorial government agency websites</li>
+<li><a href="http://www.federalreserve.gov/otherfrb.htm">Federal reserve banks and branches</a></li>
+<li><a href="http://www.fhlbanks.com">Federal home loan banks</a></li>
+<li>Libraries, archives, and museums, including <a href="http://www.archives.gov/presidential-libraries/">Presidential libraries</a></li>
+<li>Department of Defense websites for <a href="http://www.defense.gov/Sites/DOD-Websites?category=Recruiting">recruiting</a> and <a href="http://www.defense.gov/Sites/DOD-Websites?category=Academy">service academies</a></li>
+<li><a href="https://www.usa.gov/recreation-and-travel">Travel and tourism</a> websites for states and U.S. territories</li>
+<li><a href="https://www.usa.gov/state-lotteries">State lotteries</a></li>
+<li><a href="http://nifa.usda.gov/partners-and-extension-map">Cooperative extensions</a></li>
+<li><a href="http://www.opm.gov/combined-federal-campaign/find-local-campaigns/locator/">Combined federal campaigns</a></li>
+<li><a href="https://www.fas.org/sgp/crs/misc/RS21663.pdf">Government sponsored enterprises</a> (such as Fannie Mae) [PDF]</li>
+<li>Federal and state retirement systems</li>
+<li>Task forces (such as the Preventative Services Task Force) and commissions (such as the 9/11 Commission)</li>
+<li>A few select, nongoverment organizations (such as the Red Cross) and public-private partnerships</li>
+</ul>
+
+
+<h3>What's Not Included in This List?</h3>
+
+<ul>
+<li>.gov URLs</li>
+<li>.mil URLs</li>
+<li>Subdomains or folders that are already covered by a higher-level domain</li>
+<li>State institutions of higher education or their board of regents</li>
+<li>K-12 school districts</li>
+<li>Local fire, library, police, sheriff, etc. departments with separate websites</li>
+<li>Local chambers of commerce or visitor bureaus</li>
+<li>Nonprofit municipal leagues or councils of government officials</li>
+<li>Nonprofit historical societies</li>
+<li>Transit authorities</li>
+</ul>
+
+
+<p><a name="using-the-api"></a></p>
+
+<h2>Using the API</h2>
+
+<p>This API accepts a GET request.</p>
+
+<p>The base URL is <code>http://govt-urls.api.usa.gov/government_urls/search?</code>.</p>
+
+<p>Sample API requests follow.</p>
+
+<p>All known non-.gov URLs<br/>
+<a href="http://govt-urls.api.usa.gov/government_urls/search?scope_ids=usagov">http://govt-urls.api.usa.gov/government_urls/search?scope_ids=usagov</a></p>
+
+<p>All known federal URLs<br/>
+<a href="http://govt-urls.api.usa.gov/government_urls/search?q=usagovFED">http://govt-urls.api.usa.gov/government_urls/search?q=usagovFED</a></p>
+
+<p>All known URLs for villages<br/>
+<a href="http://govt-urls.api.usa.gov/government_urls/search?q=village">http://govt-urls.api.usa.gov/government_urls/search?q=village</a></p>
+
+<p>All known URLs for villages in New York<br/>
+<a href="http://govt-urls.api.usa.gov/government_urls/search?q=village&amp;states=NY">http://govt-urls.api.usa.gov/government_urls/search?q=village&amp;states=NY</a></p>
+
+<p>All known URLs for New York and Pennsylvania<br/>
+<a href="http://govt-urls.api.usa.gov/government_urls/search?states=ny,pa">http://govt-urls.api.usa.gov/government_urls/search?states=ny,pa</a></p>
+
+<p><a name="parameters"></a></p>
+
+<h2>Parameters</h2>
+
+<p>Five parameters are accepted.</p>
+
+<ol>
+<li>q&mdash;Keyword or phrase for your search query. You also can use this field to specify which states or other preset scopes to use as a filter. For states and possessions, use <code>usagov</code> <em>plus</em> the U.S. Postal Service's <a href="http://pe.usps.gov/text/pub28/28apb.htm">abbreviations for states or possessions</a> (such as usagovAK for Alaska and usagovPR for Puerto Rico). The three other preset scopes are usagovFED (non-.gov URLs for federal agencies), usagovQUASI (quasi-governmental agencies or programs), and usagovNSN (Native Sovereign Nations).</li>
+<li>states&mdash;A comma-separated string specifying which states or possessions to use as a filter. The two-letter code is based on the Postal Service abbreviation.</li>
+<li>scope_ids&mdash;Use <code>usagov</code> to list all known non-.gov URLs.</li>
+<li>size&mdash;Specifies how many results are returned (up to 100 at a time).</li>
+<li>offset&mdash;Specifies the starting record.</li>
+</ol>
+
+
+<p>Combine parameters with <code>&amp;</code>.</p>
+
+<p><a name="data-sources"></a></p>
+
+<h2>Data Source</h2>
+
+<p>The original, searchable database for these URLs is publicly available at <a href="http://govt-urls.usa.gov/tematres">http://govt-urls.usa.gov/tematres</a>.</p>
+
+<p>We make periodic updates as we come across changes and welcome comments and additions. <a href="https://github.com/GSA/govt-urls/issues">Submit a new issue</a> to contribute directly to this list or email us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#x73;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#105;&#116;&#x61;&#108;&#103;&#x6f;&#118;&#46;&#103;&#111;&#118;">&#x73;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#115;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#111;&#x76;</a>.</p>
+
+<p><a name="what-it-returns"></a></p>
+
+<h2>What It Returns</h2>
+
+<p>Below is a sample JSON response for <a href="http://govt-urls.api.usa.gov/government_urls/search?q=johnson+city">http://govt-urls.api.usa.gov/government_urls/search?q=johnson+city</a>.</p>
+
+<pre><code>{
+total: 2,
+offset: 0,
+results: [
+{
+id: "5278",
+name: "johnsoncitytn.org",
+parents: [
+"usagovTN"
+],
+states: [
+"TN"
+],
+creation_date: "2013-06-06",
+last_modified_date: "2013-06-06",
+scope_note: "City of Johnson City, TN",
+scope_id: "usagov",
+related_terms: [ ],
+equivalent_related_terms: [ ],
+non_preferred_terms: [ ],
+preferred_terms: [ ]
+},
+{
+id: "9802",
+name: "villageofjc.com",
+parents: [
+"usagovNY"
+],
+states: [
+"NY"
+],
+creation_date: "2013-06-06",
+last_modified_date: "2013-06-06",
+scope_note: "Village of Johnson City, NY",
+scope_id: "usagov",
+related_terms: [ ],
+equivalent_related_terms: [ ],
+non_preferred_terms: [
+"johnsoncityny.org"
+],
+preferred_terms: [ ]
+},
+{}
+]
+}
+</code></pre>
+
+<p><a name="code-samples"></a></p>
+
+<p>Fields not already mentioned above that deserve a bit more explanation include:</p>
+
+<ul>
+<li><strong>parents</strong>&mdash;indicates the category for each URL, such as federal (usagovFED) or state or possession (usagovAK, usagovPR, etc.).</li>
+<li><strong>scope_note</strong>&mdash;provides quick information about which government agency owns the URL and how it is used.</li>
+<li><strong>related_terms</strong>&mdash;indicates an association between two related terms when it seems helpful.</li>
+<li><strong>equivalent_related_terms</strong>&mdash;indciates two URLs that both resolve to the same website. Neither is preferred.</li>
+<li><strong>non_preferred_terms</strong>&mdash;indicates a nonpreferred URL. Nonpreferred URLs no longer resolve or redirect to another URL. non_preferred_terms is the reciprocal of preferred_terms and means "don't use" the term following it.</li>
+<li><strong>preferred_terms</strong>&mdash;indicates the preferred, resolving URL. "Use" the term following it.</li>
+</ul>
+
+
+<h2>Open Source Code</h2>
+
+<p>The code that runs this API is on Github. If you're a Rails developer, fork our
+<a href="https://github.com/GSA/govt-urls">Non-.gov URLs repo</a> to add features (such
+as additional searchable fields) or fix bugs. Better yet, send us a <a href="https://github.com/GSA/govt-urls/pulls">pull request</a>
+to contribute your changes to our project and improve this API for everyone who is using it.</p>
+
+<h2>Feedback</h2>
+
+<p>Email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#115;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#112;&#112;&#x6f;&#114;&#116;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#118;">&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#115;&#117;&#112;&#112;&#111;&#114;&#x74;&#x2e;&#100;&#105;&#103;&#105;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;</a> with any suggestions about what you'd like to see in the next version of this API.</p>
+
+<h2>A Tip of the Hat</h2>
+
+<p>A tip of the hat to Marilyn Kercher. She started this list many years ago and took it as her personal mission to ensure you can find information from any government website—including those that don't end in .gov or .mil—when you search on <a href="https://www.usa.gov/">USA.gov</a>. She would be thrilled to learn that this list is now open for anyone to access.</p>
+
+<h2>Terms of Use</h2>
+
+<p>By accessing this API, you agree to <a href="https://www.usa.gov/About/developer-resources/terms-of-service.shtml">USA.gov's Terms of Service for Developer Resources</a>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/government-urls"><span class="label label-info">government-urls</span></a>
+      
+      <a href="/tagged/api"><span class="label label-info">api</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      
+      
+      <a href="/developer/govturls.html">
+        <time datetime="2016-11-09">November 9, 2016</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
       <a href="/blog/serp-redesign-tips.html">Tips to Make the Most of the Newly Redesigned Results Page</a>
     </h1>
     
@@ -417,7 +636,7 @@ i14y (Beta) API instructions*</p>
 
 <p>You can also set up a CNAME to <a href="/manual/cname.html">mask your domain</a>, which allows you to show searchers your search.YOURSITE.gov (instead of search.USA.gov).</p>
 
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#x73;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#105;&#x67;&#x69;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#x6f;&#114;&#116;&#x2e;&#x64;&#x69;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;</a>.</p>
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#x73;&#101;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;">&#x73;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#118;</a>.</p>
 
     </div>
 
@@ -800,7 +1019,7 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
 
 <p><strong><em>Troubleshooting Tip:</em></strong> For non-English sites, some agencies opt to include the specific location of the language's content (such as agency.gov/language or language.agency.gov) in their <a href="/manual/domains.html">Domains</a> to further refine the search results. Test the results for your non-English site with both the general agency.gov and the language-specific location to determine which setting gives you the best results.</p>
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#x73;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#x69;&#x67;&#x69;&#x74;&#x61;&#x6c;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#118;">&#115;&#101;&#97;&#114;&#99;&#x68;&#x40;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#46;&#103;&#x6f;&#x76;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#58;&#x73;&#101;&#97;&#114;&#x63;&#x68;&#64;&#115;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#103;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;">&#x73;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#111;&#x76;</a>.</p>
 
     </div>
 
@@ -821,76 +1040,6 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
       
       <a href="/manual/add-site.html">
         <time datetime="2016-08-02">August 2, 2016</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/manual/users.html">How to Manage Your Site's Users</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Manage Users</p>
-
-<p>After you've <a href="https://search.usa.gov/sites/">logged in</a> and <a href="/manual/add-site.html">added a site</a> with your official government email, you can add your coworkers to your site.</p>
-
-<p>You can add anyone you'd like to your site&mdash;with or without a .gov or .mil email address. Email addresses outside the .gov or .mil domains must be associated with a business. Personal emails, such as @gmail.com or @yahoo.com, are not allowed.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/user.png" alt="Add a user" /></p>
-
-<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each user's status.</p>
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;"> Color </th>
-<th style="text-align:left;"> Status </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;"> No color&nbsp;&nbsp;&nbsp; </td>
-<td style="text-align:left;"> Approved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Yellow  </td>
-<td style="text-align:left;"> Pending - requires approval or email verification </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Red   </td>
-<td style="text-align:left;"> Not approved </td>
-</tr>
-</tbody>
-</table>
-
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> We recommend adding a generic email account (such as webteam@agency.gov) as a user to ensure ongoing access to your account as individuals come and go.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
-      
-      <a href="/tagged/users"><span class="label label-info">users</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/users.html">
-        <time datetime="2016-07-28">July 28, 2016</time>
       </a>
     </div>
 
