@@ -20,6 +20,9 @@ Update all URLs that are listed in the Search Admin Center for each of your sear
 
 * **Settings:** Update your Homepage URL.
 
+**Analytics:**
+* **3rd Party Tracking:** If you are using [3rd party tracking code](http://search.digitalgov.gov/manual/third-party.html) that is HTTP protocol-specific, you will need to submit updated code.
+
 **Content:**
 
 * **Content Overview:** No action needed. The URL that we scan for social media accounts is synced with the homepage you have listed in the Dashboard section.
