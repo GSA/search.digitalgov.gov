@@ -182,6 +182,125 @@
   <article class='article'>
     
     <h1>
+      <a href="/manual/https-transition.html">Preparing Your Site for HTTPS</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="https://https.cio.gov/">OMB memo M-15-13</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> requires all publicly available federal websites and web services to <a href="https://www.digitalgov.gov/2015/07/21/an-introduction-to-https-by-18f-and-digitalgov-university/">implement HTTPS</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> by December 31, 2016.</p>
+
+<p>Below is a checklist of action items that should be completed in order for your search site to function as expected in HTTPS.</p>
+
+<h2>1. The Admin Center</h2>
+
+<p>Update all URLs that are listed in the Search Admin Center for each of your search configurations. <em>You will need to update the links for all of your search configurations.</em></p>
+
+<h3>Everyone:</h3>
+
+<p><strong>Dashboard:</strong></p>
+
+<ul>
+<li><strong>Settings:</strong> Update your Homepage URL.</li>
+</ul>
+
+
+<p><strong>Analytics:</strong>
+* <strong>3rd Party Tracking:</strong> If you are using <a href="http://search.digitalgov.gov/manual/third-party.html">3rd party tracking code</a> that is HTTP protocol-specific, you will need to submit updated code.</p>
+
+<p><strong>Content:</strong></p>
+
+<ul>
+<li><strong>Content Overview:</strong> No action needed. The URL that we scan for social media accounts is synced with the homepage you have listed in the Dashboard section.</li>
+<li><strong>Domains:</strong> No action needed, as this list isn’t protocol-specific.</li>
+<li><strong>Collections:</strong> Update all URL paths in your collections; if you have mixed collections, leave any HTTP sites as-is.</li>
+<li><strong>Routed Queries:</strong> Update routed query URLs.</li>
+<li><strong>RSS feeds:</strong> Update RSS feed URLs. The indexing will error if the protocol listed in our system for the feed URL does not match the feed URL on your site, or if you’ve placed a 301 redirect on your old HTTP version of the feed pointing to the new HTTPS version of the feed. We will also need to update the URLs for all items that are already in our index. <a href="mailto:search@support.digitalgov.gov">Email us</a> and we will do a global update to change HTTP to HTTPS for you. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS.</li>
+</ul>
+
+
+<p><strong>Display:</strong></p>
+
+<ul>
+<li><strong>Image Assets:</strong> Update the Favicon URL.</li>
+<li><strong>Header &amp; Footer:</strong> Update header and footer links.</li>
+<li><strong>No Results Page:</strong> Update alternative links.</li>
+</ul>
+
+
+<h3>Only those using <code>Domains &gt; Advanced</code> features:</h3>
+
+<ul>
+<li><strong>Supplemental Feed:</strong> Update RSS feed URLs. The indexing will error if the protocol listed in our system for the feed URL does not match the feed URL on your site, or if you’ve placed a 301 redirect on your old HTTP version of the feed pointing to the new HTTPS version of the feed. We will also need to update the URLs for all items that are already in our index. <a href="mailto:search@support.digitalgov.gov">Email us</a> and we will do a global update to change HTTP to HTTPS for you. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS.</li>
+<li><strong>Supplemental URLs:</strong> Update supplemental URLs.</li>
+<li><strong>Filter URLs:</strong> Update filtered URLs.</li>
+</ul>
+
+
+<h2>2. Masked Domains</h2>
+
+<p>If your site uses <a href="http://search.digitalgov.gov/manual/cname.html">domain masking</a>: <a href="mailto:search@support.digitalgov.gov">contact our team</a> to be added to our SSL certificate. While this step doesn't apply to everyone, it does need to be done before step 3.</p>
+
+<h2>3. Form Code Action on Your Website</h2>
+
+<p>Update your form code action: An <code>s</code> must be added to your site’s form action in order for the request to be made over HTTPS, and for the results page to be served over HTTPS. Example:</p>
+
+<p><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;</code></p>
+
+<h2>4. Commercial Search Engines</h2>
+
+<p>Notify Google and Bing about the change; Google and Bing treat a migration from HTTP to HTTPS as a site move.</p>
+
+<ul>
+<li>Google has a step-by-step guide, <a href="https://support.google.com/webmasters/answer/6033049">Move a Site with URL changes</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>For Bing, review <a href="https://www.bing.com/webmaster/help/how-to-use-the-site-move-tool-bb8f5112">How to Use the Site Move tool</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+</ul>
+
+
+<p>Additional SEO best practices:</p>
+
+<ul>
+<li>Update your XML sitemap with HTTPS URLs.</li>
+<li>Use <code>rel canonical</code> to <a href="https://support.google.com/webmasters/answer/139066?hl=en#https">declare HTTPS the preferred version</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>Update internal website links.</li>
+<li>Update links to your website from social media and other platforms managed by your agency.</li>
+</ul>
+
+
+<hr />
+
+<p><strong><em>Additional Information:</em></strong></p>
+
+<ul>
+<li>Read more about the <a href="https://https.cio.gov/">HTTPS-Only Standard</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> from the Federal CIO Council.</li>
+<li>View a <a href="https://docs.google.com/spreadsheets/d/1XB26X_wFoBBlQEqecj7HB79hQ7DTLIPo97SS5irwsK8/edit#gid=1975121463">SEO Checklist</a> &nbsp;<i class="icon-external-link"><span>(External link)</span></i> created by Aleyda Solís.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/https"><span class="label label-info">https</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/https-transition.html">
+        <time datetime="2016-11-15">November 15, 2016</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
       <a href="/blog/redesign.html">Checklist for a Successful Website Redesign</a>
     </h1>
     
@@ -204,7 +323,7 @@
 </ol>
 
 
-<p>If you've undergone a redesign, followed these five steps, and your site search results are not what you'd expect, notify us at <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#103;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;">&#x73;&#101;&#x61;&#114;&#99;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#97;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#118;</a>.</p>
+<p>If you've undergone a redesign, followed these five steps, and your site search results are not what you'd expect, notify us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x73;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#x73;&#117;&#x70;&#112;&#111;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#x76;">&#115;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#118;</a>.</p>
 
 <hr />
 
@@ -523,7 +642,7 @@ i14y (Beta) API instructions*</p>
 
 <p>The original, searchable database for these URLs is publicly available at <a href="http://govt-urls.usa.gov/tematres">http://govt-urls.usa.gov/tematres</a>.</p>
 
-<p>We make periodic updates as we come across changes and welcome comments and additions. <a href="https://github.com/GSA/govt-urls/issues">Submit a new issue</a> to contribute directly to this list or email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#115;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#x76;">&#x73;&#x65;&#97;&#x72;&#99;&#104;&#64;&#115;&#117;&#112;&#112;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#108;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
+<p>We make periodic updates as we come across changes and welcome comments and additions. <a href="https://github.com/GSA/govt-urls/issues">Submit a new issue</a> to contribute directly to this list or email us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#115;&#101;&#x61;&#x72;&#99;&#104;&#64;&#115;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#103;&#105;&#116;&#97;&#108;&#103;&#111;&#118;&#46;&#x67;&#111;&#x76;">&#115;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#111;&#118;&#x2e;&#103;&#111;&#118;</a>.</p>
 
 <p><a name="what-it-returns"></a></p>
 
@@ -601,7 +720,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <h2>Feedback</h2>
 
-<p>Email us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#x73;&#101;&#97;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#112;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;">&#x73;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#x69;&#103;&#x69;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#x67;&#x6f;&#x76;</a> with any suggestions about what you'd like to see in the next version of this API.</p>
+<p>Email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#115;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#x67;&#111;&#118;&#x2e;&#103;&#111;&#x76;">&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#112;&#111;&#114;&#116;&#46;&#x64;&#105;&#103;&#105;&#116;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#x76;</a> with any suggestions about what you'd like to see in the next version of this API.</p>
 
 <h2>A Tip of the Hat</h2>
 
@@ -926,85 +1045,6 @@ to contribute your changes to our project and improve this API for everyone who 
       
       <a href="/manual/clone-site.html">
         <time datetime="2016-08-11">August 11, 2016</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/developer/i14y-testing.html">cURL Commands for i14y Testing</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>If you experience difficulty sending documents to our index via <a href="http://search.digitalgov.gov/developer/i14y.html">i14y</a>, it is possible your firewall is not letting you communicate with the i14y server. Adding a test document to your i14y drawer can help you diagnose a firewall issue.
-Windows users may need to <a href="https://curl.haxx.se/download.html">install cURL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> in order to run this test from the command line.</p>
-
-<h2>Adding the Test Document</h2>
-
-<p>From the command line, enter:</p>
-
-<pre><code>curl "https://i14y.usa.gov/api/v1/documents" -XPOST -H "Content-Type:application/json" -u your_drawer_handle:your_secret_token -d '{"document_id":"1", "title":"Test Document", "path": "http://www.gov.gov/cms/doc1.html", "created": "2015-05-12T22:35:09Z", "description":"The summary of the document goes here.", "content":"This is placeholder text, and in a real document would be paragraphs long.", "promote": false, "language" : "en", "tags" : "tag1, another tag"}'
-</code></pre>
-
-<p>Note: you need to replace <strong>your_drawer_handle</strong> with your i14y drawer handle, found in the i14y drawers section in the Search Admin Center (<a href="http://search.digitalgov.gov/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers). You will also need to replace <strong>your_secret_token</strong> with the drawer’s secret token, which can be found by hitting “Show” in the 14y drawer list. The drawer handle and token should be separated by a colon (:) with no spaces on either side of the colon.</p>
-
-<p>The above command returns JSON structured like this:</p>
-
-<pre><code>{
-"status":200,
-"developer_message":"OK",
-"user_message":"Your document was successfully created."
-}
-</code></pre>
-
-<p>If you do not see a 200 status, <a href="mailto:search@support.digitalgov.gov">contact our team</a>.</p>
-
-<p>After successfully sending a document, you should see an increase (by 1) in the number of documents in your <a href="http://search.digitalgov.gov/manual/i14y-drawers.html">i14y drawer</a>.</p>
-
-<h2>Removing the Test Document</h2>
-
-<p>Once you have successfully added the test document to your drawer, you will need to delete it, or it will appear in your site’s search results.</p>
-
-<p>From the command line, enter:</p>
-
-<pre><code>curl "https://i14y.usa.gov/api/v1/documents/1" -XDELETE -u your_drawer_handle:your_secret_token
-</code></pre>
-
-<p>The above command returns JSON structured like this:</p>
-
-<pre><code>{
-"status":200,
-"developer_message":"OK",
-"user_message":"Your document was successfully deleted."
-}
-</code></pre>
-
-<hr />
-
-<p><strong><em>Resources:</em></strong> Read tips on <a href="http://search.digitalgov.gov/developer/i14y.html">Getting Started With i14y</a>, or view the full <a href="http://gsa.github.io/slate/">i14y technical documentation</a> on Github.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/i14y"><span class="label label-info">i14y</span></a>
-      
-      <a href="/tagged/api"><span class="label label-info">api</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      
-      
-      
-      <a href="/developer/i14y-testing.html">
-        <time datetime="2016-08-02">August 2, 2016</time>
       </a>
     </div>
 

@@ -103,6 +103,124 @@
  
     
     <h1>
+      <a href="/manual/https-transition.html">Preparing Your Site for HTTPS</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="https://https.cio.gov/">OMB memo M-15-13</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> requires all publicly available federal websites and web services to <a href="https://www.digitalgov.gov/2015/07/21/an-introduction-to-https-by-18f-and-digitalgov-university/">implement HTTPS</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> by December 31, 2016.</p>
+
+<p>Below is a checklist of action items that should be completed in order for your search site to function as expected in HTTPS.</p>
+
+<h2>1. The Admin Center</h2>
+
+<p>Update all URLs that are listed in the Search Admin Center for each of your search configurations. <em>You will need to update the links for all of your search configurations.</em></p>
+
+<h3>Everyone:</h3>
+
+<p><strong>Dashboard:</strong></p>
+
+<ul>
+<li><strong>Settings:</strong> Update your Homepage URL.</li>
+</ul>
+
+
+<p><strong>Analytics:</strong>
+* <strong>3rd Party Tracking:</strong> If you are using <a href="http://search.digitalgov.gov/manual/third-party.html">3rd party tracking code</a> that is HTTP protocol-specific, you will need to submit updated code.</p>
+
+<p><strong>Content:</strong></p>
+
+<ul>
+<li><strong>Content Overview:</strong> No action needed. The URL that we scan for social media accounts is synced with the homepage you have listed in the Dashboard section.</li>
+<li><strong>Domains:</strong> No action needed, as this list isn’t protocol-specific.</li>
+<li><strong>Collections:</strong> Update all URL paths in your collections; if you have mixed collections, leave any HTTP sites as-is.</li>
+<li><strong>Routed Queries:</strong> Update routed query URLs.</li>
+<li><strong>RSS feeds:</strong> Update RSS feed URLs. The indexing will error if the protocol listed in our system for the feed URL does not match the feed URL on your site, or if you’ve placed a 301 redirect on your old HTTP version of the feed pointing to the new HTTPS version of the feed. We will also need to update the URLs for all items that are already in our index. <a href="mailto:search@support.digitalgov.gov">Email us</a> and we will do a global update to change HTTP to HTTPS for you. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS.</li>
+</ul>
+
+
+<p><strong>Display:</strong></p>
+
+<ul>
+<li><strong>Image Assets:</strong> Update the Favicon URL.</li>
+<li><strong>Header &amp; Footer:</strong> Update header and footer links.</li>
+<li><strong>No Results Page:</strong> Update alternative links.</li>
+</ul>
+
+
+<h3>Only those using <code>Domains &gt; Advanced</code> features:</h3>
+
+<ul>
+<li><strong>Supplemental Feed:</strong> Update RSS feed URLs. The indexing will error if the protocol listed in our system for the feed URL does not match the feed URL on your site, or if you’ve placed a 301 redirect on your old HTTP version of the feed pointing to the new HTTPS version of the feed. We will also need to update the URLs for all items that are already in our index. <a href="mailto:search@support.digitalgov.gov">Email us</a> and we will do a global update to change HTTP to HTTPS for you. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS.</li>
+<li><strong>Supplemental URLs:</strong> Update supplemental URLs.</li>
+<li><strong>Filter URLs:</strong> Update filtered URLs.</li>
+</ul>
+
+
+<h2>2. Masked Domains</h2>
+
+<p>If your site uses <a href="http://search.digitalgov.gov/manual/cname.html">domain masking</a>: <a href="mailto:search@support.digitalgov.gov">contact our team</a> to be added to our SSL certificate. While this step doesn't apply to everyone, it does need to be done before step 3.</p>
+
+<h2>3. Form Code Action on Your Website</h2>
+
+<p>Update your form code action: An <code>s</code> must be added to your site’s form action in order for the request to be made over HTTPS, and for the results page to be served over HTTPS. Example:</p>
+
+<p><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;</code></p>
+
+<h2>4. Commercial Search Engines</h2>
+
+<p>Notify Google and Bing about the change; Google and Bing treat a migration from HTTP to HTTPS as a site move.</p>
+
+<ul>
+<li>Google has a step-by-step guide, <a href="https://support.google.com/webmasters/answer/6033049">Move a Site with URL changes</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>For Bing, review <a href="https://www.bing.com/webmaster/help/how-to-use-the-site-move-tool-bb8f5112">How to Use the Site Move tool</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+</ul>
+
+
+<p>Additional SEO best practices:</p>
+
+<ul>
+<li>Update your XML sitemap with HTTPS URLs.</li>
+<li>Use <code>rel canonical</code> to <a href="https://support.google.com/webmasters/answer/139066?hl=en#https">declare HTTPS the preferred version</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>Update internal website links.</li>
+<li>Update links to your website from social media and other platforms managed by your agency.</li>
+</ul>
+
+
+<hr />
+
+<p><strong><em>Additional Information:</em></strong></p>
+
+<ul>
+<li>Read more about the <a href="https://https.cio.gov/">HTTPS-Only Standard</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> from the Federal CIO Council.</li>
+<li>View a <a href="https://docs.google.com/spreadsheets/d/1XB26X_wFoBBlQEqecj7HB79hQ7DTLIPo97SS5irwsK8/edit#gid=1975121463">SEO Checklist</a> &nbsp;<i class="icon-external-link"><span>(External link)</span></i> created by Aleyda Solís.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/https"><span class="label label-info">https</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/https-transition.html">
+        <time datetime="2016-11-15">November 15, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/index.html">Help Manual: Managing Your Search Configuration</a>
     </h1>
     
@@ -275,6 +393,51 @@ i14y (Beta) API instructions*</p>
  
     
     <h1>
+      <a href="/manual/clone-site.html">Clone Site</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Clone Site</p>
+
+<p>The clone site feature allows you to create an identical copy of your current search configuration. All settings are carried over to the cloned site, except for images you may have uploaded for <a href="/manual/best-bets.html#bbg">Graphics Best Bets</a>.</p>
+
+<p>Any users of your current configuration will have access to the cloned site.</p>
+
+<p>The default site handle for the cloned site will be <code>OriginalSiteHandle_copy</code>. You will need to update this default name before hitting submit.</p>
+
+<p>Your site handle is a unique identifier for your site. The site handle is included in the request you send us from your search box, to let us know which search site to use. We also include it in the URL of your search results page, again, to show which search site is being used. We recommend making this handle short and unique, such as <code>nih</code>.</p>
+
+<p>Handles can have lowercase letters, numbers, periods, hyphens, and underscores only. They can't have spaces and other punctuation.</p>
+
+<p>If you'd like to edit your site handle after the fact, <a href="mailto:search@support.digitalgov.gov">email us</a>. Note, however, that you will lose access to any search analytics that were collected using the old site handle.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/settings"><span class="label label-info">settings</span></a>
+      
+      <a href="/tagged/clone-site"><span class="label label-info">clone-site</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/clone-site.html">
+        <time datetime="2016-08-11">August 11, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/referrers.html">How to Analyze Your Referrers</a>
     </h1>
     
@@ -317,51 +480,6 @@ i14y (Beta) API instructions*</p>
       
       
       <a href="/manual/referrers.html">
-        <time datetime="2016-08-11">August 11, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/clone-site.html">Clone Site</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Clone Site</p>
-
-<p>The clone site feature allows you to create an identical copy of your current search configuration. All settings are carried over to the cloned site, except for images you may have uploaded for <a href="/manual/best-bets.html#bbg">Graphics Best Bets</a>.</p>
-
-<p>Any users of your current configuration will have access to the cloned site.</p>
-
-<p>The default site handle for the cloned site will be <code>OriginalSiteHandle_copy</code>. You will need to update this default name before hitting submit.</p>
-
-<p>Your site handle is a unique identifier for your site. The site handle is included in the request you send us from your search box, to let us know which search site to use. We also include it in the URL of your search results page, again, to show which search site is being used. We recommend making this handle short and unique, such as <code>nih</code>.</p>
-
-<p>Handles can have lowercase letters, numbers, periods, hyphens, and underscores only. They can't have spaces and other punctuation.</p>
-
-<p>If you'd like to edit your site handle after the fact, <a href="mailto:search@support.digitalgov.gov">email us</a>. Note, however, that you will lose access to any search analytics that were collected using the old site handle.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/settings"><span class="label label-info">settings</span></a>
-      
-      <a href="/tagged/clone-site"><span class="label label-info">clone-site</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/clone-site.html">
         <time datetime="2016-08-11">August 11, 2016</time>
       </a>
     </div>
@@ -502,7 +620,7 @@ i14y (Beta) API instructions*</p>
 
 <p><strong><em>Troubleshooting Tip:</em></strong> For non-English sites, some agencies opt to include the specific location of the language's content (such as agency.gov/language or language.agency.gov) in their <a href="/manual/domains.html">Domains</a> to further refine the search results. Test the results for your non-English site with both the general agency.gov and the language-specific location to determine which setting gives you the best results.</p>
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#115;&#101;&#97;&#114;&#x63;&#104;&#x40;&#x73;&#x75;&#x70;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#111;&#118;&#x2e;&#x67;&#x6f;&#118;">&#115;&#x65;&#97;&#114;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#100;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#x6f;&#x76;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#58;&#x73;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#x69;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;">&#x73;&#101;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#118;</a>.</p>
 
     </div>
 
@@ -522,6 +640,75 @@ i14y (Beta) API instructions*</p>
       
       <a href="/manual/add-site.html">
         <time datetime="2016-08-02">August 2, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/users.html">How to Manage Your Site's Users</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Manage Users</p>
+
+<p>After you've <a href="https://search.usa.gov/sites/">logged in</a> and <a href="/manual/add-site.html">added a site</a> with your official government email, you can add your coworkers to your site.</p>
+
+<p>You can add anyone you'd like to your site&mdash;with or without a .gov or .mil email address. Email addresses outside the .gov or .mil domains must be associated with a business. Personal emails, such as @gmail.com or @yahoo.com, are not allowed.</p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/user.png" alt="Add a user" /></p>
+
+<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each user's status.</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;"> Color </th>
+<th style="text-align:left;"> Status </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> No color&nbsp;&nbsp;&nbsp; </td>
+<td style="text-align:left;"> Approved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+</tr>
+<tr>
+<td style="text-align:left;"> Yellow  </td>
+<td style="text-align:left;"> Pending - requires approval or email verification </td>
+</tr>
+<tr>
+<td style="text-align:left;"> Red   </td>
+<td style="text-align:left;"> Not approved </td>
+</tr>
+</tbody>
+</table>
+
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> We recommend adding a generic email account (such as webteam@agency.gov) as a user to ensure ongoing access to your account as individuals come and go.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
+      
+      <a href="/tagged/users"><span class="label label-info">users</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/users.html">
+        <time datetime="2016-07-28">July 28, 2016</time>
       </a>
     </div>
     </article>
@@ -645,190 +832,6 @@ i14y (Beta) API instructions*</p>
  
     
     <h1>
-      <a href="/manual/users.html">How to Manage Your Site's Users</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Manage Users</p>
-
-<p>After you've <a href="https://search.usa.gov/sites/">logged in</a> and <a href="/manual/add-site.html">added a site</a> with your official government email, you can add your coworkers to your site.</p>
-
-<p>You can add anyone you'd like to your site&mdash;with or without a .gov or .mil email address. Email addresses outside the .gov or .mil domains must be associated with a business. Personal emails, such as @gmail.com or @yahoo.com, are not allowed.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/user.png" alt="Add a user" /></p>
-
-<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each user's status.</p>
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;"> Color </th>
-<th style="text-align:left;"> Status </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;"> No color&nbsp;&nbsp;&nbsp; </td>
-<td style="text-align:left;"> Approved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Yellow  </td>
-<td style="text-align:left;"> Pending - requires approval or email verification </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Red   </td>
-<td style="text-align:left;"> Not approved </td>
-</tr>
-</tbody>
-</table>
-
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> We recommend adding a generic email account (such as webteam@agency.gov) as a user to ensure ongoing access to your account as individuals come and go.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
-      
-      <a href="/tagged/users"><span class="label label-info">users</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/users.html">
-        <time datetime="2016-07-28">July 28, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/https-transition.html">Preparing Your Site for HTTPS</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="https://https.cio.gov/">OMB memo M-15-13</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> requires all publicly available federal websites and web services to <a href="https://www.digitalgov.gov/2015/07/21/an-introduction-to-https-by-18f-and-digitalgov-university/">implement HTTPS</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> by December 31, 2016.</p>
-
-<p>Below is a checklist of action items that should be completed in order for your search site to function as expected in HTTPS.</p>
-
-<h2>1. The Admin Center</h2>
-
-<p>Update all URLs that are listed in the Search Admin Center for each of your search configurations. <em>You will need to update the links for all of your search configurations.</em></p>
-
-<h3>Everyone:</h3>
-
-<p><strong>Dashboard:</strong></p>
-
-<ul>
-<li><strong>Settings:</strong> Update your Homepage URL.</li>
-</ul>
-
-
-<p><strong>Content:</strong></p>
-
-<ul>
-<li><strong>Content Overview:</strong> No action needed. The URL that we scan for social media accounts is synced with the homepage you have listed in the Dashboard section.</li>
-<li><strong>Domains:</strong> No action needed, as this list isn’t protocol-specific.</li>
-<li><strong>Collections:</strong> Update all URL paths in your collections; if you have mixed collections, leave any HTTP sites as-is.</li>
-<li><strong>Routed Queries:</strong> Update routed query URLs.</li>
-<li><strong>RSS feeds:</strong> Update RSS feed URLs. The indexing will error if the protocol listed in our system for the feed URL does not match the feed URL on your site, or if you’ve placed a 301 redirect on your old HTTP version of the feed pointing to the new HTTPS version of the feed. We will also need to update the URLs for all items that are already in our index. <a href="mailto:search@support.digitalgov.gov">Email us</a> and we will do a global update to change HTTP to HTTPS for you. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS.</li>
-</ul>
-
-
-<p><strong>Display:</strong></p>
-
-<ul>
-<li><strong>Image Assets:</strong> Update the Favicon URL.</li>
-<li><strong>Header &amp; Footer:</strong> Update header and footer links.</li>
-<li><strong>No Results Page:</strong> Update alternative links.</li>
-</ul>
-
-
-<h3>Only those using <code>Domains &gt; Advanced</code> features:</h3>
-
-<ul>
-<li><strong>Supplemental Feed:</strong> Update RSS feed URLs. The indexing will error if the protocol listed in our system for the feed URL does not match the feed URL on your site, or if you’ve placed a 301 redirect on your old HTTP version of the feed pointing to the new HTTPS version of the feed. We will also need to update the URLs for all items that are already in our index. <a href="mailto:search@support.digitalgov.gov">Email us</a> and we will do a global update to change HTTP to HTTPS for you. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS.</li>
-<li><strong>Supplemental URLs:</strong> Update supplemental URLs.</li>
-<li><strong>Filter URLs:</strong> Update filtered URLs.</li>
-</ul>
-
-
-<h2>2. Masked Domains</h2>
-
-<p>If your site uses <a href="http://search.digitalgov.gov/manual/cname.html">domain masking</a>: <a href="mailto:search@support.digitalgov.gov">contact our team</a> to be added to our SSL certificate. While this step doesn't apply to everyone, it does need to be done before step 3.</p>
-
-<h2>3. Form Code Action on Your Website</h2>
-
-<p>Update your form code action: An <code>s</code> must be added to your site’s form action in order for the request to be made over HTTPS, and for the results page to be served over HTTPS. Example:</p>
-
-<p><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;</code></p>
-
-<h2>4. Commercial Search Engines</h2>
-
-<p>Notify Google and Bing about the change; Google and Bing treat a migration from HTTP to HTTPS as a site move.</p>
-
-<ul>
-<li>Google has a step-by-step guide, <a href="https://support.google.com/webmasters/answer/6033049">Move a Site with URL changes</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>For Bing, review <a href="https://www.bing.com/webmaster/help/how-to-use-the-site-move-tool-bb8f5112">How to Use the Site Move tool</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-</ul>
-
-
-<p>Additional SEO best practices:</p>
-
-<ul>
-<li>Update your XML sitemap with HTTPS URLs.</li>
-<li>Use <code>rel canonical</code> to <a href="https://support.google.com/webmasters/answer/139066?hl=en#https">declare HTTPS the preferred version</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>Update internal website links.</li>
-<li>Update links to your website from social media and other platforms managed by your agency.</li>
-</ul>
-
-
-<hr />
-
-<p><strong><em>Additional Information:</em></strong></p>
-
-<ul>
-<li>Read more about the <a href="https://https.cio.gov/">HTTPS-Only Standard</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> from the Federal CIO Council.</li>
-<li>View a <a href="https://docs.google.com/spreadsheets/d/1XB26X_wFoBBlQEqecj7HB79hQ7DTLIPo97SS5irwsK8/edit#gid=1975121463">SEO Checklist</a> &nbsp;<i class="icon-external-link"><span>(External link)</span></i> created by Aleyda Solís.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/https"><span class="label label-info">https</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/https-transition.html">
-        <time datetime="2016-07-28">July 28, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
       <a href="/manual/govbox-jobs.html">Help Searchers Find Jobs</a>
     </h1>
     
@@ -863,7 +866,7 @@ i14y (Beta) API instructions*</p>
 
 <hr />
 
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#118;">&#115;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Job Openings module.</p>
+<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. Email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x73;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#x70;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#103;&#111;&#118;">&#115;&#101;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Job Openings module.</p>
 
     </div>
 
