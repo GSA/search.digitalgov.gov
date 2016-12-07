@@ -103,66 +103,68 @@
  
     
     <h1>
-      <a href="/manual/monthly-reports.html">How to Analyze Your Monthly Reports</a>
+      <a href="/manual/site-overview.html">How to View a Snapshot of What's Happening on Your Site Today</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Monthly Reports</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Site Overview</p>
 
-<p>The monthly report gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and <a href="/manual/clicks.html">clicks</a> each month.</p>
+<p>The Site Overview page provides a snapshot of what has been happening on your site in the past day. All of the analytics in the <a href="https://search.usa.gov/sites/">Admin Center</a> are updated in real-time, which means that you instantaneously see the searches and clicks as they're performed on your site.</p>
 
-<p>Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.</p>
+<p>You can opt to receive this snapshot as a daily email by clicking on the envelope icon (<i class="icon-envelope"></i>) in the top navigation bar next to your selected site.</p>
 
 <p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
 
-<p>Data are available in the Admin Center from August 2014.</p>
+<h2>Top Queries</h2>
 
-<h2>Monthly Usage Stats</h2>
+<p>Reports on the top 10 searches done by searchers on your site. If you don't have any searches, you'll see a message that there aren't enough query data available. These typically don't require any action as they don't change much from day-to-day.</p>
 
-<p>Data for the total number of queries and clicks. Use this report to find and analyze the so-called <a href="http://www.searchtools.com/analysis/long-tail.html">short head</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> of your most popular search queries and clicks, which are typically the same as your site's <a href="http://www.usability.gov/tags/task-analysis/">top tasks</a>.</p>
+<p>Note that the data are processed to present "real" searches by humans (that is, the data are de-duped by IP address to remove bot traffic and other noise).</p>
 
-<h3>Queries with No Results</h3>
+<h2>Top Clicked URLs</h2>
 
-<p>A list of queries that returned no results. Sometimes searchers look for information on the wrong website, and sometimes they use different words than what are used on the page, and so they get no results from the search index. Use this list of Queries with No Results to help searchers get to the information they're looking for. You can set up <a href="/manual/best-bets.html">Best Bets (Text or Graphics)</a>), or a <a href="/manual/routed-queries.html">Routed Query</a>. You can also <a href="/manual/no-results.html">customize the No Results message</a> displayed on your results page.</p>
+<p>Reports on the top 10 pages that were clicked thru by searchers on your search results page. If you don't have any clicks, you'll see a message that there aren't enough click data available. These typically don't require any action as they don't change much from day-to-day.</p>
 
-<h2>Impressions and Clicks by Module</h2>
+<h2>Trending URLs</h2>
 
-<p>Detailed data for the total number of impressions and clicks and your clickthru rate (CTR) are presented for each "module" on the search results page. We also provide the average CTR across all DigitalGov Search customers so you can see how your rate compares to the average rate. The data in the table is sorted in descending order from the most to least number of clicks.</p>
+<p>If there are any pages that are trending, they'll appear here. Reports on up to the top 10 changing URLs that were <em>visited by users on your website</em>.</p>
 
-<p>Use this report to inform which <a href="/manual/display-overview.html">modules you opt to display</a>.</p>
+<p>Use this report to identify newly popular pages on your website. Investigate why pages are trending, if the reason is not immediately apparent.</p>
 
-<p><strong><em>Drill down into best bets.</em></strong> Select the option to drill down into your <a href="/manual/best-bets.html">Best Bets (Text or Graphics)</a> to see the number of impressions, number of clicks, and CTR for each best bet. The data in the table is sorted in descending order from the highest to lowest CTR. Review and edit best bets as needed. Focus on those with a high number of impressions and low CTR to make the biggest impact on searchers' experience (and on your overall CTR). Select drill down again to see a pie chart of the search terms that led to an impression on each best bet.</p>
+<p>Note that you'll only see this list of trending URLs if you have our <a href="/manual/code.html">Javascript snippet</a> on your web pages. Data are updated every few minutes so this is near real-time information and you may see URLs come and go quickly.</p>
 
-<h2>Download Top Queries</h2>
+<h2>Trending Queries</h2>
 
-<p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV (comma-separated values) link to download the list as a text file. Once you've downloaded the CSV file, you can easily <a href="https://support.office.com/en-us/article/Import-or-export-text-txt-or-csv-files-e8ab9ff3-be8d-43f1-9d52-b5e8a008ba5c">import it  into Excel</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> or another speadsheet program to analyze the data.</p>
+<p>If there are any queries that are trending, they'll appear here. Reports on up to the top 10 changing search terms with the greatest <em>gain</em> between yesterday and today.</p>
 
-<p>The CSV file contains three columns: (1) query, (2) raw count, and (3) IP-deduped.</p>
+<p>Use this report to identify newly popular terms. Create new content or update existing content to ensure it's current, accurate, and complete.</p>
 
-<p>Read <a href="https://www.digitalgov.gov/2013/10/24/understanding-your-users-needs-by-analyzing-search-terms/">Understanding Your Users' Needs By Analyzing Search Terms</a> for tips on how to create a semi-automated report for analyzing the data in this CSV file on a regular basis.</p>
+<h2>Queries with No Results</h2>
 
-<h2>Definitions</h2>
+<p>If there are any terms that returned no results, they'll appear here. Reports on up to the top 10 queries with no results.</p>
 
-<p>All data presented on this page (and other pages in the Admin Center) are IP-deduped to exclude bots and other noise in an attempt to accurately represent searchers' intent on your site. Some definitions follow.</p>
+<p>For example, on one agency's website in October 2012, a dozen searches for <em>frostline</em> returned no results. The frost line&mdash;also known as depth of frost or freezing&mdash;is the depth to which the groundwater in soil is expected to freeze. The agency's pages on the topic referred to this concept as <em>depth of freezing</em>.</p>
 
-<p><strong><a href="/manual/queries.html">Queries</a>:</strong> Number of times a search query (that is, a word or string of words) was entered in the search box by a unique searcher.</p>
+<p>Use this alert about results data to help searchers find your content by adding a <a href="/manual/best-bets.html">Best Bet</a>, updating your existing web pages, or both.</p>
 
-<p><strong><a href="/manual/clicks.html">Clicks</a>.</strong> Number of times a searcher clicked on one of your pages within the search results for a particular query.</p>
+<h2>Top Queries with Low Click Thrus</h2>
 
-<p><strong>Impressions:</strong> Number of times a module is displayed, whether it is clicked on or not. Not all modules are displayed for all queries. Each time a module is displayed it is counted as one impression.</p>
+<p>If there are any frequently searched terms that returned results but didn't result in a click at least 20% of the time, they'll appear here. Reports on up to the top 10 searches with low click thru rates.</p>
 
-<p><strong>Clickthru Rate (CTR):</strong> The rate (expressed in a percentage) at which searchers click on a module. This rate is calculated by dividing the total number of clicks by the total number of impressions. CTR is useful to measure the performance of specific campaigns, such as <a href="/manual/best-bets.html">best bets</a> for seasonal events.</p>
+<p>Use this alert about low click thrus to identify issues with coverage. You may opt to create a <a href="/manual/best-bets.html">Best Bet (Text or Graphics)</a>, add pages that may be missing from the results, or do both to improve recall. Or, you may opt to incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results, or enter common search terms as keywords, verbatim.</p>
 
-<p><strong>Raw count:</strong> Total number of times the query was submitted. The raw count is provided in the downloadable CSV files only.</p>
+<h2>This Month's Totals to Date</h2>
 
-<p><strong>IP-deduped count:</strong> Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of "real," human traffic.</p>
+<p>Reports on the total number of queries and clicks for the present month-to-date. A click  is recorded each time a searcher clicks on a results link.</p>
+
+<p>A graph of your site's total search queries over time is also presented to provide an overview of how your traffic has trended from the time your agency started using our service (but no further back than 2010). Hover over the trend line to see the total number of queries in previous months.</p>
 
 <hr />
 
-<p><strong><em>Did you know?</em></strong> On the first of each month, we email you a report with data on the previous month's queries, clicks, and top search terms.</p>
+<p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and <a href="/manual/clicks.html">clicks</a> each month.</p>
 
-<p><strong><em>Did you know?</em></strong> The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site in the past day or so.</p>
+<p><strong><em>Did you know?</em></strong>  Click the pushpin icon in the top navigation bar to change the default site that appears when you first log in to the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
 
     </div>
 
@@ -172,9 +174,9 @@
       
       <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
       
-      <a href="/tagged/queries"><span class="label label-info">queries</span></a>
+      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
       
-      <a href="/tagged/clicks"><span class="label label-info">clicks</span></a>
+      <a href="/tagged/site-overview"><span class="label label-info">site-overview</span></a>
       
     </div>
    <div class='time'>
@@ -182,7 +184,7 @@
       
       
       
-      <a href="/manual/monthly-reports.html">
+      <a href="/manual/site-overview.html">
         <time datetime="2015-11-02">November 2, 2015</time>
       </a>
     </div>
@@ -318,6 +320,95 @@
       
       
       <a href="/manual/color-codes.html">
+        <time datetime="2015-11-02">November 2, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/monthly-reports.html">How to Analyze Your Monthly Reports</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Monthly Reports</p>
+
+<p>The monthly report gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and <a href="/manual/clicks.html">clicks</a> each month.</p>
+
+<p>Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.</p>
+
+<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
+
+<p>Data are available in the Admin Center from August 2014.</p>
+
+<h2>Monthly Usage Stats</h2>
+
+<p>Data for the total number of queries and clicks. Use this report to find and analyze the so-called <a href="http://www.searchtools.com/analysis/long-tail.html">short head</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> of your most popular search queries and clicks, which are typically the same as your site's <a href="http://www.usability.gov/tags/task-analysis/">top tasks</a>.</p>
+
+<h3>Queries with No Results</h3>
+
+<p>A list of queries that returned no results. Sometimes searchers look for information on the wrong website, and sometimes they use different words than what are used on the page, and so they get no results from the search index. Use this list of Queries with No Results to help searchers get to the information they're looking for. You can set up <a href="/manual/best-bets.html">Best Bets (Text or Graphics)</a>), or a <a href="/manual/routed-queries.html">Routed Query</a>. You can also <a href="/manual/no-results.html">customize the No Results message</a> displayed on your results page.</p>
+
+<h2>Impressions and Clicks by Module</h2>
+
+<p>Detailed data for the total number of impressions and clicks and your clickthru rate (CTR) are presented for each "module" on the search results page. We also provide the average CTR across all DigitalGov Search customers so you can see how your rate compares to the average rate. The data in the table is sorted in descending order from the most to least number of clicks.</p>
+
+<p>Use this report to inform which <a href="/manual/display-overview.html">modules you opt to display</a>.</p>
+
+<p><strong><em>Drill down into best bets.</em></strong> Select the option to drill down into your <a href="/manual/best-bets.html">Best Bets (Text or Graphics)</a> to see the number of impressions, number of clicks, and CTR for each best bet. The data in the table is sorted in descending order from the highest to lowest CTR. Review and edit best bets as needed. Focus on those with a high number of impressions and low CTR to make the biggest impact on searchers' experience (and on your overall CTR). Select drill down again to see a pie chart of the search terms that led to an impression on each best bet.</p>
+
+<h2>Download Top Queries</h2>
+
+<p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV (comma-separated values) link to download the list as a text file. Once you've downloaded the CSV file, you can easily <a href="https://support.office.com/en-us/article/Import-or-export-text-txt-or-csv-files-e8ab9ff3-be8d-43f1-9d52-b5e8a008ba5c">import it  into Excel</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> or another speadsheet program to analyze the data.</p>
+
+<p>The CSV file contains three columns: (1) query, (2) raw count, and (3) IP-deduped.</p>
+
+<p>Read <a href="https://www.digitalgov.gov/2013/10/24/understanding-your-users-needs-by-analyzing-search-terms/">Understanding Your Users' Needs By Analyzing Search Terms</a> for tips on how to create a semi-automated report for analyzing the data in this CSV file on a regular basis.</p>
+
+<h2>Definitions</h2>
+
+<p>All data presented on this page (and other pages in the Admin Center) are IP-deduped to exclude bots and other noise in an attempt to accurately represent searchers' intent on your site. Some definitions follow.</p>
+
+<p><strong><a href="/manual/queries.html">Queries</a>:</strong> Number of times a search query (that is, a word or string of words) was entered in the search box by a unique searcher.</p>
+
+<p><strong><a href="/manual/clicks.html">Clicks</a>.</strong> Number of times a searcher clicked on one of your pages within the search results for a particular query.</p>
+
+<p><strong>Impressions:</strong> Number of times a module is displayed, whether it is clicked on or not. Not all modules are displayed for all queries. Each time a module is displayed it is counted as one impression.</p>
+
+<p><strong>Clickthru Rate (CTR):</strong> The rate (expressed in a percentage) at which searchers click on a module. This rate is calculated by dividing the total number of clicks by the total number of impressions. CTR is useful to measure the performance of specific campaigns, such as <a href="/manual/best-bets.html">best bets</a> for seasonal events.</p>
+
+<p><strong>Raw count:</strong> Total number of times the query was submitted. The raw count is provided in the downloadable CSV files only.</p>
+
+<p><strong>IP-deduped count:</strong> Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of "real," human traffic.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> On the first of each month, we email you a report with data on the previous month's queries, clicks, and top search terms.</p>
+
+<p><strong><em>Did you know?</em></strong> The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site in the past day or so.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/queries"><span class="label label-info">queries</span></a>
+      
+      <a href="/tagged/clicks"><span class="label label-info">clicks</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/monthly-reports.html">
         <time datetime="2015-11-02">November 2, 2015</time>
       </a>
     </div>
@@ -547,7 +638,7 @@
 
 <p><strong>Tagline.</strong> Fill out text for a "tagline" if you'd like one to appear at the very top of your results page header.</p>
 
-<p>The default tagline style uses Georgia (font family), 1.3 em (size), and italic (style). Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#58;&#115;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#105;&#x74;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#x6f;&#118;">&#115;&#101;&#97;&#114;&#99;&#x68;&#64;&#115;&#117;&#x70;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#118;</a> if you'd like to change the default font family, size, or style.</p>
+<p>The default tagline style uses Georgia (font family), 1.3 em (size), and italic (style). Email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#115;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#111;&#x76;">&#x73;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#100;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#x76;</a> if you'd like to change the default font family, size, or style.</p>
 
 <p><strong>Menu Button Alignment.</strong> Leave the Browse Site "hamburger" menu right-aligned, or select the Left option to make it left-aligned.</p>
 
@@ -941,195 +1032,6 @@ URL: mailto:info@agency.gov</p>
       
       <a href="/manual/routed-queries.html">
         <time datetime="2015-07-10">July 10, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/rss.html">How to Add Your RSS Feeds to Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > RSS</p>
-
-<p>Would you like searchers to be able to search your news or multimedia content? Would you like them to be able to narrow results by date?</p>
-
-<p>Tell us the locations and names of your RSS feeds. We index all new and updated content on your feeds within minutes.</p>
-
-<h2>Step 1. Tell Us About Your RSS Feeds</h2>
-
-<p>We love feeds! Tell us about <em>all</em> of your RSS feeds, even if you don't opt to show them in step 2 below. Feeds are the fastest and most reliable way for us to learn about your new and updated content.</p>
-
-<p>Select the option to add a new RSS feed.</p>
-
-<h3>Name</h3>
-
-<p>Create a name for the feed. Within this 'bucket' you can list a single RSS feed or many feeds. For example, you can opt to list all of your agency's press releases separately (such as Police News, Fire News, EMS News, etc.) or you can list all three under one general name (such as News).</p>
-
-<p><img class="img-responsive" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/rss.png" alt="Add an RSS Feed"></img></p>
-
-<h3>Feed type</h3>
-
-<p>Select the type of feed. The default option is RSS (for text content like press releases or blogs). Change it to <a href="http://www.rssboard.org/media-rss">media RSS</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> for multimedia content like images and videos.</p>
-
-<p>Each item within a RSS feed must include a title, link, description, and publication date.</p>
-
-<p>Each item within a media RSS feed must also include both a <a href="http://www.rssboard.org/media-rss#media-content">media:content URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a direct URL to the media object and a <a href="http://www.rssboard.org/media-rss#media-thumbnails">media:thumbnail URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a URL to the object's thumbnail.</p>
-
-<p>Any items missing a required element won't display in your search results.</p>
-
-<h3>Sample RSS Item with All Required Elements</h3>
-
-<pre><code>&lt;item&gt;
-&lt;title&gt;
-Statement from Agriculture Secretary Tom Vilsack Regarding World Organization for Animal Health (OIE) Upgrade of United States&amp;apos; BSE Risk Status
-&lt;/title&gt;
-&lt;pubDate&gt;May 29, 2013 00:00:00 CDT&lt;/pubDate&gt;
-&lt;link&gt;
-http://www.usda.gov/wps/portal/usda/usdahome?contentid=2013/05/0106.xml&amp;contentidonly=true
-&lt;/link&gt;
-&lt;description&gt;
-WASHINGTON, May 29, 2013–Agriculture Secretary Tom Vilsack made the following statement about notification received today from the World Organization for Animal Health (OIE) upgrading the United States&amp;apos; risk classification for bovine spongiform encephalopathy (BSE) to negligible risk:
-&lt;/description&gt;
-&lt;/item&gt;
-</code></pre>
-
-<h3>Sample Media RSS Item with All Required Elements</h3>
-
-<pre><code>&lt;item&gt;
-&lt;title type="html"&gt;
-&lt;![CDATA[ Great Lakes Beach Health ]]&gt;
-&lt;/title&gt;
-&lt;link&gt;
-http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
-&lt;/link&gt;
-&lt;guid&gt;
-http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
-&lt;/guid&gt;
-&lt;pubDate&gt;Fri, 24 May 2013 00:00:00 EDT&lt;/pubDate&gt;
-&lt;media:description type="html"&gt;
-&lt;![CDATA[ As schools close for the year and summer weather beckons, many recreationalists head to the Great Lakes' public beaches. However, these coastal areas can become  contaminated with disease-causing bacteria that threaten public health, disrupt water   recreation, and pay a toll on the Great Lakes economies that depend on summer tourism. ]]&gt;
-&lt;/media:description&gt;
-&lt;media:thumbnail url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/thumbs/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
-&lt;media:content type="" url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/large/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
-&lt;/item&gt;
-</code></pre>
-
-<h2>Step 2. Opt to Show as a Facet, Inline Module, or Both</h2>
-
-<p>Allow searchers to see inline results for the three most recent, relevant RSS results <em>across all of your RSS feeds</em> by turning on the News module on the <a href="/manual/display-overview.html">Display Overview</a> page. You can also edit the default title, News, on the Display Overview page.</p>
-
-<p>Allow searchers to narrow results to a specific feed by turning on the option to show the facet on the <a href="/manual/display-overview.html">Display Overview</a> page. To ensure searchers don't encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a facet.</p>
-
-<h2>Step 3. Check Your Search Results Page</h2>
-
-<p><strong>Module.</strong> If you opted to show your RSS feed(s) as a module, searchers will see inline news results. It'll will highlight the three most recent, relevant results across all of your RSS feeds.</p>
-
-<p><strong>Facet.</strong> If you opted to show your RSS feed(s) as a facet, searchers can narrow their results to see your RSS-based results only.</p>
-
-<p>Within the RSS-based results, searchers can opt to limit results to the last hour, day, week, month, or year, or they can set a custom date range. They also can sort results in descending order by relevance (best match first) or date (most recent first).</p>
-
-<p><strong>Results count.</strong> We show the number of results returned for searches against your feed(s).</p>
-
-<p><img class="img-responsive" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/ResultsCount.png" alt="Results count for items in our indexes"></img></p>
-
-<h2>Step 4. Check the Status of Your Feeds</h2>
-
-<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each feed's status.</p>
-
-<p><img class="img-responsive" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/rss-status.png" alt="RSS status messages and colors"></img></p>
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;"> Color </th>
-<th style="text-align:left;"> Status </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;"> Green&nbsp;&nbsp;&nbsp; </td>
-<td style="text-align:left;"> Feed indexed, no errors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Yellow </td>
-<td style="text-align:left;"> Pending Indexing </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Red </td>
-<td style="text-align:left;"> Feed indexed, but error in one or more items </td>
-</tr>
-<tr>
-<td style="text-align:left;"> &nbsp; </td>
-<td style="text-align:left;"> &nbsp; </td>
-</tr>
-</tbody>
-</table>
-
-
-<p>Click on the name of any feed with an error to see more detailed information about it. Possible error messages follow.</p>
-
-<ul>
-<li>404 Not Found</li>
-<li>Feed looks empty</li>
-<li>Description can't be blank</li>
-<li>Title can't be blank</li>
-<li>Missing link field</li>
-<li>Missing pubDate field</li>
-<li>Link is not a valid URL</li>
-<li>Linked URL does not exist (HTTP 404)</li>
-</ul>
-
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
-
-<ul>
-<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
-<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-<li><a href="http://atomenabled.org/developers/syndication/">Atom syndication format</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-</ul>
-
-
-<p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="https://search.usa.gov/sites/">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don't need to coordinate with us.</p>
-
-<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your feed.</p>
-
-<p>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab. Change the form action to <code>action="http://search.usa.gov/search/news</code> and add the following line to limit the results to your feed.</p>
-
-<p><code>&lt;input type="hidden" name="channel" value="###"&gt;</code></p>
-
-<p>The value is the number for your feed ID, which is visible in the URL when you edit your feed in the Admin Center.</p>
-
-<p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your RSS feeds.</p>
-
-<p><strong><em>Did you know?</em></strong> When you <a href="/manual/youtube.html">provide us with your YouTube channel</a>, we'll automatically index the RSS feed for your YouTube channel.</p>
-
-<p><strong><em>Did you know?</em></strong> For any feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by these facets in the <a href="/manual/display-overview.html">sidebar</a> on the results page.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/rss"><span class="label label-info">rss</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/rss.html">
-        <time datetime="2015-06-02">June 2, 2015</time>
       </a>
     </div>
     </article>
