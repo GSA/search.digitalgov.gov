@@ -32,13 +32,13 @@ Type over the text in the Name field to edit a facet's display name. Keep each n
 
 1. ***Federal Register* documents.** When a searcher's query matches the text of a notice or rule published by your agency in the *Federal Register*, the document appears in the *Federal Register* module. Up to three documents are displayed. For more information, including a screenshot, read our post [Help Searchers Find Federal Register Documents](/manual/govbox-federal-register.html).
 
-1. **Related searches.** Help visitors better define the focus of their search by offering them searches related to their current search term. Suggestions are derived from the searches performed on your website. Up to five searches related to your visitors' original search are displayed and are updated in near real time. See, for example, the sample results page below that shows related searches displayed for a [search on *tacoma* on Access Washington](http://search.usa.gov/search?affiliate=accesswashington&query=tacoma).
+1. **Related searches.** Help visitors better define the focus of their search by offering them searches related to their current search term. Suggestions are derived from the searches performed on your website. Up to five searches related to your visitors' original search are displayed and are updated in near real time.
 
 1. **Health topics.** Help searchers find high-quality, authoritative health information from MedlinePlus and ClinicalTrials.gov. For more information, including a screenshot, read our post [Help Searchers Find Health Information](/manual/govbox-health.html).
 
 1. **Recent tweets.** This option only appears after you've told us about your [Twitter](/manual/twitter.html) account. When a searcher's query matches the text of a tweet published within the past three days, the tweet appears in the Recent Tweets module.
 
-1. **Type-ahead search.** Help searchers refine their query by displaying type-ahead search suggestions as a list in the search box. The list forms as a searcher begins to type in the search box. Suggestions are listed in order of most popular (that is, most searched). They're updated every few seconds. See, for example, the suggestions as you type di... on [SocialSecurity.gov's search results page](http://search.socialsecurity.gov/search?affiliate=ssa&query=names).
+1. **Type-ahead search.** Help searchers refine their query by displaying type-ahead search suggestions as a list in the search box. The list forms as a searcher begins to type in the search box. Suggestions are listed in order of most popular (that is, most searched). They're updated every few seconds. See, for example, the suggestions as you type di... on [SocialSecurity.gov's search results page](search.ssa.gov/search?affiliate=ssa).
 
 ## Related Sites
 
@@ -48,7 +48,7 @@ Enter the [site handle](/manual/settings.html) for one of your other DigitalGov 
 
 See, for example, the Español option displayed on [USA.gov for a search on *venezuela*](http://search.usa.gov/search?query=venezuela&affiliate=usagov). When searchers click this option, they see results for [*venezuela* on GobiernoUSA.gov](http://search.usa.gov/search?query=venezuela&affiliate=gobiernousa).
 
-If you list more than two related sites, searchers will see them listed under a dropdown menu, View Topic. See, for example, the related sites displayed on [Broward.org for a search on *jobs*](http://search.broward.org/search?affiliate=co.broward.fl.us&query=jobs).
+If you list more than two related sites, searchers will see them listed under a dropdown menu, View Topic.
 
 Email us at <search@support.digitalgov.gov> if you'd like to use a custom label instead of the default 'View Topic' label.
 
