@@ -19,9 +19,9 @@ See the sample results page below that shows a text best bet displayed on [USGS.
 
 There are a variety of layouts possible for graphics best bets.
 
-* **Two columns with a collection of links and an image** displayed on USA.gov for a search on *[wildfires](http://search.usa.gov/search?query=wildfires&affiliate=usagov)*. 
-* **Two columns with a collection of links only** displayed on USA.gov for a search on *[holidays](http://search.usa.gov/search?query=holidays&affiliate=usagov)*. 
-* **One column with a link to a specific web page and an image** displayed on WhiteHouse.gov for a search on *[jobs](http://search.whitehouse.gov/search?affiliate=wh&query=jobs)*.
+* **Two columns with a collection of links and an image** displayed on USA.gov for a search on *[wildfires](https://search.usa.gov/search?query=wildfires&affiliate=usagov)*. 
+* **Two columns with a collection of links only** displayed on USA.gov for a search on *[housing](https://search.usa.gov/search?affiliate=usagov&query=housing)*. 
+* **One column with a link to a specific web page and an image** displayed on WhiteHouse.gov for a search on *[jobs](https://search.whitehouse.gov/search?affiliate=wh&query=jobs)*.
 
 ## Add a Graphics Best Bet
 
