@@ -103,6 +103,129 @@
  
     
     <h1>
+      <a href="/manual/https-transition.html">Preparing Your Site for HTTPS</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="https://https.cio.gov/">OMB memo M-15-13</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> requires all publicly available federal websites and web services to <a href="https://www.digitalgov.gov/2015/07/21/an-introduction-to-https-by-18f-and-digitalgov-university/">implement HTTPS</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> by December 31, 2016.</p>
+
+<p>Below is a checklist of action items that should be completed in order for your search site to function as expected in HTTPS.</p>
+
+<h2>1. The Admin Center</h2>
+
+<p>Update all URLs that are listed in the Search Admin Center for each of your search configurations. <em>You will need to update the links for all of your search configurations.</em></p>
+
+<h3>Everyone:</h3>
+
+<p><strong>Dashboard:</strong></p>
+
+<ul>
+<li><strong>Settings:</strong> Update your Homepage URL.</li>
+</ul>
+
+
+<p><strong>Analytics:</strong></p>
+
+<ul>
+<li><strong>3rd Party Tracking:</strong> If you are using <a href="http://search.digitalgov.gov/manual/third-party.html">3rd party tracking code</a> that is HTTP protocol-specific, you will need to submit updated code.</li>
+</ul>
+
+
+<p><strong>Content:</strong></p>
+
+<ul>
+<li><strong>Content Overview:</strong> No action needed. The URL that we scan for social media accounts is synced with the homepage you have listed in the Dashboard section.</li>
+<li><strong>Domains:</strong> No action needed, as this list isn’t protocol-specific.</li>
+<li><strong>Collections:</strong> Update all URL paths in your collections; if you have mixed collections, leave any HTTP sites as-is.</li>
+<li><strong>Best Bets (Text and Graphics):</strong> Throughout December 2016, we are doing bulk updates of Best Bet URLs in our system. If your site is serving content over HTTPS, we will update the URLs for your Best Bets. We suggest doing a spotcheck to confirm that all Best Bets have been updated. If you need a bulk update done after December, please <a href="mailto:search@support.digitalgov.gov">email us</a>.</li>
+<li><strong>Routed Queries:</strong> Update routed query URLs.</li>
+<li><strong>RSS feeds:</strong> Throughout December 2016, we are doing bulk updates of RSS feed URLs in our system. If your site is serving content over HTTPS, we will update the indexed URLs for your RSS feeds. We suggest doing a spotcheck to confirm that all feeds have been updated. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS. If you need a bulk update done after December, please <a href="mailto:search@support.digitalgov.gov">email us</a>.</li>
+</ul>
+
+
+<p><strong>Display:</strong></p>
+
+<ul>
+<li><strong>Image Assets:</strong> Update the Favicon URL.</li>
+<li><strong>Header &amp; Footer:</strong> Update header and footer links.</li>
+<li><strong>No Results Page:</strong> Update alternative links.</li>
+</ul>
+
+
+<h3>Only those using <code>Domains &gt; Advanced</code> features:</h3>
+
+<ul>
+<li><strong>Supplemental Feed:</strong> Throughout December 2016, we are doing bulk updates of RSS feed URLs in our system. If your site is serving content over HTTPS, we will update the indexed URLs for your RSS feeds. We suggest doing a spotcheck to confirm that all feeds have been updated. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS. If you need a bulk update done after December, please <a href="mailto:search@support.digitalgov.gov">email us</a>.</li>
+<li><strong>Supplemental URLs:</strong> Throughout December 2016, we are doing bulk updates of supplemental URLs in our system. If your site is serving content over HTTPS, we will update the supplemental URLs you have submitted. We suggest doing a spotcheck to confirm that all URLs have been updated. If you need a bulk update done after December, please <a href="mailto:search@support.digitalgov.gov">email us</a>.</li>
+<li><strong>Filter URLs:</strong> Update filtered URLs.</li>
+</ul>
+
+
+<h2>2. Masked Domains</h2>
+
+<p>If your site uses <a href="http://search.digitalgov.gov/manual/cname.html">domain masking</a>: <a href="mailto:search@support.digitalgov.gov">contact our team</a> to be added to our SSL certificate. While this step doesn't apply to everyone, it does need to be done before step 3.</p>
+
+<h2>3. Form Code Action on Your Website</h2>
+
+<p>Update your form code action: An <code>s</code> must be added to your site’s form action in order for the request to be made over HTTPS, and for the results page to be served over HTTPS. Example:</p>
+
+<p><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;</code></p>
+
+<h2>4. Commercial Search Engines</h2>
+
+<p>Notify Google and Bing about the change; Google and Bing treat a migration from HTTP to HTTPS as a site move.</p>
+
+<ul>
+<li>Google has a step-by-step guide, <a href="https://support.google.com/webmasters/answer/6033049">Move a Site with URL changes</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>For Bing, review <a href="https://www.bing.com/webmaster/help/how-to-use-the-site-move-tool-bb8f5112">How to Use the Site Move tool</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+</ul>
+
+
+<p>Additional SEO best practices:</p>
+
+<ul>
+<li>Update your XML sitemap with HTTPS URLs.</li>
+<li>Use <code>rel canonical</code> to <a href="https://support.google.com/webmasters/answer/139066?hl=en#https">declare HTTPS the preferred version</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>Update internal website links.</li>
+<li>Update links to your website from social media and other platforms managed by your agency.</li>
+</ul>
+
+
+<hr />
+
+<p><strong><em>Additional Information:</em></strong></p>
+
+<ul>
+<li>Read more about the <a href="https://https.cio.gov/">HTTPS-Only Standard</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> from the Federal CIO Council.</li>
+<li>View a <a href="https://docs.google.com/spreadsheets/d/1XB26X_wFoBBlQEqecj7HB79hQ7DTLIPo97SS5irwsK8/edit#gid=1975121463">SEO Checklist</a> &nbsp;<i class="icon-external-link"><span>(External link)</span></i> created by Aleyda Solís.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/https"><span class="label label-info">https</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/https-transition.html">
+        <time datetime="2016-12-15">December 15, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/training.html">DigitalGov Search Training</a>
     </h1>
     
@@ -256,7 +379,7 @@
 
 <h2>Site Handle</h2>
 
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#105;&#103;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#118;">&#115;&#101;&#97;&#x72;&#x63;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#x69;&#103;&#x69;&#x74;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#x6f;&#x76;</a>.</p>
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#x73;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#x73;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#46;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#x67;&#111;&#x76;">&#115;&#101;&#97;&#114;&#99;&#104;&#x40;&#115;&#117;&#112;&#x70;&#111;&#114;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#108;&#103;&#111;&#x76;&#46;&#103;&#x6f;&#x76;</a>.</p>
 
 <p><a href="http://search.socialsecurity.gov/search?query=office+locations&amp;affiliate=ssa"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/settings.png" title="Site name and handle on SocialSecurity.gov's search results page" alt="Site name and handle on SocialSecurity.gov's search results page" /></a></p>
 
@@ -266,7 +389,7 @@
 
 <h2>Site Language</h2>
 
-<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">66 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#115;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#112;&#111;&#x72;&#x74;&#x2e;&#x64;&#x69;&#x67;&#105;&#x74;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#103;&#111;&#x76;&#46;&#103;&#x6f;&#118;</a>.</p>
+<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">66 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x73;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#x74;&#x61;&#x6c;&#x67;&#111;&#x76;&#x2e;&#x67;&#111;&#118;">&#115;&#x65;&#x61;&#114;&#99;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#100;&#x69;&#103;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;</a>.</p>
 
 <h2>Delete</h2>
 
@@ -319,7 +442,7 @@
 
 <p>Type over the text in the Name field to edit a facet's display name. Keep each name short (15 or fewer characters) and consistent with the content you're searching. Click on the hyperlink in the Source field to update the facet's source content. Hover over the icon with three horizontal lines on the left to change the order.</p>
 
-<p><strong>More.</strong> We show up to four facets above your search box. If you turn on the display of more than four facets, you'll see them listed under a 'More' dropdown menu. Email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#115;&#117;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#x69;&#x74;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#118;">&#115;&#101;&#97;&#114;&#x63;&#104;&#64;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#103;&#111;&#118;</a> if you'd like to use a custom label instead of the default 'More'.</p>
+<p><strong>More.</strong> We show up to four facets above your search box. If you turn on the display of more than four facets, you'll see them listed under a 'More' dropdown menu. Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#x73;&#101;&#x61;&#114;&#99;&#104;&#x40;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#115;&#117;&#x70;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#111;&#x76;</a> if you'd like to use a custom label instead of the default 'More'.</p>
 
 <h2>Modules</h2>
 
@@ -347,7 +470,7 @@
 
 <p>If you list more than two related sites, searchers will see them listed under a dropdown menu, View Topic.</p>
 
-<p>Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#x73;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#114;&#116;&#46;&#100;&#x69;&#103;&#105;&#x74;&#97;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#x76;">&#115;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#x67;&#x69;&#116;&#97;&#108;&#103;&#111;&#118;&#x2e;&#103;&#111;&#118;</a> if you'd like to use a custom label instead of the default 'View Topic' label.</p>
+<p>Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#115;&#x65;&#97;&#114;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#118;">&#115;&#101;&#97;&#x72;&#99;&#104;&#64;&#x73;&#117;&#x70;&#112;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#118;</a> if you'd like to use a custom label instead of the default 'View Topic' label.</p>
 
 <h2>Pointer to Kick Off New Search</h2>
 
@@ -361,13 +484,13 @@
 </ul>
 
 
-<p>Email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#115;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#118;">&#x73;&#101;&#97;&#114;&#x63;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#x74;&#46;&#100;&#105;&#103;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;</a> if you'd provide searchers with a custom message to encourage them to search another section of your site, your database, or both.</p>
+<p>Email us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#x73;&#101;&#x61;&#x72;&#99;&#104;&#64;&#115;&#117;&#112;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#x74;&#97;&#x6c;&#x67;&#x6f;&#x76;&#46;&#x67;&#x6f;&#118;">&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#105;&#x67;&#x69;&#116;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#x6f;&#x76;</a> if you'd provide searchers with a custom message to encourage them to search another section of your site, your database, or both.</p>
 
 <hr />
 
 <p><strong><em>Did you know?</em></strong>  Searchers may narrow results by time period for any <a href="/manual/rss.html">RSS</a> feeds. See, for example, results for a <a href="http://search.whitehouse.gov/search/news?affiliate=wh&amp;channel=6&amp;m=false&amp;query=jobs&amp;tbs=w">search on <em>jobs</em> narrowed to press articles in the last week on WhiteHouse.gov</a>.</p>
 
-<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#115;&#x65;&#97;&#114;&#99;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#x76;">&#115;&#101;&#x61;&#114;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;</a> to if you want to customize these display names.</p>
+<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#115;&#101;&#97;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#46;&#100;&#105;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#x76;">&#115;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#x74;&#97;&#108;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#118;</a> to if you want to customize these display names.</p>
 
 <p><strong><em>Did you know?</em></strong> You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our <a href="/manual/code.html">JavaScript snippet</a> before the closing <code>&lt;body&gt;</code> tag on your HTML web pages.</p>
 
@@ -537,6 +660,177 @@ Keyword 4: market value
       
       
       <a href="/manual/best-bets-graphics.html">
+        <time datetime="2016-12-07">December 7, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/account.html">How to Create and Edit Your Account</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > My Account</p>
+
+<p>You can use DigitalGov Search to power the search box on your federal government website&mdash;at no cost.</p>
+
+<h2>Log In</h2>
+
+<p>Log in to an existing account <a href="https://search.usa.gov/login">https://search.usa.gov/login</a> or register for a new account at <a href="https://search.usa.gov/signup">https://search.usa.gov/signup</a>.</p>
+
+<p><a href="https://search.usa.gov/login"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/login.png" title="Login from search.digitalgov.gov" alt="Login from search.digitalgov.gov" /></a></p>
+
+<p>Access to our service requires agreement with our <a href="/tos.html">Terms of Service</a> and verification that you're a federal government employee or contractor acting within the scope of your government contract.</p>
+
+<p>After you register, you'll receive an automatic email. Click on the link in the email to verify that your email address belongs to you.</p>
+
+<p>If you have a .gov or .mil address, you'll be able to access your account immediately after you verify your email.</p>
+
+<p>If you don't have a .gov or .mil address, we'll ask for additional information to confirm that you're a government employee or contractor. We'll notify you when your account is approved.</p>
+
+<h2>Add a Site</h2>
+
+<p>Once your account is approved, you can <a href="/manual/add-site.html">add a site</a> in our <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+
+<h2>Edit Your Contact Information</h2>
+
+<p>If you need to update your email address, name, or agency for any reason, it's easy to change your them in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+
+<p>In the upper right-hand corner, there is a drop-down menu. Click on <em>My account</em>.</p>
+
+<p><a href="https://search.usa.gov/sites/"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/blog-edit-email1.png" title="Edit your account" alt="Edit your account" /></a></p>
+
+<p>Once on this page you can edit your email address.</p>
+
+<p><a href="https://search.usa.gov/account"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/blog-edit-email2.png" title="Edit your email address" alt="Edit your email address" /></a></p>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> We cannot retrieve any passwords for any account, because we don't have access to passwords. To reset your password:</p>
+
+<ol>
+<li>Go to our Login page at <a href="https://search.usa.gov/login">https://search.usa.gov/login</a></li>
+<li>Enter your email address.</li>
+<li>Click on <em>Forgot your password?</em></li>
+<li>You'll be prompted to reset your password and it'll be emailed to you.</li>
+</ol>
+
+
+<p>If you have any problem resetting your password, email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#x73;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#118;">&#x73;&#101;&#x61;&#114;&#99;&#x68;&#64;&#115;&#117;&#112;&#x70;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/my-account"><span class="label label-info">my-account</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/account.html">
+        <time datetime="2016-12-07">December 7, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/add-site.html">How to Add a New Site</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > Add Site</p>
+
+<h2>Homepage URL</h2>
+
+<p>Tell us the homepage URL of your website. Enter a fully qualified URL, including http://, http://www, etc.</p>
+
+<p><strong>Correct Syntax</strong></p>
+
+<ul>
+<li>https://www.whitehouse.gov</li>
+<li>https://gobierno.usa.gov</li>
+<li>https://stemcells.nih.gov</li>
+</ul>
+
+
+<p><strong>Incorrect Syntax</strong></p>
+
+<ul>
+<li>usa.gov (use https://www.usa.gov)</li>
+<li>www.nasa.gov (use https://www.nasa.gov)</li>
+<li>https://www.sec.gov/litigation.shtml (use the higher-level folder, https://www.sec.gov/litigation)</li>
+<li>https://www.gsa.gov/portal/category/100000?utm_source=OCM&amp;utm_medium=print-radio&amp;utm_term=&amp;utm_campaign=shortcuts (use the higher-level domain, https://www.gsa.gov)</li>
+<li>http://www.doc.gov (use the domain that resolves, https://www.commerce.gov)</li>
+</ul>
+
+
+<p>We use this homepage URL to:</p>
+
+<ol>
+<li>Seed your <a href="/manual/domains.html">domains</a> list.</li>
+<li>Scan for any social media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/instagram.html">Instagram</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>), your favicon to use on your search results browser tab, and <a href="/manual/rss.html">RSS feeds</a> that are linked from your homepage, or another page you specify on the Display Overview page.</li>
+<li>Link the default <a href="/manual/brand.html">logo</a> on your results page to your homepage.</li>
+</ol>
+
+
+<h2>Display Name</h2>
+
+<p><a href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/DisplayName_SiteHandle_800.png"><img style="float: right;" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/DisplayName_SiteHandle_175.png" alt="Display Name and Site Handle on NIH.gov's search results page"></a>Tell us the name of your website. Searchers see your display name on the results page, such as in your page title or best bets. We recommend using the plain language name for your agency or site, such as National Institutes of Health.</p>
+
+<h2>Site Handle</h2>
+
+<p>Your site handle is a unique identifier for your site. The site handle is included in the request you send us from your search box, to let us know which search site to use. We also include it in the URL of your search results page, again, to show which search site is being used. We recommend making this handle short and unique, such as <code>nih</code>.</p>
+
+<p>Handles can have lowercase letters, numbers, periods, hyphens, and underscores only. They can't have spaces and other punctuation.</p>
+
+<h2>Site Language</h2>
+
+<p>English is the default language for our results pages. If you will be searching against content in another language, you should choose another language for your search site - we support English, Spanish, and <a href="/manual/supported-languages.html">66 other languages</a>.</p>
+
+<p>When English is selected, results will primarily include English language pages. All display text on the results page will also be in English.</p>
+
+<p>If you select Spanish, results will primarily include Spanish language pages. All display text on the results page will also be in Spanish. (Localizations are provided by GSA's <a href="https://gobierno.usa.gov/">GobiernoUSA.gov</a> team.)</p>
+
+<p>If you select one of the other <a href="/manual/supported-languages.html">66 languages</a>, results will primarily include pages from the selected language when possible. Display text will be in the selected language when localizations are available, and in English when they're not available.</p>
+
+<p>We've published the <a href="https://github.com/GSA/punchcard/tree/master/localizations">localization files</a> on Github, and we encourage you to <a href="https://github.com/GSA/punchcard/blob/master/CONTRIBUTING.md">contribute</a> to them.</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting Tip:</em></strong> For non-English sites, some agencies opt to include the specific location of the language's content (such as agency.gov/language or language.agency.gov) in their <a href="/manual/domains.html">Domains</a> to further refine the search results. Test the results for your non-English site with both the general agency.gov and the language-specific location to determine which setting gives you the best results.</p>
+
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;">&#115;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#46;&#100;&#x69;&#103;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#x76;&#x2e;&#x67;&#111;&#118;</a>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/settings"><span class="label label-info">settings</span></a>
+      
+      <a href="/tagged/add-site"><span class="label label-info">add-site</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/add-site.html">
         <time datetime="2016-12-07">December 7, 2016</time>
       </a>
     </div>
@@ -744,299 +1038,6 @@ Keyword 4: market value
       
       <a href="/manual/best-bets.html">
         <time datetime="2016-12-07">December 7, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/account.html">How to Create and Edit Your Account</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > My Account</p>
-
-<p>You can use DigitalGov Search to power the search box on your federal government website&mdash;at no cost.</p>
-
-<h2>Log In</h2>
-
-<p>Log in to an existing account <a href="https://search.usa.gov/login">https://search.usa.gov/login</a> or register for a new account at <a href="https://search.usa.gov/signup">https://search.usa.gov/signup</a>.</p>
-
-<p><a href="https://search.usa.gov/login"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/login.png" title="Login from search.digitalgov.gov" alt="Login from search.digitalgov.gov" /></a></p>
-
-<p>Access to our service requires agreement with our <a href="/tos.html">Terms of Service</a> and verification that you're a federal government employee or contractor acting within the scope of your government contract.</p>
-
-<p>After you register, you'll receive an automatic email. Click on the link in the email to verify that your email address belongs to you.</p>
-
-<p>If you have a .gov or .mil address, you'll be able to access your account immediately after you verify your email.</p>
-
-<p>If you don't have a .gov or .mil address, we'll ask for additional information to confirm that you're a government employee or contractor. We'll notify you when your account is approved.</p>
-
-<h2>Add a Site</h2>
-
-<p>Once your account is approved, you can <a href="/manual/add-site.html">add a site</a> in our <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-<h2>Edit Your Contact Information</h2>
-
-<p>If you need to update your email address, name, or agency for any reason, it's easy to change your them in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-<p>In the upper right-hand corner, there is a drop-down menu. Click on <em>My account</em>.</p>
-
-<p><a href="https://search.usa.gov/sites/"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/blog-edit-email1.png" title="Edit your account" alt="Edit your account" /></a></p>
-
-<p>Once on this page you can edit your email address.</p>
-
-<p><a href="https://search.usa.gov/account"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/blog-edit-email2.png" title="Edit your email address" alt="Edit your email address" /></a></p>
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> We cannot retrieve any passwords for any account, because we don't have access to passwords. To reset your password:</p>
-
-<ol>
-<li>Go to our Login page at <a href="https://search.usa.gov/login">https://search.usa.gov/login</a></li>
-<li>Enter your email address.</li>
-<li>Click on <em>Forgot your password?</em></li>
-<li>You'll be prompted to reset your password and it'll be emailed to you.</li>
-</ol>
-
-
-<p>If you have any problem resetting your password, email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#117;&#112;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;">&#x73;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#111;&#118;</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/my-account"><span class="label label-info">my-account</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/account.html">
-        <time datetime="2016-12-07">December 7, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/add-site.html">How to Add a New Site</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > Add Site</p>
-
-<h2>Homepage URL</h2>
-
-<p>Tell us the homepage URL of your website. Enter a fully qualified URL, including http://, http://www, etc.</p>
-
-<p><strong>Correct Syntax</strong></p>
-
-<ul>
-<li>https://www.whitehouse.gov</li>
-<li>https://gobierno.usa.gov</li>
-<li>https://stemcells.nih.gov</li>
-</ul>
-
-
-<p><strong>Incorrect Syntax</strong></p>
-
-<ul>
-<li>usa.gov (use https://www.usa.gov)</li>
-<li>www.nasa.gov (use https://www.nasa.gov)</li>
-<li>https://www.sec.gov/litigation.shtml (use the higher-level folder, https://www.sec.gov/litigation)</li>
-<li>https://www.gsa.gov/portal/category/100000?utm_source=OCM&amp;utm_medium=print-radio&amp;utm_term=&amp;utm_campaign=shortcuts (use the higher-level domain, https://www.gsa.gov)</li>
-<li>http://www.doc.gov (use the domain that resolves, https://www.commerce.gov)</li>
-</ul>
-
-
-<p>We use this homepage URL to:</p>
-
-<ol>
-<li>Seed your <a href="/manual/domains.html">domains</a> list.</li>
-<li>Scan for any social media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/instagram.html">Instagram</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>), your favicon to use on your search results browser tab, and <a href="/manual/rss.html">RSS feeds</a> that are linked from your homepage, or another page you specify on the Display Overview page.</li>
-<li>Link the default <a href="/manual/brand.html">logo</a> on your results page to your homepage.</li>
-</ol>
-
-
-<h2>Display Name</h2>
-
-<p><a href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/DisplayName_SiteHandle_800.png"><img style="float: right;" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/DisplayName_SiteHandle_175.png" alt="Display Name and Site Handle on NIH.gov's search results page"></a>Tell us the name of your website. Searchers see your display name on the results page, such as in your page title or best bets. We recommend using the plain language name for your agency or site, such as National Institutes of Health.</p>
-
-<h2>Site Handle</h2>
-
-<p>Your site handle is a unique identifier for your site. The site handle is included in the request you send us from your search box, to let us know which search site to use. We also include it in the URL of your search results page, again, to show which search site is being used. We recommend making this handle short and unique, such as <code>nih</code>.</p>
-
-<p>Handles can have lowercase letters, numbers, periods, hyphens, and underscores only. They can't have spaces and other punctuation.</p>
-
-<h2>Site Language</h2>
-
-<p>English is the default language for our results pages. If you will be searching against content in another language, you should choose another language for your search site - we support English, Spanish, and <a href="/manual/supported-languages.html">66 other languages</a>.</p>
-
-<p>When English is selected, results will primarily include English language pages. All display text on the results page will also be in English.</p>
-
-<p>If you select Spanish, results will primarily include Spanish language pages. All display text on the results page will also be in Spanish. (Localizations are provided by GSA's <a href="https://gobierno.usa.gov/">GobiernoUSA.gov</a> team.)</p>
-
-<p>If you select one of the other <a href="/manual/supported-languages.html">66 languages</a>, results will primarily include pages from the selected language when possible. Display text will be in the selected language when localizations are available, and in English when they're not available.</p>
-
-<p>We've published the <a href="https://github.com/GSA/punchcard/tree/master/localizations">localization files</a> on Github, and we encourage you to <a href="https://github.com/GSA/punchcard/blob/master/CONTRIBUTING.md">contribute</a> to them.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting Tip:</em></strong> For non-English sites, some agencies opt to include the specific location of the language's content (such as agency.gov/language or language.agency.gov) in their <a href="/manual/domains.html">Domains</a> to further refine the search results. Test the results for your non-English site with both the general agency.gov and the language-specific location to determine which setting gives you the best results.</p>
-
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x73;&#101;&#x61;&#x72;&#99;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#97;&#108;&#103;&#111;&#x76;&#46;&#x67;&#111;&#x76;">&#115;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#117;&#x70;&#112;&#111;&#114;&#116;&#46;&#x64;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#x6f;&#118;&#46;&#103;&#x6f;&#118;</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/settings"><span class="label label-info">settings</span></a>
-      
-      <a href="/tagged/add-site"><span class="label label-info">add-site</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/add-site.html">
-        <time datetime="2016-12-07">December 7, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/https-transition.html">Preparing Your Site for HTTPS</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="https://https.cio.gov/">OMB memo M-15-13</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> requires all publicly available federal websites and web services to <a href="https://www.digitalgov.gov/2015/07/21/an-introduction-to-https-by-18f-and-digitalgov-university/">implement HTTPS</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> by December 31, 2016.</p>
-
-<p>Below is a checklist of action items that should be completed in order for your search site to function as expected in HTTPS.</p>
-
-<h2>1. The Admin Center</h2>
-
-<p>Update all URLs that are listed in the Search Admin Center for each of your search configurations. <em>You will need to update the links for all of your search configurations.</em></p>
-
-<h3>Everyone:</h3>
-
-<p><strong>Dashboard:</strong></p>
-
-<ul>
-<li><strong>Settings:</strong> Update your Homepage URL.</li>
-</ul>
-
-
-<p><strong>Analytics:</strong></p>
-
-<ul>
-<li><strong>3rd Party Tracking:</strong> If you are using <a href="http://search.digitalgov.gov/manual/third-party.html">3rd party tracking code</a> that is HTTP protocol-specific, you will need to submit updated code.</li>
-</ul>
-
-
-<p><strong>Content:</strong></p>
-
-<ul>
-<li><strong>Content Overview:</strong> No action needed. The URL that we scan for social media accounts is synced with the homepage you have listed in the Dashboard section.</li>
-<li><strong>Domains:</strong> No action needed, as this list isn’t protocol-specific.</li>
-<li><strong>Collections:</strong> Update all URL paths in your collections; if you have mixed collections, leave any HTTP sites as-is.</li>
-<li><strong>Routed Queries:</strong> Update routed query URLs.</li>
-<li><strong>RSS feeds:</strong> Update RSS feed URLs. The indexing will error if the protocol listed in our system for the feed URL does not match the feed URL on your site, or if you’ve placed a 301 redirect on your old HTTP version of the feed pointing to the new HTTPS version of the feed. We will also need to update the URLs for all items that are already in our index. <a href="mailto:search@support.digitalgov.gov">Email us</a> and we will do a global update to change HTTP to HTTPS for you. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS.</li>
-</ul>
-
-
-<p><strong>Display:</strong></p>
-
-<ul>
-<li><strong>Image Assets:</strong> Update the Favicon URL.</li>
-<li><strong>Header &amp; Footer:</strong> Update header and footer links.</li>
-<li><strong>No Results Page:</strong> Update alternative links.</li>
-</ul>
-
-
-<h3>Only those using <code>Domains &gt; Advanced</code> features:</h3>
-
-<ul>
-<li><strong>Supplemental Feed:</strong> Update RSS feed URLs. The indexing will error if the protocol listed in our system for the feed URL does not match the feed URL on your site, or if you’ve placed a 301 redirect on your old HTTP version of the feed pointing to the new HTTPS version of the feed. We will also need to update the URLs for all items that are already in our index. <a href="mailto:search@support.digitalgov.gov">Email us</a> and we will do a global update to change HTTP to HTTPS for you. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS.</li>
-<li><strong>Supplemental URLs:</strong> Update supplemental URLs.</li>
-<li><strong>Filter URLs:</strong> Update filtered URLs.</li>
-</ul>
-
-
-<h2>2. Masked Domains</h2>
-
-<p>If your site uses <a href="http://search.digitalgov.gov/manual/cname.html">domain masking</a>: <a href="mailto:search@support.digitalgov.gov">contact our team</a> to be added to our SSL certificate. While this step doesn't apply to everyone, it does need to be done before step 3.</p>
-
-<h2>3. Form Code Action on Your Website</h2>
-
-<p>Update your form code action: An <code>s</code> must be added to your site’s form action in order for the request to be made over HTTPS, and for the results page to be served over HTTPS. Example:</p>
-
-<p><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;</code></p>
-
-<h2>4. Commercial Search Engines</h2>
-
-<p>Notify Google and Bing about the change; Google and Bing treat a migration from HTTP to HTTPS as a site move.</p>
-
-<ul>
-<li>Google has a step-by-step guide, <a href="https://support.google.com/webmasters/answer/6033049">Move a Site with URL changes</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>For Bing, review <a href="https://www.bing.com/webmaster/help/how-to-use-the-site-move-tool-bb8f5112">How to Use the Site Move tool</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-</ul>
-
-
-<p>Additional SEO best practices:</p>
-
-<ul>
-<li>Update your XML sitemap with HTTPS URLs.</li>
-<li>Use <code>rel canonical</code> to <a href="https://support.google.com/webmasters/answer/139066?hl=en#https">declare HTTPS the preferred version</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>Update internal website links.</li>
-<li>Update links to your website from social media and other platforms managed by your agency.</li>
-</ul>
-
-
-<hr />
-
-<p><strong><em>Additional Information:</em></strong></p>
-
-<ul>
-<li>Read more about the <a href="https://https.cio.gov/">HTTPS-Only Standard</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> from the Federal CIO Council.</li>
-<li>View a <a href="https://docs.google.com/spreadsheets/d/1XB26X_wFoBBlQEqecj7HB79hQ7DTLIPo97SS5irwsK8/edit#gid=1975121463">SEO Checklist</a> &nbsp;<i class="icon-external-link"><span>(External link)</span></i> created by Aleyda Solís.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/https"><span class="label label-info">https</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/https-transition.html">
-        <time datetime="2016-11-15">November 15, 2016</time>
       </a>
     </div>
     </article>
