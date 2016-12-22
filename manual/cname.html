@@ -105,11 +105,16 @@
     <p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these steps to mask your domain.</p>
 
 <ol>
-<li><p>Create a CNAME in your external DNS records for <code>search.yoursite.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>. Your site handle is listed on the <a href="http://search.digitalgov.gov/manual/settings.html">settings page</a> in the Search Admin Center.</p>
+<li><p>Create a CNAME in your external DNS records for <code>search.yoursite.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>. Your site handle is listed on the <a href="/manual/settings.html">settings page</a> in the Search Admin Center.</p>
 
-<p> NOTE: if your site handle contains a <code>.</code>, please replace it with a <code>-</code> in your DNS record,  e.g., for site handle <code>yoursite.gov.search</code> the DNS record would look like this:</p>
+<p> For example: if your site handle is <code>abc</code>, the DNS record would look like this:</p>
 
-<pre><code> search.yoursite.gov   CNAME  yoursite-gov-search.sites.infr.search.usa.gov
+<pre><code> search.yoursite.gov   CNAME  abc.sites.infr.search.usa.gov
+</code></pre>
+
+<p> NOTE: if your site handle contains a <code>.</code>, please replace it with a <code>-</code> in your DNS record,  e.g., for site handle <code>abc.gov.search</code> the DNS record would look like this:</p>
+
+<pre><code> search.yoursite.gov   CNAME  abc-gov-search.sites.infr.search.usa.gov
 </code></pre>
 
 <p> To use a CNAME with <code>HTTPS</code>, you will need to <a href="mailto:search@support.digitalgov.gov">email us</a> after your DNS records have been updated in order to be added to our SSL certificate. If your CNAME is not on our SSL certificate, browser security warnings will appear when your search results page attemps to load over <code>HTTPS</code>.</p></li>
@@ -148,7 +153,7 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
     
     
     <a href="/manual/cname.html">
-      <time>July 28, 2016</time>
+      <time>December 22, 2016</time>
     </a>
   </div>
 
