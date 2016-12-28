@@ -103,6 +103,129 @@
  
     
     <h1>
+      <a href="/manual/code.html">How to Activate Your Search by Adding Our Code Snippets to Your Website</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search > Code Snippets</p>
+
+<p>Visit our <a href="https://search.usa.gov/sites/">Admin Center</a>, select your site, and click on the Activate Search option in the left-hand menu.</p>
+
+<p>Add the following two snippets of code to your website to "hook" your website and our hosted search service together. You can add this code to your individual web pages or to the template(s) in your content management system.</p>
+
+<h2>1. Form Snippet</h2>
+
+<p>Include this snippet of code where the form for your search box appears. It should look something like this:</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<h2>2. Javascript Snippet</h2>
+
+<p>Include this snippet of code before the closing <code>&lt;body&gt;</code> tag. This tag enables type-ahead search in the search box on your web pages and powers the data on trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the Admin Center. It should look something like this:</p>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+      var usasearch_config = { siteHandle:"YourSiteHandle" };
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "//search.usa.gov/javascripts/remote.loader.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+//]]&gt;
+&lt;/script&gt;
+</code></pre>
+
+<h2>Advanced: Options for Limiting a Search Box to Specific Folders or Subdomains</h2>
+
+<p>You can limit results to specific folders or subdomains by creating a collection, setting up an RSS feed, or passing in a hidden value.</p>
+
+<h3>Option 1. Limit to Collections</h3>
+
+<p>Create a <a href="/manual/collections.html">collection</a>. Then update your form code to (a) change the action to <code>action="https://search.usa.gov/search/docs/</code> and (b) add an input for this collection, <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>. It should look something like this:</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search/docs/" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input type="hidden" name="dc" value="###"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center as shown in the sample below.</p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/get-code-collection.png" alt="Value for the collection ID" /></p>
+
+<h3>Option 2. Limit to RSS Feeds</h3>
+
+<p>Set up an <a href="/manual/rss.html">RSS feed</a>. Then update your form code to (a) change the action to <code>action="https://search.usa.gov/search/news/</code> and (b) add an input for this feed, <code>&lt;input type="hidden" name="channel" value="###"&gt;</code>.  It should look something like this:</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search/news/" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input type="hidden" name="channel" value="###"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>The value is the number for your RSS ID, which is visible in the URL when you edit or preview your feed in the Admin Center.</p>
+
+<h3>Option 3. Limit to a Hidden Domain Value</h3>
+
+<p>Leave your domain blank on the <a href="/manual/domains.html">Domains</a> page and, instead, passing a hidden value for the domain in the search form code.</p>
+
+<p>See, for example, <a href="http://www.ri.gov">RI.gov</a>, <a href="http://www.dmv.ri.gov/">DMV.RI.gov</a>, <a href="http://www.health.ri.gov/">Health.RI.gov</a>. On Health.RI.gov, the following hidden value is added to limit to only the health subdomain.</p>
+
+<pre><code>&lt;input type="hidden" name="sitelimit" id="sitelimit" value="www.health.ri.gov" &gt;
+</code></pre>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> If you're using Drupal, be sure to check out our <a href="https://www.drupal.org/project/usasearch">Drupal module</a>.</p>
+
+<p><strong><em>Did you know?</em></strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers your domain (instead of USA.gov).</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
+      
+      <a href="/tagged/code-snippets"><span class="label label-info">code-snippets</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/code.html">
+        <time datetime="2016-12-28">December 28, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/cname.html">How to Mask Your Domain</a>
     </h1>
     
@@ -159,131 +282,6 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
       
       <a href="/manual/cname.html">
         <time datetime="2016-12-22">December 22, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/code.html">How to Activate Your Search by Adding Our Code Snippets to Your Website</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search > Code Snippets</p>
-
-<p>Visit our <a href="https://search.usa.gov/sites/">Admin Center</a>, select your site, and click on the Activate Search option in the left-hand menu.</p>
-
-<p>Add the following two snippets of code to your website to "hook" your website and our hosted search service together. You can add this code to your individual web pages or to the template(s) in your content management system.</p>
-
-<h2>1. Form Snippet</h2>
-
-<p>Include this snippet of code where the form for your search box appears. It should look something like this:</p>
-
-<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;
-    &lt;div style="margin:0;padding:0;display:inline"&gt;
-    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
-    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
-    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
-    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
-    &lt;input name="commit" type="submit" value="Search" /&gt;
-&lt;/form&gt;
-</code></pre>
-
-<h2>2. Javascript Snippet</h2>
-
-<p>Include this snippet of code before the closing <code>&lt;body&gt;</code> tag. This tag enables type-ahead search in the search box on your web pages and powers the data on trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the Admin Center. It should look something like this:</p>
-
-<pre><code>&lt;script type="text/javascript"&gt;
-//&lt;![CDATA[
-      var usasearch_config = { siteHandle:"YourSiteHandle" };
-
-      var script = document.createElement("script");
-      script.type = "text/javascript";
-      script.src = "http://search.usa.gov/javascripts/remote.loader.js";
-      document.getElementsByTagName("head")[0].appendChild(script);
-
-//]]&gt;
-&lt;/script&gt;
-</code></pre>
-
-<blockquote><p><strong><em>HTTPS Quick Tip:</em></strong> If your website is secured with https, we support secure search on https://search.usa.gov. Simply add 's' to both your form action <code>https://search.usa.gov/search</code> and type-ahead script <code>https://search.usa.gov/javascripts/remote.loader.js</code>.</p></blockquote>
-
-<h2>Advanced: Options for Limiting a Search Box to Specific Folders or Subdomains</h2>
-
-<p>You can limit results to specific folders or subdomains by creating a collection, setting up an RSS feed, or passing in a hidden value.</p>
-
-<h3>Option 1. Limit to Collections</h3>
-
-<p>Create a <a href="/manual/collections.html">collection</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/docs/</code> and (b) add an input for this collection, <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>. It should look something like this:</p>
-
-<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search/docs/" id="search_form" method="get"&gt;
-    &lt;div style="margin:0;padding:0;display:inline"&gt;
-    &lt;input type="hidden" name="dc" value="###"&gt;
-    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
-    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
-    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
-    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
-    &lt;input name="commit" type="submit" value="Search" /&gt;
-&lt;/form&gt;
-</code></pre>
-
-<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center as shown in the sample below.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/get-code-collection.png" alt="Value for the collection ID" /></p>
-
-<h3>Option 2. Limit to RSS Feeds</h3>
-
-<p>Set up an <a href="/manual/rss.html">RSS feed</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/news/</code> and (b) add an input for this feed, <code>&lt;input type="hidden" name="channel" value="###"&gt;</code>.  It should look something like this:</p>
-
-<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search/news/" id="search_form" method="get"&gt;
-    &lt;div style="margin:0;padding:0;display:inline"&gt;
-    &lt;input type="hidden" name="channel" value="###"&gt;
-    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
-    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
-    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
-    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
-    &lt;input name="commit" type="submit" value="Search" /&gt;
-&lt;/form&gt;
-</code></pre>
-
-<p>The value is the number for your RSS ID, which is visible in the URL when you edit or preview your feed in the Admin Center.</p>
-
-<h3>Option 3. Limit to a Hidden Domain Value</h3>
-
-<p>Leave your domain blank on the <a href="/manual/domains.html">Domains</a> page and, instead, passing a hidden value for the domain in the search form code.</p>
-
-<p>See, for example, <a href="http://www.ri.gov">RI.gov</a>, <a href="http://www.dmv.ri.gov/">DMV.RI.gov</a>, <a href="http://www.health.ri.gov/">Health.RI.gov</a>. On Health.RI.gov, the following hidden value is added to limit to only the health subdomain.</p>
-
-<pre><code>&lt;input type="hidden" name="sitelimit" id="sitelimit" value="www.health.ri.gov" &gt;
-</code></pre>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> If you're using Drupal, be sure to check out our <a href="https://www.drupal.org/project/usasearch">Drupal module</a>.</p>
-
-<p><strong><em>Did you know?</em></strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers your domain (instead of USA.gov).</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
-      
-      <a href="/tagged/code-snippets"><span class="label label-info">code-snippets</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/code.html">
-        <time datetime="2016-06-22">June 22, 2016</time>
       </a>
     </div>
     </article>

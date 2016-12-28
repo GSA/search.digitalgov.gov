@@ -112,7 +112,7 @@
 
 <p>Include this snippet of code where the form for your search box appears. It should look something like this:</p>
 
-<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get"&gt;
+<pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;
     &lt;div style="margin:0;padding:0;display:inline"&gt;
     &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
     &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
@@ -132,14 +132,12 @@
 
       var script = document.createElement("script");
       script.type = "text/javascript";
-      script.src = "http://search.usa.gov/javascripts/remote.loader.js";
+      script.src = "//search.usa.gov/javascripts/remote.loader.js";
       document.getElementsByTagName("head")[0].appendChild(script);
 
 //]]&gt;
 &lt;/script&gt;
 </code></pre>
-
-<blockquote><p><strong><em>HTTPS Quick Tip:</em></strong> If your website is secured with https, we support secure search on https://search.usa.gov. Simply add 's' to both your form action <code>https://search.usa.gov/search</code> and type-ahead script <code>https://search.usa.gov/javascripts/remote.loader.js</code>.</p></blockquote>
 
 <h2>Advanced: Options for Limiting a Search Box to Specific Folders or Subdomains</h2>
 
@@ -147,9 +145,9 @@
 
 <h3>Option 1. Limit to Collections</h3>
 
-<p>Create a <a href="/manual/collections.html">collection</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/docs/</code> and (b) add an input for this collection, <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>. It should look something like this:</p>
+<p>Create a <a href="/manual/collections.html">collection</a>. Then update your form code to (a) change the action to <code>action="https://search.usa.gov/search/docs/</code> and (b) add an input for this collection, <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>. It should look something like this:</p>
 
-<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search/docs/" id="search_form" method="get"&gt;
+<pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search/docs/" id="search_form" method="get"&gt;
     &lt;div style="margin:0;padding:0;display:inline"&gt;
     &lt;input type="hidden" name="dc" value="###"&gt;
     &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
@@ -166,9 +164,9 @@
 
 <h3>Option 2. Limit to RSS Feeds</h3>
 
-<p>Set up an <a href="/manual/rss.html">RSS feed</a>. Then update your form code to (a) change the action to <code>action="http://search.usa.gov/search/news/</code> and (b) add an input for this feed, <code>&lt;input type="hidden" name="channel" value="###"&gt;</code>.  It should look something like this:</p>
+<p>Set up an <a href="/manual/rss.html">RSS feed</a>. Then update your form code to (a) change the action to <code>action="https://search.usa.gov/search/news/</code> and (b) add an input for this feed, <code>&lt;input type="hidden" name="channel" value="###"&gt;</code>.  It should look something like this:</p>
 
-<pre><code>&lt;form accept-charset="UTF-8" action="http://search.usa.gov/search/news/" id="search_form" method="get"&gt;
+<pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search/news/" id="search_form" method="get"&gt;
     &lt;div style="margin:0;padding:0;display:inline"&gt;
     &lt;input type="hidden" name="channel" value="###"&gt;
     &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
@@ -214,7 +212,7 @@
     
     
     <a href="/manual/code.html">
-      <time>June 22, 2016</time>
+      <time>December 28, 2016</time>
     </a>
   </div>
 
