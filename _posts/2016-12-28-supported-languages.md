@@ -45,7 +45,8 @@ When you add a search site, you have the option to set the language to something
 | Japanese* | Urdu
 | Kalaallisut | Uzbek
 | Kazakh* | Vietnamese
-| Khmer   |           
+| Khmer | 
+
 ---
 
 Languages marked with a * do not yet have localized system text. You can [contribute](https://github.com/GSA/punchcard/blob/master/CONTRIBUTING.md) to our [localizations on github](https://github.com/GSA/punchcard/tree/master/localizations).
