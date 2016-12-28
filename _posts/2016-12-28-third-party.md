@@ -72,7 +72,7 @@ Coordinate with your ForeSee representative and DigitalGov Search to implement y
     * foresee-qualifier.js  
     * foresee-test.js
 
-1. Submit your foresee-trigger.js via our Admin Center. It should look something like the following script. `<script type="text/javascript" src="http://www.youragency.gov/library/foresee/foresee-trigger.js"></script>`
+1. Submit your foresee-trigger.js via our Admin Center. It should look something like the following script. `<script type="text/javascript" src="//www.youragency.gov/library/foresee/foresee-trigger.js"></script>`
 
 1. We'll send you an email to confirm that we've set up both your CNAME and added the script for your foresee-trigger.js file.
 
