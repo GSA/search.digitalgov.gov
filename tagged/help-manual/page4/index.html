@@ -103,6 +103,53 @@
  
     
     <h1>
+      <a href="/manual/no-results.html">How to Customize the No Results Page</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Display > No Results Page</p>
+
+<h2>Standard Response</h2>
+
+<p>Our standard No Results response is <em>Sorry, no results found for 'QueryTerms'. Try entering fewer or broader query terms</em>. This response will display whenever there are no results for a query.</p>
+
+<h2>Additional Guidance Text</h2>
+
+<p>You can add text to guide searchers to additional resources. If you leave this field blank, the Alternative Links will display immediately after the standard response.</p>
+
+<h2>Alternative Links</h2>
+
+<p>You can add links to alternative resources that may assist the searcher in answering their query. See, for instance, <a href="https://search.usa.gov/search?affiliate=usagov&amp;query=avinaweoinasdv">this search on USA.gov for "avinaweoinasdv"</a>.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> You can see a list of Queries with No Results in <a href="/manual/site-overview.html">Today's Snapshot</a> on the Dashboard, and in the <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Monthly Reports.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-display"><span class="label label-info">manage-display</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/no-results.html">
+        <time datetime="2015-07-27">July 27, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/routed-queries.html">How to Route Queries</a>
     </h1>
     
@@ -167,195 +214,6 @@
       
       <a href="/manual/routed-queries.html">
         <time datetime="2015-07-10">July 10, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/rss.html">How to Add Your RSS Feeds to Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > RSS</p>
-
-<p>Would you like searchers to be able to search your news or multimedia content? Would you like them to be able to narrow results by date?</p>
-
-<p>Tell us the locations and names of your RSS feeds. We index all new and updated content on your feeds within minutes.</p>
-
-<h2>Step 1. Tell Us About Your RSS Feeds</h2>
-
-<p>We love feeds! Tell us about <em>all</em> of your RSS feeds, even if you don't opt to show them in step 2 below. Feeds are the fastest and most reliable way for us to learn about your new and updated content.</p>
-
-<p>Select the option to add a new RSS feed.</p>
-
-<h3>Name</h3>
-
-<p>Create a name for the feed. Within this 'bucket' you can list a single RSS feed or many feeds. For example, you can opt to list all of your agency's press releases separately (such as Police News, Fire News, EMS News, etc.) or you can list all three under one general name (such as News).</p>
-
-<p><img class="img-responsive" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/rss.png" alt="Add an RSS Feed"></img></p>
-
-<h3>Feed type</h3>
-
-<p>Select the type of feed. The default option is RSS (for text content like press releases or blogs). Change it to <a href="http://www.rssboard.org/media-rss">media RSS</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> for multimedia content like images and videos.</p>
-
-<p>Each item within a RSS feed must include a title, link, description, and publication date.</p>
-
-<p>Each item within a media RSS feed must also include both a <a href="http://www.rssboard.org/media-rss#media-content">media:content URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a direct URL to the media object and a <a href="http://www.rssboard.org/media-rss#media-thumbnails">media:thumbnail URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a URL to the object's thumbnail.</p>
-
-<p>Any items missing a required element won't display in your search results.</p>
-
-<h3>Sample RSS Item with All Required Elements</h3>
-
-<pre><code>&lt;item&gt;
-&lt;title&gt;
-Statement from Agriculture Secretary Tom Vilsack Regarding World Organization for Animal Health (OIE) Upgrade of United States&amp;apos; BSE Risk Status
-&lt;/title&gt;
-&lt;pubDate&gt;May 29, 2013 00:00:00 CDT&lt;/pubDate&gt;
-&lt;link&gt;
-http://www.usda.gov/wps/portal/usda/usdahome?contentid=2013/05/0106.xml&amp;contentidonly=true
-&lt;/link&gt;
-&lt;description&gt;
-WASHINGTON, May 29, 2013–Agriculture Secretary Tom Vilsack made the following statement about notification received today from the World Organization for Animal Health (OIE) upgrading the United States&amp;apos; risk classification for bovine spongiform encephalopathy (BSE) to negligible risk:
-&lt;/description&gt;
-&lt;/item&gt;
-</code></pre>
-
-<h3>Sample Media RSS Item with All Required Elements</h3>
-
-<pre><code>&lt;item&gt;
-&lt;title type="html"&gt;
-&lt;![CDATA[ Great Lakes Beach Health ]]&gt;
-&lt;/title&gt;
-&lt;link&gt;
-http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
-&lt;/link&gt;
-&lt;guid&gt;
-http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
-&lt;/guid&gt;
-&lt;pubDate&gt;Fri, 24 May 2013 00:00:00 EDT&lt;/pubDate&gt;
-&lt;media:description type="html"&gt;
-&lt;![CDATA[ As schools close for the year and summer weather beckons, many recreationalists head to the Great Lakes' public beaches. However, these coastal areas can become  contaminated with disease-causing bacteria that threaten public health, disrupt water   recreation, and pay a toll on the Great Lakes economies that depend on summer tourism. ]]&gt;
-&lt;/media:description&gt;
-&lt;media:thumbnail url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/thumbs/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
-&lt;media:content type="" url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/large/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
-&lt;/item&gt;
-</code></pre>
-
-<h2>Step 2. Opt to Show as a Facet, Inline Module, or Both</h2>
-
-<p>Allow searchers to see inline results for the three most recent, relevant RSS results <em>across all of your RSS feeds</em> by turning on the News module on the <a href="/manual/display-overview.html">Display Overview</a> page. You can also edit the default title, News, on the Display Overview page.</p>
-
-<p>Allow searchers to narrow results to a specific feed by turning on the option to show the facet on the <a href="/manual/display-overview.html">Display Overview</a> page. To ensure searchers don't encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a facet.</p>
-
-<h2>Step 3. Check Your Search Results Page</h2>
-
-<p><strong>Module.</strong> If you opted to show your RSS feed(s) as a module, searchers will see inline news results. It'll will highlight the three most recent, relevant results across all of your RSS feeds.</p>
-
-<p><strong>Facet.</strong> If you opted to show your RSS feed(s) as a facet, searchers can narrow their results to see your RSS-based results only.</p>
-
-<p>Within the RSS-based results, searchers can opt to limit results to the last hour, day, week, month, or year, or they can set a custom date range. They also can sort results in descending order by relevance (best match first) or date (most recent first).</p>
-
-<p><strong>Results count.</strong> We show the number of results returned for searches against your feed(s).</p>
-
-<p><img class="img-responsive" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/ResultsCount.png" alt="Results count for items in our indexes"></img></p>
-
-<h2>Step 4. Check the Status of Your Feeds</h2>
-
-<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each feed's status.</p>
-
-<p><img class="img-responsive" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/rss-status.png" alt="RSS status messages and colors"></img></p>
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;"> Color </th>
-<th style="text-align:left;"> Status </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;"> Green&nbsp;&nbsp;&nbsp; </td>
-<td style="text-align:left;"> Feed indexed, no errors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Yellow </td>
-<td style="text-align:left;"> Pending Indexing </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Red </td>
-<td style="text-align:left;"> Feed indexed, but error in one or more items </td>
-</tr>
-<tr>
-<td style="text-align:left;"> &nbsp; </td>
-<td style="text-align:left;"> &nbsp; </td>
-</tr>
-</tbody>
-</table>
-
-
-<p>Click on the name of any feed with an error to see more detailed information about it. Possible error messages follow.</p>
-
-<ul>
-<li>404 Not Found</li>
-<li>Feed looks empty</li>
-<li>Description can't be blank</li>
-<li>Title can't be blank</li>
-<li>Missing link field</li>
-<li>Missing pubDate field</li>
-<li>Link is not a valid URL</li>
-<li>Linked URL does not exist (HTTP 404)</li>
-</ul>
-
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
-
-<ul>
-<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
-<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-<li><a href="http://atomenabled.org/developers/syndication/">Atom syndication format</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-</ul>
-
-
-<p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="https://search.usa.gov/sites/">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don't need to coordinate with us.</p>
-
-<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your feed.</p>
-
-<p>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab. Change the form action to <code>action="http://search.usa.gov/search/news</code> and add the following line to limit the results to your feed.</p>
-
-<p><code>&lt;input type="hidden" name="channel" value="###"&gt;</code></p>
-
-<p>The value is the number for your feed ID, which is visible in the URL when you edit your feed in the Admin Center.</p>
-
-<p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your RSS feeds.</p>
-
-<p><strong><em>Did you know?</em></strong> When you <a href="/manual/youtube.html">provide us with your YouTube channel</a>, we'll automatically index the RSS feed for your YouTube channel.</p>
-
-<p><strong><em>Did you know?</em></strong> For any feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by these facets in the <a href="/manual/display-overview.html">sidebar</a> on the results page.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/rss"><span class="label label-info">rss</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/rss.html">
-        <time datetime="2015-06-02">June 2, 2015</time>
       </a>
     </div>
     </article>
@@ -522,7 +380,7 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
 </table>
 
 
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#58;&#x73;&#x65;&#97;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#46;&#100;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#x67;&#111;&#118;&#x2e;&#103;&#111;&#118;">&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#x69;&#x74;&#x61;&#108;&#103;&#111;&#x76;&#46;&#103;&#111;&#x76;</a>.</p>
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#x73;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#x72;&#x74;&#46;&#100;&#x69;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#118;">&#115;&#101;&#97;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#116;&#46;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#118;</a>.</p>
 
     </div>
 
