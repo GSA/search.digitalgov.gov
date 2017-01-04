@@ -14,19 +14,17 @@ Are specific web pages missing from your Bing web results? Tell us about these U
 
 ### Supplemental Feed
 
-You can use an RSS feed to add URLs. The feed is useful if you'd like to automate the process, add multiple URLs, or both.
+You can use an [RSS feed](/manual/rss.html) to add URLs. The feed is useful if you'd like to automate the process, add multiple URLs, or both.
 
-Enter the URL of your RSS feed. Click submit. We'll fetch each URL in your feed and index the title, description, *and the full text of the document* for the items you provide. We'll display the title and description you provide (not the page's title or a snippet based on the page's content), as well as a results count.
+Enter the URL of your RSS feed. Click submit. We'll fetch each URL in your feed and index the title, description, *and the full text of the document* for the items you provide. We'll display the title and description you provide in the feed (not the page's title or a snippet based on the page's content), as well as a results count. Please be sure to [follow our schema](/manual/rss.html).
 
 We'll update any items that include a publication date.
 
-Delete a URL added via RSS feed by deleting it as an item in your RSS feed. We'll remove the URL from our index the next time we fetch your RSS feed. If you need to remove it from our index immediately, you can take the additional step of deleting the URL by selecting Delete within the list of URLs on the Supplemental URLs page.
-
-Note that you *must* delete the URL from your RSS feed. Otherwise, the URL will reappear the next time we fetch your RSS feed.
+Delete a URL added via RSS feed by deleting the item from your RSS feed. We'll remove the URL from our index the next time we fetch your RSS feed. If you need to remove it from our index immediately, you do so manually within the list of URLs on the Supplemental URLs page. Search for the URL and hit `Delete`. Note that you *must also* delete the URL from your RSS feed. Otherwise, the URL will reappear the next time we fetch your RSS feed.
 
 You can also delete *all* of the URLs added via the RSS feed by deleting the RSS feed itself.
 
-We can't restore URLs that don't exist within your *current* feed.
+We can't restore URLs that don't exist within your *current* feed. Please don't remove items from the feed unless you want them to be removed from the index. It's ok if the feed is long.
 
 ### Supplemental URLs
 
