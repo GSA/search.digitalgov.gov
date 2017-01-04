@@ -103,88 +103,6 @@
  
     
     <h1>
-      <a href="/manual/domains.html">How to Edit Your Domains</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Domains</p>
-
-<p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
-
-<h2>Entire Site(s)</h2>
-
-<ul>
-<li>List yoursite.gov (without www) to search your entire site, including all subdomains.</li>
-<li>List yoursite.gov and yoursite2.gov to search multiple sites.</li>
-</ul>
-
-
-<h2>Specific Subdomains</h2>
-
-<ul>
-<li>List www.yoursite.gov to include only the primary 'www' domain.</li>
-<li>List subdomain.yoursite.gov to include subdomains.</li>
-</ul>
-
-
-<h2>Specific Directories</h2>
-
-<p>List yoursite.gov/folder to include folders. Note: this will include all sub-folders (if they exist), i.e. yoursite.gov/folder/folder2.</p>
-
-<p>You cannot specify individual URLs.</p>
-
-<p>Searches that start three or more subfolders deep cannot use our default configuration. <a href="mailto:search@support.digitalgov.gov">Email us</a> for assistance.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
-
-<ol>
-<li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
-<li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#x73;&#101;&#97;&#114;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#118;">&#115;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#x67;&#111;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
-</ol>
-
-
-<p><a id="filter"></a><strong><em>Troubleshooting Tip:</em></strong> You can remove or filter specific URLs using any of the following options.</p>
-
-<ol>
-<li><p>Remove the page from your site and return a 404 (Not Found) 401 (Gone), or 301 (Permanently Moved) HTTP status.</p></li>
-<li><p>Add a <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">noindex robots metatag or x-robots tag</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
-<li><p>Request the page's removal using the <a href="http://www.bing.com/webmaster/help/block-urls-from-bing-264e560a">Block URLs option in Bing Webaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/1663419">Remove URLs option in Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p></li>
-<li><p>Use the Filter URLs option under the <a href="/manual/domains-advanced.html">Advanced</a> tab. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
-</ol>
-
-
-<p><strong><em>Troubleshooting Tip:</em></strong> Are specific web pages missing from your Bing web results? You can tell us about any missing URLs via an RSS feed or manually (the Supplemental Feed and Supplemental URLs options under the <a href="/manual/domains-advanced.html">Advanced</a> tab, respectively). We'll fetch and index the pages and append them to your web results.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/domains.html">
-        <time datetime="2016-07-28">July 28, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
       <a href="/manual/domains-advanced.html">How to Use Advanced Options to Add or Filter Specific URLs</a>
     </h1>
     
@@ -198,19 +116,17 @@
 
 <h3>Supplemental Feed</h3>
 
-<p>You can use an RSS feed to add URLs. The feed is useful if you'd like to automate the process, add multiple URLs, or both.</p>
+<p>You can use an <a href="/manual/rss.html">RSS feed</a> to add URLs. The feed is useful if you'd like to automate the process, add multiple URLs, or both.</p>
 
-<p>Enter the URL of your RSS feed. Click submit. We'll fetch each URL in your feed and index the title, description, <em>and the full text of the document</em> for the items you provide. We'll display the title and description you provide (not the page's title or a snippet based on the page's content), as well as a results count.</p>
+<p>Enter the URL of your RSS feed. Click submit. We'll fetch each URL in your feed and index the title, description, <em>and the full text of the document</em> for the items you provide. We'll display the title and description you provide in the feed (not the page's title or a snippet based on the page's content), as well as a results count. Please be sure to <a href="/manual/rss.html">follow our schema</a>.</p>
 
 <p>We'll update any items that include a publication date.</p>
 
-<p>Delete a URL added via RSS feed by deleting it as an item in your RSS feed. We'll remove the URL from our index the next time we fetch your RSS feed. If you need to remove it from our index immediately, you can take the additional step of deleting the URL by selecting Delete within the list of URLs on the Supplemental URLs page.</p>
-
-<p>Note that you <em>must</em> delete the URL from your RSS feed. Otherwise, the URL will reappear the next time we fetch your RSS feed.</p>
+<p>Delete a URL added via RSS feed by deleting the item from your RSS feed. We'll remove the URL from our index the next time we fetch your RSS feed. If you need to remove it from our index immediately, you do so manually within the list of URLs on the Supplemental URLs page. Search for the URL and hit <code>Delete</code>. Note that you <em>must also</em> delete the URL from your RSS feed. Otherwise, the URL will reappear the next time we fetch your RSS feed.</p>
 
 <p>You can also delete <em>all</em> of the URLs added via the RSS feed by deleting the RSS feed itself.</p>
 
-<p>We can't restore URLs that don't exist within your <em>current</em> feed.</p>
+<p>We can't restore URLs that don't exist within your <em>current</em> feed. Please don't remove items from the feed unless you want them to be removed from the index. It's ok if the feed is long.</p>
 
 <h3>Supplemental URLs</h3>
 
@@ -284,7 +200,89 @@
       
       
       <a href="/manual/domains-advanced.html">
-        <time datetime="2015-06-02">June 2, 2015</time>
+        <time datetime="2017-01-04">January 4, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/domains.html">How to Edit Your Domains</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Domains</p>
+
+<p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
+
+<h2>Entire Site(s)</h2>
+
+<ul>
+<li>List yoursite.gov (without www) to search your entire site, including all subdomains.</li>
+<li>List yoursite.gov and yoursite2.gov to search multiple sites.</li>
+</ul>
+
+
+<h2>Specific Subdomains</h2>
+
+<ul>
+<li>List www.yoursite.gov to include only the primary 'www' domain.</li>
+<li>List subdomain.yoursite.gov to include subdomains.</li>
+</ul>
+
+
+<h2>Specific Directories</h2>
+
+<p>List yoursite.gov/folder to include folders. Note: this will include all sub-folders (if they exist), i.e. yoursite.gov/folder/folder2.</p>
+
+<p>You cannot specify individual URLs.</p>
+
+<p>Searches that start three or more subfolders deep cannot use our default configuration. <a href="mailto:search@support.digitalgov.gov">Email us</a> for assistance.</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
+
+<ol>
+<li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
+<li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
+<li>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#115;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#115;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#117;&#112;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#x6f;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
+</ol>
+
+
+<p><a id="filter"></a><strong><em>Troubleshooting Tip:</em></strong> You can remove or filter specific URLs using any of the following options.</p>
+
+<ol>
+<li><p>Remove the page from your site and return a 404 (Not Found) 401 (Gone), or 301 (Permanently Moved) HTTP status.</p></li>
+<li><p>Add a <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">noindex robots metatag or x-robots tag</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
+<li><p>Request the page's removal using the <a href="http://www.bing.com/webmaster/help/block-urls-from-bing-264e560a">Block URLs option in Bing Webaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/1663419">Remove URLs option in Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p></li>
+<li><p>Use the Filter URLs option under the <a href="/manual/domains-advanced.html">Advanced</a> tab. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
+</ol>
+
+
+<p><strong><em>Troubleshooting Tip:</em></strong> Are specific web pages missing from your Bing web results? You can tell us about any missing URLs via an RSS feed or manually (the Supplemental Feed and Supplemental URLs options under the <a href="/manual/domains-advanced.html">Advanced</a> tab, respectively). We'll fetch and index the pages and append them to your web results.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/domains.html">
+        <time datetime="2016-07-28">July 28, 2016</time>
       </a>
     </div>
     </article>
