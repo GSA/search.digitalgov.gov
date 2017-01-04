@@ -13,6 +13,8 @@ Input the JavaScript code you'd like to call from your search results page. Clic
 
 Some tips for commonly used third-party web services follow.
 
+***Note***: We do not currently support Google Tag Manager. You will need to submit all of the scripts you are managing in your Google Tag Manager setup.
+
 ## Google Analytics Tip
 
 Within your Google Analytics account, select the option, *Do Track Site Search*. Set the query parameter as *query*. For more information, read Google's tip, [Set Up and Configure Site Search](https://support.google.com/analytics/answer/1012264?hl=en&ref_topic=1031951){% external_link %}.
