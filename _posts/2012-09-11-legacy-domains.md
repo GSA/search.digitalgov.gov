@@ -18,6 +18,6 @@ What do you need to do? If your URL starts with any of the following six legacy 
 
 Specifically, you have to update the action of your [form code](/manual/code.html) to call search.usa.gov (or search.yoursite.gov).
 
-`<form method="get" action="http://search.usa.gov/search">`
+`<form method="get" action="https://search.usa.gov/search">`
 
 Note that, if you don't update your form code, your search results page will no longer work.
