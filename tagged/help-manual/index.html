@@ -103,6 +103,75 @@
  
     
     <h1>
+      <a href="/manual/i14y-drawers.html">How to Work with i14y Drawers</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers</p>
+
+<p>An <a href="/developer/i14y.html">i14y</a> Drawer is an index receiving content via the i14y API. We've called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
+
+<h2>Step 1. Make sure your site is connected to i14y</h2>
+
+<p>If your site Admin Center has the following page: <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, your site is connected to i14y. If you don't see this page in the Admin Center, <a href="mailto:search@support.digitalgov.gov">email us</a>. You can also read about <a href="/developer/i14y.html">Getting Started with i14y</a>.</p>
+
+<h2>Step 2. Add one or more Drawers</h2>
+
+<p>On <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, Click <code>Add i14y Drawer</code> in the upper right corner. If you have more than one website that will be sending content, add a separate Drawer for each of these sites.</p>
+
+<h3>Handle</h3>
+
+<p>Let us know what the handle for your drawer should be - the handle must be all lowercase alphanumeric, all one word, and can include underscores but no other special characters (e.g., agency_drawer_handle2).</p>
+
+<p>The Drawer <em>Description</em> is optional</p>
+
+<h2>Step 3. Send Content to Fill your Drawer</h2>
+
+<p>After you have created your Drawer(s), click <code>Show</code> from the i14y Drawers list to find that Drawer’s secret API key. Use this secret key with your drawer handle in your API call or your CMS module to <a href="http://gsa.github.io/slate/#authentication">send your content to the right place</a>.</p>
+
+<h2>Step 4. Review your Index</h2>
+
+<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list, and when the most recent document was received. We also send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
+
+<p><strong><em>Note:</em></strong> If you experience difficulty sending documents to i14y, it is possible your firewall is not letting you communicate with the i14y server. Check out our <a href="/developer/i14y-testing.html">cURL test commands</a> or view the full <a href="http://gsa.github.io/slate/">i14y documentation on Github</a>.</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting Tip:</em></strong> We can attach each i14y drawer to multiple search configurations: if you have a drawer that you’d like to use for multiple search sites, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
+
+<hr />
+
+<p><strong><em>Caution:</em></strong> A pop-up message will appear when you hit <code>Remove</code> on a drawer: please review this pop-up message carefully. If you remove a drawer that is only associated with one search configuration, the drawer and its contents will be deleted from our system. If the drawer is attached to multiple search configurations, it will only be removed from the search configuration you are currently on. The pop-up message will indicate what type of drawer you have.</p>
+
+<p>If you accidentally delete a drawer, you will need to set-up a new drawer and resend the content - we are unable to retrieve deleted drawers. If you accidentally remove a shared drawer but it is still associated with other search configurations, we can re-attach it to your site. <a href="mailto:search@support.digitalgov.gov">Contact us</a> for assistance.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/i14y"><span class="label label-info">i14y</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/i14y-drawers.html">
+        <time datetime="2017-01-26">January 26, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/third-party.html">How to Add JavaScript for Your Third-party Web Services</a>
     </h1>
     
@@ -162,7 +231,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li><p>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#115;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#115;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#117;&#112;&#112;&#111;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#111;&#x76;</a> to <a href="cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
+<li><p>Email us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#x73;&#101;&#97;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#97;&#108;&#103;&#111;&#118;&#46;&#103;&#111;&#x76;">&#x73;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#116;&#46;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#x76;</a> to <a href="cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
 <li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
 
 <p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
@@ -188,7 +257,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 <hr />
 
-<p><strong><em>Did you know?</em></strong> We use Google Analytics Web analytics software&mdash;our own tag plus the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag&mdash;by default. Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#115;&#101;&#97;&#114;&#99;&#104;&#x40;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#111;&#118;">&#x73;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;</a> if you'd like to opt out. Learn more about our <a href="http://www.digitalgov.gov/about/policies/">site policies</a> and <a href="../tos.html">terms of service</a>.</p>
+<p><strong><em>Did you know?</em></strong> We use Google Analytics Web analytics software&mdash;our own tag plus the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag&mdash;by default. Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#x73;&#101;&#x61;&#114;&#99;&#x68;&#64;&#115;&#x75;&#112;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#118;">&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#116;&#46;&#x64;&#105;&#x67;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#118;</a> if you'd like to opt out. Learn more about our <a href="http://www.digitalgov.gov/about/policies/">site policies</a> and <a href="../tos.html">terms of service</a>.</p>
 
     </div>
 
@@ -213,73 +282,6 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       
       
       <a href="/manual/third-party.html">
-        <time datetime="2017-01-04">January 4, 2017</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/i14y-drawers.html">How to Work with i14y Drawers</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers</p>
-
-<p>An <a href="/developer/i14y.html">i14y</a> Drawer is an index receiving content via the i14y API. We've called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
-
-<h2>Step 1. Make sure your site is connected to i14y</h2>
-
-<p>If your site Admin Center has the following page: <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, your site is connected to i14y. If you don't see this page in the Admin Center, <a href="mailto:search@support.digitalgov.gov">email us</a>. You can also read about <a href="/developer/i14y.html">Getting Started with i14y</a>.</p>
-
-<h2>Step 2. Add one or more Drawers</h2>
-
-<p>On <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, Click <code>Add i14y Drawer</code> in the upper right corner. If you have more than one website that will be sending content, add a separate Drawer for each of these sites.</p>
-
-<h3>Handle</h3>
-
-<p>Let us know what the handle for your drawer should be - the handle must be all lowercase alphanumeric, all one word, and can include underscores but no other special characters (e.g., agency_drawer_handle2).</p>
-
-<p>The Drawer <em>Description</em> is optional</p>
-
-<h2>Step 3. Send Content to Fill your Drawer</h2>
-
-<p>After you have created your Drawer(s), click <code>Show</code> from the i14y Drawers list to find that Drawer’s secret API key. Use this secret key with your drawer handle in your API call or your CMS module to <a href="http://gsa.github.io/slate/#authentication">send your content to the right place</a>.</p>
-
-<h2>Step 4. Review your Index</h2>
-
-<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list, and when the most recent document was received. We also send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
-
-<p><strong><em>Note:</em></strong> If you experience difficulty sending documents to i14y, it is possible your firewall is not letting you communicate with the i14y server. Check out our <a href="/developer/i14y-testing.html">cURL test commands</a> or view the full <a href="http://gsa.github.io/slate/">i14y documentation on Github</a>.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting Tip:</em></strong> We can attach each i14y drawer to multiple search configurations: if you have a drawer that you’d like to use for multiple search sites, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
-
-<hr />
-
-<p><strong><em>Caution:</em></strong> If you hit <code>Remove</code> on a drawer, the drawer and its contents will be deleted from our system. If the drawer is attached to multiple search configurations, it will be deleted from <strong><em>every</em></strong> search configuration. If you accidentally delete a drawer, you will need to set-up a new drawer and resend the content  - we are unable to retrieve deleted drawers.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/i14y"><span class="label label-info">i14y</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/i14y-drawers.html">
         <time datetime="2017-01-04">January 4, 2017</time>
       </a>
     </div>
@@ -434,7 +436,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 <h2>Site Handle</h2>
 
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#115;&#101;&#97;&#114;&#x63;&#104;&#x40;&#x73;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#118;&#46;&#x67;&#x6f;&#118;">&#x73;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;</a>.</p>
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#115;&#101;&#x61;&#114;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#x69;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#x76;">&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#x67;&#x6f;&#x76;</a>.</p>
 
 <p><a href="http://search.socialsecurity.gov/search?query=office+locations&amp;affiliate=ssa"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/settings.png" title="Site name and handle on SocialSecurity.gov's search results page" alt="Site name and handle on SocialSecurity.gov's search results page" /></a></p>
 
@@ -444,7 +446,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 <h2>Site Language</h2>
 
-<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">69 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#115;&#101;&#97;&#114;&#99;&#x68;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;">&#115;&#101;&#97;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#111;&#x76;&#x2e;&#103;&#111;&#x76;</a>.</p>
+<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">69 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#46;&#x67;&#111;&#x76;">&#115;&#101;&#97;&#114;&#99;&#104;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#103;&#x69;&#x74;&#97;&#108;&#103;&#111;&#118;&#46;&#x67;&#111;&#118;</a>.</p>
 
 <h2>Delete</h2>
 

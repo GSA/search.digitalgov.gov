@@ -3,10 +3,135 @@
   <title><![CDATA[DigitalGov Search]]></title>
   <link href="https://search.digitalgov.gov/all.atom" rel="self"/>
   <link href="https://search.digitalgov.gov/"/>
-  <updated>2017-01-25T19:12:09+00:00</updated>
+  <updated>2017-01-26T21:27:08+00:00</updated>
   <id>https://search.digitalgov.gov/</id>
   <author><name><![CDATA[DigitalGov Search]]></name></author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[How to Work with i14y Drawers]]></title>
+    <link href="https://search.digitalgov.gov/manual/i14y-drawers.html"/>
+    <updated>2017-01-26T00:00:00+00:00</updated>
+    <id>https://search.digitalgov.gov/manual/i14y-drawers.html</id>
+    <content type="html"><![CDATA[<p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers</p>
+
+<p>An <a href="/developer/i14y.html">i14y</a> Drawer is an index receiving content via the i14y API. We've called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
+
+<h2>Step 1. Make sure your site is connected to i14y</h2>
+
+<p>If your site Admin Center has the following page: <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, your site is connected to i14y. If you don't see this page in the Admin Center, <a href="mailto:search@support.digitalgov.gov">email us</a>. You can also read about <a href="/developer/i14y.html">Getting Started with i14y</a>.</p>
+
+<h2>Step 2. Add one or more Drawers</h2>
+
+<p>On <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, Click <code>Add i14y Drawer</code> in the upper right corner. If you have more than one website that will be sending content, add a separate Drawer for each of these sites.</p>
+
+<h3>Handle</h3>
+
+<p>Let us know what the handle for your drawer should be - the handle must be all lowercase alphanumeric, all one word, and can include underscores but no other special characters (e.g., agency_drawer_handle2).</p>
+
+<p>The Drawer <em>Description</em> is optional</p>
+
+<h2>Step 3. Send Content to Fill your Drawer</h2>
+
+<p>After you have created your Drawer(s), click <code>Show</code> from the i14y Drawers list to find that Drawer’s secret API key. Use this secret key with your drawer handle in your API call or your CMS module to <a href="http://gsa.github.io/slate/#authentication">send your content to the right place</a>.</p>
+
+<h2>Step 4. Review your Index</h2>
+
+<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list, and when the most recent document was received. We also send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
+
+<p><strong><em>Note:</em></strong> If you experience difficulty sending documents to i14y, it is possible your firewall is not letting you communicate with the i14y server. Check out our <a href="/developer/i14y-testing.html">cURL test commands</a> or view the full <a href="http://gsa.github.io/slate/">i14y documentation on Github</a>.</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting Tip:</em></strong> We can attach each i14y drawer to multiple search configurations: if you have a drawer that you’d like to use for multiple search sites, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
+
+<hr />
+
+<p><strong><em>Caution:</em></strong> A pop-up message will appear when you hit <code>Remove</code> on a drawer: please review this pop-up message carefully. If you remove a drawer that is only associated with one search configuration, the drawer and its contents will be deleted from our system. If the drawer is attached to multiple search configurations, it will only be removed from the search configuration you are currently on. The pop-up message will indicate what type of drawer you have.</p>
+
+<p>If you accidentally delete a drawer, you will need to set-up a new drawer and resend the content - we are unable to retrieve deleted drawers. If you accidentally remove a shared drawer but it is still associated with other search configurations, we can re-attach it to your site. <a href="mailto:search@support.digitalgov.gov">Contact us</a> for assistance.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Getting Started with i14y]]></title>
+    <link href="https://search.digitalgov.gov/developer/i14y.html"/>
+    <updated>2017-01-26T00:00:00+00:00</updated>
+    <id>https://search.digitalgov.gov/developer/i14y.html</id>
+    <content type="html"><![CDATA[<p><a href="/index.html">DigitalGov Search</a> > <a href="/developer/index.html">APIs for Developers</a> > i14y API</p>
+
+<p><a href="https://github.com/GSA/i14y">i14y Github repo</a> | <a href="http://gsa.github.io/slate/">Technical Documentation</a></p>
+
+<p>Do you want to have real-time updates to your search index, and full control over your page titles and descriptions? Then <a href="https://github.com/GSA/i14y">i14y, our content indexing API</a> is for you! We currently have a <a href="http://www.drupal.org/project/usasearch">Drupal module</a> and a <a href="https://github.com/GSA/wp-digitalgov-i14y-indexer">WordPress plugin</a> that will hook your CMS into i14y. If you use a different CMS, or don't have one at all, you still can develop an API of your content that meets the i14y specs and send it to us. We plan to develop more CMS hooks in the future, and welcome your partnership if there's a particular hook you need.</p>
+
+<h2>Step 1. Connect one of your sites to i14y</h2>
+
+<p>i14y needs to be enabled in the back end for a site to be able to receive content through it. You can</p>
+
+<ul>
+<li><a href="/manual/add-site.html">Add a brand new search site</a>,</li>
+<li>Use the Clone Site tool to copy one of your existing site’s settings to a new site (<code>YourSite &gt; Dashboard &gt; Clone Site</code>), or</li>
+<li>use an existing site.</li>
+</ul>
+
+
+<p><a href="mailto:search@support.digitalgov.gov">Email us</a> and let us know which site you want enabled for i14y. Please note: once we turn on i14y for a site, we no longer serve search results from a commercial web index. Therefore, we recommend that you set up a test site for i14y, so that your customers will continue to get results until you are fully set up and ready to move your i14y index to your production search site.</p>
+
+<h2>Step 2. Add a Drawer</h2>
+
+<p>An i14y Drawer is an index receiving content via the i14y API. We've called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
+
+<p>After we have enabled i14y for your search site, a new page will appear: <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers.</p>
+
+<p>Click <code>Add i14y Drawer</code> in the upper right corner. Create a handle for your drawer - the handle must be all lowercase alphanumeric, all one word, and can include underscores but no other special characters (e.g., agency_drawer_handle2).</p>
+
+<p>The Drawer <em>Description</em> is optional.</p>
+
+<p>If you have more than one website that will be sending content, add a separate Drawer for each of these sites.</p>
+
+<h2>Step 3. Fill your Drawer</h2>
+
+<p>After you have created your Drawer(s), click <code>Show</code> from the i14y Drawers list to find that Drawer’s secret API key. Use this secret key with your drawer handle in your API call or your CMS module to send your content to the right place.</p>
+
+<p>You are now ready to add content to your drawer. You can do this in two ways:</p>
+
+<ul>
+<li>Use i14y directly. <a href="https://github.com/GSA/i14y">Github repo</a> | <a href="http://gsa.github.io/slate/">Technical Documentation</a></li>
+<li>Use a module plugged into your CMS. At this time there is a <a href="https://www.drupal.org/project/usasearch">Drupal module</a> and a <a href="https://github.com/GSA/digitalsearch-wp-i4y-indexer">Wordpress plugin</a> available.</li>
+</ul>
+
+
+<h2>Step 4. Review your index</h2>
+
+<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list. We also send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
+
+<p>If you experience difficulty sending documents to i14y, it is possible your firewall is not letting you communicate with the i14y server. Check out our <a href="/developer/i14y-testing.html">cURL test commands</a> or view the full <a href="http://gsa.github.io/slate/">i14y documentation on Github</a>.</p>
+
+<p>We can attach each i14y drawer to multiple search configurations: if you have a drawer that you’d like to use for multiple search sites, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
+
+<p><strong><em>Caution:</em></strong> A pop-up message will appear when you hit <code>Remove</code> on a drawer: please review this pop-up message carefully. If you remove a drawer that is only associated with one search configuration, the drawer and its contents will be deleted from our system. If the drawer is attached to multiple search configurations, it will only be removed from the search configuration you are currently on. The pop-up message will indicate what type of drawer you have.</p>
+
+<p>If you accidentally delete a drawer, you will need to set-up a new drawer and resend the content - we are unable to retrieve deleted drawers. If you accidentally remove a shared drawer but it is still associated with other search configurations, we can re-attach it to your site. <a href="mailto:search@support.digitalgov.gov">Contact us</a> for assistance.</p>
+
+<h2>Step 5. Configure your search</h2>
+
+<p>Once you have your index populated, you will <a href="/manual/content-overview.html">set up the rest of your search</a> as you would for a traditional DigitalGov Search site. Set your default search scope on your <a href="/manual/domains.html">Domains</a> page, add Social Media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/instagram.html">Instagram</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>, create <a href="/manual/collections.html">Collections</a>, and set your results page Display (both <a href="/manual/display-overview.html">search features</a> and <a href="/manual/brand.html">branding</a>).</p>
+
+<p>If you have any <a href="/manual/rss.html">RSS content</a> that will not be sent to your i14y drawer, you can add those feeds as well.</p>
+
+<h2>Step 6. Update your search box</h2>
+
+<p>Update your website’s search box <a href="/manual/code.html">form code</a> to point to <code>affiliate=youri14yenabledsitehandle</code>.</p>
+
+<h2>Terms of Use</h2>
+
+<p>By accessing the i14y API, you agree to <a href="https://www.usa.gov/About/developer-resources/terms-of-service.shtml">USA.gov's Terms of Service for Developer Resources</a>.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> i14y is hacker shorthand for interoperability, because there are 14 characters between the first and last letters. i14y can also be shorthand for Independence Day.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Resources for Developers]]></title>
@@ -120,7 +245,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li><p>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#115;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#115;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#117;&#112;&#112;&#111;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#111;&#x76;</a> to <a href="cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
+<li><p>Email us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#x73;&#101;&#97;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#97;&#108;&#103;&#111;&#118;&#46;&#103;&#111;&#x76;">&#x73;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#116;&#46;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#x76;</a> to <a href="cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
 <li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
 
 <p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
@@ -146,128 +271,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 <hr />
 
-<p><strong><em>Did you know?</em></strong> We use Google Analytics Web analytics software&mdash;our own tag plus the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag&mdash;by default. Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#115;&#101;&#97;&#114;&#99;&#104;&#x40;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#111;&#118;">&#x73;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;</a> if you'd like to opt out. Learn more about our <a href="http://www.digitalgov.gov/about/policies/">site policies</a> and <a href="../tos.html">terms of service</a>.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to Work with i14y Drawers]]></title>
-    <link href="https://search.digitalgov.gov/manual/i14y-drawers.html"/>
-    <updated>2017-01-04T00:00:00+00:00</updated>
-    <id>https://search.digitalgov.gov/manual/i14y-drawers.html</id>
-    <content type="html"><![CDATA[<p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers</p>
-
-<p>An <a href="/developer/i14y.html">i14y</a> Drawer is an index receiving content via the i14y API. We've called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
-
-<h2>Step 1. Make sure your site is connected to i14y</h2>
-
-<p>If your site Admin Center has the following page: <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, your site is connected to i14y. If you don't see this page in the Admin Center, <a href="mailto:search@support.digitalgov.gov">email us</a>. You can also read about <a href="/developer/i14y.html">Getting Started with i14y</a>.</p>
-
-<h2>Step 2. Add one or more Drawers</h2>
-
-<p>On <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, Click <code>Add i14y Drawer</code> in the upper right corner. If you have more than one website that will be sending content, add a separate Drawer for each of these sites.</p>
-
-<h3>Handle</h3>
-
-<p>Let us know what the handle for your drawer should be - the handle must be all lowercase alphanumeric, all one word, and can include underscores but no other special characters (e.g., agency_drawer_handle2).</p>
-
-<p>The Drawer <em>Description</em> is optional</p>
-
-<h2>Step 3. Send Content to Fill your Drawer</h2>
-
-<p>After you have created your Drawer(s), click <code>Show</code> from the i14y Drawers list to find that Drawer’s secret API key. Use this secret key with your drawer handle in your API call or your CMS module to <a href="http://gsa.github.io/slate/#authentication">send your content to the right place</a>.</p>
-
-<h2>Step 4. Review your Index</h2>
-
-<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list, and when the most recent document was received. We also send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
-
-<p><strong><em>Note:</em></strong> If you experience difficulty sending documents to i14y, it is possible your firewall is not letting you communicate with the i14y server. Check out our <a href="/developer/i14y-testing.html">cURL test commands</a> or view the full <a href="http://gsa.github.io/slate/">i14y documentation on Github</a>.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting Tip:</em></strong> We can attach each i14y drawer to multiple search configurations: if you have a drawer that you’d like to use for multiple search sites, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
-
-<hr />
-
-<p><strong><em>Caution:</em></strong> If you hit <code>Remove</code> on a drawer, the drawer and its contents will be deleted from our system. If the drawer is attached to multiple search configurations, it will be deleted from <strong><em>every</em></strong> search configuration. If you accidentally delete a drawer, you will need to set-up a new drawer and resend the content  - we are unable to retrieve deleted drawers.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Getting Started with i14y]]></title>
-    <link href="https://search.digitalgov.gov/developer/i14y.html"/>
-    <updated>2017-01-04T00:00:00+00:00</updated>
-    <id>https://search.digitalgov.gov/developer/i14y.html</id>
-    <content type="html"><![CDATA[<p><a href="/index.html">DigitalGov Search</a> > <a href="/developer/index.html">APIs for Developers</a> > i14y API</p>
-
-<p><a href="https://github.com/GSA/i14y">i14y Github repo</a> | <a href="http://gsa.github.io/slate/">Technical Documentation</a></p>
-
-<p>Do you want to have real-time updates to your search index, and full control over your page titles and descriptions? Then <a href="https://github.com/GSA/i14y">i14y, our content indexing API</a> is for you! We currently have a <a href="http://www.drupal.org/project/usasearch">Drupal module</a> and a <a href="https://github.com/GSA/wp-digitalgov-i14y-indexer">WordPress plugin</a> that will hook your CMS into i14y. If you use a different CMS, or don't have one at all, you still can develop an API of your content that meets the i14y specs and send it to us. We plan to develop more CMS hooks in the future, and welcome your partnership if there's a particular hook you need.</p>
-
-<h2>Step 1. Connect one of your sites to i14y</h2>
-
-<p>i14y needs to be enabled in the back end for a site to be able to receive content through it. You can</p>
-
-<ul>
-<li><a href="/manual/add-site.html">Add a brand new search site</a>,</li>
-<li>Use the Clone Site tool to copy one of your existing site’s settings to a new site (<code>YourSite &gt; Dashboard &gt; Clone Site</code>), or</li>
-<li>use an existing site.</li>
-</ul>
-
-
-<p><a href="mailto:search@support.digitalgov.gov">Email us</a> and let us know which site you want enabled for i14y. Please note: once we turn on i14y for a site, we no longer serve search results from a commercial web index. Therefore, we recommend that you set up a test site for i14y, so that your customers will continue to get results until you are fully set up and ready to move your i14y index to your production search site.</p>
-
-<h2>Step 2. Add a Drawer</h2>
-
-<p>An i14y Drawer is an index receiving content via the i14y API. We've called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
-
-<p>After we have enabled i14y for your search site, a new page will appear: <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers.</p>
-
-<p>Click <code>Add i14y Drawer</code> in the upper right corner. Create a handle for your drawer - the handle must be all lowercase alphanumeric, all one word, and can include underscores but no other special characters (e.g., agency_drawer_handle2).</p>
-
-<p>The Drawer <em>Description</em> is optional.</p>
-
-<p>If you have more than one website that will be sending content, add a separate Drawer for each of these sites.</p>
-
-<h2>Step 3. Fill your Drawer</h2>
-
-<p>After you have created your Drawer(s), click <code>Show</code> from the i14y Drawers list to find that Drawer’s secret API key. Use this secret key with your drawer handle in your API call or your CMS module to send your content to the right place.</p>
-
-<p>You are now ready to add content to your drawer. You can do this in two ways:</p>
-
-<ul>
-<li>Use i14y directly. <a href="https://github.com/GSA/i14y">Github repo</a> | <a href="http://gsa.github.io/slate/">Technical Documentation</a></li>
-<li>Use a module plugged into your CMS. At this time there is a <a href="https://www.drupal.org/project/usasearch">Drupal module</a> and a <a href="https://github.com/GSA/digitalsearch-wp-i4y-indexer">Wordpress plugin</a> available.</li>
-</ul>
-
-
-<h2>Step 4. Review your index</h2>
-
-<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list. We also send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
-
-<p>If you experience difficulty sending documents to i14y, it is possible your firewall is not letting you communicate with the i14y server. Check out our <a href="/developer/i14y-testing.html">cURL test commands</a> or view the full <a href="http://gsa.github.io/slate/">i14y documentation on Github</a>.</p>
-
-<p>We can attach each i14y drawer to multiple search configurations: if you have a drawer that you’d like to use for multiple search sites, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
-
-<p><strong><em>Caution:</em></strong> If you hit <code>Remove</code> on a drawer, the drawer and its contents will be deleted from our system. If the drawer is attached to multiple search configurations, it will be deleted from <strong><em>every</em></strong> search configuration. If you accidentally delete a drawer, you will need to set-up a new drawer and resend the content  - we are unable to retrieve deleted drawers.</p>
-
-<h2>Step 5. Configure your search</h2>
-
-<p>Once you have your index populated, you will <a href="/manual/content-overview.html">set up the rest of your search</a> as you would for a traditional DigitalGov Search site. Set your default search scope on your <a href="/manual/domains.html">Domains</a> page, add Social Media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/instagram.html">Instagram</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>, create <a href="/manual/collections.html">Collections</a>, and set your results page Display (both <a href="/manual/display-overview.html">search features</a> and <a href="/manual/brand.html">branding</a>).</p>
-
-<p>If you have any <a href="/manual/rss.html">RSS content</a> that will not be sent to your i14y drawer, you can add those feeds as well.</p>
-
-<h2>Step 6. Update your search box</h2>
-
-<p>Update your website’s search box <a href="/manual/code.html">form code</a> to point to <code>affiliate=youri14yenabledsitehandle</code>.</p>
-
-<h2>Terms of Use</h2>
-
-<p>By accessing the i14y API, you agree to <a href="https://www.usa.gov/About/developer-resources/terms-of-service.shtml">USA.gov's Terms of Service for Developer Resources</a>.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> i14y is hacker shorthand for interoperability, because there are 14 characters between the first and last letters. i14y can also be shorthand for Independence Day.</p>
+<p><strong><em>Did you know?</em></strong> We use Google Analytics Web analytics software&mdash;our own tag plus the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag&mdash;by default. Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#x73;&#101;&#x61;&#114;&#99;&#x68;&#64;&#115;&#x75;&#112;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#118;">&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#116;&#46;&#x64;&#105;&#x67;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#118;</a> if you'd like to opt out. Learn more about our <a href="http://www.digitalgov.gov/about/policies/">site policies</a> and <a href="../tos.html">terms of service</a>.</p>
 ]]></content>
   </entry>
   
@@ -551,7 +555,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 <h2>Site Handle</h2>
 
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#115;&#101;&#97;&#114;&#x63;&#104;&#x40;&#x73;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#118;&#46;&#x67;&#x6f;&#118;">&#x73;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;</a>.</p>
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#115;&#101;&#x61;&#114;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#x69;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#x76;">&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#x67;&#x6f;&#x76;</a>.</p>
 
 <p><a href="http://search.socialsecurity.gov/search?query=office+locations&amp;affiliate=ssa"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/settings.png" title="Site name and handle on SocialSecurity.gov's search results page" alt="Site name and handle on SocialSecurity.gov's search results page" /></a></p>
 
@@ -561,7 +565,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 <h2>Site Language</h2>
 
-<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">69 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#115;&#101;&#97;&#114;&#99;&#x68;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;">&#115;&#101;&#97;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#111;&#x76;&#x2e;&#103;&#111;&#x76;</a>.</p>
+<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">69 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#46;&#x67;&#111;&#x76;">&#115;&#101;&#97;&#114;&#99;&#104;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#103;&#x69;&#x74;&#97;&#108;&#103;&#111;&#118;&#46;&#x67;&#111;&#118;</a>.</p>
 
 <h2>Delete</h2>
 
@@ -1407,7 +1411,7 @@ As of December 5, 2016, DigitalGov Search is not taking any new State or Local g
 
 <h2>Need Help? We're Here to Help!</h2>
 
-<p>Email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#115;&#x65;&#97;&#114;&#x63;&#104;&#64;&#x73;&#117;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#x61;&#108;&#103;&#111;&#x76;&#46;&#x67;&#111;&#118;">&#x73;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#103;&#111;&#118;&#46;&#103;&#111;&#x76;</a>, or give us a call at 202-505-5315.</p>
+<p>Email us at <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#58;&#115;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#x61;&#108;&#103;&#111;&#118;&#46;&#x67;&#111;&#x76;">&#x73;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#97;&#108;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#x76;</a>, or give us a call at 202-505-5315.</p>
 
 <p>If you're a federal agency in the DC area, we'd be happy to stop by your office for an in-person consultation. <a href="mailto:search@support.digitalgov.gov">Email us</a> to set up a time.
 </article></p>
@@ -1431,7 +1435,7 @@ As of December 5, 2016, DigitalGov Search is not taking any new State or Local g
 
 <p>Type over the text in the Name field to edit a facet's display name. Keep each name short (15 or fewer characters) and consistent with the content you're searching. Click on the hyperlink in the Source field to update the facet's source content. Hover over the icon with three horizontal lines on the left to change the order.</p>
 
-<p><strong>More.</strong> We show up to four facets above your search box. If you turn on the display of more than four facets, you'll see them listed under a 'More' dropdown menu. Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#115;&#117;&#112;&#112;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#x69;&#116;&#x61;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#115;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#103;&#111;&#118;&#46;&#103;&#x6f;&#118;</a> if you'd like to use a custom label instead of the default 'More'.</p>
+<p><strong>More.</strong> We show up to four facets above your search box. If you turn on the display of more than four facets, you'll see them listed under a 'More' dropdown menu. Email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#115;&#x65;&#97;&#114;&#99;&#104;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;">&#115;&#101;&#97;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#x70;&#112;&#111;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#103;&#111;&#x76;&#46;&#103;&#111;&#118;</a> if you'd like to use a custom label instead of the default 'More'.</p>
 
 <h2>Modules</h2>
 
@@ -1459,7 +1463,7 @@ As of December 5, 2016, DigitalGov Search is not taking any new State or Local g
 
 <p>If you list more than two related sites, searchers will see them listed under a dropdown menu, View Topic.</p>
 
-<p>Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#x73;&#x65;&#97;&#114;&#99;&#x68;&#64;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#97;&#108;&#103;&#111;&#x76;&#46;&#103;&#111;&#x76;">&#x73;&#101;&#97;&#114;&#99;&#104;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;</a> if you'd like to use a custom label instead of the default 'View Topic' label.</p>
+<p>Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#58;&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#112;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#103;&#111;&#118;">&#115;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#117;&#112;&#112;&#x6f;&#114;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#x67;&#x6f;&#x76;</a> if you'd like to use a custom label instead of the default 'View Topic' label.</p>
 
 <h2>Pointer to Kick Off New Search</h2>
 
@@ -1473,13 +1477,13 @@ As of December 5, 2016, DigitalGov Search is not taking any new State or Local g
 </ul>
 
 
-<p>Email us at <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#58;&#x73;&#101;&#97;&#x72;&#x63;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#118;">&#115;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#112;&#111;&#x72;&#x74;&#46;&#100;&#105;&#103;&#x69;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;</a> if you'd provide searchers with a custom message to encourage them to search another section of your site, your database, or both.</p>
+<p>Email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x73;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#103;&#x6f;&#x76;">&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#114;&#116;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a> if you'd provide searchers with a custom message to encourage them to search another section of your site, your database, or both.</p>
 
 <hr />
 
 <p><strong><em>Did you know?</em></strong>  Searchers may narrow results by time period for any <a href="/manual/rss.html">RSS</a> feeds. See, for example, results for a <a href="http://search.whitehouse.gov/search/news?affiliate=wh&amp;channel=6&amp;m=false&amp;query=jobs&amp;tbs=w">search on <em>jobs</em> narrowed to press articles in the last week on WhiteHouse.gov</a>.</p>
 
-<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#111;&#118;&#46;&#103;&#x6f;&#118;">&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#114;&#x74;&#x2e;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;</a> to if you want to customize these display names.</p>
+<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x73;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;">&#x73;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;</a> to if you want to customize these display names.</p>
 
 <p><strong><em>Did you know?</em></strong> You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our <a href="/manual/code.html">JavaScript snippet</a> before the closing <code>&lt;body&gt;</code> tag on your HTML web pages.</p>
 ]]></content>
@@ -1929,7 +1933,7 @@ Keyword 4: market value
 
 <p><strong><em>Troubleshooting Tip:</em></strong> For non-English sites, some agencies opt to include the specific location of the language's content (such as agency.gov/language or language.agency.gov) in their <a href="/manual/domains.html">Domains</a> to further refine the search results. Test the results for your non-English site with both the general agency.gov and the language-specific location to determine which setting gives you the best results.</p>
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#x73;&#101;&#x61;&#114;&#99;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#118;&#46;&#x67;&#x6f;&#x76;">&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#112;&#112;&#111;&#114;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#97;&#108;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;">&#x73;&#101;&#97;&#x72;&#99;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#118;</a>.</p>
 ]]></content>
   </entry>
   
@@ -1984,7 +1988,7 @@ Keyword 4: market value
 </ol>
 
 
-<p>If you have any problem resetting your password, email us at <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#x72;&#99;&#104;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#x67;&#111;&#118;">&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#115;&#117;&#112;&#x70;&#111;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#x76;</a>.</p>
+<p>If you have any problem resetting your password, email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x73;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#x75;&#112;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#x76;">&#115;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#46;&#100;&#105;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#118;</a>.</p>
 ]]></content>
   </entry>
   
@@ -2108,7 +2112,7 @@ Keyword 4: market value
 
 <p>The original, searchable database for these URLs is publicly available at <a href="http://govt-urls.usa.gov/tematres">http://govt-urls.usa.gov/tematres</a>.</p>
 
-<p>We make periodic updates as we come across changes and welcome comments and additions. <a href="https://github.com/GSA/govt-urls/issues">Submit a new issue</a> to contribute directly to this list or email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#115;&#117;&#112;&#x70;&#111;&#114;&#x74;&#x2e;&#100;&#105;&#x67;&#x69;&#116;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;">&#115;&#101;&#97;&#x72;&#99;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
+<p>We make periodic updates as we come across changes and welcome comments and additions. <a href="https://github.com/GSA/govt-urls/issues">Submit a new issue</a> to contribute directly to this list or email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#58;&#115;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#x61;&#108;&#103;&#111;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#115;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#103;&#111;&#118;&#46;&#x67;&#x6f;&#118;</a>.</p>
 
 <p><a name="what-it-returns"></a></p>
 
@@ -2186,7 +2190,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <h2>Feedback</h2>
 
-<p>Email us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#115;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#111;&#114;&#116;&#46;&#100;&#x69;&#103;&#x69;&#x74;&#x61;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#x76;">&#115;&#101;&#x61;&#x72;&#99;&#104;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#108;&#103;&#111;&#x76;&#46;&#103;&#x6f;&#118;</a> with any suggestions about what you'd like to see in the next version of this API.</p>
+<p>Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#115;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#46;&#x64;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#111;&#118;">&#x73;&#x65;&#97;&#114;&#x63;&#104;&#64;&#115;&#117;&#x70;&#x70;&#111;&#114;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#x76;</a> with any suggestions about what you'd like to see in the next version of this API.</p>
 
 <h2>A Tip of the Hat</h2>
 
@@ -2315,7 +2319,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <p>The original, searchable database for these URLs is publicly available at <a href="http://govt-urls.usa.gov/tematres">http://govt-urls.usa.gov/tematres</a>.</p>
 
-<p>We make periodic updates as we come across changes and welcome comments and additions. <a href="https://github.com/GSA/govt-urls/issues">Submit a new issue</a> to contribute directly to this list or email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#x73;&#x65;&#97;&#x72;&#99;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#118;">&#115;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;</a>.</p>
+<p>We make periodic updates as we come across changes and welcome comments and additions. <a href="https://github.com/GSA/govt-urls/issues">Submit a new issue</a> to contribute directly to this list or email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#115;&#101;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#46;&#100;&#105;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#x2e;&#x67;&#111;&#x76;">&#x73;&#101;&#97;&#x72;&#99;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#118;</a>.</p>
 
 <p><a name="what-it-returns"></a></p>
 
@@ -2393,7 +2397,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <h2>Feedback</h2>
 
-<p>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#115;&#101;&#97;&#x72;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#46;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#46;&#103;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#46;&#103;&#111;&#118;</a> with any suggestions about what you'd like to see in the next version of this API.</p>
+<p>Email us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#115;&#x65;&#x61;&#114;&#99;&#104;&#64;&#x73;&#117;&#x70;&#112;&#x6f;&#114;&#116;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#97;&#108;&#x67;&#111;&#118;&#46;&#103;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#114;&#99;&#104;&#64;&#x73;&#117;&#112;&#x70;&#111;&#114;&#116;&#46;&#100;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;</a> with any suggestions about what you'd like to see in the next version of this API.</p>
 
 <h2>A Tip of the Hat</h2>
 
@@ -2488,7 +2492,7 @@ to contribute your changes to our project and improve this API for everyone who 
 </ol>
 
 
-<p>If you've undergone a redesign, followed these five steps, and your site search results are not what you'd expect, notify us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#x73;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#114;&#x74;&#46;&#100;&#105;&#103;&#x69;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#118;">&#x73;&#101;&#97;&#x72;&#99;&#x68;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#114;&#116;&#x2e;&#x64;&#105;&#x67;&#x69;&#x74;&#97;&#x6c;&#103;&#x6f;&#118;&#46;&#103;&#x6f;&#x76;</a>.</p>
+<p>If you've undergone a redesign, followed these five steps, and your site search results are not what you'd expect, notify us at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;">&#x73;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#x61;&#108;&#103;&#111;&#x76;&#46;&#103;&#111;&#x76;</a>.</p>
 
 <hr />
 
@@ -2757,7 +2761,7 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
 
 <hr />
 
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. Email us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#115;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#100;&#105;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#x76;">&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#x74;&#97;&#108;&#103;&#111;&#x76;&#46;&#x67;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Job Openings module.</p>
+<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? Or a local or state government that doesn't use NeoGov? We want your jobs data. Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#115;&#x65;&#97;&#x72;&#x63;&#104;&#64;&#115;&#x75;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#118;">&#x73;&#101;&#97;&#x72;&#99;&#x68;&#64;&#115;&#x75;&#112;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Job Openings module.</p>
 ]]></content>
   </entry>
   
@@ -2801,7 +2805,7 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
 <ol>
 <li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
 <li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>Email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#115;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#115;&#117;&#x70;&#112;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#x69;&#x74;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#118;">&#x73;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
+<li>Email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#58;&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#112;&#112;&#111;&#114;&#x74;&#46;&#100;&#x69;&#x67;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#118;">&#x73;&#101;&#97;&#114;&#99;&#x68;&#64;&#115;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#46;&#100;&#x69;&#103;&#x69;&#116;&#97;&#x6c;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
 </ol>
 
 
@@ -2839,7 +2843,7 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
 
 <p>If you don't like the default web results, you can choose to use another index. Options follow.</p>
 
-<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can index content that is sent to us by API or RSS. Email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#x73;&#x65;&#97;&#x72;&#99;&#104;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#116;&#46;&#x64;&#105;&#x67;&#105;&#116;&#97;&#x6c;&#x67;&#111;&#118;&#x2e;&#x67;&#x6f;&#118;</a> and we'll work with you to determine the best way for us to get your content.</p>
+<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can index content that is sent to us by API or RSS. Email us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#x70;&#112;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#115;&#101;&#x61;&#114;&#99;&#104;&#x40;&#x73;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#103;&#x69;&#x74;&#97;&#x6c;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;</a> and we'll work with you to determine the best way for us to get your content.</p>
 
 <p><strong>Option 2. Buy and Use Google Site Search.</strong> If you already have (or plan to purchase), <a href="https://www.google.com/work/search/products/gss.html">Google Site Search</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, we'll send a searcher's query to the search index you've provided and we'll render the results within our search results page.</p>
 
@@ -3333,7 +3337,7 @@ AF,US-VA</p>
 
 <p>State and local government jobs are from cities, counties, and state agencies that use <a href="http://www.neogov.com">NeoGov</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, such as <a href="https://bouldercolorado.gov/human-resources/jobs-and-volunteer">jobs with the the city of Boulder, Colorado</a>.</p>
 
-<p><strong><em>Are we missing your jobs data?</em></strong> Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#x6f;&#x76;&#46;&#103;&#111;&#x76;">&#x73;&#x65;&#97;&#114;&#x63;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#x6f;&#118;</a> to let us know where you publish the jobs data for your federal, state, or local government agency. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
+<p><strong><em>Are we missing your jobs data?</em></strong> Email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#111;&#x76;">&#x73;&#101;&#97;&#114;&#x63;&#x68;&#64;&#115;&#117;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#x76;</a> to let us know where you publish the jobs data for your federal, state, or local government agency. We'll accept your jobs data via FTP or any machine-readable format (such as an RSS feed or API).</p>
 
 <p><a name="what-it-returns"></a></p>
 
@@ -3395,7 +3399,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <h2>Feedback</h2>
 
-<p>Email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#112;&#112;&#111;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#46;&#103;&#x6f;&#x76;">&#115;&#101;&#97;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#46;&#x64;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#111;&#118;</a> with any suggestions about what you'd like to see in the next version of API.</p>
+<p>Email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#115;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#118;">&#x73;&#101;&#97;&#x72;&#x63;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#x69;&#103;&#105;&#x74;&#97;&#108;&#103;&#111;&#118;&#46;&#x67;&#x6f;&#x76;</a> with any suggestions about what you'd like to see in the next version of API.</p>
 
 <h2>Terms of Use</h2>
 
@@ -3670,7 +3674,7 @@ to contribute your changes to our project and improve this API for everyone who 
 
 <p><strong>Tagline.</strong> Fill out text for a "tagline" if you'd like one to appear at the very top of your results page header.</p>
 
-<p>The default tagline style uses Georgia (font family), 1.3 em (size), and italic (style). Email us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#115;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#116;&#97;&#108;&#103;&#111;&#118;&#46;&#103;&#111;&#118;">&#x73;&#101;&#97;&#114;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#103;&#111;&#118;&#46;&#103;&#111;&#x76;</a> if you'd like to change the default font family, size, or style.</p>
+<p>The default tagline style uses Georgia (font family), 1.3 em (size), and italic (style). Email us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#x73;&#x65;&#97;&#114;&#99;&#104;&#x40;&#115;&#x75;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;">&#115;&#101;&#97;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#x70;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a> if you'd like to change the default font family, size, or style.</p>
 
 <p><strong>Menu Button Alignment.</strong> Leave the Browse Site "hamburger" menu right-aligned, or select the Left option to make it left-aligned.</p>
 
@@ -3835,7 +3839,7 @@ URL: mailto:info@agency.gov</p>
 </table>
 
 
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#x73;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#112;&#111;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;</a>.</p>
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#115;&#x65;&#97;&#114;&#x63;&#104;&#x40;&#x73;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;">&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#118;</a>.</p>
 ]]></content>
   </entry>
   
@@ -4421,7 +4425,7 @@ URL: mailto:info@agency.gov</p>
 
 <p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/sitelink.png" title="Sitelink-generated links for EDGAR filings on SEC.gov" alt="Sitelink-generated links for EDGAR filings on SEC.gov" /></p>
 
-<p>Do you have related content that you'd like to display as value-added links that searchers should see within the context of each other (such as related forms, instructions, and publications)? If your related content follows a discernable URL pattern, email us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#x3a;&#x73;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#103;&#105;&#116;&#x61;&#108;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#118;">&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#x74;&#46;&#x64;&#x69;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#x67;&#x6f;&#118;</a> and we'll work with you to promote the related content on your site.</p>
+<p>Do you have related content that you'd like to display as value-added links that searchers should see within the context of each other (such as related forms, instructions, and publications)? If your related content follows a discernable URL pattern, email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#115;&#101;&#x61;&#114;&#x63;&#104;&#64;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#x67;&#x6f;&#x76;">&#115;&#101;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#103;&#x6f;&#118;&#46;&#x67;&#111;&#x76;</a> and we'll work with you to promote the related content on your site.</p>
 
 <p>We've open sourced the <a href="https://github.com/GSA/sitelink_generator">code for the sitelink generator</a> on Github so you can <a href="https://github.com/GSA/sitelink_generator/fork">fork the code</a> and contribute to it directly. We've also <a href="http://rubygems.org/gems/sitelink_generator">published it as Ruby gem</a>.</p>
 
@@ -4633,7 +4637,7 @@ Securities and Exchange Commission<br/>
 
 <p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/flickr.html">Flickr</a> photostream. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.</p>
 
-<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#115;&#101;&#97;&#x72;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#118;">&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#103;&#111;&#x76;&#46;&#x67;&#111;&#118;</a> if you're ready to turn on the new results page.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#x3a;&#x73;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#118;">&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#103;&#111;&#x76;&#46;&#103;&#111;&#118;</a> if you're ready to turn on the new results page.</p>
 ]]></content>
   </entry>
   
@@ -4666,7 +4670,7 @@ Securities and Exchange Commission<br/>
 
 <p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/instagram.html">Instagram</a> account. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.</p>
 
-<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#115;&#101;&#97;&#114;&#x63;&#104;&#64;&#115;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#46;&#100;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#118;">&#115;&#101;&#97;&#114;&#x63;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#100;&#105;&#x67;&#x69;&#x74;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;</a> if you're ready to turn on the new results page.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#x3a;&#x73;&#101;&#x61;&#114;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;">&#x73;&#x65;&#97;&#114;&#99;&#104;&#64;&#115;&#x75;&#112;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#x76;</a> if you're ready to turn on the new results page.</p>
 ]]></content>
   </entry>
   
@@ -5528,7 +5532,7 @@ Securities and Exchange Commission<br/>
 <li>We set up <a href="https://codeclimate.com/">Code Climate</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to identify areas of our code that can be improved.</li>
 <li>We phased out color schemes and now offer two options, default and custom.</li>
 <li>We updated the links in our email templates to reflect the new Admin Center.</li>
-<li>We added the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#x73;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#46;&#100;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#103;&#111;&#118;&#46;&#103;&#x6f;&#x76;">&#x73;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#112;&#111;&#x72;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#97;&#x6c;&#103;&#111;&#118;&#46;&#103;&#111;&#x76;</a> if you'd like to opt out.</li>
+<li>We added the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#x2e;&#x67;&#x6f;&#118;">&#115;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#x75;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#x67;&#111;&#118;</a> if you'd like to opt out.</li>
 </ul>
 
 
@@ -5567,7 +5571,7 @@ Securities and Exchange Commission<br/>
 
 <p>You can read our updated help by clicking on the Help? link on each page in the Admin Center, or see the full set of help files on our <a href="/manual/index.html">How to Set Up Your Search Box</a> page.</p>
 
-<p>Email us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#111;&#118;&#46;&#103;&#111;&#x76;">&#x73;&#101;&#x61;&#114;&#99;&#104;&#64;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#x74;&#46;&#100;&#105;&#103;&#x69;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
+<p>Email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#x73;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#115;&#x75;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#x76;&#x2e;&#x67;&#111;&#x76;">&#115;&#101;&#97;&#x72;&#x63;&#104;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#116;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
 
 <h2>Chores</h2>
 
@@ -5722,7 +5726,7 @@ We are able to fully manage the tool and reduce the amount of resources needed t
 
 <p>MRSS is the standard <a href="http://www.rssboard.org/media-rss">media RSS specification</a> for syndicating multimedia content. So, even if you don't have an MRSS feed now, it should be easy to generate one as long as your content is in a content management system or other database. MRSS is also the standard specification used by hosted multimedia services such as Flickr, Instagram, Vimeo, and YouTube.</p>
 
-<p>Email us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#115;&#101;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;">&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#x73;&#x75;&#x70;&#112;&#x6f;&#114;&#116;&#46;&#100;&#x69;&#103;&#x69;&#x74;&#x61;&#108;&#103;&#x6f;&#x76;&#x2e;&#x67;&#111;&#118;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
+<p>Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#115;&#101;&#x61;&#114;&#x63;&#104;&#64;&#x73;&#117;&#112;&#112;&#111;&#x72;&#x74;&#46;&#100;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#46;&#103;&#x6f;&#118;">&#115;&#x65;&#97;&#114;&#99;&#104;&#64;&#115;&#117;&#x70;&#x70;&#x6f;&#x72;&#x74;&#46;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#118;&#46;&#x67;&#111;&#118;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
 
 <p>(Thanks, <a href="http://www.usgs.gov">USGS.gov</a> team, for suggesting this new feature!)</p>
 
@@ -5795,7 +5799,7 @@ We are able to fully manage the tool and reduce the amount of resources needed t
 <ul>
 <li>We updated our <a href="/tos.html">terms of service</a>.</li>
 <li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#115;&#x65;&#97;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#x6f;&#118;">&#115;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#111;&#118;</a> with any questions.</li>
+<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x73;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#46;&#103;&#111;&#x76;">&#115;&#x65;&#97;&#114;&#99;&#104;&#x40;&#115;&#117;&#x70;&#112;&#x6f;&#114;&#116;&#46;&#100;&#105;&#103;&#x69;&#x74;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#111;&#x76;</a> with any questions.</li>
 <li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
 <li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
 <li>We removed the trending searches feature and widget.</li>
@@ -6030,7 +6034,7 @@ We are able to fully manage the tool and reduce the amount of resources needed t
 <li>Searchers can narrow RSS news results by custom date ranges.</li>
 <li>Searchers now see more images above the fold on image results pages.</li>
 <li>Searchers see integrated image results across both the images on your website and in your Flickr photostream.</li>
-<li>You can now add the <a href="http://www.digitalgov.gov/services/dap/">Digtital Analytics Program's</a> government-wide analytics tag to your search results pages. Email the Digital Analytics Program at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#68;&#65;&#x50;&#x40;&#103;&#x73;&#x61;&#46;&#x67;&#111;&#x76;">&#x44;&#x41;&#x50;&#64;&#x67;&#115;&#97;&#46;&#103;&#111;&#x76;</a> for more information on setting up the government-wide analytics tag.</li>
+<li>You can now add the <a href="http://www.digitalgov.gov/services/dap/">Digtital Analytics Program's</a> government-wide analytics tag to your search results pages. Email the Digital Analytics Program at <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#68;&#x41;&#x50;&#x40;&#x67;&#x73;&#97;&#x2e;&#x67;&#x6f;&#118;">&#x44;&#x41;&#x50;&#64;&#103;&#x73;&#x61;&#46;&#103;&#x6f;&#x76;</a> for more information on setting up the government-wide analytics tag.</li>
 <li>When you <a href="/manual/twitter.html">add your Twitter handle</a> in the Admin Center, we now show the Twitter GovBox by default.</li>
 </ul>
 
