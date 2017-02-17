@@ -3,7 +3,7 @@
 <head>
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <title>How to Add Your Flickr Images to Our Index</title>
+  <title>January 2017 Release Notes</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -97,60 +97,73 @@
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/manual/flickr.html">How to Add Your Flickr Images to Our Index</a>
+    <a href="/releases/january-2017.html">January 2017 Release Notes</a>
   </h1>
   
 
   <div class='post-content'>
-    <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Flickr</p>
+    <h2>Highlighted Features</h2>
 
-<h2>Tell Us About Your Flickr Photostream</h2>
+<h3>i14y Drawer Management</h3>
 
-<p>Provide us with the <em>full URL</em> for your Flickr photostream. Most photostreams are in the photos folder (e.g., <a href="https://www.flickr.com/photos/hudopa">https://www.flickr.com/photos/hudopa</a> for HUD). Some photostreams are in the groups folder (such as <a href="https://www.flickr.com/groups/usagov">https://www.flickr.com/groups/usagov</a> for USA.gov).</p>
+<p>We updated the process for removing <a href="/manual/i14y-drawers.html">i14y Drawers</a> from a search configuration.</p>
 
-<p>The URL must be for your overall photostream. You cannot specify individual photos, sets, favorites, or maps.</p>
+<ul>
+<li>If you remove a drawer that is associated with only one search configuration, it will be deleted from our system.</li>
+<li>If you remove a drawer that is attached to multiple search configurations, it will be removed from only the one configuration and will remain attached to the others.</li>
+</ul>
 
-<h2>Opt to Display Your Flickr Images</h2>
 
-<p>When you add the URL for your Flickr photostream, we'll automatically index all of the images in your photostream.</p>
+<h3>New Results Page Platform Launches</h3>
 
-<p>On the image results page, we'll display the images from your Flickr photostream by default. If you'd like to backfill them with the standard image results from your website, <a href="mailto:search@support.digitalgov.gov">email us</a> and we'll turn on your web images for you.</p>
+<p>We launched our new JavaScript search results page, which is serving the search results on IRS.gov.</p>
 
-<p>See the sample results page below that shows photo results displayed on <a href="http://search.usa.gov/search/images?affiliate=www.louisiana.gov&amp;query=hurricanes">Louisiana.gov for a search on <em>hurricanes</em></a>.</p>
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/new-serp.png" alt="New JavaScript results page" /></p>
 
-<p><a href="http://search.usa.gov/search/images?affiliate=www.louisiana.gov&amp;query=hurricanes"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/social-media-flickr.png" title="Image results from Flickr" alt="Image results from Flickr" /></a></p>
+<h2>Chores</h2>
 
-<hr />
+<ul>
+<li>Have your RSS feeds transitioned from <code>HTTP</code> to <code>HTTPS</code>? Our system now recognizes that transition automatically.</li>
+<li>We indexed and support the search for whitehouse.gov. We prepared indexes to go live at noon January 20, for the obamawhitehouse.archives.gov sites, as well as the new content on whitehouse.gov.</li>
+<li>We’ve updated the process around password reset links.
 
-<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
+<ul>
+<li>Password reset links are only valid for one hour: previously, if you requested a password reset link more than once within the hour, the first link would expire. This caused confusion for many users who accidentally hit the reset link twice and were encountering expired links.</li>
+<li>Now, we will resend you the first, valid link for a period of one hour, regardless of how many times you hit the reset button.</li>
+<li>We’ve also updated and clarified the message you see if you click an expired link.</li>
+</ul>
+</li>
+<li>We finalized adding all our active repos to the <a href="https://code.gov">Code.gov</a> inventory.</li>
+</ul>
 
-<p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/instagram.html">Instagram</a> account. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.</p>
 
-<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;">&#115;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#100;&#105;&#103;&#105;&#116;&#97;&#108;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#x76;</a> if you're ready to turn on the new results page.</p>
+<h2>Fixes</h2>
+
+<ul>
+<li>Our excellent asset caching was inadvertently prolonging transient errors by serving up cached error responses. We’ve fixed this so errors will really go away when they’ve cleared.</li>
+<li>We also added a response code passthrough to make sure that, in our multiserver environment, we don't end up returning <code>200</code> responses just because an error page is working just fine. We are now passing through the response code reported by the error page.</li>
+<li>We fixed a bug where some password reset tokens were delivering users to the login page, when they should have been delivered to the password reset page.</li>
+<li>We fixed an error that was interfering with our import of Federal Register documents for indexing.</li>
+</ul>
+
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-    
-    <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-    
-    <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
-    
-    <a href="/tagged/flickr"><span class="label label-info">flickr</span></a>
-    
-    <a href="/tagged/images"><span class="label label-info">images</span></a>
+    <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
     
   </div>
 
   <div class='time'>
     
     
+    </br><span>Page last reviewed or updated:</span>
     
     
-    <a href="/manual/flickr.html">
-      <time>August 20, 2014</time>
+    
+    <a href="/releases/january-2017.html">
+      <time>February 17, 2017</time>
     </a>
   </div>
 

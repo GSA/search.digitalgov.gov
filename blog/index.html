@@ -102,6 +102,220 @@
   <article class='article'>
     
     <h1>
+      <a href="/releases/november-2016.html">November 2016 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlighted Features</h2>
+
+<h3>JavaScript Search Results Page</h3>
+
+<p>Our new JavaScript search results page was released in Beta. This new results page platform allows us to offer more layout options, to better complement our customers' site layouts. The first layout released matches the current default layout.</p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/new-serp-classic-template.png" alt="New JavaScript results page" /></p>
+
+<h3>Crawling and Indexing</h3>
+
+<p>We are exploring how we can use our own crawler for a subset of our customers' search configurations. The goal is to serve more results directly from our own indexes, rather than leveraging commercial indexes. We recognize that not all agency customers are able to send us their content via API or RSS, and we also recognize that agencies are interested in having more control over when their content gets indexed, which is not possible with the commercial crawlers.</p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>In August, our development team successfully migrated Search’s infrastructure to AWS. We continue to make updates to the new environment, including ClamAV scanning and new VPCs. Other work around our ATO includes:
+
+<ul>
+<li>Nessus scanner work</li>
+<li>Re-IP'ing our system to integrate with GSA's new log archiving system</li>
+<li>Password management and handling updates, now requiring complex passwords, updates every 90 days, and displaying ambiguous login error messages.</li>
+</ul>
+</li>
+<li>We continue to assist customers with <a href="/manual/https-transition.html">transitioning to HTTPS</a>, adding <a href="/manual/cname.html">sites’ domain masks</a> to our SSL certificate and preparing to update our help manual and some backend configurations.</li>
+<li>When you <a href="/manual/clone-site.html">clone a search configuration</a>, your type-ahead suggestions will no longer clone to the new configuration. This enables your new site to populate type-ahead suggestions based on its own traffic.</li>
+<li>In December, Bing is <a href="https://blogs.msdn.microsoft.com/bingdevcenter/2016/11/04/azure-data-market-bing-search-and-web-results-only-apis-to-be-decommissioned-december-15/">deprecating 2 of its APIs</a>. We’re handling this transition for all search configurations that use our hosted search results page. We began preparing for the transition this month and will complete work prior to the December 15th deprecation.</li>
+<li>We did a lot of work</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>Email verification links were redirecting infinitely, causing some new users to be unable to get into the system.</li>
+<li>We fixed a conflict for our customers who may share machines with other users, so now if a user is logged in and another user attempts to verify their account, the original user will be logged out so the second user can complete their verification.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/november-2016.html">
+        <time datetime="2017-02-17">February 17, 2017</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
+      <a href="/releases/january-2017.html">January 2017 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlighted Features</h2>
+
+<h3>i14y Drawer Management</h3>
+
+<p>We updated the process for removing <a href="/manual/i14y-drawers.html">i14y Drawers</a> from a search configuration.</p>
+
+<ul>
+<li>If you remove a drawer that is associated with only one search configuration, it will be deleted from our system.</li>
+<li>If you remove a drawer that is attached to multiple search configurations, it will be removed from only the one configuration and will remain attached to the others.</li>
+</ul>
+
+
+<h3>New Results Page Platform Launches</h3>
+
+<p>We launched our new JavaScript search results page, which is serving the search results on IRS.gov.</p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/new-serp.png" alt="New JavaScript results page" /></p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>Have your RSS feeds transitioned from <code>HTTP</code> to <code>HTTPS</code>? Our system now recognizes that transition automatically.</li>
+<li>We indexed and support the search for whitehouse.gov. We prepared indexes to go live at noon January 20, for the obamawhitehouse.archives.gov sites, as well as the new content on whitehouse.gov.</li>
+<li>We’ve updated the process around password reset links.
+
+<ul>
+<li>Password reset links are only valid for one hour: previously, if you requested a password reset link more than once within the hour, the first link would expire. This caused confusion for many users who accidentally hit the reset link twice and were encountering expired links.</li>
+<li>Now, we will resend you the first, valid link for a period of one hour, regardless of how many times you hit the reset button.</li>
+<li>We’ve also updated and clarified the message you see if you click an expired link.</li>
+</ul>
+</li>
+<li>We finalized adding all our active repos to the <a href="https://code.gov">Code.gov</a> inventory.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>Our excellent asset caching was inadvertently prolonging transient errors by serving up cached error responses. We’ve fixed this so errors will really go away when they’ve cleared.</li>
+<li>We also added a response code passthrough to make sure that, in our multiserver environment, we don't end up returning <code>200</code> responses just because an error page is working just fine. We are now passing through the response code reported by the error page.</li>
+<li>We fixed a bug where some password reset tokens were delivering users to the login page, when they should have been delivered to the password reset page.</li>
+<li>We fixed an error that was interfering with our import of Federal Register documents for indexing.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/january-2017.html">
+        <time datetime="2017-02-17">February 17, 2017</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
+      <a href="/releases/december-2016.html">December 2016 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlighted Features</h2>
+
+<h3>Password Management</h3>
+
+<p>The password change page now requires confirmation of your previous password. We also now require complex passwords, including 8 or more characters, and a combination of character types and cases.</p>
+
+<h3>Crawling and Indexing</h3>
+
+<p>We are exploring how we can use our own crawler for a subset of our customers' search configurations. The goal is to serve more results directly from our own indexes, rather than leveraging commercial indexes. We recognize that not all agency customers are able to send us their content via API or RSS, and we also recognize that agencies are interested in having more control over when their content gets indexed, which is not possible with the commercial crawlers.</p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>On December 15th, Bing <a href="https://blogs.msdn.microsoft.com/bingdevcenter/2016/11/04/azure-data-market-bing-search-and-web-results-only-apis-to-be-decommissioned-december-15/">deprecated 2 of its APIs</a>. We successfully (and invisibly!) handled this transition for all search configurations that use our hosted search results page.
+
+<ul>
+<li>Related to this, we updated our search results API instructions in our Admin Center.</li>
+</ul>
+</li>
+<li>In line with the <a href="https://https.cio.gov/">HTTPS-only mandate</a>, we are now serving traffic only over <code>HTTPS</code>. We updated our <a href="/manual/">help manual</a> and the code snippets you see in the Admin Center to reflect this change.</li>
+<li>We ran (and are continuing to run) bulk updates to some URLs that are still listed as <code>HTTP</code> in our system but can be accessed over <code>HTTPS</code>.  This bulk update applies to URLs in the following features:
+
+<ul>
+<li>RSS feeds</li>
+<li>Supplemental URLs</li>
+<li>Supplemental RSS feeds</li>
+<li>Best Bets</li>
+</ul>
+</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>Our new JavaScript search results page now appears correctly in all modern versions of Firefox and Internet Explorer, and on both Windows and Mac computers.</li>
+<li>We fixed an issue where our multi-server AWS environment was interfering with our <a href="govt-urls.usa.gov/tematres/vocab/index.php">Government URLs inventory database</a>.</li>
+<li>We fixed an error that was blocking our uploads to Bing's temporary index.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/december-2016.html">
+        <time datetime="2017-02-17">February 17, 2017</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
       <a href="/manual/training.html">DigitalGov Search Training</a>
     </h1>
     
@@ -527,7 +741,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li><p>Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#115;&#x65;&#x61;&#114;&#99;&#104;&#64;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#x64;&#x69;&#103;&#x69;&#116;&#x61;&#108;&#x67;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;">&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#x6f;&#x76;</a> to <a href="cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
+<li><p>Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#115;&#101;&#97;&#114;&#99;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#103;&#105;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;">&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#x73;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#105;&#103;&#105;&#116;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#103;&#111;&#118;</a> to <a href="cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
 <li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
 
 <p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
@@ -553,7 +767,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 <hr />
 
-<p><strong><em>Did you know?</em></strong> We use Google Analytics Web analytics software&mdash;our own tag plus the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag&mdash;by default. Email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#115;&#101;&#97;&#114;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#118;">&#x73;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#111;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#x2e;&#103;&#x6f;&#118;</a> if you'd like to opt out. Learn more about our <a href="http://www.digitalgov.gov/about/policies/">site policies</a> and <a href="../tos.html">terms of service</a>.</p>
+<p><strong><em>Did you know?</em></strong> We use Google Analytics Web analytics software&mdash;our own tag plus the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag&mdash;by default. Email us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#x75;&#x70;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#x2e;&#x67;&#111;&#118;">&#x73;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#114;&#116;&#46;&#100;&#x69;&#103;&#x69;&#116;&#97;&#108;&#x67;&#111;&#118;&#46;&#x67;&#111;&#x76;</a> if you'd like to opt out. Learn more about our <a href="http://www.digitalgov.gov/about/policies/">site policies</a> and <a href="../tos.html">terms of service</a>.</p>
 
     </div>
 
@@ -878,334 +1092,6 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       
       
       <a href="/manual/supported-languages.html">
-        <time datetime="2016-12-28">December 28, 2016</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/manual/settings.html">How to Edit Your Settings</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Settings</p>
-
-<h2>Display Name</h2>
-
-<p>Tell us the name of your website. Searchers see your site name on the results page, such as in your page title or best bets. We recommend using the plain language name for your agency or site, such as <em>Social Security Administration</em>.</p>
-
-<h2>Homepage URL</h2>
-
-<p>Tell us the homepage URL of your website. Enter a fully qualified URL, including http://, http://www, etc.</p>
-
-<p><strong>Correct Syntax</strong></p>
-
-<ul>
-<li>https://www.whitehouse.gov</li>
-<li>https://gobierno.usa.gov</li>
-<li>https://stemcells.nih.gov</li>
-</ul>
-
-
-<p><strong>Incorrect Syntax</strong></p>
-
-<ul>
-<li>usa.gov (use https://www.usa.gov)</li>
-<li>www.nasa.gov (use https://www.nasa.gov)</li>
-<li>https://www.sec.gov/litigation.shtml (use the higher-level folder, https://www.sec.gov/litigation)</li>
-<li>https://www.gsa.gov/portal/category/100000?utm_source=OCM&amp;utm_medium=print-radio&amp;utm_term=&amp;utm_campaign=shortcuts (use the higher-level domain, https://www.gsa.gov)</li>
-<li>http://www.doc.gov (use the domain that resolves, https://www.commerce.gov)</li>
-</ul>
-
-
-<p>We use this homepage URL to (a) populate your primary <a href="/manual/domains.html">domain</a> and (b) link the default logo on your results page to your homepage.</p>
-
-<h2>Site Handle</h2>
-
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#x3a;&#115;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#x76;">&#x73;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#x70;&#112;&#111;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;</a>.</p>
-
-<p><a href="http://search.socialsecurity.gov/search?query=office+locations&amp;affiliate=ssa"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/settings.png" title="Site name and handle on SocialSecurity.gov's search results page" alt="Site name and handle on SocialSecurity.gov's search results page" /></a></p>
-
-<h2>Site ID</h2>
-
-<p>We assign a unique, system-generated numeric ID to your site. We use this ID for some back-end code. You can see this ID in the URL for your site in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-<h2>Site Language</h2>
-
-<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">69 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#x74;&#46;&#100;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#118;&#46;&#103;&#111;&#118;">&#x73;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#115;&#117;&#112;&#112;&#111;&#x72;&#116;&#46;&#100;&#105;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;</a>.</p>
-
-<h2>Delete</h2>
-
-<p>After you've set up a site, you may want to delete it. <strong>Use caution.</strong> This action permanently deletes your site and its associated analytics and indexes. We cannot restore deleted sites.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong>  Click the pushpin icon in the top navigation bar to change the default site that appears when you first log in to the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
-      
-      <a href="/tagged/settings"><span class="label label-info">settings</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/settings.html">
-        <time datetime="2016-12-28">December 28, 2016</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/manual/rss.html">How to Add Your RSS Feeds to Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > RSS</p>
-
-<p>Would you like searchers to be able to search your news or multimedia content? Would you like them to be able to narrow results by date?</p>
-
-<p>Tell us the locations and names of your RSS feeds. We index all new and updated content on your feeds within minutes.</p>
-
-<h2>Step 1. Tell Us About Your RSS Feeds</h2>
-
-<p>We love feeds! Tell us about <em>all</em> of your RSS feeds, even if you don't opt to show them in step 2 below. Feeds are the fastest and most reliable way for us to learn about your new and updated content.</p>
-
-<p>Select the option to add a new RSS feed.</p>
-
-<h3>Name</h3>
-
-<p>Create a name for the feed. Within this 'bucket' you can list a single RSS feed or many feeds. For example, you can opt to list all of your agency's press releases separately (such as Police News, Fire News, EMS News, etc.) or you can list all three under one general name (such as News).</p>
-
-<p><img class="img-responsive" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/rss.png" alt="Add an RSS Feed"></img></p>
-
-<h3>Feed type</h3>
-
-<p>Select the type of feed. The default option is RSS (for text content like press releases or blogs). Change it to <a href="http://www.rssboard.org/media-rss">media RSS</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> for multimedia content like images and videos.</p>
-
-<p>Each item within a RSS feed must include a title, link, description, and publication date.</p>
-
-<p>Each item within a media RSS feed must also include both a <a href="http://www.rssboard.org/media-rss#media-content">media:content URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a direct URL to the media object and a <a href="http://www.rssboard.org/media-rss#media-thumbnails">media:thumbnail URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a URL to the object's thumbnail.</p>
-
-<p>Any items missing a required element won't display in your search results.</p>
-
-<h3>Sample RSS Item with All Required Elements</h3>
-
-<pre><code>&lt;item&gt;
-&lt;title&gt;
-Statement from Agriculture Secretary Tom Vilsack Regarding World Organization for Animal Health (OIE) Upgrade of United States&amp;apos; BSE Risk Status
-&lt;/title&gt;
-&lt;pubDate&gt;May 29, 2013 00:00:00 CDT&lt;/pubDate&gt;
-&lt;link&gt;
-http://www.usda.gov/wps/portal/usda/usdahome?contentid=2013/05/0106.xml&amp;contentidonly=true
-&lt;/link&gt;
-&lt;description&gt;
-WASHINGTON, May 29, 2013–Agriculture Secretary Tom Vilsack made the following statement about notification received today from the World Organization for Animal Health (OIE) upgrading the United States&amp;apos; risk classification for bovine spongiform encephalopathy (BSE) to negligible risk:
-&lt;/description&gt;
-&lt;/item&gt;
-</code></pre>
-
-<h3>Sample Media RSS Item with All Required Elements</h3>
-
-<pre><code>&lt;item&gt;
-&lt;title type="html"&gt;
-&lt;![CDATA[ Great Lakes Beach Health ]]&gt;
-&lt;/title&gt;
-&lt;link&gt;
-http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
-&lt;/link&gt;
-&lt;guid&gt;
-http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
-&lt;/guid&gt;
-&lt;pubDate&gt;Fri, 24 May 2013 00:00:00 EDT&lt;/pubDate&gt;
-&lt;media:description type="html"&gt;
-&lt;![CDATA[ As schools close for the year and summer weather beckons, many recreationalists head to the Great Lakes' public beaches. However, these coastal areas can become  contaminated with disease-causing bacteria that threaten public health, disrupt water   recreation, and pay a toll on the Great Lakes economies that depend on summer tourism. ]]&gt;
-&lt;/media:description&gt;
-&lt;media:thumbnail url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/thumbs/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
-&lt;media:content type="" url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/large/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
-&lt;/item&gt;
-</code></pre>
-
-<h2>Step 2. Opt to Show as a Facet, Inline Module, or Both</h2>
-
-<p>Allow searchers to see inline results for the three most recent, relevant RSS results <em>across all of your RSS feeds</em> by turning on the News module on the <a href="/manual/display-overview.html">Display Overview</a> page. You can also edit the default title, News, on the Display Overview page.</p>
-
-<p>Allow searchers to narrow results to a specific feed by turning on the option to show the facet on the <a href="/manual/display-overview.html">Display Overview</a> page. To ensure searchers don't encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a facet.</p>
-
-<h2>Step 3. Check Your Search Results Page</h2>
-
-<p><strong>Module.</strong> If you opted to show your RSS feed(s) as a module, searchers will see inline news results. It'll will highlight the three most recent, relevant results across all of your RSS feeds.</p>
-
-<p><strong>Facet.</strong> If you opted to show your RSS feed(s) as a facet, searchers can narrow their results to see your RSS-based results only.</p>
-
-<p>Within the RSS-based results, searchers can opt to limit results to the last hour, day, week, month, or year, or they can set a custom date range. They also can sort results in descending order by relevance (best match first) or date (most recent first).</p>
-
-<p><strong>Results count.</strong> We show the number of results returned for searches against your feed(s).</p>
-
-<p><img class="img-responsive" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/ResultsCount.png" alt="Results count for items in our indexes"></img></p>
-
-<h2>Step 4. Check the Status of Your Feeds</h2>
-
-<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each feed's status.</p>
-
-<p><img class="img-responsive" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/rss-status.png" alt="RSS status messages and colors"></img></p>
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;"> Color </th>
-<th style="text-align:left;"> Status </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;"> Green&nbsp;&nbsp;&nbsp; </td>
-<td style="text-align:left;"> Feed indexed, no errors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Yellow </td>
-<td style="text-align:left;"> Pending Indexing </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Red </td>
-<td style="text-align:left;"> Feed indexed, but error in one or more items </td>
-</tr>
-<tr>
-<td style="text-align:left;"> &nbsp; </td>
-<td style="text-align:left;"> &nbsp; </td>
-</tr>
-</tbody>
-</table>
-
-
-<p>Click on the name of any feed with an error to see more detailed information about it. Possible error messages follow.</p>
-
-<ul>
-<li>404 Not Found</li>
-<li>Feed looks empty</li>
-<li>Description can't be blank</li>
-<li>Title can't be blank</li>
-<li>Missing link field</li>
-<li>Missing pubDate field</li>
-<li>Link is not a valid URL</li>
-<li>Linked URL does not exist (HTTP 404)</li>
-</ul>
-
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
-
-<ul>
-<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
-<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-<li><a href="http://atomenabled.org/developers/syndication/">Atom syndication format</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-</ul>
-
-
-<p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="https://search.usa.gov/sites/">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don't need to coordinate with us.</p>
-
-<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your feed.</p>
-
-<p>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab. Change the form action to <code>action="https://search.usa.gov/search/news</code> and add the following line to limit the results to your feed.</p>
-
-<p><code>&lt;input type="hidden" name="channel" value="###"&gt;</code></p>
-
-<p>The value is the number for your feed ID, which is visible in the URL when you edit your feed in the Admin Center.</p>
-
-<p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your RSS feeds.</p>
-
-<p><strong><em>Did you know?</em></strong> When you <a href="/manual/youtube.html">provide us with your YouTube channel</a>, we'll automatically index the RSS feed for your YouTube channel.</p>
-
-<p><strong><em>Did you know?</em></strong> For any feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by these facets in the <a href="/manual/display-overview.html">sidebar</a> on the results page.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/rss"><span class="label label-info">rss</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/rss.html">
-        <time datetime="2016-12-28">December 28, 2016</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/manual/preview.html">How to Preview Your Search Results</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Preview</p>
-
-<p>As you update your site's display settings, you can preview your search results page before pushing the changes to your live website.</p>
-
-<p>Visit our <a href="https://search.usa.gov/sites/">Admin Center</a>, select your site, and click on the Preview option (the eye icon) in the left-hand menu.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/preview-nav.png" alt="Select the preview option" /></p>
-
-<p>Enter a term in the box to see search results.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> You can also preview (and share) your search results page by typing https://search.usa.gov/search?affiliate=<strong>YourSiteHandle</strong> into the address bar in any browser. (Your site handle is listed on the <a href="/manual/settings.html">Settings</a> page in the Admin Center, if you don't know it.)</p>
-
-<p><strong><em>Did you know?</em></strong> If you're still on our legacy results page, you'll see two to three options.</p>
-
-<p><strong>View Staged.</strong> This option allows you to view the staged search results page before you publish it to your live site. You'll see this option if you have staged changes.</p>
-
-<p><strong>View Current.</strong> This option allows you to view the current, live search results page on your site. This is the only option you'll see if you don't have any staged changes.</p>
-
-<p><strong>View Redesigned Page.</strong> This option allows you to view the <a href="/blog/serp-redesign.html">newly redesigned search results page</a> as it'll appear on your site after May 30, 2014.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/preview"><span class="label label-info">preview</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/preview.html">
         <time datetime="2016-12-28">December 28, 2016</time>
       </a>
     </div>
