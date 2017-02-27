@@ -30,25 +30,6 @@ We have a [proven track record](/tagged/quote) of delivering fast, relevant sear
 </tr>
 </table>
 
-<table align="center" width="100%">
-<tr><td>&nbsp;</td></tr>
-<tr>
-<td valign="top" align="center"><a href="https://portal.ehawaii.gov/page/search/?q=jobs"><img alt="Hawaii" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/customers-hawaii.png"></a><br><strong>Hawaii</strong></td>
-<td valign="top" align="center"><a href="http://www.idaho.gov/home/search_results.html?query=jobs"><img alt="Idaho" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/customers-idaho.png"></a><br><strong>Idaho</strong></td>
-<td valign="top" align="center"><a href="http://search.kansas.gov/search?affiliate=kansas.gov&query=jobs"><img alt="Kansas" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/customers-kansas.png"></a><br><strong>Kansas</strong></td>
-<td valign="top" align="center"><a href="http://kentucky.gov/Pages/search.aspx?terms=jobs&affiliateId=GENERAL"><img alt="Kentucky" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/customers-kentucky.png"></a><br><strong>Kentucky</strong></td>
-</tr>
-</table>
-
-<table align="center" width="100%">
-<tr><td>&nbsp;</td></tr>
-<tr>
-<td valign="top" align="center"><a href="http://search.usa.gov/search?affiliate=www.louisiana.gov&query=jobs"><img alt="Louisiana" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/customers-louisiana.png"></a><br><strong>Louisiana</strong></td>
-<td valign="top" align="center"><a href="http://nvsearch.nv.gov/search?affiliate=stateofnevada&query=jobs"><img alt="Nevada" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/customers-nevada.png"></a><br><strong>Nevada</strong></td>
-<td valign="top" align="center"><a href="https://search.usa.gov/search?affiliate=ri.gov&query=jobs"><img alt="Rhode Island" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/customers-ri.png"></a><br><strong>Rhode Island</strong></td>
-<td valign="top" align="center"><a href="http://search.usa.gov/search?affiliate=accesswashington&query=jobs"><img alt="Washington" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/customers-washington.png" height="70"></a><br><strong>Washington</strong></td>
-</tr>
-</table>
 <a name="history"></a>
 
 ## Our History
