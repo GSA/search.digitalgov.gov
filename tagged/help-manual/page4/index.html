@@ -103,112 +103,68 @@
  
     
     <h1>
-      <a href="/manual/color-codes.html">Key to Color Coding in the Admin Center</a>
+      <a href="/manual/site-overview.html">How to View a Snapshot of What's Happening on Your Site Today</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Site Overview</p>
 
-<p>We use color coding the Admin Center to indicate the status of a few types of items.</p>
+<p>The Site Overview page provides a snapshot of what has been happening on your site in the past day. All of the analytics in the <a href="https://search.usa.gov/sites/">Admin Center</a> are updated in real-time, which means that you instantaneously see the searches and clicks as they're performed on your site.</p>
 
-<h2><a href="/manual/users.html">Manage Users</a></h2>
+<p>You can opt to receive this snapshot as a daily email by clicking on the envelope icon (<i class="icon-envelope"></i>) in the top navigation bar next to your selected site.</p>
 
-<table>
-<thead>
-<tr>
-<th style="text-align:left;"> Color </th>
-<th style="text-align:left;"> Status </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;"> No color&nbsp;&nbsp;&nbsp; </td>
-<td style="text-align:left;"> Approved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Yellow  </td>
-<td style="text-align:left;"> Pending - requires approval or email verification </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Red   </td>
-<td style="text-align:left;"> Not approved </td>
-</tr>
-</tbody>
-</table>
+<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
 
+<h2>Top Queries</h2>
 
-<h2><a href="/manual/rss.html">RSS Feeds</a></h2>
+<p>Reports on the top 10 searches done by searchers on your site. If you don't have any searches, you'll see a message that there aren't enough query data available. These typically don't require any action as they don't change much from day-to-day.</p>
 
-<table>
-<thead>
-<tr>
-<th style="text-align:left;"> Color </th>
-<th style="text-align:left;"> Status </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;"> Green&nbsp;&nbsp;&nbsp; </td>
-<td style="text-align:left;"> Feed indexed, no errors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Yellow  </td>
-<td style="text-align:left;"> Pending Indexing </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Red   </td>
-<td style="text-align:left;"> Feed indexed, but error in one or more items </td>
-</tr>
-<tr>
-<td style="text-align:left;"> &nbsp; </td>
-<td style="text-align:left;"> &nbsp; </td>
-</tr>
-</tbody>
-</table>
+<p>Note that the data are processed to present "real" searches by humans (that is, the data are de-duped by IP address to remove bot traffic and other noise).</p>
 
+<h2>Top Clicked URLs</h2>
 
-<p>Click on the name of the feed to see more detailed information about its status. Possible error messages follow.</p>
+<p>Reports on the top 10 pages that were clicked thru by searchers on your search results page. If you don't have any clicks, you'll see a message that there aren't enough click data available. These typically don't require any action as they don't change much from day-to-day.</p>
 
-<ul>
-<li>404 Not Found</li>
-<li>Feed looks empty</li>
-<li>Description can't be blank</li>
-<li>Title can't be blank</li>
-<li>Missing link field</li>
-<li>Missing pubDate field</li>
-<li>Link is not a valid URL</li>
-<li>Linked URL does not exist (HTTP 404)</li>
-</ul>
+<h2>Trending URLs</h2>
 
+<p>If there are any pages that are trending, they'll appear here. Reports on up to the top 10 changing URLs that were <em>visited by users on your website</em>.</p>
 
-<h2><a href="/manual/best-bets.html">Best Bets</a>: Text or Graphics</h2>
+<p>Use this report to identify newly popular pages on your website. Investigate why pages are trending, if the reason is not immediately apparent.</p>
 
-<table>
-<thead>
-<tr>
-<th style="text-align:left;"> Color </th>
-<th style="text-align:left;"> Status </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;"> Green&nbsp;&nbsp;&nbsp;  </td>
-<td style="text-align:left;"> Active&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Yellow   </td>
-<td style="text-align:left;"> Inactive </td>
-</tr>
-<tr>
-<td style="text-align:left;"> &nbsp; </td>
-<td style="text-align:left;"> &nbsp; </td>
-</tr>
-</tbody>
-</table>
+<p>Note that you'll only see this list of trending URLs if you have our <a href="/manual/code.html">Javascript snippet</a> on your web pages. Data are updated every few minutes so this is near real-time information and you may see URLs come and go quickly.</p>
 
+<h2>Trending Queries</h2>
 
-<p>Active best bets are shown to searchers on your site. Inactive entries aren't shown to searchers because they're inactive, expired (by the publish end date), or both.</p>
+<p>If there are any queries that are trending, they'll appear here. Reports on up to the top 10 changing search terms with the greatest <em>gain</em> between yesterday and today.</p>
+
+<p>Use this report to identify newly popular terms. Create new content or update existing content to ensure it's current, accurate, and complete.</p>
+
+<h2>Queries with No Results</h2>
+
+<p>If there are any terms that returned no results, they'll appear here. Reports on up to the top 10 queries with no results.</p>
+
+<p>For example, on one agency's website in October 2012, a dozen searches for <em>frostline</em> returned no results. The frost line&mdash;also known as depth of frost or freezing&mdash;is the depth to which the groundwater in soil is expected to freeze. The agency's pages on the topic referred to this concept as <em>depth of freezing</em>.</p>
+
+<p>Use this alert about results data to help searchers find your content by adding a <a href="/manual/best-bets.html">Best Bet</a>, updating your existing web pages, or both.</p>
+
+<h2>Top Queries with Low Click Thrus</h2>
+
+<p>If there are any frequently searched terms that returned results but didn't result in a click at least 20% of the time, they'll appear here. Reports on up to the top 10 searches with low click thru rates.</p>
+
+<p>Use this alert about low click thrus to identify issues with coverage. You may opt to create a <a href="/manual/best-bets.html">Best Bet (Text or Graphics)</a>, add pages that may be missing from the results, or do both to improve recall. Or, you may opt to incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results, or enter common search terms as keywords, verbatim.</p>
+
+<h2>This Month's Totals to Date</h2>
+
+<p>Reports on the total number of queries and clicks for the present month-to-date. A click  is recorded each time a searcher clicks on a results link.</p>
+
+<p>A graph of your site's total search queries over time is also presented to provide an overview of how your traffic has trended from the time your agency started using our service (but no further back than 2010). Hover over the trend line to see the total number of queries in previous months.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and <a href="/manual/clicks.html">clicks</a> each month.</p>
+
+<p><strong><em>Did you know?</em></strong>  Click the pushpin icon in the top navigation bar to change the default site that appears when you first log in to the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
 
     </div>
 
@@ -216,11 +172,11 @@
       
       <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
       
-      <a href="/tagged/manage-users"><span class="label label-info">manage-users</span></a>
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
       
-      <a href="/tagged/best-bets"><span class="label label-info">best-bets</span></a>
+      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
       
-      <a href="/tagged/rss"><span class="label label-info">rss</span></a>
+      <a href="/tagged/site-overview"><span class="label label-info">site-overview</span></a>
       
     </div>
    <div class='time'>
@@ -228,7 +184,7 @@
       
       
       
-      <a href="/manual/color-codes.html">
+      <a href="/manual/site-overview.html">
         <time datetime="2015-11-02">November 2, 2015</time>
       </a>
     </div>
@@ -458,7 +414,7 @@
 
 <p><strong>Tagline.</strong> Fill out text for a "tagline" if you'd like one to appear at the very top of your results page header.</p>
 
-<p>The default tagline style uses Georgia (font family), 1.3 em (size), and italic (style). Email us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#x61;&#114;&#99;&#104;&#64;&#115;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#x61;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#111;&#118;">&#x73;&#x65;&#x61;&#x72;&#99;&#x68;&#x40;&#x73;&#x75;&#x70;&#112;&#111;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#103;&#x6f;&#x76;&#x2e;&#x67;&#111;&#x76;</a> if you'd like to change the default font family, size, or style.</p>
+<p>The default tagline style uses Georgia (font family), 1.3 em (size), and italic (style). Email us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#x73;&#101;&#97;&#x72;&#99;&#104;&#64;&#115;&#117;&#112;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#97;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#x67;&#111;&#x76;">&#x73;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#112;&#111;&#x72;&#116;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#x61;&#108;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#118;</a> if you'd like to change the default font family, size, or style.</p>
 
 <p><strong>Menu Button Alignment.</strong> Leave the Browse Site "hamburger" menu right-aligned, or select the Left option to make it left-aligned.</p>
 
@@ -723,7 +679,7 @@ URL: mailto:info@agency.gov</p>
 </table>
 
 
-<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#117;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#x64;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;">&#x73;&#x65;&#x61;&#114;&#99;&#104;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#x6f;&#118;</a>.</p>
+<p>Do you have other questions or comments about how our service works? Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#115;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#111;&#118;">&#115;&#101;&#97;&#114;&#x63;&#x68;&#64;&#115;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#x6f;&#x76;</a>.</p>
 
     </div>
 

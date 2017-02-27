@@ -103,6 +103,125 @@
  
     
     <h1>
+      <a href="/manual/third-party.html">How to Add JavaScript for Your Third-party Web Services</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > 3rd Party Tracking</p>
+
+<p>Do you want your search results page to run third-party web services such as Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?</p>
+
+<p>Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
+
+<p>Some tips for commonly used third-party web services follow.</p>
+
+<p><strong><em>Note</em></strong>: We do not currently support Google Tag Manager. You will need to submit all of the scripts you are managing in your Google Tag Manager setup.</p>
+
+<h2>Google Analytics Tip</h2>
+
+<p>Within your Google Analytics account, select the option, <em>Do Track Site Search</em>. Set the query parameter as <em>query</em>. For more information, read Google's tip, <a href="https://support.google.com/analytics/answer/1012264?hl=en&amp;ref_topic=1031951">Set Up and Configure Site Search</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<p>Additionally, if you've requested <a href="cname.html">domain masking</a> and you want to include the analytics for your <em>search.agency.gov</em> subdomain with your main <em>agency.gov</em> domain, you'll need to set your domain in your Google Analytics JavaScript by including <code>_gaq.push(['_setDomainName', 'agency.gov']);</code>.</p>
+
+<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<p>The code you submit should look something like one of the following two scripts.</p>
+
+<h3>Google Analytics Code (Older Format)</h3>
+
+<pre><code> &lt;script type="text/javascript"&gt;
+ var _gaq = _gaq || []; 
+ _gaq.push(['_setAccount', 'UA-########-1']); 
+ _gaq.push(['_trackPageview']);
+
+ (function() { 
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
+ })();
+ &lt;/script&gt;
+</code></pre>
+
+<h3>Google Analytics Code (Newer Format)</h3>
+
+<pre><code> &lt;script type="text/javascript"&gt;
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ &lt;/script&gt;
+</code></pre>
+
+<h2>Digital Analytics Program Tip</h2>
+
+<p>Does your federal agency participate in the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> (DAP)?  You don't need to do anything. We're already fully integrated with DAP.</p>
+
+<h2>ForeSee Tip</h2>
+
+<p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
+
+<ol>
+<li><p>Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#115;&#101;&#97;&#114;&#99;&#104;&#64;&#115;&#117;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#108;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#118;">&#115;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#x74;&#97;&#108;&#103;&#111;&#x76;&#46;&#103;&#111;&#118;</a> to <a href="cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
+<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
+
+<p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
+
+<p> <strong>and replace it with =></strong> 'files': '//www.youragency.gov/fsrscripts/',</p>
+
+<p> <em>(Or, find => 'files': '/foresee/', and replace it with => 'files': '//www.youragency/foresee/',)</em></p>
+
+<p> in the following five files.</p>
+
+<ul>
+<li>foresee-trigger.js</li>
+<li>foresee-tracker.js</li>
+<li>foresee-alive.js</li>
+<li>foresee-qualifier.js</li>
+<li>foresee-test.js</li>
+</ul>
+</li>
+<li><p>Submit your foresee-trigger.js via our Admin Center. It should look something like the following script. <code>&lt;script type="text/javascript" src="//www.youragency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;</code></p></li>
+<li><p>We'll send you an email to confirm that we've set up both your CNAME and added the script for your foresee-trigger.js file.</p></li>
+</ol>
+
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> We use Google Analytics Web analytics software&mdash;our own tag plus the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag&mdash;by default. Email us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x73;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#118;">&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#x74;&#46;&#100;&#105;&#103;&#105;&#x74;&#x61;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;</a> if you'd like to opt out. Learn more about our <a href="http://www.digitalgov.gov/about/policies/">site policies</a> and <a href="../tos.html">terms of service</a>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
+      
+      <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
+      
+      <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
+      
+      <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/third-party.html">
+        <time datetime="2017-01-04">January 4, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/domains-advanced.html">How to Use Advanced Options to Add or Filter Specific URLs</a>
     </h1>
     
@@ -439,7 +558,7 @@
 
 <h2>Site Handle</h2>
 
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#115;&#101;&#97;&#x72;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#114;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#118;">&#115;&#101;&#97;&#114;&#x63;&#x68;&#64;&#115;&#117;&#112;&#x70;&#111;&#x72;&#116;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#118;</a>.</p>
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#58;&#x73;&#101;&#x61;&#114;&#99;&#104;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#118;">&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#112;&#112;&#111;&#x72;&#x74;&#46;&#100;&#x69;&#103;&#105;&#x74;&#97;&#x6c;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a>.</p>
 
 <p><a href="http://search.socialsecurity.gov/search?query=office+locations&amp;affiliate=ssa"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/settings.png" title="Site name and handle on SocialSecurity.gov's search results page" alt="Site name and handle on SocialSecurity.gov's search results page" /></a></p>
 
@@ -449,7 +568,7 @@
 
 <h2>Site Language</h2>
 
-<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">69 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#115;&#x65;&#x61;&#114;&#99;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#x6c;&#103;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;">&#115;&#101;&#97;&#114;&#x63;&#104;&#64;&#x73;&#x75;&#x70;&#112;&#111;&#x72;&#x74;&#46;&#100;&#x69;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a>.</p>
+<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">69 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#97;&#114;&#x63;&#104;&#64;&#115;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#x67;&#111;&#118;">&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#115;&#x75;&#112;&#112;&#111;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;</a>.</p>
 
 <h2>Delete</h2>
 
@@ -1086,151 +1205,6 @@ Keyword 4: market value
       
       
       <a href="/manual/best-bets.html">
-        <time datetime="2016-12-07">December 7, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/best-bets-graphics.html">How to Highlight Graphics Best Bets</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Best Bets: Graphics</p>
-
-<p>Do you want to promote a specific web page or collection of web pages? Create a Graphics Best Bet.</p>
-
-<p>A best bet appears above the standard web results when a searcher's query matches the text of its title, description, or keywords.</p>
-
-<p>Graphics best bets have a one or two-column layout and you can add an image. The most relevant best bet is listed under a heading, Recommended by YourSite.</p>
-
-<p>See the sample results page below that shows a text best bet displayed on <a href="http://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis">USGS.gov for a search on tsunamis</a>.</p>
-
-<p><a href="http://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/best-bets-graphics.png" title="Graphics best bet highlighting tsunami links on USGS.gov" alt="Graphics best bet highlighting tsunami links on USGS.gov" /></a></p>
-
-<p>There are a variety of layouts possible for graphics best bets.</p>
-
-<ul>
-<li><strong>Two columns with a collection of links and an image</strong> displayed on USA.gov for a search on <em><a href="https://search.usa.gov/search?query=wildfires&amp;affiliate=usagov">wildfires</a></em>.</li>
-<li><strong>Two columns with a collection of links only</strong> displayed on USA.gov for a search on <em><a href="https://search.usa.gov/search?affiliate=usagov&amp;query=housing">housing</a></em>.</li>
-<li><strong>One column with a link to a specific web page and an image</strong> displayed on WhiteHouse.gov for a search on <em><a href="https://search.whitehouse.gov/search?affiliate=wh&amp;query=jobs">jobs</a></em>.</li>
-</ul>
-
-
-<h2>Add a Graphics Best Bet</h2>
-
-<p><strong><em>Title.</em></strong> Add the title (up to 255 characters) of the web page or collection of web pages that you want to promote. The title is visible to searchers.</p>
-
-<p><strong><em>Title URL.</em></strong> Add the URL of the primary web page that you want to promote. This field is optional.</p>
-
-<p><strong><em>Status and Publish Dates.</em></strong> The default start date is the day on which you create the best bet. The default end date is null, so it will stay up forever until you decide to take it down. You can opt to set a start and end date to control to specify other start and end dates. You can also opt to set its status as either active or inactive.</p>
-
-<p><strong><em>Layout.</em></strong> Select a one- or two-column layout.</p>
-
-<p><strong><em>Image.</em></strong> You can opt to add an image.</p>
-
-<p><strong><em>Keywords.</em></strong> Keywords are optional and they're <em>not</em> visible to searchers. Add specific words or phrases that aren't already included in the visible title or link titles. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.</p>
-
-<p><strong><em>Links.</em></strong> Enter a title and URL for each link. There is no limit on the number of links. Use the three horizontal bars on the left to rearrange the display order of the links. If you select a two-column layout above, links are displayed in newspaper-style format, with an automatic break for columns depending on how many links you list. The link titles are visible to searchers.</p>
-
-<h2>When Searchers See Your Best Bets</h2>
-
-<p>For searchers to see a best bet on your site, it must match their query and be relevant and active.</p>
-
-<h3>It Matches Their Query</h3>
-
-<p>Searchers see your best bets when their query:</p>
-
-<ul>
-<li>Matches any or all words in the title,</li>
-<li>Matches any of all words in the link titles, or</li>
-<li>Matches a keyword exactly.</li>
-</ul>
-
-
-<p>Matches are made within, but not across, fields.</p>
-
-<p>A sample best bet entry is below.</p>
-
-<pre><code>Title: Estate Tax  
-Link title 1: Transfer Property After You Pass Away  
-Link title 2: Estate Tax Rights  
-Link title 3: Tax Rates  
-Keyword 1: death tax  
-Keyword 2: inheritance tax  
-Keyword 3: fair market value  
-Keyword 4: market value  
-</code></pre>
-
-<p>This best bet would display for searches on estate tax (exact title match), estate (partial title match), tax on the estate (title match that includes stopwords), estate taxes (title match for singular/plural variant), property tax (partial link title match), propertey tax (link title match with a slight misspelling), and death tax (exact keyword match), among other queries.</p>
-
-<p>It would <em>not</em> display for searches on death, death property, taxes after death, fair value, or estate property tax as they're only partial keyword or cross field matches.</p>
-
-<h3>It Is Very Relevant</h3>
-
-<p>After we determine best bets match the searcher's query, we determine their relevance and display only the most relevant best bet. Relevance is determined, in order, first by title, then by link titles, and lastly by keywords. Date is used as a tiebreaker if the entries' scores based on the above three factors are equal.</p>
-
-<h3>It Is Active</h3>
-
-<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each entry's status.</p>
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;"> Color </th>
-<th style="text-align:left;"> Status </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;"> Green&nbsp;&nbsp;&nbsp;  </td>
-<td style="text-align:left;"> Active&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Yellow   </td>
-<td style="text-align:left;"> Inactive </td>
-</tr>
-<tr>
-<td style="text-align:left;"> &nbsp; </td>
-<td style="text-align:left;"> &nbsp; </td>
-</tr>
-</tbody>
-</table>
-
-
-<p>Active best bets are shown to searchers on your site. Inactive entries aren't shown to searchers because they're inactive, expired (by the publish end date), or both.</p>
-
-<hr />
-
-<p>Watch the recording of our February 2015 webinar <a href="https://www.youtube.com/embed/WzQocKYK0t4"><strong>Straight to the Top: Best Bets in DigitalGov Search</strong></a> (55 mins)</p>
-
-<p><strong><em>Did you know?</em></strong> See also our closely related feature that allows you to create a <a href="/manual/best-bets-text.html">Text Best Bets</a>.</p>
-
-<p><strong><em>Did you know?</em></strong> Use the <a href="/manual/system-alert.html">Search Page Alert</a> feature to add a text message to your search results page, which will appear at all times above all search results, <em>regardless of the query</em>.</p>
-
-<p><strong><em>Did you know?</em></strong> Analyze the number of impressions and clicks and clickthru rate for each best bet on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/best-bets"><span class="label label-info">best-bets</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/best-bets-graphics.html">
         <time datetime="2016-12-07">December 7, 2016</time>
       </a>
     </div>
