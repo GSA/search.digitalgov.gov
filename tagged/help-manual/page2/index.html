@@ -103,90 +103,6 @@
  
     
     <h1>
-      <a href="/manual/collections.html">How to Create Collections Within Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Collections</p>
-
-<p>Would you like searchers to be able to change where they are searching, either to a particular place within your site, or to another site? You can create a collection that will search in any set of domains, subdomains, or subfolders.</p>
-
-<h2>Step 1. Create a Collection</h2>
-
-<p>Enter a name for the collection (such as FAQs, Archive, or News).</p>
-
-<p>Enter the domains, subdomains, or subfolders that you want this collection to search in. Start each URL prefix with http:// and end it in a trailing slash to avoid unintended matches (e.g., https://publications.agency.gov/docs/ and https://answers.agency.gov).</p>
-
-<p>You cannot specify URLs for individual web pages. If you are including a subfolder, be sure to include the folder(s) where the files are actually stored, not the folder where the index page lives.</p>
-
-<p>Paths that are three or more subfolders deep may not return results immediately. <a href="mailto:search@support.digitalgov.gov">Email us</a> if you are not seeing search results for these paths.</p>
-
-<h2>Step 2. Opt to Show as a Facet</h2>
-
-<p>Click on the <a href="/manual/display-overview.html">Display Overview</a> page. Turn on your collection to allow searchers to see it as a search facet in the navigation bar above the search box on the results page (in the desktop view), or in the search menu (on smaller screens).</p>
-
-<h2>Step 3. Check Your Search Results Page</h2>
-
-<p>Searchers will see the collection name as an option that they can select in order to focus their search.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-2.png" alt="Collection on the search results page" /></p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your collection.</p>
-
-<ol>
-<li>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab.</li>
-<li>Change the form action from <code>action="https://search.usa.gov/search/"</code> to <code>action="https://search.usa.gov/search/docs"</code>.</li>
-<li>Add the following line to limit the results to your collection: <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>.</li>
-</ol>
-
-
-<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
-
-<p>See the sample search box below that is limited to news on <a href="https://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=autism">NIH.gov for a search on <em>autism</em></a>.</p>
-
-<p><a href="https://www.nih.gov/news/releases.htm"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-3.png" title="News-only search box on NIH.gov's News Releases page" alt="News-only search box on NIH.gov's News Releases page" /></a></p>
-
-<p><a href="https://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=autism"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-4.png" title="NIH.gov news-only search results page" alt="NIH.gov news-only search results page" /></a></p>
-
-<p><a name="sitelimit"></a></p>
-
-<p><strong><em>Did you know?</em></strong> If you don't want to set up a Collection, you can use the <code>sitelimit</code> parameter to search a subset of your content. Compare the collection-based results above with the results for <a href="https://search.usa.gov/search?affiliate=nih&amp;query=autism&amp;sitelimit=nih.gov/news">the same search using the sitelimit parameter</a>.</p>
-
-<p>Note that the searcher sees that results are filtered to nih.gov/news in a message under the search box, among other differences.</p>
-
-<p>Simply add the following line to your form code on your search box to use the <code>sitelimit</code> parameter.</p>
-
-<p><code>&lt;input type="hidden" name="sitelimit" id="sitelimit" value="https://www.agency.gov/limittothisfolder"&gt;</code></p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/collections"><span class="label label-info">collections</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/collections.html">
-        <time datetime="2016-12-28">December 28, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
       <a href="/manual/code.html">How to Activate Your Search by Adding Our Code Snippets to Your Website</a>
     </h1>
     
@@ -301,6 +217,172 @@
       
       
       <a href="/manual/code.html">
+        <time datetime="2016-12-28">December 28, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/collections.html">How to Create Collections Within Our Index</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Collections</p>
+
+<p>Would you like searchers to be able to change where they are searching, either to a particular place within your site, or to another site? You can create a collection that will search in any set of domains, subdomains, or subfolders.</p>
+
+<h2>Step 1. Create a Collection</h2>
+
+<p>Enter a name for the collection (such as FAQs, Archive, or News).</p>
+
+<p>Enter the domains, subdomains, or subfolders that you want this collection to search in. Start each URL prefix with http:// and end it in a trailing slash to avoid unintended matches (e.g., https://publications.agency.gov/docs/ and https://answers.agency.gov).</p>
+
+<p>You cannot specify URLs for individual web pages. If you are including a subfolder, be sure to include the folder(s) where the files are actually stored, not the folder where the index page lives.</p>
+
+<p>Paths that are three or more subfolders deep may not return results immediately. <a href="mailto:search@support.digitalgov.gov">Email us</a> if you are not seeing search results for these paths.</p>
+
+<h2>Step 2. Opt to Show as a Facet</h2>
+
+<p>Click on the <a href="/manual/display-overview.html">Display Overview</a> page. Turn on your collection to allow searchers to see it as a search facet in the navigation bar above the search box on the results page (in the desktop view), or in the search menu (on smaller screens).</p>
+
+<h2>Step 3. Check Your Search Results Page</h2>
+
+<p>Searchers will see the collection name as an option that they can select in order to focus their search.</p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-2.png" alt="Collection on the search results page" /></p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your collection.</p>
+
+<ol>
+<li>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab.</li>
+<li>Change the form action from <code>action="https://search.usa.gov/search/"</code> to <code>action="https://search.usa.gov/search/docs"</code>.</li>
+<li>Add the following line to limit the results to your collection: <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>.</li>
+</ol>
+
+
+<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
+
+<p>See the sample search box below that is limited to news on <a href="https://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=autism">NIH.gov for a search on <em>autism</em></a>.</p>
+
+<p><a href="https://www.nih.gov/news/releases.htm"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-3.png" title="News-only search box on NIH.gov's News Releases page" alt="News-only search box on NIH.gov's News Releases page" /></a></p>
+
+<p><a href="https://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=autism"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-4.png" title="NIH.gov news-only search results page" alt="NIH.gov news-only search results page" /></a></p>
+
+<p><a name="sitelimit"></a></p>
+
+<p><strong><em>Did you know?</em></strong> If you don't want to set up a Collection, you can use the <code>sitelimit</code> parameter to search a subset of your content. Compare the collection-based results above with the results for <a href="https://search.usa.gov/search?affiliate=nih&amp;query=autism&amp;sitelimit=nih.gov/news">the same search using the sitelimit parameter</a>.</p>
+
+<p>Note that the searcher sees that results are filtered to nih.gov/news in a message under the search box, among other differences.</p>
+
+<p>Simply add the following line to your form code on your search box to use the <code>sitelimit</code> parameter.</p>
+
+<p><code>&lt;input type="hidden" name="sitelimit" id="sitelimit" value="https://www.agency.gov/limittothisfolder"&gt;</code></p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/collections"><span class="label label-info">collections</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/collections.html">
+        <time datetime="2016-12-28">December 28, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/blog/go-live.html">Going Live with DigitalGov Search</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Your pre-launch checklist will be unique to your agency's workflow, requirements, and deadlines. Below is a typical checklist.</p>
+
+<h2>Double Check Your Content Sources</h2>
+
+<p><i class="icon-check"></i> <strong>1. Have you told us which domain(s) you want to search?</strong> List one or more <a href="/manual/domains.html">domains</a> that you want to search on the first page of web results. Most agencies opt to leave out the 'www' to include all subdomains (for example, list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies especially department-level portals opt to also include their bureaus' websites (for example, Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)</p>
+
+<p><i class="icon-check"></i> <strong>2. Have you told us about your RSS feeds?</strong> We love <a href="/manual/rss.html">RSS feeds</a>. Tell us about all of your feeds, even if you opt not to show them (see #5 below). They're the quickest way for you to tell us about your new and updated content. Feeds also have well-structured titles, URLs, descriptions, and dates that we use to improve your search results page. (Tip: Preview your feeds from the RSS page in the <a href="https://search.usa.gov/sites/">Admin Center</a> to confirm that we've indexed your content.)</p>
+
+<p><i class="icon-check"></i> <strong>3. Have you told us about your social media accounts?</strong> <a href="/manual/flickr.html">Flickr photostreams</a>, <a href="/manual/twitter.html">tweets</a>, and <a href="/manual/youtube.html">YouTube videos</a> are a great way to highlight your recent content. Tell us about all of your social media, even if you opt not to show them (see #5 below).</p>
+
+<h2>Customize the Display of Your Search Results Page</h2>
+
+<p><i class="icon-check"></i> <strong>4. Have you made the search results page look like your website?</strong> Customize the <a href="/manual/brand.html">brand</a> (font, colors, logo, favicon, and navigation links) of your search results page to create a seamless experience for users as they search and browse your website.</p>
+
+<p><i class="icon-check"></i> <strong>5. Have you told us what to show on your results page?</strong> Turn on (or off) the inline modules and facets that you want to appear on your search results page. You can change the default settings on the <a href="/manual/display-overview.html">Display Overview</a> page in the Admin Center.</p>
+
+<h2>Connect Your Site to DigitalGov Search</h2>
+
+<p>Most agencies add these two <a href="/manual/code.html">snippets of code</a> to the template(s) in their websites or content management systems (rather than adding them to individual pages).</p>
+
+<p><i class="icon-check"></i> <strong>6. Does your search box point to DigitalGov Search?</strong> Update your search box form code point to our service so that, when users execute a search, they'll see your DigitalGov Search-hosted results page.</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+     &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p><i class="icon-check"></i> <strong>7. Do you have our Javascript tag on your webpages?</strong> This Javascript powers the suggestions for type-ahead and <a href="/manual/display-overview.html">related searches</a>. It also provides data on your trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+     var usasearch_config = { siteHandle:"YourSiteHandle" };
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "//search.usa.gov/javascripts/remote.loader.js";
+    document.getElementsByTagName("head")[0].appendChild(script);
+//]]&gt;
+&lt;/script&gt;
+</code></pre>
+
+<h2>Set Up Nice-to-Have Features (Optional)</h2>
+
+<p><i class="icon-check"></i> <strong>8. Have you masked your domain?</strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov.</p>
+
+<p><i class="icon-check"></i> <strong>9. Have you added the Javascripts for your other third-party web services to your results page?</strong> If you have a <a href="/manual/third-party.html">third-party service</a> running on your website, you likely want it to run on your results page. Agencies often include their Foresee, Google Analytics, Omniture, or WebTrends code, among others. If your federal website participates in the <a href="https://www.digitalgov.gov/services/dap/">Digital Analytics Program</a>, you do not need to take any action: DAP code is included on your results page, by default.</p>
+
+<h2>Don't Forget SEO (Optional)</h2>
+
+<p><i class="icon-check"></i> <strong>10. Have you optimized your site so we can find your content?</strong> We follow <a href="http://www.digitalgov.gov/2013/05/31/four-steps-to-achieve-good-seo/">search engine optimization</a> (SEO) best practices. Verify that you have a <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and an <a href="http://www.sitemaps.org">XML sitemap</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. These two files are typically located in the root directory of your website (i.e., agency.gov/robots.txt and agency.gov/sitemap.xml, respectively). Also verify that your robots.txt file allows our user agent (usasearch) to access your public content.</p>
+
+<p><i class="icon-check"></i> <strong>11. Have you registered your site with the major commercial search engines?</strong> Register for both <a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to maximize the coverage of your content in their search results.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/blog/go-live.html">
         <time datetime="2016-12-28">December 28, 2016</time>
       </a>
     </div>
@@ -489,6 +571,151 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
       
       <a href="/manual/https-transition.html">
         <time datetime="2016-12-15">December 15, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/best-bets-graphics.html">How to Highlight Graphics Best Bets</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Best Bets: Graphics</p>
+
+<p>Do you want to promote a specific web page or collection of web pages? Create a Graphics Best Bet.</p>
+
+<p>A best bet appears above the standard web results when a searcher's query matches the text of its title, description, or keywords.</p>
+
+<p>Graphics best bets have a one or two-column layout and you can add an image. The most relevant best bet is listed under a heading, Recommended by YourSite.</p>
+
+<p>See the sample results page below that shows a text best bet displayed on <a href="http://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis">USGS.gov for a search on tsunamis</a>.</p>
+
+<p><a href="http://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/best-bets-graphics.png" title="Graphics best bet highlighting tsunami links on USGS.gov" alt="Graphics best bet highlighting tsunami links on USGS.gov" /></a></p>
+
+<p>There are a variety of layouts possible for graphics best bets.</p>
+
+<ul>
+<li><strong>Two columns with a collection of links and an image</strong> displayed on USA.gov for a search on <em><a href="https://search.usa.gov/search?query=wildfires&amp;affiliate=usagov">wildfires</a></em>.</li>
+<li><strong>Two columns with a collection of links only</strong> displayed on USA.gov for a search on <em><a href="https://search.usa.gov/search?affiliate=usagov&amp;query=housing">housing</a></em>.</li>
+<li><strong>One column with a link to a specific web page and an image</strong> displayed on WhiteHouse.gov for a search on <em><a href="https://search.whitehouse.gov/search?affiliate=wh&amp;query=jobs">jobs</a></em>.</li>
+</ul>
+
+
+<h2>Add a Graphics Best Bet</h2>
+
+<p><strong><em>Title.</em></strong> Add the title (up to 255 characters) of the web page or collection of web pages that you want to promote. The title is visible to searchers.</p>
+
+<p><strong><em>Title URL.</em></strong> Add the URL of the primary web page that you want to promote. This field is optional.</p>
+
+<p><strong><em>Status and Publish Dates.</em></strong> The default start date is the day on which you create the best bet. The default end date is null, so it will stay up forever until you decide to take it down. You can opt to set a start and end date to control to specify other start and end dates. You can also opt to set its status as either active or inactive.</p>
+
+<p><strong><em>Layout.</em></strong> Select a one- or two-column layout.</p>
+
+<p><strong><em>Image.</em></strong> You can opt to add an image.</p>
+
+<p><strong><em>Keywords.</em></strong> Keywords are optional and they're <em>not</em> visible to searchers. Add specific words or phrases that aren't already included in the visible title or link titles. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.</p>
+
+<p><strong><em>Links.</em></strong> Enter a title and URL for each link. There is no limit on the number of links. Use the three horizontal bars on the left to rearrange the display order of the links. If you select a two-column layout above, links are displayed in newspaper-style format, with an automatic break for columns depending on how many links you list. The link titles are visible to searchers.</p>
+
+<h2>When Searchers See Your Best Bets</h2>
+
+<p>For searchers to see a best bet on your site, it must match their query and be relevant and active.</p>
+
+<h3>It Matches Their Query</h3>
+
+<p>Searchers see your best bets when their query:</p>
+
+<ul>
+<li>Matches any or all words in the title,</li>
+<li>Matches any of all words in the link titles, or</li>
+<li>Matches a keyword exactly.</li>
+</ul>
+
+
+<p>Matches are made within, but not across, fields.</p>
+
+<p>A sample best bet entry is below.</p>
+
+<pre><code>Title: Estate Tax  
+Link title 1: Transfer Property After You Pass Away  
+Link title 2: Estate Tax Rights  
+Link title 3: Tax Rates  
+Keyword 1: death tax  
+Keyword 2: inheritance tax  
+Keyword 3: fair market value  
+Keyword 4: market value  
+</code></pre>
+
+<p>This best bet would display for searches on estate tax (exact title match), estate (partial title match), tax on the estate (title match that includes stopwords), estate taxes (title match for singular/plural variant), property tax (partial link title match), propertey tax (link title match with a slight misspelling), and death tax (exact keyword match), among other queries.</p>
+
+<p>It would <em>not</em> display for searches on death, death property, taxes after death, fair value, or estate property tax as they're only partial keyword or cross field matches.</p>
+
+<h3>It Is Very Relevant</h3>
+
+<p>After we determine best bets match the searcher's query, we determine their relevance and display only the most relevant best bet. Relevance is determined, in order, first by title, then by link titles, and lastly by keywords. Date is used as a tiebreaker if the entries' scores based on the above three factors are equal.</p>
+
+<h3>It Is Active</h3>
+
+<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each entry's status.</p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;"> Color </th>
+<th style="text-align:left;"> Status </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> Green&nbsp;&nbsp;&nbsp;  </td>
+<td style="text-align:left;"> Active&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+</tr>
+<tr>
+<td style="text-align:left;"> Yellow   </td>
+<td style="text-align:left;"> Inactive </td>
+</tr>
+<tr>
+<td style="text-align:left;"> &nbsp; </td>
+<td style="text-align:left;"> &nbsp; </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Active best bets are shown to searchers on your site. Inactive entries aren't shown to searchers because they're inactive, expired (by the publish end date), or both.</p>
+
+<hr />
+
+<p>Watch the recording of our February 2015 webinar <a href="https://www.youtube.com/embed/WzQocKYK0t4"><strong>Straight to the Top: Best Bets in DigitalGov Search</strong></a> (55 mins)</p>
+
+<p><strong><em>Did you know?</em></strong> See also our closely related feature that allows you to create a <a href="/manual/best-bets-text.html">Text Best Bets</a>.</p>
+
+<p><strong><em>Did you know?</em></strong> Use the <a href="/manual/system-alert.html">Search Page Alert</a> feature to add a text message to your search results page, which will appear at all times above all search results, <em>regardless of the query</em>.</p>
+
+<p><strong><em>Did you know?</em></strong> Analyze the number of impressions and clicks and clickthru rate for each best bet on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/best-bets"><span class="label label-info">best-bets</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/best-bets-graphics.html">
+        <time datetime="2016-12-07">December 7, 2016</time>
       </a>
     </div>
     </article>
@@ -703,124 +930,58 @@ Keyword 4: market value
  
     
     <h1>
-      <a href="/manual/best-bets-graphics.html">How to Highlight Graphics Best Bets</a>
+      <a href="/manual/account.html">How to Create and Edit Your Account</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Best Bets: Graphics</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > My Account</p>
 
-<p>Do you want to promote a specific web page or collection of web pages? Create a Graphics Best Bet.</p>
+<p>You can use DigitalGov Search to power the search box on your federal government website&mdash;at no cost.</p>
 
-<p>A best bet appears above the standard web results when a searcher's query matches the text of its title, description, or keywords.</p>
+<h2>Log In</h2>
 
-<p>Graphics best bets have a one or two-column layout and you can add an image. The most relevant best bet is listed under a heading, Recommended by YourSite.</p>
+<p>Log in to an existing account <a href="https://search.usa.gov/login">https://search.usa.gov/login</a> or register for a new account at <a href="https://search.usa.gov/signup">https://search.usa.gov/signup</a>.</p>
 
-<p>See the sample results page below that shows a text best bet displayed on <a href="http://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis">USGS.gov for a search on tsunamis</a>.</p>
+<p><a href="https://search.usa.gov/login"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/login.png" title="Login from search.digitalgov.gov" alt="Login from search.digitalgov.gov" /></a></p>
 
-<p><a href="http://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/best-bets-graphics.png" title="Graphics best bet highlighting tsunami links on USGS.gov" alt="Graphics best bet highlighting tsunami links on USGS.gov" /></a></p>
+<p>Access to our service requires agreement with our <a href="/tos.html">Terms of Service</a> and verification that you're a federal government employee or contractor acting within the scope of your government contract.</p>
 
-<p>There are a variety of layouts possible for graphics best bets.</p>
+<p>After you register, you'll receive an automatic email. Click on the link in the email to verify that your email address belongs to you.</p>
 
-<ul>
-<li><strong>Two columns with a collection of links and an image</strong> displayed on USA.gov for a search on <em><a href="https://search.usa.gov/search?query=wildfires&amp;affiliate=usagov">wildfires</a></em>.</li>
-<li><strong>Two columns with a collection of links only</strong> displayed on USA.gov for a search on <em><a href="https://search.usa.gov/search?affiliate=usagov&amp;query=housing">housing</a></em>.</li>
-<li><strong>One column with a link to a specific web page and an image</strong> displayed on WhiteHouse.gov for a search on <em><a href="https://search.whitehouse.gov/search?affiliate=wh&amp;query=jobs">jobs</a></em>.</li>
-</ul>
+<p>If you have a .gov or .mil address, you'll be able to access your account immediately after you verify your email.</p>
 
+<p>If you don't have a .gov or .mil address, we'll ask for additional information to confirm that you're a government employee or contractor. We'll notify you when your account is approved.</p>
 
-<h2>Add a Graphics Best Bet</h2>
+<h2>Add a Site</h2>
 
-<p><strong><em>Title.</em></strong> Add the title (up to 255 characters) of the web page or collection of web pages that you want to promote. The title is visible to searchers.</p>
+<p>Once your account is approved, you can <a href="/manual/add-site.html">add a site</a> in our <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
 
-<p><strong><em>Title URL.</em></strong> Add the URL of the primary web page that you want to promote. This field is optional.</p>
+<h2>Edit Your Contact Information</h2>
 
-<p><strong><em>Status and Publish Dates.</em></strong> The default start date is the day on which you create the best bet. The default end date is null, so it will stay up forever until you decide to take it down. You can opt to set a start and end date to control to specify other start and end dates. You can also opt to set its status as either active or inactive.</p>
+<p>If you need to update your email address, name, or agency for any reason, it's easy to change your them in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
 
-<p><strong><em>Layout.</em></strong> Select a one- or two-column layout.</p>
+<p>In the upper right-hand corner, there is a drop-down menu. Click on <em>My account</em>.</p>
 
-<p><strong><em>Image.</em></strong> You can opt to add an image.</p>
+<p><a href="https://search.usa.gov/sites/"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/blog-edit-email1.png" title="Edit your account" alt="Edit your account" /></a></p>
 
-<p><strong><em>Keywords.</em></strong> Keywords are optional and they're <em>not</em> visible to searchers. Add specific words or phrases that aren't already included in the visible title or link titles. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.</p>
+<p>Once on this page you can edit your email address.</p>
 
-<p><strong><em>Links.</em></strong> Enter a title and URL for each link. There is no limit on the number of links. Use the three horizontal bars on the left to rearrange the display order of the links. If you select a two-column layout above, links are displayed in newspaper-style format, with an automatic break for columns depending on how many links you list. The link titles are visible to searchers.</p>
-
-<h2>When Searchers See Your Best Bets</h2>
-
-<p>For searchers to see a best bet on your site, it must match their query and be relevant and active.</p>
-
-<h3>It Matches Their Query</h3>
-
-<p>Searchers see your best bets when their query:</p>
-
-<ul>
-<li>Matches any or all words in the title,</li>
-<li>Matches any of all words in the link titles, or</li>
-<li>Matches a keyword exactly.</li>
-</ul>
-
-
-<p>Matches are made within, but not across, fields.</p>
-
-<p>A sample best bet entry is below.</p>
-
-<pre><code>Title: Estate Tax  
-Link title 1: Transfer Property After You Pass Away  
-Link title 2: Estate Tax Rights  
-Link title 3: Tax Rates  
-Keyword 1: death tax  
-Keyword 2: inheritance tax  
-Keyword 3: fair market value  
-Keyword 4: market value  
-</code></pre>
-
-<p>This best bet would display for searches on estate tax (exact title match), estate (partial title match), tax on the estate (title match that includes stopwords), estate taxes (title match for singular/plural variant), property tax (partial link title match), propertey tax (link title match with a slight misspelling), and death tax (exact keyword match), among other queries.</p>
-
-<p>It would <em>not</em> display for searches on death, death property, taxes after death, fair value, or estate property tax as they're only partial keyword or cross field matches.</p>
-
-<h3>It Is Very Relevant</h3>
-
-<p>After we determine best bets match the searcher's query, we determine their relevance and display only the most relevant best bet. Relevance is determined, in order, first by title, then by link titles, and lastly by keywords. Date is used as a tiebreaker if the entries' scores based on the above three factors are equal.</p>
-
-<h3>It Is Active</h3>
-
-<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each entry's status.</p>
-
-<table>
-<thead>
-<tr>
-<th style="text-align:left;"> Color </th>
-<th style="text-align:left;"> Status </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;"> Green&nbsp;&nbsp;&nbsp;  </td>
-<td style="text-align:left;"> Active&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Yellow   </td>
-<td style="text-align:left;"> Inactive </td>
-</tr>
-<tr>
-<td style="text-align:left;"> &nbsp; </td>
-<td style="text-align:left;"> &nbsp; </td>
-</tr>
-</tbody>
-</table>
-
-
-<p>Active best bets are shown to searchers on your site. Inactive entries aren't shown to searchers because they're inactive, expired (by the publish end date), or both.</p>
+<p><a href="https://search.usa.gov/account"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/blog-edit-email2.png" title="Edit your email address" alt="Edit your email address" /></a></p>
 
 <hr />
 
-<p>Watch the recording of our February 2015 webinar <a href="https://www.youtube.com/embed/WzQocKYK0t4"><strong>Straight to the Top: Best Bets in DigitalGov Search</strong></a> (55 mins)</p>
+<p><strong><em>Troubleshooting tip:</em></strong> We cannot retrieve any passwords for any account, because we don't have access to passwords. To reset your password:</p>
 
-<p><strong><em>Did you know?</em></strong> See also our closely related feature that allows you to create a <a href="/manual/best-bets-text.html">Text Best Bets</a>.</p>
+<ol>
+<li>Go to our Login page at <a href="https://search.usa.gov/login">https://search.usa.gov/login</a></li>
+<li>Enter your email address.</li>
+<li>Click on <em>Forgot your password?</em></li>
+<li>You'll be prompted to reset your password and it'll be emailed to you.</li>
+</ol>
 
-<p><strong><em>Did you know?</em></strong> Use the <a href="/manual/system-alert.html">Search Page Alert</a> feature to add a text message to your search results page, which will appear at all times above all search results, <em>regardless of the query</em>.</p>
 
-<p><strong><em>Did you know?</em></strong> Analyze the number of impressions and clicks and clickthru rate for each best bet on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.</p>
+<p>If you have any problem resetting your password, email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x73;&#101;&#97;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#x76;">&#115;&#x65;&#97;&#114;&#x63;&#104;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
 
     </div>
 
@@ -828,9 +989,7 @@ Keyword 4: market value
       
       <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
       
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/best-bets"><span class="label label-info">best-bets</span></a>
+      <a href="/tagged/my-account"><span class="label label-info">my-account</span></a>
       
     </div>
    <div class='time'>
@@ -838,7 +997,7 @@ Keyword 4: market value
       
       
       
-      <a href="/manual/best-bets-graphics.html">
+      <a href="/manual/account.html">
         <time datetime="2016-12-07">December 7, 2016</time>
       </a>
     </div>
@@ -914,7 +1073,7 @@ Keyword 4: market value
 
 <p><strong><em>Troubleshooting Tip:</em></strong> For non-English sites, some agencies opt to include the specific location of the language's content (such as agency.gov/language or language.agency.gov) in their <a href="/manual/domains.html">Domains</a> to further refine the search results. Test the results for your non-English site with both the general agency.gov and the language-specific location to determine which setting gives you the best results.</p>
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#x73;&#101;&#97;&#114;&#x63;&#104;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;">&#115;&#x65;&#97;&#114;&#x63;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#x76;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x73;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#112;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#118;">&#x73;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#115;&#x75;&#112;&#112;&#111;&#114;&#x74;&#46;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#46;&#x67;&#111;&#118;</a>.</p>
 
     </div>
 
@@ -933,83 +1092,6 @@ Keyword 4: market value
       
       
       <a href="/manual/add-site.html">
-        <time datetime="2016-12-07">December 7, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/account.html">How to Create and Edit Your Account</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > My Account</p>
-
-<p>You can use DigitalGov Search to power the search box on your federal government website&mdash;at no cost.</p>
-
-<h2>Log In</h2>
-
-<p>Log in to an existing account <a href="https://search.usa.gov/login">https://search.usa.gov/login</a> or register for a new account at <a href="https://search.usa.gov/signup">https://search.usa.gov/signup</a>.</p>
-
-<p><a href="https://search.usa.gov/login"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/login.png" title="Login from search.digitalgov.gov" alt="Login from search.digitalgov.gov" /></a></p>
-
-<p>Access to our service requires agreement with our <a href="/tos.html">Terms of Service</a> and verification that you're a federal government employee or contractor acting within the scope of your government contract.</p>
-
-<p>After you register, you'll receive an automatic email. Click on the link in the email to verify that your email address belongs to you.</p>
-
-<p>If you have a .gov or .mil address, you'll be able to access your account immediately after you verify your email.</p>
-
-<p>If you don't have a .gov or .mil address, we'll ask for additional information to confirm that you're a government employee or contractor. We'll notify you when your account is approved.</p>
-
-<h2>Add a Site</h2>
-
-<p>Once your account is approved, you can <a href="/manual/add-site.html">add a site</a> in our <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-<h2>Edit Your Contact Information</h2>
-
-<p>If you need to update your email address, name, or agency for any reason, it's easy to change your them in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-<p>In the upper right-hand corner, there is a drop-down menu. Click on <em>My account</em>.</p>
-
-<p><a href="https://search.usa.gov/sites/"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/blog-edit-email1.png" title="Edit your account" alt="Edit your account" /></a></p>
-
-<p>Once on this page you can edit your email address.</p>
-
-<p><a href="https://search.usa.gov/account"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/blog-edit-email2.png" title="Edit your email address" alt="Edit your email address" /></a></p>
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> We cannot retrieve any passwords for any account, because we don't have access to passwords. To reset your password:</p>
-
-<ol>
-<li>Go to our Login page at <a href="https://search.usa.gov/login">https://search.usa.gov/login</a></li>
-<li>Enter your email address.</li>
-<li>Click on <em>Forgot your password?</em></li>
-<li>You'll be prompted to reset your password and it'll be emailed to you.</li>
-</ol>
-
-
-<p>If you have any problem resetting your password, email us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#115;&#117;&#x70;&#112;&#111;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#x61;&#108;&#103;&#x6f;&#118;&#46;&#103;&#111;&#x76;">&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#112;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#x69;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#x67;&#111;&#118;</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/my-account"><span class="label label-info">my-account</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/account.html">
         <time datetime="2016-12-07">December 7, 2016</time>
       </a>
     </div>
@@ -1101,57 +1183,6 @@ i14y (Beta) API instructions*</p>
       
       <a href="/manual/index.html">
         <time datetime="2016-11-14">November 14, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/referrers.html">How to Analyze Your Referrers</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Referrers</p>
-
-<p>The Referrers report shows what pages searchers were on when they entered their queries. The current month is shown by default, and the date can be adjusted by using the date selectors at the top of the page and re-generating the report.</p>
-
-<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
-
-<p>Data are available in the Admin Center from August 2014 (13 months).</p>
-
-<h2>Top Referrers</h2>
-
-<p>The top 1,000 most popular referring URLs for your selected time period, with the most popular listed first.</p>
-
-<h2># of Queries</h2>
-
-<p>The number of queries made from a specific referring URL.</p>
-
-<h2>View All Queries from this Referring URL</h2>
-
-<p>Click on the link to see a list of all the queries  that were made from a specific URL, with the most popular listed first (the <strong>Queries from a Referring URL</strong> report). You can see the number of times each query was made from that URL. You can also click to view a list of all the referring URLs for each unique query (the <strong>Referring URLs Leading to a Query</strong> report).</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/referrers"><span class="label label-info">referrers</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/referrers.html">
-        <time datetime="2016-08-11">August 11, 2016</time>
       </a>
     </div>
     </article>
