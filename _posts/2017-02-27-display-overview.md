@@ -28,7 +28,7 @@ Type over the text in the Name field to edit a facet's display name. Keep each n
 
 1. **Videos.** This option only appears after you've told us about your [YouTube](/manual/youtube.html) channel. When a searcher's query matches the metadata of a video published within the 13 months, the video appears in the Videos module. One inline video is displayed with a link to see more videos for the searcher's query.
 
-1. **Job openings.** When a searcher's query matches the text of a job opening published by your agency on USAJobs or NeoGov, the job appears in the Job Openings module. Up to three job openings are displayed. For more information, including a screenshot, read our post [Help Searchers Find Jobs](/manual/govbox-jobs.html). You will need to [contact us](mailto:search@support.digitalgov.gov) to get the Jobs module enabled for your site.
+1. **Job openings.** When a searcher's query matches the text of a job opening published by your agency on USAJobs, the job appears in the Job Openings module. Up to three job openings are displayed. For more information, including a screenshot, read our post [Help Searchers Find Jobs](/manual/govbox-jobs.html). You will need to [contact us](mailto:search@support.digitalgov.gov) to get the Jobs module enabled for your site.
 
 1. ***Federal Register* documents.** When a searcher's query matches the text of a notice or rule published by your agency in the *Federal Register*, the document appears in the *Federal Register* module. Up to three documents are displayed. For more information, including a screenshot, read our post [Help Searchers Find Federal Register Documents](/manual/govbox-federal-register.html).
 
