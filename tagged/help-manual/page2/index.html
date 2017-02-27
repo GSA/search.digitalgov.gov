@@ -103,148 +103,77 @@
  
     
     <h1>
-      <a href="/manual/settings.html">How to Edit Your Settings</a>
+      <a href="/manual/domains-advanced.html">How to Use Advanced Options to Add or Filter Specific URLs</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Settings</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > <a href="/manual/domains.html">Domains</a> > Advanced</p>
 
-<h2>Display Name</h2>
+<h2>Add a URL</h2>
 
-<p>Tell us the name of your website. Searchers see your site name on the results page, such as in your page title or best bets. We recommend using the plain language name for your agency or site, such as <em>Social Security Administration</em>.</p>
+<p>Are specific web pages missing from your Bing web results? Tell us about these URLs and we'll append them to your web results. We offer two ways for you to tell us about the web pages that you want us to fetch and include in our web index, via an RSS feed (Supplemental Feed) or manually (Supplemental URLs).</p>
 
-<h2>Homepage URL</h2>
+<h3>Supplemental Feed</h3>
 
-<p>Tell us the homepage URL of your website. Enter a fully qualified URL, including http://, http://www, etc.</p>
+<p>You can use an <a href="/manual/rss.html">RSS feed</a> to add URLs. The feed is useful if you'd like to automate the process, add multiple URLs, or both.</p>
 
-<p><strong>Correct Syntax</strong></p>
+<p>Enter the URL of your RSS feed. Click submit. We'll fetch each URL in your feed and index the title, description, <em>and the full text of the document</em> for the items you provide. We'll display the title and description you provide in the feed (not the page's title or a snippet based on the page's content), as well as a results count. Please be sure to <a href="/manual/rss.html">follow our schema</a>.</p>
 
-<ul>
-<li>https://www.whitehouse.gov</li>
-<li>https://gobierno.usa.gov</li>
-<li>https://stemcells.nih.gov</li>
-</ul>
+<p>We'll update any items that include a publication date.</p>
 
+<p>Delete a URL added via RSS feed by deleting the item from your RSS feed. We'll remove the URL from our index the next time we fetch your RSS feed. If you need to remove it from our index immediately, you do so manually within the list of URLs on the Supplemental URLs page. Search for the URL and hit <code>Delete</code>. Note that you <em>must also</em> delete the URL from your RSS feed. Otherwise, the URL will reappear the next time we fetch your RSS feed.</p>
 
-<p><strong>Incorrect Syntax</strong></p>
+<p>You can also delete <em>all</em> of the URLs added via the RSS feed by deleting the RSS feed itself.</p>
 
-<ul>
-<li>usa.gov (use https://www.usa.gov)</li>
-<li>www.nasa.gov (use https://www.nasa.gov)</li>
-<li>https://www.sec.gov/litigation.shtml (use the higher-level folder, https://www.sec.gov/litigation)</li>
-<li>https://www.gsa.gov/portal/category/100000?utm_source=OCM&amp;utm_medium=print-radio&amp;utm_term=&amp;utm_campaign=shortcuts (use the higher-level domain, https://www.gsa.gov)</li>
-<li>http://www.doc.gov (use the domain that resolves, https://www.commerce.gov)</li>
-</ul>
+<p>We can't restore URLs that don't exist within your <em>current</em> feed. Please don't remove items from the feed unless you want them to be removed from the index. It's ok if the feed is long.</p>
 
+<h3>Supplemental URLs</h3>
 
-<p>We use this homepage URL to (a) populate your primary <a href="/manual/domains.html">domain</a> and (b) link the default logo on your results page to your homepage.</p>
+<p>You can also manually add a a specific URL on the Supplemental URLs page. We'll fetch each URL you add manually and we'll index the title, description, <em>and the full text of the document</em> for the link you provide. We'll display the title and description you provide (not the page's title or a snippet based on the page's content).</p>
 
-<h2>Site Handle</h2>
+<p>Delete a manually added URL by selecting Delete within the list of supplemental URLs.</p>
 
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#x73;&#101;&#97;&#x72;&#x63;&#104;&#64;&#115;&#117;&#112;&#112;&#111;&#114;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;">&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#111;&#x72;&#116;&#46;&#100;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#x67;&#111;&#118;</a>.</p>
+<p>The source column in the crawl report shows how you added the URL, via an RSS feed or manually.</p>
 
-<p><a href="http://search.socialsecurity.gov/search?query=office+locations&amp;affiliate=ssa"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/settings.png" title="Site name and handle on SocialSecurity.gov's search results page" alt="Site name and handle on SocialSecurity.gov's search results page" /></a></p>
+<h2>Filter a URL</h2>
 
-<h2>Site ID</h2>
+<p>You can filter <em>a single URL</em> from the results on your site. Use it for emergency reasons only (such as spillage of classified information or unintentional publication of a page). Note that this option should be used only if the <a href="/manual/domains.html#filter">other options</a> aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p>
 
-<p>We assign a unique, system-generated numeric ID to your site. We use this ID for some back-end code. You can see this ID in the URL for your site in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+<p>It is not meant to fix the results for entire site, such as for launch or redesign problems. For tips on how to fix these more systemic problems, read our <a href="/blog/redesign.html">Checklist for a Successful Website Redesign</a>.</p>
 
-<h2>Site Language</h2>
+<p>Entire the full path of the URL, e.g. use https://www.usa.gov/Citizen/Topics/Benefits.shtml, not usa.gov/citizen/topics.</p>
 
-<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">69 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#x73;&#101;&#97;&#114;&#x63;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#x2e;&#x64;&#x69;&#103;&#x69;&#116;&#97;&#108;&#x67;&#111;&#118;&#46;&#x67;&#111;&#118;">&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#x74;&#97;&#x6c;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#118;</a>.</p>
-
-<h2>Delete</h2>
-
-<p>After you've set up a site, you may want to delete it. <strong>Use caution.</strong> This action permanently deletes your site and its associated analytics and indexes. We cannot restore deleted sites.</p>
+<p>You can later use the delete option to remove the filter.</p>
 
 <hr />
 
-<p><strong><em>Did you know?</em></strong>  Click the pushpin icon in the top navigation bar to change the default site that appears when you first log in to the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
 
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
-      
-      <a href="/tagged/settings"><span class="label label-info">settings</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/settings.html">
-        <time datetime="2016-12-28">December 28, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/collections.html">How to Create Collections Within Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Collections</p>
-
-<p>Would you like searchers to be able to change where they are searching, either to a particular place within your site, or to another site? You can create a collection that will search in any set of domains, subdomains, or subfolders.</p>
-
-<h2>Step 1. Create a Collection</h2>
-
-<p>Enter a name for the collection (such as FAQs, Archive, or News).</p>
-
-<p>Enter the domains, subdomains, or subfolders that you want this collection to search in. Start each URL prefix with http:// and end it in a trailing slash to avoid unintended matches (e.g., https://publications.agency.gov/docs/ and https://answers.agency.gov).</p>
-
-<p>You cannot specify URLs for individual web pages. If you are including a subfolder, be sure to include the folder(s) where the files are actually stored, not the folder where the index page lives.</p>
-
-<p>Paths that are three or more subfolders deep may not return results immediately. <a href="mailto:search@support.digitalgov.gov">Email us</a> if you are not seeing search results for these paths.</p>
-
-<h2>Step 2. Opt to Show as a Facet</h2>
-
-<p>Click on the <a href="/manual/display-overview.html">Display Overview</a> page. Turn on your collection to allow searchers to see it as a search facet in the navigation bar above the search box on the results page (in the desktop view), or in the search menu (on smaller screens).</p>
-
-<h2>Step 3. Check Your Search Results Page</h2>
-
-<p>Searchers will see the collection name as an option that they can select in order to focus their search.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-2.png" alt="Collection on the search results page" /></p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your collection.</p>
-
-<ol>
-<li>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab.</li>
-<li>Change the form action from <code>action="https://search.usa.gov/search/"</code> to <code>action="https://search.usa.gov/search/docs"</code>.</li>
-<li>Add the following line to limit the results to your collection: <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>.</li>
-</ol>
+<ul>
+<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
+<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+<li><a href="http://atomenabled.org/developers/syndication/">Atom syndication format</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+</ul>
 
 
-<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report for your PDF that says, "No content found in document"? Your PDF is likely an image-only, non-searchable file that was created from a paper document using a scanner. See the resources below for more information on how to create searchable PDF files.</p>
 
-<p>See the sample search box below that is limited to news on <a href="https://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=autism">NIH.gov for a search on <em>autism</em></a>.</p>
+<ul>
+<li><a href="http://blogs.adobe.com/acrolaw/2007/02/is_that_pdf_sea/">Is that PDF Searchable?</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (blog post)</li>
+<li><a href="https://acrobatusers.com/tutorials/how-to-create-a-searchable-pdf-file">How to Create Searchable PDF File</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (video)</li>
+</ul>
 
-<p><a href="https://www.nih.gov/news/releases.htm"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-3.png" title="News-only search box on NIH.gov's News Releases page" alt="News-only search box on NIH.gov's News Releases page" /></a></p>
 
-<p><a href="https://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=autism"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-4.png" title="NIH.gov news-only search results page" alt="NIH.gov news-only search results page" /></a></p>
+<p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report that says your page is taking too long to load? Use <a href="http://tools.pingdom.com/fpt/">Pingdom Tools Full Page Test</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to test the load time of your page, analyze it, and find the bottlenecks.</p>
 
-<p><a name="sitelimit"></a></p>
+<p><strong><em>Did you know?</em></strong> To help the public find your web pages when they search on Bing.com, we notify Bing about any URLs you add. While this helps with search engine optimization (SEO), it is not a cure-all. You should also register for and use commercial search engines' webmaster tools.</p>
 
-<p><strong><em>Did you know?</em></strong> If you don't want to set up a Collection, you can use the <code>sitelimit</code> parameter to search a subset of your content. Compare the collection-based results above with the results for <a href="https://search.usa.gov/search?affiliate=nih&amp;query=autism&amp;sitelimit=nih.gov/news">the same search using the sitelimit parameter</a>.</p>
+<ul>
+<li><a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+<li><a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Central</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+</ul>
 
-<p>Note that the searcher sees that results are filtered to nih.gov/news in a message under the search box, among other differences.</p>
-
-<p>Simply add the following line to your form code on your search box to use the <code>sitelimit</code> parameter.</p>
-
-<p><code>&lt;input type="hidden" name="sitelimit" id="sitelimit" value="https://www.agency.gov/limittothisfolder"&gt;</code></p>
 
     </div>
 
@@ -254,7 +183,15 @@
       
       <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
       
-      <a href="/tagged/collections"><span class="label label-info">collections</span></a>
+      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
+      
+      <a href="/tagged/advanced"><span class="label label-info">advanced</span></a>
+      
+      <a href="/tagged/supplemental-feed"><span class="label label-info">supplemental-feed</span></a>
+      
+      <a href="/tagged/supplemental-urls"><span class="label label-info">supplemental-urls</span></a>
+      
+      <a href="/tagged/filter-urls"><span class="label label-info">filter-urls</span></a>
       
     </div>
    <div class='time'>
@@ -262,141 +199,8 @@
       
       
       
-      <a href="/manual/collections.html">
-        <time datetime="2016-12-28">December 28, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/preview.html">How to Preview Your Search Results</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Preview</p>
-
-<p>As you update your site's display settings, you can preview your search results page before pushing the changes to your live website.</p>
-
-<p>Visit our <a href="https://search.usa.gov/sites/">Admin Center</a>, select your site, and click on the Preview option (the eye icon) in the left-hand menu.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/preview-nav.png" alt="Select the preview option" /></p>
-
-<p>Enter a term in the box to see search results.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> You can also preview (and share) your search results page by typing https://search.usa.gov/search?affiliate=<strong>YourSiteHandle</strong> into the address bar in any browser. (Your site handle is listed on the <a href="/manual/settings.html">Settings</a> page in the Admin Center, if you don't know it.)</p>
-
-<p><strong><em>Did you know?</em></strong> If you're still on our legacy results page, you'll see two to three options.</p>
-
-<p><strong>View Staged.</strong> This option allows you to view the staged search results page before you publish it to your live site. You'll see this option if you have staged changes.</p>
-
-<p><strong>View Current.</strong> This option allows you to view the current, live search results page on your site. This is the only option you'll see if you don't have any staged changes.</p>
-
-<p><strong>View Redesigned Page.</strong> This option allows you to view the <a href="/blog/serp-redesign.html">newly redesigned search results page</a> as it'll appear on your site after May 30, 2014.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/preview"><span class="label label-info">preview</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/preview.html">
-        <time datetime="2016-12-28">December 28, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/blog/go-live.html">Going Live with DigitalGov Search</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>Your pre-launch checklist will be unique to your agency's workflow, requirements, and deadlines. Below is a typical checklist.</p>
-
-<h2>Double Check Your Content Sources</h2>
-
-<p><i class="icon-check"></i> <strong>1. Have you told us which domain(s) you want to search?</strong> List one or more <a href="/manual/domains.html">domains</a> that you want to search on the first page of web results. Most agencies opt to leave out the 'www' to include all subdomains (for example, list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies especially department-level portals opt to also include their bureaus' websites (for example, Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)</p>
-
-<p><i class="icon-check"></i> <strong>2. Have you told us about your RSS feeds?</strong> We love <a href="/manual/rss.html">RSS feeds</a>. Tell us about all of your feeds, even if you opt not to show them (see #5 below). They're the quickest way for you to tell us about your new and updated content. Feeds also have well-structured titles, URLs, descriptions, and dates that we use to improve your search results page. (Tip: Preview your feeds from the RSS page in the <a href="https://search.usa.gov/sites/">Admin Center</a> to confirm that we've indexed your content.)</p>
-
-<p><i class="icon-check"></i> <strong>3. Have you told us about your social media accounts?</strong> <a href="/manual/flickr.html">Flickr photostreams</a>, <a href="/manual/twitter.html">tweets</a>, and <a href="/manual/youtube.html">YouTube videos</a> are a great way to highlight your recent content. Tell us about all of your social media, even if you opt not to show them (see #5 below).</p>
-
-<h2>Customize the Display of Your Search Results Page</h2>
-
-<p><i class="icon-check"></i> <strong>4. Have you made the search results page look like your website?</strong> Customize the <a href="/manual/brand.html">brand</a> (font, colors, logo, favicon, and navigation links) of your search results page to create a seamless experience for users as they search and browse your website.</p>
-
-<p><i class="icon-check"></i> <strong>5. Have you told us what to show on your results page?</strong> Turn on (or off) the inline modules and facets that you want to appear on your search results page. You can change the default settings on the <a href="/manual/display-overview.html">Display Overview</a> page in the Admin Center.</p>
-
-<h2>Connect Your Site to DigitalGov Search</h2>
-
-<p>Most agencies add these two <a href="/manual/code.html">snippets of code</a> to the template(s) in their websites or content management systems (rather than adding them to individual pages).</p>
-
-<p><i class="icon-check"></i> <strong>6. Does your search box point to DigitalGov Search?</strong> Update your search box form code point to our service so that, when users execute a search, they'll see your DigitalGov Search-hosted results page.</p>
-
-<pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
-     &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
-    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
-    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
-    &lt;input name="commit" type="submit" value="Search" /&gt;
-&lt;/form&gt;
-</code></pre>
-
-<p><i class="icon-check"></i> <strong>7. Do you have our Javascript tag on your webpages?</strong> This Javascript powers the suggestions for type-ahead and <a href="/manual/display-overview.html">related searches</a>. It also provides data on your trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-<pre><code>&lt;script type="text/javascript"&gt;
-//&lt;![CDATA[
-     var usasearch_config = { siteHandle:"YourSiteHandle" };
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "//search.usa.gov/javascripts/remote.loader.js";
-    document.getElementsByTagName("head")[0].appendChild(script);
-//]]&gt;
-&lt;/script&gt;
-</code></pre>
-
-<h2>Set Up Nice-to-Have Features (Optional)</h2>
-
-<p><i class="icon-check"></i> <strong>8. Have you masked your domain?</strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov.</p>
-
-<p><i class="icon-check"></i> <strong>9. Have you added the Javascripts for your other third-party web services to your results page?</strong> If you have a <a href="/manual/third-party.html">third-party service</a> running on your website, you likely want it to run on your results page. Agencies often include their Foresee, Google Analytics, Omniture, or WebTrends code, among others. If your federal website participates in the <a href="https://www.digitalgov.gov/services/dap/">Digital Analytics Program</a>, you do not need to take any action: DAP code is included on your results page, by default.</p>
-
-<h2>Don't Forget SEO (Optional)</h2>
-
-<p><i class="icon-check"></i> <strong>10. Have you optimized your site so we can find your content?</strong> We follow <a href="http://www.digitalgov.gov/2013/05/31/four-steps-to-achieve-good-seo/">search engine optimization</a> (SEO) best practices. Verify that you have a <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and an <a href="http://www.sitemaps.org">XML sitemap</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. These two files are typically located in the root directory of your website (i.e., agency.gov/robots.txt and agency.gov/sitemap.xml, respectively). Also verify that your robots.txt file allows our user agent (usasearch) to access your public content.</p>
-
-<p><i class="icon-check"></i> <strong>11. Have you registered your site with the major commercial search engines?</strong> Register for both <a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to maximize the coverage of your content in their search results.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/blog/go-live.html">
-        <time datetime="2016-12-28">December 28, 2016</time>
+      <a href="/manual/domains-advanced.html">
+        <time datetime="2017-01-04">January 4, 2017</time>
       </a>
     </div>
     </article>
@@ -587,6 +391,308 @@
       
       
       <a href="/manual/supported-languages.html">
+        <time datetime="2016-12-28">December 28, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/settings.html">How to Edit Your Settings</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Settings</p>
+
+<h2>Display Name</h2>
+
+<p>Tell us the name of your website. Searchers see your site name on the results page, such as in your page title or best bets. We recommend using the plain language name for your agency or site, such as <em>Social Security Administration</em>.</p>
+
+<h2>Homepage URL</h2>
+
+<p>Tell us the homepage URL of your website. Enter a fully qualified URL, including http://, http://www, etc.</p>
+
+<p><strong>Correct Syntax</strong></p>
+
+<ul>
+<li>https://www.whitehouse.gov</li>
+<li>https://gobierno.usa.gov</li>
+<li>https://stemcells.nih.gov</li>
+</ul>
+
+
+<p><strong>Incorrect Syntax</strong></p>
+
+<ul>
+<li>usa.gov (use https://www.usa.gov)</li>
+<li>www.nasa.gov (use https://www.nasa.gov)</li>
+<li>https://www.sec.gov/litigation.shtml (use the higher-level folder, https://www.sec.gov/litigation)</li>
+<li>https://www.gsa.gov/portal/category/100000?utm_source=OCM&amp;utm_medium=print-radio&amp;utm_term=&amp;utm_campaign=shortcuts (use the higher-level domain, https://www.gsa.gov)</li>
+<li>http://www.doc.gov (use the domain that resolves, https://www.commerce.gov)</li>
+</ul>
+
+
+<p>We use this homepage URL to (a) populate your primary <a href="/manual/domains.html">domain</a> and (b) link the default logo on your results page to your homepage.</p>
+
+<h2>Site Handle</h2>
+
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#x73;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;">&#115;&#101;&#x61;&#x72;&#99;&#x68;&#64;&#115;&#x75;&#112;&#x70;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;</a>.</p>
+
+<p><a href="http://search.socialsecurity.gov/search?query=office+locations&amp;affiliate=ssa"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/settings.png" title="Site name and handle on SocialSecurity.gov's search results page" alt="Site name and handle on SocialSecurity.gov's search results page" /></a></p>
+
+<h2>Site ID</h2>
+
+<p>We assign a unique, system-generated numeric ID to your site. We use this ID for some back-end code. You can see this ID in the URL for your site in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+
+<h2>Site Language</h2>
+
+<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">69 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#109;&#97;&#x69;&#108;&#116;&#111;&#58;&#x73;&#x65;&#97;&#114;&#x63;&#104;&#64;&#x73;&#117;&#x70;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#115;&#101;&#97;&#x72;&#99;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#46;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#x6c;&#103;&#x6f;&#118;&#46;&#103;&#111;&#118;</a>.</p>
+
+<h2>Delete</h2>
+
+<p>After you've set up a site, you may want to delete it. <strong>Use caution.</strong> This action permanently deletes your site and its associated analytics and indexes. We cannot restore deleted sites.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong>  Click the pushpin icon in the top navigation bar to change the default site that appears when you first log in to the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
+      
+      <a href="/tagged/settings"><span class="label label-info">settings</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/settings.html">
+        <time datetime="2016-12-28">December 28, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/preview.html">How to Preview Your Search Results</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Preview</p>
+
+<p>As you update your site's display settings, you can preview your search results page before pushing the changes to your live website.</p>
+
+<p>Visit our <a href="https://search.usa.gov/sites/">Admin Center</a>, select your site, and click on the Preview option (the eye icon) in the left-hand menu.</p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/preview-nav.png" alt="Select the preview option" /></p>
+
+<p>Enter a term in the box to see search results.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> You can also preview (and share) your search results page by typing https://search.usa.gov/search?affiliate=<strong>YourSiteHandle</strong> into the address bar in any browser. (Your site handle is listed on the <a href="/manual/settings.html">Settings</a> page in the Admin Center, if you don't know it.)</p>
+
+<p><strong><em>Did you know?</em></strong> If you're still on our legacy results page, you'll see two to three options.</p>
+
+<p><strong>View Staged.</strong> This option allows you to view the staged search results page before you publish it to your live site. You'll see this option if you have staged changes.</p>
+
+<p><strong>View Current.</strong> This option allows you to view the current, live search results page on your site. This is the only option you'll see if you don't have any staged changes.</p>
+
+<p><strong>View Redesigned Page.</strong> This option allows you to view the <a href="/blog/serp-redesign.html">newly redesigned search results page</a> as it'll appear on your site after May 30, 2014.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/preview"><span class="label label-info">preview</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/preview.html">
+        <time datetime="2016-12-28">December 28, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/blog/go-live.html">Going Live with DigitalGov Search</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Your pre-launch checklist will be unique to your agency's workflow, requirements, and deadlines. Below is a typical checklist.</p>
+
+<h2>Double Check Your Content Sources</h2>
+
+<p><i class="icon-check"></i> <strong>1. Have you told us which domain(s) you want to search?</strong> List one or more <a href="/manual/domains.html">domains</a> that you want to search on the first page of web results. Most agencies opt to leave out the 'www' to include all subdomains (for example, list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies especially department-level portals opt to also include their bureaus' websites (for example, Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)</p>
+
+<p><i class="icon-check"></i> <strong>2. Have you told us about your RSS feeds?</strong> We love <a href="/manual/rss.html">RSS feeds</a>. Tell us about all of your feeds, even if you opt not to show them (see #5 below). They're the quickest way for you to tell us about your new and updated content. Feeds also have well-structured titles, URLs, descriptions, and dates that we use to improve your search results page. (Tip: Preview your feeds from the RSS page in the <a href="https://search.usa.gov/sites/">Admin Center</a> to confirm that we've indexed your content.)</p>
+
+<p><i class="icon-check"></i> <strong>3. Have you told us about your social media accounts?</strong> <a href="/manual/flickr.html">Flickr photostreams</a>, <a href="/manual/twitter.html">tweets</a>, and <a href="/manual/youtube.html">YouTube videos</a> are a great way to highlight your recent content. Tell us about all of your social media, even if you opt not to show them (see #5 below).</p>
+
+<h2>Customize the Display of Your Search Results Page</h2>
+
+<p><i class="icon-check"></i> <strong>4. Have you made the search results page look like your website?</strong> Customize the <a href="/manual/brand.html">brand</a> (font, colors, logo, favicon, and navigation links) of your search results page to create a seamless experience for users as they search and browse your website.</p>
+
+<p><i class="icon-check"></i> <strong>5. Have you told us what to show on your results page?</strong> Turn on (or off) the inline modules and facets that you want to appear on your search results page. You can change the default settings on the <a href="/manual/display-overview.html">Display Overview</a> page in the Admin Center.</p>
+
+<h2>Connect Your Site to DigitalGov Search</h2>
+
+<p>Most agencies add these two <a href="/manual/code.html">snippets of code</a> to the template(s) in their websites or content management systems (rather than adding them to individual pages).</p>
+
+<p><i class="icon-check"></i> <strong>6. Does your search box point to DigitalGov Search?</strong> Update your search box form code point to our service so that, when users execute a search, they'll see your DigitalGov Search-hosted results page.</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+     &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p><i class="icon-check"></i> <strong>7. Do you have our Javascript tag on your webpages?</strong> This Javascript powers the suggestions for type-ahead and <a href="/manual/display-overview.html">related searches</a>. It also provides data on your trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+     var usasearch_config = { siteHandle:"YourSiteHandle" };
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "//search.usa.gov/javascripts/remote.loader.js";
+    document.getElementsByTagName("head")[0].appendChild(script);
+//]]&gt;
+&lt;/script&gt;
+</code></pre>
+
+<h2>Set Up Nice-to-Have Features (Optional)</h2>
+
+<p><i class="icon-check"></i> <strong>8. Have you masked your domain?</strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov.</p>
+
+<p><i class="icon-check"></i> <strong>9. Have you added the Javascripts for your other third-party web services to your results page?</strong> If you have a <a href="/manual/third-party.html">third-party service</a> running on your website, you likely want it to run on your results page. Agencies often include their Foresee, Google Analytics, Omniture, or WebTrends code, among others. If your federal website participates in the <a href="https://www.digitalgov.gov/services/dap/">Digital Analytics Program</a>, you do not need to take any action: DAP code is included on your results page, by default.</p>
+
+<h2>Don't Forget SEO (Optional)</h2>
+
+<p><i class="icon-check"></i> <strong>10. Have you optimized your site so we can find your content?</strong> We follow <a href="http://www.digitalgov.gov/2013/05/31/four-steps-to-achieve-good-seo/">search engine optimization</a> (SEO) best practices. Verify that you have a <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and an <a href="http://www.sitemaps.org">XML sitemap</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. These two files are typically located in the root directory of your website (i.e., agency.gov/robots.txt and agency.gov/sitemap.xml, respectively). Also verify that your robots.txt file allows our user agent (usasearch) to access your public content.</p>
+
+<p><i class="icon-check"></i> <strong>11. Have you registered your site with the major commercial search engines?</strong> Register for both <a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to maximize the coverage of your content in their search results.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/blog/go-live.html">
+        <time datetime="2016-12-28">December 28, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/collections.html">How to Create Collections Within Our Index</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Collections</p>
+
+<p>Would you like searchers to be able to change where they are searching, either to a particular place within your site, or to another site? You can create a collection that will search in any set of domains, subdomains, or subfolders.</p>
+
+<h2>Step 1. Create a Collection</h2>
+
+<p>Enter a name for the collection (such as FAQs, Archive, or News).</p>
+
+<p>Enter the domains, subdomains, or subfolders that you want this collection to search in. Start each URL prefix with http:// and end it in a trailing slash to avoid unintended matches (e.g., https://publications.agency.gov/docs/ and https://answers.agency.gov).</p>
+
+<p>You cannot specify URLs for individual web pages. If you are including a subfolder, be sure to include the folder(s) where the files are actually stored, not the folder where the index page lives.</p>
+
+<p>Paths that are three or more subfolders deep may not return results immediately. <a href="mailto:search@support.digitalgov.gov">Email us</a> if you are not seeing search results for these paths.</p>
+
+<h2>Step 2. Opt to Show as a Facet</h2>
+
+<p>Click on the <a href="/manual/display-overview.html">Display Overview</a> page. Turn on your collection to allow searchers to see it as a search facet in the navigation bar above the search box on the results page (in the desktop view), or in the search menu (on smaller screens).</p>
+
+<h2>Step 3. Check Your Search Results Page</h2>
+
+<p>Searchers will see the collection name as an option that they can select in order to focus their search.</p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-2.png" alt="Collection on the search results page" /></p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your collection.</p>
+
+<ol>
+<li>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab.</li>
+<li>Change the form action from <code>action="https://search.usa.gov/search/"</code> to <code>action="https://search.usa.gov/search/docs"</code>.</li>
+<li>Add the following line to limit the results to your collection: <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>.</li>
+</ol>
+
+
+<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
+
+<p>See the sample search box below that is limited to news on <a href="https://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=autism">NIH.gov for a search on <em>autism</em></a>.</p>
+
+<p><a href="https://www.nih.gov/news/releases.htm"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-3.png" title="News-only search box on NIH.gov's News Releases page" alt="News-only search box on NIH.gov's News Releases page" /></a></p>
+
+<p><a href="https://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=autism"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-4.png" title="NIH.gov news-only search results page" alt="NIH.gov news-only search results page" /></a></p>
+
+<p><a name="sitelimit"></a></p>
+
+<p><strong><em>Did you know?</em></strong> If you don't want to set up a Collection, you can use the <code>sitelimit</code> parameter to search a subset of your content. Compare the collection-based results above with the results for <a href="https://search.usa.gov/search?affiliate=nih&amp;query=autism&amp;sitelimit=nih.gov/news">the same search using the sitelimit parameter</a>.</p>
+
+<p>Note that the searcher sees that results are filtered to nih.gov/news in a message under the search box, among other differences.</p>
+
+<p>Simply add the following line to your form code on your search box to use the <code>sitelimit</code> parameter.</p>
+
+<p><code>&lt;input type="hidden" name="sitelimit" id="sitelimit" value="https://www.agency.gov/limittothisfolder"&gt;</code></p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/collections"><span class="label label-info">collections</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/collections.html">
         <time datetime="2016-12-28">December 28, 2016</time>
       </a>
     </div>
@@ -1125,100 +1231,6 @@ Keyword 4: market value
       
       
       <a href="/manual/best-bets-graphics.html">
-        <time datetime="2016-12-07">December 7, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/add-site.html">How to Add a New Site</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > Add Site</p>
-
-<h2>Homepage URL</h2>
-
-<p>Tell us the homepage URL of your website. Enter a fully qualified URL, including http://, http://www, etc.</p>
-
-<p><strong>Correct Syntax</strong></p>
-
-<ul>
-<li>https://www.whitehouse.gov</li>
-<li>https://gobierno.usa.gov</li>
-<li>https://stemcells.nih.gov</li>
-</ul>
-
-
-<p><strong>Incorrect Syntax</strong></p>
-
-<ul>
-<li>usa.gov (use https://www.usa.gov)</li>
-<li>www.nasa.gov (use https://www.nasa.gov)</li>
-<li>https://www.sec.gov/litigation.shtml (use the higher-level folder, https://www.sec.gov/litigation)</li>
-<li>https://www.gsa.gov/portal/category/100000?utm_source=OCM&amp;utm_medium=print-radio&amp;utm_term=&amp;utm_campaign=shortcuts (use the higher-level domain, https://www.gsa.gov)</li>
-<li>http://www.doc.gov (use the domain that resolves, https://www.commerce.gov)</li>
-</ul>
-
-
-<p>We use this homepage URL to:</p>
-
-<ol>
-<li>Seed your <a href="/manual/domains.html">domains</a> list.</li>
-<li>Scan for any social media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/instagram.html">Instagram</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>), your favicon to use on your search results browser tab, and <a href="/manual/rss.html">RSS feeds</a> that are linked from your homepage, or another page you specify on the Display Overview page.</li>
-<li>Link the default <a href="/manual/brand.html">logo</a> on your results page to your homepage.</li>
-</ol>
-
-
-<h2>Display Name</h2>
-
-<p><a href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/DisplayName_SiteHandle_800.png"><img style="float: right;" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/DisplayName_SiteHandle_175.png" alt="Display Name and Site Handle on NIH.gov's search results page"></a>Tell us the name of your website. Searchers see your display name on the results page, such as in your page title or best bets. We recommend using the plain language name for your agency or site, such as National Institutes of Health.</p>
-
-<h2>Site Handle</h2>
-
-<p>Your site handle is a unique identifier for your site. The site handle is included in the request you send us from your search box, to let us know which search site to use. We also include it in the URL of your search results page, again, to show which search site is being used. We recommend making this handle short and unique, such as <code>nih</code>.</p>
-
-<p>Handles can have lowercase letters, numbers, periods, hyphens, and underscores only. They can't have spaces and other punctuation.</p>
-
-<h2>Site Language</h2>
-
-<p>English is the default language for our results pages. If you will be searching against content in another language, you should choose another language for your search site - we support English, Spanish, and <a href="/manual/supported-languages.html">66 other languages</a>.</p>
-
-<p>When English is selected, results will primarily include English language pages. All display text on the results page will also be in English.</p>
-
-<p>If you select Spanish, results will primarily include Spanish language pages. All display text on the results page will also be in Spanish. (Localizations are provided by GSA's <a href="https://gobierno.usa.gov/">GobiernoUSA.gov</a> team.)</p>
-
-<p>If you select one of the other <a href="/manual/supported-languages.html">66 languages</a>, results will primarily include pages from the selected language when possible. Display text will be in the selected language when localizations are available, and in English when they're not available.</p>
-
-<p>We've published the <a href="https://github.com/GSA/punchcard/tree/master/localizations">localization files</a> on Github, and we encourage you to <a href="https://github.com/GSA/punchcard/blob/master/CONTRIBUTING.md">contribute</a> to them.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting Tip:</em></strong> For non-English sites, some agencies opt to include the specific location of the language's content (such as agency.gov/language or language.agency.gov) in their <a href="/manual/domains.html">Domains</a> to further refine the search results. Test the results for your non-English site with both the general agency.gov and the language-specific location to determine which setting gives you the best results.</p>
-
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#115;&#101;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;">&#115;&#101;&#97;&#114;&#x63;&#104;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#103;&#x69;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#118;&#46;&#103;&#x6f;&#118;</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/settings"><span class="label label-info">settings</span></a>
-      
-      <a href="/tagged/add-site"><span class="label label-info">add-site</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/add-site.html">
         <time datetime="2016-12-07">December 7, 2016</time>
       </a>
     </div>
