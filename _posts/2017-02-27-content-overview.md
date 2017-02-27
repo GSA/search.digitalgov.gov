@@ -54,7 +54,7 @@ After you've added your content, be sure to [set the display options](/manual/di
 
 We also have three pre-built, government-centric content modules that you can opt to turn on, too.
 
-* **Job Openings.** [Toggle on the Jobs module](/manual/govbox-jobs.html) to show your agency's job openings from USAJobs (federal government) or NeoGov (applicable local and state governments). 
+* **Job Openings.** [Toggle on the Jobs module](/manual/govbox-jobs.html) to show your agency's job openings from USAJobs. 
 * ***Federal Register* Documents.** [Toggle on the *Federal Register* module](/manual/govbox-federal-register.html) to show your agency's documents posted on FederalRegister.gov. 
 * **Health Topics.** [Toggle on the Health Topics module](/manual/govbox-health.html) to show authoritative health information from MedlinePlus and ClinicalTrials.gov.
 
