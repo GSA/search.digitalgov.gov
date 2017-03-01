@@ -4,7 +4,7 @@ title: Our Customers
 tags: about-us customer-federal customer-state
 ---
 
-We have a [proven track record](/tagged/quote) of delivering fast, relevant search results. Nearly 175 Federal government agencies currently use DigitalGov Search to power their search box and improve their visitors' search experience. We are no longer able to take new State or Local agency customers, and will be discontinuing current service to State and Local agency websites as of February 28, 2017.
+We have a [proven track record](/tagged/quote) of delivering fast, relevant search results. Nearly 175 Federal and District of Columbia government agencies currently use DigitalGov Search to power their search box and improve their visitors' search experience.
 
 <table align="center" width="100%">
 <tr>
@@ -39,5 +39,3 @@ DigitalGov Search got its start when Internet entrepreneur Eric Brewer, whose ea
 In June 2000, President Clinton announced the gift from the Federal Search Foundation, a nonprofit organization established by Brewer, and instructed that an official U.S. web portal be launched within 90 days. USA.gov went online on September 22, 2000 under the name FirstGov.gov with a [prominent search box](http://web.archive.org/web/20001109105200/http://www.firstgov.gov) to allow the public to search across government websites. Visit USA.gov to learn more [about its mission and history](https://www.usa.gov/about).
 
 In 2010, DigitalGov Search moved to open-source software and became available to agencies across government in the United States to power the search boxes on their site. Today we power nearly 300 million queries a year through over 1,800 federal search configurations.
-
-Beginning March 1, 2017, our service will be available to Federal agencies only.
