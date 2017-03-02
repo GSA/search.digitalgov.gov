@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Our Customers
-tags: about-us customer-federal customer-state
+tags: about-us customer-federal
 ---
 
 We have a [proven track record](/tagged/quote) of delivering fast, relevant search results. Nearly 175 Federal and District of Columbia government agencies currently use DigitalGov Search to power their search box and improve their visitors' search experience.
