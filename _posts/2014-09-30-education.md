@@ -10,4 +10,4 @@ tags: quote customer-federal
 Visit DigitalGov.gov to learn more about the [rollout of ED.gov's visual refresh and redesign](http://www.digitalgov.gov/2014/08/27/member-spotlight-jill-james-dept-of-education/).
 
 Department of Education  
-<http://www.ed.gov>
+<https://www.ed.gov>
