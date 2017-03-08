@@ -103,6 +103,195 @@
  
     
     <h1>
+      <a href="/manual/rss.html">How to Add Your RSS Feeds to Our Index</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > RSS</p>
+
+<p>Would you like searchers to be able to search your news or multimedia content? Would you like them to be able to narrow results by date?</p>
+
+<p>Tell us the locations and names of your RSS feeds. We index all new and updated content on your feeds within minutes.</p>
+
+<h2>Step 1. Tell Us About Your RSS Feeds</h2>
+
+<p>We love feeds! Tell us about <em>all</em> of your RSS feeds, even if you don't opt to show them in step 2 below. Feeds are the fastest and most reliable way for us to learn about your new and updated content.</p>
+
+<p>Select the option to add a new RSS feed.</p>
+
+<h3>Name</h3>
+
+<p>Create a name for the feed. Within this 'bucket' you can list a single RSS feed or many feeds. For example, you can opt to list all of your agency's press releases separately (such as Police News, Fire News, EMS News, etc.) or you can list all three under one general name (such as News).</p>
+
+<p><img class="img-responsive" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/rss.png" alt="Add an RSS Feed"></img></p>
+
+<h3>Feed type</h3>
+
+<p>Select the type of feed. The default option is RSS (for text content like press releases or blogs). Change it to <a href="http://www.rssboard.org/media-rss">media RSS</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> for multimedia content like images and videos.</p>
+
+<p>Each item within a RSS feed must include a title, link, description, and publication date.</p>
+
+<p>Each item within a media RSS feed must also include both a <a href="http://www.rssboard.org/media-rss#media-content">media:content URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a direct URL to the media object and a <a href="http://www.rssboard.org/media-rss#media-thumbnails">media:thumbnail URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a URL to the object's thumbnail.</p>
+
+<p>Any items missing a required element won't display in your search results.</p>
+
+<h3>Sample RSS Item with All Required Elements</h3>
+
+<pre><code>&lt;item&gt;
+&lt;title&gt;
+Statement from Agriculture Secretary Tom Vilsack Regarding World Organization for Animal Health (OIE) Upgrade of United States&amp;apos; BSE Risk Status
+&lt;/title&gt;
+&lt;pubDate&gt;May 29, 2013 00:00:00 CDT&lt;/pubDate&gt;
+&lt;link&gt;
+http://www.usda.gov/wps/portal/usda/usdahome?contentid=2013/05/0106.xml&amp;contentidonly=true
+&lt;/link&gt;
+&lt;description&gt;
+WASHINGTON, May 29, 2013–Agriculture Secretary Tom Vilsack made the following statement about notification received today from the World Organization for Animal Health (OIE) upgrading the United States&amp;apos; risk classification for bovine spongiform encephalopathy (BSE) to negligible risk:
+&lt;/description&gt;
+&lt;/item&gt;
+</code></pre>
+
+<h3>Sample Media RSS Item with All Required Elements</h3>
+
+<pre><code>&lt;item&gt;
+&lt;title type="html"&gt;
+&lt;![CDATA[ Great Lakes Beach Health ]]&gt;
+&lt;/title&gt;
+&lt;link&gt;
+http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
+&lt;/link&gt;
+&lt;guid&gt;
+http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
+&lt;/guid&gt;
+&lt;pubDate&gt;Fri, 24 May 2013 00:00:00 EDT&lt;/pubDate&gt;
+&lt;media:description type="html"&gt;
+&lt;![CDATA[ As schools close for the year and summer weather beckons, many recreationalists head to the Great Lakes' public beaches. However, these coastal areas can become  contaminated with disease-causing bacteria that threaten public health, disrupt water   recreation, and pay a toll on the Great Lakes economies that depend on summer tourism. ]]&gt;
+&lt;/media:description&gt;
+&lt;media:thumbnail url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/thumbs/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
+&lt;media:content type="" url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/large/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
+&lt;/item&gt;
+</code></pre>
+
+<h2>Step 2. Opt to Show as a Facet, Inline Module, or Both</h2>
+
+<p>Allow searchers to see inline results for the three most recent, relevant RSS results <em>across all of your RSS feeds</em> by turning on the News module on the <a href="/manual/display-overview.html">Display Overview</a> page. You can also edit the default title, News, on the Display Overview page.</p>
+
+<p>Allow searchers to narrow results to a specific feed by turning on the option to show the facet on the <a href="/manual/display-overview.html">Display Overview</a> page. To ensure searchers don't encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a facet. The example screenshot below shows a feed displayed as a facet.</p>
+
+<h2>Step 3. Check Your Search Results Page</h2>
+
+<p><strong>Module.</strong> If you opted to show your RSS feed(s) as a module, searchers will see inline news results. It will highlight the three most recent, relevant results across all of your RSS feeds.</p>
+
+<p><strong>Facet.</strong> If you opted to show your RSS feed(s) as a facet, searchers can narrow their results to see your RSS-based results only.</p>
+
+<p>Within the RSS-based results, searchers can opt to limit results to the last hour, day, week, month, or year, or they can set a custom date range. They also can sort results in descending order by relevance (best match first) or date (most recent first).</p>
+
+<p><strong>Results count.</strong> We show the number of results returned for searches against your feed(s).</p>
+
+<p><img class="img-responsive" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/ResultsCount.png" alt="Results count for items in our indexes"></img></p>
+
+<h2>Step 4. Check the Status of Your Feeds</h2>
+
+<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each feed's status.</p>
+
+<p><img class="img-responsive" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/rss-status.png" alt="RSS status messages and colors"></img></p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;"> Color </th>
+<th style="text-align:left;"> Status </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> Green&nbsp;&nbsp;&nbsp; </td>
+<td style="text-align:left;"> Feed indexed, no errors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+</tr>
+<tr>
+<td style="text-align:left;"> Yellow </td>
+<td style="text-align:left;"> Pending Indexing </td>
+</tr>
+<tr>
+<td style="text-align:left;"> Red </td>
+<td style="text-align:left;"> Feed indexed, but error in one or more items </td>
+</tr>
+<tr>
+<td style="text-align:left;"> &nbsp; </td>
+<td style="text-align:left;"> &nbsp; </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Click on the name of any feed with an error to see more detailed information about it. Possible error messages follow.</p>
+
+<ul>
+<li>404 Not Found</li>
+<li>Feed looks empty</li>
+<li>Description can't be blank</li>
+<li>Title can't be blank</li>
+<li>Missing link field</li>
+<li>Missing pubDate field</li>
+<li>Link is not a valid URL</li>
+<li>Linked URL does not exist (HTTP 404)</li>
+</ul>
+
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
+
+<ul>
+<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
+<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+<li><a href="http://atomenabled.org/developers/syndication/">Atom syndication format</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+</ul>
+
+
+<p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="https://search.usa.gov/sites/">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don't need to coordinate with us.</p>
+
+<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your feed.</p>
+
+<p>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab. Change the form action to <code>action="https://search.usa.gov/search/news</code> and add the following line to limit the results to your feed.</p>
+
+<p><code>&lt;input type="hidden" name="channel" value="###"&gt;</code></p>
+
+<p>The value is the number for your feed ID, which is visible in the URL when you edit your feed in the Admin Center.</p>
+
+<p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your RSS feeds.</p>
+
+<p><strong><em>Did you know?</em></strong> When you <a href="/manual/youtube.html">provide us with your YouTube channel</a>, we'll automatically index the RSS feed for your YouTube channel.</p>
+
+<p><strong><em>Did you know?</em></strong> For any feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by these facets in the <a href="/manual/display-overview.html">sidebar</a> on the results page.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/rss"><span class="label label-info">rss</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/rss.html">
+        <time datetime="2017-02-22">February 22, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/i14y-drawers.html">How to Work with i14y Drawers</a>
     </h1>
     
@@ -164,6 +353,125 @@
       
       <a href="/manual/i14y-drawers.html">
         <time datetime="2017-01-26">January 26, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/third-party.html">How to Add JavaScript for Your Third-party Web Services</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > 3rd Party Tracking</p>
+
+<p>Do you want your search results page to run third-party web services such as Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?</p>
+
+<p>Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
+
+<p>Some tips for commonly used third-party web services follow.</p>
+
+<p><strong><em>Note</em></strong>: We do not currently support Google Tag Manager. You will need to submit all of the scripts you are managing in your Google Tag Manager setup.</p>
+
+<h2>Google Analytics Tip</h2>
+
+<p>Within your Google Analytics account, select the option, <em>Do Track Site Search</em>. Set the query parameter as <em>query</em>. For more information, read Google's tip, <a href="https://support.google.com/analytics/answer/1012264?hl=en&amp;ref_topic=1031951">Set Up and Configure Site Search</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<p>Additionally, if you've requested <a href="cname.html">domain masking</a> and you want to include the analytics for your <em>search.agency.gov</em> subdomain with your main <em>agency.gov</em> domain, you'll need to set your domain in your Google Analytics JavaScript by including <code>_gaq.push(['_setDomainName', 'agency.gov']);</code>.</p>
+
+<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<p>The code you submit should look something like one of the following two scripts.</p>
+
+<h3>Google Analytics Code (Older Format)</h3>
+
+<pre><code> &lt;script type="text/javascript"&gt;
+ var _gaq = _gaq || []; 
+ _gaq.push(['_setAccount', 'UA-########-1']); 
+ _gaq.push(['_trackPageview']);
+
+ (function() { 
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
+ })();
+ &lt;/script&gt;
+</code></pre>
+
+<h3>Google Analytics Code (Newer Format)</h3>
+
+<pre><code> &lt;script type="text/javascript"&gt;
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ &lt;/script&gt;
+</code></pre>
+
+<h2>Digital Analytics Program Tip</h2>
+
+<p>Does your federal agency participate in the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> (DAP)?  You don't need to do anything. We're already fully integrated with DAP.</p>
+
+<h2>ForeSee Tip</h2>
+
+<p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
+
+<ol>
+<li><p>Email us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#112;&#x6f;&#114;&#116;&#x2e;&#x64;&#x69;&#103;&#x69;&#116;&#97;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;">&#115;&#101;&#97;&#x72;&#99;&#x68;&#x40;&#x73;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#103;&#111;&#118;&#46;&#103;&#111;&#x76;</a> to <a href="cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
+<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
+
+<p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
+
+<p> <strong>and replace it with =></strong> 'files': '//www.youragency.gov/fsrscripts/',</p>
+
+<p> <em>(Or, find => 'files': '/foresee/', and replace it with => 'files': '//www.youragency/foresee/',)</em></p>
+
+<p> in the following five files.</p>
+
+<ul>
+<li>foresee-trigger.js</li>
+<li>foresee-tracker.js</li>
+<li>foresee-alive.js</li>
+<li>foresee-qualifier.js</li>
+<li>foresee-test.js</li>
+</ul>
+</li>
+<li><p>Submit your foresee-trigger.js via our Admin Center. It should look something like the following script. <code>&lt;script type="text/javascript" src="//www.youragency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;</code></p></li>
+<li><p>We'll send you an email to confirm that we've set up both your CNAME and added the script for your foresee-trigger.js file.</p></li>
+</ol>
+
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> We use Google Analytics Web analytics software&mdash;our own tag plus the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag&mdash;by default. Email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#x73;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#114;&#99;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#x6f;&#x72;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#116;&#97;&#x6c;&#103;&#111;&#118;&#46;&#x67;&#111;&#118;</a> if you'd like to opt out. Learn more about our <a href="http://www.digitalgov.gov/about/policies/">site policies</a> and <a href="../tos.html">terms of service</a>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
+      
+      <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
+      
+      <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
+      
+      <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/third-party.html">
+        <time datetime="2017-01-04">January 4, 2017</time>
       </a>
     </div>
     </article>
@@ -278,92 +586,64 @@
  
     
     <h1>
-      <a href="/manual/third-party.html">How to Add JavaScript for Your Third-party Web Services</a>
+      <a href="/manual/settings.html">How to Edit Your Settings</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > 3rd Party Tracking</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Settings</p>
 
-<p>Do you want your search results page to run third-party web services such as Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?</p>
+<h2>Display Name</h2>
 
-<p>Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
+<p>Tell us the name of your website. Searchers see your site name on the results page, such as in your page title or best bets. We recommend using the plain language name for your agency or site, such as <em>Social Security Administration</em>.</p>
 
-<p>Some tips for commonly used third-party web services follow.</p>
+<h2>Homepage URL</h2>
 
-<p><strong><em>Note</em></strong>: We do not currently support Google Tag Manager. You will need to submit all of the scripts you are managing in your Google Tag Manager setup.</p>
+<p>Tell us the homepage URL of your website. Enter a fully qualified URL, including http://, http://www, etc.</p>
 
-<h2>Google Analytics Tip</h2>
-
-<p>Within your Google Analytics account, select the option, <em>Do Track Site Search</em>. Set the query parameter as <em>query</em>. For more information, read Google's tip, <a href="https://support.google.com/analytics/answer/1012264?hl=en&amp;ref_topic=1031951">Set Up and Configure Site Search</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<p>Additionally, if you've requested <a href="cname.html">domain masking</a> and you want to include the analytics for your <em>search.agency.gov</em> subdomain with your main <em>agency.gov</em> domain, you'll need to set your domain in your Google Analytics JavaScript by including <code>_gaq.push(['_setDomainName', 'agency.gov']);</code>.</p>
-
-<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<p>The code you submit should look something like one of the following two scripts.</p>
-
-<h3>Google Analytics Code (Older Format)</h3>
-
-<pre><code> &lt;script type="text/javascript"&gt;
- var _gaq = _gaq || []; 
- _gaq.push(['_setAccount', 'UA-########-1']); 
- _gaq.push(['_trackPageview']);
-
- (function() { 
- var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
- ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
- var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
- })();
- &lt;/script&gt;
-</code></pre>
-
-<h3>Google Analytics Code (Newer Format)</h3>
-
-<pre><code> &lt;script type="text/javascript"&gt;
- (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
- &lt;/script&gt;
-</code></pre>
-
-<h2>Digital Analytics Program Tip</h2>
-
-<p>Does your federal agency participate in the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> (DAP)?  You don't need to do anything. We're already fully integrated with DAP.</p>
-
-<h2>ForeSee Tip</h2>
-
-<p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
-
-<ol>
-<li><p>Email us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#115;&#101;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#97;&#x6c;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#118;">&#115;&#x65;&#97;&#114;&#99;&#104;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;</a> to <a href="cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
-<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
-
-<p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
-
-<p> <strong>and replace it with =></strong> 'files': '//www.youragency.gov/fsrscripts/',</p>
-
-<p> <em>(Or, find => 'files': '/foresee/', and replace it with => 'files': '//www.youragency/foresee/',)</em></p>
-
-<p> in the following five files.</p>
+<p><strong>Correct Syntax</strong></p>
 
 <ul>
-<li>foresee-trigger.js</li>
-<li>foresee-tracker.js</li>
-<li>foresee-alive.js</li>
-<li>foresee-qualifier.js</li>
-<li>foresee-test.js</li>
+<li>https://www.whitehouse.gov</li>
+<li>https://gobierno.usa.gov</li>
+<li>https://stemcells.nih.gov</li>
 </ul>
-</li>
-<li><p>Submit your foresee-trigger.js via our Admin Center. It should look something like the following script. <code>&lt;script type="text/javascript" src="//www.youragency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;</code></p></li>
-<li><p>We'll send you an email to confirm that we've set up both your CNAME and added the script for your foresee-trigger.js file.</p></li>
-</ol>
 
+
+<p><strong>Incorrect Syntax</strong></p>
+
+<ul>
+<li>usa.gov (use https://www.usa.gov)</li>
+<li>www.nasa.gov (use https://www.nasa.gov)</li>
+<li>https://www.sec.gov/litigation.shtml (use the higher-level folder, https://www.sec.gov/litigation)</li>
+<li>https://www.gsa.gov/portal/category/100000?utm_source=OCM&amp;utm_medium=print-radio&amp;utm_term=&amp;utm_campaign=shortcuts (use the higher-level domain, https://www.gsa.gov)</li>
+<li>http://www.doc.gov (use the domain that resolves, https://www.commerce.gov)</li>
+</ul>
+
+
+<p>We use this homepage URL to (a) populate your primary <a href="/manual/domains.html">domain</a> and (b) link the default logo on your results page to your homepage.</p>
+
+<h2>Site Handle</h2>
+
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#115;&#101;&#x61;&#114;&#99;&#104;&#x40;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#x61;&#108;&#103;&#111;&#118;&#46;&#103;&#111;&#118;">&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#103;&#105;&#116;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#118;</a>.</p>
+
+<p><a href="http://search.socialsecurity.gov/search?query=office+locations&amp;affiliate=ssa"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/settings.png" title="Site name and handle on SocialSecurity.gov's search results page" alt="Site name and handle on SocialSecurity.gov's search results page" /></a></p>
+
+<h2>Site ID</h2>
+
+<p>We assign a unique, system-generated numeric ID to your site. We use this ID for some back-end code. You can see this ID in the URL for your site in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+
+<h2>Site Language</h2>
+
+<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">69 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#x73;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#x74;&#46;&#100;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#115;&#x75;&#112;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#x74;&#97;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#x76;</a>.</p>
+
+<h2>Delete</h2>
+
+<p>After you've set up a site, you may want to delete it. <strong>Use caution.</strong> This action permanently deletes your site and its associated analytics and indexes. We cannot restore deleted sites.</p>
 
 <hr />
 
-<p><strong><em>Did you know?</em></strong> We use Google Analytics Web analytics software&mdash;our own tag plus the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag&mdash;by default. Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#115;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x73;&#x75;&#x70;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#x76;">&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#108;&#103;&#111;&#x76;&#46;&#x67;&#111;&#x76;</a> if you'd like to opt out. Learn more about our <a href="http://www.digitalgov.gov/about/policies/">site policies</a> and <a href="../tos.html">terms of service</a>.</p>
+<p><strong><em>Did you know?</em></strong>  Click the pushpin icon in the top navigation bar to change the default site that appears when you first log in to the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
 
     </div>
 
@@ -371,15 +651,9 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       
       <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
       
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
       
-      <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
-      
-      <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
-      
-      <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
-      
-      <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
+      <a href="/tagged/settings"><span class="label label-info">settings</span></a>
       
     </div>
    <div class='time'>
@@ -387,8 +661,8 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       
       
       
-      <a href="/manual/third-party.html">
-        <time datetime="2017-01-04">January 4, 2017</time>
+      <a href="/manual/settings.html">
+        <time datetime="2016-12-28">December 28, 2016</time>
       </a>
     </div>
     </article>
@@ -588,91 +862,6 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
  
     
     <h1>
-      <a href="/manual/settings.html">How to Edit Your Settings</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Settings</p>
-
-<h2>Display Name</h2>
-
-<p>Tell us the name of your website. Searchers see your site name on the results page, such as in your page title or best bets. We recommend using the plain language name for your agency or site, such as <em>Social Security Administration</em>.</p>
-
-<h2>Homepage URL</h2>
-
-<p>Tell us the homepage URL of your website. Enter a fully qualified URL, including http://, http://www, etc.</p>
-
-<p><strong>Correct Syntax</strong></p>
-
-<ul>
-<li>https://www.whitehouse.gov</li>
-<li>https://gobierno.usa.gov</li>
-<li>https://stemcells.nih.gov</li>
-</ul>
-
-
-<p><strong>Incorrect Syntax</strong></p>
-
-<ul>
-<li>usa.gov (use https://www.usa.gov)</li>
-<li>www.nasa.gov (use https://www.nasa.gov)</li>
-<li>https://www.sec.gov/litigation.shtml (use the higher-level folder, https://www.sec.gov/litigation)</li>
-<li>https://www.gsa.gov/portal/category/100000?utm_source=OCM&amp;utm_medium=print-radio&amp;utm_term=&amp;utm_campaign=shortcuts (use the higher-level domain, https://www.gsa.gov)</li>
-<li>http://www.doc.gov (use the domain that resolves, https://www.commerce.gov)</li>
-</ul>
-
-
-<p>We use this homepage URL to (a) populate your primary <a href="/manual/domains.html">domain</a> and (b) link the default logo on your results page to your homepage.</p>
-
-<h2>Site Handle</h2>
-
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#58;&#x73;&#101;&#x61;&#114;&#99;&#104;&#x40;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#100;&#x69;&#103;&#x69;&#x74;&#97;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#x76;">&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#111;&#118;</a>.</p>
-
-<p><a href="http://search.socialsecurity.gov/search?query=office+locations&amp;affiliate=ssa"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/settings.png" title="Site name and handle on SocialSecurity.gov's search results page" alt="Site name and handle on SocialSecurity.gov's search results page" /></a></p>
-
-<h2>Site ID</h2>
-
-<p>We assign a unique, system-generated numeric ID to your site. We use this ID for some back-end code. You can see this ID in the URL for your site in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-<h2>Site Language</h2>
-
-<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">69 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#115;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#118;">&#x73;&#x65;&#97;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#x64;&#x69;&#103;&#x69;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#103;&#x6f;&#x76;</a>.</p>
-
-<h2>Delete</h2>
-
-<p>After you've set up a site, you may want to delete it. <strong>Use caution.</strong> This action permanently deletes your site and its associated analytics and indexes. We cannot restore deleted sites.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong>  Click the pushpin icon in the top navigation bar to change the default site that appears when you first log in to the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
-      
-      <a href="/tagged/settings"><span class="label label-info">settings</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/settings.html">
-        <time datetime="2016-12-28">December 28, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
       <a href="/manual/preview.html">How to Preview Your Search Results</a>
     </h1>
     
@@ -715,88 +904,6 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       
       
       <a href="/manual/preview.html">
-        <time datetime="2016-12-28">December 28, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/blog/go-live.html">Going Live with DigitalGov Search</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>Your pre-launch checklist will be unique to your agency's workflow, requirements, and deadlines. Below is a typical checklist.</p>
-
-<h2>Double Check Your Content Sources</h2>
-
-<p><i class="icon-check"></i> <strong>1. Have you told us which domain(s) you want to search?</strong> List one or more <a href="/manual/domains.html">domains</a> that you want to search on the first page of web results. Most agencies opt to leave out the 'www' to include all subdomains (for example, list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies especially department-level portals opt to also include their bureaus' websites (for example, Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)</p>
-
-<p><i class="icon-check"></i> <strong>2. Have you told us about your RSS feeds?</strong> We love <a href="/manual/rss.html">RSS feeds</a>. Tell us about all of your feeds, even if you opt not to show them (see #5 below). They're the quickest way for you to tell us about your new and updated content. Feeds also have well-structured titles, URLs, descriptions, and dates that we use to improve your search results page. (Tip: Preview your feeds from the RSS page in the <a href="https://search.usa.gov/sites/">Admin Center</a> to confirm that we've indexed your content.)</p>
-
-<p><i class="icon-check"></i> <strong>3. Have you told us about your social media accounts?</strong> <a href="/manual/flickr.html">Flickr photostreams</a>, <a href="/manual/twitter.html">tweets</a>, and <a href="/manual/youtube.html">YouTube videos</a> are a great way to highlight your recent content. Tell us about all of your social media, even if you opt not to show them (see #5 below).</p>
-
-<h2>Customize the Display of Your Search Results Page</h2>
-
-<p><i class="icon-check"></i> <strong>4. Have you made the search results page look like your website?</strong> Customize the <a href="/manual/brand.html">brand</a> (font, colors, logo, favicon, and navigation links) of your search results page to create a seamless experience for users as they search and browse your website.</p>
-
-<p><i class="icon-check"></i> <strong>5. Have you told us what to show on your results page?</strong> Turn on (or off) the inline modules and facets that you want to appear on your search results page. You can change the default settings on the <a href="/manual/display-overview.html">Display Overview</a> page in the Admin Center.</p>
-
-<h2>Connect Your Site to DigitalGov Search</h2>
-
-<p>Most agencies add these two <a href="/manual/code.html">snippets of code</a> to the template(s) in their websites or content management systems (rather than adding them to individual pages).</p>
-
-<p><i class="icon-check"></i> <strong>6. Does your search box point to DigitalGov Search?</strong> Update your search box form code point to our service so that, when users execute a search, they'll see your DigitalGov Search-hosted results page.</p>
-
-<pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
-     &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
-    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
-    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
-    &lt;input name="commit" type="submit" value="Search" /&gt;
-&lt;/form&gt;
-</code></pre>
-
-<p><i class="icon-check"></i> <strong>7. Do you have our Javascript tag on your webpages?</strong> This Javascript powers the suggestions for type-ahead and <a href="/manual/display-overview.html">related searches</a>. It also provides data on your trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-<pre><code>&lt;script type="text/javascript"&gt;
-//&lt;![CDATA[
-     var usasearch_config = { siteHandle:"YourSiteHandle" };
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "//search.usa.gov/javascripts/remote.loader.js";
-    document.getElementsByTagName("head")[0].appendChild(script);
-//]]&gt;
-&lt;/script&gt;
-</code></pre>
-
-<h2>Set Up Nice-to-Have Features (Optional)</h2>
-
-<p><i class="icon-check"></i> <strong>8. Have you masked your domain?</strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov.</p>
-
-<p><i class="icon-check"></i> <strong>9. Have you added the Javascripts for your other third-party web services to your results page?</strong> If you have a <a href="/manual/third-party.html">third-party service</a> running on your website, you likely want it to run on your results page. Agencies often include their Foresee, Google Analytics, Omniture, or WebTrends code, among others. If your federal website participates in the <a href="https://www.digitalgov.gov/services/dap/">Digital Analytics Program</a>, you do not need to take any action: DAP code is included on your results page, by default.</p>
-
-<h2>Don't Forget SEO (Optional)</h2>
-
-<p><i class="icon-check"></i> <strong>10. Have you optimized your site so we can find your content?</strong> We follow <a href="http://www.digitalgov.gov/2013/05/31/four-steps-to-achieve-good-seo/">search engine optimization</a> (SEO) best practices. Verify that you have a <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and an <a href="http://www.sitemaps.org">XML sitemap</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. These two files are typically located in the root directory of your website (i.e., agency.gov/robots.txt and agency.gov/sitemap.xml, respectively). Also verify that your robots.txt file allows our user agent (usasearch) to access your public content.</p>
-
-<p><i class="icon-check"></i> <strong>11. Have you registered your site with the major commercial search engines?</strong> Register for both <a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to maximize the coverage of your content in their search results.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/blog/go-live.html">
         <time datetime="2016-12-28">December 28, 2016</time>
       </a>
     </div>
@@ -890,6 +997,88 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
  
     
     <h1>
+      <a href="/blog/go-live.html">Going Live with DigitalGov Search</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Your pre-launch checklist will be unique to your agency's workflow, requirements, and deadlines. Below is a typical checklist.</p>
+
+<h2>Double Check Your Content Sources</h2>
+
+<p><i class="icon-check"></i> <strong>1. Have you told us which domain(s) you want to search?</strong> List one or more <a href="/manual/domains.html">domains</a> that you want to search on the first page of web results. Most agencies opt to leave out the 'www' to include all subdomains (for example, list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies especially department-level portals opt to also include their bureaus' websites (for example, Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)</p>
+
+<p><i class="icon-check"></i> <strong>2. Have you told us about your RSS feeds?</strong> We love <a href="/manual/rss.html">RSS feeds</a>. Tell us about all of your feeds, even if you opt not to show them (see #5 below). They're the quickest way for you to tell us about your new and updated content. Feeds also have well-structured titles, URLs, descriptions, and dates that we use to improve your search results page. (Tip: Preview your feeds from the RSS page in the <a href="https://search.usa.gov/sites/">Admin Center</a> to confirm that we've indexed your content.)</p>
+
+<p><i class="icon-check"></i> <strong>3. Have you told us about your social media accounts?</strong> <a href="/manual/flickr.html">Flickr photostreams</a>, <a href="/manual/twitter.html">tweets</a>, and <a href="/manual/youtube.html">YouTube videos</a> are a great way to highlight your recent content. Tell us about all of your social media, even if you opt not to show them (see #5 below).</p>
+
+<h2>Customize the Display of Your Search Results Page</h2>
+
+<p><i class="icon-check"></i> <strong>4. Have you made the search results page look like your website?</strong> Customize the <a href="/manual/brand.html">brand</a> (font, colors, logo, favicon, and navigation links) of your search results page to create a seamless experience for users as they search and browse your website.</p>
+
+<p><i class="icon-check"></i> <strong>5. Have you told us what to show on your results page?</strong> Turn on (or off) the inline modules and facets that you want to appear on your search results page. You can change the default settings on the <a href="/manual/display-overview.html">Display Overview</a> page in the Admin Center.</p>
+
+<h2>Connect Your Site to DigitalGov Search</h2>
+
+<p>Most agencies add these two <a href="/manual/code.html">snippets of code</a> to the template(s) in their websites or content management systems (rather than adding them to individual pages).</p>
+
+<p><i class="icon-check"></i> <strong>6. Does your search box point to DigitalGov Search?</strong> Update your search box form code point to our service so that, when users execute a search, they'll see your DigitalGov Search-hosted results page.</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+     &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p><i class="icon-check"></i> <strong>7. Do you have our Javascript tag on your webpages?</strong> This Javascript powers the suggestions for type-ahead and <a href="/manual/display-overview.html">related searches</a>. It also provides data on your trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+     var usasearch_config = { siteHandle:"YourSiteHandle" };
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "//search.usa.gov/javascripts/remote.loader.js";
+    document.getElementsByTagName("head")[0].appendChild(script);
+//]]&gt;
+&lt;/script&gt;
+</code></pre>
+
+<h2>Set Up Nice-to-Have Features (Optional)</h2>
+
+<p><i class="icon-check"></i> <strong>8. Have you masked your domain?</strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov.</p>
+
+<p><i class="icon-check"></i> <strong>9. Have you added the Javascripts for your other third-party web services to your results page?</strong> If you have a <a href="/manual/third-party.html">third-party service</a> running on your website, you likely want it to run on your results page. Agencies often include their Foresee, Google Analytics, Omniture, or WebTrends code, among others. If your federal website participates in the <a href="https://www.digitalgov.gov/services/dap/">Digital Analytics Program</a>, you do not need to take any action: DAP code is included on your results page, by default.</p>
+
+<h2>Don't Forget SEO (Optional)</h2>
+
+<p><i class="icon-check"></i> <strong>10. Have you optimized your site so we can find your content?</strong> We follow <a href="http://www.digitalgov.gov/2013/05/31/four-steps-to-achieve-good-seo/">search engine optimization</a> (SEO) best practices. Verify that you have a <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and an <a href="http://www.sitemaps.org">XML sitemap</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. These two files are typically located in the root directory of your website (i.e., agency.gov/robots.txt and agency.gov/sitemap.xml, respectively). Also verify that your robots.txt file allows our user agent (usasearch) to access your public content.</p>
+
+<p><i class="icon-check"></i> <strong>11. Have you registered your site with the major commercial search engines?</strong> Register for both <a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to maximize the coverage of your content in their search results.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/blog/go-live.html">
+        <time datetime="2016-12-28">December 28, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/cname.html">How to Mask Your Domain</a>
     </h1>
     
@@ -946,129 +1135,6 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
       
       <a href="/manual/cname.html">
         <time datetime="2016-12-22">December 22, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/https-transition.html">Preparing Your Site for HTTPS</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="https://https.cio.gov/">OMB memo M-15-13</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> requires all publicly available federal websites and web services to <a href="https://www.digitalgov.gov/2015/07/21/an-introduction-to-https-by-18f-and-digitalgov-university/">implement HTTPS</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> by December 31, 2016.</p>
-
-<p>Below is a checklist of action items that should be completed in order for your search site to function as expected in HTTPS.</p>
-
-<h2>1. The Admin Center</h2>
-
-<p>Update all URLs that are listed in the Search Admin Center for each of your search configurations. <em>You will need to update the links for all of your search configurations.</em></p>
-
-<h3>Everyone:</h3>
-
-<p><strong>Dashboard:</strong></p>
-
-<ul>
-<li><strong>Settings:</strong> Update your Homepage URL.</li>
-</ul>
-
-
-<p><strong>Analytics:</strong></p>
-
-<ul>
-<li><strong>3rd Party Tracking:</strong> If you are using <a href="http://search.digitalgov.gov/manual/third-party.html">3rd party tracking code</a> that is HTTP protocol-specific, you will need to submit updated code.</li>
-</ul>
-
-
-<p><strong>Content:</strong></p>
-
-<ul>
-<li><strong>Content Overview:</strong> No action needed. The URL that we scan for social media accounts is synced with the homepage you have listed in the Dashboard section.</li>
-<li><strong>Domains:</strong> No action needed, as this list isn’t protocol-specific.</li>
-<li><strong>Collections:</strong> Update all URL paths in your collections; if you have mixed collections, leave any HTTP sites as-is.</li>
-<li><strong>Best Bets (Text and Graphics):</strong> Throughout December 2016, we are doing bulk updates of Best Bet URLs in our system. If your site is serving content over HTTPS, we will update the URLs for your Best Bets. We suggest doing a spotcheck to confirm that all Best Bets have been updated. If you need a bulk update done after December, please <a href="mailto:search@support.digitalgov.gov">email us</a>.</li>
-<li><strong>Routed Queries:</strong> Update routed query URLs.</li>
-<li><strong>RSS feeds:</strong> Throughout December 2016, we are doing bulk updates of RSS feed URLs in our system. If your site is serving content over HTTPS, we will update the indexed URLs for your RSS feeds. We suggest doing a spotcheck to confirm that all feeds have been updated. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS. If you need a bulk update done after December, please <a href="mailto:search@support.digitalgov.gov">email us</a>.</li>
-</ul>
-
-
-<p><strong>Display:</strong></p>
-
-<ul>
-<li><strong>Image Assets:</strong> Update the Favicon URL.</li>
-<li><strong>Header &amp; Footer:</strong> Update header and footer links.</li>
-<li><strong>No Results Page:</strong> Update alternative links.</li>
-</ul>
-
-
-<h3>Only those using <code>Domains &gt; Advanced</code> features:</h3>
-
-<ul>
-<li><strong>Supplemental Feed:</strong> Throughout December 2016, we are doing bulk updates of RSS feed URLs in our system. If your site is serving content over HTTPS, we will update the indexed URLs for your RSS feeds. We suggest doing a spotcheck to confirm that all feeds have been updated. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS. If you need a bulk update done after December, please <a href="mailto:search@support.digitalgov.gov">email us</a>.</li>
-<li><strong>Supplemental URLs:</strong> Throughout December 2016, we are doing bulk updates of supplemental URLs in our system. If your site is serving content over HTTPS, we will update the supplemental URLs you have submitted. We suggest doing a spotcheck to confirm that all URLs have been updated. If you need a bulk update done after December, please <a href="mailto:search@support.digitalgov.gov">email us</a>.</li>
-<li><strong>Filter URLs:</strong> Update filtered URLs.</li>
-</ul>
-
-
-<h2>2. Masked Domains</h2>
-
-<p>If your site uses <a href="http://search.digitalgov.gov/manual/cname.html">domain masking</a>: <a href="mailto:search@support.digitalgov.gov">contact our team</a> to be added to our SSL certificate. While this step doesn't apply to everyone, it does need to be done before step 3.</p>
-
-<h2>3. Form Code Action on Your Website</h2>
-
-<p>Update your form code action: An <code>s</code> must be added to your site’s form action in order for the request to be made over HTTPS, and for the results page to be served over HTTPS. Example:</p>
-
-<p><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;</code></p>
-
-<h2>4. Commercial Search Engines</h2>
-
-<p>Notify Google and Bing about the change; Google and Bing treat a migration from HTTP to HTTPS as a site move.</p>
-
-<ul>
-<li>Google has a step-by-step guide, <a href="https://support.google.com/webmasters/answer/6033049">Move a Site with URL changes</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>For Bing, review <a href="https://www.bing.com/webmaster/help/how-to-use-the-site-move-tool-bb8f5112">How to Use the Site Move tool</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-</ul>
-
-
-<p>Additional SEO best practices:</p>
-
-<ul>
-<li>Update your XML sitemap with HTTPS URLs.</li>
-<li>Use <code>rel canonical</code> to <a href="https://support.google.com/webmasters/answer/139066?hl=en#https">declare HTTPS the preferred version</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>Update internal website links.</li>
-<li>Update links to your website from social media and other platforms managed by your agency.</li>
-</ul>
-
-
-<hr />
-
-<p><strong><em>Additional Information:</em></strong></p>
-
-<ul>
-<li>Read more about the <a href="https://https.cio.gov/">HTTPS-Only Standard</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> from the Federal CIO Council.</li>
-<li>View a <a href="https://docs.google.com/spreadsheets/d/1XB26X_wFoBBlQEqecj7HB79hQ7DTLIPo97SS5irwsK8/edit#gid=1975121463">SEO Checklist</a> &nbsp;<i class="icon-external-link"><span>(External link)</span></i> created by Aleyda Solís.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/https"><span class="label label-info">https</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/https-transition.html">
-        <time datetime="2016-12-15">December 15, 2016</time>
       </a>
     </div>
     </article>
