@@ -3,7 +3,7 @@
 <head>
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <title>How to Edit Your Settings</title>
+  <title>February 2017 Release Notes</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -97,84 +97,54 @@
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/manual/settings.html">How to Edit Your Settings</a>
+    <a href="/releases/february-2017.html">February 2017 Release Notes</a>
   </h1>
   
 
   <div class='post-content'>
-    <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Settings</p>
-
-<h2>Display Name</h2>
-
-<p>Tell us the name of your website. Searchers see your site name on the results page, such as in your page title or best bets. We recommend using the plain language name for your agency or site, such as <em>Social Security Administration</em>.</p>
-
-<h2>Homepage URL</h2>
-
-<p>Tell us the homepage URL of your website. Enter a fully qualified URL, including http://, http://www, etc.</p>
-
-<p><strong>Correct Syntax</strong></p>
+    <h2>Highlighted Features</h2>
 
 <ul>
-<li>https://www.whitehouse.gov</li>
-<li>https://gobierno.usa.gov</li>
-<li>https://stemcells.nih.gov</li>
+<li>If you change your email address, we will now send a verification link to the new address.</li>
+<li>We now offer a Kazakh language search results page.</li>
 </ul>
 
 
-<p><strong>Incorrect Syntax</strong></p>
+<h2>Chores</h2>
 
 <ul>
-<li>usa.gov (use https://www.usa.gov)</li>
-<li>www.nasa.gov (use https://www.nasa.gov)</li>
-<li>https://www.sec.gov/litigation.shtml (use the higher-level folder, https://www.sec.gov/litigation)</li>
-<li>https://www.gsa.gov/portal/category/100000?utm_source=OCM&amp;utm_medium=print-radio&amp;utm_term=&amp;utm_campaign=shortcuts (use the higher-level domain, https://www.gsa.gov)</li>
-<li>http://www.doc.gov (use the domain that resolves, https://www.commerce.gov)</li>
+<li>As of March 1st, we only support federal and District of Columbia websites. We’ve done a lot of behind-the-scenes work to support our non-federal customers during the past few months of transition.</li>
+<li>We’ve added our active repos to <a href="https://code.gov/">Code.gov</a>, a website promoting good practices in code development, collaboration, and reuse across the federal government.</li>
+<li>Our sysadmins reduced the size of our Elasticsearch server cluster, saving money while maintaining system integrity.</li>
+<li>We removed old code from our system, wrapping up tasks from our December transition to Bing’s newest API.</li>
 </ul>
 
 
-<p>We use this homepage URL to (a) populate your primary <a href="/manual/domains.html">domain</a> and (b) link the default logo on your results page to your homepage.</p>
+<h2>Fixes</h2>
 
-<h2>Site Handle</h2>
+<ul>
+<li>We fixed internal reports that allow us to track when agencies launch our service on their sites.</li>
+<li>We fixed a bug that affected the indexing of some <a href="/manual/twitter.html">Twitter accounts</a>.</li>
+</ul>
 
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#115;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#x75;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#100;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#x76;">&#115;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;</a>.</p>
-
-<p><a href="http://search.socialsecurity.gov/search?query=office+locations&amp;affiliate=ssa"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/settings.png" title="Site name and handle on SocialSecurity.gov's search results page" alt="Site name and handle on SocialSecurity.gov's search results page" /></a></p>
-
-<h2>Site ID</h2>
-
-<p>We assign a unique, system-generated numeric ID to your site. We use this ID for some back-end code. You can see this ID in the URL for your site in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-<h2>Site Language</h2>
-
-<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">69 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#115;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#118;">&#x73;&#x65;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#x61;&#108;&#103;&#111;&#118;&#46;&#x67;&#111;&#118;</a>.</p>
-
-<h2>Delete</h2>
-
-<p>After you've set up a site, you may want to delete it. <strong>Use caution.</strong> This action permanently deletes your site and its associated analytics and indexes. We cannot restore deleted sites.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong>  Click the pushpin icon in the top navigation bar to change the default site that appears when you first log in to the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-    
-    <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
-    
-    <a href="/tagged/settings"><span class="label label-info">settings</span></a>
+    <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
     
   </div>
 
   <div class='time'>
     
     
+    </br><span>Page last reviewed or updated:</span>
     
     
-    <a href="/manual/settings.html">
-      <time>December 28, 2016</time>
+    
+    <a href="/releases/february-2017.html">
+      <time>March 15, 2017</time>
     </a>
   </div>
 
