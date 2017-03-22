@@ -102,6 +102,118 @@
   <article class='article'>
     
     <h1>
+      <a href="/manual/analytics-alerts.html">Setting Up Analtyics Alerts</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Analytics Alerts</p>
+
+<p>Analytics Alerts let you receive email alerts when your site visitors are getting no results for a particular query or when a query is getting a <a href="#Low-Query-Click-thru-Rate-(CTR">low click-through rate</a>).</p>
+
+<h2>No Results</h2>
+
+<p>Set up this alert to be notified if specific queries are frequently searched for but are returning no results. Help on specific fields follows, or <a href="#no-results-example">skip to an example</a>.</p>
+
+<p><strong>Name</strong></p>
+
+<p>Enter a name for your alert. It will be the subject line of your alert email. The name of your alert must be unique across our entire search alert system, so if you see an error message, please modify the name.</p>
+
+<p><strong>Check interval</strong></p>
+
+<p>Enter the frequency at which you’d like the system to check for queries with no results. Use <code>m</code>, <code>h</code>, <code>d</code>, or <code>w</code> to specify the minutes/hours/days/weeks you’d like between checks.</p>
+
+<p><strong>Minimum number of queries</strong></p>
+
+<p>Enter the minimum number of times, over the time window, that a given query must be entered to trigger the alert.</p>
+
+<p><strong>Time window for each check</strong></p>
+
+<p>Enter the amount of time the system should look back through for each check. Use <code>m</code>, <code>h</code>, <code>d</code>, or <code>w</code> to specify minutes/hours/days/weeks.</p>
+
+<p><strong>Time between alerts</strong></p>
+
+<p>Enter the minimum period of time between successive email messages.</p>
+
+<p><strong>Ignored query terms</strong></p>
+
+<p>Enter any query terms that you don’t want included in the alert, separated by commas.</p>
+
+<p><strong><em>No Results Example:</em></strong></p>
+
+<p>In this example, the alert system will check every 30 minutes to see if any query has been entered at least 50 times over the past 12 hours and yielded no results. The system will send an alert at most once per day if there are queries that fit this criteria, and it will not include the query ‘panda’ in the alert.</p>
+
+<p><img src="https://search.digitalgov.gov/img/No-Results-Screenshot.png" title="No Results Analytics Alert Example" alt="No Results Analytics Alert Example" /></p>
+
+<h2>Low Query Click-thru Rate (CTR)</h2>
+
+<p>Set up this alert to be notified if the results page for a query with significant traffic is not getting many clicks. If the query resulted in a click less than 20% of the time, it is considered to have a low click through rate (CTR); however, you are able to set any percentage threshold for your alert emails. Help on specific fields follows, or <a href="#low-ctr-example">skip to an example</a>.</p>
+
+<p><strong>Name</strong></p>
+
+<p>Enter a name for your alert. It will be the subject line of your email. The name of your alert must be unique across our entire search alert system, so if you see an error message, please modify the name.</p>
+
+<p><strong>Check interval</strong></p>
+
+<p>Enter the frequency at which you’d like the system to check for queries with a low CTR. Use <code>m</code>, <code>h</code>, <code>d</code>, or <code>w</code> to specify the minutes/hours/days/weeks you’d like between checks.</p>
+
+<p><strong>Minimum search activity level (queries + clicks)</strong></p>
+
+<p>Enter the minimum number of times, over the time window, that a given query must have search activity (queries plus clicks) to trigger the low query CTR alert. Because we’re not able to differentiate between query activity and click activity, you may want to pad this number a little. However, since these queries are not getting a lot of clicks, you don’t want to pad it too much.</p>
+
+<p><strong>Maximum CTR for alert</strong></p>
+
+<p>Enter the maximum click through rate that will trigger an alert, expressed as a percentage. You will receive an alert for a query that has a CTR equal to or lower than that percentage during the given time window.</p>
+
+<p><strong>Time window for each check</strong></p>
+
+<p>Enter the amount of time the system should look back through for each check. Use <code>m</code>, <code>h</code>, <code>d</code>, or <code>w</code> to specify minutes/hours/days/weeks.</p>
+
+<p><strong>Time between alerts</strong></p>
+
+<p>Enter the minimum period of time between successive email messages.</p>
+
+<p><strong>Ignored query terms</strong></p>
+
+<p>Enter any query terms that you don’t want included in the alert, separated by commas.</p>
+
+<p><strong><em>Low CTR Example:</em></strong></p>
+
+<p>In this example, the alert system will check every 30 minutes for a query that has had search activity (queries plus clicks) at least 100 times over the past 12 hours and has a CTR 15% or lower. The system will send an alert at most once per day if there are queries that fit these criteria, and it will not include queries for ‘lion’ in the alert.</p>
+
+<p><img src="https://search.digitalgov.gov/img/Low-CTR-Screenshot.png" title="Low CTR Analytics Alert Example" alt="Low CTR Analytics Alert Example" /></p>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> Don’t forget to hit ‘add’ in the upper right corner!</p>
+
+<p><strong><em>Troubleshooting tip:</em></strong> Analytics alerts are only sent to the Search user who set up the alert.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/analytics-alerts.html">
+        <time datetime="2017-03-22">March 22, 2017</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
       <a href="/manual/youtube.html">How to Add Your YouTube Videos to Our Index</a>
     </h1>
     
@@ -539,7 +651,7 @@
 
 <p><strong><em>Troubleshooting Tip:</em></strong> For non-English sites, some agencies opt to include the specific location of the language's content (such as agency.gov/language or language.agency.gov) in their <a href="/manual/domains.html">Domains</a> to further refine the search results. Test the results for your non-English site with both the general agency.gov and the language-specific location to determine which setting gives you the best results.</p>
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#115;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#115;&#117;&#112;&#112;&#111;&#114;&#x74;&#46;&#x64;&#105;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;">&#115;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#103;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#115;&#x65;&#97;&#114;&#99;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#46;&#x67;&#x6f;&#118;">&#x73;&#x65;&#97;&#114;&#x63;&#104;&#x40;&#x73;&#117;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#100;&#105;&#x67;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#118;</a>.</p>
 
     </div>
 
@@ -732,7 +844,7 @@
 
 <h2>Need Help? We're Here to Help!</h2>
 
-<p>Email us at <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#58;&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#112;&#112;&#x6f;&#114;&#x74;&#46;&#100;&#x69;&#103;&#x69;&#x74;&#97;&#x6c;&#103;&#x6f;&#x76;&#46;&#x67;&#x6f;&#118;">&#115;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#x73;&#117;&#112;&#112;&#111;&#114;&#x74;&#46;&#100;&#x69;&#103;&#x69;&#116;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#118;</a>, or give us a call at 202-505-5315.</p>
+<p>Email us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#x6f;&#58;&#115;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#x73;&#117;&#112;&#112;&#111;&#x72;&#x74;&#46;&#100;&#105;&#103;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#x6f;&#x76;">&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#97;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#x6f;&#x76;</a>, or give us a call at 202-505-5315.</p>
 
 <p>If you're a federal agency in the DC area, we'd be happy to stop by your office for an in-person consultation. <a href="mailto:search@support.digitalgov.gov">Email us</a> to set up a time.
 </article></p>
@@ -825,59 +937,6 @@
       
       
       <a href="/developer/index.html">
-        <time datetime="2017-02-27">February 27, 2017</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/manual/govbox-jobs.html">Help Searchers Find Jobs</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>One of the most common search tasks is to look for current job openings. We created the Jobs module to help searchers quickly find relevant jobs.</p>
-
-<p>When you <a href="/manual/display-overview.html">turn on the Job Openings</a> module, searchers looking for jobs on your site will see up to three relevant jobs listings on your results page. You will need to <a href="mailto:search@support.digitalgov.gov">contact us</a> to get the Jobs module enabled for your site.</p>
-
-<h2>Federal Government</h2>
-
-<ul>
-<li><strong>Federal Cross-Agency Portals.</strong> If your website is a federal cross-agency portal (e.g., USA.gov), the Job Openings module will return relevant, location- and keyword-matched job openings <em>across all federal agencies</em>.</li>
-<li><strong>Federal Department Websites.</strong> If your website is affiliated with a specific federal department (e.g., Department of Commerce), the Job Openings module will return relevant, location- and keyword-matched job openings <em>across all agencies within your department</em>.</li>
-<li><strong>Federal Agency or Office Websites.</strong> If your website is affiliated with a specific federal agency (e.g., NOAA) or office (e.g, National Ocean Service), the Job Openings module will return relevant, location-and keyword-matched job openings <em>at your agency</em>.</li>
-</ul>
-
-
-<p>Searchers will also see a direct link to <a href="https://www.usajobs.gov">USAJobs.gov</a> for all current job openings (specific to your department or agency, if applicable), as shown in the sample below for a search on <a href="http://search.doi.gov/search?utf8=%E2%9C%93&amp;affiliate=doi.gov&amp;query=jobs" title=""><em>jobs</em></a> on DOI.gov.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/govbox-jobs.png" title="Search results for jobs on DOI.gov" alt="Search results for jobs on DOI.gov" /></p>
-
-<hr />
-
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? We want your jobs data. Email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x73;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#115;&#117;&#112;&#x70;&#111;&#114;&#x74;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;">&#x73;&#101;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Job Openings module.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/modules"><span class="label label-info">modules</span></a>
-      
-      <a href="/tagged/jobs"><span class="label label-info">jobs</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/govbox-jobs.html">
         <time datetime="2017-02-27">February 27, 2017</time>
       </a>
     </div>

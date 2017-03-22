@@ -3,7 +3,7 @@
 <head>
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <title>How to Edit Your Domains</title>
+  <title>Setting Up Analtyics Alerts</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -97,61 +97,92 @@
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/manual/domains.html">How to Edit Your Domains</a>
+    <a href="/manual/analytics-alerts.html">Setting Up Analtyics Alerts</a>
   </h1>
   
 
   <div class='post-content'>
-    <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Domains</p>
+    <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Analytics Alerts</p>
 
-<p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
+<p>Analytics Alerts let you receive email alerts when your site visitors are getting no results for a particular query or when a query is getting a <a href="#Low-Query-Click-thru-Rate-(CTR">low click-through rate</a>).</p>
 
-<h2>Entire Site(s)</h2>
+<h2>No Results</h2>
 
-<ul>
-<li>List yoursite.gov (without www) to search your entire site, including all subdomains.</li>
-<li>List yoursite.gov and yoursite2.gov to search multiple sites.</li>
-</ul>
+<p>Set up this alert to be notified if specific queries are frequently searched for but are returning no results. Help on specific fields follows, or <a href="#no-results-example">skip to an example</a>.</p>
 
+<p><strong>Name</strong></p>
 
-<h2>Specific Subdomains</h2>
+<p>Enter a name for your alert. It will be the subject line of your alert email. The name of your alert must be unique across our entire search alert system, so if you see an error message, please modify the name.</p>
 
-<ul>
-<li>List www.yoursite.gov to include only the primary 'www' domain.</li>
-<li>List subdomain.yoursite.gov to include subdomains.</li>
-</ul>
+<p><strong>Check interval</strong></p>
 
+<p>Enter the frequency at which you’d like the system to check for queries with no results. Use <code>m</code>, <code>h</code>, <code>d</code>, or <code>w</code> to specify the minutes/hours/days/weeks you’d like between checks.</p>
 
-<h2>Specific Directories</h2>
+<p><strong>Minimum number of queries</strong></p>
 
-<p>List yoursite.gov/folder to include folders. Note: this will include all sub-folders (if they exist), i.e. yoursite.gov/folder/folder2.</p>
+<p>Enter the minimum number of times, over the time window, that a given query must be entered to trigger the alert.</p>
 
-<p>You cannot specify individual URLs.</p>
+<p><strong>Time window for each check</strong></p>
 
-<p>Searches that start three or more subfolders deep cannot use our default configuration. <a href="mailto:search@support.digitalgov.gov">Email us</a> for assistance.</p>
+<p>Enter the amount of time the system should look back through for each check. Use <code>m</code>, <code>h</code>, <code>d</code>, or <code>w</code> to specify minutes/hours/days/weeks.</p>
+
+<p><strong>Time between alerts</strong></p>
+
+<p>Enter the minimum period of time between successive email messages.</p>
+
+<p><strong>Ignored query terms</strong></p>
+
+<p>Enter any query terms that you don’t want included in the alert, separated by commas.</p>
+
+<p><strong><em>No Results Example:</em></strong></p>
+
+<p>In this example, the alert system will check every 30 minutes to see if any query has been entered at least 50 times over the past 12 hours and yielded no results. The system will send an alert at most once per day if there are queries that fit this criteria, and it will not include the query ‘panda’ in the alert.</p>
+
+<p><img src="https://search.digitalgov.gov/img/No-Results-Screenshot.png" title="No Results Analytics Alert Example" alt="No Results Analytics Alert Example" /></p>
+
+<h2>Low Query Click-thru Rate (CTR)</h2>
+
+<p>Set up this alert to be notified if the results page for a query with significant traffic is not getting many clicks. If the query resulted in a click less than 20% of the time, it is considered to have a low click through rate (CTR); however, you are able to set any percentage threshold for your alert emails. Help on specific fields follows, or <a href="#low-ctr-example">skip to an example</a>.</p>
+
+<p><strong>Name</strong></p>
+
+<p>Enter a name for your alert. It will be the subject line of your email. The name of your alert must be unique across our entire search alert system, so if you see an error message, please modify the name.</p>
+
+<p><strong>Check interval</strong></p>
+
+<p>Enter the frequency at which you’d like the system to check for queries with a low CTR. Use <code>m</code>, <code>h</code>, <code>d</code>, or <code>w</code> to specify the minutes/hours/days/weeks you’d like between checks.</p>
+
+<p><strong>Minimum search activity level (queries + clicks)</strong></p>
+
+<p>Enter the minimum number of times, over the time window, that a given query must have search activity (queries plus clicks) to trigger the low query CTR alert. Because we’re not able to differentiate between query activity and click activity, you may want to pad this number a little. However, since these queries are not getting a lot of clicks, you don’t want to pad it too much.</p>
+
+<p><strong>Maximum CTR for alert</strong></p>
+
+<p>Enter the maximum click through rate that will trigger an alert, expressed as a percentage. You will receive an alert for a query that has a CTR equal to or lower than that percentage during the given time window.</p>
+
+<p><strong>Time window for each check</strong></p>
+
+<p>Enter the amount of time the system should look back through for each check. Use <code>m</code>, <code>h</code>, <code>d</code>, or <code>w</code> to specify minutes/hours/days/weeks.</p>
+
+<p><strong>Time between alerts</strong></p>
+
+<p>Enter the minimum period of time between successive email messages.</p>
+
+<p><strong>Ignored query terms</strong></p>
+
+<p>Enter any query terms that you don’t want included in the alert, separated by commas.</p>
+
+<p><strong><em>Low CTR Example:</em></strong></p>
+
+<p>In this example, the alert system will check every 30 minutes for a query that has had search activity (queries plus clicks) at least 100 times over the past 12 hours and has a CTR 15% or lower. The system will send an alert at most once per day if there are queries that fit these criteria, and it will not include queries for ‘lion’ in the alert.</p>
+
+<p><img src="https://search.digitalgov.gov/img/Low-CTR-Screenshot.png" title="Low CTR Analytics Alert Example" alt="Low CTR Analytics Alert Example" /></p>
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> Don’t forget to hit ‘add’ in the upper right corner!</p>
 
-<ol>
-<li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
-<li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#x73;&#101;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#108;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;">&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#64;&#115;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#46;&#100;&#105;&#x67;&#105;&#x74;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
-</ol>
-
-
-<p><a id="filter"></a><strong><em>Troubleshooting Tip:</em></strong> You can remove or filter specific URLs using any of the following options.</p>
-
-<ol>
-<li><p>Remove the page from your site and return a 404 (Not Found) 401 (Gone), or 301 (Permanently Moved) HTTP status.</p></li>
-<li><p>Add a <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">noindex robots metatag or x-robots tag</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
-<li><p>Request the page's removal using the <a href="http://www.bing.com/webmaster/help/block-urls-from-bing-264e560a">Block URLs option in Bing Webaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/1663419">Remove URLs option in Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p></li>
-<li><p>Use the Filter URLs option under the <a href="/manual/domains-advanced.html">Advanced</a> tab. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
-</ol>
-
-
-<p><strong><em>Troubleshooting Tip:</em></strong> Are specific web pages missing from your Bing web results? You can tell us about any missing URLs via an RSS feed or manually (the Supplemental Feed and Supplemental URLs options under the <a href="/manual/domains-advanced.html">Advanced</a> tab, respectively). We'll fetch and index the pages and append them to your web results.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> Analytics alerts are only sent to the Search user who set up the alert.</p>
 
   </div>
 
@@ -159,9 +190,7 @@
     
     <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
     
-    <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-    
-    <a href="/tagged/domains"><span class="label label-info">domains</span></a>
+    <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
     
   </div>
 
@@ -170,8 +199,8 @@
     
     
     
-    <a href="/manual/domains.html">
-      <time>July 28, 2016</time>
+    <a href="/manual/analytics-alerts.html">
+      <time>March 22, 2017</time>
     </a>
   </div>
 
