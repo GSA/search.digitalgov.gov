@@ -103,6 +103,195 @@
  
     
     <h1>
+      <a href="/manual/rss.html">How to Add Your RSS Feeds to Our Index</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > RSS</p>
+
+<p>Would you like searchers to be able to search your news or multimedia content? Would you like them to be able to narrow results by date?</p>
+
+<p>Tell us the locations and names of your RSS feeds. We index all new and updated content on your feeds within minutes.</p>
+
+<h2>Step 1. Tell Us About Your RSS Feeds</h2>
+
+<p>We love feeds! Tell us about <em>all</em> of your RSS feeds, even if you don't opt to show them in step 2 below. Feeds are the fastest and most reliable way for us to learn about your new and updated content.</p>
+
+<p>Select the option to add a new RSS feed.</p>
+
+<h3>Name</h3>
+
+<p>Create a name for the feed. Within this 'bucket' you can list a single RSS feed or many feeds. For example, you can opt to list all of your agency's press releases separately (such as Police News, Fire News, EMS News, etc.) or you can list all three under one general name (such as News).</p>
+
+<h3>Feed type</h3>
+
+<p>Select the type of feed. The default option is RSS (for text content like press releases or blogs). Change it to <a href="http://www.rssboard.org/media-rss">media RSS</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> for multimedia content like images and videos.</p>
+
+<p>Each item within a RSS feed must include a title, link, description, and publication date.</p>
+
+<p>Each item within a media RSS feed must also include both a <a href="http://www.rssboard.org/media-rss#media-content">media:content URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a direct URL to the media object and a <a href="http://www.rssboard.org/media-rss#media-thumbnails">media:thumbnail URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a URL to the object's thumbnail.</p>
+
+<p>Any items missing a required element won't display in your search results.</p>
+
+<h3>Sample RSS Item with All Required Elements</h3>
+
+<pre><code>&lt;item&gt;
+&lt;title&gt;
+Statement from Agriculture Secretary Tom Vilsack Regarding World Organization for Animal Health (OIE) Upgrade of United States&amp;apos; BSE Risk Status
+&lt;/title&gt;
+&lt;pubDate&gt;May 29, 2013 00:00:00 CDT&lt;/pubDate&gt;
+&lt;link&gt;
+http://www.usda.gov/wps/portal/usda/usdahome?contentid=2013/05/0106.xml&amp;contentidonly=true
+&lt;/link&gt;
+&lt;description&gt;
+WASHINGTON, May 29, 2013–Agriculture Secretary Tom Vilsack made the following statement about notification received today from the World Organization for Animal Health (OIE) upgrading the United States&amp;apos; risk classification for bovine spongiform encephalopathy (BSE) to negligible risk:
+&lt;/description&gt;
+&lt;/item&gt;
+</code></pre>
+
+<h3>Sample Media RSS Item with All Required Elements</h3>
+
+<pre><code>&lt;item&gt;
+&lt;title type="html"&gt;
+&lt;![CDATA[ Great Lakes Beach Health ]]&gt;
+&lt;/title&gt;
+&lt;link&gt;
+http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
+&lt;/link&gt;
+&lt;guid&gt;
+http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
+&lt;/guid&gt;
+&lt;pubDate&gt;Fri, 24 May 2013 00:00:00 EDT&lt;/pubDate&gt;
+&lt;media:description type="html"&gt;
+&lt;![CDATA[ As schools close for the year and summer weather beckons, many recreationalists head to the Great Lakes' public beaches. However, these coastal areas can become  contaminated with disease-causing bacteria that threaten public health, disrupt water   recreation, and pay a toll on the Great Lakes economies that depend on summer tourism. ]]&gt;
+&lt;/media:description&gt;
+&lt;media:thumbnail url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/thumbs/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
+&lt;media:content type="" url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/large/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
+&lt;/item&gt;
+</code></pre>
+
+<h2>Step 2. Opt to Show as a Facet, Inline Module, or Both</h2>
+
+<p>Allow searchers to see inline results for the three most recent, relevant RSS results <em>across all of your RSS feeds</em> by turning on the News module on the <a href="/manual/display-overview.html">Display Overview</a> page. You can also edit the default title, News, on the Display Overview page.</p>
+
+<p>Allow searchers to narrow results to a specific feed by turning on the option to show the facet on the <a href="/manual/display-overview.html">Display Overview</a> page. To ensure searchers don't encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a facet.</p>
+
+<h2>Step 3. Check Your Search Results Page</h2>
+
+<p><strong>Module.</strong> If you opted to show your RSS feed(s) as a module, searchers will see inline news results. It will highlight the three most recent, relevant results across all of your RSS feeds.</p>
+
+<p><img class="img-responsive" src="https://search.digitalgov.gov/img/RSS-Inline.png" alt="RSS Inline Module Example"></img></p>
+
+<p><strong>Facet.</strong> If you opted to show your RSS feed(s) as a facet, searchers can narrow their results to see only RSS-based content by clicking on the facet.</p>
+
+<p>Within the RSS-based results, searchers can opt to limit results to the last hour, day, week, month, or year, or they can set a custom date range. They also can sort results in descending order by relevance (best match first) or date (most recent first).</p>
+
+<p><strong>Results count.</strong> We show the number of results returned for searches against your feed(s).</p>
+
+<p><img class="img-responsive" src="https://search.digitalgov.gov/img/RSS-Facet.png" alt="RSS Facet Example with Results Count"></img></p>
+
+<h2>Step 4. Check the Status of Your Feeds</h2>
+
+<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each feed's status.</p>
+
+<p><img class="img-responsive" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/rss-status.png" alt="RSS status messages and colors"></img></p>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left;"> Color </th>
+<th style="text-align:left;"> Status </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> Green&nbsp;&nbsp;&nbsp; </td>
+<td style="text-align:left;"> Feed indexed, no errors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+</tr>
+<tr>
+<td style="text-align:left;"> Yellow </td>
+<td style="text-align:left;"> Pending Indexing </td>
+</tr>
+<tr>
+<td style="text-align:left;"> Red </td>
+<td style="text-align:left;"> Feed indexed, but error in one or more items </td>
+</tr>
+<tr>
+<td style="text-align:left;"> &nbsp; </td>
+<td style="text-align:left;"> &nbsp; </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Click on the name of any feed with an error to see more detailed information about it. Possible error messages follow.</p>
+
+<ul>
+<li>404 Not Found</li>
+<li>Feed looks empty</li>
+<li>Description can't be blank</li>
+<li>Title can't be blank</li>
+<li>Missing link field</li>
+<li>Missing pubDate field</li>
+<li>Link is not a valid URL</li>
+<li>Linked URL does not exist (HTTP 404)</li>
+</ul>
+
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
+
+<ul>
+<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
+<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+<li><a href="http://atomenabled.org/developers/syndication/">Atom syndication format</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+</ul>
+
+
+<p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="https://search.usa.gov/sites/">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don't need to coordinate with us.</p>
+
+<p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your feed.</p>
+
+<p>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab. Change the form action to <code>action="https://search.usa.gov/search/news</code> and add the following line to limit the results to your feed.</p>
+
+<p><code>&lt;input type="hidden" name="channel" value="###"&gt;</code></p>
+
+<p>The value is the number for your feed ID, which is visible in the URL when you edit your feed in the Admin Center.</p>
+
+<p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your RSS feeds.</p>
+
+<p><strong><em>Did you know?</em></strong> When you <a href="/manual/youtube.html">provide us with your YouTube channel</a>, we'll automatically index the RSS feed for your YouTube channel.</p>
+
+<p><strong><em>Did you know?</em></strong> For any feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by these facets in the <a href="/manual/display-overview.html">sidebar</a> on the results page.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/rss"><span class="label label-info">rss</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/rss.html">
+        <time datetime="2017-03-23">March 23, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/index.html">Help Manual: Managing Your Search Configuration</a>
     </h1>
     
@@ -617,7 +806,7 @@ i14y (Beta) API instructions*</p>
 
 <p><strong><em>Troubleshooting Tip:</em></strong> For non-English sites, some agencies opt to include the specific location of the language's content (such as agency.gov/language or language.agency.gov) in their <a href="/manual/domains.html">Domains</a> to further refine the search results. Test the results for your non-English site with both the general agency.gov and the language-specific location to determine which setting gives you the best results.</p>
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#115;&#117;&#x70;&#112;&#111;&#114;&#116;&#46;&#100;&#105;&#103;&#x69;&#x74;&#97;&#x6c;&#103;&#111;&#118;&#46;&#x67;&#111;&#x76;">&#115;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#117;&#112;&#112;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#105;&#116;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#103;&#111;&#118;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#58;&#115;&#x65;&#97;&#114;&#99;&#104;&#64;&#x73;&#117;&#x70;&#112;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#x67;&#111;&#118;">&#x73;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#115;&#x75;&#x70;&#112;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#x74;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;</a>.</p>
 
     </div>
 
@@ -669,7 +858,7 @@ i14y (Beta) API instructions*</p>
 
 <hr />
 
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? We want your jobs data. Email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#115;&#x65;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#100;&#105;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#x6f;&#118;&#46;&#103;&#111;&#x76;">&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#114;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#97;&#x6c;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a> to let us know where you publish your job openings so that we can include them in the Job Openings module.</p>
+<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? We want your jobs data. Email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#108;&#103;&#x6f;&#118;&#46;&#x67;&#x6f;&#118;">&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#112;&#112;&#111;&#x72;&#116;&#46;&#100;&#105;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#118;</a> to let us know where you publish your job openings so that we can include them in the Job Openings module.</p>
 
     </div>
 
@@ -782,105 +971,6 @@ i14y (Beta) API instructions*</p>
       
       
       <a href="/manual/flickr.html">
-        <time datetime="2017-02-27">February 27, 2017</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/display-overview.html">How to Select the Options that Appear on Your Results Page</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Display > Display Overview</p>
-
-<h2>Facets</h2>
-
-<p><strong>Label.</strong> By default, we use the label 'Search' for your facets. Enter a label in the label field if you'd like something other than this default. Keep your label consistent with the options you're listing and under 15 characters.</p>
-
-<p>See the sample results page below that shows the facets with the default label, Search, displayed for a <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=passport">search on <em>passport</em> on USA.gov</a>. (It is most easily seen by clicking on the menu option from a mobile phone.)</p>
-
-<p><strong>On/off options for facets.</strong> Select which facets you'd like to appear on your results page. Turn an option on to allow searchers to see it. Turn an option on or off at any time.</p>
-
-<p>Type over the text in the Name field to edit a facet's display name. Keep each name short (15 or fewer characters) and consistent with the content you're searching. Click on the hyperlink in the Source field to update the facet's source content. Hover over the icon with three horizontal lines on the left to change the order.</p>
-
-<p><strong>More.</strong> We show up to four facets above your search box. If you turn on the display of more than four facets, you'll see them listed under a 'More' dropdown menu. Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#112;&#112;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;">&#115;&#101;&#97;&#x72;&#99;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#103;&#111;&#x76;&#46;&#103;&#x6f;&#x76;</a> if you'd like to use a custom label instead of the default 'More'.</p>
-
-<h2>Modules</h2>
-
-<p><strong>On/off options for modules.</strong> Turn on a module to allow searchers to see inline, contextually relevant results for selected content sources based on keyword matches with relevant queries. There are eight types of modules.</p>
-
-<ol>
-<li><p><strong>News.</strong> This option only appears after you've told us about your <a href="/manual/rss.html">RSS</a> feeds. When a searcher's query matches the title of an RSS article published within the past four months, the article appears in the News module. Very recent news results (less than five days) appear at the top of the page and less recent news results appear at the bottom. Up to three articles are displayed. Type over the default name, News, in the Name field to edit the display name.</p></li>
-<li><p><strong>Videos.</strong> This option only appears after you've told us about your <a href="/manual/youtube.html">YouTube</a> channel. When a searcher's query matches the metadata of a video published within the 13 months, the video appears in the Videos module. One inline video is displayed with a link to see more videos for the searcher's query.</p></li>
-<li><p><strong>Job openings.</strong> When a searcher's query matches the text of a job opening published by your agency on USAJobs, the job appears in the Job Openings module. Up to three job openings are displayed. For more information, including a screenshot, read our post <a href="/manual/govbox-jobs.html">Help Searchers Find Jobs</a>. You will need to <a href="mailto:search@support.digitalgov.gov">contact us</a> to get the Jobs module enabled for your site.</p></li>
-<li><p><strong><em>Federal Register</em> documents.</strong> When a searcher's query matches the text of a notice or rule published by your agency in the <em>Federal Register</em>, the document appears in the <em>Federal Register</em> module. Up to three documents are displayed. For more information, including a screenshot, read our post <a href="/manual/govbox-federal-register.html">Help Searchers Find Federal Register Documents</a>.</p></li>
-<li><p><strong>Related searches.</strong> Help visitors better define the focus of their search by offering them searches related to their current search term. Suggestions are derived from the searches performed on your website. Up to five searches related to your visitors' original search are displayed and are updated in near real time.</p></li>
-<li><p><strong>Health topics.</strong> Help searchers find high-quality, authoritative health information from MedlinePlus and ClinicalTrials.gov. For more information, including a screenshot, read our post <a href="/manual/govbox-health.html">Help Searchers Find Health Information</a>.</p></li>
-<li><p><strong>Recent tweets.</strong> This option only appears after you've told us about your <a href="/manual/twitter.html">Twitter</a> account. When a searcher's query matches the text of a tweet published within the past three days, the tweet appears in the Recent Tweets module.</p></li>
-<li><p><strong>Type-ahead search.</strong> Help searchers refine their query by displaying type-ahead search suggestions as a list in the search box. The list forms as a searcher begins to type in the search box. Suggestions are listed in order of most popular (that is, most searched). They're updated every few seconds. See, for example, the suggestions as you type di... on <a href="https://search.ssa.gov/search?affiliate=ssa">SocialSecurity.gov's search results page</a>.</p></li>
-</ol>
-
-
-<h2>Related Sites</h2>
-
-<p>Help visitors find content relevant to their search query that resides on other websites, such as the site for your parent organization or your Spanish-language site. When searchers click on the link to the related site, they see search results for their query on the related site.</p>
-
-<p>Enter the <a href="/manual/settings.html">site handle</a> for one of your other DigitalGov Search sites. Enter the text you'd like searchers to see for the link to the related site. Create two entries, one from the first site to the second and vice versa, if you'd like a reciprocal link.</p>
-
-<p>See, for example, the Español option displayed on <a href="http://search.usa.gov/search?query=venezuela&amp;affiliate=usagov">USA.gov for a search on <em>venezuela</em></a>. When searchers click this option, they see results for <a href="http://search.usa.gov/search?query=venezuela&amp;affiliate=gobiernousa"><em>venezuela</em> on GobiernoUSA.gov</a>.</p>
-
-<p>If you list more than two related sites, searchers will see them listed under a dropdown menu, View Topic.</p>
-
-<p>Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x73;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#112;&#112;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#x69;&#x74;&#x61;&#x6c;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#x76;">&#x73;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#97;&#108;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a> if you'd like to use a custom label instead of the default 'View Topic' label.</p>
-
-<h2>Pointer to Kick Off New Search</h2>
-
-<p>Your site's visitors sometimes don't realize the scope of the content they're searching against. This is especially true when you set up a search box for a subsection of your site only or when you have separate options for searching your web pages and databases.</p>
-
-<p>See, for example, the custom messages on IRS.gov's Forms &amp; Pubs beta search encouraging visitors to try their search again to see tax materials for prior years.</p>
-
-<ul>
-<li><a href="http://find.irs.gov/search?affiliate=irs-fp&amp;query=no-results-message">Custom message on IRS.gov's Forms &amp; Pubs beta search when there aren't any results</a></li>
-<li><a href="http://find.irs.gov/search?affiliate=irs-fp&amp;query=2014+form+1040">Custom message when there are results</a></li>
-</ul>
-
-
-<p>Email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#115;&#x65;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#114;&#99;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#x74;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#97;&#x6c;&#x67;&#x6f;&#118;&#46;&#x67;&#111;&#118;</a> if you'd provide searchers with a custom message to encourage them to search another section of your site, your database, or both.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong>  Searchers may narrow results by time period for any <a href="/manual/rss.html">RSS</a> feeds. See, for example, results for a <a href="http://search.whitehouse.gov/search/news?affiliate=wh&amp;channel=6&amp;m=false&amp;query=jobs&amp;tbs=w">search on <em>jobs</em> narrowed to press articles in the last week on WhiteHouse.gov</a>.</p>
-
-<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x73;&#101;&#97;&#114;&#99;&#104;&#64;&#115;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;">&#115;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#x75;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#x64;&#x69;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#111;&#118;&#46;&#103;&#x6f;&#118;</a> to if you want to customize these display names.</p>
-
-<p><strong><em>Did you know?</em></strong> You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our <a href="/manual/code.html">JavaScript snippet</a> before the closing <code>&lt;body&gt;</code> tag on your HTML web pages.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-display"><span class="label label-info">manage-display</span></a>
-      
-      <a href="/tagged/facets"><span class="label label-info">facets</span></a>
-      
-      <a href="/tagged/modules"><span class="label label-info">modules</span></a>
-      
-      <a href="/tagged/related-sites"><span class="label label-info">related-sites</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/display-overview.html">
         <time datetime="2017-02-27">February 27, 2017</time>
       </a>
     </div>
