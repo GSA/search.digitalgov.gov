@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Filtering Specific URLs
+title: Filtering URLs
 category: manual
 tags: "help-manual manage-content domains filter-urls"
 published: true
