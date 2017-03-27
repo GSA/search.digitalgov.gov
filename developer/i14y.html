@@ -106,9 +106,21 @@
 
 <p><a href="https://github.com/GSA/i14y">i14y Github repo</a> | <a href="http://gsa.github.io/slate/">Technical Documentation</a></p>
 
-<p>Do you want to have real-time updates to your search index, and full control over your page titles and descriptions? Then <a href="https://github.com/GSA/i14y">i14y, our content indexing API</a> is for you! We currently have a <a href="http://www.drupal.org/project/usasearch">Drupal module</a> and a <a href="https://github.com/GSA/wp-digitalgov-i14y-indexer">WordPress plugin</a> that will hook your CMS into i14y. If you use a different CMS, or don't have one at all, you still can develop an API of your content that meets the i14y specs and send it to us. We plan to develop more CMS hooks in the future, and welcome your partnership if there's a particular hook you need.</p>
+<h2>What is i14y?</h2>
 
-<h2>Step 1. Connect one of your sites to i14y</h2>
+<p>i14y is a content indexing API that allows you to send your content directly to our indexes. When your site is enabled for i14y, it gives you complete control over what searchers see. No commercial web results will be served: instead, searchers will see content exactly as you've sent it to us.</p>
+
+<h2>How Do I Use i14y?</h2>
+
+<p>We currently have a <a href="http://www.drupal.org/project/usasearch">Drupal module</a> that will hook your CMS into i14y.</p>
+
+<p>If you use a different CMS, or don't have one at all, you still can develop an API of your content that meets the i14y specs. Read our <a href="http://gsa.github.io/slate/">technical documentation</a> to learn more.</p>
+
+<p>We would love to see more CMS hooks in the future. The i14y code is open source, and we welcome your partnership if there's a particular hook you need. There is starter code for a <a href="https://github.com/GSA/wp-digitalgov-i14y-indexer">WordPress plugin</a> that is ready for partner contributions.</p>
+
+<h2>Checklist to Go Live with i14y</h2>
+
+<h3>Step 1. Connect one of your sites to i14y</h3>
 
 <p>i14y needs to be enabled in the back end for a site to be able to receive content through it. You can</p>
 
@@ -121,7 +133,7 @@
 
 <p><a href="mailto:search@support.digitalgov.gov">Email us</a> and let us know which site you want enabled for i14y. Please note: once we turn on i14y for a site, we no longer serve search results from a commercial web index. Therefore, we recommend that you set up a test site for i14y, so that your customers will continue to get results until you are fully set up and ready to move your i14y index to your production search site.</p>
 
-<h2>Step 2. Add a Drawer</h2>
+<h3>Step 2. Add a Drawer</h3>
 
 <p>An i14y Drawer is an index receiving content via the i14y API. We've called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
 
@@ -133,7 +145,7 @@
 
 <p>If you have more than one website that will be sending content, add a separate Drawer for each of these sites.</p>
 
-<h2>Step 3. Fill your Drawer</h2>
+<h3>Step 3. Fill your Drawer</h3>
 
 <p>After you have created your Drawer(s), click <code>Show</code> from the i14y Drawers list to find that Drawer’s secret API key. Use this secret key with your drawer handle in your API call or your CMS module to send your content to the right place.</p>
 
@@ -145,7 +157,7 @@
 </ul>
 
 
-<h2>Step 4. Review your index</h2>
+<h3>Step 4. Review your index</h3>
 
 <p>You can view the number of documents indexed for each drawer on the main i14y Drawers list. We also send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
 
@@ -157,17 +169,17 @@
 
 <p>If you accidentally delete a drawer, you will need to set-up a new drawer and resend the content - we are unable to retrieve deleted drawers. If you accidentally remove a shared drawer but it is still associated with other search configurations, we can re-attach it to your site. <a href="mailto:search@support.digitalgov.gov">Contact us</a> for assistance.</p>
 
-<h2>Step 5. Configure your search</h2>
+<h3>Step 5. Configure your search</h3>
 
 <p>Once you have your index populated, you will <a href="/manual/content-overview.html">set up the rest of your search</a> as you would for a traditional DigitalGov Search site. Set your default search scope on your <a href="/manual/domains.html">Domains</a> page, add Social Media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/instagram.html">Instagram</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>, create <a href="/manual/collections.html">Collections</a>, and set your results page Display (both <a href="/manual/display-overview.html">search features</a> and <a href="/manual/brand.html">branding</a>).</p>
 
 <p>If you have any <a href="/manual/rss.html">RSS content</a> that will not be sent to your i14y drawer, you can add those feeds as well.</p>
 
-<h2>Step 6. Update your search box</h2>
+<h3>Step 6. Update your search box</h3>
 
 <p>Update your website’s search box <a href="/manual/code.html">form code</a> to point to <code>affiliate=youri14yenabledsitehandle</code>.</p>
 
-<h2>Terms of Use</h2>
+<h3>Terms of Use</h3>
 
 <p>By accessing the i14y API, you agree to <a href="https://www.usa.gov/About/developer-resources/terms-of-service.shtml">USA.gov's Terms of Service for Developer Resources</a>.</p>
 
@@ -193,7 +205,7 @@
     
     
     <a href="/developer/i14y.html">
-      <time>January 26, 2017</time>
+      <time>March 27, 2017</time>
     </a>
   </div>
 
