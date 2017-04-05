@@ -44,6 +44,7 @@ The source column in the crawl report shows how you added the URL, via an RSS fe
 We display titles as they are provided in the feed or as you entered them manually.
 
 We display descriptions as follows: 
+
 * If a searcher’s term matches terms in the description you provided: We'll display the description exactly as you provided it.
 * If a searcher’s term only matches terms in the full text of the document: We’ll display snippets taken from the full text.
 
