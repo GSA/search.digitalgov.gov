@@ -103,61 +103,48 @@
  
     
     <h1>
-      <a href="/manual/domains.html">How to Edit Your Domains</a>
+      <a href="/manual/users.html">How to Manage Your Site's Users</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Domains</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Dashboard > Manage Users</p>
 
-<p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
+<p>After you've <a href="https://search.usa.gov/sites/">logged in</a> and <a href="/manual/add-site.html">added a site</a> with your official government email, you can add your coworkers to your site.</p>
 
-<h2>Entire Site(s)</h2>
+<p>You can add anyone you'd like to your site&mdash;with or without a .gov or .mil email address. Email addresses outside the .gov or .mil domains must be associated with a business. Personal emails, such as @gmail.com or @yahoo.com, are not allowed.</p>
 
-<ul>
-<li>List yoursite.gov (without www) to search your entire site, including all subdomains.</li>
-<li>List yoursite.gov and yoursite2.gov to search multiple sites.</li>
-</ul>
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/user.png" alt="Add a user" /></p>
 
+<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each user's status.</p>
 
-<h2>Specific Subdomains</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;"> Color </th>
+<th style="text-align:left;"> Status </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> No color&nbsp;&nbsp;&nbsp; </td>
+<td style="text-align:left;"> Approved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+</tr>
+<tr>
+<td style="text-align:left;"> Yellow  </td>
+<td style="text-align:left;"> Pending - requires approval or email verification </td>
+</tr>
+<tr>
+<td style="text-align:left;"> Red   </td>
+<td style="text-align:left;"> Not approved </td>
+</tr>
+</tbody>
+</table>
 
-<ul>
-<li>List www.yoursite.gov to include only the primary 'www' domain.</li>
-<li>List subdomain.yoursite.gov to include subdomains.</li>
-</ul>
-
-
-<h2>Specific Directories</h2>
-
-<p>List yoursite.gov/folder to include folders. Note: this will include all sub-folders (if they exist), i.e. yoursite.gov/folder/folder2.</p>
-
-<p>You cannot specify individual URLs.</p>
-
-<p>Searches that start three or more subfolders deep cannot use our default configuration. <a href="mailto:search@support.digitalgov.gov">Email us</a> for assistance.</p>
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
-
-<ol>
-<li>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</li>
-<li>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</li>
-<li>Email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#115;&#x65;&#97;&#114;&#99;&#104;&#64;&#115;&#x75;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#x76;">&#115;&#x65;&#97;&#114;&#x63;&#104;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#103;&#105;&#116;&#97;&#108;&#x67;&#111;&#x76;&#46;&#103;&#111;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</li>
-</ol>
-
-
-<p><a id="filter"></a><strong><em>Troubleshooting Tip:</em></strong> You can remove or filter specific URLs using any of the following options.</p>
-
-<ol>
-<li><p>Remove the page from your site and return a 404 (Not Found) 401 (Gone), or 301 (Permanently Moved) HTTP status.</p></li>
-<li><p>Add a <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">noindex robots metatag or x-robots tag</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
-<li><p>Request the page's removal using the <a href="http://www.bing.com/webmaster/help/block-urls-from-bing-264e560a">Block URLs option in Bing Webaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/1663419">Remove URLs option in Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p></li>
-<li><p>Use the Filter URLs option under the <a href="/manual/domains-advanced.html">Advanced</a> tab. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
-</ol>
-
-
-<p><strong><em>Troubleshooting Tip:</em></strong> Are specific web pages missing from your Bing web results? You can tell us about any missing URLs via an RSS feed or manually (the Supplemental Feed and Supplemental URLs options under the <a href="/manual/domains-advanced.html">Advanced</a> tab, respectively). We'll fetch and index the pages and append them to your web results.</p>
+<p><strong><em>Did you know?</em></strong> We recommend adding a generic email account (such as webteam@agency.gov) as a user to ensure ongoing access to your account as individuals come and go.</p>
 
     </div>
 
@@ -165,9 +152,9 @@
       
       <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
       
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
       
-      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
+      <a href="/tagged/users"><span class="label label-info">users</span></a>
       
     </div>
    <div class='time'>
@@ -175,7 +162,7 @@
       
       
       
-      <a href="/manual/domains.html">
+      <a href="/manual/users.html">
         <time datetime="2016-07-28">July 28, 2016</time>
       </a>
     </div>
@@ -720,7 +707,7 @@
 
 <p><strong>Tagline.</strong> Fill out text for a "tagline" if you'd like one to appear at the very top of your results page header.</p>
 
-<p>The default tagline style uses Georgia (font family), 1.3 em (size), and italic (style). Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x73;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#115;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#x76;">&#115;&#101;&#97;&#114;&#99;&#x68;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#x67;&#x69;&#x74;&#97;&#x6c;&#103;&#x6f;&#118;&#46;&#103;&#111;&#118;</a> if you'd like to change the default font family, size, or style.</p>
+<p>The default tagline style uses Georgia (font family), 1.3 em (size), and italic (style). Email us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#115;&#101;&#x61;&#114;&#99;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#103;&#x6f;&#118;">&#115;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#111;&#x72;&#116;&#x2e;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#x2e;&#x67;&#111;&#x76;</a> if you'd like to change the default font family, size, or style.</p>
 
 <p><strong>Menu Button Alignment.</strong> Leave the Browse Site "hamburger" menu right-aligned, or select the Left option to make it left-aligned.</p>
 

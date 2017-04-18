@@ -102,6 +102,89 @@
   <article class='article'>
     
     <h1>
+      <a href="/manual/domains.html">How to Edit Your Domains</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Domains</p>
+
+<p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
+
+<h2>Entire Site(s)</h2>
+
+<ul>
+<li>List yoursite.gov (without www) to search your entire site, including all subdomains.</li>
+<li>List yoursite.gov and yoursite2.gov to search multiple sites.</li>
+</ul>
+
+
+<h2>Specific Subdomains</h2>
+
+<ul>
+<li>List www.yoursite.gov to include only the primary 'www' domain.</li>
+<li>List subdomain.yoursite.gov to include subdomains.</li>
+</ul>
+
+
+<h2>Specific Directories</h2>
+
+<p>List yoursite.gov/folder to include folders. Note: this will include all sub-folders (if they exist), i.e. yoursite.gov/folder/folder2.</p>
+
+<p>You cannot specify individual URLs.</p>
+
+<p>Searches that start three or more subfolders deep cannot use our default configuration. <a href="mailto:search@support.digitalgov.gov">Email us</a> for assistance.</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
+
+<ol>
+<li><p>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
+<li><p>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</p></li>
+<li><p>Email us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#115;&#101;&#97;&#114;&#x63;&#104;&#x40;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#x67;&#x6f;&#118;">&#x73;&#101;&#97;&#x72;&#99;&#104;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#97;&#108;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
+</ol>
+
+
+<p><a id="filter"></a><strong><em>Troubleshooting Tip:</em></strong> You can remove or filter specific URLs using any of the following options.</p>
+
+<ol>
+<li><p>Remove the page from your site and return a 404 (Not Found) 401 (Gone), or 301 (Permanently Moved) HTTP status.</p></li>
+<li><p>Add a <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">noindex robots metatag or x-robots tag</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
+<li><p>Request the page's removal using the <a href="http://www.bing.com/webmaster/help/block-urls-from-bing-264e560a">Block URLs option in Bing Webaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/1663419">Remove URLs option in Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p></li>
+<li><p>Use the <a href="/manual/filter-content.html">Filter URLs</a> option under the Advanced tab. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
+</ol>
+
+
+<p><strong><em>Troubleshooting Tip:</em></strong> Are specific web pages missing from your Bing web results? You can tell us about any missing URLs via an RSS feed or manually (the Supplemental Feed and Supplemental URLs options under the <a href="/manual/domains-advanced.html">Advanced</a> tab, respectively). We'll fetch and index the pages and append them to your web results.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/domains.html">
+        <time datetime="2017-04-18">April 18, 2017</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
       <a href="/developer/i14y.html">Getting Started with i14y</a>
     </h1>
     
@@ -1053,54 +1136,6 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
       
       <a href="/releases/february-2017.html">
         <time datetime="2017-03-15">March 15, 2017</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/manual/system-alert.html">How to Add a Custom System Alert to Your Results Page</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Display > Search Page Alert</p>
-
-<p>There may be times when you want to add a system alert to your search results page. For instance, during a <a href="/blog/redesign.html">site redesign</a>, you may wish to inform searchers that your site is in transition.</p>
-
-<p>Use the Search Page Alert feature to add a text message to your search results page, which will appear at all times above all search results, <em>regardless of the query</em>. Enter a title and text for the alert, set the status to active, and hit <code>Save</code> to turn on your alert. The appearance of the alert is not customizable.</p>
-
-<p>Note: at this time, Search Page Alerts do not appear if your results are being served via <a href="/developer/i14y.html">i14y</a> or <a href="/manual/domains-advanced.html">Supplemental Feed</a>.</p>
-
-<p>See, for example, the custom alert on Defense.gov announcing their migration to a new system.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/system-alert.png" title="Custom System Alert on Defense.gov" alt="Custom System Alert on Defense.gov" /></p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> See also our closely related feature <a href="/manual/best-bets.html">Best Bets</a>, which allows you to recommend individual results or sets of results, which will appear <em>only when a searcher's query matches</em> the text of their titles, descriptions, or keywords.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-display"><span class="label label-info">manage-display</span></a>
-      
-      <a href="/tagged/alert"><span class="label label-info">alert</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/system-alert.html">
-        <time datetime="2017-03-08">March 8, 2017</time>
       </a>
     </div>
 
