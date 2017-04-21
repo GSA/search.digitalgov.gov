@@ -103,6 +103,88 @@
  
     
     <h1>
+      <a href="/releases/november-2013.html">November 2013 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlight: New, Improved Mobile Results Page</h2>
+
+<p>Searchers using a mobile phone now see a new, improved search results page. Visible improvements include:</p>
+
+<ul>
+<li>Wall-to-wall search box.</li>
+<li>More readable font for type-ahead suggestions and search results.</li>
+<li><a href="http://insideintercom.io/why-cards-are-the-future-of-the-web/">Card-based design</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to cluster best bets, web results, and related searches.</li>
+</ul>
+
+
+<p>See the screenshot below for <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=thanksgiving&amp;m=true">USA.gov's results for <em>thanksgiving</em> on a mobile phone</a>.</p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/usagov-mobile-thanksgiving.png" alt="Mobile search results page on USA.gov" /></p>
+
+<p>Under the hood, our new results page uses a responsive design to optimize searchers' experience on your site&mdash;anywhere, anytime, and on any device per the <a href="https://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html">Digital Government Strategy</a>.</p>
+
+<p>Look for even more improvements to your search results page over the next few months. And, be sure to customize your results page by uploading your <a href="/manual/brand.html">mobile logo</a> and letting us know your <a href="/manual/settings.html">homepage URL</a>.</p>
+
+<h2>Other Features</h2>
+
+<ul>
+<li>You can now see clickthru rates (CTRs) for each Best Bet. View your <a href="/manual/monthly-reports.html">Monthly Report</a> in the Admin Center and click drill down to access the CTR data. Drill down a second time to see the queries that lead to each Best Bet. Use the data to improve searchers' experience on your site by editing or deleting your Best Bets.</li>
+<li>Searchers now see longer URLs on larger resolutions (up to 65 characters) and shorter URLs on smaller resolutions. We previously displayed up to 42 characters, regardless of the searcher's screen resolution.</li>
+<li>Searchers on a site with a custom <a href="/manual/cname.html">CNAME</a> are now redirected to the site's homepage.</li>
+<li>You can now see up to 1,000 results on the <a href="/manual/clicks.html">Clicks</a> and <a href="/manual/queries.html">Queries</a> pages in the Analytics section of the Admin Center. We previously showed up to 10 results.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li>We're now leveraging <a href="https://keen.io/">Keen IO</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> for some real-time analytics.</li>
+<li>We updated Rails to version <a href="http://weblog.rubyonrails.org/2013/10/16/Rails-3-2-15-has-been-released/">3.2.15</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We fixed some Javascript-related <a href="http://cukes.info/">Cucumber</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> scenarios that had previously been failing.</li>
+<li>We now gracefully handle our Twitter IDs so that our Twitter process is more stable.</li>
+<li>We now gracefully handle an <a href="https://github.com/eventmachine/eventmachine">EventMachine</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> failure.</li>
+<li>We tidied up some loose ends from our old, now-defunct Admin Center by removing unused code and database columns.</li>
+<li>We renewed some of our SSL certificates.</li>
+<li>We updated the operating system packages on all of our machines and we rebuilt a disk on one of our servers.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed a bug that prevented you from adding a new site in the Admin Center.</li>
+<li>We now filter invalid URLs from your <a href="/manual/rss.html">RSS</a> feeds so that searchers don't see a 404 error.</li>
+<li>We fixed our <a href="/manual/collections.html">Collections</a> search results page so that it no longer fails when it contains a database URL without any values set.</li>
+<li>We added <em>correctional</em> to our <a href="http://wiki.apache.org/solr/LanguageAnalysis#solr.StemmerOverrideFilterFactory">stemming override</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file so that searchers don't see irrelevant results for correct, corrected, etc.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/november-2013.html">
+        <time datetime="2013-11-29">November 29, 2013</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/october-2013.html">October 2013 Release Notes</a>
     </h1>
     
@@ -142,7 +224,7 @@
 <li>We set up <a href="https://codeclimate.com/">Code Climate</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to identify areas of our code that can be improved.</li>
 <li>We phased out color schemes and now offer two options, default and custom.</li>
 <li>We updated the links in our email templates to reflect the new Admin Center.</li>
-<li>We added the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#58;&#x73;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#115;&#117;&#112;&#x70;&#111;&#114;&#116;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#118;">&#x73;&#x65;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#x75;&#x70;&#112;&#x6f;&#114;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#103;&#x6f;&#x76;</a> if you'd like to opt out.</li>
+<li>We added the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#115;&#x65;&#97;&#114;&#99;&#104;&#x40;&#115;&#x75;&#112;&#112;&#111;&#114;&#x74;&#46;&#x64;&#105;&#103;&#105;&#116;&#x61;&#108;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;">&#x73;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#115;&#117;&#112;&#x70;&#111;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#116;&#97;&#108;&#103;&#111;&#x76;&#46;&#103;&#111;&#118;</a> if you'd like to opt out.</li>
 </ul>
 
 
@@ -203,7 +285,7 @@
 
 <p>You can read our updated help by clicking on the Help? link on each page in the Admin Center, or see the full set of help files on our <a href="/manual/index.html">How to Set Up Your Search Box</a> page.</p>
 
-<p>Email us at <a href="&#109;&#x61;&#x69;&#108;&#116;&#111;&#58;&#x73;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#x67;&#111;&#118;&#46;&#x67;&#111;&#118;">&#115;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#103;&#105;&#116;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
+<p>Email us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#x3a;&#x73;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#46;&#103;&#111;&#x76;">&#115;&#x65;&#97;&#114;&#99;&#104;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#114;&#116;&#46;&#100;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
 
 <h2>Chores</h2>
 
@@ -410,7 +492,7 @@
 
 <p>MRSS is the standard <a href="http://www.rssboard.org/media-rss">media RSS specification</a> for syndicating multimedia content. So, even if you don't have an MRSS feed now, it should be easy to generate one as long as your content is in a content management system or other database. MRSS is also the standard specification used by hosted multimedia services such as Flickr, Instagram, Vimeo, and YouTube.</p>
 
-<p>Email us at <a href="&#109;&#97;&#105;&#108;&#116;&#x6f;&#58;&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#x40;&#x73;&#x75;&#x70;&#x70;&#111;&#x72;&#x74;&#46;&#x64;&#105;&#103;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;">&#115;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#x75;&#x70;&#112;&#111;&#114;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#97;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
+<p>Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#112;&#111;&#114;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#x74;&#97;&#108;&#x67;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;">&#115;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#115;&#117;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
 
 <p>(Thanks, <a href="http://www.usgs.gov">USGS.gov</a> team, for suggesting this new feature!)</p>
 
@@ -505,7 +587,7 @@
 <ul>
 <li>We updated our <a href="/tos.html">terms of service</a>.</li>
 <li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#115;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#x70;&#112;&#x6f;&#114;&#116;&#46;&#100;&#105;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#118;">&#115;&#101;&#97;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#100;&#105;&#103;&#105;&#116;&#97;&#108;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a> with any questions.</li>
+<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x73;&#x65;&#97;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#x70;&#112;&#111;&#114;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;">&#115;&#x65;&#x61;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#116;&#x61;&#108;&#x67;&#111;&#118;&#x2e;&#103;&#111;&#x76;</a> with any questions.</li>
 <li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
 <li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
 <li>We removed the trending searches feature and widget.</li>
@@ -783,94 +865,6 @@
       
       <a href="/releases/december-2012.html">
         <time datetime="2013-01-04">January 4, 2013</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/november-2012.html">November 2012 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2>2 Highlighted Features</h2>
-
-<h3>1. Common Search Metrics for the Digital Strategy</h3>
-
-<p>Do you ever feel like you're drowning in data? Do you feel like finding meaningful insights from the data is like searching for a needle in a haystack?</p>
-
-<p>To standardize and streamline how agencies collect and report this data, the <a href="https://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html">Digital Government Strategy</a> requires federal executive branch agencies to implement common performance and customer satisfaction metrics. DigitalGov has published <a href="http://www.digitalgov.gov/2013/07/29/digital-metrics-for-federal-agencies/">guidance on common metrics</a>, including describing what you should measure, what to do with the data, and common tools to help you collect and analyze your metrics.</p>
-
-<p>To support you in collecting and reporting your site <a href="/tagged/analytics">search metrics</a> for the Digital Government Strategy, we've added four new reports to the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-<ol>
-<li><strong>Top "no results" queries.</strong> The most popular, valid searches that don't return any results on your site's search results page (e.g., because you don't have the content on your site, or the content isn't findable by the person's search term). Review your content to see if you need to add new content, or update existing content to include the words your readers search for.</li>
-<li><strong>Top searches with low click through rates.</strong> The most popular search terms that people generally don't act (click) on. Consider incorporating language from these popular search terms into page titles or descriptions, to encourage searchers to click on your relevant page.</li>
-<li><strong>Top changing search terms (movement up/down).</strong> Shows trending topics, what's hot or not. Use this report to investigate why people might be losing interest in once-popular content and consider archiving if it's no longer needed. For newly popular terms, create new content or update existing content to ensure it's current, accurate, and complete.</li>
-<li><strong>Top clicked URLs for specific queries.</strong> The most common results that searchers found most relevant or appealing, for specific search terms. Review these popular pages and other customer top tasks to make sure they are current, accurate, complete and compelling.</li>
-</ol>
-
-
-<h3>2. Recommended Pages in Type-ahead Suggestions</h3>
-
-<p>Searchers often know the exact page they're looking for. We've added a feature to help them find that page even more quickly.</p>
-
-<p>As searchers type in their query, relevant <a href="/manual/best-bets-text.html">text Best Bets</a> are shown as Recommended Pages, as shown in the sample below for a search on <a href="http://search.usa.gov/search?query=jobs&amp;amp;affiliate=u.s.departmentoflabor"><em>fa&#8230;</em> on DOL.gov</a>.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/tumblr_mdljlrljT71qid15q.png" alt="Type-ahead suggestions on DOL.gov's search results  page" /></p>
-
-<h2>Other Features</h2>
-
-<ul>
-<li>Searchers can narrow RSS news results by custom date ranges.</li>
-<li>Searchers now see more images above the fold on image results pages.</li>
-<li>Searchers see integrated image results across both the images on your website and in your Flickr photostream.</li>
-<li>You can now add the <a href="http://www.digitalgov.gov/services/dap/">Digtital Analytics Program's</a> government-wide analytics tag to your search results pages. Email the Digital Analytics Program at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x44;&#x41;&#x50;&#x40;&#103;&#x73;&#97;&#x2e;&#x67;&#x6f;&#x76;">&#68;&#x41;&#80;&#x40;&#103;&#115;&#97;&#x2e;&#x67;&#111;&#118;</a> for more information on setting up the government-wide analytics tag.</li>
-<li>When you <a href="/manual/twitter.html">add your Twitter handle</a> in the Admin Center, we now show the Twitter GovBox by default.</li>
-</ul>
-
-
-<h2>Chores</h2>
-
-<ul>
-<li>We upgraded the <a href="https://rubygems.org/gems/tweetstream">tweetstream</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://rubygems.org/gems/twitter">twitter</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> gems.</li>
-<li>We upgraded <a href="http://jenkins-ci.org/">Jenkins</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We upgraded to <a href="http://blog.cloudera.com/blog/2012/10/cdh4-1-now-released/">Cloudera 4.1</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and installed <a href="https://ccp.cloudera.com/display/IMPALA10BETADOC/Cloudera+Impala+1.0+Beta+Documentation">Impala</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>We fixed the URLs within your tweets so that searchers can now click on the links.</li>
-<li>We fixed a bug so that infinite scroll now works on news and image results pages.</li>
-<li>We now index your ISO-8859-1 encoded pages.</li>
-<li>We now always show your no results section on the Query Logs page in the Admin Center.</li>
-<li>We fixed some bugs with how the ends of the day and month were calculated so that the data displayed in our reports is consistent.</li>
-<li>We fixed a bug so that the query timeline chart now displays in all browsers.</li>
-<li>We synced the Query Logs and Click Stats reports so that you now see today's data for both.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/november-2012.html">
-        <time datetime="2012-11-16">November 16, 2012</time>
       </a>
     </div>
     </article>
