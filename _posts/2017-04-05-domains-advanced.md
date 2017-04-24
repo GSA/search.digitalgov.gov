@@ -33,7 +33,7 @@ You can also delete all of the URLs added via the RSS feed by deleting the RSS f
 <a name="supplemental-urls"></a>
 ## Adding Content via the Supplemental URLs Section
 
-You can also manually add a a specific URL on the Supplemental URLs page. We'll fetch each URL you add manually and we'll index the title, description, and the full text of the document/webpage for the link you provide. Note: You can’t manually add a Supplemental URL if it has already been added by via Supplemental feed.
+You can also manually add a specific URL on the Supplemental URLs page. We'll fetch each URL you add manually and we'll index the title, description, and the full text of the document/webpage for the link you provide. Note: You can’t manually add a Supplemental URL if it has already been added by via Supplemental feed.
 
 Delete a manually added URL by selecting `Remove` within the list of supplemental URLs.
 
