@@ -211,18 +211,16 @@
  
     
     <h1>
-      <a href="/releases/november-2016.html">November 2016 Release Notes</a>
+      <a href="/releases/december-2016.html">December 2016 Release Notes</a>
     </h1>
     
 
     <div class='post-content'>
       <h2>Highlighted Features</h2>
 
-<h3>JavaScript Search Results Page</h3>
+<h3>Password Management</h3>
 
-<p>Our new JavaScript search results page was released in Beta. This new results page platform allows us to offer more layout options, to better complement our customers' site layouts. The first layout released matches the current default layout.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/new-serp-classic-template.png" alt="New JavaScript results page" width="100%"/></p>
+<p>The password change page now requires confirmation of your previous password. We also now require complex passwords, including 8 or more characters, and a combination of character types and cases.</p>
 
 <h3>Crawling and Indexing</h3>
 
@@ -231,25 +229,31 @@
 <h2>Chores</h2>
 
 <ul>
-<li>In August, our development team successfully migrated Search’s infrastructure to AWS. We continue to make updates to the new environment, including ClamAV scanning and new VPCs. Other work around our ATO includes:
+<li>On December 15th, Bing <a href="https://blogs.msdn.microsoft.com/bingdevcenter/2016/11/04/azure-data-market-bing-search-and-web-results-only-apis-to-be-decommissioned-december-15/">deprecated 2 of its APIs</a>. We successfully (and invisibly!) handled this transition for all search configurations that use our hosted search results page.
 
 <ul>
-<li>Nessus scanner work</li>
-<li>Re-IP'ing our system to integrate with GSA's new log archiving system</li>
-<li>Password management and handling updates, now requiring complex passwords, updates every 90 days, and displaying ambiguous login error messages.</li>
+<li>Related to this, we updated our search results API instructions in our Admin Center.</li>
 </ul>
 </li>
-<li>We continue to assist customers with <a href="/manual/https-transition.html">transitioning to HTTPS</a>, adding <a href="/manual/cname.html">sites’ domain masks</a> to our SSL certificate and preparing to update our help manual and some backend configurations.</li>
-<li>When you <a href="/manual/clone-site.html">clone a search configuration</a>, your type-ahead suggestions will no longer clone to the new configuration. This enables your new site to populate type-ahead suggestions based on its own traffic.</li>
-<li>In December, Bing is <a href="https://blogs.msdn.microsoft.com/bingdevcenter/2016/11/04/azure-data-market-bing-search-and-web-results-only-apis-to-be-decommissioned-december-15/">deprecating 2 of its APIs</a>. We’re handling this transition for all search configurations that use our hosted search results page. We began preparing for the transition this month and will complete work prior to the December 15th deprecation.</li>
+<li>In line with the <a href="https://https.cio.gov/">HTTPS-only mandate</a>, we are now serving traffic only over <code>HTTPS</code>. We updated our <a href="/manual/">help manual</a> and the code snippets you see in the Admin Center to reflect this change.</li>
+<li>We ran (and are continuing to run) bulk updates to some URLs that are still listed as <code>HTTP</code> in our system but can be accessed over <code>HTTPS</code>.  This bulk update applies to URLs in the following features:
+
+<ul>
+<li>RSS feeds</li>
+<li>Supplemental URLs</li>
+<li>Supplemental RSS feeds</li>
+<li>Best Bets</li>
+</ul>
+</li>
 </ul>
 
 
 <h2>Fixes</h2>
 
 <ul>
-<li>Email verification links were redirecting infinitely, causing some new users to be unable to get into the system.</li>
-<li>We fixed a conflict for our customers who may share machines with other users, so now if a user is logged in and another user attempts to verify their account, the original user will be logged out so the second user can complete their verification.</li>
+<li>Our new JavaScript search results page now appears correctly in all modern versions of Firefox and Internet Explorer, and on both Windows and Mac computers.</li>
+<li>We fixed an issue where our multi-server AWS environment was interfering with our <a href="govt-urls.usa.gov/tematres/vocab/index.php">Government URLs inventory database</a>.</li>
+<li>We fixed an error that was blocking our uploads to Bing's temporary index.</li>
 </ul>
 
 
@@ -267,8 +271,8 @@
       
       
       
-      <a href="/releases/november-2016.html">
-        <time datetime="2017-02-22">February 22, 2017</time>
+      <a href="/releases/december-2016.html">
+        <time datetime="2017-02-17">February 17, 2017</time>
       </a>
     </div>
     </article>
@@ -351,16 +355,18 @@
  
     
     <h1>
-      <a href="/releases/december-2016.html">December 2016 Release Notes</a>
+      <a href="/releases/november-2016.html">November 2016 Release Notes</a>
     </h1>
     
 
     <div class='post-content'>
       <h2>Highlighted Features</h2>
 
-<h3>Password Management</h3>
+<h3>JavaScript Search Results Page</h3>
 
-<p>The password change page now requires confirmation of your previous password. We also now require complex passwords, including 8 or more characters, and a combination of character types and cases.</p>
+<p>Our new JavaScript search results page was released in Beta. This new results page platform allows us to offer more layout options, to better complement our customers' site layouts. The first layout released matches the current default layout.</p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/new-serp-classic-template.png" alt="New JavaScript results page" width="100%"/></p>
 
 <h3>Crawling and Indexing</h3>
 
@@ -369,31 +375,25 @@
 <h2>Chores</h2>
 
 <ul>
-<li>On December 15th, Bing <a href="https://blogs.msdn.microsoft.com/bingdevcenter/2016/11/04/azure-data-market-bing-search-and-web-results-only-apis-to-be-decommissioned-december-15/">deprecated 2 of its APIs</a>. We successfully (and invisibly!) handled this transition for all search configurations that use our hosted search results page.
+<li>In August, our development team successfully migrated Search’s infrastructure to AWS. We continue to make updates to the new environment, including ClamAV scanning and new VPCs. Other work around our ATO includes:
 
 <ul>
-<li>Related to this, we updated our search results API instructions in our Admin Center.</li>
+<li>Nessus scanner work</li>
+<li>Re-IP'ing our system to integrate with GSA's new log archiving system</li>
+<li>Password management and handling updates, now requiring complex passwords, updates every 90 days, and displaying ambiguous login error messages.</li>
 </ul>
 </li>
-<li>In line with the <a href="https://https.cio.gov/">HTTPS-only mandate</a>, we are now serving traffic only over <code>HTTPS</code>. We updated our <a href="/manual/">help manual</a> and the code snippets you see in the Admin Center to reflect this change.</li>
-<li>We ran (and are continuing to run) bulk updates to some URLs that are still listed as <code>HTTP</code> in our system but can be accessed over <code>HTTPS</code>.  This bulk update applies to URLs in the following features:
-
-<ul>
-<li>RSS feeds</li>
-<li>Supplemental URLs</li>
-<li>Supplemental RSS feeds</li>
-<li>Best Bets</li>
-</ul>
-</li>
+<li>We continue to assist customers with <a href="/manual/https-transition.html">transitioning to HTTPS</a>, adding <a href="/manual/cname.html">sites’ domain masks</a> to our SSL certificate and preparing to update our help manual and some backend configurations.</li>
+<li>When you <a href="/manual/clone-site.html">clone a search configuration</a>, your type-ahead suggestions will no longer clone to the new configuration. This enables your new site to populate type-ahead suggestions based on its own traffic.</li>
+<li>In December, Bing is <a href="https://blogs.msdn.microsoft.com/bingdevcenter/2016/11/04/azure-data-market-bing-search-and-web-results-only-apis-to-be-decommissioned-december-15/">deprecating 2 of its APIs</a>. We’re handling this transition for all search configurations that use our hosted search results page. We began preparing for the transition this month and will complete work prior to the December 15th deprecation.</li>
 </ul>
 
 
 <h2>Fixes</h2>
 
 <ul>
-<li>Our new JavaScript search results page now appears correctly in all modern versions of Firefox and Internet Explorer, and on both Windows and Mac computers.</li>
-<li>We fixed an issue where our multi-server AWS environment was interfering with our <a href="govt-urls.usa.gov/tematres/vocab/index.php">Government URLs inventory database</a>.</li>
-<li>We fixed an error that was blocking our uploads to Bing's temporary index.</li>
+<li>Email verification links were redirecting infinitely, causing some new users to be unable to get into the system.</li>
+<li>We fixed a conflict for our customers who may share machines with other users, so now if a user is logged in and another user attempts to verify their account, the original user will be logged out so the second user can complete their verification.</li>
 </ul>
 
 
@@ -411,8 +411,8 @@
       
       
       
-      <a href="/releases/december-2016.html">
-        <time datetime="2017-02-17">February 17, 2017</time>
+      <a href="/releases/november-2016.html">
+        <time datetime="2016-11-30">November 30, 2016</time>
       </a>
     </div>
     </article>
@@ -772,7 +772,7 @@
 
 <p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/sitelink.png" title="Sitelink-generated links for EDGAR filings on SEC.gov" alt="Sitelink-generated links for EDGAR filings on SEC.gov" /></p>
 
-<p>Do you have related content that you'd like to display as value-added links that searchers should see within the context of each other (such as related forms, instructions, and publications)? If your related content follows a discernable URL pattern, email us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#115;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#100;&#105;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;">&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#x2e;&#103;&#111;&#118;</a> and we'll work with you to promote the related content on your site.</p>
+<p>Do you have related content that you'd like to display as value-added links that searchers should see within the context of each other (such as related forms, instructions, and publications)? If your related content follows a discernable URL pattern, email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#x70;&#112;&#x6f;&#x72;&#x74;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#118;">&#115;&#x65;&#97;&#x72;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;</a> and we'll work with you to promote the related content on your site.</p>
 
 <p>We've open sourced the <a href="https://github.com/GSA/sitelink_generator">code for the sitelink generator</a> on Github so you can <a href="https://github.com/GSA/sitelink_generator/fork">fork the code</a> and contribute to it directly. We've also <a href="http://rubygems.org/gems/sitelink_generator">published it as Ruby gem</a>.</p>
 
