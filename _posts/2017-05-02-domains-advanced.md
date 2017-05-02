@@ -66,13 +66,17 @@ If there are no commercial results for a query but there are supplemental conten
 
 If you would like your supplemental content to always appear first in search results, please [contact our team](mailto:search@suppot.digitalgov.gov). Searchers will first be served any supplemental content results, and are then offered the chance to “search again,” which will lead them to commercial index results. 
 
+Please note: if you have any [regular RSS feeds](/manual/rss.html) set up in your search site, this regular RSS content will also appear first with the supplemental content, prior to commercial results. If content is present in both types of feed, duplicates will appear in your results.
+
 In the example below, a Supplemental URL appears first, and clicking “Try your search again” will lead to a page of Bing results. 
 
 <img class="img-responsive" src="https://search.digitalgov.gov/img/Supplemental-Content-First-Example.png" alt="A Supplemental URL is Displayed on Page One of the DigitalGo Search Search Results Page"></img>
 
 ## Getting Supplemental Content To Be Your Only Search Results
 
-If you would like your Supplemental content to be the only results served from your site, please [contact our team](mailto:search@suppot.digitalgov.gov). Searchers will not be offered the chance to “search again” on a commercial index after they exhaust your supplemental content results (see above example).
+If you would like your supplemental content to be the only results served from your site, please [contact our team](mailto:search@suppot.digitalgov.gov). Searchers will not be offered the chance to “search again” on a commercial index after they exhaust your supplemental content results (see above example). 
+
+Please note: if you have any [regular RSS feeds](/manual/rss.html) set up in your search site, this regular RSS content will also appear with the supplemental content. If content is present in both types of feed, duplicates will appear in your results.
 
 ---
 
