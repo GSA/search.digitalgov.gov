@@ -103,6 +103,70 @@
  
     
     <h1>
+      <a href="/manual/cname.html">How to Mask Your Domain</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>We offer DNS masking, which allows you to show searchers search.YOURAGENCY.gov (instead of search.USA.gov). Follow these steps to mask your domain.</p>
+
+<ol>
+<li><p>Create a CNAME in your external DNS records for <code>search.youragency.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>. Your site handle is listed on the <a href="/manual/settings.html">settings page</a> in the Search Admin Center.</p>
+
+<p> For example: if your site handle is <code>abc</code>, the DNS record would look like this:</p>
+
+<pre><code> search.youragency.gov   CNAME  abc.sites.infr.search.usa.gov
+</code></pre>
+
+<p> NOTE: if your site handle contains a <code>.</code>, please replace it with a <code>-</code> in your DNS record,  e.g., for site handle <code>abc.gov.search</code> the DNS record would look like this:</p>
+
+<pre><code> search.youragency.gov   CNAME  abc-gov-search.sites.infr.search.usa.gov
+</code></pre>
+
+<p> To use a CNAME with <code>HTTPS</code>, you will need to <a href="mailto:search@support.digitalgov.gov">email us</a> after your DNS records have been updated in order to be added to our SSL certificate. If your CNAME is not on our SSL certificate, browser security warnings will appear when your search results page attemps to load over <code>HTTPS</code>. We only able to offer top level domain masking with HTTPS: i.e., <code>search.youragency.gov</code> but not <code>search.subagency.youragency.gov</code>.</p></li>
+<li><p>When the setup is complete, change your search box's <a href="/manual/code.html">form code</a> action from <code>search.usa.gov/search</code> to <code>search.yoursite.gov/search</code>.</p></li>
+</ol>
+
+
+<p>Your domain mask will work as soon as this DNS update is complete.</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> Many agencies have both internal and external DNS. Be
+sure to update your <em>external</em> DNS records (step 1) before changing your form code (step 2).</p>
+
+<p><strong><em>Did you know?</em></strong> Any search site within your domain may use the same domain mask and CNAME record, even if the CNAME is not associated with that particular site's handle. To implement an existing mask for a search box, just do Step 2, above.</p>
+
+<p><strong><em>Did you know?</em></strong> Once the CNAME is set up, if visitors to your site happen to truncate the URL in the browser bar to http://search.youragency.gov (without any parameters), they're automatically redirected to your agency's homepage at http://www.youragency.gov.</p>
+
+<p><strong><em>Did you know?</em></strong> Most of our customers use a <code>search.yoursite.gov</code> mask (such as search.nih.gov). If the <code>search</code> subdomain is already used by another application, you can use <code>find</code> or <code>findit</code>, such as <code>find.irs.gov</code> or <code>findit.state.gov</code>. We no longer support other subdomain patterns.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
+      
+      <a href="/tagged/cname"><span class="label label-info">cname</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/cname.html">
+        <time datetime="2017-06-06">June 6, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/training.html">DigitalGov Search Training</a>
     </h1>
     
@@ -531,7 +595,7 @@
 <ol>
 <li><p>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
 <li><p>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</p></li>
-<li><p>Email us at <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x73;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#115;&#117;&#x70;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;">&#x73;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#x6f;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
+<li><p>Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#46;&#103;&#x6f;&#118;">&#115;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
 </ol>
 
 
@@ -565,51 +629,6 @@
       
       <a href="/manual/domains.html">
         <time datetime="2017-04-18">April 18, 2017</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/filter-content.html">Filtering URLs</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > <a href="/manual/domains.html">Domains</a> > Advanced > Filter URLs</p>
-
-<p>You can filter <em>a single URL</em> from the results on your site. Use it for emergency reasons only (such as spillage of classified information or unintentional publication of a page). Note that this option should be used only if the <a href="/manual/domains.html#filter">other options</a> aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p>
-
-<p>It is not meant to fix the results for entire site, such as for launch or redesign problems. For tips on how to fix these more systemic problems, read our <a href="/blog/redesign.html">Checklist for a Successful Website Redesign</a>.</p>
-
-<p>Entire the full path of the URL, e.g. use https://www.usa.gov/Citizen/Topics/Benefits.shtml, not usa.gov/citizen/topics.</p>
-
-<p>You can later use the delete option to remove the filter.</p>
-
-<p>Please note: this filtering only affects your search results page that is hosted by our service - it does not affect commercial web results on Google.com, Bing.com, etc.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
-      
-      <a href="/tagged/filter-urls"><span class="label label-info">filter-urls</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/filter-content.html">
-        <time datetime="2017-03-24">March 24, 2017</time>
       </a>
     </div>
     </article>
@@ -700,6 +719,51 @@ i14y (Beta) API instructions*</p>
       
       
       <a href="/manual/index.html">
+        <time datetime="2017-03-24">March 24, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/filter-content.html">Filtering URLs</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > <a href="/manual/domains.html">Domains</a> > Advanced > Filter URLs</p>
+
+<p>You can filter <em>a single URL</em> from the results on your site. Use it for emergency reasons only (such as spillage of classified information or unintentional publication of a page). Note that this option should be used only if the <a href="/manual/domains.html#filter">other options</a> aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p>
+
+<p>It is not meant to fix the results for entire site, such as for launch or redesign problems. For tips on how to fix these more systemic problems, read our <a href="/blog/redesign.html">Checklist for a Successful Website Redesign</a>.</p>
+
+<p>Entire the full path of the URL, e.g. use https://www.usa.gov/Citizen/Topics/Benefits.shtml, not usa.gov/citizen/topics.</p>
+
+<p>You can later use the delete option to remove the filter.</p>
+
+<p>Please note: this filtering only affects your search results page that is hosted by our service - it does not affect commercial web results on Google.com, Bing.com, etc.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
+      
+      <a href="/tagged/filter-urls"><span class="label label-info">filter-urls</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/filter-content.html">
         <time datetime="2017-03-24">March 24, 2017</time>
       </a>
     </div>
@@ -1080,53 +1144,6 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
       
       <a href="/manual/youtube.html">
         <time datetime="2017-03-21">March 21, 2017</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/system-alert.html">How to Add a Custom System Alert to Your Results Page</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Display > Search Page Alert</p>
-
-<p>There may be times when you want to add a system alert to your search results page. For instance, during a <a href="/blog/redesign.html">site redesign</a>, you may wish to inform searchers that your site is in transition.</p>
-
-<p>Use the Search Page Alert feature to add a text message to your search results page, which will appear at all times above all search results, <em>regardless of the query</em>. Enter a title and text for the alert, set the status to active, and hit <code>Save</code> to turn on your alert. The appearance of the alert is not customizable.</p>
-
-<p>Note: at this time, Search Page Alerts do not appear if your results are being served via <a href="/developer/i14y.html">i14y</a> or <a href="/manual/domains-advanced.html">Supplemental Feed</a>.</p>
-
-<p>See, for example, the custom alert on Defense.gov announcing their migration to a new system.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/system-alert.png" title="Custom System Alert on Defense.gov" alt="Custom System Alert on Defense.gov" /></p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> See also our closely related feature <a href="/manual/best-bets.html">Best Bets</a>, which allows you to recommend individual results or sets of results, which will appear <em>only when a searcher's query matches</em> the text of their titles, descriptions, or keywords.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-display"><span class="label label-info">manage-display</span></a>
-      
-      <a href="/tagged/alert"><span class="label label-info">alert</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/system-alert.html">
-        <time datetime="2017-03-08">March 8, 2017</time>
       </a>
     </div>
     </article>

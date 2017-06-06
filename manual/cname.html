@@ -102,22 +102,22 @@
   
 
   <div class='post-content'>
-    <p>We offer DNS masking, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). Follow these steps to mask your domain.</p>
+    <p>We offer DNS masking, which allows you to show searchers search.YOURAGENCY.gov (instead of search.USA.gov). Follow these steps to mask your domain.</p>
 
 <ol>
-<li><p>Create a CNAME in your external DNS records for <code>search.yoursite.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>. Your site handle is listed on the <a href="/manual/settings.html">settings page</a> in the Search Admin Center.</p>
+<li><p>Create a CNAME in your external DNS records for <code>search.youragency.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>. Your site handle is listed on the <a href="/manual/settings.html">settings page</a> in the Search Admin Center.</p>
 
 <p> For example: if your site handle is <code>abc</code>, the DNS record would look like this:</p>
 
-<pre><code> search.yoursite.gov   CNAME  abc.sites.infr.search.usa.gov
+<pre><code> search.youragency.gov   CNAME  abc.sites.infr.search.usa.gov
 </code></pre>
 
 <p> NOTE: if your site handle contains a <code>.</code>, please replace it with a <code>-</code> in your DNS record,  e.g., for site handle <code>abc.gov.search</code> the DNS record would look like this:</p>
 
-<pre><code> search.yoursite.gov   CNAME  abc-gov-search.sites.infr.search.usa.gov
+<pre><code> search.youragency.gov   CNAME  abc-gov-search.sites.infr.search.usa.gov
 </code></pre>
 
-<p> To use a CNAME with <code>HTTPS</code>, you will need to <a href="mailto:search@support.digitalgov.gov">email us</a> after your DNS records have been updated in order to be added to our SSL certificate. If your CNAME is not on our SSL certificate, browser security warnings will appear when your search results page attemps to load over <code>HTTPS</code>.</p></li>
+<p> To use a CNAME with <code>HTTPS</code>, you will need to <a href="mailto:search@support.digitalgov.gov">email us</a> after your DNS records have been updated in order to be added to our SSL certificate. If your CNAME is not on our SSL certificate, browser security warnings will appear when your search results page attemps to load over <code>HTTPS</code>. We only able to offer top level domain masking with HTTPS: i.e., <code>search.youragency.gov</code> but not <code>search.subagency.youragency.gov</code>.</p></li>
 <li><p>When the setup is complete, change your search box's <a href="/manual/code.html">form code</a> action from <code>search.usa.gov/search</code> to <code>search.yoursite.gov/search</code>.</p></li>
 </ol>
 
@@ -131,9 +131,9 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
 
 <p><strong><em>Did you know?</em></strong> Any search site within your domain may use the same domain mask and CNAME record, even if the CNAME is not associated with that particular site's handle. To implement an existing mask for a search box, just do Step 2, above.</p>
 
-<p><strong><em>Did you know?</em></strong> Once the CNAME is set up, if visitors to your site happen to truncate the URL in the browser bar to http://search.yoursite.gov (without any parameters), they're automatically redirected to your homepage at http://www.yoursite.gov.</p>
+<p><strong><em>Did you know?</em></strong> Once the CNAME is set up, if visitors to your site happen to truncate the URL in the browser bar to http://search.youragency.gov (without any parameters), they're automatically redirected to your agency's homepage at http://www.youragency.gov.</p>
 
-<p><strong><em>Did you know?</em></strong> Most of our customers use a mask like <code>search.yoursite.gov</code> (such as search.nih.gov). If the <code>search</code> subdomain is already used by another application, you can use <code>find</code> or <code>findit</code>, such as <code>find.irs.gov</code> or <code>findit.state.gov</code>. We no longer support other subdomain patterns.</p>
+<p><strong><em>Did you know?</em></strong> Most of our customers use a <code>search.yoursite.gov</code> mask (such as search.nih.gov). If the <code>search</code> subdomain is already used by another application, you can use <code>find</code> or <code>findit</code>, such as <code>find.irs.gov</code> or <code>findit.state.gov</code>. We no longer support other subdomain patterns.</p>
 
   </div>
 
@@ -153,7 +153,7 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
     
     
     <a href="/manual/cname.html">
-      <time>December 22, 2016</time>
+      <time>June 6, 2017</time>
     </a>
   </div>
 
