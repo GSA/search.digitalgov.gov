@@ -124,7 +124,7 @@
 </code></pre>
 
 <p> To use a CNAME with <code>HTTPS</code>, you will need to <a href="mailto:search@support.digitalgov.gov">email us</a> after your DNS records have been updated in order to be added to our SSL certificate. If your CNAME is not on our SSL certificate, browser security warnings will appear when your search results page attemps to load over <code>HTTPS</code>. We only able to offer top level domain masking with HTTPS: i.e., <code>search.youragency.gov</code> but not <code>search.subagency.youragency.gov</code>.</p></li>
-<li><p>When the setup is complete, change your search box's <a href="/manual/code.html">form code</a> action from <code>search.usa.gov/search</code> to <code>search.yoursite.gov/search</code>.</p></li>
+<li><p>When the setup is complete, change your search box's <a href="/manual/code.html">form code</a> action from <code>search.usa.gov/search</code> to <code>search.youragency.gov/search</code>.</p></li>
 </ol>
 
 
@@ -139,7 +139,7 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
 
 <p><strong><em>Did you know?</em></strong> Once the CNAME is set up, if visitors to your site happen to truncate the URL in the browser bar to http://search.youragency.gov (without any parameters), they're automatically redirected to your agency's homepage at http://www.youragency.gov.</p>
 
-<p><strong><em>Did you know?</em></strong> Most of our customers use a <code>search.yoursite.gov</code> mask (such as search.nih.gov). If the <code>search</code> subdomain is already used by another application, you can use <code>find</code> or <code>findit</code>, such as <code>find.irs.gov</code> or <code>findit.state.gov</code>. We no longer support other subdomain patterns.</p>
+<p><strong><em>Did you know?</em></strong> Most of our customers use a <code>search.youragency.gov</code> mask (such as search.nih.gov). If the <code>search</code> subdomain is already used by another application, you can use <code>find</code> or <code>findit</code>, such as <code>find.irs.gov</code> or <code>findit.state.gov</code>. We no longer support other subdomain patterns.</p>
 
     </div>
 
@@ -595,7 +595,7 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
 <ol>
 <li><p>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
 <li><p>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</p></li>
-<li><p>Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#97;&#x6c;&#x67;&#x6f;&#118;&#46;&#103;&#x6f;&#118;">&#115;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#x6f;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
+<li><p>Email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#46;&#100;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#103;&#x6f;&#118;&#46;&#103;&#x6f;&#x76;">&#115;&#x65;&#97;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#112;&#111;&#114;&#x74;&#x2e;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#x67;&#x6f;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
 </ol>
 
 
