@@ -103,6 +103,58 @@
  
     
     <h1>
+      <a href="/releases/june-2017.html">June 2017 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlights</h2>
+
+<ul>
+<li><p>Take complete control of your search results! We released the dev Drupal 8 version of our <a href="https://www.drupal.org/project/usasearch">Drupal module</a>. The module hooks your CMS into <a href="/developer/i14y.html">i14y</a>, our content indexing API. Through i14y,  you can send content directly to our indexes. No commercial web results are served: instead, searchers will see content exactly as you've sent it to us. Go to our <a href="https://www.drupal.org/project/usasearch">Drupal project page</a> to try it out, and <a href="mailto:search@support.digitalgov.gov">reach out to our team</a> with questions.</p></li>
+<li><p>Our developer team has begun work on backend features that will provide new ways for customer content to be sent directly into our own indexes. This will be a long term project that extends through the rest of this calendar year and into 2018. Stay tuned!</p></li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<ul>
+<li><p>We continue to refine our bot-blocking feature that was <a href="releases/may-2017.html">released in May</a>. We are excited at the success of the feature and are continuing to stop new ‘junk’ queries from being entered into your search forms.</p></li>
+<li><p>We began updating our server recipes to Chef 12 and our Ruby version to 2.3.</p></li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>With our new bot blocker feature, we discovered that the CAPTCHA page didn’t work for human searchers who don't have Javascript enabled, and searchers did not see an error. We added an error message to instruct these searchers to temporarily enable Javascript in order to complete the CAPTCHA prompt.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/june-2017.html">
+        <time datetime="2017-07-13">July 13, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/may-2017.html">May 2017 Release Notes</a>
     </h1>
     
@@ -701,81 +753,6 @@
       
       <a href="/releases/february-2013.html">
         <time datetime="2015-02-23">February 23, 2015</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/july-2014.html">July 2014 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2>Federal Register Documents Are Now Available</h2>
-
-<p>Federal agencies publish notices, proposed rules, and final rules in the <em><a href="https://www.federalregister.gov/">Federal Register</a></em>. To make it easier for citizens and communities to understand the regulatory process and to participate in government decision-making, we created the <em>Federal Register</em> module to help searchers find these notices and rules.</p>
-
-<p>This GovBox offers direct access to <em>Federal Register</em> documents. We pull the data from the <a href="https://www.federalregister.gov/learn/developers">Federal Register API</a> to provide timely information across all documents.</p>
-
-<p>If you <a href="/manual/display-overview.html">opt to show the Federal Register</a> module, searchers looking for topics on your site can readily find the notices and rules that your agency has published in the <em>Federal Register</em>.</p>
-
-<p>The full title will be shown within the search results and when <em>Federal Register</em> documents have been posted by multiple agencies, searchers will see both agencies listed.</p>
-
-<p>Documents with open comment periods will appear before relevant documents with closed comment periods. The status of the comment period will be noted in the results. At the bottom of the page, there is a link to see more <em>Federal Register</em> documents.</p>
-
-<p><a href="http://search.doi.gov/search?utf8=%E2%9C%93&amp;affiliate=doi.gov&amp;query=grand+canyon"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/release-07-2014-FR.png" title="Federal Register results for grand canyon on DOI.gov" alt="Federal Register results for grand canyon on DOI.gov" /></a></p>
-
-<h2>Other Features</h2>
-
-<ul>
-<li>Migration done! All of our features are now present on the newly <a href="/blog/serp-redesign.html">redesigned search results page</a>.</li>
-<li>Visitors to our <a href="https://twitter.com/DG_Search">Twitter account</a> now see a new background photo.</li>
-<li>Developers can now access our open-sourced <a href="https://github.com/GSA/oasis">social image search code</a>.</li>
-<li>Librarians, developers, and others can see this quarter's updated list of federal, state, local, tribal, and territorial <a href="https://github.com/GSA/govt-urls">government URLs</a> that aren't .gov or .mil.</li>
-</ul>
-
-
-<h2>Chores</h2>
-
-<ul>
-<li>We upgraded to <a href="https://www.ruby-lang.org/en/news/2014/05/09/ruby-2-1-2-is-released/">Ruby 2.1.2</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.elasticsearch.org/blog/elasticsearch-1-3-1-released/">Elasticsearch 1.3.1</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We began to fetch and index <a href="http://instagram.com/">Instagram</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> pictures and signed up for <a href="https://www.pinterest.com/">Pinterest</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We investigated the overlap between the agency classifications for USAJobs and the <em>Federal Register</em> at <a href="https://schemas.usajobs.gov/Enumerations/AgencySubElement.xml">https://schemas.usajobs.gov/Enumerations/AgencySubElement.xml</a> and <a href="https://www.federalregister.gov/agencies">https://www.federalregister.gov/agencies</a>, respectively.</li>
-<li>We improved our operational efficiency by removing our old  analytics tables and <a href="http://hadoop.apache.org/">Hadoop</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> clusters.</li>
-<li>We migrated the previous 13 months of data into <a href="http://www.elasticsearch.org/">Elasticsearch</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We updated all of our data products (like daily emails) to use <a href="http://www.elasticsearch.org/">Elasticsearch</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We started to use <a href="http://www.elasticsearch.org/overview/kibana/">Kibana</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to visualize our search data.</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>Quoted searches now work for our <a href="http://www.elasticsearch.org/">Elasticsearch</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> indexes.</li>
-<li>Daily Snapshot emails now report data the correct date.</li>
-<li>Searchers now see better type-ahead suggestions.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/july-2014.html">
-        <time datetime="2014-12-17">December 17, 2014</time>
       </a>
     </div>
     </article>
