@@ -103,115 +103,125 @@
  
     
     <h1>
-      <a href="/manual/module-codes.html">Key for Search Module Codes and Names</a>
+      <a href="/blog/power-users-recap.html">DigitalGov Search for Power Users: Recap</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics</p>
+      <p>Our April 2015 training session looked into the nooks and crannies of the <a href="https://search.usa.gov/sites/">Admin Center</a>, and provided other advanced tips for optimizing your search. We used the scenario of a site redesign to ground these tips in a common experience. This is a summary and cheat sheet. Since we know that some of these tips won’t be relevant until they’re relevant, please hang on to this for future reference.</p>
 
-<p>We call several different indexes when serving search results, and we present results from each of these indexes in a separate module. Each module loads when there are relevant search results to display. Each module has a code, and you'll see these codes in the Download Details csv files available through the <a href="/manual/queries.html">Queries</a> or <a href="/manual/clicks.html">Clicks</a> pages of the the Admin Center analytics section.</p>
+<p>Watch the <a href="https://www.youtube.com/watch?v=Z1Eg9LhhFcY">recorded session</a> on YouTube.</p>
 
-<p>This page lists all the module codes and their full names.</p>
+<p>The launch of a new or redesigned site is a great time to think about refreshing your search as well. Come along on a journey through a search refresh before, during, and just after your new site goes live. You need not wait for a new site, though - these steps can be taken at any time.</p>
 
-<table>
-<thead>
-<tr>
-<th style="text-align:left;"> Code    </th>
-<th style="text-align:left;"> Module Name </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;"> AIDOC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-<td style="text-align:left;"> Collections </td>
-</tr>
-<tr>
-<td style="text-align:left;"> AWEB  </td>
-<td style="text-align:left;"> Web Results Only (Azure) </td>
-</tr>
-<tr>
-<td style="text-align:left;"> BBG   </td>
-<td style="text-align:left;"> Best Bets: Graphics </td>
-</tr>
-<tr>
-<td style="text-align:left;"> BOOS  </td>
-<td style="text-align:left;"> Best Bets: Text </td>
-</tr>
-<tr>
-<td style="text-align:left;"> BSPEL </td>
-<td style="text-align:left;"> Spelling Suggestions (Bing/Google) </td>
-</tr>
-<tr>
-<td style="text-align:left;"> BWEB  </td>
-<td style="text-align:left;"> Web Results (Bing) </td>
-</tr>
-<tr>
-<td style="text-align:left;"> DECOR </td>
-<td style="text-align:left;"> Value-added Links for SEC Filings </td>
-</tr>
-<tr>
-<td style="text-align:left;"> FRDOC </td>
-<td style="text-align:left;"> Federal Register Documents </td>
-</tr>
-<tr>
-<td style="text-align:left;"> GWEB  </td>
-<td style="text-align:left;"> Web Results (Google) </td>
-</tr>
-<tr>
-<td style="text-align:left;"> IMAG  </td>
-<td style="text-align:left;"> Image Results (Bing) </td>
-</tr>
-<tr>
-<td style="text-align:left;"> JOBS  </td>
-<td style="text-align:left;"> Jobs </td>
-</tr>
-<tr>
-<td style="text-align:left;"> LOVER </td>
-<td style="text-align:left;"> Spelling Overrides (DigitalGov Search) </td>
-</tr>
-<tr>
-<td style="text-align:left;"> MEDL  </td>
-<td style="text-align:left;"> Health Topics </td>
-</tr>
-<tr>
-<td style="text-align:left;"> NEWS  </td>
-<td style="text-align:left;"> RSS Feeds </td>
-</tr>
-<tr>
-<td style="text-align:left;"> NIMAG </td>
-<td style="text-align:left;"> Image Results (MRSS) </td>
-</tr>
-<tr>
-<td style="text-align:left;"> OASIS </td>
-<td style="text-align:left;"> Image Results (DigitalGov Search) </td>
-</tr>
-<tr>
-<td style="text-align:left;"> OSPEL </td>
-<td style="text-align:left;"> Spelling Suggestions (DigitalGov Search Images) </td>
-</tr>
-<tr>
-<td style="text-align:left;"> OVER  </td>
-<td style="text-align:left;"> Spelling Overrides (Bing/Google) </td>
-</tr>
-<tr>
-<td style="text-align:left;"> SPEL  </td>
-<td style="text-align:left;"> Spelling Suggestions (DigitalGov Search) </td>
-</tr>
-<tr>
-<td style="text-align:left;"> SREL  </td>
-<td style="text-align:left;"> Related Searches </td>
-</tr>
-<tr>
-<td style="text-align:left;"> TWEET </td>
-<td style="text-align:left;"> Tweets </td>
-</tr>
-<tr>
-<td style="text-align:left;"> VIDS  </td>
-<td style="text-align:left;"> Video Results (YouTube) </td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li><a href="#commercial">Tell search engines to (re-)index your site</a></li>
+<li><a href="#direct">Let us index your site directly</a></li>
+<li><a href="#ac">Update your search settings in the Admin Center</a></li>
+<li><a href="#emergency">Break Glass In Case of Emergency</a></li>
+<li><a href="#fancy">Get Fancy</a></li>
+</ul>
+
+
+<p><a name="commercial"></a></p>
+
+<h2>Tell Search Engines to (Re-)Index Your Site</h2>
+
+<p>DigitalGov Search does not crawl. Crawling is hard and expensive, and others have systems in place that do this very well, so we rely on commercial search engines’ indexes of your site. Search engines create <strong>indexes</strong> of the websites they crawl, and search queries are run against those indexes. If a website is restructured but the search indexes are not updated, the old structure will be presented in search results.</p>
+
+<ul>
+<li><strong>Robots.txt</strong> files declare what can and cannot be indexed by crawlers. Tip: Set up a robots.txt file on your <em>beta</em> site to <em>disallow</em> indexing. When you switch your beta site to <strong>production</strong>, update the robots.txt to <strong>allow</strong> indexing. <a href="https://www.google.com/search?q=robots.txt+example">Resources and Examples</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>
+
+<ul>
+<li>Put your file at the root of your site, <code>http://www.YOURSITE.gov/robots.txt</code>.</li>
+<li>If you didn’t disallow indexing of your beta site and it has already been indexed, request it be removed via Google and Bing’s webmaster tools sites. A robots.txt file won’t proactively <em>remove</em> content from search engines’ indexes.</li>
+</ul>
+</li>
+<li><strong>301 redirects</strong> allow crawlers to find their way around your new structure, and expedite the reindexing process. A 404 page is a dead end, and the new location or version of that file can’t be found from there.
+
+<ul>
+<li>If the volume of 301s to place is daunting, consider setting a general 301 for all the content in a location pointing to the new index page for that type of content. You can also prioritize your 301 placement based on your site usage analytics, starting with the most popular pages.</li>
+<li>If you’re not sure which of your pages are throwing 404s, you can run your list of URLs through an <a href="https://duckduckgo.com/?q=http+status+checker">online http status checker</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, or you could install SEO auditing software on your computer, if your IT policies allow it.</li>
+</ul>
+</li>
+<li><strong>XML sitemaps</strong> tell crawlers how often to reindex your site, or portions of your site. The protocol and examples are available at [Sitemaps.org(http://www.sitemaps.org/protocol.html)&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. The crucial element is to set the <code>&lt;changefreq&gt;</code> tag to the appropriate frequency for your content. You can set the frequency at the site, folder, or even individual item level.
+
+<ul>
+<li>Put your file at the root of your site, <code>http://www.YOURSITE.gov/sitemap.xml</code>.</li>
+</ul>
+</li>
+<li>See also our <a href="/blog/redesign.html">tips on preparing for a site redesign</a>.</li>
+</ul>
+
+
+<p><a name="direct"></a></p>
+
+<h2>And, Tell Us about Your Content and We’ll Index It Directly</h2>
+
+<p>While we don’t crawl, we will index any pages you tell us about. The steps mentioned above will be useful for searchers out on the web looking for your information and services. By default we leverage the commercial indexes for your site search, but we have our own indexes as well.  If you’re having a hard time getting search engines to index your new site, re-index your old site, or you just prefer our indexes, there are a couple of ways you can tell us about your content.</p>
+
+<ul>
+<li>You can <a href="/manual/rss.html"><strong>send us all of your content</strong> via RSS</a> for direct indexing. We’ll need the URL, title, description, update date, and the full content or body of each item. Sort by update date in descending order. This can be an RSS or Atom feed. <a href="mailto:search@support.digitalgov.gov">Let us know</a> you created this feed. There are a few different options for indexing feeds so we’ll make sure it’s set up in the best way possible.</li>
+<li>Better yet, <strong>publish your content via API</strong>. We are in the beginning stages of development for a bootstrap API and a CRUD API. If you’d like to be part of our beta testing group and give feedback on the product, <a href="mailto:search@support.digitalgov.gov">let us know</a>. We want to get people kicking the tires on the prototype early, in the coming weeks. (note, this is current as of April 2015)</li>
+</ul>
+
+
+<p><a name="ac"></a></p>
+
+<h2>Update Your Search Settings in the Admin Center</h2>
+
+<p>Don’t forget to update your content settings in the Admin Center to point to your new content. This is an important, but often overlooked step.</p>
+
+<ul>
+<li>Set up your domains list to <strong>include entire domains</strong>. Example: nih.gov - not www.nih.gov. Specifying www will limit your search to that particular subdomain. If you do specify a subdomain, do so with the intent to limit your search. <a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > <code>YourSite</code> > <code>Content</code> > <code>Domains</code></li>
+<li>If a particular <strong>new item</strong> is not showing up in search results and you need it there ASAP, you can create a Best Bet pointing to it, or add it as a Supplemental URL.
+
+<ul>
+<li><strong>Best Bets</strong> can be managed at <a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > <code>YourSite</code> > <code>Content</code> > <code>Best Bets: Text or Best Bets: Graphics</code> <em>(Recommended)</em></li>
+<li><strong>Supplemental URLs</strong> can be added at <a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > <code>YourSite</code> > <code>Content</code> > <code>Domains</code> > <code>Advanced</code> > <code>Supplemental URLs</code></li>
+</ul>
+</li>
+<li>When undergoing a <a href="/blog/redesign.html">site redesign</a>, be sure to <strong>update</strong> Collections, Best Bets, RSS Feeds, Header and Footer links, related sites, image assets, and results page colors, as appropriate.</li>
+<li>If you set up a <strong>test search site</strong> to go with your beta site, we recommend you <strong>transfer</strong> all the new settings over to your old site when you take your beta site into production, in order to maintain continuity of analytics. The test search site will have separate analytics from your existing, live search. If you would like help transferring your settings, <a href="mailto:search@support.digitalgov.gov">let us know</a>.</li>
+</ul>
+
+
+<p><a name="emergency"></a></p>
+
+<h2>Break Glass In Case of Emergency</h2>
+
+<p>We have a stopgap measure available to <a href="/manual/domains-advanced.html">filter certain results</a> directly in the Admin Center. Under <code>[DigitalGov Search](/index.html) &gt; [Admin Center](https://search.usa.gov/sites/) &gt; YourSite &gt; Analytics &gt; Queries</code> you’ll see an option for Filter URLs.</p>
+
+<p><strong>Important Note!</strong> This is meant to be a <strong>stopgap measure</strong> until search engines’ indexes have caught up. After they’re updated there, the urls you’ve filtered here <strong>should be removed</strong>. They are appended to your query and are counted against the byte limit we can include in any one query. Please don’t forget to remove them after you no longer need them.</p>
+
+<p><a name="fancy"></a></p>
+
+<h2>Get Fancy</h2>
+
+<p>At any time, you can use some of our more advanced options to get the most out of your search. Don’t wait for a redesign to take advantage of these features.</p>
+
+<ul>
+<li><strong>3rd party tracking</strong> allows you to include search traffic in your broader website and customer experience monitoring, such as Google Analytics and Foresee.
+
+<ul>
+<li>If you are sending <strong>more than one code</strong>, or an additional code, for a given tracking service, please either send both together in the same submission, or include a note with your second code snippet that it should be appended to what you had submitted before.</li>
+<li><strong>ForeSee</strong> requires you set up a <a href="/manual/cname.html">cname</a> in order for it to work (see below).</li>
+<li>You can also put in any other analytics or customer satisfaction tools you use.</li>
+<li>The <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> is already integrated with DigitalGov Search, so you don’t need to do anything.</li>
+</ul>
+</li>
+<li><strong>Domain Masking</strong> is available for your hosted search results page. Create a <strong>CNAME</strong> record in your external DNS records. Example: <code>NAME: search.YOURSITE.gov</code> ; <code>CNAME: search.usa.gov.edgekey.net</code>. Other subdomain options are ‘find’ and ‘findit.’ <strong>Alert us in writing</strong> of your choice and we’ll get our side set up. When both sides are ready, <strong>update the form code</strong> on your search box to point to <code>search.YOURSITE.gov</code>.</li>
+<li><strong>Search box setup</strong>. You can get fancy with your search box, pointing it to a particular collection, or adding options for people to set their search scope.
+
+<ul>
+<li>Start your <strong>search in a collection</strong>: add <code>&lt;input type="hidden" name="dc" value="INSERT_COLLECTION_ID_#" /&gt;</code> to your form code. The collection ID can be found in the URL of the collection’s edit screen.</li>
+<li>Create an <strong>isolated search</strong> experience by searching a hidden collection: add <code>&lt;input type="hidden" name="dc" value="INSERT_COLLECTION_ID_#" /&gt;</code>, as above, but make sure the collection display is set to OFF.</li>
+<li>Provide <strong>options</strong> that allow the user to set their search scope from the get-go. For example, <a href="http://lawrenceks.org/">Lawrence, Kansas</a> has developed a nice modern approach to radio buttons.</li>
+<li>Pass a <strong>site limit parameter</strong> from your search box: add <code>&lt;input type="hidden" name="sitelimit" id="sitelimit" value="http://www.agency.gov/limittothisfolder"&gt;</code> to your form code.</li>
+</ul>
+</li>
+<li>The <strong>API key</strong> for displaying search results on your own site is available under <a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > <code>YourSite</code> > <code>Activate</code> > <code>API Access Key</code>. We recommend you <strong>use the hosted results page</strong> whenever possible, to take advantage of all of the features of our service.</li>
+</ul>
 
 
     </div>
@@ -220,11 +230,7 @@
       
       <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
       
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/clicks"><span class="label label-info">clicks</span></a>
-      
-      <a href="/tagged/queries"><span class="label label-info">queries</span></a>
+      <a href="/tagged/training"><span class="label label-info">training</span></a>
       
     </div>
    <div class='time'>
@@ -232,8 +238,8 @@
       
       
       
-      <a href="/manual/module-codes.html">
-        <time datetime="2015-03-26">March 26, 2015</time>
+      <a href="/blog/power-users-recap.html">
+        <time datetime="2015-04-26">April 26, 2015</time>
       </a>
     </div>
     </article>
@@ -312,7 +318,7 @@
 
 <p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/flickr.html">Flickr</a> photostream. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.</p>
 
-<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#x73;&#x65;&#97;&#x72;&#x63;&#104;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;">&#x73;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#116;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#103;&#111;&#118;</a> if you're ready to turn on the new results page.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#115;&#101;&#x61;&#114;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#x6f;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#97;&#108;&#x67;&#111;&#118;&#46;&#103;&#x6f;&#x76;">&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#x40;&#x73;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;</a> if you're ready to turn on the new results page.</p>
 
     </div>
 
