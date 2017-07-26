@@ -22,6 +22,7 @@ This page lists all the module codes and their full names.
 | DECOR | Value-added Links for SEC Filings |
 | FRDOC | Federal Register Documents |
 | GWEB  | Web Results (Google) |
+| I14Y  | Web Results (Digital Gov Search via [i14y](https://search.digitalgov.gov/developer/i14y.html)) |
 | IMAG  | Image Results (Bing) |
 | JOBS  | Jobs |
 | LOVER | Spelling Overrides (DigitalGov Search) |
