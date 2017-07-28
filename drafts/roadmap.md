@@ -74,9 +74,9 @@ We encourage you to set-up and test i14y as soon as possible.
 _Non-CMS Customers:_
 We encourage you to explore how you can compile a list of your site URLs. You do not need to send us any information yet.
 
-Do you have questions? Join us for an open Q&A session on DATE, TIME, LINK.
+Do you have questions? Join us for an open Q&A session on DATE, TIME, LINK. We also welcome email [questions and comments](mailto:search@support.digitalgov.gov).
 
-We also welcome email [questions and comments](mailto:search@support.digitalgov.gov).
+The Search program has grown and evolved since its [inception in September 2000](/customers.html). We look forward to this next phase of service to you and the public. 
 
 Happy searching,
 
