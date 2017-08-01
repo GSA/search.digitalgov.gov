@@ -103,6 +103,123 @@
  
     
     <h1>
+      <a href="/manual/analytics-alerts.html">Setting Up Analtyics Alerts</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Analytics Alerts</p>
+
+<p>Analytics Alerts let you receive email alerts when your site visitors are getting no results for a particular query or when a query is getting a <a href="#low-query-click-thru-rate">low click-through rate</a>.</p>
+
+<h2>No Results</h2>
+
+<p>Set up this alert to be notified if specific queries are frequently searched for but are returning no results. Help on specific fields follows, and there is an <a href="#no-results-example">example</a> below.</p>
+
+<p><strong>Name</strong></p>
+
+<p>Enter a name for your alert. It will be the subject line of your alert email. The name of your alert must be unique across our entire search alert system, so if you see an error message, please modify the name.</p>
+
+<p><strong>Check interval</strong></p>
+
+<p>Enter the frequency at which you’d like the system to check for queries with no results. Use <code>m</code>, <code>h</code>, <code>d</code>, or <code>w</code> to specify the minutes/hours/days/weeks you’d like between checks.</p>
+
+<p><strong>Minimum number of queries</strong></p>
+
+<p>Enter the minimum number of times, over the time window, that a given query must be entered to trigger the alert.</p>
+
+<p><strong>Time window for each check</strong></p>
+
+<p>Enter the amount of time the system should look back through for each check. Use <code>m</code>, <code>h</code>, <code>d</code>, or <code>w</code> to specify minutes/hours/days/weeks.</p>
+
+<p><strong>Time between alerts</strong></p>
+
+<p>Enter the minimum period of time between successive email messages.</p>
+
+<p><strong>Ignored query terms</strong></p>
+
+<p>Enter any query terms that you don’t want included in the alert, separated by commas.</p>
+
+<p><a name="no-results-example"></a></p>
+
+<h3>No Results Example:</h3>
+
+<p>In this example, the alert system will check every 30 minutes to see if any query has been entered at least 50 times over the past 12 hours and yielded no results. The system will send an alert at most once per day if there are queries that fit this criteria, and it will not include the query ‘panda’ in the alert.</p>
+
+<p><img src="https://search.digitalgov.gov/img/No-Results-Screenshot.png" title="No Results Analytics Alert Example" alt="No Results Analytics Alert Example" /></p>
+
+<p><a name="low-query-click-thru-rate"></a></p>
+
+<h2>Low Query Click-thru Rate (CTR)</h2>
+
+<p>Set up this alert to be notified if the results page for a query with significant traffic is not getting many clicks. If the query resulted in a click less than 20% of the time, it is considered to have a low click through rate (CTR); however, you are able to set any percentage threshold for your alert emails. Help on specific fields follows, and there is an <a href="#low-query-click-thru-example">example</a> below.</p>
+
+<p><strong>Name</strong></p>
+
+<p>Enter a name for your alert. It will be the subject line of your email. The name of your alert must be unique across our entire search alert system, so if you see an error message, please modify the name.</p>
+
+<p><strong>Check interval</strong></p>
+
+<p>Enter the frequency at which you’d like the system to check for queries with a low CTR. Use <code>m</code>, <code>h</code>, <code>d</code>, or <code>w</code> to specify the minutes/hours/days/weeks you’d like between checks.</p>
+
+<p><strong>Minimum search activity level (queries + clicks)</strong></p>
+
+<p>Enter the minimum number of times, over the time window, that a given query must have search activity (queries plus clicks) to trigger the low query CTR alert. Because we’re not able to differentiate between query activity and click activity, you may want to pad this number a little. However, since these queries are not getting a lot of clicks, you don’t want to pad it too much.</p>
+
+<p><strong>Maximum CTR for alert</strong></p>
+
+<p>Enter the maximum click through rate that will trigger an alert, expressed as a percentage. You will receive an alert for a query that has a CTR equal to or lower than that percentage during the given time window.</p>
+
+<p><strong>Time window for each check</strong></p>
+
+<p>Enter the amount of time the system should look back through for each check. Use <code>m</code>, <code>h</code>, <code>d</code>, or <code>w</code> to specify minutes/hours/days/weeks.</p>
+
+<p><strong>Time between alerts</strong></p>
+
+<p>Enter the minimum period of time between successive email messages.</p>
+
+<p><strong>Ignored query terms</strong></p>
+
+<p>Enter any query terms that you don’t want included in the alert, separated by commas.</p>
+
+<p><a name="low-query-click-thru-example"></a></p>
+
+<h3>Low CTR Example:</h3>
+
+<p>In this example, the alert system will check every 30 minutes for a query that has had search activity (queries plus clicks) at least 100 times over the past 12 hours and has a CTR 15% or lower. The system will send an alert at most once per day if there are queries that fit these criteria, and it will not include queries for ‘lion’ in the alert.</p>
+
+<p><img src="https://search.digitalgov.gov/img/Low-CTR-Screenshot.png" title="Low CTR Analytics Alert Example" alt="Low CTR Analytics Alert Example" /></p>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> Don’t forget to hit ‘add’ in the upper right corner!</p>
+
+<p><strong><em>Troubleshooting tip:</em></strong> Analytics alerts are only sent to the Search user who set up the alert.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/analytics-alerts.html">
+        <time datetime="2017-03-23">March 23, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/youtube.html">How to Add Your YouTube Videos to Our Index</a>
     </h1>
     
@@ -283,7 +400,7 @@
 
 <p><strong><em>Troubleshooting Tip:</em></strong> For non-English sites, some agencies opt to include the specific location of the language's content (such as agency.gov/language or language.agency.gov) in their <a href="/manual/domains.html">Domains</a> to further refine the search results. Test the results for your non-English site with both the general agency.gov and the language-specific location to determine which setting gives you the best results.</p>
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#115;&#101;&#97;&#114;&#x63;&#104;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;">&#115;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;</a>.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Once you've added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#111;&#58;&#115;&#101;&#97;&#114;&#99;&#104;&#x40;&#115;&#117;&#112;&#112;&#111;&#114;&#x74;&#x2e;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#103;&#111;&#118;&#46;&#x67;&#111;&#x76;">&#115;&#101;&#x61;&#114;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;</a>.</p>
 
     </div>
 
@@ -335,7 +452,7 @@
 
 <hr />
 
-<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? We want your jobs data. Email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#58;&#x73;&#101;&#97;&#114;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#105;&#103;&#105;&#116;&#97;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#118;">&#x73;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#115;&#117;&#x70;&#112;&#111;&#114;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#97;&#x6c;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#118;</a> to let us know where you publish your job openings so that we can include them in the Job Openings module.</p>
+<p> <strong>Did you know?</strong> Are you a federal agency that doesn't post your jobs on USAJobs? We want your jobs data. Email us at <a href="&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#115;&#x65;&#97;&#x72;&#99;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#46;&#100;&#105;&#103;&#105;&#116;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#103;&#x6f;&#118;">&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#108;&#103;&#111;&#118;&#46;&#103;&#111;&#x76;</a> to let us know where you publish your job openings so that we can include them in the Job Openings module.</p>
 
     </div>
 
@@ -474,7 +591,7 @@
 
 <p>Type over the text in the Name field to edit a facet's display name. Keep each name short (15 or fewer characters) and consistent with the content you're searching. Click on the hyperlink in the Source field to update the facet's source content. Hover over the icon with three horizontal lines on the left to change the order.</p>
 
-<p><strong>More.</strong> We show up to four facets above your search box. If you turn on the display of more than four facets, you'll see them listed under a 'More' dropdown menu. Email us at <a href="&#109;&#97;&#105;&#108;&#x74;&#111;&#58;&#x73;&#101;&#97;&#114;&#99;&#104;&#64;&#115;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#103;&#111;&#118;">&#x73;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#x64;&#105;&#x67;&#x69;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#46;&#x67;&#x6f;&#118;</a> if you'd like to use a custom label instead of the default 'More'.</p>
+<p><strong>More.</strong> We show up to four facets above your search box. If you turn on the display of more than four facets, you'll see them listed under a 'More' dropdown menu. Email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#111;&#58;&#x73;&#x65;&#97;&#114;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;">&#115;&#101;&#97;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#x70;&#112;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#118;&#46;&#103;&#111;&#118;</a> if you'd like to use a custom label instead of the default 'More'.</p>
 
 <h2>Modules</h2>
 
@@ -502,7 +619,7 @@
 
 <p>If you list more than two related sites, searchers will see them listed under a dropdown menu, View Topic.</p>
 
-<p>Email us at <a href="&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#58;&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#x72;&#116;&#x2e;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#108;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#x73;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#115;&#117;&#112;&#112;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#x6f;&#x76;&#x2e;&#x67;&#111;&#118;</a> if you'd like to use a custom label instead of the default 'View Topic' label.</p>
+<p>Email us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#115;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#117;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#118;&#46;&#x67;&#x6f;&#x76;">&#x73;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#x70;&#112;&#111;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#111;&#118;</a> if you'd like to use a custom label instead of the default 'View Topic' label.</p>
 
 <h2>Pointer to Kick Off New Search</h2>
 
@@ -516,13 +633,13 @@
 </ul>
 
 
-<p>Email us at <a href="&#109;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#x73;&#101;&#97;&#x72;&#99;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#97;&#108;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#x76;">&#115;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#114;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#116;&#97;&#108;&#103;&#111;&#118;&#46;&#x67;&#x6f;&#x76;</a> if you'd provide searchers with a custom message to encourage them to search another section of your site, your database, or both.</p>
+<p>Email us at <a href="&#x6d;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#x73;&#101;&#97;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#112;&#112;&#x6f;&#x72;&#116;&#46;&#100;&#x69;&#103;&#x69;&#x74;&#x61;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#x73;&#x75;&#112;&#112;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#118;</a> if you'd provide searchers with a custom message to encourage them to search another section of your site, your database, or both.</p>
 
 <hr />
 
 <p><strong><em>Did you know?</em></strong>  Searchers may narrow results by time period for any <a href="/manual/rss.html">RSS</a> feeds. See, for example, results for a <a href="http://search.whitehouse.gov/search/news?affiliate=wh&amp;channel=6&amp;m=false&amp;query=jobs&amp;tbs=w">search on <em>jobs</em> narrowed to press articles in the last week on WhiteHouse.gov</a>.</p>
 
-<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#x73;&#x75;&#112;&#112;&#111;&#114;&#116;&#46;&#100;&#105;&#103;&#x69;&#116;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#111;&#x76;">&#115;&#101;&#97;&#114;&#99;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#x72;&#116;&#46;&#x64;&#105;&#103;&#x69;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#x2e;&#x67;&#x6f;&#x76;</a> to if you want to customize these display names.</p>
+<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#115;&#101;&#x61;&#x72;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#111;&#x76;&#x2e;&#103;&#111;&#x76;">&#x73;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#115;&#x75;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#x6f;&#x76;</a> to if you want to customize these display names.</p>
 
 <p><strong><em>Did you know?</em></strong> You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our <a href="/manual/code.html">JavaScript snippet</a> before the closing <code>&lt;body&gt;</code> tag on your HTML web pages.</p>
 
@@ -576,7 +693,7 @@
 
 <p>If you don't like the default web results, you can choose to use another index. Options follow.</p>
 
-<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can index content that is sent to us by API or RSS. Email us at <a href="&#x6d;&#97;&#x69;&#x6c;&#x74;&#111;&#x3a;&#115;&#101;&#97;&#x72;&#x63;&#x68;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#x74;&#97;&#108;&#x67;&#111;&#x76;&#x2e;&#x67;&#111;&#118;">&#x73;&#101;&#97;&#114;&#99;&#104;&#x40;&#x73;&#x75;&#112;&#112;&#111;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#111;&#x76;&#46;&#x67;&#111;&#x76;</a> and we'll work with you to determine the best way for us to get your content.</p>
+<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can index content that is sent to us by API or RSS. Email us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#115;&#x75;&#112;&#112;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#x67;&#105;&#116;&#97;&#108;&#x67;&#111;&#118;&#x2e;&#103;&#111;&#x76;">&#115;&#x65;&#x61;&#114;&#x63;&#104;&#64;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#103;&#x6f;&#118;&#46;&#x67;&#x6f;&#118;</a> and we'll work with you to determine the best way for us to get your content.</p>
 
 <p><strong>Option 2. Buy and Use Google Site Search.</strong> If you already have (or plan to purchase), <a href="https://www.google.com/work/search/products/gss.html">Google Site Search</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, we'll send a searcher's query to the search index you've provided and we'll render the results within our search results page.</p>
 
@@ -770,75 +887,6 @@
       
       <a href="/manual/code.html">
         <time datetime="2017-02-27">February 27, 2017</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/i14y-drawers.html">How to Work with i14y Drawers</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers</p>
-
-<p>An <a href="/developer/i14y.html">i14y</a> Drawer is an index receiving content via the i14y API. We've called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
-
-<h2>Step 1. Make sure your site is connected to i14y</h2>
-
-<p>If your site Admin Center has the following page: <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, your site is connected to i14y. If you don't see this page in the Admin Center, <a href="mailto:search@support.digitalgov.gov">email us</a>. You can also read about <a href="/developer/i14y.html">Getting Started with i14y</a>.</p>
-
-<h2>Step 2. Add one or more Drawers</h2>
-
-<p>On <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, Click <code>Add i14y Drawer</code> in the upper right corner. If you have more than one website that will be sending content, add a separate Drawer for each of these sites.</p>
-
-<h3>Handle</h3>
-
-<p>Let us know what the handle for your drawer should be - the handle must be all lowercase alphanumeric, all one word, and can include underscores but no other special characters (e.g., agency_drawer_handle2).</p>
-
-<p>The Drawer <em>Description</em> is optional</p>
-
-<h2>Step 3. Send Content to Fill your Drawer</h2>
-
-<p>After you have created your Drawer(s), click <code>Show</code> from the i14y Drawers list to find that Drawer’s secret API key. Use this secret key with your drawer handle in your API call or your CMS module to <a href="http://gsa.github.io/slate/#authentication">send your content to the right place</a>.</p>
-
-<h2>Step 4. Review your Index</h2>
-
-<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list, and when the most recent document was received. We also send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
-
-<p><strong><em>Note:</em></strong> If you experience difficulty sending documents to i14y, it is possible your firewall is not letting you communicate with the i14y server. Check out our <a href="/developer/i14y-testing.html">cURL test commands</a> or view the full <a href="http://gsa.github.io/slate/">i14y documentation on Github</a>.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting Tip:</em></strong> We can attach each i14y drawer to multiple search configurations: if you have a drawer that you’d like to use for multiple search sites, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
-
-<hr />
-
-<p><strong><em>Caution:</em></strong> A pop-up message will appear when you hit <code>Remove</code> on a drawer: please review this pop-up message carefully. If you remove a drawer that is only associated with one search configuration, the drawer and its contents will be deleted from our system. If the drawer is attached to multiple search configurations, it will only be removed from the search configuration you are currently on. The pop-up message will indicate what type of drawer you have.</p>
-
-<p>If you accidentally delete a drawer, you will need to set-up a new drawer and resend the content - we are unable to retrieve deleted drawers. If you accidentally remove a shared drawer but it is still associated with other search configurations, we can re-attach it to your site. <a href="mailto:search@support.digitalgov.gov">Contact us</a> for assistance.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/i14y"><span class="label label-info">i14y</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/i14y-drawers.html">
-        <time datetime="2017-01-26">January 26, 2017</time>
       </a>
     </div>
     </article>
