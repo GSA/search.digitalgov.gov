@@ -102,6 +102,78 @@
   <article class='article'>
     
     <h1>
+      <a href="/manual/i14y-drawers.html">How to Work with i14y Drawers</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers</p>
+
+<p>An <a href="/developer/i14y.html">i14y</a> Drawer is an index receiving content via the i14y API. We've called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
+
+<h2>Step 1. Make sure your site is connected to i14y</h2>
+
+<p>If your site Admin Center has the following page: <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, your site is connected to i14y. If you don't see this page in the Admin Center, <a href="mailto:search@support.digitalgov.gov">email us</a>. You can also read about <a href="/developer/i14y.html">Getting Started with i14y</a>.</p>
+
+<h2>Step 2. Add one or more Drawers</h2>
+
+<p>On <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, Click <code>Add i14y Drawer</code> in the upper right corner. If you have more than one website that will be sending content, add a separate Drawer for each of these sites.</p>
+
+<h3>Handle</h3>
+
+<p>Let us know what the handle for your drawer should be - the handle must be all lowercase alphanumeric, all one word, and can include underscores but no other special characters (e.g., agency_drawer_handle2).</p>
+
+<p>The Drawer <em>Description</em> is optional</p>
+
+<h2>Step 3. Send Content to Fill your Drawer</h2>
+
+<p>After you have created your Drawer(s), click <code>Show</code> from the i14y Drawers list to find that Drawer’s secret API key. Use this secret key with your drawer handle in your API call or your CMS module to <a href="http://gsa.github.io/slate/#authentication">send your content to the right place</a>.</p>
+
+<h2>Step 4. Review your Index</h2>
+
+<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list, and when the most recent document was received. Click <code>Show</code> to view documents within a particular drawer. We display the most recent 1,000 items that were sent to the drawer. You can also search for keywords in the documents' text, titles, and descriptions (Note: you cannot currently search for URLs).</p>
+
+<p>We send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
+
+<p><strong><em>Note:</em></strong> If you experience difficulty sending documents to i14y, it is possible your firewall is not letting you communicate with the i14y server. Check out our <a href="/developer/i14y-testing.html">cURL test commands</a> or view the full <a href="http://gsa.github.io/slate/">i14y documentation on Github</a>.</p>
+
+<hr />
+
+<p><strong><em>Caution:</em></strong> A pop-up message will appear when you hit <code>Remove</code> on a drawer: please review this pop-up message carefully. If you remove a drawer that is only associated with one search configuration, the drawer and its contents will be deleted from our system. If the drawer is attached to multiple search configurations, it will only be removed from the search configuration you are currently on. The pop-up message will indicate what type of drawer you have.</p>
+
+<p>If you accidentally delete a drawer, you will need to set-up a new drawer and resend the content - we are unable to retrieve deleted drawers. If you accidentally remove a shared drawer but it is still associated with other search configurations, we can re-attach it to your site. <a href="mailto:search@support.digitalgov.gov">Contact us</a> for assistance.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> We can attach each i14y drawer to multiple search configurations: if you have a drawer that you’d like to use for multiple search sites, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/i14y"><span class="label label-info">i14y</span></a>
+      
+    </div>
+    
+    <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/i14y-drawers.html">
+        <time datetime="2017-08-03">August 3, 2017</time>
+      </a>
+    </div>
+
+  </article>
+  
+  <article class='article'>
+    
+    <h1>
       <a href="/manual/instagram.html">How to Add Your Instagram Pictures to Our Index</a>
     </h1>
     
@@ -135,7 +207,7 @@
 
 <p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/flickr.html">Flickr</a> photostream. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.</p>
 
-<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#x73;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#111;&#114;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#x2e;&#103;&#x6f;&#118;">&#x73;&#101;&#x61;&#114;&#x63;&#104;&#x40;&#115;&#x75;&#112;&#112;&#111;&#114;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#97;&#x6c;&#103;&#x6f;&#x76;&#46;&#103;&#111;&#x76;</a> if you're ready to turn on the new results page.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#x73;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#115;&#117;&#x70;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#x76;">&#x73;&#x65;&#97;&#114;&#99;&#104;&#x40;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#116;&#97;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#x6f;&#118;</a> if you're ready to turn on the new results page.</p>
 
     </div>
 
@@ -992,149 +1064,6 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
       
       <a href="/releases/april-2017.html">
         <time datetime="2017-05-10">May 10, 2017</time>
-      </a>
-    </div>
-
-  </article>
-  
-  <article class='article'>
-    
-    <h1>
-      <a href="/manual/domains-advanced.html">Adding Supplemental Content to Your Search Configuration</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > <a href="/manual/domains.html">Domains</a> > Advanced</p>
-
-<p>Is content missing from your search results? Do you want to have RSS content appear in your main page search results?</p>
-
-<p>We offer two ways for you to tell us about content that you want us to fetch and include in our web index: via RSS feed (Supplemental Feed) or manually (via the <a href="#supplemental-urls">Supplemental URLs</a> section).</p>
-
-<p><strong>Note for customers using Collections:</strong> We serve <a href="/manual/collections.html">Collections</a> results from commercial indexes; the instructions below only apply to your main search results.</p>
-
-<p><strong>Note to our i14y customers:</strong> Supplemental content will not appear for customers using our <a href="/developer/i14y.html">i14y content indexing API</a>.</p>
-
-<h2>Adding Content via Supplemental Feed</h2>
-
-<p>You can use an RSS feed to add URLs. The feed is useful if you'd like to automate the process, add multiple URLs, or both.</p>
-
-<p>Enter the URL of your RSS feed. Click <code>Submit</code>. We'll fetch each URL in your feed and index the title, description (optional), and the full text of the document/webpage for the items you provide. Please be sure to follow our <a href="/manual/rss.html">schema</a>, and note that we will only index the items that are listed in the feed.</p>
-
-<p>You can see the list of URLs we have indexed from your feed by viewing the Supplemental URLs section.</p>
-
-<p>Delete a URL added via RSS feed by deleting the item from your RSS feed. We'll remove the URL from our index the next time we fetch your RSS feed (we fetch saved feeds once per day, in the evening in Eastern Time; for brand new feeds, we fetch as soon as you hit <code>Submit</code> on the feed URL).</p>
-
-<p>You can also delete all of the URLs added via the RSS feed by deleting the RSS feed itself.</p>
-
-<p><strong>Note:</strong> We can't restore URLs that don't exist within your current feed. Please don't remove items from the feed unless you want them to be removed from the index. You can add a feed that contains up to 1,000 items on your own. If you have a feed that will include more than 1,000 items, please contact us.</p>
-
-<p><a name="supplemental-urls"></a></p>
-
-<h2>Adding Content via the Supplemental URLs Section</h2>
-
-<p>You can also manually add a specific URL on the Supplemental URLs page. We'll fetch each URL you add manually and we'll index the title, description, and the full text of the document/webpage for the link you provide. Note: You can’t manually add a Supplemental URL if it has already been added by via Supplemental feed.</p>
-
-<p>Delete a manually added URL by selecting <code>Remove</code> within the list of supplemental URLs.</p>
-
-<p>The source column in the crawl report shows how you added the URL, via an RSS feed or manually.</p>
-
-<h2>How Supplemental Content Appears on Your Search Results Page</h2>
-
-<p>We display titles as they are provided in the feed or as you entered them manually.</p>
-
-<p>We display descriptions as follows:</p>
-
-<ul>
-<li>If a searcher’s term matches terms in the description you provided: We'll display the description exactly as you provided it.</li>
-<li>If a searcher’s term only matches terms in the full text of the document: We’ll display snippets taken from the full text.</li>
-</ul>
-
-
-<p>By default, supplemental content will appear after all Bing commercial search results have been shown. For example, a search on DigitalGov.gov for “serverless architecture” displays results from Bing’s index on page 1.</p>
-
-<p>After hitting ‘next’ to view page 2, supplemental content is served.</p>
-
-<h3>Page 1:</h3>
-
-<p><img class="img-responsive" src="https://search.digitalgov.gov/img/Commercial-Results-First-Page-1.png" alt="Commercial Results are Displayed on Page One of the DigitalGov.gov Search Results Page"></img></p>
-
-<h3>Page 2:</h3>
-
-<p><img class="img-responsive" src="https://search.digitalgov.gov/img/Commercial-Results-First-Page-2.png" alt="Supplemental Feed Results are Displayed on Page Two of the DigitalGov.gov Search Results Page"></img></p>
-
-<p>If there are no commercial results for a query but there are supplemental content results, we will display the supplemental content on page one.</p>
-
-<h2>Getting Supplemental Content To Always Appear First</h2>
-
-<p>If you would like your supplemental content to always appear first in search results, please <a href="mailto:search@suppot.digitalgov.gov">contact our team</a>. Searchers will first be served any supplemental content results, and are then offered the chance to “search again,” which will lead them to commercial index results.</p>
-
-<p>Please note: if you have any <a href="/manual/rss.html">regular RSS feeds</a> set up in your search site, this regular RSS content will also appear first with the supplemental content, prior to commercial results. If content is present in both types of feed, duplicates will appear in your results.</p>
-
-<p>In the example below, a Supplemental URL appears first, and clicking “Try your search again” will lead to a page of Bing results.</p>
-
-<p><img class="img-responsive" src="https://search.digitalgov.gov/img/Supplemental-Content-First-Example.png" alt="A Supplemental URL is Displayed on Page One of the DigitalGo Search Search Results Page"></img></p>
-
-<h2>Getting Supplemental Content To Be Your Only Search Results</h2>
-
-<p>If you would like your supplemental content to be the only results served from your site, please <a href="mailto:search@suppot.digitalgov.gov">contact our team</a>. Searchers will not be offered the chance to “search again” on a commercial index after they exhaust your supplemental content results (see above example).</p>
-
-<p>Please note: if you have any <a href="/manual/rss.html">regular RSS feeds</a> set up in your search site, this regular RSS content will also appear with the supplemental content. If content is present in both types of feed, duplicates will appear in your results.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
-
-<ul>
-<li><a href="https://validator.w3.org/feed/">W3C Feed Validation Service</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
-<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-<li><a href="https://atomenabled.org/developers/syndication/">Atom syndication format</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-</ul>
-
-
-<p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report for your PDF that says, "No content found in document"? Your PDF is likely an image-only, non-searchable file that was created from a paper document using a scanner. See the resources below for more information on how to create searchable PDF files.</p>
-
-<ul>
-<li><a href="https://blogs.adobe.com/acrolaw/2007/02/is_that_pdf_sea/">Is that PDF Searchable?</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (blog post)</li>
-<li><a href="https://acrobatusers.com/tutorials/how-to-create-a-searchable-pdf-file">How to Create Searchable PDF File</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (video)</li>
-</ul>
-
-
-<p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report that says your page is taking too long to load? Use <a href="https://tools.pingdom.com/fpt/">Pingdom Tools Full Page Test</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to test the load time of your page, analyze it, and find the bottlenecks.</p>
-
-<p><strong><em>Did you know?</em></strong> To help the public find your web pages when they search on Bing.com, we notify Bing about any URLs you add. While this helps with search engine optimization (SEO), it is not a cure-all. You should also register for and use commercial search engines' webmaster tools.</p>
-
-<ul>
-<li><a href="https://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-<li><a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Central</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
-      
-      <a href="/tagged/advanced"><span class="label label-info">advanced</span></a>
-      
-      <a href="/tagged/supplemental-feed"><span class="label label-info">supplemental-feed</span></a>
-      
-      <a href="/tagged/supplemental-urls"><span class="label label-info">supplemental-urls</span></a>
-      
-    </div>
-    
-    <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/domains-advanced.html">
-        <time datetime="2017-05-02">May 2, 2017</time>
       </a>
     </div>
 

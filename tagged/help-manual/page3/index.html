@@ -103,48 +103,102 @@
  
     
     <h1>
-      <a href="/manual/i14y-drawers.html">How to Work with i14y Drawers</a>
+      <a href="/manual/code.html">How to Activate Your Search by Adding Our Code Snippets to Your Website</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Activate Search > Code Snippets</p>
 
-<p>An <a href="/developer/i14y.html">i14y</a> Drawer is an index receiving content via the i14y API. We've called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
+<p>Visit our <a href="https://search.usa.gov/sites/">Admin Center</a>, select your site, and click on the Activate Search option in the left-hand menu.</p>
 
-<h2>Step 1. Make sure your site is connected to i14y</h2>
+<p>Add the following two snippets of code to your website to "hook" your website and our hosted search service together. You can add this code to your individual web pages or to the template(s) in your content management system.</p>
 
-<p>If your site Admin Center has the following page: <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, your site is connected to i14y. If you don't see this page in the Admin Center, <a href="mailto:search@support.digitalgov.gov">email us</a>. You can also read about <a href="/developer/i14y.html">Getting Started with i14y</a>.</p>
+<h2>1. Form Snippet</h2>
 
-<h2>Step 2. Add one or more Drawers</h2>
+<p>Include this snippet of code where the form for your search box appears. It should look something like this:</p>
 
-<p>On <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, Click <code>Add i14y Drawer</code> in the upper right corner. If you have more than one website that will be sending content, add a separate Drawer for each of these sites.</p>
+<pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
 
-<h3>Handle</h3>
+<h2>2. Javascript Snippet</h2>
 
-<p>Let us know what the handle for your drawer should be - the handle must be all lowercase alphanumeric, all one word, and can include underscores but no other special characters (e.g., agency_drawer_handle2).</p>
+<p>Include this snippet of code before the closing <code>&lt;body&gt;</code> tag. This tag enables type-ahead search in the search box on your web pages and powers the data on trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the Admin Center. It should look something like this:</p>
 
-<p>The Drawer <em>Description</em> is optional</p>
+<pre><code>&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+      var usasearch_config = { siteHandle:"YourSiteHandle" };
 
-<h2>Step 3. Send Content to Fill your Drawer</h2>
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "//search.usa.gov/javascripts/remote.loader.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
 
-<p>After you have created your Drawer(s), click <code>Show</code> from the i14y Drawers list to find that Drawer’s secret API key. Use this secret key with your drawer handle in your API call or your CMS module to <a href="http://gsa.github.io/slate/#authentication">send your content to the right place</a>.</p>
+//]]&gt;
+&lt;/script&gt;
+</code></pre>
 
-<h2>Step 4. Review your Index</h2>
+<h2>Advanced: Options for Limiting a Search Box to Specific Folders or Subdomains</h2>
 
-<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list, and when the most recent document was received. We also send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
+<p>You can limit results to specific folders or subdomains by creating a collection, setting up an RSS feed, or passing in a hidden value.</p>
 
-<p><strong><em>Note:</em></strong> If you experience difficulty sending documents to i14y, it is possible your firewall is not letting you communicate with the i14y server. Check out our <a href="/developer/i14y-testing.html">cURL test commands</a> or view the full <a href="http://gsa.github.io/slate/">i14y documentation on Github</a>.</p>
+<h3>Option 1. Limit to Collections</h3>
+
+<p>Create a <a href="/manual/collections.html">collection</a>. Then update your form code to (a) change the action to <code>action="https://search.usa.gov/search/docs/</code> and (b) add an input for this collection, <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>. It should look something like this:</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search/docs/" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input type="hidden" name="dc" value="###"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center as shown in the sample below.</p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/get-code-collection.png" alt="Value for the collection ID" /></p>
+
+<h3>Option 2. Limit to RSS Feeds</h3>
+
+<p>Set up an <a href="/manual/rss.html">RSS feed</a>. Then update your form code to (a) change the action to <code>action="https://search.usa.gov/search/news/</code> and (b) add an input for this feed, <code>&lt;input type="hidden" name="channel" value="###"&gt;</code>.  It should look something like this:</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search/news/" id="search_form" method="get"&gt;
+    &lt;div style="margin:0;padding:0;display:inline"&gt;
+    &lt;input type="hidden" name="channel" value="###"&gt;
+    &lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+    &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+    &lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+    &lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+    &lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p>The value is the number for your RSS ID, which is visible in the URL when you edit or preview your feed in the Admin Center.</p>
+
+<h3>Option 3. Limit to a Hidden Domain Value</h3>
+
+<p>Leave your domain blank on the <a href="/manual/domains.html">Domains</a> page and, instead, pass a hidden value for the domain in the search form code.</p>
+
+<p>For example, on health.agency.gov, the following hidden value would be added to limit results to only the health subdomain.</p>
+
+<pre><code>&lt;input type="hidden" name="sitelimit" id="sitelimit" value="www.health.agency.gov" &gt;
+</code></pre>
 
 <hr />
 
-<p><strong><em>Troubleshooting Tip:</em></strong> We can attach each i14y drawer to multiple search configurations: if you have a drawer that you’d like to use for multiple search sites, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
+<p><strong><em>Did you know?</em></strong> If you're using Drupal, be sure to check out our <a href="https://www.drupal.org/project/usasearch">Drupal module</a>.</p>
 
-<hr />
-
-<p><strong><em>Caution:</em></strong> A pop-up message will appear when you hit <code>Remove</code> on a drawer: please review this pop-up message carefully. If you remove a drawer that is only associated with one search configuration, the drawer and its contents will be deleted from our system. If the drawer is attached to multiple search configurations, it will only be removed from the search configuration you are currently on. The pop-up message will indicate what type of drawer you have.</p>
-
-<p>If you accidentally delete a drawer, you will need to set-up a new drawer and resend the content - we are unable to retrieve deleted drawers. If you accidentally remove a shared drawer but it is still associated with other search configurations, we can re-attach it to your site. <a href="mailto:search@support.digitalgov.gov">Contact us</a> for assistance.</p>
+<p><strong><em>Did you know?</em></strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers your domain (instead of USA.gov).</p>
 
     </div>
 
@@ -152,9 +206,9 @@
       
       <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
       
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
       
-      <a href="/tagged/i14y"><span class="label label-info">i14y</span></a>
+      <a href="/tagged/code-snippets"><span class="label label-info">code-snippets</span></a>
       
     </div>
    <div class='time'>
@@ -162,8 +216,8 @@
       
       
       
-      <a href="/manual/i14y-drawers.html">
-        <time datetime="2017-01-26">January 26, 2017</time>
+      <a href="/manual/code.html">
+        <time datetime="2017-02-27">February 27, 2017</time>
       </a>
     </div>
     </article>
@@ -231,7 +285,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 <p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li><p>Email us at <a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#115;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#111;&#114;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#118;&#46;&#x67;&#x6f;&#x76;">&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#112;&#112;&#x6f;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#111;&#x76;</a> to <a href="cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
+<li><p>Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x73;&#x65;&#97;&#114;&#99;&#x68;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#108;&#x67;&#111;&#118;&#x2e;&#x67;&#111;&#118;">&#x73;&#101;&#x61;&#114;&#x63;&#x68;&#64;&#115;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#x69;&#x67;&#105;&#116;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#103;&#111;&#x76;</a> to <a href="cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
 <li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
 
 <p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
@@ -257,7 +311,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 <hr />
 
-<p><strong><em>Did you know?</em></strong> We use Google Analytics Web analytics software&mdash;our own tag plus the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag&mdash;by default. Email us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#115;&#101;&#x61;&#114;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#97;&#x6c;&#103;&#111;&#118;&#46;&#x67;&#111;&#x76;">&#115;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#x6f;&#114;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#118;</a> if you'd like to opt out. Learn more about our <a href="http://www.digitalgov.gov/about/policies/">site policies</a> and <a href="../tos.html">terms of service</a>.</p>
+<p><strong><em>Did you know?</em></strong> We use Google Analytics Web analytics software&mdash;our own tag plus the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag&mdash;by default. Email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x73;&#101;&#97;&#114;&#99;&#x68;&#x40;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;">&#115;&#x65;&#97;&#114;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#x67;&#111;&#x76;</a> if you'd like to opt out. Learn more about our <a href="http://www.digitalgov.gov/about/policies/">site policies</a> and <a href="../tos.html">terms of service</a>.</p>
 
     </div>
 
@@ -330,7 +384,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 <h2>Site Handle</h2>
 
-<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#115;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#x74;&#97;&#108;&#103;&#111;&#118;&#x2e;&#103;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#x64;&#x69;&#103;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#x67;&#x6f;&#x76;</a>.</p>
+<p>You created your site handle when you originally added your site. We use your site handle in the HTTP request to display your custom settings. Searchers can see your site handle in the browser's address bar. We recommend making this handle short and unique, such as <em>ssa</em>. If you'd like to edit your site handle, email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#115;&#101;&#97;&#x72;&#99;&#x68;&#x40;&#x73;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#x69;&#103;&#x69;&#116;&#x61;&#x6c;&#103;&#111;&#x76;&#46;&#x67;&#111;&#118;">&#x73;&#x65;&#97;&#x72;&#x63;&#x68;&#64;&#115;&#117;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#x64;&#x69;&#103;&#105;&#x74;&#97;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#111;&#118;</a>.</p>
 
 <p><a href="http://search.socialsecurity.gov/search?query=office+locations&amp;affiliate=ssa"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/settings.png" title="Site name and handle on SocialSecurity.gov's search results page" alt="Site name and handle on SocialSecurity.gov's search results page" /></a></p>
 
@@ -340,7 +394,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 <h2>Site Language</h2>
 
-<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">69 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#x75;&#x70;&#112;&#111;&#114;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#116;&#x61;&#x6c;&#x67;&#111;&#x76;&#x2e;&#x67;&#111;&#x76;">&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#x73;&#x75;&#x70;&#112;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#x74;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#x6f;&#118;</a>.</p>
+<p>You chose your site's language (English, Spanish, or one of the other <a href="/manual/supported-languages.html">69 supported languages</a> when you first <a href="/manual/add-site.html">added your site</a>. If you'd like to edit your site's language, email us at <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#x73;&#101;&#97;&#x72;&#99;&#x68;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#108;&#103;&#x6f;&#118;&#x2e;&#103;&#x6f;&#x76;">&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#105;&#116;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#118;</a>.</p>
 
 <h2>Delete</h2>
 
@@ -1103,7 +1157,7 @@ Keyword 4: market value
 </ol>
 
 
-<p>If you have any problem resetting your password, email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#116;&#111;&#x3a;&#x73;&#x65;&#x61;&#114;&#99;&#x68;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#97;&#108;&#103;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#115;&#101;&#97;&#x72;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#x74;&#x2e;&#x64;&#x69;&#x67;&#105;&#116;&#x61;&#108;&#103;&#x6f;&#118;&#46;&#x67;&#x6f;&#118;</a>.</p>
+<p>If you have any problem resetting your password, email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#x70;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#103;&#x69;&#x74;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#118;">&#x73;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#105;&#x67;&#105;&#116;&#97;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#x6f;&#x76;</a>.</p>
 
     </div>
 
