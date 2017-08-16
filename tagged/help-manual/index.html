@@ -103,6 +103,70 @@
  
     
     <h1>
+      <a href="/manual/cname.html">How to Mask Your Domain</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>We offer DNS masking, which allows you to show searchers search.YOURAGENCY.gov (instead of search.USA.gov). Follow these steps to mask your domain.</p>
+
+<ol>
+<li><p>Create a CNAME in your external DNS records for <code>search.youragency.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>. Your site handle is listed on the <a href="/manual/settings.html">settings page</a> in the Search Admin Center.</p>
+
+<p> For example: if your site handle is <code>abc</code>, the DNS record would look like this:</p>
+
+<pre><code> search.youragency.gov   CNAME  abc.sites.infr.search.usa.gov
+</code></pre>
+
+<p> NOTE: if your site handle contains a <code>.</code>, please replace it with a <code>-</code> in your DNS record,  e.g., for site handle <code>abc.gov.search</code> the DNS record would look like this:</p>
+
+<pre><code> search.youragency.gov   CNAME  abc-gov-search.sites.infr.search.usa.gov
+</code></pre>
+
+<p> To use a CNAME with <code>HTTPS</code>, you will need to <a href="mailto:search@support.digitalgov.gov">email us</a> after your DNS records have been updated in order to be added to our SSL certificate. If your CNAME is not on our SSL certificate, browser security warnings will appear when your search results page attemps to load over <code>HTTPS</code>. We are only able to offer top level domain masking with HTTPS: i.e., <code>search.youragency.gov</code> but not <code>search.subagency.youragency.gov</code>.</p></li>
+<li><p>When the setup is complete, change your search box's <a href="/manual/code.html">form code</a> action from <code>search.usa.gov/search</code> to <code>search.youragency.gov/search</code>.</p></li>
+</ol>
+
+
+<p>Your domain mask will work as soon as this DNS update is complete.</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> Many agencies have both internal and external DNS. Be
+sure to update your <em>external</em> DNS records (step 1) before changing your form code (step 2).</p>
+
+<p><strong><em>Did you know?</em></strong> Any search site within your domain may use the same domain mask and CNAME record, even if the CNAME is not associated with that particular site's handle. To implement an existing mask for a search box, just do Step 2, above.</p>
+
+<p><strong><em>Did you know?</em></strong> Once the CNAME is set up, if visitors to your site happen to truncate the URL in the browser bar to http://search.youragency.gov (without any parameters), they're automatically redirected to your agency's homepage at http://www.youragency.gov.</p>
+
+<p><strong><em>Did you know?</em></strong> Most of our customers use a <code>search.youragency.gov</code> mask (such as search.nih.gov). If the <code>search</code> subdomain is already used by another application, you can use <code>find</code> or <code>findit</code>, such as <code>find.irs.gov</code> or <code>findit.state.gov</code>. We no longer support other subdomain patterns.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
+      
+      <a href="/tagged/cname"><span class="label label-info">cname</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/cname.html">
+        <time datetime="2017-08-16">August 16, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/i14y-drawers.html">How to Work with i14y Drawers</a>
     </h1>
     
@@ -207,7 +271,7 @@
 
 <p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/flickr.html">Flickr</a> photostream. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.</p>
 
-<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x73;&#x65;&#x61;&#114;&#99;&#104;&#x40;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#46;&#100;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#103;&#111;&#x76;&#46;&#103;&#111;&#118;">&#x73;&#x65;&#x61;&#114;&#99;&#104;&#64;&#x73;&#x75;&#112;&#112;&#111;&#x72;&#116;&#x2e;&#x64;&#105;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#103;&#x6f;&#118;</a> if you're ready to turn on the new results page.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#x3a;&#115;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#x73;&#x75;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#x6c;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#118;">&#115;&#101;&#97;&#114;&#99;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#100;&#105;&#103;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#118;</a> if you're ready to turn on the new results page.</p>
 
     </div>
 
@@ -516,70 +580,6 @@
  
     
     <h1>
-      <a href="/manual/cname.html">How to Mask Your Domain</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>We offer DNS masking, which allows you to show searchers search.YOURAGENCY.gov (instead of search.USA.gov). Follow these steps to mask your domain.</p>
-
-<ol>
-<li><p>Create a CNAME in your external DNS records for <code>search.youragency.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>. Your site handle is listed on the <a href="/manual/settings.html">settings page</a> in the Search Admin Center.</p>
-
-<p> For example: if your site handle is <code>abc</code>, the DNS record would look like this:</p>
-
-<pre><code> search.youragency.gov   CNAME  abc.sites.infr.search.usa.gov
-</code></pre>
-
-<p> NOTE: if your site handle contains a <code>.</code>, please replace it with a <code>-</code> in your DNS record,  e.g., for site handle <code>abc.gov.search</code> the DNS record would look like this:</p>
-
-<pre><code> search.youragency.gov   CNAME  abc-gov-search.sites.infr.search.usa.gov
-</code></pre>
-
-<p> To use a CNAME with <code>HTTPS</code>, you will need to <a href="mailto:search@support.digitalgov.gov">email us</a> after your DNS records have been updated in order to be added to our SSL certificate. If your CNAME is not on our SSL certificate, browser security warnings will appear when your search results page attemps to load over <code>HTTPS</code>. We only able to offer top level domain masking with HTTPS: i.e., <code>search.youragency.gov</code> but not <code>search.subagency.youragency.gov</code>.</p></li>
-<li><p>When the setup is complete, change your search box's <a href="/manual/code.html">form code</a> action from <code>search.usa.gov/search</code> to <code>search.youragency.gov/search</code>.</p></li>
-</ol>
-
-
-<p>Your domain mask will work as soon as this DNS update is complete.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> Many agencies have both internal and external DNS. Be
-sure to update your <em>external</em> DNS records (step 1) before changing your form code (step 2).</p>
-
-<p><strong><em>Did you know?</em></strong> Any search site within your domain may use the same domain mask and CNAME record, even if the CNAME is not associated with that particular site's handle. To implement an existing mask for a search box, just do Step 2, above.</p>
-
-<p><strong><em>Did you know?</em></strong> Once the CNAME is set up, if visitors to your site happen to truncate the URL in the browser bar to http://search.youragency.gov (without any parameters), they're automatically redirected to your agency's homepage at http://www.youragency.gov.</p>
-
-<p><strong><em>Did you know?</em></strong> Most of our customers use a <code>search.youragency.gov</code> mask (such as search.nih.gov). If the <code>search</code> subdomain is already used by another application, you can use <code>find</code> or <code>findit</code>, such as <code>find.irs.gov</code> or <code>findit.state.gov</code>. We no longer support other subdomain patterns.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
-      
-      <a href="/tagged/cname"><span class="label label-info">cname</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/cname.html">
-        <time datetime="2017-06-06">June 6, 2017</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
       <a href="/manual/domains-advanced.html">Adding Supplemental Content to Your Search Configuration</a>
     </h1>
     
@@ -875,7 +875,7 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
 <ol>
 <li><p>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
 <li><p>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</p></li>
-<li><p>Email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#x73;&#101;&#97;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#x70;&#112;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;">&#115;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#117;&#x70;&#112;&#x6f;&#x72;&#116;&#46;&#100;&#x69;&#103;&#x69;&#x74;&#x61;&#x6c;&#103;&#x6f;&#118;&#x2e;&#x67;&#x6f;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
+<li><p>Email us at <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#x73;&#x65;&#x61;&#114;&#x63;&#x68;&#64;&#115;&#x75;&#x70;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#x74;&#x61;&#x6c;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;">&#x73;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#x6f;&#x76;&#46;&#103;&#111;&#118;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
 </ol>
 
 
