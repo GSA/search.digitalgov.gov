@@ -103,6 +103,80 @@
  
     
     <h1>
+      <a href="/releases/august-2012.html">August 2012 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Highlighted Feature: Drupal 7 module now available</h2>
+
+<p>If you're using Drupal, be sure to check out our updated <a href="https://www.drupal.org/project/usasearch">Drupal module</a>. It includes a new development branch for version 6 and and a release for version 7. Thanks, <a href="https://www.drupal.org/user/457434">Tim Wood</a> at the Department of Commerce!</p>
+
+<h2>Other features</h2>
+
+<ul>
+<li>Searchers can now narrow their results by up to three additional facets&mdash;contributor, publisher, or subject. To start using this feature, simply update any of your <a href="/manual/rss.html">RSS feeds</a> to include these Dublin Core properties.</li>
+<li>Searchers are able to show and hide options (e.g., the time filter) from the sidebar on the results page.</li>
+<li>You can now add only one <a href="/manual/code.html">Javascript snippet</a> to your web pages (versus two separate snippets).</li>
+<li><em>Coming soon, a Forms GovBox.</em> Similar to our existing agency and <a href="/manual/govbox-health.html">health</a> GovBoxes, we're currently working on rolling out a forms GovBox to help searchers find federal government forms. If you have forms metadata in a structured format, and want to have your visitors see them in search results, please <a href="mailto:search@support.digitalgov.gov">send us an email</a>.</li>
+</ul>
+
+
+<h2>Chores</h2>
+
+<p>Over the past few weeks, we finished a long list of summer chores and we're happy to have a clear deck to offer you more features in the coming months.</p>
+
+<p>We upgraded our environment to <a href="http://weblog.rubyonrails.org/2012/1/20/rails-3-2-0-faster-dev-mode-routing-explain-queries-tagged-logger-store">Rails 3.2</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. This upgrade ensures continued stability and allows us to maintain our record of exceeding our service level agreements.</p>
+
+<p>We also changed our back-end logic for indexing your content. We now index secure (https) content. We also now allow you to give instructions to our user agent in your <a href="http://www.robotstxt.org/robotstxt.html">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file.</p>
+
+<p>Don't forget to check out your July search stats&mdash;in your email inbox or via the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+
+<h2>Other Chores</h2>
+
+<ul>
+<li>We upgraded to Ruby 1.9.3.</li>
+<li>We updated the <a href="/manual/govbox-health.html">health GovBox</a> to account for changes in the <a href="https://www.nlm.nih.gov/medlineplus/xml.html">MedlinePlus XML files</a>.</li>
+<li>We investigated features and functionality of <a href="https://developers.google.com/bigquery/">Google BigQuery</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We investigated additional tools to monitor our application and the speed of our results.</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>We fixed broken URLs for YouTube thumbnails.</li>
+<li>We fixed an invalid byte sequence in UTF-8.</li>
+<li>We fixed the alt text on our Results by images.</li>
+<li>We fixed the z-index so that type-ahead suggestions always appear on top of other page elements. We also updated the CSS for our type-ahead to ensure it doesn't conflict with your CSS.</li>
+<li>We fixed our recalls API to return the expected response and to handle null values for recalled_on.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/august-2012.html">
+        <time datetime="2014-03-27">March 27, 2014</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/february-2014.html">February 2014 Release Notes</a>
     </h1>
     
@@ -450,7 +524,7 @@
 <li>We set up <a href="https://codeclimate.com/">Code Climate</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to identify areas of our code that can be improved.</li>
 <li>We phased out color schemes and now offer two options, default and custom.</li>
 <li>We updated the links in our email templates to reflect the new Admin Center.</li>
-<li>We added the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#115;&#101;&#x61;&#114;&#x63;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#x69;&#103;&#105;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#46;&#x67;&#x6f;&#118;">&#115;&#x65;&#97;&#x72;&#99;&#x68;&#64;&#115;&#x75;&#112;&#112;&#111;&#114;&#116;&#46;&#100;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#103;&#x6f;&#x76;</a> if you'd like to opt out.</li>
+<li>We added the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#x73;&#x65;&#97;&#114;&#99;&#104;&#64;&#115;&#117;&#112;&#112;&#x6f;&#x72;&#x74;&#46;&#x64;&#x69;&#x67;&#x69;&#116;&#x61;&#108;&#103;&#x6f;&#118;&#46;&#x67;&#x6f;&#x76;">&#x73;&#101;&#97;&#114;&#x63;&#x68;&#64;&#x73;&#x75;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#x69;&#x74;&#97;&#x6c;&#103;&#111;&#118;&#x2e;&#103;&#111;&#118;</a> if you'd like to opt out.</li>
 </ul>
 
 
@@ -511,7 +585,7 @@
 
 <p>You can read our updated help by clicking on the Help? link on each page in the Admin Center, or see the full set of help files on our <a href="/manual/index.html">How to Set Up Your Search Box</a> page.</p>
 
-<p>Email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#x3a;&#115;&#101;&#97;&#114;&#x63;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#x69;&#x67;&#105;&#116;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#x67;&#111;&#x76;">&#115;&#x65;&#x61;&#114;&#x63;&#x68;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#x74;&#97;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#x6f;&#118;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
+<p>Email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#64;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#105;&#116;&#97;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;">&#115;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#100;&#x69;&#x67;&#x69;&#x74;&#97;&#x6c;&#x67;&#111;&#x76;&#46;&#103;&#111;&#118;</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
 
 <h2>Chores</h2>
 
@@ -718,7 +792,7 @@
 
 <p>MRSS is the standard <a href="http://www.rssboard.org/media-rss">media RSS specification</a> for syndicating multimedia content. So, even if you don't have an MRSS feed now, it should be easy to generate one as long as your content is in a content management system or other database. MRSS is also the standard specification used by hosted multimedia services such as Flickr, Instagram, Vimeo, and YouTube.</p>
 
-<p>Email us at <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#115;&#x65;&#x61;&#114;&#99;&#104;&#64;&#115;&#x75;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#100;&#105;&#103;&#105;&#x74;&#x61;&#x6c;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#118;">&#115;&#101;&#x61;&#x72;&#x63;&#x68;&#x40;&#x73;&#117;&#x70;&#112;&#x6f;&#114;&#116;&#46;&#100;&#105;&#103;&#105;&#116;&#x61;&#108;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#118;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
+<p>Email us at <a href="&#x6d;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#115;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#105;&#116;&#97;&#108;&#103;&#x6f;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#115;&#x65;&#x61;&#x72;&#99;&#x68;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#105;&#103;&#x69;&#116;&#97;&#108;&#x67;&#111;&#118;&#46;&#x67;&#x6f;&#x76;</a> if you have any questions about how to set up an MRSS feed to index your multimedia content.</p>
 
 <p>(Thanks, <a href="http://www.usgs.gov">USGS.gov</a> team, for suggesting this new feature!)</p>
 
@@ -776,85 +850,6 @@
       
       <a href="/releases/may-2013.html">
         <time datetime="2013-05-31">May 31, 2013</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/april-2013.html">April 2013 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2>Highlight: Find State and Local Jobs</h2>
-
-<p>Searchers on many state and local websites can now see current job openings. We're automatically indexing and displaying job openings for all of your websites that use <a href="http://www.neogov.com">NeoGov</a>.</p>
-
-<p>See the sample results page below that shows current job openings displayed on the City of Bloomington, MN, for a search on <a href="http://search.ci.bloomington.mn.us/search?affiliate=cityofbloomingtonmnsearchresults&amp;query=jobs">jobs</a>.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/jobs-bloomington.png" alt="Search results for jobs on ci.bloomington.mn.us" /></p>
-
-<p>(Thanks, City of Bloomington, for helping us pilot test this new feature!)</p>
-
-<h2>Other Features</h2>
-
-<ul>
-<li>Searchers now see search results for <a href="/manual/collections.html">collections</a> that are in deeply nested folders on your site.</li>
-<li>Searchers no longer see deep site links for the first-listed search result.</li>
-<li>Developers can now access <a href="https://api.usa.gov/jobs/search.json?tags=state">state</a> and <a href="https://api.usa.gov/jobs/search.json?tags=city+county">local</a> jobs data via our <a href="/developer/jobs.html">Jobs API</a> for government agencies that use both DigitalGov Search and NeoGov.</li>
-</ul>
-
-
-<h2>Chores</h2>
-
-<ul>
-<li>We updated our <a href="/tos.html">terms of service</a>.</li>
-<li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-<li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#115;&#x65;&#97;&#114;&#x63;&#x68;&#64;&#115;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#46;&#x64;&#105;&#x67;&#x69;&#x74;&#x61;&#108;&#103;&#111;&#118;&#46;&#x67;&#111;&#x76;">&#115;&#101;&#x61;&#x72;&#99;&#104;&#64;&#x73;&#117;&#x70;&#x70;&#111;&#114;&#x74;&#46;&#x64;&#x69;&#103;&#x69;&#116;&#x61;&#108;&#x67;&#111;&#x76;&#x2e;&#103;&#x6f;&#x76;</a> with any questions.</li>
-<li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
-<li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
-<li>We removed the trending searches feature and widget.</li>
-<li>We updated our <a href="http://jenkins-ci.org">Jenkins</a> build to fix to failing <a href="http://cukes.info">Cucumber</a> specs.</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>We're now tracking impressions on <a href="/manual/best-bets-graphics.html">graphics Best Bets</a>.</li>
-<li>We now accept Flickr and RSS feeds even if there are invalid items without a description, date, or other required field.</li>
-<li>The advanced search link no longer propagates unnecessary parameters in the URL.</li>
-<li>We removed trailing spaces from Twitter handles to prevent broken links in the <a href="/manual/twitter.html">Twitter GovBox</a>.</li>
-<li>We now accept Flickr handles with an '@' sign in them.</li>
-<li>Searchers now see better results when they do a search from the <a href="http://search.usa.gov/search/advanced?affiliate=usagov">advanced search page</a> with multiple terms in the 'Any of these words' and 'None of these words' fields.</li>
-<li>Searchers now see results for terms like full-time and part-time. The hyphens had previously been treated as the NOT Boolean operator.</li>
-<li>Searchers no longer see the <a href="/manual/govbox-jobs.html">Jobs GovBox</a> for advanced searches when it isn't relevant.</li>
-<li>We fixed a bug so that, if a site parameter is specified, it overrides the scopeid parameter.</li>
-<li>We added some additional logic to the code that redirects visitors from search.usa.gov to USA.gov's homepage.</li>
-<li>We fixed a few regression bugs for related searches and the naming of the 'unescapedUrl' and 'publishedAt' fields in our Search API.</li>
-<li>We now display search results only for pages that specify a URL.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/april-2013.html">
-        <time datetime="2013-05-03">May 3, 2013</time>
       </a>
     </div>
     </article>
