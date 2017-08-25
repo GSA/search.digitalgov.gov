@@ -3,7 +3,7 @@
 <head>
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-  <title>October 2013 Release Notes</title>
+  <title>Posts tagged drupal</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -94,82 +94,61 @@
   <div class="col-md-8 col-md-offset-2">
     <!-- do not remove as used to parse in usasearch -->
     <div id="main-container">    
-      <article class="article feature" style="padding:0 30px; margin-top: 10px;">
+      <!-- begin tag layout -->
+<p class="muted">Posts tagged <strong>drupal</strong></p>
+
+<div class='articles'>
   
-  <h1>
-    <a href="/releases/october-2013.html">October 2013 Release Notes</a>
-  </h1>
-  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/drupal.html">usasearch Drupal Module Help Documentation</a>
+    </h1>
+    
 
-  <div class='post-content'>
-    <h2>Highlight: Compare Your Click-thru Rate to the Average Rate</h2>
+    <div class='post-content'>
+      <p>To use the DigitalGov Search service on a Drupal-based website, you should install the <code>usasearch</code> <a href="https://drupal.org/project/usasearch">Drupal module</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. It is possible to manually modify Drupal to connect to our service, but the module allows you to minimize the development work required for ongoing use and maintenance.</p>
 
-<p>How do you stack up? You can now compare your click-thru rate (CTR) with the average rate across all sites that use DigitalGov Search. Use your CTR data to measure the performance of specific campaigns and modules.</p>
-
-<p>For example, October's Monthly Report for <a href="http://kids.usa.gov/">Kids.gov</a> shows the average CTR for Best Bets: Graphics on Kids.gov is 26.8%, while the average CTR across all DigitalGov Search sites is 14.0%. Their <a href="/manual/best-bets-graphics.html">graphic best bets</a> are very effective compared to other sites.</p>
-
-<p>See how Kids.gov's other modules stack up against the average below.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/releases-kidsgov-ctr.png" alt="Average CTR" /></p>
-
-<p>This means that the graphic best bets (such as seen for a <a href="http://search.usa.gov/search?affiliate=kidsgov&amp;query=george+washington">search on <em>George Washington</em> on Kids.gov</a>) are almost twice as likely to be clicked on Kids.gov than other sites.</p>
-
-<p>It's important to remember your audience. <a href="http://www.digitalgov.gov/2012/08/06/how-kids-search/">Kids use search differently than adults</a> and they're probably more attracted to graphic images.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/releases-kidsgov-bbg.png" alt="George Washington Best Bets: Graphic" /></p>
-
-<p>Go to the <a href="/manual/monthly-reports.html">Monthly Reports</a> page in the <a href="https://search.usa.gov/sites/">Admin Center</a> to see how you stack up.</p>
-
-<h2>Other Features</h2>
+<h2>Step by step instructions for setting up the module</h2>
 
 <ul>
-<li>We made the final cutover to our new Admin Center. As part of the cutover, we updated all of our <a href="/manual/index.html">help files</a> and removed 404 pages from our search results. We also migrated our <a href="/manual/best-bets-graphics.html">Best Bets: Graphics</a> and My Account pages.</li>
-<li>You're no longer asked to provide a phone number or address when you <a href="https://search.usa.gov/signup">register for a new account</a>.</li>
-<li>Librarians, developers, and others can see a list of federal, state, local, tribal, and territorial <a href="http://govt-urls.usa.gov/tematres/">government URLs</a> that aren't .gov or .mil.</li>
+<li><a href="/manual/drupal-7-module-instructions.html">usasearch 7.x-5.x</a></li>
+<li><a href="/manual/drupal-8-module-instructions.html">usasearch 8.x-1.x</a></li>
 </ul>
 
 
-<h2>Chores</h2>
+<h2><a href="/manual/drupal-module-troubleshooting.html">Troubleshooting tips</a></h2>
 
-<ul>
-<li>We applied updates to our operating system from <a href="http://ezix.org/project/wiki/HardwareLiSter">Hardware Lister</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, <a href="http://jenkins-ci.org/">Jenkins</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, <a href="http://www.python.org/">Python</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, <a href="http://www.redhat.com">Red Hat</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, and our <a href="http://rpmfind.net/linux/rpm2html/search.php?query=tzdata">Time Zone data</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We set up <a href="https://codeclimate.com/">Code Climate</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to identify areas of our code that can be improved.</li>
-<li>We phased out color schemes and now offer two options, default and custom.</li>
-<li>We updated the links in our email templates to reflect the new Admin Center.</li>
-<li>We added the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag to our results pages by default. Email us at <a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#58;&#x73;&#101;&#x61;&#x72;&#99;&#104;&#x40;&#115;&#x75;&#112;&#x70;&#111;&#114;&#x74;&#x2e;&#x64;&#x69;&#x67;&#x69;&#116;&#97;&#x6c;&#x67;&#111;&#x76;&#x2e;&#x67;&#x6f;&#118;">&#115;&#x65;&#97;&#114;&#99;&#x68;&#64;&#115;&#117;&#112;&#x70;&#111;&#x72;&#x74;&#x2e;&#x64;&#105;&#103;&#105;&#116;&#x61;&#108;&#103;&#111;&#x76;&#46;&#x67;&#x6f;&#118;</a> if you'd like to opt out.</li>
-</ul>
+    </div>
 
-
-<h2>Fixes</h2>
-
-<ul>
-<li>We fixed a display issue with the icons in the Admin Center so that customers using Internet Explorer can now see them.</li>
-<li>We now show a link to <a href="http://validator.w3.org/nu/">validate</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> your CSS and HTML on the advanced header and footer page.</li>
-</ul>
-
-
-  </div>
-
-  <div class='tags'>
-    
-    <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-    
-  </div>
-
-  <div class='time'>
-    
-    
-    </br><span>Page last reviewed or updated:</span>
-    
-    
-    
-    <a href="/releases/october-2013.html">
-      <time>October 31, 2013</time>
-    </a>
-  </div>
-
-</article>
+    <div class='tags'>
       
+      <a href="/tagged/i14y"><span class="label label-info">i14y</span></a>
+      
+      <a href="/tagged/drupal"><span class="label label-info">drupal</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/drupal.html">
+        <time datetime="2017-08-25">August 25, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+</div>
+
+
+<ul class="pager">
+  
+
+  
+</ul>
+<!-- end tag layout -->      
     </div>
   </div>
 </div>
