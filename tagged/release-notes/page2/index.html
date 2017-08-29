@@ -363,7 +363,7 @@
 
 <p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/sitelink.png" title="Sitelink-generated links for EDGAR filings on SEC.gov" alt="Sitelink-generated links for EDGAR filings on SEC.gov" /></p>
 
-<p>Do you have related content that you'd like to display as value-added links that searchers should see within the context of each other (such as related forms, instructions, and publications)? If your related content follows a discernable URL pattern, email us at <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#x73;&#101;&#x61;&#x72;&#x63;&#104;&#64;&#115;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#46;&#x64;&#105;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#46;&#x67;&#x6f;&#118;">&#x73;&#101;&#x61;&#x72;&#99;&#104;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#103;&#x69;&#116;&#x61;&#x6c;&#x67;&#111;&#118;&#46;&#103;&#111;&#x76;</a> and we'll work with you to promote the related content on your site.</p>
+<p>Do you have related content that you'd like to display as value-added links that searchers should see within the context of each other (such as related forms, instructions, and publications)? If your related content follows a discernable URL pattern, email us at <a href="&#109;&#x61;&#105;&#108;&#116;&#x6f;&#58;&#x73;&#101;&#97;&#x72;&#99;&#x68;&#64;&#x73;&#117;&#x70;&#112;&#x6f;&#114;&#x74;&#x2e;&#100;&#x69;&#x67;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#118;&#x2e;&#103;&#111;&#x76;">&#x73;&#101;&#x61;&#x72;&#x63;&#104;&#x40;&#115;&#117;&#112;&#x70;&#x6f;&#114;&#116;&#46;&#x64;&#x69;&#103;&#105;&#116;&#x61;&#108;&#103;&#x6f;&#x76;&#x2e;&#103;&#111;&#x76;</a> and we'll work with you to promote the related content on your site.</p>
 
 <p>We've open sourced the <a href="https://github.com/GSA/sitelink_generator">code for the sitelink generator</a> on Github so you can <a href="https://github.com/GSA/sitelink_generator/fork">fork the code</a> and contribute to it directly. We've also <a href="http://rubygems.org/gems/sitelink_generator">published it as Ruby gem</a>.</p>
 
@@ -595,6 +595,74 @@
  
     
     <h1>
+      <a href="/releases/may-2014.html">May 2014 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2>Features</h2>
+
+<p>We officially rolled our newly <a href="http://localhost:4000/blog/serp-redesign.html">redesigned results page</a>.</p>
+
+<p>As we continue to add features to our search results page, you can see small, incremental changes. We added a thin, visible border around the search box to improve its visibility, especially against a white background. We changed the color of the query term in the search box from gray to black. We also added more padding around <a href="/manual/best-bets-text.html">Best Bets</a> so that searchers can more readily distinguish them from web results. At the bottom of page, we added "Page 1" to "Next >>" to more clearly indicate that more results are available.</p>
+
+<p><a href="http://search.usa.gov/search?affiliate=usagov&amp;query=huricane"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/release-05-2014-usa-huricane.png" title="Tweaks to the redesigned USA.gov results page" alt="Tweaks to the redesigned USA.gov results page" /></a></p>
+
+<p>Additionally, searchers can now see image and video results. Searchers can filter results to images or videos only. They can also see up to one inline video result with a link to see more videos.</p>
+
+<p>To improve the quality of the image search results, we now display images from <a href="/manual/flickr.html">your Flickr photostream</a> by default.</p>
+
+<p>We realized that our results page was getting a bit top-heavy so we now display inline results only when they're most relevant&mdash;capping the display of inline videos at 13 months and inline RSS-based news results at four months. Additionally, we display very recent news results (less than five days) at the top of the page and less recent news results closer to the bottom.</p>
+
+<p>It is also now possible to include an email address as a header or footer link by using mailto:info@agency.gov within the URL.</p>
+
+<h2>Chores</h2>
+
+<ul>
+<li>We added support for .com <a href="/manual/cname.html">CNAMEs</a>.</li>
+<li>We increased the maximum mobile logo size from 50KB to 64KB.</li>
+<li>We updated <a href="https://travis-ci.org/">Travis-CI</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to use <a href="https://www.ruby-lang.org/en/downloads/">Ruby 2.0</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We added robots.txt files to all sites that use a CNAME to block crawlers from their search results pages.</li>
+<li>We updated <a href="http://logstash.net/">logstash</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and upgraded <a href="http://www.elasticsearch.org/downloads/1-2-0/">ElasticSearch to 1.2.0</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
+<li>We investigated <a href="http://www.drupal.org">Drupal</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> modules that publish content APIs for our bring your own index pilot.</li>
+<li>We updated our SSL certificate.</li>
+<li>We added a page in the Admin Center for you to let us know about your <a href="/manual/instagram.html">Instagram</a> account. We also registered for the <a href="http://instagram.com/developer/">Instagram API</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. (We're planning to display image results Instagram soon.)</li>
+</ul>
+
+
+<h2>Fixes</h2>
+
+<ul>
+<li>Searchers no longer see duplicate video results.</li>
+<li>We fixed the spacing between web results on mobile phones.</li>
+<li>We now automatically populate the homepage URL for newly added sites.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/may-2014.html">
+        <time datetime="2014-07-09">July 9, 2014</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/april-2014.html">April 2014 Release Notes</a>
     </h1>
     
@@ -665,74 +733,6 @@
       
       
       <a href="/releases/april-2014.html">
-        <time datetime="2014-07-09">July 9, 2014</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/may-2014.html">May 2014 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2>Features</h2>
-
-<p>We officially rolled our newly <a href="http://localhost:4000/blog/serp-redesign.html">redesigned results page</a>.</p>
-
-<p>As we continue to add features to our search results page, you can see small, incremental changes. We added a thin, visible border around the search box to improve its visibility, especially against a white background. We changed the color of the query term in the search box from gray to black. We also added more padding around <a href="/manual/best-bets-text.html">Best Bets</a> so that searchers can more readily distinguish them from web results. At the bottom of page, we added "Page 1" to "Next >>" to more clearly indicate that more results are available.</p>
-
-<p><a href="http://search.usa.gov/search?affiliate=usagov&amp;query=huricane"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/release-05-2014-usa-huricane.png" title="Tweaks to the redesigned USA.gov results page" alt="Tweaks to the redesigned USA.gov results page" /></a></p>
-
-<p>Additionally, searchers can now see image and video results. Searchers can filter results to images or videos only. They can also see up to one inline video result with a link to see more videos.</p>
-
-<p>To improve the quality of the image search results, we now display images from <a href="/manual/flickr.html">your Flickr photostream</a> by default.</p>
-
-<p>We realized that our results page was getting a bit top-heavy so we now display inline results only when they're most relevant&mdash;capping the display of inline videos at 13 months and inline RSS-based news results at four months. Additionally, we display very recent news results (less than five days) at the top of the page and less recent news results closer to the bottom.</p>
-
-<p>It is also now possible to include an email address as a header or footer link by using mailto:info@agency.gov within the URL.</p>
-
-<h2>Chores</h2>
-
-<ul>
-<li>We added support for .com <a href="/manual/cname.html">CNAMEs</a>.</li>
-<li>We increased the maximum mobile logo size from 50KB to 64KB.</li>
-<li>We updated <a href="https://travis-ci.org/">Travis-CI</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to use <a href="https://www.ruby-lang.org/en/downloads/">Ruby 2.0</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We added robots.txt files to all sites that use a CNAME to block crawlers from their search results pages.</li>
-<li>We updated <a href="http://logstash.net/">logstash</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and upgraded <a href="http://www.elasticsearch.org/downloads/1-2-0/">ElasticSearch to 1.2.0</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We investigated <a href="http://www.drupal.org">Drupal</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> modules that publish content APIs for our bring your own index pilot.</li>
-<li>We updated our SSL certificate.</li>
-<li>We added a page in the Admin Center for you to let us know about your <a href="/manual/instagram.html">Instagram</a> account. We also registered for the <a href="http://instagram.com/developer/">Instagram API</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. (We're planning to display image results Instagram soon.)</li>
-</ul>
-
-
-<h2>Fixes</h2>
-
-<ul>
-<li>Searchers no longer see duplicate video results.</li>
-<li>We fixed the spacing between web results on mobile phones.</li>
-<li>We now automatically populate the homepage URL for newly added sites.</li>
-</ul>
-
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/may-2014.html">
         <time datetime="2014-07-09">July 9, 2014</time>
       </a>
     </div>
