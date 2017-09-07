@@ -19,7 +19,7 @@
 ## How to set up your development environment
 
 Open a Terminal window. Start homebrew.
-    
+
     $ brew update
     $ brew doctor
 
@@ -41,4 +41,3 @@ Go to <http://localhost:4000>.
 * If you don't already have it, you'll need [Ruby 2.0.0](http://www.ruby-lang.org/en/downloads). [RVM](http://rvm.io) is recommended to install Ruby on your development environment.
 
     $ rvm install ruby-2.2.1
-
