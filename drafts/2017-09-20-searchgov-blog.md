@@ -83,9 +83,10 @@ We encourage you to explore how you can compile a list of your site URLs, and to
 
 Do you have questions? Join us for an open Q&A session on:
 
-> Tuesday, October 3rd, 1 PM ET
-
-> Call in number: 866-881-7035 / Passcode: 7847593
+```
+Tuesday, October 3rd, 1 PM ET
+Call in number: 866-881-7035 / Passcode: 7847593#
+```
 
 We also welcome email [questions and comments](mailto:search@support.digitalgov.gov).
 
