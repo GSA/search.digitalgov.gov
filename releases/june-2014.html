@@ -102,68 +102,64 @@
   
 
   <div class='post-content'>
-    <h2>Highlighted Features</h2>
+    <h2 id="highlighted-features">Highlighted Features</h2>
 
-<h3>Feature 1. We incorporated your feedback into our redesigned results page.</h3>
+<h3 id="feature-1-we-incorporated-your-feedback-into-our-redesigned-results-page">Feature 1. We incorporated your feedback into our redesigned results page.</h3>
 
-<p>We're continuing to work on our redesigned search results page to incorporate your feedback. Searchers now see a more prominent option to browse your site.</p>
+<p>We’re continuing to work on our redesigned search results page to incorporate your feedback. Searchers now see a more prominent option to browse your site.</p>
 
-<p><a href="http://search.usa.gov/search?affiliate=federalstudentaid"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/release-06-2014-fedaid-browse.png" title="Redesigned option to browse site" alt="Redesigned option to browse site" /></a></p>
+<p><a href="http://search.usa.gov/search?affiliate=federalstudentaid"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/release-06-2014-fedaid-browse.png" alt="Redesigned option to browse site" title="Redesigned option to browse site" /></a></p>
 
 <p>Additionally, you can now:</p>
 
 <ul>
-<li>Left align your logo;</li>
-<li>Add a direct link to your advanced search page (using the syntax http://search.usa.gov/search/advanced?affiliate=<a href="/manual/settings.html">YourSiteHandle</a>); and</li>
-<li>Display images from <a href="/manual/rss.html">media RSS feeds</a>.</li>
+  <li>Left align your logo;</li>
+  <li>Add a direct link to your advanced search page (using the syntax http://search.usa.gov/search/advanced?affiliate=<a href="/manual/settings.html">YourSiteHandle</a>); and</li>
+  <li>Display images from <a href="/manual/rss.html">media RSS feeds</a>.</li>
 </ul>
-
 
 <p>All job openings (beyond those for U.S. citizens only) now appear when searchers click on the link to see all the openings on <a href="https://www.usajobs.gov/">USAJobs</a>.</p>
 
-<p><a href="http://search.usa.gov/search?affiliate=usagov&amp;query=jobs"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/release-06-2014-USAgov.png" title="Tweaks to the redesigned USA.gov  results page" alt="Tweaks to the redesigned USA.gov results page" /></a></p>
+<p><a href="http://search.usa.gov/search?affiliate=usagov&amp;query=jobs"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/release-06-2014-USAgov.png" alt="Tweaks to the redesigned USA.gov results page" title="Tweaks to the redesigned USA.gov  results page" /></a></p>
 
-<h3>Feature 2. You can access real-time, unfiltered analytics.</h3>
+<h3 id="feature-2-you-can-access-real-time-unfiltered-analytics">Feature 2. You can access real-time, unfiltered analytics.</h3>
 
-<p>We recently upgraded our underlying analytics framework to use the <a href="http://www.elasticsearch.org/overview/">ELK stack</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. We've gained many benefits with the upgrade. There are also two big benefits for you.</p>
+<p>We recently upgraded our underlying analytics framework to use the <a href="http://www.elasticsearch.org/overview/">ELK stack</a> <i class="icon-external-link"><span>(External link)</span></i>. We’ve gained many benefits with the upgrade. There are also two big benefits for you.</p>
 
-<p><strong>Benefit #1: Real-time Data.</strong> You can now instantaneously see the searches and clicks that are performed on your site. We previously processed some of your analytics via nightly cron jobs so there was a delay before you saw the data. Try it out. Do a search on your site and then go to <a href="https://search.usa.gov/sites/">Admin Center</a>. You'll see your search query on the dashboard.</p>
+<p><strong>Benefit #1: Real-time Data.</strong> You can now instantaneously see the searches and clicks that are performed on your site. We previously processed some of your analytics via nightly cron jobs so there was a delay before you saw the data. Try it out. Do a search on your site and then go to <a href="https://search.usa.gov/sites/">Admin Center</a>. You’ll see your search query on the dashboard.</p>
 
 <p><strong>Benefit #2: Unfiltered Data.</strong> You can now access your unfiltered analytics via the Admin Center so you can more easily manipulate the data. We previously only provided unfiltered data in the CSV downloads or via secure FTP.</p>
 
-<p>You still see filtered data by default. You can toggle between a filtered or unfiltered view by going to the <a href="https://search.usa.gov/sites/">Admin Center</a> > Analytics > Settings.</p>
+<p>You still see filtered data by default. You can toggle between a filtered or unfiltered view by going to the <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; Analytics &gt; Settings.</p>
 
 <ul>
-<li><em>Filtered.</em> Several rules are applied to remove bot and other non-human looking traffic. The filtered data represent our best effort to show you real searches performed by your site's visitors.</li>
-<li><em>Unfiltered.</em> Nearly all searches and clicks are included. Only known spiders (such as Bingbot and Googlebot) are excluded. Some of you may see dramatically more data in the unfiltered view.</li>
+  <li><em>Filtered.</em> Several rules are applied to remove bot and other non-human looking traffic. The filtered data represent our best effort to show you real searches performed by your site’s visitors.</li>
+  <li><em>Unfiltered.</em> Nearly all searches and clicks are included. Only known spiders (such as Bingbot and Googlebot) are excluded. Some of you may see dramatically more data in the unfiltered view.</li>
 </ul>
 
+<p><a href="https://search.usa.gov/sites/"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/release-04-2014-Analytics.png" alt="Toggle between a filtered or unfiltered view" title="Toggle between a filtered or unfiltered view" /></a></p>
 
-<p><a href="https://search.usa.gov/sites/"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/release-04-2014-Analytics.png" title="Toggle between a filtered or unfiltered view" alt="Toggle between a filtered or unfiltered view" /></a></p>
-
-<h2>Chores</h2>
+<h2 id="chores">Chores</h2>
 
 <ul>
-<li>We now diplay images from Flickr only by default. <a href="mailto:search@support.digitalgov.gov">Email us</a> if you'd like to display images from Bing, too.</li>
-<li>We now <a href="http://code.flickr.net/2014/04/30/flickr-api-going-ssl-only-on-june-27th-2014/">use SSL to access the Flickr API</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We upgraded to <a href="http://www.elasticsearch.org/blog/elasticsearch-1-2-1-released/">ElasticSearch 1.2.1</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We now handle some error messages from the <a href="https://dev.twitter.com/">Twitter API</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> more gracefully.</li>
-<li>We added agency IDs from the <a href="https://www.federalregister.gov/">Federal Register</a> to our database in preparation for using <a href="https://www.federalregister.gov/learn/developers">their API</a> to display Federal Register documents in our search results.</li>
-<li>As we now have a single, responsive search results page, we no longer use 'Mobile Logo' in the Admin Center. We now use just 'Logo.'</li>
-<li>We removed the fields for image attribution for <a href="/manual/best-bets-graphics.html">Graphics Best Bets</a> from our database.</li>
-<li>We updated our cron-based emails to use our new analytics framework.</li>
-<li>We backfilled the data in our Admin Center so that you see analytics from 13 months ago.</li>
+  <li>We now diplay images from Flickr only by default. <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">Email us</a> if you’d like to display images from Bing, too.</li>
+  <li>We now <a href="http://code.flickr.net/2014/04/30/flickr-api-going-ssl-only-on-june-27th-2014/">use SSL to access the Flickr API</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
+  <li>We upgraded to <a href="http://www.elasticsearch.org/blog/elasticsearch-1-2-1-released/">ElasticSearch 1.2.1</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
+  <li>We now handle some error messages from the <a href="https://dev.twitter.com/">Twitter API</a> <i class="icon-external-link"><span>(External link)</span></i> more gracefully.</li>
+  <li>We added agency IDs from the <a href="https://www.federalregister.gov/">Federal Register</a> to our database in preparation for using <a href="https://www.federalregister.gov/learn/developers">their API</a> to display Federal Register documents in our search results.</li>
+  <li>As we now have a single, responsive search results page, we no longer use ‘Mobile Logo’ in the Admin Center. We now use just ‘Logo.’</li>
+  <li>We removed the fields for image attribution for <a href="/manual/best-bets-graphics.html">Graphics Best Bets</a> from our database.</li>
+  <li>We updated our cron-based emails to use our new analytics framework.</li>
+  <li>We backfilled the data in our Admin Center so that you see analytics from 13 months ago.</li>
 </ul>
 
-
-<h2>Fixes</h2>
+<h2 id="fixes">Fixes</h2>
 
 <ul>
-<li>We fixed our parser for <a href="http://tools.ietf.org/html/rfc4287">Atom</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> RSS feeds to use atom:summary when atom:content isn't present.</li>
-<li>We fixed a bug so that the options to filter search results now appears in Internet Explorer 8.</li>
-<li>We now use a <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/method-reference#named">named tracker</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> so that, when you use the default tracker, you can see pageviews and other data in your Google Analytics accounts.</li>
+  <li>We fixed our parser for <a href="http://tools.ietf.org/html/rfc4287">Atom</a> <i class="icon-external-link"><span>(External link)</span></i> RSS feeds to use atom:summary when atom:content isn’t present.</li>
+  <li>We fixed a bug so that the options to filter search results now appears in Internet Explorer 8.</li>
+  <li>We now use a <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/method-reference#named">named tracker</a> <i class="icon-external-link"><span>(External link)</span></i> so that, when you use the default tracker, you can see pageviews and other data in your Google Analytics accounts.</li>
 </ul>
-
 
   </div>
 

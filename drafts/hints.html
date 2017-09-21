@@ -94,39 +94,38 @@
   <div class="col-md-8 col-md-offset-2">
     <!-- do not remove as used to parse in usasearch -->
     <div id="main-container">    
-      <h1>Hints</h1>
+      <h1 id="hints">Hints</h1>
 
 <table>
-<thead>
-<tr>
-<th style="text-align:left;">Syntax                                                                                 </th>
-<th style="text-align:left;"> Output</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;"><code>{% hint document_collection.name %}</code> &nbsp;&nbsp;                </td>
-<td style="text-align:left;"> Enter a short, meaningful name. Searchers will see this name as a facet.</td>
-</tr>
-<tr>
-<td style="text-align:left;"><code>{% hint document_collection.url_prefixes.prefix %}</code> &nbsp;&nbsp; </td>
-<td style="text-align:left;"> Enter the folder where the files to be searched are stored. Don't add an index page.</td>
-</tr>
-<tr>
-<td style="text-align:left;"><code>{% hint site_domain.domain %}</code> &nbsp;&nbsp;                      </td>
-<td style="text-align:left;"> Leave off www to include all subdomains. Use www for results from www.agency.gov only.</td>
-</tr>
-<tr>
-<td style="text-align:left;"><code>{% hint user.contact_name %}</code> &nbsp;&nbsp;                       </td>
-<td style="text-align:left;"> Please enter first and last name.</td>
-</tr>
-<tr>
-<td style="text-align:left;"><code>{% hint user.email %}</code> &nbsp;&nbsp;                              </td>
-<td style="text-align:left;"> Colleagues you add will receive an email to complete their registration.</td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th style="text-align: left">Syntax</th>
+      <th style="text-align: left">Output</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code>{% hint document_collection.name %}</code>   </td>
+      <td style="text-align: left">Enter a short, meaningful name. Searchers will see this name as a facet.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code>{% hint document_collection.url_prefixes.prefix %}</code>   </td>
+      <td style="text-align: left">Enter the folder where the files to be searched are stored. Don’t add an index page.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code>{% hint site_domain.domain %}</code>   </td>
+      <td style="text-align: left">Leave off www to include all subdomains. Use www for results from www.agency.gov only.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code>{% hint user.contact_name %}</code>   </td>
+      <td style="text-align: left">Please enter first and last name.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code>{% hint user.email %}</code>   </td>
+      <td style="text-align: left">Colleagues you add will receive an email to complete their registration.</td>
+    </tr>
+  </tbody>
 </table>
-
       
     </div>
   </div>

@@ -102,54 +102,51 @@
   
 
   <div class='post-content'>
-    <h2>Highlighted Features</h2>
+    <h2 id="highlighted-features">Highlighted Features</h2>
 
-<h3>Feature 1. We migrated from Solr to Elasticsearch.</h3>
+<h3 id="feature-1-we-migrated-from-solr-to-elasticsearch">Feature 1. We migrated from Solr to Elasticsearch.</h3>
 
-<p>Open source search technology has improved rapidly in recent years. To keep pace, we upgraded from Solr to <a href="http://www.elasticsearch.org/">Elasticsearch</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+<p>Open source search technology has improved rapidly in recent years. To keep pace, we upgraded from Solr to <a href="http://www.elasticsearch.org/">Elasticsearch</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
 
-<p>We've realized many benefits. Loren Siebert, one of our software engineers, <a href="/blog/search-big-data.html">recently presented</a> on some lessons we've learned and the evolution of open source search technology in general.</p>
+<p>We’ve realized many benefits. Loren Siebert, one of our software engineers, <a href="/blog/search-big-data.html">recently presented</a> on some lessons we’ve learned and the evolution of open source search technology in general.</p>
 
-<h3>Feature 2. We're continuing to go responsive.</h3>
+<h3 id="feature-2-were-continuing-to-go-responsive">Feature 2. We’re continuing to go responsive.</h3>
 
 <p>Based your feedback, searchers now see a larger logo when they search from their desktop computers.</p>
 
 <p>Searchers now see the <a href="/manual/govbox-health.html">Health GovBox</a> when they search from a mobile phone or tablet.</p>
 
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/feature-2014-02-01-newserp-health-gb.png" title="Health GovBox for a search on diabetes on USA.gov" alt="Health GovBox for a search on diabetes on USA.gov" /></p>
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/feature-2014-02-01-newserp-health-gb.png" alt="Health GovBox for a search on diabetes on USA.gov" title="Health GovBox for a search on diabetes on USA.gov" /></p>
 
-<h3>Feature 3. Searchers now see higher quality RSS search results.</h3>
+<h3 id="feature-3-searchers-now-see-higher-quality-rss-search-results">Feature 3. Searchers now see higher quality RSS search results.</h3>
 
-<p>We're working to improve the search experience for your <a href="/manual/rss.html">RSS feeds</a>. Below are the first two improvements we made. Many more are on the way over the next few months.</p>
-
-<ul>
-<li>Searchers now see only unique URLs in the News GovBox. (We previously didn't dedupe URLs that belonged to multiple feeds.)</li>
-<li>Searchers now see only valid, resolving URLs. (We previously didn't revisit your older URLs to remove those with 404 errors.)</li>
-</ul>
-
-
-<p>See, for example, the Most recent... results for a <a href="http://search.ers.usda.gov/search?affiliate=ers&amp;query=corn&amp;m=true">search on corn on ERS.gov</a>.</p>
-
-<h2>Chores</h2>
+<p>We’re working to improve the search experience for your <a href="/manual/rss.html">RSS feeds</a>. Below are the first two improvements we made. Many more are on the way over the next few months.</p>
 
 <ul>
-<li>The option to narrow results to images only is now opt-in. To override the default, turn on the images sidebar option on the <a href="/manual/display-overview.html">Display Overview</a> page in the Admin Center.</li>
-<li>We sped up the cron job that generates the monthly and weekly CSV files on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page in the Admin Center.</li>
-<li>We prototyped using the <a href="http://www.elasticsearch.org/overview/">ELK stack</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> ( <a href="http://www.elasticsearch.org/overview/elasticsearch">Elasticsearch</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>, <a href="http://www.elasticsearch.org/overview/logstash">Logstash</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.elasticsearch.org/overview/kibana">Kibana</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>) for our search analytics.</li>
-<li>We fixed our <a href="https://travis-ci.org/">Travis CI</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> builds.</li>
-<li>We upgraded to <a href="http://www.elasticsearch.org/downloads/1-0-1/">Elasticsearch 1.0.1</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</li>
-<li>We now route traffic evenly between our two datacenters.</li>
+  <li>Searchers now see only unique URLs in the News GovBox. (We previously didn’t dedupe URLs that belonged to multiple feeds.)</li>
+  <li>Searchers now see only valid, resolving URLs. (We previously didn’t revisit your older URLs to remove those with 404 errors.)</li>
 </ul>
 
+<p>See, for example, the Most recent… results for a <a href="http://search.ers.usda.gov/search?affiliate=ers&amp;query=corn&amp;m=true">search on corn on ERS.gov</a>.</p>
 
-<h2>Fixes</h2>
+<h2 id="chores">Chores</h2>
 
 <ul>
-<li>The last two columns are no longer dropped when you bulk upload <a href="/manual/best-bets-text.html">text best bets</a>.</li>
-<li>Searchers no longer get intermittently "stuck" on page one of the results.</li>
-<li>Searchers no longer lose their spot on the results page after they opt to see more job openings.</li>
+  <li>The option to narrow results to images only is now opt-in. To override the default, turn on the images sidebar option on the <a href="/manual/display-overview.html">Display Overview</a> page in the Admin Center.</li>
+  <li>We sped up the cron job that generates the monthly and weekly CSV files on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page in the Admin Center.</li>
+  <li>We prototyped using the <a href="http://www.elasticsearch.org/overview/">ELK stack</a> <i class="icon-external-link"><span>(External link)</span></i> ( <a href="http://www.elasticsearch.org/overview/elasticsearch">Elasticsearch</a> <i class="icon-external-link"><span>(External link)</span></i>, <a href="http://www.elasticsearch.org/overview/logstash">Logstash</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.elasticsearch.org/overview/kibana">Kibana</a> <i class="icon-external-link"><span>(External link)</span></i>) for our search analytics.</li>
+  <li>We fixed our <a href="https://travis-ci.org/">Travis CI</a> <i class="icon-external-link"><span>(External link)</span></i> builds.</li>
+  <li>We upgraded to <a href="http://www.elasticsearch.org/downloads/1-0-1/">Elasticsearch 1.0.1</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
+  <li>We now route traffic evenly between our two datacenters.</li>
 </ul>
 
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li>The last two columns are no longer dropped when you bulk upload <a href="/manual/best-bets-text.html">text best bets</a>.</li>
+  <li>Searchers no longer get intermittently “stuck” on page one of the results.</li>
+  <li>Searchers no longer lose their spot on the results page after they opt to see more job openings.</li>
+</ul>
 
   </div>
 

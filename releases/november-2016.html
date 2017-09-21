@@ -102,42 +102,39 @@
   
 
   <div class='post-content'>
-    <h2>Highlighted Features</h2>
+    <h2 id="highlighted-features">Highlighted Features</h2>
 
-<h3>JavaScript Search Results Page</h3>
+<h3 id="javascript-search-results-page">JavaScript Search Results Page</h3>
 
-<p>Our new JavaScript search results page was released in Beta. This new results page platform allows us to offer more layout options, to better complement our customers' site layouts. The first layout released matches the current default layout.</p>
+<p>Our new JavaScript search results page was released in Beta. This new results page platform allows us to offer more layout options, to better complement our customers’ site layouts. The first layout released matches the current default layout.</p>
 
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/new-serp-classic-template.png" alt="New JavaScript results page" width="100%"/></p>
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/new-serp-classic-template.png" alt="New JavaScript results page" width="100%" /></p>
 
-<h3>Crawling and Indexing</h3>
+<h3 id="crawling-and-indexing">Crawling and Indexing</h3>
 
-<p>We are exploring how we can use our own crawler for a subset of our customers' search configurations. The goal is to serve more results directly from our own indexes, rather than leveraging commercial indexes. We recognize that not all agency customers are able to send us their content via API or RSS, and we also recognize that agencies are interested in having more control over when their content gets indexed, which is not possible with the commercial crawlers.</p>
+<p>We are exploring how we can use our own crawler for a subset of our customers’ search configurations. The goal is to serve more results directly from our own indexes, rather than leveraging commercial indexes. We recognize that not all agency customers are able to send us their content via API or RSS, and we also recognize that agencies are interested in having more control over when their content gets indexed, which is not possible with the commercial crawlers.</p>
 
-<h2>Chores</h2>
-
-<ul>
-<li>In August, our development team successfully migrated Search’s infrastructure to AWS. We continue to make updates to the new environment, including ClamAV scanning and new VPCs. Other work around our ATO includes:
+<h2 id="chores">Chores</h2>
 
 <ul>
-<li>Nessus scanner work</li>
-<li>Re-IP'ing our system to integrate with GSA's new log archiving system</li>
-<li>Password management and handling updates, now requiring complex passwords, updates every 90 days, and displaying ambiguous login error messages.</li>
-</ul>
-</li>
-<li>We continue to assist customers with <a href="/manual/https-transition.html">transitioning to HTTPS</a>, adding <a href="/manual/cname.html">sites’ domain masks</a> to our SSL certificate and preparing to update our help manual and some backend configurations.</li>
-<li>When you <a href="/manual/clone-site.html">clone a search configuration</a>, your type-ahead suggestions will no longer clone to the new configuration. This enables your new site to populate type-ahead suggestions based on its own traffic.</li>
-<li>In December, Bing is <a href="https://blogs.msdn.microsoft.com/bingdevcenter/2016/11/04/azure-data-market-bing-search-and-web-results-only-apis-to-be-decommissioned-december-15/">deprecating 2 of its APIs</a>. We’re handling this transition for all search configurations that use our hosted search results page. We began preparing for the transition this month and will complete work prior to the December 15th deprecation.</li>
+  <li>In August, our development team successfully migrated Search’s infrastructure to AWS. We continue to make updates to the new environment, including ClamAV scanning and new VPCs. Other work around our ATO includes:
+    <ul>
+      <li>Nessus scanner work</li>
+      <li>Re-IP’ing our system to integrate with GSA’s new log archiving system</li>
+      <li>Password management and handling updates, now requiring complex passwords, updates every 90 days, and displaying ambiguous login error messages.</li>
+    </ul>
+  </li>
+  <li>We continue to assist customers with <a href="/manual/https-transition.html">transitioning to HTTPS</a>, adding <a href="/manual/cname.html">sites’ domain masks</a> to our SSL certificate and preparing to update our help manual and some backend configurations.</li>
+  <li>When you <a href="/manual/clone-site.html">clone a search configuration</a>, your type-ahead suggestions will no longer clone to the new configuration. This enables your new site to populate type-ahead suggestions based on its own traffic.</li>
+  <li>In December, Bing is <a href="https://blogs.msdn.microsoft.com/bingdevcenter/2016/11/04/azure-data-market-bing-search-and-web-results-only-apis-to-be-decommissioned-december-15/">deprecating 2 of its APIs</a>. We’re handling this transition for all search configurations that use our hosted search results page. We began preparing for the transition this month and will complete work prior to the December 15th deprecation.</li>
 </ul>
 
-
-<h2>Fixes</h2>
+<h2 id="fixes">Fixes</h2>
 
 <ul>
-<li>Email verification links were redirecting infinitely, causing some new users to be unable to get into the system.</li>
-<li>We fixed a conflict for our customers who may share machines with other users, so now if a user is logged in and another user attempts to verify their account, the original user will be logged out so the second user can complete their verification.</li>
+  <li>Email verification links were redirecting infinitely, causing some new users to be unable to get into the system.</li>
+  <li>We fixed a conflict for our customers who may share machines with other users, so now if a user is logged in and another user attempts to verify their account, the original user will be logged out so the second user can complete their verification.</li>
 </ul>
-
 
   </div>
 

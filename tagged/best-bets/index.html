@@ -108,182 +108,146 @@
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Best Bets: Text or Graphics</p>
+      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Best Bets: Text or Graphics</p>
 
 <p>Do you want to promote a specific page or resource? <a href="#bbt">Create a Text Best Bet</a>.</p>
 
 <p>Do you want to promote a set of pages or resources? We recommend you <a href="#bbg">create a Graphics Best Bet</a> if you have more than two recommendations on a given topic.</p>
 
-<p>Best Bets appear at the top of the results page when a searcher's query matches the text of its title, description, or keywords.</p>
+<p>Best Bets appear at the top of the results page when a searcher’s query matches the text of its title, description, or keywords.</p>
 
-<p><a name="bbt"></a></p>
+<p><a name="bbt"></a>
+## Best Bets: Text</p>
 
-<h2>Best Bets: Text</h2>
-
-<p>Text best bets have the same look as standard web results. They're listed under the heading, Recommended by YourSite.</p>
+<p>Text best bets have the same look as standard web results. They’re listed under the heading, Recommended by YourSite.</p>
 
 <p>See the sample results page below that shows a text best bet displayed on TSA.gov for a search on <em><a href="https://search.usa.gov/search?query=razors&amp;affiliate=tsa.gov">razors</a></em>.</p>
 
 <p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/best-bets-text.png" alt="Text best bets for 'razors' on TSA.gov" /></p>
 
-<h3>Add an Individual Text Best Bet</h3>
+<h3 id="add-an-individual-text-best-bet">Add an Individual Text Best Bet</h3>
 
 <p><strong><em>URL.</em></strong> Add the URL of the web page that you want to promote. Make sure the URL is properly formatted, and includes the protocol (either <code>http://</code> or <code>https://</code>).</p>
 
 <p><strong><em>Title and Description.</em></strong> Add the title and description of the web page that you want to promote. Each field can have up to 255 characters. Titles and descriptions are visible to searchers.</p>
 
-<p><strong><em>Status and Publish Dates.</em></strong> By default, newly created Best Bets are Active. If you don't want your Best Bet to display, set it to Inactive. The default start date is the day on which you create the best bet. The default end date is null, so it will stay up forever until you decide to take it down. You can opt to specify other start and end dates using the date pickers.</p>
+<p><strong><em>Status and Publish Dates.</em></strong> By default, newly created Best Bets are Active. If you don’t want your Best Bet to display, set it to Inactive. The default start date is the day on which you create the best bet. The default end date is null, so it will stay up forever until you decide to take it down. You can opt to specify other start and end dates using the date pickers.</p>
 
 <p><strong><em>Match Keywords Only?</em></strong> You have the option of having your Best Bets display only for exact keyword matches, and not for title or discription matches. If you select this option, be sure to include <em>all</em> query terms you want the Best Bet to display for, including terms you have used in the title and description.</p>
 
-<p><strong><em>Keywords.</em></strong> Keywords are optional and they're <em>not</em> visible to searchers. Add specific words or phrases that aren't already included in the visible title or description. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field. Use your search Analytics to inform your keyword lists. Keywords are not case sensitive, but are exact matches.</p>
+<p><strong><em>Keywords.</em></strong> Keywords are optional and they’re <em>not</em> visible to searchers. Add specific words or phrases that aren’t already included in the visible title or description. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field. Use your search Analytics to inform your keyword lists. Keywords are not case sensitive, but are exact matches.</p>
 
-<p><p><a name="bulk"></a></p>
+<p><a name="bulk"></a>
 
-<h3>Add Multiple Best Bets via Bulk Upload</h3>
+### Add Multiple Best Bets via Bulk Upload
 
-<p>Create a comma-separated file with the following fields (in this order). Download our <a href="/files/best-bets-template-201603.csv">sample template for uploading best bets</a> [CSV] to see the correct format.</p>
+Create a comma-separated file with the following fields (in this order). Download our <a href="/files/best-bets-template-201603.csv">sample template for uploading best bets</a> [CSV] to see the correct format.
 
-<p>Title, URL, Description, StartDate, EndDate, Keywords, Match_Keywords_Only, Status</p>
+Title, URL, Description, StartDate, EndDate, Keywords, Match_Keywords_Only, Status
 
-<ul>
-<li>Required fields:
+* Required fields:
+  * Title
+  * URL. Make sure the URL is properly formatted, and includes the protocol (either <code>http://</code> or <code>https://</code>). 
+  * Description 
+* Optional fields:
+  * Start date
+  * End date
+  * Keywords 
+  * Match_Keywords_Only. Enter a <code>1</code> in this column if you want the Best Bet to respond only to the query terms and phrases you’ve specified in this column. Note that selecting this option means you need to list <em>all</em> terms or phrases you want the Best Bet to respond to.<br />
+  * Status. If you leave this column blank, the Best Bet will default to <code>Active</code> and will display to users. Enter <code>0</code> to set the Best Bet to <code>Inactive</code>.
+<br />
+Save the file with a .csv extension and upload it.
 
-<ul>
-<li>Title</li>
-<li>URL. Make sure the URL is properly formatted, and includes the protocol (either <code>http://</code> or <code>https://</code>).</li>
-<li>Description</li>
-</ul>
-</li>
-<li>Optional fields:
+Bulk upload updates existing Best Bets (matching on the URL field) and adds new Best Bets. To turn off Best Bets, either use the <code>Remove</code> button in the Admin Center Best Bets list view, or set the Best Bet to <code>Inactive</code> in the edit view.
 
-<ul>
-<li>Start date</li>
-<li>End date</li>
-<li>Keywords</li>
-<li>Match_Keywords_Only. Enter a <code>1</code> in this column if you want the Best Bet to respond only to the query terms and phrases you've specified in this column. Note that selecting this option means you need to list <em>all</em> terms or phrases you want the Best Bet to respond to.</li>
-<li>Status. If you leave this column blank, the Best Bet will default to <code>Active</code> and will display to users. Enter <code>0</code> to set the Best Bet to <code>Inactive</code>.</li>
-</ul>
-</li>
-</ul>
+<a name="bbg"></a>
 
+## Best Bets: Graphics
 
-<p>Save the file with a .csv extension and upload it.</p>
+Recommended items are displayed in two columns, and you have the option of including an image. We show the most relevant Graphics Best Bet for the query, with the heading, Recommended by YourSite.
 
-<p>Bulk upload updates existing Best Bets (matching on the URL field) and adds new Best Bets. To turn off Best Bets, either use the <code>Remove</code> button in the Admin Center Best Bets list view, or set the Best Bet to <code>Inactive</code> in the edit view.</p>
+See the sample results page below that shows a graphics best bet displayed on <a href="https://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis">USGS.gov for a search on tsunamis</a>.
 
-<p><a name="bbg"></a></p>
+<a href="https://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/best-bets-graphics.png" alt="Graphics best bet highlighting tsunami links on USGS.gov" title="Graphics best bet highlighting tsunami links on USGS.gov" /></a>
 
-<h2>Best Bets: Graphics</h2>
+See also
 
-<p>Recommended items are displayed in two columns, and you have the option of including an image. We show the most relevant Graphics Best Bet for the query, with the heading, Recommended by YourSite.</p>
+* <strong>Two columns with a collection of links and an image</strong> displayed on USA.gov for a search on <em><a href="https://search.usa.gov/search?affiliate=usagov&amp;query=wildfires">wildfires</a></em>. <br />
+* <strong>Two columns with a collection of links only</strong> displayed on USA.gov for a search on <em><a href="https://search.usa.gov/search?affiliate=usagov&amp;query=housing">housing</a></em>. <br />
+* <strong>A single link to a specific web page and an image</strong> displayed on WhiteHouse.gov for a search on <em><a href="https://search.whitehouse.gov/search?affiliate=wh&amp;query=jobs">jobs</a></em>.<br />
 
-<p>See the sample results page below that shows a graphics best bet displayed on <a href="https://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis">USGS.gov for a search on tsunamis</a>.</p>
+### Add a Graphics Best Bet
 
-<p><a href="https://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/best-bets-graphics.png" title="Graphics best bet highlighting tsunami links on USGS.gov" alt="Graphics best bet highlighting tsunami links on USGS.gov" /></a></p>
+<strong><em>Title.</em></strong> Add the title (up to 255 characters) of the web page or collection of web pages that you want to promote. The title is visible to searchers.
 
-<p>See also</p>
+<strong><em>Title URL.</em></strong> Add the URL of the primary web page that you want to promote. This field is optional.
 
-<ul>
-<li><strong>Two columns with a collection of links and an image</strong> displayed on USA.gov for a search on <em><a href="https://search.usa.gov/search?affiliate=usagov&amp;query=wildfires">wildfires</a></em>.</li>
-<li><strong>Two columns with a collection of links only</strong> displayed on USA.gov for a search on <em><a href="https://search.usa.gov/search?affiliate=usagov&amp;query=housing">housing</a></em>.</li>
-<li><strong>A single link to a specific web page and an image</strong> displayed on WhiteHouse.gov for a search on <em><a href="https://search.whitehouse.gov/search?affiliate=wh&amp;query=jobs">jobs</a></em>.</li>
-</ul>
+<strong><em>Status and Publish Dates.</em></strong> By default, newly created Best Bets are Active. If you don’t want your Best Bet to display, set it to Inactive. The default start date is the day on which you create the best bet. The default end date is null, so it will stay up forever until you decide to take it down. You can opt to specify other start and end dates using the date pickers.
 
+<strong><em>Image.</em></strong> You can opt to add an image.
 
-<h3>Add a Graphics Best Bet</h3>
+<strong><em>Match Keywords Only?</em></strong> You have the option of having your Best Bets display only for exact keyword matches, and not for title and link title matches. If you select this option, be sure to include <em>all</em> query terms you want the Best Bet to display for, including terms you have used in the title and description.
 
-<p><strong><em>Title.</em></strong> Add the title (up to 255 characters) of the web page or collection of web pages that you want to promote. The title is visible to searchers.</p>
+<strong><em>Keywords.</em></strong> Keywords are optional and they’re <em>not</em> visible to searchers. Add specific words or phrases that aren’t already included in the visible title or link titles. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field. Use your search Analytics to inform your keyword lists. Keywords are not case sensitive, but are exact matches.
 
-<p><strong><em>Title URL.</em></strong> Add the URL of the primary web page that you want to promote. This field is optional.</p>
+<strong><em>Links.</em></strong> Enter a title and URL for each link. There is no limit on the number of links. Use the list icons (“hamburger buttons”) on the left to rearrange the display order of the links. The two columns populate by rows, so if you have three links, you would have two links in the top row, and one link in the left column of the second row. The link titles are visible to searchers.
 
-<p><strong><em>Status and Publish Dates.</em></strong> By default, newly created Best Bets are Active. If you don't want your Best Bet to display, set it to Inactive. The default start date is the day on which you create the best bet. The default end date is null, so it will stay up forever until you decide to take it down. You can opt to specify other start and end dates using the date pickers.</p>
+## When Searchers See Your Best Bets: Graphics
 
-<p><strong><em>Image.</em></strong> You can opt to add an image.</p>
+For searchers to see a best bet on your site, it must match their query and be relevant and active.
 
-<p><strong><em>Match Keywords Only?</em></strong> You have the option of having your Best Bets display only for exact keyword matches, and not for title and link title matches. If you select this option, be sure to include <em>all</em> query terms you want the Best Bet to display for, including terms you have used in the title and description.</p>
+### It Matches Their Query
 
-<p><strong><em>Keywords.</em></strong> Keywords are optional and they're <em>not</em> visible to searchers. Add specific words or phrases that aren't already included in the visible title or link titles. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field. Use your search Analytics to inform your keyword lists. Keywords are not case sensitive, but are exact matches.</p>
+Searchers see your best bets when their query:
 
-<p><strong><em>Links.</em></strong> Enter a title and URL for each link. There is no limit on the number of links. Use the list icons ("hamburger buttons") on the left to rearrange the display order of the links. The two columns populate by rows, so if you have three links, you would have two links in the top row, and one link in the left column of the second row. The link titles are visible to searchers.</p>
+* Matches any or all words in the title, description, or link titles, or
+* Matches a keyword exactly.
 
-<h2>When Searchers See Your Best Bets: Graphics</h2>
+Matches are made within, but not across, fields.
 
-<p>For searchers to see a best bet on your site, it must match their query and be relevant and active.</p>
+A sample graphics best bet entry is below.
 
-<h3>It Matches Their Query</h3>
+    Title: Estate Tax<br />
+    Link title 1: Transfer Property After You Pass Away<br />
+    Link title 2: Estate Tax Rights<br />
+    Link title 3: Tax Rates<br />
+    Keyword 1: death tax<br />
+    Keyword 2: inheritance tax<br />
+    Keyword 3: fair market value<br />
+    Keyword 4: market value<br />
 
-<p>Searchers see your best bets when their query:</p>
+This best bet would display for searches on estate tax (exact title match), estate (partial title match), tax on the estate (title match that includes stopwords), estate taxes (title match for singular/plural variant), property tax (partial link title match), propertey tax (link title match with a slight misspelling), and death tax (exact keyword match), among other queries.
 
-<ul>
-<li>Matches any or all words in the title, description, or link titles, or</li>
-<li>Matches a keyword exactly.</li>
-</ul>
+It would <em>not</em> display for searches on death, death property, taxes after death, fair value, as keywords matches must be exact, and these queries are only partial keyword matches. It also would <em>not</em> display for estate property tax, as this is a partial match across multiple fields.
 
+### It Is Very Relevant
 
-<p>Matches are made within, but not across, fields.</p>
+After we determine which best bets match the searcher’s query, we rank their relevance and display only the most relevant. We’ll display up to two text best bets, and up to one graphics best bet. Default relevance is determined first by title, then by description (text best bets) or link titles (graphics best bets), and lastly by keywords. Date is used as a tiebreaker if the entries’ scores based on the above three factors are equal. We display the newer Best Bet.
 
-<p>A sample graphics best bet entry is below.</p>
+If you’ve selected Match Keywords Only, then only keywords are used to determine relevance.
 
-<pre><code>Title: Estate Tax  
-Link title 1: Transfer Property After You Pass Away  
-Link title 2: Estate Tax Rights  
-Link title 3: Tax Rates  
-Keyword 1: death tax  
-Keyword 2: inheritance tax  
-Keyword 3: fair market value  
-Keyword 4: market value  
-</code></pre>
+### It Is Active
 
-<p>This best bet would display for searches on estate tax (exact title match), estate (partial title match), tax on the estate (title match that includes stopwords), estate taxes (title match for singular/plural variant), property tax (partial link title match), propertey tax (link title match with a slight misspelling), and death tax (exact keyword match), among other queries.</p>
+We use <a href="/manual/color-codes.html">color coding</a> to indicate each entry’s status. 
 
-<p>It would <em>not</em> display for searches on death, death property, taxes after death, fair value, as keywords matches must be exact, and these queries are only partial keyword matches. It also would <em>not</em> display for estate property tax, as this is a partial match across multiple fields.</p>
+| Color | Status | 
+| :———— | :———————————- |
+| Green     | Active          |
+| Yellow   | Inactive |
+|   |   |
 
-<h3>It Is Very Relevant</h3>
+Active best bets are shown to searchers on your site. Inactive entries aren’t shown to searchers because they’re inactive, expired (by the publish end date), or both.
 
-<p>After we determine which best bets match the searcher's query, we rank their relevance and display only the most relevant. We'll display up to two text best bets, and up to one graphics best bet. Default relevance is determined first by title, then by description (text best bets) or link titles (graphics best bets), and lastly by keywords. Date is used as a tiebreaker if the entries' scores based on the above three factors are equal. We display the newer Best Bet.</p>
+— 
 
-<p>If you've selected Match Keywords Only, then only keywords are used to determine relevance.</p>
+Watch the recording of our February 2015 webinar <a href="https://www.youtube.com/embed/WzQocKYK0t4"><strong>Straight to the Top: Best Bets in DigitalGov Search</strong></a> (55 mins)
 
-<h3>It Is Active</h3>
+<strong><em>Did you know?</em></strong> Use the <a href="/manual/system-alert.html">Search Page Alert</a> feature to add a text message to your search results page, which will appear at all times above all search results, <em>regardless of the query</em>.
 
-<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each entry's status.</p>
+<strong><em>Did you know?</em></strong> Analyze the number of impressions and clicks and clickthru rate for each best bet on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.
 
-<table>
-<thead>
-<tr>
-<th style="text-align:left;"> Color </th>
-<th style="text-align:left;"> Status </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;"> Green&nbsp;&nbsp;&nbsp;  </td>
-<td style="text-align:left;"> Active&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Yellow   </td>
-<td style="text-align:left;"> Inactive </td>
-</tr>
-<tr>
-<td style="text-align:left;"> &nbsp; </td>
-<td style="text-align:left;"> &nbsp; </td>
-</tr>
-</tbody>
-</table>
-
-
-<p>Active best bets are shown to searchers on your site. Inactive entries aren't shown to searchers because they're inactive, expired (by the publish end date), or both.</p>
-
-<hr />
-
-<p>Watch the recording of our February 2015 webinar <a href="https://www.youtube.com/embed/WzQocKYK0t4"><strong>Straight to the Top: Best Bets in DigitalGov Search</strong></a> (55 mins)</p>
-
-<p><strong><em>Did you know?</em></strong> Use the <a href="/manual/system-alert.html">Search Page Alert</a> feature to add a text message to your search results page, which will appear at all times above all search results, <em>regardless of the query</em>.</p>
-
-<p><strong><em>Did you know?</em></strong> Analyze the number of impressions and clicks and clickthru rate for each best bet on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.</p>
-
-<p><strong><em>Did you know?</em></strong> When you use the <a href="/manual/collections.html#sitelimit">sitelimit parameter</a> to scope the search to a subsection of your website, we'll apply this sitelimit to your Best Bets so searchers see recommended pages from within that folder or subdomain only.</p>
+<strong><em>Did you know?</em></strong> When you use the <a href="/manual/collections.html#sitelimit">sitelimit parameter</a> to scope the search to a subsection of your website, we’ll apply this sitelimit to your Best Bets so searchers see recommended pages from within that folder or subdomain only.
+</p>
 
     </div>
 
@@ -316,28 +280,27 @@ Keyword 4: market value
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Best Bets: Graphics</p>
+      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Best Bets: Graphics</p>
 
 <p>Do you want to promote a specific web page or collection of web pages? Create a Graphics Best Bet.</p>
 
-<p>A best bet appears above the standard web results when a searcher's query matches the text of its title, description, or keywords.</p>
+<p>A best bet appears above the standard web results when a searcher’s query matches the text of its title, description, or keywords.</p>
 
 <p>Graphics best bets have a one or two-column layout and you can add an image. The most relevant best bet is listed under a heading, Recommended by YourSite.</p>
 
 <p>See the sample results page below that shows a text best bet displayed on <a href="http://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis">USGS.gov for a search on tsunamis</a>.</p>
 
-<p><a href="http://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/best-bets-graphics.png" title="Graphics best bet highlighting tsunami links on USGS.gov" alt="Graphics best bet highlighting tsunami links on USGS.gov" /></a></p>
+<p><a href="http://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/best-bets-graphics.png" alt="Graphics best bet highlighting tsunami links on USGS.gov" title="Graphics best bet highlighting tsunami links on USGS.gov" /></a></p>
 
 <p>There are a variety of layouts possible for graphics best bets.</p>
 
 <ul>
-<li><strong>Two columns with a collection of links and an image</strong> displayed on USA.gov for a search on <em><a href="https://search.usa.gov/search?query=wildfires&amp;affiliate=usagov">wildfires</a></em>.</li>
-<li><strong>Two columns with a collection of links only</strong> displayed on USA.gov for a search on <em><a href="https://search.usa.gov/search?affiliate=usagov&amp;query=housing">housing</a></em>.</li>
-<li><strong>One column with a link to a specific web page and an image</strong> displayed on WhiteHouse.gov for a search on <em><a href="https://search.whitehouse.gov/search?affiliate=wh&amp;query=jobs">jobs</a></em>.</li>
+  <li><strong>Two columns with a collection of links and an image</strong> displayed on USA.gov for a search on <em><a href="https://search.usa.gov/search?query=wildfires&amp;affiliate=usagov">wildfires</a></em>.</li>
+  <li><strong>Two columns with a collection of links only</strong> displayed on USA.gov for a search on <em><a href="https://search.usa.gov/search?affiliate=usagov&amp;query=housing">housing</a></em>.</li>
+  <li><strong>One column with a link to a specific web page and an image</strong> displayed on WhiteHouse.gov for a search on <em><a href="https://search.whitehouse.gov/search?affiliate=wh&amp;query=jobs">jobs</a></em>.</li>
 </ul>
 
-
-<h2>Add a Graphics Best Bet</h2>
+<h2 id="add-a-graphics-best-bet">Add a Graphics Best Bet</h2>
 
 <p><strong><em>Title.</em></strong> Add the title (up to 255 characters) of the web page or collection of web pages that you want to promote. The title is visible to searchers.</p>
 
@@ -349,24 +312,23 @@ Keyword 4: market value
 
 <p><strong><em>Image.</em></strong> You can opt to add an image.</p>
 
-<p><strong><em>Keywords.</em></strong> Keywords are optional and they're <em>not</em> visible to searchers. Add specific words or phrases that aren't already included in the visible title or link titles. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.</p>
+<p><strong><em>Keywords.</em></strong> Keywords are optional and they’re <em>not</em> visible to searchers. Add specific words or phrases that aren’t already included in the visible title or link titles. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.</p>
 
 <p><strong><em>Links.</em></strong> Enter a title and URL for each link. There is no limit on the number of links. Use the three horizontal bars on the left to rearrange the display order of the links. If you select a two-column layout above, links are displayed in newspaper-style format, with an automatic break for columns depending on how many links you list. The link titles are visible to searchers.</p>
 
-<h2>When Searchers See Your Best Bets</h2>
+<h2 id="when-searchers-see-your-best-bets">When Searchers See Your Best Bets</h2>
 
 <p>For searchers to see a best bet on your site, it must match their query and be relevant and active.</p>
 
-<h3>It Matches Their Query</h3>
+<h3 id="it-matches-their-query">It Matches Their Query</h3>
 
 <p>Searchers see your best bets when their query:</p>
 
 <ul>
-<li>Matches any or all words in the title,</li>
-<li>Matches any of all words in the link titles, or</li>
-<li>Matches a keyword exactly.</li>
+  <li>Matches any or all words in the title,</li>
+  <li>Matches any of all words in the link titles, or</li>
+  <li>Matches a keyword exactly.</li>
 </ul>
-
 
 <p>Matches are made within, but not across, fields.</p>
 
@@ -384,41 +346,40 @@ Keyword 4: market value
 
 <p>This best bet would display for searches on estate tax (exact title match), estate (partial title match), tax on the estate (title match that includes stopwords), estate taxes (title match for singular/plural variant), property tax (partial link title match), propertey tax (link title match with a slight misspelling), and death tax (exact keyword match), among other queries.</p>
 
-<p>It would <em>not</em> display for searches on death, death property, taxes after death, fair value, or estate property tax as they're only partial keyword or cross field matches.</p>
+<p>It would <em>not</em> display for searches on death, death property, taxes after death, fair value, or estate property tax as they’re only partial keyword or cross field matches.</p>
 
-<h3>It Is Very Relevant</h3>
+<h3 id="it-is-very-relevant">It Is Very Relevant</h3>
 
-<p>After we determine best bets match the searcher's query, we determine their relevance and display only the most relevant best bet. Relevance is determined, in order, first by title, then by link titles, and lastly by keywords. Date is used as a tiebreaker if the entries' scores based on the above three factors are equal.</p>
+<p>After we determine best bets match the searcher’s query, we determine their relevance and display only the most relevant best bet. Relevance is determined, in order, first by title, then by link titles, and lastly by keywords. Date is used as a tiebreaker if the entries’ scores based on the above three factors are equal.</p>
 
-<h3>It Is Active</h3>
+<h3 id="it-is-active">It Is Active</h3>
 
-<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each entry's status.</p>
+<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each entry’s status.</p>
 
 <table>
-<thead>
-<tr>
-<th style="text-align:left;"> Color </th>
-<th style="text-align:left;"> Status </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;"> Green&nbsp;&nbsp;&nbsp;  </td>
-<td style="text-align:left;"> Active&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Yellow   </td>
-<td style="text-align:left;"> Inactive </td>
-</tr>
-<tr>
-<td style="text-align:left;"> &nbsp; </td>
-<td style="text-align:left;"> &nbsp; </td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th style="text-align: left">Color</th>
+      <th style="text-align: left">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Green   </td>
+      <td style="text-align: left">Active         </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Yellow</td>
+      <td style="text-align: left">Inactive</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
 </table>
 
-
-<p>Active best bets are shown to searchers on your site. Inactive entries aren't shown to searchers because they're inactive, expired (by the publish end date), or both.</p>
+<p>Active best bets are shown to searchers on your site. Inactive entries aren’t shown to searchers because they’re inactive, expired (by the publish end date), or both.</p>
 
 <hr />
 
@@ -461,107 +422,103 @@ Keyword 4: market value
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite</p>
+      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite</p>
 
 <p>We use color coding the Admin Center to indicate the status of a few types of items.</p>
 
-<h2><a href="/manual/users.html">Manage Users</a></h2>
+<h2 id="manage-usersmanualusershtml"><a href="/manual/users.html">Manage Users</a></h2>
 
 <table>
-<thead>
-<tr>
-<th style="text-align:left;"> Color </th>
-<th style="text-align:left;"> Status </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;"> No color&nbsp;&nbsp;&nbsp; </td>
-<td style="text-align:left;"> Approved&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Yellow  </td>
-<td style="text-align:left;"> Pending - requires approval or email verification </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Red   </td>
-<td style="text-align:left;"> Not approved </td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th style="text-align: left">Color</th>
+      <th style="text-align: left">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">No color   </td>
+      <td style="text-align: left">Approved         </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Yellow</td>
+      <td style="text-align: left">Pending - requires approval or email verification</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Red</td>
+      <td style="text-align: left">Not approved</td>
+    </tr>
+  </tbody>
 </table>
 
-
-<h2><a href="/manual/rss.html">RSS Feeds</a></h2>
+<h2 id="rss-feedsmanualrsshtml"><a href="/manual/rss.html">RSS Feeds</a></h2>
 
 <table>
-<thead>
-<tr>
-<th style="text-align:left;"> Color </th>
-<th style="text-align:left;"> Status </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;"> Green&nbsp;&nbsp;&nbsp; </td>
-<td style="text-align:left;"> Feed indexed, no errors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Yellow  </td>
-<td style="text-align:left;"> Pending Indexing </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Red   </td>
-<td style="text-align:left;"> Feed indexed, but error in one or more items </td>
-</tr>
-<tr>
-<td style="text-align:left;"> &nbsp; </td>
-<td style="text-align:left;"> &nbsp; </td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th style="text-align: left">Color</th>
+      <th style="text-align: left">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Green   </td>
+      <td style="text-align: left">Feed indexed, no errors      </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Yellow</td>
+      <td style="text-align: left">Pending Indexing</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Red</td>
+      <td style="text-align: left">Feed indexed, but error in one or more items</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
 </table>
-
 
 <p>Click on the name of the feed to see more detailed information about its status. Possible error messages follow.</p>
 
 <ul>
-<li>404 Not Found</li>
-<li>Feed looks empty</li>
-<li>Description can't be blank</li>
-<li>Title can't be blank</li>
-<li>Missing link field</li>
-<li>Missing pubDate field</li>
-<li>Link is not a valid URL</li>
-<li>Linked URL does not exist (HTTP 404)</li>
+  <li>404 Not Found</li>
+  <li>Feed looks empty</li>
+  <li>Description can’t be blank</li>
+  <li>Title can’t be blank</li>
+  <li>Missing link field</li>
+  <li>Missing pubDate field</li>
+  <li>Link is not a valid URL</li>
+  <li>Linked URL does not exist (HTTP 404)</li>
 </ul>
 
-
-<h2><a href="/manual/best-bets.html">Best Bets</a>: Text or Graphics</h2>
+<h2 id="best-betsmanualbest-betshtml-text-or-graphics"><a href="/manual/best-bets.html">Best Bets</a>: Text or Graphics</h2>
 
 <table>
-<thead>
-<tr>
-<th style="text-align:left;"> Color </th>
-<th style="text-align:left;"> Status </th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;"> Green&nbsp;&nbsp;&nbsp;  </td>
-<td style="text-align:left;"> Active&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
-</tr>
-<tr>
-<td style="text-align:left;"> Yellow   </td>
-<td style="text-align:left;"> Inactive </td>
-</tr>
-<tr>
-<td style="text-align:left;"> &nbsp; </td>
-<td style="text-align:left;"> &nbsp; </td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th style="text-align: left">Color</th>
+      <th style="text-align: left">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Green   </td>
+      <td style="text-align: left">Active         </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Yellow</td>
+      <td style="text-align: left">Inactive</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
 </table>
 
-
-<p>Active best bets are shown to searchers on your site. Inactive entries aren't shown to searchers because they're inactive, expired (by the publish end date), or both.</p>
+<p>Active best bets are shown to searchers on your site. Inactive entries aren’t shown to searchers because they’re inactive, expired (by the publish end date), or both.</p>
 
     </div>
 

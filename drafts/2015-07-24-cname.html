@@ -105,22 +105,20 @@
     <p>We offer DNS masking, which allows you to show searchers <code>search.YOURSITE.gov</code> (instead of <code>search.USA.gov</code>). Follow these three steps to mask your domain.</p>
 
 <ol>
-<li>Email us at <a href="&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#58;&#115;&#x65;&#97;&#114;&#99;&#104;&#64;&#x73;&#x75;&#x70;&#x70;&#111;&#114;&#116;&#46;&#100;&#x69;&#103;&#x69;&#x74;&#x61;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#x6f;&#118;">&#115;&#x65;&#97;&#x72;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#111;&#114;&#x74;&#46;&#100;&#x69;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#111;&#118;&#x2e;&#103;&#111;&#118;</a> and ask us to mask your domain.</li>
-<li>Create a CNAME in your external DNS records for <code>search.yoursite.gov</code>. Point it to <code>search.usa.gov.edgekey.net</code>.</li>
-<li>When the setup is complete, change the <a href="/manual/code.html">code for your form</a> action from <code>search.usa.gov</code> to <code>search.yoursite.gov</code>.</li>
+  <li>Email us at <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;</a> and ask us to mask your domain.</li>
+  <li>Create a CNAME in your external DNS records for <code>search.yoursite.gov</code>. Point it to <code>search.usa.gov.edgekey.net</code>.</li>
+  <li>When the setup is complete, change the <a href="/manual/code.html">code for your form</a> action from <code>search.usa.gov</code> to <code>search.yoursite.gov</code>.</li>
 </ol>
-
 
 <p>By default, we set up <code>search.YOURSITE.gov</code> (such as <code>search.nih.gov</code>). If this subdomain is already used by another application, you can request <code>find.YOURSITE.gov</code> or <code>findit.YOURSITE.gov</code>.</p>
 
-<p>To use a CNAME over HTTPS, your agency will need to provide the SSL certificate that we'd put on our infrastructure. Specifically:</p>
+<p>To use a CNAME over HTTPS, your agency will need to provide the SSL certificate that we’d put on our infrastructure. Specifically:</p>
 
 <ol>
-<li>Purchase</li>
-<li>Renew</li>
-<li>Validate with certificate authorities</li>
+  <li>Purchase</li>
+  <li>Renew</li>
+  <li>Validate with certificate authorities</li>
 </ol>
-
 
 <p>You will also need to update your search form and javascript <a href="/manual/code.html">codes</a> from <code>http</code> to <code>https</code>.</p>
 
@@ -129,7 +127,8 @@
 <p><strong><em>Troubleshooting tip:</em></strong> Many agencies have both internal and external DNS. Be
 sure to update your <em>external</em> DNS records (step 2) before changing your form code (step 3).</p>
 
-<p><strong><em>Troubleshooting tip:</em></strong>  Once the CNAME is set up, if visitors to your site happen to truncate the URL in the browser bar to <code>http://search.yoursite.gov</code> (without any parameters), they're automatically redirected to your homepage at <code>http://www.yoursite.gov</code>.</p>
+<p><strong><em>Troubleshooting tip:</em></strong>  Once the CNAME is set up, if visitors to your site happen to truncate the URL in the browser bar to <code>http://search.yoursite.gov</code> (without any parameters), they’re automatically redirected to your homepage at <code>http://www.yoursite.gov</code>.</p>
+
 
   </div>
 

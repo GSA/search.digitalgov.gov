@@ -97,7 +97,7 @@
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/drafts/2017-09-20-searchgov-blog.html">Search.gov -- The Road Ahead in 2018</a>
+    <a href="/drafts/2017-09-21-searchgov-blog.html">Search.gov -- The Road Ahead in 2018</a>
   </h1>
   
 
@@ -114,7 +114,7 @@
 
 <p>Speaking of easy to use: we’re changing our name to make things simpler. In the past, we’ve been FirstGov Search, FirstSearch, USAGov Search, USASearch, and are currently DigitalGov Search. Our new name is short, simple, and easy to remember.</p>
 
-<h2>Overview: What It Means To Use Our Indexes Instead of Commercial Web Indexes</h2>
+<h2 id="overview-what-it-means-to-use-our-indexes-instead-of-commercial-web-indexes">Overview: What It Means To Use Our Indexes Instead of Commercial Web Indexes</h2>
 
 <p>Our current default is to serve search results from Bing’s index. Once a query is made, we get a set of results from Bing via API and display them on your search results page. We also use Google’s index to support certain Collections where Bing does not provide results. However, this past spring, Google announced they will be shutting down the API we use for these searches in March 2018. This would leave us with a gap in our service.</p>
 
@@ -122,37 +122,37 @@
 
 <p>In the most basic terms, here’s what we’ll be doing:</p>
 
-<p><img src="/img/basic-indexing-flow.png" title="Flowchart showing the major phases of search indexing: Discover, Parse, Index, and Search." alt="alt text" /></p>
+<p><img src="/img/basic-indexing-flow.png" alt="alt text" title="Flowchart showing the major phases of search indexing: Discover, Parse, Index, and Search." /></p>
 
 <p><em><a href="/img/searchgov-flow.png" title="How Search.gov Works">Detailed diagram</a></em></p>
 
 <p>Below are the options for how you can tell us about your site content. The list is divided into sections based on whether or not your website is on a content management system (CMS). There will be two primary ways to get content into our system: have your CMS send content to us via the i14y API, or send us a list of URLs.</p>
 
-<h2>Customers with Content Management Systems (CMS)</h2>
+<h2 id="customers-with-content-management-systems-cms">Customers with Content Management Systems (CMS)</h2>
 
-<h3>Preferred Option: i14y Content Indexing API (i14y)</h3>
+<h3 id="preferred-option-i14y-content-indexing-api-i14y">Preferred Option: i14y Content Indexing API (i14y)</h3>
 
 <p>Since 2015, we’ve offered an API called <a href="https://search.digitalgov.gov/developer/i14y.html">i14y</a>. I14y receives real-time content updates, which gives you full control over your search results. You can update and remove content, and decide exactly what will be shown as the result title for each item.</p>
 
 <p>We are excited to get additional CMS customers using this powerful feature.</p>
 
-<h4>Customers with Drupal - We have a Drupal module for i14y!</h4>
+<h4 id="customers-with-drupal---we-have-a-drupal-module-for-i14y">Customers with Drupal - We have a Drupal module for i14y!</h4>
 
 <p>For customers who use Drupal as their CMS, our <a href="https://www.drupal.org/project/usasearch">Drupal module</a> eliminates the need for programming effort around the i14y API. This module is available for websites in Drupal 7 and 8.</p>
 
-<h4>Customers with Drupal + Content not in the CMS</h4>
+<h4 id="customers-with-drupal--content-not-in-the-cms">Customers with Drupal + Content not in the CMS</h4>
 
 <p>If your site is on Drupal but you also have published material outside of Drupal (such as PDFs or old web pages), we’ll be able to search both CMS and non-CMS content together.</p>
 
 <p>Your non-CMS material will be indexed via the URL method described below, while your Drupal content will come to us via the module. <em>Note:</em> PDFs count as non-CMS content even if they’re attached to Drupal nodes. Drupal doesn’t store the text of PDFs in its tables, so the module can’t send it to us.</p>
 
-<h4>Customers with other CMSs</h4>
+<h4 id="customers-with-other-cmss">Customers with other CMSs</h4>
 
 <p>If you use a CMS that’s not Drupal, we encourage you to develop an integration with i14y and open source it so that other agencies can leverage it as well - a rising tide lifts all boats! If you’re unable to develop an integration, however, read on for other options.</p>
 
-<h2>Customers without Content Management Systems</h2>
+<h2 id="customers-without-content-management-systems">Customers without Content Management Systems</h2>
 
-<h3>Indexing from Lists of URLs</h3>
+<h3 id="indexing-from-lists-of-urls">Indexing from Lists of URLs</h3>
 
 <p>In FY18, we will have the ability to index content from lists of URLs. You’ll provide a list of URLs so we know what content to index, and we will develop the title and other metadata from the pages you point us to.</p>
 
@@ -160,13 +160,13 @@
 
 <p>If you’re unable to send us a list of URLs, please schedule a time to talk.</p>
 
-<p>If you’re unable to send us a list of URLs, please <a href="mailto:search@support.digitalgov.gov">schedule a time</a> to talk with us.</p>
+<p>If you’re unable to send us a list of URLs, please <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">schedule a time</a> to talk with us.</p>
 
-<h2>Customers who send us RSS feeds</h2>
+<h2 id="customers-who-send-us-rss-feeds">Customers who send us RSS feeds</h2>
 
 <p>For customers who have developed RSS feeds for our system: that process will remain unchanged. We’ve heard from many of you that maintenance is laborious, so you may want to investigate our new approaches, but you don’t have to change anything if you don’t want to.</p>
 
-<h2>Next Steps and Action Items</h2>
+<h2 id="next-steps-and-action-items">Next Steps and Action Items</h2>
 
 <p>We are excited about our new direction. You can follow our progress by reading our monthly <a href="https://search.digitalgov.gov/tagged/release-notes/">Release Notes</a>.</p>
 
@@ -184,13 +184,14 @@
 Call in number: 866-881-7035 / Passcode: 7847593#
 </code></pre>
 
-<p>We also welcome email <a href="mailto:search@support.digitalgov.gov">questions and comments</a>.</p>
+<p>We also welcome email <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">questions and comments</a>.</p>
 
 <p>The Search program has grown and evolved since its <a href="/customers.html">inception in September 2000</a>. We look forward to this next phase of service to you and the public.</p>
 
 <p>Happy searching,</p>
 
 <p>The Search.gov Team</p>
+
 
   </div>
 
@@ -205,7 +206,7 @@ Call in number: 866-881-7035 / Passcode: 7847593#
     
     
     
-    <a href="/drafts/2017-09-20-searchgov-blog.html">
+    <a href="/drafts/2017-09-21-searchgov-blog.html">
       <time></time>
     </a>
   </div>

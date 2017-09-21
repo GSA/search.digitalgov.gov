@@ -102,47 +102,46 @@
   
 
   <div class='post-content'>
-    <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > Clicks</p>
+    <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Analytics &gt; Clicks</p>
 
 <p>The Clicks page shows what searchers clicked on from your search results pages, and the number of times each of those items was clicked during the selected date range. The current month is shown by default, and the date can be adjusted using the date selectors at the top of the page and re-generating the report.</p>
 
-<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
+<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site’s visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
 
 <p>Data are available in the Admin Center from August 2014 (13 months).</p>
 
-<h2>Reading the Report Table</h2>
+<h2 id="reading-the-report-table">Reading the Report Table</h2>
 
-<h3>Top URLs Clicked</h3>
+<h3 id="top-urls-clicked">Top URLs Clicked</h3>
 
-<p><a href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/Analytics_Clicks_800.png" target="_blank" alt="Top clicks from results pages"><img style="float: right;" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/Analytics_Clicks_175.png"></a>The top 1,000 most clicked-on URLs from your results page for the selected time period, with the most popular first.</p>
+<p><a href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/Analytics_Clicks_800.png" target="_blank" alt="Top clicks from results pages"><img style="float: right;" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/Analytics_Clicks_175.png" /></a>The top 1,000 most clicked-on URLs from your results page for the selected time period, with the most popular first.</p>
 
-<h3>Download Details</h3>
+<h3 id="download-details">Download Details</h3>
 
 <p>You can download the raw click logs for any URL in the list. The CSV (comma separated values) file has one line for each time this URL was clicked. Details avialable include:</p>
 
 <ul>
-<li><em>Date</em> and <em>Time</em> of the click,</li>
-<li><em>Query</em>: The query they ran before clicking the search result,</li>
-<li><em>Position</em>: Where in the results page was the result they clicked, e.g. <strong>5</strong> means the searcher clicked the fifth result in the list,</li>
-<li><em>Request</em>: The clicked URL (It is embedded in the request URL. Look for the text following ‘u=’.) and its position on the page,</li>
-<li><em>Referrer</em>: The webpage the person was on when they ran the search, this column also includes the query,</li>
-<li><em>Vertical</em> and <em>Modules</em>: The modules loaded in response to the query (Our <a href="/manual/module-codes.html">Module Codes</a> tip provides a key of the codes and names.),</li>
-<li><em>Device</em>, <em>Browser</em>, and <em>OS</em>: The kind of device and browser they were using, and</li>
-<li><em>Country Code</em> and <em>Region</em>: Where the user was, physically.</li>
+  <li><em>Date</em> and <em>Time</em> of the click,</li>
+  <li><em>Query</em>: The query they ran before clicking the search result,</li>
+  <li><em>Position</em>: Where in the results page was the result they clicked, e.g. <strong>5</strong> means the searcher clicked the fifth result in the list,</li>
+  <li><em>Request</em>: The clicked URL (It is embedded in the request URL. Look for the text following ‘u=’.) and its position on the page,</li>
+  <li><em>Referrer</em>: The webpage the person was on when they ran the search, this column also includes the query,</li>
+  <li><em>Vertical</em> and <em>Modules</em>: The modules loaded in response to the query (Our <a href="/manual/module-codes.html">Module Codes</a> tip provides a key of the codes and names.),</li>
+  <li><em>Device</em>, <em>Browser</em>, and <em>OS</em>: The kind of device and browser they were using, and</li>
+  <li><em>Country Code</em> and <em>Region</em>: Where the user was, physically.</li>
 </ul>
 
+<h3 id="of-clicks"># of Clicks</h3>
 
-<h3># of Clicks</h3>
+<p><a href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/ClicksQueries_800.png" target="_blank" alt="Report of Queries that people ran before clicking on a particular page"><img style="float: right;" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/ClicksQueries_175.png" /></a>Select a hyperlinked number in the <code># of Clicks</code> column to view the queries that led to the clicks for that URL (the <strong>Queries leading to a Click</strong> report).</p>
 
-<p><a href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/ClicksQueries_800.png" target="_blank" alt="Report of Queries that people ran before clicking on a particular page"><img style="float: right;" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/ClicksQueries_175.png"></a>Select a hyperlinked number in the <code># of Clicks</code> column to view the queries that led to the clicks for that URL (the <strong>Queries leading to a Click</strong> report).</p>
-
-<p>If you then click on a number in the <code># of Clicks</code> column for a query on the Queries leading to a Click page, you will see all the URLs <a href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/ClicksfromQuery_800.png" target="_blank" alt="Report of pages people clicked on after searching for a given term"><img style="float: right;" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/ClicksfromQuery_175.png"></a>that were clicked on from that query's results pages (the <strong>Clicks from a Query</strong> report). This is the same report you see when you follow a <code># of Clicks</code> link from the <a href="/manual/queries.html">Queries page</a>.</p>
+<p>If you then click on a number in the <code># of Clicks</code> column for a query on the Queries leading to a Click page, you will see all the URLs <a href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/ClicksfromQuery_800.png" target="_blank" alt="Report of pages people clicked on after searching for a given term"><img style="float: right;" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/ClicksfromQuery_175.png" /></a>that were clicked on from that query’s results pages (the <strong>Clicks from a Query</strong> report). This is the same report you see when you follow a <code># of Clicks</code> link from the <a href="/manual/queries.html">Queries page</a>.</p>
 
 <p>You can loop through or drill down into this list for any set of clicks and queries.</p>
 
 <hr />
 
-<p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> gives a bird's-eye view of the number of <a href="/manual/queries.html">queries</a> and clicks each month. The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site today.</p>
+<p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> gives a bird’s-eye view of the number of <a href="/manual/queries.html">queries</a> and clicks each month. The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site today.</p>
 
   </div>
 

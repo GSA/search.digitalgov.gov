@@ -102,33 +102,33 @@
   
 
   <div class='post-content'>
-    <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Analytics > 3rd Party Tracking</p>
+    <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Analytics &gt; 3rd Party Tracking</p>
 
 <p>Do you want your search results page to run third-party web services such as Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?</p>
 
-<p>Input the JavaScript code you'd like to call from your search results page. Click submit to send us your request. We'll input your code for you and send you an email to confirm that we've done it.</p>
+<p>Input the JavaScript code you’d like to call from your search results page. Click submit to send us your request. We’ll input your code for you and send you an email to confirm that we’ve done it.</p>
 
 <p>Some tips for commonly used third-party web services follow.</p>
 
 <p><strong><em>Note</em></strong>: We do not currently support Google Tag Manager. You will need to submit all of the scripts you are managing in your Google Tag Manager setup.</p>
 
-<h2>Google Analytics Tip</h2>
+<h2 id="google-analytics-tip">Google Analytics Tip</h2>
 
-<p>Within your Google Analytics account, select the option, <em>Do Track Site Search</em>. Set the query parameter as <em>query</em>. For more information, read Google's tip, <a href="https://support.google.com/analytics/answer/1012264?hl=en&amp;ref_topic=1031951">Set Up and Configure Site Search</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+<p>Within your Google Analytics account, select the option, <em>Do Track Site Search</em>. Set the query parameter as <em>query</em>. For more information, read Google’s tip, <a href="https://support.google.com/analytics/answer/1012264?hl=en&amp;ref_topic=1031951">Set Up and Configure Site Search</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
 
-<p>Additionally, if you've requested <a href="cname.html">domain masking</a> and you want to include the analytics for your <em>search.agency.gov</em> subdomain with your main <em>agency.gov</em> domain, you'll need to set your domain in your Google Analytics JavaScript by including <code>_gaq.push(['_setDomainName', 'agency.gov']);</code>.</p>
+<p>Additionally, if you’ve requested <a href="cname.html">domain masking</a> and you want to include the analytics for your <em>search.agency.gov</em> subdomain with your main <em>agency.gov</em> domain, you’ll need to set your domain in your Google Analytics JavaScript by including <code>_gaq.push(['_setDomainName', 'agency.gov']);</code>.</p>
 
-<p>For more information, read Google's tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
+<p>For more information, read Google’s tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
 
 <p>The code you submit should look something like one of the following two scripts.</p>
 
-<h3>Google Analytics Code (Older Format)</h3>
+<h3 id="google-analytics-code-older-format">Google Analytics Code (Older Format)</h3>
 
 <pre><code> &lt;script type="text/javascript"&gt;
  var _gaq = _gaq || []; 
  _gaq.push(['_setAccount', 'UA-########-1']); 
  _gaq.push(['_trackPageview']);
-
+ 
  (function() { 
  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
  ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
@@ -137,7 +137,7 @@
  &lt;/script&gt;
 </code></pre>
 
-<h3>Google Analytics Code (Newer Format)</h3>
+<h3 id="google-analytics-code-newer-format">Google Analytics Code (Newer Format)</h3>
 
 <pre><code> &lt;script type="text/javascript"&gt;
  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -147,42 +147,48 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
  &lt;/script&gt;
 </code></pre>
 
-<h2>Digital Analytics Program Tip</h2>
+<h2 id="digital-analytics-program-tip">Digital Analytics Program Tip</h2>
 
-<p>Does your federal agency participate in the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> (DAP)?  You don't need to do anything. We're already fully integrated with DAP.</p>
+<p>Does your federal agency participate in the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> (DAP)?  You don’t need to do anything. We’re already fully integrated with DAP.</p>
 
-<h2>ForeSee Tip</h2>
+<h2 id="foresee-tip">ForeSee Tip</h2>
 
 <p>Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
 
 <ol>
-<li><p>Email us at <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#x6f;&#58;&#x73;&#x65;&#97;&#x72;&#99;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#x6f;&#114;&#x74;&#46;&#100;&#105;&#x67;&#x69;&#x74;&#97;&#x6c;&#x67;&#x6f;&#x76;&#46;&#x67;&#111;&#118;">&#x73;&#101;&#x61;&#114;&#99;&#104;&#64;&#115;&#117;&#112;&#x70;&#x6f;&#x72;&#116;&#x2e;&#100;&#105;&#x67;&#x69;&#x74;&#x61;&#108;&#x67;&#111;&#118;&#46;&#x67;&#111;&#118;</a> to <a href="cname.html">set up a CNAME</a> for search.youragency.gov.</p></li>
-<li><p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
+  <li>
+    <p>Email us at <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;</a> to <a href="cname.html">set up a CNAME</a> for search.youragency.gov.</p>
+  </li>
+  <li>
+    <p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
 
-<p> <strong>Find =></strong> 'files': '/fsrscripts/',</p>
+    <p><strong>Find =&gt;</strong> ‘files’: ‘/fsrscripts/’,</p>
 
-<p> <strong>and replace it with =></strong> 'files': '//www.youragency.gov/fsrscripts/',</p>
+    <p><strong>and replace it with =&gt;</strong> ‘files’: ‘//www.youragency.gov/fsrscripts/’,</p>
 
-<p> <em>(Or, find => 'files': '/foresee/', and replace it with => 'files': '//www.youragency/foresee/',)</em></p>
+    <p><em>(Or, find =&gt; ‘files’: ‘/foresee/’, and replace it with =&gt; ‘files’: ‘//www.youragency/foresee/’,)</em></p>
 
-<p> in the following five files.</p>
+    <p>in the following five files.</p>
 
-<ul>
-<li>foresee-trigger.js</li>
-<li>foresee-tracker.js</li>
-<li>foresee-alive.js</li>
-<li>foresee-qualifier.js</li>
-<li>foresee-test.js</li>
-</ul>
-</li>
-<li><p>Submit your foresee-trigger.js via our Admin Center. It should look something like the following script. <code>&lt;script type="text/javascript" src="//www.youragency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;</code></p></li>
-<li><p>We'll send you an email to confirm that we've set up both your CNAME and added the script for your foresee-trigger.js file.</p></li>
+    <ul>
+      <li>foresee-trigger.js</li>
+      <li>foresee-tracker.js</li>
+      <li>foresee-alive.js</li>
+      <li>foresee-qualifier.js</li>
+      <li>foresee-test.js</li>
+    </ul>
+  </li>
+  <li>
+    <p>Submit your foresee-trigger.js via our Admin Center. It should look something like the following script. <code>&lt;script type="text/javascript" src="//www.youragency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;</code></p>
+  </li>
+  <li>
+    <p>We’ll send you an email to confirm that we’ve set up both your CNAME and added the script for your foresee-trigger.js file.</p>
+  </li>
 </ol>
-
 
 <hr />
 
-<p><strong><em>Did you know?</em></strong> We use Google Analytics Web analytics software&mdash;our own tag plus the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag&mdash;by default. Email us at <a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#115;&#x65;&#97;&#114;&#x63;&#x68;&#x40;&#115;&#x75;&#x70;&#x70;&#111;&#114;&#116;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#x61;&#x6c;&#x67;&#x6f;&#x76;&#x2e;&#103;&#x6f;&#x76;">&#x73;&#x65;&#97;&#114;&#99;&#104;&#x40;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#x69;&#x74;&#x61;&#108;&#x67;&#111;&#x76;&#46;&#x67;&#111;&#x76;</a> if you'd like to opt out. Learn more about our <a href="http://www.digitalgov.gov/about/policies/">site policies</a> and <a href="../tos.html">terms of service</a>.</p>
+<p><strong><em>Did you know?</em></strong> We use Google Analytics Web analytics software—our own tag plus the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a> tag—by default. Email us at <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;</a> if you’d like to opt out. Learn more about our <a href="http://www.digitalgov.gov/about/policies/">site policies</a> and <a href="../tos.html">terms of service</a>.</p>
 
   </div>
 

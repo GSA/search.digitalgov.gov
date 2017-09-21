@@ -108,7 +108,7 @@
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > <a href="/manual/domains.html">Domains</a> > Advanced</p>
+      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; <a href="/manual/domains.html">Domains</a> &gt; Advanced</p>
 
 <p>Is content missing from your search results? Do you want to have RSS content appear in your main page search results?</p>
 
@@ -118,69 +118,67 @@
 
 <p><strong>Note to our i14y customers:</strong> Supplemental content will not appear for customers using our <a href="/developer/i14y.html">i14y content indexing API</a>.</p>
 
-<h2>Adding Content via Supplemental Feed</h2>
+<h2 id="adding-content-via-supplemental-feed">Adding Content via Supplemental Feed</h2>
 
-<p>You can use an RSS feed to add URLs. The feed is useful if you'd like to automate the process, add multiple URLs, or both.</p>
+<p>You can use an RSS feed to add URLs. The feed is useful if you’d like to automate the process, add multiple URLs, or both.</p>
 
-<p>Enter the URL of your RSS feed. Click <code>Submit</code>. We'll fetch each URL in your feed and index the title, description (optional), and the full text of the document/webpage for the items you provide. Please be sure to follow our <a href="/manual/rss.html">schema</a>, and note that we will only index the items that are listed in the feed.</p>
+<p>Enter the URL of your RSS feed. Click <code>Submit</code>. We’ll fetch each URL in your feed and index the title, description (optional), and the full text of the document/webpage for the items you provide. Please be sure to follow our <a href="/manual/rss.html">schema</a>, and note that we will only index the items that are listed in the feed.</p>
 
 <p>You can see the list of URLs we have indexed from your feed by viewing the Supplemental URLs section.</p>
 
-<p>Delete a URL added via RSS feed by deleting the item from your RSS feed. We'll remove the URL from our index the next time we fetch your RSS feed (we fetch saved feeds once per day, in the evening in Eastern Time; for brand new feeds, we fetch as soon as you hit <code>Submit</code> on the feed URL).</p>
+<p>Delete a URL added via RSS feed by deleting the item from your RSS feed. We’ll remove the URL from our index the next time we fetch your RSS feed (we fetch saved feeds once per day, in the evening in Eastern Time; for brand new feeds, we fetch as soon as you hit <code>Submit</code> on the feed URL).</p>
 
 <p>You can also delete all of the URLs added via the RSS feed by deleting the RSS feed itself.</p>
 
-<p><strong>Note:</strong> We can't restore URLs that don't exist within your current feed. Please don't remove items from the feed unless you want them to be removed from the index. You can add a feed that contains up to 1,000 items on your own. If you have a feed that will include more than 1,000 items, please contact us.</p>
+<p><strong>Note:</strong> We can’t restore URLs that don’t exist within your current feed. Please don’t remove items from the feed unless you want them to be removed from the index. You can add a feed that contains up to 1,000 items on your own. If you have a feed that will include more than 1,000 items, please contact us.</p>
 
-<p><a name="supplemental-urls"></a></p>
+<p><a name="supplemental-urls"></a>
+## Adding Content via the Supplemental URLs Section</p>
 
-<h2>Adding Content via the Supplemental URLs Section</h2>
-
-<p>You can also manually add a specific URL on the Supplemental URLs page. We'll fetch each URL you add manually and we'll index the title, description, and the full text of the document/webpage for the link you provide. Note: You can’t manually add a Supplemental URL if it has already been added by via Supplemental feed.</p>
+<p>You can also manually add a specific URL on the Supplemental URLs page. We’ll fetch each URL you add manually and we’ll index the title, description, and the full text of the document/webpage for the link you provide. Note: You can’t manually add a Supplemental URL if it has already been added by via Supplemental feed.</p>
 
 <p>Delete a manually added URL by selecting <code>Remove</code> within the list of supplemental URLs.</p>
 
 <p>The source column in the crawl report shows how you added the URL, via an RSS feed or manually.</p>
 
-<h2>How Supplemental Content Appears on Your Search Results Page</h2>
+<h2 id="how-supplemental-content-appears-on-your-search-results-page">How Supplemental Content Appears on Your Search Results Page</h2>
 
 <p>We display titles as they are provided in the feed or as you entered them manually.</p>
 
 <p>We display descriptions as follows:</p>
 
 <ul>
-<li>If a searcher’s term matches terms in the description you provided: We'll display the description exactly as you provided it.</li>
-<li>If a searcher’s term only matches terms in the full text of the document: We’ll display snippets taken from the full text.</li>
+  <li>If a searcher’s term matches terms in the description you provided: We’ll display the description exactly as you provided it.</li>
+  <li>If a searcher’s term only matches terms in the full text of the document: We’ll display snippets taken from the full text.</li>
 </ul>
-
 
 <p>By default, supplemental content will appear after all Bing commercial search results have been shown. For example, a search on DigitalGov.gov for “serverless architecture” displays results from Bing’s index on page 1.</p>
 
 <p>After hitting ‘next’ to view page 2, supplemental content is served.</p>
 
-<h3>Page 1:</h3>
+<h3 id="page-1">Page 1:</h3>
 
-<p><img class="img-responsive" src="https://search.digitalgov.gov/img/Commercial-Results-First-Page-1.png" alt="Commercial Results are Displayed on Page One of the DigitalGov.gov Search Results Page"></img></p>
+<p><img class="img-responsive" src="https://search.digitalgov.gov/img/Commercial-Results-First-Page-1.png" alt="Commercial Results are Displayed on Page One of the DigitalGov.gov Search Results Page" />&lt;/img&gt;</p>
 
-<h3>Page 2:</h3>
+<h3 id="page-2">Page 2:</h3>
 
-<p><img class="img-responsive" src="https://search.digitalgov.gov/img/Commercial-Results-First-Page-2.png" alt="Supplemental Feed Results are Displayed on Page Two of the DigitalGov.gov Search Results Page"></img></p>
+<p><img class="img-responsive" src="https://search.digitalgov.gov/img/Commercial-Results-First-Page-2.png" alt="Supplemental Feed Results are Displayed on Page Two of the DigitalGov.gov Search Results Page" />&lt;/img&gt;</p>
 
 <p>If there are no commercial results for a query but there are supplemental content results, we will display the supplemental content on page one.</p>
 
-<h2>Getting Supplemental Content To Always Appear First</h2>
+<h2 id="getting-supplemental-content-to-always-appear-first">Getting Supplemental Content To Always Appear First</h2>
 
-<p>If you would like your supplemental content to always appear first in search results, please <a href="mailto:search@suppot.digitalgov.gov">contact our team</a>. Searchers will first be served any supplemental content results, and are then offered the chance to “search again,” which will lead them to commercial index results.</p>
+<p>If you would like your supplemental content to always appear first in search results, please <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">contact our team</a>. Searchers will first be served any supplemental content results, and are then offered the chance to “search again,” which will lead them to commercial index results.</p>
 
 <p>Please note: if you have any <a href="/manual/rss.html">regular RSS feeds</a> set up in your search site, this regular RSS content will also appear first with the supplemental content, prior to commercial results. If content is present in both types of feed, duplicates will appear in your results.</p>
 
 <p>In the example below, a Supplemental URL appears first, and clicking “Try your search again” will lead to a page of Bing results.</p>
 
-<p><img class="img-responsive" src="https://search.digitalgov.gov/img/Supplemental-Content-First-Example.png" alt="A Supplemental URL is Displayed on Page One of the DigitalGo Search Search Results Page"></img></p>
+<p><img class="img-responsive" src="https://search.digitalgov.gov/img/Supplemental-Content-First-Example.png" alt="A Supplemental URL is Displayed on Page One of the DigitalGo Search Search Results Page" />&lt;/img&gt;</p>
 
-<h2>Getting Supplemental Content To Be Your Only Search Results</h2>
+<h2 id="getting-supplemental-content-to-be-your-only-search-results">Getting Supplemental Content To Be Your Only Search Results</h2>
 
-<p>If you would like your supplemental content to be the only results served from your site, please <a href="mailto:search@suppot.digitalgov.gov">contact our team</a>. Searchers will not be offered the chance to “search again” on a commercial index after they exhaust your supplemental content results (see above example).</p>
+<p>If you would like your supplemental content to be the only results served from your site, please <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">contact our team</a>. Searchers will not be offered the chance to “search again” on a commercial index after they exhaust your supplemental content results (see above example).</p>
 
 <p>Please note: if you have any <a href="/manual/rss.html">regular RSS feeds</a> set up in your search site, this regular RSS content will also appear with the supplemental content. If content is present in both types of feed, duplicates will appear in your results.</p>
 
@@ -189,29 +187,26 @@
 <p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
 
 <ul>
-<li><a href="https://validator.w3.org/feed/">W3C Feed Validation Service</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
-<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-<li><a href="https://atomenabled.org/developers/syndication/">Atom syndication format</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+  <li><a href="https://validator.w3.org/feed/">W3C Feed Validation Service</a> <i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
+  <li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a> <i class="icon-external-link"><span>(External link)</span></i></li>
+  <li><a href="https://atomenabled.org/developers/syndication/">Atom syndication format</a> <i class="icon-external-link"><span>(External link)</span></i></li>
 </ul>
 
-
-<p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report for your PDF that says, "No content found in document"? Your PDF is likely an image-only, non-searchable file that was created from a paper document using a scanner. See the resources below for more information on how to create searchable PDF files.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report for your PDF that says, “No content found in document”? Your PDF is likely an image-only, non-searchable file that was created from a paper document using a scanner. See the resources below for more information on how to create searchable PDF files.</p>
 
 <ul>
-<li><a href="https://blogs.adobe.com/acrolaw/2007/02/is_that_pdf_sea/">Is that PDF Searchable?</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (blog post)</li>
-<li><a href="https://acrobatusers.com/tutorials/how-to-create-a-searchable-pdf-file">How to Create Searchable PDF File</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (video)</li>
+  <li><a href="https://blogs.adobe.com/acrolaw/2007/02/is_that_pdf_sea/">Is that PDF Searchable?</a> <i class="icon-external-link"><span>(External link)</span></i> (blog post)</li>
+  <li><a href="https://acrobatusers.com/tutorials/how-to-create-a-searchable-pdf-file">How to Create Searchable PDF File</a> <i class="icon-external-link"><span>(External link)</span></i> (video)</li>
 </ul>
 
+<p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report that says your page is taking too long to load? Use <a href="https://tools.pingdom.com/fpt/">Pingdom Tools Full Page Test</a> <i class="icon-external-link"><span>(External link)</span></i> to test the load time of your page, analyze it, and find the bottlenecks.</p>
 
-<p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report that says your page is taking too long to load? Use <a href="https://tools.pingdom.com/fpt/">Pingdom Tools Full Page Test</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to test the load time of your page, analyze it, and find the bottlenecks.</p>
-
-<p><strong><em>Did you know?</em></strong> To help the public find your web pages when they search on Bing.com, we notify Bing about any URLs you add. While this helps with search engine optimization (SEO), it is not a cure-all. You should also register for and use commercial search engines' webmaster tools.</p>
+<p><strong><em>Did you know?</em></strong> To help the public find your web pages when they search on Bing.com, we notify Bing about any URLs you add. While this helps with search engine optimization (SEO), it is not a cure-all. You should also register for and use commercial search engines’ webmaster tools.</p>
 
 <ul>
-<li><a href="https://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
-<li><a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Central</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+  <li><a href="https://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i></li>
+  <li><a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Central</a> <i class="icon-external-link"><span>(External link)</span></i></li>
 </ul>
-
 
     </div>
 
@@ -250,56 +245,66 @@
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Domains</p>
+      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Domains</p>
 
 <p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
 
-<h2>Entire Site(s)</h2>
+<h2 id="entire-sites">Entire Site(s)</h2>
 
 <ul>
-<li>List yoursite.gov (without www) to search your entire site, including all subdomains.</li>
-<li>List yoursite.gov and yoursite2.gov to search multiple sites.</li>
+  <li>List yoursite.gov (without www) to search your entire site, including all subdomains.</li>
+  <li>List yoursite.gov and yoursite2.gov to search multiple sites.</li>
 </ul>
 
-
-<h2>Specific Subdomains</h2>
+<h2 id="specific-subdomains">Specific Subdomains</h2>
 
 <ul>
-<li>List www.yoursite.gov to include only the primary 'www' domain.</li>
-<li>List subdomain.yoursite.gov to include subdomains.</li>
+  <li>List www.yoursite.gov to include only the primary ‘www’ domain.</li>
+  <li>List subdomain.yoursite.gov to include subdomains.</li>
 </ul>
 
-
-<h2>Specific Directories</h2>
+<h2 id="specific-directories">Specific Directories</h2>
 
 <p>List yoursite.gov/folder to include folders. Note: this will include all sub-folders (if they exist), i.e. yoursite.gov/folder/folder2.</p>
 
 <p>You cannot specify individual URLs.</p>
 
-<p>Searches that start three or more subfolders deep cannot use our default configuration. <a href="mailto:search@support.digitalgov.gov">Email us</a> for assistance.</p>
+<p>Searches that start three or more subfolders deep cannot use our default configuration. <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">Email us</a> for assistance.</p>
 
 <hr />
 
 <p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
 
 <ol>
-<li><p>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
-<li><p>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</p></li>
-<li><p>Email us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#115;&#101;&#x61;&#114;&#x63;&#104;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#x61;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#x75;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#x74;&#97;&#x6c;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
+  <li>
+    <p>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a> <i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p>
+  </li>
+  <li>
+    <p>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</p>
+  </li>
+  <li>
+    <p>Email us at <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;</a> to filter them from your site’s search results. Note that this option should be used only if the other options aren’t feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p>
+  </li>
 </ol>
-
 
 <p><a id="filter"></a><strong><em>Troubleshooting Tip:</em></strong> You can remove or filter specific URLs using any of the following options.</p>
 
 <ol>
-<li><p>Remove the page from your site and return a 404 (Not Found) 401 (Gone), or 301 (Permanently Moved) HTTP status.</p></li>
-<li><p>Add a <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">noindex robots metatag or x-robots tag</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
-<li><p>Request the page's removal using the <a href="http://www.bing.com/webmaster/help/block-urls-from-bing-264e560a">Block URLs option in Bing Webaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/1663419">Remove URLs option in Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p></li>
-<li><p>Use the <a href="/manual/filter-content.html">Filter URLs</a> option under the Advanced tab. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
+  <li>
+    <p>Remove the page from your site and return a 404 (Not Found) 401 (Gone), or 301 (Permanently Moved) HTTP status.</p>
+  </li>
+  <li>
+    <p>Add a <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">noindex robots metatag or x-robots tag</a> <i class="icon-external-link"><span>(External link)</span></i>. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p>
+  </li>
+  <li>
+    <p>Request the page’s removal using the <a href="http://www.bing.com/webmaster/help/block-urls-from-bing-264e560a">Block URLs option in Bing Webaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/1663419">Remove URLs option in Google Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
+  </li>
+  <li>
+    <p>Use the <a href="/manual/filter-content.html">Filter URLs</a> option under the Advanced tab. Note that this option should be used only if the other options aren’t feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p>
+  </li>
 </ol>
 
-
-<p><strong><em>Troubleshooting Tip:</em></strong> Are specific web pages missing from your Bing web results? You can tell us about any missing URLs via an RSS feed or manually (the Supplemental Feed and Supplemental URLs options under the <a href="/manual/domains-advanced.html">Advanced</a> tab, respectively). We'll fetch and index the pages and append them to your web results.</p>
+<p><strong><em>Troubleshooting Tip:</em></strong> Are specific web pages missing from your Bing web results? You can tell us about any missing URLs via an RSS feed or manually (the Supplemental Feed and Supplemental URLs options under the <a href="/manual/domains-advanced.html">Advanced</a> tab, respectively). We’ll fetch and index the pages and append them to your web results.</p>
 
     </div>
 
@@ -332,9 +337,9 @@
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > <a href="/manual/domains.html">Domains</a> > Advanced > Filter URLs</p>
+      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; <a href="/manual/domains.html">Domains</a> &gt; Advanced &gt; Filter URLs</p>
 
-<p>You can filter <em>a single URL</em> from the results on your site. Use it for emergency reasons only (such as spillage of classified information or unintentional publication of a page). Note that this option should be used only if the <a href="/manual/domains.html#filter">other options</a> aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p>
+<p>You can filter <em>a single URL</em> from the results on your site. Use it for emergency reasons only (such as spillage of classified information or unintentional publication of a page). Note that this option should be used only if the <a href="/manual/domains.html#filter">other options</a> aren’t feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p>
 
 <p>It is not meant to fix the results for entire site, such as for launch or redesign problems. For tips on how to fix these more systemic problems, read our <a href="/blog/redesign.html">Checklist for a Successful Website Redesign</a>.</p>
 
