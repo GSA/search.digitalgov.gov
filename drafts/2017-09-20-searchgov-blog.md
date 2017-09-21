@@ -27,7 +27,7 @@ In the most basic terms, here’s what we’ll be doing:
 
 ![alt text](/img/basic-indexing-flow.png "Flowchart showing the major phases of search indexing: Discover, Parse, Index, and Search.")
 
-*[detailed diagram](/img/searchgov-flow.png "How Search.gov Works")*
+*[Detailed diagram](/img/searchgov-flow.png "How Search.gov Works")*
 
 Below are the options for how you can tell us about your site content. The list is divided into sections based on whether or not your website is on a content management system (CMS). There will be two primary ways to get content into our system: have your CMS send content to us via the i14y API, or send us a list of URLs.
 
@@ -35,7 +35,7 @@ Below are the options for how you can tell us about your site content. The list 
  
 ### Preferred Option: i14y Content Indexing API (i14y)
  
-For customers who use Drupal as their CMS, our [Drupal module](https://www.drupal.org/project/usasearch) eliminates the need for programming effort in order to send content to the i14y API. This module is available for websites in Drupal 7 and 8. 
+Since 2015, we’ve offered an API called [i14y](https://search.digitalgov.gov/developer/i14y.html). I14y receives real-time content updates, which gives you full control over your search results. You can update and remove content, and decide exactly what will be shown as the result title for each item.
 
 We are excited to get additional CMS customers using this powerful feature.
 
