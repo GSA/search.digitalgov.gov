@@ -108,11 +108,11 @@
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Collections</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Collections</p>
 
 <p>Would you like searchers to be able to change where they are searching, either to a particular place within your site, or to another site? You can create a collection that will search in any set of domains, subdomains, or subfolders.</p>
 
-<h2 id="step-1-create-a-collection">Step 1. Create a Collection</h2>
+<h2>Step 1. Create a Collection</h2>
 
 <p>Enter a name for the collection (such as FAQs, Archive, or News).</p>
 
@@ -120,13 +120,13 @@
 
 <p>You cannot specify URLs for individual web pages. If you are including a subfolder, be sure to include the folder(s) where the files are actually stored, not the folder where the index page lives.</p>
 
-<p>Paths that are three or more subfolders deep may not return results immediately. <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">Email us</a> if you are not seeing search results for these paths.</p>
+<p>Paths that are three or more subfolders deep may not return results immediately. <a href="mailto:search@support.digitalgov.gov">Email us</a> if you are not seeing search results for these paths.</p>
 
-<h2 id="step-2-opt-to-show-as-a-facet">Step 2. Opt to Show as a Facet</h2>
+<h2>Step 2. Opt to Show as a Facet</h2>
 
 <p>Click on the <a href="/manual/display-overview.html">Display Overview</a> page. Turn on your collection to allow searchers to see it as a search facet in the navigation bar above the search box on the results page (in the desktop view), or in the search menu (on smaller screens).</p>
 
-<h2 id="step-3-check-your-search-results-page">Step 3. Check Your Search Results Page</h2>
+<h2>Step 3. Check Your Search Results Page</h2>
 
 <p>Searchers will see the collection name as an option that they can select in order to focus their search.</p>
 
@@ -137,22 +137,23 @@
 <p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your collection.</p>
 
 <ol>
-  <li>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab.</li>
-  <li>Change the form action from <code>action="https://search.usa.gov/search/"</code> to <code>action="https://search.usa.gov/search/docs"</code>.</li>
-  <li>Add the following line to limit the results to your collection: <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>.</li>
+<li>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab.</li>
+<li>Change the form action from <code>action="https://search.usa.gov/search/"</code> to <code>action="https://search.usa.gov/search/docs"</code>.</li>
+<li>Add the following line to limit the results to your collection: <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>.</li>
 </ol>
+
 
 <p>The value is the number for your collection ID, which is visible in the URL when you edit your collection in the Admin Center.</p>
 
 <p>See the sample search box below that is limited to news on <a href="https://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=autism">NIH.gov for a search on <em>autism</em></a>.</p>
 
-<p><a href="https://www.nih.gov/news/releases.htm"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-3.png" alt="News-only search box on NIH.gov's News Releases page" title="News-only search box on NIH.gov's News Releases page" /></a></p>
+<p><a href="https://www.nih.gov/news/releases.htm"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-3.png" title="News-only search box on NIH.gov's News Releases page" alt="News-only search box on NIH.gov's News Releases page" /></a></p>
 
-<p><a href="https://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=autism"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-4.png" alt="NIH.gov news-only search results page" title="NIH.gov news-only search results page" /></a></p>
+<p><a href="https://search.nih.gov/search/docs?affiliate=nih&amp;dc=565&amp;query=autism"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-4.png" title="NIH.gov news-only search results page" alt="NIH.gov news-only search results page" /></a></p>
 
 <p><a name="sitelimit"></a></p>
 
-<p><strong><em>Did you know?</em></strong> If you don’t want to set up a Collection, you can use the <code>sitelimit</code> parameter to search a subset of your content. Compare the collection-based results above with the results for <a href="https://search.usa.gov/search?affiliate=nih&amp;query=autism&amp;sitelimit=nih.gov/news">the same search using the sitelimit parameter</a>.</p>
+<p><strong><em>Did you know?</em></strong> If you don't want to set up a Collection, you can use the <code>sitelimit</code> parameter to search a subset of your content. Compare the collection-based results above with the results for <a href="https://search.usa.gov/search?affiliate=nih&amp;query=autism&amp;sitelimit=nih.gov/news">the same search using the sitelimit parameter</a>.</p>
 
 <p>Note that the searcher sees that results are filtered to nih.gov/news in a message under the search box, among other differences.</p>
 

@@ -108,44 +108,47 @@
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers</p>
 
-<p>An <a href="/developer/i14y.html">i14y</a> Drawer is an index receiving content via the i14y API. We’ve called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
+<p>An <a href="/developer/i14y.html">i14y</a> Drawer is an index receiving content via the i14y API. We've called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
 
 <p>Information on working with our Drupal module is <a href="/manual/drupal.html">here</a>.</p>
 
-<h2 id="step-1-make-sure-your-site-is-connected-to-i14y">Step 1. Make sure your site is connected to i14y</h2>
+<h2>Step 1. Make sure your site is connected to i14y</h2>
 
-<p>If your site Admin Center has the following page: <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers, your site is connected to i14y. If you don’t see this page in the Admin Center, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">email us</a>. You can also read about <a href="/developer/i14y.html">Getting Started with i14y</a>.</p>
+<p>If your site Admin Center has the following page: <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, your site is connected to i14y. If you don't see this page in the Admin Center, <a href="mailto:search@support.digitalgov.gov">email us</a>. You can also read about <a href="/developer/i14y.html">Getting Started with i14y</a>.</p>
 
-<h2 id="step-2-add-one-or-more-drawers">Step 2. Add one or more Drawers</h2>
-<p>On <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers, Click <code>Add i14y Drawer</code> in the upper right corner. If you have more than one website that will be sending content, add a separate Drawer for each of these sites.</p>
+<h2>Step 2. Add one or more Drawers</h2>
 
-<h3 id="handle">Handle</h3>
+<p>On <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers, Click <code>Add i14y Drawer</code> in the upper right corner. If you have more than one website that will be sending content, add a separate Drawer for each of these sites.</p>
+
+<h3>Handle</h3>
 
 <p>Let us know what the handle for your drawer should be - the handle must be all lowercase alphanumeric, all one word, and can include underscores but no other special characters (e.g., agency_drawer_handle2).</p>
 
 <p>The Drawer <em>Description</em> is optional</p>
 
-<h2 id="step-3-send-content-to-fill-your-drawer">Step 3. Send Content to Fill your Drawer</h2>
+<h2>Step 3. Send Content to Fill your Drawer</h2>
 
-<p>After you have created your Drawer(s), click <code>Show</code> from the i14y Drawers list to find that Drawer’s secret API key. Use this secret key with your drawer handle in your API call or your CMS module to <a href="http://gsa.github.io/slate/#authentication">send your content to the right place</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
+<p>After you have created your Drawer(s), click <code>Show</code> from the i14y Drawers list to find that Drawer’s secret API key. Use this secret key with your drawer handle in your API call or your CMS module to <a href="http://gsa.github.io/slate/#authentication">send your content to the right place</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
 
-<h2 id="step-4-review-your-index">Step 4. Review your Index</h2>
+<h2>Step 4. Review your Index</h2>
 
-<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list, and when the most recent document was received. Click <code>Show</code> to view documents within a particular drawer. We display the most recent 1,000 items that were sent to the drawer. You can also search for keywords in the documents’ text, titles, and descriptions (Note: you cannot currently search for URLs).</p>
+<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list, and when the most recent document was received. Click <code>Show</code> to view documents within a particular drawer. We display the most recent 1,000 items that were sent to the drawer. You can also search for keywords in the documents' text, titles, and descriptions (Note: you cannot currently search for URLs).</p>
 
 <p>We send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
 
-<p><strong><em>Note:</em></strong> If you experience difficulty sending documents to i14y, it is possible your firewall is not letting you communicate with the i14y server. Check out our <a href="/developer/i14y-testing.html">cURL test commands</a> or view the full <a href="http://gsa.github.io/slate/">i14y documentation on Github</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
+<p><strong><em>Note:</em></strong> If you experience difficulty sending documents to i14y, it is possible your firewall is not letting you communicate with the i14y server. Check out our <a href="/developer/i14y-testing.html">cURL test commands</a> or view the full <a href="http://gsa.github.io/slate/">i14y documentation on Github</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
 
 <hr />
+
 <p><strong><em>Caution:</em></strong> A pop-up message will appear when you hit <code>Remove</code> on a drawer: please review this pop-up message carefully. If you remove a drawer that is only associated with one search configuration, the drawer and its contents will be deleted from our system. If the drawer is attached to multiple search configurations, it will only be removed from the search configuration you are currently on. The pop-up message will indicate what type of drawer you have.</p>
 
-<p>If you accidentally delete a drawer, you will need to set-up a new drawer and resend the content - we are unable to retrieve deleted drawers. If you accidentally remove a shared drawer but it is still associated with other search configurations, we can re-attach it to your site. <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">Contact us</a> for assistance.</p>
+<p>If you accidentally delete a drawer, you will need to set-up a new drawer and resend the content - we are unable to retrieve deleted drawers. If you accidentally remove a shared drawer but it is still associated with other search configurations, we can re-attach it to your site. <a href="mailto:search@support.digitalgov.gov">Contact us</a> for assistance.</p>
 
 <hr />
-<p><strong><em>Did you know?</em></strong> We can attach each i14y drawer to multiple search configurations: if you have a drawer that you’d like to use for multiple search sites, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">email us</a>.</p>
+
+<p><strong><em>Did you know?</em></strong> We can attach each i14y drawer to multiple search configurations: if you have a drawer that you’d like to use for multiple search sites, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
 
     </div>
 
@@ -178,48 +181,42 @@
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="/developer/index.html">APIs for Developers</a> &gt; i14y API</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="/developer/index.html">APIs for Developers</a> > i14y API</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td><a href="https://github.com/GSA/i14y">i14y Github repo</a> <i class="icon-external-link"><span>(External link)</span></i></td>
-      <td><a href="http://gsa.github.io/slate/">Technical Documentation</a> <i class="icon-external-link"><span>(External link)</span></i></td>
-    </tr>
-  </tbody>
-</table>
+<p><a href="https://github.com/GSA/i14y">i14y Github repo</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> | <a href="http://gsa.github.io/slate/">Technical Documentation</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></p>
 
-<h2 id="what-is-i14y">What is i14y?</h2>
+<h2>What is i14y?</h2>
 
-<p>i14y is a content indexing API that allows you to send your content directly to our indexes. When your site is enabled for i14y, it gives you complete control over what searchers see. No commercial web results will be served: instead, searchers will see content exactly as you’ve sent it to us.</p>
+<p>i14y is a content indexing API that allows you to send your content directly to our indexes. When your site is enabled for i14y, it gives you complete control over what searchers see. No commercial web results will be served: instead, searchers will see content exactly as you've sent it to us.</p>
 
-<h2 id="how-do-i-use-i14y">How Do I Use i14y?</h2>
+<h2>How Do I Use i14y?</h2>
 
-<p>We currently have a <a href="http://www.drupal.org/project/usasearch">Drupal module</a> <i class="icon-external-link"><span>(External link)</span></i> that will hook your CMS into i14y. You can also check out our <a href="/manual/drupal.html">help docs for working with the Drupal module</a>.</p>
+<p>We currently have a <a href="http://www.drupal.org/project/usasearch">Drupal module</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> that will hook your CMS into i14y. You can also check out our <a href="/manual/drupal.html">help docs for working with the Drupal module</a>.</p>
 
-<p>If you use a different CMS, or don’t have one at all, you still can develop an API of your content that meets the i14y specs. Read our <a href="http://gsa.github.io/slate/">technical documentation</a> <i class="icon-external-link"><span>(External link)</span></i> to learn more.</p>
+<p>If you use a different CMS, or don't have one at all, you still can develop an API of your content that meets the i14y specs. Read our <a href="http://gsa.github.io/slate/">technical documentation</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to learn more.</p>
 
-<p>We would love to see more CMS hooks in the future. The i14y code is open source, and we welcome your partnership if there’s a particular hook you need. There is starter code for a <a href="https://github.com/GSA/wp-digitalgov-i14y-indexer">WordPress plugin</a> <i class="icon-external-link"><span>(External link)</span></i> that is ready for partner contributions.</p>
+<p>We would love to see more CMS hooks in the future. The i14y code is open source, and we welcome your partnership if there's a particular hook you need. There is starter code for a <a href="https://github.com/GSA/wp-digitalgov-i14y-indexer">WordPress plugin</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> that is ready for partner contributions.</p>
 
-<h2 id="checklist-to-go-live-with-i14y">Checklist to Go Live with i14y</h2>
+<h2>Checklist to Go Live with i14y</h2>
 
-<h3 id="step-1-connect-one-of-your-sites-to-i14y">Step 1. Connect one of your sites to i14y</h3>
+<h3>Step 1. Connect one of your sites to i14y</h3>
 
 <p>i14y needs to be enabled in the back end for a site to be able to receive content through it. You can</p>
 
 <ul>
-  <li><a href="/manual/add-site.html">Add a brand new search site</a>,</li>
-  <li>Use the Clone Site tool to copy one of your existing site’s settings to a new site (<code>YourSite &gt; Dashboard &gt; Clone Site</code>), or</li>
-  <li>use an existing site.</li>
+<li><a href="/manual/add-site.html">Add a brand new search site</a>,</li>
+<li>Use the Clone Site tool to copy one of your existing site’s settings to a new site (<code>YourSite &gt; Dashboard &gt; Clone Site</code>), or</li>
+<li>use an existing site.</li>
 </ul>
 
-<p><a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">Email us</a> and let us know which site you want enabled for i14y. Please note: once we turn on i14y for a site, we no longer serve search results from a commercial web index. Therefore, we recommend that you set up a test site for i14y, so that your customers will continue to get results until you are fully set up and ready to move your i14y index to your production search site.</p>
 
-<h3 id="step-2-add-a-drawer">Step 2. Add a Drawer</h3>
+<p><a href="mailto:search@support.digitalgov.gov">Email us</a> and let us know which site you want enabled for i14y. Please note: once we turn on i14y for a site, we no longer serve search results from a commercial web index. Therefore, we recommend that you set up a test site for i14y, so that your customers will continue to get results until you are fully set up and ready to move your i14y index to your production search site.</p>
 
-<p>An i14y Drawer is an index receiving content via the i14y API. We’ve called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
+<h3>Step 2. Add a Drawer</h3>
 
-<p>After we have enabled i14y for your search site, a new page will appear: <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers.</p>
+<p>An i14y Drawer is an index receiving content via the i14y API. We've called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
+
+<p>After we have enabled i14y for your search site, a new page will appear: <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers.</p>
 
 <p>Click <code>Add i14y Drawer</code> in the upper right corner. Create a handle for your drawer - the handle must be all lowercase alphanumeric, all one word, and can include underscores but no other special characters (e.g., agency_drawer_handle2).</p>
 
@@ -227,57 +224,49 @@
 
 <p>If you have more than one website or domain that will be sending content, add a separate Drawer for each of these sites. We also recommend setting up separate drawers for staging or test content, so you can easily remove that content from your search site when you are ready to go live.</p>
 
-<h3 id="step-3-fill-your-drawer">Step 3. Fill your Drawer</h3>
+<h3>Step 3. Fill your Drawer</h3>
 
 <p>After you have created your Drawer(s), click <code>Show</code> from the i14y Drawers list to find that Drawer’s secret API key. Use this secret key with your drawer handle in your API call or your CMS module to send your content to the right place.</p>
 
 <p>You are now ready to add content to your drawer. You can do this in two ways:</p>
 
 <ul>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>Use i14y directly. <a href="https://github.com/GSA/i14y">Github repo</a> <i class="icon-external-link"><span>(External link)</span></i></td>
-          <td><a href="http://gsa.github.io/slate/">Technical Documentation</a> <i class="icon-external-link"><span>(External link)</span></i></td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>Use a module plugged into your CMS. At this time there is a <a href="https://www.drupal.org/project/usasearch">Drupal module</a> <i class="icon-external-link"><span>(External link)</span></i> available. Help docs for the module are <a href="/manual/drupal.html">here</a>.</li>
+<li>Use i14y directly. <a href="https://github.com/GSA/i14y">Github repo</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> | <a href="http://gsa.github.io/slate/">Technical Documentation</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+<li>Use a module plugged into your CMS. At this time there is a <a href="https://www.drupal.org/project/usasearch">Drupal module</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> available. Help docs for the module are <a href="/manual/drupal.html">here</a>.</li>
 </ul>
 
-<h3 id="step-4-review-your-index">Step 4. Review your index</h3>
 
-<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list, and when the most recent document was received. Click <code>Show</code> to view documents within a particular drawer. We display the most recent 1,000 items that were sent to the drawer. You can also search for keywords in the documents’ text, titles, and descriptions (Note: you cannot currently search for URLs).</p>
+<h3>Step 4. Review your index</h3>
+
+<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list, and when the most recent document was received. Click <code>Show</code> to view documents within a particular drawer. We display the most recent 1,000 items that were sent to the drawer. You can also search for keywords in the documents' text, titles, and descriptions (Note: you cannot currently search for URLs).</p>
 
 <p>We send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
 
-<p>If you experience difficulty sending documents to i14y, it is possible your firewall is not letting you communicate with the i14y server. Check out our <a href="/developer/i14y-testing.html">cURL test commands</a> or view the full <a href="http://gsa.github.io/slate/">i14y documentation on Github</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
+<p>If you experience difficulty sending documents to i14y, it is possible your firewall is not letting you communicate with the i14y server. Check out our <a href="/developer/i14y-testing.html">cURL test commands</a> or view the full <a href="http://gsa.github.io/slate/">i14y documentation on Github</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
 
-<p>We can attach each i14y drawer to multiple search configurations: if you have a drawer that you’d like to use for multiple search sites, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">email us</a>.</p>
+<p>We can attach each i14y drawer to multiple search configurations: if you have a drawer that you’d like to use for multiple search sites, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
 
 <p><strong><em>Caution:</em></strong> A pop-up message will appear when you hit <code>Remove</code> on a drawer: please review this pop-up message carefully. If you remove a drawer that is only associated with one search configuration, the drawer and its contents will be deleted from our system. If the drawer is attached to multiple search configurations, it will only be removed from the search configuration you are currently on. The pop-up message will indicate what type of drawer you have.</p>
 
-<p>If you accidentally delete a drawer, you will need to set-up a new drawer and resend the content - we are unable to retrieve deleted drawers. If you accidentally remove a shared drawer but it is still associated with other search configurations, we can re-attach it to your site. <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">Contact us</a> for assistance.</p>
+<p>If you accidentally delete a drawer, you will need to set-up a new drawer and resend the content - we are unable to retrieve deleted drawers. If you accidentally remove a shared drawer but it is still associated with other search configurations, we can re-attach it to your site. <a href="mailto:search@support.digitalgov.gov">Contact us</a> for assistance.</p>
 
-<h3 id="step-5-configure-your-search">Step 5. Configure your search</h3>
+<h3>Step 5. Configure your search</h3>
 
 <p>Once you have your index populated, you will <a href="/manual/content-overview.html">set up the rest of your search</a> as you would for a traditional DigitalGov Search site. Set your default search scope on your <a href="/manual/domains.html">Domains</a> page, add Social Media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/instagram.html">Instagram</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>, create <a href="/manual/collections.html">Collections</a>, and set your results page Display (both <a href="/manual/display-overview.html">search features</a> and <a href="/manual/brand.html">branding</a>).</p>
 
 <p>If you have any <a href="/manual/rss.html">RSS content</a> that will not be sent to your i14y drawer, you can add those feeds as well.</p>
 
-<h3 id="step-6-update-your-search-box">Step 6. Update your search box</h3>
+<h3>Step 6. Update your search box</h3>
 
 <p>Update your website’s search box <a href="/manual/code.html">form code</a> to point to <code>affiliate=youri14yenabledsitehandle</code>.</p>
 
-<h3 id="terms-of-use">Terms of Use</h3>
+<h3>Terms of Use</h3>
 
-<p>By accessing the i14y API, you agree to <a href="https://www.usa.gov/About/developer-resources/terms-of-service.shtml">USA.gov’s Terms of Service for Developer Resources</a>.</p>
+<p>By accessing the i14y API, you agree to <a href="https://www.usa.gov/About/developer-resources/terms-of-service.shtml">USA.gov's Terms of Service for Developer Resources</a>.</p>
 
 <hr />
 
-<p><strong><em>Did you know?</em></strong> i14y is hacker shorthand for “interoperability”, because there are 14 characters between the first and last letters. i14y can also be shorthand for Independence Day.</p>
+<p><strong><em>Did you know?</em></strong> i14y is hacker shorthand for "interoperability", because there are 14 characters between the first and last letters. i14y can also be shorthand for Independence Day.</p>
 
     </div>
 
@@ -310,146 +299,182 @@
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Best Bets: Text or Graphics</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Best Bets: Text or Graphics</p>
 
 <p>Do you want to promote a specific page or resource? <a href="#bbt">Create a Text Best Bet</a>.</p>
 
 <p>Do you want to promote a set of pages or resources? We recommend you <a href="#bbg">create a Graphics Best Bet</a> if you have more than two recommendations on a given topic.</p>
 
-<p>Best Bets appear at the top of the results page when a searcher’s query matches the text of its title, description, or keywords.</p>
+<p>Best Bets appear at the top of the results page when a searcher's query matches the text of its title, description, or keywords.</p>
 
-<p><a name="bbt"></a>
-## Best Bets: Text</p>
+<p><a name="bbt"></a></p>
 
-<p>Text best bets have the same look as standard web results. They’re listed under the heading, Recommended by YourSite.</p>
+<h2>Best Bets: Text</h2>
+
+<p>Text best bets have the same look as standard web results. They're listed under the heading, Recommended by YourSite.</p>
 
 <p>See the sample results page below that shows a text best bet displayed on TSA.gov for a search on <em><a href="https://search.usa.gov/search?query=razors&amp;affiliate=tsa.gov">razors</a></em>.</p>
 
 <p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/best-bets-text.png" alt="Text best bets for 'razors' on TSA.gov" /></p>
 
-<h3 id="add-an-individual-text-best-bet">Add an Individual Text Best Bet</h3>
+<h3>Add an Individual Text Best Bet</h3>
 
 <p><strong><em>URL.</em></strong> Add the URL of the web page that you want to promote. Make sure the URL is properly formatted, and includes the protocol (either <code>http://</code> or <code>https://</code>).</p>
 
 <p><strong><em>Title and Description.</em></strong> Add the title and description of the web page that you want to promote. Each field can have up to 255 characters. Titles and descriptions are visible to searchers.</p>
 
-<p><strong><em>Status and Publish Dates.</em></strong> By default, newly created Best Bets are Active. If you don’t want your Best Bet to display, set it to Inactive. The default start date is the day on which you create the best bet. The default end date is null, so it will stay up forever until you decide to take it down. You can opt to specify other start and end dates using the date pickers.</p>
+<p><strong><em>Status and Publish Dates.</em></strong> By default, newly created Best Bets are Active. If you don't want your Best Bet to display, set it to Inactive. The default start date is the day on which you create the best bet. The default end date is null, so it will stay up forever until you decide to take it down. You can opt to specify other start and end dates using the date pickers.</p>
 
 <p><strong><em>Match Keywords Only?</em></strong> You have the option of having your Best Bets display only for exact keyword matches, and not for title or discription matches. If you select this option, be sure to include <em>all</em> query terms you want the Best Bet to display for, including terms you have used in the title and description.</p>
 
-<p><strong><em>Keywords.</em></strong> Keywords are optional and they’re <em>not</em> visible to searchers. Add specific words or phrases that aren’t already included in the visible title or description. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field. Use your search Analytics to inform your keyword lists. Keywords are not case sensitive, but are exact matches.</p>
+<p><strong><em>Keywords.</em></strong> Keywords are optional and they're <em>not</em> visible to searchers. Add specific words or phrases that aren't already included in the visible title or description. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field. Use your search Analytics to inform your keyword lists. Keywords are not case sensitive, but are exact matches.</p>
 
-<p><a name="bulk"></a>
+<p><p><a name="bulk"></a></p>
 
-### Add Multiple Best Bets via Bulk Upload
+<h3>Add Multiple Best Bets via Bulk Upload</h3>
 
-Create a comma-separated file with the following fields (in this order). Download our [sample template for uploading best bets](/files/best-bets-template-201603.csv) [CSV] to see the correct format.
+<p>Create a comma-separated file with the following fields (in this order). Download our <a href="/files/best-bets-template-201603.csv">sample template for uploading best bets</a> [CSV] to see the correct format.</p>
 
-Title, URL, Description, StartDate, EndDate, Keywords, Match_Keywords_Only, Status
+<p>Title, URL, Description, StartDate, EndDate, Keywords, Match_Keywords_Only, Status</p>
 
-* Required fields:
-  * Title
-  * URL. Make sure the URL is properly formatted, and includes the protocol (either `http://` or `https://`). 
-  * Description 
-* Optional fields:
-  * Start date
-  * End date
-  * Keywords 
-  * Match_Keywords_Only. Enter a `1` in this column if you want the Best Bet to respond only to the query terms and phrases you've specified in this column. Note that selecting this option means you need to list *all* terms or phrases you want the Best Bet to respond to.  
-  * Status. If you leave this column blank, the Best Bet will default to `Active` and will display to users. Enter `0` to set the Best Bet to `Inactive`.
-  
-Save the file with a .csv extension and upload it.
+<ul>
+<li>Required fields:
 
-Bulk upload updates existing Best Bets (matching on the URL field) and adds new Best Bets. To turn off Best Bets, either use the `Remove` button in the Admin Center Best Bets list view, or set the Best Bet to `Inactive` in the edit view.
+<ul>
+<li>Title</li>
+<li>URL. Make sure the URL is properly formatted, and includes the protocol (either <code>http://</code> or <code>https://</code>).</li>
+<li>Description</li>
+</ul>
+</li>
+<li>Optional fields:
 
-<a name="bbg"></a>
+<ul>
+<li>Start date</li>
+<li>End date</li>
+<li>Keywords</li>
+<li>Match_Keywords_Only. Enter a <code>1</code> in this column if you want the Best Bet to respond only to the query terms and phrases you've specified in this column. Note that selecting this option means you need to list <em>all</em> terms or phrases you want the Best Bet to respond to.</li>
+<li>Status. If you leave this column blank, the Best Bet will default to <code>Active</code> and will display to users. Enter <code>0</code> to set the Best Bet to <code>Inactive</code>.</li>
+</ul>
+</li>
+</ul>
 
-## Best Bets: Graphics
 
-Recommended items are displayed in two columns, and you have the option of including an image. We show the most relevant Graphics Best Bet for the query, with the heading, Recommended by YourSite.
+<p>Save the file with a .csv extension and upload it.</p>
 
-See the sample results page below that shows a graphics best bet displayed on [USGS.gov for a search on tsunamis](https://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis).
+<p>Bulk upload updates existing Best Bets (matching on the URL field) and adds new Best Bets. To turn off Best Bets, either use the <code>Remove</code> button in the Admin Center Best Bets list view, or set the Best Bet to <code>Inactive</code> in the edit view.</p>
 
-[![Graphics best bet highlighting tsunami links on USGS.gov](https://d3qcdigd1fhos0.cloudfront.net/blog/img/best-bets-graphics.png "Graphics best bet highlighting tsunami links on USGS.gov")](https://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis)
+<p><a name="bbg"></a></p>
 
-See also
+<h2>Best Bets: Graphics</h2>
 
-* **Two columns with a collection of links and an image** displayed on USA.gov for a search on *[wildfires](https://search.usa.gov/search?affiliate=usagov&amp;query=wildfires)*.   
-* **Two columns with a collection of links only** displayed on USA.gov for a search on *[housing](https://search.usa.gov/search?affiliate=usagov&amp;query=housing)*.   
-* **A single link to a specific web page and an image** displayed on WhiteHouse.gov for a search on *[jobs](https://search.whitehouse.gov/search?affiliate=wh&amp;query=jobs)*.  
+<p>Recommended items are displayed in two columns, and you have the option of including an image. We show the most relevant Graphics Best Bet for the query, with the heading, Recommended by YourSite.</p>
 
-### Add a Graphics Best Bet
+<p>See the sample results page below that shows a graphics best bet displayed on <a href="https://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis">USGS.gov for a search on tsunamis</a>.</p>
 
-***Title.*** Add the title (up to 255 characters) of the web page or collection of web pages that you want to promote. The title is visible to searchers.
+<p><a href="https://search.usa.gov/search?affiliate=usgs&amp;query=tsunamis"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/best-bets-graphics.png" title="Graphics best bet highlighting tsunami links on USGS.gov" alt="Graphics best bet highlighting tsunami links on USGS.gov" /></a></p>
 
-***Title URL.*** Add the URL of the primary web page that you want to promote. This field is optional.
+<p>See also</p>
 
-***Status and Publish Dates.*** By default, newly created Best Bets are Active. If you don't want your Best Bet to display, set it to Inactive. The default start date is the day on which you create the best bet. The default end date is null, so it will stay up forever until you decide to take it down. You can opt to specify other start and end dates using the date pickers.
+<ul>
+<li><strong>Two columns with a collection of links and an image</strong> displayed on USA.gov for a search on <em><a href="https://search.usa.gov/search?affiliate=usagov&amp;query=wildfires">wildfires</a></em>.</li>
+<li><strong>Two columns with a collection of links only</strong> displayed on USA.gov for a search on <em><a href="https://search.usa.gov/search?affiliate=usagov&amp;query=housing">housing</a></em>.</li>
+<li><strong>A single link to a specific web page and an image</strong> displayed on WhiteHouse.gov for a search on <em><a href="https://search.whitehouse.gov/search?affiliate=wh&amp;query=jobs">jobs</a></em>.</li>
+</ul>
 
-***Image.*** You can opt to add an image.
 
-***Match Keywords Only?*** You have the option of having your Best Bets display only for exact keyword matches, and not for title and link title matches. If you select this option, be sure to include *all* query terms you want the Best Bet to display for, including terms you have used in the title and description.
+<h3>Add a Graphics Best Bet</h3>
 
-***Keywords.*** Keywords are optional and they're *not* visible to searchers. Add specific words or phrases that aren't already included in the visible title or link titles. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field. Use your search Analytics to inform your keyword lists. Keywords are not case sensitive, but are exact matches.
+<p><strong><em>Title.</em></strong> Add the title (up to 255 characters) of the web page or collection of web pages that you want to promote. The title is visible to searchers.</p>
 
-***Links.*** Enter a title and URL for each link. There is no limit on the number of links. Use the list icons ("hamburger buttons") on the left to rearrange the display order of the links. The two columns populate by rows, so if you have three links, you would have two links in the top row, and one link in the left column of the second row. The link titles are visible to searchers.
+<p><strong><em>Title URL.</em></strong> Add the URL of the primary web page that you want to promote. This field is optional.</p>
 
-## When Searchers See Your Best Bets: Graphics
+<p><strong><em>Status and Publish Dates.</em></strong> By default, newly created Best Bets are Active. If you don't want your Best Bet to display, set it to Inactive. The default start date is the day on which you create the best bet. The default end date is null, so it will stay up forever until you decide to take it down. You can opt to specify other start and end dates using the date pickers.</p>
 
-For searchers to see a best bet on your site, it must match their query and be relevant and active.
+<p><strong><em>Image.</em></strong> You can opt to add an image.</p>
 
-### It Matches Their Query
+<p><strong><em>Match Keywords Only?</em></strong> You have the option of having your Best Bets display only for exact keyword matches, and not for title and link title matches. If you select this option, be sure to include <em>all</em> query terms you want the Best Bet to display for, including terms you have used in the title and description.</p>
 
-Searchers see your best bets when their query:
+<p><strong><em>Keywords.</em></strong> Keywords are optional and they're <em>not</em> visible to searchers. Add specific words or phrases that aren't already included in the visible title or link titles. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field. Use your search Analytics to inform your keyword lists. Keywords are not case sensitive, but are exact matches.</p>
 
-* Matches any or all words in the title, description, or link titles, or
-* Matches a keyword exactly.
+<p><strong><em>Links.</em></strong> Enter a title and URL for each link. There is no limit on the number of links. Use the list icons ("hamburger buttons") on the left to rearrange the display order of the links. The two columns populate by rows, so if you have three links, you would have two links in the top row, and one link in the left column of the second row. The link titles are visible to searchers.</p>
 
-Matches are made within, but not across, fields.
+<h2>When Searchers See Your Best Bets: Graphics</h2>
 
-A sample graphics best bet entry is below.
+<p>For searchers to see a best bet on your site, it must match their query and be relevant and active.</p>
 
-    Title: Estate Tax  
-    Link title 1: Transfer Property After You Pass Away  
-    Link title 2: Estate Tax Rights  
-    Link title 3: Tax Rates  
-    Keyword 1: death tax  
-    Keyword 2: inheritance tax  
-    Keyword 3: fair market value  
-    Keyword 4: market value  
+<h3>It Matches Their Query</h3>
 
-This best bet would display for searches on estate tax (exact title match), estate (partial title match), tax on the estate (title match that includes stopwords), estate taxes (title match for singular/plural variant), property tax (partial link title match), propertey tax (link title match with a slight misspelling), and death tax (exact keyword match), among other queries.
+<p>Searchers see your best bets when their query:</p>
 
-It would *not* display for searches on death, death property, taxes after death, fair value, as keywords matches must be exact, and these queries are only partial keyword matches. It also would *not* display for estate property tax, as this is a partial match across multiple fields.
+<ul>
+<li>Matches any or all words in the title, description, or link titles, or</li>
+<li>Matches a keyword exactly.</li>
+</ul>
 
-### It Is Very Relevant
 
-After we determine which best bets match the searcher's query, we rank their relevance and display only the most relevant. We'll display up to two text best bets, and up to one graphics best bet. Default relevance is determined first by title, then by description (text best bets) or link titles (graphics best bets), and lastly by keywords. Date is used as a tiebreaker if the entries' scores based on the above three factors are equal. We display the newer Best Bet.
+<p>Matches are made within, but not across, fields.</p>
 
-If you've selected Match Keywords Only, then only keywords are used to determine relevance.
+<p>A sample graphics best bet entry is below.</p>
 
-### It Is Active
+<pre><code>Title: Estate Tax  
+Link title 1: Transfer Property After You Pass Away  
+Link title 2: Estate Tax Rights  
+Link title 3: Tax Rates  
+Keyword 1: death tax  
+Keyword 2: inheritance tax  
+Keyword 3: fair market value  
+Keyword 4: market value  
+</code></pre>
 
-We use [color coding](/manual/color-codes.html) to indicate each entry's status. 
+<p>This best bet would display for searches on estate tax (exact title match), estate (partial title match), tax on the estate (title match that includes stopwords), estate taxes (title match for singular/plural variant), property tax (partial link title match), propertey tax (link title match with a slight misspelling), and death tax (exact keyword match), among other queries.</p>
 
-| Color | Status | 
-| :------------ | :---------------------------------- |
-| Green&nbsp;&nbsp;&nbsp;  | Active&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
-| Yellow   | Inactive |
-| &nbsp; | &nbsp; |
+<p>It would <em>not</em> display for searches on death, death property, taxes after death, fair value, as keywords matches must be exact, and these queries are only partial keyword matches. It also would <em>not</em> display for estate property tax, as this is a partial match across multiple fields.</p>
 
-Active best bets are shown to searchers on your site. Inactive entries aren't shown to searchers because they're inactive, expired (by the publish end date), or both.
+<h3>It Is Very Relevant</h3>
 
---- 
+<p>After we determine which best bets match the searcher's query, we rank their relevance and display only the most relevant. We'll display up to two text best bets, and up to one graphics best bet. Default relevance is determined first by title, then by description (text best bets) or link titles (graphics best bets), and lastly by keywords. Date is used as a tiebreaker if the entries' scores based on the above three factors are equal. We display the newer Best Bet.</p>
 
-Watch the recording of our February 2015 webinar [**Straight to the Top: Best Bets in DigitalGov Search**](https://www.youtube.com/embed/WzQocKYK0t4) (55 mins)
+<p>If you've selected Match Keywords Only, then only keywords are used to determine relevance.</p>
 
-***Did you know?*** Use the [Search Page Alert](/manual/system-alert.html) feature to add a text message to your search results page, which will appear at all times above all search results, *regardless of the query*.
+<h3>It Is Active</h3>
 
-***Did you know?*** Analyze the number of impressions and clicks and clickthru rate for each best bet on the [Monthly Reports](/manual/monthly-reports.html) page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.
+<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each entry's status.</p>
 
-***Did you know?*** When you use the [sitelimit parameter](/manual/collections.html#sitelimit) to scope the search to a subsection of your website, we'll apply this sitelimit to your Best Bets so searchers see recommended pages from within that folder or subdomain only.
-</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;"> Color </th>
+<th style="text-align:left;"> Status </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> Green&nbsp;&nbsp;&nbsp;  </td>
+<td style="text-align:left;"> Active&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+</tr>
+<tr>
+<td style="text-align:left;"> Yellow   </td>
+<td style="text-align:left;"> Inactive </td>
+</tr>
+<tr>
+<td style="text-align:left;"> &nbsp; </td>
+<td style="text-align:left;"> &nbsp; </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>Active best bets are shown to searchers on your site. Inactive entries aren't shown to searchers because they're inactive, expired (by the publish end date), or both.</p>
+
+<hr />
+
+<p>Watch the recording of our February 2015 webinar <a href="https://www.youtube.com/embed/WzQocKYK0t4"><strong>Straight to the Top: Best Bets in DigitalGov Search</strong></a> (55 mins)</p>
+
+<p><strong><em>Did you know?</em></strong> Use the <a href="/manual/system-alert.html">Search Page Alert</a> feature to add a text message to your search results page, which will appear at all times above all search results, <em>regardless of the query</em>.</p>
+
+<p><strong><em>Did you know?</em></strong> Analyze the number of impressions and clicks and clickthru rate for each best bet on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.</p>
+
+<p><strong><em>Did you know?</em></strong> When you use the <a href="/manual/collections.html#sitelimit">sitelimit parameter</a> to scope the search to a subsection of your website, we'll apply this sitelimit to your Best Bets so searchers see recommended pages from within that folder or subdomain only.</p>
 
     </div>
 
@@ -482,35 +507,35 @@ Watch the recording of our February 2015 webinar [**Straight to the Top: Best Be
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Instagram</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Instagram</p>
 
-<p><strong>ALERT:</strong>  Instagram now requires accounts to grant permission to index their images via an integration between systems. Since this integration will not be possible for DigitalGov Search in the foreseeable future, we’re exploring other options. This help manual page is for historical reference only.</p>
+<p><strong>ALERT:</strong>  Instagram now requires accounts to grant permission to index their images via an integration between systems. Since this integration will not be possible for DigitalGov Search in the foreseeable future, we're exploring other options. This help manual page is for historical reference only.</p>
 
-<h2 id="tell-us-about-your-instagram-account">Tell Us About Your Instagram Account</h2>
+<h2>Tell Us About Your Instagram Account</h2>
 
 <p>Provide us with the <em>username</em> for your Instagram Account.</p>
 
-<p>When you’re logged into Instagram, you can see your username at <a href="https://instagram.com/accounts/login/?next=/accounts/edit/">https://instagram.com/accounts/login/?next=/accounts/edit/</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
+<p>When you're logged into Instagram, you can see your username at <a href="https://instagram.com/accounts/login/?next=/accounts/edit/">https://instagram.com/accounts/login/?next=/accounts/edit/</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
 
-<p>For example, the Instagram username for the Department of Labor is <a href="https://instagram.com/usdol/">usdol</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
+<p>For example, the Instagram username for the Department of Labor is <a href="https://instagram.com/usdol/">usdol</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p>
 
-<h2 id="opt-to-display-your-instagram-pictures">Opt to Display Your Instagram Pictures</h2>
+<h2>Opt to Display Your Instagram Pictures</h2>
 
-<p>When you add the username for your Instagram account, we’ll automatically index all of the pictures in your account.</p>
+<p>When you add the username for your Instagram account, we'll automatically index all of the pictures in your account.</p>
 
-<p>On the image results page, we’ll display the pictures from your Instagram account by default. If you’d like to backfill them with the standard image results from your website, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">email us</a> and we’ll turn on your web images for you.</p>
+<p>On the image results page, we'll display the pictures from your Instagram account by default. If you'd like to backfill them with the standard image results from your website, <a href="mailto:search@support.digitalgov.gov">email us</a> and we'll turn on your web images for you.</p>
 
 <p>See the sample results page below that shows image results displayed on <a href="http://search.usa.gov/search/images?affiliate=u.s.departmentoflabor&amp;query=minimum+wage">DOL.gov for a search on <em>minimum wage</em></a>.</p>
 
-<p><a href="http://search.usa.gov/search/images?affiliate=u.s.departmentoflabor&amp;query=minimum+wage"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/social-media-instagram.png" alt="Image results from Flickr &amp; Instagram" title="Image results from Flickr &amp; Instagram" /></a></p>
+<p><a href="http://search.usa.gov/search/images?affiliate=u.s.departmentoflabor&amp;query=minimum+wage"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/social-media-instagram.png" title="Image results from Flickr &amp; Instagram" alt="Image results from Flickr &amp; Instagram" /></a></p>
 
 <hr />
 
-<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency’s photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
+<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
 
 <p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/flickr.html">Flickr</a> photostream. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.</p>
 
-<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;</a> if you’re ready to turn on the new results page.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#x3a;&#x73;&#x65;&#x61;&#x72;&#x63;&#104;&#x40;&#x73;&#117;&#x70;&#x70;&#111;&#x72;&#116;&#x2e;&#100;&#105;&#103;&#105;&#x74;&#97;&#108;&#x67;&#x6f;&#x76;&#46;&#x67;&#x6f;&#118;">&#115;&#x65;&#x61;&#x72;&#99;&#104;&#64;&#115;&#117;&#x70;&#112;&#x6f;&#x72;&#116;&#x2e;&#x64;&#x69;&#x67;&#x69;&#x74;&#97;&#108;&#103;&#111;&#118;&#x2e;&#x67;&#111;&#118;</a> if you're ready to turn on the new results page.</p>
 
     </div>
 
@@ -547,7 +572,7 @@ Watch the recording of our February 2015 webinar [**Straight to the Top: Best Be
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; <a href="/manual/domains.html">Domains</a> &gt; Advanced</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > <a href="/manual/domains.html">Domains</a> > Advanced</p>
 
 <p>Is content missing from your search results? Do you want to have RSS content appear in your main page search results?</p>
 
@@ -557,67 +582,69 @@ Watch the recording of our February 2015 webinar [**Straight to the Top: Best Be
 
 <p><strong>Note to our i14y customers:</strong> Supplemental content will not appear for customers using our <a href="/developer/i14y.html">i14y content indexing API</a>.</p>
 
-<h2 id="adding-content-via-supplemental-feed">Adding Content via Supplemental Feed</h2>
+<h2>Adding Content via Supplemental Feed</h2>
 
-<p>You can use an RSS feed to add URLs. The feed is useful if you’d like to automate the process, add multiple URLs, or both.</p>
+<p>You can use an RSS feed to add URLs. The feed is useful if you'd like to automate the process, add multiple URLs, or both.</p>
 
-<p>Enter the URL of your RSS feed. Click <code>Submit</code>. We’ll fetch each URL in your feed and index the title, description (optional), and the full text of the document/webpage for the items you provide. Please be sure to follow our <a href="/manual/rss.html">schema</a>, and note that we will only index the items that are listed in the feed.</p>
+<p>Enter the URL of your RSS feed. Click <code>Submit</code>. We'll fetch each URL in your feed and index the title, description (optional), and the full text of the document/webpage for the items you provide. Please be sure to follow our <a href="/manual/rss.html">schema</a>, and note that we will only index the items that are listed in the feed.</p>
 
 <p>You can see the list of URLs we have indexed from your feed by viewing the Supplemental URLs section.</p>
 
-<p>Delete a URL added via RSS feed by deleting the item from your RSS feed. We’ll remove the URL from our index the next time we fetch your RSS feed (we fetch saved feeds once per day, in the evening in Eastern Time; for brand new feeds, we fetch as soon as you hit <code>Submit</code> on the feed URL).</p>
+<p>Delete a URL added via RSS feed by deleting the item from your RSS feed. We'll remove the URL from our index the next time we fetch your RSS feed (we fetch saved feeds once per day, in the evening in Eastern Time; for brand new feeds, we fetch as soon as you hit <code>Submit</code> on the feed URL).</p>
 
 <p>You can also delete all of the URLs added via the RSS feed by deleting the RSS feed itself.</p>
 
-<p><strong>Note:</strong> We can’t restore URLs that don’t exist within your current feed. Please don’t remove items from the feed unless you want them to be removed from the index. You can add a feed that contains up to 1,000 items on your own. If you have a feed that will include more than 1,000 items, please contact us.</p>
+<p><strong>Note:</strong> We can't restore URLs that don't exist within your current feed. Please don't remove items from the feed unless you want them to be removed from the index. You can add a feed that contains up to 1,000 items on your own. If you have a feed that will include more than 1,000 items, please contact us.</p>
 
-<p><a name="supplemental-urls"></a>
-## Adding Content via the Supplemental URLs Section</p>
+<p><a name="supplemental-urls"></a></p>
 
-<p>You can also manually add a specific URL on the Supplemental URLs page. We’ll fetch each URL you add manually and we’ll index the title, description, and the full text of the document/webpage for the link you provide. Note: You can’t manually add a Supplemental URL if it has already been added by via Supplemental feed.</p>
+<h2>Adding Content via the Supplemental URLs Section</h2>
+
+<p>You can also manually add a specific URL on the Supplemental URLs page. We'll fetch each URL you add manually and we'll index the title, description, and the full text of the document/webpage for the link you provide. Note: You can’t manually add a Supplemental URL if it has already been added by via Supplemental feed.</p>
 
 <p>Delete a manually added URL by selecting <code>Remove</code> within the list of supplemental URLs.</p>
 
 <p>The source column in the crawl report shows how you added the URL, via an RSS feed or manually.</p>
 
-<h2 id="how-supplemental-content-appears-on-your-search-results-page">How Supplemental Content Appears on Your Search Results Page</h2>
+<h2>How Supplemental Content Appears on Your Search Results Page</h2>
 
 <p>We display titles as they are provided in the feed or as you entered them manually.</p>
 
 <p>We display descriptions as follows:</p>
 
 <ul>
-  <li>If a searcher’s term matches terms in the description you provided: We’ll display the description exactly as you provided it.</li>
-  <li>If a searcher’s term only matches terms in the full text of the document: We’ll display snippets taken from the full text.</li>
+<li>If a searcher’s term matches terms in the description you provided: We'll display the description exactly as you provided it.</li>
+<li>If a searcher’s term only matches terms in the full text of the document: We’ll display snippets taken from the full text.</li>
 </ul>
+
 
 <p>By default, supplemental content will appear after all Bing commercial search results have been shown. For example, a search on DigitalGov.gov for “serverless architecture” displays results from Bing’s index on page 1.</p>
 
 <p>After hitting ‘next’ to view page 2, supplemental content is served.</p>
 
-<h3 id="page-1">Page 1:</h3>
+<h3>Page 1:</h3>
 
-<p><img class="img-responsive" src="https://search.digitalgov.gov/img/Commercial-Results-First-Page-1.png" alt="Commercial Results are Displayed on Page One of the DigitalGov.gov Search Results Page" />&lt;/img&gt;</p>
+<p><img class="img-responsive" src="https://search.digitalgov.gov/img/Commercial-Results-First-Page-1.png" alt="Commercial Results are Displayed on Page One of the DigitalGov.gov Search Results Page"></img></p>
 
-<h3 id="page-2">Page 2:</h3>
+<h3>Page 2:</h3>
 
-<p><img class="img-responsive" src="https://search.digitalgov.gov/img/Commercial-Results-First-Page-2.png" alt="Supplemental Feed Results are Displayed on Page Two of the DigitalGov.gov Search Results Page" />&lt;/img&gt;</p>
+<p><img class="img-responsive" src="https://search.digitalgov.gov/img/Commercial-Results-First-Page-2.png" alt="Supplemental Feed Results are Displayed on Page Two of the DigitalGov.gov Search Results Page"></img></p>
 
 <p>If there are no commercial results for a query but there are supplemental content results, we will display the supplemental content on page one.</p>
 
-<h2 id="getting-supplemental-content-to-always-appear-first">Getting Supplemental Content To Always Appear First</h2>
+<h2>Getting Supplemental Content To Always Appear First</h2>
 
-<p>If you would like your supplemental content to always appear first in search results, please <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">contact our team</a>. Searchers will first be served any supplemental content results, and are then offered the chance to “search again,” which will lead them to commercial index results.</p>
+<p>If you would like your supplemental content to always appear first in search results, please <a href="mailto:search@suppot.digitalgov.gov">contact our team</a>. Searchers will first be served any supplemental content results, and are then offered the chance to “search again,” which will lead them to commercial index results.</p>
 
 <p>Please note: if you have any <a href="/manual/rss.html">regular RSS feeds</a> set up in your search site, this regular RSS content will also appear first with the supplemental content, prior to commercial results. If content is present in both types of feed, duplicates will appear in your results.</p>
 
 <p>In the example below, a Supplemental URL appears first, and clicking “Try your search again” will lead to a page of Bing results.</p>
 
-<p><img class="img-responsive" src="https://search.digitalgov.gov/img/Supplemental-Content-First-Example.png" alt="A Supplemental URL is Displayed on Page One of the DigitalGo Search Search Results Page" />&lt;/img&gt;</p>
+<p><img class="img-responsive" src="https://search.digitalgov.gov/img/Supplemental-Content-First-Example.png" alt="A Supplemental URL is Displayed on Page One of the DigitalGo Search Search Results Page"></img></p>
 
-<h2 id="getting-supplemental-content-to-be-your-only-search-results">Getting Supplemental Content To Be Your Only Search Results</h2>
+<h2>Getting Supplemental Content To Be Your Only Search Results</h2>
 
-<p>If you would like your supplemental content to be the only results served from your site, please <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">contact our team</a>. Searchers will not be offered the chance to “search again” on a commercial index after they exhaust your supplemental content results (see above example).</p>
+<p>If you would like your supplemental content to be the only results served from your site, please <a href="mailto:search@suppot.digitalgov.gov">contact our team</a>. Searchers will not be offered the chance to “search again” on a commercial index after they exhaust your supplemental content results (see above example).</p>
 
 <p>Please note: if you have any <a href="/manual/rss.html">regular RSS feeds</a> set up in your search site, this regular RSS content will also appear with the supplemental content. If content is present in both types of feed, duplicates will appear in your results.</p>
 
@@ -626,26 +653,29 @@ Watch the recording of our February 2015 webinar [**Straight to the Top: Best Be
 <p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
 
 <ul>
-  <li><a href="https://validator.w3.org/feed/">W3C Feed Validation Service</a> <i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
-  <li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a> <i class="icon-external-link"><span>(External link)</span></i></li>
-  <li><a href="https://atomenabled.org/developers/syndication/">Atom syndication format</a> <i class="icon-external-link"><span>(External link)</span></i></li>
+<li><a href="https://validator.w3.org/feed/">W3C Feed Validation Service</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
+<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+<li><a href="https://atomenabled.org/developers/syndication/">Atom syndication format</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
 </ul>
 
-<p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report for your PDF that says, “No content found in document”? Your PDF is likely an image-only, non-searchable file that was created from a paper document using a scanner. See the resources below for more information on how to create searchable PDF files.</p>
+
+<p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report for your PDF that says, "No content found in document"? Your PDF is likely an image-only, non-searchable file that was created from a paper document using a scanner. See the resources below for more information on how to create searchable PDF files.</p>
 
 <ul>
-  <li><a href="https://blogs.adobe.com/acrolaw/2007/02/is_that_pdf_sea/">Is that PDF Searchable?</a> <i class="icon-external-link"><span>(External link)</span></i> (blog post)</li>
-  <li><a href="https://acrobatusers.com/tutorials/how-to-create-a-searchable-pdf-file">How to Create Searchable PDF File</a> <i class="icon-external-link"><span>(External link)</span></i> (video)</li>
+<li><a href="https://blogs.adobe.com/acrolaw/2007/02/is_that_pdf_sea/">Is that PDF Searchable?</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (blog post)</li>
+<li><a href="https://acrobatusers.com/tutorials/how-to-create-a-searchable-pdf-file">How to Create Searchable PDF File</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (video)</li>
 </ul>
 
-<p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report that says your page is taking too long to load? Use <a href="https://tools.pingdom.com/fpt/">Pingdom Tools Full Page Test</a> <i class="icon-external-link"><span>(External link)</span></i> to test the load time of your page, analyze it, and find the bottlenecks.</p>
 
-<p><strong><em>Did you know?</em></strong> To help the public find your web pages when they search on Bing.com, we notify Bing about any URLs you add. While this helps with search engine optimization (SEO), it is not a cure-all. You should also register for and use commercial search engines’ webmaster tools.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> Are you seeing an error message in the crawled URLs report that says your page is taking too long to load? Use <a href="https://tools.pingdom.com/fpt/">Pingdom Tools Full Page Test</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to test the load time of your page, analyze it, and find the bottlenecks.</p>
+
+<p><strong><em>Did you know?</em></strong> To help the public find your web pages when they search on Bing.com, we notify Bing about any URLs you add. While this helps with search engine optimization (SEO), it is not a cure-all. You should also register for and use commercial search engines' webmaster tools.</p>
 
 <ul>
-  <li><a href="https://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i></li>
-  <li><a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Central</a> <i class="icon-external-link"><span>(External link)</span></i></li>
+<li><a href="https://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+<li><a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Central</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
 </ul>
+
 
     </div>
 
@@ -684,66 +714,56 @@ Watch the recording of our February 2015 webinar [**Straight to the Top: Best Be
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Domains</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Domains</p>
 
 <p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
 
-<h2 id="entire-sites">Entire Site(s)</h2>
+<h2>Entire Site(s)</h2>
 
 <ul>
-  <li>List yoursite.gov (without www) to search your entire site, including all subdomains.</li>
-  <li>List yoursite.gov and yoursite2.gov to search multiple sites.</li>
+<li>List yoursite.gov (without www) to search your entire site, including all subdomains.</li>
+<li>List yoursite.gov and yoursite2.gov to search multiple sites.</li>
 </ul>
 
-<h2 id="specific-subdomains">Specific Subdomains</h2>
+
+<h2>Specific Subdomains</h2>
 
 <ul>
-  <li>List www.yoursite.gov to include only the primary ‘www’ domain.</li>
-  <li>List subdomain.yoursite.gov to include subdomains.</li>
+<li>List www.yoursite.gov to include only the primary 'www' domain.</li>
+<li>List subdomain.yoursite.gov to include subdomains.</li>
 </ul>
 
-<h2 id="specific-directories">Specific Directories</h2>
+
+<h2>Specific Directories</h2>
 
 <p>List yoursite.gov/folder to include folders. Note: this will include all sub-folders (if they exist), i.e. yoursite.gov/folder/folder2.</p>
 
 <p>You cannot specify individual URLs.</p>
 
-<p>Searches that start three or more subfolders deep cannot use our default configuration. <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">Email us</a> for assistance.</p>
+<p>Searches that start three or more subfolders deep cannot use our default configuration. <a href="mailto:search@support.digitalgov.gov">Email us</a> for assistance.</p>
 
 <hr />
 
 <p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
 
 <ol>
-  <li>
-    <p>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a> <i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p>
-  </li>
-  <li>
-    <p>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</p>
-  </li>
-  <li>
-    <p>Email us at <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;</a> to filter them from your site’s search results. Note that this option should be used only if the other options aren’t feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p>
-  </li>
+<li><p>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
+<li><p>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</p></li>
+<li><p>Email us at <a href="&#109;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#115;&#101;&#x61;&#114;&#x63;&#104;&#64;&#x73;&#117;&#112;&#x70;&#x6f;&#x72;&#x74;&#x2e;&#x64;&#105;&#x67;&#105;&#116;&#x61;&#108;&#103;&#111;&#x76;&#x2e;&#x67;&#x6f;&#x76;">&#x73;&#x65;&#x61;&#x72;&#x63;&#x68;&#64;&#x73;&#x75;&#x70;&#x70;&#111;&#x72;&#x74;&#x2e;&#100;&#105;&#103;&#x69;&#x74;&#97;&#x6c;&#103;&#x6f;&#x76;&#46;&#103;&#x6f;&#x76;</a> to filter them from your site's search results. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
 </ol>
+
 
 <p><a id="filter"></a><strong><em>Troubleshooting Tip:</em></strong> You can remove or filter specific URLs using any of the following options.</p>
 
 <ol>
-  <li>
-    <p>Remove the page from your site and return a 404 (Not Found) 401 (Gone), or 301 (Permanently Moved) HTTP status.</p>
-  </li>
-  <li>
-    <p>Add a <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">noindex robots metatag or x-robots tag</a> <i class="icon-external-link"><span>(External link)</span></i>. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p>
-  </li>
-  <li>
-    <p>Request the page’s removal using the <a href="http://www.bing.com/webmaster/help/block-urls-from-bing-264e560a">Block URLs option in Bing Webaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/1663419">Remove URLs option in Google Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
-  </li>
-  <li>
-    <p>Use the <a href="/manual/filter-content.html">Filter URLs</a> option under the Advanced tab. Note that this option should be used only if the other options aren’t feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p>
-  </li>
+<li><p>Remove the page from your site and return a 404 (Not Found) 401 (Gone), or 301 (Permanently Moved) HTTP status.</p></li>
+<li><p>Add a <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">noindex robots metatag or x-robots tag</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p></li>
+<li><p>Request the page's removal using the <a href="http://www.bing.com/webmaster/help/block-urls-from-bing-264e560a">Block URLs option in Bing Webaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/1663419">Remove URLs option in Google Webmaster Tools</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i>.</p></li>
+<li><p>Use the <a href="/manual/filter-content.html">Filter URLs</a> option under the Advanced tab. Note that this option should be used only if the other options aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p></li>
 </ol>
 
-<p><strong><em>Troubleshooting Tip:</em></strong> Are specific web pages missing from your Bing web results? You can tell us about any missing URLs via an RSS feed or manually (the Supplemental Feed and Supplemental URLs options under the <a href="/manual/domains-advanced.html">Advanced</a> tab, respectively). We’ll fetch and index the pages and append them to your web results.</p>
+
+<p><strong><em>Troubleshooting Tip:</em></strong> Are specific web pages missing from your Bing web results? You can tell us about any missing URLs via an RSS feed or manually (the Supplemental Feed and Supplemental URLs options under the <a href="/manual/domains-advanced.html">Advanced</a> tab, respectively). We'll fetch and index the pages and append them to your web results.</p>
 
     </div>
 
@@ -776,9 +796,9 @@ Watch the recording of our February 2015 webinar [**Straight to the Top: Best Be
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; <a href="/manual/domains.html">Domains</a> &gt; Advanced &gt; Filter URLs</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > <a href="/manual/domains.html">Domains</a> > Advanced > Filter URLs</p>
 
-<p>You can filter <em>a single URL</em> from the results on your site. Use it for emergency reasons only (such as spillage of classified information or unintentional publication of a page). Note that this option should be used only if the <a href="/manual/domains.html#filter">other options</a> aren’t feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p>
+<p>You can filter <em>a single URL</em> from the results on your site. Use it for emergency reasons only (such as spillage of classified information or unintentional publication of a page). Note that this option should be used only if the <a href="/manual/domains.html#filter">other options</a> aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p>
 
 <p>It is not meant to fix the results for entire site, such as for launch or redesign problems. For tips on how to fix these more systemic problems, read our <a href="/blog/redesign.html">Checklist for a Successful Website Redesign</a>.</p>
 
@@ -821,33 +841,33 @@ Watch the recording of our February 2015 webinar [**Straight to the Top: Best Be
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; RSS</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > RSS</p>
 
 <p>Would you like searchers to be able to search your news or multimedia content? Would you like them to be able to narrow results by date?</p>
 
 <p>Tell us the locations and names of your RSS feeds. We index all new and updated content on your feeds within minutes.</p>
 
-<h2 id="step-1-tell-us-about-your-rss-feeds">Step 1. Tell Us About Your RSS Feeds</h2>
+<h2>Step 1. Tell Us About Your RSS Feeds</h2>
 
-<p>We love feeds! Tell us about <em>all</em> of your RSS feeds, even if you don’t opt to show them in step 2 below. Feeds are the fastest and most reliable way for us to learn about your new and updated content.</p>
+<p>We love feeds! Tell us about <em>all</em> of your RSS feeds, even if you don't opt to show them in step 2 below. Feeds are the fastest and most reliable way for us to learn about your new and updated content.</p>
 
 <p>Select the option to add a new RSS feed.</p>
 
-<h3 id="name">Name</h3>
+<h3>Name</h3>
 
-<p>Create a name for the feed. Within this ‘bucket’ you can list a single RSS feed or many feeds. For example, you can opt to list all of your agency’s press releases separately (such as Police News, Fire News, EMS News, etc.) or you can list all three under one general name (such as News).</p>
+<p>Create a name for the feed. Within this 'bucket' you can list a single RSS feed or many feeds. For example, you can opt to list all of your agency's press releases separately (such as Police News, Fire News, EMS News, etc.) or you can list all three under one general name (such as News).</p>
 
-<h3 id="feed-type">Feed type</h3>
+<h3>Feed type</h3>
 
-<p>Select the type of feed. The default option is RSS (for text content like press releases or blogs). Change it to <a href="http://www.rssboard.org/media-rss">media RSS</a> <i class="icon-external-link"><span>(External link)</span></i> for multimedia content like images and videos.</p>
+<p>Select the type of feed. The default option is RSS (for text content like press releases or blogs). Change it to <a href="http://www.rssboard.org/media-rss">media RSS</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> for multimedia content like images and videos.</p>
 
 <p>Each item within a RSS feed must include a title, link, description, and publication date.</p>
 
-<p>Each item within a media RSS feed must also include both a <a href="http://www.rssboard.org/media-rss#media-content">media:content URL</a> <i class="icon-external-link"><span>(External link)</span></i> to specify a direct URL to the media object and a <a href="http://www.rssboard.org/media-rss#media-thumbnails">media:thumbnail URL</a> <i class="icon-external-link"><span>(External link)</span></i> to specify a URL to the object’s thumbnail.</p>
+<p>Each item within a media RSS feed must also include both a <a href="http://www.rssboard.org/media-rss#media-content">media:content URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a direct URL to the media object and a <a href="http://www.rssboard.org/media-rss#media-thumbnails">media:thumbnail URL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> to specify a URL to the object's thumbnail.</p>
 
-<p>Any items missing a required element won’t display in your search results.</p>
+<p>Any items missing a required element won't display in your search results.</p>
 
-<h3 id="sample-rss-item-with-all-required-elements">Sample RSS Item with All Required Elements</h3>
+<h3>Sample RSS Item with All Required Elements</h3>
 
 <pre><code>&lt;item&gt;
 &lt;title&gt;
@@ -863,7 +883,7 @@ WASHINGTON, May 29, 2013–Agriculture Secretary Tom Vilsack made the following 
 &lt;/item&gt;
 </code></pre>
 
-<h3 id="sample-media-rss-item-with-all-required-elements">Sample Media RSS Item with All Required Elements</h3>
+<h3>Sample Media RSS Item with All Required Elements</h3>
 
 <pre><code>&lt;item&gt;
 &lt;title type="html"&gt;
@@ -877,96 +897,99 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
 &lt;/guid&gt;
 &lt;pubDate&gt;Fri, 24 May 2013 00:00:00 EDT&lt;/pubDate&gt;
 &lt;media:description type="html"&gt;
-&lt;![CDATA[ As schools close for the year and summer weather beckons, many recreationalists head to the Great Lakes' public beaches. However, these coastal areas can become 	contaminated with disease-causing bacteria that threaten public health, disrupt water 	recreation, and pay a toll on the Great Lakes economies that depend on summer tourism. ]]&gt;
+&lt;![CDATA[ As schools close for the year and summer weather beckons, many recreationalists head to the Great Lakes' public beaches. However, these coastal areas can become  contaminated with disease-causing bacteria that threaten public health, disrupt water   recreation, and pay a toll on the Great Lakes economies that depend on summer tourism. ]]&gt;
 &lt;/media:description&gt;
 &lt;media:thumbnail url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/thumbs/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
 &lt;media:content type="" url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/large/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
 &lt;/item&gt;
 </code></pre>
 
-<h2 id="step-2-opt-to-show-as-a-facet-inline-module-or-both">Step 2. Opt to Show as a Facet, Inline Module, or Both</h2>
+<h2>Step 2. Opt to Show as a Facet, Inline Module, or Both</h2>
 
 <p>Allow searchers to see inline results for the three most recent, relevant RSS results <em>across all of your RSS feeds</em> by turning on the News module on the <a href="/manual/display-overview.html">Display Overview</a> page. You can also edit the default title, News, on the Display Overview page.</p>
 
-<p>Allow searchers to narrow results to a specific feed by turning on the option to show the facet on the <a href="/manual/display-overview.html">Display Overview</a> page. To ensure searchers don’t encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a facet.</p>
+<p>Allow searchers to narrow results to a specific feed by turning on the option to show the facet on the <a href="/manual/display-overview.html">Display Overview</a> page. To ensure searchers don't encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a facet.</p>
 
-<h2 id="step-3-check-your-search-results-page">Step 3. Check Your Search Results Page</h2>
+<h2>Step 3. Check Your Search Results Page</h2>
 
-<h3 id="module">Module</h3>
+<h3>Module</h3>
 
 <p>If you opted to show your RSS feed(s) as a module, searchers will see inline news results. It will highlight the three most recent, relevant results across all of your RSS feeds.</p>
 
-<p><img class="img-responsive" src="https://search.digitalgov.gov/img/RSS-Inline.png" alt="RSS Inline Module Example" />&lt;/img&gt;</p>
+<p><img class="img-responsive" src="https://search.digitalgov.gov/img/RSS-Inline.png" alt="RSS Inline Module Example"></img></p>
 
-<h3 id="facet">Facet</h3>
+<h3>Facet</h3>
 
 <p>If you opted to show your RSS feed(s) as a facet, searchers can narrow their results to see only RSS-based content by clicking on the facet.</p>
 
 <p>Within the RSS-based results, searchers can opt to limit results to the last hour, day, week, month, or year, or they can set a custom date range. They also can sort results in descending order by relevance (best match first) or date (most recent first).</p>
 
-<h3 id="results-count">Results count</h3>
+<h3>Results count</h3>
 
 <p>We show the number of results returned for searches against your feed(s).</p>
 
-<p><img class="img-responsive" src="https://search.digitalgov.gov/img/RSS-Facet.png" alt="RSS Facet Example with Results Count" />&lt;/img&gt;</p>
+<p><img class="img-responsive" src="https://search.digitalgov.gov/img/RSS-Facet.png" alt="RSS Facet Example with Results Count"></img></p>
 
-<h2 id="step-4-check-the-status-of-your-feeds">Step 4. Check the Status of Your Feeds</h2>
+<h2>Step 4. Check the Status of Your Feeds</h2>
 
-<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each feed’s status.</p>
+<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each feed's status.</p>
 
-<p><img class="img-responsive" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/rss-status.png" alt="RSS status messages and colors" />&lt;/img&gt;</p>
+<p><img class="img-responsive" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/rss-status.png" alt="RSS status messages and colors"></img></p>
 
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Color</th>
-      <th style="text-align: left">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">Green   </td>
-      <td style="text-align: left">Feed indexed, no errors      </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Yellow</td>
-      <td style="text-align: left">Pending Indexing</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Red</td>
-      <td style="text-align: left">Feed indexed, but error in one or more items</td>
-    </tr>
-    <tr>
-      <td style="text-align: left"> </td>
-      <td style="text-align: left"> </td>
-    </tr>
-  </tbody>
+<thead>
+<tr>
+<th style="text-align:left;"> Color </th>
+<th style="text-align:left;"> Status </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;"> Green&nbsp;&nbsp;&nbsp; </td>
+<td style="text-align:left;"> Feed indexed, no errors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+</tr>
+<tr>
+<td style="text-align:left;"> Yellow </td>
+<td style="text-align:left;"> Pending Indexing </td>
+</tr>
+<tr>
+<td style="text-align:left;"> Red </td>
+<td style="text-align:left;"> Feed indexed, but error in one or more items </td>
+</tr>
+<tr>
+<td style="text-align:left;"> &nbsp; </td>
+<td style="text-align:left;"> &nbsp; </td>
+</tr>
+</tbody>
 </table>
+
 
 <p>Click on the name of any feed with an error to see more detailed information about it. Possible error messages follow.</p>
 
 <ul>
-  <li>404 Not Found</li>
-  <li>Feed looks empty</li>
-  <li>Description can’t be blank</li>
-  <li>Title can’t be blank</li>
-  <li>Missing link field</li>
-  <li>Missing pubDate field</li>
-  <li>Link is not a valid URL</li>
-  <li>Linked URL does not exist (HTTP 404)</li>
+<li>404 Not Found</li>
+<li>Feed looks empty</li>
+<li>Description can't be blank</li>
+<li>Title can't be blank</li>
+<li>Missing link field</li>
+<li>Missing pubDate field</li>
+<li>Link is not a valid URL</li>
+<li>Linked URL does not exist (HTTP 404)</li>
 </ul>
+
 
 <hr />
 
 <p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
 
 <ul>
-  <li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a> <i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
-  <li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a> <i class="icon-external-link"><span>(External link)</span></i></li>
-  <li><a href="http://atomenabled.org/developers/syndication/">Atom syndication format</a> <i class="icon-external-link"><span>(External link)</span></i></li>
+<li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
+<li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
+<li><a href="http://atomenabled.org/developers/syndication/">Atom syndication format</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i></li>
 </ul>
 
-<p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="https://search.usa.gov/sites/">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don’t need to coordinate with us.</p>
+
+<p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="https://search.usa.gov/sites/">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don't need to coordinate with us.</p>
 
 <p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your feed.</p>
 
@@ -976,11 +999,11 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
 
 <p>The value is the number for your feed ID, which is visible in the URL when you edit your feed in the Admin Center.</p>
 
-<p><strong><em>Did you know?</em></strong> You can click on the ‘Preview’ option to see the content we have indexed for each of your RSS feeds.</p>
+<p><strong><em>Did you know?</em></strong> You can click on the 'Preview' option to see the content we have indexed for each of your RSS feeds.</p>
 
-<p><strong><em>Did you know?</em></strong> When you <a href="/manual/youtube.html">provide us with your YouTube channel</a>, we’ll automatically index the RSS feed for your YouTube channel.</p>
+<p><strong><em>Did you know?</em></strong> When you <a href="/manual/youtube.html">provide us with your YouTube channel</a>, we'll automatically index the RSS feed for your YouTube channel.</p>
 
-<p><strong><em>Did you know?</em></strong> For any feeds that you’ve extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a> <i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by these facets in the <a href="/manual/display-overview.html">sidebar</a> on the results page.</p>
+<p><strong><em>Did you know?</em></strong> For any feeds that you've extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by these facets in the <a href="/manual/display-overview.html">sidebar</a> on the results page.</p>
 
     </div>
 
@@ -1013,9 +1036,9 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; YouTube</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > YouTube</p>
 
-<h2 id="tell-us-about-your-youtube-channel">Tell Us About Your YouTube Channel</h2>
+<h2>Tell Us About Your YouTube Channel</h2>
 
 <p>Provide us with the <em>full URL</em> for your YouTube channel.</p>
 
@@ -1025,25 +1048,25 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
 
 <p>Either URL format works.</p>
 
-<h2 id="opt-to-display-your-videos">Opt to Display Your Videos</h2>
+<h2>Opt to Display Your Videos</h2>
 
-<p>When you add the URL for your YouTube channel, we’ll automatically index your videos—both your uploaded videos and playlists.</p>
+<p>When you add the URL for your YouTube channel, we'll automatically index your videos&mdash;both your uploaded videos and playlists.</p>
 
-<p>We’ll show the videos by default. You can toggle the settings for showing your videos on the <a href="/manual/display-overview.html">Display Overview</a> page, choosing to show them as a facet, inline module, or both.</p>
+<p>We'll show the videos by default. You can toggle the settings for showing your videos on the <a href="/manual/display-overview.html">Display Overview</a> page, choosing to show them as a facet, inline module, or both.</p>
 
 <p><strong>Facet</strong></p>
 
-<p><img src="https://search.digitalgov.gov/img/Videos-Facet.png" alt="Videos Facet on DigitalGov.gov" title="Videos Facet on DigitalGov.gov" /></p>
+<p><img src="https://search.digitalgov.gov/img/Videos-Facet.png" title="Videos Facet on DigitalGov.gov" alt="Videos Facet on DigitalGov.gov" /></p>
 
 <p><strong>Inline Module</strong></p>
 
-<p><img src="https://search.digitalgov.gov/img/Videos-Inline-Module.png" alt="Inline Module on DigitalGov.gov" title="Inline Module on DigitalGov.gov" /></p>
+<p><img src="https://search.digitalgov.gov/img/Videos-Inline-Module.png" title="Inline Module on DigitalGov.gov" alt="Inline Module on DigitalGov.gov" /></p>
 
 <p>You can edit the default facet label, Videos, on the <a href="/manual/rss.html">RSS</a> page.</p>
 
 <hr />
 
-<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency’s photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
+<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
 
     </div>
 
@@ -1080,23 +1103,23 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Flickr</p>
+      <p><a href="/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > Flickr</p>
 
-<h2 id="tell-us-about-your-flickr-photostream">Tell Us About Your Flickr Photostream</h2>
+<h2>Tell Us About Your Flickr Photostream</h2>
 
 <p>Provide us with the <em>full URL</em> for your Flickr photostream. Most photostreams are in the photos folder (e.g., <a href="https://www.flickr.com/photos/hudopa">https://www.flickr.com/photos/hudopa</a> for HUD). Some photostreams are in the groups folder (such as <a href="https://www.flickr.com/groups/usagov">https://www.flickr.com/groups/usagov</a> for USA.gov).</p>
 
 <p>The URL must be for your overall photostream. You cannot specify individual photos, sets, favorites, or maps.</p>
 
-<h2 id="opt-to-display-your-flickr-images">Opt to Display Your Flickr Images</h2>
+<h2>Opt to Display Your Flickr Images</h2>
 
-<p>When you add the URL for your Flickr photostream, we’ll automatically index all of the images in your photostream.</p>
+<p>When you add the URL for your Flickr photostream, we'll automatically index all of the images in your photostream.</p>
 
-<p>On the image results page, we’ll display the images from your Flickr photostream by default. If you’d like to backfill them with the standard image results from your website, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">email us</a> and we’ll turn on your web images for you.</p>
+<p>On the image results page, we'll display the images from your Flickr photostream by default. If you'd like to backfill them with the standard image results from your website, <a href="mailto:search@support.digitalgov.gov">email us</a> and we'll turn on your web images for you.</p>
 
 <hr />
 
-<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency’s photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
+<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
 
 <p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/instagram.html">Instagram</a> account. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.</p>
 

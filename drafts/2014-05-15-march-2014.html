@@ -102,69 +102,75 @@
   
 
   <div class='post-content'>
-    <h2 id="highlighted-features">Highlighted Features</h2>
+    <h2>Highlighted Features</h2>
 
-<h3 id="feature-1-we-have-the-hamburger-menu">Feature 1. We have the hamburger menu!</h3>
+<h3>Feature 1. We have the hamburger menu!</h3>
 
 <p>This now ubiquitous icon will provide a solution for several use cases as we launch our new results page.</p>
 
 <p>The menu allows our customers to show as many facets, related sites, and web site navigation links as desired. Users now expect a hamburger menu to show additional operations and it works works well for search results pages. Why? most users click on a search result above the fold of the web page versus trying to browse or limit the results.</p>
 
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/feature-2014-04-01-hamburger.png" alt="Hamburger on new SERP" title="Hamburger on new SERP" /></p>
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/feature-2014-04-01-hamburger.png" title="Hamburger on new SERP" alt="Hamburger on new SERP" /></p>
 
-<h3 id="feature-2-were-very-close-to-launching-our-new-results-page">Feature 2. We’re very close to launching our new results page!</h3>
+<h3>Feature 2. We're very close to launching our new results page!</h3>
 
 <ul>
-  <li>Searchers now see the <a href="/manual/display-overview.html">Related Sites</a> when they search from a mobile phone or tablet.</li>
+<li>Searchers now see the <a href="/manual/display-overview.html">Related Sites</a> when they search from a mobile phone or tablet.</li>
 </ul>
 
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/feature-2014-04-01-related-sites.png" alt="Related sites on new SERP" title="Related sites on new SERP" /></p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/feature-2014-04-01-related-sites.png" title="Related sites on new SERP" alt="Related sites on new SERP" /></p>
 
 <ul>
-  <li>Searchers now see the <a href="/manual/rss.html">News GovBox</a> when they search from a mobile phone or tablet.</li>
+<li>Searchers now see the <a href="/manual/rss.html">News GovBox</a> when they search from a mobile phone or tablet.</li>
 </ul>
 
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/feature-2014-04-01-news-govbox.png" alt="News GovBox for a search on allergy on USA.gov" title="News GovBox for a search on allergy on USA.gov" /></p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/feature-2014-04-01-news-govbox.png" title="News GovBox for a search on allergy on USA.gov" alt="News GovBox for a search on allergy on USA.gov" /></p>
 
 <ul>
-  <li>Searchers now see <a href="/manual/best-bets-graphics.html">graphics best bets</a> on our new results page</li>
+<li>Searchers now see <a href="/manual/best-bets-graphics.html">graphics best bets</a> on our new results page</li>
 </ul>
 
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/feature-2014-04-01-graphics-best-bet.png" alt="Graphic Best Bets on new SERP" title="Graphic Best Bets on new SERP" /></p>
 
-<h3 id="other-notable-features">Other notable features</h3>
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/feature-2014-04-01-graphics-best-bet.png" title="Graphic Best Bets on new SERP" alt="Graphic Best Bets on new SERP" /></p>
+
+<h3>Other notable features</h3>
 
 <ul>
-  <li>Searchers see site limit message on new SERP</li>
-  <li>Searchers see query term in News GovBox heading</li>
-  <li>Searchers don’t see repetitive link for site limit message</li>
-  <li>Desktop &amp; tablet searchers see full description for text best bets</li>
+<li>Searchers see site limit message on new SERP</li>
+<li>Searchers see query term in News GovBox heading</li>
+<li>Searchers don't see repetitive link for site limit message</li>
+<li>Desktop &amp; tablet searchers see full description for text best bets</li>
 </ul>
 
-<h2 id="chores">Chores</h2>
+
+<h2>Chores</h2>
 
 <ul>
-  <li>We hooked up logstash, part of the <a href="http://www.elasticsearch.org/overview/">ELK stack</a>,
+<li>We hooked up logstash, part of the <a href="http://www.elasticsearch.org/overview/">ELK stack</a>,
 as a service</li>
-  <li>We upgraded to <a href="http://www.elasticsearch.org/overview/elasticsearch">Elasticsearch</a> 1.1.0</li>
-  <li>Searchers no longer see a bad request 400 or blank page for sites that don’t specify a character set</li>
-  <li>We fixed our flickr rake task</li>
-  <li>Customers with .com domains may now leverage CNAME</li>
-  <li>We investigated  the OpenSSL Heartbleed vulnerability and determined that we were not risk</li>
-  <li>We no longer query news items if there are no RSS feeds exist</li>
-  <li>We adjusted Elastic Search our instrumentation</li>
+<li>We upgraded to <a href="http://www.elasticsearch.org/overview/elasticsearch">Elasticsearch</a> 1.1.0</li>
+<li>Searchers no longer see a bad request 400 or blank page for sites that don't specify a character set</li>
+<li>We fixed our flickr rake task</li>
+<li>Customers with .com domains may now leverage CNAME</li>
+<li>We investigated  the OpenSSL Heartbleed vulnerability and determined that we were not risk</li>
+<li>We no longer query news items if there are no RSS feeds exist</li>
+<li>We adjusted Elastic Search our instrumentation</li>
 </ul>
 
-<h2 id="fixes">Fixes</h2>
+
+<h2>Fixes</h2>
 
 <ul>
-  <li>We now allow more than one value for Dublin Core elements</li>
-  <li>Customers may no longer enter enter HTML in best bets</li>
-  <li>Some customers Flickr accounts get an error message</li>
-  <li>Customers who enter domains with directories can not add additional directories with same characters</li>
-  <li>Searchers see related sites links change with the selected nav colors</li>
-  <li>Searchers see an odd overlay for the menu on sites w/ a white color scheme</li>
+<li>We now allow more than one value for Dublin Core elements</li>
+<li>Customers may no longer enter enter HTML in best bets</li>
+<li>Some customers Flickr accounts get an error message</li>
+<li>Customers who enter domains with directories can not add additional directories with same characters</li>
+<li>Searchers see related sites links change with the selected nav colors</li>
+<li>Searchers see an odd overlay for the menu on sites w/ a white color scheme</li>
 </ul>
+
 
   </div>
 
