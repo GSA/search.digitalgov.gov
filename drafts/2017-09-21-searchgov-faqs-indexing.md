@@ -25,6 +25,8 @@ We will update these FAQs with questions we hear from our customers.
 
 [Q: How was my site getting results before?](#q-how-was-my-site-getting-results-before)
 
+[Q: Why are you changing your name?](#q-why-are-you-changing-your-name)
+
 # Indexing
 
 [Q: How will you index my site?](#q-how-will-you-index-my-site)
@@ -64,7 +66,10 @@ We encourage you to explore how you can compile a list of your site URLs. You do
 ## Q: How was my site getting results before?
  
 Since 2007, we have served search results from Bing’s index by default. We also use Google’s index to support certain Collections where Bing does not provide results.
-# Indexing
+
+## Q: Why are you changing your name?
+We’re changing our name to make things simpler. In the past, we’ve been FirstGov Search, FirstSearch, USAGov Search, USASearch, and are currently DigitalGov Search. Our new name is short, simple, and easy to remember.
+
 
 # Indexing
 
@@ -72,10 +77,11 @@ Since 2007, we have served search results from Bing’s index by default. We als
  
 Based on your site setup, you have a variety of options. Below is our order of preference in terms of how we’ll get your content into our indexes (note: you may choose more than one approach):
  
-[i14y API](https://search.digitalgov.gov/developer/i14y.html) --  Our API allows you to update your search index in real-time. This is the preferred method.
-URL list (coming in FY18) -- If you can’t send us your content via i14y, then we will fetch and index the URLs that you provide. Our system will visit the URLs you provide and extract page titles, dates, and full text for indexing. You can use the URL indexing method in concert with i14y, for any non-CMS content. 
+* [i14y API](https://search.digitalgov.gov/developer/i14y.html) --  Our API allows you to update your search index in real-time. This is the preferred method.
 
-[RSS feed](https://search.digitalgov.gov/manual/rss.html) -- We will still accept RSS feeds to update your indexes on a rolling basis. 
+* URL list (coming in FY18) -- If you can’t send us your content via i14y, then we will fetch and index the URLs that you provide. Our system will visit the URLs you provide and extract page titles, dates, and full text for indexing. You can use the URL indexing method in concert with i14y, for any non-CMS content. 
+
+* [RSS feed](https://search.digitalgov.gov/manual/rss.html) -- We will still accept RSS feeds to update your indexes on a rolling basis. 
 
 If you’re unable to do any of the above, [contact us](mailto:search@support.digitalgov.gov), and we’ll discuss options.
  
@@ -85,7 +91,7 @@ If you have set up i14y already, or if you send your full site content via RSS, 
  
 ## Q: I use Drupal, is there a module I could leverage?
  
-For customers who use Drupal as their CMS, our [Drupal module](https://www.drupal.org/project/usasearch) eliminates the need for programming effort around the i14y API. This module is available for both Drupal 7 and 8.
+Yes! For customers who use Drupal as their CMS, our [Drupal module]( https://www.drupal.org/project/usasearch) eliminates the need for programming effort around the i14y API. This module is available for both Drupal 7 and 8.
 
 The module is open source. We welcome pull requests and code contributions that will improve the module and offer new features.
 
@@ -99,7 +105,7 @@ You will need to send us non-CMS material as a list of URLs, while your Drupal c
  
 Our [i14y API](https://search.digitalgov.gov/developer/i14y.html) is a listener ready to recieve content from any system. We developed a Drupal module because it is the most popular CMS in government and to increase the adoption of i14y. 
 
-We have the beginning stages of a WordPress plugin, and welcome contributions to finish it up. If you’re able to develop an integration for your particular CMS, please make it open source, so other agencies can leverage it as well.
+We have the beginning stages of a [WordPress plugin](https://github.com/GSA/wp-digitalgov-i14y-indexer), and welcome contributions to finish it up. If you’re able to develop an integration for your particular CMS, please make it open source, so other agencies can leverage it as well.
 
 ## Q: What if we have no plans for a CMS?
  
