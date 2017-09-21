@@ -79,14 +79,18 @@ _Non-CMS Customers:_
 
 We encourage you to explore how you can compile a list of your site URLs, and to begin thinking about cleaning up your page titles and descriptions. You do not need to send us any information yet. You may want to check out our webinar [Structuring Your Site for Better SEO](https://search.digitalgov.gov/manual/training.html) that will give you tips on what sorts of things to be on the watch for.
 
-Do you have questions? Join us for an open Q&A session on:
+### Do you have questions? 
+
+You may join us for an open Q&A session on:
 
 ```
 Tuesday, October 3rd, 1 PM ET
 Call in number: 866-881-7035 / Passcode: 7847593#
 ```
 
-We also welcome your emailed [questions and comments](mailto:search@support.digitalgov.gov).
+We also invite you to read our [FAQs](/blog/searchgov-blog.html), which we'll update regularly.
+
+Finally, we welcome you to email [questions and comments](mailto:search@support.digitalgov.gov).
 
 The Search program has grown and evolved since its [inception in September 2000](/customers.html). We look forward to this next phase of service to you and the public. 
 
