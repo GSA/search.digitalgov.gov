@@ -85,7 +85,7 @@ You may join us for an open Q&A session on:
 
 ```
 Tuesday, October 3rd, 1 PM ET
-Call in number: 866-881-7035 / Passcode: 7847593#
+Call in number: 1-866-816-7357 / Passcode: 929827#
 ```
 
 We also invite you to read our [FAQs](/blog/searchgov-blog.html), which we'll update regularly.
