@@ -88,7 +88,7 @@ Tuesday, October 3rd, 1 PM ET
 Call in number: 1-866-816-7357 / Passcode: 929827#
 ```
 
-We also invite you to read our [FAQs](/blog/searchgov-blog.html), which we'll update regularly.
+We also invite you to read our [FAQs](/blog/searchgov-faqs-indexing.html), which we'll update regularly.
 
 Finally, we welcome you to email [questions and comments](mailto:search@support.digitalgov.gov).
 
