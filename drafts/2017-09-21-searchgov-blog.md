@@ -61,8 +61,6 @@ In FY18, we will have the ability to index content from lists of URLs. You’ll 
 
 This is a good opportunity to review your page titles and other metadata, and to tidy things up. This will improve not only how results are presented in our system, but improve your SEO for Google and Bing as well.
 
-If you’re unable to send us a list of URLs, please schedule a time to talk.
-
 If you’re unable to send us a list of URLs, please [schedule a time](mailto:search@support.digitalgov.gov) to talk with us.
 
 ## Customers who send us RSS feeds
@@ -79,7 +77,7 @@ We encourage you to set-up and test i14y as soon as possible.
 
 _Non-CMS Customers:_
 
-We encourage you to explore how you can compile a list of your site URLs, and to begin thinking about cleaning up your page titles and descriptions. You do not need to send us any information yet, but you may be interested to check out our webinar [Structuring Your Site for Better SEO](https://search.digitalgov.gov/manual/training.html) that will give you tips on what sorts of things to be on the watch for.
+We encourage you to explore how you can compile a list of your site URLs, and to begin thinking about cleaning up your page titles and descriptions. You do not need to send us any information yet. You may want to check out our webinar [Structuring Your Site for Better SEO](https://search.digitalgov.gov/manual/training.html) that will give you tips on what sorts of things to be on the watch for.
 
 Do you have questions? Join us for an open Q&A session on:
 
@@ -88,7 +86,7 @@ Tuesday, October 3rd, 1 PM ET
 Call in number: 866-881-7035 / Passcode: 7847593#
 ```
 
-We also welcome email [questions and comments](mailto:search@support.digitalgov.gov).
+We also welcome your emailed [questions and comments](mailto:search@support.digitalgov.gov).
 
 The Search program has grown and evolved since its [inception in September 2000](/customers.html). We look forward to this next phase of service to you and the public. 
 
