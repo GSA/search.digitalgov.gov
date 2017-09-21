@@ -107,70 +107,65 @@
 <p>Below are the release details for April and, as a reminder, we divide our work into three categories.</p>
 
 <ol>
-<li>Features: Things you actually notice.</li>
-<li>Chores: Back-end improvements that you don't notice.</li>
-<li>Fixes: Fixes to any code issues that may arise.</li>
+  <li>Features: Things you actually notice.</li>
+  <li>Chores: Back-end improvements that you don’t notice.</li>
+  <li>Fixes: Fixes to any code issues that may arise.</li>
 </ol>
 
-
-<h2>Features for Agency Customers</h2>
-
-<ul>
-<li>Customers can input multiple social media handles or URLs on the Social Media page.</li>
-<li>Customers can input multiple RSS feeds for each title on the RSS page.</li>
-<li>Customers can upload a page background image on the Look and Feel page. They can also select a repeat option for the image.</li>
-<li>Customers can toggle display of deep links on the Results Module page.</li>
-<li>Customers can toggle related sites, including Spanish, on the Results Module page.</li>
-<li>Customers can input their WebTrends or Google Analytics IDs on the 3rd Party Tracking page.</li>
-<li>Customers can download weekly reports from Monthly Reports page.</li>
-<li>API customers can access new features through the API.</li>
-<li>Admins can bulk upload an unlimited number of URLs on behalf of customers.</li>
-<li>Admins can specify "catalog" URLs on behalf of customers.</li>
-</ul>
-
-
-<h2>Features for Searchers</h2>
+<h2 id="features-for-agency-customers">Features for Agency Customers</h2>
 
 <ul>
-<li>Searchers see all elements aligned horizontally under search bar.</li>
-<li>Searchers see the published at date for web search results when the URL is part of an RSS feed.</li>
-<li>Searchers see up to 20 video results per page with a paging option to see more results.</li>
-<li>Mobile searchers see mobile friendly results pages for RSS- and collection-based results.</li>
-<li>Searchers see magnifying glass favicon on hosted results pages when no custom favicon is specified.</li>
+  <li>Customers can input multiple social media handles or URLs on the Social Media page.</li>
+  <li>Customers can input multiple RSS feeds for each title on the RSS page.</li>
+  <li>Customers can upload a page background image on the Look and Feel page. They can also select a repeat option for the image.</li>
+  <li>Customers can toggle display of deep links on the Results Module page.</li>
+  <li>Customers can toggle related sites, including Spanish, on the Results Module page.</li>
+  <li>Customers can input their WebTrends or Google Analytics IDs on the 3rd Party Tracking page.</li>
+  <li>Customers can download weekly reports from Monthly Reports page.</li>
+  <li>API customers can access new features through the API.</li>
+  <li>Admins can bulk upload an unlimited number of URLs on behalf of customers.</li>
+  <li>Admins can specify “catalog” URLs on behalf of customers.</li>
 </ul>
 
-
-<h2>Chores</h2>
+<h2 id="features-for-searchers">Features for Searchers</h2>
 
 <ul>
-<li>Regularly update all specified URLs, including those discovered via sitemaps.</li>
-<li>Remove the locale parameter from the URL.</li>
-<li>Collapse duplicate leading slashes in URLs in our index.</li>
-<li>Discover and create nested PDFs daily. Fetch and index them with the weekly refresh.</li>
-<li>Update our program URL to usasearch.howto.gov.</li>
-<li>Redirect searchers from search.usa.gov/forms to USA.gov's <a href="https://www.usa.gov/Topics/Reference-Shelf/forms.shtml">forms page</a>.</li>
-<li>Developers can no longer sign up for an account. Redirect developers to the recalls API on USA.gov's <a href="https://www.usa.gov/developer">developer resources</a>.</li>
+  <li>Searchers see all elements aligned horizontally under search bar.</li>
+  <li>Searchers see the published at date for web search results when the URL is part of an RSS feed.</li>
+  <li>Searchers see up to 20 video results per page with a paging option to see more results.</li>
+  <li>Mobile searchers see mobile friendly results pages for RSS- and collection-based results.</li>
+  <li>Searchers see magnifying glass favicon on hosted results pages when no custom favicon is specified.</li>
 </ul>
 
-
-<h2>Fixes</h2>
+<h2 id="chores">Chores</h2>
 
 <ul>
-<li>Customers using ad block extensions see the left nav in the Admin Center.</li>
-<li>Customers are no longer allowed to toggle OneSERP on the Look and Feel page if their header or footer contains script, style, or link elements.</li>
-<li>Customers are no longer allowed to enter HTML or body elements in the header and footer.</li>
-<li>IE-specific comments do not break the page layout.</li>
-<li>Searchers no longer see a border around the header image when it has a link.</li>
-<li>Take the useragent into account when parsing robots.txt files.</li>
-<li>Center managed headers in IE8.</li>
-<li>Fix RSS search to allow page parameters.</li>
-<li>Fix display problem with ampersands.</li>
-<li>Fix date sort in the recalls API.</li>
-<li>Fix export URLs to export all records.</li>
-<li>Fix the URLs and Sitemaps page to load quickly.</li>
-<li>Fix missing help links in the Admin Center.</li>
+  <li>Regularly update all specified URLs, including those discovered via sitemaps.</li>
+  <li>Remove the locale parameter from the URL.</li>
+  <li>Collapse duplicate leading slashes in URLs in our index.</li>
+  <li>Discover and create nested PDFs daily. Fetch and index them with the weekly refresh.</li>
+  <li>Update our program URL to usasearch.howto.gov.</li>
+  <li>Redirect searchers from search.usa.gov/forms to USA.gov’s <a href="https://www.usa.gov/Topics/Reference-Shelf/forms.shtml">forms page</a>.</li>
+  <li>Developers can no longer sign up for an account. Redirect developers to the recalls API on USA.gov’s <a href="https://www.usa.gov/developer">developer resources</a>.</li>
 </ul>
 
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li>Customers using ad block extensions see the left nav in the Admin Center.</li>
+  <li>Customers are no longer allowed to toggle OneSERP on the Look and Feel page if their header or footer contains script, style, or link elements.</li>
+  <li>Customers are no longer allowed to enter HTML or body elements in the header and footer.</li>
+  <li>IE-specific comments do not break the page layout.</li>
+  <li>Searchers no longer see a border around the header image when it has a link.</li>
+  <li>Take the useragent into account when parsing robots.txt files.</li>
+  <li>Center managed headers in IE8.</li>
+  <li>Fix RSS search to allow page parameters.</li>
+  <li>Fix display problem with ampersands.</li>
+  <li>Fix date sort in the recalls API.</li>
+  <li>Fix export URLs to export all records.</li>
+  <li>Fix the URLs and Sitemaps page to load quickly.</li>
+  <li>Fix missing help links in the Admin Center.</li>
+</ul>
 
   </div>
 

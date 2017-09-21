@@ -103,16 +103,16 @@
 
   <div class='post-content'>
     <p>If you experience difficulty sending documents to our index via <a href="http://search.digitalgov.gov/developer/i14y.html">i14y</a>, it is possible your firewall is not letting you communicate with the i14y server. Adding a test document to your i14y drawer can help you diagnose a firewall issue.
-Windows users may need to <a href="https://curl.haxx.se/download.html">install cURL</a>&nbsp;<i class="icon-external-link"><span>(External link)</span></i> in order to run this test from the command line.</p>
+Windows users may need to <a href="https://curl.haxx.se/download.html">install cURL</a> <i class="icon-external-link"><span>(External link)</span></i> in order to run this test from the command line.</p>
 
-<h2>Adding the Test Document</h2>
+<h2 id="adding-the-test-document">Adding the Test Document</h2>
 
 <p>From the command line, enter:</p>
 
 <pre><code>curl "https://i14y.usa.gov/api/v1/documents" -XPOST -H "Content-Type:application/json" -u your_drawer_handle:your_secret_token -d '{"document_id":"1", "title":"Test Document", "path": "http://www.gov.gov/cms/doc1.html", "created": "2015-05-12T22:35:09Z", "description":"The summary of the document goes here.", "content":"This is placeholder text, and in a real document would be paragraphs long.", "promote": false, "language" : "en", "tags" : "tag1, another tag"}'
 </code></pre>
 
-<p>Note: you need to replace <strong>your_drawer_handle</strong> with your i14y drawer handle, found in the i14y drawers section in the Search Admin Center (<a href="http://search.digitalgov.gov/index.html">DigitalGov Search</a> > <a href="https://search.usa.gov/sites/">Admin Center</a> > YourSite > Manage Content > i14y Drawers). You will also need to replace <strong>your_secret_token</strong> with the drawer’s secret token, which can be found by hitting “Show” in the 14y drawer list. The drawer handle and token should be separated by a colon (:) with no spaces on either side of the colon.</p>
+<p>Note: you need to replace <strong>your_drawer_handle</strong> with your i14y drawer handle, found in the i14y drawers section in the Search Admin Center (<a href="http://search.digitalgov.gov/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers). You will also need to replace <strong>your_secret_token</strong> with the drawer’s secret token, which can be found by hitting “Show” in the 14y drawer list. The drawer handle and token should be separated by a colon (:) with no spaces on either side of the colon.</p>
 
 <p>The above command returns JSON structured like this:</p>
 
@@ -123,11 +123,11 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
 }
 </code></pre>
 
-<p>If you do not see a 200 status, <a href="mailto:search@support.digitalgov.gov">contact our team</a>.</p>
+<p>If you do not see a 200 status, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">contact our team</a>.</p>
 
 <p>After successfully sending a document, you should see an increase (by 1) in the number of documents in your <a href="http://search.digitalgov.gov/manual/i14y-drawers.html">i14y drawer</a>.</p>
 
-<h2>Removing the Test Document</h2>
+<h2 id="removing-the-test-document">Removing the Test Document</h2>
 
 <p>Once you have successfully added the test document to your drawer, you will need to delete it, or it will appear in your site’s search results.</p>
 

@@ -105,56 +105,51 @@
     <p>We divide our work into three categories.</p>
 
 <ol>
-<li>Features: Things you actually notice.</li>
-<li>Chores: Back-end improvements that you don't notice.</li>
-<li>Bugs: Fixes to any code issues that may arise.</li>
+  <li>Features: Things you actually notice.</li>
+  <li>Chores: Back-end improvements that you don’t notice.</li>
+  <li>Bugs: Fixes to any code issues that may arise.</li>
 </ol>
 
-
-<h2>Features for Searchers</h2>
-
-<ul>
-<li>Searchers don't see duplicate results from Add URLs.</li>
-<li>Spanish searchers see stemmed equivalents.</li>
-<li>Searchers on USA.gov see FAQ GovBox higher in results.</li>
-</ul>
-
-
-<h2>Features for Agency Customers</h2>
+<h2 id="features-for-searchers">Features for Searchers</h2>
 
 <ul>
-<li>Customers can choose from predefined themes.</li>
-<li>Customers see a a Sitemap box on the Sitemaps page.</li>
-<li>Customers have a Discovery Tag for us to proactively discover and index content from their websites.</li>
-<li>Customers can edit Header and Footer CSS.</li>
-<li>Customers can set their locale to Spanish during sign up.</li>
-<li>Customers see an updated left nav.</li>
+  <li>Searchers don’t see duplicate results from Add URLs.</li>
+  <li>Spanish searchers see stemmed equivalents.</li>
+  <li>Searchers on USA.gov see FAQ GovBox higher in results.</li>
 </ul>
 
-
-<h2>Chores</h2>
+<h2 id="features-for-agency-customers">Features for Agency Customers</h2>
 
 <ul>
-<li>Remove "locale" parameter from all models, analytics, etc.</li>
+  <li>Customers can choose from predefined themes.</li>
+  <li>Customers see a a Sitemap box on the Sitemaps page.</li>
+  <li>Customers have a Discovery Tag for us to proactively discover and index content from their websites.</li>
+  <li>Customers can edit Header and Footer CSS.</li>
+  <li>Customers can set their locale to Spanish during sign up.</li>
+  <li>Customers see an updated left nav.</li>
 </ul>
 
-
-<h2>Bugs</h2>
+<h2 id="chores">Chores</h2>
 
 <ul>
-<li>Add Spanish translations for Popular Links, no RSS results, and document results.</li>
-<li>Remove extra whitespace when displaying snippets.</li>
-<li>Fix buggy bold highlighting in type-ahead searches in API.</li>
-<li>Remove 0-100 scale from sparklines in search module stats and let it autoscale.</li>
-<li>Increase length of URL and title field on indexed documents.</li>
-<li>Ignore invalid IndexedDocument URL's before they get queued for fetching/indexing</li>
-<li>Ignore HTTPS URLS for on-demand index.</li>
-<li>Fix duplicate results due to domain and protocol variations.</li>
-<li>Handle 503 errors from RSS feeds more gracefully.</li>
-<li>Fix error logging around duplicate indexed docs pages.</li>
-<li>Fix deduping regression to still match exact URLs.</li>
+  <li>Remove “locale” parameter from all models, analytics, etc.</li>
 </ul>
 
+<h2 id="bugs">Bugs</h2>
+
+<ul>
+  <li>Add Spanish translations for Popular Links, no RSS results, and document results.</li>
+  <li>Remove extra whitespace when displaying snippets.</li>
+  <li>Fix buggy bold highlighting in type-ahead searches in API.</li>
+  <li>Remove 0-100 scale from sparklines in search module stats and let it autoscale.</li>
+  <li>Increase length of URL and title field on indexed documents.</li>
+  <li>Ignore invalid IndexedDocument URL’s before they get queued for fetching/indexing</li>
+  <li>Ignore HTTPS URLS for on-demand index.</li>
+  <li>Fix duplicate results due to domain and protocol variations.</li>
+  <li>Handle 503 errors from RSS feeds more gracefully.</li>
+  <li>Fix error logging around duplicate indexed docs pages.</li>
+  <li>Fix deduping regression to still match exact URLs.</li>
+</ul>
 
   </div>
 
