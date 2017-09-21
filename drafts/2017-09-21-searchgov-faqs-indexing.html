@@ -122,6 +122,8 @@
 
 <p><a href="#q-how-was-my-site-getting-results-before">Q: How was my site getting results before?</a></p>
 
+<p><a href="#q-why-are-you-changing-your-name">Q: Why are you changing your name?</a></p>
+
 <h1 id="indexing">Indexing</h1>
 
 <p><a href="#q-how-will-you-index-my-site">Q: How will you index my site?</a></p>
@@ -160,8 +162,10 @@
 
 <h2 id="q-how-was-my-site-getting-results-before">Q: How was my site getting results before?</h2>
 
-<p>Since 2007, we have served search results from Bing’s index by default. We also use Google’s index to support certain Collections where Bing does not provide results.
-# Indexing</p>
+<p>Since 2007, we have served search results from Bing’s index by default. We also use Google’s index to support certain Collections where Bing does not provide results.</p>
+
+<h2 id="q-why-are-you-changing-your-name">Q: Why are you changing your name?</h2>
+<p>We’re changing our name to make things simpler. In the past, we’ve been FirstGov Search, FirstSearch, USAGov Search, USASearch, and are currently DigitalGov Search. Our new name is short, simple, and easy to remember.</p>
 
 <h1 id="indexing-1">Indexing</h1>
 
@@ -169,10 +173,17 @@
 
 <p>Based on your site setup, you have a variety of options. Below is our order of preference in terms of how we’ll get your content into our indexes (note: you may choose more than one approach):</p>
 
-<p><a href="https://search.digitalgov.gov/developer/i14y.html">i14y API</a> –  Our API allows you to update your search index in real-time. This is the preferred method.
-URL list (coming in FY18) – If you can’t send us your content via i14y, then we will fetch and index the URLs that you provide. Our system will visit the URLs you provide and extract page titles, dates, and full text for indexing. You can use the URL indexing method in concert with i14y, for any non-CMS content.</p>
-
-<p><a href="https://search.digitalgov.gov/manual/rss.html">RSS feed</a> – We will still accept RSS feeds to update your indexes on a rolling basis.</p>
+<ul>
+  <li>
+    <p><a href="https://search.digitalgov.gov/developer/i14y.html">i14y API</a> –  Our API allows you to update your search index in real-time. This is the preferred method.</p>
+  </li>
+  <li>
+    <p>URL list (coming in FY18) – If you can’t send us your content via i14y, then we will fetch and index the URLs that you provide. Our system will visit the URLs you provide and extract page titles, dates, and full text for indexing. You can use the URL indexing method in concert with i14y, for any non-CMS content.</p>
+  </li>
+  <li>
+    <p><a href="https://search.digitalgov.gov/manual/rss.html">RSS feed</a> – We will still accept RSS feeds to update your indexes on a rolling basis.</p>
+  </li>
+</ul>
 
 <p>If you’re unable to do any of the above, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">contact us</a>, and we’ll discuss options.</p>
 
@@ -182,7 +193,7 @@ URL list (coming in FY18) – If you can’t send us your content via i14y, then
 
 <h2 id="q-i-use-drupal-is-there-a-module-i-could-leverage">Q: I use Drupal, is there a module I could leverage?</h2>
 
-<p>For customers who use Drupal as their CMS, our <a href="https://www.drupal.org/project/usasearch">Drupal module</a> eliminates the need for programming effort around the i14y API. This module is available for both Drupal 7 and 8.</p>
+<p>Yes! For customers who use Drupal as their CMS, our <a href="https://www.drupal.org/project/usasearch">Drupal module</a> eliminates the need for programming effort around the i14y API. This module is available for both Drupal 7 and 8.</p>
 
 <p>The module is open source. We welcome pull requests and code contributions that will improve the module and offer new features.</p>
 
@@ -196,7 +207,7 @@ URL list (coming in FY18) – If you can’t send us your content via i14y, then
 
 <p>Our <a href="https://search.digitalgov.gov/developer/i14y.html">i14y API</a> is a listener ready to recieve content from any system. We developed a Drupal module because it is the most popular CMS in government and to increase the adoption of i14y.</p>
 
-<p>We have the beginning stages of a WordPress plugin, and welcome contributions to finish it up. If you’re able to develop an integration for your particular CMS, please make it open source, so other agencies can leverage it as well.</p>
+<p>We have the beginning stages of a <a href="https://github.com/GSA/wp-digitalgov-i14y-indexer">WordPress plugin</a>, and welcome contributions to finish it up. If you’re able to develop an integration for your particular CMS, please make it open source, so other agencies can leverage it as well.</p>
 
 <h2 id="q-what-if-we-have-no-plans-for-a-cms">Q: What if we have no plans for a CMS?</h2>
 
