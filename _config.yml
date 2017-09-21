@@ -4,17 +4,8 @@ url: https://search.digitalgov.gov
 permalink: /:categories/:title.html
 lsi: false
 highlighter: pygments
-markdown: kramdown
+markdown: rdiscount
 exclude: [.gitignore, .rvmrc, Gemfile, Gemfile.lock, README.md, Rakefile, config.rb, sass, vendor]
-
-kramdown:
-  auto_ids:       true
-  entity_output:  as_char
-  toc_levels:     1..6
-  smart_quotes:   lsquo,rsquo,ldquo,rdquo
-  input:          GFM
-  hard_wrap:      false
-  footnote_nr:    1
 
 # plugin config
 paginate_per_page: 10
