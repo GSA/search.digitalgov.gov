@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Search.gov -- Index Transition FAQs
-category: 
+category: blog
 tags: FAQs
 ---
 
@@ -11,7 +11,7 @@ We’ll be developing our own search indexes from your site content. We’ll acc
 
 Other search features and your search results page will remain the same, and searchers should not notice a difference.
 
-We’ll work closely with you to make sure everything goes smoothly through the transition. Please view our [blog post](/drafts/drafts/2017-09-20-searchgov-blog.html) for a more detailed explanation. 
+We’ll work closely with you to make sure everything goes smoothly through the transition. Please view our [blog post](/blog/searchgov-blog.html) for a more detailed explanation. 
 
 We will update these FAQs with questions we hear from our customers. 
   
@@ -68,8 +68,8 @@ We encourage you to explore how you can compile a list of your site URLs. You do
 Since 2007, we have served search results from Bing’s index by default. We also use Google’s index to support certain Collections where Bing does not provide results.
 
 ## Q: Why are you changing your name?
-We’re changing our name to make things simpler. In the past, we’ve been FirstGov Search, FirstSearch, USAGov Search, USASearch, and are currently DigitalGov Search. Our new name is short, simple, and easy to remember.
 
+We’re changing our name to make things simpler. In the past, we’ve been FirstGov Search, FirstSearch, USAGov Search, USASearch, and are currently DigitalGov Search. Our new name is short, simple, and easy to remember.
 
 # Indexing
 

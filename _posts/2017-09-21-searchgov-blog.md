@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Search.gov -- The Road Ahead in 2018
-category: 
+category: blog
 tags: roadmap 
 ---
 
-We are pleased to announce some exciting upcoming changes to our service. On October 1st, we’ll become Search.gov. We’re changing more than just our name; in fiscal year 2018, we will use our own indexes to serve search results instead of relying on [commercial web search engines](/drafts/2017-09-20-searchgov-faqs-indexing.html#q-how-was-my-site-getting-results-before).
+We are pleased to announce some exciting upcoming changes to our service. On October 1st, we’ll become Search.gov. We’re changing more than just our name; in fiscal year 2018, we will use our own indexes to serve search results instead of relying on [commercial web search engines](/blog/searchgov-faqs-indexing.html#q-how-was-my-site-getting-results-before).
 
 Why are we evolving in this direction? Licensing commercial search results is expensive and complex. As we’ve continued to grow, our costs have continued to increase, and a new model has become a necessity. 
 
