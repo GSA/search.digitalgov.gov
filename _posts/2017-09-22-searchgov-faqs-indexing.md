@@ -23,6 +23,8 @@ We will update these FAQs with questions we hear from our customers.
 
 [Q: What do I need to do today?](#q-what-do-i-need-to-do-today)
 
+[Q: Do I need to change any code on my website?](#q-do-i-need-to-change-any-code-on-my-website)
+
 [Q: How was my site getting results before?](#q-how-was-my-site-getting-results-before)
 
 [Q: Why are you changing your name?](#q-why-are-you-changing-your-name)
@@ -62,6 +64,10 @@ We encourage you to set-up and test i14y as soon as possible.
 *Non-CMS Customers:*
 
 We encourage you to explore how you can compile a list of your site URLs. You do not need to send us any information yet. 
+
+## Q: Do I need to change any code on my website?
+
+No: you do not need to update any code on your website. Indexing takes place in the backend of our system.
 
 ## Q: How was my site getting results before?
  
