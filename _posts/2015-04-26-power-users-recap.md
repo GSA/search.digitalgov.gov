@@ -45,17 +45,17 @@ While we don’t crawl, we will index any pages you tell us about. The steps men
 
 Don’t forget to update your content settings in the Admin Center to point to your new content. This is an important, but often overlooked step.
 
-* Set up your domains list to **include entire domains**. Example: nih.gov - not www.nih.gov. Specifying www will limit your search to that particular subdomain. If you do specify a subdomain, do so with the intent to limit your search. [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > `YourSite` > `Content` > `Domains`
+* Set up your domains list to **include entire domains**. Example: nih.gov - not www.nih.gov. Specifying www will limit your search to that particular subdomain. If you do specify a subdomain, do so with the intent to limit your search. [Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > `YourSite` > `Content` > `Domains`
 * If a particular **new item** is not showing up in search results and you need it there ASAP, you can create a Best Bet pointing to it, or add it as a Supplemental URL.
-  * **Best Bets** can be managed at [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > `YourSite` > `Content` > `Best Bets: Text or Best Bets: Graphics` *(Recommended)*
-  * **Supplemental URLs** can be added at [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > `YourSite` > `Content` > `Domains` > `Advanced` > `Supplemental URLs`
+  * **Best Bets** can be managed at [Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > `YourSite` > `Content` > `Best Bets: Text or Best Bets: Graphics` *(Recommended)*
+  * **Supplemental URLs** can be added at [Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > `YourSite` > `Content` > `Domains` > `Advanced` > `Supplemental URLs`
 * When undergoing a [site redesign](/blog/redesign.html), be sure to **update** Collections, Best Bets, RSS Feeds, Header and Footer links, related sites, image assets, and results page colors, as appropriate. 
 * If you set up a **test search site** to go with your beta site, we recommend you **transfer** all the new settings over to your old site when you take your beta site into production, in order to maintain continuity of analytics. The test search site will have separate analytics from your existing, live search. If you would like help transferring your settings, [let us know](mailto:search@support.digitalgov.gov).
 
 <a name="emergency"></a>
 ## Break Glass In Case of Emergency
 
-We have a stopgap measure available to [filter certain results](/manual/domains-advanced.html) directly in the Admin Center. Under `[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Queries` you’ll see an option for Filter URLs. 
+We have a stopgap measure available to [filter certain results](/manual/domains-advanced.html) directly in the Admin Center. Under `[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Queries` you’ll see an option for Filter URLs. 
 
 **Important Note!** This is meant to be a **stopgap measure** until search engines’ indexes have caught up. After they’re updated there, the urls you’ve filtered here **should be removed**. They are appended to your query and are counted against the byte limit we can include in any one query. Please don’t forget to remove them after you no longer need them.
 
@@ -75,4 +75,4 @@ At any time, you can use some of our more advanced options to get the most out o
   * Create an **isolated search** experience by searching a hidden collection: add `<input type="hidden" name="dc" value="INSERT_COLLECTION_ID_#" />`, as above, but make sure the collection display is set to OFF.
   * Provide **options** that allow the user to set their search scope from the get-go. For example, [Lawrence, Kansas](http://lawrenceks.org/) has developed a nice modern approach to radio buttons. 
   * Pass a **site limit parameter** from your search box: add `<input type="hidden" name="sitelimit" id="sitelimit" value="http://www.agency.gov/limittothisfolder">` to your form code.
-* The **API key** for displaying search results on your own site is available under [DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > `YourSite` > `Activate` > `API Access Key`. We recommend you **use the hosted results page** whenever possible, to take advantage of all of the features of our service.
+* The **API key** for displaying search results on your own site is available under [Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > `YourSite` > `Activate` > `API Access Key`. We recommend you **use the hosted results page** whenever possible, to take advantage of all of the features of our service.

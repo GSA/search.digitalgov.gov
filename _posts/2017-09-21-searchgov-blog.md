@@ -15,7 +15,7 @@ In this new model, we’ll work closely with you to get your sites indexed. This
 
 We know that one of the core features of our service is how simple it is to get your site search up and running. We’ll always strive to make the service easy to use.
 
-Speaking of easy to use: we’re changing our name to make things simpler. In the past, we’ve been FirstGov Search, FirstSearch, USAGov Search, USASearch, and are currently DigitalGov Search. Our new name is short, simple, and easy to remember.
+Speaking of easy to use: we’re changing our name to make things simpler. In the past, we’ve been FirstGov Search, FirstSearch, USAGov Search, USASearch, and most recently DigitalGov Search. Our new name is short, simple, and easy to remember.
 
 ## Overview: What It Means To Use Our Indexes Instead of Commercial Web Indexes
 

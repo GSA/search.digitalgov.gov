@@ -5,7 +5,7 @@ category: manual
 tags: help-manual manage-content
 ---
 
-[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > Content Overview
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > Content Overview
 
 To display the results on your search results page, we index content from various sources. Each time a searcher does a query on your site, we determine which indexes answer the searcher's question and display results from them. This means a single search results page often includes items from several indexes.
 
@@ -19,7 +19,7 @@ When you [add your domains](/manual/domains.html), we'll show results for all of
 
 If you don't like the default web results, you can choose to use another index. Options follow.
 
-**Option 1. Use Our DigitalGov Search Web Index.** We can index content that is sent to us by API or RSS. Email us at <search@support.digitalgov.gov> and we'll work with you to determine the best way for us to get your content.
+**Option 1. Use Our Search.gov Web Index.** We can index content that is sent to us by API or RSS. Email us at <search@support.digitalgov.gov> and we'll work with you to determine the best way for us to get your content.
 
 **Option 2. Buy and Use Google Site Search.** If you already have (or plan to purchase), [Google Site Search](https://www.google.com/work/search/products/gss.html){% external_link %}, we'll send a searcher's query to the search index you've provided and we'll render the results within our search results page. 
 

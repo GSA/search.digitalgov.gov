@@ -4,7 +4,8 @@ title: How to Create Collections Within Our Index
 category: manual
 tags: help-manual manage-content collections
 ---
-[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Collections
+
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Collections
 
 Would you like searchers to be able to change where they are searching, either to a particular place within your site, or to another site? You can create a collection that will search in any set of domains, subdomains, or subfolders.
 

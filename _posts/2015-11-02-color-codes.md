@@ -5,7 +5,7 @@ category: manual
 tags: help-manual manage-users best-bets rss
 ---
 
-[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite
 
 We use color coding the Admin Center to indicate the status of a few types of items. 
 

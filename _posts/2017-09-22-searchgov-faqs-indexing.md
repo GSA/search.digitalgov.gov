@@ -75,7 +75,7 @@ Since 2007, we have served search results from Bing’s index by default. We als
 
 ## Q: Why are you changing your name?
 
-We’re changing our name to make things simpler. In the past, we’ve been FirstGov Search, FirstSearch, USAGov Search, USASearch, and are currently DigitalGov Search. Our new name is short, simple, and easy to remember.
+We’re changing our name to make things simpler. In the past, we’ve been FirstGov Search, FirstSearch, USAGov Search, USASearch, and most recently DigitalGov Search. Our new name is short, simple, and easy to remember.
 
 # Indexing
 

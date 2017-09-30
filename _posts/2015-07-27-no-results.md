@@ -5,7 +5,7 @@ category: manual
 tags: help-manual manage-display
 ---
 
-[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Display > No Results Page
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Display > No Results Page
 
 ## Standard Response
 

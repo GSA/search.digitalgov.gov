@@ -5,13 +5,13 @@ category: manual
 tags: help-manual manage-display facets modules related-sites
 ---
 
-[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Display > Display Overview
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Display > Display Overview
 
 INSERT THUMBNAIL OF SCREENSHOT, WHICH IS LINK TO LARGER IMAGE WITH THE DIFFERENT PAGE ELEMENTS IDENTIFIED
 
 ## Facets
 
-A *facet* is a way to refine a search, like looking at something through a particular narrow view. In DigitalGov Search, facets refine based on [Collections](/manual/collections.html), [RSS feeds](/manual/rss.html), or [image/video content](/manual/content-overview.html). In the desktop view, facets display in a top navigation bar. On smaller screens, they are available as a section of the menu. The navigation bar and menu section will only appear after you turn one or more facets on.
+A *facet* is a way to refine a search, like looking at something through a particular narrow view. In Search.gov, facets refine based on [Collections](/manual/collections.html), [RSS feeds](/manual/rss.html), or [image/video content](/manual/content-overview.html). In the desktop view, facets display in a top navigation bar. On smaller screens, they are available as a section of the menu. The navigation bar and menu section will only appear after you turn one or more facets on.
 
 **Label.** (Smaller screens only) By default, we use the section label 'Search' for your facets. Enter a label in the label field if you'd like something other than this default. Keep your label consistent with the options you're listing and under 15 characters.
 
@@ -26,7 +26,7 @@ The default label for the primary search results facet is ‘Everything.’ To c
 
 ## Modules
 
-In DigitalGov Search, a module is an index that can be added to your Domains search to provide a more robust search experience for your site’s visitors.
+In Search.gov, a module is an index that can be added to your Domains search to provide a more robust search experience for your site’s visitors.
 
 **On/off options for modules.** Turn modules *On* to allow searchers to see results for selected content sources in the body of the search results page based on keyword matches with relevant queries. Some modules are also available as search facets (see above).
 
@@ -65,7 +65,7 @@ Related Searches
 
 Help visitors find content relevant to their search query that resides on other websites, such as the site for your parent organization or your Spanish-language site. When searchers click on the link to the related site, they see search results for their query on the related site.
 
-Enter the [site handle](/manual/settings.html) for one of your other DigitalGov Search sites. Enter the text you'd like searchers to see for the link to the related site. Create two entries, one from the current site to the related site and vice versa, if you'd like a reciprocal link.
+Enter the [site handle](/manual/settings.html) for one of your other Search.gov sites. Enter the text you'd like searchers to see for the link to the related site. Create two entries, one from the current site to the related site and vice versa, if you'd like a reciprocal link.
 
 See, for example, the Español option displayed on [USA.gov for a search on *venezuela*](http://search.usa.gov/search?query=venezuela&affiliate=usagov). When searchers click this option, they see results for [*venezuela* on GobiernoUSA.gov](http://search.usa.gov/search?query=venezuela&affiliate=gobiernousa).
 

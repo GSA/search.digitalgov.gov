@@ -1,4 +1,4 @@
-# DigitalGov Search
+# www.search.gov
 
 ## How to add a new post
 

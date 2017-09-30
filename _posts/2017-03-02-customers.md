@@ -4,7 +4,7 @@ title: Our Customers
 tags: about-us customer-federal
 ---
 
-We have a [proven track record](/tagged/quote) of delivering fast, relevant search results. Nearly 175 Federal and District of Columbia government agencies currently use DigitalGov Search to power their search box and improve their visitors' search experience.
+We have a [proven track record](/tagged/quote) of delivering fast, relevant search results. Nearly 175 Federal and District of Columbia government agencies currently use Search.gov to power their search box and improve their visitors' search experience.
 
 <table align="center" width="100%">
 <tr>
@@ -34,8 +34,8 @@ We have a [proven track record](/tagged/quote) of delivering fast, relevant sear
 
 ## Our History
 
-DigitalGov Search got its start when Internet entrepreneur Eric Brewer, whose early research was funded by the Department of Defense, offered to donate a powerful search engine to government. That gift helped accelerate the government's earlier work to create a government-wide portal.
+Search.gov got its start when Internet entrepreneur Eric Brewer, whose early research was funded by the Department of Defense, offered to donate a powerful search engine to government. That gift helped accelerate the government's earlier work to create a government-wide portal.
 
 In June 2000, President Clinton announced the gift from the Federal Search Foundation, a nonprofit organization established by Brewer, and instructed that an official U.S. web portal be launched within 90 days. USA.gov went online on September 22, 2000 under the name FirstGov.gov with a [prominent search box](http://web.archive.org/web/20001109105200/http://www.firstgov.gov) to allow the public to search across government websites. Visit USA.gov to learn more [about its mission and history](https://www.usa.gov/about).
 
-In 2010, DigitalGov Search moved to open-source software and became available to agencies across government in the United States to power the search boxes on their site. Today we power nearly 300 million queries a year through over 1,800 federal search configurations.
+In 2010, Search.gov moved to open-source software and became available to agencies across government in the United States to power the search boxes on their site. Today we power nearly 300 million queries a year through over 1,800 federal search configurations.

@@ -5,7 +5,7 @@ category: manual
 tags: help-manual analytics queries clicks
 ---
 
-[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Monthly Reports
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Monthly Reports
 
 The monthly report gives a bird's-eye view of the number of [queries](/manual/queries.html) and [clicks](/manual/clicks.html) each month.
 
@@ -25,7 +25,7 @@ A list of queries that returned no results. Sometimes searchers look for informa
 
 ## Impressions and Clicks by Module
 
-Detailed data for the total number of impressions and clicks and your clickthru rate (CTR) are presented for each "module" on the search results page. We also provide the average CTR across all DigitalGov Search customers so you can see how your rate compares to the average rate. The data in the table is sorted in descending order from the most to least number of clicks.
+Detailed data for the total number of impressions and clicks and your clickthru rate (CTR) are presented for each "module" on the search results page. We also provide the average CTR across all Search.gov customers so you can see how your rate compares to the average rate. The data in the table is sorted in descending order from the most to least number of clicks.
 
 Use this report to inform which [modules you opt to display](/manual/display-overview.html).
 

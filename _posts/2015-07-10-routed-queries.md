@@ -4,7 +4,8 @@ title: How to Route Queries
 category: manual
 tags: help-manual manage-content routed-queries
 ---
-[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > Routed Queries
+
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > Routed Queries
 
 Do you want to get searchers to a specific web page as quickly as possible? Create a Routed Query.
 
