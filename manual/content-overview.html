@@ -7,6 +7,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" media="screen" rel="stylesheet" type="text/css" />
   <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
   <!--[if IE 7]>
@@ -29,7 +31,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72"
           href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
-  <link rel="shortcut icon" href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/favicon.ico">
+  <link rel="shortcut icon" href="/img/favicon.ico">
   <link rel='alternate' type='application/atom+xml' title='usasearch.howto.gov Atom feed' href='/all.atom' />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="/javascripts/bootstrap3-typeahead.js"></script>
@@ -41,8 +43,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <a class="navbar-brand" href="/">
-        <span class="digital">Digital</span><em>Gov</em></span>
-        <span class="search">Search</span>
+        <span class="search">Search.gov</span>
       </a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -55,18 +56,16 @@
 
           <input name="query" autocomplete="off"  type="text" class="typeahead form-control search-query" id="search-query" data-provide="typeahead" >
           <span class="input-group-btn">
-            <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
+            <button type="submit" class="btn btn-nav" aria-label="Left Align" id="search-button">
               <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
             </button>
           </span>
         </div>
       </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="https://search.usa.gov/sites"><i
+      <div class="nav navbar-right">
+          <a href="https://search.usa.gov/sites" class="navbar-brand"><i
               class="icon-user icon-white"></i>&nbsp;Login</a>
-        </li>
-      </ul>
+      </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -102,7 +101,7 @@
   
 
   <div class='post-content'>
-    <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Content Overview</p>
+    <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Content Overview</p>
 
 <p>To display the results on your search results page, we index content from various sources. Each time a searcher does a query on your site, we determine which indexes answer the searcher’s question and display results from them. This means a single search results page often includes items from several indexes.</p>
 
@@ -116,7 +115,7 @@
 
 <p>If you don’t like the default web results, you can choose to use another index. Options follow.</p>
 
-<p><strong>Option 1. Use Our DigitalGov Search Web Index.</strong> We can index content that is sent to us by API or RSS. Email us at <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;</a> and we’ll work with you to determine the best way for us to get your content.</p>
+<p><strong>Option 1. Use Our Search.gov Web Index.</strong> We can index content that is sent to us by API or RSS. Email us at <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;</a> and we’ll work with you to determine the best way for us to get your content.</p>
 
 <p><strong>Option 2. Buy and Use Google Site Search.</strong> If you already have (or plan to purchase), <a href="https://www.google.com/work/search/products/gss.html">Google Site Search</a> <i class="icon-external-link"><span>(External link)</span></i>, we’ll send a searcher’s query to the search index you’ve provided and we’ll render the results within our search results page.</p>
 

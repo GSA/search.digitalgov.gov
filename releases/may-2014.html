@@ -7,6 +7,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" media="screen" rel="stylesheet" type="text/css" />
   <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
   <!--[if IE 7]>
@@ -29,7 +31,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72"
           href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
-  <link rel="shortcut icon" href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/favicon.ico">
+  <link rel="shortcut icon" href="/img/favicon.ico">
   <link rel='alternate' type='application/atom+xml' title='usasearch.howto.gov Atom feed' href='/all.atom' />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="/javascripts/bootstrap3-typeahead.js"></script>
@@ -41,8 +43,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <a class="navbar-brand" href="/">
-        <span class="digital">Digital</span><em>Gov</em></span>
-        <span class="search">Search</span>
+        <span class="search">Search.gov</span>
       </a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -55,18 +56,16 @@
 
           <input name="query" autocomplete="off"  type="text" class="typeahead form-control search-query" id="search-query" data-provide="typeahead" >
           <span class="input-group-btn">
-            <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
+            <button type="submit" class="btn btn-nav" aria-label="Left Align" id="search-button">
               <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
             </button>
           </span>
         </div>
       </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="https://search.usa.gov/sites"><i
+      <div class="nav navbar-right">
+          <a href="https://search.usa.gov/sites" class="navbar-brand"><i
               class="icon-user icon-white"></i>&nbsp;Login</a>
-        </li>
-      </ul>
+      </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

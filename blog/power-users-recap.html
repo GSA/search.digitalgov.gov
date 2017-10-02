@@ -7,6 +7,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" media="screen" rel="stylesheet" type="text/css" />
   <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
   <!--[if IE 7]>
@@ -29,7 +31,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72"
           href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
-  <link rel="shortcut icon" href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/favicon.ico">
+  <link rel="shortcut icon" href="/img/favicon.ico">
   <link rel='alternate' type='application/atom+xml' title='usasearch.howto.gov Atom feed' href='/all.atom' />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="/javascripts/bootstrap3-typeahead.js"></script>
@@ -41,8 +43,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <a class="navbar-brand" href="/">
-        <span class="digital">Digital</span><em>Gov</em></span>
-        <span class="search">Search</span>
+        <span class="search">Search.gov</span>
       </a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -55,18 +56,16 @@
 
           <input name="query" autocomplete="off"  type="text" class="typeahead form-control search-query" id="search-query" data-provide="typeahead" >
           <span class="input-group-btn">
-            <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
+            <button type="submit" class="btn btn-nav" aria-label="Left Align" id="search-button">
               <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
             </button>
           </span>
         </div>
       </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="https://search.usa.gov/sites"><i
+      <div class="nav navbar-right">
+          <a href="https://search.usa.gov/sites" class="navbar-brand"><i
               class="icon-user icon-white"></i>&nbsp;Login</a>
-        </li>
-      </ul>
+      </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -158,11 +157,11 @@
 <p>Don’t forget to update your content settings in the Admin Center to point to your new content. This is an important, but often overlooked step.</p>
 
 <ul>
-  <li>Set up your domains list to <strong>include entire domains</strong>. Example: nih.gov - not www.nih.gov. Specifying www will limit your search to that particular subdomain. If you do specify a subdomain, do so with the intent to limit your search. <a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; <code>YourSite</code> &gt; <code>Content</code> &gt; <code>Domains</code></li>
+  <li>Set up your domains list to <strong>include entire domains</strong>. Example: nih.gov - not www.nih.gov. Specifying www will limit your search to that particular subdomain. If you do specify a subdomain, do so with the intent to limit your search. <a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; <code>YourSite</code> &gt; <code>Content</code> &gt; <code>Domains</code></li>
   <li>If a particular <strong>new item</strong> is not showing up in search results and you need it there ASAP, you can create a Best Bet pointing to it, or add it as a Supplemental URL.
     <ul>
-      <li><strong>Best Bets</strong> can be managed at <a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; <code>YourSite</code> &gt; <code>Content</code> &gt; <code>Best Bets: Text or Best Bets: Graphics</code> <em>(Recommended)</em></li>
-      <li><strong>Supplemental URLs</strong> can be added at <a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; <code>YourSite</code> &gt; <code>Content</code> &gt; <code>Domains</code> &gt; <code>Advanced</code> &gt; <code>Supplemental URLs</code></li>
+      <li><strong>Best Bets</strong> can be managed at <a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; <code>YourSite</code> &gt; <code>Content</code> &gt; <code>Best Bets: Text or Best Bets: Graphics</code> <em>(Recommended)</em></li>
+      <li><strong>Supplemental URLs</strong> can be added at <a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; <code>YourSite</code> &gt; <code>Content</code> &gt; <code>Domains</code> &gt; <code>Advanced</code> &gt; <code>Supplemental URLs</code></li>
     </ul>
   </li>
   <li>When undergoing a <a href="/blog/redesign.html">site redesign</a>, be sure to <strong>update</strong> Collections, Best Bets, RSS Feeds, Header and Footer links, related sites, image assets, and results page colors, as appropriate.</li>
@@ -172,7 +171,7 @@
 <p><a name="emergency"></a>
 ## Break Glass In Case of Emergency</p>
 
-<p>We have a stopgap measure available to <a href="/manual/domains-advanced.html">filter certain results</a> directly in the Admin Center. Under <code>[DigitalGov Search](/index.html) &gt; [Admin Center](https://search.usa.gov/sites/) &gt; YourSite &gt; Analytics &gt; Queries</code> you’ll see an option for Filter URLs.</p>
+<p>We have a stopgap measure available to <a href="/manual/domains-advanced.html">filter certain results</a> directly in the Admin Center. Under <code>[Search.gov Home](/index.html) &gt; [Admin Center](https://search.usa.gov/sites/) &gt; YourSite &gt; Analytics &gt; Queries</code> you’ll see an option for Filter URLs.</p>
 
 <p><strong>Important Note!</strong> This is meant to be a <strong>stopgap measure</strong> until search engines’ indexes have caught up. After they’re updated there, the urls you’ve filtered here <strong>should be removed</strong>. They are appended to your query and are counted against the byte limit we can include in any one query. Please don’t forget to remove them after you no longer need them.</p>
 
@@ -199,7 +198,7 @@
       <li>Pass a <strong>site limit parameter</strong> from your search box: add <code>&lt;input type="hidden" name="sitelimit" id="sitelimit" value="http://www.agency.gov/limittothisfolder"&gt;</code> to your form code.</li>
     </ul>
   </li>
-  <li>The <strong>API key</strong> for displaying search results on your own site is available under <a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; <code>YourSite</code> &gt; <code>Activate</code> &gt; <code>API Access Key</code>. We recommend you <strong>use the hosted results page</strong> whenever possible, to take advantage of all of the features of our service.</li>
+  <li>The <strong>API key</strong> for displaying search results on your own site is available under <a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; <code>YourSite</code> &gt; <code>Activate</code> &gt; <code>API Access Key</code>. We recommend you <strong>use the hosted results page</strong> whenever possible, to take advantage of all of the features of our service.</li>
 </ul>
 
   </div>

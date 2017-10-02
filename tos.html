@@ -7,6 +7,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" media="screen" rel="stylesheet" type="text/css" />
   <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
   <!--[if IE 7]>
@@ -29,7 +31,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72"
           href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
-  <link rel="shortcut icon" href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/favicon.ico">
+  <link rel="shortcut icon" href="/img/favicon.ico">
   <link rel='alternate' type='application/atom+xml' title='usasearch.howto.gov Atom feed' href='/all.atom' />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="/javascripts/bootstrap3-typeahead.js"></script>
@@ -41,8 +43,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <a class="navbar-brand" href="/">
-        <span class="digital">Digital</span><em>Gov</em></span>
-        <span class="search">Search</span>
+        <span class="search">Search.gov</span>
       </a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -55,18 +56,16 @@
 
           <input name="query" autocomplete="off"  type="text" class="typeahead form-control search-query" id="search-query" data-provide="typeahead" >
           <span class="input-group-btn">
-            <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
+            <button type="submit" class="btn btn-nav" aria-label="Left Align" id="search-button">
               <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
             </button>
           </span>
         </div>
       </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="https://search.usa.gov/sites"><i
+      <div class="nav navbar-right">
+          <a href="https://search.usa.gov/sites" class="navbar-brand"><i
               class="icon-user icon-white"></i>&nbsp;Login</a>
-        </li>
-      </ul>
+      </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -102,14 +101,14 @@
   
 
   <div class='post-content'>
-    <p>The following terms of service (“Terms”) governing the General Services Administration’s (GSA) DigitalGov Search website and services, including the content, documentation, code and related materials, are offered subject to your acceptance of the Terms as well as any relevant sections of the DigitalGov <a href="http://www.digitalgov.gov/about/policies/">Site Policies</a> (collectively, the “Agreement”). Access to or use of DigitalGov Search services or its content constitutes acceptance to this Agreement.</p>
+    <p>The following terms of service (“Terms”) governing the General Services Administration’s (GSA) Search.gov website and services, including the content, documentation, code and related materials, are offered subject to your acceptance of the Terms as well as any relevant sections of the DigitalGov <a href="http://www.digitalgov.gov/about/policies/">Site Policies</a> (collectively, the “Agreement”). Access to or use of Search.gov services or its content constitutes acceptance to this Agreement.</p>
 
 <h2 id="data-collection-and-use">Data Collection and Use</h2>
 
 <h3 id="data-collection">Data Collection</h3>
 
 <ul>
-  <li>When you use DigitalGov Search, we store information about searches on your site, including: the web page from which searchers accessed your search results, the date and time, the words searched for, items clicked on a page, and standard HTTP request data, including the browser and operating system used. We periodically delete our search logs.</li>
+  <li>When you use Search.gov, we store information about searches on your site, including: the web page from which searchers accessed your search results, the date and time, the words searched for, items clicked on a page, and standard HTTP request data, including the browser and operating system used. We periodically delete our search logs.</li>
   <li>We use this information to measure the usage of our website and services and to identify system performance or problem areas. We also use this information to help us develop the service, analyze patterns of usage, and to make the service more useful. This information is not used for associating search terms or patterns of site navigation with individual users. We may anonymize and provide this information to third-party entities for the purposes of analyzing search traffic.</li>
 </ul>
 
@@ -118,18 +117,18 @@
 <ul>
   <li>Customers using our Search Results API cannot cache results.</li>
   <li>Data accessed through our website and services does not, and should not, include controls over its end use.</li>
-  <li>Once the data has been downloaded from DigitalGov Search, we can’t vouch for the quality or timeliness of any analyses conducted with data retrieved.</li>
+  <li>Once the data has been downloaded from Search.gov, we can’t vouch for the quality or timeliness of any analyses conducted with data retrieved.</li>
 </ul>
 
 <h2 id="citing-data">Citing Data</h2>
 
-<p>Customers using the Search Results API must display the <a href="http://download.microsoft.com/download/0/4/E/04E076D4-60B2-4D31-BCC7-C4805B558DBB/Bing%20product%20guidelines.pdf">Powered by Bing</a> [PDF] logo on ‘web’ and ‘image’ search results pages for attribution of these results. Customers using any of the other three indexes (‘docs’, ‘news’, and ‘videonews’) must display “Powered by DigitalGov Search” (using plain text or <a href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/digitalgov_search_logo.png">our logo</a> for DigitalGov Search) for attribution instead of the Bing logo.</p>
+<p>Customers using the Search Results API must display the <a href="http://download.microsoft.com/download/0/4/E/04E076D4-60B2-4D31-BCC7-C4805B558DBB/Bing%20product%20guidelines.pdf">Powered by Bing</a> [PDF] logo on ‘web’ and ‘image’ search results pages for attribution of these results. Customers using any of the other three indexes (‘docs’, ‘news’, and ‘videonews’) must display “Powered by Search.gov” (using plain text or <a href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/searchdotgovlogo.png">our logo</a> for Search.gov) for attribution instead of the Bing logo.</p>
 
 <h2 id="source-code">Source Code</h2>
 
 <h3 id="use-of-open-source-software">Use of Open Source Software</h3>
 
-<p>DigitalGov Search uses open-source software and free or low cost, commercial application programming interfaces when it best meets the needs and mission of GSA.</p>
+<p>Search.gov uses open-source software and free or low cost, commercial application programming interfaces when it best meets the needs and mission of GSA.</p>
 
 <h3 id="redistribution-of-code">Redistribution of Code</h3>
 
@@ -148,7 +147,7 @@
 
 <h2 id="modification-or-false-representation-of-content">Modification or False Representation of Content</h2>
 
-<p>You may not modify or falsely represent content accessed through DigitalGov Search yet still claim the source is DigitalGov Search.</p>
+<p>You may not modify or falsely represent content accessed through Search.gov yet still claim the source is Search.gov.</p>
 
 <h2 id="right-to-limit">Right to Limit</h2>
 
@@ -164,11 +163,11 @@
 
 <h2 id="changes">Changes</h2>
 
-<p>GSA reserves the right, at its sole discretion, to modify or replace this Agreement, in whole or in part. Your continued use of or access to the DigitalGov Search services following posting of any changes to this Agreement constitutes acceptance of those modified terms. GSA may, in the future, offer new services and/or features. Such new features and/or services shall be subject to the terms and conditions of this Agreement.</p>
+<p>GSA reserves the right, at its sole discretion, to modify or replace this Agreement, in whole or in part. Your continued use of or access to the Search.gov services following posting of any changes to this Agreement constitutes acceptance of those modified terms. GSA may, in the future, offer new services and/or features. Such new features and/or services shall be subject to the terms and conditions of this Agreement.</p>
 
 <h2 id="disclaimer-of-warranties">Disclaimer of Warranties</h2>
 
-<p>DigitalGov Search services are provided “as is” and on an “as-available” basis. GSA hereby disclaims all warranties of any kind, express or implied, including without limitation the warranties of merchantability, fitness for a particular purpose, and non-infringement. GSA makes no warranty that the services will be error free or that access thereto will be continuous or uninterrupted.</p>
+<p>Search.gov services are provided “as is” and on an “as-available” basis. GSA hereby disclaims all warranties of any kind, express or implied, including without limitation the warranties of merchantability, fitness for a particular purpose, and non-infringement. GSA makes no warranty that the services will be error free or that access thereto will be continuous or uninterrupted.</p>
 
 <h2 id="limitations-on-liability">Limitations on Liability</h2>
 

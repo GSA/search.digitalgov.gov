@@ -7,6 +7,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" media="screen" rel="stylesheet" type="text/css" />
   <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
   <!--[if IE 7]>
@@ -29,7 +31,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72"
           href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
-  <link rel="shortcut icon" href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/favicon.ico">
+  <link rel="shortcut icon" href="/img/favicon.ico">
   <link rel='alternate' type='application/atom+xml' title='usasearch.howto.gov Atom feed' href='/all.atom' />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="/javascripts/bootstrap3-typeahead.js"></script>
@@ -41,8 +43,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <a class="navbar-brand" href="/">
-        <span class="digital">Digital</span><em>Gov</em></span>
-        <span class="search">Search</span>
+        <span class="search">Search.gov</span>
       </a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -55,18 +56,16 @@
 
           <input name="query" autocomplete="off"  type="text" class="typeahead form-control search-query" id="search-query" data-provide="typeahead" >
           <span class="input-group-btn">
-            <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
+            <button type="submit" class="btn btn-nav" aria-label="Left Align" id="search-button">
               <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
             </button>
           </span>
         </div>
       </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="https://search.usa.gov/sites"><i
+      <div class="nav navbar-right">
+          <a href="https://search.usa.gov/sites" class="navbar-brand"><i
               class="icon-user icon-white"></i>&nbsp;Login</a>
-        </li>
-      </ul>
+      </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -102,7 +101,7 @@
   
 
   <div class='post-content'>
-    <p>This documentation will walk you through setting up the <code>usasearch</code> <a href="https://drupal.org/project/usasearch">Drupal 7 module</a> <i class="icon-external-link"><span>(External link)</span></i> field by field, to integrate your Drupal CMS with the DigitalGov Search service. If you have trouble, take a look at our <a href="/manual/drupal-module-troubleshooting.html">troubleshooting tips</a>.</p>
+    <p>This documentation will walk you through setting up the <code>usasearch</code> <a href="https://drupal.org/project/usasearch">Drupal 7 module</a> <i class="icon-external-link"><span>(External link)</span></i> field by field, to integrate your Drupal CMS with the Search.gov service. If you have trouble, take a look at our <a href="/manual/drupal-module-troubleshooting.html">troubleshooting tips</a>.</p>
 
 <p>These instructions follow the order of settings listed in our Drupal module at <code>YOUR-DRUPAL-7-SITE.gov/admin/config/search/usasearch</code>.</p>
 
@@ -138,7 +137,7 @@
 
 <h2 id="use-rules-to-index-content">Use rules to index content</h2>
 
-<p>Check this box to index content manually with rules. IMPORTANT: If checked, the DigitalGov Search index will not be updated unless specified in a rule action.</p>
+<p>Check this box to index content manually with rules. IMPORTANT: If checked, the Search.gov index will not be updated unless specified in a rule action.</p>
 
 <p>Be sure to write rules for your content types in sets of three: 
 * adding to the index
@@ -163,11 +162,11 @@
 
 <p>Recommended setting (default): Checked.</p>
 
-<p>Check this box to include entire content types in the search index. Include or exclude particular content types in their entirety in the DigitalGov Search settings for the content type’s structure page, e.g. <code>YOUR-DRUPAL-7-SITE.gov/admin/structure/types/manage/article</code>. You can exclude individual nodes using the DigitalGov Search Settings within the node edit view.</p>
+<p>Check this box to include entire content types in the search index. Include or exclude particular content types in their entirety in the Search.gov settings for the content type’s structure page, e.g. <code>YOUR-DRUPAL-7-SITE.gov/admin/structure/types/manage/article</code>. You can exclude individual nodes using the Search.gov Settings within the node edit view.</p>
 
 <p>If this box is unchecked, node indexing will need to be managed individually. We recommend you leave the box checked on the module settings.</p>
 
-<p>If you exclude a content type from indexing, and later decide to <em>include</em> it, nodes of this type will be indexed on the next cron run. You may also want to review any nodes that were created in the interim, to ensure in their individual DigitalGov Search settings that they are enabled for indexing.</p>
+<p>If you exclude a content type from indexing, and later decide to <em>include</em> it, nodes of this type will be indexed on the next cron run. You may also want to review any nodes that were created in the interim, to ensure in their individual Search.gov settings that they are enabled for indexing.</p>
 
 <h2 id="save-configuration">Save configuration</h2>
 

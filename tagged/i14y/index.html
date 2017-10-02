@@ -7,6 +7,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" media="screen" rel="stylesheet" type="text/css" />
   <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
   <!--[if IE 7]>
@@ -29,7 +31,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72"
           href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
-  <link rel="shortcut icon" href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/favicon.ico">
+  <link rel="shortcut icon" href="/img/favicon.ico">
   <link rel='alternate' type='application/atom+xml' title='usasearch.howto.gov Atom feed' href='/all.atom' />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="/javascripts/bootstrap3-typeahead.js"></script>
@@ -41,8 +43,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <a class="navbar-brand" href="/">
-        <span class="digital">Digital</span><em>Gov</em></span>
-        <span class="search">Search</span>
+        <span class="search">Search.gov</span>
       </a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -55,18 +56,16 @@
 
           <input name="query" autocomplete="off"  type="text" class="typeahead form-control search-query" id="search-query" data-provide="typeahead" >
           <span class="input-group-btn">
-            <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
+            <button type="submit" class="btn btn-nav" aria-label="Left Align" id="search-button">
               <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
             </button>
           </span>
         </div>
       </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="https://search.usa.gov/sites"><i
+      <div class="nav navbar-right">
+          <a href="https://search.usa.gov/sites" class="navbar-brand"><i
               class="icon-user icon-white"></i>&nbsp;Login</a>
-        </li>
-      </ul>
+      </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -108,7 +107,7 @@
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers</p>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers</p>
 
 <p>An <a href="/developer/i14y.html">i14y</a> Drawer is an index receiving content via the i14y API. We’ve called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
 
@@ -178,7 +177,7 @@
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="/developer/index.html">APIs for Developers</a> &gt; i14y API</p>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="/developer/index.html">APIs for Developers</a> &gt; i14y API</p>
 
 <table>
   <tbody>
@@ -263,7 +262,7 @@
 
 <h3 id="step-5-configure-your-search">Step 5. Configure your search</h3>
 
-<p>Once you have your index populated, you will <a href="/manual/content-overview.html">set up the rest of your search</a> as you would for a traditional DigitalGov Search site. Set your default search scope on your <a href="/manual/domains.html">Domains</a> page, add Social Media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/instagram.html">Instagram</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>, create <a href="/manual/collections.html">Collections</a>, and set your results page Display (both <a href="/manual/display-overview.html">search features</a> and <a href="/manual/brand.html">branding</a>).</p>
+<p>Once you have your index populated, you will <a href="/manual/content-overview.html">set up the rest of your search</a> as you would for a traditional Search.gov site. Set your default search scope on your <a href="/manual/domains.html">Domains</a> page, add Social Media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/instagram.html">Instagram</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>, create <a href="/manual/collections.html">Collections</a>, and set your results page Display (both <a href="/manual/display-overview.html">search features</a> and <a href="/manual/brand.html">branding</a>).</p>
 
 <p>If you have any <a href="/manual/rss.html">RSS content</a> that will not be sent to your i14y drawer, you can add those feeds as well.</p>
 
@@ -310,7 +309,7 @@
     
 
     <div class='post-content'>
-      <p>If you have installed the <code>usasearch</code> <a href="https://drupal.org/project/usasearch">Drupal module</a> <i class="icon-external-link"><span>(External link)</span></i> to integrate your Drupal CMS with the DigitalGov Search service but are having trouble, the following suggestions should help you identify where the problem is. If after working through these items you still have questions, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">reach out to our team</a> and, though we’re not Drupal experts, we can try to help.</p>
+      <p>If you have installed the <code>usasearch</code> <a href="https://drupal.org/project/usasearch">Drupal module</a> <i class="icon-external-link"><span>(External link)</span></i> to integrate your Drupal CMS with the Search.gov service but are having trouble, the following suggestions should help you identify where the problem is. If after working through these items you still have questions, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">reach out to our team</a> and, though we’re not Drupal experts, we can try to help.</p>
 
 <p><a href="#search-errors">Skip to Search error troubleshooting tips</a></p>
 
@@ -387,7 +386,7 @@
   </li>
 </ul>
 
-<h3 id="is-the-drupal-site-search-box-directing-to-the-wrong-digitalgov-search-site">Is the Drupal site search box directing to the wrong DigitalGov Search site?</h3>
+<h3 id="is-the-drupal-site-search-box-directing-to-the-wrong-searchgov-site">Is the Drupal site search box directing to the wrong Search.gov site?</h3>
 
 <p>Your search box should use the site handle you entered on the module settings page. If you run a search and are brought to our search results page, but see the wrong search site, check to see if the Drupal search box form code was manually modified to point to another search site handle (the <code>affiliate</code> parameter in the form code). If it was modified, you’ll need to change the site handle directly in that modified code. You may also be able to restore the form code to the Drupal default, to take advantage of the module’s site handle field and be able to modify the site handle without a developer.</p>
 
@@ -424,7 +423,7 @@
     
 
     <div class='post-content'>
-      <p>This documentation will walk you through setting up the <code>usasearch</code> <a href="https://www.drupal.org/project/usasearch/releases?api_version%5B%5D=7234">Drupal 8 module</a> <i class="icon-external-link"><span>(External link)</span></i> field by field, to integrate your Drupal CMS with the DigitalGov Search service. If you have trouble, take a look at our <a href="/manual/drupal-module-troubleshooting.html">troubleshooting tips</a>.</p>
+      <p>This documentation will walk you through setting up the <code>usasearch</code> <a href="https://www.drupal.org/project/usasearch/releases?api_version%5B%5D=7234">Drupal 8 module</a> <i class="icon-external-link"><span>(External link)</span></i> field by field, to integrate your Drupal CMS with the Search.gov service. If you have trouble, take a look at our <a href="/manual/drupal-module-troubleshooting.html">troubleshooting tips</a>.</p>
 
 <p>These instructions follow the order of settings listed in our Drupal module at <code>YOUR-DRUPAL-8-SITE.gov/admin/config/search/usasearch</code>.</p>
 
@@ -456,7 +455,7 @@
 
 <h3 id="enable-i14y-api">Enable i14y API</h3>
 
-<p>Recommended! If this box is checked, the module will send content to DigitalGov Search for indexing. The <code>Drawer Handle</code> and <code>API Secret Token</code> fields will be required.</p>
+<p>Recommended! If this box is checked, the module will send content to Search.gov for indexing. The <code>Drawer Handle</code> and <code>API Secret Token</code> fields will be required.</p>
 
 <h3 id="drawer-handle">Drawer Handle</h3>
 
@@ -470,9 +469,9 @@
 
 <p>Recommended setting (default): Checked - all types.</p>
 
-<p>Select which content types will be sent to our indexes. Content types unchecked here will <strong>not</strong> be indexed. You can also control indexing status of individual nodes in their DigitalGov Search settings.</p>
+<p>Select which content types will be sent to our indexes. Content types unchecked here will <strong>not</strong> be indexed. You can also control indexing status of individual nodes in their Search.gov settings.</p>
 
-<p>If you exclude a content type from indexing, and later decide to <em>include</em> it, nodes of this type will be indexed on the next cron run. You may also want to review any nodes that were created in the interim, to ensure in their individual DigitalGov Search settings that they are enabled for indexing.</p>
+<p>If you exclude a content type from indexing, and later decide to <em>include</em> it, nodes of this type will be indexed on the next cron run. You may also want to review any nodes that were created in the interim, to ensure in their individual Search.gov settings that they are enabled for indexing.</p>
 
 <h3 id="description-view-mode">Description View Mode</h3>
 
@@ -541,7 +540,7 @@
     
 
     <div class='post-content'>
-      <p>This documentation will walk you through setting up the <code>usasearch</code> <a href="https://drupal.org/project/usasearch">Drupal 7 module</a> <i class="icon-external-link"><span>(External link)</span></i> field by field, to integrate your Drupal CMS with the DigitalGov Search service. If you have trouble, take a look at our <a href="/manual/drupal-module-troubleshooting.html">troubleshooting tips</a>.</p>
+      <p>This documentation will walk you through setting up the <code>usasearch</code> <a href="https://drupal.org/project/usasearch">Drupal 7 module</a> <i class="icon-external-link"><span>(External link)</span></i> field by field, to integrate your Drupal CMS with the Search.gov service. If you have trouble, take a look at our <a href="/manual/drupal-module-troubleshooting.html">troubleshooting tips</a>.</p>
 
 <p>These instructions follow the order of settings listed in our Drupal module at <code>YOUR-DRUPAL-7-SITE.gov/admin/config/search/usasearch</code>.</p>
 
@@ -577,7 +576,7 @@
 
 <h2 id="use-rules-to-index-content">Use rules to index content</h2>
 
-<p>Check this box to index content manually with rules. IMPORTANT: If checked, the DigitalGov Search index will not be updated unless specified in a rule action.</p>
+<p>Check this box to index content manually with rules. IMPORTANT: If checked, the Search.gov index will not be updated unless specified in a rule action.</p>
 
 <p>Be sure to write rules for your content types in sets of three: 
 * adding to the index
@@ -602,11 +601,11 @@
 
 <p>Recommended setting (default): Checked.</p>
 
-<p>Check this box to include entire content types in the search index. Include or exclude particular content types in their entirety in the DigitalGov Search settings for the content type’s structure page, e.g. <code>YOUR-DRUPAL-7-SITE.gov/admin/structure/types/manage/article</code>. You can exclude individual nodes using the DigitalGov Search Settings within the node edit view.</p>
+<p>Check this box to include entire content types in the search index. Include or exclude particular content types in their entirety in the Search.gov settings for the content type’s structure page, e.g. <code>YOUR-DRUPAL-7-SITE.gov/admin/structure/types/manage/article</code>. You can exclude individual nodes using the Search.gov Settings within the node edit view.</p>
 
 <p>If this box is unchecked, node indexing will need to be managed individually. We recommend you leave the box checked on the module settings.</p>
 
-<p>If you exclude a content type from indexing, and later decide to <em>include</em> it, nodes of this type will be indexed on the next cron run. You may also want to review any nodes that were created in the interim, to ensure in their individual DigitalGov Search settings that they are enabled for indexing.</p>
+<p>If you exclude a content type from indexing, and later decide to <em>include</em> it, nodes of this type will be indexed on the next cron run. You may also want to review any nodes that were created in the interim, to ensure in their individual Search.gov settings that they are enabled for indexing.</p>
 
 <h2 id="save-configuration">Save configuration</h2>
 
@@ -652,7 +651,7 @@
     
 
     <div class='post-content'>
-      <p>To use the DigitalGov Search service on a Drupal-based website, you should install the <code>usasearch</code> <a href="https://drupal.org/project/usasearch">Drupal module</a> <i class="icon-external-link"><span>(External link)</span></i>. It is possible to manually modify Drupal to connect to our service, but the module allows you to minimize the development work required for ongoing use and maintenance.</p>
+      <p>To use the Search.gov service on a Drupal-based website, you should install the <code>usasearch</code> <a href="https://drupal.org/project/usasearch">Drupal module</a> <i class="icon-external-link"><span>(External link)</span></i>. It is possible to manually modify Drupal to connect to our service, but the module allows you to minimize the development work required for ongoing use and maintenance.</p>
 
 <h2 id="step-by-step-instructions-for-setting-up-the-module">Step by step instructions for setting up the module</h2>
 
@@ -692,7 +691,7 @@
     
 
     <div class='post-content'>
-      <p>If you experience difficulty sending documents to our index via <a href="http://search.digitalgov.gov/developer/i14y.html">i14y</a>, it is possible your firewall is not letting you communicate with the i14y server. Adding a test document to your i14y drawer can help you diagnose a firewall issue.
+      <p>If you experience difficulty sending documents to our index via <a href="/developer/i14y.html">i14y</a>, it is possible your firewall is not letting you communicate with the i14y server. Adding a test document to your i14y drawer can help you diagnose a firewall issue.
 Windows users may need to <a href="https://curl.haxx.se/download.html">install cURL</a> <i class="icon-external-link"><span>(External link)</span></i> in order to run this test from the command line.</p>
 
 <h2 id="adding-the-test-document">Adding the Test Document</h2>
@@ -702,7 +701,7 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
 <pre><code>curl "https://i14y.usa.gov/api/v1/documents" -XPOST -H "Content-Type:application/json" -u your_drawer_handle:your_secret_token -d '{"document_id":"1", "title":"Test Document", "path": "http://www.gov.gov/cms/doc1.html", "created": "2015-05-12T22:35:09Z", "description":"The summary of the document goes here.", "content":"This is placeholder text, and in a real document would be paragraphs long.", "promote": false, "language" : "en", "tags" : "tag1, another tag"}'
 </code></pre>
 
-<p>Note: you need to replace <strong>your_drawer_handle</strong> with your i14y drawer handle, found in the i14y drawers section in the Search Admin Center (<a href="http://search.digitalgov.gov/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers). You will also need to replace <strong>your_secret_token</strong> with the drawer’s secret token, which can be found by hitting “Show” in the 14y drawer list. The drawer handle and token should be separated by a colon (:) with no spaces on either side of the colon.</p>
+<p>Note: you need to replace <strong>your_drawer_handle</strong> with your i14y drawer handle, found in the i14y drawers section in the Search Admin Center (<a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers). You will also need to replace <strong>your_secret_token</strong> with the drawer’s secret token, which can be found by hitting “Show” in the 14y drawer list. The drawer handle and token should be separated by a colon (:) with no spaces on either side of the colon.</p>
 
 <p>The above command returns JSON structured like this:</p>
 
@@ -715,7 +714,7 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
 
 <p>If you do not see a 200 status, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">contact our team</a>.</p>
 
-<p>After successfully sending a document, you should see an increase (by 1) in the number of documents in your <a href="http://search.digitalgov.gov/manual/i14y-drawers.html">i14y drawer</a>.</p>
+<p>After successfully sending a document, you should see an increase (by 1) in the number of documents in your <a href="/manual/i14y-drawers.html">i14y drawer</a>.</p>
 
 <h2 id="removing-the-test-document">Removing the Test Document</h2>
 
@@ -737,7 +736,7 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
 
 <hr />
 
-<p><strong><em>Resources:</em></strong> Read tips on <a href="http://search.digitalgov.gov/developer/i14y.html">Getting Started With i14y</a>, or view the full <a href="http://gsa.github.io/slate/">i14y technical documentation</a> on Github.</p>
+<p><strong><em>Resources:</em></strong> Read tips on <a href="/developer/i14y.html">Getting Started With i14y</a>, or view the full <a href="http://gsa.github.io/slate/">i14y technical documentation</a> on Github.</p>
 
     </div>
 

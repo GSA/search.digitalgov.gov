@@ -7,6 +7,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" media="screen" rel="stylesheet" type="text/css" />
   <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
   <!--[if IE 7]>
@@ -29,7 +31,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72"
           href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
-  <link rel="shortcut icon" href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/favicon.ico">
+  <link rel="shortcut icon" href="/img/favicon.ico">
   <link rel='alternate' type='application/atom+xml' title='usasearch.howto.gov Atom feed' href='/all.atom' />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="/javascripts/bootstrap3-typeahead.js"></script>
@@ -41,8 +43,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <a class="navbar-brand" href="/">
-        <span class="digital">Digital</span><em>Gov</em></span>
-        <span class="search">Search</span>
+        <span class="search">Search.gov</span>
       </a>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -55,18 +56,16 @@
 
           <input name="query" autocomplete="off"  type="text" class="typeahead form-control search-query" id="search-query" data-provide="typeahead" >
           <span class="input-group-btn">
-            <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
+            <button type="submit" class="btn btn-nav" aria-label="Left Align" id="search-button">
               <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
             </button>
           </span>
         </div>
       </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="https://search.usa.gov/sites"><i
+      <div class="nav navbar-right">
+          <a href="https://search.usa.gov/sites" class="navbar-brand"><i
               class="icon-user icon-white"></i>&nbsp;Login</a>
-        </li>
-      </ul>
+      </div>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
@@ -108,7 +107,7 @@
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers</p>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers</p>
 
 <p>An <a href="/developer/i14y.html">i14y</a> Drawer is an index receiving content via the i14y API. We’ve called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
 
@@ -178,7 +177,7 @@
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="/developer/index.html">APIs for Developers</a> &gt; i14y API</p>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="/developer/index.html">APIs for Developers</a> &gt; i14y API</p>
 
 <table>
   <tbody>
@@ -263,7 +262,7 @@
 
 <h3 id="step-5-configure-your-search">Step 5. Configure your search</h3>
 
-<p>Once you have your index populated, you will <a href="/manual/content-overview.html">set up the rest of your search</a> as you would for a traditional DigitalGov Search site. Set your default search scope on your <a href="/manual/domains.html">Domains</a> page, add Social Media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/instagram.html">Instagram</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>, create <a href="/manual/collections.html">Collections</a>, and set your results page Display (both <a href="/manual/display-overview.html">search features</a> and <a href="/manual/brand.html">branding</a>).</p>
+<p>Once you have your index populated, you will <a href="/manual/content-overview.html">set up the rest of your search</a> as you would for a traditional Search.gov site. Set your default search scope on your <a href="/manual/domains.html">Domains</a> page, add Social Media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/instagram.html">Instagram</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>, create <a href="/manual/collections.html">Collections</a>, and set your results page Display (both <a href="/manual/display-overview.html">search features</a> and <a href="/manual/brand.html">branding</a>).</p>
 
 <p>If you have any <a href="/manual/rss.html">RSS content</a> that will not be sent to your i14y drawer, you can add those feeds as well.</p>
 
@@ -310,7 +309,7 @@
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Best Bets: Text or Graphics</p>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Best Bets: Text or Graphics</p>
 
 <p>Do you want to promote a specific page or resource? <a href="#bbt">Create a Text Best Bet</a>.</p>
 
@@ -482,9 +481,9 @@ Watch the recording of our February 2015 webinar <a href="https://www.youtube.co
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Instagram</p>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Instagram</p>
 
-<p><strong>ALERT:</strong>  Instagram now requires accounts to grant permission to index their images via an integration between systems. Since this integration will not be possible for DigitalGov Search in the foreseeable future, we’re exploring other options. This help manual page is for historical reference only.</p>
+<p><strong>ALERT:</strong>  Instagram now requires accounts to grant permission to index their images via an integration between systems. Since this integration will not be possible for Search.gov in the foreseeable future, we’re exploring other options. This help manual page is for historical reference only.</p>
 
 <h2 id="tell-us-about-your-instagram-account">Tell Us About Your Instagram Account</h2>
 
@@ -547,7 +546,7 @@ Watch the recording of our February 2015 webinar <a href="https://www.youtube.co
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; <a href="/manual/domains.html">Domains</a> &gt; Advanced</p>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; <a href="/manual/domains.html">Domains</a> &gt; Advanced</p>
 
 <p>Is content missing from your search results? Do you want to have RSS content appear in your main page search results?</p>
 
@@ -684,7 +683,7 @@ Watch the recording of our February 2015 webinar <a href="https://www.youtube.co
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Domains</p>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Domains</p>
 
 <p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
 
@@ -776,7 +775,7 @@ Watch the recording of our February 2015 webinar <a href="https://www.youtube.co
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; <a href="/manual/domains.html">Domains</a> &gt; Advanced &gt; Filter URLs</p>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; <a href="/manual/domains.html">Domains</a> &gt; Advanced &gt; Filter URLs</p>
 
 <p>You can filter <em>a single URL</em> from the results on your site. Use it for emergency reasons only (such as spillage of classified information or unintentional publication of a page). Note that this option should be used only if the <a href="/manual/domains.html#filter">other options</a> aren’t feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p>
 
@@ -821,7 +820,7 @@ Watch the recording of our February 2015 webinar <a href="https://www.youtube.co
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; RSS</p>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; RSS</p>
 
 <p>Would you like searchers to be able to search your news or multimedia content? Would you like them to be able to narrow results by date?</p>
 
@@ -1013,7 +1012,7 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; YouTube</p>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; YouTube</p>
 
 <h2 id="tell-us-about-your-youtube-channel">Tell Us About Your YouTube Channel</h2>
 
@@ -1080,7 +1079,7 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
     
 
     <div class='post-content'>
-      <p><a href="/index.html">DigitalGov Search</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Flickr</p>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Flickr</p>
 
 <h2 id="tell-us-about-your-flickr-photostream">Tell Us About Your Flickr Photostream</h2>
 
