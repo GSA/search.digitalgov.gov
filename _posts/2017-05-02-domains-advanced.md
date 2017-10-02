@@ -6,7 +6,7 @@ tags: "help-manual manage-content domains advanced supplemental-feed supplementa
 published: true
 ---
 
-[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > [Domains](/manual/domains.html) > Advanced
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > [Domains](/manual/domains.html) > Advanced
 
 Is content missing from your search results? Do you want to have RSS content appear in your main page search results?
 

@@ -5,7 +5,7 @@ category: manual
 tags: help-manual analytics third-party google-analytics foresee DAP
 ---
 
-[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > 3rd Party Tracking
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > 3rd Party Tracking
 
 Do you want your search results page to run third-party web services such as Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?
 
@@ -54,7 +54,7 @@ Does your federal agency participate in the [Digital Analytics Program](http://w
 
 ## ForeSee Tip
 
-Coordinate with your ForeSee representative and DigitalGov Search to implement your customer satisfaction survey on your results page. The four general steps follow.
+Coordinate with your ForeSee representative and the Search.gov team to implement your customer satisfaction survey on your results page. The four general steps follow.
 
 1. Email us at <search@support.digitalgov.gov> to [set up a CNAME](cname.html) for search.youragency.gov.
 

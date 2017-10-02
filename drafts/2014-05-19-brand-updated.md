@@ -5,7 +5,7 @@ category: manual
 tags: how-to manage-display font colors header footer
 ---
 
-[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Display
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Display
 
 Our search results page uses a [responsive design](http://alistapart.com/topic/responsive-design){% external_link %} to ensure it is optimized for searchers anywhere, anytime, and on any device. 
 
@@ -37,4 +37,4 @@ Fill out the titles and URLs for the navigation links you'd like to appear in yo
 
 ***Did you know?*** As you change each font and color option, the mini search results page in the upper right-hand corner will update to reflect your changes. Once you click save, the changes will appear on your live site.
 
-***Did you know?*** We offer results through our [Search Data API](/manual/api.html), if you'd like to create mash-ups or have complete control of the look and feel of your search results pages. You can access the API by clicking on the Activate Search option in the left-hand menu in the Admin Center.
+***Did you know?*** We offer results through our [Search Results API](/manual/api.html), if you'd like to create mash-ups or have complete control of the look and feel of your search results pages. You can access the API by clicking on the Activate Search option in the left-hand menu in the Admin Center.

@@ -5,7 +5,7 @@ category: manual
 tags: drupal, i14y
 ---
 
-If you have installed the `usasearch` [Drupal module](https://drupal.org/project/usasearch){% external_link %} to integrate your Drupal CMS with the DigitalGov Search service but are having trouble, the following suggestions should help you identify where the problem is. If after working through these items you still have questions, [reach out to our team](mailto:search@support.digitalgov.gov) and, though we're not Drupal experts, we can try to help. 
+If you have installed the `usasearch` [Drupal module](https://drupal.org/project/usasearch){% external_link %} to integrate your Drupal CMS with the Search.gov service but are having trouble, the following suggestions should help you identify where the problem is. If after working through these items you still have questions, [reach out to our team](mailto:search@support.digitalgov.gov) and, though we're not Drupal experts, we can try to help. 
 
 <a href="#search-errors">Skip to Search error troubleshooting tips</a>
 
@@ -73,7 +73,7 @@ If you have another question about indexing with our service through the `usasea
   In Drupal 8, we don't override the native Drupal search box. Instead, you need to place a `USA Search Form` block, and disable the default Drupal search. To do this, go to `YOUR-DRUPAL-SITE.gov/admin/structure/block` in your Drupal site, and do `ctrl-F` to locate the word `Search` in the list. Disable the block that says just `Search`. Use `Place block` to insert a `USA Search Form` block in the block region of your choice. The search box in this block will point at the search site you entered in the module settings. 
 
 
-### Is the Drupal site search box directing to the wrong DigitalGov Search site?
+### Is the Drupal site search box directing to the wrong Search.gov site?
 
 Your search box should use the site handle you entered on the module settings page. If you run a search and are brought to our search results page, but see the wrong search site, check to see if the Drupal search box form code was manually modified to point to another search site handle (the `affiliate` parameter in the form code). If it was modified, you'll need to change the site handle directly in that modified code. You may also be able to restore the form code to the Drupal default, to take advantage of the module's site handle field and be able to modify the site handle without a developer.
 

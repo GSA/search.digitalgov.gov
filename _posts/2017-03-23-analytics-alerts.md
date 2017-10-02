@@ -5,7 +5,7 @@ category: manual
 tags: help-manual analytics
 ---
 
-[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Analytics Alerts
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Analytics Alerts
 
 Analytics Alerts let you receive email alerts when your site visitors are getting no results for a particular query or when a query is getting a [low click-through rate](#low-query-click-thru-rate). 
 

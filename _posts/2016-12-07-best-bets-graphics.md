@@ -5,7 +5,7 @@ category: manual
 tags: help-manual manage-content best-bets
 ---
 
-[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > Best Bets: Graphics
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > Best Bets: Graphics
 
 Do you want to promote a specific web page or collection of web pages? Create a Graphics Best Bet.
 

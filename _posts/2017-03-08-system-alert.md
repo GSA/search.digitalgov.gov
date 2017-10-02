@@ -5,7 +5,7 @@ category: manual
 tags: help-manual manage-display alert
 ---
 
-[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Display > Search Page Alert
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Display > Search Page Alert
 
 There may be times when you want to add a system alert to your search results page. For instance, during a [site redesign](/blog/redesign.html), you may wish to inform searchers that your site is in transition. 
 

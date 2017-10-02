@@ -5,7 +5,7 @@ category: manual
 tags: drupal, i14y
 ---
 
-This documentation will walk you through setting up the `usasearch` [Drupal 7 module](https://drupal.org/project/usasearch){% external_link %} field by field, to integrate your Drupal CMS with the DigitalGov Search service. If you have trouble, take a look at our [troubleshooting tips](/manual/drupal-module-troubleshooting.html). 
+This documentation will walk you through setting up the `usasearch` [Drupal 7 module](https://drupal.org/project/usasearch){% external_link %} field by field, to integrate your Drupal CMS with the Search.gov service. If you have trouble, take a look at our [troubleshooting tips](/manual/drupal-module-troubleshooting.html). 
 
 These instructions follow the order of settings listed in our Drupal module at `YOUR-DRUPAL-7-SITE.gov/admin/config/search/usasearch`.
 
@@ -41,7 +41,7 @@ Do you edit your site on one domain or subdomain, but publish on another? If so,
 
 ## Use rules to index content
 
-Check this box to index content manually with rules. IMPORTANT: If checked, the DigitalGov Search index will not be updated unless specified in a rule action. 
+Check this box to index content manually with rules. IMPORTANT: If checked, the Search.gov index will not be updated unless specified in a rule action. 
 
 Be sure to write rules for your content types in sets of three: 
 * adding to the index
@@ -66,11 +66,11 @@ If you don't want the full text of your nodes to be searchable, select a preferr
 
 Recommended setting (default): Checked. 
 
-Check this box to include entire content types in the search index. Include or exclude particular content types in their entirety in the DigitalGov Search settings for the content type's structure page, e.g. `YOUR-DRUPAL-7-SITE.gov/admin/structure/types/manage/article`. You can exclude individual nodes using the DigitalGov Search Settings within the node edit view.
+Check this box to include entire content types in the search index. Include or exclude particular content types in their entirety in the Search.gov settings for the content type's structure page, e.g. `YOUR-DRUPAL-7-SITE.gov/admin/structure/types/manage/article`. You can exclude individual nodes using the Search.gov Settings within the node edit view.
 
 If this box is unchecked, node indexing will need to be managed individually. We recommend you leave the box checked on the module settings.
 
-If you exclude a content type from indexing, and later decide to *include* it, nodes of this type will be indexed on the next cron run. You may also want to review any nodes that were created in the interim, to ensure in their individual DigitalGov Search settings that they are enabled for indexing.
+If you exclude a content type from indexing, and later decide to *include* it, nodes of this type will be indexed on the next cron run. You may also want to review any nodes that were created in the interim, to ensure in their individual Search.gov settings that they are enabled for indexing.
 
 ## Save configuration 
 

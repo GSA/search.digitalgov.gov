@@ -5,7 +5,7 @@ category: manual
 tags: drupal, i14y
 ---
 
-This documentation will walk you through setting up the `usasearch` [Drupal 8 module](https://www.drupal.org/project/usasearch/releases?api_version%5B%5D=7234){% external_link %} field by field, to integrate your Drupal CMS with the DigitalGov Search service. If you have trouble, take a look at our [troubleshooting tips](/manual/drupal-module-troubleshooting.html). 
+This documentation will walk you through setting up the `usasearch` [Drupal 8 module](https://www.drupal.org/project/usasearch/releases?api_version%5B%5D=7234){% external_link %} field by field, to integrate your Drupal CMS with the Search.gov service. If you have trouble, take a look at our [troubleshooting tips](/manual/drupal-module-troubleshooting.html). 
 
 These instructions follow the order of settings listed in our Drupal module at `YOUR-DRUPAL-8-SITE.gov/admin/config/search/usasearch`.
 
@@ -37,7 +37,7 @@ Highly recommended! The “i14y API settings” section allows you to send conte
 
 ### Enable i14y API
 
-Recommended! If this box is checked, the module will send content to DigitalGov Search for indexing. The `Drawer Handle` and `API Secret Token` fields will be required.
+Recommended! If this box is checked, the module will send content to Search.gov for indexing. The `Drawer Handle` and `API Secret Token` fields will be required.
 
 ### Drawer Handle
 
@@ -51,9 +51,9 @@ Enter your i14y drawer’s “secret token”. This can be found in our system i
 
 Recommended setting (default): Checked - all types.
 
-Select which content types will be sent to our indexes. Content types unchecked here will **not** be indexed. You can also control indexing status of individual nodes in their DigitalGov Search settings.
+Select which content types will be sent to our indexes. Content types unchecked here will **not** be indexed. You can also control indexing status of individual nodes in their Search.gov settings.
 
-If you exclude a content type from indexing, and later decide to *include* it, nodes of this type will be indexed on the next cron run. You may also want to review any nodes that were created in the interim, to ensure in their individual DigitalGov Search settings that they are enabled for indexing.
+If you exclude a content type from indexing, and later decide to *include* it, nodes of this type will be indexed on the next cron run. You may also want to review any nodes that were created in the interim, to ensure in their individual Search.gov settings that they are enabled for indexing.
 
 ### Description View Mode
 

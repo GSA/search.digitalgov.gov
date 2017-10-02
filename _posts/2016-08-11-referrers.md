@@ -5,7 +5,7 @@ category: manual
 tags: help-manual analytics referrers
 ---
 
-[DigitalGov Search](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Referrers
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Referrers
 
 The Referrers report shows what pages searchers were on when they entered their queries. The current month is shown by default, and the date can be adjusted by using the date selectors at the top of the page and re-generating the report.
 
