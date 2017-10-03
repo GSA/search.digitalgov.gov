@@ -30,7 +30,6 @@ You can also delete all of the URLs added via the RSS feed by deleting the RSS f
 
 **Note:** We can't restore URLs that don't exist within your current feed. Please don't remove items from the feed unless you want them to be removed from the index. You can add a feed that contains up to 1,000 items on your own. If you have a feed that will include more than 1,000 items, please contact us.
 
-<a name="supplemental-urls"></a>
 ## Adding Content via the Supplemental URLs Section
 
 You can also manually add a specific URL on the Supplemental URLs page. We'll fetch each URL you add manually and we'll index the title, description, and the full text of the document/webpage for the link you provide. Note: You can’t manually add a Supplemental URL if it has already been added by via Supplemental feed.
@@ -54,11 +53,11 @@ After hitting ‘next’ to view page 2, supplemental content is served.
 
 ### Page 1:
 
-<img class="img-responsive" src="https://search.digitalgov.gov/img/Commercial-Results-First-Page-1.png" alt="Commercial Results are Displayed on Page One of the DigitalGov.gov Search Results Page"></img>
+![Commercial Results are Displayed on Page One of the DigitalGov.gov Search Results Page](/img/Commercial-Results-First-Page-1.png){:height="95%" width="95%"}
 
 ### Page 2: 
 
-<img class="img-responsive" src="https://search.digitalgov.gov/img/Commercial-Results-First-Page-2.png" alt="Supplemental Feed Results are Displayed on Page Two of the DigitalGov.gov Search Results Page"></img>
+![Supplemental Feed Results are Displayed on Page Two of the DigitalGov.gov Search Results Page](/img/Commercial-Results-First-Page-2.png){:height="95%" width="95%"}
 
 If there are no commercial results for a query but there are supplemental content results, we will display the supplemental content on page one.
 
@@ -70,7 +69,7 @@ Please note: if you have any [regular RSS feeds](/manual/rss.html) set up in you
 
 In the example below, a Supplemental URL appears first, and clicking “Try your search again” will lead to a page of Bing results. 
 
-<img class="img-responsive" src="https://search.digitalgov.gov/img/Supplemental-Content-First-Example.png" alt="A Supplemental URL is Displayed on Page One of the DigitalGo Search Search Results Page"></img>
+![A Supplemental URL is Displayed on Page One of the DigitalGo Search Search Results Page](/img/Supplemental-Content-First-Example.png){:height="95%" width="95%"}
 
 ## Getting Supplemental Content To Be Your Only Search Results
 

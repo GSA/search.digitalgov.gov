@@ -41,7 +41,7 @@ The value is the number for your collection ID, which is visible in the URL when
 
 See the sample search box below that is limited to news on [NIH.gov for a search on *autism*](https://search.nih.gov/search/docs?affiliate=nih&dc=565&query=autism).
 
-[![News-only search box on NIH.gov's News Releases page](https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-3.png "News-only search box on NIH.gov's News Releases page")](https://www.nih.gov/news/releases.htm)
+![News-only search box on NIH.gov's News Releases page](/img/manual-collection-3.png){:height="95%" width="95%"}
   
 [![NIH.gov news-only search results page](https://d3qcdigd1fhos0.cloudfront.net/blog/img/manual-collection-4.png "NIH.gov news-only search results page")](https://search.nih.gov/search/docs?affiliate=nih&dc=565&query=autism)
 

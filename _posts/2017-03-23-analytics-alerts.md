@@ -75,7 +75,6 @@ Enter the minimum period of time between successive email messages.
 
 Enter any query terms that you don’t want included in the alert, separated by commas. 
 
-<a name="low-query-click-thru-example"></a>
 ### Low CTR Example:
 
 In this example, the alert system will check every 30 minutes for a query that has had search activity (queries plus clicks) at least 100 times over the past 12 hours and has a CTR 15% or lower. The system will send an alert at most once per day if there are queries that fit these criteria, and it will not include queries for ‘lion’ in the alert.

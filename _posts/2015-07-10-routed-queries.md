@@ -25,20 +25,17 @@ We recommend creating a routed query for [top tasks](http://www.digitalgov.gov/2
 
 Private industry has been using query routing for some time. If you go to [Home Depot](http://www.homedepot.com/){% external_link %} and search for a general term like *carpet*, you're routed to their carpet navigation page. If you search for a more specific term like *vanities*, you get standard search results.
 
-Using Kids.gov an as example, every time someone goes to [Kids.gov](https://kids.usa.gov) and searches for any of the following terms (must be exact matches), they'll automatically be directed to the Kids.gov [Three Branches of Government](https://kids.usa.gov/three-branches-of-government/index.shtml) page.
+Using USA.gov an as example, every time someone goes to [USA.gov](https://www.usa.gov) and searches for any of the following terms (must be exact matches), they'll automatically be directed to the USA.gov [Unclaimed Money from the Government](https://www.usa.gov/unclaimed-money) page.
 
-* 3 branches
-* 3 branches of government
-* branches of government
-* executive branch
-* government branches
-* judicial branch
-* legislative branch
-* the three levels of government
-* three branches of government
+* missing money
+* unclaimed assets
+* unclaimed funds
+* unclaimed money
+* unclaimed money in my name
+* unclaimed property
 
-If they get routed to the [Three Branches of Government](https://kids.usa.gov/three-branches-of-government/index.shtml) and search again for one of these terms, they'll get the standard list of search results. We won't take people in an endless loop.
+If they get routed to the [Unclaimed Money from the Government](https://www.usa.gov/unclaimed-money) and search again for one of these terms, they'll get the standard list of search results. We won't take people in an endless loop.
 
-If they search for something not on the above list, like *what are the branches of government*, they'll still get the normal search results. 
+If they search for something not on the above list, like *show me missing money*, they'll still get the normal search results. 
 
-![Standard search results for 'what are the branches of government' on Kids.gov](https://d3qcdigd1fhos0.cloudfront.net/blog/img/routed-queries.png)
+![Standard search results for 'I am looking for unclaimed money' on USA.gov](/img/unclaimed-money.png){:height="95%" width="95%"}
