@@ -37,14 +37,12 @@ Enter the minimum period of time between successive email messages.
 
 Enter any query terms that you don’t want included in the alert, separated by commas. 
 
-<a name="no-results-example"></a>
 ### No Results Example:
 
 In this example, the alert system will check every 30 minutes to see if any query has been entered at least 50 times over the past 12 hours and yielded no results. The system will send an alert at most once per day if there are queries that fit this criteria, and it will not include the query ‘panda’ in the alert.
 
-![No Results Analytics Alert Example](https://search.digitalgov.gov/img/No-Results-Screenshot.png "No Results Analytics Alert Example")
+![No Results Analytics Alert Example](https://search.digitalgov.gov/img/No-Results-Screenshot.png "No Results Analytics Alert Example"){:height="95%" width="95%"}
 
-<a name="low-query-click-thru-rate"></a>
 ## Low Query Click-thru Rate (CTR)
 
 Set up this alert to be notified if the results page for a query with significant traffic is not getting many clicks. If the query resulted in a click less than 20% of the time, it is considered to have a low click through rate (CTR); however, you are able to set any percentage threshold for your alert emails. Help on specific fields follows, and there is an [example](#low-query-click-thru-example) below.
@@ -82,7 +80,7 @@ Enter any query terms that you don’t want included in the alert, separated by 
 
 In this example, the alert system will check every 30 minutes for a query that has had search activity (queries plus clicks) at least 100 times over the past 12 hours and has a CTR 15% or lower. The system will send an alert at most once per day if there are queries that fit these criteria, and it will not include queries for ‘lion’ in the alert.
 
-![Low CTR Analytics Alert Example](https://search.digitalgov.gov/img/Low-CTR-Screenshot.png "Low CTR Analytics Alert Example")
+![Low CTR Analytics Alert Example](https://search.digitalgov.gov/img/Low-CTR-Screenshot.png "Low CTR Analytics Alert Example"){:height="95%" width="95%"}
 
 ---
 
