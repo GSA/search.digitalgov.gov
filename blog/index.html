@@ -99,6 +99,46 @@
   <article class="article">
 
     <pre><code>&lt;h1&gt;
+  &lt;a href="/manual/typeahead-api.html"&gt;Type-ahead API&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;p&gt;&lt;strong&gt;&lt;em&gt;Note&lt;/em&gt;&lt;/strong&gt;: this information is for customers who wish to use an API to display type-ahead suggestions on their website. If you are only looking to turn on type-ahead suggestions on your search results page, please review the instructions on our &lt;a href="/manual/display-overview.html"&gt;Display Overview&lt;/a&gt; page.&lt;/p&gt;
+</code></pre>
+
+    <p>The Type-ahead API exposes the type-ahead suggestions that appear below your search box as searchers enter their search terms.</p>
+
+    <p>This API is available for use on official government websites only. You must be a Search.gov customer to access the instructions. <a href="https://search.usa.gov/sites">Sign in</a> is required.</p>
+
+    <p>Keys and instructions for each can be found under <a href="https://search.usa.gov/sites">Admin Center</a> &gt; YourSite &gt; Activate Search.</p>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/api"&gt;&lt;span class="label label-info"&gt;api&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/activate-search"&gt;&lt;span class="label label-info"&gt;activate-search&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/manual/typeahead-api.html"&gt;
+    &lt;time datetime="2017-11-10"&gt;November 10, 2017&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
   &lt;a href="/manual/i14y-drawers.html"&gt;How to Work with i14y Drawers&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -1107,123 +1147,6 @@ June 2016 | 57 mins</p>
   
   
   &lt;a href="/developer/index.html"&gt;
-    &lt;time datetime="2017-08-25"&gt;August 25, 2017&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/manual/drupal-module-troubleshooting.html"&gt;Drupal Module Troubleshooting Tips&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;If you have installed the &lt;code&gt;usasearch&lt;/code&gt; &lt;a href="https://drupal.org/project/usasearch"&gt;Drupal module&lt;/a&gt; &lt;i class="icon-external-link"&gt;&lt;span&gt;(External link)&lt;/span&gt;&lt;/i&gt; to integrate your Drupal CMS with the Search.gov service but are having trouble, the following suggestions should help you identify where the problem is. If after working through these items you still have questions, &lt;a href="&amp;#109;&amp;#097;&amp;#105;&amp;#108;&amp;#116;&amp;#111;:&amp;#115;&amp;#101;&amp;#097;&amp;#114;&amp;#099;&amp;#104;&amp;#064;&amp;#115;&amp;#117;&amp;#112;&amp;#112;&amp;#111;&amp;#114;&amp;#116;&amp;#046;&amp;#100;&amp;#105;&amp;#103;&amp;#105;&amp;#116;&amp;#097;&amp;#108;&amp;#103;&amp;#111;&amp;#118;&amp;#046;&amp;#103;&amp;#111;&amp;#118;"&gt;reach out to our team&lt;/a&gt; and, though we’re not Drupal experts, we can try to help.&lt;/p&gt;
-</code></pre>
-
-    <p><a href="#search-errors">Skip to Search error troubleshooting tips</a></p>
-
-    <h2 id="indexing-errors">Indexing errors</h2>
-
-    <h3 id="do-you-have-the-right-module-for-your-drupal-version">Do you have the right module for your Drupal version?</h3>
-
-    <p>We have modules for both Drupal 7 and Drupal 8. If your site is in Drupal 7, use <code>usasearch-7.x-5.7</code>. If your site is in Drupal 8, click <a href="https://www.drupal.org/project/usasearch/releases">View all Releases</a> <i class="icon-external-link"><span>(External link)</span></i> and select API version <code>8.x</code>.</p>
-
-    <h3 id="have-you-set-up-an-i14y-drawer">Have you set up an i14y drawer?</h3>
-
-    <p>In order to send content from Drupal to our system, you’ll need an index to send the content into. We call these indexes “Drawers”, because like drawers in a filing cabinet, all the items put into them will be the content you can search against. <a href="/manual/i14y-drawers.html">Read more about Drawers here</a>. In order to set up a drawer, your search site will need to be enabled for i14y, so <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">contact us</a> to request that.</p>
-
-    <h3 id="has-any-content-actually-been-sent-to-us">Has any content actually been sent to us?</h3>
-
-    <p>The module sends content when someone hits <code>save</code> on a node, or when you run <code>re-index site</code>. In Drupal 7, <code>re-index site</code> is found on the main Drupal search settings page (<code>YOUR-DRUPAL-SITE.gov/admin/config/search/settings</code>); in Drupal 8, you can re-index the site from the bottom of the module settings page.</p>
-
-    <ul>
-  <li>If these actions have indeed happened, check the Drupal recent log messages (<code>YOUR-DRUPAL-SITE.gov/admin/reports/dblog</code>) to see if there’s anything related to <code>usasearch</code>, and please <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">send us screenshots of the errors</a>.</li>
-  <li>If these actions haven’t yet happened, please hit <code>save</code> on a node, and see if that item appears in your Drawer. You can view the contents of your Drawer by selecting <a href="https://search.usa.gov/sites">Search Admin Center</a> &gt; Your site &gt; Content &gt; i14y Drawers &gt; Show. If the item isn’t there, then check the Drupal log for an error.</li>
-</ul>
-
-    <h3 id="is-your-firewall-letting-you-communicate-with-us">Is your firewall letting you communicate with us?</h3>
-
-    <p>If content isn’t reaching us, it could be that your firewall is not allowing you to reach i14y. Please run the following from the command line, from inside the same firewall as your web server, if possible. Note: you’ll need to customize the string below with your i14y drawer’s handle and secret token (where it says <code>YOURDRAWERHANDLE:YOURDRAWERSECRETTOKEN</code>):</p>
-
-    <pre><code>curl "https://i14y.usa.gov/api/v1/documents" -XPOST -H "Content-Type:application/json" -u YOURDRAWERHANDLE:YOURDRAWERSECRETTOKEN -d '{"document_id":"1", "title":"test item", "created":"2017-02-16T10:19:02", "path":"https://www.usa.gov", "description":"This is a test", "content":"This is a test to see if the agency web server is able to communicate with the i14y API. If this document doesn't show up in the drawer in the admin center, then the i14y location may need to be whitelisted in order to facilitate indexing."}'
-</code></pre>
-
-    <ul>
-  <li>
-    <p>If you get a <code>403 Forbidden</code> response</p>
-
-    <p>Please contact your security team to request the i14y hostname be whitelisted: <code>https://i14y.usa.gov/</code></p>
-
-    <p>We can’t give you an IP to whitelist, as our system is hosted in AWS, and so i14y’s IP address changes regularly.</p>
-  </li>
-  <li>
-    <p>If you get a <code>200 OK</code> response</p>
-
-    <p>Your system is able to communicate with our system, so the issue must lie in how the module is working with your Drupal instance. <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">Send us</a> all the information and screenshots of errors that you can, and we’ll help you troubleshoot.</p>
-
-    <p>Be sure you delete the test document or it will be included in your search results. You can delete it from the command line. Run this command:</p>
-
-    <pre><code>curl "https://i14y.usa.gov/api/v1/documents/1" -XDELETE -u YOURDRAWERHANDLE:YOURDRAWERSECRETTOKEN
-</code></pre>
-  </li>
-  <li>
-    <p>If you get any other error response</p>
-
-    <p>Please take a screenshot and <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">send it to us</a> to report the issue so we can investigate the error.</p>
-  </li>
-</ul>
-
-    <h3 id="do-you-have-another-question">Do you have another question?</h3>
-
-    <p>If you have another question about indexing with our service through the <code>usasearch</code> Drupal module, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">don’t hesitate to ask</a>!</p>
-
-    <p><a name="search-errors"></a>
-## Search errors</p>
-
-    <h3 id="is-your-drupal-site-search-box-showing-drupal-search-results">Is your Drupal site search box showing Drupal search results?</h3>
-
-    <ul>
-  <li>
-    <p>If you have a <strong>Drupal 7</strong> site</p>
-
-    <p>Our Drupal 7 module is designed to take over the native Drupal search box on your site, and direct queries to the site you specify in the <code>affiliate site handle</code> field. If you’re seeing other results - either the Drupal search results or a different search site in our system, find out if the search box form code had been manually modified to point to this other location. Our module will only work with out-of-the-box Drupal search boxes. If the search box form code was modified, you’ll need to manually point it to our service using the required parameters - you can see <a href="/manual/code.html">general information on form code here</a>, or you can view examples customized to your particular site within the Admin Center, under <code>Activate</code>. You may also be able to restore the form code to the Drupal default, to take advantage of the module’s site handle field and be able to modify the site handle without a dev.</p>
-  </li>
-  <li>
-    <p>If you have a <strong>Drupal 8</strong> site</p>
-
-    <p>In Drupal 8, we don’t override the native Drupal search box. Instead, you need to place a <code>USA Search Form</code> block, and disable the default Drupal search. To do this, go to <code>YOUR-DRUPAL-SITE.gov/admin/structure/block</code> in your Drupal site, and do <code>ctrl-F</code> to locate the word <code>Search</code> in the list. Disable the block that says just <code>Search</code>. Use <code>Place block</code> to insert a <code>USA Search Form</code> block in the block region of your choice. The search box in this block will point at the search site you entered in the module settings.</p>
-  </li>
-</ul>
-
-    <h3 id="is-the-drupal-site-search-box-directing-to-the-wrong-searchgov-site">Is the Drupal site search box directing to the wrong Search.gov site?</h3>
-
-    <p>Your search box should use the site handle you entered on the module settings page. If you run a search and are brought to our search results page, but see the wrong search site, check to see if the Drupal search box form code was manually modified to point to another search site handle (the <code>affiliate</code> parameter in the form code). If it was modified, you’ll need to change the site handle directly in that modified code. You may also be able to restore the form code to the Drupal default, to take advantage of the module’s site handle field and be able to modify the site handle without a developer.</p>
-
-    <h3 id="do-you-have-another-question-1">Do you have another question?</h3>
-
-    <p>If you have another question about searching through our service with the <code>usasearch</code> Drupal module, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">don’t hesitate to ask</a>!</p>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/drupal,"&gt;&lt;span class="label label-info"&gt;drupal,&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/i14y"&gt;&lt;span class="label label-info"&gt;i14y&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/manual/drupal-module-troubleshooting.html"&gt;
     &lt;time datetime="2017-08-25"&gt;August 25, 2017&lt;/time&gt;
   &lt;/a&gt;
 &lt;/div&gt;
