@@ -11,4 +11,4 @@ The Type-ahead API exposes the type-ahead suggestions that appear below your sea
 
 This API is available for use on official government websites only. You must be a Search.gov customer to access the instructions. [Sign in](https://search.usa.gov/sites) is required. 
 
-Keys and instructions for each can be found under [Admin Center](https://search.usa.gov/sites) > YourSite > Activate Search.
+Keys and instructions can be found under [Admin Center](https://search.usa.gov/sites) > YourSite > Activate Search.
