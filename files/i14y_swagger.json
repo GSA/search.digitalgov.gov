@@ -1,0 +1,244 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is a way for you to test our i14y API. You’ll need to have a DigitalGov Search account and at least one site already set up. The i14y API uses keys to allow access to the API.If you don't have an API key, you can use the api key `qG9yZW46bG9yZW5pMTR5dG9rZW4=` to test the authorization filters.",
+    "version": "1.0.0",
+    "title": "i14y Content Indexing API",
+    "termsOfService": "https://search.gov/tos.html",
+    "contact": {
+      "email": "search@support.digitalgov.gov"
+    },
+    "license": {
+      "name": "Creative Commons Zero v1.0 Universal",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  },
+  "host": "i14y.usa.gov",
+  "tags": [
+    {
+      "name": "i14y Content Indexing API",
+      "description": ""
+    }
+  ],
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/api/v1/documents": {
+      "post": {
+        "tags": [
+          "Add a document"
+        ],
+        "summary": "Add a document to the search index",
+        "description": "Add a document to the search index",
+        "operationId": "/api/v1/documents",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "document_id",
+            "in": "query",
+            "description": "A document ID that is unique to your CMS. It cannot begin with a forward slash. Attempting to create a document with a `document_id` that already exists results in an error.",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "description": "Document link URL",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "path",
+            "in": "query",
+            "description": "Document title",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "created",
+            "in": "query",
+            "description": "When the document was initially created (such as ‘2013-02-27T10:00:00Z’)",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "description": "Document description. You must pass either a description or content, and preferably both!",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "content",
+            "in": "query",
+            "description": "Document content. . You must pass either a description or content, and preferably both!",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "promote",
+            "in": "query",
+            "description": "Whether to promote the document in the relevance ranking",
+            "type": "string"
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "description": "Two-letter locale describing language of document (defaults to 'en’)",
+            "type": "string"
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "description": "Comma-separated list of case-insentitive tags",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "basic_auth": []
+          }
+        ]
+      }
+    },
+    "/api/v1/documents/{uri_encoded_document_id}": {
+      "put": {
+        "tags": [
+          "Update a document"
+        ],
+        "summary": "Update document in the search index",
+        "description": "Update a document in the search index",
+        "operationId": "/api/v1/documents/update",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "uri_encoded_document_id",
+            "in": "path",
+            "description": "URI Encoded Document ID",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "title",
+            "in": "query",
+            "description": "Document link URL",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "path",
+            "in": "query",
+            "description": "Document title",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "created",
+            "in": "query",
+            "description": "When the document was initially created (such as ‘2013-02-27T10:00:00Z’)",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "in": "query",
+            "description": "Document description. You must pass either a description or content, and preferably both!",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "content",
+            "in": "query",
+            "description": "Document content. . You must pass either a description or content, and preferably both!",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "changed",
+            "in": "query",
+            "description": "When document was modified (such as '2013-02-27T10:00:01Z’)",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "promote",
+            "in": "query",
+            "description": "Whether to promote the document in the relevance ranking",
+            "type": "string"
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "description": "Two-letter locale describing language of document (defaults to 'en’)",
+            "type": "string"
+          },
+          {
+            "name": "tags",
+            "in": "query",
+            "description": "Comma-separated list of case-insentitive tags",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "basic_auth": []
+          }
+        ]
+      },
+      "delete": {
+        "tags": [
+          "Delete a document"
+        ],
+        "summary": "Delete a document in the search index",
+        "description": "Update a document in the search index",
+        "operationId": "/api/v1/documents/delete",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "uri_encoded_document_id",
+            "in": "path",
+            "description": "URI Encoded Document ID",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "security": [
+          {
+            "basic_auth": []
+          }
+        ]
+      }
+    }
+  },
+  "securityDefinitions": {
+    "basic_auth": {
+      "type": "basic"
+    }
+  },
+  "externalDocs": {
+    "description": "Sign up for Search.gov!",
+    "url": "https://search.gov"
+  }
+}
