@@ -60,6 +60,7 @@ curl "https://i14y.usa.gov/api/v1/documents" -XPOST -H "Content-Type:application
 If you have another question about indexing with our service through the `usasearch` Drupal module, [don't hesitate to ask](mailto:search@support.digitalgov.gov)!
 
 <a name="search-errors"></a>
+
 ## Search errors
 
 ### Is your Drupal site search box showing Drupal search results?
