@@ -102,18 +102,43 @@
  
     
     <h1>
-      <a href="/manual/typeahead-api.html">Type-ahead API</a>
+      <a href="/manual/typeahead-suggestions.html">Displaying Type-ahead Suggestions on Your Agency's Website</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><strong><em>Note</em></strong>: this information is for customers who wish to use an API to display type-ahead (autocomplete) suggestions on their website. If you are only looking to turn on type-ahead suggestions on your search results page, please review the instructions on our <a href="/manual/display-overview.html#modules">Display Overview</a> page.</p>
+      <p><strong><em>Note</em></strong>: this information is for customers who wish to display type-ahead (autocomplete) suggestions on their agency’s website. If you are only looking to turn on type-ahead suggestions on your search results page, please review the instructions on our <a href="/manual/display-overview.html#modules">Display Overview</a> page.</p>
 
-<p>The Type-ahead API exposes the type-ahead suggestions that appear below your search box as searchers enter their search terms.</p>
+<p>There are two ways to get type-ahead suggestions to appear on your agency’s website.</p>
+
+<h2 id="javascript-snippet">JavaScript Snippet</h2>
+
+<p>We offer a JavaScript snippet that is placed on your pages before the closing <code>&lt;body&gt;</code> tag.</p>
+
+<p>You must be a Search.gov customer to use this feature. Full instructions and code can be found under <a href="https://search.usa.gov/sites">Admin Center</a> &gt; YourSite &gt; Activate Search &gt; Code Snippets.</p>
+
+<p>The code will look similar to:</p>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+      var usasearch_config = { siteHandle:"YourSiteHandle" };
+
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src = "//search.usa.gov/javascripts/remote.loader.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+
+//]]&gt;
+&lt;/script&gt;
+</code></pre>
+
+<h2 id="type-ahead-api">Type-ahead API</h2>
+
+<p>The Type-ahead API exposes your site’s type-ahead suggestions. Calling the API directly alllows you to show type-ahead suggestions without adding the JavaScript code.</p>
 
 <p>This API is available for use on official government websites only. You must be a Search.gov customer to access the instructions. <a href="https://search.usa.gov/sites">Sign in</a> is required.</p>
 
-<p>Keys and instructions can be found under <a href="https://search.usa.gov/sites">Admin Center</a> &gt; YourSite &gt; Activate Search.</p>
+<p>Keys and instructions can be found under <a href="https://search.usa.gov/sites">Admin Center</a> &gt; YourSite &gt; Activate Search &gt; Type-ahead API Instructions.</p>
 
     </div>
 
@@ -131,8 +156,8 @@
       
       
       
-      <a href="/manual/typeahead-api.html">
-        <time datetime="2017-10-11">October 11, 2017</time>
+      <a href="/manual/typeahead-suggestions.html">
+        <time datetime="2017-10-27">October 27, 2017</time>
       </a>
     </div>
     </article>
