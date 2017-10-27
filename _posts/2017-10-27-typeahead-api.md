@@ -37,3 +37,5 @@ The Type-ahead API exposes your site's type-ahead suggestions. Calling the API d
 This API is available for use on official government websites only. You must be a Search.gov customer to access the instructions. [Sign in](https://search.usa.gov/sites) is required. 
 
 Keys and instructions can be found under [Admin Center](https://search.usa.gov/sites) > YourSite > Activate Search > Type-ahead API Instructions.
+
+
