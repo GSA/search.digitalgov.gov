@@ -99,6 +99,60 @@
   <article class="article">
 
     <pre><code>&lt;h1&gt;
+  &lt;a href="/manual/search-results-api.html"&gt;Showing Results Within Your Agency's Website&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;p&gt;We offer an API that allows agencies to display results from our service on their website. Instead of searchers going to our hosted search results page, agencies can use the “Search Results API” to pull results from our service and display the results within their own pages. Agencies that want to maintain an exact match of their headers, footers, and other branding are encouraged to use this API.&lt;/p&gt;
+</code></pre>
+
+    <p>The API exposes all relevant results “modules” in a single JSON call, including:</p>
+
+    <ul>
+  <li>Web results</li>
+  <li><a href="/manual/best-bets.html">Best Bets</a></li>
+  <li><a href="/manual/govbox-health.html">Health topics</a></li>
+  <li><a href="/manual/govbox-jobs.html">Job openings</a></li>
+  <li><a href="/manual/twitter.html">Recent tweets</a></li>
+  <li><a href="/manual/rss.html">Recent news</a></li>
+  <li><a href="/manual/youtube.html">Recent videos</a></li>
+  <li><a href="/manual/govbox-federal-register.html">Federal Register documents</a></li>
+  <li><a href="/manual/display-overview.html#modules">Related searches</a></li>
+</ul>
+
+    <p><strong><em>Note about Web Results:</em></strong> To retrieve web results through this API, you must either use our indexes (populated via the <a href="/developer/i14y.html">i14y API</a> or via <a href="/manual/rss.html">RSS</a>), or you must purchase an API key from Bing.</p>
+
+    <p>This API is available for use on official government websites only. You must be a Search.gov customer to access the instructions. <a href="https://search.usa.gov/sites">Sign in</a> is required.</p>
+
+    <p>Instructions can be found under <a href="https://search.usa.gov/sites">Admin Center</a> &gt; YourSite &gt; Activate Search &gt; Search Results API Instructions. The Search Results API key can be found under <a href="https://search.usa.gov/sites">Admin Center</a> &gt; YourSite &gt; Activate Search &gt; API Access Key.</p>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/api"&gt;&lt;span class="label label-info"&gt;api&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/activate-search"&gt;&lt;span class="label label-info"&gt;activate-search&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/manual/search-results-api.html"&gt;
+    &lt;time datetime="2017-10-30"&gt;October 30, 2017&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
   &lt;a href="/manual/typeahead-api.html"&gt;Displaying Type-ahead Suggestions on Your Agency's Website&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -1099,60 +1153,6 @@ June 2016 | 57 mins</p>
   
   
   &lt;a href="/manual/training.html"&gt;
-    &lt;time datetime="2017-09-12"&gt;September 12, 2017&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/releases/august-2017.html"&gt;August 2017 Release Notes&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;h2 id="highlights"&gt;Highlights&lt;/h2&gt;
-</code></pre>
-
-    <ul>
-  <li>
-    <p>Agencies can send content directly to our indexes via our <a href="/developer/i14y.html">i14y API</a>. Previously, each document had to have a created date. Now, this field is optional. Review our <a href="http://gsa.github.io/slate/#create-a-document">technical documentation</a> for more information.</p>
-  </li>
-  <li>
-    <p>We continued work on backend features that will provide new ways for customer content to be sent directly into our own indexes. In August, our team created a rake task that will allow our system to fetch, parse, and index a list of URLs. We also investigated the spellchecker functionality in Elasticsearch. This is a long term project that extends through the rest of this calendar year and into 2018. Stay tuned!</p>
-  </li>
-</ul>
-
-    <h2 id="chores">Chores</h2>
-
-    <ul>
-  <li>
-    <p>We completed our upgrade to Ruby 2.3.</p>
-  </li>
-  <li>
-    <p>We continued work that will upgrade our server recipes to Chef 12.</p>
-  </li>
-</ul>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
-  
-  
-  
-  &lt;a href="/releases/august-2017.html"&gt;
     &lt;time datetime="2017-09-12"&gt;September 12, 2017&lt;/time&gt;
   &lt;/a&gt;
 &lt;/div&gt;
