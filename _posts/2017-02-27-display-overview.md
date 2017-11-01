@@ -38,7 +38,7 @@ Type over the text in the Name field to edit a facet's display name. Keep each n
 
 1. **Recent tweets.** This option only appears after you've told us about your [Twitter](/manual/twitter.html) account. When a searcher's query matches the text of a tweet published within the past three days, the tweet appears in the Recent Tweets module.
 
-1. **Type-ahead search.** Help searchers refine their query by displaying type-ahead search suggestions as a list in the search box. The list forms as a searcher begins to type in the search box. Suggestions are listed in order of most popular (that is, most searched). They're updated every few seconds. See, for example, the suggestions as you type di... on [SocialSecurity.gov's search results page](https://search.ssa.gov/search?affiliate=ssa).
+1. **Type-ahead search.** Help searchers refine their query by displaying type-ahead search suggestions as a list in the search box. The list forms as a searcher begins to type in the search box. Suggestions are listed in order of most popular (that is, most searched). They're updated every few seconds. See, for example, the suggestions as you type di... on [SocialSecurity.gov's search results page](https://search.ssa.gov/search?affiliate=ssa). ***Note:*** this will enable type-ahead on your search results page that is hosted by our service. If you wish to display type-ahead suggestions on your agency’s website, please review instructions for our [JavaScript snippet and API](/manual/typeahead-api.html). 
 
 ## Related Sites
 
@@ -52,21 +52,8 @@ If you list more than two related sites, searchers will see them listed under a 
 
 Email us at <search@support.digitalgov.gov> if you'd like to use a custom label instead of the default 'View Topic' label.
 
-## Pointer to Kick Off New Search
-
-Your site's visitors sometimes don't realize the scope of the content they're searching against. This is especially true when you set up a search box for a subsection of your site only or when you have separate options for searching your web pages and databases.
-
-See, for example, the custom messages on IRS.gov's Forms & Pubs beta search encouraging visitors to try their search again to see tax materials for prior years.
-
-* [Custom message on IRS.gov's Forms & Pubs beta search when there aren't any results](http://find.irs.gov/search?affiliate=irs-fp&query=no-results-message)
-* [Custom message when there are results](http://find.irs.gov/search?affiliate=irs-fp&query=2014+form+1040)
-
-Email us at <search@support.digitalgov.gov> if you'd provide searchers with a custom message to encourage them to search another section of your site, your database, or both.
-
 ---
 
-***Did you know?***  Searchers may narrow results by time period for any [RSS](/manual/rss.html) feeds. See, for example, results for a [search on *jobs* narrowed to press articles in the last week on WhiteHouse.gov](http://search.whitehouse.gov/search/news?affiliate=wh&channel=6&m=false&query=jobs&tbs=w).
+***Did you know?***  Searchers may narrow results by time period for any [RSS](/manual/rss.html) feeds. See, for example, results for a [search on *space* narrowed to press releases in the last week on NASA.gov](https://nasasearch.nasa.gov/search/news?affiliate=nasa&channel=1618&query=space&sort_by=date&tbs=w).
 
 ***Did you know?***  For any of your [RSS](/manual/rss.html) feeds that you've extended with a contributor, publisher, or subject [Dublin Core](http://dublincore.org/documents/dcmi-terms/){% external_link %} property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <search@support.digitalgov.gov> to if you want to customize these display names.
-
-***Did you know?*** You can also add the type-ahead search suggestions to your homepage, or wherever you have a search box on your website, by adding our [JavaScript snippet](/manual/code.html) before the closing `<body>` tag on your HTML web pages.
