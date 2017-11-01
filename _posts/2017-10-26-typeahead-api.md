@@ -11,7 +11,7 @@ There are two ways to get type-ahead suggestions to appear on your agency's webs
 
 ## JavaScript Snippet
 
-We offer a JavaScript snippet that is placed on your pages before the closing `<body>` tag. 
+We offer a JavaScript snippet that is placed on your pages before the closing `</body>` tag. 
 
 You must be a Search.gov customer to use this feature. Full instructions and code can be found under [Admin Center](https://search.usa.gov/sites) > YourSite > Activate Search > Code Snippets.
 
