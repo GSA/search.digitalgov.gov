@@ -1,8 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "To use or test this API you will need a DigitalGov Search account and at least one site set up for i14y. The i14y authentication keys in your site will provide allow access to your i14y drawer. If you do not have an API key, you use the following `username: swagger_drawer password: fa4bae21633fbd0250ba4e54eae5e2f4` to test the API via the Authorize button below.",
-    "version": "1.0.0",
+    "description": "After clicking the Authorize button, your username and password will equal ```i14y drawer handle``` / ```secret token```.",
     "title": "i14y Content Indexing API",
     "termsOfService": "https://search.gov/tos.html",
     "contact": {
@@ -27,10 +26,10 @@
     "/api/v1/documents": {
       "post": {
         "tags": [
-          "Add a document"
+          "Create a document"
         ],
-        "summary": "Add a document to the search index",
-        "description": "Add a document to the search index",
+        "summary": "Create a document in the search index",
+        "description": "This endpoint creates a document in the search index",
         "operationId": "/api/v1/documents",
         "produces": [
           "application/json"
@@ -46,14 +45,14 @@
           {
             "name": "title",
             "in": "query",
-            "description": "Document link URL",
+            "description": "Document title",
             "required": true,
             "type": "string"
           },
           {
             "name": "path",
             "in": "query",
-            "description": "Document title",
+            "description": "Document link URL",
             "required": true,
             "type": "string"
           },
@@ -74,7 +73,7 @@
           {
             "name": "content",
             "in": "query",
-            "description": "Document content. . You must pass either a description or content, and preferably both!",
+            "description": "Document content. You must pass either a description or content, and preferably both!",
             "required": false,
             "type": "string"
           },
@@ -100,8 +99,14 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
         },
+           "400": {
+             "description": "Bad Request – There is a problem with your request"
+                    },
+           "500": {
+             "description": "Internal Server Error – There is a problem with our server and we’ve been notified. Try again later."
+                    },                    
+        },  
         "security": [
           {
             "basic_auth": []
@@ -131,14 +136,14 @@
           {
             "name": "title",
             "in": "query",
-            "description": "Document link URL",
+            "description": "Document title",
             "required": false,
             "type": "string"
           },
           {
             "name": "path",
             "in": "query",
-            "description": "Document title",
+            "description": "Document link URL",
             "required": false,
             "type": "string"
           },
@@ -192,8 +197,14 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
         },
+           "400": {
+             "description": "Bad Request – There is a problem with your request"
+                    },
+           "500": {
+             "description": "Internal Server Error – There is a problem with our server and we’ve been notified. Try again later."
+                    },                    
+        },  
         "security": [
           {
             "basic_auth": []
@@ -222,8 +233,14 @@
         "responses": {
           "200": {
             "description": "OK"
-          }
         },
+           "400": {
+             "description": "Bad Request – There is a problem with your request"
+                    },
+           "500": {
+             "description": "Internal Server Error – There is a problem with our server and we’ve been notified. Try again later."
+                    },                    
+        },            
         "security": [
           {
             "basic_auth": []
