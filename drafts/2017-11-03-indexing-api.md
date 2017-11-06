@@ -71,7 +71,7 @@ window.onload = function() {
   
   // Build a system
   const ui = SwaggerUIBundle({
-    url: "/files/i14y_swagger.json",
+    url: "https://search.gov/files/i14y_swagger.json",
     dom_id: '#swagger-ui',
     deepLinking: true,
     presets: [
