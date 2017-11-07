@@ -99,21 +99,21 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request – There is a problem with your request"
+          },
+          "500": {
+            "description": "Internal Server Error – There is a problem with our server and we’ve been notified. Try again later."
+          }
         },
-           "400": {
-             "description": "Bad Request – There is a problem with your request"
-                    },
-           "500": {
-             "description": "Internal Server Error – There is a problem with our server and we’ve been notified. Try again later."
-                    },                    
-        },  
         "security": [
           {
             "basic_auth": []
           }
         ]
+      }
     },
-}, 
     "/api/v1/documents/{uri_encoded_document_id}": {
       "put": {
         "tags": [
@@ -197,14 +197,14 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request – There is a problem with your request"
+          },
+          "500": {
+            "description": "Internal Server Error – There is a problem with our server and we’ve been notified. Try again later."
+          }
         },
-           "400": {
-             "description": "Bad Request – There is a problem with your request"
-                    },
-           "500": {
-             "description": "Internal Server Error – There is a problem with our server and we’ve been notified. Try again later."
-                    },                    
-        },  
         "security": [
           {
             "basic_auth": []
@@ -233,14 +233,14 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request – There is a problem with your request"
+          },
+          "500": {
+            "description": "Internal Server Error – There is a problem with our server and we’ve been notified. Try again later."
+          }
         },
-           "400": {
-             "description": "Bad Request – There is a problem with your request"
-                    },
-           "500": {
-             "description": "Internal Server Error – There is a problem with our server and we’ve been notified. Try again later."
-                    },                    
-        },            
         "security": [
           {
             "basic_auth": []
