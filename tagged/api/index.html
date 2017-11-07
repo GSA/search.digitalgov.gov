@@ -102,6 +102,123 @@
  
     
     <h1>
+      <a href="/developer/indexing-api.html">i14y Content Indexing API Documentation</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="/developer/index.html">APIs for Developers</a> &gt; i14y API</p>
+
+<p><a href="https://github.com/GSA/i14y">i14y Github repo</a> <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<h2 id="what-is-i14y">What is i14y?</h2>
+
+<p>The Search.gov i14y Content Indexing API allows you to send content directly from your content management system (CMS) into Search.gov for real-time indexing. By hooking into your CMS workflow, you can immediately create, update, and delete the associated documents in our search indexes via this API. Even if you don’t have a CMS, you can develop software to publish your content in a way that meets the i14y API specifications below.</p>
+
+<p>Ruby/Python/Node clients are welcome.</p>
+
+<h2 id="before-you-begin">Before you Begin</h2>
+
+<ol>
+  <li>Set-up a search site with our service via 
+<a href="https://search.gov">Search.gov</a></li>
+  <li>Request that your search site be enabled for i14y by <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">emailing our team</a>.</li>
+  <li>Set up an i14y “drawer” in our system. <a href="https://search.gov/manual/i14y-drawers.html">Full instructions</a> are available in our help manual. You’ll give your drawer a handle, and you’ll need to enter this drawer handle in the username field below after you click the Authorize button.</li>
+  <li>Get your i14y secret token. You’ll need to enter this token as your password.
+The token can be found in our system in: <a href="https://search.usa.gov/sites">Search Admin Center</a> &gt; Manage Content &gt; i14y Drawers, select the option Show.</li>
+</ol>
+
+<p><em>Note:</em> If you are a developer who doesn’t have access to our site configurations, please <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">email us</a>.</p>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+  <defs>
+    <symbol viewbox="0 0 20 20" id="unlocked">
+          <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+    </symbol>
+
+    <symbol viewbox="0 0 20 20" id="locked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z" />
+    </symbol>
+
+    <symbol viewbox="0 0 20 20" id="close">
+      <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z" />
+    </symbol>
+
+    <symbol viewbox="0 0 20 20" id="large-arrow">
+      <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z" />
+    </symbol>
+
+    <symbol viewbox="0 0 20 20" id="large-arrow-down">
+      <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z" />
+    </symbol>
+
+
+    <symbol viewbox="0 0 24 24" id="jump-to">
+      <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z" />
+    </symbol>
+
+    <symbol viewbox="0 0 24 24" id="expand">
+      <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z" />
+    </symbol>
+
+  </defs>
+</svg>
+
+<link rel="stylesheet" type="text/css" href="/files/swagger-ui.css" />
+
+<div id="swagger-ui"></div>
+
+<script src="/files/swagger-ui-bundle.js"> </script>
+
+<script src="/files/swagger-ui-standalone-preset.js"> </script>
+
+<script>
+window.onload = function() {
+  
+  // Build a system
+  const ui = SwaggerUIBundle({
+    url: "https://search.gov/files/i14y_swagger.json",
+    dom_id: '#swagger-ui',
+    deepLinking: true,
+    presets: [
+      SwaggerUIBundle.presets.apis,
+      SwaggerUIStandalonePreset
+    ],
+    plugins: [
+      SwaggerUIBundle.plugins.DownloadUrl
+    ],
+    layout: "StandaloneLayout"
+  })
+
+  window.ui = ui
+}
+</script>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/i14y"><span class="label label-info">i14y</span></a>
+      
+      <a href="/tagged/api"><span class="label label-info">api</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/developer/indexing-api.html">
+        <time datetime="2017-11-03">November 3, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/developer/index.html">Resources for Developers</a>
     </h1>
     
@@ -1278,92 +1395,16 @@ to contribute your changes to our project and improve this API for everyone who 
     </div>
     </article>
   
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/blog/open-source.html">Our Open Source Strategy</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>We keep an eye on on our what our government counterparts are up to, both in the U.S. and other countries. We first came across <a href="https://www.gov.uk">Gov.UK’s</a> philosophy on and approach to <a href="http://digital.cabinetoffice.gov.uk/2012/10/12/coding-in-the-open">coding in the open</a> a couple of years ago. It caught our attention and we realized we should also articulate our open source strategy.</p>
-
-<h2 id="use-and-contribute-to-open-source-projects">Use and Contribute to Open Source Projects</h2>
-
-<p>Since 2010, we’ve embraced and leveraged open source software to build our site search service for federal, state, and local government websites. This use of open source has allowed us to experience enormous growth over the past few years. In July 2014 alone, over 23 million searchers received results from our service—a five-fold increase since July 2010.</p>
-
-<p>Our search service is now a complex system made up of many moving parts, including providing type-ahead search suggestions, serving search results, fetching, indexing, and caching content, and providing analytics.</p>
-
-<p>Each of these parts is compiled into our codebase and, as we use open source components for our system, we contribute back to the projects.</p>
-
-<h2 id="code-in-the-open">Code in the Open</h2>
-
-<p>We recently began to unravel our monolithic codebase so that we can share individual pieces of our code. To borrow the phrase from Gov.UK, we’re now <strong><em>coding in the open</em></strong>.</p>
-
-<p>We recently released the code for our <a href="https://github.com/gsa/oasis">social media image</a>, <a href="https://github.com/GSA/jobs_api">jobs</a> and <a href="https://github.com/GSA/recalls_api">recalls</a> API servers. They’re our first foray into coding in the open. The source code for these API servers is in <a href="https://github.com/GSA">our GitHub repo</a> and is available for anyone to see and contribute to.</p>
-
-<p>The data products for the jobs and recalls code are also open and available for anyone to consume on our <a href="/developer/index.html">Developer hub</a>.</p>
-
-<p>These three servers and their underlying data now operate outside of our core search codebase.</p>
-
-<p>Following this same model, moving forward, we plan to:</p>
-
-<ul>
-  <li>Share first—For every new feature, we’ll write the code so that <em>anyone</em> can make use of the code, not just us. If the public community contributes to the codebase, we’ll be able to improve this feature without taxing our developers.</li>
-  <li>Expose APIs—We’ll expose our data products as APIs so that <em>anyone</em> can make use of the data, not just searchers on a government websites.</li>
-  <li>Be our own customer—We’ll use our own public code and data just like everyone else. We’ll call our own API servers to integrate the data within our search results pages.</li>
-</ul>
-
-<h2 id="make-things-open-to-make-things-better">Make Things Open to Make Things Better</h2>
-
-<p>We agree with Gov.UK that “to make things open makes things better.”</p>
-
-<p>We have finite resources and we don’t want to lose our focus on serving our agency customers and improving visitors’ search experience on government websites. So, we won’t be spending a lot of time to build or support a vibrant community around our code.</p>
-
-<p>That said, we hope that exposing the pieces of our system will be useful to someone somewhere. We’ll continue to provide the “ingredients” of our search service so that others will be able to make use of the code and data in ways that we could never imagine.</p>
-
-<h2 id="and-were-not-alone">And, We’re Not Alone</h2>
-
-<p>We’re not alone. Other federal agencies have embraced the approach of coding in the open and have <a href="http://gsa.github.io/federal-open-source-repos">GitHub repos</a>. Below are a just a few of our many favorites.</p>
-
-<ul>
-  <li>The <a href="http://www.cfpb.gov">Consumer Financial Protection Bureau</a> has embraced open source, including serving their public data sets through <a href="https://github.com/cfpb/qu">qu</a> and sharing their work at <a href="http://cfpb.github.io">http://cfpb.github.io</a>.</li>
-  <li>The <a href="http://www.fda.gov">Food and Drug Administration</a> recently made public FDA datasets more accessible at <a href="https://open.fda.gov">openFDA</a>.</li>
-  <li>GSA’s newly-created <a href="https://18f.gsa.gov">18F</a> has committed to <a href="http://18fblog.tumblr.com/post/93415834296/working-in-public-from-day-1">working in the open from day 1</a>.</li>
-  <li>The <a href="http://www.whitehouse.gov">White House</a> was in the forefront of using open source software in the federal government with their use of Drupal. They’re continuing to lead by example by opening up the code for their <a href="https://github.com/WhiteHouse/petitions">We the People petitions</a> and <a href="https://github.com/WhiteHouse/wh-app-ios">iOS</a> and <a href="https://github.com/WhiteHouse/wh-app-android">Android</a> mobile apps.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/open"><span class="label label-info">open</span></a>
-      
-      <a href="/tagged/api"><span class="label label-info">api</span></a>
-      
-      <a href="/tagged/about-us"><span class="label label-info">about-us</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      <a href="/blog/open-source.html">
-        <time datetime="2014-08-22">August 22, 2014</time>
-      </a>
-    </div>
-    </article>
-  
 </div>
 
 
 <ul class="pager">
   
 
+  
+  <li class="next">
+    <a href="/tagged/api/page2">Older &rarr;</a>
+  </li>
   
 </ul>
 <!-- end tag layout -->      

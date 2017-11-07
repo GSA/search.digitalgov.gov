@@ -99,6 +99,125 @@
   <article class="article">
 
     <pre><code>&lt;h1&gt;
+  &lt;a href="/developer/indexing-api.html"&gt;i14y Content Indexing API Documentation&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;p&gt;&lt;a href="/index.html"&gt;Search.gov Home&lt;/a&gt; &amp;gt; &lt;a href="/developer/index.html"&gt;APIs for Developers&lt;/a&gt; &amp;gt; i14y API&lt;/p&gt;
+</code></pre>
+
+    <p><a href="https://github.com/GSA/i14y">i14y Github repo</a> <i class="icon-external-link"><span>(External link)</span></i></p>
+
+    <h2 id="what-is-i14y">What is i14y?</h2>
+
+    <p>The Search.gov i14y Content Indexing API allows you to send content directly from your content management system (CMS) into Search.gov for real-time indexing. By hooking into your CMS workflow, you can immediately create, update, and delete the associated documents in our search indexes via this API. Even if you don’t have a CMS, you can develop software to publish your content in a way that meets the i14y API specifications below.</p>
+
+    <p>Ruby/Python/Node clients are welcome.</p>
+
+    <h2 id="before-you-begin">Before you Begin</h2>
+
+    <ol>
+  <li>Set-up a search site with our service via 
+<a href="https://search.gov">Search.gov</a></li>
+  <li>Request that your search site be enabled for i14y by <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">emailing our team</a>.</li>
+  <li>Set up an i14y “drawer” in our system. <a href="https://search.gov/manual/i14y-drawers.html">Full instructions</a> are available in our help manual. You’ll give your drawer a handle, and you’ll need to enter this drawer handle in the username field below after you click the Authorize button.</li>
+  <li>Get your i14y secret token. You’ll need to enter this token as your password.
+The token can be found in our system in: <a href="https://search.usa.gov/sites">Search Admin Center</a> &gt; Manage Content &gt; i14y Drawers, select the option Show.</li>
+</ol>
+
+    <p><em>Note:</em> If you are a developer who doesn’t have access to our site configurations, please <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">email us</a>.</p>
+
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+  <defs>
+    <symbol viewbox="0 0 20 20" id="unlocked">
+          <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+    </symbol>
+
+    <symbol viewbox="0 0 20 20" id="locked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z" />
+    </symbol>
+
+    <symbol viewbox="0 0 20 20" id="close">
+      <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z" />
+    </symbol>
+
+    <symbol viewbox="0 0 20 20" id="large-arrow">
+      <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z" />
+    </symbol>
+
+    <symbol viewbox="0 0 20 20" id="large-arrow-down">
+      <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z" />
+    </symbol>
+
+
+    <symbol viewbox="0 0 24 24" id="jump-to">
+      <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z" />
+    </symbol>
+
+    <symbol viewbox="0 0 24 24" id="expand">
+      <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z" />
+    </symbol>
+
+  </defs>
+</svg>
+
+    <link rel="stylesheet" type="text/css" href="/files/swagger-ui.css" />
+
+    <div id="swagger-ui"></div>
+
+    <script src="/files/swagger-ui-bundle.js"> </script>
+
+    <script src="/files/swagger-ui-standalone-preset.js"> </script>
+
+    <script>
+window.onload = function() {
+  
+  // Build a system
+  const ui = SwaggerUIBundle({
+    url: "https://search.gov/files/i14y_swagger.json",
+    dom_id: '#swagger-ui',
+    deepLinking: true,
+    presets: [
+      SwaggerUIBundle.presets.apis,
+      SwaggerUIStandalonePreset
+    ],
+    plugins: [
+      SwaggerUIBundle.plugins.DownloadUrl
+    ],
+    layout: "StandaloneLayout"
+  })
+
+  window.ui = ui
+}
+</script>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/i14y"&gt;&lt;span class="label label-info"&gt;i14y&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/api"&gt;&lt;span class="label label-info"&gt;api&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/developer/indexing-api.html"&gt;
+    &lt;time datetime="2017-11-03"&gt;November 3, 2017&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
   &lt;a href="/developer/index.html"&gt;Resources for Developers&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -979,128 +1098,6 @@
   
   &lt;a href="/blog/searchgov-faqs-indexing.html"&gt;
     &lt;time datetime="2017-09-22"&gt;September 22, 2017&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/blog/searchgov-blog.html"&gt;Search.gov -- The Road Ahead in 2018&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;We are pleased to announce some exciting upcoming changes to our service. On October 1st, we’ll become Search.gov. We’re changing more than just our name; in fiscal year 2018, we will use our own indexes to serve search results instead of relying on &lt;a href="/blog/searchgov-faqs-indexing.html#q-how-was-my-site-getting-results-before"&gt;commercial web search engines&lt;/a&gt;.&lt;/p&gt;
-</code></pre>
-
-    <p>Why are we evolving in this direction? Licensing commercial search results is expensive and complex. As we’ve continued to grow, our costs have continued to increase, and a new model has become a necessity.</p>
-
-    <p>Indexing changes will begin rolling out in early FY18 and will only affect where your web results come from. Your search results page will look the same, and our additional search features will also be the same: <a href="https://search.digitalgov.gov/manual/best-bets.html">Best Bets</a>, <a href="https://search.digitalgov.gov/manual/collections.html">Collections</a>, job postings, social media integrations, and so on.</p>
-
-    <p>In this new model, we’ll work closely with you to get your sites indexed. This post describes the different approaches we’ll take and what we’ll need from you, depending on which method is right for your site and needs.</p>
-
-    <p>We know that one of the core features of our service is how simple it is to get your site search up and running. We’ll always strive to make the service easy to use.</p>
-
-    <p>Speaking of easy to use: we’re changing our name to make things simpler. In the past, we’ve been FirstGov Search, FirstSearch, USAGov Search, USASearch, and most recently DigitalGov Search. Our new name is short, simple, and easy to remember.</p>
-
-    <h2 id="overview-what-it-means-to-use-our-indexes-instead-of-commercial-web-indexes">Overview: What It Means To Use Our Indexes Instead of Commercial Web Indexes</h2>
-
-    <p>Our current default is to serve search results from Bing’s index. Once a query is made, we get a set of results from Bing via API and display them on your search results page. We also use Google’s index to support certain Collections where Bing does not provide results. However, this past spring, Google announced they will be shutting down the API we use for these searches in March 2018. This would leave us with a gap in our service.</p>
-
-    <p>To address this gap and other licensing complexities, we will focus on using our own indexes in FY18 instead of getting Bing or Google results. This means that we will need to know what content is on your website, and get information about it into our indexes.</p>
-
-    <p>In the most basic terms, here’s what we’ll be doing:</p>
-
-    <p><img src="/img/basic-indexing-flow.png" alt="alt text" title="Flowchart showing the major phases of search indexing: Discover, Parse, Index, and Search." /></p>
-
-    <p><em><a href="/img/searchgov-flow.png" title="How Search.gov Works">Detailed diagram</a></em></p>
-
-    <p>Below are the options for how you can tell us about your site content. The list is divided into sections based on whether or not your website is on a content management system (CMS). There will be two primary ways to get content into our system: have your CMS send content to us via the i14y API, or send us a list of URLs.</p>
-
-    <h2 id="customers-with-content-management-systems-cms">Customers with Content Management Systems (CMS)</h2>
-
-    <h3 id="preferred-option-i14y-content-indexing-api-i14y">Preferred Option: i14y Content Indexing API (i14y)</h3>
-
-    <p>Since 2015, we’ve offered an API called <a href="https://search.digitalgov.gov/developer/i14y.html">i14y</a>. I14y receives real-time content updates, which gives you full control over your search results. You can update and remove content, and decide exactly what will be shown as the result title for each item.</p>
-
-    <p>We are excited to get additional CMS customers using this powerful feature.</p>
-
-    <h4 id="customers-with-drupal---we-have-a-drupal-module-for-i14y">Customers with Drupal - We have a Drupal module for i14y!</h4>
-
-    <p>For customers who use Drupal as their CMS, our <a href="https://www.drupal.org/project/usasearch">Drupal module</a> eliminates the need for programming effort around the i14y API. This module is available for websites in Drupal 7 and 8.</p>
-
-    <h4 id="customers-with-drupal--content-not-in-the-cms">Customers with Drupal + Content not in the CMS</h4>
-
-    <p>If your site is on Drupal but you also have published material outside of Drupal (such as PDFs or old web pages), we’ll be able to search both CMS and non-CMS content together.</p>
-
-    <p>Your non-CMS material will be indexed via the URL method described below, while your Drupal content will come to us via the module. <em>Note:</em> PDFs count as non-CMS content even if they’re attached to Drupal nodes. Drupal doesn’t store the text of PDFs in its tables, so the module can’t send it to us.</p>
-
-    <h4 id="customers-with-other-cmss">Customers with other CMSs</h4>
-
-    <p>If you use a CMS that’s not Drupal, we encourage you to develop an integration with i14y and open source it so that other agencies can leverage it as well - a rising tide lifts all boats! If you’re unable to develop an integration, however, read on for other options.</p>
-
-    <h2 id="customers-without-content-management-systems">Customers without Content Management Systems</h2>
-
-    <h3 id="indexing-from-lists-of-urls">Indexing from Lists of URLs</h3>
-
-    <p>In FY18, we will have the ability to index content from lists of URLs. You’ll provide a list of URLs so we know what content to index, and we will develop the title and other metadata from the pages you point us to.</p>
-
-    <p>This is a good opportunity to review your page titles and other metadata, and to tidy things up. This will improve not only how results are presented in our system, but improve your SEO for Google and Bing as well.</p>
-
-    <p>If you’re unable to send us a list of URLs, please <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">schedule a time</a> to talk with us.</p>
-
-    <h2 id="customers-who-send-us-rss-feeds">Customers who send us RSS feeds</h2>
-
-    <p>For customers who have developed RSS feeds for our system: that process will remain unchanged. We’ve heard from many of you that maintenance is laborious, so you may want to investigate our new approaches, but you don’t have to change anything if you don’t want to.</p>
-
-    <h2 id="next-steps-and-action-items">Next Steps and Action Items</h2>
-
-    <p>We are excited about our new direction. You can follow our progress by reading our monthly <a href="https://search.digitalgov.gov/tagged/release-notes/">Release Notes</a>.</p>
-
-    <p><em>CMS customers:</em></p>
-
-    <p>We encourage you to set-up and test i14y as soon as possible.</p>
-
-    <p><em>Non-CMS Customers:</em></p>
-
-    <p>We encourage you to explore how you can compile a list of your site URLs, and to begin thinking about cleaning up your page titles and descriptions. You do not need to send us any information yet. You may want to check out our webinar <a href="https://search.digitalgov.gov/manual/training.html">Structuring Your Site for Better SEO</a> that will give you tips on what sorts of things to be on the watch for.</p>
-
-    <h3 id="do-you-have-questions">Do you have questions?</h3>
-
-    <p>You may join us for an open Q&amp;A session on:</p>
-
-    <pre><code>Tuesday, October 3rd, 1 PM ET
-Call in number: 1-866-816-7357 / Passcode: 929827#
-</code></pre>
-
-    <p>We also invite you to read our <a href="/blog/searchgov-faqs-indexing.html">FAQs</a>, which we’ll update regularly.</p>
-
-    <p>Finally, we welcome you to email <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">questions and comments</a>.</p>
-
-    <p>The Search program has grown and evolved since its <a href="/customers.html">inception in September 2000</a>. We look forward to this next phase of service to you and the public.</p>
-
-    <p>Happy searching,</p>
-
-    <p>The Search.gov Team</p>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/roadmap"&gt;&lt;span class="label label-info"&gt;roadmap&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/blog/searchgov-blog.html"&gt;
-    &lt;time datetime="2017-09-21"&gt;September 21, 2017&lt;/time&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 </code></pre>
