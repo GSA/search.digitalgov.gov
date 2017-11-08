@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Analyze Your Monthly Reports
+title: Analyzing Your Monthly Reports
 category: manual
 tags: help-manual analytics queries clicks
 ---
@@ -13,15 +13,13 @@ Data are shown for the present month-to-date by default. You can change the time
 
 You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site's visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.
 
-Data are available in the Admin Center from August 2014.
-
 ## Monthly Usage Stats
 
 Data for the total number of queries and clicks. Use this report to find and analyze the so-called [short head](http://www.searchtools.com/analysis/long-tail.html){% external_link %} of your most popular search queries and clicks, which are typically the same as your site's [top tasks](http://www.usability.gov/tags/task-analysis/).
 
 ### Queries with No Results
 
-A list of queries that returned no results. Sometimes searchers look for information on the wrong website, and sometimes they use different words than what are used on the page, and so they get no results from the search index. Use this list of Queries with No Results to help searchers get to the information they're looking for. You can set up [Best Bets (Text or Graphics)](/manual/best-bets.html)), or a [Routed Query](/manual/routed-queries.html). You can also [customize the No Results message](/manual/no-results.html) displayed on your results page.
+A list of queries that returned no results. Sometimes searchers look for information on the wrong website, and sometimes they use different words than what are used on the page, and so they get no results from the search index. Use this list of Queries with No Results to help searchers get to the information they're looking for. You can set up [Best Bets](/manual/best-bets.html), or a [Routed Query](/manual/routed-queries.html). You can also [customize the No Results message](/manual/no-results.html) displayed on your results page.
 
 ## Impressions and Clicks by Module
 
@@ -29,7 +27,7 @@ Detailed data for the total number of impressions and clicks and your clickthru 
 
 Use this report to inform which [modules you opt to display](/manual/display-overview.html).
 
-***Drill down into best bets.*** Select the option to drill down into your [Best Bets (Text or Graphics)](/manual/best-bets.html) to see the number of impressions, number of clicks, and CTR for each best bet. The data in the table is sorted in descending order from the highest to lowest CTR. Review and edit best bets as needed. Focus on those with a high number of impressions and low CTR to make the biggest impact on searchers' experience (and on your overall CTR). Select drill down again to see a pie chart of the search terms that led to an impression on each best bet.
+***Drill down into Best Bets.*** Select the option to drill down into your [Best Bets (Text or Graphics)](/manual/best-bets.html) to see the number of impressions, number of clicks, and CTR for each Best Bet. The data in the table is sorted in descending order from the highest to lowest CTR. Review and edit Best Bets as needed. Focus on those with a high number of impressions and low CTR to make the biggest impact on searchers' experience (and on your overall CTR). Select drill down again to see a pie chart of the search terms that led to an impression on each Best Bet.
 
 ## Download Top Queries
 
@@ -49,7 +47,7 @@ All data presented on this page (and other pages in the Admin Center) are IP-ded
 
 **Impressions:** Number of times a module is displayed, whether it is clicked on or not. Not all modules are displayed for all queries. Each time a module is displayed it is counted as one impression.
 
-**Clickthru Rate (CTR):** The rate (expressed in a percentage) at which searchers click on a module. This rate is calculated by dividing the total number of clicks by the total number of impressions. CTR is useful to measure the performance of specific campaigns, such as [best bets](/manual/best-bets.html) for seasonal events.
+**Clickthru Rate (CTR):** The rate (expressed in a percentage) at which searchers click on a module. This rate is calculated by dividing the total number of clicks by the total number of impressions. CTR is useful to measure the performance of specific campaigns, such as [Best Bets](/manual/best-bets.html) for seasonal events.
 
 **Raw count:** Total number of times the query was submitted. The raw count is provided in the downloadable CSV files only.
 
