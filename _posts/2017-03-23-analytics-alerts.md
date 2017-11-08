@@ -7,7 +7,7 @@ tags: help-manual analytics
 
 [Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Analytics Alerts
 
-Analytics Alerts let you receive email alerts when your site visitors are getting no results for a particular query or when a query is getting a [low click-through rate](#low-query-click-thru-rate-CTR). 
+Analytics Alerts let you receive email alerts when your site visitors are getting no results for a particular query or when a query is getting a [low click-through rate](#low-query-click-through-rate). 
 
 ## No Results
 
@@ -43,9 +43,9 @@ In this example, the alert system will check every 30 minutes to see if any quer
 
 ![No Results Analytics Alert Example](https://search.digitalgov.gov/img/No-Results-Screenshot.png "No Results Analytics Alert Example"){:height="95%" width="95%"}
 
-## Low Query Click-thru Rate (CTR)
+## Low Query Click-through Rate
 
-Set up this alert to be notified if the results page for a query with significant traffic is not getting many clicks. If the query resulted in a click less than 20% of the time, it is considered to have a low click through rate (CTR); however, you are able to set any percentage threshold for your alert emails. Help on specific fields follows, and there is an [example](#low-ctr-example) below.
+Set up this alert to be notified if the results page for a query with significant traffic is not getting many clicks. If the query resulted in a click less than 20% of the time, it is considered to have a low click-through rate (CTR); however, you are able to set any percentage threshold for your alert emails. Help on specific fields follows, and there is an [example](#low-ctr-example) below.
 
 **Name**
 
@@ -61,7 +61,7 @@ Enter the minimum number of times, over the time window, that a given query must
 
 **Maximum CTR for alert**
 
-Enter the maximum click through rate that will trigger an alert, expressed as a percentage. You will receive an alert for a query that has a CTR equal to or lower than that percentage during the given time window.
+Enter the maximum click-through rate that will trigger an alert, expressed as a percentage. You will receive an alert for a query that has a CTR equal to or lower than that percentage during the given time window.
 
 **Time window for each check**
 
@@ -85,4 +85,4 @@ In this example, the alert system will check every 30 minutes for a query that h
 
 ***Troubleshooting tip:*** Don’t forget to hit ‘add’ in the upper right corner!
 
-***Troubleshooting tip:*** Analytics alerts are only sent to the Search user who set up the alert. 
+***Troubleshooting tip:*** Analytics alerts are only sent to the Search.gov user who set up the alert. 
