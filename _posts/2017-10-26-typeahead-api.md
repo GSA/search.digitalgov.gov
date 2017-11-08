@@ -39,4 +39,4 @@ This API is available for use on official government websites only. You must be 
 Keys and instructions can be found under [Admin Center](https://search.usa.gov/sites) > YourSite > Activate Search > Type-ahead API Instructions.
 
 --- 
-***Troubleshooting*** Suggestions are derived from the searches performed on your website. For additional details, please review the Typeahead API section in the Search [Admin Center](https://search.usa.gov/sites).
+***Troubleshooting:*** Suggestions are derived from the searches performed on your website. For additional details, please review the Type-ahead API section in the Search [Admin Center](https://search.usa.gov/sites).
