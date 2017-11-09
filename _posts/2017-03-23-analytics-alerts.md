@@ -7,7 +7,7 @@ tags: help-manual analytics
 
 [Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Analytics Alerts
 
-Analytics Alerts let you receive email alerts when your site visitors are getting no results for a particular query or when a query is getting a [low click-through rate](#low-query-click-through-rate). 
+Analytics Alerts let you receive email alerts when your site visitors are getting no results for a particular query or when a query is getting a [low click-through rate](#low-query-click-through-rate). ***Note:*** the Low Click-through Rate alert is not currently functional. We apologize for any inconvience this may cause.
 
 ## No Results
 
@@ -44,6 +44,8 @@ In this example, the alert system will check every 30 minutes to see if any quer
 ![No Results Analytics Alert Example](https://search.digitalgov.gov/img/No-Results-Screenshot.png "No Results Analytics Alert Example"){:height="95%" width="95%"}
 
 ## Low Query Click-through Rate
+
+***Note:*** the Low Click-through Rate alert is not currently functional. We apologize for any inconvience this may cause.
 
 Set up this alert to be notified if the results page for a query with significant traffic is not getting many clicks. If the query resulted in a click less than 20% of the time, it is considered to have a low click-through rate (CTR); however, you are able to set any percentage threshold for your alert emails. Help on specific fields follows, and there is an [example](#low-ctr-example) below.
 
