@@ -99,6 +99,201 @@
   <article class="article">
 
     <pre><code>&lt;h1&gt;
+  &lt;a href="/manual/rss.html"&gt;Add Your RSS Feeds to Our Index&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;p&gt;&lt;a href="/index.html"&gt;Search.gov Home&lt;/a&gt; &amp;gt; &lt;a href="https://search.usa.gov/sites/"&gt;Admin Center&lt;/a&gt; &amp;gt; YourSite &amp;gt; Manage Content &amp;gt; RSS&lt;/p&gt;
+</code></pre>
+
+    <p>Would you like searchers to be able to search your news or multimedia content? Would you like them to be able to narrow results by date?</p>
+
+    <p>Tell us the locations and names of your RSS feeds. We index all new and updated content on your feeds within minutes.</p>
+
+    <h2 id="step-1-tell-us-about-your-rss-feeds">Step 1. Tell Us About Your RSS Feeds</h2>
+
+    <p>We love feeds! Tell us about <em>all</em> of your RSS feeds, even if you don’t opt to show them in step 2 below. Feeds are the fastest and most reliable way for us to learn about your new and updated content.</p>
+
+    <p>Select the option to add a new RSS feed.</p>
+
+    <h3 id="name">Name</h3>
+
+    <p>Create a name for the feed. Within this ‘bucket’ you can list a single RSS feed or many feeds. For example, you can opt to list all of your agency’s press releases separately (such as Police News, Fire News, EMS News, etc.) or you can list all three under one general name (such as News).</p>
+
+    <h3 id="feed-type">Feed type</h3>
+
+    <p>Select the type of feed. The default option is RSS (for text content like press releases or blogs). Change it to <a href="http://www.rssboard.org/media-rss">media RSS</a> <i class="icon-external-link"><span>(External link)</span></i> for multimedia content like images and videos.</p>
+
+    <p>Each item within a RSS feed must include a title, link, description, and publication date.</p>
+
+    <p>Each item within a media RSS feed must also include both a <a href="http://www.rssboard.org/media-rss#media-content">media:content URL</a> <i class="icon-external-link"><span>(External link)</span></i> to specify a direct URL to the media object and a <a href="http://www.rssboard.org/media-rss#media-thumbnails">media:thumbnail URL</a> <i class="icon-external-link"><span>(External link)</span></i> to specify a URL to the object’s thumbnail.</p>
+
+    <p>Any items missing a required element won’t display in your search results.</p>
+
+    <h3 id="sample-rss-item-with-all-required-elements">Sample RSS Item with All Required Elements</h3>
+
+    <pre><code>&lt;item&gt;
+&lt;title&gt;
+Statement from Agriculture Secretary Tom Vilsack Regarding World Organization for Animal Health (OIE) Upgrade of United States&amp;apos; BSE Risk Status
+&lt;/title&gt;
+&lt;pubDate&gt;May 29, 2013 00:00:00 CDT&lt;/pubDate&gt;
+&lt;link&gt;
+http://www.usda.gov/wps/portal/usda/usdahome?contentid=2013/05/0106.xml&amp;contentidonly=true
+&lt;/link&gt;
+&lt;description&gt;
+WASHINGTON, May 29, 2013–Agriculture Secretary Tom Vilsack made the following statement about notification received today from the World Organization for Animal Health (OIE) upgrading the United States&amp;apos; risk classification for bovine spongiform encephalopathy (BSE) to negligible risk:
+&lt;/description&gt;
+&lt;/item&gt;
+</code></pre>
+
+    <h3 id="sample-media-rss-item-with-all-required-elements">Sample Media RSS Item with All Required Elements</h3>
+
+    <pre><code>&lt;item&gt;
+&lt;title type="html"&gt;
+&lt;![CDATA[ Great Lakes Beach Health ]]&gt;
+&lt;/title&gt;
+&lt;link&gt;
+http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
+&lt;/link&gt;
+&lt;guid&gt;
+http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
+&lt;/guid&gt;
+&lt;pubDate&gt;Fri, 24 May 2013 00:00:00 EDT&lt;/pubDate&gt;
+&lt;media:description type="html"&gt;
+&lt;![CDATA[ As schools close for the year and summer weather beckons, many recreationalists head to the Great Lakes' public beaches. However, these coastal areas can become 	contaminated with disease-causing bacteria that threaten public health, disrupt water 	recreation, and pay a toll on the Great Lakes economies that depend on summer tourism. ]]&gt;
+&lt;/media:description&gt;
+&lt;media:thumbnail url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/thumbs/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
+&lt;media:content type="" url="http://gallery.usgs.gov/images/05_24_2013/gkb4Erq11X_05_24_2013/large/CoastalEco_KPrzybyla_kelly18.JPG"/&gt;
+&lt;/item&gt;
+</code></pre>
+
+    <h2 id="step-2-opt-to-show-as-a-facet-inline-module-or-both">Step 2. Opt to Show as a Facet, Inline Module, or Both</h2>
+
+    <p>Allow searchers to see inline results for recent, relevant RSS results <em>across all of your RSS feeds</em> by turning on the News module on the <a href="/manual/display-overview.html">Display Overview</a> page. When a searcher’s query matches the title of an RSS article published within the past four months, the article appears in the News module. Very recent news results (less than five days) appear at the top of the page and less recent news results appear at the bottom. Up to three articles are displayed. You can edit the default module title, News, on the Display Overview page.</p>
+
+    <p>Allow searchers to narrow results to a specific feed by turning on the option to show the facet on the <a href="/manual/display-overview.html">Display Overview</a> page. To ensure searchers don’t encounter too many dead ends, we recommend showing only feeds with a significant amount of content as a facet.</p>
+
+    <h2 id="step-3-check-your-search-results-page">Step 3. Check Your Search Results Page</h2>
+
+    <h3 id="module">Module</h3>
+
+    <p>If you opted to show your RSS feed(s) as a module, searchers will see inline news results. It will highlight the three most recent, relevant results across all of your RSS feeds.</p>
+
+    <p><img class="img-responsive" src="https://search.digitalgov.gov/img/RSS-Inline.png" alt="RSS Inline Module Example" />&lt;/img&gt;</p>
+
+    <h3 id="facet">Facet</h3>
+
+    <p>If you opted to show your RSS feed(s) as a facet, searchers can narrow their results to see only RSS-based content by clicking on the facet.</p>
+
+    <p>Within the RSS-based results, searchers can opt to limit results to the last hour, day, week, month, or year, or they can set a custom date range. They also can sort results in descending order by relevance (best match first) or date (most recent first).</p>
+
+    <h3 id="results-count">Results count</h3>
+
+    <p>We show the number of results returned for searches against your feed(s).</p>
+
+    <p><img class="img-responsive" src="https://search.digitalgov.gov/img/RSS-Facet.png" alt="RSS Facet Example with Results Count" />&lt;/img&gt;</p>
+
+    <h2 id="step-4-check-the-status-of-your-feeds">Step 4. Check the Status of Your Feeds</h2>
+
+    <p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each feed’s status.</p>
+
+    <p><img class="img-responsive" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/rss-status.png" alt="RSS status messages and colors" />&lt;/img&gt;</p>
+
+    <table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Color</th>
+      <th style="text-align: left">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">Green   </td>
+      <td style="text-align: left">Feed indexed, no errors      </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Yellow</td>
+      <td style="text-align: left">Pending Indexing</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Red</td>
+      <td style="text-align: left">Feed indexed, but error in one or more items</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+    <p>Click on the name of any feed with an error to see more detailed information about it. Possible error messages follow.</p>
+
+    <ul>
+  <li>404 Not Found</li>
+  <li>Feed looks empty</li>
+  <li>Description can’t be blank</li>
+  <li>Title can’t be blank</li>
+  <li>Missing link field</li>
+  <li>Missing pubDate field</li>
+  <li>Link is not a valid URL</li>
+  <li>Linked URL does not exist (HTTP 404)</li>
+</ul>
+
+    <hr />
+
+    <p><strong><em>Troubleshooting tip:</em></strong> We support RSS 2.0 and Atom feeds. Learn more and validate your feeds at:</p>
+
+    <ul>
+  <li><a href="http://validator.w3.org/feed/">W3C Feed Validation Service</a> <i class="icon-external-link"><span>(External link)</span></i> (Atom &amp; RSS)</li>
+  <li>RSS 2.0 <a href="http://www.rssboard.org/rss-specification">specification</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="http://www.rssboard.org/rss-validator/">validator</a> <i class="icon-external-link"><span>(External link)</span></i></li>
+  <li><a href="http://atomenabled.org/developers/syndication/">Atom syndication format</a> <i class="icon-external-link"><span>(External link)</span></i></li>
+</ul>
+
+    <p><strong><em>Troubleshooting tip:</em></strong> We index the content on your RSS feeds from the time you input them in the <a href="https://search.usa.gov/sites/">Admin Center</a>. To backfill historical content, temporarily modify your RSS feeds to return more results. Leave this larger feed in place for one hour. You can do this during off-hours and you don’t need to coordinate with us.</p>
+
+    <p><strong><em>Did you know?</em></strong> You can set up a search box on your website that limits results to your feed.</p>
+
+    <p>Start with the standard form snippet on the <a href="/manual/code.html">Code Snippets</a> page under the Activate Search tab. Change the form action to <code>action="https://search.usa.gov/search/news</code> and add the following line to limit the results to your feed.</p>
+
+    <p><code>&lt;input type="hidden" name="channel" value="###"&gt;</code></p>
+
+    <p>The value is the number for your feed ID, which is visible in the URL when you edit your feed in the Admin Center.</p>
+
+    <p><strong><em>Did you know?</em></strong> You can click on the ‘Preview’ option to see the content we have indexed for each of your RSS feeds.</p>
+
+    <p><strong><em>Did you know?</em></strong> When you <a href="/manual/youtube.html">provide us with your YouTube channel</a>, we’ll automatically index the RSS feed for your YouTube channel.</p>
+
+    <p><strong><em>Did you know?</em></strong> For any feeds that you’ve extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a> <i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by these facets in the <a href="/manual/display-overview.html">sidebar</a> on the results page.</p>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/help-manual"&gt;&lt;span class="label label-info"&gt;help-manual&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/manage-content"&gt;&lt;span class="label label-info"&gt;manage-content&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/rss"&gt;&lt;span class="label label-info"&gt;rss&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/manual/rss.html"&gt;
+    &lt;time datetime="2017-11-09"&gt;November 9, 2017&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
   &lt;a href="/feedback/feedback.html"&gt;Feature Requests — Customer-Driven Development&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -960,160 +1155,6 @@ window.onload = function() {
 </code></pre>
 
   <p>&lt;/article&gt;</p>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/blog/searchgov-faqs-indexing.html"&gt;Search.gov -- Index Transition FAQs&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;In FY18, we’ll be changing our name to Search.gov, and will transition from leveraging commercial engines for search results to serving results from our own indexes.&lt;/p&gt;
-</code></pre>
-
-    <p>We’ll be developing our own search indexes from your site content. We’ll accept content for real-time indexing via <a href="/developer/i14y.html">i14y</a> (1st option, preferred). We’ll also start indexing content from URL lists (2nd option).</p>
-
-    <p>Other search features and your search results page will remain the same, and searchers should not notice a difference.</p>
-
-    <p>We’ll work closely with you to make sure everything goes smoothly through the transition. Please view our <a href="/blog/searchgov-blog.html">blog post</a> for a more detailed explanation.</p>
-
-    <p>We will update these FAQs with questions we hear from our customers.</p>
-
-    <h1 id="general">General</h1>
-
-    <p><a href="#q-what-do-i-need-to-do-in-this-new-model">Q: What do I need to do in this new model?</a></p>
-
-    <p><a href="#q-what-is-the-timeline-for-the-transition">Q: What is the timeline for the transition?</a></p>
-
-    <p><a href="#q-what-do-i-need-to-do-today">Q: What do I need to do today?</a></p>
-
-    <p><a href="#q-do-i-need-to-change-any-code-on-my-website">Q: Do I need to change any code on my website?</a></p>
-
-    <p><a href="#q-how-was-my-site-getting-results-before">Q: How was my site getting results before?</a></p>
-
-    <p><a href="#q-why-are-you-changing-your-name">Q: Why are you changing your name?</a></p>
-
-    <h1 id="indexing">Indexing</h1>
-
-    <p><a href="#q-how-will-you-index-my-site">Q: How will you index my site?</a></p>
-
-    <p><a href="#q-what-if-i-already-use-i14y-or-rss-to-send-content">Q: What if I already use i14y or RSS to send content?</a></p>
-
-    <p><a href="#q-i-use-drupal-is-there-a-module-i-could-leverage">Q: I use Drupal, is there a module I could leverage?</a></p>
-
-    <p><a href="#q-what-if-i-have-content-in-my-cms-plus-files-stored-on-filesystems-such-as-pdfs">Q: What if I have content in my CMS plus files stored on filesystems (such as PDFs)?</a></p>
-
-    <p><a href="#q-are-there-cms-integrations-available-other-than-drupal">Q: Are there CMS integrations available, other than Drupal?</a></p>
-
-    <p><a href="#q-what-if-we-have-no-plans-for-a-cms">Q: What if we have no plans for a CMS?</a></p>
-
-    <p><a href="#q-how-can-i-create-or-find-a-list-of-urls-for-my-site">Q: How can I create or find a list of URLs for my site?</a></p>
-
-    <h1 id="general-1">General</h1>
-
-    <h2 id="q-what-do-i-need-to-do-in-this-new-model">Q: What do I need to do in this new model?</h2>
-
-    <p>We’ll work with you to get your site sending content to i14y if you’re using a CMS, or you can provide us with an inventory of your URLs if you have a static site. If you’re unable to get a list of your URLs, we’ll want to discuss options with you.  See the indexing questions below for more information.</p>
-
-    <h2 id="q-what-is-the-timeline-for-the-transition">Q: What is the timeline for the transition?</h2>
-
-    <p>We’ll launch the first phase of the new index early in FY18. We are starting our outreach now, so that everyone has time to ask questions and get ready for the shift. We don’t yet have a hard deadline for getting everyone moved over, but we’re targeting early 2018.</p>
-
-    <h2 id="q-what-do-i-need-to-do-today">Q: What do I need to do today?</h2>
-
-    <p><em>CMS customers:</em></p>
-
-    <p>We encourage you to set-up and test i14y as soon as possible.</p>
-
-    <p><em>Non-CMS Customers:</em></p>
-
-    <p>We encourage you to explore how you can compile a list of your site URLs. You do not need to send us any information yet.</p>
-
-    <h2 id="q-do-i-need-to-change-any-code-on-my-website">Q: Do I need to change any code on my website?</h2>
-
-    <p>No: you do not need to update any code on your website. Indexing takes place in the backend of our system.</p>
-
-    <h2 id="q-how-was-my-site-getting-results-before">Q: How was my site getting results before?</h2>
-
-    <p>Since 2007, we have served search results from Bing’s index by default. We also use Google’s index to support certain Collections where Bing does not provide results.</p>
-
-    <h2 id="q-why-are-you-changing-your-name">Q: Why are you changing your name?</h2>
-
-    <p>We’re changing our name to make things simpler. In the past, we’ve been FirstGov Search, FirstSearch, USAGov Search, USASearch, and most recently DigitalGov Search. Our new name is short, simple, and easy to remember.</p>
-
-    <h1 id="indexing-1">Indexing</h1>
-
-    <h2 id="q-how-will-you-index-my-site">Q: How will you index my site?</h2>
-
-    <p>Based on your site setup, you have a variety of options. Below is our order of preference in terms of how we’ll get your content into our indexes (note: you may choose more than one approach):</p>
-
-    <ul>
-  <li>
-    <p><a href="https://search.digitalgov.gov/developer/i14y.html">i14y API</a> –  Our API allows you to update your search index in real-time. This is the preferred method.</p>
-  </li>
-  <li>
-    <p>URL list (coming in FY18) – If you can’t send us your content via i14y, then we will fetch and index the URLs that you provide. Our system will visit the URLs you provide and extract page titles, dates, and full text for indexing. You can use the URL indexing method in concert with i14y, for any non-CMS content.</p>
-  </li>
-  <li>
-    <p><a href="https://search.digitalgov.gov/manual/rss.html">RSS feed</a> – We will still accept RSS feeds to update your indexes on a rolling basis.</p>
-  </li>
-</ul>
-
-    <p>If you’re unable to do any of the above, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">contact us</a>, and we’ll discuss options.</p>
-
-    <h2 id="q-what-if-i-already-use-i14y-or-rss-to-send-content">Q: What if I already use i14y or RSS to send content?</h2>
-
-    <p>If you have set up i14y already, or if you send your full site content via RSS, you do not have to change anything for the new model.</p>
-
-    <h2 id="q-i-use-drupal-is-there-a-module-i-could-leverage">Q: I use Drupal, is there a module I could leverage?</h2>
-
-    <p>Yes! For customers who use Drupal as their CMS, our <a href="https://www.drupal.org/project/usasearch">Drupal module</a> eliminates the need for programming effort around the i14y API. This module is available for both Drupal 7 and 8.</p>
-
-    <p>The module is open source. We welcome pull requests and code contributions that will improve the module and offer new features.</p>
-
-    <h2 id="q-what-if-i-have-content-in-my-cms-plus-files-stored-on-filesystems-such-as-pdfs">Q: What if I have content in my CMS plus files stored on filesystems (such as PDFs)?</h2>
-
-    <p>If your site is on Drupal but you also have published material outside of Drupal (such as PDFs or old web pages), we’ll be able to search both CMS and non-CMS content together.</p>
-
-    <p>You will need to send us non-CMS material as a list of URLs, while your Drupal content will come to us via the module. <em>Note:</em> PDFs count as non-CMS content even if they’re attached to Drupal nodes. Drupal doesn’t store the text of PDFs in its tables, so the module can’t send it to us.</p>
-
-    <h2 id="q-are-there-cms-integrations-available-other-than-drupal">Q: Are there CMS integrations available, other than Drupal?</h2>
-
-    <p>Our <a href="https://search.digitalgov.gov/developer/i14y.html">i14y API</a> is a listener ready to recieve content from any system. We developed a Drupal module because it is the most popular CMS in government and to increase the adoption of i14y.</p>
-
-    <p>We have the beginning stages of a <a href="https://github.com/GSA/wp-digitalgov-i14y-indexer">WordPress plugin</a>, and welcome contributions to finish it up. If you’re able to develop an integration for your particular CMS, please make it open source, so other agencies can leverage it as well.</p>
-
-    <h2 id="q-what-if-we-have-no-plans-for-a-cms">Q: What if we have no plans for a CMS?</h2>
-
-    <p>You can send us a list of URLs for indexing.</p>
-
-    <h2 id="q-how-can-i-create-or-find-a-list-of-urls-for-my-site">Q: How can I create or find a list of URLs for my site?</h2>
-
-    <p>You should be able to run a command to export all of the URLs on your webserver, such as <code>ls</code> or <code>grep</code> or <code>dir</code>. Consult your friendly neighborhood server admin for assistance.</p>
-
-    <p>Some sites have XML sitemaps that list URLs and files. Your sitemap may be incomplete, so you’ll want to review it.</p>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/FAQs"&gt;&lt;span class="label label-info"&gt;FAQs&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/blog/searchgov-faqs-indexing.html"&gt;
-    &lt;time datetime="2017-09-22"&gt;September 22, 2017&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
 
 </div>
 
