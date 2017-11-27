@@ -38,7 +38,7 @@
           {
             "name": "document_id",
             "in": "query",
-            "description": "A document ID that is unique to your CMS. It cannot begin with a forward slash. Attempting to create a document with a `document_id` that already exists results in an error.",
+            "description": "A document ID that is unique to your CMS. It cannot contain any forward slashes, and it cannot be longer than 512 bytes. Attempting to create a document with a `document_id` that already exists results in an error.",
             "required": true,
             "type": "string"
           },
