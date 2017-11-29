@@ -101,7 +101,7 @@
   
 
   <div class='post-content'>
-    <p>If you have installed the <code>usasearch</code> <a href="https://drupal.org/project/usasearch">Drupal module</a> <i class="icon-external-link"><span>(External link)</span></i> to integrate your Drupal CMS with the Search.gov service but are having trouble, the following suggestions should help you identify where the problem is. If after working through these items you still have questions, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">reach out to our team</a> and, though we’re not Drupal experts, we can try to help.</p>
+    <p>If you have installed the <code>usasearch</code> <a href="https://drupal.org/project/usasearch">Drupal module</a> <i class="icon-external-link"><span>(External link)</span></i> to integrate your Drupal CMS with the Search.gov service but are having trouble, the following suggestions should help you identify where the problem is. If after working through these items you still have questions, <a href="mailto:search@support.digitalgov.gov">reach out to our team</a> and, though we’re not Drupal experts, we can try to help.</p>
 
 <p><a href="#search-errors">Skip to Search error troubleshooting tips</a></p>
 
@@ -113,14 +113,14 @@
 
 <h3 id="have-you-set-up-an-i14y-drawer">Have you set up an i14y drawer?</h3>
 
-<p>In order to send content from Drupal to our system, you’ll need an index to send the content into. We call these indexes “Drawers”, because like drawers in a filing cabinet, all the items put into them will be the content you can search against. <a href="/manual/i14y-drawers.html">Read more about Drawers here</a>. In order to set up a drawer, your search site will need to be enabled for i14y, so <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">contact us</a> to request that.</p>
+<p>In order to send content from Drupal to our system, you’ll need an index to send the content into. We call these indexes “Drawers”, because like drawers in a filing cabinet, all the items put into them will be the content you can search against. <a href="/manual/i14y-drawers.html">Read more about Drawers here</a>. In order to set up a drawer, your search site will need to be enabled for i14y, so <a href="mailto:search@support.digitalgov.gov">contact us</a> to request that.</p>
 
 <h3 id="has-any-content-actually-been-sent-to-us">Has any content actually been sent to us?</h3>
 
 <p>The module sends content when someone hits <code>save</code> on a node, or when you run <code>re-index site</code>. In Drupal 7, <code>re-index site</code> is found on the main Drupal search settings page (<code>YOUR-DRUPAL-SITE.gov/admin/config/search/settings</code>); in Drupal 8, you can re-index the site from the bottom of the module settings page.</p>
 
 <ul>
-  <li>If these actions have indeed happened, check the Drupal recent log messages (<code>YOUR-DRUPAL-SITE.gov/admin/reports/dblog</code>) to see if there’s anything related to <code>usasearch</code>, and please <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">send us screenshots of the errors</a>.</li>
+  <li>If these actions have indeed happened, check the Drupal recent log messages (<code>YOUR-DRUPAL-SITE.gov/admin/reports/dblog</code>) to see if there’s anything related to <code>usasearch</code>, and please <a href="mailto:search@support.digitalgov.gov">send us screenshots of the errors</a>.</li>
   <li>If these actions haven’t yet happened, please hit <code>save</code> on a node, and see if that item appears in your Drawer. You can view the contents of your Drawer by selecting <a href="https://search.usa.gov/sites">Search Admin Center</a> &gt; Your site &gt; Content &gt; i14y Drawers &gt; Show. If the item isn’t there, then check the Drupal log for an error.</li>
 </ul>
 
@@ -142,7 +142,7 @@
   <li>
     <p>If you get a <code>200 OK</code> response</p>
 
-    <p>Your system is able to communicate with our system, so the issue must lie in how the module is working with your Drupal instance. <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">Send us</a> all the information and screenshots of errors that you can, and we’ll help you troubleshoot.</p>
+    <p>Your system is able to communicate with our system, so the issue must lie in how the module is working with your Drupal instance. <a href="mailto:search@support.digitalgov.gov">Send us</a> all the information and screenshots of errors that you can, and we’ll help you troubleshoot.</p>
 
     <p>Be sure you delete the test document or it will be included in your search results. You can delete it from the command line. Run this command:</p>
 
@@ -152,13 +152,13 @@
   <li>
     <p>If you get any other error response</p>
 
-    <p>Please take a screenshot and <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">send it to us</a> to report the issue so we can investigate the error.</p>
+    <p>Please take a screenshot and <a href="mailto:search@support.digitalgov.gov">send it to us</a> to report the issue so we can investigate the error.</p>
   </li>
 </ul>
 
 <h3 id="do-you-have-another-question">Do you have another question?</h3>
 
-<p>If you have another question about indexing with our service through the <code>usasearch</code> Drupal module, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">don’t hesitate to ask</a>!</p>
+<p>If you have another question about indexing with our service through the <code>usasearch</code> Drupal module, <a href="mailto:search@support.digitalgov.gov">don’t hesitate to ask</a>!</p>
 
 <p><a name="search-errors"></a></p>
 
@@ -185,7 +185,7 @@
 
 <h3 id="do-you-have-another-question-1">Do you have another question?</h3>
 
-<p>If you have another question about searching through our service with the <code>usasearch</code> Drupal module, <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#115;&#101;&#097;&#114;&#099;&#104;&#064;&#115;&#117;&#112;&#112;&#111;&#114;&#116;&#046;&#100;&#105;&#103;&#105;&#116;&#097;&#108;&#103;&#111;&#118;&#046;&#103;&#111;&#118;">don’t hesitate to ask</a>!</p>
+<p>If you have another question about searching through our service with the <code>usasearch</code> Drupal module, <a href="mailto:search@support.digitalgov.gov">don’t hesitate to ask</a>!</p>
 
   </div>
 
