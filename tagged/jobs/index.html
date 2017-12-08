@@ -191,27 +191,27 @@
 
 <p>Jobs are searchable by keyword, location, agency, schedule, or any combination of these.</p>
 
-<p>The base URL is https://api.usa.gov/jobs/search.json?<strong>parameters</strong></p>
+<p>The base URL is https://jobs.search.gov/jobs/search.json?<strong>parameters</strong></p>
 
 <p>Sample API requests follow.</p>
 
 <p>All nursing jobs
-<a href="https://api.usa.gov/jobs/search.json?query=nursing+jobs">https://api.usa.gov/jobs/search.json?query=nursing+jobs</a></p>
+<a href="https://jobs.search.gov/jobs/search.json?query=nursing+jobs">https://jobs.search.gov/jobs/search.json?query=nursing+jobs</a></p>
 
 <p>Nursing jobs in NY
-<a href="https://api.usa.gov/jobs/search.json?query=nursing+jobs+in+ny">https://api.usa.gov/jobs/search.json?query=nursing+jobs+in+ny</a></p>
+<a href="https://jobs.search.gov/jobs/search.json?query=nursing+jobs+in+ny">https://jobs.search.gov/jobs/search.json?query=nursing+jobs+in+ny</a></p>
 
 <p>Nursing jobs with a state government agency
-<a href="https://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=state">https://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=state</a></p>
+<a href="https://jobs.search.gov/jobs/search.json?query=nursing+jobs&amp;tags=state">https://jobs.search.gov/jobs/search.json?query=nursing+jobs&amp;tags=state</a></p>
 
 <p>Nursing jobs with a federal government agency
-<a href="https://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=federal">https://api.usa.gov/jobs/search.json?query=nursing+jobs&amp;tags=federal</a></p>
+<a href="https://jobs.search.gov/jobs/search.json?query=nursing+jobs&amp;tags=federal">https://jobs.search.gov/jobs/search.json?query=nursing+jobs&amp;tags=federal</a></p>
 
 <p>Nursing jobs with Veterans Affairs in NY
-<a href="https://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+ny">https://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+ny</a></p>
+<a href="https://jobs.search.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+ny">https://jobs.search.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+ny</a></p>
 
 <p>Part-time nursing jobs with Veterans Affairs in NY
-<a href="https://api.usa.gov/jobs/search.json?query=parttime+nursing+jobs+with+veterans+affairs+in+ny">https://api.usa.gov/jobs/search.json?query=parttime+nursing+jobs+with+veterans+affairs+in+ny</a></p>
+<a href="https://jobs.search.gov/jobs/search.json?query=parttime+nursing+jobs+with+veterans+affairs+in+ny">https://jobs.search.gov/jobs/search.json?query=parttime+nursing+jobs+with+veterans+affairs+in+ny</a></p>
 
 <p><a name="parameters"></a></p>
 
@@ -313,7 +313,7 @@ US-VA:COUNTY-FAIRFAX:CITY-FAIRFAX</p>
 <p><em>Air Force or State of Virginia</em>
 AF,US-VA</p>
 
-<p>If you specify <code>organization_ids</code> in your API call but the searcher types in another agency, the searchers’ agency overrides the <code>organization_ids</code> parameter. For example, VA jobs are returned when you specify Air Force jobs, but the searcher looks for jobs at the VA (<a href="https://api.usa.gov/jobs/search.json?query=jobs+at+the+va&amp;organization_ids=AF">https://api.usa.gov/jobs/search.json?query=jobs+at+the+va&amp;organization_ids=AF</a>).</p>
+<p>If you specify <code>organization_ids</code> in your API call but the searcher types in another agency, the searchers’ agency overrides the <code>organization_ids</code> parameter. For example, VA jobs are returned when you specify Air Force jobs, but the searcher looks for jobs at the VA (<a href="https://jobs.search.gov/jobs/search.json?query=jobs+at+the+va&amp;organization_ids=AF">https://jobs.search.gov/jobs/search.json?query=jobs+at+the+va&amp;organization_ids=AF</a>).</p>
 
 <h3 id="hl-highlighting">Hl [highlighting]</h3>
 
@@ -351,7 +351,7 @@ AF,US-VA</p>
 
 <h2 id="what-it-returns">What it Returns</h2>
 
-<p>Below is a sample JSON response for <a href="https://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+albany+ny">https://api.usa.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+albany+ny</a>.</p>
+<p>Below is a sample JSON response for <a href="https://jobs.search.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+albany+ny">https://jobs.search.gov/jobs/search.json?query=nursing+jobs+with+veterans+affairs+in+albany+ny</a>.</p>
 
 <pre><code>[
   {
