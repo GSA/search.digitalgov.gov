@@ -3,7 +3,7 @@
   <title><![CDATA[Search.gov]]></title>
   <link href="https://www.search.gov/all.atom" rel="self"/>
   <link href="https://www.search.gov/"/>
-  <updated>2017-12-11T16:00:13+00:00</updated>
+  <updated>2017-12-11T16:06:07+00:00</updated>
   <id>https://www.search.gov/</id>
   <author><name><![CDATA[Search.gov]]></name></author>
 
@@ -1307,7 +1307,7 @@ June 2016 | 57 mins</p>
 
 <p>If content isn’t reaching us, it could be that your firewall is not allowing you to reach i14y. Please run the following from the command line, from inside the same firewall as your web server, if possible. Note: you’ll need to customize the string below with your i14y drawer’s handle and secret token (where it says <code>YOURDRAWERHANDLE:YOURDRAWERSECRETTOKEN</code>):</p>
 
-<pre><code>curl "https://i14y.usa.gov/api/v1/documents" -XPOST -H "Content-Type:application/json" -u YOURDRAWERHANDLE:YOURDRAWERSECRETTOKEN -d '{"document_id":"1", "title":"test item", "created":"2017-02-16T10:19:02", "path":"https://www.usa.gov", "description":"This is a test", "content":"This is a test to see if the agency web server is able to communicate with the i14y API. If this document doesn't show up in the drawer in the admin center, then the i14y location may need to be whitelisted in order to facilitate indexing."}'
+<pre><code>curl "https://i14y.usa.gov/api/v1/documents" -XPOST -H "Content-Type:application/json" -u YOURDRAWERHANDLE:YOURDRAWERSECRETTOKEN -d '{"document_id":"1", "title":"test item", "created":"2017-02-16T10:19:02", "path":"https://www.usa.gov", "description":"This is a test", "content":"This is a test to see if the agency web server is able to communicate with the i14y API. If this document does not show up in the drawer in the admin center, then the i14y location may need to be whitelisted in order to facilitate indexing."}'
 </code></pre>
 
 <ul>
