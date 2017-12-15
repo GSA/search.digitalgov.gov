@@ -102,6 +102,98 @@
  
     
     <h1>
+      <a href="/manual/domains.html">How to Edit Your Domains</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Domains</p>
+
+<p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
+
+<h2 id="entire-sites">Entire Site(s)</h2>
+
+<ul>
+  <li>List yoursite.gov (without www) to search your entire site, including all subdomains.</li>
+  <li>List yoursite.gov and yoursite2.gov to search multiple sites.</li>
+</ul>
+
+<h2 id="specific-subdomains">Specific Subdomains</h2>
+
+<ul>
+  <li>List www.yoursite.gov to include only the primary ‘www’ domain.</li>
+  <li>List subdomain.yoursite.gov to include subdomains.</li>
+</ul>
+
+<h2 id="specific-directories">Specific Directories</h2>
+
+<p>List yoursite.gov/folder to include folders. Note: this will include all sub-folders (if they exist), i.e. yoursite.gov/folder/folder2.</p>
+
+<p>You cannot specify individual URLs.</p>
+
+<p>Searches that start three or more subfolders deep cannot use our default configuration. <a href="mailto:search@support.digitalgov.gov">Email us</a> for assistance.</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
+
+<ol>
+  <li>
+    <p>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a> <i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p>
+  </li>
+  <li>
+    <p>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</p>
+  </li>
+  <li>
+    <p>Email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> to filter them from your site’s search results. Note that this option should be used only if the other options aren’t feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p>
+  </li>
+</ol>
+
+<p><a id="filter"></a><strong><em>Troubleshooting Tip:</em></strong> You can remove or filter specific URLs using any of the following options.</p>
+
+<ol>
+  <li>
+    <p>Remove the page from your site and return a 404 (Not Found) 401 (Gone), or 301 (Permanently Moved) HTTP status.</p>
+  </li>
+  <li>
+    <p>Add a <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">noindex robots metatag or x-robots tag</a> <i class="icon-external-link"><span>(External link)</span></i>. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p>
+  </li>
+  <li>
+    <p>Request the page’s removal using the <a href="http://www.bing.com/webmaster/help/block-urls-from-bing-264e560a">Block URLs option in Bing Webaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/1663419">Remove URLs option in Google Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
+  </li>
+  <li>
+    <p>Use the <a href="/manual/filter-content.html">Filter URLs</a> option under the Advanced tab. Note that this option should be used only if the other options aren’t feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p>
+  </li>
+</ol>
+
+<p><strong><em>Troubleshooting Tip:</em></strong> Are specific web pages missing from your Bing web results? You can tell us about any missing URLs via an RSS feed or manually (the Supplemental Feed and Supplemental URLs options under the <a href="/manual/domains-advanced.html">Advanced</a> tab, respectively). We’ll fetch and index the pages and append them to your web results.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/domains.html">
+        <time datetime="2017-04-18">April 18, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/index.html">Help Manual: Managing Your Search Configuration</a>
     </h1>
     
@@ -692,104 +784,6 @@ Custom <a href="/manual/system-alert.html">Search Page Alert</a></p>
       
       
       <a href="/manual/flickr.html">
-        <time datetime="2017-02-27">February 27, 2017</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/display-overview.html">How to Select the Options that Appear on Your Results Page</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Display &gt; Display Overview</p>
-
-<h2 id="facets">Facets</h2>
-
-<p><strong>Label.</strong> By default, we use the label ‘Search’ for your facets. Enter a label in the label field if you’d like something other than this default. Keep your label consistent with the options you’re listing and under 15 characters.</p>
-
-<p>See the sample results page below that shows the facets with the default label, Search, displayed for a <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=passport">search on <em>passport</em> on USA.gov</a>. (It is most easily seen by clicking on the menu option from a mobile phone.)</p>
-
-<p><strong>On/off options for facets.</strong> Select which facets you’d like to appear on your results page. Turn an option on to allow searchers to see it. Turn an option on or off at any time.</p>
-
-<p>Type over the text in the Name field to edit a facet’s display name. Keep each name short (15 or fewer characters) and consistent with the content you’re searching. Click on the hyperlink in the Source field to update the facet’s source content. Hover over the icon with three horizontal lines on the left to change the order.</p>
-
-<p><strong>More.</strong> We show up to four facets above your search box. If you turn on the display of more than four facets, you’ll see them listed under a ‘More’ dropdown menu. Email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> if you’d like to use a custom label instead of the default ‘More’.</p>
-
-<h2 id="modules">Modules</h2>
-
-<p><strong>On/off options for modules.</strong> Turn on a module to allow searchers to see inline, contextually relevant results for selected content sources based on keyword matches with relevant queries. There are eight types of modules.</p>
-
-<ol>
-  <li>
-    <p><strong>News.</strong> This option only appears after you’ve told us about your <a href="/manual/rss.html">RSS</a> feeds. When a searcher’s query matches the title of an RSS article published within the past four months, the article appears in the News module. Very recent news results (less than five days) appear at the top of the page and less recent news results appear at the bottom. Up to three articles are displayed. Type over the default name, News, in the Name field to edit the display name.</p>
-  </li>
-  <li>
-    <p><strong>Videos.</strong> This option only appears after you’ve told us about your <a href="/manual/youtube.html">YouTube</a> channel. When a searcher’s query matches the metadata of a video published within the 13 months, the video appears in the Videos module. One inline video is displayed with a link to see more videos for the searcher’s query.</p>
-  </li>
-  <li>
-    <p><strong>Job openings.</strong> When a searcher’s query matches the text of a job opening published by your agency on USAJobs, the job appears in the Job Openings module. Up to three job openings are displayed. For more information, including a screenshot, read our post <a href="/manual/govbox-jobs.html">Help Searchers Find Jobs</a>. You will need to <a href="mailto:search@support.digitalgov.gov">contact us</a> to get the Jobs module enabled for your site.</p>
-  </li>
-  <li>
-    <p><strong><em>Federal Register</em> documents.</strong> When a searcher’s query matches the text of a notice or rule published by your agency in the <em>Federal Register</em>, the document appears in the <em>Federal Register</em> module. Up to three documents are displayed. For more information, including a screenshot, read our post <a href="/manual/govbox-federal-register.html">Help Searchers Find Federal Register Documents</a>.</p>
-  </li>
-  <li>
-    <p><strong>Related searches.</strong> Help visitors better define the focus of their search by offering them searches related to their current search term. Suggestions are derived from the searches performed on your website. Up to five searches related to your visitors’ original search are displayed and are updated in near real time.</p>
-  </li>
-  <li>
-    <p><strong>Health topics.</strong> Help searchers find high-quality, authoritative health information from MedlinePlus and ClinicalTrials.gov. For more information, including a screenshot, read our post <a href="/manual/govbox-health.html">Help Searchers Find Health Information</a>.</p>
-  </li>
-  <li>
-    <p><strong>Recent tweets.</strong> This option only appears after you’ve told us about your <a href="/manual/twitter.html">Twitter</a> account. When a searcher’s query matches the text of a tweet published within the past three days, the tweet appears in the Recent Tweets module.</p>
-  </li>
-  <li>
-    <p><strong>Type-ahead search.</strong> Help searchers refine their query by displaying type-ahead search suggestions as a list in the search box. The list forms as a searcher begins to type in the search box. Suggestions are listed in order of most popular (that is, most searched). They’re updated every few seconds. See, for example, the suggestions as you type di… on <a href="https://search.ssa.gov/search?affiliate=ssa">SocialSecurity.gov’s search results page</a>. <strong><em>Note:</em></strong> this will enable type-ahead on your search results page that is hosted by our service. If you wish to display type-ahead suggestions on your agency’s website, please review instructions for our <a href="/manual/typeahead-api.html">JavaScript snippet and API</a>.</p>
-  </li>
-</ol>
-
-<h2 id="related-sites">Related Sites</h2>
-
-<p>Help visitors find content relevant to their search query that resides on other websites, such as the site for your parent organization or your Spanish-language site. When searchers click on the link to the related site, they see search results for their query on the related site.</p>
-
-<p>Enter the <a href="/manual/settings.html">site handle</a> for one of your other Search.gov sites. Enter the text you’d like searchers to see for the link to the related site. Create two entries, one from the first site to the second and vice versa, if you’d like a reciprocal link.</p>
-
-<p>See, for example, the Español option displayed on <a href="http://search.usa.gov/search?query=venezuela&amp;affiliate=usagov">USA.gov for a search on <em>venezuela</em></a>. When searchers click this option, they see results for <a href="http://search.usa.gov/search?query=venezuela&amp;affiliate=gobiernousa"><em>venezuela</em> on GobiernoUSA.gov</a>.</p>
-
-<p>If you list more than two related sites, searchers will see them listed under a dropdown menu, View Topic.</p>
-
-<p>Email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> if you’d like to use a custom label instead of the default ‘View Topic’ label.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong>  Searchers may narrow results by time period for any <a href="/manual/rss.html">RSS</a> feeds. See, for example, results for a <a href="https://nasasearch.nasa.gov/search/news?affiliate=nasa&amp;channel=1618&amp;query=space&amp;sort_by=date&amp;tbs=w">search on <em>space</em> narrowed to press releases in the last week on NASA.gov</a>.</p>
-
-<p><strong><em>Did you know?</em></strong>  For any of your <a href="/manual/rss.html">RSS</a> feeds that you’ve extended with a contributor, publisher, or subject <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a> <i class="icon-external-link"><span>(External link)</span></i> property, searchers may narrow results by the three facets. We’ll display “Contributor,” “Publisher,” and “Subject” as the default names. Email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> to if you want to customize these display names.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-display"><span class="label label-info">manage-display</span></a>
-      
-      <a href="/tagged/facets"><span class="label label-info">facets</span></a>
-      
-      <a href="/tagged/modules"><span class="label label-info">modules</span></a>
-      
-      <a href="/tagged/related-sites"><span class="label label-info">related-sites</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/display-overview.html">
         <time datetime="2017-02-27">February 27, 2017</time>
       </a>
     </div>
