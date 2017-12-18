@@ -99,6 +99,60 @@
   <article class="article">
 
     <pre><code>&lt;h1&gt;
+  &lt;a href="/releases/november-2017.html"&gt;November 2017 Release Notes&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;h2 id="highlights"&gt;Highlights&lt;/h2&gt;
+</code></pre>
+    <ul>
+  <li>To accomplish our <a href="/blog/searchgov-blog.html">FY 2018 goals</a>, we continued backend development that will allow your agency content to be served directly from our indexes. In November, our team began testing our new system. We also released several features related to this project:
+    <ul>
+      <li><a href="/manual/collections.html">Collections</a> results will now come from our indexes. Previously, a site that saw main page search results from our indexes would still see Bing or Google results when using Collections. Now, if a site is using our indexes for its main search page, its Collections results will also come from our indexes.</li>
+      <li>The <a href="/manual/rss.html">page-1 RSS module</a> and <a href="/manual/system-alert.html">search page alert</a> will now appear for sites getting results from our indexes. Previously, these two features only worked on sites using Bing/Google.</li>
+      <li><a href="/developer/indexing-api.html">i14y documents</a> will be rejected if the<code> document_id</code> contains slashes or is more than 512 bytes.</li>
+    </ul>
+  </li>
+</ul>
+
+    <h2 id="chores">Chores</h2>
+    <ul>
+  <li>On November 14th, we notified our users of a <a href="http://mailchi.mp/support/service-degradation-resolved">Bing service degradation</a>. This caused inconsistent results across sites, including incomplete results or 503 errors, and prevented access to the Search Admin Center. The inconsistency began at 2:05pm ET and ended at 3:05pm ET.</li>
+  <li>We continued transitioning our repos to use Circle CI.</li>
+</ul>
+
+    <h2 id="fixes">Fixes</h2>
+    <ul>
+  <li>Phrase searches now work with content that is served from our indexes. A search for “cheese curds” will return results for the specific phrase “cheese curds” rather than the separate words “cheese” and “curds”.</li>
+</ul>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
+  
+  
+  
+  &lt;a href="/releases/november-2017.html"&gt;
+    &lt;time datetime="2017-12-18"&gt;December 18, 2017&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
   &lt;a href="/manual/index.html"&gt;Help Manual: Managing Your Search Configuration&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -1077,60 +1131,6 @@ window.onload = function() {
   
   &lt;a href="/developer/index.html"&gt;
     &lt;time datetime="2017-10-31"&gt;October 31, 2017&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/manual/search-results-api.html"&gt;Showing Results Within Your Agency's Website&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;We offer an API that allows agencies to display results from our service on their website. Instead of searchers going to our hosted search results page, agencies can use the “Search Results API” to pull results from our service and display the results within their own pages. Agencies that want to maintain an exact match of their headers, footers, and other branding are encouraged to use this API.&lt;/p&gt;
-</code></pre>
-
-    <p>The API exposes all relevant results “modules” in a single JSON call, including:</p>
-
-    <ul>
-  <li>Web results</li>
-  <li><a href="/manual/best-bets.html">Best Bets</a></li>
-  <li><a href="/manual/govbox-health.html">Health topics</a></li>
-  <li><a href="/manual/govbox-jobs.html">Job openings</a></li>
-  <li><a href="/manual/twitter.html">Recent tweets</a></li>
-  <li><a href="/manual/rss.html">Recent news</a></li>
-  <li><a href="/manual/youtube.html">Recent videos</a></li>
-  <li><a href="/manual/govbox-federal-register.html">Federal Register documents</a></li>
-  <li><a href="/manual/display-overview.html#modules">Related searches</a></li>
-</ul>
-
-    <p><strong><em>Note about Web Results:</em></strong> To retrieve web results through this API, you must either use our indexes (populated via the <a href="/developer/i14y.html">i14y API</a> or via <a href="/manual/rss.html">RSS</a>), or you must purchase an API key from Bing.</p>
-
-    <p>This API is available for use on official government websites only. You must be a Search.gov customer to access the instructions. <a href="https://search.usa.gov/sites">Sign in</a> is required.</p>
-
-    <p>Instructions can be found under <a href="https://search.usa.gov/sites">Admin Center</a> &gt; YourSite &gt; Activate Search &gt; Search Results API Instructions. The Search Results API key can be found under <a href="https://search.usa.gov/sites">Admin Center</a> &gt; YourSite &gt; Activate Search &gt; API Access Key.</p>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/api"&gt;&lt;span class="label label-info"&gt;api&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/activate-search"&gt;&lt;span class="label label-info"&gt;activate-search&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/manual/search-results-api.html"&gt;
-    &lt;time datetime="2017-10-30"&gt;October 30, 2017&lt;/time&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 </code></pre>

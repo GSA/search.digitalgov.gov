@@ -3,10 +3,39 @@
   <title><![CDATA[Search.gov]]></title>
   <link href="https://www.search.gov/all.atom" rel="self"/>
   <link href="https://www.search.gov/"/>
-  <updated>2017-12-18T14:36:11+00:00</updated>
+  <updated>2017-12-18T15:21:06+00:00</updated>
   <id>https://www.search.gov/</id>
   <author><name><![CDATA[Search.gov]]></name></author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[November 2017 Release Notes]]></title>
+    <link href="https://www.search.gov/releases/november-2017.html"/>
+    <updated>2017-12-18T00:00:00+00:00</updated>
+    <id>https://www.search.gov/releases/november-2017.html</id>
+    <content type="html"><![CDATA[<h2 id="highlights">Highlights</h2>
+<ul>
+  <li>To accomplish our <a href="/blog/searchgov-blog.html">FY 2018 goals</a>, we continued backend development that will allow your agency content to be served directly from our indexes. In November, our team began testing our new system. We also released several features related to this project:
+    <ul>
+      <li><a href="/manual/collections.html">Collections</a> results will now come from our indexes. Previously, a site that saw main page search results from our indexes would still see Bing or Google results when using Collections. Now, if a site is using our indexes for its main search page, its Collections results will also come from our indexes.</li>
+      <li>The <a href="/manual/rss.html">page-1 RSS module</a> and <a href="/manual/system-alert.html">search page alert</a> will now appear for sites getting results from our indexes. Previously, these two features only worked on sites using Bing/Google.</li>
+      <li><a href="/developer/indexing-api.html">i14y documents</a> will be rejected if the<code> document_id</code> contains slashes or is more than 512 bytes.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+<ul>
+  <li>On November 14th, we notified our users of a <a href="http://mailchi.mp/support/service-degradation-resolved">Bing service degradation</a>. This caused inconsistent results across sites, including incomplete results or 503 errors, and prevented access to the Search Admin Center. The inconsistency began at 2:05pm ET and ended at 3:05pm ET.</li>
+  <li>We continued transitioning our repos to use Circle CI.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+<ul>
+  <li>Phrase searches now work with content that is served from our indexes. A search for “cheese curds” will return results for the specific phrase “cheese curds” rather than the separate words “cheese” and “curds”.</li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Help Manual: Managing Your Search Configuration]]></title>
