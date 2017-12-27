@@ -102,6 +102,122 @@
  
     
     <h1>
+      <a href="/manual/https-transition.html">Preparing Your Site for HTTPS</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="https://https.cio.gov/">OMB memo M-15-13</a> <i class="icon-external-link"><span>(External link)</span></i> requires all publicly available federal websites and web services to <a href="https://www.digitalgov.gov/2015/07/21/an-introduction-to-https-by-18f-and-digitalgov-university/">implement HTTPS</a> <i class="icon-external-link"><span>(External link)</span></i> by December 31, 2016.</p>
+
+<p>Below is a checklist of action items that should be completed in order for your search site to function as expected in HTTPS.</p>
+
+<h2 id="1-the-admin-center">1. The Admin Center</h2>
+
+<p>Update all URLs that are listed in the Search Admin Center for each of your search configurations. <em>You will need to update the links for all of your search configurations.</em></p>
+
+<h3 id="everyone">Everyone:</h3>
+
+<p><strong>Dashboard:</strong></p>
+
+<ul>
+  <li><strong>Settings:</strong> Update your Homepage URL.</li>
+</ul>
+
+<p><strong>Analytics:</strong></p>
+
+<ul>
+  <li><strong>3rd Party Tracking:</strong> If you are using <a href="/manual/third-party.html">3rd party tracking code</a> that is HTTP protocol-specific, you will need to submit updated code.</li>
+</ul>
+
+<p><strong>Content:</strong></p>
+
+<ul>
+  <li><strong>Content Overview:</strong> No action needed. The URL that we scan for social media accounts is synced with the homepage you have listed in the Dashboard section.</li>
+  <li><strong>Domains:</strong> No action needed, as this list isn’t protocol-specific.</li>
+  <li><strong>Collections:</strong> Update all URL paths in your collections; if you have mixed collections, leave any HTTP sites as-is.</li>
+  <li><strong>Best Bets (Text and Graphics):</strong> Throughout December 2016, we are doing bulk updates of Best Bet URLs in our system. If your site is serving content over HTTPS, we will update the URLs for your Best Bets. We suggest doing a spotcheck to confirm that all Best Bets have been updated. If you need a bulk update done after December, please <a href="mailto:search@support.digitalgov.gov">email us</a>.</li>
+  <li><strong>Routed Queries:</strong> Update routed query URLs.</li>
+  <li><strong>RSS feeds:</strong> Throughout December 2016, we are doing bulk updates of RSS feed URLs in our system. If your site is serving content over HTTPS, we will update the indexed URLs for your RSS feeds. We suggest doing a spotcheck to confirm that all feeds have been updated. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS. If you need a bulk update done after December, please <a href="mailto:search@support.digitalgov.gov">email us</a>.</li>
+</ul>
+
+<p><strong>Display:</strong></p>
+
+<ul>
+  <li><strong>Image Assets:</strong> Update the Favicon URL.</li>
+  <li><strong>Header &amp; Footer:</strong> Update header and footer links.</li>
+  <li><strong>No Results Page:</strong> Update alternative links.</li>
+</ul>
+
+<h3 id="only-those-using-domains--advanced-features">Only those using <code>Domains &gt; Advanced</code> features:</h3>
+
+<ul>
+  <li><strong>Supplemental Feed:</strong> Throughout December 2016, we are doing bulk updates of RSS feed URLs in our system. If your site is serving content over HTTPS, we will update the indexed URLs for your RSS feeds. We suggest doing a spotcheck to confirm that all feeds have been updated. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS. If you need a bulk update done after December, please <a href="mailto:search@support.digitalgov.gov">email us</a>.</li>
+  <li><strong>Supplemental URLs:</strong> Throughout December 2016, we are doing bulk updates of supplemental URLs in our system. If your site is serving content over HTTPS, we will update the supplemental URLs you have submitted. We suggest doing a spotcheck to confirm that all URLs have been updated. If you need a bulk update done after December, please <a href="mailto:search@support.digitalgov.gov">email us</a>.</li>
+  <li><strong>Filter URLs:</strong> Update filtered URLs.</li>
+</ul>
+
+<h2 id="2-masked-domains">2. Masked Domains</h2>
+
+<p>If your site uses <a href="/manual/cname.html">domain masking</a>: <a href="mailto:search@support.digitalgov.gov">contact our team</a> to be added to our SSL certificate. While this step doesn’t apply to everyone, it does need to be done before step 3.</p>
+
+<h2 id="3-form-code-action-on-your-website">3. Form Code Action on Your Website</h2>
+
+<p>Update your form code action: An <code>s</code> must be added to your site’s form action in order for the request to be made over HTTPS, and for the results page to be served over HTTPS. Example:</p>
+
+<p><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;</code></p>
+
+<h2 id="4-commercial-search-engines">4. Commercial Search Engines</h2>
+
+<p>Notify Google and Bing about the change; Google and Bing treat a migration from HTTP to HTTPS as a site move.</p>
+
+<ul>
+  <li>Google has a step-by-step guide, <a href="https://support.google.com/webmasters/answer/6033049">Move a Site with URL changes</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
+  <li>For Bing, review <a href="https://www.bing.com/webmaster/help/how-to-use-the-site-move-tool-bb8f5112">How to Use the Site Move tool</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
+</ul>
+
+<p>Additional SEO best practices:</p>
+
+<ul>
+  <li>Update your XML sitemap with HTTPS URLs.</li>
+  <li>Use <code>rel canonical</code> to <a href="https://support.google.com/webmasters/answer/139066?hl=en#https">declare HTTPS the preferred version</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
+  <li>Update internal website links.</li>
+  <li>Update links to your website from social media and other platforms managed by your agency.</li>
+</ul>
+
+<hr />
+
+<p><strong><em>Additional Information:</em></strong></p>
+
+<ul>
+  <li>Read more about the <a href="https://https.cio.gov/">HTTPS-Only Standard</a> <i class="icon-external-link"><span>(External link)</span></i> from the Federal CIO Council.</li>
+  <li>View a <a href="https://docs.google.com/spreadsheets/d/1XB26X_wFoBBlQEqecj7HB79hQ7DTLIPo97SS5irwsK8/edit#gid=1975121463">SEO Checklist</a>  <i class="icon-external-link"><span>(External link)</span></i> created by Aleyda Solís.</li>
+</ul>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/https"><span class="label label-info">https</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/https-transition.html">
+        <time datetime="2016-12-15">December 15, 2016</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/best-bets-graphics.html">How to Highlight Graphics Best Bets</a>
     </h1>
     
@@ -476,97 +592,6 @@ Keyword 4: market value
       
       <a href="/manual/users.html">
         <time datetime="2016-07-28">July 28, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/site-overview.html">How to View a Snapshot of What's Happening on Your Site Today</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Dashboard &gt; Site Overview</p>
-
-<p>The Site Overview page provides a snapshot of what has been happening on your site in the past day. All of the analytics in the <a href="https://search.usa.gov/sites/">Admin Center</a> are updated in real-time, which means that you instantaneously see the searches and clicks as they’re performed on your site.</p>
-
-<p>You can opt to receive this snapshot as a daily email by clicking on the envelope icon (<i class="icon-envelope"></i>) in the top navigation bar next to your selected site.</p>
-
-<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site’s visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
-
-<h2 id="top-queries">Top Queries</h2>
-
-<p>Reports on the top 10 searches done by searchers on your site. If you don’t have any searches, you’ll see a message that there aren’t enough query data available. These typically don’t require any action as they don’t change much from day-to-day.</p>
-
-<p>Note that the data are processed to present “real” searches by humans (that is, the data are de-duped by IP address to remove bot traffic and other noise).</p>
-
-<h2 id="top-clicked-urls">Top Clicked URLs</h2>
-
-<p>Reports on the top 10 pages that were clicked thru by searchers on your search results page. If you don’t have any clicks, you’ll see a message that there aren’t enough click data available. These typically don’t require any action as they don’t change much from day-to-day.</p>
-
-<h2 id="trending-urls">Trending URLs</h2>
-
-<p>If there are any pages that are trending, they’ll appear here. Reports on up to the top 10 changing URLs that were <em>visited by users on your website</em>.</p>
-
-<p>Use this report to identify newly popular pages on your website. Investigate why pages are trending, if the reason is not immediately apparent.</p>
-
-<p>Note that you’ll only see this list of trending URLs if you have our <a href="/manual/code.html">Javascript snippet</a> on your web pages. Data are updated every few minutes so this is near real-time information and you may see URLs come and go quickly.</p>
-
-<h2 id="trending-queries">Trending Queries</h2>
-
-<p>If there are any queries that are trending, they’ll appear here. Reports on up to the top 10 changing search terms with the greatest <em>gain</em> between yesterday and today.</p>
-
-<p>Use this report to identify newly popular terms. Create new content or update existing content to ensure it’s current, accurate, and complete.</p>
-
-<h2 id="queries-with-no-results">Queries with No Results</h2>
-
-<p>If there are any terms that returned no results, they’ll appear here. Reports on up to the top 10 queries with no results.</p>
-
-<p>For example, on one agency’s website in October 2012, a dozen searches for <em>frostline</em> returned no results. The frost line—also known as depth of frost or freezing—is the depth to which the groundwater in soil is expected to freeze. The agency’s pages on the topic referred to this concept as <em>depth of freezing</em>.</p>
-
-<p>Use this alert about results data to help searchers find your content by adding a <a href="/manual/best-bets.html">Best Bet</a>, updating your existing web pages, or both.</p>
-
-<h2 id="top-queries-with-low-click-thrus">Top Queries with Low Click Thrus</h2>
-
-<p>If there are any frequently searched terms that returned results but didn’t result in a click at least 20% of the time, they’ll appear here. Reports on up to the top 10 searches with low click thru rates.</p>
-
-<p>Use this alert about low click thrus to identify issues with coverage. You may opt to create a <a href="/manual/best-bets.html">Best Bet (Text or Graphics)</a>, add pages that may be missing from the results, or do both to improve recall. Or, you may opt to incorporate language from these popular search terms into your titles and descriptions to improve the relevance of results, or enter common search terms as keywords, verbatim.</p>
-
-<h2 id="this-months-totals-to-date">This Month’s Totals to Date</h2>
-
-<p>Reports on the total number of queries and clicks for the present month-to-date. A click  is recorded each time a searcher clicks on a results link.</p>
-
-<p>A graph of your site’s total search queries over time is also presented to provide an overview of how your traffic has trended from the time your agency started using our service (but no further back than 2010). Hover over the trend line to see the total number of queries in previous months.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> gives a bird’s-eye view of the number of <a href="/manual/queries.html">queries</a> and <a href="/manual/clicks.html">clicks</a> each month.</p>
-
-<p><strong><em>Did you know?</em></strong>  Click the pushpin icon in the top navigation bar to change the default site that appears when you first log in to the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
-      
-      <a href="/tagged/site-overview"><span class="label label-info">site-overview</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/site-overview.html">
-        <time datetime="2015-11-02">November 2, 2015</time>
       </a>
     </div>
     </article>
