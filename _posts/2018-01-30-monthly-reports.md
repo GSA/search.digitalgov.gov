@@ -19,7 +19,7 @@ Data for the total number of queries and clicks. Use this report to find and ana
 
 ### Queries with No Results
 
-A list of queries that returned no results. Sometimes searchers look for information on the wrong website, and sometimes they use different words than what are used on the page, and so they get no results from the search index. Use this list of Queries with No Results to help searchers get to the information they're looking for. You can set up [Best Bets](/manual/best-bets.html), or a [Routed Query](/manual/routed-queries.html). You can also [customize the No Results message](/manual/no-results.html) displayed on your results page.
+A list of queries that returned no results. Sometimes, searchers look for information on the wrong website or use different words than what are used on the page, and so they get no results. Use this list of Queries with No Results to help searchers get to the information they're looking for. You can set up [Best Bets](/manual/best-bets.html), or a [Routed Query](/manual/routed-queries.html). You can also [customize the No Results message](/manual/no-results.html) displayed on your results page.
 
 ## Impressions and Clicks by Module
 
@@ -27,13 +27,9 @@ Detailed data for the total number of impressions and clicks and your clickthru 
 
 Use this report to inform which [modules you opt to display](/manual/display-overview.html).
 
-***Drill down into Best Bets.*** Select the option to drill down into your [Best Bets (Text or Graphics)](/manual/best-bets.html) to see the number of impressions, number of clicks, and CTR for each Best Bet. The data in the table is sorted in descending order from the highest to lowest CTR. Review and edit Best Bets as needed. Focus on those with a high number of impressions and low CTR to make the biggest impact on searchers' experience (and on your overall CTR). Select drill down again to see a pie chart of the search terms that led to an impression on each Best Bet.
-
 ## Download Top Queries
 
 View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV (comma-separated values) link to download the list as a text file. Once you've downloaded the CSV file, you can easily [import it  into Excel](https://support.office.com/en-us/article/Import-or-export-text-txt-or-csv-files-e8ab9ff3-be8d-43f1-9d52-b5e8a008ba5c){% external_link %} or another speadsheet program to analyze the data.
-
-The CSV file contains three columns: (1) query, (2) raw count, and (3) IP-deduped.
 
 Read [Understanding Your Users' Needs By Analyzing Search Terms](https://www.digitalgov.gov/2013/10/24/understanding-your-users-needs-by-analyzing-search-terms/) for tips on how to create a semi-automated report for analyzing the data in this CSV file on a regular basis.
 
