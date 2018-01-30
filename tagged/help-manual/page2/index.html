@@ -102,6 +102,74 @@
  
     
     <h1>
+      <a href="/manual/cname.html">How to Mask Your Domain</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>We offer DNS masking, which allows you to show searchers search.YOURAGENCY.gov (instead of search.USA.gov). Follow these steps to mask your domain.</p>
+
+<ol>
+  <li>
+    <p>Create a CNAME in your external DNS records for <code>search.youragency.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>. Your site handle is listed on the <a href="/manual/settings.html">settings page</a> in the Search Admin Center.</p>
+
+    <p>For example: if your site handle is <code>abc</code>, the DNS record would look like this:</p>
+
+    <pre><code> search.youragency.gov   CNAME  abc.sites.infr.search.usa.gov
+</code></pre>
+
+    <p>NOTE: if your site handle contains a <code>.</code>, please replace it with a <code>-</code> in your DNS record,  e.g., for site handle <code>abc.gov.search</code> the DNS record would look like this:</p>
+
+    <pre><code> search.youragency.gov   CNAME  abc-gov-search.sites.infr.search.usa.gov
+</code></pre>
+  </li>
+</ol>
+
+  	To use a CNAME with <code>HTTPS</code>, you will need to <a href="mailto:search@support.digitalgov.gov">email us</a> after your DNS records have been updated in order to be added to our SSL certificate. If your CNAME is not on our SSL certificate, browser security warnings will appear when your search results page attemps to load over <code>HTTPS</code>. We are only able to offer top level domain masking with HTTPS: i.e., <code>search.youragency.gov</code> but not <code>search.subagency.youragency.gov</code>. 
+
+<ol>
+  <li>When the setup is complete, change your search box’s <a href="/manual/code.html">form code</a> action from <code>search.usa.gov/search</code> to <code>search.youragency.gov/search</code>.</li>
+</ol>
+
+<p>Your domain mask will work as soon as this DNS update is complete.</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> Many agencies have both internal and external DNS. Be
+sure to update your <em>external</em> DNS records (step 1) before changing your form code (step 2).</p>
+
+<p><strong><em>Did you know?</em></strong> Any search site within your domain may use the same domain mask and CNAME record, even if the CNAME is not associated with that particular site’s handle. To implement an existing mask for a search box, just do Step 2, above.</p>
+
+<p><strong><em>Did you know?</em></strong> Once the CNAME is set up, if visitors to your site happen to truncate the URL in the browser bar to http://search.youragency.gov (without any parameters), they’re automatically redirected to your agency’s homepage at http://www.youragency.gov.</p>
+
+<p><strong><em>Did you know?</em></strong> Most of our customers use a <code>search.youragency.gov</code> mask (such as search.nih.gov). If the <code>search</code> subdomain is already used by another application, you can use <code>find</code> or <code>findit</code>, such as <code>find.irs.gov</code> or <code>findit.state.gov</code>. We no longer support other subdomain patterns.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
+      
+      <a href="/tagged/cname"><span class="label label-info">cname</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/cname.html">
+        <time datetime="2017-08-16">August 16, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/instagram.html">How to Add Your Instagram Pictures to Our Index</a>
     </h1>
     
@@ -910,97 +978,6 @@
       
       <a href="/manual/system-alert.html">
         <time datetime="2017-03-08">March 8, 2017</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/add-site.html">How to Add a New Site</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; Add Site</p>
-
-<h2 id="homepage-url">Homepage URL</h2>
-
-<p>Tell us the homepage URL of your website. Enter a fully qualified URL, including http://, http://www, etc.</p>
-
-<p><strong>Correct Syntax</strong></p>
-
-<ul>
-  <li>https://www.whitehouse.gov</li>
-  <li>https://gobierno.usa.gov</li>
-  <li>https://stemcells.nih.gov</li>
-</ul>
-
-<p><strong>Incorrect Syntax</strong></p>
-
-<ul>
-  <li>usa.gov (use https://www.usa.gov)</li>
-  <li>www.nasa.gov (use https://www.nasa.gov)</li>
-  <li>https://www.sec.gov/litigation.shtml (use the higher-level folder, https://www.sec.gov/litigation)</li>
-  <li>https://www.gsa.gov/portal/category/100000?utm_source=OCM&amp;utm_medium=print-radio&amp;utm_term=&amp;utm_campaign=shortcuts (use the higher-level domain, https://www.gsa.gov)</li>
-  <li>http://www.doc.gov (use the domain that resolves, https://www.commerce.gov)</li>
-</ul>
-
-<p>We use this homepage URL to:</p>
-
-<ol>
-  <li>Seed your <a href="/manual/domains.html">domains</a> list.</li>
-  <li>Scan for any social media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/instagram.html">Instagram</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>), your favicon to use on your search results browser tab, and <a href="/manual/rss.html">RSS feeds</a> that are linked from your homepage, or another page you specify on the Display Overview page.</li>
-  <li>Link the default <a href="/manual/brand.html">logo</a> on your results page to your homepage.</li>
-</ol>
-
-<h2 id="display-name">Display Name</h2>
-
-<p><a href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/DisplayName_SiteHandle_800.png"><img style="float: right;" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/DisplayName_SiteHandle_175.png" alt="Display Name and Site Handle on NIH.gov's search results page" /></a>Tell us the name of your website. Searchers see your display name on the results page, such as in your page title or best bets. We recommend using the plain language name for your agency or site, such as National Institutes of Health.</p>
-
-<h2 id="site-handle">Site Handle</h2>
-
-<p>Your site handle is a unique identifier for your site. The site handle is included in the request you send us from your search box, to let us know which search site to use. We also include it in the URL of your search results page, again, to show which search site is being used. We recommend making this handle short and unique, such as <code>nih</code>.</p>
-
-<p>Handles can have lowercase letters, numbers, periods, hyphens, and underscores only. They can’t have spaces and other punctuation.</p>
-
-<h2 id="site-language">Site Language</h2>
-
-<p>English is the default language for our results pages. If you will be searching against content in another language, you should choose another language for your search site - we support English, Spanish, and <a href="/manual/supported-languages.html">66 other languages</a>.</p>
-
-<p>When English is selected, results will primarily include English language pages. All display text on the results page will also be in English.</p>
-
-<p>If you select Spanish, results will primarily include Spanish language pages. All display text on the results page will also be in Spanish. (Localizations are provided by GSA’s <a href="https://gobierno.usa.gov/">GobiernoUSA.gov</a> team.)</p>
-
-<p>If you select one of the other <a href="/manual/supported-languages.html">69 languages</a>, results will primarily include pages from the selected language when possible. Display text will be in the selected language when localizations are available, and in English when they’re not available.</p>
-
-<p>We’ve published the <a href="https://github.com/GSA/punchcard/tree/master/localizations">localization files</a> on Github, and we encourage you to <a href="https://github.com/GSA/punchcard/blob/master/CONTRIBUTING.md">contribute</a> to them.</p>
-
-<hr />
-
-<p><strong><em>Troubleshooting Tip:</em></strong> For non-English sites, some agencies opt to include the specific location of the language’s content (such as agency.gov/language or language.agency.gov) in their <a href="/manual/domains.html">Domains</a> to further refine the search results. Test the results for your non-English site with both the general agency.gov and the language-specific location to determine which setting gives you the best results.</p>
-
-<p><strong><em>Troubleshooting Tip:</em></strong> Once you’ve added your site, you can edit your display name on the <a href="/manual/settings.html">Settings</a> page. If you later need to edit your site handle or language, email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/settings"><span class="label label-info">settings</span></a>
-      
-      <a href="/tagged/add-site"><span class="label label-info">add-site</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/add-site.html">
-        <time datetime="2017-03-02">March 2, 2017</time>
       </a>
     </div>
     </article>
