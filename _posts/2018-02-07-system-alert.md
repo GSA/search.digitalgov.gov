@@ -11,8 +11,6 @@ There may be times when you want to add a system alert to your search results pa
 
 Use the Search Page Alert feature to add a text message to your search results page, which will appear at all times above all search results, *regardless of the query*. Enter a title and text for the alert, set the status to active, and hit `Save` to turn on your alert. The appearance of the alert is not customizable.
 
-Note: at this time, Search Page Alerts do not appear if your results are being served via [i14y](/developer/i14y.html) or [Supplemental Feed](/manual/domains-advanced.html).
-
 See, for example, the custom alert on Defense.gov announcing their migration to a new system.
 
 ![Custom System Alert on Defense.gov](https://d3qcdigd1fhos0.cloudfront.net/blog/img/system-alert.png "Custom System Alert on Defense.gov")
