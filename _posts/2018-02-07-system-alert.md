@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Add a Custom System Alert to Your Results Page
+title: Adding a Custom System Alert to Your Results Page
 category: manual
 tags: help-manual manage-display alert
 ---
