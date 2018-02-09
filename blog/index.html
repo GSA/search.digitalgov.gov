@@ -99,6 +99,79 @@
   <article class="article">
 
     <pre><code>&lt;h1&gt;
+  &lt;a href="/manual/routed-queries.html"&gt;Route Queries to a Specific Page&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;p&gt;&lt;a href="/index.html"&gt;Search.gov Home&lt;/a&gt; &amp;gt; &lt;a href="https://search.usa.gov/sites/"&gt;Admin Center&lt;/a&gt; &amp;gt; YourSite &amp;gt; Manage Content &amp;gt; Routed Queries&lt;/p&gt;
+</code></pre>
+
+    <p>Do you want to get searchers to a specific web page as quickly as possible? Create a Routed Query.</p>
+
+    <p>A routed query skips the search results page and automatically directs visitors to a web page of your choice for very specific queries. Use query routing to save visitors the extra step of reading through search results links by taking them directly to your content pages.</p>
+
+    <p>We recommend creating a routed query for <a href="http://www.digitalgov.gov/2015/02/06/top-task-usability-design-for-your-users/">top tasks</a> that have a good content page but less-than-ideal search results.</p>
+
+    <h2 id="add-a-routed-query">Add a Routed Query</h2>
+
+    <p><strong><em>Routed Query URL.</em></strong> Add the URL of the web page that you want to direct visitors to.</p>
+
+    <p><strong><em>Routed Query Description.</em></strong> Add a brief description to help you remember why you created this entry and what it does. Descriptions aren’t used for indexing or visible to searchers.</p>
+
+    <p><strong><em>Keywords.</em></strong> Add the specific words or phrases used to trigger the routing. Searchers will only be directed to the URL above when their query term exactly matches one of the listed keywords. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.</p>
+
+    <p><em>Note</em>: Any keyword that you add to a Routed Query will become a permanent <a href="/manual/typeahead-api.html">type-ahead suggestion</a>. This applies to all 3 ways that type-ahead suggestions are displayed from our system: the module that can be turned on in the <a href="/manual/display-overview.html#modules">Display Overview section</a>, the <a href="/manual/typeahead-api.html">JavaScript snippet</a>, and the <a href="/manual/typeahead-api.html">API</a>. If you do not want certain keywords to appear as type-ahead suggestions, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
+
+    <h2 id="examples-of-how-it-works">Examples of How It Works</h2>
+
+    <p>Private industry has been using query routing for some time. If you go to <a href="http://www.homedepot.com/">Home Depot</a> <i class="icon-external-link"><span>(External link)</span></i> and search for a general term like <em>carpet</em>, you’re routed to their carpet navigation page. If you search for a more specific term like <em>vanities</em>, you get standard search results.</p>
+
+    <p>Using USA.gov an as example, every time someone goes to <a href="https://www.usa.gov">USA.gov</a> and searches for any of the following terms (must be exact matches), they’ll automatically be directed to the USA.gov <a href="https://www.usa.gov/unclaimed-money">Unclaimed Money from the Government</a> page.</p>
+
+    <ul>
+  <li>missing money</li>
+  <li>unclaimed assets</li>
+  <li>unclaimed funds</li>
+  <li>unclaimed money</li>
+  <li>unclaimed money in my name</li>
+  <li>unclaimed property</li>
+</ul>
+
+    <p>If they get routed to the <a href="https://www.usa.gov/unclaimed-money">Unclaimed Money from the Government</a> and search again for one of these terms, they’ll get the standard list of search results. We won’t take people in an endless loop.</p>
+
+    <p>If they search for something not on the above list, like <em>show me missing money</em>, they’ll still get the normal search results.</p>
+
+    <p><img src="/img/unclaimed-money.png" alt="Standard search results for 'I am looking for unclaimed money' on USA.gov" height="95%" width="95%" /></p>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/help-manual"&gt;&lt;span class="label label-info"&gt;help-manual&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/manage-content"&gt;&lt;span class="label label-info"&gt;manage-content&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/routed-queries"&gt;&lt;span class="label label-info"&gt;routed-queries&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/manual/routed-queries.html"&gt;
+    &lt;time datetime="2018-02-09"&gt;February 9, 2018&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
   &lt;a href="/manual/system-alert.html"&gt;Adding a Custom System Alert to Your Results Page&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -853,102 +926,6 @@
   
   
   &lt;a href="/releases/november-2017.html"&gt;
-    &lt;time datetime="2017-12-18"&gt;December 18, 2017&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/manual/index.html"&gt;Help Manual: Managing Your Search Configuration&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;This help manual follows the order of settings that are available in the &lt;a href="https://search.usa.gov/sites/"&gt;Search Admin Center&lt;/a&gt;.&lt;/p&gt;
-</code></pre>
-
-    <h3 id="-dashboard"><i class="icon-dashboard"></i> Dashboard</h3>
-
-    <p><a href="/manual/site-overview.html">Site overview</a>  <br />
-<a href="/manual/users.html">Manage users</a>  <br />
-<a href="/manual/settings.html">Settings</a>  <br />
-<a href="/manual/clone-site.html">Clone Site</a></p>
-
-    <h3 id="-analytics"><i class="icon-bar-chart"></i> Analytics</h3>
-
-    <p><a href="/manual/queries.html">Queries</a>  <br />
-<a href="/manual/clicks.html">Clicks</a>  <br />
-<a href="/manual/referrers.html">Referrers</a>  <br />
-<a href="/manual/monthly-reports.html">Monthly reports</a>  <br />
-<a href="/manual/third-party.html">3rd party tracking</a><br />
-<a href="/manual/analytics-alerts.html">Analytics Alerts</a></p>
-
-    <h3 id="-manage-content"><i class="icon-file"></i> Manage Content</h3>
-
-    <p><a href="/manual/content-overview.html">Content overview</a>  <br />
-<a href="/manual/domains.html">Domains</a> (plus advanced options to <a href="/manual/domains-advanced.html">add</a> or <a href="/manual/filter-content.html">filter</a> URLs; a <a href="/manual/filter-tags.html">filter tags</a> option will appear if your site is enabled for <a href="/developer/i14y.html">i14y</a>)  <br />
-<a href="/manual/collections.html">Collections</a>  <br />
-<a href="/manual/i14y-drawers.html">i14y drawers</a> (this option will only appear if your site is enabled for <a href="/developer/i14y.html">i14y</a>) <br />
-<a href="/manual/best-bets.html">Best bets: text and/or graphics</a>  <br />
-<a href="/manual/routed-queries.html">Routed queries</a>  <br />
-<a href="/manual/rss.html">RSS</a>  <br />
-<a href="/manual/youtube.html">YouTube</a>  <br />
-<a href="/manual/twitter.html">Twitter</a>  <br />
-<a href="/manual/flickr.html">Flickr</a>  <br />
-<a href="/manual/instagram.html">Instagram</a> [Deprecated]</p>
-
-    <h3 id="-manage-display"><i class="icon-desktop"></i> Manage Display</h3>
-
-    <p><a href="/manual/display-overview.html">Display overview</a> (including <a href="/manual/govbox-jobs.html">job openings</a>, <a href="/manual/govbox-federal-register.html"><em>Federal Register</em></a>, and <a href="/manual/govbox-health.html">health topics</a>)  <br />
-<a href="/manual/brand.html">Brand</a> (font &amp; colors, image assets, and header &amp; footer)  <br />
-Custom <a href="/manual/no-results.html">No Results</a> page  <br />
-Custom <a href="/manual/system-alert.html">Search Page Alert</a></p>
-
-    <h3 id="-preview"><i class="icon-eye-open"></i> Preview</h3>
-
-    <p><a href="/manual/preview.html">Preview</a></p>
-
-    <h3 id="-activate-search"><i class="icon-code"></i> Activate Search</h3>
-
-    <p><a href="/manual/code.html">Code snippets</a>  <br />
-<a href="/manual/search-results-api.html">Search Results API access key</a>*  <br />
-<a href="/manual/search-results-api.html">Search Results API instructions</a>*  <br />
-<a href="/manual/typeahead-api.html">Type-ahead API instructions</a>*  <br />
-<a href="/developer/i14y.html">i14y API instructions</a>*</p>
-
-    <p>* These APIs are available for use on official government websites only. You must be a Search.gov customer. <a href="https://search.usa.gov/sites">Sign in</a> is required. Keys and instructions for each can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Activate Search.</p>
-
-    <h3 id="additional-help-resources-not-in-the-admin-center">Additional Help Resources Not in the Admin Center</h3>
-
-    <p><a href="/developer/i14y.html">i14y Content Indexing API Overview</a>    <br />
-<a href="/developer/indexing-api.html">i14y Technical Documentation</a>    <br />
-<a href="https://www.youtube.com/watch?v=TnlpuudK_WY">Getting Started video</a> (4 mins) <i class="icon-external-link"><span>(External link)</span></i>  <br />
-<a href="/blog/go-live.html">Go-Live Punch List</a>    <br />
-<a href="/manual/cname.html">Masking your domain</a><br />
-<a href="/blog/redesign.html">Redesign Checklist</a>  <br />
-<a href="/developer/index.html">Resources for Developers</a>   <br />
-<a href="/manual/training.html">Upcoming Training and Video Recordings</a></p>
-
-    <p>Do you have other questions or comments about how our service works? <a href="mailto:search@support.digitalgov.gov">Email us</a>.</p>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/help-manual"&gt;&lt;span class="label label-info"&gt;help-manual&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/manual/index.html"&gt;
     &lt;time datetime="2017-12-18"&gt;December 18, 2017&lt;/time&gt;
   &lt;/a&gt;
 &lt;/div&gt;

@@ -3,10 +3,56 @@
   <title><![CDATA[Search.gov]]></title>
   <link href="https://www.search.gov/all.atom" rel="self"/>
   <link href="https://www.search.gov/"/>
-  <updated>2018-02-07T14:00:11+00:00</updated>
+  <updated>2018-02-09T17:30:09+00:00</updated>
   <id>https://www.search.gov/</id>
   <author><name><![CDATA[Search.gov]]></name></author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Route Queries to a Specific Page]]></title>
+    <link href="https://www.search.gov/manual/routed-queries.html"/>
+    <updated>2018-02-09T00:00:00+00:00</updated>
+    <id>https://www.search.gov/manual/routed-queries.html</id>
+    <content type="html"><![CDATA[<p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Routed Queries</p>
+
+<p>Do you want to get searchers to a specific web page as quickly as possible? Create a Routed Query.</p>
+
+<p>A routed query skips the search results page and automatically directs visitors to a web page of your choice for very specific queries. Use query routing to save visitors the extra step of reading through search results links by taking them directly to your content pages.</p>
+
+<p>We recommend creating a routed query for <a href="http://www.digitalgov.gov/2015/02/06/top-task-usability-design-for-your-users/">top tasks</a> that have a good content page but less-than-ideal search results.</p>
+
+<h2 id="add-a-routed-query">Add a Routed Query</h2>
+
+<p><strong><em>Routed Query URL.</em></strong> Add the URL of the web page that you want to direct visitors to.</p>
+
+<p><strong><em>Routed Query Description.</em></strong> Add a brief description to help you remember why you created this entry and what it does. Descriptions aren’t used for indexing or visible to searchers.</p>
+
+<p><strong><em>Keywords.</em></strong> Add the specific words or phrases used to trigger the routing. Searchers will only be directed to the URL above when their query term exactly matches one of the listed keywords. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.</p>
+
+<p><em>Note</em>: Any keyword that you add to a Routed Query will become a permanent <a href="/manual/typeahead-api.html">type-ahead suggestion</a>. This applies to all 3 ways that type-ahead suggestions are displayed from our system: the module that can be turned on in the <a href="/manual/display-overview.html#modules">Display Overview section</a>, the <a href="/manual/typeahead-api.html">JavaScript snippet</a>, and the <a href="/manual/typeahead-api.html">API</a>. If you do not want certain keywords to appear as type-ahead suggestions, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
+
+<h2 id="examples-of-how-it-works">Examples of How It Works</h2>
+
+<p>Private industry has been using query routing for some time. If you go to <a href="http://www.homedepot.com/">Home Depot</a> <i class="icon-external-link"><span>(External link)</span></i> and search for a general term like <em>carpet</em>, you’re routed to their carpet navigation page. If you search for a more specific term like <em>vanities</em>, you get standard search results.</p>
+
+<p>Using USA.gov an as example, every time someone goes to <a href="https://www.usa.gov">USA.gov</a> and searches for any of the following terms (must be exact matches), they’ll automatically be directed to the USA.gov <a href="https://www.usa.gov/unclaimed-money">Unclaimed Money from the Government</a> page.</p>
+
+<ul>
+  <li>missing money</li>
+  <li>unclaimed assets</li>
+  <li>unclaimed funds</li>
+  <li>unclaimed money</li>
+  <li>unclaimed money in my name</li>
+  <li>unclaimed property</li>
+</ul>
+
+<p>If they get routed to the <a href="https://www.usa.gov/unclaimed-money">Unclaimed Money from the Government</a> and search again for one of these terms, they’ll get the standard list of search results. We won’t take people in an endless loop.</p>
+
+<p>If they search for something not on the above list, like <em>show me missing money</em>, they’ll still get the normal search results.</p>
+
+<p><img src="/img/unclaimed-money.png" alt="Standard search results for 'I am looking for unclaimed money' on USA.gov" height="95%" width="95%" /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Adding a Custom System Alert to Your Results Page]]></title>
@@ -5438,50 +5484,6 @@ URL: mailto:info@agency.gov</p>
 <hr />
 
 <p><strong><em>Did you know?</em></strong> You can see a list of Queries with No Results in <a href="/manual/site-overview.html">Today’s Snapshot</a> on the Dashboard, and in the <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Analytics &gt; Monthly Reports.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How to Route Queries]]></title>
-    <link href="https://www.search.gov/manual/routed-queries.html"/>
-    <updated>2015-07-10T00:00:00+00:00</updated>
-    <id>https://www.search.gov/manual/routed-queries.html</id>
-    <content type="html"><![CDATA[<p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Routed Queries</p>
-
-<p>Do you want to get searchers to a specific web page as quickly as possible? Create a Routed Query.</p>
-
-<p>A routed query skips the search results page and automatically directs visitors to a web page of your choice for very specific queries. Use query routing to save visitors the extra step of reading through search results links by taking them directly to your content pages.</p>
-
-<p>We recommend creating a routed query for <a href="http://www.digitalgov.gov/2015/02/06/top-task-usability-design-for-your-users/">top tasks</a> that have a good content page but less-than-ideal search results.</p>
-
-<h2 id="add-a-routed-query">Add a Routed Query</h2>
-
-<p><strong><em>Routed Query URL.</em></strong> Add the URL of the web page that you want to direct visitors to.</p>
-
-<p><strong><em>Routed Query Description.</em></strong> Add a brief description to help you remember why you created this entry and what it does. Descriptions aren’t used for indexing or visible to searchers.</p>
-
-<p><strong><em>Keywords.</em></strong> Add the specific words or phrases used to trigger the routing. Searchers will only be directed to the URL above when their query term exactly matches one of the listed keywords. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.</p>
-
-<h2 id="examples-of-how-it-works">Examples of How It Works</h2>
-
-<p>Private industry has been using query routing for some time. If you go to <a href="http://www.homedepot.com/">Home Depot</a> <i class="icon-external-link"><span>(External link)</span></i> and search for a general term like <em>carpet</em>, you’re routed to their carpet navigation page. If you search for a more specific term like <em>vanities</em>, you get standard search results.</p>
-
-<p>Using USA.gov an as example, every time someone goes to <a href="https://www.usa.gov">USA.gov</a> and searches for any of the following terms (must be exact matches), they’ll automatically be directed to the USA.gov <a href="https://www.usa.gov/unclaimed-money">Unclaimed Money from the Government</a> page.</p>
-
-<ul>
-  <li>missing money</li>
-  <li>unclaimed assets</li>
-  <li>unclaimed funds</li>
-  <li>unclaimed money</li>
-  <li>unclaimed money in my name</li>
-  <li>unclaimed property</li>
-</ul>
-
-<p>If they get routed to the <a href="https://www.usa.gov/unclaimed-money">Unclaimed Money from the Government</a> and search again for one of these terms, they’ll get the standard list of search results. We won’t take people in an endless loop.</p>
-
-<p>If they search for something not on the above list, like <em>show me missing money</em>, they’ll still get the normal search results.</p>
-
-<p><img src="/img/unclaimed-money.png" alt="Standard search results for 'I am looking for unclaimed money' on USA.gov" height="95%" width="95%" /></p>
 ]]></content>
   </entry>
   

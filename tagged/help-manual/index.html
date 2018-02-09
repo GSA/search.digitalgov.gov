@@ -102,6 +102,76 @@
  
     
     <h1>
+      <a href="/manual/routed-queries.html">Route Queries to a Specific Page</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Routed Queries</p>
+
+<p>Do you want to get searchers to a specific web page as quickly as possible? Create a Routed Query.</p>
+
+<p>A routed query skips the search results page and automatically directs visitors to a web page of your choice for very specific queries. Use query routing to save visitors the extra step of reading through search results links by taking them directly to your content pages.</p>
+
+<p>We recommend creating a routed query for <a href="http://www.digitalgov.gov/2015/02/06/top-task-usability-design-for-your-users/">top tasks</a> that have a good content page but less-than-ideal search results.</p>
+
+<h2 id="add-a-routed-query">Add a Routed Query</h2>
+
+<p><strong><em>Routed Query URL.</em></strong> Add the URL of the web page that you want to direct visitors to.</p>
+
+<p><strong><em>Routed Query Description.</em></strong> Add a brief description to help you remember why you created this entry and what it does. Descriptions aren’t used for indexing or visible to searchers.</p>
+
+<p><strong><em>Keywords.</em></strong> Add the specific words or phrases used to trigger the routing. Searchers will only be directed to the URL above when their query term exactly matches one of the listed keywords. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.</p>
+
+<p><em>Note</em>: Any keyword that you add to a Routed Query will become a permanent <a href="/manual/typeahead-api.html">type-ahead suggestion</a>. This applies to all 3 ways that type-ahead suggestions are displayed from our system: the module that can be turned on in the <a href="/manual/display-overview.html#modules">Display Overview section</a>, the <a href="/manual/typeahead-api.html">JavaScript snippet</a>, and the <a href="/manual/typeahead-api.html">API</a>. If you do not want certain keywords to appear as type-ahead suggestions, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
+
+<h2 id="examples-of-how-it-works">Examples of How It Works</h2>
+
+<p>Private industry has been using query routing for some time. If you go to <a href="http://www.homedepot.com/">Home Depot</a> <i class="icon-external-link"><span>(External link)</span></i> and search for a general term like <em>carpet</em>, you’re routed to their carpet navigation page. If you search for a more specific term like <em>vanities</em>, you get standard search results.</p>
+
+<p>Using USA.gov an as example, every time someone goes to <a href="https://www.usa.gov">USA.gov</a> and searches for any of the following terms (must be exact matches), they’ll automatically be directed to the USA.gov <a href="https://www.usa.gov/unclaimed-money">Unclaimed Money from the Government</a> page.</p>
+
+<ul>
+  <li>missing money</li>
+  <li>unclaimed assets</li>
+  <li>unclaimed funds</li>
+  <li>unclaimed money</li>
+  <li>unclaimed money in my name</li>
+  <li>unclaimed property</li>
+</ul>
+
+<p>If they get routed to the <a href="https://www.usa.gov/unclaimed-money">Unclaimed Money from the Government</a> and search again for one of these terms, they’ll get the standard list of search results. We won’t take people in an endless loop.</p>
+
+<p>If they search for something not on the above list, like <em>show me missing money</em>, they’ll still get the normal search results.</p>
+
+<p><img src="/img/unclaimed-money.png" alt="Standard search results for 'I am looking for unclaimed money' on USA.gov" height="95%" width="95%" /></p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/routed-queries"><span class="label label-info">routed-queries</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/routed-queries.html">
+        <time datetime="2018-02-09">February 9, 2018</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/system-alert.html">Adding a Custom System Alert to Your Results Page</a>
     </h1>
     
@@ -865,78 +935,6 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
       
       <a href="/manual/rss.html">
         <time datetime="2017-11-09">November 9, 2017</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/i14y-drawers.html">Working with i14y Drawers</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers</p>
-
-<p>An <a href="/developer/i14y.html">i14y</a> Drawer is an index receiving content via the i14y API. We’ve called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
-
-<p>Information on working with our Drupal module is <a href="/manual/drupal.html">here</a>.</p>
-
-<h2 id="step-1-make-sure-your-site-is-connected-to-i14y">Step 1. Make sure your site is connected to i14y</h2>
-
-<p>If your site Admin Center has the following page: <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers, your site is connected to i14y. If you don’t see this page in the Admin Center, <a href="mailto:search@support.digitalgov.gov">email us</a>. You can also read about <a href="/developer/i14y.html">Getting Started with i14y</a>.</p>
-
-<h2 id="step-2-add-one-or-more-drawers">Step 2. Add one or more Drawers</h2>
-<p>On <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers, Click <code>Add i14y Drawer</code> in the upper right corner. If you have more than one website that will be sending content, add a separate Drawer for each of these sites.</p>
-
-<h3 id="handle">Handle</h3>
-
-<p>Let us know what the handle for your drawer should be - the handle must be all lowercase alphanumeric, all one word, and can include underscores but no other special characters (e.g., agency_drawer_handle2).</p>
-
-<p>The Drawer <em>Description</em> is optional</p>
-
-<h2 id="step-3-send-content-to-fill-your-drawer">Step 3. Send Content to Fill your Drawer</h2>
-
-<p>After you have created your Drawer(s), click <code>Show</code> from the i14y Drawers list to find that Drawer’s secret API key. Use this secret key with your drawer handle in your API call or your CMS module to <a href="/developer/indexing-api.html">send your content to the right place</a>.</p>
-
-<h2 id="step-4-review-your-index">Step 4. Review your Index</h2>
-
-<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list, and when the most recent document was received. Click <code>Show</code> to view documents within a particular drawer. We display the most recent 1,000 items that were sent to the drawer. You can also search for keywords in the documents’ text, titles, and descriptions (Note: you cannot currently search for URLs).</p>
-
-<p><strong>Note:</strong> We use the <a href="/manual/domains.html">Domains</a> section to scope search results - if the domain(s) of your i14y content are not listed in the Domains section, that content will not appear on your search results page.</p>
-
-<p>We send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
-
-<p><strong><em>Note:</em></strong> If you experience difficulty sending documents to i14y, it is possible your firewall is not letting you communicate with the i14y server. Check out our <a href="/developer/i14y-testing.html">cURL test commands</a> or view the full <a href="/developer/indexing-api.html">i14y documentation</a>.</p>
-
-<hr />
-<p><strong><em>Caution:</em></strong> A pop-up message will appear when you hit <code>Remove</code> on a drawer: please review this pop-up message carefully. If you remove a drawer that is only associated with one search configuration, the drawer and its contents will be deleted from our system. If the drawer is attached to multiple search configurations, it will only be removed from the search configuration you are currently on. The pop-up message will indicate what type of drawer you have.</p>
-
-<p>If you accidentally delete a drawer, you will need to set-up a new drawer and resend the content - we are unable to retrieve deleted drawers. If you accidentally remove a shared drawer but it is still associated with other search configurations, we can re-attach it to your site. <a href="mailto:search@support.digitalgov.gov">Contact us</a> for assistance.</p>
-
-<hr />
-<p><strong><em>Did you know?</em></strong> We can attach each i14y drawer to multiple search configurations: if you have a drawer that you’d like to use for multiple search sites, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/i14y"><span class="label label-info">i14y</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/i14y-drawers.html">
-        <time datetime="2017-10-03">October 3, 2017</time>
       </a>
     </div>
     </article>

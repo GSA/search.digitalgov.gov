@@ -102,6 +102,76 @@
  
     
     <h1>
+      <a href="/manual/routed-queries.html">Route Queries to a Specific Page</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Routed Queries</p>
+
+<p>Do you want to get searchers to a specific web page as quickly as possible? Create a Routed Query.</p>
+
+<p>A routed query skips the search results page and automatically directs visitors to a web page of your choice for very specific queries. Use query routing to save visitors the extra step of reading through search results links by taking them directly to your content pages.</p>
+
+<p>We recommend creating a routed query for <a href="http://www.digitalgov.gov/2015/02/06/top-task-usability-design-for-your-users/">top tasks</a> that have a good content page but less-than-ideal search results.</p>
+
+<h2 id="add-a-routed-query">Add a Routed Query</h2>
+
+<p><strong><em>Routed Query URL.</em></strong> Add the URL of the web page that you want to direct visitors to.</p>
+
+<p><strong><em>Routed Query Description.</em></strong> Add a brief description to help you remember why you created this entry and what it does. Descriptions aren’t used for indexing or visible to searchers.</p>
+
+<p><strong><em>Keywords.</em></strong> Add the specific words or phrases used to trigger the routing. Searchers will only be directed to the URL above when their query term exactly matches one of the listed keywords. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.</p>
+
+<p><em>Note</em>: Any keyword that you add to a Routed Query will become a permanent <a href="/manual/typeahead-api.html">type-ahead suggestion</a>. This applies to all 3 ways that type-ahead suggestions are displayed from our system: the module that can be turned on in the <a href="/manual/display-overview.html#modules">Display Overview section</a>, the <a href="/manual/typeahead-api.html">JavaScript snippet</a>, and the <a href="/manual/typeahead-api.html">API</a>. If you do not want certain keywords to appear as type-ahead suggestions, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
+
+<h2 id="examples-of-how-it-works">Examples of How It Works</h2>
+
+<p>Private industry has been using query routing for some time. If you go to <a href="http://www.homedepot.com/">Home Depot</a> <i class="icon-external-link"><span>(External link)</span></i> and search for a general term like <em>carpet</em>, you’re routed to their carpet navigation page. If you search for a more specific term like <em>vanities</em>, you get standard search results.</p>
+
+<p>Using USA.gov an as example, every time someone goes to <a href="https://www.usa.gov">USA.gov</a> and searches for any of the following terms (must be exact matches), they’ll automatically be directed to the USA.gov <a href="https://www.usa.gov/unclaimed-money">Unclaimed Money from the Government</a> page.</p>
+
+<ul>
+  <li>missing money</li>
+  <li>unclaimed assets</li>
+  <li>unclaimed funds</li>
+  <li>unclaimed money</li>
+  <li>unclaimed money in my name</li>
+  <li>unclaimed property</li>
+</ul>
+
+<p>If they get routed to the <a href="https://www.usa.gov/unclaimed-money">Unclaimed Money from the Government</a> and search again for one of these terms, they’ll get the standard list of search results. We won’t take people in an endless loop.</p>
+
+<p>If they search for something not on the above list, like <em>show me missing money</em>, they’ll still get the normal search results.</p>
+
+<p><img src="/img/unclaimed-money.png" alt="Standard search results for 'I am looking for unclaimed money' on USA.gov" height="95%" width="95%" /></p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/routed-queries"><span class="label label-info">routed-queries</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/routed-queries.html">
+        <time datetime="2018-02-09">February 9, 2018</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/instagram.html">How to Add Your Instagram Pictures to Our Index</a>
     </h1>
     
@@ -1068,73 +1138,6 @@ Keyword 4: market value
       
       <a href="/manual/filter-content.html">
         <time datetime="2017-03-24">March 24, 2017</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/youtube.html">How to Add Your YouTube Videos to Our Index</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; YouTube</p>
-
-<h2 id="tell-us-about-your-youtube-channel">Tell Us About Your YouTube Channel</h2>
-
-<p>Provide us with the <em>full URL</em> for your YouTube channel.</p>
-
-<p>Some channels use a visitor-friendly name and are in the user folder (such as <a href="https://www.youtube.com/user/NASAtelevision">https://www.youtube.com/user/NASAtelevision</a> for NASA).</p>
-
-<p>Others use an alphanumeric string and are in the channel folder (such as <a href="https://www.youtube.com/channel/UCryGec9PdUCLjpJW2mgCuLw">https://www.youtube.com/channel/UCryGec9PdUCLjpJW2mgCuLw</a> for NASA Jet Propulsion Laboratory).</p>
-
-<p>Either URL format works.</p>
-
-<h2 id="opt-to-display-your-videos">Opt to Display Your Videos</h2>
-
-<p>When you add the URL for your YouTube channel, we’ll automatically index your videos—both your uploaded videos and playlists.</p>
-
-<p>We’ll show the videos by default. You can toggle the settings for showing your videos on the <a href="/manual/display-overview.html">Display Overview</a> page, choosing to show them as a facet, inline module, or both.</p>
-
-<p><strong>Facet</strong></p>
-
-<p><img src="https://search.digitalgov.gov/img/Videos-Facet.png" alt="Videos Facet on DigitalGov.gov" title="Videos Facet on DigitalGov.gov" height="95%" width="95%" /></p>
-
-<p><strong>Inline Module</strong></p>
-
-<p><img src="https://search.digitalgov.gov/img/Videos-Inline-Module.png" alt="Inline Module on DigitalGov.gov" title="Inline Module on DigitalGov.gov" height="95%" width="95%" /></p>
-
-<p>You can edit the default facet label, Videos, on the <a href="/manual/rss.html">RSS</a> page.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency’s photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
-      
-      <a href="/tagged/youtube"><span class="label label-info">youtube</span></a>
-      
-      <a href="/tagged/videos"><span class="label label-info">videos</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/youtube.html">
-        <time datetime="2017-03-21">March 21, 2017</time>
       </a>
     </div>
     </article>
