@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to Route Queries
+title: Route Queries to a Specific Page
 category: manual
 tags: help-manual manage-content routed-queries
 ---
@@ -20,6 +20,8 @@ We recommend creating a routed query for [top tasks](http://www.digitalgov.gov/2
 ***Routed Query Description.*** Add a brief description to help you remember why you created this entry and what it does. Descriptions aren't used for indexing or visible to searchers.
 
 ***Keywords.*** Add the specific words or phrases used to trigger the routing. Searchers will only be directed to the URL above when their query term exactly matches one of the listed keywords. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field. 
+
+*Note*: Any keyword that you add to a Routed Query will become a permanent [type-ahead suggestion](/manual/typeahead-api.html). This applies to all 3 ways that type-ahead suggestions are displayed from our system: the module that can be turned on in the [Display Overview section](/manual/display-overview.html#modules), the [JavaScript snippet](/manual/typeahead-api.html), and the [API](/manual/typeahead-api.html). If you do not want certain keywords to appear as type-ahead suggestions, [email us](mailto:search@support.digitalgov.gov).
 
 ## Examples of How It Works
 
