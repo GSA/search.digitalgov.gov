@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Setting Up Analtyics Alerts
+title: Setting Up Analytics Alerts
 category: manual
 tags: help-manual analytics
 ---
