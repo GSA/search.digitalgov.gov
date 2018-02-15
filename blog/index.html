@@ -99,6 +99,62 @@
   <article class="article">
 
     <pre><code>&lt;h1&gt;
+  &lt;a href="/releases/january-2018.html"&gt;January 2018 Release Notes&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;h2 id="highlights"&gt;Highlights&lt;/h2&gt;
+</code></pre>
+    <ul>
+  <li>Our <a href="/blog/searchgov-blog.html">new indexing system</a> has been in production since December! In January, we released several features that are building on and improving our new system:
+    <ul>
+      <li>We updated our index with new stemming settings. Stemming refers to how a system processes related words, based on the root of the words. For example, stemming is what allows a search for “renew passport” to show results for “passport renewal”.</li>
+      <li>URLs in our index can be permanently deleted from our system.</li>
+      <li>Documents in our index are now limited to 10 MB in size.</li>
+      <li>We can extract body text from a document if the <code>&lt;main&gt;</code> element is empty.</li>
+    </ul>
+  </li>
+</ul>
+
+    <h2 id="chores">Chores</h2>
+    <ul>
+  <li>We upgraded Rails and Elasticsearch on our <a href="https://github.com/GSA/asis">ASIS application</a>.</li>
+  <li>We upgraded Elasticsearch on our <a href="https://github.com/GSA/jobs_api">Jobs API</a>.</li>
+</ul>
+
+    <h2 id="deprecations">Deprecations</h2>
+    <ul>
+  <li>The Instagram section is no longer displayed in the Admin Center dashboard, unless you had an Instagram account added to your search site prior to June 2016. At that time, Instagram began requiring accounts to grant permission to index their images via an integration between systems, which Search.gov cannot support. Therefore, our Instagram index was last updated in June 2016. Any images in our index prior to that date will continue to be shown on your search results page, as long as you do not remove your Instagram account from the Admin Center. If you remove your account, any photos in our index will be permanently deleted from our system.</li>
+  <li>Drilldown tables and graphs are no longer available in the Monthly Reports section. According to our analytics, the tables and graphs were not being viewed. We anticipate rolling out new analytics viewing options later in 2018.</li>
+</ul>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
+  
+  
+  
+  &lt;a href="/releases/january-2018.html"&gt;
+    &lt;time datetime="2018-02-15"&gt;February 15, 2018&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
   &lt;a href="/manual/routed-queries.html"&gt;Route Queries to a Specific Page&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -873,60 +929,6 @@
   
   &lt;a href="/manual/site-overview.html"&gt;
     &lt;time datetime="2017-12-27"&gt;December 27, 2017&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/releases/november-2017.html"&gt;November 2017 Release Notes&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;h2 id="highlights"&gt;Highlights&lt;/h2&gt;
-</code></pre>
-    <ul>
-  <li>To accomplish our <a href="/blog/searchgov-blog.html">FY 2018 goals</a>, we continued backend development that will allow your agency content to be served directly from our indexes. In November, our team began testing our new system. We also released several features related to this project:
-    <ul>
-      <li><a href="/manual/collections.html">Collections</a> results will now come from our indexes. Previously, a site that saw main page search results from our indexes would still see Bing or Google results when using Collections. Now, if a site is using our indexes for its main search page, its Collections results will also come from our indexes.</li>
-      <li>The <a href="/manual/rss.html">page-1 RSS module</a> and <a href="/manual/system-alert.html">search page alert</a> will now appear for sites getting results from our indexes. Previously, these two features only worked on sites using Bing/Google.</li>
-      <li><a href="/developer/indexing-api.html">i14y documents</a> will be rejected if the<code> document_id</code> contains slashes or is more than 512 bytes.</li>
-    </ul>
-  </li>
-</ul>
-
-    <h2 id="chores">Chores</h2>
-    <ul>
-  <li>On November 14th, we notified our users of a <a href="http://mailchi.mp/support/service-degradation-resolved">Bing service degradation</a>. This caused inconsistent results across sites, including incomplete results or 503 errors, and prevented access to the Search Admin Center. The inconsistency began at 2:05pm ET and ended at 3:05pm ET.</li>
-  <li>We continued transitioning our repos to use Circle CI.</li>
-</ul>
-
-    <h2 id="fixes">Fixes</h2>
-    <ul>
-  <li>Phrase searches now work with content that is served from our indexes. A search for “cheese curds” will return results for the specific phrase “cheese curds” rather than the separate words “cheese” and “curds”.</li>
-</ul>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
-  
-  
-  
-  &lt;a href="/releases/november-2017.html"&gt;
-    &lt;time datetime="2017-12-18"&gt;December 18, 2017&lt;/time&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 </code></pre>
