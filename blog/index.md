@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Search.gov Blog
+sitemap: false
 ---
 
 <!-- begin /blog/index.md content -->

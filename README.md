@@ -1,4 +1,4 @@
-# www.search.gov
+# search.gov
 
 ## How to add a new post
 
