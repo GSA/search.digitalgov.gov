@@ -32,6 +32,7 @@ This page lists all the module codes and their full names.
 | OASIS | Image Results (Search.gov) |
 | OSPEL | Spelling Suggestions (Search.gov Images) |
 | OVER  | Spelling Overrides (Bing/Google) |
+| QRTD  | Routed Queries |
 | SPEL  | Spelling Suggestions (Search.gov) |
 | SREL  | Related Searches |
 | TWEET | Tweets (Twitter) |
