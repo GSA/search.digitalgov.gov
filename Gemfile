@@ -7,3 +7,9 @@ gem 'rdiscount'
 gem 'rspec'
 gem 'sass', '~> 3.2.19'
 gem 'therubyracer'
+gem 'jekyll-sitemap'
+
+group :test, :development do
+  gem 'pry'
+  gem 'rb-readline'
+end
