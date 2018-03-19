@@ -106,7 +106,7 @@
 
 <p>Sitemaps tell search engines what URLs are on a website, and, if URLs are added as they are published, they tell the engines what new content needs to be picked up. They may also provide additional metadata about each URL, such as the last modified date, which signals to the engine to update the index record for that page.</p>
 
-<p>Search.gov uses sitemaps to tell us what URLs should be in our index and when a URL has been updated. Sitemaps are also used by <a href="https://support.google.com/webmasters/answer/156184">Google</a>  <i class="icon-external-link"><span>(External link)</span></i>, Bing, and and other search engines. Yes, <em>having an xml sitemap will improve your Google SEO (search engine optimization).</em></p>
+<p>Search.gov uses sitemaps to tell us what URLs should be in our index and when a URL has been updated. Sitemaps are used in a similar way by <a href="https://support.google.com/webmasters/answer/156184">Google</a>  <i class="icon-external-link"><span>(External link)</span></i>, Bing, and and other search engines. <em>Having an xml sitemap will improve your Google SEO (search engine optimization).</em></p>
 
 <p>Example: <a href="/sitemap.xml">https://search.gov/sitemap.xml</a></p>
 
@@ -114,17 +114,25 @@
 
 <p>Some sitemaps are comprehensive, but for very large sites you may need to publish several sitemaps. Each sitemap should be no more than 50MB or 50,000 URLs, whichever comes first. You do not need to add URLs of content you want to remain unsearchable.</p>
 
-<p>Note that an html formatted file listing the pages of a site is more akin to an index page, and is not the same as an XML sitemap.</p>
+<p><strong>Note</strong> that an HTML formatted file listing the pages of a site is more akin to an index page, and is not the same as an XML sitemap. HTML files are human friendly, but not machine friendly, and Search engines need an xml formatted file in order to leverage the information for indexing work.</p>
 
-<h2 id="more-than-one-web-platform-use-multiple-sitemaps-and-a-sitemap-index-file">More than one web platform? Use multiple sitemaps and a sitemap index file</h2>
+<h2 id="more-than-one-web-platform-use-multiple-sitemaps">More than one web platform? Use multiple sitemaps.</h2>
+<p>It’s common for agencies to use more than one platform to publish their websites. For instance, a CMS was launched, but some content is still on the legacy site’s platform. In this case, use available plugins for the CMS’s in your environment to auto-generate sitemaps for that content. Manually generate a sitemap for any static content. You can publish a <a href="https://www.sitemaps.org/protocol.html#index">sitemap index file</a>  <i class="icon-external-link"><span>(External link)</span></i> that lists the locations of all your specific sitemaps, or you can list all your sitemaps on your robots.txt file.</p>
 
-<p>It’s common for agencies to use more than one platform to publish their websites. For instance, a CMS was launched, but some content is still on the legacy site’s platform.</p>
+<h2 id="how-do-search-engines-find-my-sitemaps">How do search engines find my sitemap(s)?</h2>
+<p>Sitemap URLs (or the [<a href="https://www.sitemaps.org/protocol.html#index">sitemap index</a>  <i class="icon-external-link"><span>(External link)</span></i> url) should be listed in your site’s robots.txt file, i.e.:<br />
+<code>Sitemap: https://www.agency.gov/sitemap_1.xml</code><br />
+<code>Sitemap: https://www.agency.gov/sitemap_2.xml</code></p>
+
+<p>Example: <a href="/robots.txt">https://search.gov/robots.txt</a></p>
 
 <h2 id="what-should-my-xml-sitemap-look-like">What should my XML sitemap look like?</h2>
-<p>Please refer to the official <a href="https://www.sitemaps.org/protocol.html">sitemaps protocol</a> <i class="icon-external-link"><span>(External link)</span></i> for information on how a sitemap should be structured.</p>
+<p>Please refer to the official <a href="https://www.sitemaps.org/protocol.html">sitemaps protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> for information on how a sitemap should be structured.</p>
 
 <h2 id="what-metadata-does-searchgov-require-for-each-xml-sitemap-url">What metadata does Search.gov require for each XML sitemap URL?</h2>
-<p>The sitemap protocol defines <a href="https://www.sitemaps.org/protocol.html#xmlTagDefinitions">required and optional XML tags</a>  <i class="icon-external-link"><span>(External link)</span></i> for each URL. Search.gov recommends including the <code>&lt;lastmod&gt;</code> value (the date of last modification of the file) whenever possible, to indicate when a file has been updated and needs to be re-indexed. (We do not have plans to support the <code>&lt;priority&gt;</code> tag, which is <a href="https://www.seroundtable.com/google-priority-change-frequency-xml-sitemap-20273.html">no longer used</a>  <i class="icon-external-link"><span>(External link)</span></i> by search engines like Google. We may support the <code>&lt;changefreq&gt;</code> tag in the future, but the <code>&lt;lastmod&gt;</code> tag is more accurate and supported by more search engines.)</p>
+<p>The sitemap protocol defines <a href="https://www.sitemaps.org/protocol.html#xmlTagDefinitions">required and optional XML tags</a>  <i class="icon-external-link"><span>(External link)</span></i> for each URL. We recommend including the <code>&lt;lastmod&gt;</code> value (the date of last modification of the file) whenever possible, to indicate when a file has been updated and needs to be re-indexed.</p>
+
+<p>We do not have plans to support the <code>&lt;priority&gt;</code> tag, which is <a href="https://www.seroundtable.com/google-priority-change-frequency-xml-sitemap-20273.html">no longer used</a>  <i class="icon-external-link"><span>(External link)</span></i> by search engines like Google. We may support the <code>&lt;changefreq&gt;</code> tag in the future, but the <code>&lt;lastmod&gt;</code> tag is more accurate and supported by more search engines.</p>
 
 <h2 id="how-can-i-create-an-xml-sitemap">How can I create an XML sitemap?</h2>
 <p>Most content management systems provide tools to generate a sitemap and keep it updated. Below are some tools that we recommend:</p>
@@ -148,13 +156,6 @@
 <p><a href="https://freesitemapgenerator.com">Free Sitemap Generator</a>  <i class="icon-external-link"><span>(External link)</span></i>
 <a href="http://www.web-site-map.com/">Web Sitemap</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
 
-<h2 id="how-do-search-engines-find-my-sitemaps">How do search engines find my sitemap(s)?</h2>
-<p>Sitemap URLs (or the sitemap index url) should be listed in your site’s robots.txt file, i.e.:<br />
-<code>Sitemap: https://www.agency.gov/sitemap_1.xml</code><br />
-<code>Sitemap: https://www.agency.gov/sitemap_2.xml</code></p>
-
-<p>Example: <a href="/robots.txt">https://search.gov/robots.txt</a></p>
-
 <h2 id="sitemap-checklist">Sitemap checklist</h2>
 <p><i class="icon-check"></i> 1. One or more sitemaps have been created
 <i class="icon-check"></i> 2. The URLs in the sitemap have been reviewed (clean URLs, only includes URLs that should be searchable)
@@ -166,6 +167,8 @@
 <a href="https://support.google.com/webmasters/answer/183668?hl=en&amp;ref_topic=4581190">Google’s guide to building a sitemap</a>  <i class="icon-external-link"><span>(External link)</span></i>
 <a href="http://tools.seochat.com/tools/site-validator/">Sitemap validator</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
 
+<h2 id="more-questions">More questions?</h2>
+<p>If you have questions that aren’t answered here, <a href="mailto:search@support.digitalgov.gov">email us</a>. We’ll also keep updating this page over time</p>
 
   </div>
 
