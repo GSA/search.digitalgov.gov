@@ -3,10 +3,44 @@
   <title><![CDATA[Search.gov]]></title>
   <link href="https://search.gov/all.atom" rel="self"/>
   <link href="https://search.gov/"/>
-  <updated>2018-03-19T17:48:08+00:00</updated>
+  <updated>2018-03-27T21:03:09+00:00</updated>
   <id>https://search.gov/</id>
   <author><name><![CDATA[Search.gov]]></name></author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[February 2018 Release Notes]]></title>
+    <link href="https://search.gov/releases/february-2018.html"/>
+    <updated>2018-03-27T00:00:00+00:00</updated>
+    <id>https://search.gov/releases/february-2018.html</id>
+    <content type="html"><![CDATA[<h2 id="highlights">Highlights</h2>
+<ul>
+  <li>Our <a href="/blog/searchgov-blog.html">new indexing system</a> has been in production since December! In February, we continued to release several features that are building on and improving our new system:
+    <ul>
+      <li>We have made our indexing rake task more efficient.</li>
+      <li>We began implementing indexing from XML sitemaps. Check out our new <a href="/blog/sitemaps.html">XML Sitemaps page</a> to learn more about them.</li>
+    </ul>
+  </li>
+  <li>We made our title parsing more flexible, drawing from either <code>&lt;title&gt;</code> or <code>&lt;og:title&gt;</code> tags, depending on where a site’s quality title metadata may be.</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+<ul>
+  <li>We upgraded Rails for our core application</li>
+  <li>We switched our highlighting of terms in search results to a much lighter method.</li>
+  <li>We now have all apps enforcing HTTPs and are compliant with BOD 18-01.</li>
+  <li>We removed abandoned i14y drawers.</li>
+  <li>We improved how our indexing job updates records for existing pages.</li>
+</ul>
+
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+  <li>We fixed an RSS feeds fetch issue.</li>
+  <li>We have fixed the bug causing search sites to have access to the Best Bets of other affiliates.</li>
+  <li>We disabled four-byte UTF-8 characters in Twitter results, and now support eight-byte characters. That’s right - emojis in your search results if they are used in your tweets.</li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[XML Sitemaps]]></title>
