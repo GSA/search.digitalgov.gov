@@ -100,6 +100,500 @@
   <article class="article">
 
     <pre><code>&lt;h1&gt;
+  &lt;a href="/blog/six-months-in.html"&gt;Six Months In&amp;#58; Lessons Learned in the Transition to Search.gov&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;p&gt;In September 2017 we announced that we would be moving away from using commercial search engines as our primary source of web results. This was driven by Google’s announcement that they would be sunsetting their Site Search API at the end of March 2018, and our desire to have more control over the quality, coverage, and cost of our web results than we were able to achieve with Bing.&lt;/p&gt;
+</code></pre>
+
+    <p>We’d like to update you on our progress and share some lessons learned. Over the past months we’ve worked with many of you and listened to the challenges you face in your particular environments. In the fall we believed that encouraging agencies towards using our i14y indexing API was the best way to go. Having lived into it, we now know that we need to focus on indexing content directly off of your websites, leveraging structured lists of URLs known as XML sitemaps. The lessons here are presented in the order we learned them.</p>
+
+    <h2 id="lessons-learned">Lessons Learned</h2>
+
+    <h3 id="1-the-api-first-focus-we-began-with-isnt-viable-as-a-standard-solution">1. The API-first focus we began with isn’t viable as a standard solution</h3>
+
+    <ul>
+  <li>Many agencies use content management systems for which we are unable to provide an integration, and struggle to create one on their own.</li>
+  <li>Even though many agencies use Drupal, and may have been able to leverage our module, distributed site management and quarantine-like firewalling make it highly difficult to get i14y indexing up and running via the module.</li>
+  <li>Mixed platforms for content mean that most sites will need other indexing support beyond just i14y.</li>
+  <li>The number of indexes created by our API model isn’t scalable. Even though Elasticsearch, the search solution our system is built on, is designed for its indexes to expand to great size with ease, it doesn’t perform well with a high number of relatively small indexes.</li>
+  <li>And finally, many agencies still have static sites, from which it’s close to impossible to export even a clean list of URLs for indexing, much less to push content out to an API over time.</li>
+</ul>
+
+    <h3 id="2-crawling-is-prohibitively-resource-intense">2. Crawling is prohibitively resource-intense</h3>
+
+    <ul>
+  <li>To assist some static sites in our early-transition group, we incorporated a crawler into our stack, to facilitate content discover in those websites. The crawler does a good job, but it’s still a manual process and automating for continuous discovery would require significant processing power.</li>
+  <li>Crawl delays, as set in robots.txt files, have a serious impact on indexing speed. At a crawl delay of 10, it would take over two weeks to crawl a site of 150,000 pages.</li>
+</ul>
+
+    <h3 id="3-relevancy-ranking-is-easiest-to-manage-if-all-the-content-is-in-the-same-index">3. Relevancy ranking is easiest to manage if all the content is in the same index</h3>
+
+    <ul>
+  <li>In addition to search indexes holding data from pages and files, it can also have indicator data showing how a given piece of content should be ranked relative to other pieces of content. For sites who have sent web content into i14y drawer indexes and have content that we have indexed from static files, each index will have ranking indicators, but it’s hard for a search system to know how to compare the different indicators when blending results together.</li>
+  <li>We’ll be able to add more ranking indicators to the index that we build than we can offer in the i14y drawer indexes built by agencies via API.</li>
+  <li>If an agency is able to send 100% of the content they want searched, with full text, to a single i14y drawer, then their relevance ranking would be easy to determine. While most agencies can’t do this, we will continue to support i14y for the agencies that have already launched with it.</li>
+</ul>
+
+    <h3 id="4-xml-sitemaps-are-great---really-helpful-for-search-engines-and-pretty-easy-for-agencies-to-implement">4. XML sitemaps are great - really helpful for search engines and pretty easy for agencies to implement</h3>
+
+    <ul>
+  <li>An XML sitemap is a machine-friendly list of the contents of a website. While no one can know for sure, the consensus in the SEO industry is that Google and Bing use XML sitemaps as part of their monitoring sites for new or updated content. Making it easy for them to find your content is thought to give a <a href="https://searchengineland.com/guide/seo/site-architecture-search-engine-ranking">ranking boost to your site’s content</a>  <i class="icon-external-link"><span>(External link)</span></i>.</li>
+  <li>Most content management systems have plugins that will generate an xml sitemap for the content in the CMS. Static content can either be added to the CMS-generated sitemap, or listed in a separate sitemap file.</li>
+  <li>We feel it’s a better use of time for agency teams to work on implementing good sitemaps that will help them out in Google and Bing, as well as with the Search.gov system, than to invest a lot of time in an integration that only works with us.</li>
+</ul>
+
+    <h2 id="so-where-are-we-now">So where are we now?</h2>
+
+    <p>We built the new index model and released that in December 2017, along with our core indexing job that grabs data from pages - html, pdf, and the other major file types.</p>
+
+    <p>We added a crawler in January 2018, to facilitate URL discovery on a given website.</p>
+
+    <p>We added the ability to index content from XML sitemaps in February. We follow the <a href="https://www.sitemaps.org/protocol.html">sitemaps protocol</a>  <i class="icon-external-link"><span>(External link)</span></i>, which relies in part on also having  and have posted a explainer pages about <a href="/blog/sitemaps.html">XML sitemaps</a> and <a href="/blog/robotstxt.html">robots.txt files</a> to get you the most essential information.</p>
+
+    <p>We removed our connection to the Google Site Search API in March, and are now serving results from our own index for those cases where we had previously used Google.</p>
+
+    <p>We started with a small representative set of sites, and have moved into working on our highest traffic customers. Over 90 search sites now bear the <code>Powered by Search.gov</code> mark on their search results pages, including <a href="https://search.ssa.gov/search?utf8=%E2%9C%93&amp;affiliate=ssa&amp;sort_by=&amp;query=replacement+card">SSA.gov</a>, <a href="https://search.usa.gov/search?utf8=%E2%9C%93&amp;affiliate=tsa.gov&amp;sort_by=&amp;query=screening">TSA.gov</a>, <a href="https://search.medicare.gov/search?utf8=%E2%9C%93&amp;affiliate=medicaregov&amp;sort_by=&amp;query=medical+equipment">Medicare.gov</a>, and many more.</p>
+
+    <h2 id="where-to-next">Where to next?</h2>
+
+    <p>Unlike with the Google API sunset, there is no hard deadline for our moving sites off Bing and into our own index. Our timelines around Bing are driving toward having well over half of our search traffic going to our own indexes this fiscal year. We’ll continue to work on high traffic sites, large Department website searches, and the many agency component websites that combine to create the parent website’s search.</p>
+
+    <p>If your search site is low traffic and you haven’t heard from us yet, you can expect to remain on Bing for the foreseeable future. We will reach out as the time draws near.</p>
+
+    <p>In the meantime, we encourage <em>all</em> sites to invest some time in developing and maintaining a good XML sitemap. As mentioned above, this will help us maintain a good index of your content, and it will also give you a Google boost, so it’s really win-win. Part of having a good sitemap is having a good robots.txt file as well. Read over our new explainer posts and reach out with any questions.</p>
+
+    <p><a href="/blog/sitemaps.html">Learn more about XML sitemaps</a></p>
+
+    <p><a href="/blog/robotstxt.html">Learn more about robots.txt files</a></p>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/indexing"&gt;&lt;span class="label label-info"&gt;indexing&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/roadmap"&gt;&lt;span class="label label-info"&gt;roadmap&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/blog/six-months-in.html"&gt;
+    &lt;time datetime="2018-03-28"&gt;March 28, 2018&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
+  &lt;a href="/blog/sitemaps.html"&gt;XML Sitemaps&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;p&gt;An &lt;a href="https://en.wikipedia.org/wiki/Sitemaps"&gt;XML sitemap&lt;/a&gt;  &lt;i class="icon-external-link"&gt;&lt;span&gt;(External link)&lt;/span&gt;&lt;/i&gt; is an XML formatted file containing a list of URLs on a website. An XML sitemap provides information that allows a search engine to index your website more intelligently, and to keep its search index up to date.&lt;/p&gt;
+</code></pre>
+
+    <p>Sitemaps tell search engines what URLs are on a website, and, if URLs are added as they are published, they tell the engines what new content needs to be picked up. They may also provide additional metadata about each URL, such as the last modified date, which signals to the engine to update the index record for that page.</p>
+
+    <p>Search.gov uses sitemaps to tell us what URLs should be in our index and when a URL has been updated. Sitemaps are used in a similar way by <a href="https://support.google.com/webmasters/answer/156184">Google</a>  <i class="icon-external-link"><span>(External link)</span></i>, Bing, and and other search engines. <em>Having an xml sitemap will improve your Google SEO (search engine optimization).</em></p>
+
+    <p>Example: <a href="/sitemap.xml">https://search.gov/sitemap.xml</a></p>
+
+    <h2 id="what-content-should-be-on-xml-sitemap">What content should be on XML sitemap?</h2>
+
+    <p>Some sitemaps are comprehensive, but for very large sites you may need to publish several sitemaps. Each sitemap should be no more than 50MB or 50,000 URLs, whichever comes first. You do not need to add URLs of content you want to remain unsearchable.</p>
+
+    <p><strong>Note</strong> that an HTML formatted file listing the pages of a site is more akin to an index page, and is not the same as an XML sitemap. HTML files are human friendly, but not machine friendly, and Search engines need an xml formatted file in order to leverage the information for indexing work.</p>
+
+    <h2 id="more-than-one-web-platform-use-multiple-sitemaps">More than one web platform? Use multiple sitemaps.</h2>
+
+    <p>It’s common for agencies to use more than one platform to publish their websites. For instance, a CMS was launched, but some content is still on the legacy site’s platform. In this case, use available plugins for the CMS’s in your environment to auto-generate sitemaps for that content. Manually generate a sitemap for any static content. You can publish a <a href="https://www.sitemaps.org/protocol.html#index">sitemap index file</a>  <i class="icon-external-link"><span>(External link)</span></i> that lists the locations of all your specific sitemaps, or you can list all your sitemaps on your robots.txt file.</p>
+
+    <h2 id="how-do-search-engines-find-my-sitemaps">How do search engines find my sitemap(s)?</h2>
+
+    <p>Sitemaps (or the <a href="https://www.sitemaps.org/protocol.html#index">sitemap index</a>  <i class="icon-external-link"><span>(External link)</span></i>) should be listed in your site’s robots.txt file, i.e.:<br />
+<code>Sitemap: https://www.agency.gov/sitemap_1.xml</code><br />
+<code>Sitemap: https://www.agency.gov/sitemap_2.xml</code></p>
+
+    <p>List the appropriate sitemap(s) for the domain or subdomain. <code>www.exampleagency.gov/robots.txt</code> would list sitemaps for content in the <code>www</code> subdomain, while <code>forms.exampleagency.gov/robots.txt</code> would list sitemaps for the <code>forms</code> subdomain.</p>
+
+    <p>Read more about <a href="/blog/robotstxt.html">robots.txt files</a>, and take a look at ours: <a href="/robots.txt">https://search.gov/robots.txt</a></p>
+
+    <h2 id="what-should-my-xml-sitemap-look-like">What should my XML sitemap look like?</h2>
+
+    <p>Please refer to the official <a href="https://www.sitemaps.org/protocol.html">sitemaps protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> for full information on how a sitemap should be structured.</p>
+
+    <p>When publishing your sitemap, be sure it begins with an <code>&lt;xml&gt;</code> declaration, and that the URLs are enclosed in opening and closing tags. To take a simplified example:</p>
+
+    <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;urlset&gt;
+&lt;url&gt;
+&lt;loc&gt;https://exampleagency.gov/blog/file1.html&lt;/loc&gt;
+&lt;lastmod&gt;2018-03-19T00:00:00+00:00&lt;/lastmod&gt;
+&lt;/url&gt;
+&lt;url&gt;
+&lt;loc&gt;https://exampleagency.gov/policy/new-policy.html&lt;/loc&gt;
+&lt;lastmod&gt;2018-03-27T00:00:00+00:00&lt;/lastmod&gt;
+&lt;/url&gt;
+&lt;/urlset&gt;
+</code></pre>
+    <p>If you use multiple sitemaps, then you’ll need to use a <a href="https://www.sitemaps.org/protocol.html#index">sitemap index</a>  <i class="icon-external-link"><span>(External link)</span></i>, along these lines:</p>
+
+    <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;sitemapindex&gt;
+&lt;sitemap&gt;https://exampleagency.gov/sitemap.xml?page=1&lt;/sitemap&gt;
+&lt;sitemap&gt;https://exampleagency.gov/sitemap.xml?page=2&lt;/sitemap&gt;
+&lt;/sitemapindex&gt;
+</code></pre>
+    <p>Importantly, be sure that any <a href="https://www.sitemaps.org/protocol.html#escaping">special characters in your URLs are escaped</a>  <i class="icon-external-link"><span>(External link)</span></i> so the search engines will know how to read them.</p>
+
+    <h2 id="what-metadata-does-searchgov-require-for-each-xml-sitemap-url">What metadata does Search.gov require for each XML sitemap URL?</h2>
+
+    <p>The sitemap protocol defines <a href="https://www.sitemaps.org/protocol.html#xmlTagDefinitions">required and optional XML tags</a>  <i class="icon-external-link"><span>(External link)</span></i> for each URL. We recommend including the <code>&lt;lastmod&gt;</code> value (the date of last modification of the file) whenever possible, to indicate when a file has been updated and needs to be re-indexed.</p>
+
+    <p>We do not have plans to support the <code>&lt;priority&gt;</code> tag, which is <a href="https://www.seroundtable.com/google-priority-change-frequency-xml-sitemap-20273.html">no longer used</a>  <i class="icon-external-link"><span>(External link)</span></i> by search engines like Google. We may support the <code>&lt;changefreq&gt;</code> tag in the future, but the <code>&lt;lastmod&gt;</code> tag is more accurate and supported by more search engines.</p>
+
+    <h2 id="how-can-i-create-an-xml-sitemap">How can I create an XML sitemap?</h2>
+
+    <p>Most content management systems provide tools to generate a sitemap and keep it updated. Below are some tools that we recommend:</p>
+
+    <h3 id="drupal">Drupal</h3>
+    <p><a href="https://www.drupal.org/project/xmlsitemap">XML Sitemap Module</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+    <h3 id="wordpress">Wordpress</h3>
+    <p><a href="https://wordpress.org/plugins/wordpress-seo/">Yoast SEO Plugin</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+    <p><a href="https://wordpress.org/plugins/google-sitemap-generator/">Google Sitemap Plugin</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+    <h3 id="wagtail">Wagtail</h3>
+    <p><a href="http://docs.wagtail.io/en/latest/reference/contrib/sitemaps.html">Sitemap Generator</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+    <h3 id="github-pages-jekyll">Github Pages (Jekyll)</h3>
+    <p><a href="https://help.github.com/articles/sitemaps-for-github-pages/">Jekyll Sitemap gem</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+    <h3 id="online-generators">Online generators</h3>
+    <p>(Note: free online generators often have a limit to the number of URLs they will include, and do not always generate the most accurate sitemaps. Use them only as a last resort.)</p>
+
+    <p><a href="https://freesitemapgenerator.com">Free Sitemap Generator</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+    <p><a href="http://www.web-site-map.com/">Web Sitemap</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+    <h2 id="sitemap-checklist">Sitemap checklist</h2>
+    <p><i class="icon-check"></i> 1. One or more sitemaps have been created</p>
+
+    <p><i class="icon-check"></i> 2. The URLs in the sitemap have been reviewed (clean URLs, only includes URLs that should be searchable)</p>
+
+    <p><i class="icon-check"></i> 3. Each sitemap’s XML format has been <a href="http://tools.seochat.com/tools/site-validator/">validated</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+    <p><i class="icon-check"></i> 4. Each sitemap (or a sitemap index) is listed in the site’s robots.txt file</p>
+
+    <h2 id="additional-resources">Additional Resources:</h2>
+    <p><a href="https://www.sitemaps.org/">Official Documentation from Sitemaps.org</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+    <p><a href="https://support.google.com/webmasters/answer/183668?hl=en&amp;ref_topic=4581190">Google’s guide to building a sitemap</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+    <p><a href="http://tools.seochat.com/tools/site-validator/">Sitemap validator</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+    <h2 id="more-questions">More questions?</h2>
+    <p>If you have questions that aren’t answered here, <a href="mailto:search@support.digitalgov.gov">email us</a>. We’ll also keep updating this page over time.</p>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/sitemaps"&gt;&lt;span class="label label-info"&gt;sitemaps&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/indexing"&gt;&lt;span class="label label-info"&gt;indexing&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/blog/sitemaps.html"&gt;
+    &lt;time datetime="2018-03-28"&gt;March 28, 2018&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
+  &lt;a href="/blog/searchgov-faqs-indexing.html"&gt;Search.gov&amp;#58; Index Transition FAQs&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;p&gt;&lt;em&gt;Updated March 2018&lt;/em&gt;&lt;/p&gt;
+</code></pre>
+
+    <p>In FY18, we changed our name to Search.gov, and are transitioning from leveraging commercial engines for search results to serving results from our own indexes.</p>
+
+    <p>We’re now developing our own search indexes from your site content. We will primarily be leveraging <a href="/blog/sitemaps.html">XML sitemaps</a> to discover your content (1st option, preferred). We’ll also accept content for real-time indexing via <a href="/developer/i14y.html">i14y</a> (2nd option).</p>
+
+    <p>Other search features and your search results page will remain the same, and searchers should not notice a difference.</p>
+
+    <p>We’ll work closely with you to make sure everything goes smoothly through the transition. Please view our <a href="/blog/six-months-in.html">recent status post</a> to learn more about the progress we’ve made, and you can <a href="/blog/searchgov-blog.html">read the original announcement</a> as well.</p>
+
+    <p>We will update these FAQs with questions we hear from our customers.</p>
+
+    <h1 id="general">General</h1>
+
+    <p><a href="#q-what-do-i-need-to-do-in-this-new-model">Q: What do I need to do in this new model?</a></p>
+
+    <p><a href="#q-what-is-the-timeline-for-the-transition">Q: What is the timeline for the transition?</a></p>
+
+    <p><a href="#q-what-do-i-need-to-do-today">Q: What do I need to do today?</a></p>
+
+    <p><a href="#q-do-i-need-to-change-any-code-on-my-website">Q: Do I need to change any code on my website?</a></p>
+
+    <p><a href="#q-how-was-my-site-getting-results-before">Q: How was my site getting results before?</a></p>
+
+    <p><a href="#q-why-did-you-change-your-name">Q: Why did you change your name?</a></p>
+
+    <h1 id="indexing">Indexing</h1>
+
+    <p><a href="#q-how-will-you-index-my-site">Q: How will you index my site?</a></p>
+
+    <p><a href="#q-how-often-will-you-update-my-index">Q: How often will you update my index?</a></p>
+
+    <p><a href="#q-how-will-you-remove-items-from-the-index">Q: How will you remove items from the index?</a></p>
+
+    <p><a href="#q-how-does-the-sitemap-control-my-search-results">Q: How does the sitemap control my search results?</a></p>
+
+    <p><a href="#q-what-if-i-already-use-i14y-or-rss-to-send-content">Q: What if I already use i14y or RSS to send content?</a></p>
+
+    <p><a href="#q-i-use-drupal-is-there-a-module-i-could-leverage">Q: I use Drupal, is there a module I could leverage?</a></p>
+
+    <p><a href="#q-what-if-i-have-content-in-my-cms-plus-files-stored-on-filesystems-such-as-pdfs">Q: What if I have content in my CMS plus files stored on filesystems (such as PDFs)?</a></p>
+
+    <p><a href="#q-are-there-cms-integrations-available-other-than-drupal">Q: Are there CMS integrations available, other than Drupal?</a></p>
+
+    <p><a href="#q-what-if-we-have-no-plans-for-a-cms">Q: What if we have no plans for a CMS?</a></p>
+
+    <p><a href="#q-how-can-i-create-or-find-a-list-of-urls-for-my-site">Q: How can I create or find a list of URLs for my site?</a></p>
+
+    <h1 id="general-1">General</h1>
+
+    <h2 id="q-what-do-i-need-to-do-in-this-new-model">Q: What do I need to do in this new model?</h2>
+
+    <p>We’ll work with you to get a good XML sitemap in place for your content, or set of sitemaps, as fits your use case. Sites using content management systems that are able to sent <em>all</em> content into an i14y drawer may investigate integrating with i14y. If you’re unable to do either of these things, we’ll want to discuss options with you.  See the indexing questions below for more information.</p>
+
+    <h2 id="q-what-is-the-timeline-for-the-transition">Q: What is the timeline for the transition?</h2>
+
+    <p>We launched the first phase of the new index in December 2017. We’ve reached the deadline Google had set for sunsetting their Site Search API, and are now disconnected from that service and supporting those searches from our own indexes. We continue to reach out to sites as we focus on indexing their content. We don’t have a hard deadline for getting everyone moved over, and are prioritizing high traffic search sites first for moving into our indexes. Over 90 search sites are already supported from our indexes.</p>
+
+    <h2 id="q-what-do-i-need-to-do-today">Q: What do I need to do today?</h2>
+
+    <p><em>CMS customers:</em></p>
+
+    <p>We encourage you to set-up and implement <a href="/blog/sitemaps.html">XML sitemaps</a> as soon as possible. Most content management systems have plugins that will facilitate creation of these sitemaps. Please also review your <a href="/blog/robotstxt.html">robots.txt file</a> to ensure the sitemaps are listed there, and that all the content you want searchable is allowed to be indexed.</p>
+
+    <p><em>Non-CMS Customers:</em></p>
+
+    <p>We encourage you to explore how you can publish an <a href="/blog/sitemaps.html">XML sitemap</a>. Please also review your <a href="/blog/robotstxt.html">robots.txt file</a> to ensure the sitemaps are listed there, and that all the content you want searchable is allowed to be indexed.</p>
+
+    <h2 id="q-do-i-need-to-change-any-code-on-my-website">Q: Do I need to change any code on my website?</h2>
+
+    <p>No: you do not need to update any code on your website. Indexing takes place in the backend of our system.</p>
+
+    <p>We do ask that you publish <a href="/blog/sitemaps.html">XML sitemaps</a>, and update your <a href="/blog/robotstxt.html">robots.txt file</a>.</p>
+
+    <h2 id="q-how-was-my-site-getting-results-before">Q: How was my site getting results before?</h2>
+
+    <p>Since 2007, we served search results from Bing’s index by default. We also used Google’s index to support certain Collections where Bing does not provide results. We’re now serving these results from our own indexes, and are disconnected from Google.</p>
+
+    <h2 id="q-why-did-you-change-your-name">Q: Why did you change your name?</h2>
+
+    <p>We changed our name to make things simpler. In the past, we’ve been FirstGov Search, FirstSearch, USAGov Search, USASearch, and most recently DigitalGov Search. Our new name is short, simple, and easy to remember.</p>
+
+    <h1 id="indexing-1">Indexing</h1>
+
+    <h2 id="q-how-will-you-index-my-site">Q: How will you index my site?</h2>
+
+    <p>Based on your site setup, you have a variety of options. Below is our order of preference in terms of how we’ll get your content into our indexes (note: you may choose more than one approach):</p>
+
+    <ul>
+  <li>
+    <p><a href="/blog/sitemaps.html">Structured URL list (XML sitemap)</a> – We will fetch and index the URLs that you provide on an XML sitemap, and will monitor your sitemaps for new content and updates over time. Our system will visit the URLs you provide and extract page titles, dates, and full text for indexing. You can post multiple sitemaps for content from different platforms - <a href="/blog/sitemaps.html">get the essential information about sitemaps here</a>. This is the preferred method.</p>
+  </li>
+  <li>
+    <p><a href="https://search.digitalgov.gov/developer/i14y.html">i14y API</a> –  Our API allows you to update your search index in real-time. Best for agencies with dedicated developer resources and single-platform publishing environments.</p>
+  </li>
+  <li>
+    <p><a href="https://search.digitalgov.gov/manual/rss.html">RSS feed</a> – We will still accept RSS feeds to update your indexes on a rolling basis.</p>
+  </li>
+</ul>
+
+    <p>If you’re unable to do any of the above, <a href="mailto:search@support.digitalgov.gov">contact us</a>, and we’ll discuss options.</p>
+
+    <h2 id="q-how-often-will-you-update-my-index">Q: How often will you update my index?</h2>
+
+    <p>If you have an XML sitemap, our default will be to monitor it daily for newly published or updated pages. If you have a need to have certain content searchable within minutes of publication, please <a href="mailto:search@support.digitalgov.gov">let us know</a>.</p>
+
+    <h2 id="q-how-will-you-remove-items-from-the-index">Q: How will you remove items from the index?</h2>
+
+    <p>We will be monitoring the status of pages in our index. If any start returning a <code>404 Not Found</code>, <code>403 Not Permitted</code>, <code>301 Permanent Redirect</code>, or other non-<code>200 OK</code> response, we will remove those items from the index. For redirects, we’ll update the index with information from the target page.</p>
+
+    <p>Removing a page from the sitemap will not remove it from the search index. If the page is still publicly accessible and returning a <code>200</code> response, you can <a href="mailto:search@support.digitalgov.gov">contact us</a> to have it removed from the index, or you can use our <a href="/manual/filter-content.html">Filter URLs</a> feature to suppress the item from appearing in search results.</p>
+
+    <h2 id="q-how-does-the-sitemap-control-my-search-results">Q: How does the sitemap control my search results?</h2>
+
+    <p>It doesn’t! Sitemaps advertise to search engines what content is on a site that should be searchable. The Search.gov engine then brings that content into our index. Separately, the settings you manage in the Admin Center dictate how we should pull results from our index when people search for things on your site.</p>
+
+    <h2 id="q-what-if-i-already-use-i14y-or-rss-to-send-content">Q: What if I already use i14y or RSS to send content?</h2>
+
+    <p>If you have set up i14y already, or if you send your full site content via RSS, you do not have to change anything for the new model.</p>
+
+    <h2 id="q-i-use-drupal-is-there-a-module-i-could-leverage">Q: I use Drupal, is there a module I could leverage?</h2>
+
+    <p>Yes! For customers who use Drupal as their CMS, please install the <a href="https://www.drupal.org/project/xmlsitemap">XML Sitemaps module</a>.</p>
+
+    <p>We also have a <a href="https://www.drupal.org/project/usasearch">Drupal module</a> that can jumpstart a connection with the i14y indexing API. This module is available for both Drupal 7 and 8, but we’ve found that the module only supports about half of the Drupal publishing models in government.</p>
+
+    <h2 id="q-what-if-i-have-content-in-my-cms-plus-files-stored-on-filesystems-such-as-pdfs">Q: What if I have content in my CMS plus files stored on filesystems (such as PDFs)?</h2>
+
+    <p>If your site is in a CMS but you also have published material outside of the CMS (such as PDFs or old web pages), we’ll be able to search both CMS and non-CMS content together.</p>
+
+    <p>You will need to publish an XML sitemap of your non-CMS material, or you could manually add the content to your CMS-managed sitemap(s). <em>Note:</em> PDFs count as non-CMS content even if they’re attached within your CMS.</p>
+
+    <h2 id="q-are-there-cms-sitemap-plugins-available-other-than-drupal">Q: Are there CMS sitemap plugins available, other than Drupal?</h2>
+
+    <p>Yes - see our <a href="/blog/sitemaps.html">XML Sitemaps overview page</a> for a more complete list of tools.</p>
+
+    <h2 id="q-what-if-we-have-no-plans-for-a-cms">Q: What if we have no plans for a CMS?</h2>
+
+    <p>You can still create an XML sitemap, though you may need to update it manually, or develop a regular server job to keep it updated.</p>
+
+    <h2 id="q-how-can-i-create-or-find-a-list-of-urls-for-my-site-to-build-a-sitemap">Q: How can I create or find a list of URLs for my site, to build a sitemap?</h2>
+
+    <p>You should be able to run a command to export all of the URLs on your webserver, such as <code>ls</code> or <code>grep</code> or <code>dir</code>. Consult your friendly neighborhood server admin for assistance.</p>
+
+    <p>Some sites have XML sitemaps that list URLs and files. Your sitemap may be incomplete, so you’ll want to review it.</p>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/FAQs"&gt;&lt;span class="label label-info"&gt;FAQs&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/blog/searchgov-faqs-indexing.html"&gt;
+    &lt;time datetime="2018-03-28"&gt;March 28, 2018&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
+  &lt;a href="/blog/go-live.html"&gt;Going Live with Search.gov&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;p&gt;Your pre-launch checklist will be unique to your agency’s workflow, requirements, and deadlines. Below is a typical checklist.&lt;/p&gt;
+</code></pre>
+
+    <h2 id="double-check-your-content-settings">Double Check Your Content Settings</h2>
+
+    <p><i class="icon-check"></i> <strong>1. Have you told us which domain(s) you want to search?</strong> List one or more <a href="/manual/domains.html">domains</a> that you want to search on the first page of web results. Some agencies opt to leave out the ‘www’ to include all subdomains (for example, list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies especially department-level portals opt to also include their bureaus’ websites (for example, Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)</p>
+
+    <p><i class="icon-check"></i> <strong>2. Have we indexed your your content?</strong> We follow search engine optimization (SEO) best practices and leverage your <a href="/blog/sitemaps.html">XML sitemaps</a> to monitor for new content. Verify also that you have a <a href="/blog/robotstxt.html">robots.txt file</a>. These two files are typically located in the root directory of your website (i.e., <code>exampleagency.gov/robots.txt</code> and <code>exampleagency.gov/sitemap.xml</code>, respectively). Also verify that your robots.txt file allows our user agent (<code>usasearch</code>) to access your public content.</p>
+
+    <p><i class="icon-check"></i> <strong>3. Have you told us about your RSS feeds?</strong> We love <a href="/manual/rss.html">RSS feeds</a>. Tell us about all of your feeds, even if you opt not to show them (see #5 below). They’re a quick way for us to index your new and updated content, in addition to the content listed on your sitemap (see above). (Tip: Preview your feeds from the RSS page in the <a href="https://search.usa.gov/sites/">Admin Center</a> to confirm that we’ve indexed your content.)</p>
+
+    <p><i class="icon-check"></i> <strong>4. Have you told us about your social media accounts?</strong> <a href="/manual/flickr.html">Flickr photostreams</a>, <a href="/manual/twitter.html">tweets</a>, and <a href="/manual/youtube.html">YouTube videos</a> are a great way to highlight your recent content and offer a single point of access to your various publishing channels.</p>
+
+    <h2 id="customize-the-display-of-your-search-results-page">Customize the Display of Your Search Results Page</h2>
+
+    <p><i class="icon-check"></i> <strong>5. Have you made the search results page look like your website?</strong> Customize the <a href="/manual/brand.html">brand</a> (font, colors, logo, favicon, and navigation links) of your search results page to create a seamless experience for users as they search and browse your website.</p>
+
+    <p><i class="icon-check"></i> <strong>6. Have you told us what to show on your results page?</strong> Turn on (or off) the inline modules and facets that you want to appear on your search results page. You can change the default settings on the <a href="/manual/display-overview.html">Display Overview</a> page in the Admin Center.</p>
+
+    <h2 id="connect-your-site-to-searchgov">Connect Your Site to Search.gov</h2>
+
+    <p>Most agencies add these two <a href="/manual/code.html">snippets of code</a> to the template(s) in their websites or content management systems (rather than adding them to individual pages).</p>
+
+    <p><i class="icon-check"></i> <strong>7. Does your search box point to Search.gov?</strong> Update your search box form code point to our service so that, when users execute a search, they’ll see your Search.gov-hosted results page.</p>
+
+    <pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+	 &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+ 	&lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+ 	&lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+ 	&lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+    <p><i class="icon-check"></i> <strong>8. Do you have our Javascript tag on your webpages?</strong> This Javascript powers the suggestions for type-ahead and <a href="/manual/display-overview.html">related searches</a>. It also provides data on your trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+
+    <pre><code>&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+	 var usasearch_config = { siteHandle:"YourSiteHandle" };
+ 	var script = document.createElement("script");
+ 	script.type = "text/javascript";
+ 	script.src = "//search.usa.gov/javascripts/remote.loader.js";
+ 	document.getElementsByTagName("head")[0].appendChild(script);
+//]]&gt;
+&lt;/script&gt;
+</code></pre>
+
+    <h2 id="set-up-nice-to-have-features-optional">Set Up Nice-to-Have Features (Optional)</h2>
+
+    <p><i class="icon-check"></i> <strong>9. Have you masked your domain?</strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov. Be sure to alert us you will be adding a domain mask, so we can add you to our SSL certificate before you update your search box form code.</p>
+
+    <p><i class="icon-check"></i> <strong>10. Have you added the Javascripts for your other third-party web services to your results page?</strong> If you have a <a href="/manual/third-party.html">third-party service</a> running on your website, you likely want it to run on your results page. Agencies often include their Foresee, Google Analytics, Omniture, or WebTrends code, among others. If your federal website participates in the <a href="https://www.digitalgov.gov/services/dap/">Digital Analytics Program</a>, you do not need to take any action: DAP code is included on your results page, by default.</p>
+
+    <h2 id="dont-forget-seo">Don’t Forget SEO</h2>
+
+    <p><i class="icon-check"></i> <strong>11. Have you registered your site with the major commercial search engines?</strong> Register for both <a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i> to maximize the coverage of your content in their search results.</p>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/help-manual"&gt;&lt;span class="label label-info"&gt;help-manual&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/blog/go-live.html"&gt;
+    &lt;time datetime="2018-03-28"&gt;March 28, 2018&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
   &lt;a href="/releases/february-2018.html"&gt;February 2018 Release Notes&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -150,112 +644,6 @@
   
   &lt;a href="/releases/february-2018.html"&gt;
     &lt;time datetime="2018-03-27"&gt;March 27, 2018&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/blog/sitemaps.html"&gt;XML Sitemaps&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;An &lt;a href="https://en.wikipedia.org/wiki/Sitemaps"&gt;XML sitemap&lt;/a&gt;  &lt;i class="icon-external-link"&gt;&lt;span&gt;(External link)&lt;/span&gt;&lt;/i&gt; is an XML formatted file containing a list of URLs on a website. An XML sitemap provides information that allows a search engine to index your website more intelligently, and to keep its search index up to date.&lt;/p&gt;
-</code></pre>
-
-    <p>Sitemaps tell search engines what URLs are on a website, and, if URLs are added as they are published, they tell the engines what new content needs to be picked up. They may also provide additional metadata about each URL, such as the last modified date, which signals to the engine to update the index record for that page.</p>
-
-    <p>Search.gov uses sitemaps to tell us what URLs should be in our index and when a URL has been updated. Sitemaps are used in a similar way by <a href="https://support.google.com/webmasters/answer/156184">Google</a>  <i class="icon-external-link"><span>(External link)</span></i>, Bing, and and other search engines. <em>Having an xml sitemap will improve your Google SEO (search engine optimization).</em></p>
-
-    <p>Example: <a href="/sitemap.xml">https://search.gov/sitemap.xml</a></p>
-
-    <h2 id="what-content-should-be-on-xml-sitemap">What content should be on XML sitemap?</h2>
-
-    <p>Some sitemaps are comprehensive, but for very large sites you may need to publish several sitemaps. Each sitemap should be no more than 50MB or 50,000 URLs, whichever comes first. You do not need to add URLs of content you want to remain unsearchable.</p>
-
-    <p><strong>Note</strong> that an HTML formatted file listing the pages of a site is more akin to an index page, and is not the same as an XML sitemap. HTML files are human friendly, but not machine friendly, and Search engines need an xml formatted file in order to leverage the information for indexing work.</p>
-
-    <h2 id="more-than-one-web-platform-use-multiple-sitemaps">More than one web platform? Use multiple sitemaps.</h2>
-    <p>It’s common for agencies to use more than one platform to publish their websites. For instance, a CMS was launched, but some content is still on the legacy site’s platform. In this case, use available plugins for the CMS’s in your environment to auto-generate sitemaps for that content. Manually generate a sitemap for any static content. You can publish a <a href="https://www.sitemaps.org/protocol.html#index">sitemap index file</a>  <i class="icon-external-link"><span>(External link)</span></i> that lists the locations of all your specific sitemaps, or you can list all your sitemaps on your robots.txt file.</p>
-
-    <h2 id="how-do-search-engines-find-my-sitemaps">How do search engines find my sitemap(s)?</h2>
-    <p>Sitemap URLs (or the [<a href="https://www.sitemaps.org/protocol.html#index">sitemap index</a>  <i class="icon-external-link"><span>(External link)</span></i> url) should be listed in your site’s robots.txt file, i.e.:<br />
-<code>Sitemap: https://www.agency.gov/sitemap_1.xml</code><br />
-<code>Sitemap: https://www.agency.gov/sitemap_2.xml</code></p>
-
-    <p>Example: <a href="/robots.txt">https://search.gov/robots.txt</a></p>
-
-    <h2 id="what-should-my-xml-sitemap-look-like">What should my XML sitemap look like?</h2>
-    <p>Please refer to the official <a href="https://www.sitemaps.org/protocol.html">sitemaps protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> for information on how a sitemap should be structured.</p>
-
-    <h2 id="what-metadata-does-searchgov-require-for-each-xml-sitemap-url">What metadata does Search.gov require for each XML sitemap URL?</h2>
-    <p>The sitemap protocol defines <a href="https://www.sitemaps.org/protocol.html#xmlTagDefinitions">required and optional XML tags</a>  <i class="icon-external-link"><span>(External link)</span></i> for each URL. We recommend including the <code>&lt;lastmod&gt;</code> value (the date of last modification of the file) whenever possible, to indicate when a file has been updated and needs to be re-indexed.</p>
-
-    <p>We do not have plans to support the <code>&lt;priority&gt;</code> tag, which is <a href="https://www.seroundtable.com/google-priority-change-frequency-xml-sitemap-20273.html">no longer used</a>  <i class="icon-external-link"><span>(External link)</span></i> by search engines like Google. We may support the <code>&lt;changefreq&gt;</code> tag in the future, but the <code>&lt;lastmod&gt;</code> tag is more accurate and supported by more search engines.</p>
-
-    <h2 id="how-can-i-create-an-xml-sitemap">How can I create an XML sitemap?</h2>
-    <p>Most content management systems provide tools to generate a sitemap and keep it updated. Below are some tools that we recommend:</p>
-
-    <h3 id="drupal">Drupal</h3>
-    <p><a href="https://www.drupal.org/project/xmlsitemap">XML Sitemap Module</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <h3 id="wordpress">Wordpress</h3>
-    <p><a href="https://wordpress.org/plugins/wordpress-seo/">Yoast SEO Plugin</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <p><a href="https://wordpress.org/plugins/google-sitemap-generator/">Google Sitemap Plugin</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <h3 id="wagtail">Wagtail</h3>
-    <p><a href="http://docs.wagtail.io/en/latest/reference/contrib/sitemaps.html">Sitemap Generator</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <h3 id="github-pages-jekyll">Github Pages (Jekyll)</h3>
-    <p><a href="https://help.github.com/articles/sitemaps-for-github-pages/">Jekyll Sitemap gem</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <h3 id="online-generators">Online generators</h3>
-    <p>(Note: free online generators often have a limit to the number of URLs they will include, and do not always generate the most accurate sitemaps. Use them only as a last resort.)</p>
-
-    <p><a href="https://freesitemapgenerator.com">Free Sitemap Generator</a>  <i class="icon-external-link"><span>(External link)</span></i>
-<a href="http://www.web-site-map.com/">Web Sitemap</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <h2 id="sitemap-checklist">Sitemap checklist</h2>
-    <p><i class="icon-check"></i> 1. One or more sitemaps have been created</p>
-
-    <p><i class="icon-check"></i> 2. The URLs in the sitemap have been reviewed (clean URLs, only includes URLs that should be searchable)</p>
-
-    <p><i class="icon-check"></i> 3. Each sitemap’s XML format has been <a href="http://tools.seochat.com/tools/site-validator/">validated</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <p><i class="icon-check"></i> 4. Each sitemap (or a sitemap index) is listed in the site’s robots.txt file</p>
-
-    <h2 id="additional-resources">Additional Resources:</h2>
-    <p><a href="https://www.sitemaps.org/">Official Documentation from Sitemaps.org</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <p><a href="https://support.google.com/webmasters/answer/183668?hl=en&amp;ref_topic=4581190">Google’s guide to building a sitemap</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <p><a href="http://tools.seochat.com/tools/site-validator/">Sitemap validator</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <h2 id="more-questions">More questions?</h2>
-    <p>If you have questions that aren’t answered here, <a href="mailto:search@support.digitalgov.gov">email us</a>. We’ll also keep updating this page over time</p>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/sitemaps,"&gt;&lt;span class="label label-info"&gt;sitemaps,&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/indexing"&gt;&lt;span class="label label-info"&gt;indexing&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/blog/sitemaps.html"&gt;
-    &lt;time datetime="2018-03-19"&gt;March 19, 2018&lt;/time&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 </code></pre>
@@ -721,208 +1109,6 @@
   
   &lt;a href="/manual/routed-queries.html"&gt;
     &lt;time datetime="2018-02-09"&gt;February 9, 2018&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/manual/system-alert.html"&gt;Adding a Custom System Alert to Your Results Page&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;&lt;a href="/index.html"&gt;Search.gov Home&lt;/a&gt; &amp;gt; &lt;a href="https://search.usa.gov/sites/"&gt;Admin Center&lt;/a&gt; &amp;gt; YourSite &amp;gt; Display &amp;gt; Search Page Alert&lt;/p&gt;
-</code></pre>
-
-    <p>There may be times when you want to add a system alert to your search results page. For instance, during a <a href="/blog/redesign.html">site redesign</a>, you may wish to inform searchers that your site is in transition.</p>
-
-    <p>Use the Search Page Alert feature to add a text message to your search results page, which will appear at all times above all search results, <em>regardless of the query</em>. Enter a title and text for the alert, set the status to active, and hit <code>Save</code> to turn on your alert. The appearance of the alert is not customizable.</p>
-
-    <p>See, for example, the custom alert on Defense.gov announcing their migration to a new system.</p>
-
-    <p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/system-alert.png" alt="Custom System Alert on Defense.gov" title="Custom System Alert on Defense.gov" /></p>
-
-    <hr />
-
-    <p><strong><em>Did you know?</em></strong> See also our closely related feature <a href="/manual/best-bets.html">Best Bets</a>, which allows you to recommend individual results or sets of results, which will appear <em>only when a searcher’s query matches</em> the text of their titles, descriptions, or keywords.</p>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/help-manual"&gt;&lt;span class="label label-info"&gt;help-manual&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/manage-display"&gt;&lt;span class="label label-info"&gt;manage-display&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/alert"&gt;&lt;span class="label label-info"&gt;alert&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/manual/system-alert.html"&gt;
-    &lt;time datetime="2018-02-07"&gt;February 7, 2018&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/manual/instagram.html"&gt;How to Add Your Instagram Pictures to Our Index&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;&lt;a href="/index.html"&gt;Search.gov Home&lt;/a&gt; &amp;gt; &lt;a href="https://search.usa.gov/sites/"&gt;Admin Center&lt;/a&gt; &amp;gt; YourSite &amp;gt; Manage Content &amp;gt; Instagram&lt;/p&gt;
-</code></pre>
-
-    <p><strong>ALERT:</strong>  Instagram now requires accounts to grant permission to index their images via an integration between systems. Since this integration will not be possible for Search.gov in the foreseeable future, we’re exploring other options. Our Instagram index was last updated in June 2016. Any images in our index prior to that date will continue to be shown on your search results page, as long as you do not remove your Instagram account from the Admin Center. If you remove your account, any photos in our index will be permanently deleted from our system. This help manual page is for historical reference only.</p>
-
-    <h2 id="tell-us-about-your-instagram-account">Tell Us About Your Instagram Account</h2>
-
-    <p>Provide us with the <em>username</em> for your Instagram Account.</p>
-
-    <p>When you’re logged into Instagram, you can see your username at <a href="https://instagram.com/accounts/login/?next=/accounts/edit/">https://instagram.com/accounts/login/?next=/accounts/edit/</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-    <p>For example, the Instagram username for the Department of Labor is <a href="https://instagram.com/usdol/">usdol</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-    <h2 id="opt-to-display-your-instagram-pictures">Opt to Display Your Instagram Pictures</h2>
-
-    <p>When you add the username for your Instagram account, we’ll automatically index all of the pictures in your account.</p>
-
-    <p>On the image results page, we’ll display the pictures from your Instagram account by default. If you’d like to backfill them with the standard image results from your website, <a href="mailto:search@support.digitalgov.gov">email us</a> and we’ll turn on your web images for you.</p>
-
-    <p>See the sample results page below that shows image results displayed on <a href="http://search.usa.gov/search/images?affiliate=u.s.departmentoflabor&amp;query=minimum+wage">DOL.gov for a search on <em>minimum wage</em></a>.</p>
-
-    <p><a href="http://search.usa.gov/search/images?affiliate=u.s.departmentoflabor&amp;query=minimum+wage"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/social-media-instagram.png" alt="Image results from Flickr &amp; Instagram" title="Image results from Flickr &amp; Instagram" /></a></p>
-
-    <hr />
-
-    <p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency’s photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
-
-    <p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/flickr.html">Flickr</a> photostream. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.</p>
-
-    <p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> if you’re ready to turn on the new results page.</p>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/help-manual"&gt;&lt;span class="label label-info"&gt;help-manual&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/manage-content"&gt;&lt;span class="label label-info"&gt;manage-content&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/social-media"&gt;&lt;span class="label label-info"&gt;social-media&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/instagram"&gt;&lt;span class="label label-info"&gt;instagram&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/images"&gt;&lt;span class="label label-info"&gt;images&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/manual/instagram.html"&gt;
-    &lt;time datetime="2018-02-01"&gt;February 1, 2018&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/manual/monthly-reports.html"&gt;Analyzing Your Monthly Reports&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;&lt;a href="/index.html"&gt;Search.gov Home&lt;/a&gt; &amp;gt; &lt;a href="https://search.usa.gov/sites/"&gt;Admin Center&lt;/a&gt; &amp;gt; YourSite &amp;gt; Analytics &amp;gt; Monthly Reports&lt;/p&gt;
-</code></pre>
-
-    <p>The monthly report gives a bird’s-eye view of the number of <a href="/manual/queries.html">queries</a> and <a href="/manual/clicks.html">clicks</a> each month.</p>
-
-    <p>Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.</p>
-
-    <p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site’s visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
-
-    <h2 id="monthly-usage-stats">Monthly Usage Stats</h2>
-
-    <p>Data for the total number of queries and clicks. Use this report to find and analyze the so-called <a href="http://www.searchtools.com/analysis/long-tail.html">short head</a> <i class="icon-external-link"><span>(External link)</span></i> of your most popular search queries and clicks, which are typically the same as your site’s <a href="http://www.usability.gov/tags/task-analysis/">top tasks</a>.</p>
-
-    <h3 id="queries-with-no-results">Queries with No Results</h3>
-
-    <p>A list of queries that returned no results. Sometimes, searchers look for information on the wrong website or use different words than what are used on the page, and so they get no results. Use this list of Queries with No Results to help searchers get to the information they’re looking for. You can set up <a href="/manual/best-bets.html">Best Bets</a>, or a <a href="/manual/routed-queries.html">Routed Query</a>. You can also <a href="/manual/no-results.html">customize the No Results message</a> displayed on your results page.</p>
-
-    <h2 id="impressions-and-clicks-by-module">Impressions and Clicks by Module</h2>
-
-    <p>Detailed data for the total number of impressions and clicks and your clickthru rate (CTR) are presented for each “module” on the search results page. We also provide the average CTR across all Search.gov customers so you can see how your rate compares to the average rate. The data in the table is sorted in descending order from the most to least number of clicks.</p>
-
-    <p>Use this report to inform which <a href="/manual/display-overview.html">modules you opt to display</a>.</p>
-
-    <h2 id="download-top-queries">Download Top Queries</h2>
-
-    <p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV (comma-separated values) link to download the list as a text file. Once you’ve downloaded the CSV file, you can easily <a href="https://support.office.com/en-us/article/Import-or-export-text-txt-or-csv-files-e8ab9ff3-be8d-43f1-9d52-b5e8a008ba5c">import it  into Excel</a> <i class="icon-external-link"><span>(External link)</span></i> or another speadsheet program to analyze the data.</p>
-
-    <p>Read <a href="https://www.digitalgov.gov/2013/10/24/understanding-your-users-needs-by-analyzing-search-terms/">Understanding Your Users’ Needs By Analyzing Search Terms</a> for tips on how to create a semi-automated report for analyzing the data in this CSV file on a regular basis.</p>
-
-    <h2 id="definitions">Definitions</h2>
-
-    <p>All data presented on this page (and other pages in the Admin Center) are IP-deduped to exclude bots and other noise in an attempt to accurately represent searchers’ intent on your site. Some definitions follow.</p>
-
-    <p><strong><a href="/manual/queries.html">Queries</a>:</strong> Number of times a search query (that is, a word or string of words) was entered in the search box by a unique searcher.</p>
-
-    <p><strong><a href="/manual/clicks.html">Clicks</a>.</strong> Number of times a searcher clicked on one of your pages within the search results for a particular query.</p>
-
-    <p><strong>Impressions:</strong> Number of times a module is displayed, whether it is clicked on or not. Not all modules are displayed for all queries. Each time a module is displayed it is counted as one impression.</p>
-
-    <p><strong>Clickthru Rate (CTR):</strong> The rate (expressed in a percentage) at which searchers click on a module. This rate is calculated by dividing the total number of clicks by the total number of impressions. CTR is useful to measure the performance of specific campaigns, such as <a href="/manual/best-bets.html">Best Bets</a> for seasonal events.</p>
-
-    <p><strong>Raw count:</strong> Total number of times the query was submitted. The raw count is provided in the downloadable CSV files only.</p>
-
-    <p><strong>IP-deduped count:</strong> Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of “real,” human traffic.</p>
-
-    <hr />
-
-    <p><strong><em>Did you know?</em></strong> On the first of each month, we email you a report with data on the previous month’s queries, clicks, and top search terms.</p>
-
-    <p><strong><em>Did you know?</em></strong> The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site in the past day or so.</p>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/help-manual"&gt;&lt;span class="label label-info"&gt;help-manual&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/analytics"&gt;&lt;span class="label label-info"&gt;analytics&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/queries"&gt;&lt;span class="label label-info"&gt;queries&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/clicks"&gt;&lt;span class="label label-info"&gt;clicks&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/manual/monthly-reports.html"&gt;
-    &lt;time datetime="2018-01-30"&gt;January 30, 2018&lt;/time&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 </code></pre>

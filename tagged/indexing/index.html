@@ -103,6 +103,98 @@
  
     
     <h1>
+      <a href="/blog/six-months-in.html">Six Months In&#58; Lessons Learned in the Transition to Search.gov</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>In September 2017 we announced that we would be moving away from using commercial search engines as our primary source of web results. This was driven by Google’s announcement that they would be sunsetting their Site Search API at the end of March 2018, and our desire to have more control over the quality, coverage, and cost of our web results than we were able to achieve with Bing.</p>
+
+<p>We’d like to update you on our progress and share some lessons learned. Over the past months we’ve worked with many of you and listened to the challenges you face in your particular environments. In the fall we believed that encouraging agencies towards using our i14y indexing API was the best way to go. Having lived into it, we now know that we need to focus on indexing content directly off of your websites, leveraging structured lists of URLs known as XML sitemaps. The lessons here are presented in the order we learned them.</p>
+
+<h2 id="lessons-learned">Lessons Learned</h2>
+
+<h3 id="1-the-api-first-focus-we-began-with-isnt-viable-as-a-standard-solution">1. The API-first focus we began with isn’t viable as a standard solution</h3>
+
+<ul>
+  <li>Many agencies use content management systems for which we are unable to provide an integration, and struggle to create one on their own.</li>
+  <li>Even though many agencies use Drupal, and may have been able to leverage our module, distributed site management and quarantine-like firewalling make it highly difficult to get i14y indexing up and running via the module.</li>
+  <li>Mixed platforms for content mean that most sites will need other indexing support beyond just i14y.</li>
+  <li>The number of indexes created by our API model isn’t scalable. Even though Elasticsearch, the search solution our system is built on, is designed for its indexes to expand to great size with ease, it doesn’t perform well with a high number of relatively small indexes.</li>
+  <li>And finally, many agencies still have static sites, from which it’s close to impossible to export even a clean list of URLs for indexing, much less to push content out to an API over time.</li>
+</ul>
+
+<h3 id="2-crawling-is-prohibitively-resource-intense">2. Crawling is prohibitively resource-intense</h3>
+
+<ul>
+  <li>To assist some static sites in our early-transition group, we incorporated a crawler into our stack, to facilitate content discover in those websites. The crawler does a good job, but it’s still a manual process and automating for continuous discovery would require significant processing power.</li>
+  <li>Crawl delays, as set in robots.txt files, have a serious impact on indexing speed. At a crawl delay of 10, it would take over two weeks to crawl a site of 150,000 pages.</li>
+</ul>
+
+<h3 id="3-relevancy-ranking-is-easiest-to-manage-if-all-the-content-is-in-the-same-index">3. Relevancy ranking is easiest to manage if all the content is in the same index</h3>
+
+<ul>
+  <li>In addition to search indexes holding data from pages and files, it can also have indicator data showing how a given piece of content should be ranked relative to other pieces of content. For sites who have sent web content into i14y drawer indexes and have content that we have indexed from static files, each index will have ranking indicators, but it’s hard for a search system to know how to compare the different indicators when blending results together.</li>
+  <li>We’ll be able to add more ranking indicators to the index that we build than we can offer in the i14y drawer indexes built by agencies via API.</li>
+  <li>If an agency is able to send 100% of the content they want searched, with full text, to a single i14y drawer, then their relevance ranking would be easy to determine. While most agencies can’t do this, we will continue to support i14y for the agencies that have already launched with it.</li>
+</ul>
+
+<h3 id="4-xml-sitemaps-are-great---really-helpful-for-search-engines-and-pretty-easy-for-agencies-to-implement">4. XML sitemaps are great - really helpful for search engines and pretty easy for agencies to implement</h3>
+
+<ul>
+  <li>An XML sitemap is a machine-friendly list of the contents of a website. While no one can know for sure, the consensus in the SEO industry is that Google and Bing use XML sitemaps as part of their monitoring sites for new or updated content. Making it easy for them to find your content is thought to give a <a href="https://searchengineland.com/guide/seo/site-architecture-search-engine-ranking">ranking boost to your site’s content</a>  <i class="icon-external-link"><span>(External link)</span></i>.</li>
+  <li>Most content management systems have plugins that will generate an xml sitemap for the content in the CMS. Static content can either be added to the CMS-generated sitemap, or listed in a separate sitemap file.</li>
+  <li>We feel it’s a better use of time for agency teams to work on implementing good sitemaps that will help them out in Google and Bing, as well as with the Search.gov system, than to invest a lot of time in an integration that only works with us.</li>
+</ul>
+
+<h2 id="so-where-are-we-now">So where are we now?</h2>
+
+<p>We built the new index model and released that in December 2017, along with our core indexing job that grabs data from pages - html, pdf, and the other major file types.</p>
+
+<p>We added a crawler in January 2018, to facilitate URL discovery on a given website.</p>
+
+<p>We added the ability to index content from XML sitemaps in February. We follow the <a href="https://www.sitemaps.org/protocol.html">sitemaps protocol</a>  <i class="icon-external-link"><span>(External link)</span></i>, which relies in part on also having  and have posted a explainer pages about <a href="/blog/sitemaps.html">XML sitemaps</a> and <a href="/blog/robotstxt.html">robots.txt files</a> to get you the most essential information.</p>
+
+<p>We removed our connection to the Google Site Search API in March, and are now serving results from our own index for those cases where we had previously used Google.</p>
+
+<p>We started with a small representative set of sites, and have moved into working on our highest traffic customers. Over 90 search sites now bear the <code>Powered by Search.gov</code> mark on their search results pages, including <a href="https://search.ssa.gov/search?utf8=%E2%9C%93&amp;affiliate=ssa&amp;sort_by=&amp;query=replacement+card">SSA.gov</a>, <a href="https://search.usa.gov/search?utf8=%E2%9C%93&amp;affiliate=tsa.gov&amp;sort_by=&amp;query=screening">TSA.gov</a>, <a href="https://search.medicare.gov/search?utf8=%E2%9C%93&amp;affiliate=medicaregov&amp;sort_by=&amp;query=medical+equipment">Medicare.gov</a>, and many more.</p>
+
+<h2 id="where-to-next">Where to next?</h2>
+
+<p>Unlike with the Google API sunset, there is no hard deadline for our moving sites off Bing and into our own index. Our timelines around Bing are driving toward having well over half of our search traffic going to our own indexes this fiscal year. We’ll continue to work on high traffic sites, large Department website searches, and the many agency component websites that combine to create the parent website’s search.</p>
+
+<p>If your search site is low traffic and you haven’t heard from us yet, you can expect to remain on Bing for the foreseeable future. We will reach out as the time draws near.</p>
+
+<p>In the meantime, we encourage <em>all</em> sites to invest some time in developing and maintaining a good XML sitemap. As mentioned above, this will help us maintain a good index of your content, and it will also give you a Google boost, so it’s really win-win. Part of having a good sitemap is having a good robots.txt file as well. Read over our new explainer posts and reach out with any questions.</p>
+
+<p><a href="/blog/sitemaps.html">Learn more about XML sitemaps</a></p>
+
+<p><a href="/blog/robotstxt.html">Learn more about robots.txt files</a></p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/indexing"><span class="label label-info">indexing</span></a>
+      
+      <a href="/tagged/roadmap"><span class="label label-info">roadmap</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/blog/six-months-in.html">
+        <time datetime="2018-03-28">March 28, 2018</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/blog/sitemaps.html">XML Sitemaps</a>
     </h1>
     
@@ -123,24 +215,55 @@
 <p><strong>Note</strong> that an HTML formatted file listing the pages of a site is more akin to an index page, and is not the same as an XML sitemap. HTML files are human friendly, but not machine friendly, and Search engines need an xml formatted file in order to leverage the information for indexing work.</p>
 
 <h2 id="more-than-one-web-platform-use-multiple-sitemaps">More than one web platform? Use multiple sitemaps.</h2>
+
 <p>It’s common for agencies to use more than one platform to publish their websites. For instance, a CMS was launched, but some content is still on the legacy site’s platform. In this case, use available plugins for the CMS’s in your environment to auto-generate sitemaps for that content. Manually generate a sitemap for any static content. You can publish a <a href="https://www.sitemaps.org/protocol.html#index">sitemap index file</a>  <i class="icon-external-link"><span>(External link)</span></i> that lists the locations of all your specific sitemaps, or you can list all your sitemaps on your robots.txt file.</p>
 
 <h2 id="how-do-search-engines-find-my-sitemaps">How do search engines find my sitemap(s)?</h2>
-<p>Sitemap URLs (or the [<a href="https://www.sitemaps.org/protocol.html#index">sitemap index</a>  <i class="icon-external-link"><span>(External link)</span></i> url) should be listed in your site’s robots.txt file, i.e.:<br />
+
+<p>Sitemaps (or the <a href="https://www.sitemaps.org/protocol.html#index">sitemap index</a>  <i class="icon-external-link"><span>(External link)</span></i>) should be listed in your site’s robots.txt file, i.e.:<br />
 <code>Sitemap: https://www.agency.gov/sitemap_1.xml</code><br />
 <code>Sitemap: https://www.agency.gov/sitemap_2.xml</code></p>
 
-<p>Example: <a href="/robots.txt">https://search.gov/robots.txt</a></p>
+<p>List the appropriate sitemap(s) for the domain or subdomain. <code>www.exampleagency.gov/robots.txt</code> would list sitemaps for content in the <code>www</code> subdomain, while <code>forms.exampleagency.gov/robots.txt</code> would list sitemaps for the <code>forms</code> subdomain.</p>
+
+<p>Read more about <a href="/blog/robotstxt.html">robots.txt files</a>, and take a look at ours: <a href="/robots.txt">https://search.gov/robots.txt</a></p>
 
 <h2 id="what-should-my-xml-sitemap-look-like">What should my XML sitemap look like?</h2>
-<p>Please refer to the official <a href="https://www.sitemaps.org/protocol.html">sitemaps protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> for information on how a sitemap should be structured.</p>
+
+<p>Please refer to the official <a href="https://www.sitemaps.org/protocol.html">sitemaps protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> for full information on how a sitemap should be structured.</p>
+
+<p>When publishing your sitemap, be sure it begins with an <code>&lt;xml&gt;</code> declaration, and that the URLs are enclosed in opening and closing tags. To take a simplified example:</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;urlset&gt;
+&lt;url&gt;
+&lt;loc&gt;https://exampleagency.gov/blog/file1.html&lt;/loc&gt;
+&lt;lastmod&gt;2018-03-19T00:00:00+00:00&lt;/lastmod&gt;
+&lt;/url&gt;
+&lt;url&gt;
+&lt;loc&gt;https://exampleagency.gov/policy/new-policy.html&lt;/loc&gt;
+&lt;lastmod&gt;2018-03-27T00:00:00+00:00&lt;/lastmod&gt;
+&lt;/url&gt;
+&lt;/urlset&gt;
+</code></pre>
+<p>If you use multiple sitemaps, then you’ll need to use a <a href="https://www.sitemaps.org/protocol.html#index">sitemap index</a>  <i class="icon-external-link"><span>(External link)</span></i>, along these lines:</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;sitemapindex&gt;
+&lt;sitemap&gt;https://exampleagency.gov/sitemap.xml?page=1&lt;/sitemap&gt;
+&lt;sitemap&gt;https://exampleagency.gov/sitemap.xml?page=2&lt;/sitemap&gt;
+&lt;/sitemapindex&gt;
+</code></pre>
+<p>Importantly, be sure that any <a href="https://www.sitemaps.org/protocol.html#escaping">special characters in your URLs are escaped</a>  <i class="icon-external-link"><span>(External link)</span></i> so the search engines will know how to read them.</p>
 
 <h2 id="what-metadata-does-searchgov-require-for-each-xml-sitemap-url">What metadata does Search.gov require for each XML sitemap URL?</h2>
+
 <p>The sitemap protocol defines <a href="https://www.sitemaps.org/protocol.html#xmlTagDefinitions">required and optional XML tags</a>  <i class="icon-external-link"><span>(External link)</span></i> for each URL. We recommend including the <code>&lt;lastmod&gt;</code> value (the date of last modification of the file) whenever possible, to indicate when a file has been updated and needs to be re-indexed.</p>
 
 <p>We do not have plans to support the <code>&lt;priority&gt;</code> tag, which is <a href="https://www.seroundtable.com/google-priority-change-frequency-xml-sitemap-20273.html">no longer used</a>  <i class="icon-external-link"><span>(External link)</span></i> by search engines like Google. We may support the <code>&lt;changefreq&gt;</code> tag in the future, but the <code>&lt;lastmod&gt;</code> tag is more accurate and supported by more search engines.</p>
 
 <h2 id="how-can-i-create-an-xml-sitemap">How can I create an XML sitemap?</h2>
+
 <p>Most content management systems provide tools to generate a sitemap and keep it updated. Below are some tools that we recommend:</p>
 
 <h3 id="drupal">Drupal</h3>
@@ -160,8 +283,9 @@
 <h3 id="online-generators">Online generators</h3>
 <p>(Note: free online generators often have a limit to the number of URLs they will include, and do not always generate the most accurate sitemaps. Use them only as a last resort.)</p>
 
-<p><a href="https://freesitemapgenerator.com">Free Sitemap Generator</a>  <i class="icon-external-link"><span>(External link)</span></i>
-<a href="http://www.web-site-map.com/">Web Sitemap</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+<p><a href="https://freesitemapgenerator.com">Free Sitemap Generator</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<p><a href="http://www.web-site-map.com/">Web Sitemap</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
 
 <h2 id="sitemap-checklist">Sitemap checklist</h2>
 <p><i class="icon-check"></i> 1. One or more sitemaps have been created</p>
@@ -180,13 +304,13 @@
 <p><a href="http://tools.seochat.com/tools/site-validator/">Sitemap validator</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
 
 <h2 id="more-questions">More questions?</h2>
-<p>If you have questions that aren’t answered here, <a href="mailto:search@support.digitalgov.gov">email us</a>. We’ll also keep updating this page over time</p>
+<p>If you have questions that aren’t answered here, <a href="mailto:search@support.digitalgov.gov">email us</a>. We’ll also keep updating this page over time.</p>
 
     </div>
 
     <div class='tags'>
       
-      <a href="/tagged/sitemaps,"><span class="label label-info">sitemaps,</span></a>
+      <a href="/tagged/sitemaps"><span class="label label-info">sitemaps</span></a>
       
       <a href="/tagged/indexing"><span class="label label-info">indexing</span></a>
       
@@ -197,7 +321,7 @@
       
       
       <a href="/blog/sitemaps.html">
-        <time datetime="2018-03-19">March 19, 2018</time>
+        <time datetime="2018-03-28">March 28, 2018</time>
       </a>
     </div>
     </article>

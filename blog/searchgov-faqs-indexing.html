@@ -4,7 +4,7 @@
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   
-  <title>Search.gov -- Index Transition FAQs</title>
+  <title>Search.gov&#58; Index Transition FAQs</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -97,18 +97,20 @@
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/blog/searchgov-faqs-indexing.html">Search.gov -- Index Transition FAQs</a>
+    <a href="/blog/searchgov-faqs-indexing.html">Search.gov&#58; Index Transition FAQs</a>
   </h1>
   
 
   <div class='post-content'>
-    <p>In FY18, we’ll be changing our name to Search.gov, and will transition from leveraging commercial engines for search results to serving results from our own indexes.</p>
+    <p><em>Updated March 2018</em></p>
 
-<p>We’ll be developing our own search indexes from your site content. We’ll accept content for real-time indexing via <a href="/developer/i14y.html">i14y</a> (1st option, preferred). We’ll also start indexing content from URL lists (2nd option).</p>
+<p>In FY18, we changed our name to Search.gov, and are transitioning from leveraging commercial engines for search results to serving results from our own indexes.</p>
+
+<p>We’re now developing our own search indexes from your site content. We will primarily be leveraging <a href="/blog/sitemaps.html">XML sitemaps</a> to discover your content (1st option, preferred). We’ll also accept content for real-time indexing via <a href="/developer/i14y.html">i14y</a> (2nd option).</p>
 
 <p>Other search features and your search results page will remain the same, and searchers should not notice a difference.</p>
 
-<p>We’ll work closely with you to make sure everything goes smoothly through the transition. Please view our <a href="/blog/searchgov-blog.html">blog post</a> for a more detailed explanation.</p>
+<p>We’ll work closely with you to make sure everything goes smoothly through the transition. Please view our <a href="/blog/six-months-in.html">recent status post</a> to learn more about the progress we’ve made, and you can <a href="/blog/searchgov-blog.html">read the original announcement</a> as well.</p>
 
 <p>We will update these FAQs with questions we hear from our customers.</p>
 
@@ -124,11 +126,17 @@
 
 <p><a href="#q-how-was-my-site-getting-results-before">Q: How was my site getting results before?</a></p>
 
-<p><a href="#q-why-are-you-changing-your-name">Q: Why are you changing your name?</a></p>
+<p><a href="#q-why-did-you-change-your-name">Q: Why did you change your name?</a></p>
 
 <h1 id="indexing">Indexing</h1>
 
 <p><a href="#q-how-will-you-index-my-site">Q: How will you index my site?</a></p>
+
+<p><a href="#q-how-often-will-you-update-my-index">Q: How often will you update my index?</a></p>
+
+<p><a href="#q-how-will-you-remove-items-from-the-index">Q: How will you remove items from the index?</a></p>
+
+<p><a href="#q-how-does-the-sitemap-control-my-search-results">Q: How does the sitemap control my search results?</a></p>
 
 <p><a href="#q-what-if-i-already-use-i14y-or-rss-to-send-content">Q: What if I already use i14y or RSS to send content?</a></p>
 
@@ -146,33 +154,35 @@
 
 <h2 id="q-what-do-i-need-to-do-in-this-new-model">Q: What do I need to do in this new model?</h2>
 
-<p>We’ll work with you to get your site sending content to i14y if you’re using a CMS, or you can provide us with an inventory of your URLs if you have a static site. If you’re unable to get a list of your URLs, we’ll want to discuss options with you.  See the indexing questions below for more information.</p>
+<p>We’ll work with you to get a good XML sitemap in place for your content, or set of sitemaps, as fits your use case. Sites using content management systems that are able to sent <em>all</em> content into an i14y drawer may investigate integrating with i14y. If you’re unable to do either of these things, we’ll want to discuss options with you.  See the indexing questions below for more information.</p>
 
 <h2 id="q-what-is-the-timeline-for-the-transition">Q: What is the timeline for the transition?</h2>
 
-<p>We’ll launch the first phase of the new index early in FY18. We are starting our outreach now, so that everyone has time to ask questions and get ready for the shift. We don’t yet have a hard deadline for getting everyone moved over, but we’re targeting early 2018.</p>
+<p>We launched the first phase of the new index in December 2017. We’ve reached the deadline Google had set for sunsetting their Site Search API, and are now disconnected from that service and supporting those searches from our own indexes. We continue to reach out to sites as we focus on indexing their content. We don’t have a hard deadline for getting everyone moved over, and are prioritizing high traffic search sites first for moving into our indexes. Over 90 search sites are already supported from our indexes.</p>
 
 <h2 id="q-what-do-i-need-to-do-today">Q: What do I need to do today?</h2>
 
 <p><em>CMS customers:</em></p>
 
-<p>We encourage you to set-up and test i14y as soon as possible.</p>
+<p>We encourage you to set-up and implement <a href="/blog/sitemaps.html">XML sitemaps</a> as soon as possible. Most content management systems have plugins that will facilitate creation of these sitemaps. Please also review your <a href="/blog/robotstxt.html">robots.txt file</a> to ensure the sitemaps are listed there, and that all the content you want searchable is allowed to be indexed.</p>
 
 <p><em>Non-CMS Customers:</em></p>
 
-<p>We encourage you to explore how you can compile a list of your site URLs. You do not need to send us any information yet.</p>
+<p>We encourage you to explore how you can publish an <a href="/blog/sitemaps.html">XML sitemap</a>. Please also review your <a href="/blog/robotstxt.html">robots.txt file</a> to ensure the sitemaps are listed there, and that all the content you want searchable is allowed to be indexed.</p>
 
 <h2 id="q-do-i-need-to-change-any-code-on-my-website">Q: Do I need to change any code on my website?</h2>
 
 <p>No: you do not need to update any code on your website. Indexing takes place in the backend of our system.</p>
 
+<p>We do ask that you publish <a href="/blog/sitemaps.html">XML sitemaps</a>, and update your <a href="/blog/robotstxt.html">robots.txt file</a>.</p>
+
 <h2 id="q-how-was-my-site-getting-results-before">Q: How was my site getting results before?</h2>
 
-<p>Since 2007, we have served search results from Bing’s index by default. We also use Google’s index to support certain Collections where Bing does not provide results.</p>
+<p>Since 2007, we served search results from Bing’s index by default. We also used Google’s index to support certain Collections where Bing does not provide results. We’re now serving these results from our own indexes, and are disconnected from Google.</p>
 
-<h2 id="q-why-are-you-changing-your-name">Q: Why are you changing your name?</h2>
+<h2 id="q-why-did-you-change-your-name">Q: Why did you change your name?</h2>
 
-<p>We’re changing our name to make things simpler. In the past, we’ve been FirstGov Search, FirstSearch, USAGov Search, USASearch, and most recently DigitalGov Search. Our new name is short, simple, and easy to remember.</p>
+<p>We changed our name to make things simpler. In the past, we’ve been FirstGov Search, FirstSearch, USAGov Search, USASearch, and most recently DigitalGov Search. Our new name is short, simple, and easy to remember.</p>
 
 <h1 id="indexing-1">Indexing</h1>
 
@@ -182,10 +192,10 @@
 
 <ul>
   <li>
-    <p><a href="https://search.digitalgov.gov/developer/i14y.html">i14y API</a> –  Our API allows you to update your search index in real-time. This is the preferred method.</p>
+    <p><a href="/blog/sitemaps.html">Structured URL list (XML sitemap)</a> – We will fetch and index the URLs that you provide on an XML sitemap, and will monitor your sitemaps for new content and updates over time. Our system will visit the URLs you provide and extract page titles, dates, and full text for indexing. You can post multiple sitemaps for content from different platforms - <a href="/blog/sitemaps.html">get the essential information about sitemaps here</a>. This is the preferred method.</p>
   </li>
   <li>
-    <p>URL list (coming in FY18) – If you can’t send us your content via i14y, then we will fetch and index the URLs that you provide. Our system will visit the URLs you provide and extract page titles, dates, and full text for indexing. You can use the URL indexing method in concert with i14y, for any non-CMS content.</p>
+    <p><a href="https://search.digitalgov.gov/developer/i14y.html">i14y API</a> –  Our API allows you to update your search index in real-time. Best for agencies with dedicated developer resources and single-platform publishing environments.</p>
   </li>
   <li>
     <p><a href="https://search.digitalgov.gov/manual/rss.html">RSS feed</a> – We will still accept RSS feeds to update your indexes on a rolling basis.</p>
@@ -194,38 +204,49 @@
 
 <p>If you’re unable to do any of the above, <a href="mailto:search@support.digitalgov.gov">contact us</a>, and we’ll discuss options.</p>
 
+<h2 id="q-how-often-will-you-update-my-index">Q: How often will you update my index?</h2>
+
+<p>If you have an XML sitemap, our default will be to monitor it daily for newly published or updated pages. If you have a need to have certain content searchable within minutes of publication, please <a href="mailto:search@support.digitalgov.gov">let us know</a>.</p>
+
+<h2 id="q-how-will-you-remove-items-from-the-index">Q: How will you remove items from the index?</h2>
+
+<p>We will be monitoring the status of pages in our index. If any start returning a <code>404 Not Found</code>, <code>403 Not Permitted</code>, <code>301 Permanent Redirect</code>, or other non-<code>200 OK</code> response, we will remove those items from the index. For redirects, we’ll update the index with information from the target page.</p>
+
+<p>Removing a page from the sitemap will not remove it from the search index. If the page is still publicly accessible and returning a <code>200</code> response, you can <a href="mailto:search@support.digitalgov.gov">contact us</a> to have it removed from the index, or you can use our <a href="/manual/filter-content.html">Filter URLs</a> feature to suppress the item from appearing in search results.</p>
+
+<h2 id="q-how-does-the-sitemap-control-my-search-results">Q: How does the sitemap control my search results?</h2>
+
+<p>It doesn’t! Sitemaps advertise to search engines what content is on a site that should be searchable. The Search.gov engine then brings that content into our index. Separately, the settings you manage in the Admin Center dictate how we should pull results from our index when people search for things on your site.</p>
+
 <h2 id="q-what-if-i-already-use-i14y-or-rss-to-send-content">Q: What if I already use i14y or RSS to send content?</h2>
 
 <p>If you have set up i14y already, or if you send your full site content via RSS, you do not have to change anything for the new model.</p>
 
 <h2 id="q-i-use-drupal-is-there-a-module-i-could-leverage">Q: I use Drupal, is there a module I could leverage?</h2>
 
-<p>Yes! For customers who use Drupal as their CMS, our <a href="https://www.drupal.org/project/usasearch">Drupal module</a> eliminates the need for programming effort around the i14y API. This module is available for both Drupal 7 and 8.</p>
+<p>Yes! For customers who use Drupal as their CMS, please install the <a href="https://www.drupal.org/project/xmlsitemap">XML Sitemaps module</a>.</p>
 
-<p>The module is open source. We welcome pull requests and code contributions that will improve the module and offer new features.</p>
+<p>We also have a <a href="https://www.drupal.org/project/usasearch">Drupal module</a> that can jumpstart a connection with the i14y indexing API. This module is available for both Drupal 7 and 8, but we’ve found that the module only supports about half of the Drupal publishing models in government.</p>
 
 <h2 id="q-what-if-i-have-content-in-my-cms-plus-files-stored-on-filesystems-such-as-pdfs">Q: What if I have content in my CMS plus files stored on filesystems (such as PDFs)?</h2>
 
-<p>If your site is on Drupal but you also have published material outside of Drupal (such as PDFs or old web pages), we’ll be able to search both CMS and non-CMS content together.</p>
+<p>If your site is in a CMS but you also have published material outside of the CMS (such as PDFs or old web pages), we’ll be able to search both CMS and non-CMS content together.</p>
 
-<p>You will need to send us non-CMS material as a list of URLs, while your Drupal content will come to us via the module. <em>Note:</em> PDFs count as non-CMS content even if they’re attached to Drupal nodes. Drupal doesn’t store the text of PDFs in its tables, so the module can’t send it to us.</p>
+<p>You will need to publish an XML sitemap of your non-CMS material, or you could manually add the content to your CMS-managed sitemap(s). <em>Note:</em> PDFs count as non-CMS content even if they’re attached within your CMS.</p>
 
-<h2 id="q-are-there-cms-integrations-available-other-than-drupal">Q: Are there CMS integrations available, other than Drupal?</h2>
+<h2 id="q-are-there-cms-sitemap-plugins-available-other-than-drupal">Q: Are there CMS sitemap plugins available, other than Drupal?</h2>
 
-<p>Our <a href="https://search.digitalgov.gov/developer/i14y.html">i14y API</a> is a listener ready to recieve content from any system. We developed a Drupal module because it is the most popular CMS in government and to increase the adoption of i14y.</p>
-
-<p>We have the beginning stages of a <a href="https://github.com/GSA/wp-digitalgov-i14y-indexer">WordPress plugin</a>, and welcome contributions to finish it up. If you’re able to develop an integration for your particular CMS, please make it open source, so other agencies can leverage it as well.</p>
+<p>Yes - see our <a href="/blog/sitemaps.html">XML Sitemaps overview page</a> for a more complete list of tools.</p>
 
 <h2 id="q-what-if-we-have-no-plans-for-a-cms">Q: What if we have no plans for a CMS?</h2>
 
-<p>You can send us a list of URLs for indexing.</p>
+<p>You can still create an XML sitemap, though you may need to update it manually, or develop a regular server job to keep it updated.</p>
 
-<h2 id="q-how-can-i-create-or-find-a-list-of-urls-for-my-site">Q: How can I create or find a list of URLs for my site?</h2>
+<h2 id="q-how-can-i-create-or-find-a-list-of-urls-for-my-site-to-build-a-sitemap">Q: How can I create or find a list of URLs for my site, to build a sitemap?</h2>
 
 <p>You should be able to run a command to export all of the URLs on your webserver, such as <code>ls</code> or <code>grep</code> or <code>dir</code>. Consult your friendly neighborhood server admin for assistance.</p>
 
 <p>Some sites have XML sitemaps that list URLs and files. Your sitemap may be incomplete, so you’ll want to review it.</p>
-
 
   </div>
 
@@ -241,7 +262,7 @@
     
     
     <a href="/blog/searchgov-faqs-indexing.html">
-      <time>September 22, 2017</time>
+      <time>March 28, 2018</time>
     </a>
   </div>
 
