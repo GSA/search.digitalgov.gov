@@ -100,6 +100,121 @@
   <article class="article">
 
     <pre><code>&lt;h1&gt;
+  &lt;a href="/blog/robotstxt.html"&gt;Robots.txt Files&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;p&gt;A &lt;code&gt;/robots.txt&lt;/code&gt; file is a text file that instructs automated web bots on how to crawl and/or index a website. Web teams use them to provide information about what site directories should or should not be crawled, how quickly content should be accessed, and which bots are welcome on the site.&lt;/p&gt;
+</code></pre>
+
+    <h2 id="what-should-my-robotstxt-file-look-like">What should my robots.txt file look like?</h2>
+    <p>Please refer to the <a href="http://www.robotstxt.org/robotstxt.html">robots.txt protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> for detailed information on how and where to create your robots.txt. Key points to keep in mind:</p>
+
+    <ul>
+  <li>The file must be located at the root of the domain, and each subdomain needs its own file.</li>
+  <li>The robots.txt protocol is case sensitive.</li>
+  <li>It’s easy to accidentally block indexing of everything
+    <ul>
+      <li><code>Disallow: /</code> means disallow everything</li>
+      <li><code>Disallow:  </code> means disallow nothing, thus allowing everything</li>
+      <li><code>Allow: /</code> means allow everything</li>
+      <li><code>Allow:  </code> means allow nothing, thus disallowing everything</li>
+    </ul>
+  </li>
+  <li>The instructions in robots.txt are guidance for bots, not binding requirements.</li>
+</ul>
+
+    <h2 id="how-can-i-optimize-my-robotstxt-for-searchgov">How can I optimize my robots.txt for Search.gov?</h2>
+
+    <h3 id="crawl-delay">Crawl delay</h3>
+    <p>A robots.txt file may specify a “crawl delay” directive for one or more user agents, which tells a bot how quickly it can request pages from a website. For example, a crawl delay of 10 specifies that a crawler should not request a new page more than every 10 seconds.  We recommend a crawl-delay of 2 seconds for our <code>usasearch</code> user agent, and setting a higher crawl delay for all other bots. The lower the crawl delay, the faster Search.gov will be able to index your site. In the robots.txt file, it would look like this:</p>
+
+    <pre><code>User-agent: usasearch  
+Crawl-delay: 2
+
+User-agent: *
+Crawl-delay: 10
+</code></pre>
+
+    <h3 id="xml-sitemaps">XML Sitemaps</h3>
+    <p>Your robots.txt file should also list one or more of your <a href="https://search.gov/blog/sitemaps.html">XML sitemaps</a>. For example:</p>
+
+    <pre><code>Sitemap: https://www.exampleagency.gov/sitemap.xml
+Sitemap: https://www.exampleagency.gov/independent-subsection-sitemap.xml
+</code></pre>
+    <ul>
+  <li>Only list sitemaps for the domain matching where the robots.txt file is. A different subdomain’s sitemap should be listed on that subdomain’s robots.txt.</li>
+</ul>
+
+    <h3 id="allow-only-the-content-that-you-want-searchable">Allow only the content that you want searchable</h3>
+    <p>We recommend disallowing any directories or files that should not be searchable. For example:</p>
+
+    <pre><code>Disallow: /archive/
+Disallow: /news-1997/
+Disallow: /reports/duplicative-page.html
+</code></pre>
+
+    <ul>
+  <li>Note that if you disallow a directory after it’s been indexed by a search engine, this will not trigger a removal of that content from the index. You’ll need to go into the search engine’s webmaster tools to request removal.</li>
+</ul>
+
+    <h3 id="customize-settings-for-different-bots">Customize settings for different bots</h3>
+    <p>You can set different permissions for different bots. For example, if you want us to index your archived content but don’t want Google or Bing to index it, you can specify that:</p>
+
+    <pre><code>User-agent: usasearch  
+Crawl-delay: 2
+Allow: /archive/
+
+User-agent: *
+Crawl-delay: 10
+Disallow: /archive/
+</code></pre>
+
+    <h2 id="robotstxt-checklist">Robots.txt checklist</h2>
+    <p><i class="icon-check"></i> 1. A robots.txt file has been created in the site’s root directory (<code>https://exampleagency.gov/robots.txt</code>)</p>
+
+    <p><i class="icon-check"></i> 2. The robots.txt file disallows any directories and files that automated bots should not crawl</p>
+
+    <p><i class="icon-check"></i> 3. The robots.txt file lists one or more <a href="https://search.gov/blog/sitemaps.html">XML sitemaps</a></p>
+
+    <p><i class="icon-check"></i> 4. The robots.txt file format has been <a href="http://tools.seochat.com/tools/robots-txt-validator/">validated</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+    <h2 id="additional-resources">Additional Resources</h2>
+    <p><a href="https://yoast.com/ultimate-guide-robots-txt/">Yoast SEO’s Ultimate Guide to Robots.txt</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+    <p><a href="https://support.google.com/webmasters/answer/6062608?hl=en&amp;ref_topic=6061961">Google’s “Learn about robots.txt files”</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/how-to"&gt;&lt;span class="label label-info"&gt;how-to&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/manage-content"&gt;&lt;span class="label label-info"&gt;manage-content&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/indexing"&gt;&lt;span class="label label-info"&gt;indexing&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
+  
+  
+  
+  
+  &lt;a href="/blog/robotstxt.html"&gt;
+    &lt;time datetime="2018-03-29"&gt;March 29, 2018&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
   &lt;a href="/blog/six-months-in.html"&gt;Six Months In&amp;#58; Lessons Learned in the Transition to Search.gov&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -1036,79 +1151,6 @@
   
   &lt;a href="/releases/january-2018.html"&gt;
     &lt;time datetime="2018-02-15"&gt;February 15, 2018&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/manual/routed-queries.html"&gt;Route Queries to a Specific Page&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;&lt;a href="/index.html"&gt;Search.gov Home&lt;/a&gt; &amp;gt; &lt;a href="https://search.usa.gov/sites/"&gt;Admin Center&lt;/a&gt; &amp;gt; YourSite &amp;gt; Manage Content &amp;gt; Routed Queries&lt;/p&gt;
-</code></pre>
-
-    <p>Do you want to get searchers to a specific web page as quickly as possible? Create a Routed Query.</p>
-
-    <p>A routed query skips the search results page and automatically directs visitors to a web page of your choice for very specific queries. Use query routing to save visitors the extra step of reading through search results links by taking them directly to your content pages.</p>
-
-    <p>We recommend creating a routed query for <a href="http://www.digitalgov.gov/2015/02/06/top-task-usability-design-for-your-users/">top tasks</a> that have a good content page but less-than-ideal search results.</p>
-
-    <h2 id="add-a-routed-query">Add a Routed Query</h2>
-
-    <p><strong><em>Routed Query URL.</em></strong> Add the URL of the web page that you want to direct visitors to.</p>
-
-    <p><strong><em>Routed Query Description.</em></strong> Add a brief description to help you remember why you created this entry and what it does. Descriptions aren’t used for indexing or visible to searchers.</p>
-
-    <p><strong><em>Keywords.</em></strong> Add the specific words or phrases used to trigger the routing. Searchers will only be directed to the URL above when their query term exactly matches one of the listed keywords. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.</p>
-
-    <p><em>Note</em>: Any keyword that you add to a Routed Query will become a permanent <a href="/manual/typeahead-api.html">type-ahead suggestion</a>. This applies to all 3 ways that type-ahead suggestions are displayed from our system: the module that can be turned on in the <a href="/manual/display-overview.html#modules">Display Overview section</a>, the <a href="/manual/typeahead-api.html">JavaScript snippet</a>, and the <a href="/manual/typeahead-api.html">API</a>. If you do not want certain keywords to appear as type-ahead suggestions, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
-
-    <h2 id="examples-of-how-it-works">Examples of How It Works</h2>
-
-    <p>Private industry has been using query routing for some time. If you go to <a href="http://www.homedepot.com/">Home Depot</a> <i class="icon-external-link"><span>(External link)</span></i> and search for a general term like <em>carpet</em>, you’re routed to their carpet navigation page. If you search for a more specific term like <em>vanities</em>, you get standard search results.</p>
-
-    <p>Using USA.gov an as example, every time someone goes to <a href="https://www.usa.gov">USA.gov</a> and searches for any of the following terms (must be exact matches), they’ll automatically be directed to the USA.gov <a href="https://www.usa.gov/unclaimed-money">Unclaimed Money from the Government</a> page.</p>
-
-    <ul>
-  <li>missing money</li>
-  <li>unclaimed assets</li>
-  <li>unclaimed funds</li>
-  <li>unclaimed money</li>
-  <li>unclaimed money in my name</li>
-  <li>unclaimed property</li>
-</ul>
-
-    <p>If they get routed to the <a href="https://www.usa.gov/unclaimed-money">Unclaimed Money from the Government</a> and search again for one of these terms, they’ll get the standard list of search results. We won’t take people in an endless loop.</p>
-
-    <p>If they search for something not on the above list, like <em>show me missing money</em>, they’ll still get the normal search results.</p>
-
-    <p><img src="/img/unclaimed-money.png" alt="Standard search results for 'I am looking for unclaimed money' on USA.gov" height="95%" width="95%" /></p>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/help-manual"&gt;&lt;span class="label label-info"&gt;help-manual&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/manage-content"&gt;&lt;span class="label label-info"&gt;manage-content&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/routed-queries"&gt;&lt;span class="label label-info"&gt;routed-queries&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/manual/routed-queries.html"&gt;
-    &lt;time datetime="2018-02-09"&gt;February 9, 2018&lt;/time&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 </code></pre>

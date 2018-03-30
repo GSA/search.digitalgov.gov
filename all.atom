@@ -3,10 +3,97 @@
   <title><![CDATA[Search.gov]]></title>
   <link href="https://search.gov/all.atom" rel="self"/>
   <link href="https://search.gov/"/>
-  <updated>2018-03-29T20:39:08+00:00</updated>
+  <updated>2018-03-30T03:15:08+00:00</updated>
   <id>https://search.gov/</id>
   <author><name><![CDATA[Search.gov]]></name></author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Robots.txt Files]]></title>
+    <link href="https://search.gov/blog/robotstxt.html"/>
+    <updated>2018-03-29T00:00:00+00:00</updated>
+    <id>https://search.gov/blog/robotstxt.html</id>
+    <content type="html"><![CDATA[<p>A <code>/robots.txt</code> file is a text file that instructs automated web bots on how to crawl and/or index a website. Web teams use them to provide information about what site directories should or should not be crawled, how quickly content should be accessed, and which bots are welcome on the site.</p>
+
+<h2 id="what-should-my-robotstxt-file-look-like">What should my robots.txt file look like?</h2>
+<p>Please refer to the <a href="http://www.robotstxt.org/robotstxt.html">robots.txt protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> for detailed information on how and where to create your robots.txt. Key points to keep in mind:</p>
+
+<ul>
+  <li>The file must be located at the root of the domain, and each subdomain needs its own file.</li>
+  <li>The robots.txt protocol is case sensitive.</li>
+  <li>It’s easy to accidentally block indexing of everything
+    <ul>
+      <li><code>Disallow: /</code> means disallow everything</li>
+      <li><code>Disallow:  </code> means disallow nothing, thus allowing everything</li>
+      <li><code>Allow: /</code> means allow everything</li>
+      <li><code>Allow:  </code> means allow nothing, thus disallowing everything</li>
+    </ul>
+  </li>
+  <li>The instructions in robots.txt are guidance for bots, not binding requirements.</li>
+</ul>
+
+<h2 id="how-can-i-optimize-my-robotstxt-for-searchgov">How can I optimize my robots.txt for Search.gov?</h2>
+
+<h3 id="crawl-delay">Crawl delay</h3>
+<p>A robots.txt file may specify a “crawl delay” directive for one or more user agents, which tells a bot how quickly it can request pages from a website. For example, a crawl delay of 10 specifies that a crawler should not request a new page more than every 10 seconds.  We recommend a crawl-delay of 2 seconds for our <code>usasearch</code> user agent, and setting a higher crawl delay for all other bots. The lower the crawl delay, the faster Search.gov will be able to index your site. In the robots.txt file, it would look like this:</p>
+
+<pre><code>User-agent: usasearch  
+Crawl-delay: 2
+
+User-agent: *
+Crawl-delay: 10
+</code></pre>
+
+<h3 id="xml-sitemaps">XML Sitemaps</h3>
+<p>Your robots.txt file should also list one or more of your <a href="https://search.gov/blog/sitemaps.html">XML sitemaps</a>. For example:</p>
+
+<pre><code>Sitemap: https://www.exampleagency.gov/sitemap.xml
+Sitemap: https://www.exampleagency.gov/independent-subsection-sitemap.xml
+</code></pre>
+<ul>
+  <li>Only list sitemaps for the domain matching where the robots.txt file is. A different subdomain’s sitemap should be listed on that subdomain’s robots.txt.</li>
+</ul>
+
+<h3 id="allow-only-the-content-that-you-want-searchable">Allow only the content that you want searchable</h3>
+<p>We recommend disallowing any directories or files that should not be searchable. For example:</p>
+
+<pre><code>Disallow: /archive/
+Disallow: /news-1997/
+Disallow: /reports/duplicative-page.html
+</code></pre>
+
+<ul>
+  <li>Note that if you disallow a directory after it’s been indexed by a search engine, this will not trigger a removal of that content from the index. You’ll need to go into the search engine’s webmaster tools to request removal.</li>
+</ul>
+
+<h3 id="customize-settings-for-different-bots">Customize settings for different bots</h3>
+<p>You can set different permissions for different bots. For example, if you want us to index your archived content but don’t want Google or Bing to index it, you can specify that:</p>
+
+<pre><code>User-agent: usasearch  
+Crawl-delay: 2
+Allow: /archive/
+
+User-agent: *
+Crawl-delay: 10
+Disallow: /archive/
+</code></pre>
+
+<h2 id="robotstxt-checklist">Robots.txt checklist</h2>
+<p><i class="icon-check"></i> 1. A robots.txt file has been created in the site’s root directory (<code>https://exampleagency.gov/robots.txt</code>)</p>
+
+<p><i class="icon-check"></i> 2. The robots.txt file disallows any directories and files that automated bots should not crawl</p>
+
+<p><i class="icon-check"></i> 3. The robots.txt file lists one or more <a href="https://search.gov/blog/sitemaps.html">XML sitemaps</a></p>
+
+<p><i class="icon-check"></i> 4. The robots.txt file format has been <a href="http://tools.seochat.com/tools/robots-txt-validator/">validated</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<h2 id="additional-resources">Additional Resources</h2>
+<p><a href="https://yoast.com/ultimate-guide-robots-txt/">Yoast SEO’s Ultimate Guide to Robots.txt</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<p><a href="https://support.google.com/webmasters/answer/6062608?hl=en&amp;ref_topic=6061961">Google’s “Learn about robots.txt files”</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Six Months In&#58; Lessons Learned in the Transition to Search.gov]]></title>
