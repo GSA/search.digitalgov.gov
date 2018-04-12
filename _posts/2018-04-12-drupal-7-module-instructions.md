@@ -5,6 +5,8 @@ category: manual
 tags: drupal, i14y
 ---
 
+> **Important Note:** April, 2018. For new implementations, the Search.gov team recommends you index your content with us not using our Drupal module to send content to our i14y indexing API, but rather by publishing a comprehensive XML sitemap, which we can use to index your content. We recommend the [XML Sitemap module](https://www.drupal.org/project/xmlsitemap){% external_link %}. [Read more.](/blog/six-months-in.html)
+
 This documentation will walk you through setting up the `usasearch` [Drupal 7 module](https://drupal.org/project/usasearch){% external_link %} field by field, to integrate your Drupal CMS with the Search.gov service. If you have trouble, take a look at our [troubleshooting tips](/manual/drupal-module-troubleshooting.html). 
 
 These instructions follow the order of settings listed in our Drupal module at `YOUR-DRUPAL-7-SITE.gov/admin/config/search/usasearch`.

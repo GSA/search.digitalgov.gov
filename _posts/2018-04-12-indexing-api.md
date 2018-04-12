@@ -7,6 +7,8 @@ tags: i14y api
 
 [Search.gov Home](/index.html) > [APIs for Developers](/developer/index.html) > i14y API
 
+> **Important Note:** April, 2018. i14y does not visit your content to do full-text scraping of your content. For new implementations, the Search.gov team recommends you index your content with us not using the i14y API, but rather by publishing a comprehensive xml sitemap, which we can use to index your content. [Read more.](/blog/six-months-in.html)
+
 [i14y Github repo](https://github.com/GSA/i14y){% external_link %}
 
 ## What is i14y?

@@ -5,6 +5,8 @@ category: manual
 tags: drupal, i14y
 ---
 
+> **Important Note:** April, 2018. For new implementations, the Search.gov team recommends you index your content with us not using our Drupal module to send content to our i14y indexing API, but rather by publishing a comprehensive XML sitemap, which we can use to index your content. We recommend the [XML Sitemap module](https://www.drupal.org/project/xmlsitemap){% external_link %}. [Read more.](/blog/six-months-in.html)
+
 If you have installed the `usasearch` [Drupal module](https://drupal.org/project/usasearch){% external_link %} to integrate your Drupal CMS with the Search.gov service but are having trouble, the following suggestions should help you identify where the problem is. If after working through these items you still have questions, [reach out to our team](mailto:search@support.digitalgov.gov) and, though we're not Drupal experts, we can try to help. 
 
 <a href="#search-errors">Skip to Search error troubleshooting tips</a>
