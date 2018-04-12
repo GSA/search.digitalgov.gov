@@ -103,6 +103,98 @@
  
     
     <h1>
+      <a href="/manual/domains.html">How to Edit Your Domains</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Domains</p>
+
+<p>Enter the applicable domains, subdomains, or folders to return results specific to your website. You do not need to include http:// as we recognize domains with or without it.</p>
+
+<h2 id="entire-sites">Entire Site(s)</h2>
+
+<ul>
+  <li>List yoursite.gov (without www) to search your entire site, including all subdomains.</li>
+  <li>List yoursite.gov and yoursite2.gov to search multiple sites.</li>
+</ul>
+
+<h2 id="specific-subdomains">Specific Subdomains</h2>
+
+<ul>
+  <li>List www.yoursite.gov to include only the primary ‘www’ domain.</li>
+  <li>List subdomain.yoursite.gov to include subdomains.</li>
+</ul>
+
+<h2 id="specific-directories">Specific Directories</h2>
+
+<p>List yoursite.gov/folder to include folders. Note: this will include all sub-folders (if they exist), i.e. yoursite.gov/folder/folder2.</p>
+
+<p>You cannot specify individual URLs.</p>
+
+<p>Searches that start three or more subfolders deep cannot use our default configuration. <a href="mailto:search@support.digitalgov.gov">Email us</a> for assistance.</p>
+
+<hr />
+
+<p><strong><em>Troubleshooting Tip:</em></strong> You can <em>exclude</em> specific subdomains or folders using any of the following options.</p>
+
+<ol>
+  <li>
+    <p>List the excluded subdomains or folders in your <a href="http://www.robotstxt.org">robots.txt</a> <i class="icon-external-link"><span>(External link)</span></i> file. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p>
+  </li>
+  <li>
+    <p>Exclude them by omission. For example, to exclude subdomain3, list only subdomain1.yoursite.gov, subdomain2.yoursite.gov, and subdomain4.yoursite.gov.</p>
+  </li>
+  <li>
+    <p>Email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> to filter them from your site’s search results. Note that this option should be used only if the other options aren’t feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p>
+  </li>
+</ol>
+
+<p><a id="filter"></a><strong><em>Troubleshooting Tip:</em></strong> You can remove or filter specific URLs using any of the following options.</p>
+
+<ol>
+  <li>
+    <p>Remove the page from your site and return a 404 (Not Found) 401 (Gone), or 301 (Permanently Moved) HTTP status.</p>
+  </li>
+  <li>
+    <p>Add a <a href="https://developers.google.com/webmasters/control-crawl-index/docs/robots_meta_tag?csw=1">noindex robots metatag or x-robots tag</a> <i class="icon-external-link"><span>(External link)</span></i>. This blocks them from all crawlers that follow the robots exclusion protocol, including Google.com and Bing.com.</p>
+  </li>
+  <li>
+    <p>Request the page’s removal using the <a href="http://www.bing.com/webmaster/help/block-urls-from-bing-264e560a">Block URLs option in Bing Webaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/1663419">Remove URLs option in Google Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
+  </li>
+  <li>
+    <p>Use the <a href="/manual/filter-content.html">Filter URLs</a> option under the Advanced tab. Note that this option should be used only if the other options aren’t feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.</p>
+  </li>
+</ol>
+
+<p><strong><em>Troubleshooting Tip:</em></strong> Are specific web pages missing from your Bing web results? You can tell us about any missing URLs via an RSS feed or manually (the Supplemental Feed and Supplemental URLs options under the <a href="/manual/domains-advanced.html">Advanced</a> tab, respectively). We’ll fetch and index the pages and append them to your web results.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/domains"><span class="label label-info">domains</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/domains.html">
+        <time datetime="2017-04-18">April 18, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/filter-content.html">Filtering URLs</a>
     </h1>
     
@@ -580,84 +672,6 @@ Keyword 4: market value
       
       <a href="/manual/best-bets-graphics.html">
         <time datetime="2016-12-07">December 7, 2016</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/developer/i14y-testing.html">cURL Commands for i14y Testing</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>If you experience difficulty sending documents to our index via <a href="/developer/i14y.html">i14y</a>, it is possible your firewall is not letting you communicate with the i14y server. Adding a test document to your i14y drawer can help you diagnose a firewall issue.
-Windows users may need to <a href="https://curl.haxx.se/download.html">install cURL</a> <i class="icon-external-link"><span>(External link)</span></i> in order to run this test from the command line.</p>
-
-<h2 id="adding-the-test-document">Adding the Test Document</h2>
-
-<p>From the command line, enter:</p>
-
-<pre><code>curl "https://i14y.usa.gov/api/v1/documents" -XPOST -H "Content-Type:application/json" -u your_drawer_handle:your_secret_token -d '{"document_id":"1", "title":"Test Document", "path": "http://www.gov.gov/cms/doc1.html", "created": "2015-05-12T22:35:09Z", "description":"The summary of the document goes here.", "content":"This is placeholder text, and in a real document would be paragraphs long.", "promote": false, "language" : "en", "tags" : "tag1, another tag"}'
-</code></pre>
-
-<p>Note: you need to replace <strong>your_drawer_handle</strong> with your i14y drawer handle, found in the i14y drawers section in the Search Admin Center (<a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers). You will also need to replace <strong>your_secret_token</strong> with the drawer’s secret token, which can be found by hitting “Show” in the 14y drawer list. The drawer handle and token should be separated by a colon (:) with no spaces on either side of the colon.</p>
-
-<p>The above command returns JSON structured like this:</p>
-
-<pre><code>{
-"status":200,
-"developer_message":"OK",
-"user_message":"Your document was successfully created."
-}
-</code></pre>
-
-<p>If you do not see a 200 status, <a href="mailto:search@support.digitalgov.gov">contact our team</a>.</p>
-
-<p>After successfully sending a document, you should see an increase (by 1) in the number of documents in your <a href="/manual/i14y-drawers.html">i14y drawer</a>.</p>
-
-<h2 id="removing-the-test-document">Removing the Test Document</h2>
-
-<p>Once you have successfully added the test document to your drawer, you will need to delete it, or it will appear in your site’s search results.</p>
-
-<p>From the command line, enter:</p>
-
-<pre><code>curl "https://i14y.usa.gov/api/v1/documents/1" -XDELETE -u your_drawer_handle:your_secret_token
-</code></pre>
-
-<p>The above command returns JSON structured like this:</p>
-
-<pre><code>{
-"status":200,
-"developer_message":"OK",
-"user_message":"Your document was successfully deleted."
-}
-</code></pre>
-
-<hr />
-
-<p><strong><em>Resources:</em></strong> Read tips on <a href="/developer/i14y.html">Getting Started With i14y</a>, or view the full <a href="/developer/indexing-api.html">i14y technical documentation</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/i14y"><span class="label label-info">i14y</span></a>
-      
-      <a href="/tagged/api"><span class="label label-info">api</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/developer/i14y-testing.html">
-        <time datetime="2016-08-02">August 2, 2016</time>
       </a>
     </div>
     </article>

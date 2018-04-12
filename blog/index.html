@@ -100,6 +100,834 @@
   <article class="article">
 
     <pre><code>&lt;h1&gt;
+  &lt;a href="/blog/redesign.html"&gt;Checklist for a Successful Website Redesign&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;p&gt;We often receive questions when an agency conducts a major website upgrade, changes content management systems, or both. We created this checklist that will help ensure your redesign is successful.&lt;/p&gt;
+</code></pre>
+
+    <h2 id="reindexing">Reindexing</h2>
+
+    <ol>
+  <li>Keep the file name and directory structure the same, if possible. If it isn’t possible, use 301 redirects to send visitors to the appropriate new pages. For more on 301 redirects, read tips from <a href="http://blogs.bing.com/webmaster/2011/10/06/managing-redirects-301s-302s-and-canonicals/">Bing</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/93633">Google</a> <i class="icon-external-link"><span>(External link)</span></i>. Notify other websites that link to you of the changes.</li>
+  <li>Register for the commercial search engines’ webmaster tools.
+    <ul>
+      <li><a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i></li>
+      <li><a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i> (now called Google Search Console)</li>
+    </ul>
+  </li>
+  <li>Update the <a href="/blog/sitemaps.html">XML sitemap</a> on your website and notify the search engines via webmaster tools.</li>
+  <li>Notify the search engines of content that has been removed via the webmaster tools. Specifically, in Bing, use the <a href="https://www.bing.com/webmaster/help/how-to-use-the-site-move-tool-bb8f5112">Site Move tool</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
+</ol>
+
+    <h2 id="search-setup">Search Setup</h2>
+    <ol>
+  <li>Within the <a href="https://search.usa.gov/sites/">Search Admin Center</a>:
+    <ul>
+      <li>Update the paths for your <a href="/manual/domains.html">Domains</a> and <a href="/manual/collections.html">Collections</a>, if needed.</li>
+      <li>Upload a <a href="/manual/brand.html">new logo and update your colors</a>, if needed.</li>
+      <li>Create <a href="/manual/best-bets.html">Best Bets</a> for any important pages that Bing and Google are slow to re-index.</li>
+      <li>Add a <a href="/manual/system-alert.html">Search Page Alert</a> to let people know about your redesign and its impact on search.</li>
+    </ul>
+  </li>
+  <li>If you are transitioning your website to HTTPS, we have an additional <a href="/manual/https-transition.html">Preparing Your Site for HTTPS</a> checklist.</li>
+</ol>
+
+    <p>If you’ve undergone a redesign, followed these steps, and your site search results are not what you’d expect, <a href="mailto:search@support.digitalgov.gov">send us an email</a>.</p>
+
+    <hr />
+
+    <p><strong><em>Additional Resource:</em></strong></p>
+
+    <ul>
+  <li><em><a href="http://googlewebmastercentral.blogspot.com/2012/04/how-to-move-your-content-to-new.html">How to move your content to a new location</a></em> <i class="icon-external-link"><span>(External link)</span></i>, Google Webmaster Central Blog</li>
+</ul>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/seo"&gt;&lt;span class="label label-info"&gt;seo&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/blog/redesign.html"&gt;
+    &lt;time datetime="2018-04-12"&gt;April 12, 2018&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
+  &lt;a href="/developer/indexing-api.html"&gt;i14y Content Indexing API Documentation&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;p&gt;&lt;a href="/index.html"&gt;Search.gov Home&lt;/a&gt; &amp;gt; &lt;a href="/developer/index.html"&gt;APIs for Developers&lt;/a&gt; &amp;gt; i14y API&lt;/p&gt;
+</code></pre>
+
+    <blockquote>
+      <p><strong>Important Note:</strong> April, 2018. i14y does not visit your content to do full-text scraping of your content. For new implementations, the Search.gov team recommends you index your content with us not using the i14y API, but rather by publishing a comprehensive xml sitemap, which we can use to index your content. <a href="/blog/six-months-in.html">Read more.</a></p>
+    </blockquote>
+
+    <p><a href="https://github.com/GSA/i14y">i14y Github repo</a> <i class="icon-external-link"><span>(External link)</span></i></p>
+
+    <h2 id="what-is-i14y">What is i14y?</h2>
+
+    <p>The Search.gov i14y Content Indexing API allows you to send content directly from your content management system (CMS) into Search.gov for real-time indexing. By hooking into your CMS workflow, you can immediately create, update, and delete the associated documents in our search indexes via this API. Even if you don’t have a CMS, you can develop software to publish your content in a way that meets the i14y API specifications below.</p>
+
+    <p>Ruby/Python/Node clients are welcome.</p>
+
+    <h2 id="before-you-begin">Before you Begin</h2>
+
+    <ol>
+  <li>Set-up a search site with our service via 
+<a href="https://search.gov">Search.gov</a></li>
+  <li>Request that your search site be enabled for i14y by <a href="mailto:search@support.digitalgov.gov">emailing our team</a>.</li>
+  <li>Set up an i14y “drawer” in our system. <a href="https://search.gov/manual/i14y-drawers.html">Full instructions</a> are available in our help manual. You’ll give your drawer a handle, and you’ll need to enter this drawer handle in the username field below after you click the Authorize button.</li>
+  <li>Get your i14y secret token. You’ll need to enter this token as your password.
+The token can be found in our system in: <a href="https://search.usa.gov/sites">Search Admin Center</a> &gt; Manage Content &gt; i14y Drawers, select the option Show.</li>
+</ol>
+
+    <p><em>Note:</em> If you are a developer who doesn’t have access to our site configurations, please <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
+
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
+  <defs>
+    <symbol viewBox="0 0 20 20" id="unlocked">
+          <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="locked">
+      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z" />
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="close">
+      <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z" />
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow">
+      <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z" />
+    </symbol>
+
+    <symbol viewBox="0 0 20 20" id="large-arrow-down">
+      <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z" />
+    </symbol>
+
+
+    <symbol viewBox="0 0 24 24" id="jump-to">
+      <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z" />
+    </symbol>
+
+    <symbol viewBox="0 0 24 24" id="expand">
+      <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z" />
+    </symbol>
+
+  </defs>
+</svg>
+
+    <link rel="stylesheet" type="text/css" href="/files/swagger-ui.css" />
+
+    <div id="swagger-ui"></div>
+
+    <script src="/files/swagger-ui-bundle.js"> </script>
+
+    <script src="/files/swagger-ui-standalone-preset.js"> </script>
+
+    <script>
+window.onload = function() {
+  
+  // Build a system
+  const ui = SwaggerUIBundle({
+    url: "https://search.gov/files/i14y_swagger.json",
+    dom_id: '#swagger-ui',
+    deepLinking: true,
+    presets: [
+      SwaggerUIBundle.presets.apis,
+      SwaggerUIStandalonePreset
+    ],
+    plugins: [
+      SwaggerUIBundle.plugins.DownloadUrl
+    ],
+    layout: "StandaloneLayout"
+  })
+
+  window.ui = ui
+}
+</script>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/i14y"&gt;&lt;span class="label label-info"&gt;i14y&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/api"&gt;&lt;span class="label label-info"&gt;api&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/developer/indexing-api.html"&gt;
+    &lt;time datetime="2018-04-12"&gt;April 12, 2018&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
+  &lt;a href="/developer/i14y.html"&gt;Getting Started with i14y&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;p&gt;&lt;a href="/index.html"&gt;Search.gov Home&lt;/a&gt; &amp;gt; &lt;a href="/developer/index.html"&gt;APIs for Developers&lt;/a&gt; &amp;gt; i14y API&lt;/p&gt;
+</code></pre>
+
+    <blockquote>
+      <p><strong>Important Note:</strong> April, 2018 - For new implementations, the Search.gov team recommends you index your content with us not using the i14y API, but rather by publishing a comprehensive xml sitemap, which we can use to index your content. <a href="/blog/six-months-in.html">Read more.</a></p>
+    </blockquote>
+
+    <p><a href="https://github.com/GSA/i14y">i14y Github repo</a> <i class="icon-external-link"><span>(External link)</span></i></p>
+
+    <p><a href="/developer/indexing-api.html">Technical Documentation</a></p>
+
+    <h2 id="what-is-i14y">What is i14y?</h2>
+
+    <p>i14y is a content indexing API that allows you to send your content directly to our indexes. When your site is enabled for i14y, it gives you complete control over what searchers see. No commercial web results will be served: instead, searchers will see content exactly as you’ve sent it to us.</p>
+
+    <h2 id="how-do-i-use-i14y">How Do I Use i14y?</h2>
+
+    <p>We currently have a <a href="http://www.drupal.org/project/usasearch">Drupal module</a> <i class="icon-external-link"><span>(External link)</span></i> that will hook your CMS into i14y. You can also check out our <a href="/manual/drupal.html">help docs for working with the Drupal module</a>.</p>
+
+    <p>If you use a different CMS, or don’t have one at all, we recommend you focus on publishing a comprehensive <a href="/blog/sitemaps.html">xml sitemap</a>, which we would leverage to index your content.</p>
+
+    <p><strong>Important Note:</strong> i14y does not visit your content to do full-text scraping of your content. For new implementations, the Search.gov team recommends you index your content with us not using the i14y API, but rather by publishing a comprehensive xml sitemap, which we can use to index your content. <a href="/blog/six-months-in.html">Read more.</a></p>
+
+    <h2 id="checklist-to-go-live-with-i14y">Checklist to Go Live with i14y</h2>
+
+    <h3 id="step-1-connect-one-of-your-sites-to-i14y">Step 1. Connect one of your sites to i14y</h3>
+
+    <p>i14y needs to be enabled in the back end for a site to be able to receive content through it. You can</p>
+
+    <ul>
+  <li><a href="/manual/add-site.html">Add a brand new search site</a>,</li>
+  <li>Use the Clone Site tool to copy one of your existing site’s settings to a new site (<code>YourSite &gt; Dashboard &gt; Clone Site</code>), or</li>
+  <li>use an existing site.</li>
+</ul>
+
+    <p><a href="mailto:search@support.digitalgov.gov">Email us</a> and let us know which site you want enabled for i14y. Please note: once we turn on i14y for a site, we no longer serve search results from a commercial web index. Therefore, we recommend that you set up a test site for i14y, so that your customers will continue to get results until you are fully set up and ready to move your i14y index to your production search site.</p>
+
+    <h3 id="step-2-add-a-drawer">Step 2. Add a Drawer</h3>
+
+    <p>An i14y Drawer is an index receiving content via the i14y API. We’ve called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
+
+    <p>After we have enabled i14y for your search site, a new page will appear: <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers.</p>
+
+    <p>Click <code>Add i14y Drawer</code> in the upper right corner. Create a handle for your drawer - the handle must be all lowercase alphanumeric, all one word, and can include underscores but no other special characters (e.g., agency_drawer_handle2).</p>
+
+    <p>The Drawer <em>Description</em> is optional.</p>
+
+    <p>If you have more than one website or domain that will be sending content, add a separate Drawer for each of these sites. We also recommend setting up separate drawers for staging or test content, so you can easily remove that content from your search site when you are ready to go live.</p>
+
+    <h3 id="step-3-fill-your-drawer">Step 3. Fill your Drawer</h3>
+
+    <p>After you have created your Drawer(s), click <code>Show</code> from the i14y Drawers list to find that Drawer’s secret API key. Use this secret key with your drawer handle in your API call or your CMS module to send your content to the right place.</p>
+
+    <p>You are now ready to add content to your drawer. You can do this in two ways:</p>
+
+    <ul>
+  <li>Use i14y directly. View our <a href="https://github.com/GSA/i14y">Github repo</a> <i class="icon-external-link"><span>(External link)</span></i> or <a href="/developer/indexing-api.html">Technical Documentation</a> for more information.</li>
+  <li>Use a module plugged into your CMS. At this time there is a <a href="https://www.drupal.org/project/usasearch">Drupal module</a> <i class="icon-external-link"><span>(External link)</span></i> available. Help docs for the module are <a href="/manual/drupal.html">here</a>.</li>
+  <li><strong>Important Note:</strong> i14y does not visit your content to do full-text scraping of your content. For new implementations, the Search.gov team recommends you index your content with us not using the i14y API, but rather by publishing a comprehensive xml sitemap, which we can use to index your content. <a href="/blog/six-months-in.html">Read more.</a></li>
+</ul>
+
+    <h3 id="step-4-review-your-index">Step 4. Review your index</h3>
+
+    <p>You can view the number of documents indexed for each drawer on the main i14y Drawers list, and when the most recent document was received. Click <code>Show</code> to view documents within a particular drawer. We display the most recent 1,000 items that were sent to the drawer. You can also search for keywords in the documents’ text, titles, and descriptions (Note: you cannot currently search for URLs).</p>
+
+    <p><strong>Note:</strong> We use the <a href="/manual/domains.html">Domains</a> section to scope search results - if the domain(s) of your i14y content are not listed in the Domains section, that content will not appear on your search results page.</p>
+
+    <p>We send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
+
+    <p>If you experience difficulty sending documents to i14y, it is possible your firewall is not letting you communicate with the i14y server. Check out our <a href="/developer/i14y-testing.html">cURL test commands</a> or view the full <a href="/developer/indexing-api.html">i14y documentation</a>.</p>
+
+    <p>We can attach each i14y drawer to multiple search configurations: if you have a drawer that you’d like to use for multiple search sites, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
+
+    <p><strong><em>Caution:</em></strong> A pop-up message will appear when you hit <code>Remove</code> on a drawer: please review this pop-up message carefully. If you remove a drawer that is only associated with one search configuration, the drawer and its contents will be deleted from our system. If the drawer is attached to multiple search configurations, it will only be removed from the search configuration you are currently on. The pop-up message will indicate what type of drawer you have.</p>
+
+    <p>If you accidentally delete a drawer, you will need to set-up a new drawer and resend the content - we are unable to retrieve deleted drawers. If you accidentally remove a shared drawer but it is still associated with other search configurations, we can re-attach it to your site. <a href="mailto:search@support.digitalgov.gov">Contact us</a> for assistance.</p>
+
+    <h3 id="step-5-configure-your-search">Step 5. Configure your search</h3>
+
+    <p>Once you have your index populated, you will <a href="/manual/content-overview.html">set up the rest of your search</a> as you would for a traditional Search.gov site:</p>
+    <ul>
+  <li>Set your default search scope on your <a href="/manual/domains.html">Domains</a> page. Use the <a href="/manual/filter-tags.html">Filter Tags</a> feature to further scope your search results.</li>
+  <li>Add social media accounts: <a href="/manual/flickr.html">Flickr</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a></li>
+  <li>Create <a href="/manual/collections.html">Collections</a> and <a href="/manual/best-bets.html">Best Bets</a></li>
+  <li>Select your display settings (both <a href="/manual/display-overview.html">search features</a> and <a href="/manual/brand.html">branding</a>).</li>
+</ul>
+
+    <p>If you have any <a href="/manual/rss.html">RSS content</a> that will not be sent to your i14y drawer, you can add those feeds as well.</p>
+
+    <h3 id="step-6-update-your-search-box">Step 6. Update your search box</h3>
+
+    <p>Update your website’s search box <a href="/manual/code.html">form code</a> to point to <code>affiliate=youri14yenabledsitehandle</code>.</p>
+
+    <h3 id="terms-of-use">Terms of Use</h3>
+
+    <p>By accessing the i14y API, you agree to <a href="https://www.usa.gov/About/developer-resources/terms-of-service.shtml">USA.gov’s Terms of Service for Developer Resources</a>.</p>
+
+    <hr />
+
+    <p><strong><em>Did you know?</em></strong> i14y is hacker shorthand for “interoperability”, because there are 14 characters between the first and last letters. i14y can also be shorthand for Independence Day.</p>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/i14y"&gt;&lt;span class="label label-info"&gt;i14y&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/api"&gt;&lt;span class="label label-info"&gt;api&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/manage-content"&gt;&lt;span class="label label-info"&gt;manage-content&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/developer/i14y.html"&gt;
+    &lt;time datetime="2018-04-12"&gt;April 12, 2018&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
+  &lt;a href="/developer/i14y-testing.html"&gt;cURL Commands for i14y Testing&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;blockquote&gt;
+</code></pre>
+    <p><strong>Important Note:</strong> April, 2018. i14y does not visit your content to do full-text scraping of your content. For new implementations, the Search.gov team recommends you index your content with us not using the i14y API, but rather by publishing a comprehensive xml sitemap, which we can use to index your content. <a href="/blog/six-months-in.html">Read more.</a></p>
+    <p>&lt;/blockquote&gt;</p>
+
+    <p>If you experience difficulty sending documents to our index via <a href="/developer/i14y.html">i14y</a>, it is possible your firewall is not letting you communicate with the i14y server. Adding a test document to your i14y drawer can help you diagnose a firewall issue.
+Windows users may need to <a href="https://curl.haxx.se/download.html">install cURL</a> <i class="icon-external-link"><span>(External link)</span></i> in order to run this test from the command line.</p>
+
+    <h2 id="adding-the-test-document">Adding the Test Document</h2>
+
+    <p>From the command line, enter:</p>
+
+    <pre><code>curl "https://i14y.usa.gov/api/v1/documents" -XPOST -H "Content-Type:application/json" -u your_drawer_handle:your_secret_token -d '{"document_id":"1", "title":"Test Document", "path": "http://www.gov.gov/cms/doc1.html", "created": "2015-05-12T22:35:09Z", "description":"The summary of the document goes here.", "content":"This is placeholder text, and in a real document would be paragraphs long.", "promote": false, "language" : "en", "tags" : "tag1, another tag"}'
+</code></pre>
+
+    <p>Note: you need to replace <strong>your_drawer_handle</strong> with your i14y drawer handle, found in the i14y drawers section in the Search Admin Center (<a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers). You will also need to replace <strong>your_secret_token</strong> with the drawer’s secret token, which can be found by hitting “Show” in the 14y drawer list. The drawer handle and token should be separated by a colon (:) with no spaces on either side of the colon.</p>
+
+    <p>The above command returns JSON structured like this:</p>
+
+    <pre><code>{
+"status":200,
+"developer_message":"OK",
+"user_message":"Your document was successfully created."
+}
+</code></pre>
+
+    <p>If you do not see a 200 status, <a href="mailto:search@support.digitalgov.gov">contact our team</a>.</p>
+
+    <p>After successfully sending a document, you should see an increase (by 1) in the number of documents in your <a href="/manual/i14y-drawers.html">i14y drawer</a>.</p>
+
+    <h2 id="removing-the-test-document">Removing the Test Document</h2>
+
+    <p>Once you have successfully added the test document to your drawer, you will need to delete it, or it will appear in your site’s search results.</p>
+
+    <p>From the command line, enter:</p>
+
+    <pre><code>curl "https://i14y.usa.gov/api/v1/documents/1" -XDELETE -u your_drawer_handle:your_secret_token
+</code></pre>
+
+    <p>The above command returns JSON structured like this:</p>
+
+    <pre><code>{
+"status":200,
+"developer_message":"OK",
+"user_message":"Your document was successfully deleted."
+}
+</code></pre>
+
+    <hr />
+
+    <p><strong><em>Resources:</em></strong> Read tips on <a href="/developer/i14y.html">Getting Started With i14y</a>, or view the full <a href="/developer/indexing-api.html">i14y technical documentation</a>.</p>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/i14y"&gt;&lt;span class="label label-info"&gt;i14y&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/api"&gt;&lt;span class="label label-info"&gt;api&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/manage-content"&gt;&lt;span class="label label-info"&gt;manage-content&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/developer/i14y-testing.html"&gt;
+    &lt;time datetime="2018-04-12"&gt;April 12, 2018&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
+  &lt;a href="/manual/drupal.html"&gt;usasearch Drupal Module Help Documentation&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;blockquote&gt;
+</code></pre>
+    <p><strong>Important Note:</strong> April, 2018. For new implementations, the Search.gov team recommends you index your content with us not using our Drupal module to send content to our i14y indexing API, but rather by publishing a comprehensive XML sitemap, which we can use to index your content. We recommend the <a href="https://www.drupal.org/project/xmlsitemap">XML Sitemap module</a> <i class="icon-external-link"><span>(External link)</span></i>. <a href="/blog/six-months-in.html">Read more.</a></p>
+    <p>&lt;/blockquote&gt;</p>
+
+    <p>To use the Search.gov service on a Drupal-based website, you should install the <a href="https://www.drupal.org/project/xmlsitemap">XML Sitemap</a> <i class="icon-external-link"><span>(External link)</span></i> module, and may want to consider a tool like <a href="https://www.drupal.org/project/yoast_seo">Yoast SEO</a> <i class="icon-external-link"><span>(External link)</span></i> to pull in non-Drupal content as well. You may also be interested in our overview of <a href="/blog/sitemaps.html">XML sitemaps</a>.</p>
+
+    <p>The <code>usasearch</code> <a href="https://drupal.org/project/usasearch">Drupal module</a> <i class="icon-external-link"><span>(External link)</span></i> can facilitate indexing content with our service, but we prefer the XML sitemap method.</p>
+
+    <ul>
+  <li>It is possible to manually modify the Drupal search box to connect to our service, but the module allows you to make the connection via a setting configuration, rather than code work.</li>
+</ul>
+
+    <h2 id="step-by-step-instructions-for-setting-up-the-module">Step by step instructions for setting up the module</h2>
+
+    <ul>
+  <li><a href="/manual/drupal-7-module-instructions.html">usasearch 7.x-5.x</a></li>
+  <li><a href="/manual/drupal-8-module-instructions.html">usasearch 8.x-1.x</a></li>
+</ul>
+
+    <h2 id="troubleshooting-tips"><a href="/manual/drupal-module-troubleshooting.html">Troubleshooting tips</a></h2>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/i14y"&gt;&lt;span class="label label-info"&gt;i14y&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/drupal"&gt;&lt;span class="label label-info"&gt;drupal&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/manual/drupal.html"&gt;
+    &lt;time datetime="2018-04-12"&gt;April 12, 2018&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
+  &lt;a href="/manual/drupal-module-troubleshooting.html"&gt;Drupal Module Troubleshooting Tips&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;blockquote&gt;
+</code></pre>
+    <p><strong>Important Note:</strong> April, 2018. For new implementations, the Search.gov team recommends you index your content with us not using our Drupal module to send content to our i14y indexing API, but rather by publishing a comprehensive XML sitemap, which we can use to index your content. We recommend the <a href="https://www.drupal.org/project/xmlsitemap">XML Sitemap module</a> <i class="icon-external-link"><span>(External link)</span></i>. <a href="/blog/six-months-in.html">Read more.</a></p>
+    <p>&lt;/blockquote&gt;</p>
+
+    <p>If you have installed the <code>usasearch</code> <a href="https://drupal.org/project/usasearch">Drupal module</a> <i class="icon-external-link"><span>(External link)</span></i> to integrate your Drupal CMS with the Search.gov service but are having trouble, the following suggestions should help you identify where the problem is. If after working through these items you still have questions, <a href="mailto:search@support.digitalgov.gov">reach out to our team</a> and, though we’re not Drupal experts, we can try to help.</p>
+
+    <p><a href="#search-errors">Skip to Search error troubleshooting tips</a></p>
+
+    <h2 id="indexing-errors">Indexing errors</h2>
+
+    <h3 id="do-you-have-the-right-module-for-your-drupal-version">Do you have the right module for your Drupal version?</h3>
+
+    <p>We have modules for both Drupal 7 and Drupal 8. If your site is in Drupal 7, use <code>usasearch-7.x-5.7</code>. If your site is in Drupal 8, click <a href="https://www.drupal.org/project/usasearch/releases">View all Releases</a> <i class="icon-external-link"><span>(External link)</span></i> and select API version <code>8.x</code>.</p>
+
+    <h3 id="have-you-set-up-an-i14y-drawer">Have you set up an i14y drawer?</h3>
+
+    <p>In order to send content from Drupal to our system, you’ll need an index to send the content into. We call these indexes “Drawers”, because like drawers in a filing cabinet, all the items put into them will be the content you can search against. <a href="/manual/i14y-drawers.html">Read more about Drawers here</a>. In order to set up a drawer, your search site will need to be enabled for i14y, so <a href="mailto:search@support.digitalgov.gov">contact us</a> to request that.</p>
+
+    <h3 id="has-any-content-actually-been-sent-to-us">Has any content actually been sent to us?</h3>
+
+    <p>The module sends content when someone hits <code>save</code> on a node, or when you run <code>re-index site</code>. In Drupal 7, <code>re-index site</code> is found on the main Drupal search settings page (<code>YOUR-DRUPAL-SITE.gov/admin/config/search/settings</code>); in Drupal 8, you can re-index the site from the bottom of the module settings page.</p>
+
+    <ul>
+  <li>If these actions have indeed happened, check the Drupal recent log messages (<code>YOUR-DRUPAL-SITE.gov/admin/reports/dblog</code>) to see if there’s anything related to <code>usasearch</code>, and please <a href="mailto:search@support.digitalgov.gov">send us screenshots of the errors</a>.</li>
+  <li>If these actions haven’t yet happened, please hit <code>save</code> on a node, and see if that item appears in your Drawer. You can view the contents of your Drawer by selecting <a href="https://search.usa.gov/sites">Search Admin Center</a> &gt; Your site &gt; Content &gt; i14y Drawers &gt; Show. If the item isn’t there, then check the Drupal log for an error.</li>
+</ul>
+
+    <h3 id="is-your-firewall-letting-you-communicate-with-us">Is your firewall letting you communicate with us?</h3>
+
+    <p>If content isn’t reaching us, it could be that your firewall is not allowing you to reach i14y. Please run the following from the command line, from inside the same firewall as your web server, if possible. Note: you’ll need to customize the string below with your i14y drawer’s handle and secret token (where it says <code>YOURDRAWERHANDLE:YOURDRAWERSECRETTOKEN</code>):</p>
+
+    <pre><code>curl "https://i14y.usa.gov/api/v1/documents" -XPOST -H "Content-Type:application/json" -u YOURDRAWERHANDLE:YOURDRAWERSECRETTOKEN -d '{"document_id":"1", "title":"test item", "created":"2017-02-16T10:19:02", "path":"https://www.usa.gov", "description":"This is a test", "content":"This is a test to see if the agency web server is able to communicate with the i14y API. If this document does not show up in the drawer in the admin center, then the i14y location may need to be whitelisted in order to facilitate indexing."}'
+</code></pre>
+
+    <ul>
+  <li>
+    <p>If you get a <code>403 Forbidden</code> response</p>
+
+    <p>Please contact your security team to request the i14y hostname be whitelisted: <code>https://i14y.usa.gov/</code></p>
+
+    <p>We can’t give you an IP to whitelist, as our system is hosted in AWS, and so i14y’s IP address changes regularly.</p>
+  </li>
+  <li>
+    <p>If you get a <code>200 OK</code> response</p>
+
+    <p>Your system is able to communicate with our system, so the issue must lie in how the module is working with your Drupal instance. <a href="mailto:search@support.digitalgov.gov">Send us</a> all the information and screenshots of errors that you can, and we’ll help you troubleshoot.</p>
+
+    <p>Be sure you delete the test document or it will be included in your search results. You can delete it from the command line. Run this command:</p>
+
+    <pre><code>curl "https://i14y.usa.gov/api/v1/documents/1" -XDELETE -u YOURDRAWERHANDLE:YOURDRAWERSECRETTOKEN
+</code></pre>
+  </li>
+  <li>
+    <p>If you get any other error response</p>
+
+    <p>Please take a screenshot and <a href="mailto:search@support.digitalgov.gov">send it to us</a> to report the issue so we can investigate the error.</p>
+  </li>
+</ul>
+
+    <h3 id="do-you-have-another-question">Do you have another question?</h3>
+
+    <p>If you have another question about indexing with our service through the <code>usasearch</code> Drupal module, <a href="mailto:search@support.digitalgov.gov">don’t hesitate to ask</a>!</p>
+
+    <p><a name="search-errors"></a></p>
+
+    <h2 id="search-errors">Search errors</h2>
+
+    <h3 id="is-your-drupal-site-search-box-showing-drupal-search-results">Is your Drupal site search box showing Drupal search results?</h3>
+
+    <ul>
+  <li>
+    <p>If you have a <strong>Drupal 7</strong> site</p>
+
+    <p>Our Drupal 7 module is designed to take over the native Drupal search box on your site, and direct queries to the site you specify in the <code>affiliate site handle</code> field. If you’re seeing other results - either the Drupal search results or a different search site in our system, find out if the search box form code had been manually modified to point to this other location. Our module will only work with out-of-the-box Drupal search boxes. If the search box form code was modified, you’ll need to manually point it to our service using the required parameters - you can see <a href="/manual/code.html">general information on form code here</a>, or you can view examples customized to your particular site within the Admin Center, under <code>Activate</code>. You may also be able to restore the form code to the Drupal default, to take advantage of the module’s site handle field and be able to modify the site handle without a dev.</p>
+  </li>
+  <li>
+    <p>If you have a <strong>Drupal 8</strong> site</p>
+
+    <p>In Drupal 8, we don’t override the native Drupal search box. Instead, you need to place a <code>USA Search Form</code> block, and disable the default Drupal search. To do this, go to <code>YOUR-DRUPAL-SITE.gov/admin/structure/block</code> in your Drupal site, and do <code>ctrl-F</code> to locate the word <code>Search</code> in the list. Disable the block that says just <code>Search</code>. Use <code>Place block</code> to insert a <code>USA Search Form</code> block in the block region of your choice. The search box in this block will point at the search site you entered in the module settings.</p>
+  </li>
+</ul>
+
+    <h3 id="is-the-drupal-site-search-box-directing-to-the-wrong-searchgov-site">Is the Drupal site search box directing to the wrong Search.gov site?</h3>
+
+    <p>Your search box should use the site handle you entered on the module settings page. If you run a search and are brought to our search results page, but see the wrong search site, check to see if the Drupal search box form code was manually modified to point to another search site handle (the <code>affiliate</code> parameter in the form code). If it was modified, you’ll need to change the site handle directly in that modified code. You may also be able to restore the form code to the Drupal default, to take advantage of the module’s site handle field and be able to modify the site handle without a developer.</p>
+
+    <h3 id="do-you-have-another-question-1">Do you have another question?</h3>
+
+    <p>If you have another question about searching through our service with the <code>usasearch</code> Drupal module, <a href="mailto:search@support.digitalgov.gov">don’t hesitate to ask</a>!</p>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/drupal,"&gt;&lt;span class="label label-info"&gt;drupal,&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/i14y"&gt;&lt;span class="label label-info"&gt;i14y&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/manual/drupal-module-troubleshooting.html"&gt;
+    &lt;time datetime="2018-04-12"&gt;April 12, 2018&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
+  &lt;a href="/manual/drupal-8-module-instructions.html"&gt;Step by Step Instructions for Setting Up the Drupal 8 usasearch module&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;blockquote&gt;
+</code></pre>
+    <p><strong>Important Note:</strong> April, 2018. For new implementations, the Search.gov team recommends you index your content with us not using our Drupal module to send content to our i14y indexing API, but rather by publishing a comprehensive XML sitemap, which we can use to index your content. We recommend the <a href="https://www.drupal.org/project/xmlsitemap">XML Sitemap module</a> <i class="icon-external-link"><span>(External link)</span></i>. <a href="/blog/six-months-in.html">Read more.</a></p>
+    <p>&lt;/blockquote&gt;</p>
+
+    <p>This documentation will walk you through setting up the <code>usasearch</code> <a href="https://www.drupal.org/project/usasearch/releases?api_version%5B%5D=7234">Drupal 8 module</a> <i class="icon-external-link"><span>(External link)</span></i> field by field, to integrate your Drupal CMS with the Search.gov service. If you have trouble, take a look at our <a href="/manual/drupal-module-troubleshooting.html">troubleshooting tips</a>.</p>
+
+    <p>These instructions follow the order of settings listed in our Drupal module at <code>YOUR-DRUPAL-8-SITE.gov/admin/config/search/usasearch</code>.</p>
+
+    <p>Instructions for setting up the <strong>Drupal 7</strong> module are <a href="/manual/drupal-7-module-instructions.html">here</a>.</p>
+
+    <h2 id="search-settings">Search Settings</h2>
+
+    <p>This section allows you to configure how the <code>USA Search Block</code> will use our service. In Drupal 8, you must place the <code>USA Search Block</code>, as we do not override the native Drupal Search. We recommend you disable the native Drupal Search block.</p>
+
+    <h3 id="site-handle">Site handle</h3>
+
+    <p>Required. Enter the site handle you gave your search site. This is found in our <a href="https://search.usa.gov/sites">Search Admin Center</a> &gt; Your site &gt; Dashboard &gt; Settings.</p>
+
+    <h3 id="enable-autocomplete">Enable autocomplete</h3>
+
+    <p>Recommended setting: Checked.</p>
+
+    <p>Check this box if you want to enable the Javascript for our <a href="/developer/">Type-ahead API</a>. Suggestions for popular queries will appear below your search box as searchers begin typing. A query must have been run more than 10 times in a day for it to become a search suggestion.</p>
+
+    <h3 id="search-domain">Search domain</h3>
+
+    <p>We offer <a href="/manual/cname.html">domain masking</a>, which allows you to display <code>search.YOURAGENCY.gov</code> in the URL of your search results page, instead of the default <code>search.usa.gov</code>.</p>
+
+    <p>NOTE: Only change this setting if you have domain masking configured for your search site! If you haven’t set it up, leave the default <code>https://search.usa.gov</code> until you’ve completed the masking steps.</p>
+
+    <h2 id="connecting-drupal-to-our-system-for-direct-indexing">Connecting Drupal to Our System for Direct Indexing</h2>
+
+    <p>Highly recommended! The “i14y API settings” section allows you to send content directly to our indexes via our i14y API. This means that you’ll have full control over the content of your search results, and your search index will be updated in real time. Note: If you do not want to index your content with us yourselves, do not complete this section. If you only want to use our system for search, skip this section and the following Indexing section.</p>
+
+    <h3 id="enable-i14y-api">Enable i14y API</h3>
+
+    <p>Recommended! If this box is checked, the module will send content to Search.gov for indexing. The <code>Drawer Handle</code> and <code>API Secret Token</code> fields will be required.</p>
+
+    <h3 id="drawer-handle">Drawer Handle</h3>
+
+    <p>Enter your i14y  “drawer handle”. This is the name you gave your drawer and is found in: <a href="https://search.usa.gov/sites">Search Admin Center</a> &gt; Your site &gt; Manage Content &gt; i14y Drawers.</p>
+
+    <h3 id="i14y-api-secret-token">i14y API Secret Token</h3>
+
+    <p>Enter your i14y drawer’s “secret token”. This can be found in our system in: <a href="https://search.usa.gov/sites">Search Admin Center</a> &gt; Your site &gt; Manage Content &gt; i14y Drawers, select the option, <code>Show</code>.</p>
+
+    <h3 id="content-types">Content Types</h3>
+
+    <p>Recommended setting (default): Checked - all types.</p>
+
+    <p>Select which content types will be sent to our indexes. Content types unchecked here will <strong>not</strong> be indexed. You can also control indexing status of individual nodes in their Search.gov settings.</p>
+
+    <p>If you exclude a content type from indexing, and later decide to <em>include</em> it, nodes of this type will be indexed on the next cron run. You may also want to review any nodes that were created in the interim, to ensure in their individual Search.gov settings that they are enabled for indexing.</p>
+
+    <h3 id="description-view-mode">Description View Mode</h3>
+
+    <p>Recommended setting: Teaser.</p>
+
+    <p>Select the search result description text that works best for your site. Choose among the text you’ve set as your teaser, RSS item content, Drupal search index snippet, or full text. The view mode  will need to be enabled and configured for each content type. If the view mode is not available for a content type, “Teaser” will be used. The full text of your node will still be searchable.</p>
+
+    <p>Note: If you don’t like the content that’s being sent to us as the Teaser, you can make changes for that content type’s at <code>YOUR-DRUPAL-8-SITE.gov/admin/structure/types/manage/[CONTENT TYPE] &gt; Display settings</code> or
+<code>YOUR-DRUPAL-8-SITE.gov/admin/structure/types/manage/[CONTENT TYPE]/display/teaser</code></p>
+
+    <h3 id="enable-i14y-logging">Enable i14y logging</h3>
+
+    <p>Recommended setting (default): Checked.</p>
+
+    <p>Check this box to log i14y API operations to the watchdog log. On <code>YOUR-DRUPAL-8-SITE.gov/admin/reports/dblog</code>, filter by Type <code>usasearch</code>.</p>
+
+    <h3 id="alternate-indexing-domain">Alternate indexing domain</h3>
+
+    <p>Do you edit your site on one domain or subdomain, but publish on another? If so, use this field to set the domain you want us to present for your content on the search results page. For instance, if you enter <code>www.YOURAGENCY.gov</code> here, nodes that are stored in Drupal under <code>edit.YOURAGENCY.gov</code> would be indexed with us as <code>www.YOURAGENCY.gov</code>.</p>
+
+    <h2 id="indexing">Indexing</h2>
+
+    <h3 id="re-index-site">Re-index site</h3>
+
+    <p>If you click <code>re-index site</code>, we will begin a full-site reindexing on your next cron run. You can wait for cron to run, or you can run it manually.</p>
+
+    <h3 id="number-of-items-to-index-per-cron-run">Number of items to index per cron run</h3>
+
+    <p>Use this throttle to adjust the number of documents sent to us in each cron run. The number that is best for your site will depend on various factors, including your firewall.</p>
+
+    <h2 id="save-configuration">Save configuration</h2>
+
+    <p>After you save these settings, the module will send a command to us when you hit <code>Save</code> on a node in Drupal, either to add the node to the index, update it, or delete it from the index.</p>
+
+    <h2 id="having-trouble">Having trouble?</h2>
+
+    <p>Take a look at our <a href="/manual/drupal-module-troubleshooting.html">troubleshooting tips</a>, and don’t hesitate to <a href="mailto:search@support.digitalgov.gov">reach out</a>. We’re not Drupal experts ourselves, but we’ll try to help.</p>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/drupal,"&gt;&lt;span class="label label-info"&gt;drupal,&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/i14y"&gt;&lt;span class="label label-info"&gt;i14y&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/manual/drupal-8-module-instructions.html"&gt;
+    &lt;time datetime="2018-04-12"&gt;April 12, 2018&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
+  &lt;a href="/manual/drupal-7-module-instructions.html"&gt;Step by Step Instructions for Setting Up the Drupal 7 usasearch module&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;blockquote&gt;
+</code></pre>
+    <p><strong>Important Note:</strong> April, 2018. For new implementations, the Search.gov team recommends you index your content with us not using our Drupal module to send content to our i14y indexing API, but rather by publishing a comprehensive XML sitemap, which we can use to index your content. We recommend the <a href="https://www.drupal.org/project/xmlsitemap">XML Sitemap module</a> <i class="icon-external-link"><span>(External link)</span></i>. <a href="/blog/six-months-in.html">Read more.</a></p>
+    <p>&lt;/blockquote&gt;</p>
+
+    <p>This documentation will walk you through setting up the <code>usasearch</code> <a href="https://drupal.org/project/usasearch">Drupal 7 module</a> <i class="icon-external-link"><span>(External link)</span></i> field by field, to integrate your Drupal CMS with the Search.gov service. If you have trouble, take a look at our <a href="/manual/drupal-module-troubleshooting.html">troubleshooting tips</a>.</p>
+
+    <p>These instructions follow the order of settings listed in our Drupal module at <code>YOUR-DRUPAL-7-SITE.gov/admin/config/search/usasearch</code>.</p>
+
+    <p>Instructions for setting up the <strong>Drupal 8</strong> module are <a href="/manual/drupal-8-module-instructions.html">here</a>.</p>
+
+    <h2 id="affiliate-site-handle">Affiliate site handle</h2>
+
+    <p>Required. Enter the site handle you gave your search site. This is found in our <a href="https://search.usa.gov/sites">Search Admin Center</a> &gt; Your site &gt; Dashboard &gt; Settings.</p>
+
+    <h2 id="drawer-handle">Drawer Handle</h2>
+
+    <p>Required. Enter your i14y  “drawer handle”. This is the name you gave your drawer and is found in: <a href="https://search.usa.gov/sites">Search Admin Center</a> &gt; Your site &gt; Manage Content &gt; i14y Drawers.</p>
+
+    <h2 id="i14y-api-secret-token">i14y API Secret Token</h2>
+
+    <p>Required. Enter your i14y drawer’s “secret token”. This can be found in our system in: <a href="https://search.usa.gov/sites">Search Admin Center</a> &gt; Your site &gt; Manage Content &gt; i14y Drawers, select the option, <code>Show</code>.</p>
+
+    <h2 id="enable-autocomplete">Enable autocomplete</h2>
+
+    <p>Recommended setting (default): Checked.</p>
+
+    <p>Check this box if you want to enable the Javascript for our <a href="/developer/">Type-ahead API</a>. Suggestions for popular queries will appear below your search box as searchers begin typing. A query must have been run more than 10 times in a day for it to become a search suggestion.</p>
+
+    <h2 id="search-domain">Search domain</h2>
+
+    <p>We offer <a href="/manual/cname.html">domain masking</a>, which allows you to display <code>search.YOURAGENCY.gov</code> in the URL of your search results page, instead of the default <code>search.usa.gov</code>.</p>
+
+    <p>NOTE: Only change this setting if you have domain masking configured for your search site! If you haven’t set it up, leave the default <code>https://search.usa.gov</code> until you’ve completed the masking steps.</p>
+
+    <h2 id="alternate-indexing-domain">Alternate indexing domain</h2>
+
+    <p>Do you edit your site on one domain or subdomain, but publish on another? If so, use this field to set the domain you want us to present for your content on the search results page. For instance, if you enter <code>www.YOURAGENCY.gov</code> here, nodes that are stored in Drupal under <code>edit.YOURAGENCY.gov</code> would be indexed with us as <code>www.YOURAGENCY.gov</code>.</p>
+
+    <h2 id="use-rules-to-index-content">Use rules to index content</h2>
+
+    <p>Check this box to index content manually with rules. IMPORTANT: If checked, the Search.gov index will not be updated unless specified in a rule action.</p>
+
+    <p>Be sure to write rules for your content types in sets of three:</p>
+    <ul>
+  <li>adding to the index</li>
+  <li>updating the index</li>
+  <li>deleting from the index</li>
+</ul>
+
+    <h2 id="results-description-view-mode">Results Description View Mode</h2>
+
+    <p>Recommended setting (default): Teaser.</p>
+
+    <p>Select the search result description text that works best for your site. Choose among the text you’ve set as your teaser, RSS item content, Drupal search index snippet, or full text. The view mode will need to be enabled and configured for each content type. If the view mode is not available for a content type, “Teaser” will be used. We will still index and search the full text of your content if <code>Indexed content view mode</code> is <code>Full content</code>.</p>
+
+    <p>Note: If you don’t like the content that’s being sent to us as the Teaser, you can make changes for that content type’s at <code>YOUR-DRUPAL-7-SITE.gov/admin/structure/types/manage/[CONTENT TYPE] &gt; Display settings</code> or at <code>YOUR-DRUPAL-7-SITE.gov/admin/structure/types/manage/[CONTENT TYPE]/display/teaser</code>.</p>
+
+    <h2 id="indexed-content-view-mode">Indexed content view mode</h2>
+
+    <p>Recommended setting (default): Full content.</p>
+
+    <p>If you don’t want the full text of your nodes to be searchable, select a preferred view mode to define the content that gets indexed. If the view mode is not available for a content type <code>Full content</code> will be used.</p>
+
+    <h2 id="include-by-content-type-unless-explicitly-excluded">Include by content type unless explicitly excluded</h2>
+
+    <p>Recommended setting (default): Checked.</p>
+
+    <p>Check this box to include entire content types in the search index. Include or exclude particular content types in their entirety in the Search.gov settings for the content type’s structure page, e.g. <code>YOUR-DRUPAL-7-SITE.gov/admin/structure/types/manage/article</code>. You can exclude individual nodes using the Search.gov Settings within the node edit view.</p>
+
+    <p>If this box is unchecked, node indexing will need to be managed individually. We recommend you leave the box checked on the module settings.</p>
+
+    <p>If you exclude a content type from indexing, and later decide to <em>include</em> it, nodes of this type will be indexed on the next cron run. You may also want to review any nodes that were created in the interim, to ensure in their individual Search.gov settings that they are enabled for indexing.</p>
+
+    <h2 id="save-configuration">Save configuration</h2>
+
+    <p>After you save these settings, the module will send a command to us when you hit <code>Save</code> on a node in Drupal, either to add a node to the index, update it, or delete from the index.</p>
+
+    <p>If you select <code>re-index site</code> on the main Drupal search settings page (see below), we will begin a full-site reindexing on your next cron run.</p>
+
+    <h2 id="optional-indexing-content-retroactively">Optional: Indexing content retroactively</h2>
+
+    <p>Go to the main Drupal search settings page (<code>YOUR-DRUPAL-7-SITE.gov/admin/config/search/settings</code>) and click <code>Re-index site</code>. This will start sending us content for indexing on your next cron run. You can wait for cron to run, or you can run it manually. You can also adjust the number of documents sent to us in each cron run using the <code>throttle</code> setting on the Drupal search settings page.</p>
+
+    <h2 id="having-trouble">Having trouble?</h2>
+
+    <p>Take a look at our <a href="/manual/drupal-module-troubleshooting.html">troubleshooting tips</a>, and don’t hesitate to <a href="mailto:search@support.digitalgov.gov">reach out</a>. We’re not Drupal experts ourselves, but we’ll try to help.</p>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/drupal,"&gt;&lt;span class="label label-info"&gt;drupal,&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/i14y"&gt;&lt;span class="label label-info"&gt;i14y&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/manual/drupal-7-module-instructions.html"&gt;
+    &lt;time datetime="2018-04-12"&gt;April 12, 2018&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
   &lt;a href="/blog/robotstxt.html"&gt;Robots.txt Files&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -301,856 +1129,6 @@ Disallow: /archive/
   
   &lt;a href="/blog/six-months-in.html"&gt;
     &lt;time datetime="2018-03-28"&gt;March 28, 2018&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/blog/sitemaps.html"&gt;XML Sitemaps&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;An &lt;a href="https://en.wikipedia.org/wiki/Sitemaps"&gt;XML sitemap&lt;/a&gt;  &lt;i class="icon-external-link"&gt;&lt;span&gt;(External link)&lt;/span&gt;&lt;/i&gt; is an XML formatted file containing a list of URLs on a website. An XML sitemap provides information that allows a search engine to index your website more intelligently, and to keep its search index up to date.&lt;/p&gt;
-</code></pre>
-
-    <p>Sitemaps tell search engines what URLs are on a website, and, if URLs are added as they are published, they tell the engines what new content needs to be picked up. They may also provide additional metadata about each URL, such as the last modified date, which signals to the engine to update the index record for that page.</p>
-
-    <p>Search.gov uses sitemaps to tell us what URLs should be in our index and when a URL has been updated. Sitemaps are used in a similar way by <a href="https://support.google.com/webmasters/answer/156184">Google</a>  <i class="icon-external-link"><span>(External link)</span></i>, Bing, and and other search engines. <em>Having an xml sitemap will improve your Google SEO (search engine optimization).</em></p>
-
-    <p>Example: <a href="/sitemap.xml">https://search.gov/sitemap.xml</a></p>
-
-    <h2 id="what-content-should-be-on-xml-sitemap">What content should be on XML sitemap?</h2>
-
-    <p>Some sitemaps are comprehensive, but for very large sites you may need to publish several sitemaps. Each sitemap should be no more than 50MB or 50,000 URLs, whichever comes first. You do not need to add URLs of content you want to remain unsearchable.</p>
-
-    <p><strong>Note</strong> that an HTML formatted file listing the pages of a site is more akin to an index page, and is not the same as an XML sitemap. HTML files are human friendly, but not machine friendly, and Search engines need an xml formatted file in order to leverage the information for indexing work.</p>
-
-    <h2 id="more-than-one-web-platform-use-multiple-sitemaps">More than one web platform? Use multiple sitemaps.</h2>
-
-    <p>It’s common for agencies to use more than one platform to publish their websites. For instance, a CMS was launched, but some content is still on the legacy site’s platform. In this case, use available plugins for the CMS’s in your environment to auto-generate sitemaps for that content. Manually generate a sitemap for any static content. You can publish a <a href="https://www.sitemaps.org/protocol.html#index">sitemap index file</a>  <i class="icon-external-link"><span>(External link)</span></i> that lists the locations of all your specific sitemaps, or you can list all your sitemaps on your robots.txt file.</p>
-
-    <h2 id="how-do-search-engines-find-my-sitemaps">How do search engines find my sitemap(s)?</h2>
-
-    <p>Sitemaps (or the <a href="https://www.sitemaps.org/protocol.html#index">sitemap index</a>  <i class="icon-external-link"><span>(External link)</span></i>) should be listed in your site’s robots.txt file, i.e.:<br />
-<code>Sitemap: https://www.agency.gov/sitemap_1.xml</code><br />
-<code>Sitemap: https://www.agency.gov/sitemap_2.xml</code></p>
-
-    <p>List the appropriate sitemap(s) for the domain or subdomain. <code>www.exampleagency.gov/robots.txt</code> would list sitemaps for content in the <code>www</code> subdomain, while <code>forms.exampleagency.gov/robots.txt</code> would list sitemaps for the <code>forms</code> subdomain.</p>
-
-    <p>Read more about <a href="/blog/robotstxt.html">robots.txt files</a>, and take a look at ours: <a href="/robots.txt">https://search.gov/robots.txt</a></p>
-
-    <h2 id="what-should-my-xml-sitemap-look-like">What should my XML sitemap look like?</h2>
-
-    <p>Please refer to the official <a href="https://www.sitemaps.org/protocol.html">sitemaps protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> for full information on how a sitemap should be structured.</p>
-
-    <p>When publishing your sitemap, be sure it begins with an <code>&lt;xml&gt;</code> declaration, and that the URLs are enclosed in opening and closing tags. To take a simplified example:</p>
-
-    <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;urlset&gt;
-&lt;url&gt;
-&lt;loc&gt;https://exampleagency.gov/blog/file1.html&lt;/loc&gt;
-&lt;lastmod&gt;2018-03-19T00:00:00+00:00&lt;/lastmod&gt;
-&lt;/url&gt;
-&lt;url&gt;
-&lt;loc&gt;https://exampleagency.gov/policy/new-policy.html&lt;/loc&gt;
-&lt;lastmod&gt;2018-03-27T00:00:00+00:00&lt;/lastmod&gt;
-&lt;/url&gt;
-&lt;/urlset&gt;
-</code></pre>
-    <p>If you use multiple sitemaps, then you’ll need to use a <a href="https://www.sitemaps.org/protocol.html#index">sitemap index</a>  <i class="icon-external-link"><span>(External link)</span></i>, along these lines:</p>
-
-    <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;sitemapindex&gt;
-&lt;sitemap&gt;https://exampleagency.gov/sitemap.xml?page=1&lt;/sitemap&gt;
-&lt;sitemap&gt;https://exampleagency.gov/sitemap.xml?page=2&lt;/sitemap&gt;
-&lt;/sitemapindex&gt;
-</code></pre>
-    <p>Importantly, be sure that any <a href="https://www.sitemaps.org/protocol.html#escaping">special characters in your URLs are escaped</a>  <i class="icon-external-link"><span>(External link)</span></i> so the search engines will know how to read them.</p>
-
-    <h2 id="what-metadata-does-searchgov-require-for-each-xml-sitemap-url">What metadata does Search.gov require for each XML sitemap URL?</h2>
-
-    <p>The sitemap protocol defines <a href="https://www.sitemaps.org/protocol.html#xmlTagDefinitions">required and optional XML tags</a>  <i class="icon-external-link"><span>(External link)</span></i> for each URL. We recommend including the <code>&lt;lastmod&gt;</code> value (the date of last modification of the file) whenever possible, to indicate when a file has been updated and needs to be re-indexed.</p>
-
-    <p>We do not have plans to support the <code>&lt;priority&gt;</code> tag, which is <a href="https://www.seroundtable.com/google-priority-change-frequency-xml-sitemap-20273.html">no longer used</a>  <i class="icon-external-link"><span>(External link)</span></i> by search engines like Google. We may support the <code>&lt;changefreq&gt;</code> tag in the future, but the <code>&lt;lastmod&gt;</code> tag is more accurate and supported by more search engines.</p>
-
-    <h2 id="how-can-i-create-an-xml-sitemap">How can I create an XML sitemap?</h2>
-
-    <p>Most content management systems provide tools to generate a sitemap and keep it updated. Below are some tools that we recommend:</p>
-
-    <h3 id="drupal">Drupal</h3>
-    <p><a href="https://www.drupal.org/project/xmlsitemap">XML Sitemap Module</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <h3 id="wordpress">Wordpress</h3>
-    <p><a href="https://wordpress.org/plugins/wordpress-seo/">Yoast SEO Plugin</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <p><a href="https://wordpress.org/plugins/google-sitemap-generator/">Google Sitemap Plugin</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <h3 id="wagtail">Wagtail</h3>
-    <p><a href="http://docs.wagtail.io/en/latest/reference/contrib/sitemaps.html">Sitemap Generator</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <h3 id="github-pages-jekyll">Github Pages (Jekyll)</h3>
-    <p><a href="https://help.github.com/articles/sitemaps-for-github-pages/">Jekyll Sitemap gem</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <h3 id="online-generators">Online generators</h3>
-    <p>(Note: free online generators often have a limit to the number of URLs they will include, and do not always generate the most accurate sitemaps. Use them only as a last resort.)</p>
-
-    <p><a href="https://freesitemapgenerator.com">Free Sitemap Generator</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <p><a href="http://www.web-site-map.com/">Web Sitemap</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <h2 id="sitemap-checklist">Sitemap checklist</h2>
-    <p><i class="icon-check"></i> 1. One or more sitemaps have been created</p>
-
-    <p><i class="icon-check"></i> 2. The URLs in the sitemap have been reviewed (clean URLs, only includes URLs that should be searchable)</p>
-
-    <p><i class="icon-check"></i> 3. Each sitemap’s XML format has been <a href="http://tools.seochat.com/tools/site-validator/">validated</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <p><i class="icon-check"></i> 4. Each sitemap (or a sitemap index) is listed in the site’s robots.txt file</p>
-
-    <h2 id="additional-resources">Additional Resources:</h2>
-    <p><a href="https://www.sitemaps.org/">Official Documentation from Sitemaps.org</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <p><a href="https://support.google.com/webmasters/answer/183668?hl=en&amp;ref_topic=4581190">Google’s guide to building a sitemap</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <p><a href="http://tools.seochat.com/tools/site-validator/">Sitemap validator</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <h2 id="more-questions">More questions?</h2>
-    <p>If you have questions that aren’t answered here, <a href="mailto:search@support.digitalgov.gov">email us</a>. We’ll also keep updating this page over time.</p>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/sitemaps"&gt;&lt;span class="label label-info"&gt;sitemaps&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/indexing"&gt;&lt;span class="label label-info"&gt;indexing&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/blog/sitemaps.html"&gt;
-    &lt;time datetime="2018-03-28"&gt;March 28, 2018&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/blog/searchgov-faqs-indexing.html"&gt;Search.gov&amp;#58; Index Transition FAQs&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;&lt;em&gt;Updated March 2018&lt;/em&gt;&lt;/p&gt;
-</code></pre>
-
-    <p>In FY18, we changed our name to Search.gov, and are transitioning from leveraging commercial engines for search results to serving results from our own indexes.</p>
-
-    <p>We’re now developing our own search indexes from your site content. We will primarily be leveraging <a href="/blog/sitemaps.html">XML sitemaps</a> to discover your content (1st option, preferred). We’ll also accept content for real-time indexing via <a href="/developer/i14y.html">i14y</a> (2nd option).</p>
-
-    <p>Other search features and your search results page will remain the same, and searchers should not notice a difference.</p>
-
-    <p>We’ll work closely with you to make sure everything goes smoothly through the transition. Please view our <a href="/blog/six-months-in.html">recent status post</a> to learn more about the progress we’ve made, and you can <a href="/blog/searchgov-blog.html">read the original announcement</a> as well.</p>
-
-    <p>We will update these FAQs with questions we hear from our customers.</p>
-
-    <h1 id="general">General</h1>
-
-    <p><a href="#q-what-do-i-need-to-do-in-this-new-model">Q: What do I need to do in this new model?</a></p>
-
-    <p><a href="#q-what-is-the-timeline-for-the-transition">Q: What is the timeline for the transition?</a></p>
-
-    <p><a href="#q-what-do-i-need-to-do-today">Q: What do I need to do today?</a></p>
-
-    <p><a href="#q-do-i-need-to-change-any-code-on-my-website">Q: Do I need to change any code on my website?</a></p>
-
-    <p><a href="#q-how-was-my-site-getting-results-before">Q: How was my site getting results before?</a></p>
-
-    <p><a href="#q-why-did-you-change-your-name">Q: Why did you change your name?</a></p>
-
-    <h1 id="indexing">Indexing</h1>
-
-    <p><a href="#q-how-will-you-index-my-site">Q: How will you index my site?</a></p>
-
-    <p><a href="#q-how-often-will-you-update-my-index">Q: How often will you update my index?</a></p>
-
-    <p><a href="#q-how-will-you-remove-items-from-the-index">Q: How will you remove items from the index?</a></p>
-
-    <p><a href="#q-how-does-the-sitemap-control-my-search-results">Q: How does the sitemap control my search results?</a></p>
-
-    <p><a href="#q-what-if-i-already-use-i14y-or-rss-to-send-content">Q: What if I already use i14y or RSS to send content?</a></p>
-
-    <p><a href="#q-i-use-drupal-is-there-a-module-i-could-leverage">Q: I use Drupal, is there a module I could leverage?</a></p>
-
-    <p><a href="#q-what-if-i-have-content-in-my-cms-plus-files-stored-on-filesystems-such-as-pdfs">Q: What if I have content in my CMS plus files stored on filesystems (such as PDFs)?</a></p>
-
-    <p><a href="#q-are-there-cms-integrations-available-other-than-drupal">Q: Are there CMS integrations available, other than Drupal?</a></p>
-
-    <p><a href="#q-what-if-we-have-no-plans-for-a-cms">Q: What if we have no plans for a CMS?</a></p>
-
-    <p><a href="#q-how-can-i-create-or-find-a-list-of-urls-for-my-site">Q: How can I create or find a list of URLs for my site?</a></p>
-
-    <h1 id="general-1">General</h1>
-
-    <h2 id="q-what-do-i-need-to-do-in-this-new-model">Q: What do I need to do in this new model?</h2>
-
-    <p>We’ll work with you to get a good XML sitemap in place for your content, or set of sitemaps, as fits your use case. Sites using content management systems that are able to sent <em>all</em> content into an i14y drawer may investigate integrating with i14y. If you’re unable to do either of these things, we’ll want to discuss options with you.  See the indexing questions below for more information.</p>
-
-    <h2 id="q-what-is-the-timeline-for-the-transition">Q: What is the timeline for the transition?</h2>
-
-    <p>We launched the first phase of the new index in December 2017. We’ve reached the deadline Google had set for sunsetting their Site Search API, and are now disconnected from that service and supporting those searches from our own indexes. We continue to reach out to sites as we focus on indexing their content. We don’t have a hard deadline for getting everyone moved over, and are prioritizing high traffic search sites first for moving into our indexes. Over 90 search sites are already supported from our indexes.</p>
-
-    <h2 id="q-what-do-i-need-to-do-today">Q: What do I need to do today?</h2>
-
-    <p><em>CMS customers:</em></p>
-
-    <p>We encourage you to set-up and implement <a href="/blog/sitemaps.html">XML sitemaps</a> as soon as possible. Most content management systems have plugins that will facilitate creation of these sitemaps. Please also review your <a href="/blog/robotstxt.html">robots.txt file</a> to ensure the sitemaps are listed there, and that all the content you want searchable is allowed to be indexed.</p>
-
-    <p><em>Non-CMS Customers:</em></p>
-
-    <p>We encourage you to explore how you can publish an <a href="/blog/sitemaps.html">XML sitemap</a>. Please also review your <a href="/blog/robotstxt.html">robots.txt file</a> to ensure the sitemaps are listed there, and that all the content you want searchable is allowed to be indexed.</p>
-
-    <h2 id="q-do-i-need-to-change-any-code-on-my-website">Q: Do I need to change any code on my website?</h2>
-
-    <p>No: you do not need to update any code on your website. Indexing takes place in the backend of our system.</p>
-
-    <p>We do ask that you publish <a href="/blog/sitemaps.html">XML sitemaps</a>, and update your <a href="/blog/robotstxt.html">robots.txt file</a>.</p>
-
-    <h2 id="q-how-was-my-site-getting-results-before">Q: How was my site getting results before?</h2>
-
-    <p>Since 2007, we served search results from Bing’s index by default. We also used Google’s index to support certain Collections where Bing does not provide results. We’re now serving these results from our own indexes, and are disconnected from Google.</p>
-
-    <h2 id="q-why-did-you-change-your-name">Q: Why did you change your name?</h2>
-
-    <p>We changed our name to make things simpler. In the past, we’ve been FirstGov Search, FirstSearch, USAGov Search, USASearch, and most recently DigitalGov Search. Our new name is short, simple, and easy to remember.</p>
-
-    <h1 id="indexing-1">Indexing</h1>
-
-    <h2 id="q-how-will-you-index-my-site">Q: How will you index my site?</h2>
-
-    <p>Based on your site setup, you have a variety of options. Below is our order of preference in terms of how we’ll get your content into our indexes (note: you may choose more than one approach):</p>
-
-    <ul>
-  <li>
-    <p><a href="/blog/sitemaps.html">Structured URL list (XML sitemap)</a> – We will fetch and index the URLs that you provide on an XML sitemap, and will monitor your sitemaps for new content and updates over time. Our system will visit the URLs you provide and extract page titles, dates, and full text for indexing. You can post multiple sitemaps for content from different platforms - <a href="/blog/sitemaps.html">get the essential information about sitemaps here</a>. This is the preferred method.</p>
-  </li>
-  <li>
-    <p><a href="https://search.digitalgov.gov/developer/i14y.html">i14y API</a> –  Our API allows you to update your search index in real-time. Best for agencies with dedicated developer resources and single-platform publishing environments.</p>
-  </li>
-  <li>
-    <p><a href="https://search.digitalgov.gov/manual/rss.html">RSS feed</a> – We will still accept RSS feeds to update your indexes on a rolling basis.</p>
-  </li>
-</ul>
-
-    <p>If you’re unable to do any of the above, <a href="mailto:search@support.digitalgov.gov">contact us</a>, and we’ll discuss options.</p>
-
-    <h2 id="q-how-often-will-you-update-my-index">Q: How often will you update my index?</h2>
-
-    <p>If you have an XML sitemap, our default will be to monitor it daily for newly published or updated pages. If you have a need to have certain content searchable within minutes of publication, please <a href="mailto:search@support.digitalgov.gov">let us know</a>.</p>
-
-    <h2 id="q-how-will-you-remove-items-from-the-index">Q: How will you remove items from the index?</h2>
-
-    <p>We will be monitoring the status of pages in our index. If any start returning a <code>404 Not Found</code>, <code>403 Not Permitted</code>, <code>301 Permanent Redirect</code>, or other non-<code>200 OK</code> response, we will remove those items from the index. For redirects, we’ll update the index with information from the target page.</p>
-
-    <p>Removing a page from the sitemap will not remove it from the search index. If the page is still publicly accessible and returning a <code>200</code> response, you can <a href="mailto:search@support.digitalgov.gov">contact us</a> to have it removed from the index, or you can use our <a href="/manual/filter-content.html">Filter URLs</a> feature to suppress the item from appearing in search results.</p>
-
-    <h2 id="q-how-does-the-sitemap-control-my-search-results">Q: How does the sitemap control my search results?</h2>
-
-    <p>It doesn’t! Sitemaps advertise to search engines what content is on a site that should be searchable. The Search.gov engine then brings that content into our index. Separately, the settings you manage in the Admin Center dictate how we should pull results from our index when people search for things on your site.</p>
-
-    <h2 id="q-what-if-i-already-use-i14y-or-rss-to-send-content">Q: What if I already use i14y or RSS to send content?</h2>
-
-    <p>If you have set up i14y already, or if you send your full site content via RSS, you do not have to change anything for the new model.</p>
-
-    <h2 id="q-i-use-drupal-is-there-a-module-i-could-leverage">Q: I use Drupal, is there a module I could leverage?</h2>
-
-    <p>Yes! For customers who use Drupal as their CMS, please install the <a href="https://www.drupal.org/project/xmlsitemap">XML Sitemaps module</a>.</p>
-
-    <p>We also have a <a href="https://www.drupal.org/project/usasearch">Drupal module</a> that can jumpstart a connection with the i14y indexing API. This module is available for both Drupal 7 and 8, but we’ve found that the module only supports about half of the Drupal publishing models in government.</p>
-
-    <h2 id="q-what-if-i-have-content-in-my-cms-plus-files-stored-on-filesystems-such-as-pdfs">Q: What if I have content in my CMS plus files stored on filesystems (such as PDFs)?</h2>
-
-    <p>If your site is in a CMS but you also have published material outside of the CMS (such as PDFs or old web pages), we’ll be able to search both CMS and non-CMS content together.</p>
-
-    <p>You will need to publish an XML sitemap of your non-CMS material, or you could manually add the content to your CMS-managed sitemap(s). <em>Note:</em> PDFs count as non-CMS content even if they’re attached within your CMS.</p>
-
-    <h2 id="q-are-there-cms-sitemap-plugins-available-other-than-drupal">Q: Are there CMS sitemap plugins available, other than Drupal?</h2>
-
-    <p>Yes - see our <a href="/blog/sitemaps.html">XML Sitemaps overview page</a> for a more complete list of tools.</p>
-
-    <h2 id="q-what-if-we-have-no-plans-for-a-cms">Q: What if we have no plans for a CMS?</h2>
-
-    <p>You can still create an XML sitemap, though you may need to update it manually, or develop a regular server job to keep it updated.</p>
-
-    <h2 id="q-how-can-i-create-or-find-a-list-of-urls-for-my-site-to-build-a-sitemap">Q: How can I create or find a list of URLs for my site, to build a sitemap?</h2>
-
-    <p>You should be able to run a command to export all of the URLs on your webserver, such as <code>ls</code> or <code>grep</code> or <code>dir</code>. Consult your friendly neighborhood server admin for assistance.</p>
-
-    <p>Some sites have XML sitemaps that list URLs and files. Your sitemap may be incomplete, so you’ll want to review it.</p>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/FAQs"&gt;&lt;span class="label label-info"&gt;FAQs&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/blog/searchgov-faqs-indexing.html"&gt;
-    &lt;time datetime="2018-03-28"&gt;March 28, 2018&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/blog/go-live.html"&gt;Going Live with Search.gov&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;Your pre-launch checklist will be unique to your agency’s workflow, requirements, and deadlines. Below is a typical checklist.&lt;/p&gt;
-</code></pre>
-
-    <h2 id="double-check-your-content-settings">Double Check Your Content Settings</h2>
-
-    <p><i class="icon-check"></i> <strong>1. Have you told us which domain(s) you want to search?</strong> List one or more <a href="/manual/domains.html">domains</a> that you want to search on the first page of web results. Some agencies opt to leave out the ‘www’ to include all subdomains (for example, list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies especially department-level portals opt to also include their bureaus’ websites (for example, Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)</p>
-
-    <p><i class="icon-check"></i> <strong>2. Have we indexed your your content?</strong> We follow search engine optimization (SEO) best practices and leverage your <a href="/blog/sitemaps.html">XML sitemaps</a> to monitor for new content. Verify also that you have a <a href="/blog/robotstxt.html">robots.txt file</a>. These two files are typically located in the root directory of your website (i.e., <code>exampleagency.gov/robots.txt</code> and <code>exampleagency.gov/sitemap.xml</code>, respectively). Also verify that your robots.txt file allows our user agent (<code>usasearch</code>) to access your public content.</p>
-
-    <p><i class="icon-check"></i> <strong>3. Have you told us about your RSS feeds?</strong> We love <a href="/manual/rss.html">RSS feeds</a>. Tell us about all of your feeds, even if you opt not to show them (see #5 below). They’re a quick way for us to index your new and updated content, in addition to the content listed on your sitemap (see above). (Tip: Preview your feeds from the RSS page in the <a href="https://search.usa.gov/sites/">Admin Center</a> to confirm that we’ve indexed your content.)</p>
-
-    <p><i class="icon-check"></i> <strong>4. Have you told us about your social media accounts?</strong> <a href="/manual/flickr.html">Flickr photostreams</a>, <a href="/manual/twitter.html">tweets</a>, and <a href="/manual/youtube.html">YouTube videos</a> are a great way to highlight your recent content and offer a single point of access to your various publishing channels.</p>
-
-    <h2 id="customize-the-display-of-your-search-results-page">Customize the Display of Your Search Results Page</h2>
-
-    <p><i class="icon-check"></i> <strong>5. Have you made the search results page look like your website?</strong> Customize the <a href="/manual/brand.html">brand</a> (font, colors, logo, favicon, and navigation links) of your search results page to create a seamless experience for users as they search and browse your website.</p>
-
-    <p><i class="icon-check"></i> <strong>6. Have you told us what to show on your results page?</strong> Turn on (or off) the inline modules and facets that you want to appear on your search results page. You can change the default settings on the <a href="/manual/display-overview.html">Display Overview</a> page in the Admin Center.</p>
-
-    <h2 id="connect-your-site-to-searchgov">Connect Your Site to Search.gov</h2>
-
-    <p>Most agencies add these two <a href="/manual/code.html">snippets of code</a> to the template(s) in their websites or content management systems (rather than adding them to individual pages).</p>
-
-    <p><i class="icon-check"></i> <strong>7. Does your search box point to Search.gov?</strong> Update your search box form code point to our service so that, when users execute a search, they’ll see your Search.gov-hosted results page.</p>
-
-    <pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
-	 &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
- 	&lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
- 	&lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
- 	&lt;input name="commit" type="submit" value="Search" /&gt;
-&lt;/form&gt;
-</code></pre>
-
-    <p><i class="icon-check"></i> <strong>8. Do you have our Javascript tag on your webpages?</strong> This Javascript powers the suggestions for type-ahead and <a href="/manual/display-overview.html">related searches</a>. It also provides data on your trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-    <pre><code>&lt;script type="text/javascript"&gt;
-//&lt;![CDATA[
-	 var usasearch_config = { siteHandle:"YourSiteHandle" };
- 	var script = document.createElement("script");
- 	script.type = "text/javascript";
- 	script.src = "//search.usa.gov/javascripts/remote.loader.js";
- 	document.getElementsByTagName("head")[0].appendChild(script);
-//]]&gt;
-&lt;/script&gt;
-</code></pre>
-
-    <h2 id="set-up-nice-to-have-features-optional">Set Up Nice-to-Have Features (Optional)</h2>
-
-    <p><i class="icon-check"></i> <strong>9. Have you masked your domain?</strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov. Be sure to alert us you will be adding a domain mask, so we can add you to our SSL certificate before you update your search box form code.</p>
-
-    <p><i class="icon-check"></i> <strong>10. Have you added the Javascripts for your other third-party web services to your results page?</strong> If you have a <a href="/manual/third-party.html">third-party service</a> running on your website, you likely want it to run on your results page. Agencies often include their Foresee, Google Analytics, Omniture, or WebTrends code, among others. If your federal website participates in the <a href="https://www.digitalgov.gov/services/dap/">Digital Analytics Program</a>, you do not need to take any action: DAP code is included on your results page, by default.</p>
-
-    <h2 id="dont-forget-seo">Don’t Forget SEO</h2>
-
-    <p><i class="icon-check"></i> <strong>11. Have you registered your site with the major commercial search engines?</strong> Register for both <a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i> to maximize the coverage of your content in their search results.</p>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/help-manual"&gt;&lt;span class="label label-info"&gt;help-manual&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/blog/go-live.html"&gt;
-    &lt;time datetime="2018-03-28"&gt;March 28, 2018&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/releases/february-2018.html"&gt;February 2018 Release Notes&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;h2 id="highlights"&gt;Highlights&lt;/h2&gt;
-</code></pre>
-    <ul>
-  <li>Our <a href="/blog/searchgov-blog.html">new indexing system</a> has been in production since December! In February, we continued to release several features that are building on and improving our new system:
-    <ul>
-      <li>We have made our indexing rake task more efficient.</li>
-      <li>We began implementing indexing from XML sitemaps. Check out our new <a href="/blog/sitemaps.html">XML Sitemaps page</a> to learn more about them.</li>
-    </ul>
-  </li>
-  <li>We made our title parsing more flexible, drawing from either <code>&lt;title&gt;</code> or <code>&lt;og:title&gt;</code> tags, depending on where a site’s quality title metadata may be.</li>
-</ul>
-
-    <h2 id="chores">Chores</h2>
-    <ul>
-  <li>We upgraded Rails for our core application</li>
-  <li>We switched our highlighting of terms in search results to a much lighter method.</li>
-  <li>We now have all apps enforcing HTTPs and are compliant with BOD 18-01.</li>
-  <li>We removed abandoned i14y drawers.</li>
-  <li>We improved how our indexing job updates records for existing pages.</li>
-</ul>
-
-    <h2 id="bug-fixes">Bug Fixes</h2>
-    <ul>
-  <li>We fixed an RSS feeds fetch issue.</li>
-  <li>We have fixed the bug causing search sites to have access to the Best Bets of other affiliates.</li>
-  <li>We disabled four-byte UTF-8 characters in Twitter results, and now support eight-byte characters. That’s right - emojis in your search results if they are used in your tweets.</li>
-</ul>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
-  
-  
-  
-  &lt;a href="/releases/february-2018.html"&gt;
-    &lt;time datetime="2018-03-27"&gt;March 27, 2018&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/manual/module-codes.html"&gt;Key for Search Module Codes and Names&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;&lt;a href="/index.html"&gt;Search.gov Home&lt;/a&gt; &amp;gt; &lt;a href="https://search.usa.gov/sites/"&gt;Admin Center&lt;/a&gt; &amp;gt; YourSite &amp;gt; Analytics&lt;/p&gt;
-</code></pre>
-
-    <p>We call several different indexes when serving search results, and we present results from each of these indexes in a separate module. Each module loads when there are relevant search results to display. Each module has a code, and you’ll see these codes in the Download Details csv files available through the <a href="/manual/queries.html">Queries</a> or <a href="/manual/clicks.html">Clicks</a> pages of the Admin Center analytics section.</p>
-
-    <p>This page lists all the module codes and their full names.</p>
-
-    <table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Code</th>
-      <th style="text-align: left">Module Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">AIDOC     </td>
-      <td style="text-align: left">Collections</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">AWEB</td>
-      <td style="text-align: left">Web Results Only (Azure)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">BBG</td>
-      <td style="text-align: left">Best Bets: Graphics</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">BOOS</td>
-      <td style="text-align: left">Best Bets: Text</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">BSPEL</td>
-      <td style="text-align: left">Spelling Suggestions (Bing/Google)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">BWEB</td>
-      <td style="text-align: left">Web Results (Bing)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">DECOR</td>
-      <td style="text-align: left">Value-added Links for SEC Filings</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">FRDOC</td>
-      <td style="text-align: left">Federal Register Documents</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">GWEB</td>
-      <td style="text-align: left">Web Results (Google)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">I14Y</td>
-      <td style="text-align: left">Web Results (Search.gov via <a href="/developer/i14y.html">i14y</a>)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">IMAG</td>
-      <td style="text-align: left">Image Results (Bing)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">JOBS</td>
-      <td style="text-align: left">Jobs</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">LOVER</td>
-      <td style="text-align: left">Spelling Overrides (Search.gov)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">MEDL</td>
-      <td style="text-align: left">Health Topics</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">NEWS</td>
-      <td style="text-align: left">RSS Feeds</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">NIMAG</td>
-      <td style="text-align: left">Image Results (MRSS)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">OASIS</td>
-      <td style="text-align: left">Image Results (Search.gov)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">OSPEL</td>
-      <td style="text-align: left">Spelling Suggestions (Search.gov Images)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">OVER</td>
-      <td style="text-align: left">Spelling Overrides (Bing/Google)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">QRTD</td>
-      <td style="text-align: left">Routed Queries</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">SPEL</td>
-      <td style="text-align: left">Spelling Suggestions (Search.gov)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">SREL</td>
-      <td style="text-align: left">Related Searches</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">TWEET</td>
-      <td style="text-align: left">Tweets (Twitter)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">VIDS</td>
-      <td style="text-align: left">Video Results (YouTube)</td>
-    </tr>
-  </tbody>
-</table>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/help-manual"&gt;&lt;span class="label label-info"&gt;help-manual&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/analytics"&gt;&lt;span class="label label-info"&gt;analytics&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/clicks"&gt;&lt;span class="label label-info"&gt;clicks&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/queries"&gt;&lt;span class="label label-info"&gt;queries&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/manual/module-codes.html"&gt;
-    &lt;time datetime="2018-03-15"&gt;March 15, 2018&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/manual/queries.html"&gt;Analyzing Your Site's Queries&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;&lt;a href="/index.html"&gt;Search.gov Home&lt;/a&gt; &amp;gt; &lt;a href="https://search.usa.gov/sites/"&gt;Admin Center&lt;/a&gt; &amp;gt; YourSite &amp;gt; Analytics &amp;gt; Queries&lt;/p&gt;
-</code></pre>
-
-    <p>The Queries page lists the number of times a search query (that is, a word or string of words) was entered in the search box on your site by a unique searcher.</p>
-
-    <p>Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.</p>
-
-    <p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site’s visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
-
-    <p>Data are available in the Admin Center from the past 13 months.</p>
-
-    <h2 id="top-queries">Top Queries</h2>
-
-    <p><strong><em>Top 1,000.</em></strong> You’ll see a list, in frequency order, of the 1,000 most popular queries for your selected time period.</p>
-
-    <p><strong><em>Top 1,000 by query.</em></strong> Enter any specific term or phrase into the Query search box. Re-generate the report to see the top 1,000 queries that contain that term or phrase and its stemmed equivalents.</p>
-
-    <p>For example, below are the top 10 queries related to <em>housing</em> on USA.gov in August 2013.</p>
-
-    <ol>
-  <li>house of representatives</li>
-  <li>housing</li>
-  <li>speaker of the house</li>
-  <li>white house</li>
-  <li>house minority leader</li>
-  <li>housing assistance</li>
-  <li>house majority leader</li>
-  <li>speaker of the house 2013</li>
-  <li>the white house</li>
-  <li>houses</li>
-</ol>
-
-    <h2 id="download-details">Download Details</h2>
-
-    <p>You can download a detailed CSV (comma separated values) file for any search term. There’s one line for each time this query was run. This CSV file gives you access to the raw search logs, including:</p>
-
-    <ul>
-  <li>The date and time of the query</li>
-  <li>The query (It is embedded in the request URL. Look for the text following ‘query=’.)</li>
-  <li>Where the person was when they ran the search (We use the ISO-2 alpha standard for country codes and ISO 3166-2 codes for country subdivisions.)</li>
-  <li>The modules loaded in response to the query (Our <a href="/manual/module-codes.html">Module Codes</a> page provides a key of the codes and names.)</li>
-  <li>The kind of device and browser they were using</li>
-</ul>
-
-    <h2 id="clicks-from-a-query-and-queries-leading-to-a-click">Clicks from a Query and Queries Leading to a Click</h2>
-
-    <p>Select “View Clicks” to view the top clicked URLs for each query.</p>
-
-    <p>If you clicked on “View Clicks” for the <em>house of representatives</em> example above, you’d see that the top URLs clicked for that query are:</p>
-
-    <ol>
-  <li>www.house.gov</li>
-  <li>www.house.gov/representatives</li>
-  <li>www.house.gov/representatives/find</li>
-</ol>
-
-    <p>From this list of clicked URLs, you’d be able to select “View Queries” to view the top queries that led to a click for each URL.</p>
-
-    <p>If you clicked on the first-listed <em>www.house.gov</em> in the example above, you’d see that the top queries leading to a click on that URL are:</p>
-
-    <ol>
-  <li>house of representatives</li>
-  <li>congress</li>
-  <li>congress members</li>
-  <li>congress representatives</li>
-</ol>
-
-    <p>You can loop through or drill down into this list for any set of clicks and queries.</p>
-
-    <h2 id="click-through-rate-ctr">Click-Through Rate (CTR)</h2>
-
-    <p>The click-through rate (CTR) is the the number of clicks from a query divided by the number of queries (multiplied by 100 to be expressed as a percentage).</p>
-
-    <p>High or low CTR’s may indicate that users are not able to find relevant results. A CTR can be over 100%: if a user enters a query, clicks on a link, hits ‘back’ in their browser, returns to the search results, and clicks again, the CTR for that query would be 200% (2 clicks divided by 1 query, multiplied by 100 = 200%).</p>
-
-    <hr />
-
-    <p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> section gives a bird’s-eye view of the number of queries and <a href="/manual/clicks.html">clicks</a> on your site each month. The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site in the past day or so.</p>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/help-manual"&gt;&lt;span class="label label-info"&gt;help-manual&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/analytics"&gt;&lt;span class="label label-info"&gt;analytics&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/queries"&gt;&lt;span class="label label-info"&gt;queries&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/manual/queries.html"&gt;
-    &lt;time datetime="2018-02-28"&gt;February 28, 2018&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/manual/clicks.html"&gt;Analyzing Your Site's Clicks&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;&lt;a href="/index.html"&gt;Search.gov Home&lt;/a&gt; &amp;gt; &lt;a href="https://search.usa.gov/sites/"&gt;Admin Center&lt;/a&gt; &amp;gt; YourSite &amp;gt; Analytics &amp;gt; Clicks&lt;/p&gt;
-</code></pre>
-
-    <p>The Clicks page shows what searchers clicked on from your search results pages, and the number of times each of those items was clicked during the selected date range. The current month is shown by default, and the date can be adjusted using the date selectors at the top of the page and re-generating the report.</p>
-
-    <p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site’s visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
-
-    <p>Data are available in the Admin Center from the past 13 months.</p>
-
-    <h2 id="reading-the-report-table">Reading the Report Table</h2>
-
-    <h3 id="top-urls-clicked">Top URLs Clicked</h3>
-
-    <p><a href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/Analytics_Clicks_800.png" target="_blank" alt="Top clicks from results pages"><img style="float: right;" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/Analytics_Clicks_175.png" /></a>The top 1,000 most clicked-on URLs from your results page for the selected time period, with the most popular first.</p>
-
-    <h3 id="download-details">Download Details</h3>
-
-    <p>You can download the raw click logs for any URL in the list. The CSV (comma separated values) file has one line for each time this URL was clicked. Details avialable include:</p>
-
-    <ul>
-  <li><em>Date</em> and <em>Time</em> of the click,</li>
-  <li><em>Query</em>: The query they ran before clicking the search result,</li>
-  <li><em>Position</em>: Where in the results page was the result they clicked, e.g. <strong>5</strong> means the searcher clicked the fifth result in the list,</li>
-  <li><em>Request</em>: The clicked URL (It is embedded in the request URL. Look for the text following ‘u=’.) and its position on the page,</li>
-  <li><em>Referrer</em>: The webpage the person was on when they ran the search, this column also includes the query,</li>
-  <li><em>Vertical</em> and <em>Modules</em>: The modules loaded in response to the query (Our <a href="/manual/module-codes.html">Module Codes</a> tip provides a key of the codes and names.),</li>
-  <li><em>Device</em>, <em>Browser</em>, and <em>OS</em>: The kind of device and browser they were using, and</li>
-  <li><em>Country Code</em> and <em>Region</em>: Where the user was, physically. We use the ISO-2 alpha standard for country codes and ISO 3166-2 codes for country subdivisions.</li>
-</ul>
-
-    <h3 id="-of-clicks"># of Clicks</h3>
-
-    <p><a href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/ClicksQueries_800.png" target="_blank" alt="Report of Queries that people ran before clicking on a particular page"><img style="float: right;" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/ClicksQueries_175.png" /></a>Select a hyperlinked number in the <code># of Clicks</code> column to view the queries that led to the clicks for that URL (the <strong>Queries leading to a Click</strong> report).</p>
-
-    <p>If you then click on a number in the <code># of Clicks</code> column for a query on the Queries leading to a Click page, you will see all the URLs <a href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/ClicksfromQuery_800.png" target="_blank" alt="Report of pages people clicked on after searching for a given term"><img style="float: right;" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/ClicksfromQuery_175.png" /></a>that were clicked on from that query’s results pages (the <strong>Clicks from a Query</strong> report). This is the same report you see when you follow a <code># of Clicks</code> link from the <a href="/manual/queries.html">Queries page</a>.</p>
-
-    <p>You can loop through or drill down into this list for any set of clicks and queries.</p>
-
-    <hr />
-
-    <p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> gives a bird’s-eye view of the number of <a href="/manual/queries.html">queries</a> and clicks each month. The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site today.</p>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/help-manual"&gt;&lt;span class="label label-info"&gt;help-manual&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/analytics"&gt;&lt;span class="label label-info"&gt;analytics&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/clicks"&gt;&lt;span class="label label-info"&gt;clicks&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/manual/clicks.html"&gt;
-    &lt;time datetime="2018-02-28"&gt;February 28, 2018&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/releases/january-2018.html"&gt;January 2018 Release Notes&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;h2 id="highlights"&gt;Highlights&lt;/h2&gt;
-</code></pre>
-    <ul>
-  <li>Our <a href="/blog/searchgov-blog.html">new indexing system</a> has been in production since December! In January, we released several features that are building on and improving our new system:
-    <ul>
-      <li>We updated our index with new stemming settings. Stemming refers to how a system processes related words, based on the root of the words. For example, stemming is what allows a search for “renew passport” to show results for “passport renewal”.</li>
-      <li>URLs in our index can be permanently deleted from our system.</li>
-      <li>Documents in our index are now limited to 10 MB in size.</li>
-      <li>We can extract body text from a document if the <code>&lt;main&gt;</code> element is empty.</li>
-    </ul>
-  </li>
-</ul>
-
-    <h2 id="chores">Chores</h2>
-    <ul>
-  <li>We upgraded Rails and Elasticsearch on our <a href="https://github.com/GSA/asis">ASIS application</a>.</li>
-  <li>We upgraded Elasticsearch on our <a href="https://github.com/GSA/jobs_api">Jobs API</a>.</li>
-</ul>
-
-    <h2 id="deprecations">Deprecations</h2>
-    <ul>
-  <li>The Instagram section is no longer displayed in the Admin Center dashboard, unless you had an Instagram account added to your search site prior to June 2016. At that time, Instagram began requiring accounts to grant permission to index their images via an integration between systems, which Search.gov cannot support. Therefore, our Instagram index was last updated in June 2016. Any images in our index prior to that date will continue to be shown on your search results page, as long as you do not remove your Instagram account from the Admin Center. If you remove your account, any photos in our index will be permanently deleted from our system.</li>
-  <li>Drilldown tables and graphs are no longer available in the Monthly Reports section. According to our analytics, the tables and graphs were not being viewed. We anticipate rolling out new analytics viewing options later in 2018.</li>
-</ul>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
-  
-  
-  
-  &lt;a href="/releases/january-2018.html"&gt;
-    &lt;time datetime="2018-02-15"&gt;February 15, 2018&lt;/time&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 </code></pre>

@@ -108,7 +108,17 @@
     
 
     <div class='post-content'>
-      <p>To use the Search.gov service on a Drupal-based website, you should install the <code>usasearch</code> <a href="https://drupal.org/project/usasearch">Drupal module</a> <i class="icon-external-link"><span>(External link)</span></i>. It is possible to manually modify Drupal to connect to our service, but the module allows you to minimize the development work required for ongoing use and maintenance.</p>
+      <blockquote>
+  <p><strong>Important Note:</strong> April, 2018. For new implementations, the Search.gov team recommends you index your content with us not using our Drupal module to send content to our i14y indexing API, but rather by publishing a comprehensive XML sitemap, which we can use to index your content. We recommend the <a href="https://www.drupal.org/project/xmlsitemap">XML Sitemap module</a> <i class="icon-external-link"><span>(External link)</span></i>. <a href="/blog/six-months-in.html">Read more.</a></p>
+</blockquote>
+
+<p>To use the Search.gov service on a Drupal-based website, you should install the <a href="https://www.drupal.org/project/xmlsitemap">XML Sitemap</a> <i class="icon-external-link"><span>(External link)</span></i> module, and may want to consider a tool like <a href="https://www.drupal.org/project/yoast_seo">Yoast SEO</a> <i class="icon-external-link"><span>(External link)</span></i> to pull in non-Drupal content as well. You may also be interested in our overview of <a href="/blog/sitemaps.html">XML sitemaps</a>.</p>
+
+<p>The <code>usasearch</code> <a href="https://drupal.org/project/usasearch">Drupal module</a> <i class="icon-external-link"><span>(External link)</span></i> can facilitate indexing content with our service, but we prefer the XML sitemap method.</p>
+
+<ul>
+  <li>It is possible to manually modify the Drupal search box to connect to our service, but the module allows you to make the connection via a setting configuration, rather than code work.</li>
+</ul>
 
 <h2 id="step-by-step-instructions-for-setting-up-the-module">Step by step instructions for setting up the module</h2>
 
@@ -134,7 +144,7 @@
       
       
       <a href="/manual/drupal.html">
-        <time datetime="2017-08-25">August 25, 2017</time>
+        <time datetime="2018-04-12">April 12, 2018</time>
       </a>
     </div>
     </article>
