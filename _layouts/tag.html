@@ -8,9 +8,9 @@ sitemap: false
 <p class="muted">Posts tagged <strong>{{ page.tag }}</strong></p>
 {% include posts.html %}
 
-<ul class="pager">
+<ul class="pager" >
   {% if paginator.previous_page %}
-  <li class="previous">
+  <li class="previous" style="padding: 10px 30px;">
     {% if paginator.previous_page == 1 %}
     <a href="/tagged/{{ page.tag }}">&larr; Newer</a>
     {% else %}
@@ -25,4 +25,5 @@ sitemap: false
   </li>
   {% endif %}
 </ul>
+
 <!-- end tag layout -->
