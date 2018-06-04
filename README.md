@@ -1,5 +1,7 @@
 # search.gov
 
+[![CircleCI](https://circleci.com/gh/GSA/search.digitalgov.gov.svg?style=svg)](https://circleci.com/gh/GSA/search.digitalgov.gov)
+
 ## How to add a new post
 
 1. Clone the `master` branch.
