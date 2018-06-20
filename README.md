@@ -25,7 +25,7 @@ Open a Terminal window. Start homebrew.
     $ brew update
     $ brew doctor
 
-We use bundler to manage gems. Install bundler and other required gems.
+We use bundler to manage gems. `cd` into the local repo. Install bundler and other required gems.
 
     $ gem install bundler
     $ bundle install
