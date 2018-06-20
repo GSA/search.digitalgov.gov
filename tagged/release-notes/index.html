@@ -105,6 +105,58 @@
  
     
     <h1>
+      <a href="/releases/may-2018.html">May 2018 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlights">Highlights</h2>
+<ul>
+  <li>We continue to make good progress towards our indexing system, and continues to be highly focused on the back end of our system. See below for more details.</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+<ul>
+  <li>We created back-end interfaces allowing the Search.gov team to manage indexed domains &amp; urls.</li>
+  <li>We added a delay method to <code>SearchGov Domain</code>, to honor the crawl delay settings in a given site’s <code>robots.txt</code> file.</li>
+  <li>We created a <code>SearchGov Domain Indexer</code> job that will enqueue urls in need of fetching, to allow bulk indexing tasks to be automated without overloading anyone’s servers, and we added support for <code>resque-scheduler</code> to our configuration baseline.</li>
+  <li>We set the sitemap indexer to reject urls from other domains to avoid erroneous attempts to index content from beta sites, old domains, etc.</li>
+  <li>We now check the protocol of a domain, and whether the site is responding to us. We also set our url fetcher to throw an error if the domain is unavailable or blocking our indexer.</li>
+  <li>We re-indexed the searchgov indices.</li>
+  <li>We upgraded mySQL in demo environments, and streamlined the scenario data for our test suite.</li>
+</ul>
+
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+  <li>We fixed bug that sent searchers back to page 1 results when changing the time scope in a Collection search.</li>
+  <li>We mitigated SSL certificate problems with some sites.</li>
+  <li>We made our redirection check more strict to avoid filling our database and indexes with domains and web pages that don’t need to be searchable.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/may-2018.html">
+        <time datetime="2018-06-20">June 20, 2018</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/april-2018.html">April 2018 Release Notes</a>
     </h1>
     
@@ -557,60 +609,6 @@
       
       <a href="/releases/august-2017.html">
         <time datetime="2017-09-12">September 12, 2017</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/july-2017.html">July 2017 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="highlights">Highlights</h2>
-
-<ul>
-  <li>We’ve begun work on backend features that will provide new ways for customer content to be sent directly into our own indexes. In July, a new index was set up in our system. We also investigated ways to fetch, parse, and send data to our indexes. This is a long term project that extends through the rest of this calendar year and into 2018. Stay tuned!</li>
-</ul>
-
-<h2 id="chores">Chores</h2>
-
-<ul>
-  <li>
-    <p>We wrapped up refinements to our bot-blocking feature that was <a href="/releases/may-2017.html">released in May</a>.</p>
-  </li>
-  <li>
-    <p>We continued work that will upgrade our server recipes to Chef 12 and our Ruby version to 2.3.</p>
-  </li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-
-<ul>
-  <li>As part of our compliance with Section 508 law, we increased the size of facet text on our search results pages. The guideline is that text should be at least 13 pixels, and our facet text is now 13.125 pixels.</li>
-</ul>
-
-<p><img class="img-responsive" src="https://search.digitalgov.gov/img/usagov_facets.png" alt="Screenshot of USA.gov search results page with red box around facets" width="100%" /></p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/july-2017.html">
-        <time datetime="2017-08-17">August 17, 2017</time>
       </a>
     </div>
     </article>
