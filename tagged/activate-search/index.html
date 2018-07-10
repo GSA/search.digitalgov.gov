@@ -105,6 +105,72 @@
  
     
     <h1>
+      <a href="/manual/cname.html">How to Mask Your Domain</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>We offer DNS masking, which allows you to show searchers search.YOURAGENCY.gov (instead of search.USA.gov). Follow these steps to mask your domain. Please note that due to limitations in the size of our SSL certificate, we are only able to offer top level domain masking: i.e., <code>search.youragency.gov</code> but not <code>search.subagency.youragency.gov</code>.</p>
+
+<ol>
+  <li>
+    <p>Create a CNAME in your external DNS records for <code>search.youragency.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>. Your site handle is listed on the <a href="/manual/settings.html">settings page</a> in the Search Admin Center.</p>
+
+    <p>For example: if your site handle is <code>abc</code>, the DNS record would look like this:</p>
+
+    <pre><code> search.youragency.gov   CNAME  abc.sites.infr.search.usa.gov
+</code></pre>
+
+    <p>NOTE: if your site handle contains a <code>.</code>, please replace it with a <code>-</code> in your DNS record,  e.g., for site handle <code>abc.gov.search</code> the DNS record would look like this:</p>
+
+    <pre><code> search.youragency.gov   CNAME  abc-gov-search.sites.infr.search.usa.gov
+</code></pre>
+  </li>
+  <li>
+    <p>After your DNS record has been added, <a href="mailto:search@support.digitalgov.gov">email us</a> to request to be added to our SSL certificate. If your CNAME is not on our SSL certificate, browser security warnings will appear when your search results page attemps to load over <code>HTTPS</code>. It generally takes a few days for these requests to get through our queue.<br /><br />Your domain mask will work as soon as these two steps are complete.</p>
+  </li>
+  <li>
+    <p>When your DNS record is in place and you have received confirmation that your domain mask has been added to our SSL certificate, change your search box’s <a href="/manual/code.html">form code</a> action from <code>search.usa.gov/search</code> to <code>search.youragency.gov/search</code>.</p>
+  </li>
+</ol>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> Many agencies have both internal and external DNS. Be
+sure to update your <em>external</em> DNS records (step 1) before changing your form code (step 2).</p>
+
+<p><strong><em>Did you know?</em></strong> Any search site within your domain may use the same domain mask and CNAME record, even if the CNAME is not associated with that particular site’s handle. To implement an existing mask for a search box, just do Step 2, above.</p>
+
+<p><strong><em>Did you know?</em></strong> Once the CNAME is set up, if visitors to your site happen to truncate the URL in the browser bar to http://search.youragency.gov (without any parameters), they’re automatically redirected to your agency’s homepage at http://www.youragency.gov.</p>
+
+<p><strong><em>Did you know?</em></strong> Most of our customers use a <code>search.youragency.gov</code> mask (such as search.nih.gov). If the <code>search</code> subdomain is already used by another application, you can use <code>find</code> or <code>findit</code>, such as <code>find.irs.gov</code> or <code>findit.state.gov</code>. We no longer support other subdomain patterns.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
+      
+      <a href="/tagged/cname"><span class="label label-info">cname</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/cname.html">
+        <time datetime="2018-07-10">July 10, 2018</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/search-results-api.html">Showing Results Within Your Agency's Website</a>
     </h1>
     
@@ -215,72 +281,6 @@
       
       <a href="/manual/typeahead-api.html">
         <time datetime="2017-10-26">October 26, 2017</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/cname.html">How to Mask Your Domain</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>We offer DNS masking, which allows you to show searchers search.YOURAGENCY.gov (instead of search.USA.gov). Follow these steps to mask your domain. Please note that due to limitations in the size of our SSL certificate, we are only able to offer top level domain masking: i.e., <code>search.youragency.gov</code> but not <code>search.subagency.youragency.gov</code>.</p>
-
-<ol>
-  <li>
-    <p>Create a CNAME in your external DNS records for <code>search.youragency.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>. Your site handle is listed on the <a href="/manual/settings.html">settings page</a> in the Search Admin Center.</p>
-
-    <p>For example: if your site handle is <code>abc</code>, the DNS record would look like this:</p>
-
-    <pre><code> search.youragency.gov   CNAME  abc.sites.infr.search.usa.gov
-</code></pre>
-
-    <p>NOTE: if your site handle contains a <code>.</code>, please replace it with a <code>-</code> in your DNS record,  e.g., for site handle <code>abc.gov.search</code> the DNS record would look like this:</p>
-
-    <pre><code> search.youragency.gov   CNAME  abc-gov-search.sites.infr.search.usa.gov
-</code></pre>
-  </li>
-  <li>
-    <p>After your DNS record has been added, <a href="mailto:search@support.digitalgov.gov">email us</a> to request to be added to our SSL certificate. If your CNAME is not on our SSL certificate, browser security warnings will appear when your search results page attemps to load over <code>HTTPS</code>. It generally takes a few days for these requests to get through our queue.<br /><br />Your domain mask will work as soon as these two steps are complete.</p>
-  </li>
-  <li>
-    <p>When your DNS record is in place and you have received confirmation that your domain mask has been added to our SSL certificate, change your search box’s <a href="/manual/code.html">form code</a> action from <code>search.usa.gov/search</code> to <code>search.youragency.gov/search</code>.</p>
-  </li>
-</ol>
-
-<hr />
-
-<p><strong><em>Troubleshooting tip:</em></strong> Many agencies have both internal and external DNS. Be
-sure to update your <em>external</em> DNS records (step 1) before changing your form code (step 2).</p>
-
-<p><strong><em>Did you know?</em></strong> Any search site within your domain may use the same domain mask and CNAME record, even if the CNAME is not associated with that particular site’s handle. To implement an existing mask for a search box, just do Step 2, above.</p>
-
-<p><strong><em>Did you know?</em></strong> Once the CNAME is set up, if visitors to your site happen to truncate the URL in the browser bar to http://search.youragency.gov (without any parameters), they’re automatically redirected to your agency’s homepage at http://www.youragency.gov.</p>
-
-<p><strong><em>Did you know?</em></strong> Most of our customers use a <code>search.youragency.gov</code> mask (such as search.nih.gov). If the <code>search</code> subdomain is already used by another application, you can use <code>find</code> or <code>findit</code>, such as <code>find.irs.gov</code> or <code>findit.state.gov</code>. We no longer support other subdomain patterns.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/activate-search"><span class="label label-info">activate-search</span></a>
-      
-      <a href="/tagged/cname"><span class="label label-info">cname</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/cname.html">
-        <time datetime="2017-08-16">August 16, 2017</time>
       </a>
     </div>
     </article>

@@ -102,6 +102,75 @@
   <article class="article">
 
     <pre><code>&lt;h1&gt;
+  &lt;a href="/manual/cname.html"&gt;How to Mask Your Domain&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;p&gt;We offer DNS masking, which allows you to show searchers search.YOURAGENCY.gov (instead of search.USA.gov). Follow these steps to mask your domain. Please note that due to limitations in the size of our SSL certificate, we are only able to offer top level domain masking: i.e., &lt;code&gt;search.youragency.gov&lt;/code&gt; but not &lt;code&gt;search.subagency.youragency.gov&lt;/code&gt;.&lt;/p&gt;
+</code></pre>
+
+    <ol>
+  <li>
+    <p>Create a CNAME in your external DNS records for <code>search.youragency.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>. Your site handle is listed on the <a href="/manual/settings.html">settings page</a> in the Search Admin Center.</p>
+
+    <p>For example: if your site handle is <code>abc</code>, the DNS record would look like this:</p>
+
+    <pre><code> search.youragency.gov   CNAME  abc.sites.infr.search.usa.gov
+</code></pre>
+
+    <p>NOTE: if your site handle contains a <code>.</code>, please replace it with a <code>-</code> in your DNS record,  e.g., for site handle <code>abc.gov.search</code> the DNS record would look like this:</p>
+
+    <pre><code> search.youragency.gov   CNAME  abc-gov-search.sites.infr.search.usa.gov
+</code></pre>
+  </li>
+  <li>
+    <p>After your DNS record has been added, <a href="mailto:search@support.digitalgov.gov">email us</a> to request to be added to our SSL certificate. If your CNAME is not on our SSL certificate, browser security warnings will appear when your search results page attemps to load over <code>HTTPS</code>. It generally takes a few days for these requests to get through our queue.<br /><br />Your domain mask will work as soon as these two steps are complete.</p>
+  </li>
+  <li>
+    <p>When your DNS record is in place and you have received confirmation that your domain mask has been added to our SSL certificate, change your search box’s <a href="/manual/code.html">form code</a> action from <code>search.usa.gov/search</code> to <code>search.youragency.gov/search</code>.</p>
+  </li>
+</ol>
+
+    <hr />
+
+    <p><strong><em>Troubleshooting tip:</em></strong> Many agencies have both internal and external DNS. Be
+sure to update your <em>external</em> DNS records (step 1) before changing your form code (step 2).</p>
+
+    <p><strong><em>Did you know?</em></strong> Any search site within your domain may use the same domain mask and CNAME record, even if the CNAME is not associated with that particular site’s handle. To implement an existing mask for a search box, just do Step 2, above.</p>
+
+    <p><strong><em>Did you know?</em></strong> Once the CNAME is set up, if visitors to your site happen to truncate the URL in the browser bar to http://search.youragency.gov (without any parameters), they’re automatically redirected to your agency’s homepage at http://www.youragency.gov.</p>
+
+    <p><strong><em>Did you know?</em></strong> Most of our customers use a <code>search.youragency.gov</code> mask (such as search.nih.gov). If the <code>search</code> subdomain is already used by another application, you can use <code>find</code> or <code>findit</code>, such as <code>find.irs.gov</code> or <code>findit.state.gov</code>. We no longer support other subdomain patterns.</p>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/help-manual"&gt;&lt;span class="label label-info"&gt;help-manual&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/activate-search"&gt;&lt;span class="label label-info"&gt;activate-search&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/cname"&gt;&lt;span class="label label-info"&gt;cname&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/manual/cname.html"&gt;
+    &lt;time datetime="2018-07-10"&gt;July 10, 2018&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
   &lt;a href="/index.html"&gt;Search.gov&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -1009,129 +1078,6 @@ If you’re unable to use or view the submission form, <a href="mailto:search@su
   
   
   &lt;a href="/blog/redesign.html"&gt;
-    &lt;time datetime="2018-04-12"&gt;April 12, 2018&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/developer/indexing-api.html"&gt;i14y Content Indexing API Documentation&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;&lt;a href="/index.html"&gt;Search.gov Home&lt;/a&gt; &amp;gt; &lt;a href="/developer/index.html"&gt;APIs for Developers&lt;/a&gt; &amp;gt; i14y API&lt;/p&gt;
-</code></pre>
-
-    <blockquote>
-      <p><strong>Important Note:</strong> April, 2018. i14y does not visit your content to do full-text scraping of your content. For new implementations, the Search.gov team recommends you index your content with us not using the i14y API, but rather by publishing a comprehensive xml sitemap, which we can use to index your content. <a href="/blog/six-months-in.html">Read more.</a></p>
-    </blockquote>
-
-    <p><a href="https://github.com/GSA/i14y">i14y Github repo</a> <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <h2 id="what-is-i14y">What is i14y?</h2>
-
-    <p>The Search.gov i14y Content Indexing API allows you to send content directly from your content management system (CMS) into Search.gov for real-time indexing. By hooking into your CMS workflow, you can immediately create, update, and delete the associated documents in our search indexes via this API. Even if you don’t have a CMS, you can develop software to publish your content in a way that meets the i14y API specifications below.</p>
-
-    <p>Ruby/Python/Node clients are welcome.</p>
-
-    <h2 id="before-you-begin">Before you Begin</h2>
-
-    <ol>
-  <li>Set-up a search site with our service via 
-<a href="https://search.gov">Search.gov</a></li>
-  <li>Request that your search site be enabled for i14y by <a href="mailto:search@support.digitalgov.gov">emailing our team</a>.</li>
-  <li>Set up an i14y “drawer” in our system. <a href="https://search.gov/manual/i14y-drawers.html">Full instructions</a> are available in our help manual. You’ll give your drawer a handle, and you’ll need to enter this drawer handle in the username field below after you click the Authorize button.</li>
-  <li>Get your i14y secret token. You’ll need to enter this token as your password.
-The token can be found in our system in: <a href="https://search.usa.gov/sites">Search Admin Center</a> &gt; Manage Content &gt; i14y Drawers, select the option Show.</li>
-</ol>
-
-    <p><em>Note:</em> If you are a developer who doesn’t have access to our site configurations, please <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
-
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="position:absolute;width:0;height:0">
-  <defs>
-    <symbol viewBox="0 0 20 20" id="unlocked">
-          <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V6h2v-.801C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8z"></path>
-    </symbol>
-
-    <symbol viewBox="0 0 20 20" id="locked">
-      <path d="M15.8 8H14V5.6C14 2.703 12.665 1 10 1 7.334 1 6 2.703 6 5.6V8H4c-.553 0-1 .646-1 1.199V17c0 .549.428 1.139.951 1.307l1.197.387C5.672 18.861 6.55 19 7.1 19h5.8c.549 0 1.428-.139 1.951-.307l1.196-.387c.524-.167.953-.757.953-1.306V9.199C17 8.646 16.352 8 15.8 8zM12 8H8V5.199C8 3.754 8.797 3 10 3c1.203 0 2 .754 2 2.199V8z" />
-    </symbol>
-
-    <symbol viewBox="0 0 20 20" id="close">
-      <path d="M14.348 14.849c-.469.469-1.229.469-1.697 0L10 11.819l-2.651 3.029c-.469.469-1.229.469-1.697 0-.469-.469-.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-.469-.469-.469-1.228 0-1.697.469-.469 1.228-.469 1.697 0L10 8.183l2.651-3.031c.469-.469 1.228-.469 1.697 0 .469.469.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c.469.469.469 1.229 0 1.698z" />
-    </symbol>
-
-    <symbol viewBox="0 0 20 20" id="large-arrow">
-      <path d="M13.25 10L6.109 2.58c-.268-.27-.268-.707 0-.979.268-.27.701-.27.969 0l7.83 7.908c.268.271.268.709 0 .979l-7.83 7.908c-.268.271-.701.27-.969 0-.268-.269-.268-.707 0-.979L13.25 10z" />
-    </symbol>
-
-    <symbol viewBox="0 0 20 20" id="large-arrow-down">
-      <path d="M17.418 6.109c.272-.268.709-.268.979 0s.271.701 0 .969l-7.908 7.83c-.27.268-.707.268-.979 0l-7.908-7.83c-.27-.268-.27-.701 0-.969.271-.268.709-.268.979 0L10 13.25l7.418-7.141z" />
-    </symbol>
-
-
-    <symbol viewBox="0 0 24 24" id="jump-to">
-      <path d="M19 7v4H5.83l3.58-3.59L8 6l-6 6 6 6 1.41-1.41L5.83 13H21V7z" />
-    </symbol>
-
-    <symbol viewBox="0 0 24 24" id="expand">
-      <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z" />
-    </symbol>
-
-  </defs>
-</svg>
-
-    <link rel="stylesheet" type="text/css" href="/files/swagger-ui.css" />
-
-    <div id="swagger-ui"></div>
-
-    <script src="/files/swagger-ui-bundle.js"> </script>
-
-    <script src="/files/swagger-ui-standalone-preset.js"> </script>
-
-    <script>
-window.onload = function() {
-  
-  // Build a system
-  const ui = SwaggerUIBundle({
-    url: "https://search.gov/files/i14y_swagger.json",
-    dom_id: '#swagger-ui',
-    deepLinking: true,
-    presets: [
-      SwaggerUIBundle.presets.apis,
-      SwaggerUIStandalonePreset
-    ],
-    plugins: [
-      SwaggerUIBundle.plugins.DownloadUrl
-    ],
-    layout: "StandaloneLayout"
-  })
-
-  window.ui = ui
-}
-</script>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/i14y"&gt;&lt;span class="label label-info"&gt;i14y&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/api"&gt;&lt;span class="label label-info"&gt;api&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/developer/indexing-api.html"&gt;
     &lt;time datetime="2018-04-12"&gt;April 12, 2018&lt;/time&gt;
   &lt;/a&gt;
 &lt;/div&gt;
