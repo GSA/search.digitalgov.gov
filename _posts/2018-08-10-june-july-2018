@@ -1,0 +1,27 @@
+---
+layout: post
+title: June-July 2018 Release Notes
+category: releases
+tags: release-notes
+---
+
+## Highlights
+* We added support for XML sitemaps that are located in non-standard locations within a domain.
+* We added sort_by support to our Results API
+
+## Chores
+* We finished migrating to CircleCI for our continuous integration monitoring.
+* We improved our internal tracking of queries to the Bing API.
+* We improved how we handle indexing domains that time out.
+* We began indexing the last-modified date of a page, if provided
+* Our SitemapIndexer now processes one sitemap at a time, and we created an automated queue for indexing jobs and url fetching.
+* We improved the management of Searchgov domain states. Now each Searchgov domain has an "indexing activity". States might include: indexing sitemaps, fetching new URLs (such as after bulk import), and crawling.
+* We now follow client-side redirects.
+* We improved our ability to avoid certain crawler traps.
+* We now index documents up to 15 MB in size. The previous limit was 10 MB.
+* We finalized our compliance with BOD 18-01.
+* We cleaned up how we handle temp files during indexing.
+* We tidied up our internal errors on indexing jobs, as well as our test suite.
+
+## Bug Fixes
+* We fixed a bug that was not showing diacritics properly in non-English searches. 
