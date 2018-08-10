@@ -102,6 +102,65 @@
   <article class="article">
 
     <pre><code>&lt;h1&gt;
+  &lt;a href="/releases/june-july-2018.html"&gt;June-July 2018 Release Notes&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;h2 id="highlights"&gt;Highlights&lt;/h2&gt;
+</code></pre>
+    <ul>
+  <li>We added support for XML sitemaps that are located in non-standard locations within a domain.</li>
+  <li>We added sort_by support to our Results API</li>
+</ul>
+
+    <h2 id="chores">Chores</h2>
+    <ul>
+  <li>We finished migrating to CircleCI for our continuous integration monitoring.</li>
+  <li>We improved our internal tracking of queries to the Bing API.</li>
+  <li>We improved how we handle indexing domains that time out.</li>
+  <li>We began indexing the last-modified date of a page, if provided</li>
+  <li>Our SitemapIndexer now processes one sitemap at a time, and we created an automated queue for indexing jobs and url fetching.</li>
+  <li>We improved the management of Searchgov domain states. Now each Searchgov domain has an “indexing activity”. States might include: indexing sitemaps, fetching new URLs (such as after bulk import), and crawling.</li>
+  <li>We now follow client-side redirects.</li>
+  <li>We improved our ability to avoid certain crawler traps.</li>
+  <li>We now index documents up to 15 MB in size. The previous limit was 10 MB.</li>
+  <li>We finalized our compliance with BOD 18-01.</li>
+  <li>We cleaned up how we handle temp files during indexing.</li>
+  <li>We tidied up our internal errors on indexing jobs, as well as our test suite.</li>
+</ul>
+
+    <h2 id="bug-fixes">Bug Fixes</h2>
+    <ul>
+  <li>We fixed a bug that was not showing diacritics properly in non-English searches.</li>
+</ul>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
+  
+  
+  
+  &lt;a href="/releases/june-july-2018.html"&gt;
+    &lt;time datetime="2018-08-10"&gt;August 10, 2018&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
   &lt;a href="/manual/cname.html"&gt;How to Mask Your Domain&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -1010,75 +1069,6 @@ If you’re unable to use or view the submission form, <a href="mailto:search@su
   
   &lt;a href="/releases/march-2018.html"&gt;
     &lt;time datetime="2018-04-24"&gt;April 24, 2018&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/blog/redesign.html"&gt;Checklist for a Successful Website Redesign&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;We often receive questions when an agency conducts a major website upgrade, changes content management systems, or both. We created this checklist that will help ensure your redesign is successful.&lt;/p&gt;
-</code></pre>
-
-    <h2 id="reindexing">Reindexing</h2>
-
-    <ol>
-  <li>Keep the file name and directory structure the same, if possible. If it isn’t possible, use 301 redirects to send visitors to the appropriate new pages. For more on 301 redirects, read tips from <a href="http://blogs.bing.com/webmaster/2011/10/06/managing-redirects-301s-302s-and-canonicals/">Bing</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/93633">Google</a> <i class="icon-external-link"><span>(External link)</span></i>. Notify other websites that link to you of the changes.</li>
-  <li>Register for the commercial search engines’ webmaster tools.
-    <ul>
-      <li><a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i></li>
-      <li><a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i> (now called Google Search Console)</li>
-    </ul>
-  </li>
-  <li>Update the <a href="/blog/sitemaps.html">XML sitemap</a> on your website and notify the search engines via webmaster tools.</li>
-  <li>Notify the search engines of content that has been removed via the webmaster tools. Specifically, in Bing, use the <a href="https://www.bing.com/webmaster/help/how-to-use-the-site-move-tool-bb8f5112">Site Move tool</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
-</ol>
-
-    <h2 id="search-setup">Search Setup</h2>
-    <ol>
-  <li>Within the <a href="https://search.usa.gov/sites/">Search Admin Center</a>:
-    <ul>
-      <li>Update the paths for your <a href="/manual/domains.html">Domains</a> and <a href="/manual/collections.html">Collections</a>, if needed.</li>
-      <li>Upload a <a href="/manual/brand.html">new logo and update your colors</a>, if needed.</li>
-      <li>Create <a href="/manual/best-bets.html">Best Bets</a> for any important pages that Bing and Google are slow to re-index.</li>
-      <li>Add a <a href="/manual/system-alert.html">Search Page Alert</a> to let people know about your redesign and its impact on search.</li>
-    </ul>
-  </li>
-  <li>If you are transitioning your website to HTTPS, we have an additional <a href="/manual/https-transition.html">Preparing Your Site for HTTPS</a> checklist.</li>
-</ol>
-
-    <p>If you’ve undergone a redesign, followed these steps, and your site search results are not what you’d expect, <a href="mailto:search@support.digitalgov.gov">send us an email</a>.</p>
-
-    <hr />
-
-    <p><strong><em>Additional Resource:</em></strong></p>
-
-    <ul>
-  <li><em><a href="http://googlewebmastercentral.blogspot.com/2012/04/how-to-move-your-content-to-new.html">How to move your content to a new location</a></em> <i class="icon-external-link"><span>(External link)</span></i>, Google Webmaster Central Blog</li>
-</ul>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/seo"&gt;&lt;span class="label label-info"&gt;seo&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/blog/redesign.html"&gt;
-    &lt;time datetime="2018-04-12"&gt;April 12, 2018&lt;/time&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 </code></pre>
