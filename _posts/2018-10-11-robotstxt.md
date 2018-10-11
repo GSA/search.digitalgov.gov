@@ -12,7 +12,7 @@ Please refer to the [robots.txt protocol](http://www.robotstxt.org/robotstxt.htm
 
 * The file must be located at the root of the domain, and each subdomain needs its own file.
 * The robots.txt protocol is case sensitive.
-* It's easy to accidentally block indexing of everything
+* It's easy to accidentally block crawling of everything
   * `Disallow: /` means disallow everything
   * `Disallow:  ` means disallow nothing, thus allowing everything
   * `Allow: /` means allow everything
@@ -50,7 +50,9 @@ Disallow: /news-1997/
 Disallow: /reports/duplicative-page.html
 ```
 
-* Note that if you disallow a directory after it's been indexed by a search engine, this will not trigger a removal of that content from the index. You'll need to go into the search engine's webmaster tools to request removal.
+* Note that if you disallow a directory after it's been indexed by a search engine, this may not trigger a removal of that content from the index. You'll need to go into the search engine's webmaster tools to request removal.
+* Also note that search engines may index individual pages within a disallowed folder if the search engine learns about the URL from a non-crawl method, like a link from another site or your sitemap. To ensure a given page is not searchable, set a [robots meta tag](/blog/how-search-engines-index-content-better-discoverability.html#robots) on that page.
+
 
 ### Customize settings for different bots
 You can set different permissions for different bots. For example, if you want us to index your archived content but don't want Google or Bing to index it, you can specify that:
