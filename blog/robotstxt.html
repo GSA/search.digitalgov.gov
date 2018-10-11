@@ -112,7 +112,7 @@
 <ul>
   <li>The file must be located at the root of the domain, and each subdomain needs its own file.</li>
   <li>The robots.txt protocol is case sensitive.</li>
-  <li>It’s easy to accidentally block indexing of everything
+  <li>It’s easy to accidentally block crawling of everything
     <ul>
       <li><code>Disallow: /</code> means disallow everything</li>
       <li><code>Disallow:  </code> means disallow nothing, thus allowing everything</li>
@@ -154,7 +154,8 @@ Disallow: /reports/duplicative-page.html
 </code></pre>
 
 <ul>
-  <li>Note that if you disallow a directory after it’s been indexed by a search engine, this will not trigger a removal of that content from the index. You’ll need to go into the search engine’s webmaster tools to request removal.</li>
+  <li>Note that if you disallow a directory after it’s been indexed by a search engine, this may not trigger a removal of that content from the index. You’ll need to go into the search engine’s webmaster tools to request removal.</li>
+  <li>Also note that search engines may index individual pages within a disallowed folder if the search engine learns about the URL from a non-crawl method, like a link from another site or your sitemap. To ensure a given page is not searchable, set a <a href="/blog/how-search-engines-index-content-better-discoverability.html#robots">robots meta tag</a> on that page.</li>
 </ul>
 
 <h3 id="customize-settings-for-different-bots">Customize settings for different bots</h3>
@@ -204,7 +205,7 @@ Disallow: /archive/
     
     
     <a href="/blog/robotstxt.html">
-      <time>March 29, 2018</time>
+      <time>October 11, 2018</time>
     </a>
   </div>
 
