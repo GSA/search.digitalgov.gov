@@ -40,6 +40,6 @@ Go to <http://localhost:4000>.
 ---
 
 * For more information about Jekyll, visit [the wiki pages](https://github.com/mojombo/jekyll/wiki).
-* If you don't already have it, you'll need [Ruby 2.0.0](http://www.ruby-lang.org/en/downloads). [RVM](http://rvm.io) is recommended to install Ruby on your development environment.
+* If you don't already have it, you'll need [Ruby 2.3.7](http://www.ruby-lang.org/en/downloads). [RVM](http://rvm.io) is recommended to install Ruby on your development environment.
 
-    $ rvm install ruby-2.2.1
+    $ rvm install ruby-2.3.7
