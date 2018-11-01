@@ -105,6 +105,72 @@
  
     
     <h1>
+      <a href="/releases/december-2016.html">December 2016 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlighted-features">Highlighted Features</h2>
+
+<h3 id="password-management">Password Management</h3>
+
+<p>The password change page now requires confirmation of your previous password. We also now require complex passwords, including 8 or more characters, and a combination of character types and cases.</p>
+
+<h3 id="crawling-and-indexing">Crawling and Indexing</h3>
+
+<p>We are exploring how we can use our own crawler for a subset of our customers’ search configurations. The goal is to serve more results directly from our own indexes, rather than leveraging commercial indexes. We recognize that not all agency customers are able to send us their content via API or RSS, and we also recognize that agencies are interested in having more control over when their content gets indexed, which is not possible with the commercial crawlers.</p>
+
+<h2 id="chores">Chores</h2>
+
+<ul>
+  <li>On December 15th, Bing <a href="https://blogs.msdn.microsoft.com/bingdevcenter/2016/11/04/azure-data-market-bing-search-and-web-results-only-apis-to-be-decommissioned-december-15/">deprecated 2 of its APIs</a>. We successfully (and invisibly!) handled this transition for all search configurations that use our hosted search results page.
+    <ul>
+      <li>Related to this, we updated our search results API instructions in our Admin Center.</li>
+    </ul>
+  </li>
+  <li>In line with the <a href="https://https.cio.gov/">HTTPS-only mandate</a>, we are now serving traffic only over <code>HTTPS</code>. We updated our <a href="/manual/">help manual</a> and the code snippets you see in the Admin Center to reflect this change.</li>
+  <li>We ran (and are continuing to run) bulk updates to some URLs that are still listed as <code>HTTP</code> in our system but can be accessed over <code>HTTPS</code>.  This bulk update applies to URLs in the following features:
+    <ul>
+      <li>RSS feeds</li>
+      <li>Supplemental URLs</li>
+      <li>Supplemental RSS feeds</li>
+      <li>Best Bets</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li>Our new JavaScript search results page now appears correctly in all modern versions of Firefox and Internet Explorer, and on both Windows and Mac computers.</li>
+  <li>We fixed an issue where our multi-server AWS environment was interfering with our <a href="govt-urls.usa.gov/tematres/vocab/index.php">Government URLs inventory database</a>.</li>
+  <li>We fixed an error that was blocking our uploads to Bing’s temporary index.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/december-2016.html">
+        <time datetime="2017-01-01">January 1, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/november-2016.html">November 2016 Release Notes</a>
     </h1>
     
@@ -783,81 +849,6 @@
       
       
       <a href="/releases/may-2014.html">
-        <time datetime="2014-07-09">July 9, 2014</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/april-2014.html">April 2014 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="highlighted-feature-our-new-search-results-page-is-now-available">Highlighted Feature: Our New Search Results Page Is Now Available</h2>
-
-<p>Our newly redesigned search results page is now available for use by early adopters.</p>
-
-<p>Color pickers are in the <a href="https://search.usa.gov/sites/">Admin Center</a>. You can customize each element on the page.</p>
-
-<p>Searchers now see <a href="/manual/display-overview.html">Related Sites</a> on all devices, and you can designate them in the <a href="https://search.usa.gov/sites/">Admin Center</a>. You can customize the label for the Related Sites link. For example, <a href="http://search.usa.gov/search?&amp;affiliate=kidsgov&amp;query=white+house+chef">Kids.gov</a> has chosen the label, <em>This topic on USA.gov</em>.</p>
-
-<p><a href="http://search.usa.gov/search?&amp;affiliate=kidsgov&amp;query=white+house+chef"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/release-04-2014-kids.gov.png" alt="Redesigned Kids.gov" title="Redesigned Kids.gov" /></a></p>
-
-<p>On the redesigned page, the <a href="/manual/brand.html">header and footer links</a> are viewable, with the header links appearing in an expandable “hamburger menu.” Additionally, <a href="/manual/best-bets-graphics.html">Graphics Best Bets</a> appear in two columns for a clearer user experience.</p>
-
-<p>Read the posts below to learn more about the redesign, why we did it, and how you can make the most of it.</p>
-
-<ul>
-  <li><a href="/blog/serp-redesign.html">Our Redesign: Before and After</a></li>
-  <li><a href="/blog/serp-redesign-tips.html">Tips to Make the Most of the Newly Redesigned Results Page</a></li>
-  <li><a href="/manual/brand.html">How to Brand Your Results Page</a></li>
-</ul>
-
-<h2 id="other-features">Other Features</h2>
-
-<ul>
-  <li>Searchers on Spanish sites now see <em>Generado por …</em> for attribution of the web results.</li>
-  <li>Searchers no longer see a 400 error on sites that don’t specify a character set in their form code.</li>
-  <li>Searchers now see the length of <a href="/manual/youtube.html">YouTube videos</a>.</li>
-  <li>Searchers that tab through the page now see an orange highlight around the active box to improve accessibility.</li>
-</ul>
-
-<h2 id="chores">Chores</h2>
-
-<ul>
-  <li>We investigated the <a href="https://www.us-cert.gov/ncas/current-activity/2014/04/08/OpenSSL-Heartbleed-Vulnerability">OpenSSL “Heartbleed” vulnerability</a>.</li>
-  <li>We upgraded to <a href="http://www.elasticsearch.org/downloads/1-1-0/">ElasticSearch 1.1.0</a> <i class="icon-external-link"><span>(External link)</span></i> to gain some performance improvements.</li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-
-<ul>
-  <li>The full descriptions of <a href="/manual/best-bets-text.html">Best Bets</a> are now viewable on desktops.</li>
-  <li>We improved our logic so that <a href="/manual/domains.html">Domains</a> with similar root characters can be added.</li>
-  <li>We made several fixes to our results page to improve its <a href="http://www.section508.gov/">accessibility</a>.</li>
-  <li>We now allow multiple <a href="/manual/rss.html">Dublin Core values in RSS feeds</a>.</li>
-  <li>RSS-based news results published with a future date now display <em>after</em> their published date only.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/april-2014.html">
         <time datetime="2014-07-09">July 9, 2014</time>
       </a>
     </div>

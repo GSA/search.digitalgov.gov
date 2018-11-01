@@ -105,6 +105,81 @@
  
     
     <h1>
+      <a href="/releases/april-2014.html">April 2014 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlighted-feature-our-new-search-results-page-is-now-available">Highlighted Feature: Our New Search Results Page Is Now Available</h2>
+
+<p>Our newly redesigned search results page is now available for use by early adopters.</p>
+
+<p>Color pickers are in the <a href="https://search.usa.gov/sites/">Admin Center</a>. You can customize each element on the page.</p>
+
+<p>Searchers now see <a href="/manual/display-overview.html">Related Sites</a> on all devices, and you can designate them in the <a href="https://search.usa.gov/sites/">Admin Center</a>. You can customize the label for the Related Sites link. For example, <a href="http://search.usa.gov/search?&amp;affiliate=kidsgov&amp;query=white+house+chef">Kids.gov</a> has chosen the label, <em>This topic on USA.gov</em>.</p>
+
+<p><a href="http://search.usa.gov/search?&amp;affiliate=kidsgov&amp;query=white+house+chef"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/release-04-2014-kids.gov.png" alt="Redesigned Kids.gov" title="Redesigned Kids.gov" /></a></p>
+
+<p>On the redesigned page, the <a href="/manual/brand.html">header and footer links</a> are viewable, with the header links appearing in an expandable “hamburger menu.” Additionally, <a href="/manual/best-bets-graphics.html">Graphics Best Bets</a> appear in two columns for a clearer user experience.</p>
+
+<p>Read the posts below to learn more about the redesign, why we did it, and how you can make the most of it.</p>
+
+<ul>
+  <li><a href="/blog/serp-redesign.html">Our Redesign: Before and After</a></li>
+  <li><a href="/blog/serp-redesign-tips.html">Tips to Make the Most of the Newly Redesigned Results Page</a></li>
+  <li><a href="/manual/brand.html">How to Brand Your Results Page</a></li>
+</ul>
+
+<h2 id="other-features">Other Features</h2>
+
+<ul>
+  <li>Searchers on Spanish sites now see <em>Generado por …</em> for attribution of the web results.</li>
+  <li>Searchers no longer see a 400 error on sites that don’t specify a character set in their form code.</li>
+  <li>Searchers now see the length of <a href="/manual/youtube.html">YouTube videos</a>.</li>
+  <li>Searchers that tab through the page now see an orange highlight around the active box to improve accessibility.</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+
+<ul>
+  <li>We investigated the <a href="https://www.us-cert.gov/ncas/current-activity/2014/04/08/OpenSSL-Heartbleed-Vulnerability">OpenSSL “Heartbleed” vulnerability</a>.</li>
+  <li>We upgraded to <a href="http://www.elasticsearch.org/downloads/1-1-0/">ElasticSearch 1.1.0</a> <i class="icon-external-link"><span>(External link)</span></i> to gain some performance improvements.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li>The full descriptions of <a href="/manual/best-bets-text.html">Best Bets</a> are now viewable on desktops.</li>
+  <li>We improved our logic so that <a href="/manual/domains.html">Domains</a> with similar root characters can be added.</li>
+  <li>We made several fixes to our results page to improve its <a href="http://www.section508.gov/">accessibility</a>.</li>
+  <li>We now allow multiple <a href="/manual/rss.html">Dublin Core values in RSS feeds</a>.</li>
+  <li>RSS-based news results published with a future date now display <em>after</em> their published date only.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/april-2014.html">
+        <time datetime="2014-07-09">July 9, 2014</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/august-2013.html">August 2013 Release Notes</a>
     </h1>
     
@@ -756,83 +831,6 @@
       
       <a href="/releases/september-2013.html">
         <time datetime="2013-09-30">September 30, 2013</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/july-2013.html">July 2013 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="highlight-add-a-url">Highlight: Add a URL</h2>
-
-<p>Are specific web pages missing from your Bing web results? Tell us about these pages and we’ll append the pages to your web results. We offer two ways for you to tell us about the web pages that you want us to fetch and include in our web index.</p>
-
-<ol>
-  <li>Add a specific URL manually.</li>
-  <li>Use an RSS feed to manage your URLs.</li>
-</ol>
-
-<p>Go to Manage Content &gt; <a href="/manual/domains.html">Domains</a> &gt; <a href="/manual/domains-advanced.html">Advanced</a>. Select Supplement URLs to add an individual URL or select Supplemental Feed to add multiple URLs via an RSS feed.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/Add_Supplemental_URL.png" alt="Add a Supplemental URL" /></p>
-
-<p>We’ll fetch the URLs you add and we’ll index their metadata (title, description, and URL) <strong><em>plus the full text of the web page or document</em></strong>.</p>
-
-<h2 id="other-features">Other Features</h2>
-
-<ul>
-  <li>For supplemental URLs, searchers now see a snippet from either the metadata (description field) or full document text (body field), depending on which field matches their search term.</li>
-  <li>You now see better error messages for supplemental URLs that we couldn’t index.</li>
-  <li>You can now access https results from our Search API.</li>
-  <li>You now see a clickable URL for system alerts posted in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
-  <li>We rolled out the first pages our new, beta Admin Center—the <a href="/manual/settings.html">Settings</a> and <a href="/manual/users.html">Manage Users</a> pages and their corresponding <a href="/manual/index.html">help files</a>.</li>
-  <li>Developers now see unique descriptions for CPSC items in the recalls API.</li>
-</ul>
-
-<h2 id="chores">Chores</h2>
-
-<ul>
-  <li>We set up a new cloud server to host our list of federal, state, local, tribal, and territorial <a href="http://govt-urls.usa.gov/tematres/vocab/index.php">government URLs that aren’t included in the .gov or .mil top-level domains</a> that are cataloged using <a href="http://sourceforge.net/projects/tematres/">TemaTres</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
-  <li>We moved the cached results for our commercial web indexes into a separate static cache subdirectory so that they (a) can be pruned at their own rate and (b) persist across production pushes.</li>
-  <li>We now use a persistent file for your header and footer CSS instead of generating it each time we load your results page.</li>
-  <li>We now return a 404 not found status code for static files that we don’t have. We used to return a 406.</li>
-  <li>We now index <a href="https://api.usa.gov/jobs/search.json?organization_id=US-WA:CITY-SEATTLE">Seattle.gov jobs</a> in our <a href="/developer/jobs.html">Jobs API</a>.</li>
-  <li>We updated our <a href="/developer/index.html">API documentation</a> to highlight the primary data sources for each API.</li>
-  <li>We started collecting your feedback on our new, beta <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
-  <li>We reviewed the click data for our related search results.</li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-
-<ul>
-  <li>We improved our validation check for manually added supplemental URLs.</li>
-  <li>We fixed the message that you see after you upload an invalid RSS feed for the supplemental URLs so that it is more actionable.</li>
-  <li>We now escape special characters like apostrophes so that searchers don’t see unescaped values within the snippets of supplemental URLs.</li>
-  <li>You can now add <a href="/manual/rss.html">RSS feeds</a> without the http:// or https:// prefix.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/july-2013.html">
-        <time datetime="2013-07-31">July 31, 2013</time>
       </a>
     </div>
     </article>
