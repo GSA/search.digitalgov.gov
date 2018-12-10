@@ -30,16 +30,16 @@ We use bundler to manage gems. `cd` into the local repo. Install bundler and oth
     $ gem install bundler
     $ bundle install
 
-Start a server and try it out.
+Start a server and try it out. From the root directory, run:
 
     $ bundle exec compass watch (ctrl+c to stop)
     $ bundle exec jekyll serve
 
-Go to <http://localhost:4000>.
+Go to <http://localhost:4000>. The site should have the expected content & formatting of the [Search.gov](https://search.gov/) homepage.
 
 ---
 
 * For more information about Jekyll, visit [the wiki pages](https://github.com/mojombo/jekyll/wiki).
-* If you don't already have it, you'll need [Ruby 2.3.7](http://www.ruby-lang.org/en/downloads). [RVM](http://rvm.io) is recommended to install Ruby on your development environment.
+* If you don't already have it, you'll need [Ruby 2.3.8](http://www.ruby-lang.org/en/downloads). [RVM](http://rvm.io) is recommended to install Ruby on your development environment.
 
-    $ rvm install ruby-2.3.7
+    $ rvm install ruby-2.3.8
