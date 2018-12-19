@@ -102,6 +102,102 @@
   <article class="article">
 
     <pre><code>&lt;h1&gt;
+  &lt;a href="/releases/october-2018.html"&gt;October 2018 Release Notes&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;h2 id="improvements"&gt;Improvements&lt;/h2&gt;
+</code></pre>
+    <ul>
+  <li>We made several updates to our Chef cookbooks to further harden our operating system, including backend password policies, package configuration, and OS configuration.</li>
+  <li>We shifted our model for supporting domain masks for hosted search results pages to leverage CAA records.</li>
+</ul>
+
+    <h2 id="fixes">Fixes</h2>
+    <ul>
+  <li>We fixed a gnarly bug in Elasticsearch that made queries containing very common words, like “the”, behave as if there were no results.</li>
+</ul>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
+  
+  
+  
+  &lt;a href="/releases/october-2018.html"&gt;
+    &lt;time datetime="2018-12-19"&gt;December 19, 2018&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
+  &lt;a href="/releases/november-2018.html"&gt;November 2018 Release Notes&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;h2 id="improvements"&gt;Improvements&lt;/h2&gt;
+</code></pre>
+    <ul>
+  <li>We integrated directly with the new USAJOBS API. This means that we
+    <ul>
+      <li>are now querying their system at query time, rather than building an index of their job postings within our own system and querying that at query time.</li>
+      <li>have reconfigured what information our jobs searches include in the full query that we send to USAJOBS</li>
+      <li>have increased the geographic radius we’ll look at when a user searches on a jobs-related term. The radius is now 75 miles from the user’s general location.</li>
+      <li>we are now always providing a link to USAJOBS.gov if someone has searched for a jobs-related term, even if there are no jobs located near the searcher.</li>
+    </ul>
+  </li>
+  <li>We now support indexing TXT files. There are more TXT files on government websites than you would have thought!</li>
+</ul>
+
+    <h2 id="fixes">Fixes</h2>
+    <ul>
+  <li>We fixed a link in the Jobs module that led searchers to a broken USAJOBS.gov page.</li>
+  <li>We now deduplicate sitemap URLs so we will not try to index the same content more than once.</li>
+  <li>We updated Ruby gems: Loofah, Rack, FFI.</li>
+  <li>We upgraded Ruby.</li>
+</ul>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
+  
+  
+  
+  &lt;a href="/releases/november-2018.html"&gt;
+    &lt;time datetime="2018-12-19"&gt;December 19, 2018&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
   &lt;a href="/releases/september-2018.html"&gt;September 2018 Release Notes&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -831,213 +927,6 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
 </code></pre>
 
   <p>&lt;/article&gt;</p>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/developer/index.html"&gt;Resources for Developers&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;In line with the White House’s &lt;a href="https://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html"&gt;Digital Government Strategy&lt;/a&gt;, we’re making our code and data more open.&lt;/p&gt;
-</code></pre>
-
-    <h2 id="apis-for-searchgov-customers">APIs for Search.gov Customers</h2>
-
-    <p>These APIs are available for use on official government websites only. You must be a Search.gov customer. <a href="https://search.usa.gov/sites">Sign in</a> is required.</p>
-
-    <p><strong><a href="/developer/i14y.html">i14y</a></strong>—This API allows you to send content directly from your content management system (CMS) into Search.gov for real-time indexing. Instructions can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Content &gt; i14y. Request your site be activated for i14y to enable this section.</p>
-
-    <p><strong><a href="/manual/search-results-api.html">Search Results API</a></strong>—This API exposes all relevant results “modules” in a single JSON call, including: web results, best bets, health topics, job openings, recent tweets, recent news, recent videos, <em>Federal Register</em> documents, and related searches. Use it to <strong><em>pull search results</em></strong> from our service to display on your agency’s website or mobile applications. Instructions can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Activate Search.</p>
-
-    <p><strong><a href="/manual/typeahead-api.html">Type-ahead API</a></strong>—This API exposes the type-ahead suggestions that often appear below your search box as searchers enter their search terms. Instructions can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Activate Search.</p>
-
-    <h2 id="apis-and-data-feeds-for-the-public">APIs and Data Feeds for the Public</h2>
-
-    <p><strong><a href="jobs.html">Jobs API</a></strong>—Taps into a list of current jobs openings in federal agencies. Jobs are searchable by keyword, location, agency, schedule, or any combination of these.</p>
-
-    <p>Visit <a href="https://www.usa.gov/developer">USA.gov/Developer</a> for a full list of USA.gov’s APIs and data feeds available to the public.</p>
-
-    <h2 id="source-code-public-github-repositories">Source Code (Public Github Repositories)</h2>
-
-    <p><strong><a href="https://github.com/GSA/asis">ASIS (Advanced Social Image Search)</a></strong>—The source code that runs our image search. ASIS indexes images from Flickr, Instagram, and media RSS to provide a combined search API.</p>
-
-    <p><strong><a href="https://github.com/GSA/i14y">i14y</a></strong>—The source code that runs our search engine for agencies’ published content. i14y indexes agencies’ published content in real time, for search through our regular search channels.</p>
-
-    <p><strong><a href="https://github.com/GSA/jobs_api">Jobs</a></strong>—The source code that runs our jobs search and <a href="jobs.html">Jobs API</a>. Indexes current jobs openings in federal agencies.</p>
-
-    <p><strong><a href="https://github.com/GSA/govt-urls">Non-.gov URLs</a></strong>—The source code that runs our non-.gov URLs API. Indexes all government URLs that don’t end in .gov or .mil.</p>
-
-    <p><strong><a href="https://github.com/GSA/punchcard">Punchcard</a></strong>—The repository of synonyms, protected words, stop words, localizations, and other vocabularies that we use to improve the precision, recall, and usability of search results.</p>
-
-    <p><strong><a href="https://github.com/gsa/search.digitalgov.gov">search.digitalgov.gov</a></strong>—Pages and layout for our website, <a href="https://search.gov">https://search.gov</a>.</p>
-
-    <p><strong><a href="https://github.com/GSA/sitelink_generator">Site Links</a></strong>—The source code that “decorates” organic web results to provide additional, value-added links to help searchers find what they’re looking for. Currently provides one-click links to EDGAR filings for relevant SEC.gov results. Also published as a Ruby gem at <a href="https://rubygems.org/gems/sitelink_generator">https://rubygems.org/gems/sitelink_generator</a>.</p>
-
-    <p><strong><a href="https://github.com/GSA/activerecord-validate_unique_child_attribute">Unique Child Attribute</a></strong>—activerecord-validate_unique_child_attribute is an ActiveRecord extension to enforce uniqueness validations when accepting nested attributes. Works around <a href="https://github.com/rails/rails/issues/4568">Rails issue #4568</a>.</p>
-
-    <h2 id="cms-modules-and-plugins">CMS Modules and Plugins</h2>
-
-    <p>These modules and plugins were developed by Search.gov customers, not us, but we’re linking to them here so you have easy access to them. Use their respective platforms to connect with their developers and submit issues.</p>
-
-    <p><strong><a href="https://www.drupal.org/project/usasearch">Drupal Module</a></strong>—Allows you to connect your Drupal website to your Search.gov search configuration. The module also supports realtime indexing via Search.gov’s i14y content indexing API. Check out our <a href="/manual/drupal.html">help docs here</a>.</p>
-
-    <p><strong><a href="https://github.com/GSA/sites-digitalgov-search">WordPress Plugin</a></strong>—Starter code - contributions welcome! This plugin allows you to override the default WordPress search and connect your WordPress-powered website to your Search.gov search configuration.</p>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/api"&gt;&lt;span class="label label-info"&gt;api&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/open"&gt;&lt;span class="label label-info"&gt;open&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/developer/index.html"&gt;
-    &lt;time datetime="2018-06-27"&gt;June 27, 2018&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/manual/training.html"&gt;Search.gov Training&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;&lt;a href="https://www.digital.gov/events/"&gt;DigitalGov Events Calendar&lt;/a&gt;&lt;/p&gt;
-</code></pre>
-
-    <h2 id="upcoming-sessions">Upcoming Sessions</h2>
-
-    <ul>
-  <li>We hold our Search.gov Intro session a couple times a year.</li>
-</ul>
-
-    <p>Have an idea about another topic you’d like us to develop training for? <a href="mailto:search@support.digitalgov.gov">Let us know!</a></p>
-
-    <h2 id="previous-sessions">Previous Sessions</h2>
-
-    <p>Can’t view our YouTube vidoes? When available, a downloadable .mp4 file can be found below each embedded video on this page.</p>
-
-    <h3 id="how-search-engines-index-your-websites">How Search Engines Index Your Websites</h3>
-    <p>May 2018 | 48 mins</p>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/THhe3Z7XSxg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-
-    <p><em>Resources:</em>
-<br /><a href="/files/HowSearchEnginesIndexYourWebsite.pdf">Presentation Slides &amp; Notes</a> (PDF)
-<br /><a href="https://d3qcdigd1fhos0.cloudfront.net/media/howsearchenginesindex.mp4">How Search Engines Index Your Websites .mp4</a></p>
-
-    <h3 id="intro-to-searchgov">Intro to Search.gov</h3>
-    <p>May 2018 | 60 mins</p>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/W9gFgy4Jx6k?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-
-    <p>Download not available at this time.
-<br /><em>Note:</em> As new Intro sessions are held, recordings of previous sessions will be taken down.</p>
-
-    <h3 id="structuring-your-site-for-better-seo">Structuring Your Site for Better SEO</h3>
-    <p>March 2017 | 59 mins</p>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/2t5JM5slNSA" frameborder="0" allowfullscreen=""></iframe>
-
-    <p><em>Resources:</em> 
-<br /><a href="/files/Structuring Your Site Content for Better SEO Slides.pdf">Presentation Slides</a> (PDF)
-<br /><a href="/files/Article Links - Structuring Your Site for Better SEO Webinar.pdf">List of SEO Articles and Resources</a> (PDF)
-<br /><a href="https://d3qcdigd1fhos0.cloudfront.net/media/Structuring+Your+Site+for+Better+SEO_051117.mp4">Structuring Your Site .mp4</a></p>
-
-    <h3 id="all-about-analytics-search">All About Analytics: Search</h3>
-    <p>June 2016 | 57 mins</p>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/xL6ipNKPW_Y" frameborder="0" allowfullscreen=""></iframe>
-
-    <p><a href="https://d3qcdigd1fhos0.cloudfront.net/media/allaboutanalytics.mp4">All About Analytics .mp4</a></p>
-
-    <h3 id="search-doctor-preventive-care-for-your-search-results">Search Doctor: Preventive Care for Your Search Results</h3>
-    <p>April 2016 | 48 mins</p>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Wr767ENce_4" frameborder="0" allowfullscreen=""></iframe>
-
-    <p><a href="https://d3qcdigd1fhos0.cloudfront.net/media/searchdoctor.mp4">Search Doctor .mp4</a></p>
-
-    <h3 id="digitalgov-search-for-power-users">DigitalGov Search for Power Users</h3>
-    <p>February 2016 | 66 mins</p>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/P47ccZb6Fzc" frameborder="0" allowfullscreen=""></iframe>
-
-    <p><a href="https://d3qcdigd1fhos0.cloudfront.net/media/powerusers.mp4">Power Users .mp4</a></p>
-
-    <h3 id="show-me-the-data-leveraging-analytics-in-digitalgov-search">Show Me the Data: Leveraging Analytics in DigitalGov Search</h3>
-    <p>December 2015 | 61 mins</p>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/zMft4VkYZug" frameborder="0" allowfullscreen=""></iframe>
-
-    <p><em>Resources:</em> 
-<br /><a href="/files/Mastering_Your_Search_Data-December_2015.pptx">Mastering Your Search Data</a> (Slide deck) / Michelle Chronister, USAgov
-<br /><a href="/files/Sample_FY15_Monthly_Search%20Reports-USA.gov.xlsx">USA.gov FY15 Monthly Search Reports</a> (Excel workbook) / Michelle Chronister, USAgov - Modify to use as a template for your agency.
-<br /><a href="https://d3qcdigd1fhos0.cloudfront.net/media/showmethedata.mp4">Show Me the Data .mp4</a></p>
-
-    <h3 id="straight-to-the-top-best-bets-in-digitalgov-search">Straight to the Top: Best Bets in DigitalGov Search</h3>
-    <p>February 2015 | 55 mins</p>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/WzQocKYK0t4" frameborder="0" allowfullscreen=""></iframe>
-
-    <p><a href="https://d3qcdigd1fhos0.cloudfront.net/media/bestbets.mp4">Straight to the Top .mp4</a></p>
-
-    <h3 id="mastering-your-search-term-data-a-tool-for-faster-smarter-analysis">Mastering Your Search Term Data: A Tool for Faster, Smarter Analysis</h3>
-    <p>June 2014 | 58 mins</p>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/x2_PhowP-DI" frameborder="0" allowfullscreen=""></iframe>
-
-    <p><em>Note:</em> To build your own tool to analyze your search data, read <a href="https://www.digitalgov.gov/2013/10/24/understanding-your-users-needs-by-analyzing-search-terms/">Understanding Your Users’ Needs By Analyzing Search Terms</a> and explore USA.gov’s magic formulas in this <a href="https://www.digitalgov.gov/files/2013/10/usa.gov-monthly-search-reports-fy13.xlsx">spreadsheet</a> (MS Excel, 371 KB, October 2013)</p>
-
-    <p><a href="https://d3qcdigd1fhos0.cloudfront.net/media/masteringyoursearchdata.mp4">Mastering Your Search Term Data .mp4</a></p>
-
-    <h2 id="quick-start-video">Quick Start Video</h2>
-
-    <h3 id="getting-started-with-digitalgov-search">Getting Started with DigitalGov Search</h3>
-    <p>May 2015 | 4 mins</p>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/TnlpuudK_WY" frameborder="0" allowfullscreen=""></iframe>
-
-    <p><a href="https://d3qcdigd1fhos0.cloudfront.net/media/gettingstarted.mp4">Getting Started .mp4</a></p>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/help-manual"&gt;&lt;span class="label label-info"&gt;help-manual&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/training"&gt;&lt;span class="label label-info"&gt;training&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/videos"&gt;&lt;span class="label label-info"&gt;videos&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/manual/training.html"&gt;
-    &lt;time datetime="2018-06-20"&gt;June 20, 2018&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
 
 </div>
 

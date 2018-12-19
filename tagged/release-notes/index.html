@@ -105,6 +105,96 @@
  
     
     <h1>
+      <a href="/releases/october-2018.html">October 2018 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="improvements">Improvements</h2>
+<ul>
+  <li>We made several updates to our Chef cookbooks to further harden our operating system, including backend password policies, package configuration, and OS configuration.</li>
+  <li>We shifted our model for supporting domain masks for hosted search results pages to leverage CAA records.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+<ul>
+  <li>We fixed a gnarly bug in Elasticsearch that made queries containing very common words, like “the”, behave as if there were no results.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/october-2018.html">
+        <time datetime="2018-12-19">December 19, 2018</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/releases/november-2018.html">November 2018 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="improvements">Improvements</h2>
+<ul>
+  <li>We integrated directly with the new USAJOBS API. This means that we
+    <ul>
+      <li>are now querying their system at query time, rather than building an index of their job postings within our own system and querying that at query time.</li>
+      <li>have reconfigured what information our jobs searches include in the full query that we send to USAJOBS</li>
+      <li>have increased the geographic radius we’ll look at when a user searches on a jobs-related term. The radius is now 75 miles from the user’s general location.</li>
+      <li>we are now always providing a link to USAJOBS.gov if someone has searched for a jobs-related term, even if there are no jobs located near the searcher.</li>
+    </ul>
+  </li>
+  <li>We now support indexing TXT files. There are more TXT files on government websites than you would have thought!</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+<ul>
+  <li>We fixed a link in the Jobs module that led searchers to a broken USAJOBS.gov page.</li>
+  <li>We now deduplicate sitemap URLs so we will not try to index the same content more than once.</li>
+  <li>We updated Ruby gems: Loofah, Rack, FFI.</li>
+  <li>We upgraded Ruby.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/november-2018.html">
+        <time datetime="2018-12-19">December 19, 2018</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/september-2018.html">September 2018 Release Notes</a>
     </h1>
     
@@ -509,105 +599,6 @@
       
       <a href="/releases/january-2018.html">
         <time datetime="2018-02-15">February 15, 2018</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/december-2017.html">December 2017 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="highlights">Highlights</h2>
-<ul>
-  <li>Our <a href="/blog/searchgov-blog.html">new indexing system</a> is now in production! Our team has been hard at work on this effort since June, and we are thrilled to reach this exciting milestone. In December, we released several features that helped us cross the first phase finish line:
-    <ul>
-      <li>Our new system is live with an updated version of ElasticSearch.</li>
-      <li>Our new system takes into consideration a “Promote” value when determining relevancy. “Promote” is a true/false value and is optional.</li>
-      <li>Our technical lead improved the way the Loofah scraper gets HTML documents into our system. We work in the open as much as possible, and this <a href="https://github.com/flavorjones/loofah/pull/134">minor change</a> helped fix a large bug in the Loofah core code.</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="chores">Chores</h2>
-<ul>
-  <li>The endpoint for our <a href="/developer/jobs.html">Jobs API</a> was updated on December 7th. This change puts the hostname under Search.gov’s DNS zone; previously, it was hosted in another part of our division. This code change only affected agencies that are directly calling our open source API. If you are only using our Jobs Module on your hosted search results page, you did not need to take any action.</li>
-  <li>We updated Rails on our Jobs API.</li>
-  <li>We updated Ruby on our main application.</li>
-  <li>We transitioned away from using UserVoice to collect feedback from our customers. Instead, you can submit feedback via  <a href="https://docs.google.com/forms/d/e/1FAIpQLSemE9w893BahVqCbDl8vlgsawGPdcXigwovOZIqIQAIMRyOWw/viewform">Google form</a> or by <a href="mailto:search@support.digitalgov.gov">emailing us</a>. Take a moment to review the <a href="/feedback/feedback.html">feedback</a> we’ve already received.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/december-2017.html">
-        <time datetime="2018-01-25">January 25, 2018</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/november-2017.html">November 2017 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="highlights">Highlights</h2>
-<ul>
-  <li>To accomplish our <a href="/blog/searchgov-blog.html">FY 2018 goals</a>, we continued backend development that will allow your agency content to be served directly from our indexes. In November, our team began testing our new system. We also released several features related to this project:
-    <ul>
-      <li><a href="/manual/collections.html">Collections</a> results will now come from our indexes. Previously, a site that saw main page search results from our indexes would still see Bing or Google results when using Collections. Now, if a site is using our indexes for its main search page, its Collections results will also come from our indexes.</li>
-      <li>The <a href="/manual/rss.html">page-1 RSS module</a> and <a href="/manual/system-alert.html">search page alert</a> will now appear for sites getting results from our indexes. Previously, these two features only worked on sites using Bing/Google.</li>
-      <li><a href="/developer/indexing-api.html">i14y documents</a> will be rejected if the<code> document_id</code> contains slashes or is more than 512 bytes.</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="chores">Chores</h2>
-<ul>
-  <li>On November 14th, we notified our users of a <a href="http://mailchi.mp/support/service-degradation-resolved">Bing service degradation</a>. This caused inconsistent results across sites, including incomplete results or 503 errors, and prevented access to the Search Admin Center. The inconsistency began at 2:05pm ET and ended at 3:05pm ET.</li>
-  <li>We continued transitioning our repos to use Circle CI.</li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-<ul>
-  <li>Phrase searches now work with content that is served from our indexes. A search for “cheese curds” will return results for the specific phrase “cheese curds” rather than the separate words “cheese” and “curds”.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/november-2017.html">
-        <time datetime="2017-12-18">December 18, 2017</time>
       </a>
     </div>
     </article>

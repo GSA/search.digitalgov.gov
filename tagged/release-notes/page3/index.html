@@ -105,6 +105,128 @@
  
     
     <h1>
+      <a href="/releases/february-2017.html">February 2017 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlighted-features">Highlighted Features</h2>
+
+<ul>
+  <li>If you change your email address, we will now send a verification link to the new address.</li>
+  <li>We now offer a Kazakh language search results page.</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+
+<ul>
+  <li>As of March 1st, we only support federal and District of Columbia websites. We’ve done a lot of behind-the-scenes work to support our non-federal customers during the past few months of transition.</li>
+  <li>We’ve added our active repos to <a href="https://code.gov/">Code.gov</a>, a website promoting good practices in code development, collaboration, and reuse across the federal government.</li>
+  <li>Our sysadmins reduced the size of our Elasticsearch server cluster, saving money while maintaining system integrity.</li>
+  <li>We removed old code from our system, wrapping up tasks from our December transition to Bing’s newest API.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li>We fixed internal reports that allow us to track when agencies launch our service on their sites.</li>
+  <li>We fixed a bug that affected the indexing of some <a href="/manual/twitter.html">Twitter accounts</a>.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/february-2017.html">
+        <time datetime="2017-03-15">March 15, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/releases/january-2017.html">January 2017 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlighted-features">Highlighted Features</h2>
+
+<h3 id="i14y-drawer-management">i14y Drawer Management</h3>
+
+<p>We updated the process for removing <a href="/manual/i14y-drawers.html">i14y Drawers</a> from a search configuration.</p>
+
+<ul>
+  <li>If you remove a drawer that is associated with only one search configuration, it will be deleted from our system.</li>
+  <li>If you remove a drawer that is attached to multiple search configurations, it will be removed from only the one configuration and will remain attached to the others.</li>
+</ul>
+
+<h3 id="new-results-page-platform-launches">New Results Page Platform Launches</h3>
+
+<p>We launched our new JavaScript search results page, which is serving the search results on IRS.gov.</p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/new-serp.png" alt="New JavaScript results page" width="100%" /></p>
+
+<h2 id="chores">Chores</h2>
+
+<ul>
+  <li>Have your RSS feeds transitioned from <code>HTTP</code> to <code>HTTPS</code>? Our system now recognizes that transition automatically.</li>
+  <li>We indexed and support the search for whitehouse.gov. We prepared indexes to go live at noon January 20, for the obamawhitehouse.archives.gov sites, as well as the new content on whitehouse.gov.</li>
+  <li>We’ve updated the process around password reset links.
+    <ul>
+      <li>Password reset links are only valid for one hour: previously, if you requested a password reset link more than once within the hour, the first link would expire. This caused confusion for many users who accidentally hit the reset link twice and were encountering expired links.</li>
+      <li>Now, we will resend you the first, valid link for a period of one hour, regardless of how many times you hit the reset button.</li>
+      <li>We’ve also updated and clarified the message you see if you click an expired link.</li>
+    </ul>
+  </li>
+  <li>We finalized adding all our active repos to the <a href="https://code.gov">Code.gov</a> inventory.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li>Our excellent asset caching was inadvertently prolonging transient errors by serving up cached error responses. We’ve fixed this so errors will really go away when they’ve cleared.</li>
+  <li>We also added a response code passthrough to make sure that, in our multiserver environment, we don’t end up returning <code>200</code> responses just because an error page is working just fine. We are now passing through the response code reported by the error page.</li>
+  <li>We fixed a bug where some password reset tokens were delivering users to the login page, when they should have been delivered to the password reset page.</li>
+  <li>We fixed an error that was interfering with our import of Federal Register documents for indexing.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/january-2017.html">
+        <time datetime="2017-02-17">February 17, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/december-2016.html">December 2016 Release Notes</a>
     </h1>
     
@@ -696,160 +818,6 @@
       
       <a href="/releases/august-2014.html">
         <time datetime="2014-09-04">September 4, 2014</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/june-2014.html">June 2014 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="highlighted-features">Highlighted Features</h2>
-
-<h3 id="feature-1-we-incorporated-your-feedback-into-our-redesigned-results-page">Feature 1. We incorporated your feedback into our redesigned results page.</h3>
-
-<p>We’re continuing to work on our redesigned search results page to incorporate your feedback. Searchers now see a more prominent option to browse your site.</p>
-
-<p><a href="http://search.usa.gov/search?affiliate=federalstudentaid"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/release-06-2014-fedaid-browse.png" alt="Redesigned option to browse site" title="Redesigned option to browse site" /></a></p>
-
-<p>Additionally, you can now:</p>
-
-<ul>
-  <li>Left align your logo;</li>
-  <li>Add a direct link to your advanced search page (using the syntax http://search.usa.gov/search/advanced?affiliate=<a href="/manual/settings.html">YourSiteHandle</a>); and</li>
-  <li>Display images from <a href="/manual/rss.html">media RSS feeds</a>.</li>
-</ul>
-
-<p>All job openings (beyond those for U.S. citizens only) now appear when searchers click on the link to see all the openings on <a href="https://www.usajobs.gov/">USAJobs</a>.</p>
-
-<p><a href="http://search.usa.gov/search?affiliate=usagov&amp;query=jobs"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/release-06-2014-USAgov.png" alt="Tweaks to the redesigned USA.gov results page" title="Tweaks to the redesigned USA.gov  results page" /></a></p>
-
-<h3 id="feature-2-you-can-access-real-time-unfiltered-analytics">Feature 2. You can access real-time, unfiltered analytics.</h3>
-
-<p>We recently upgraded our underlying analytics framework to use the <a href="http://www.elasticsearch.org/overview/">ELK stack</a> <i class="icon-external-link"><span>(External link)</span></i>. We’ve gained many benefits with the upgrade. There are also two big benefits for you.</p>
-
-<p><strong>Benefit #1: Real-time Data.</strong> You can now instantaneously see the searches and clicks that are performed on your site. We previously processed some of your analytics via nightly cron jobs so there was a delay before you saw the data. Try it out. Do a search on your site and then go to <a href="https://search.usa.gov/sites/">Admin Center</a>. You’ll see your search query on the dashboard.</p>
-
-<p><strong>Benefit #2: Unfiltered Data.</strong> You can now access your unfiltered analytics via the Admin Center so you can more easily manipulate the data. We previously only provided unfiltered data in the CSV downloads or via secure FTP.</p>
-
-<p>You still see filtered data by default. You can toggle between a filtered or unfiltered view by going to the <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; Analytics &gt; Settings.</p>
-
-<ul>
-  <li><em>Filtered.</em> Several rules are applied to remove bot and other non-human looking traffic. The filtered data represent our best effort to show you real searches performed by your site’s visitors.</li>
-  <li><em>Unfiltered.</em> Nearly all searches and clicks are included. Only known spiders (such as Bingbot and Googlebot) are excluded. Some of you may see dramatically more data in the unfiltered view.</li>
-</ul>
-
-<p><a href="https://search.usa.gov/sites/"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/release-04-2014-Analytics.png" alt="Toggle between a filtered or unfiltered view" title="Toggle between a filtered or unfiltered view" /></a></p>
-
-<h2 id="chores">Chores</h2>
-
-<ul>
-  <li>We now diplay images from Flickr only by default. <a href="mailto:search@support.digitalgov.gov">Email us</a> if you’d like to display images from Bing, too.</li>
-  <li>We now <a href="http://code.flickr.net/2014/04/30/flickr-api-going-ssl-only-on-june-27th-2014/">use SSL to access the Flickr API</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
-  <li>We upgraded to <a href="http://www.elasticsearch.org/blog/elasticsearch-1-2-1-released/">ElasticSearch 1.2.1</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
-  <li>We now handle some error messages from the <a href="https://dev.twitter.com/">Twitter API</a> <i class="icon-external-link"><span>(External link)</span></i> more gracefully.</li>
-  <li>We added agency IDs from the <a href="https://www.federalregister.gov/">Federal Register</a> to our database in preparation for using <a href="https://www.federalregister.gov/learn/developers">their API</a> to display Federal Register documents in our search results.</li>
-  <li>As we now have a single, responsive search results page, we no longer use ‘Mobile Logo’ in the Admin Center. We now use just ‘Logo.’</li>
-  <li>We removed the fields for image attribution for <a href="/manual/best-bets-graphics.html">Graphics Best Bets</a> from our database.</li>
-  <li>We updated our cron-based emails to use our new analytics framework.</li>
-  <li>We backfilled the data in our Admin Center so that you see analytics from 13 months ago.</li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-
-<ul>
-  <li>We fixed our parser for <a href="http://tools.ietf.org/html/rfc4287">Atom</a> <i class="icon-external-link"><span>(External link)</span></i> RSS feeds to use atom:summary when atom:content isn’t present.</li>
-  <li>We fixed a bug so that the options to filter search results now appears in Internet Explorer 8.</li>
-  <li>We now use a <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/method-reference#named">named tracker</a> <i class="icon-external-link"><span>(External link)</span></i> so that, when you use the default tracker, you can see pageviews and other data in your Google Analytics accounts.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/june-2014.html">
-        <time datetime="2014-07-11">July 11, 2014</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/may-2014.html">May 2014 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="features">Features</h2>
-
-<p>We officially rolled our newly <a href="http://localhost:4000/blog/serp-redesign.html">redesigned results page</a>.</p>
-
-<p>As we continue to add features to our search results page, you can see small, incremental changes. We added a thin, visible border around the search box to improve its visibility, especially against a white background. We changed the color of the query term in the search box from gray to black. We also added more padding around <a href="/manual/best-bets-text.html">Best Bets</a> so that searchers can more readily distinguish them from web results. At the bottom of page, we added “Page 1” to “Next »” to more clearly indicate that more results are available.</p>
-
-<p><a href="http://search.usa.gov/search?affiliate=usagov&amp;query=huricane"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/release-05-2014-usa-huricane.png" alt="Tweaks to the redesigned USA.gov results page" title="Tweaks to the redesigned USA.gov results page" /></a></p>
-
-<p>Additionally, searchers can now see image and video results. Searchers can filter results to images or videos only. They can also see up to one inline video result with a link to see more videos.</p>
-
-<p>To improve the quality of the image search results, we now display images from <a href="/manual/flickr.html">your Flickr photostream</a> by default.</p>
-
-<p>We realized that our results page was getting a bit top-heavy so we now display inline results only when they’re most relevant—capping the display of inline videos at 13 months and inline RSS-based news results at four months. Additionally, we display very recent news results (less than five days) at the top of the page and less recent news results closer to the bottom.</p>
-
-<p>It is also now possible to include an email address as a header or footer link by using mailto:info@agency.gov within the URL.</p>
-
-<h2 id="chores">Chores</h2>
-
-<ul>
-  <li>We added support for .com <a href="/manual/cname.html">CNAMEs</a>.</li>
-  <li>We increased the maximum mobile logo size from 50KB to 64KB.</li>
-  <li>We updated <a href="https://travis-ci.org/">Travis-CI</a> <i class="icon-external-link"><span>(External link)</span></i> to use <a href="https://www.ruby-lang.org/en/downloads/">Ruby 2.0</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
-  <li>We added robots.txt files to all sites that use a CNAME to block crawlers from their search results pages.</li>
-  <li>We updated <a href="http://logstash.net/">logstash</a> <i class="icon-external-link"><span>(External link)</span></i> and upgraded <a href="http://www.elasticsearch.org/downloads/1-2-0/">ElasticSearch to 1.2.0</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
-  <li>We investigated <a href="http://www.drupal.org">Drupal</a> <i class="icon-external-link"><span>(External link)</span></i> modules that publish content APIs for our bring your own index pilot.</li>
-  <li>We updated our SSL certificate.</li>
-  <li>We added a page in the Admin Center for you to let us know about your <a href="/manual/instagram.html">Instagram</a> account. We also registered for the <a href="http://instagram.com/developer/">Instagram API</a> <i class="icon-external-link"><span>(External link)</span></i>. (We’re planning to display image results Instagram soon.)</li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-
-<ul>
-  <li>Searchers no longer see duplicate video results.</li>
-  <li>We fixed the spacing between web results on mobile phones.</li>
-  <li>We now automatically populate the homepage URL for newly added sites.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/may-2014.html">
-        <time datetime="2014-07-09">July 9, 2014</time>
       </a>
     </div>
     </article>
