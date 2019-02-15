@@ -107,6 +107,151 @@
  
     
     <h1>
+      <a href="/releases/september-2014.html">September 2014 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="promote-related-content-as-value-added-links">Promote Related Content as Value-Added Links</h2>
+
+<p>To help searchers more easily find what they’re looking for, you can now promote related content by listing it as a set of value-added links under your organic web results. See the sample results page below that shows value-added links for EDGAR filings for a search on <em>apple</em> on SEC.gov.</p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/sitelink.png" alt="Sitelink-generated links for EDGAR filings on SEC.gov" title="Sitelink-generated links for EDGAR filings on SEC.gov" /></p>
+
+<p>Do you have related content that you’d like to display as value-added links that searchers should see within the context of each other (such as related forms, instructions, and publications)? If your related content follows a discernable URL pattern, email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> and we’ll work with you to promote the related content on your site.</p>
+
+<p>We’ve open sourced the <a href="https://github.com/GSA/sitelink_generator">code for the sitelink generator</a> on Github so you can <a href="https://github.com/GSA/sitelink_generator/fork">fork the code</a> and contribute to it directly. We’ve also <a href="http://rubygems.org/gems/sitelink_generator">published it as Ruby gem</a>.</p>
+
+<p>Thanks, <a href="http://www.sec.gov">SEC.gov</a> team, for helping us build this new feature!</p>
+
+<h2 id="other-features">Other Features</h2>
+
+<ul>
+  <li>Searchers now see underlined links when they hover over them on the results page.</li>
+  <li>Searchers using screen readers now see an <a href="http://www.w3.org/TR/wai-aria/">ARIA</a> <i class="icon-external-link"><span>(External link)</span></i> alert for type-ahead search suggestions to let them know the number of available suggestions and how to access them.</li>
+  <li>You can now add a tagline at the top of your results page. See the sample tagline, <em>NIJ.gov - Strengthen Science. Advance Justice.</em>, on <a href="http://search.usa.gov/search?affiliate=national-institute-of-justice&amp;query=dna">NIJ.gov’s results page</a>.</li>
+  <li>You can now left-align your hamburger menu. See the sample left-aligned menu on <a href="http://search.whitehouse.gov/search?affiliate=wh&amp;query=bo">WhiteHouse.gov’s results page</a>. (Perhaps needed because <a href="http://time.com/3107557/top-10-lefties/">Obama is a leftie</a> <i class="icon-external-link"><span>(External link)</span></i>?)</li>
+  <li>You can now add an alt tag to your logo on the <a href="/manual/brand.html">Image Assets</a> page in the Admin Center.</li>
+  <li>To improve its accessibility, you now see legends and instructional text for all radio button options in the Admin Center. You can also tab logically through all menu items.</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+
+<ul>
+  <li>We upgraded to version 4.0 of the <a href="https://rubygems.org/gems/airbrake">Airbrake gem</a> <i class="icon-external-link"><span>(External link)</span></i> and version 6.5 of <a href="http://www.redhat.com/en/technologies/linux-platforms/enterprise-linux">Red Hat Enterprise Linux</a> <i class="icon-external-link"><span>(External link)</span></i>. We also installed patches to address the <a href="https://www.us-cert.gov/ncas/alerts/TA14-268A">Shellshock vulnerability</a>.</li>
+  <li>We gained 40% more capacity in our main Elasticsearch cluster by upgrading our hardware.</li>
+  <li>We removed infinite scroll on the results page.</li>
+  <li>We now redirect searchers to USA.gov’s 404 page when they use a null or incorrect ‘affiliate’ parameter.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li>We’ve added a user agent to our request headers so you can see it when we poll your RSS feeds.</li>
+  <li>If you’ve opted to turn off web tracking, we now turn off the tags for both our own Google Analytics and the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a>.</li>
+  <li>We now show fewer similar or duplicate pictures in our image results. [<a href="https://github.com/GSA/asis/commit/f6ab91539efa965325dbe02b6c67ff68a7dff431">Commit f6ab915</a>]</li>
+  <li>We fixed our image search pagination to account for really old pictures and how we group photos into albums. [<a href="https://github.com/GSA/asis/commit/b12eb198c900d0d1a00c06a017477114b003489c">Commit b12eb19</a>]</li>
+  <li>We also fixed our indexing of images with circa dates. [<a href="https://github.com/GSA/asis/commit/f7b577c21daed4ac5b00711a70028602c4117d72">Commit f7b577c</a>]</li>
+  <li>We lessened the complexity of the importer logic for Instagram. [<a href="https://github.com/GSA/asis/commit/5f828e3e426d66300fcff574ffecff262e9b4d73">Commit 5f828e3</a>]</li>
+  <li>The option to narrow results to images only now appears by default for sites with an Instagram account. It had previously displayed only for sites with a Flickr account.</li>
+  <li>Searchers no longer see government-wide image results on sites without a Flickr or Instagram account. They now see site-specific image results.</li>
+  <li>Image searches without a search term no longer cause an error.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/september-2014.html">
+        <time datetime="2014-11-17">November 17, 2014</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/releases/august-2014.html">August 2014 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="add-instagram-pictures-to-your-image-results">Add Instagram Pictures to Your Image Results</h2>
+
+<p>Does your agency have an Instagram account? Your pictures can now appear in your site’s search results.</p>
+
+<p>Simply <a href="/manual/instagram.html">tell us your Instagram username</a> at <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Instagram. We’ll automatically index all of the pictures in your account within minutes.</p>
+
+<p>See the sample results below for a search for <a href="http://search.doi.gov/search/images?affiliate=doi.gov&amp;query=moon"><em>moon</em> on DOI.gov</a>.</p>
+
+<p><a href="http://search.doi.gov/search/images?&amp;affiliate=doi.gov&amp;query=moon"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/release-08-2014-doi-instagram.png" alt="DOI Instagram Results" title="DOI Instagram results for moon" /></a></p>
+
+<p>This feature is reflective of our commitment to bring your content, <a href="http://www.digitalgov.gov/2014/08/26/help-the-public-find-your-information-wherever-and-however-youve-published-it/">wherever it lives</a>, to your searchers.</p>
+
+<h2 id="other-features">Other Features</h2>
+
+<ul>
+  <li>Searchers now see results for Instagram pictures, regardless of spacing. For example, Apollo11 now returns the same results as Apollo 11. [<a href="https://github.com/GSA/oasis/commit/9a29de80dd22978581af4b0e460e439b78e614d7">Commit 9a29de8</a>]</li>
+  <li>Searchers now see better spelling suggestions for image searches. [<a href="https://github.com/GSA/oasis/commit/1ae0c7e7fff3a4eb02f3e09e8c8d7c030fd50e14">Commit 1ae0c7e7ff</a>]</li>
+  <li>Searchers now see images from all known government Flickr and Instagram accounts when <a href="http://search.usa.gov/search/images?affiliate=usagov&amp;query=hoover">searching for images on USA.gov</a>.</li>
+  <li>Searchers now see <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a> <i class="icon-external-link"><span>(External link)</span></i> facets on the <a href="/blog/serp-redesign.html">newly redesigned search results page</a>.</li>
+  <li>Searchers now see a consistent look and phrasing for the See more… option on the various modules on the results page.</li>
+  <li>You can now toggle the display of <a href="/manual/govbox-federal-register.html"><em>Federal Register</em> results</a> in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
+  <li>To improve the accessibility of the <a href="https://search.usa.gov/sites/">Admin Center</a>, you now see an outline defining the area of focus, and you can access the links for My Account and Sign Out when navigating with the keyboard.</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+
+<ul>
+  <li>We upgraded to <a href="http://www.elasticsearch.org/downloads/1-3-2/">ElasticSearch 1.3.2</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
+  <li>We added a notice of upcoming changes to the API Instructions page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li>We fixed the spacing between titles and descriptions so it is consistent on all of our results pages.</li>
+  <li>To improve the quality of type-ahead suggestions, we decreased the number of times a term must be searched before appearing as a suggestion.</li>
+  <li>The option to drill down into detailed data for Best Bets now remains when you change the date on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page.</li>
+  <li>Searchers no longer see deleted RSS items with 404 http status codes in their results.</li>
+  <li>We now pre-validate social media account handles.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/august-2014.html">
+        <time datetime="2014-09-04">September 4, 2014</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/june-2014.html">June 2014 Release Notes</a>
     </h1>
     
@@ -696,158 +841,6 @@
       
       <a href="/releases/january-2014.html">
         <time datetime="2014-01-31">January 31, 2014</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/december-2013.html">December 2013 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="3-highlighted-features">3 Highlighted Features</h2>
-
-<h3 id="feature-1-analyze-searchers-click-behavior">Feature 1. Analyze Searchers’ Click Behavior</h3>
-
-<p>Clickthru rates (CTR) can indicate the relevance of your results for specific search terms. You can now see (a) the CTR for your top 1,000 <a href="/manual/queries.html">queries</a> and (b) your top <a href="/manual/clicks.html">clicked URLs</a>. The data are updated in real time.</p>
-
-<p>Use the data to find searches with low CTRs. For these queries, consider if a low CTR is good or not. (A low CTR can be good when searchers see the answer directly on the results page, eliminating the need to click on a link.) For those that aren’t good, tweak your page’s title or content, add a new page to your site, or add a <a href="/manual/best-bets-text.html">best bet</a> to point to the relevant page on another agency’s site.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/feature-ctr-top-queries.png" alt="Clickthru Rates for Top Queries" title="Clickthru Rates for Top Queries" /></p>
-
-<h3 id="feature-2-analyze-the-terms-that-trigger-best-bets">Feature 2. Analyze the Terms that Trigger Best Bets</h3>
-
-<p>Have you ever wondered what search terms make your <a href="/manual/best-bets-text.html">best bets</a> appear? From the <a href="/manual/monthly-reports.html">Monthly Reports</a> page, you can now drill down to see a pie chart of the terms that trigger each best bet. The data are updated in real time.</p>
-
-<p>Use the data to tweak your best bet’s title, description, and keyword phrases. Or, use it to decide to delete the best bet altogether.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/feature-bb-trigger.png" alt="Pie Chart of Terms Triggering a Best Bet" title="Pie Chart of Terms Triggering a Best Bet" /></p>
-
-<h3 id="feature-3-use-keyword-phrases-to-show-best-bets-only-when-theyre-relevant">Feature 3. Use Keyword Phrases to Show Best Bets Only When They’re Relevant</h3>
-
-<p>Have you ever seen a <a href="/manual/best-bets-text.html">best bet</a> when you don’t expect it to appear? Best bet keywords are now <em>phrases</em>. This change allows you to show a best bet only when its keyword is an <em>exact match</em> with a searcher’s query.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/feature-improved-phrasing.png" alt="Best Bets Now Use Keyword Phrases" title="Best Bets Now Use Keyword Phrases" /></p>
-
-<h2 id="chores">Chores</h2>
-
-<ul>
-  <li>We fixed some errors with URL shortening.</li>
-  <li>We updated our stemming file so searchers no longer see irrelevant results for intern.</li>
-  <li>We replaced Jenkins with <a href="https://travis-ci.org/">Travis CI</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
-  <li>We fixed a time setting on our API machine.</li>
-  <li>We upgraded Java on our API and <a href="http://www.cloudera.com/content/cloudera/en/home.html">Cloudera</a> <i class="icon-external-link"><span>(External link)</span></i> machines.</li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-
-<ul>
-  <li>We fixed the layout of graphic best bets so results are shown in vertical, newspaper style columns. We also added more spaces between links.</li>
-  <li>Spanish language searchers no longer see spelling suggestions for terms with and without diacritics.</li>
-  <li>We renamed the IP deduped column <i>Real Count (Humans Only)</i> in the downloadable CSV file on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page.</li>
-  <li>We updated our mobile search results page to show a more/less symbol only when it is applicable.</li>
-  <li>We fixed the search box on our mobile results page so searchers can easily remove previous queries from the search box and so long mobile search terms don’t overlap with the ‘x’ on the right.</li>
-  <li>Best bets now appear even when there are no web results.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/december-2013.html">
-        <time datetime="2013-12-31">December 31, 2013</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/november-2013.html">November 2013 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="highlight-new-improved-mobile-results-page">Highlight: New, Improved Mobile Results Page</h2>
-
-<p>Searchers using a mobile phone now see a new, improved search results page. Visible improvements include:</p>
-
-<ul>
-  <li>Wall-to-wall search box.</li>
-  <li>More readable font for type-ahead suggestions and search results.</li>
-  <li><a href="http://insideintercom.io/why-cards-are-the-future-of-the-web/">Card-based design</a> <i class="icon-external-link"><span>(External link)</span></i> to cluster best bets, web results, and related searches.</li>
-</ul>
-
-<p>See the screenshot below for <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=thanksgiving&amp;m=true">USA.gov’s results for <em>thanksgiving</em> on a mobile phone</a>.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/usagov-mobile-thanksgiving.png" alt="Mobile search results page on USA.gov" /></p>
-
-<p>Under the hood, our new results page uses a responsive design to optimize searchers’ experience on your site—anywhere, anytime, and on any device per the <a href="https://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html">Digital Government Strategy</a>.</p>
-
-<p>Look for even more improvements to your search results page over the next few months. And, be sure to customize your results page by uploading your <a href="/manual/brand.html">mobile logo</a> and letting us know your <a href="/manual/settings.html">homepage URL</a>.</p>
-
-<h2 id="other-features">Other Features</h2>
-
-<ul>
-  <li>You can now see clickthru rates (CTRs) for each Best Bet. View your <a href="/manual/monthly-reports.html">Monthly Report</a> in the Admin Center and click drill down to access the CTR data. Drill down a second time to see the queries that lead to each Best Bet. Use the data to improve searchers’ experience on your site by editing or deleting your Best Bets.</li>
-  <li>Searchers now see longer URLs on larger resolutions (up to 65 characters) and shorter URLs on smaller resolutions. We previously displayed up to 42 characters, regardless of the searcher’s screen resolution.</li>
-  <li>Searchers on a site with a custom <a href="/manual/cname.html">CNAME</a> are now redirected to the site’s homepage.</li>
-  <li>You can now see up to 1,000 results on the <a href="/manual/clicks.html">Clicks</a> and <a href="/manual/queries.html">Queries</a> pages in the Analytics section of the Admin Center. We previously showed up to 10 results.</li>
-</ul>
-
-<h2 id="chores">Chores</h2>
-
-<ul>
-  <li>We’re now leveraging <a href="https://keen.io/">Keen IO</a> <i class="icon-external-link"><span>(External link)</span></i> for some real-time analytics.</li>
-  <li>We updated Rails to version <a href="http://weblog.rubyonrails.org/2013/10/16/Rails-3-2-15-has-been-released/">3.2.15</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
-  <li>We fixed some Javascript-related <a href="http://cukes.info/">Cucumber</a> <i class="icon-external-link"><span>(External link)</span></i> scenarios that had previously been failing.</li>
-  <li>We now gracefully handle our Twitter IDs so that our Twitter process is more stable.</li>
-  <li>We now gracefully handle an <a href="https://github.com/eventmachine/eventmachine">EventMachine</a> <i class="icon-external-link"><span>(External link)</span></i> failure.</li>
-  <li>We tidied up some loose ends from our old, now-defunct Admin Center by removing unused code and database columns.</li>
-  <li>We renewed some of our SSL certificates.</li>
-  <li>We updated the operating system packages on all of our machines and we rebuilt a disk on one of our servers.</li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-
-<ul>
-  <li>We fixed a bug that prevented you from adding a new site in the Admin Center.</li>
-  <li>We now filter invalid URLs from your <a href="/manual/rss.html">RSS</a> feeds so that searchers don’t see a 404 error.</li>
-  <li>We fixed our <a href="/manual/collections.html">Collections</a> search results page so that it no longer fails when it contains a database URL without any values set.</li>
-  <li>We added <em>correctional</em> to our <a href="http://wiki.apache.org/solr/LanguageAnalysis#solr.StemmerOverrideFilterFactory">stemming override</a> <i class="icon-external-link"><span>(External link)</span></i> file so that searchers don’t see irrelevant results for correct, corrected, etc.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/november-2013.html">
-        <time datetime="2013-11-29">November 29, 2013</time>
       </a>
     </div>
     </article>

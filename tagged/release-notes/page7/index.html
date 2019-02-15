@@ -107,6 +107,169 @@
  
     
     <h1>
+      <a href="/releases/december-2011.html">December 2011 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>We divide our work into three categories.</p>
+
+<ol>
+  <li>Features: Things you actually notice.</li>
+  <li>Chores: Back-end improvements that you don’t notice.</li>
+  <li>Bugs: Fixes to any code issues that may arise.</li>
+</ol>
+
+<h2 id="features-for-searchers">Features for Searchers</h2>
+
+<ul>
+  <li>Searchers don’t see duplicate results from Add URLs.</li>
+  <li>Spanish searchers see stemmed equivalents.</li>
+  <li>Searchers on USA.gov see FAQ GovBox higher in results.</li>
+</ul>
+
+<h2 id="features-for-agency-customers">Features for Agency Customers</h2>
+
+<ul>
+  <li>Customers can choose from predefined themes.</li>
+  <li>Customers see a a Sitemap box on the Sitemaps page.</li>
+  <li>Customers have a Discovery Tag for us to proactively discover and index content from their websites.</li>
+  <li>Customers can edit Header and Footer CSS.</li>
+  <li>Customers can set their locale to Spanish during sign up.</li>
+  <li>Customers see an updated left nav.</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+
+<ul>
+  <li>Remove “locale” parameter from all models, analytics, etc.</li>
+</ul>
+
+<h2 id="bugs">Bugs</h2>
+
+<ul>
+  <li>Add Spanish translations for Popular Links, no RSS results, and document results.</li>
+  <li>Remove extra whitespace when displaying snippets.</li>
+  <li>Fix buggy bold highlighting in type-ahead searches in API.</li>
+  <li>Remove 0-100 scale from sparklines in search module stats and let it autoscale.</li>
+  <li>Increase length of URL and title field on indexed documents.</li>
+  <li>Ignore invalid IndexedDocument URL’s before they get queued for fetching/indexing</li>
+  <li>Ignore HTTPS URLS for on-demand index.</li>
+  <li>Fix duplicate results due to domain and protocol variations.</li>
+  <li>Handle 503 errors from RSS feeds more gracefully.</li>
+  <li>Fix error logging around duplicate indexed docs pages.</li>
+  <li>Fix deduping regression to still match exact URLs.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/december-2011.html">
+        <time datetime="2011-12-31">December 31, 2011</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/releases/november-2011.html">November 2011 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Happy holidays! We’re happy to let you know more about our on-demand indexing features. You can now let us know where your new content lives (by submitting your new URLs, RSS feeds, or sitemaps), and we’ll immediately display it on your results pages. You’ve been asking for on-demand indexing, so we’re happy to officially announce this capability. Please check it out and let us know what you think.</p>
+
+<p>As a reminder, we divide our work into three categories.</p>
+
+<ol>
+  <li>Features: Things you actually notice.</li>
+  <li>Chores: Back-end improvements that you don’t notice.</li>
+  <li>Bugs: Fixes to any code issues that may arise.</li>
+</ol>
+
+<h2 id="features-for-searchers">Features for Searchers</h2>
+
+<ul>
+  <li>Searchers see site-specific favicon.</li>
+  <li>Searchers may narrow results to see images only.</li>
+  <li>Searchers may use SSL.</li>
+  <li>Searchers see related searches based on type-ahead suggestions at the bottom of results pages.</li>
+  <li>Spanish searchers retrieve tokenized variants.</li>
+  <li>USA.gov visitors can consume recalls as an <a href="https://www.usa.gov/rss/index.shtml">RSS feed</a>.</li>
+  <li>Mobile tablet visitors to m.USA.gov see the classic view for results pages.</li>
+</ul>
+
+<h2 id="features-for-affiliate-center-users">Features for Affiliate Center Users</h2>
+
+<ul>
+  <li>Affiliate Center users can populate and display top or trending searches.</li>
+  <li>Affiliate Center users may submit sitemaps for on-demand indexing.</li>
+  <li>URLs added by Affiliate Center users are refreshed periodically.</li>
+  <li>Affiliate Center users may emergency delete a URL.</li>
+  <li>Affiliate Center users may bulk delete type-ahead suggestions.</li>
+  <li>Affiliate Center users receive an audit-trail email when their header or footer changes.</li>
+  <li>Affiliate Center users may delete URLs they’ve added as content sources.</li>
+  <li>Affiliate Center users may customize font colors and families on their results pages via themes.</li>
+  <li>Affiliate may enable Images tab on Affiliate SERP.</li>
+  <li>Affiliates may submit social media handles.</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+
+<ul>
+  <li>Added ‘a’ as a stopword.</li>
+  <li>Updated search analytics in Affiliate Center to search on today’s data.</li>
+  <li>Changed label in Affiliate Center from HTTP Parameter Site Name to Site Handle.</li>
+  <li>Investigated document fetching and indexing errors.</li>
+</ul>
+
+<p>Bugs</p>
+
+<ul>
+  <li>Added Spanish translations for Everything, Images, and time filters on results pages.</li>
+  <li>Removed garbage characters for indexed PDF files.</li>
+  <li>Added support to parse password-protected PDF files.</li>
+  <li>Truncated descriptions for indexed PDF files at 250 characters.</li>
+  <li>Added support to allow sitemaps can reference other sitemaps.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/november-2011.html">
+        <time datetime="2011-12-06">December 6, 2011</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/october-2011.html">October 2011 Release Notes</a>
     </h1>
     

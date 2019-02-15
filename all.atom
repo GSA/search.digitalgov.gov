@@ -3,10 +3,59 @@
   <title><![CDATA[Search.gov]]></title>
   <link href="https://search.gov/all.atom" rel="self"/>
   <link href="https://search.gov/"/>
-  <updated>2019-02-01T17:06:07+00:00</updated>
+  <updated>2019-02-15T21:51:06+00:00</updated>
   <id>https://search.gov/</id>
   <author><name><![CDATA[Search.gov]]></name></author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[January 2019 Release Notes]]></title>
+    <link href="https://search.gov/releases/january-2019.html"/>
+    <updated>2019-02-15T00:00:00+00:00</updated>
+    <id>https://search.gov/releases/january-2019.html</id>
+    <content type="html"><![CDATA[<h2 id="improvements">Improvements</h2>
+
+<ul>
+  <li>After integrating directly with the new USAJOBS API, we worked on additional tuning of trigger words to avoid false positive job-related searches</li>
+  <li>We have improved search performance by caching repeat queries made to our data store</li>
+  <li>We updated our content parser to accept some non-standard HTML tags, and to ignore any content within <code>&lt;nav&gt;</code> and <code>&lt;footer&gt;</code> elements</li>
+</ul>
+
+<h2 id="fixes-upgrades-misc">Fixes, Upgrades, Misc</h2>
+
+<ul>
+  <li>We upgraded Ruby on our <code>search-gov</code> repo</li>
+  <li>We increased the processing power on the servers that support our primary web index</li>
+  <li>We reindexed our primary index into more Elasticsearch shards</li>
+  <li>We decreased the cookie timeout for Admin Center sessions</li>
+  <li>We made the failed password reset alert language more ambiguous, so people will no longer be able to tell whether the email address has an account</li>
+  <li>We fixed a bug in our MRSS photo indexer</li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[December 2018 Release Notes]]></title>
+    <link href="https://search.gov/releases/december-2018.html"/>
+    <updated>2019-02-15T00:00:00+00:00</updated>
+    <id>https://search.gov/releases/december-2018.html</id>
+    <content type="html"><![CDATA[<h2 id="improvements">Improvements</h2>
+
+<ul>
+  <li>We integrated with Bing v7 and transitioned our customers to this newer version.</li>
+  <li>We now will index content on a domain even if the root of that domain lists a different domain as the canonical domain. For example, <code>https://publications.sampleagency.gov</code> may list <code>https://www.sampleagency.gov</code> as the canonical domain, but still serve content from <code>https://publications.sampleagency.gov/reports/first_report.pdf</code>. We can now index https://publications.sampleagency.gov/reports/first_report.pdf`.</li>
+  <li>We updated our job search location feature to show more job openings, and cleaned up how we send job queries to the USAJOBS api to get more results.</li>
+  <li>We now automatically review URLs for reindexing, checking for 404s and 301s. We’re doing this every 30 days to begin with, and will adjust that timeframe as needed.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li>We upgraded the Ruby version on the repo for our search.gov website, and <code>asis</code>, our image indexing repo.</li>
+  <li>We upgraded the <code>activejob</code> Ruby gem across repos.</li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Search.gov System Status]]></title>
