@@ -107,6 +107,93 @@
  
     
     <h1>
+      <a href="/releases/october-2014.html">October 2014 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="new-feature-check-the-status-of-your-rss-feeds">New Feature: Check the Status of Your RSS Feeds</h2>
+
+<p>You now see better, more complete messages about the status of your RSS feeds in the <a href="https://search.usa.gov/sites/">Admin Center</a> under Manage Content &gt; RSS.</p>
+
+<p>Yellow indicates the status is pending. Green indicates the feed has been crawled and the status is OK. Red indicates there’s an issue with your feed or at least one item within your feed.</p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/rss-status.png" alt="RSS status messages and colors" title="RSS status messages and colors" /></p>
+
+<p>Click on the name of the feed to see more detailed information about its status. Possible error messages follow.</p>
+
+<ul>
+  <li>404 Not Found</li>
+  <li>Feed looks empty</li>
+  <li>Description can’t be blank</li>
+  <li>Title can’t be blank</li>
+  <li>Missing link field</li>
+  <li>Missing pubDate field</li>
+  <li>Link is not a valid URL</li>
+  <li>Linked URL does not exist (HTTP 404)</li>
+</ul>
+
+<h2 id="other-features">Other Features</h2>
+
+<ul>
+  <li>Searchers now see the search box and navigation options within the body of the results page, not the header.</li>
+  <li>Searchers now see results from <a href="/manual/rss.html">RSS feeds</a> when their search term matches text within the feed’s <code>content:encoded</code> element. The <code>content:encoded</code> element is optional and defines the full content of an item. Read recommendations for this element in the RSS Advisory Board’s <a href="http://www.rssboard.org/rss-profile#namespace-elements-content-encoded"><em>Really Simple Syndication Best Practices Profile</em> for content:encoded</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
+  <li>Searchers now see updated results from <a href="/manual/domains-advanced.html">supplemental RSS feeds</a> that include a <code>pubDate</code> element. Read recommendations for this element in the RSS Advisory Board’s <a href="http://www.rssboard.org/rss-profile#data-types-datetime"><em>Really Simple Syndication Best Practices Profile</em> for dates and times</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
+  <li>Searchers now see results for pictures in Flickr groups.  [<a href="https://github.com/GSA/asis/commit/8ffde0cde7d334964c48991300b26687870717db">Commit 8ffde0c</a>]</li>
+  <li>Searchers now see images with an exact phrase match above those with the words scattered throughout their metadata. For example, visitors searching on a multi-word term like <em>jefferson memorial</em> now see the result for “county event at Jefferson Memorial” above the one for “memorial event in Jefferson County.” [<a href="https://github.com/GSA/asis/commit/9a0ab9c3a44da931d8aee2595ff35053381870e2">Commit 9a0ab9c</a>]</li>
+  <li>Searchers now see image results from <a href="/manual/rss.html">media RSS feeds</a> along with results from Flickr and Instagram. [<a href="https://github.com/GSA/asis/commit/7a4917c6dd6cdb9fafa8eb364f23eb2ef19c6f5e">Commit 7a4917c</a>]</li>
+  <li>Searchers on USA.gov now see government-wide video results. See, for example, <a href="http://search.usa.gov/search/news?affiliate=usagov&amp;channel=617&amp;query=lincoln">video results for <em>lincoln</em> on USA.gov</a>.</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+
+<ul>
+  <li>We disabled norms and term frequencies in our logs as they’re not needed and save a significant amount of memory.</li>
+  <li>We upgraded to <a href="http://www.elasticsearch.org/blog/elasticsearch-1-3-4-released/">Elasticsearch 1.3.4</a> <i class="icon-external-link"><span>(External link)</span></i> and applied <a href="http://www.redhat.com/en/technologies/linux-platforms/enterprise-linux">Red Hat Enterprise Linux</a> <i class="icon-external-link"><span>(External link)</span></i> updates to our operating system.</li>
+  <li>We now reindex images with zero downtime. [<a href="https://github.com/GSA/asis/commit/6387825883ba17f75916019480019ed31cfb1a9c">Commit 6387825</a>]</li>
+  <li>We updated the synonyms for our image index to improve recall and return even more relevant pictures. [<a href="https://github.com/GSA/asis/commit/7de29e528aab2bb031576107829f5981fc2af6f9">Commit 7de29e5</a>]</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li>Searchers on Spanish sites like <a href="https://gobierno.usa.gov/">GobiernoUSA.gov</a> now see translations for the <a href="/releases/september-2014.html">value-added EDGAR links</a>.</li>
+  <li>Searchers that select a custom date range for videos now see a magnifying glass icon when you’ve set its color to white on the <a href="/manual/brand.html">Fonts &amp; Colors</a> page in the Admin Center. It had previously been invisible.</li>
+  <li>Searchers now see only the most recent <a href="/manual/govbox-federal-register.html"><em>Federal Register</em> document</a> from a docket. They’d previously seen multiple documents from the same docket.</li>
+  <li>Searchers now see spelling suggestions on results pages for <a href="/manual/collections.html">Collections</a>. They’d previously seen them on the main results page only.</li>
+  <li>We now re-import Flickr and Instagram photos for up to 30 days to update their popularity. [<a href="https://github.com/GSA/asis/commit/02f0a83887e02d5d11fc50caed6547dcaf1461ba">Commit 02f0a83</a>]</li>
+  <li>We reduced the font size for the tagline (which you can set on the Display &gt; <a href="/manual/brand.html">Header &amp; Footer</a> page in the Admin Center).</li>
+  <li>We changed the color of the selected item—visible when you tab through the search results page or Admin Center—to a lighter orange.</li>
+  <li>We updated <a href="/manual/youtube.html">YouTube</a> thumbnails to use https, not http.</li>
+  <li>We no longer return web results for searches that are too long (&gt; 60 characters), use only an asterisk, or use placeholder text (such as <em>What are you looking for?</em> and <em>Search Our Site</em>). Searchers now see a message to try a shorter query or to enter a search term.</li>
+  <li><a href="/manual/best-bets-text.html">Best bets</a> must include a description. The field can’t be blank.</li>
+  <li>We fixed a bug that prevented you from updating your password on the <a href="/manual/account.html">My Account</a> page in the Admin Center.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/october-2014.html">
+        <time datetime="2014-11-25">November 25, 2014</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/september-2014.html">September 2014 Release Notes</a>
     </h1>
     
@@ -779,68 +866,6 @@
       
       <a href="/releases/february-2014.html">
         <time datetime="2014-03-19">March 19, 2014</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/january-2014.html">January 2014 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="highlighted-feature-new-responsive-search-results-page">Highlighted Feature: New, Responsive Search Results Page</h2>
-
-<p>Our mobile search results page is now responsive. The new, <a href="http://alistapart.com/topic/responsive-design">responsive design</a> <i class="icon-external-link"><span>(External link)</span></i> ensures it is optimized for searchers on mobile phones and tablets.</p>
-
-<p>Use our customizable display options to <a href="/manual/brand.html">brand</a> this responsive results page for your agency.</p>
-
-<p>See the sample results page below for a search on <em><a href="http://search.usa.gov/search?affiliate=usagov&amp;query=tax&amp;m=true">tax on USA.gov</a></em>.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/feature-mobile-results-pages.png" alt="Responsive Search Results Page" title="Responsive Search Results Page" /></p>
-
-<h2 id="other-features">Other Features</h2>
-
-<ul>
-  <li>Searchers now see tweets from the last three days only. (It used to be 30 days.)</li>
-  <li>Searchers now see shorter (up to 15 characters) sidebar labels.</li>
-  <li>The HTML 4.01 transitional parser is now selected for you when you validate the HTML code for your header and footer in the Admin Center.</li>
-</ul>
-
-<h2 id="chores">Chores</h2>
-
-<ul>
-  <li>We migrated two indexes (best bets and supplemental URLs) from Solr to <a href="http://www.elasticsearch.org/">Elasticsearch</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
-  <li>We added more storage to our Hadoop cluster.</li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-
-<ul>
-  <li>We now show the menu icon on the mobile results page only when it is relevant.</li>
-  <li>We fixed a bug with custom color schemes so that they’re now kept when you upload images in the Admin Center.</li>
-  <li>We fixed our advanced search operators so an exact phrase search now works for supplemental URLs.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/january-2014.html">
-        <time datetime="2014-01-31">January 31, 2014</time>
       </a>
     </div>
     </article>

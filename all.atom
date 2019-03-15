@@ -3,10 +3,88 @@
   <title><![CDATA[Search.gov]]></title>
   <link href="https://search.gov/all.atom" rel="self"/>
   <link href="https://search.gov/"/>
-  <updated>2019-03-12T13:45:07+00:00</updated>
+  <updated>2019-03-15T20:48:07+00:00</updated>
   <id>https://search.gov/</id>
   <author><name><![CDATA[Search.gov]]></name></author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Metadata and tags you should include in your website]]></title>
+    <link href="https://search.gov/blog/metadata.html"/>
+    <updated>2019-03-15T00:00:00+00:00</updated>
+    <id>https://search.gov/blog/metadata.html</id>
+    <content type="html"><![CDATA[<p>Search.gov, like other search engines, relies on structured data to help inform how we index your content and how it is presented in search results. You should also read up on the metadata used by <a href="https://support.google.com/webmasters/answer/79812?hl=en">Google</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="">Bing</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<p>Including the following tags and metadata in each of your pages will improve the quality of your content’s indexing, as well as results ranking.</p>
+
+<p>This page will be updated over time as we add more tag-based indexing functions and ranking factors to our service.</p>
+
+<p><code>&lt;title&gt;</code>
+<br /><strong>Detail:</strong> Unique title of the page. If you want to include the agency or section name, place that after the actual page title.
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;meta name=”description” content=”foo” /&gt;</code> 
+<br /><strong>Used in:</strong> Your well crafted summary of the page content. This will often be used by search engines in place of a page snippet. Best to limit to 160 characters, so it will not be truncated. <a href="https://moz.com/learn/seo/meta-description">Read more here</a> <i class="icon-external-link"><span>(External link)</span></i>.
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;meta name=”keywords” content=”foo bar baz ” /&gt;</code>
+<br /><strong>Detail:</strong> While not often used by commercial search engines due to <a href="https://support.google.com/webmasters/answer/66358?hl=en">keyword stuffing</a> <i class="icon-external-link"><span>(External link)</span></i>, Search.gov indexes your keywords, if you have added them.
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;meta property="og:title” content=”Title goes here” /&gt;</code>
+<br /><strong>Detail:</strong> Usually duplicative of <code>&lt;title&gt;</code>, we use the <code>og:title</code> property as the result title if it appears to be more substantive than the <code>&lt;title&gt;</code> tag.
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;meta property="og:description” content=”Description goes here” /&gt;</code>
+<br /><strong>Detail:</strong> Often duplicative of the meta description, we will index this as well, in case it has different content.
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;meta property="article:published_time" content="YYYY-MM-DD" /&gt;</code>
+<br /><strong>Detail:</strong> Exact time is optional; <a href="https://en.wikipedia.org/wiki/ISO_8601">read more here</a> <i class="icon-external-link"><span>(External link)</span></i>.
+<br /><strong>Used in:</strong> Page freshness scoring.<br />
+<br />
+<code>&lt;meta property="article:modified_time" content="YYYY-MM-DD" /&gt;</code>
+<br /><strong>Detail:</strong> Exact time is optional; <a href="https://en.wikipedia.org/wiki/ISO_8601">read more here</a> <i class="icon-external-link"><span>(External link)</span></i>.
+<br /><strong>Used in:</strong> Page freshness scoring.<br />
+<br />
+<code>&lt;meta name="robots" content="..., ..." /&gt;</code>
+<br /><strong>Detail:</strong> Use the <a href="https://search.gov/blog/how-search-engines-index-content-better-discoverability.html#robots">meta robots tag</a> to block the search engine from indexing a particular page.
+<br /><strong>Used in:</strong> Used during indexing, does not affect relevance ranking.<br />
+<br />
+<code>&lt;main&gt;</code>
+<br /><strong>Detail:</strong> Allows the search engine to target the actual content of the page and avoid headers, sidebars and other page content not useful to search. <a href="https://search.gov/blog/how-search-engines-index-content-better-discoverability.html#main-element">Read more about the &lt;main&gt; element here</a>
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<br /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[February 2019 Release Notes]]></title>
+    <link href="https://search.gov/releases/february-2019.html"/>
+    <updated>2019-03-15T00:00:00+00:00</updated>
+    <id>https://search.gov/releases/february-2019.html</id>
+    <content type="html"><![CDATA[<h2 id="improvements">Improvements</h2>
+
+<ul>
+  <li>We’ve added Click counts as a ranking factor for customers indexed by Search.gov. We look at the URLs that represent 75% of all clicks on search results, and give those a boost. This is the “fat head” that comes before the “long tail.” As always, following best practices will help results stay relevant:
+    <ul>
+      <li>Use Best Bets to promote frequently visited pages that are not bubbling to the top of results on their own</li>
+      <li>Periodically review and update Best Bets</li>
+      <li>Maintain an up-to-date and complete sitemap with updated <lastmod> dates</lastmod></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="fixes-upgrades-misc">Fixes, Upgrades, Misc</h2>
+
+<ul>
+  <li>Fixed an issue with the type-ahead feature on customer search boxes</li>
+  <li>Fixed an issue with disappearing search icon on search boxes</li>
+  <li>Continued with Rails upgrade for our applications</li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Search.gov System Status]]></title>

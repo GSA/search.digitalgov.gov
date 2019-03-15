@@ -107,6 +107,68 @@
  
     
     <h1>
+      <a href="/releases/january-2014.html">January 2014 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlighted-feature-new-responsive-search-results-page">Highlighted Feature: New, Responsive Search Results Page</h2>
+
+<p>Our mobile search results page is now responsive. The new, <a href="http://alistapart.com/topic/responsive-design">responsive design</a> <i class="icon-external-link"><span>(External link)</span></i> ensures it is optimized for searchers on mobile phones and tablets.</p>
+
+<p>Use our customizable display options to <a href="/manual/brand.html">brand</a> this responsive results page for your agency.</p>
+
+<p>See the sample results page below for a search on <em><a href="http://search.usa.gov/search?affiliate=usagov&amp;query=tax&amp;m=true">tax on USA.gov</a></em>.</p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/feature-mobile-results-pages.png" alt="Responsive Search Results Page" title="Responsive Search Results Page" /></p>
+
+<h2 id="other-features">Other Features</h2>
+
+<ul>
+  <li>Searchers now see tweets from the last three days only. (It used to be 30 days.)</li>
+  <li>Searchers now see shorter (up to 15 characters) sidebar labels.</li>
+  <li>The HTML 4.01 transitional parser is now selected for you when you validate the HTML code for your header and footer in the Admin Center.</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+
+<ul>
+  <li>We migrated two indexes (best bets and supplemental URLs) from Solr to <a href="http://www.elasticsearch.org/">Elasticsearch</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
+  <li>We added more storage to our Hadoop cluster.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li>We now show the menu icon on the mobile results page only when it is relevant.</li>
+  <li>We fixed a bug with custom color schemes so that they’re now kept when you upload images in the Admin Center.</li>
+  <li>We fixed our advanced search operators so an exact phrase search now works for supplemental URLs.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/january-2014.html">
+        <time datetime="2014-01-31">January 31, 2014</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/december-2013.html">December 2013 Release Notes</a>
     </h1>
     
@@ -769,68 +831,6 @@
       
       <a href="/releases/march-2013.html">
         <time datetime="2013-04-05">April 5, 2013</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/january-2013.html">January 2013 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="highlighted-feature-jobs-govbox">Highlighted Feature: Jobs GovBox</h2>
-
-<p>We’re excited to announce that searchers looking for jobs on your site can now see all of your agency’s current job openings.</p>
-
-<p>Our new <a href="/manual/govbox-jobs.html">Job Openings GovBox</a> displays up to three location- and keyword-matched job openings on your results page. For more information on how to turn on this GovBox, see <a href="/manual/display-overview.html">How To Select The Modules That Appear On Your Results Page</a>.</p>
-
-<p>We’ve open sourced all of the code that powers our <a href="https://github.com/GSA/jobs_api">Jobs Server API</a> in Github.</p>
-
-<p>We analyzed data on jobs-related searches to ensure that the new federal <a href="/manual/govbox-jobs.html">Jobs GovBox</a> lists the most relevant job openings.</p>
-
-<p>Searchers can now effectively search for jobs by keyword, agency, state, or work schedule (part-or full-time).</p>
-
-<p>We also focused on not showing the Jobs GovBox when it isn’t relevant (for example, it is no longer shown when searchers look for job safety posters or employment verification forms).</p>
-
-<h2 id="chores">Chores</h2>
-
-<ul>
-  <li>We added our posting channel ID to all USAJobs links.</li>
-  <li>We set up a cron job to fetch and process job files from USAJobs.</li>
-  <li>We added impression and click tracking for the Jobs GovBox module.</li>
-  <li>We resolved performance discrepancy between our <a href="/releases/october-2012.html">two datacenters</a>.</li>
-  <li>We no longer use XML sitemaps to add documents to our web index.</li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-
-<ul>
-  <li>You can now delete keywords from text best bets.</li>
-  <li>Newly added misspellings are now being applied to type-ahead suggestions.</li>
-  <li>Searchers can now find jobs in non-standard state locations (for example someone searching for jobs in Washington, DC, will find postings the the location of Washington DC Metro Area, District of Columbia).</li>
-  <li>We’ve already pushed two bug fixes for the Jobs GovBox to production. Searchers no longer see yet-to-be-opened or already closed jobs.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/january-2013.html">
-        <time datetime="2013-01-25">January 25, 2013</time>
       </a>
     </div>
     </article>
