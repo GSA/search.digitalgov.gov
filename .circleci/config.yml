@@ -1,6 +1,11 @@
 version: 2
 jobs:
   build:
+    branches:
+      ignore:
+        # gh-pages is auto-updated by the 'deploy' rake task
+        - gh-pages
+
     docker:
        - image: circleci/ruby:2.3.8-node-browsers
 
