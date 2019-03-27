@@ -1,0 +1,14 @@
+version: 2
+
+jobs:
+  build:
+    branches:
+      ignore:
+        # gh-pages is auto-updated by the 'deploy' rake task.
+        # This config exists just to keep CircleCi from reporting a lack thereof.
+        - gh-pages
+    docker:
+      - image: circleci/ruby:2.3.8-node-browsers
+
+    steps:
+      - checkout
