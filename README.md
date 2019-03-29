@@ -40,6 +40,7 @@ Go to <http://localhost:4000>. The site should have the expected content & forma
 ---
 
 * For more information about Jekyll, visit [the wiki pages](https://github.com/mojombo/jekyll/wiki).
-* If you don't already have it, you'll need [Ruby 2.3.8](http://www.ruby-lang.org/en/downloads). [RVM](http://rvm.io) is recommended to install Ruby on your development environment.
+* If you don't already have it, you'll need the Ruby version specified in `.ruby-version`. [RVM](http://rvm.io) is recommended to install Ruby on your development environment. Verify that your path points to the correct version of Ruby:
 
-    $ rvm install ruby-2.3.8
+    $ ruby -v
+    ruby 2.5.5p157 (2019-03-15 revision 67260) [x86_64-darwin18]
