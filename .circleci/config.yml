@@ -1,16 +1,19 @@
-version: 2
-jobs:
-  build:
-    branches:
-      ignore:
-        # gh-pages is auto-updated by the 'deploy' rake task
-        - gh-pages
+version: 2.1
 
+executors:
+  test_executor:
     docker:
-       - image: circleci/ruby:2.3.8-node-browsers
-
+       - image: circleci/ruby:${RUBY_VERSION}-node-browsers
     working_directory: ~/search.digitalgov.gov
 
+jobs:
+  build:
+    environment:
+      RUBY_VERSION: << parameters.ruby_version >>
+    executor: test_executor
+    parameters:
+      ruby_version:
+        type: string
     steps:
       - checkout
 
@@ -39,3 +42,24 @@ jobs:
       - store_artifacts:
           path: /tmp/test-results
           destination: test-results
+
+workflows:
+  build_and_test:
+    jobs:
+      - build:
+          ruby_version: 2.3.8
+          filters:
+            branches:
+              # gh-pages is auto-updated by the 'deploy' rake task
+              ignore: gh-pages
+      - build:
+          ruby_version: 2.5.5
+          filters:
+            branches:
+              ignore: gh-pages
+      - build:
+          ruby_version: 2.6.2
+          filters:
+            branches:
+              ignore: gh-pages
+
