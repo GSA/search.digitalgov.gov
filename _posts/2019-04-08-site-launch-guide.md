@@ -30,10 +30,8 @@ The basic steps are:
 <a href="#description">Site launch flow chart detailed description</a><br />
 <a href="/files/site-launch-workflow.png" target="new">Open larger image</a><br />
        
-
-<br />
 <a name="description"></a>
-<a name="add-site"></a><br />
+<a name="add-site"></a>
 
 ## 1. Add Site
 
@@ -58,13 +56,15 @@ Once you've created your site, note the actions available on the left-hand navig
 <a name="add-domains"></a><br />
 ## 2. Add Domains
 
-**Who:** You, the agency web team<br />
+**Who:** You, the agency web team
+
 **What:** In the content management section, the domains list defines the default search scope for your site. You can include one domain or several, or you can focus on particular subdomains of one domain. [Read more here](https://search.gov/manual/domains.html).<br /> 
 
 <a name="select-index"></a><br />
 ## 3. Web Index Selection
 
-**Who:** Search.gov team, in consultation with you, the agency web team <br />
+**Who:** Search.gov team, in consultation with you, the agency web team
+
 **What:** By default a new search site will be connected to the Bing web index to receive web results. Websites with very low levels of search traffic can continue to use the Bing web index after they launched our service. However, sites that will see greater than 150,000 queries per year will need to be indexed directly by our service before going live.  We monitor new sites established in our system, and will reach out if we think your site will need to be indexed by us, or if we need more information to make a determination.
 
 Regardless of the index used to support your search, we can only serve publicly accessible content. You will not be able to use our service for secure content, including intranets, and we can never index or serve personally identifiable information (PII) or other confidential data.
@@ -79,7 +79,9 @@ If we will be indexing your content ourselves, we will follow these steps:
 
 #### A. Define Domains and Subdomains
 
-The Admin Center Domains list controls what we pull out of our index for a search on your site. But we also need to know what to put in to the index to begin with. We’ll work with you to confirm the domains and subdomains you want discoverable through search. For example, after discussing with you, we may plan to index all of your subdomains, or just a selection of the major sections:
+**Who:** Search.gov team, in consultation with you, the agency web team
+
+**What:** The Admin Center Domains list controls what we pull out of our index for a search on your site. But we also need to know what to put in to the index to begin with. We’ll work with you to confirm the domains and subdomains you want discoverable through search. For example, after discussing with you, we may plan to index all of your subdomains, or just a selection of the major sections:
 
 ```
 www.example.gov
@@ -90,13 +92,17 @@ www.subagencydomainexample.gov
 
 #### B. Sitemap for Each Subdomain
 
-The easiest way for us to discover what URLs exist on your domain is via an XML sitemap. Each domain identified above will need a separate sitemap. Please read our [detailed discussion of XML sitemaps](https://search.gov/blog/sitemaps.html), and let us know if you have any questions. We understand it can be difficult for some legacy systems to generate a sitemaps, so if this is the case, [please reach out](mailto:search@support.digitalgov.gov).
+**Who:** You, the agency web team, in consultation with the Search.gov team
+
+**What:** The easiest way for us to discover what URLs exist on your domain is via an XML sitemap. Each domain identified above will need a separate sitemap. Please read our [detailed discussion of XML sitemaps](https://search.gov/blog/sitemaps.html), and let us know if you have any questions. We understand it can be difficult for some legacy systems to generate a sitemaps, so if this is the case, [please reach out](mailto:search@support.digitalgov.gov).
 
 We do not crawl websites by default due to the high resource demand of crawling every page on every website all the time. One of the goals of our service is to contain the costs of search government-wide, and a crawling-first model would increase costs significantly.
 
 ####  C. Index Subdomains
 
-Once sitemaps are posted to your website, our system will index your content. Alert us when the sitemaps are posted, and we’ll add your domains to our list of domains that we monitor. Then, indexing will begin.
+**Who:** Search.gov team
+
+**What:** Once sitemaps are posted to your website, our system will index your content. Alert us when the sitemaps are posted, and we’ll add your domains to our list of domains that we monitor. Then, indexing will begin.
 
 By default, we make 1 request per second to a domain. If a `Crawl-delay` is declared in your [/robots.txt file](https://search.gov/blog/robotstxt.html), we will honor that delay while fetching your content for indexing. The length of time required to index a site is `(number of items) x (crawl delay) / 3600 = hours to index`.
 
@@ -119,6 +125,7 @@ Please note, we can only index domains that are publicly accessible. This means 
 For brand new sites: You will be able to test the index using your regular search site(s).
 
 #### F. Ready to Launch
+
 For brand new sites: Your index is ready to go, you can proceed with the rest of the site launch steps and go live without any further action from our team.
 
 For sites switching from Bing: When you give us the green light to switch to the new index, there is no action needed on your part other than the approval. We will change a setting in our back end, which will point your existing search site’s web results module to our index, and the change is effective immediately. All other elements of your search site remain the same: search features, branding, etc.
@@ -126,7 +133,8 @@ For sites switching from Bing: When you give us the green light to switch to the
 <a name="add-features"></a><br />
 ## 4. Add Search Features
 
-**Who:** You, the agency web team <br />
+**Who:** You, the agency web team
+
 **What:** We offer several additional search features you can configure to enhance your search experience.
 
 [Collections](https://search.gov/manual/collections.html) allow you to set up alternative search scopes from the Domains you declare for the main search. Often Collections point at particular subfolders or subdomains of the primary domain for the site. Sometimes they point at a different domain entirely. If you are indexed by Searhc.gov and you want a Collection to search another domain, check with us to see if we have that content already indexed.  
@@ -142,13 +150,15 @@ _[Federal Register]https://search.gov/manual/govbox-federal-register.html_ rules
 <a name="turn-features-on"></a><br />
 ## 5. Toggle Search Features On
 
-**Who:** You, the agency web team <br />
+**Who:** You, the agency web team
+
 **What:** In order to display any of the search features you just added above, you’ll need to toggle ON the display for each one, using the [Display Overview page](https://search.gov/manual/display-overview.html). If you want to show Jobs or _Federal Register_ results and you don’t see those options on the Display Overview page, [let us know](mailto:search@support.digitalgov.gov) and we can connect your search site to those features.<br /> 
 
 <a name="configure-branding"></a><br />
 ## 6. Configure Results Page
 
-**Who:** You, the agency web team <br />
+**Who:** You, the agency web team
+
 **What:** To make the results page complement your website’s look and feel, upload your logo, set the font style, and customize the page colors to ensure a more seamless experience for your searchers as they move from your site to ours, and back again. You can also add header and footer links to support navigation back to your website. [See more details here](https://search.gov/manual/brand.html).<br /> 
 
 [Masking the domain for your results page](https://search.gov/manual/cname.html) is another way you can provide continuity to your searchers as they move back and forth between your site and our system.
@@ -156,7 +166,8 @@ _[Federal Register]https://search.gov/manual/govbox-federal-register.html_ rules
 <a name="go-live"></a><br />
 ## 7. Connect Your Search Box to Search.gov
 
-**Who:** You, the agency web team, in collaboration with your deploy team, if different <br />
+**Who:** You, the agency web team, in collaboration with your deploy team, if different
+
 **What:** Once you’re ready to go live with your search site, you will need to modify the form code for the search box on your website. We provide simple pre-formatted code in the Admin Center, or you can include these same parameters in another style of search box. [Read more and see required parameters here](https://search.gov/manual/code.html).
 
 Use our [Go-Live Check List](https://search.gov/blog/go-live.html) to give everything a final review, and  when you're ready, push your search box form code update to production on your servers.
