@@ -1,11 +1,17 @@
 ---
 layout: post
 title: How to Customize the No Results Page
+slug: Custom No Results Page
 category: manual
 tags: help-manual manage-display
+breadcrumbs:
+  - label: “Home”
+  - url: https://search.gov/
+  - label: “Manual”
+  - url: https://search.gov/manual/
 ---
 
-[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Display > No Results Page
+Find it in the [Admin Center](https://search.usa.gov/sites/) > YourSite > Display > No Results Page
 
 ## Standard Response
 
@@ -21,4 +27,4 @@ You can add links to alternative resources that may assist the searcher in answe
 
 ---
 
-***Did you know?*** You can see a list of Queries with No Results in [Today's Snapshot](/manual/site-overview.html) on the Dashboard, and in the [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Monthly Reports.
+***Did you know?*** You can see a list of Queries with No Results in [Today's Snapshot](https://search.gov/manual/site-overview.html) on the Dashboard, and in the [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Monthly Reports.

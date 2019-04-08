@@ -1,11 +1,17 @@
 ---
 layout: post
 title: How to Add JavaScript for Your Third-party Web Services
+slug: 3rd Party Tracking
 category: manual
 tags: help-manual analytics third-party google-analytics foresee DAP
+breadcrumbs:
+  - label: “Home”
+  - url: https://search.gov/
+  - label: “Manual”
+  - url: https://search.gov/manual/
 ---
 
-[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > 3rd Party Tracking
+Find it in the [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > 3rd Party Tracking
 
 Do you want your search results page to run third-party web services such as Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?
 
@@ -19,7 +25,7 @@ Some tips for commonly used third-party web services follow.
 
 Within your Google Analytics account, select the option, *Do Track Site Search*. Set the query parameter as *query*. For more information, read Google's tip, [Set Up and Configure Site Search](https://support.google.com/analytics/answer/1012264?hl=en&ref_topic=1031951){% external_link %}.
 
-Additionally, if you've requested [domain masking](cname.html) and you want to include the analytics for your *search.agency.gov* subdomain with your main *agency.gov* domain, you'll need to set your domain in your Google Analytics JavaScript by including `_gaq.push(['_setDomainName', 'agency.gov']);`.
+Additionally, if you've requested [domain masking](https://search.gov/manual/cname.html) and you want to include the analytics for your *search.agency.gov* subdomain with your main *agency.gov* domain, you'll need to set your domain in your Google Analytics JavaScript by including `_gaq.push(['_setDomainName', 'agency.gov']);`.
 
 For more information, read Google's tip, [Tracking Multiple Domains](https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite){% external_link %}.
 
@@ -50,13 +56,13 @@ The code you submit should look something like one of the following two scripts.
      
 ## Digital Analytics Program Tip
 
-Does your federal agency participate in the [Digital Analytics Program](http://www.digitalgov.gov/services/dap/) (DAP)?  You don't need to do anything. We're already fully integrated with DAP.
+Does your federal agency participate in the [Digital Analytics Program](http://www.digital.gov/services/dap/) (DAP)?  You don't need to do anything. We're already fully integrated with DAP.
 
 ## ForeSee Tip
 
 Coordinate with your ForeSee representative and the Search.gov team to implement your customer satisfaction survey on your results page. The four general steps follow.
 
-1. Email us at <search@support.digitalgov.gov> to [set up a CNAME](cname.html) for search.youragency.gov.
+1. Email us at <search@support.digitalgov.gov> to [set up a CNAME](https://search.gov/manual/cname.html) for search.youragency.gov.
 
 1. Update the files path in your Foresee code to use an absolute path instead of a relative path. 
 
@@ -80,4 +86,4 @@ Coordinate with your ForeSee representative and the Search.gov team to implement
 
 ---
 
-***Did you know?*** We use Google Analytics Web analytics software&mdash;our own tag plus the [Digital Analytics Program](http://www.digitalgov.gov/services/dap/) tag&mdash;by default. Email us at <search@support.digitalgov.gov> if you'd like to opt out. Learn more about our [site policies](http://www.digitalgov.gov/about/policies/) and [terms of service](../tos.html).
+***Did you know?*** We use Google Analytics Web analytics software&mdash;our own tag plus the [Digital Analytics Program](http://www.digital.gov/services/dap/) tag&mdash;by default. Email us at <search@support.digitalgov.gov> if you'd like to opt out. Learn more about our [site policies](http://www.digital.gov/about/policies/) and [terms of service](https://search.gov/tos.html).

@@ -5,9 +5,9 @@ category: blog
 tags: indexing roadmap
 ---
 
-In September 2017 [we announced](/blog/searchgov-blog.html) that we would be moving away from using commercial search engines as our primary source of web results. This was driven by Google’s announcement that they would be sunsetting their Site Search API at the end of March 2018, and our desire to have more control over the quality, coverage, and cost of our web results than we were able to achieve with Bing.
+In September 2017 [we announced](https://search.gov/blog/searchgov-blog.html) that we would be moving away from using commercial search engines as our primary source of web results. This was driven by Google’s announcement that they would be sunsetting their Site Search API at the end of March 2018, and our desire to have more control over the quality, coverage, and cost of our web results than we were able to achieve with Bing.
 
-We’d like to update you on our progress and share some lessons learned. Over the past months we’ve worked with many of you and listened to the challenges you face in your particular environments. In the fall we believed that encouraging agencies towards using our i14y indexing API was the best way to go. Having lived into it, we now know that we need to focus on indexing content directly off of your websites, leveraging structured lists of URLs known as XML sitemaps. The lessons here are presented in the order we learned them, and we've updated the [indexing FAQs](/blog/searchgov-faqs-indexing.html) to reflect the current approach.
+We’d like to update you on our progress and share some lessons learned. Over the past months we’ve worked with many of you and listened to the challenges you face in your particular environments. In the fall we believed that encouraging agencies towards using our i14y indexing API was the best way to go. Having lived into it, we now know that we need to focus on indexing content directly off of your websites, leveraging structured lists of URLs known as XML sitemaps. The lessons here are presented in the order we learned them, and we've updated the [indexing FAQs](https://search.gov/blog/searchgov-faqs-indexing.html) to reflect the current approach.
 
 ## Lessons Learned
 
@@ -42,7 +42,7 @@ We built the new index model and released that in December 2017, along with our 
 
 We added a crawler in January 2018, to facilitate URL discovery on a given website.
 
-We added the ability to index content from XML sitemaps in February. We follow the [sitemaps protocol](https://www.sitemaps.org/protocol.html) {% external_link %}, which relies in part on also having  and have posted a explainer pages about [XML sitemaps](/blog/sitemaps.html) and [robots.txt files](/blog/robotstxt.html) to get you the most essential information.
+We added the ability to index content from XML sitemaps in February. We follow the [sitemaps protocol](https://www.sitemaps.org/protocol.html) {% external_link %}, which relies in part on also having  and have posted a explainer pages about [XML sitemaps](https://search.gov/blog/sitemaps.html) and [robots.txt files](https://search.gov/blog/robotstxt.html) to get you the most essential information.
 
 We removed our connection to the Google Site Search API in March, and are now serving results from our own index for those cases where we had previously used Google. 
 
@@ -56,6 +56,6 @@ If your search site is low traffic and you haven’t heard from us yet, you can 
 
 In the meantime, we encourage *all* sites to invest some time in developing and maintaining a good XML sitemap. As mentioned above, this will help us maintain a good index of your content, and it will also give you a Google boost, so it’s really win-win. Part of having a good sitemap is having a good robots.txt file as well. Read over our new explainer posts and reach out with any questions.
 
-[Learn more about XML sitemaps](/blog/sitemaps.html)
+[Learn more about XML sitemaps](https://search.gov/blog/sitemaps.html)
 
-[Learn more about robots.txt files](/blog/robotstxt.html)
+[Learn more about robots.txt files](https://search.gov/blog/robotstxt.html)

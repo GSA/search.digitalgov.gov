@@ -1,11 +1,17 @@
 ---
 layout: post
 title: Analyzing Your Site's Referrers
+slug: Referrer Analytics
 category: manual
 tags: help-manual analytics referrers
+breadcrumbs:
+  - label: “Home”
+  - url: https://search.gov/
+  - label: “Manual”
+  - url: https://search.gov/manual/
 ---
 
-[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Referrers
+Find it in the [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Referrers
 
 The Referrers report shows what pages searchers were on when they entered their queries. The current month is shown by default, and the date can be adjusted by using the date selectors at the top of the page and re-generating the report.
 
