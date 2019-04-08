@@ -32,4 +32,4 @@ For 18 years, GSA's Search.gov has transformed the public’s search experience 
 
 1. Add your site handle from the Admin Center to the `_config.yml` file in your Federalist repo, on the `searchgov_affiliate` line.
 1. Include the `_includes/searchgov/form.html` search box in your `<header>` include.
-1. If you would like type-ahead search suggestions to appear in your website’s search box, add include the `_includes/searchgov/script.html` block in your `<footer>` include.
+1. If you would like type-ahead search suggestions to appear in your website’s search box, include the `_includes/searchgov/script.html` block in your `<footer>` include.
