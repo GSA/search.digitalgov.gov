@@ -139,7 +139,7 @@ body
       bottom: 10px
 
 .img-responsive
-  max-width: 80%
+  max-width: 100%
 
 .article
   background-color: #FFF
@@ -203,3 +203,25 @@ body
 
 .dropdown-menu
   width: 89%
+
+.breadcrumb
+  padding: 8px 15px
+  margin-top: 20px
+  margin-bottom: 20px
+  list-style: none
+  border-radius: 4px
+  background-color: #e4e2e0
+
+.breadcrumb > li
+  display: inline-block
+
+.breadcrumb > li + li:before
+  padding: 0 5px
+  color: #212121
+  content: ">"
+
+.breadcrumb > .active
+  color: #212121
+
+ul.breadcrumb
+  display: inline
