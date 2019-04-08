@@ -25,13 +25,13 @@ Search.gov used to rely on the Bing web index for our main search results. Custo
 
 Like a fishing boat on the water, you’ve decided what fish you’re going after, you know what corners of the lake to go to, and you’ve collected the gear you need to get the fish.
 
-## The Big Search.gov Index
+## The Big Search.gov Index: the Lake
 
 The main difference in the search site setup process is the source of the web results. Like Google and Bing, when we index your content, we collect every site’s web pages into a big, common index. All search sites using our index reference this same common data pool.
 
 Like a lake with its fish, the common search index has all the content from all the sites we index, ready to be brought up by any number of different search site configurations.
 
-## Sitemaps
+## Sitemaps: the Tributaries
 
 [XML Sitemaps](https://search.gov/manual/sitemaps.html) list the content available on websites so that search engines will know what to collect from the site. The [content indexed](https://search.gov/manual/indexing-with-searchgov.html) from your website goes into the big index mentioned above, along with the content from all other websites. You can, in theory, pull content from any website we have indexed into your search experience. This supports portal search experiences. 
 
