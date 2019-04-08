@@ -51,7 +51,7 @@ Once you've created your site, note the actions available on the left-hand navig
 
 <i class="icon-eye-open"></i> **Preview** your search results page to see what your search experience will be like, before you go live.
 
-<i class="icon-code"></i> And finally, the **Activate** section provides pre-formatted code snippets to help you go live.
+<i class="icon-code"></i> And finally, the **Activate** section provides pre-formatted code snippets to help you go live. Don't be afraid of entering this section of the Admin Center, it does not actually activate anything.
 
 <a name="add-domains"></a><br />
 ## 2. Add Domains
