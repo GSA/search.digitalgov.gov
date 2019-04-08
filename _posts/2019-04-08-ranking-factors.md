@@ -33,7 +33,7 @@ We prefer HTML documents over other file types. Non-HTML results are demoted sig
 
 We prefer documents that are fresh. Anything published or updated in the past 30 days is considered fresh. After that, we use a Gaussian decay function to demote documents, so that the older a document is, the more it is demoted. When a document is 5 years old or older, we consider them to be equally old and do not demote further. 
 
-Documents with no date metadata at all are considered fresh and are not demoted. [Read more about date metadata](https://search.gov/blog/metadata.html) we collect and why it’s important to keep them up-to-date.
+Documents with no date metadata at all are considered fresh and are not demoted. [Read more about the metadata](https://search.gov/blog/metadata.html) we collect and why it’s important to add metadata to your files.
 
 ### Page Popularity
 
