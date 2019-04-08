@@ -137,15 +137,15 @@ For sites switching from Bing: When you give us the green light to switch to the
 
 **What:** We offer several additional search features you can configure to enhance your search experience.
 
-[Collections](https://search.gov/manual/collections.html) allow you to set up alternative search scopes from the Domains you declare for the main search. Often Collections point at particular subfolders or subdomains of the primary domain for the site. Sometimes they point at a different domain entirely. If you are indexed by Searhc.gov and you want a Collection to search another domain, check with us to see if we have that content already indexed.  
-[Best Bets](https://search.gov/manual/best-bets.html) work like ads in Google, and allow you to pin certain results to the top of your search results. Use Text Best Bets to boost individual items, and Graphics Best Bets to boost a set of related items, such as a form, its instructions page, and other related material.
-[Routed queries](https://search.gov/manual/routed-queries.html) allow you to bypass the results page entirely for a given query, where you know exactly the page you want a person to get to after running that query. This is helpful for always getting people to the landing page for a process, rather than their clicking to a mid-process page from a search results page.
-[RSS](https://search.gov/manual/rss.html) feeds can be indexed and searched either as separate tabs on the search results, or as an inline module promoting your latest content alongside your web results.
-[YouTube](https://search.gov/manual/youtube.html) videos can also be searched
-[Twitter](https://search.gov/manual/twitter.html)    
-[Flickr](https://search.gov/manual/flickr.html)   
-[Jobs](https://search.gov/manual/govbox-jobs.html) are one of the most frequently searched topics on agency websites. Use our jobs module to show your agency’s postings from USAJOBS in your own website’s search results.
-_[Federal Register]https://search.gov/manual/govbox-federal-register.html_ rules and notices can be added to your search results in a separate module. 
+* [Collections](https://search.gov/manual/collections.html) allow you to set up alternative search scopes from the Domains you declare for the main search. Often Collections point at particular subfolders or subdomains of the primary domain for the site. Sometimes they point at a different domain entirely. If you are indexed by Searhc.gov and you want a Collection to search another domain, check with us to see if we have that content already indexed.  
+* [Best Bets](https://search.gov/manual/best-bets.html) work like ads in Google, and allow you to pin certain results to the top of your search results. Use Text Best Bets to boost individual items, and Graphics Best Bets to boost a set of related items, such as a form, its instructions page, and other related material.
+* [Routed queries](https://search.gov/manual/routed-queries.html) allow you to bypass the results page entirely for a given query, where you know exactly the page you want a person to get to after running that query. This is helpful for always getting people to the landing page for a process, rather than their clicking to a mid-process page from a search results page.
+* [RSS](https://search.gov/manual/rss.html) feeds can be indexed and searched either as separate tabs on the search results, or as an inline module promoting your latest content alongside your web results.
+* [YouTube](https://search.gov/manual/youtube.html) videos can also be searched
+* [Twitter](https://search.gov/manual/twitter.html)    
+* [Flickr](https://search.gov/manual/flickr.html)   
+* [Jobs](https://search.gov/manual/govbox-jobs.html) are one of the most frequently searched topics on agency websites. Use our jobs module to show your agency’s postings from USAJOBS in your own website’s search results.
+* _[Federal Register]https://search.gov/manual/govbox-federal-register.html_ rules and notices can be added to your search results in a separate module. 
 
 <a name="turn-features-on"></a><br />
 ## 5. Toggle Search Features On
