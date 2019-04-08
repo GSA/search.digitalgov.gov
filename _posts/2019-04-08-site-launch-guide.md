@@ -170,6 +170,8 @@ For sites switching from Bing: When you give us the green light to switch to the
 
 **What:** Once you’re ready to go live with your search site, you will need to modify the form code for the search box on your website. We provide simple pre-formatted code in the Admin Center, or you can include these same parameters in another style of search box. [Read more and see required parameters here](https://search.gov/manual/code.html).
 
+If you publish your website on [Federalist](https://federalist.18f.gov/){% external_link %} please read through our [additional instructions](https://search.gov/manual/searchgov-for-federalist.html) for enabling Search.gov on your website.
+
 Use our [Go-Live Check List](https://search.gov/blog/go-live.html) to give everything a final review, and  when you're ready, push your search box form code update to production on your servers.
 
 You’re now live with Search.gov!
