@@ -59,7 +59,7 @@ After hitting ‘next’ to view page 2, supplemental content is served.
 
 ### Page 1:
 
-![Commercial Results are Displayed on Page One of the DigitalGov.gov Search Results Page](https://search.gov/img/Commercial-Results-First-Page-1.png){:height="95%" width="95%"}
+![Commercial Results are Displayed on Page One of the DigitalGov.gov Search Results Page](https://search.gov/img/Commercial-Results-First-Page-1.png)
 
 ### Page 2: 
 
