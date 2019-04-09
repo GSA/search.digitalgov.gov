@@ -5,10 +5,10 @@ slug: Monthly Reports
 category: manual
 tags: help-manual analytics queries clicks
 breadcrumbs:
-  - label: “Home”
-  - url: https://search.gov/
-  - label: “Manual”
-  - url: https://search.gov/manual/
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
 ---
 
 Find it in the [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Monthly Reports

@@ -5,10 +5,10 @@ slug: Type-ahead Search
 category: manual
 tags: api activate-search autocomplete
 breadcrumbs:
-  - label: “Home”
-  - url: https://search.gov/
-  - label: “Manual”
-  - url: https://search.gov/manual/
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
 ---
 
 **_Note_**: this information is for customers who wish to display type-ahead (autocomplete) suggestions on their agency's website. If you are only looking to turn on type-ahead suggestions on your search results page, please review the instructions on our [Display Overview](https://search.gov/manual/display-overview.html#modules) page.

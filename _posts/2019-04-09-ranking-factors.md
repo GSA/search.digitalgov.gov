@@ -5,12 +5,12 @@ slug: Ranking Factors
 category: manual
 tags: indexing seo
 breadcrumbs:
-  - label: “Home”
-  - url: https://search.gov/
-  - label: “Help Manual”
-  - url: https://search.gov/manual/
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
   - label: “Indexing”
-  - url: https://search.gov/manual/indexing-with-searchgov.html
+    url: https://search.gov/manual/indexing-with-searchgov.html
 ---
 
 Google and Bing hold their ranking algorithms closely as trade secrets, as a guard against people trying to game the system to ensure their own content comes out on top, regardless of whether that’s appropriate to the search. Search Engine Optimization (SEO) consulting has grown up as an industry to try to help websites get the best possible placement in search results.  You may be interested in our webinars on [technical SEO](https://search.gov/manual/training.html#site-structure-better-seo) and [best practices](https://search.gov/manual/training.html#search-doctor) that will help you get your website into better shape for search, and we’re also available to advise federal web teams on particular search issues. Generally speaking, though, SEO is a lot like reading tea leaves.

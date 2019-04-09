@@ -5,10 +5,10 @@ slug: Health Topics
 category: manual
 tags: help-manual display modules
 breadcrumbs:
-  - label: “Home”
-  - url: https://search.gov/
-  - label: “Manual”
-  - url: https://search.gov/manual/
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
 ---
 
 Searches for health-related information are very common. We created the Health Topics module to help searchers find high-quality, authoritative health information.

@@ -5,10 +5,10 @@ slug: Clone Site
 category: manual
 tags: "help-manual settings clone-site"
 breadcrumbs:
-  - label: “Home”
-  - url: https://search.gov/
-  - label: “Manual”
-  - url: https://search.gov/manual/
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
 ---
 
 Find it in the [Admin Center](https://search.usa.gov/sites/) > YourSite > Dashboard > Clone Site

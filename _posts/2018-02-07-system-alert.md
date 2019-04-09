@@ -5,10 +5,10 @@ slug: Search Page Alerts
 category: manual
 tags: help-manual manage-display alert
 breadcrumbs:
-  - label: “Home”
-  - url: https://search.gov/
-  - label: “Manual”
-  - url: https://search.gov/manual/
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
 ---
 
 Find it in the [Admin Center](https://search.usa.gov/sites/) > YourSite > Display > Search Page Alert

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Add Your Content to Our Indexes: An Overview
+title: Add Your Content to Our Indexes&#58; An Overview
 slug: Content Overview
 category: manual
 tags: help-manual manage-content
 breadcrumbs:
-  - label: “Home”
-  - url: https://search.gov/
-  - label: “Manual”
-  - url: https://search.gov/manual/
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
 ---
 
 Find it in the [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > Content Overview

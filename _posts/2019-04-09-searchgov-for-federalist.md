@@ -5,12 +5,12 @@ slug: Search.gov for Federalist
 category: manual
 tags: getting-started
 breadcrumbs:
-  - label: “Home”
-  - url: /
-  - label: “Help Manual”
-  - url: /manual/
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
   - label: “Site Launch Guide”
-  - url: /manual/site-launch-guide.html
+    url: /manual/site-launch-guide.html
 ---
 
 For 18 years, GSA's Search.gov has transformed the public’s search experience on federal government websites. Agencies use our free, shared service to power over 2,000 search boxes on over 30% of federal domains. This page will walk you through the steps required to integrate Search.gov with your Federalist website.

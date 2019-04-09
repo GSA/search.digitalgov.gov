@@ -5,12 +5,12 @@ slug: Sitemaps and Search Results
 category: manual
 tags: go-live site-launch indexing
 breadcrumbs:
-  - label: “Home”
-  - url: https://search.gov/
-  - label: “Help Manual”
-  - url: https://search.gov/manual/
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
   - label: “Indexing”
-  - url: https://search.gov/manual/indexing-with-searchgov.html
+    url: https://search.gov/manual/indexing-with-searchgov.html
 ---
 
 We often get questions about how sitemaps control the search results for a given site. The answer is, they don’t! This page will describe to you the relationship between sitemaps, search indexes, and the search experiences you create through the [Admin Center](https://search.usa.gov/sites).

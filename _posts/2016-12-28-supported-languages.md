@@ -5,10 +5,10 @@ slug: Language Support
 category: manual
 tags: help-manual display settings
 breadcrumbs:
-  - label: “Home”
-  - url: https://search.gov/
-  - label: “Manual”
-  - url: https://search.gov/manual/
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
 ---
 
 Find it in the [Admin Center](https://search.usa.gov/sites/) > YourSite > Dashboard > Settings

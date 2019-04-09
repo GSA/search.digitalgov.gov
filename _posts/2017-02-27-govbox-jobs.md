@@ -5,10 +5,10 @@ slug: Jobs Module
 category: manual
 tags: help-manual modules jobs
 breadcrumbs:
-  - label: “Home”
-  - url: https://search.gov/
-  - label: “Manual”
-  - url: https://search.gov/manual/
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
 ---
 
 One of the most common search tasks is to look for current job openings. We created the Jobs module to help searchers quickly find relevant jobs. 

@@ -7,12 +7,12 @@ redirect-from:
   - /blog/how-search-engines-index-content-better-discoverability.html
 tags: indexing seo help-manual
 breadcrumbs:
-  - label: “Home”
-  - url: https://search.gov/
-  - label: “Manual”
-  - url: https://search.gov/manual/
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
   - label: “Indexing”
-  - url: https://search.gov/manual/indexing-with-searchgov.html
+    url: https://search.gov/manual/indexing-with-searchgov.html
 ---
 
 Website structure and content can have a significant impact on the ability of search engines to provide a good search experience. As a result, the Search Engine Optimization industry evolved to provide better understanding of these impacts and close critical gaps. Some elements on your website will actively hinder the search experience, and this post will show you how to target valuable content and exclude distractions.

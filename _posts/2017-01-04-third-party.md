@@ -5,10 +5,10 @@ slug: 3rd Party Tracking
 category: manual
 tags: help-manual analytics third-party google-analytics foresee DAP
 breadcrumbs:
-  - label: “Home”
-  - url: https://search.gov/
-  - label: “Manual”
-  - url: https://search.gov/manual/
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
 ---
 
 Find it in the [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > 3rd Party Tracking

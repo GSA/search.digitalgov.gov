@@ -5,10 +5,12 @@ slug: Drupal7 Module Instructions
 category: manual
 tags: drupal, i14y
 breadcrumbs:
-  - label: “Home”
-  - url: https://search.gov/
-  - label: “Manual”
-  - url: https://search.gov/manual/
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
+  - label: "Drupal"
+    url: https://search.gov/manual/drupal.html
 ---
 
 > **Important Note:** April, 2018. For new implementations, the Search.gov team recommends you index your content with us not using our Drupal module to send content to our i14y indexing API, but rather by publishing a comprehensive XML sitemap, which we can use to index your content. We recommend the [XML Sitemap module](https://www.drupal.org/project/xmlsitemap){% external_link %}. [Read more.](https://search.gov/blog/six-months-in.html)

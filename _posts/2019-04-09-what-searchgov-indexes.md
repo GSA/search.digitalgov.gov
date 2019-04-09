@@ -5,13 +5,12 @@ slug: What Search.gov Indexes
 category: manual
 tags: indexing seo
 breadcrumbs:
-  - label: “Home”
-  - url: https://search.gov/
-  - label: “Help Manual”
-  - url: https://search.gov/manual/
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
   - label: “Indexing”
-  - url: https://search.gov/manual/indexing-with-searchgov.html
-
+    url: https://search.gov/manual/indexing-with-searchgov.html
 ---
 
 ## Content

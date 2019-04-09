@@ -5,10 +5,10 @@ slug: Search Results API
 category: manual
 tags: api activate-search
 breadcrumbs:
-  - label: “Home”
-  - url: https://search.gov/
-  - label: “Manual”
-  - url: https://search.gov/manual/
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
 ---
 
 We offer an API that allows agencies to display results from our service on their website. Instead of searchers going to our hosted search results page, agencies can use the "Search Results API" to pull results from our service and display the results within their own pages. Agencies that want to maintain an exact match of their headers, footers, and other branding are encouraged to use this API.

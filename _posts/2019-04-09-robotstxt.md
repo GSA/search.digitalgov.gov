@@ -7,12 +7,12 @@ redirect-from:
   - /blog/robotstxt.html
 tags: how-to manage-content indexing help-manual
 breadcrumbs:
-  - label: “Home”
-  - url: https://search.gov/
-  - label: “Manual”
-  - url: https://search.gov/manual/
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
   - label: “Indexing”
-  - url: https://search.gov/manual/indexing-with-searchgov.html
+    url: https://search.gov/manual/indexing-with-searchgov.html
 ---
 
 A `/robots.txt` file is a text file that instructs automated web bots on how to crawl and/or index a website. Web teams use them to provide information about what site directories should or should not be crawled, how quickly content should be accessed, and which bots are welcome on the site.

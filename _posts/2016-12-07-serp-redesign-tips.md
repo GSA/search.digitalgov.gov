@@ -6,9 +6,9 @@ category: blog
 tags: ux manage-display font colors header footer
 breadcrumbs:
   - label: "Home"
-  - url: https://search.gov
+    url: https://search.gov
   - label: "Blog"
-  - url: 
+    url: 
 ---
 
 As you customize the [newly redesigned results page](https://search.gov/blog/serp-redesign.html) to match your site's [brand](/manual/brand.html), we thought it'd be good to highlight some of our favorite tips.
