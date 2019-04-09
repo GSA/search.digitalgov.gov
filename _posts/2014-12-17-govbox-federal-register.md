@@ -6,9 +6,9 @@ category: manual
 tags: help-manual display modules
 breadcrumbs:
   - label: “Home”
-  - url: https://search.gov/
+    url: https://search.gov/
   - label: “Manual”
-  - url: https://search.gov/manual/
+    url: https://search.gov/manual/
 ---
 
 Federal agencies publish notices, proposed rules, and final rules in the [*Federal Register*](https://www.federalregister.gov). To make it easier for citizens and communities to understand the regulatory process and to participate in government decision-making, we created the *Federal Register* module to help searchers find these notices and rules.
