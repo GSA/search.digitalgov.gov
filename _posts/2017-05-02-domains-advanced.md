@@ -63,7 +63,7 @@ After hitting ‘next’ to view page 2, supplemental content is served.
 
 ### Page 2: 
 
-![Supplemental Feed Results are Displayed on Page Two of the DigitalGov.gov Search Results Page](https://search.gov/img/Commercial-Results-First-Page-2.png){:height="95%" width="95%"}
+![Supplemental Feed Results are Displayed on Page Two of the DigitalGov.gov Search Results Page](https://search.gov/img/Commercial-Results-First-Page-2.png)
 
 If there are no commercial results for a query but there are supplemental content results, we will display the supplemental content on page one.
 
@@ -75,7 +75,7 @@ Please note: if you have any [regular RSS feeds](https://search.gov/manual/rss.h
 
 In the example below, a Supplemental URL appears first, and clicking “Try your search again” will lead to a page of Bing results. 
 
-![A Supplemental URL is Displayed on Page One of the DigitalGo Search Search Results Page](https://search.gov/img/Supplemental-Content-First-Example.png){:height="95%" width="95%"}
+![A Supplemental URL is Displayed on Page One of the DigitalGo Search Search Results Page](https://search.gov/img/Supplemental-Content-First-Example.png)
 
 ## Getting Supplemental Content To Be Your Only Search Results
 
