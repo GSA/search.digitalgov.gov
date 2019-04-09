@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Route Queries to a Specific Page
+slug: Routed Queries
 category: manual
 tags: help-manual manage-content routed-queries
 breadcrumbs:
