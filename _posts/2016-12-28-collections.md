@@ -11,7 +11,7 @@ breadcrumbs:
   - url: https://search.gov/manual/
 ---
 
-[Search.gov Home](https://search.gov/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Collections
+Find it in the [Admin Center](https://search.usa.gov/sites/) > YourSite > Collections
 
 Would you like searchers to be able to change where they are searching, either to a particular place within your site, or to another site? You can create a collection that will search in any set of domains, subdomains, or subfolders.
 

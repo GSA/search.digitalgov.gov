@@ -53,14 +53,16 @@ Once you've created your site, note the actions available on the left-hand navig
 
 <i class="icon-code"></i> And finally, the **Activate** section provides pre-formatted code snippets to help you go live. Don't be afraid of entering this section of the Admin Center, it does not actually activate anything.
 
-<a name="add-domains"></a><br />
+<a name="add-domains"></a>
+
 ## 2. Add Domains
 
 **Who:** You, the agency web team
 
 **What:** In the content management section, the domains list defines the default search scope for your site. You can include one domain or several, or you can focus on particular subdomains of one domain. [Read more here](https://search.gov/manual/domains.html).<br /> 
 
-<a name="select-index"></a><br />
+<a name="select-index"></a>
+
 ## 3. Web Index Selection
 
 **Who:** Search.gov team, in consultation with you, the agency web team
@@ -73,8 +75,8 @@ Jump to <a href="#add-features">Step 4. Add Features</a>
 
 If we will be indexing your content ourselves, we will follow these steps:
 
+<a name="indexing-workflow">
 
-<a name="indexing-workflow"></a>
 ### Indexing with Search.gov
 
 #### A. Define Domains and Subdomains
@@ -130,7 +132,8 @@ For brand new sites: Your index is ready to go, you can proceed with the rest of
 
 For sites switching from Bing: When you give us the green light to switch to the new index, there is no action needed on your part other than the approval. We will change a setting in our back end, which will point your existing search site’s web results module to our index, and the change is effective immediately. All other elements of your search site remain the same: search features, branding, etc.
 
-<a name="add-features"></a><br />
+<a name="add-features"></a>
+
 ## 4. Add Search Features
 
 **Who:** You, the agency web team
@@ -147,14 +150,16 @@ For sites switching from Bing: When you give us the green light to switch to the
 * [Jobs](https://search.gov/manual/govbox-jobs.html) are one of the most frequently searched topics on agency websites. Use our jobs module to show your agency’s postings from USAJOBS in your own website’s search results.
 * _[Federal Register]https://search.gov/manual/govbox-federal-register.html_ rules and notices can be added to your search results in a separate module. 
 
-<a name="turn-features-on"></a><br />
+<a name="turn-features-on"></a>
+
 ## 5. Toggle Search Features On
 
 **Who:** You, the agency web team
 
 **What:** In order to display any of the search features you just added above, you’ll need to toggle ON the display for each one, using the [Display Overview page](https://search.gov/manual/display-overview.html). If you want to show Jobs or _Federal Register_ results and you don’t see those options on the Display Overview page, [let us know](mailto:search@support.digitalgov.gov) and we can connect your search site to those features.<br /> 
 
-<a name="configure-branding"></a><br />
+<a name="configure-branding"></a>
+
 ## 6. Configure Results Page
 
 **Who:** You, the agency web team
@@ -163,7 +168,8 @@ For sites switching from Bing: When you give us the green light to switch to the
 
 [Masking the domain for your results page](https://search.gov/manual/cname.html) is another way you can provide continuity to your searchers as they move back and forth between your site and our system.
 
-<a name="go-live"></a><br />
+<a name="go-live"></a>
+
 ## 7. Connect Your Search Box to Search.gov
 
 **Who:** You, the agency web team, in collaboration with your deploy team, if different
