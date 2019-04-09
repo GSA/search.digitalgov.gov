@@ -1,8 +1,18 @@
 ---
 layout: post
 title: Robots.txt Files
-category: blog
-tags: how-to manage-content indexing
+slug: Robots.txt Files
+category: manual
+redirect-from:
+  - /blog/robotstxt.html
+tags: how-to manage-content indexing help-manual
+breadcrumbs:
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
+  - label: “Indexing”
+    url: https://search.gov/manual/indexing-with-searchgov.html
 ---
 
 A `/robots.txt` file is a text file that instructs automated web bots on how to crawl and/or index a website. Web teams use them to provide information about what site directories should or should not be crawled, how quickly content should be accessed, and which bots are welcome on the site.
@@ -22,7 +32,17 @@ Please refer to the [robots.txt protocol](http://www.robotstxt.org/robotstxt.htm
 ## How can I optimize my robots.txt for Search.gov?
 
 ### Crawl delay
-A robots.txt file may specify a "crawl delay" directive for one or more user agents, which tells a bot how quickly it can request pages from a website. For example, a crawl delay of 10 specifies that a crawler should not request a new page more than every 10 seconds.  We recommend a crawl-delay of 2 seconds for our `usasearch` user agent, and setting a higher crawl delay for all other bots. The lower the crawl delay, the faster Search.gov will be able to index your site. In the robots.txt file, it would look like this:
+A robots.txt file may specify a "crawl delay" directive for one or more user agents, which tells a bot how quickly it can request pages from a website. For example, a crawl delay of 10 specifies that a crawler should not request a new page more than every 10 seconds.  
+
+```
+  500,000 URLs
+     x 10 seconds
+5,000,000 seconds
+
+5,000,000 seconds = 58 days to index the site once.
+```
+
+We recommend a crawl-delay of 2 seconds for our `usasearch` user agent, and setting a higher crawl delay for all other bots. The lower the crawl delay, the faster Search.gov will be able to index your site. In the robots.txt file, it would look like this:
 
 ```
 User-agent: usasearch  

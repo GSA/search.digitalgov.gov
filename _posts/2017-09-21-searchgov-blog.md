@@ -5,7 +5,7 @@ category: blog
 tags: roadmap 
 ---
 
-We are pleased to announce some exciting upcoming changes to our service. On October 1st, we’ll become Search.gov. We’re changing more than just our name; in fiscal year 2018, we will use our own indexes to serve search results instead of relying on [commercial web search engines](/blog/searchgov-faqs-indexing.html#q-how-was-my-site-getting-results-before).
+We are pleased to announce some exciting upcoming changes to our service. On October 1st, we’ll become Search.gov. We’re changing more than just our name; in fiscal year 2018, we will use our own indexes to serve search results instead of relying on [commercial web search engines](https://search.gov/blog/searchgov-faqs-indexing.html#q-how-was-my-site-getting-results-before).
 
 Why are we evolving in this direction? Licensing commercial search results is expensive and complex. As we’ve continued to grow, our costs have continued to increase, and a new model has become a necessity. 
 
@@ -25,9 +25,9 @@ To address this gap and other licensing complexities, we will focus on using our
 
 In the most basic terms, here’s what we’ll be doing:
 
-![alt text](/img/basic-indexing-flow.png "Flowchart showing the major phases of search indexing: Discover, Parse, Index, and Search.")
+![alt text](https://search.gov/img/basic-indexing-flow.png "Flowchart showing the major phases of search indexing: Discover, Parse, Index, and Search.")
 
-*[Detailed diagram](/img/searchgov-flow.png "How Search.gov Works")*
+*[Detailed diagram](https://search.gov/img/searchgov-flow.png "How Search.gov Works")*
 
 Below are the options for how you can tell us about your site content. The list is divided into sections based on whether or not your website is on a content management system (CMS). There will be two primary ways to get content into our system: have your CMS send content to us via the i14y API, or send us a list of URLs.
 
@@ -88,11 +88,11 @@ Tuesday, October 3rd, 1 PM ET
 Call in number: 1-866-816-7357 / Passcode: 929827#
 ```
 
-We also invite you to read our [FAQs](/blog/searchgov-faqs-indexing.html), which we'll update regularly.
+We also invite you to read our [FAQs](https://search.gov/blog/searchgov-faqs-indexing.html), which we'll update regularly.
 
 Finally, we welcome you to email [questions and comments](mailto:search@support.digitalgov.gov).
 
-The Search program has grown and evolved since its [inception in September 2000](/customers.html). We look forward to this next phase of service to you and the public. 
+The Search program has grown and evolved since its [inception in September 2000](https://search.gov/customers.html). We look forward to this next phase of service to you and the public. 
 
 Happy searching,
 

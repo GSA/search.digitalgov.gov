@@ -1,13 +1,19 @@
 ---
 layout: post
 title: i14y Content Indexing API Documentation
+slug: i14y API
 category: developer
 tags: i14y api
+breadcrumbs:
+  - label: “Home”
+    url: https://search.gov/
+  - label: “For Developers”
+    url: https://search.gov/developer/
 ---
 
-[Search.gov Home](/index.html) > [APIs for Developers](/developer/index.html) > i14y API
+[Search.gov Home](https://search.gov/index.html) > [APIs for Developers](https://search.gov/developer/index.html) > i14y API
 
-> **Important Note:** April, 2018. i14y does not visit your content to do full-text scraping of your content. For new implementations, the Search.gov team recommends you index your content with us not using the i14y API, but rather by publishing a comprehensive xml sitemap, which we can use to index your content. [Read more.](/blog/six-months-in.html)
+> **Important Note:** April, 2018. i14y does not visit your content to do full-text scraping of your content. For new implementations, the Search.gov team recommends you index your content with us not using the i14y API, but rather by publishing a comprehensive xml sitemap, which we can use to index your content. [Read more.](https://search.gov/blog/six-months-in.html)
 
 [i14y Github repo](https://github.com/GSA/i14y){% external_link %}
 

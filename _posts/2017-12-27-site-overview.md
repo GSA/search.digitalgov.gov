@@ -1,11 +1,17 @@
 ---
 layout: post
 title: View a Snapshot of What's Happening on Your Site Today
+slug: Daily Snapshot
 category: manual
 tags: help-manual analytics dashboard site-overview
+breadcrumbs:
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
 ---
 
-[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Dashboard > Site Overview
+Find it in the [Admin Center](https://search.usa.gov/sites/) > YourSite > Dashboard > Site Overview
 
 The Site Overview page provides a snapshot of what has been happening on your site in the past day. All of the analytics in the [Admin Center](https://search.usa.gov/sites/) are updated in real-time, which means that you instantaneously see the searches and clicks as they're performed on your site.
 
@@ -29,7 +35,7 @@ A list of the top 10 changing URLs that were *visited by users on your website*.
 
 Use this report to identify newly popular pages on your website. Investigate why pages are trending, if the reason is not immediately apparent.
 
-You'll only see the trending URLs list if you have our [Javascript snippet](/manual/code.html) on your web pages. Data are updated every few minutes, so you may see URLs come and go quickly.
+You'll only see the trending URLs list if you have our [Javascript snippet](https://search.gov/manual/code.html) on your web pages. Data are updated every few minutes, so you may see URLs come and go quickly.
 
 ## Trending Queries
 
@@ -41,7 +47,7 @@ Use this report to identify newly popular terms. Create new content or update ex
 
 A list of the top 10 queries that returned no results.
 
-Use this data to help searchers find your content by adding a [Best Bet](/manual/best-bets.html), updating your existing web pages, or both.
+Use this data to help searchers find your content by adding a [Best Bet](https://search.gov/manual/best-bets.html), updating your existing web pages, or both.
 
 For example, on one agency's website, a dozen searches for *frostline* returned no results. The frost line&mdash;also known as depth of frost or freezing&mdash;is the depth to which the groundwater in soil is expected to freeze. The agency's pages on the topic referred to this concept as *depth of freezing*. 
 
@@ -49,7 +55,7 @@ For example, on one agency's website, a dozen searches for *frostline* returned 
 
 A list of the top 10 searches with low click thru rates. If there are any frequently searched terms that returned results but didn't get a click at least 20% of the time, they'll appear here. 
 
-Use this alert about low click thrus to identify issues with coverage. You may opt to create a [Best Bet](/manual/best-bets.html), add pages that may be missing from the results, or do both to improve recall. Or, you may opt to incorporate language from these popular search terms into your page titles and descriptions, or enter common search terms as keywords, verbatim.
+Use this alert about low click thrus to identify issues with coverage. You may opt to create a [Best Bet](https://search.gov/manual/best-bets.html), add pages that may be missing from the results, or do both to improve recall. Or, you may opt to incorporate language from these popular search terms into your page titles and descriptions, or enter common search terms as keywords, verbatim.
 
 ## This Month's Totals to Date
 
@@ -59,6 +65,6 @@ A graph of your site's total search queries over time is also presented to provi
 
 ---
 
-***Did you know?*** The [Monthly Report](/manual/monthly-reports.html) gives a bird's-eye view of the number of [queries](/manual/queries.html) and [clicks](/manual/clicks.html) each month.
+***Did you know?*** The [Monthly Report](https://search.gov/manual/monthly-reports.html) gives a bird's-eye view of the number of [queries](https://search.gov/manual/queries.html) and [clicks](https://search.gov/manual/clicks.html) each month.
 
 ***Did you know?***  Click the pushpin icon in the top navigation bar to change the default site that appears when you first log in to the [Admin Center](https://search.usa.gov/sites/). 

@@ -1,12 +1,18 @@
 ---
 layout: post
 title: Filtering Tags
+slug: Filtering Tags
 category: manual
 tags: "help-manual manage-content domains"
 published: true
+breadcrumbs:
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
 ---
 
-[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > [Domains](/manual/domains.html) > Advanced > Filter Tags
+Find it in the [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > [Domains](/manual/domains.html) > Advanced > Filter Tags
 
 **Note:** this feature is only available to sites that are enabled for [i14y](/developer/i14y.html).
 

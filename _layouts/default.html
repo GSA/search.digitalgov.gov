@@ -6,6 +6,21 @@
 
 <div class="container-fluid">
   <div class="col-md-8 col-md-offset-2">
+{% if page.breadcrumbs %}
+  <nav aria-label="breadcrumb" class="mt-2">
+  <ul class="breadcrumb">
+    {% if url_prefix == crumb.url %}
+    {% for crumb in page.breadcrumbs %}
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="{{ crumb.url  | prepend: site.baseurl }}"><span property="name">{{ crumb.label }}</span></a></li>
+    {% endfor %}
+    {% endif %}
+    <li class="breadcrumb-item active">
+    {{ page.slug }}
+    </li>
+  </ul>
+{% endif %}
+
+
     <!-- do not remove as used to parse in usasearch -->
     <main id="main-container">
       {{ content }}

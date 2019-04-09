@@ -1,11 +1,17 @@
 ---
 layout: post
 title: Displaying Type-ahead Suggestions on Your Agency's Website
+slug: Type-ahead Search
 category: manual
 tags: api activate-search autocomplete
+breadcrumbs:
+  - label: "Home"
+    url: https://search.gov/
+  - label: "Help Manual"
+    url: https://search.gov/manual/
 ---
 
-**_Note_**: this information is for customers who wish to display type-ahead (autocomplete) suggestions on their agency's website. If you are only looking to turn on type-ahead suggestions on your search results page, please review the instructions on our [Display Overview](/manual/display-overview.html#modules) page.
+**_Note_**: this information is for customers who wish to display type-ahead (autocomplete) suggestions on their agency's website. If you are only looking to turn on type-ahead suggestions on your search results page, please review the instructions on our [Display Overview](https://search.gov/manual/display-overview.html#modules) page.
 
 There are two ways to get type-ahead suggestions to appear on your agency's website.
 
