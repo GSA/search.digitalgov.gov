@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  
+  <title>How to Add JavaScript for Your Third-party Web Services</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/stylesheets/font-awesome-ie7.min.css">
+  <![endif]-->
+
+  <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+  <link href="/stylesheets/custom.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+  <link rel="shortcut icon" href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/favicon.ico">
+  <link rel='alternate' type='application/atom+xml' title='search.gov Atom feed' href='/all.atom' />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="/javascripts/bootstrap3-typeahead.js"></script>
+ </head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        <span class="search">Search.gov</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <form class="navbar-form navbar-left form-search" accept-charset="UTF-8" action="https://find.search.gov/search/" id="search-form" method="get">
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+        <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+        <div class="input-group input-append">
+          <label for="search-query" class="hide">Query</label>
+
+          <input name="query" autocomplete="off"  type="text" class="typeahead form-control search-query" id="search-query" data-provide="typeahead" >
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-nav" aria-label="Left Align" id="search-button">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+          </span>
+        </div>
+      </form>
+      <div class="nav navbar-right">
+          <a href="https://search.usa.gov/sites" class="navbar-brand"><i
+              class="icon-user icon-white"></i>&nbsp;Login</a>
+      </div>&nbsp;&nbsp;&nbsp;<div class="nav navbar-right">
+          <a href="http://search.usa.gov/signup" class="navbar-brand">Sign up</a>
+      </div>&nbsp;&nbsp;&nbsp;<div class="nav navbar-right">
+          <a href="https://search.gov/status.html" class="navbar-brand">System Status</a>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="col-md-offset-2 col-md-8  hidden-sm hidden-md hidden-lg">
+
+  <form class="form-search" accept-charset="UTF-8" action="https://find.search.gov/search/" id="search-form" method="get">
+    <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+    <div class="input-group input-append">
+      <label for="search-query" class="hide">Query</label>
+
+      <input name="query" autocomplete="off"  type="text" class=" form-control search-query" id="search-query"  >
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </span>
+    </div>
+  </form>
+</div>
+
+
+<div class="container-fluid">
+  <div class="col-md-8 col-md-offset-2">
+
+  <nav aria-label="breadcrumb" class="mt-2">
+  <ul class="breadcrumb">
+    
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/"><span property="name">Home</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/"><span property="name">Help Manual</span></a></li>
+    
+    
+    <li class="breadcrumb-item active">
+    3rd Party Tracking
+    </li>
+  </ul>
+
+
+
+    <!-- do not remove as used to parse in usasearch -->
+    <main id="main-container">
+      <article class="article feature" style="padding:0 30px; margin-top: 10px;">
+
+  
+  <h1>
+    <a href="/manual/3rd-Party-Tracking.html">How to Add JavaScript for Your Third-party Web Services</a>
+  </h1>
+  
+
+  <div class='post-content'>
+    <p>Find it in the <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Analytics &gt; 3rd Party Tracking</p>
+
+<p>Do you want your search results page to run third-party web services such as Foresee, Google Analytics, Omniture, Siteimprove, or WebTrends?</p>
+
+<p>Input the JavaScript code you’d like to call from your search results page. Click submit to send us your request. We’ll input your code for you and send you an email to confirm that we’ve done it.</p>
+
+<p>Some tips for commonly used third-party web services follow.</p>
+
+<p><strong><em>Note</em></strong>: We do not currently support Google Tag Manager. You will need to submit all of the scripts you are managing in your Google Tag Manager setup.</p>
+
+<h2 id="google-analytics-tip">Google Analytics Tip</h2>
+
+<p>Within your Google Analytics account, select the option, <em>Do Track Site Search</em>. Set the query parameter as <em>query</em>. For more information, read Google’s tip, <a href="https://support.google.com/analytics/answer/1012264?hl=en&amp;ref_topic=1031951">Set Up and Configure Site Search</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<p>Additionally, if you’ve requested <a href="https://search.gov/manual/cname.html">domain masking</a> and you want to include the analytics for your <em>search.agency.gov</em> subdomain with your main <em>agency.gov</em> domain, you’ll need to set your domain in your Google Analytics JavaScript by including <code>_gaq.push(['_setDomainName', 'agency.gov']);</code>.</p>
+
+<p>For more information, read Google’s tip, <a href="https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingSite">Tracking Multiple Domains</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<p>The code you submit should look something like one of the following two scripts.</p>
+
+<h3 id="google-analytics-code-older-format">Google Analytics Code (Older Format)</h3>
+
+<pre><code> &lt;script type="text/javascript"&gt;
+ var _gaq = _gaq || []; 
+ _gaq.push(['_setAccount', 'UA-########-1']); 
+ _gaq.push(['_trackPageview']);
+ 
+ (function() { 
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl'; : 'http://www') +      '.google-analytics.com/ga.js'; 
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s); 
+ })();
+ &lt;/script&gt;
+</code></pre>
+
+<h3 id="google-analytics-code-newer-format">Google Analytics Code (Newer Format)</h3>
+
+<pre><code> &lt;script type="text/javascript"&gt;
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ &lt;/script&gt;
+</code></pre>
+
+<h2 id="digital-analytics-program-tip">Digital Analytics Program Tip</h2>
+
+<p>Does your federal agency participate in the <a href="http://www.digital.gov/services/dap/">Digital Analytics Program</a> (DAP)?  You don’t need to do anything. We’re already fully integrated with DAP.</p>
+
+<h2 id="foresee-tip">ForeSee Tip</h2>
+
+<p>Coordinate with your ForeSee representative and the Search.gov team to implement your customer satisfaction survey on your results page. The four general steps follow.</p>
+
+<ol>
+  <li>
+    <p>Email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> to <a href="https://search.gov/manual/cname.html">set up a CNAME</a> for search.youragency.gov.</p>
+  </li>
+  <li>
+    <p>Update the files path in your Foresee code to use an absolute path instead of a relative path.</p>
+
+    <p><strong>Find =&gt;</strong> ‘files’: ‘/fsrscripts/’,</p>
+
+    <p><strong>and replace it with =&gt;</strong> ‘files’: ‘//www.youragency.gov/fsrscripts/’,</p>
+
+    <p><em>(Or, find =&gt; ‘files’: ‘/foresee/’, and replace it with =&gt; ‘files’: ‘//www.youragency/foresee/’,)</em></p>
+
+    <p>in the following five files.</p>
+
+    <ul>
+      <li>foresee-trigger.js</li>
+      <li>foresee-tracker.js</li>
+      <li>foresee-alive.js</li>
+      <li>foresee-qualifier.js</li>
+      <li>foresee-test.js</li>
+    </ul>
+  </li>
+  <li>
+    <p>Submit your foresee-trigger.js via our Admin Center. It should look something like the following script. <code>&lt;script type="text/javascript" src="//www.youragency.gov/library/foresee/foresee-trigger.js"&gt;&lt;/script&gt;</code></p>
+  </li>
+  <li>
+    <p>We’ll send you an email to confirm that we’ve set up both your CNAME and added the script for your foresee-trigger.js file.</p>
+  </li>
+</ol>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> We use Google Analytics Web analytics software—our own tag plus the <a href="http://www.digital.gov/services/dap/">Digital Analytics Program</a> tag—by default. Email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> if you’d like to opt out. Learn more about our <a href="http://www.digital.gov/about/policies/">site policies</a> and <a href="https://search.gov/tos.html">terms of service</a>.</p>
+
+  </div>
+  
+  <div class='tags'>
+    
+    <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+    
+    <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+    
+    <a href="/tagged/third-party"><span class="label label-info">third-party</span></a>
+    
+    <a href="/tagged/google-analytics"><span class="label label-info">google-analytics</span></a>
+    
+    <a href="/tagged/foresee"><span class="label label-info">foresee</span></a>
+    
+    <a href="/tagged/DAP"><span class="label label-info">DAP</span></a>
+    
+  </div>
+
+  <div class='time'>
+    
+    
+    
+    
+    <a href="/manual/3rd-Party-Tracking.html">
+      <time>January 4, 2017</time>
+    </a>
+  </div>
+
+</article>
+
+    </main>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p><a href="mailto:search@support.digitalgov.gov">Email us</a> or call us at 202-969-7426</p>
+    <p> An Official Website of the U.S. Government <br />
+      <a href="https://www.gsa.gov/portal/category/25729">Technology Transformation Service</a>, <a href="https://www.gsa.gov/portal/category/100000">U.S. General Services Administration</a>
+    </p>
+    <ul class="footer-links list-unstyled list-inline">
+      <li><a href="https://www.usa.gov">USA.gov</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/tos.html">Terms of Service</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="https://www.digitalgov.gov/about/policies/">Site Policies</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/developer/">Developers</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  //<![CDATA[
+  var usasearch_config = { siteHandle:"usasearch" };
+
+jQuery(document).ready(function() {
+  $('.typeahead').typeahead({
+      source: function (query, process) {
+          return $.get('https://search.usa.gov/sayt?name=usasearch&q=' + query, function (data) {
+              return process(data);
+          });
+      }, minLength: 2
+  });
+})
+
+
+  // var script = document.createElement("script");
+  // script.type = "text/javascript";
+  // script.src = "https://search.usa.gov/javascripts/remote.loader.js";
+  // document.getElementsByTagName("head")[0].appendChild(script);
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31302465-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  //]]>
+</script>
+
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA" id="_fed_an_ua_tag"></script>
+
+
+</body>
+</html>

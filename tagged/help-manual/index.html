@@ -96,6 +96,9 @@
 
 <div class="container-fluid">
   <div class="col-md-8 col-md-offset-2">
+
+
+
     <!-- do not remove as used to parse in usasearch -->
     <main id="main-container">
       <!-- begin tag layout -->
@@ -107,7 +110,755 @@
  
     
     <h1>
-      <a href="/manual/training.html">Search.gov Training</a>
+      <a href="/manual/Managing-Users.html">Managing Your Site's Users</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Find it in the <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Dashboard &gt; Manage Users</p>
+
+<p>After you’ve <a href="https://search.usa.gov/sites/">logged in</a> and <a href="https://search.gov/manual/add-site.html">added a site</a> with your official government email, you can add your coworkers to your site.</p>
+
+<p>You can add anyone you’d like to your site—with or without a .gov or .mil email address. Email addresses outside the .gov or .mil domains must be associated with a business. Personal emails, such as @gmail.com or @yahoo.com, are not allowed.</p>
+
+<p>We recommend adding a generic email account (such as webteam@agency.gov) as a user to ensure ongoing access to your account as individuals come and go, but all actual site management should be done under an individual login.</p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/user.png" alt="Add a user" /></p>
+
+<p>We use <a href="https://search.gov/manual/color-codes.html">color coding</a> to indicate each user’s status.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Color</th>
+      <th style="text-align: left">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">No color   </td>
+      <td style="text-align: left">Approved         </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Yellow</td>
+      <td style="text-align: left">Pending email verification: user must verify their email address via the introductory email they received from our system</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Yellow</td>
+      <td style="text-align: left">Pending approval: requires manual approval by the Search.gov team</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">Red</td>
+      <td style="text-align: left">Not approved: to regain access, the user must be manually re-approved by the Search.gov team</td>
+    </tr>
+  </tbody>
+</table>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
+      
+      <a href="/tagged/users"><span class="label label-info">users</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/Managing-Users.html">
+        <time datetime="2019-04-09">April 9, 2019</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/Sitemaps.html">XML Sitemaps</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>An <a href="https://en.wikipedia.org/wiki/Sitemaps">XML sitemap</a>  <i class="icon-external-link"><span>(External link)</span></i> is an XML formatted file containing a list of URLs on a website. An XML sitemap provides information that allows a search engine to index your website more intelligently, and to keep its search index up to date.</p>
+
+<p>Sitemaps tell search engines what URLs are on a website, and, if URLs are added as they are published, they tell the engines what new content needs to be picked up. They may also provide additional metadata about each URL, such as the last modified date, which signals to the engine to update the index record for that page.</p>
+
+<p>Search.gov uses sitemaps to tell us what URLs should be in our index and when a URL has been updated. Sitemaps are used in a similar way by <a href="https://support.google.com/webmasters/answer/156184">Google</a>  <i class="icon-external-link"><span>(External link)</span></i>, Bing, and and other search engines. <strong>Having an xml sitemap will improve your Google SEO (search engine optimization).</strong></p>
+
+<p>Example: <a href="https://search.gov/sitemap.xml">https://search.gov/sitemap.xml</a></p>
+
+<h2 id="what-content-should-be-on-xml-sitemap">What content should be on XML sitemap?</h2>
+
+<p>Some sitemaps are comprehensive, but for very large sites you may need to publish several sitemaps. Each sitemap should be no more than 50MB or 50,000 URLs, whichever comes first. You do not need to add URLs of content you want to remain unsearchable.</p>
+
+<p><strong>Note</strong> that an HTML formatted file listing the pages of a site is more akin to an index page, and is not the same as an XML sitemap. HTML files are human friendly, but not machine friendly, and Search engines need an xml formatted file in order to leverage the information for indexing work.</p>
+
+<h2 id="more-than-one-web-platform-use-multiple-sitemaps">More than one web platform? Use multiple sitemaps.</h2>
+
+<p>It’s common for agencies to use more than one platform to publish their websites. For instance, a CMS was launched, but some content is still on the legacy site’s platform. In this case, use available plugins for the CMS’s in your environment to auto-generate sitemaps for that content. Manually generate a sitemap for any static content. You can publish a <a href="https://www.sitemaps.org/protocol.html#index">sitemap index file</a>  <i class="icon-external-link"><span>(External link)</span></i> that lists the locations of all your specific sitemaps, or you can list all your sitemaps on your robots.txt file.</p>
+
+<h2 id="how-do-search-engines-find-my-sitemaps">How do search engines find my sitemap(s)?</h2>
+
+<p>Sitemaps (or the <a href="https://www.sitemaps.org/protocol.html#index">sitemap index</a>  <i class="icon-external-link"><span>(External link)</span></i>) should be listed in your site’s robots.txt file, i.e.:<br />
+<code>Sitemap: https://www.agency.gov/sitemap_1.xml</code><br />
+<code>Sitemap: https://www.agency.gov/sitemap_2.xml</code></p>
+
+<p>List the appropriate sitemap(s) for the domain or subdomain. <code>www.exampleagency.gov/robots.txt</code> would list sitemaps for content in the <code>www</code> subdomain, while <code>forms.exampleagency.gov/robots.txt</code> would list sitemaps for the <code>forms</code> subdomain.</p>
+
+<p>Read more about <a href="https://search.gov/manual/robotstxt.html">robots.txt files</a>, and take a look at ours: <a href="https://search.gov/robots.txt">https://search.gov/robots.txt</a></p>
+
+<h2 id="what-should-my-xml-sitemap-look-like">What should my XML sitemap look like?</h2>
+
+<p>Please refer to the official <a href="https://www.sitemaps.org/protocol.html">sitemaps protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> for full information on how a sitemap should be structured.</p>
+
+<p>When publishing your sitemap, be sure it begins with an <code>&lt;xml&gt;</code> declaration, and that the URLs are enclosed in opening and closing tags. To take a simplified example:</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;urlset&gt;
+&lt;url&gt;
+&lt;loc&gt;https://exampleagency.gov/blog/file1.html&lt;/loc&gt;
+&lt;lastmod&gt;2018-03-19T00:00:00+00:00&lt;/lastmod&gt;
+&lt;/url&gt;
+&lt;url&gt;
+&lt;loc&gt;https://exampleagency.gov/policy/new-policy.html&lt;/loc&gt;
+&lt;lastmod&gt;2018-03-27T00:00:00+00:00&lt;/lastmod&gt;
+&lt;/url&gt;
+&lt;/urlset&gt;
+</code></pre>
+<p>If you use multiple sitemaps, then you’ll need to use a <a href="https://www.sitemaps.org/protocol.html#index">sitemap index</a>  <i class="icon-external-link"><span>(External link)</span></i>, along these lines:</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;sitemapindex&gt;
+&lt;sitemap&gt;https://exampleagency.gov/sitemap.xml?page=1&lt;/sitemap&gt;
+&lt;sitemap&gt;https://exampleagency.gov/sitemap.xml?page=2&lt;/sitemap&gt;
+&lt;/sitemapindex&gt;
+</code></pre>
+<p>Importantly, be sure that any <a href="https://www.sitemaps.org/protocol.html#escaping">special characters in your URLs are escaped</a>  <i class="icon-external-link"><span>(External link)</span></i> so the search engines will know how to read them.</p>
+
+<h2 id="what-metadata-does-searchgov-require-for-each-xml-sitemap-url">What metadata does Search.gov require for each XML sitemap URL?</h2>
+
+<p>The sitemap protocol defines <a href="https://www.sitemaps.org/protocol.html#xmlTagDefinitions">required and optional XML tags</a>  <i class="icon-external-link"><span>(External link)</span></i> for each URL. We recommend including the <code>&lt;lastmod&gt;</code> value (the date of last modification of the file) whenever possible, to indicate when a file has been updated and needs to be re-indexed.</p>
+
+<p>We do not have plans to support the <code>&lt;priority&gt;</code> tag, which is <a href="https://www.seroundtable.com/google-priority-change-frequency-xml-sitemap-20273.html">no longer used</a>  <i class="icon-external-link"><span>(External link)</span></i> by search engines like Google. We may support the <code>&lt;changefreq&gt;</code> tag in the future, but the <code>&lt;lastmod&gt;</code> tag is more accurate and supported by more search engines.</p>
+
+<h2 id="how-can-i-create-an-xml-sitemap">How can I create an XML sitemap?</h2>
+
+<p>Most content management systems provide tools to generate a sitemap and keep it updated. Below are some tools that we recommend:</p>
+
+<h3 id="drupal">Drupal</h3>
+<p><a href="https://www.drupal.org/project/xmlsitemap">XML Sitemap Module</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<h3 id="wordpress">Wordpress</h3>
+<p><a href="https://wordpress.org/plugins/wordpress-seo/">Yoast SEO Plugin</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<p><a href="https://wordpress.org/plugins/google-sitemap-generator/">Google Sitemap Plugin</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<h3 id="wagtail">Wagtail</h3>
+<p><a href="http://docs.wagtail.io/en/latest/reference/contrib/sitemaps.html">Sitemap Generator</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<h3 id="github-pages-jekyll">Github Pages (Jekyll)</h3>
+<p><a href="https://help.github.com/articles/sitemaps-for-github-pages/">Jekyll Sitemap gem</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<h3 id="online-generators">Online generators</h3>
+<p>(Note: free online generators often have a limit to the number of URLs they will include, and do not always generate the most accurate sitemaps. Use them only as a last resort.)</p>
+
+<p><a href="https://freesitemapgenerator.com">Free Sitemap Generator</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<p><a href="http://www.web-site-map.com/">Web Sitemap</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<h2 id="sitemap-checklist">Sitemap checklist</h2>
+<p><i class="icon-check"></i> 1. One or more sitemaps have been created</p>
+
+<p><i class="icon-check"></i> 2. The URLs in the sitemap have been reviewed (clean URLs, only includes URLs that should be searchable)</p>
+
+<p><i class="icon-check"></i> 3. Each sitemap’s XML format has been <a href="http://tools.seochat.com/tools/site-validator/">validated</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<p><i class="icon-check"></i> 4. Each sitemap (or a sitemap index) is listed in the site’s robots.txt file</p>
+
+<h2 id="additional-resources">Additional Resources:</h2>
+<p><a href="https://www.sitemaps.org/">Official Documentation from Sitemaps.org</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<p><a href="https://support.google.com/webmasters/answer/183668?hl=en&amp;ref_topic=4581190">Google’s guide to building a sitemap</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<p><a href="https://www.websiteplanet.com/webtools/sitemap-validator/">Sitemap validator</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<h2 id="more-questions">More questions?</h2>
+<p>If you have questions that aren’t answered here, <a href="mailto:search@support.digitalgov.gov">email us</a>. We’ll also keep updating this page over time.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/sitemaps"><span class="label label-info">sitemaps</span></a>
+      
+      <a href="/tagged/indexing"><span class="label label-info">indexing</span></a>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/Sitemaps.html">
+        <time datetime="2019-04-09">April 9, 2019</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/Robots.txt-Files.html">Robots.txt Files</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>A <code>/robots.txt</code> file is a text file that instructs automated web bots on how to crawl and/or index a website. Web teams use them to provide information about what site directories should or should not be crawled, how quickly content should be accessed, and which bots are welcome on the site.</p>
+
+<h2 id="what-should-my-robotstxt-file-look-like">What should my robots.txt file look like?</h2>
+<p>Please refer to the <a href="http://www.robotstxt.org/robotstxt.html">robots.txt protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> for detailed information on how and where to create your robots.txt. Key points to keep in mind:</p>
+
+<ul>
+  <li>The file must be located at the root of the domain, and each subdomain needs its own file.</li>
+  <li>The robots.txt protocol is case sensitive.</li>
+  <li>It’s easy to accidentally block crawling of everything
+    <ul>
+      <li><code>Disallow: /</code> means disallow everything</li>
+      <li><code>Disallow:  </code> means disallow nothing, thus allowing everything</li>
+      <li><code>Allow: /</code> means allow everything</li>
+      <li><code>Allow:  </code> means allow nothing, thus disallowing everything</li>
+    </ul>
+  </li>
+  <li>The instructions in robots.txt are guidance for bots, not binding requirements.</li>
+</ul>
+
+<h2 id="how-can-i-optimize-my-robotstxt-for-searchgov">How can I optimize my robots.txt for Search.gov?</h2>
+
+<h3 id="crawl-delay">Crawl delay</h3>
+<p>A robots.txt file may specify a “crawl delay” directive for one or more user agents, which tells a bot how quickly it can request pages from a website. For example, a crawl delay of 10 specifies that a crawler should not request a new page more than every 10 seconds.</p>
+
+<pre><code>  500,000 URLs
+     x 10 seconds
+5,000,000 seconds
+
+5,000,000 seconds = 58 days to index the site once.
+</code></pre>
+
+<p>We recommend a crawl-delay of 2 seconds for our <code>usasearch</code> user agent, and setting a higher crawl delay for all other bots. The lower the crawl delay, the faster Search.gov will be able to index your site. In the robots.txt file, it would look like this:</p>
+
+<pre><code>User-agent: usasearch  
+Crawl-delay: 2
+
+User-agent: *
+Crawl-delay: 10
+</code></pre>
+
+<h3 id="xml-sitemaps">XML Sitemaps</h3>
+<p>Your robots.txt file should also list one or more of your <a href="https://search.gov/blog/sitemaps.html">XML sitemaps</a>. For example:</p>
+
+<pre><code>Sitemap: https://www.exampleagency.gov/sitemap.xml
+Sitemap: https://www.exampleagency.gov/independent-subsection-sitemap.xml
+</code></pre>
+<ul>
+  <li>Only list sitemaps for the domain matching where the robots.txt file is. A different subdomain’s sitemap should be listed on that subdomain’s robots.txt.</li>
+</ul>
+
+<h3 id="allow-only-the-content-that-you-want-searchable">Allow only the content that you want searchable</h3>
+<p>We recommend disallowing any directories or files that should not be searchable. For example:</p>
+
+<pre><code>Disallow: /archive/
+Disallow: /news-1997/
+Disallow: /reports/duplicative-page.html
+</code></pre>
+
+<ul>
+  <li>Note that if you disallow a directory after it’s been indexed by a search engine, this may not trigger a removal of that content from the index. You’ll need to go into the search engine’s webmaster tools to request removal.</li>
+  <li>Also note that search engines may index individual pages within a disallowed folder if the search engine learns about the URL from a non-crawl method, like a link from another site or your sitemap. To ensure a given page is not searchable, set a <a href="/blog/how-search-engines-index-content-better-discoverability.html#robots">robots meta tag</a> on that page.</li>
+</ul>
+
+<h3 id="customize-settings-for-different-bots">Customize settings for different bots</h3>
+<p>You can set different permissions for different bots. For example, if you want us to index your archived content but don’t want Google or Bing to index it, you can specify that:</p>
+
+<pre><code>User-agent: usasearch  
+Crawl-delay: 2
+Allow: /archive/
+
+User-agent: *
+Crawl-delay: 10
+Disallow: /archive/
+</code></pre>
+
+<h2 id="robotstxt-checklist">Robots.txt checklist</h2>
+<p><i class="icon-check"></i> 1. A robots.txt file has been created in the site’s root directory (<code>https://exampleagency.gov/robots.txt</code>)</p>
+
+<p><i class="icon-check"></i> 2. The robots.txt file disallows any directories and files that automated bots should not crawl</p>
+
+<p><i class="icon-check"></i> 3. The robots.txt file lists one or more <a href="https://search.gov/blog/sitemaps.html">XML sitemaps</a></p>
+
+<p><i class="icon-check"></i> 4. The robots.txt file format has been <a href="http://tools.seochat.com/tools/robots-txt-validator/">validated</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<h2 id="additional-resources">Additional Resources</h2>
+<p><a href="https://yoast.com/ultimate-guide-robots-txt/">Yoast SEO’s Ultimate Guide to Robots.txt</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<p><a href="https://support.google.com/webmasters/answer/6062608?hl=en&amp;ref_topic=6061961">Google’s “Learn about robots.txt files”</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+      
+      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+      
+      <a href="/tagged/indexing"><span class="label label-info">indexing</span></a>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      
+      <a href="/manual/Robots.txt-Files.html">
+        <time datetime="2019-04-09">April 9, 2019</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/Metadata.html">Metadata and tags you should include in your website</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Search.gov, like other search engines, relies on structured data to help inform how we index your content and how it is presented in search results. You should also read up on the metadata used by <a href="https://support.google.com/webmasters/answer/79812?hl=en">Google</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="">Bing</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<p>Including the following tags and metadata in each of your pages will improve the quality of your content’s indexing, as well as results ranking.</p>
+
+<p>This page will be updated over time as we add more tag-based indexing functions and ranking factors to our service.</p>
+
+<p><code>&lt;title&gt;</code></p>
+
+<ul>
+  <li><em>*Detail:</em> ** Unique title of the page. If you want to include the agency or section name, place that after the actual page title. If there is no title metadata, for instance in a PDF file, we will collect the file name as the title.</li>
+  <li><em>*Used in:</em> ** Query matching, term frequency scoring</li>
+</ul>
+
+<p><code>&lt;meta name=”description” content=”foo” /&gt;</code></p>
+
+<ul>
+  <li><em>*Detail:</em> ** Your well crafted summary of the page content. This will often be used by search engines in place of a page snippet. Best to limit to 160 characters, so it will not be truncated. <a href="https://moz.com/learn/seo/meta-description">Read more here</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
+  <li><em>*Used in:</em> ** Query matching, term frequency scoring</li>
+</ul>
+
+<p><code>&lt;meta name=”keywords” content=”foo bar baz ” /&gt;</code></p>
+
+<ul>
+  <li><em>*Detail:</em> ** While not often used by commercial search engines due to <a href="https://support.google.com/webmasters/answer/66358?hl=en">keyword stuffing</a> <i class="icon-external-link"><span>(External link)</span></i>, Search.gov indexes your keywords, if you have added them.</li>
+  <li><em>*Used in:</em> ** Query matching, term frequency scoring</li>
+</ul>
+
+<p><code>&lt;meta property="og:title” content=”Title goes here” /&gt;</code></p>
+
+<ul>
+  <li><em>*Detail:</em> ** Usually duplicative of <code>&lt;title&gt;</code>, we use the <code>og:title</code> property as the result title if it appears to be more substantive than the <code>&lt;title&gt;</code> tag.</li>
+  <li><em>*Used in:</em> ** Query matching, term frequency scoring</li>
+</ul>
+
+<p><code>&lt;meta property="og:description” content=”Description goes here” /&gt;</code></p>
+
+<ul>
+  <li><em>*Detail:</em> ** Often duplicative of the meta description, we will index this as well, in case it has different content.</li>
+  <li><em>*Used in:</em> ** Query matching, term frequency scoring</li>
+</ul>
+
+<p><code>&lt;meta property="article:published_time" content="YYYY-MM-DD" /&gt;</code></p>
+
+<ul>
+  <li><em>*Detail:</em> ** Exact time is optional; <a href="https://en.wikipedia.org/wiki/ISO_8601">read more here</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
+  <li><em>*Used in:</em> ** Page freshness scoring.</li>
+</ul>
+
+<p><code>&lt;meta property="article:modified_time" content="YYYY-MM-DD" /&gt;</code></p>
+
+<ul>
+  <li><em>*Detail:</em> ** Exact time is optional; <a href="https://en.wikipedia.org/wiki/ISO_8601">read more here</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
+  <li><em>*Used in:</em> ** Page freshness scoring.</li>
+</ul>
+
+<p><code>&lt;meta name="robots" content="..., ..." /&gt;</code></p>
+
+<ul>
+  <li><em>*Detail:</em> ** Use the <a href="https://search.gov/blog/how-search-engines-index-content-better-discoverability.html#robots">meta robots tag</a> to block the search engine from indexing a particular page.</li>
+  <li><em>*Used in:</em> ** Used during indexing, does not affect relevance ranking.</li>
+</ul>
+
+<p><code>&lt;main&gt;</code></p>
+
+<ul>
+  <li><em>*Detail:</em> ** Allows the search engine to target the actual content of the page and avoid headers, sidebars and other page content not useful to search. <a href="https://search.gov/blog/how-search-engines-index-content-better-discoverability.html#main-element">Read more about the &lt;main&gt; element here</a></li>
+  <li><em>*Used in:</em> ** Query matching, term frequency scoring
+<br />
+<br /></li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/indexing"><span class="label label-info">indexing</span></a>
+      
+      <a href="/tagged/seo"><span class="label label-info">seo</span></a>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/Metadata.html">
+        <time datetime="2019-04-09">April 9, 2019</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/Better-Discoverability.html">How to get search engines to index the right content for better discoverability</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Website structure and content can have a significant impact on the ability of search engines to provide a good search experience. As a result, the Search Engine Optimization industry evolved to provide better understanding of these impacts and close critical gaps. Some elements on your website will actively hinder the search experience, and this post will show you how to target valuable content and exclude distractions.</p>
+
+<p>We’ve written a <a href="https://search.gov/manual/robotstxt.html">post about robots.txt files</a>, talking about high level inclusion and exclusion of content from search engines. There are other key tools you will want to employ on your website to further target the content on individual pages:</p>
+
+<ul>
+  <li><a href="#main-element">The &lt;main&gt; element</a></li>
+  <li><a href="#rel-canonical">Canonical links</a></li>
+  <li><a href="#robots">Robots meta tags</a></li>
+  <li>Or a combination of the above: <a href="#sample">Sample code structure for dynamic lists and an archived event</a></li>
+</ul>
+
+<p><br />
+<a id="main-element"></a></p>
+<h2 id="the-main-element">The <code>&lt;main&gt;</code> element</h2>
+<h3 id="targeting-particular-content-on-a-page">Targeting particular content on a page</h3>
+
+<p>A <code>&lt;main&gt;</code> element allows you to target content you want indexed by search engines. If a <code>&lt;main&gt;</code> element is present, the system will only collect the content inside the element. Be sure that the content you want indexed is inside of this element. If the element is closed too early, important content will not be indexed. Unless the system finds a <code>&lt;main&gt;</code> element demarcating where the primary content of the page is to be found, repetitive content such as headers, footers, and sidebars will be picked up by search engines as part of a page’s content.</p>
+
+<p>The element is implemented as a stand-alone tag:</p>
+
+<pre><code>&lt;body&gt;
+Redundant header code and navigation elements, sidebars, etc.
+&lt;main&gt;
+&lt;h1&gt;This is your page title&lt;/h1&gt;
+&lt;p&gt;This is the main text of your page
+&lt;/main&gt;
+Redundant footer code
+Various scripts, etc.
+&lt;/body&gt;
+</code></pre>
+
+<p>The element can also take the form of a <code>&lt;div&gt;</code> with the role of main, though this approach is now outdated:</p>
+
+<pre><code>&lt;body&gt;
+Redundant header code and navigation elements, sidebars, etc.
+&lt;div role=”main”&gt;
+&lt;h1&gt;This is your page title&lt;/h1&gt;
+&lt;p&gt;This is the main text of your page
+&lt;/div&gt;
+Redundant footer code
+Various scripts, etc.
+&lt;/body&gt;
+</code></pre>
+
+<p>As mentioned above, if no <code>&lt;main&gt;</code> element is present, the entire page will be scraped. This is best reserved for non-HTML file types, though, including PDFs, DOCs, and PPTs.</p>
+
+<p><br />
+<a id="rel-canonical"></a></p>
+<h2 id="canonical-links">Canonical links</h2>
+<h3 id="declare-the-real-url-for-a-page">Declare the ‘real’ URL for a page</h3>
+
+<p>There are two good reasons to declare the URL for a given page: CMS sites can easily become crawler traps, and list views can generate urls that are unhelpful as search results.</p>
+
+<p>A crawler trap occurs when the engine falls into a loop of visiting, opening, and “discovering” pages that seem new, but are modifications on existing URLs. These URLs may have appended parameters such as tags, referring pages, Google Tag Manager tokens, page numbers, etc. Crawler traps tend to occur when your site can generate an infinite number of URLs. The crawler is ultimately unable to determine what constitutes the entirety of a site.
+<code>&lt;link rel="canonical" href="https://www.example.gov/topic1" /&gt;</code></p>
+
+<p>By using a canonical link, shown above, you tell the crawler this is the real URL for the page despite parameters present in the URL when the page is opened. In the example above, even if a crawler opened the page with a URL like <code>https://example.gov/topic1?sortby=desc</code>, only <code>https://www.example.gov/topic1</code> will be captured by the search engine.</p>
+
+<p>Another important use-case for canonical links is the dynamic list. If the example above is a dynamic list of pages about Topic 1, it’s likely there will be pagination at the bottom of the page. This pagination dynamically separates items into distinct pages and generates urls like: <code>https://example.gov/topic1?page=3</code>. As new items are added to or removed from the list, there’s no guarantee that existing items will remain on a particular page. This behavior may frustrate users when a particular page no longer contains the item they want.</p>
+
+<p>Use a canonical link to limit the search engine to indexing only the first page of the list, which the user can then sort or move through as they choose. The individual items on the list are indexed separately and included in search results.</p>
+
+<p><br />
+<a id="robots"></a></p>
+<h2 id="robots-meta-tags">Robots meta tags</h2>
+<h3 id="exclude-particular-pages-from-indexing-or-exclude-their-links-from-being-followed">Exclude particular pages from indexing, or exclude their links from being followed</h3>
+
+<p>There are individual pages on your websites that do not make good search results. This could be archived event pages, list views such as Recent Blog Posts, etc. Blocking individual pages on the <a href="https://search.gov/manual/robotstxt.html">robots.txt file</a> will be difficult if you don’t have easy access to edit the file Even if edits are easy, it could quickly lead to an unmanageably long <code>robots.txt</code>.</p>
+
+<p>It’s also important to note that search engines will pay attention to <code>Disallow</code> directives in <code>robots.txt</code> when crawling, but may not when accessing your URLs from other sources, like links from other sites or your sitemap. <strong>Search.gov will rely on robots meta tags when working off your sitemap to know what content you want searchable, and what you don’t want searchable.</strong></p>
+
+<p>To achieve best results for blocking indexing of particular pages, you’ll want to employ meta robots tags in the <code>&lt;head&gt;</code> of the pages you want to exclude from the search index.</p>
+
+<p>This example says not to index the page, but allows following the links on the page:</p>
+
+<p><code>&lt;meta name="robots" content="noindex" /&gt;</code></p>
+
+<p>This example says to index the page, but not follow any of the links on the page:</p>
+
+<p><code>&lt;meta name="robots" content="nofollow" /&gt;</code></p>
+
+<p>This example tells bots not to index the page, and not to follow any of the links on the page:</p>
+
+<p><code>&lt;meta name="robots" content="noindex, nofollow" /&gt;</code></p>
+
+<p>You can also add an X-Robots-Tag to you HTTP header response to control indexing for a given page. This requires deeper access to servers than our customers usually have themselves, so if you are interested in learning more, you can do so <a href="https://developers.google.com/search/reference/robots_meta_tag">here</a>  <i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<p>If you have content that should be indexed when it’s fresh, but needs to be removed from the index once it’s outdated, you’ll want to take a few actions:</p>
+
+<ul>
+  <li>Once the page’s window of relevance is over, add a <code>&lt;meta name="robots" content="noindex" /&gt;</code> tag to the <code>&lt;head&gt;</code> of the page.</li>
+  <li>Make sure the modified_time on the page is updated.</li>
+  <li>Leave the item in the <a href="https://search.gov/manual/sitemaps.html">sitemap</a>, so that search engines will see the page was updated, revisit it, and see that the item should be removed from the index.</li>
+</ul>
+
+<p><br />
+<a id="sample"></a></p>
+<h2 id="sample-code-structure">Sample code structure</h2>
+
+<ul>
+  <li><a href="#list1">Dynamic list 1: Topic landing page</a></li>
+  <li><a href="#list2">Dynamic list 2: Posts tagged XYZ page</a></li>
+  <li><a href="#past-event">Event from last month</a></li>
+</ul>
+
+<p><a id="list1"></a></p>
+<h3 id="dynamic-list-1-topic-landing-page">Dynamic list 1: Topic landing page</h3>
+
+<p>The following code sample is for a dynamically generated list of pages on your site, where you want the landing page for the list to appear in search results.</p>
+
+<pre><code>&lt;head&gt;
+&lt;title&gt;Unique title of the page&lt;/title&gt;
+&lt;meta name="description" content="Some multi-sentence description of various things a person will find on this page. This is a great place to use different terms for the same thing, which is hopefully both plain language and keyword stuffing at the same time." /&gt;
+&lt;meta property="og:title" content="Unique title of the page" /&gt;
+&lt;meta property="og:description" content="Some multi-sentence description of various things a person will find on this page. This is a great place to use different terms for the same thing, which is hopefully both plain language and keyword stuffing at the same time. This could be the same or slightly different than the regular meta description." /&gt;
+&lt;meta property=”article:published_time” content=”2018-09-28” /&gt;
+&lt;meta property=”article:modified_time” content=”2018-09-28” /&gt;
+&lt;link rel="canonical" href="https://www.example.gov/topic1" /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+Redundant header code and navigation elements, sidebars, etc.
+&lt;main&gt;
+&lt;h1&gt;Unique title of the page&lt;/h1&gt;
+&lt;p&gt;This is the introductory text of the page. It tells people what they’ll find here, why the topic is important, etc. This text is within the main element, and so it will be used to retrieve this page in searches.
+&lt;/main&gt;
+Dynamically generated list of relevant pages
+Pagination
+Redundant footer code
+Various scripts, etc.
+&lt;/body&gt;
+</code></pre>
+
+<p><a id="list2"></a></p>
+<h3 id="dynamic-list-2-posts-tagged-xyz">Dynamic list 2: Posts tagged XYZ</h3>
+
+<p>The following code sample is for a dynamically generated list of pages on your site, where you do not want the list to appear in search results. In the case of pages tagged with a particular term, the pages themselves would be good search results, but the list of them would be just another click between the user and the content.</p>
+
+<p>Note: the description tags are still present in case someone links to this page in another system and that system wants to display a summary with the link.</p>
+
+<pre><code>&lt;head&gt;
+&lt;title&gt;Unique title of the page&lt;/title&gt;
+&lt;meta name="robots" content="noindex" /&gt;
+&lt;meta name="description" content="Some multi-sentence description of various things a person will find on this page. This is a great place to use different terms for the same thing, which is hopefully both plain language and keyword stuffing at the same time. Recommended max characters is 175." /&gt;
+&lt;meta property="og:title" content="Unique title of the page" /&gt;
+&lt;meta property="og:description" content="Some multi-sentence description of various things a person will find on this page. This is a great place to use different terms for the same thing, which is hopefully both plain language and keyword stuffing at the same time. Recommended max characters is 175. This could be the same or slightly different than the regular meta description." /&gt;
+&lt;meta property=”article:published_time” content=”2018-09-28” /&gt;
+&lt;meta property=”article:modified_time” content=”2018-09-28” /&gt;
+&lt;link rel="canonical" href="https://www.example.gov/posts-tagged-xyz" /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+Redundant header code and navigation elements, sidebars, etc.
+&lt;h1&gt;Unique title of the page&lt;/h1&gt;
+Dynamically generated list of relevant pages
+Pagination
+Redundant footer code
+Various scripts, etc.
+&lt;/body&gt;
+</code></pre>
+
+<p><a id="past-event"></a></p>
+<h3 id="event-from-last-month">Event from last month</h3>
+
+<p>In the following example, an event page was published in June, and then updated the day after the event occurred. This update adds the <code>meta robots</code> tag, which declares the page should not be indexed, and links from the page should not be followed in future crawls. Again, the meta descriptions are retained in case of linking from other systems.</p>
+
+<pre><code>&lt;head&gt;
+&lt;title&gt;Unique title of the page&lt;/title&gt;
+&lt;meta name="robots" content="noindex, nofollow" /&gt;
+&lt;meta name="description" content="Some multi-sentence description of various things a person will find on this page. This is a great place to use different terms for the same thing, which is hopefully both plain language and keyword stuffing at the same time. Recommended max characters is 175." /&gt;
+&lt;meta property="og:title" content="Unique title of the page" /&gt;
+&lt;meta property="og:description" content="Some multi-sentence description of various things a person will find on this page. This is a great place to use different terms for the same thing, which is hopefully both plain language and keyword stuffing at the same time. Recommended max characters is 175. This could be the same or slightly different than the regular meta description." /&gt;
+&lt;meta property=”article:published_time” content=”2018-06-04” /&gt;
+&lt;meta property=”article:modified_time” content=”2018-08-13” /&gt;
+&lt;link rel="canonical" href="https://www.example.gov/events/august-12-title-of-event" /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+Redundant header code and navigation elements, sidebars, etc.
+&lt;main&gt;
+&lt;h1&gt;Unique title of the page&lt;/h1&gt;
+&lt;p&gt;This is the introductory text of the page. It tells people what they’ll find here, why the topic is important, etc. This text is within the main element, and so it will be used to retrieve this page in searches.
+Specifics about the event.
+&lt;/main&gt;
+Redundant footer code
+Various scripts, etc.
+&lt;/body&gt;
+</code></pre>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+  <li><a href="https://www.w3schools.com/tags/tag_main.asp">HTML &lt;main&gt; Tag</a>  <i class="icon-external-link"><span>(External link)</span></i> - accessed October 10, 2018.</li>
+  <li><a href="https://developers.google.com/search/reference/robots_meta_tag">Robots meta tag and X-Robots-Tag HTTP header specifications
+</a>  <i class="icon-external-link"><span>(External link)</span></i> - accessed October 10, 2018.</li>
+  <li><a href="https://yoast.com/rel-canonical/">rel=canonical: the ultimate guide
+</a>  <i class="icon-external-link"><span>(External link)</span></i> - accessed October 10, 2018.</li>
+  <li><a href="https://support.google.com/webmasters/answer/139066?hl=en">Consolidate duplicate URLs: Define a canonical page for similar or duplicate pages</a>  <i class="icon-external-link"><span>(External link)</span></i> - accessed October 10, 2018.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/indexing"><span class="label label-info">indexing</span></a>
+      
+      <a href="/tagged/seo"><span class="label label-info">seo</span></a>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/Better-Discoverability.html">
+        <time datetime="2019-04-09">April 9, 2019</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/Go-Live-Checklist.html">Going Live with Search.gov</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>Your pre-launch checklist will be unique to your agency’s workflow, requirements, and deadlines. Below is a typical checklist.</p>
+
+<h2 id="double-check-your-content-settings">Double Check Your Content Settings</h2>
+
+<p><i class="icon-check"></i> <strong>1. Have you told us which domain(s) you want to search?</strong> List one or more <a href="https://search.gov/manual/domains.html">domains</a> that you want to search on the first page of web results. Some agencies opt to leave out the ‘www’ to include all subdomains (for example, list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc).</p>
+
+<p><i class="icon-check"></i> <strong>2. Have we indexed your your content?</strong> We follow search engine optimization (SEO) best practices and leverage your <a href="https://search.gov/blog/sitemaps.html">XML sitemaps</a> to monitor for new content. Verify also that you have a <a href="https://search.gov/blog/robotstxt.html">robots.txt file</a>. These two files are typically located in the root directory of your website (i.e., <code>exampleagency.gov/robots.txt</code> and <code>exampleagency.gov/sitemap.xml</code>, respectively). Also verify that your robots.txt file allows our user agent (<code>usasearch</code>) to access your public content.</p>
+
+<p><i class="icon-check"></i> <strong>3. Have you told us about your RSS feeds?</strong> We love <a href="https://search.gov/manual/rss.html">RSS feeds</a>. RSS feeds are a quick way for us to index your new and updated content, in addition to the content listed on your sitemap (see above). This is great for press releases, blog posts, etc. (Tip: Preview your feeds from the RSS page in the <a href="https://search.usa.gov/sites/">Admin Center</a> to confirm that we’ve indexed your content.)</p>
+
+<p><i class="icon-check"></i> <strong>4. Have you told us about your images and videos?</strong> <a href="https://search.gov/manual/flickr.html">Flickr photostreams</a> and <a href="https://search.gov/manual/youtube.html">YouTube videos</a> are a great way to highlight your recent content and offer a single point of access to your various publishing channels.</p>
+
+<h2 id="customize-the-display-of-your-search-results-page">Customize the Display of Your Search Results Page</h2>
+
+<p><i class="icon-check"></i> <strong>5. Have you made the search results page look like your website?</strong> Customize the <a href="https://search.gov/manual/brand.html">brand</a> (font, colors, logo, favicon, and navigation links) of your search results page to create a seamless experience for users as they search and browse your website.</p>
+
+<p><i class="icon-check"></i> <strong>6. Have you told us what to show on your results page?</strong> Turn on (or off) the inline modules and facets that you want to appear on your search results page. You can change the default settings on the <a href="https://search.gov/manual/display-overview.html">Display Overview</a> page in the Admin Center.</p>
+
+<h2 id="connect-your-site-to-searchgov">Connect Your Site to Search.gov</h2>
+
+<p>Most agencies add these two <a href="https://search.gov/manual/code.html">snippets of code</a> to the template(s) in their websites or content management systems (rather than adding them to individual pages).</p>
+
+<p><i class="icon-check"></i> <strong>7. Does your search box point to Search.gov?</strong> Update your search box form code point to our service so that, when users execute a search, they’ll see your Search.gov-hosted results page.</p>
+
+<pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
+	 &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
+ 	&lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
+ 	&lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
+ 	&lt;input name="commit" type="submit" value="Search" /&gt;
+&lt;/form&gt;
+</code></pre>
+
+<p><i class="icon-check"></i> <strong>8. Do you have our Javascript tag on your webpages?</strong> This Javascript powers the suggestions for type-ahead and <a href="https://search.gov/manual/display-overview.html">related searches</a>. It also provides data on your trending URLs on the <a href="https://search.gov/manual/site-overview.html">Site Overview</a> page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+
+<pre><code>&lt;script type="text/javascript"&gt;
+//&lt;![CDATA[
+	 var usasearch_config = { siteHandle:"YourSiteHandle" };
+ 	var script = document.createElement("script");
+ 	script.type = "text/javascript";
+ 	script.src = "//search.usa.gov/javascripts/remote.loader.js";
+ 	document.getElementsByTagName("head")[0].appendChild(script);
+//]]&gt;
+&lt;/script&gt;
+</code></pre>
+
+<h2 id="set-up-nice-to-have-features-optional">Set Up Nice-to-Have Features (Optional)</h2>
+
+<p><i class="icon-check"></i> <strong>9. Have you masked your domain?</strong> We offer <a href="https://search.gov/manual/cname.html">DNS masking</a>, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov. Be sure to alert us you will be adding a domain mask, so we can add you to our SSL certificate before you update your search box form code.</p>
+
+<p><i class="icon-check"></i> <strong>10. Have you added the Javascripts for your other third-party web services to your results page?</strong> If you have a <a href="https://search.gov/manual/third-party.html">third-party service</a> running on your website, you likely want it to run on your results page. Agencies often include their Foresee, Google Analytics, Omniture, or WebTrends code, among others. If your federal website participates in the <a href="https://www.digitalgov.gov/services/dap/">Digital Analytics Program</a>, you do not need to take any action: DAP code is included on your results page, by default.</p>
+
+<h2 id="dont-forget-seo">Don’t Forget SEO</h2>
+
+<p><i class="icon-check"></i> <strong>11. Have you registered your site with the major commercial search engines?</strong> Register for both <a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i> to maximize the coverage of your content in their search results.</p>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/Go-Live-Checklist.html">
+        <time datetime="2019-04-09">April 9, 2019</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/manual/Training.html">Search.gov Training</a>
     </h1>
     
 
@@ -126,19 +877,19 @@
 
 <p>Can’t view our YouTube vidoes? When available, a downloadable .mp4 file can be found below each embedded video on this page.</p>
 
-<p><a name="how-engines-index"></a>
-<br /></p>
+<p><a name="how-engines-index"></a></p>
+
 <h3 id="how-search-engines-index-your-websites">How Search Engines Index Your Websites</h3>
 <p>May 2018 | 48 mins</p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/THhe3Z7XSxg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
 
 <p><em>Resources:</em>
-<br /><a href="/files/HowSearchEnginesIndexYourWebsite.pdf">Presentation Slides &amp; Notes</a> (PDF)
+<br /><a href="https://search.gov/files/HowSearchEnginesIndexYourWebsite.pdf">Presentation Slides &amp; Notes</a> (PDF)
 <br /><a href="https://d3qcdigd1fhos0.cloudfront.net/media/howsearchenginesindex.mp4">How Search Engines Index Your Websites .mp4</a></p>
 
-<p><a name="intro-to-search-gov"></a>
-<br /></p>
+<p><a name="intro-to-search-gov"></a></p>
+
 <h3 id="intro-to-searchgov">Intro to Search.gov</h3>
 <p>May 2018 | 60 mins</p>
 
@@ -147,20 +898,20 @@
 <p>Download not available at this time.
 <br /><em>Note:</em> As new Intro sessions are held, recordings of previous sessions will be taken down.</p>
 
-<p><a name="site-structure-better-seo"></a>
-<br /></p>
+<p><a name="site-structure-better-seo"></a></p>
+
 <h3 id="structuring-your-site-for-better-seo">Structuring Your Site for Better SEO</h3>
 <p>March 2017 | 59 mins</p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2t5JM5slNSA" frameborder="0" allowfullscreen=""></iframe>
 
 <p><em>Resources:</em> 
-<br /><a href="/files/Structuring Your Site Content for Better SEO Slides.pdf">Presentation Slides</a> (PDF)
-<br /><a href="/files/Article Links - Structuring Your Site for Better SEO Webinar.pdf">List of SEO Articles and Resources</a> (PDF)
+<br /><a href="https://search.gov/files/Structuring Your Site Content for Better SEO Slides.pdf">Presentation Slides</a> (PDF)
+<br /><a href="https://search.gov/files/Article Links - Structuring Your Site for Better SEO Webinar.pdf">List of SEO Articles and Resources</a> (PDF)
 <br /><a href="https://d3qcdigd1fhos0.cloudfront.net/media/Structuring+Your+Site+for+Better+SEO_051117.mp4">Structuring Your Site .mp4</a></p>
 
-<p><a name="all-about-analytics"></a>
-<br /></p>
+<p><a name="all-about-analytics"></a></p>
+
 <h3 id="all-about-analytics-search">All About Analytics: Search</h3>
 <p>June 2016 | 57 mins</p>
 
@@ -168,8 +919,8 @@
 
 <p><a href="https://d3qcdigd1fhos0.cloudfront.net/media/allaboutanalytics.mp4">All About Analytics .mp4</a></p>
 
-<p><a name="search-doctor"></a>
-<br /></p>
+<p><a name="search-doctor"></a></p>
+
 <h3 id="search-doctor-preventive-care-for-your-search-results">Search Doctor: Preventive Care for Your Search Results</h3>
 <p>April 2016 | 48 mins</p>
 
@@ -177,8 +928,8 @@
 
 <p><a href="https://d3qcdigd1fhos0.cloudfront.net/media/searchdoctor.mp4">Search Doctor .mp4</a></p>
 
-<p><a name="power-users"></a>
-<br /></p>
+<p><a name="power-users"></a></p>
+
 <h3 id="digitalgov-search-for-power-users">DigitalGov Search for Power Users</h3>
 <p>February 2016 | 66 mins</p>
 
@@ -186,20 +937,20 @@
 
 <p><a href="https://d3qcdigd1fhos0.cloudfront.net/media/powerusers.mp4">Power Users .mp4</a></p>
 
-<p><a name="show-me-the-data"></a>
-<br /></p>
+<p><a name="show-me-the-data"></a></p>
+
 <h3 id="show-me-the-data-leveraging-analytics-in-digitalgov-search">Show Me the Data: Leveraging Analytics in DigitalGov Search</h3>
 <p>December 2015 | 61 mins</p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zMft4VkYZug" frameborder="0" allowfullscreen=""></iframe>
 
 <p><em>Resources:</em> 
-<br /><a href="/files/Mastering_Your_Search_Data-December_2015.pptx">Mastering Your Search Data</a> (Slide deck) / Michelle Chronister, USAgov
-<br /><a href="/files/Sample_FY15_Monthly_Search%20Reports-USA.gov.xlsx">USA.gov FY15 Monthly Search Reports</a> (Excel workbook) / Michelle Chronister, USAgov - Modify to use as a template for your agency.
+<br /><a href="https://search.gov/files/Mastering_Your_Search_Data-December_2015.pptx">Mastering Your Search Data</a> (Slide deck) / Michelle Chronister, USAgov
+<br /><a href="https://search.gov/files/Sample_FY15_Monthly_Search%20Reports-USA.gov.xlsx">USA.gov FY15 Monthly Search Reports</a> (Excel workbook) / Michelle Chronister, USAgov - Modify to use as a template for your agency.
 <br /><a href="https://d3qcdigd1fhos0.cloudfront.net/media/showmethedata.mp4">Show Me the Data .mp4</a></p>
 
-<p><a name="straight-to-the-top"></a>
-<br /></p>
+<p><a name="straight-to-the-top"></a></p>
+
 <h3 id="straight-to-the-top-best-bets-in-digitalgov-search">Straight to the Top: Best Bets in DigitalGov Search</h3>
 <p>February 2015 | 55 mins</p>
 
@@ -207,8 +958,8 @@
 
 <p><a href="https://d3qcdigd1fhos0.cloudfront.net/media/bestbets.mp4">Straight to the Top .mp4</a></p>
 
-<p><a name="mastering-your-search-term-data"></a>
-<br /></p>
+<p><a name="mastering-your-search-term-data"></a></p>
+
 <h3 id="mastering-your-search-term-data-a-tool-for-faster-smarter-analysis">Mastering Your Search Term Data: A Tool for Faster, Smarter Analysis</h3>
 <p>June 2014 | 58 mins</p>
 
@@ -218,14 +969,14 @@
 
 <p><a href="https://d3qcdigd1fhos0.cloudfront.net/media/masteringyoursearchdata.mp4">Mastering Your Search Term Data .mp4</a></p>
 
+<p><a name="getting-started-with-search-gov"></a></p>
+
 <h2 id="quick-start-video">Quick Start Video</h2>
 
-<p><a name="getting-started-with-search-gov"></a>
-<br /></p>
-<h3 id="getting-started-with-searchgov">Getting Started with Search.gov</h3>
-<p>July 2018 | 4 mins</p>
+<h3 id="getting-started-with-digitalgov-search">Getting Started with DigitalGov Search</h3>
+<p>May 2015 | 4 mins</p>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/p-y9T23ziEg" frameborder="0" allowfullscreen=""></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TnlpuudK_WY" frameborder="0" allowfullscreen=""></iframe>
 
 <p><a href="https://d3qcdigd1fhos0.cloudfront.net/media/gettingstarted.mp4">Getting Started .mp4</a></p>
 
@@ -245,7 +996,7 @@
       
       
       
-      <a href="/manual/training.html">
+      <a href="/manual/Training.html">
         <time datetime="2019-03-18">March 18, 2019</time>
       </a>
     </div>
@@ -255,102 +1006,7 @@
  
     
     <h1>
-      <a href="/manual/index.html">Help Manual: Managing Your Search Configuration</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>This help manual follows the order of settings that are available in the <a href="https://search.usa.gov/sites/">Search Admin Center</a>.</p>
-
-<h3 id="-dashboard"><i class="icon-dashboard"></i> Dashboard</h3>
-
-<p><a href="/manual/site-overview.html">Site overview</a>  <br />
-<a href="/manual/users.html">Manage users</a>  <br />
-<a href="/manual/settings.html">Settings</a>  <br />
-<a href="/manual/clone-site.html">Clone Site</a></p>
-
-<h3 id="-analytics"><i class="icon-bar-chart"></i> Analytics</h3>
-
-<p><a href="/manual/queries.html">Queries</a>  <br />
-<a href="/manual/clicks.html">Clicks</a>  <br />
-<a href="/manual/referrers.html">Referrers</a>  <br />
-<a href="/manual/monthly-reports.html">Monthly reports</a>  <br />
-<a href="/manual/third-party.html">3rd party tracking</a><br />
-<a href="/manual/analytics-alerts.html">Analytics Alerts</a></p>
-
-<h3 id="-manage-content"><i class="icon-file"></i> Manage Content</h3>
-
-<p><a href="/manual/content-overview.html">Content overview</a>  <br />
-<a href="/manual/domains.html">Domains</a> (plus advanced options to <a href="/manual/domains-advanced.html">add</a> or <a href="/manual/filter-content.html">filter</a> URLs.)  <br />
-  * For questions about indexing, including sitemaps, see links below.<br />
-<a href="/manual/collections.html">Collections</a>  <br />
-<a href="/manual/i14y-drawers.html">i14y drawers</a> (this option will only appear if your site is enabled for <a href="/developer/i14y.html">i14y</a>) <br />
-<a href="/manual/best-bets.html">Best bets: text and/or graphics</a>  <br />
-<a href="/manual/routed-queries.html">Routed queries</a>  <br />
-<a href="/manual/rss.html">RSS</a>  <br />
-<a href="/manual/youtube.html">YouTube</a>  <br />
-<a href="/manual/twitter.html">Twitter</a>  <br />
-<a href="/manual/flickr.html">Flickr</a>  <br />
-<a href="/manual/instagram.html">Instagram</a> [Deprecated]</p>
-
-<h3 id="-manage-display"><i class="icon-desktop"></i> Manage Display</h3>
-
-<p><a href="/manual/display-overview.html">Display overview</a> (including <a href="/manual/govbox-jobs.html">job openings</a>, <a href="/manual/govbox-federal-register.html"><em>Federal Register</em></a>, and <a href="/manual/govbox-health.html">health topics</a>)  <br />
-<a href="/manual/brand.html">Brand</a> (font &amp; colors, image assets, and header &amp; footer)  <br />
-Custom <a href="/manual/no-results.html">No Results</a> page  <br />
-Custom <a href="/manual/system-alert.html">Search Page Alert</a></p>
-
-<h3 id="-preview"><i class="icon-eye-open"></i> Preview</h3>
-
-<p><a href="/manual/preview.html">Preview</a></p>
-
-<h3 id="-activate-search"><i class="icon-code"></i> Activate Search</h3>
-
-<p><a href="/manual/code.html">Code snippets</a>  <br />
-<a href="/manual/search-results-api.html">Search Results API access key</a>*  <br />
-<a href="/manual/search-results-api.html">Search Results API instructions</a>*  <br />
-<a href="/manual/typeahead-api.html">Type-ahead API instructions</a>*  <br />
-<a href="/developer/i14y.html">i14y API instructions</a>*</p>
-
-<p>* These APIs are available for use on official government websites only. You must be a Search.gov customer. <a href="https://search.usa.gov/sites">Sign in</a> is required. Keys and instructions for each can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Activate Search.</p>
-
-<h3 id="additional-help-resources-not-in-the-admin-center">Additional Help Resources Not in the Admin Center</h3>
-
-<p><a href="/blog/sitemaps.html">XML Sitemaps</a>    <br />
-<a href="/blog/robotstxt.html">/robots.txt Files</a>    <br />
-<a href="/blog/how-search-engines-index-content-better-discoverability.html">How to get search engines to index the right content for better discoverability</a>    <br />
-<a href="https://www.youtube.com/watch?v=TnlpuudK_WY">Getting Started video</a> (4 mins) <i class="icon-external-link"><span>(External link)</span></i>  <br />
-<a href="/blog/go-live.html">Go-Live Punch List</a>    <br />
-<a href="/manual/cname.html">Masking your domain</a><br />
-<a href="/blog/redesign.html">Website Redesign Checklist</a>  <br />
-<a href="/developer/index.html">Resources for Developers</a>   <br />
-<a href="/manual/training.html">Upcoming Training and Video Recordings</a></p>
-
-<p>Do you have other questions or comments about how our service works? <a href="mailto:search@support.digitalgov.gov">Email us</a>.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/index.html">
-        <time datetime="2018-12-19">December 19, 2018</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/cname.html">How to Mask Your Domain</a>
+      <a href="/manual/Domain-Masking.html">How to Mask Your Domain</a>
     </h1>
     
 
@@ -362,7 +1018,7 @@ Custom <a href="/manual/system-alert.html">Search Page Alert</a></p>
     <p>Create a <code>search</code> subdomain for your domain. If <code>search</code> is already in use in your environment, you could use <code>find</code> or <code>findit</code> as your subdomain.</p>
   </li>
   <li>
-    <p>Create a CNAME in your external DNS records for <code>search.youragency.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>. Your site handle is listed on the <a href="/manual/settings.html">settings page</a> in the Search Admin Center.</p>
+    <p>Create a CNAME in your external DNS records for <code>search.youragency.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>. Your site handle is listed on the <a href="https://search.gov/manual/settings.html">settings page</a> in the Search Admin Center.</p>
 
     <p>For example: if your site handle is <code>abc</code>, the DNS record would look like this:</p>
 
@@ -378,7 +1034,7 @@ Custom <a href="/manual/system-alert.html">Search Page Alert</a></p>
     <p>After your DNS record has been added, <a href="mailto:search@support.digitalgov.gov">email us</a> to request to be added to our SSL certificate. If your CNAME is not on our SSL certificate, browser security warnings will appear when your search results page attemps to load over <code>HTTPS</code>. It generally takes a few days for these requests to get through our queue.<br /><br />Your domain mask will work as soon as these two steps are complete.</p>
   </li>
   <li>
-    <p>When your DNS record is in place and you have received confirmation that your domain mask has been added to our SSL certificate, change your search box’s <a href="/manual/code.html">form code</a> action from <code>search.usa.gov/search</code> to <code>search.youragency.gov/search</code>.</p>
+    <p>When your DNS record is in place and you have received confirmation that your domain mask has been added to our SSL certificate, change your search box’s <a href="https://search.gov/manual/code.html">form code</a> action from <code>search.usa.gov/search</code> to <code>search.youragency.gov/search</code>.</p>
   </li>
 </ol>
 
@@ -409,7 +1065,7 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
       
       
       
-      <a href="/manual/cname.html">
+      <a href="/manual/Domain-Masking.html">
         <time datetime="2018-09-21">September 21, 2018</time>
       </a>
     </div>
@@ -419,51 +1075,107 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
  
     
     <h1>
-      <a href="/manual/users.html">Managing Your Site's Users</a>
+      <a href="/manual/Training.html">Search.gov Training</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Dashboard &gt; Manage Users</p>
+      <p><a href="https://www.digital.gov/events/">DigitalGov Events Calendar</a></p>
 
-<p>After you’ve <a href="https://search.usa.gov/sites/">logged in</a> and <a href="/manual/add-site.html">added a site</a> with your official government email, you can add your coworkers to your site.</p>
+<h2 id="upcoming-sessions">Upcoming Sessions</h2>
 
-<p>You can add anyone you’d like to your site—with or without a .gov or .mil email address. Email addresses outside the .gov or .mil domains must be associated with a business. Personal emails, such as @gmail.com or @yahoo.com, are not allowed.</p>
+<ul>
+  <li>We hold our Search.gov Intro session a couple times a year.</li>
+</ul>
 
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/user.png" alt="Add a user" height="95%" width="95%" /></p>
+<p>Have an idea about another topic you’d like us to develop training for? <a href="mailto:search@support.digitalgov.gov">Let us know!</a></p>
 
-<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each user’s status.</p>
+<h2 id="previous-sessions">Previous Sessions</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Color</th>
-      <th style="text-align: left">Status</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">No color   </td>
-      <td style="text-align: left">Approved         </td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Yellow</td>
-      <td style="text-align: left">Pending email verification: user must verify their email address via the introductory email they received from our system</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Yellow</td>
-      <td style="text-align: left">Pending approval: requires manual approval by the Search.gov team</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">Red</td>
-      <td style="text-align: left">Not approved: to regain access, the user must be manually re-approved by the Search.gov team</td>
-    </tr>
-  </tbody>
-</table>
+<p>Can’t view our YouTube vidoes? When available, a downloadable .mp4 file can be found below each embedded video on this page.</p>
 
-<hr />
+<h3 id="how-search-engines-index-your-websites">How Search Engines Index Your Websites</h3>
+<p>May 2018 | 48 mins</p>
 
-<p><strong><em>Did you know?</em></strong> We recommend adding a generic email account (such as webteam@agency.gov) as a user to ensure ongoing access to your account as individuals come and go.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/THhe3Z7XSxg?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<p><em>Resources:</em>
+<br /><a href="https://search.gov/files/HowSearchEnginesIndexYourWebsite.pdf">Presentation Slides &amp; Notes</a> (PDF)
+<br /><a href="https://d3qcdigd1fhos0.cloudfront.net/media/howsearchenginesindex.mp4">How Search Engines Index Your Websites .mp4</a></p>
+
+<h3 id="intro-to-searchgov">Intro to Search.gov</h3>
+<p>May 2018 | 60 mins</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/W9gFgy4Jx6k?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+
+<p>Download not available at this time.
+<br /><em>Note:</em> As new Intro sessions are held, recordings of previous sessions will be taken down.</p>
+
+<h3 id="structuring-your-site-for-better-seo">Structuring Your Site for Better SEO</h3>
+<p>March 2017 | 59 mins</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2t5JM5slNSA" frameborder="0" allowfullscreen=""></iframe>
+
+<p><em>Resources:</em> 
+<br /><a href="https://search.gov/files/Structuring Your Site Content for Better SEO Slides.pdf">Presentation Slides</a> (PDF)
+<br /><a href="https://search.gov/files/Article Links - Structuring Your Site for Better SEO Webinar.pdf">List of SEO Articles and Resources</a> (PDF)
+<br /><a href="https://d3qcdigd1fhos0.cloudfront.net/media/Structuring+Your+Site+for+Better+SEO_051117.mp4">Structuring Your Site .mp4</a></p>
+
+<h3 id="all-about-analytics-search">All About Analytics: Search</h3>
+<p>June 2016 | 57 mins</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xL6ipNKPW_Y" frameborder="0" allowfullscreen=""></iframe>
+
+<p><a href="https://d3qcdigd1fhos0.cloudfront.net/media/allaboutanalytics.mp4">All About Analytics .mp4</a></p>
+
+<h3 id="search-doctor-preventive-care-for-your-search-results">Search Doctor: Preventive Care for Your Search Results</h3>
+<p>April 2016 | 48 mins</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Wr767ENce_4" frameborder="0" allowfullscreen=""></iframe>
+
+<p><a href="https://d3qcdigd1fhos0.cloudfront.net/media/searchdoctor.mp4">Search Doctor .mp4</a></p>
+
+<h3 id="digitalgov-search-for-power-users">DigitalGov Search for Power Users</h3>
+<p>February 2016 | 66 mins</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P47ccZb6Fzc" frameborder="0" allowfullscreen=""></iframe>
+
+<p><a href="https://d3qcdigd1fhos0.cloudfront.net/media/powerusers.mp4">Power Users .mp4</a></p>
+
+<h3 id="show-me-the-data-leveraging-analytics-in-digitalgov-search">Show Me the Data: Leveraging Analytics in DigitalGov Search</h3>
+<p>December 2015 | 61 mins</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zMft4VkYZug" frameborder="0" allowfullscreen=""></iframe>
+
+<p><em>Resources:</em> 
+<br /><a href="https://search.gov/files/Mastering_Your_Search_Data-December_2015.pptx">Mastering Your Search Data</a> (Slide deck) / Michelle Chronister, USAgov
+<br /><a href="https://search.gov/files/Sample_FY15_Monthly_Search%20Reports-USA.gov.xlsx">USA.gov FY15 Monthly Search Reports</a> (Excel workbook) / Michelle Chronister, USAgov - Modify to use as a template for your agency.
+<br /><a href="https://d3qcdigd1fhos0.cloudfront.net/media/showmethedata.mp4">Show Me the Data .mp4</a></p>
+
+<h3 id="straight-to-the-top-best-bets-in-digitalgov-search">Straight to the Top: Best Bets in DigitalGov Search</h3>
+<p>February 2015 | 55 mins</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WzQocKYK0t4" frameborder="0" allowfullscreen=""></iframe>
+
+<p><a href="https://d3qcdigd1fhos0.cloudfront.net/media/bestbets.mp4">Straight to the Top .mp4</a></p>
+
+<h3 id="mastering-your-search-term-data-a-tool-for-faster-smarter-analysis">Mastering Your Search Term Data: A Tool for Faster, Smarter Analysis</h3>
+<p>June 2014 | 58 mins</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/x2_PhowP-DI" frameborder="0" allowfullscreen=""></iframe>
+
+<p><em>Note:</em> To build your own tool to analyze your search data, read <a href="https://www.digitalgov.gov/2013/10/24/understanding-your-users-needs-by-analyzing-search-terms/">Understanding Your Users’ Needs By Analyzing Search Terms</a> and explore USA.gov’s magic formulas in this <a href="https://www.digitalgov.gov/files/2013/10/usa.gov-monthly-search-reports-fy13.xlsx">spreadsheet</a> (MS Excel, 371 KB, October 2013)</p>
+
+<p><a href="https://d3qcdigd1fhos0.cloudfront.net/media/masteringyoursearchdata.mp4">Mastering Your Search Term Data .mp4</a></p>
+
+<h2 id="quick-start-video">Quick Start Video</h2>
+
+<h3 id="getting-started-with-digitalgov-search">Getting Started with DigitalGov Search</h3>
+<p>May 2015 | 4 mins</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TnlpuudK_WY" frameborder="0" allowfullscreen=""></iframe>
+
+<p><a href="https://d3qcdigd1fhos0.cloudfront.net/media/gettingstarted.mp4">Getting Started .mp4</a></p>
 
     </div>
 
@@ -471,9 +1183,9 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
       
       <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
       
-      <a href="/tagged/dashboard"><span class="label label-info">dashboard</span></a>
+      <a href="/tagged/training"><span class="label label-info">training</span></a>
       
-      <a href="/tagged/users"><span class="label label-info">users</span></a>
+      <a href="/tagged/videos"><span class="label label-info">videos</span></a>
       
     </div>
    <div class='time'>
@@ -481,8 +1193,8 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
       
       
       
-      <a href="/manual/users.html">
-        <time datetime="2018-08-10">August 10, 2018</time>
+      <a href="/manual/Training.html">
+        <time datetime="2018-06-20">June 20, 2018</time>
       </a>
     </div>
     </article>
@@ -491,12 +1203,12 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
  
     
     <h1>
-      <a href="/manual/best-bets.html">How to Boost Certain Results using Best Bets</a>
+      <a href="/manual/Best-Bets.html">How to Boost Certain Results using Best Bets</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Best Bets: Text or Graphics</p>
+      <p>Find it in the <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Best Bets: Text or Graphics</p>
 
 <p>Do you want to promote a specific page or resource? <a href="#best-bets-text">Create a Text Best Bet</a>.</p>
 
@@ -526,7 +1238,7 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
 
 <h3 id="add-multiple-best-bets-via-bulk-upload">Add Multiple Best Bets via Bulk Upload</h3>
 
-<p>Create a comma-separated file with the following fields (in this order). Download our <a href="/files/best-bets-template-201603.csv">sample template for uploading best bets</a> [CSV] to see the correct format.</p>
+<p>Create a comma-separated file with the following fields (in this order). Download our <a href="https://search.gov/files/best-bets-template-201603.csv">sample template for uploading best bets</a> [CSV] to see the correct format.</p>
 
 <p>Title, URL, Description, StartDate, EndDate, Keywords, Match_Keywords_Only, Status</p>
 
@@ -624,7 +1336,7 @@ Keyword 4: market value
 
 <h3 id="it-is-active">It Is Active</h3>
 
-<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each entry’s status.</p>
+<p>We use <a href="https://search.gov/manual/color-codes.html">color coding</a> to indicate each entry’s status.</p>
 
 <table>
   <thead>
@@ -655,11 +1367,11 @@ Keyword 4: market value
 
 <p>Watch the recording of our February 2015 webinar <a href="https://www.youtube.com/embed/WzQocKYK0t4"><strong>Straight to the Top: Best Bets in DigitalGov Search</strong></a> (55 mins)</p>
 
-<p><strong><em>Did you know?</em></strong> Use the <a href="/manual/system-alert.html">Search Page Alert</a> feature to add a text message to your search results page, which will appear at all times above all search results, <em>regardless of the query</em>.</p>
+<p><strong><em>Did you know?</em></strong> Use the <a href="https://search.gov/manual/system-alert.html">Search Page Alert</a> feature to add a text message to your search results page, which will appear at all times above all search results, <em>regardless of the query</em>.</p>
 
-<p><strong><em>Did you know?</em></strong> Analyze the number of impressions and clicks and clickthru rate for each best bet on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.</p>
+<p><strong><em>Did you know?</em></strong> Analyze the number of impressions and clicks and clickthru rate for each best bet on the <a href="https://search.gov/manual/monthly-reports.html">Monthly Reports</a> page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.</p>
 
-<p><strong><em>Did you know?</em></strong> When you use the <a href="/manual/collections.html#sitelimit">sitelimit parameter</a> to scope the search to a subsection of your website, we’ll apply this sitelimit to your Best Bets so searchers see recommended pages from within that folder or subdomain only.</p>
+<p><strong><em>Did you know?</em></strong> When you use the <a href="https://search.gov/manual/collections.html#sitelimit">sitelimit parameter</a> to scope the search to a subsection of your website, we’ll apply this sitelimit to your Best Bets so searchers see recommended pages from within that folder or subdomain only.</p>
 
     </div>
 
@@ -677,487 +1389,8 @@ Keyword 4: market value
       
       
       
-      <a href="/manual/best-bets.html">
+      <a href="/manual/Best-Bets.html">
         <time datetime="2018-06-20">June 20, 2018</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/blog/go-live.html">Going Live with Search.gov</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>Your pre-launch checklist will be unique to your agency’s workflow, requirements, and deadlines. Below is a typical checklist.</p>
-
-<h2 id="double-check-your-content-settings">Double Check Your Content Settings</h2>
-
-<p><i class="icon-check"></i> <strong>1. Have you told us which domain(s) you want to search?</strong> List one or more <a href="/manual/domains.html">domains</a> that you want to search on the first page of web results. Some agencies opt to leave out the ‘www’ to include all subdomains (for example, list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies especially department-level portals opt to also include their bureaus’ websites (for example, Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)</p>
-
-<p><i class="icon-check"></i> <strong>2. Have we indexed your your content?</strong> We follow search engine optimization (SEO) best practices and leverage your <a href="/blog/sitemaps.html">XML sitemaps</a> to monitor for new content. Verify also that you have a <a href="/blog/robotstxt.html">robots.txt file</a>. These two files are typically located in the root directory of your website (i.e., <code>exampleagency.gov/robots.txt</code> and <code>exampleagency.gov/sitemap.xml</code>, respectively). Also verify that your robots.txt file allows our user agent (<code>usasearch</code>) to access your public content.</p>
-
-<p><i class="icon-check"></i> <strong>3. Have you told us about your RSS feeds?</strong> We love <a href="/manual/rss.html">RSS feeds</a>. Tell us about all of your feeds, even if you opt not to show them (see #5 below). They’re a quick way for us to index your new and updated content, in addition to the content listed on your sitemap (see above). (Tip: Preview your feeds from the RSS page in the <a href="https://search.usa.gov/sites/">Admin Center</a> to confirm that we’ve indexed your content.)</p>
-
-<p><i class="icon-check"></i> <strong>4. Have you told us about your social media accounts?</strong> <a href="/manual/flickr.html">Flickr photostreams</a>, <a href="/manual/twitter.html">tweets</a>, and <a href="/manual/youtube.html">YouTube videos</a> are a great way to highlight your recent content and offer a single point of access to your various publishing channels.</p>
-
-<h2 id="customize-the-display-of-your-search-results-page">Customize the Display of Your Search Results Page</h2>
-
-<p><i class="icon-check"></i> <strong>5. Have you made the search results page look like your website?</strong> Customize the <a href="/manual/brand.html">brand</a> (font, colors, logo, favicon, and navigation links) of your search results page to create a seamless experience for users as they search and browse your website.</p>
-
-<p><i class="icon-check"></i> <strong>6. Have you told us what to show on your results page?</strong> Turn on (or off) the inline modules and facets that you want to appear on your search results page. You can change the default settings on the <a href="/manual/display-overview.html">Display Overview</a> page in the Admin Center.</p>
-
-<h2 id="connect-your-site-to-searchgov">Connect Your Site to Search.gov</h2>
-
-<p>Most agencies add these two <a href="/manual/code.html">snippets of code</a> to the template(s) in their websites or content management systems (rather than adding them to individual pages).</p>
-
-<p><i class="icon-check"></i> <strong>7. Does your search box point to Search.gov?</strong> Update your search box form code point to our service so that, when users execute a search, they’ll see your Search.gov-hosted results page.</p>
-
-<pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
-	 &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
- 	&lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
- 	&lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
- 	&lt;input name="commit" type="submit" value="Search" /&gt;
-&lt;/form&gt;
-</code></pre>
-
-<p><i class="icon-check"></i> <strong>8. Do you have our Javascript tag on your webpages?</strong> This Javascript powers the suggestions for type-ahead and <a href="/manual/display-overview.html">related searches</a>. It also provides data on your trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
-
-<pre><code>&lt;script type="text/javascript"&gt;
-//&lt;![CDATA[
-	 var usasearch_config = { siteHandle:"YourSiteHandle" };
- 	var script = document.createElement("script");
- 	script.type = "text/javascript";
- 	script.src = "//search.usa.gov/javascripts/remote.loader.js";
- 	document.getElementsByTagName("head")[0].appendChild(script);
-//]]&gt;
-&lt;/script&gt;
-</code></pre>
-
-<h2 id="set-up-nice-to-have-features-optional">Set Up Nice-to-Have Features (Optional)</h2>
-
-<p><i class="icon-check"></i> <strong>9. Have you masked your domain?</strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov. Be sure to alert us you will be adding a domain mask, so we can add you to our SSL certificate before you update your search box form code.</p>
-
-<p><i class="icon-check"></i> <strong>10. Have you added the Javascripts for your other third-party web services to your results page?</strong> If you have a <a href="/manual/third-party.html">third-party service</a> running on your website, you likely want it to run on your results page. Agencies often include their Foresee, Google Analytics, Omniture, or WebTrends code, among others. If your federal website participates in the <a href="https://www.digitalgov.gov/services/dap/">Digital Analytics Program</a>, you do not need to take any action: DAP code is included on your results page, by default.</p>
-
-<h2 id="dont-forget-seo">Don’t Forget SEO</h2>
-
-<p><i class="icon-check"></i> <strong>11. Have you registered your site with the major commercial search engines?</strong> Register for both <a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i> to maximize the coverage of your content in their search results.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/blog/go-live.html">
-        <time datetime="2018-03-28">March 28, 2018</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/module-codes.html">Key for Search Module Codes and Names</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Analytics</p>
-
-<p>We call several different indexes when serving search results, and we present results from each of these indexes in a separate module. Each module loads when there are relevant search results to display. Each module has a code, and you’ll see these codes in the Download Details csv files available through the <a href="/manual/queries.html">Queries</a> or <a href="/manual/clicks.html">Clicks</a> pages of the Admin Center analytics section.</p>
-
-<p>This page lists all the module codes and their full names.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Code</th>
-      <th style="text-align: left">Module Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">AIDOC     </td>
-      <td style="text-align: left">Collections</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">AWEB</td>
-      <td style="text-align: left">Web Results Only (Azure)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">BBG</td>
-      <td style="text-align: left">Best Bets: Graphics</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">BOOS</td>
-      <td style="text-align: left">Best Bets: Text</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">BSPEL</td>
-      <td style="text-align: left">Spelling Suggestions (Bing/Google)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">BWEB</td>
-      <td style="text-align: left">Web Results (Bing)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">DECOR</td>
-      <td style="text-align: left">Value-added Links for SEC Filings</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">FRDOC</td>
-      <td style="text-align: left">Federal Register Documents</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">GWEB</td>
-      <td style="text-align: left">Web Results (Google)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">I14Y</td>
-      <td style="text-align: left">Web Results (Search.gov via <a href="/developer/i14y.html">i14y</a>)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">IMAG</td>
-      <td style="text-align: left">Image Results (Bing)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">JOBS</td>
-      <td style="text-align: left">Jobs</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">LOVER</td>
-      <td style="text-align: left">Spelling Overrides (Search.gov)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">MEDL</td>
-      <td style="text-align: left">Health Topics</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">NEWS</td>
-      <td style="text-align: left">RSS Feeds</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">NIMAG</td>
-      <td style="text-align: left">Image Results (MRSS)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">OASIS</td>
-      <td style="text-align: left">Image Results (Search.gov)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">OSPEL</td>
-      <td style="text-align: left">Spelling Suggestions (Search.gov Images)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">OVER</td>
-      <td style="text-align: left">Spelling Overrides (Bing/Google)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">QRTD</td>
-      <td style="text-align: left">Routed Queries</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">SPEL</td>
-      <td style="text-align: left">Spelling Suggestions (Search.gov)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">SREL</td>
-      <td style="text-align: left">Related Searches</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">TWEET</td>
-      <td style="text-align: left">Tweets (Twitter)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">VIDS</td>
-      <td style="text-align: left">Video Results (YouTube)</td>
-    </tr>
-  </tbody>
-</table>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/clicks"><span class="label label-info">clicks</span></a>
-      
-      <a href="/tagged/queries"><span class="label label-info">queries</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/module-codes.html">
-        <time datetime="2018-03-15">March 15, 2018</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/queries.html">Analyzing Your Site's Queries</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Analytics &gt; Queries</p>
-
-<p>The Queries page lists the number of times a search query (that is, a word or string of words) was entered in the search box on your site by a unique searcher.</p>
-
-<p>Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.</p>
-
-<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site’s visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
-
-<p>Data are available in the Admin Center from the past 13 months.</p>
-
-<h2 id="top-queries">Top Queries</h2>
-
-<p><strong><em>Top 1,000.</em></strong> You’ll see a list, in frequency order, of the 1,000 most popular queries for your selected time period.</p>
-
-<p><strong><em>Top 1,000 by query.</em></strong> Enter any specific term or phrase into the Query search box. Re-generate the report to see the top 1,000 queries that contain that term or phrase and its stemmed equivalents.</p>
-
-<p>For example, below are the top 10 queries related to <em>housing</em> on USA.gov in August 2013.</p>
-
-<ol>
-  <li>house of representatives</li>
-  <li>housing</li>
-  <li>speaker of the house</li>
-  <li>white house</li>
-  <li>house minority leader</li>
-  <li>housing assistance</li>
-  <li>house majority leader</li>
-  <li>speaker of the house 2013</li>
-  <li>the white house</li>
-  <li>houses</li>
-</ol>
-
-<h2 id="download-details">Download Details</h2>
-
-<p>You can download a detailed CSV (comma separated values) file for any search term. There’s one line for each time this query was run. This CSV file gives you access to the raw search logs, including:</p>
-
-<ul>
-  <li>The date and time of the query</li>
-  <li>The query (It is embedded in the request URL. Look for the text following ‘query=’.)</li>
-  <li>Where the person was when they ran the search (We use the ISO-2 alpha standard for country codes and ISO 3166-2 codes for country subdivisions.)</li>
-  <li>The modules loaded in response to the query (Our <a href="/manual/module-codes.html">Module Codes</a> page provides a key of the codes and names.)</li>
-  <li>The kind of device and browser they were using</li>
-</ul>
-
-<h2 id="clicks-from-a-query-and-queries-leading-to-a-click">Clicks from a Query and Queries Leading to a Click</h2>
-
-<p>Select “View Clicks” to view the top clicked URLs for each query.</p>
-
-<p>If you clicked on “View Clicks” for the <em>house of representatives</em> example above, you’d see that the top URLs clicked for that query are:</p>
-
-<ol>
-  <li>www.house.gov</li>
-  <li>www.house.gov/representatives</li>
-  <li>www.house.gov/representatives/find</li>
-</ol>
-
-<p>From this list of clicked URLs, you’d be able to select “View Queries” to view the top queries that led to a click for each URL.</p>
-
-<p>If you clicked on the first-listed <em>www.house.gov</em> in the example above, you’d see that the top queries leading to a click on that URL are:</p>
-
-<ol>
-  <li>house of representatives</li>
-  <li>congress</li>
-  <li>congress members</li>
-  <li>congress representatives</li>
-</ol>
-
-<p>You can loop through or drill down into this list for any set of clicks and queries.</p>
-
-<h2 id="click-through-rate-ctr">Click-Through Rate (CTR)</h2>
-
-<p>The click-through rate (CTR) is the the number of clicks from a query divided by the number of queries (multiplied by 100 to be expressed as a percentage).</p>
-
-<p>High or low CTR’s may indicate that users are not able to find relevant results. A CTR can be over 100%: if a user enters a query, clicks on a link, hits ‘back’ in their browser, returns to the search results, and clicks again, the CTR for that query would be 200% (2 clicks divided by 1 query, multiplied by 100 = 200%).</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> section gives a bird’s-eye view of the number of queries and <a href="/manual/clicks.html">clicks</a> on your site each month. The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site in the past day or so.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/queries"><span class="label label-info">queries</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/queries.html">
-        <time datetime="2018-02-28">February 28, 2018</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/clicks.html">Analyzing Your Site's Clicks</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Analytics &gt; Clicks</p>
-
-<p>The Clicks page shows what searchers clicked on from your search results pages, and the number of times each of those items was clicked during the selected date range. The current month is shown by default, and the date can be adjusted using the date selectors at the top of the page and re-generating the report.</p>
-
-<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site’s visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
-
-<p>Data are available in the Admin Center from the past 13 months.</p>
-
-<h2 id="reading-the-report-table">Reading the Report Table</h2>
-
-<h3 id="top-urls-clicked">Top URLs Clicked</h3>
-
-<p><a href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/Analytics_Clicks_800.png" target="_blank" alt="Top clicks from results pages"><img style="float: right;" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/Analytics_Clicks_175.png" /></a>The top 1,000 most clicked-on URLs from your results page for the selected time period, with the most popular first.</p>
-
-<h3 id="download-details">Download Details</h3>
-
-<p>You can download the raw click logs for any URL in the list. The CSV (comma separated values) file has one line for each time this URL was clicked. Details avialable include:</p>
-
-<ul>
-  <li><em>Date</em> and <em>Time</em> of the click,</li>
-  <li><em>Query</em>: The query they ran before clicking the search result,</li>
-  <li><em>Position</em>: Where in the results page was the result they clicked, e.g. <strong>5</strong> means the searcher clicked the fifth result in the list,</li>
-  <li><em>Request</em>: The clicked URL (It is embedded in the request URL. Look for the text following ‘u=’.) and its position on the page,</li>
-  <li><em>Referrer</em>: The webpage the person was on when they ran the search, this column also includes the query,</li>
-  <li><em>Vertical</em> and <em>Modules</em>: The modules loaded in response to the query (Our <a href="/manual/module-codes.html">Module Codes</a> tip provides a key of the codes and names.),</li>
-  <li><em>Device</em>, <em>Browser</em>, and <em>OS</em>: The kind of device and browser they were using, and</li>
-  <li><em>Country Code</em> and <em>Region</em>: Where the user was, physically. We use the ISO-2 alpha standard for country codes and ISO 3166-2 codes for country subdivisions.</li>
-</ul>
-
-<h3 id="-of-clicks"># of Clicks</h3>
-
-<p><a href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/ClicksQueries_800.png" target="_blank" alt="Report of Queries that people ran before clicking on a particular page"><img style="float: right;" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/ClicksQueries_175.png" /></a>Select a hyperlinked number in the <code># of Clicks</code> column to view the queries that led to the clicks for that URL (the <strong>Queries leading to a Click</strong> report).</p>
-
-<p>If you then click on a number in the <code># of Clicks</code> column for a query on the Queries leading to a Click page, you will see all the URLs <a href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/ClicksfromQuery_800.png" target="_blank" alt="Report of pages people clicked on after searching for a given term"><img style="float: right;" src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/ClicksfromQuery_175.png" /></a>that were clicked on from that query’s results pages (the <strong>Clicks from a Query</strong> report). This is the same report you see when you follow a <code># of Clicks</code> link from the <a href="/manual/queries.html">Queries page</a>.</p>
-
-<p>You can loop through or drill down into this list for any set of clicks and queries.</p>
-
-<hr />
-
-<p><strong><em>Did you know?</em></strong> The <a href="/manual/monthly-reports.html">Monthly Report</a> gives a bird’s-eye view of the number of <a href="/manual/queries.html">queries</a> and clicks each month. The <a href="/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site today.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
-      
-      <a href="/tagged/clicks"><span class="label label-info">clicks</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/clicks.html">
-        <time datetime="2018-02-28">February 28, 2018</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/routed-queries.html">Route Queries to a Specific Page</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Routed Queries</p>
-
-<p>Do you want to get searchers to a specific web page as quickly as possible? Create a Routed Query.</p>
-
-<p>A routed query skips the search results page and automatically directs visitors to a web page of your choice for very specific queries. Use query routing to save visitors the extra step of reading through search results links by taking them directly to your content pages.</p>
-
-<p>We recommend creating a routed query for <a href="http://www.digitalgov.gov/2015/02/06/top-task-usability-design-for-your-users/">top tasks</a> that have a good content page but less-than-ideal search results.</p>
-
-<h2 id="add-a-routed-query">Add a Routed Query</h2>
-
-<p><strong><em>Routed Query URL.</em></strong> Add the URL of the web page that you want to direct visitors to.</p>
-
-<p><strong><em>Routed Query Description.</em></strong> Add a brief description to help you remember why you created this entry and what it does. Descriptions aren’t used for indexing or visible to searchers.</p>
-
-<p><strong><em>Keywords.</em></strong> Add the specific words or phrases used to trigger the routing. Searchers will only be directed to the URL above when their query term exactly matches one of the listed keywords. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.</p>
-
-<p><em>Note</em>: Any keyword that you add to a Routed Query will become a permanent <a href="/manual/typeahead-api.html">type-ahead suggestion</a>. This applies to all 3 ways that type-ahead suggestions are displayed from our system: the module that can be turned on in the <a href="/manual/display-overview.html#modules">Display Overview section</a>, the <a href="/manual/typeahead-api.html">JavaScript snippet</a>, and the <a href="/manual/typeahead-api.html">API</a>. If you do not want certain keywords to appear as type-ahead suggestions, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
-
-<h2 id="examples-of-how-it-works">Examples of How It Works</h2>
-
-<p>Private industry has been using query routing for some time. If you go to <a href="http://www.homedepot.com/">Home Depot</a> <i class="icon-external-link"><span>(External link)</span></i> and search for a general term like <em>carpet</em>, you’re routed to their carpet navigation page. If you search for a more specific term like <em>vanities</em>, you get standard search results.</p>
-
-<p>Using USA.gov an as example, every time someone goes to <a href="https://www.usa.gov">USA.gov</a> and searches for any of the following terms (must be exact matches), they’ll automatically be directed to the USA.gov <a href="https://www.usa.gov/unclaimed-money">Unclaimed Money from the Government</a> page.</p>
-
-<ul>
-  <li>missing money</li>
-  <li>unclaimed assets</li>
-  <li>unclaimed funds</li>
-  <li>unclaimed money</li>
-  <li>unclaimed money in my name</li>
-  <li>unclaimed property</li>
-</ul>
-
-<p>If they get routed to the <a href="https://www.usa.gov/unclaimed-money">Unclaimed Money from the Government</a> and search again for one of these terms, they’ll get the standard list of search results. We won’t take people in an endless loop.</p>
-
-<p>If they search for something not on the above list, like <em>show me missing money</em>, they’ll still get the normal search results.</p>
-
-<p><img src="/img/unclaimed-money.png" alt="Standard search results for 'I am looking for unclaimed money' on USA.gov" height="95%" width="95%" /></p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
-      <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
-      
-      <a href="/tagged/routed-queries"><span class="label label-info">routed-queries</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/routed-queries.html">
-        <time datetime="2018-02-09">February 9, 2018</time>
       </a>
     </div>
     </article>

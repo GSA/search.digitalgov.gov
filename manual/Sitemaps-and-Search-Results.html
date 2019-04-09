@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  
+  <title>How a Page on a Sitemap Becomes a Search Result</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/stylesheets/font-awesome-ie7.min.css">
+  <![endif]-->
+
+  <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+  <link href="/stylesheets/custom.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+  <link rel="shortcut icon" href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/favicon.ico">
+  <link rel='alternate' type='application/atom+xml' title='search.gov Atom feed' href='/all.atom' />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="/javascripts/bootstrap3-typeahead.js"></script>
+ </head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        <span class="search">Search.gov</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <form class="navbar-form navbar-left form-search" accept-charset="UTF-8" action="https://find.search.gov/search/" id="search-form" method="get">
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+        <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+        <div class="input-group input-append">
+          <label for="search-query" class="hide">Query</label>
+
+          <input name="query" autocomplete="off"  type="text" class="typeahead form-control search-query" id="search-query" data-provide="typeahead" >
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-nav" aria-label="Left Align" id="search-button">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+          </span>
+        </div>
+      </form>
+      <div class="nav navbar-right">
+          <a href="https://search.usa.gov/sites" class="navbar-brand"><i
+              class="icon-user icon-white"></i>&nbsp;Login</a>
+      </div>&nbsp;&nbsp;&nbsp;<div class="nav navbar-right">
+          <a href="http://search.usa.gov/signup" class="navbar-brand">Sign up</a>
+      </div>&nbsp;&nbsp;&nbsp;<div class="nav navbar-right">
+          <a href="https://search.gov/status.html" class="navbar-brand">System Status</a>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="col-md-offset-2 col-md-8  hidden-sm hidden-md hidden-lg">
+
+  <form class="form-search" accept-charset="UTF-8" action="https://find.search.gov/search/" id="search-form" method="get">
+    <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+    <div class="input-group input-append">
+      <label for="search-query" class="hide">Query</label>
+
+      <input name="query" autocomplete="off"  type="text" class=" form-control search-query" id="search-query"  >
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </span>
+    </div>
+  </form>
+</div>
+
+
+<div class="container-fluid">
+  <div class="col-md-8 col-md-offset-2">
+
+  <nav aria-label="breadcrumb" class="mt-2">
+  <ul class="breadcrumb">
+    
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/"><span property="name">Home</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/"><span property="name">Help Manual</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/indexing-with-searchgov.html"><span property="name">“Indexing”</span></a></li>
+    
+    
+    <li class="breadcrumb-item active">
+    Sitemaps and Search Results
+    </li>
+  </ul>
+
+
+
+    <!-- do not remove as used to parse in usasearch -->
+    <main id="main-container">
+      <article class="article feature" style="padding:0 30px; margin-top: 10px;">
+
+  
+  <h1>
+    <a href="/manual/Sitemaps-and-Search-Results.html">How a Page on a Sitemap Becomes a Search Result</a>
+  </h1>
+  
+
+  <div class='post-content'>
+    <p>We often get questions about how sitemaps control the search results for a given site. The answer is, they don’t! This page will describe to you the relationship between sitemaps, search indexes, and the search experiences you create through the <a href="https://search.usa.gov/sites">Admin Center</a>.</p>
+
+<h2 id="a-frame-for-the-relationships-described-below">A frame for the relationships described below</h2>
+
+<p>Imagine a big lake. There are any number of tributaries feeding into the lake. There are fishing boats out on the lake, each loaded up with the gear they need and a guide to the kinds of fish they’re trying to catch.</p>
+
+<h2 id="the-big-searchgov-index-the-lake">The Big Search.gov Index: the Lake</h2>
+
+<p>Like a lake with its fish, the common search index has all the content from all the sites we index, ready to be brought up by any number of different search site configurations.</p>
+
+<p>The main difference in the search site setup process is the source of the web results. Like Google and Bing, when we index your content, we collect every site’s web pages into a big, common index. All search sites using our index reference this same common data pool.</p>
+
+<h2 id="sitemaps-the-tributaries">Sitemaps: the Tributaries</h2>
+
+<p><a href="https://search.gov/manual/sitemaps.html">XML Sitemaps</a> are like tributaries feeding into a lake. They do not feed into sitemap-specific indexes connected to particular search sites.</p>
+
+<p>Sitemaps list the content available on websites in a machine-friendly format, so that search engines will know what to collect from the site. The <a href="https://search.gov/manual/indexing-with-searchgov.html">content indexed</a> from your website goes into the big index mentioned above, along with the content from all other websites. You can, in theory, pull content from any website we have indexed into your search experience. This supports portal search experiences.</p>
+
+<h2 id="search-site-setup-the-fishing-boats">Search Site Setup: the Fishing Boats</h2>
+
+<p>Like a fishing boat on the water, you’ve decided what fish you’re going after, you know what corners of the lake to go to, and you’ve collected the gear you need to get the fish.</p>
+
+<p>Search.gov used to rely on the Bing web index for our main search results. Customers would log in to the <a href="https://search.usa.gov/sites">Admin Center</a> and use the <a href="https://search.gov/manual/domains.html">Domains</a> list to include the content they wanted to pull from Bing. Now that we’re building our index in house, all this remains the same. You log in to the Admin Center and configure what you want your search to return on the results page.</p>
+
+<h2 id="tying-it-all-together">Tying it all together</h2>
+
+<p>We use sitemaps to inform what we index into our system. You use the Admin Center to determine what results will come out of the index when people search on your website.
+Tributaries feed into a lake, and fishers can go out to any part of the lake to get the particular kinds of fish that they want.</p>
+
+<p>Following a particular page through this cycle looks like this:</p>
+
+<ol>
+  <li>A page is posted to a website</li>
+  <li>Its URL is added to the sitemap</li>
+  <li>Search.gov’s indexer reads the sitemap and picks up the URL</li>
+  <li>Search.gov’s indexer visits the page and <a href="https://search.gov/manual/what-searchgov-indexes.html">scrapes the content</a></li>
+  <li>The content is added to the index. Meanwhile, the search site had already been configured to include this content within the index.</li>
+  <li>A member of the public searches on the website</li>
+  <li>The query matches the page’s content</li>
+  <li>The page is returned as a search result</li>
+  <li>The searcher clicks on the URL on the results page</li>
+  <li>
+    <p>The searcher is brought to the page on the website</p>
+
+    <p><img class="img-responsive" src="https://search.gov/files/sitemaps-to-search-results.png" alt="Diagram showing a large circle, representing the Search.gov website. To the left of the circle is an array of small blocks, each representing an individual sitemap. Arrows point from the sitemaps to the large circle. To the right of the circle is a set of pentagons representing search sites. To the right of these is a vertical bar representing the Public. Arrows flow from the circle, through the pentagon and end at the bar, representing the flow of search results from the central Search.gov index through the search sites to the members of the public who are searching." /></p>
+  </li>
+</ol>
+
+  </div>
+  
+  <div class='tags'>
+    
+    <a href="/tagged/go-live"><span class="label label-info">go-live</span></a>
+    
+    <a href="/tagged/site-launch"><span class="label label-info">site-launch</span></a>
+    
+    <a href="/tagged/indexing"><span class="label label-info">indexing</span></a>
+    
+  </div>
+
+  <div class='time'>
+    
+    
+    
+    
+    <a href="/manual/Sitemaps-and-Search-Results.html">
+      <time>April 9, 2019</time>
+    </a>
+  </div>
+
+</article>
+
+    </main>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p><a href="mailto:search@support.digitalgov.gov">Email us</a> or call us at 202-969-7426</p>
+    <p> An Official Website of the U.S. Government <br />
+      <a href="https://www.gsa.gov/portal/category/25729">Technology Transformation Service</a>, <a href="https://www.gsa.gov/portal/category/100000">U.S. General Services Administration</a>
+    </p>
+    <ul class="footer-links list-unstyled list-inline">
+      <li><a href="https://www.usa.gov">USA.gov</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/tos.html">Terms of Service</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="https://www.digitalgov.gov/about/policies/">Site Policies</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/developer/">Developers</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  //<![CDATA[
+  var usasearch_config = { siteHandle:"usasearch" };
+
+jQuery(document).ready(function() {
+  $('.typeahead').typeahead({
+      source: function (query, process) {
+          return $.get('https://search.usa.gov/sayt?name=usasearch&q=' + query, function (data) {
+              return process(data);
+          });
+      }, minLength: 2
+  });
+})
+
+
+  // var script = document.createElement("script");
+  // script.type = "text/javascript";
+  // script.src = "https://search.usa.gov/javascripts/remote.loader.js";
+  // document.getElementsByTagName("head")[0].appendChild(script);
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31302465-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  //]]>
+</script>
+
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA" id="_fed_an_ua_tag"></script>
+
+
+</body>
+</html>

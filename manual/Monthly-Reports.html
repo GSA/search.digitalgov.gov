@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  
+  <title>Analyzing Your Monthly Reports</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/stylesheets/font-awesome-ie7.min.css">
+  <![endif]-->
+
+  <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+  <link href="/stylesheets/custom.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+  <link rel="shortcut icon" href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/favicon.ico">
+  <link rel='alternate' type='application/atom+xml' title='search.gov Atom feed' href='/all.atom' />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="/javascripts/bootstrap3-typeahead.js"></script>
+ </head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        <span class="search">Search.gov</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <form class="navbar-form navbar-left form-search" accept-charset="UTF-8" action="https://find.search.gov/search/" id="search-form" method="get">
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+        <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+        <div class="input-group input-append">
+          <label for="search-query" class="hide">Query</label>
+
+          <input name="query" autocomplete="off"  type="text" class="typeahead form-control search-query" id="search-query" data-provide="typeahead" >
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-nav" aria-label="Left Align" id="search-button">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+          </span>
+        </div>
+      </form>
+      <div class="nav navbar-right">
+          <a href="https://search.usa.gov/sites" class="navbar-brand"><i
+              class="icon-user icon-white"></i>&nbsp;Login</a>
+      </div>&nbsp;&nbsp;&nbsp;<div class="nav navbar-right">
+          <a href="http://search.usa.gov/signup" class="navbar-brand">Sign up</a>
+      </div>&nbsp;&nbsp;&nbsp;<div class="nav navbar-right">
+          <a href="https://search.gov/status.html" class="navbar-brand">System Status</a>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="col-md-offset-2 col-md-8  hidden-sm hidden-md hidden-lg">
+
+  <form class="form-search" accept-charset="UTF-8" action="https://find.search.gov/search/" id="search-form" method="get">
+    <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+    <div class="input-group input-append">
+      <label for="search-query" class="hide">Query</label>
+
+      <input name="query" autocomplete="off"  type="text" class=" form-control search-query" id="search-query"  >
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </span>
+    </div>
+  </form>
+</div>
+
+
+<div class="container-fluid">
+  <div class="col-md-8 col-md-offset-2">
+
+  <nav aria-label="breadcrumb" class="mt-2">
+  <ul class="breadcrumb">
+    
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/"><span property="name">Home</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/"><span property="name">Help Manual</span></a></li>
+    
+    
+    <li class="breadcrumb-item active">
+    Monthly Reports
+    </li>
+  </ul>
+
+
+
+    <!-- do not remove as used to parse in usasearch -->
+    <main id="main-container">
+      <article class="article feature" style="padding:0 30px; margin-top: 10px;">
+
+  
+  <h1>
+    <a href="/manual/Monthly-Reports.html">Analyzing Your Monthly Reports</a>
+  </h1>
+  
+
+  <div class='post-content'>
+    <p>Find it in the <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Analytics &gt; Monthly Reports</p>
+
+<p>The monthly report gives a bird’s-eye view of the number of <a href="https://search.gov/manual/queries.html">queries</a> and <a href="https://search.gov/manual/clicks.html">clicks</a> each month.</p>
+
+<p>Data are shown for the present month-to-date by default. You can change the time period by selecting a different month or year and re-generating the report.</p>
+
+<p>You can also toggle between filtered and unfiltered views of the data by clicking on the filter icon (<i class="icon-filter"></i>) in the top navigation bar. The filtered data represent our best effort to show you real searches performed by your site’s visitors. The unfiltered data include nearly all searches and clicks. Only known spiders (such as Bingbot and Googlebot) are excluded.</p>
+
+<h2 id="monthly-usage-stats">Monthly Usage Stats</h2>
+
+<p>Data for the total number of queries and clicks. Use this report to find and analyze the so-called <a href="http://www.searchtools.com/analysis/long-tail.html">short head</a> <i class="icon-external-link"><span>(External link)</span></i> of your most popular search queries and clicks, which are typically the same as your site’s <a href="http://www.usability.gov/tags/task-analysis/">top tasks</a>.</p>
+
+<h3 id="queries-with-no-results">Queries with No Results</h3>
+
+<p>A list of queries that returned no results. Sometimes, searchers look for information on the wrong website or use different words than what are used on the page, and so they get no results. Use this list of Queries with No Results to help searchers get to the information they’re looking for. You can set up <a href="https://search.gov/manual/best-bets.html">Best Bets</a>, or a <a href="https://search.gov/manual/routed-queries.html">Routed Query</a>. You can also <a href="https://search.gov/manual/no-results.html">customize the No Results message</a> displayed on your results page.</p>
+
+<h2 id="impressions-and-clicks-by-module">Impressions and Clicks by Module</h2>
+
+<p>Detailed data for the total number of impressions and clicks and your clickthru rate (CTR) are presented for each “module” on the search results page. We also provide the average CTR across all Search.gov customers so you can see how your rate compares to the average rate. The data in the table is sorted in descending order from the most to least number of clicks.</p>
+
+<p>Use this report to inform which <a href="https://search.gov/manual/display-overview.html">modules you opt to display</a>.</p>
+
+<h2 id="download-top-queries">Download Top Queries</h2>
+
+<p>View a detailed report of the number of times searchers have input specific terms and phrases by clicking on the CSV (comma-separated values) link to download the list as a text file. Once you’ve downloaded the CSV file, you can easily <a href="https://support.office.com/en-us/article/Import-or-export-text-txt-or-csv-files-e8ab9ff3-be8d-43f1-9d52-b5e8a008ba5c">import it  into Excel</a> <i class="icon-external-link"><span>(External link)</span></i> or another speadsheet program to analyze the data.</p>
+
+<p>Read <a href="https://www.digitalgov.gov/2013/10/24/understanding-your-users-needs-by-analyzing-search-terms/">Understanding Your Users’ Needs By Analyzing Search Terms</a> for tips on how to create a semi-automated report for analyzing the data in this CSV file on a regular basis.</p>
+
+<h2 id="definitions">Definitions</h2>
+
+<p>All data presented on this page (and other pages in the Admin Center) are IP-deduped to exclude bots and other noise in an attempt to accurately represent searchers’ intent on your site. Some definitions follow.</p>
+
+<p><strong><a href="https://search.gov/manual/queries.html">Queries</a>:</strong> Number of times a search query (that is, a word or string of words) was entered in the search box by a unique searcher.</p>
+
+<p><strong><a href="https://search.gov/manual/clicks.html">Clicks</a>.</strong> Number of times a searcher clicked on one of your pages within the search results for a particular query.</p>
+
+<p><strong>Impressions:</strong> Number of times a module is displayed, whether it is clicked on or not. Not all modules are displayed for all queries. Each time a module is displayed it is counted as one impression.</p>
+
+<p><strong>Clickthru Rate (CTR):</strong> The rate (expressed in a percentage) at which searchers click on a module. This rate is calculated by dividing the total number of clicks by the total number of impressions. CTR is useful to measure the performance of specific campaigns, such as <a href="https://search.gov/manual/best-bets.html">Best Bets</a> for seasonal events.</p>
+
+<p><strong>Raw count:</strong> Total number of times the query was submitted. The raw count is provided in the downloadable CSV files only.</p>
+
+<p><strong>IP-deduped count:</strong> Total number of times the query was submitted by any one IP address. This excludes bots and other traffic that send in a query multiple times from one IP address. It is often a more accurate representation of “real,” human traffic.</p>
+
+<hr />
+
+<p><strong><em>Did you know?</em></strong> On the first of each month, we email you a report with data on the previous month’s queries, clicks, and top search terms.</p>
+
+<p><strong><em>Did you know?</em></strong> The <a href="https://search.gov/manual/site-overview.html">Site Overview</a> provides a snapshot of what has been happening on your site in the past day or so.</p>
+
+  </div>
+  
+  <div class='tags'>
+    
+    <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+    
+    <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+    
+    <a href="/tagged/queries"><span class="label label-info">queries</span></a>
+    
+    <a href="/tagged/clicks"><span class="label label-info">clicks</span></a>
+    
+  </div>
+
+  <div class='time'>
+    
+    
+    
+    
+    <a href="/manual/Monthly-Reports.html">
+      <time>January 30, 2018</time>
+    </a>
+  </div>
+
+</article>
+
+    </main>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p><a href="mailto:search@support.digitalgov.gov">Email us</a> or call us at 202-969-7426</p>
+    <p> An Official Website of the U.S. Government <br />
+      <a href="https://www.gsa.gov/portal/category/25729">Technology Transformation Service</a>, <a href="https://www.gsa.gov/portal/category/100000">U.S. General Services Administration</a>
+    </p>
+    <ul class="footer-links list-unstyled list-inline">
+      <li><a href="https://www.usa.gov">USA.gov</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/tos.html">Terms of Service</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="https://www.digitalgov.gov/about/policies/">Site Policies</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/developer/">Developers</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  //<![CDATA[
+  var usasearch_config = { siteHandle:"usasearch" };
+
+jQuery(document).ready(function() {
+  $('.typeahead').typeahead({
+      source: function (query, process) {
+          return $.get('https://search.usa.gov/sayt?name=usasearch&q=' + query, function (data) {
+              return process(data);
+          });
+      }, minLength: 2
+  });
+})
+
+
+  // var script = document.createElement("script");
+  // script.type = "text/javascript";
+  // script.src = "https://search.usa.gov/javascripts/remote.loader.js";
+  // document.getElementsByTagName("head")[0].appendChild(script);
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31302465-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  //]]>
+</script>
+
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA" id="_fed_an_ua_tag"></script>
+
+
+</body>
+</html>
