@@ -22,10 +22,10 @@ At Search.gov we aim to provide a self-service, plug and play search solution. T
 1. [Connect your website’s search box to your search site](#go-live)
 
 <img class="img-responsive"
-        src="/files/site-launch-workflow.jpg"
+        src="/files/site-launch-workflow.png"
         alt="Flow chart showing the steps involved in launching a search site on Search.gov">
 <a href="https://search.gov/blog/site-launch-flow.html#description">Site launch flow chart detailed description</a><br />
-<a href="https://search.gov/files/site-launch-workflow.jpg">Open large version</a>
+<a href="https://search.gov/files/site-launch-workflow.png">Open large version</a>
 
 <a name="description"></a>
 
