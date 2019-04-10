@@ -5,7 +5,7 @@ category: manual
 tags: help-manual manage-content social-media instagram images
 ---
 
-[Search.gov Home](https://search.gov/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > Instagram
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > Instagram
 
 **ALERT:**  Instagram now requires accounts to grant permission to index their images via an integration between systems. Since this integration will not be possible for Search.gov in the foreseeable future, we're exploring other options. Our Instagram index was last updated in June 2016. Any images in our index prior to that date will continue to be shown on your search results page, as long as you do not remove your Instagram account from the Admin Center. If you remove your account, any photos in our index will be permanently deleted from our system. This help manual page is for historical reference only. 
 
@@ -29,8 +29,8 @@ See the sample results page below that shows image results displayed on [DOL.gov
 
 ---
 
-***Did you know?*** Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index [MRSS feeds](https://search.gov/manual/rss.html) so that your multimedia content is automatically included in your search results.
+***Did you know?*** Do you have a multimedia gallery on your website for your agency's photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index [MRSS feeds](/manual/rss.html) so that your multimedia content is automatically included in your search results.
 
-***Did you know?*** You can also tell us about your [Flickr](https://search.gov/manual/flickr.html) photostream. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.
+***Did you know?*** You can also tell us about your [Flickr](/manual/flickr.html) photostream. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.
 
-***Troubleshooting tip:*** Flickr and Instagram results appear on the [newly redesigned results page](https://search.gov/blog/serp-redesign.html) only. Email us at <search@support.digitalgov.gov> if you're ready to turn on the new results page.
+***Troubleshooting tip:*** Flickr and Instagram results appear on the [newly redesigned results page](/blog/serp-redesign.html) only. Email us at <search@support.digitalgov.gov> if you're ready to turn on the new results page.

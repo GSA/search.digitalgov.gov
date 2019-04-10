@@ -1,17 +1,11 @@
 ---
 layout: post
 title: How to Select the Options that Appear on Your Results Page
-slug: Display Overview
 category: manual
 tags: help-manual manage-display facets modules related-sites
-breadcrumbs:
-  - label: "Home"
-    url: https://search.gov/
-  - label: "Help Manual"
-    url: https://search.gov/manual/
 ---
 
-Find it in the [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Display > Display Overview
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Display > Display Overview
 
 ## Facets
 
@@ -30,27 +24,27 @@ Type over the text in the Name field to edit a facet's display name. Keep each n
 
 **On/off options for modules.** Turn on a module to allow searchers to see inline, contextually relevant results for selected content sources based on keyword matches with relevant queries. There are eight types of modules.
 
-1. **News.** This option only appears after you've told us about your [RSS](https://search.gov/manual/rss.html) feeds. When a searcher's query matches the title of an RSS article published within the past four months, the article appears in the News module. Very recent news results (less than five days) appear at the top of the page and less recent news results appear at the bottom. Up to three articles are displayed. Type over the default name, News, in the Name field to edit the display name.
+1. **News.** This option only appears after you've told us about your [RSS](/manual/rss.html) feeds. When a searcher's query matches the title of an RSS article published within the past four months, the article appears in the News module. Very recent news results (less than five days) appear at the top of the page and less recent news results appear at the bottom. Up to three articles are displayed. Type over the default name, News, in the Name field to edit the display name.
 
-1. **Videos.** This option only appears after you've told us about your [YouTube](https://search.gov/manual/youtube.html) channel. When a searcher's query matches the metadata of a video published within the 13 months, the video appears in the Videos module. One inline video is displayed with a link to see more videos for the searcher's query.
+1. **Videos.** This option only appears after you've told us about your [YouTube](/manual/youtube.html) channel. When a searcher's query matches the metadata of a video published within the 13 months, the video appears in the Videos module. One inline video is displayed with a link to see more videos for the searcher's query.
 
-1. **Job openings.** When a searcher's query matches the text of a job opening published by your agency on USAJobs, the job appears in the Job Openings module. Up to three job openings are displayed. For more information, including a screenshot, read our post [Help Searchers Find Jobs](https://search.gov/manual/govbox-jobs.html). You will need to [contact us](mailto:search@support.digitalgov.gov) to get the Jobs module enabled for your site.
+1. **Job openings.** When a searcher's query matches the text of a job opening published by your agency on USAJobs, the job appears in the Job Openings module. Up to three job openings are displayed. For more information, including a screenshot, read our post [Help Searchers Find Jobs](/manual/govbox-jobs.html). You will need to [contact us](mailto:search@support.digitalgov.gov) to get the Jobs module enabled for your site.
 
-1. ***Federal Register* documents.** When a searcher's query matches the text of a notice or rule published by your agency in the *Federal Register*, the document appears in the *Federal Register* module. Up to three documents are displayed. For more information, including a screenshot, read our post [Help Searchers Find Federal Register Documents](https://search.gov/manual/govbox-federal-register.html).
+1. ***Federal Register* documents.** When a searcher's query matches the text of a notice or rule published by your agency in the *Federal Register*, the document appears in the *Federal Register* module. Up to three documents are displayed. For more information, including a screenshot, read our post [Help Searchers Find Federal Register Documents](/manual/govbox-federal-register.html).
 
 1. **Related searches.** Help visitors better define the focus of their search by offering them searches related to their current search term. Suggestions are derived from the searches performed on your website. Up to five searches related to your visitors' original search are displayed and are updated in near real time.
 
-1. **Health topics.** Help searchers find high-quality, authoritative health information from MedlinePlus and ClinicalTrials.gov. For more information, including a screenshot, read our post [Help Searchers Find Health Information](https://search.gov/manual/govbox-health.html).
+1. **Health topics.** Help searchers find high-quality, authoritative health information from MedlinePlus and ClinicalTrials.gov. For more information, including a screenshot, read our post [Help Searchers Find Health Information](/manual/govbox-health.html).
 
-1. **Recent tweets.** This option only appears after you've told us about your [Twitter](https://search.gov/manual/twitter.html) account. When a searcher's query matches the text of a tweet published within the past three days, the tweet appears in the Recent Tweets module.
+1. **Recent tweets.** This option only appears after you've told us about your [Twitter](/manual/twitter.html) account. When a searcher's query matches the text of a tweet published within the past three days, the tweet appears in the Recent Tweets module.
 
-1. **Type-ahead search.** Help searchers refine their query by displaying type-ahead search suggestions as a list in the search box. The list forms as a searcher begins to type in the search box. Suggestions are listed in order of most popular (that is, most searched). They're updated every few seconds. See, for example, the suggestions as you type di... on [SocialSecurity.gov's search results page](https://search.ssa.gov/search?affiliate=ssa). ***Note:*** this will enable type-ahead on your search results page that is hosted by our service. If you wish to display type-ahead suggestions on your agency’s website, please review instructions for our [JavaScript snippet and API](https://search.gov/manual/typeahead-api.html). 
+1. **Type-ahead search.** Help searchers refine their query by displaying type-ahead search suggestions as a list in the search box. The list forms as a searcher begins to type in the search box. Suggestions are listed in order of most popular (that is, most searched). They're updated every few seconds. See, for example, the suggestions as you type di... on [SocialSecurity.gov's search results page](https://search.ssa.gov/search?affiliate=ssa). ***Note:*** this will enable type-ahead on your search results page that is hosted by our service. If you wish to display type-ahead suggestions on your agency’s website, please review instructions for our [JavaScript snippet and API](/manual/typeahead-api.html). 
 
 ## Related Sites
 
 Help visitors find content relevant to their search query that resides on other websites, such as the site for your parent organization or your Spanish-language site. When searchers click on the link to the related site, they see search results for their query on the related site.
 
-Enter the [site handle](https://search.gov/manual/settings.html) for one of your other Search.gov sites. Enter the text you'd like searchers to see for the link to the related site. Create two entries, one from the first site to the second and vice versa, if you'd like a reciprocal link.
+Enter the [site handle](/manual/settings.html) for one of your other Search.gov sites. Enter the text you'd like searchers to see for the link to the related site. Create two entries, one from the first site to the second and vice versa, if you'd like a reciprocal link.
 
 See, for example, the Español option displayed on [USA.gov for a search on *venezuela*](http://search.usa.gov/search?query=venezuela&affiliate=usagov). When searchers click this option, they see results for [*venezuela* on GobiernoUSA.gov](http://search.usa.gov/search?query=venezuela&affiliate=gobiernousa).
 
@@ -60,6 +54,6 @@ Email us at <search@support.digitalgov.gov> if you'd like to use a custom label 
 
 ---
 
-***Did you know?***  Searchers may narrow results by time period for any [RSS](https://search.gov/manual/rss.html) feeds. See, for example, results for a [search on *space* narrowed to press releases in the last week on NASA.gov](https://nasasearch.nasa.gov/search/news?affiliate=nasa&channel=1618&query=space&sort_by=date&tbs=w).
+***Did you know?***  Searchers may narrow results by time period for any [RSS](/manual/rss.html) feeds. See, for example, results for a [search on *space* narrowed to press releases in the last week on NASA.gov](https://nasasearch.nasa.gov/search/news?affiliate=nasa&channel=1618&query=space&sort_by=date&tbs=w).
 
-***Did you know?***  For any of your [RSS](https://search.gov/manual/rss.html) feeds that you've extended with a contributor, publisher, or subject [Dublin Core](http://dublincore.org/documents/dcmi-terms/){% external_link %} property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <search@support.digitalgov.gov> to if you want to customize these display names.
+***Did you know?***  For any of your [RSS](/manual/rss.html) feeds that you've extended with a contributor, publisher, or subject [Dublin Core](http://dublincore.org/documents/dcmi-terms/){% external_link %} property, searchers may narrow results by the three facets. We'll display "Contributor," "Publisher," and "Subject" as the default names. Email us at <search@support.digitalgov.gov> to if you want to customize these display names.

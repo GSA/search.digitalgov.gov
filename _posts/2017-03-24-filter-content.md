@@ -1,18 +1,12 @@
 ---
 layout: post
 title: Filtering URLs
-slug: Filter URLs
 category: manual
 tags: "help-manual manage-content domains filter-urls"
 published: true
-breadcrumbs:
-  - label: "Home"
-    url: https://search.gov/
-  - label: "Help Manual"
-    url: https://search.gov/manual/
 ---
 
-Find it in the [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > [Domains](/manual/domains.html) > Advanced > Filter URLs
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > [Domains](/manual/domains.html) > Advanced > Filter URLs
 
 You can filter *a single URL* from the results on your site. Use it for emergency reasons only (such as spillage of classified information or unintentional publication of a page). Note that this option should be used only if the [other options](/manual/domains.html#filter) aren't feasible as it can have an undesired effect on other features such as the display of spelling suggestions and relevance ranking.
 

@@ -1,17 +1,11 @@
 ---
 layout: post
 title: Setting Up Analytics Alerts
-slug: Analytics Alerts
 category: manual
 tags: help-manual analytics
-breadcrumbs:
-  - label: "Home"
-    url: https://search.gov/
-  - label: "Help Manual"
-    url: https://search.gov/manual/
 ---
 
-Find it in the [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Analytics Alerts
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Analytics > Analytics Alerts
 
 Analytics Alerts let you receive email alerts when your site visitors are getting no results for a particular query or when a query is getting a [low click-through rate](#low-query-click-through-rate). ***Note:*** the Low Click-through Rate alert is not currently functional. We apologize for any inconvience this may cause.
 

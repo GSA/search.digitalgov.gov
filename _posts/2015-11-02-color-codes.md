@@ -1,21 +1,15 @@
 ---
 layout: post
 title: Key to Color Coding in the Admin Center
-slug: Color Codes
 category: manual
 tags: help-manual manage-users best-bets rss
-breadcrumbs:
-  - label: "Home"
-    url: https://search.gov/
-  - label: "Help Manual"
-    url: https://search.gov/manual/
 ---
 
-Find it in the [Admin Center](https://search.usa.gov/sites/) > YourSite
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite
 
 We use color coding the Admin Center to indicate the status of a few types of items. 
 
-## [Manage Users](https://search.gov/manual/users.html)
+## [Manage Users](/manual/users.html)
 
 | Color | Status | 
 | :------------ | :---------------------------------- |
@@ -23,7 +17,7 @@ We use color coding the Admin Center to indicate the status of a few types of it
 | Yellow  | Pending - requires approval or email verification |
 | Red   | Not approved |
 
-## [RSS Feeds](https://search.gov/manual/rss.html)
+## [RSS Feeds](/manual/rss.html)
 
 | Color | Status | 
 | :------------ | :---------------------------------- |
@@ -43,7 +37,7 @@ Click on the name of the feed to see more detailed information about its status.
 * Link is not a valid URL
 * Linked URL does not exist (HTTP 404)
 
-## [Best Bets](https://search.gov/manual/best-bets.html): Text or Graphics
+## [Best Bets](/manual/best-bets.html): Text or Graphics
 
 | Color | Status | 
 | :------------ | :---------------------------------- |

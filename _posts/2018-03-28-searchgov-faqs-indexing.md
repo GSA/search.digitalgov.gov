@@ -9,11 +9,11 @@ tags: FAQs
 
 In FY18, we changed our name to Search.gov, and are transitioning from leveraging commercial engines for search results to serving results from our own indexes.
 
-We’re now developing our own search indexes from your site content. We will primarily be leveraging [XML sitemaps](https://search.gov/blog/sitemaps.html) to discover your content (1st option, preferred). We'll also accept content for real-time indexing via [i14y](https://search.gov/developer/i14y.html) (2nd option).
+We’re now developing our own search indexes from your site content. We will primarily be leveraging [XML sitemaps](/blog/sitemaps.html) to discover your content (1st option, preferred). We'll also accept content for real-time indexing via [i14y](/developer/i14y.html) (2nd option).
 
 Other search features and your search results page will remain the same, and searchers should not notice a difference.
 
-We’ll work closely with you to make sure everything goes smoothly through the transition. Please view our [recent status post](https://search.gov/blog/six-months-in.html) to learn more about the progress we've made, and you can [read the original announcement](https://search.gov/blog/searchgov-blog.html) as well. 
+We’ll work closely with you to make sure everything goes smoothly through the transition. Please view our [recent status post](/blog/six-months-in.html) to learn more about the progress we've made, and you can [read the original announcement](/blog/searchgov-blog.html) as well. 
 
 We will update these FAQs with questions we hear from our customers. 
   
@@ -67,17 +67,17 @@ We launched the first phase of the new index in December 2017. We've reached the
 
 *CMS customers:*
 
-We encourage you to set-up and implement [XML sitemaps](https://search.gov/blog/sitemaps.html) as soon as possible. Most content management systems have plugins that will facilitate creation of these sitemaps. Please also review your [robots.txt file](https://search.gov/blog/robotstxt.html) to ensure the sitemaps are listed there, and that all the content you want searchable is allowed to be indexed.
+We encourage you to set-up and implement [XML sitemaps](/blog/sitemaps.html) as soon as possible. Most content management systems have plugins that will facilitate creation of these sitemaps. Please also review your [robots.txt file](/blog/robotstxt.html) to ensure the sitemaps are listed there, and that all the content you want searchable is allowed to be indexed.
 
 *Non-CMS Customers:*
 
-We encourage you to explore how you can publish an [XML sitemap](https://search.gov/blog/sitemaps.html). Please also review your [robots.txt file](https://search.gov/blog/robotstxt.html) to ensure the sitemaps are listed there, and that all the content you want searchable is allowed to be indexed. 
+We encourage you to explore how you can publish an [XML sitemap](/blog/sitemaps.html). Please also review your [robots.txt file](/blog/robotstxt.html) to ensure the sitemaps are listed there, and that all the content you want searchable is allowed to be indexed. 
 
 ## Q: Do I need to change any code on my website?
 
 No: you do not need to update any code on your website. Indexing takes place in the backend of our system.
 
-We do ask that you publish [XML sitemaps](https://search.gov/blog/sitemaps.html), and update your [robots.txt file](https://search.gov/blog/robotstxt.html).
+We do ask that you publish [XML sitemaps](/blog/sitemaps.html), and update your [robots.txt file](/blog/robotstxt.html).
 
 ## Q: How was my site getting results before?
  
@@ -93,7 +93,7 @@ We changed our name to make things simpler. In the past, we’ve been FirstGov S
  
 Based on your site setup, you have a variety of options. Below is our order of preference in terms of how we’ll get your content into our indexes (note: you may choose more than one approach):
 
-* [Structured URL list (XML sitemap)](https://search.gov/blog/sitemaps.html) -- We will fetch and index the URLs that you provide on an XML sitemap, and will monitor your sitemaps for new content and updates over time. Our system will visit the URLs you provide and extract page titles, dates, and full text for indexing. You can post multiple sitemaps for content from different platforms - [get the essential information about sitemaps here](https://search.gov/blog/sitemaps.html). This is the preferred method.
+* [Structured URL list (XML sitemap)](/blog/sitemaps.html) -- We will fetch and index the URLs that you provide on an XML sitemap, and will monitor your sitemaps for new content and updates over time. Our system will visit the URLs you provide and extract page titles, dates, and full text for indexing. You can post multiple sitemaps for content from different platforms - [get the essential information about sitemaps here](/blog/sitemaps.html). This is the preferred method.
  
 * [i14y API](https://search.digitalgov.gov/developer/i14y.html) --  Our API allows you to update your search index in real-time. Best for agencies with dedicated developer resources and single-platform publishing environments.
 
@@ -109,7 +109,7 @@ If you have an XML sitemap, our default will be to monitor it daily for newly pu
 
 We will be monitoring the status of pages in our index. If any start returning a `404 Not Found`, `403 Not Permitted`, `301 Permanent Redirect`, or other non-`200 OK` response, we will remove those items from the index. For redirects, we'll update the index with information from the target page. 
 
-Removing a page from the sitemap will not remove it from the search index. If the page is still publicly accessible and returning a `200` response, you can [contact us](mailto:search@support.digitalgov.gov) to have it removed from the index, or you can use our [Filter URLs](https://search.gov/manual/filter-content.html) feature to suppress the item from appearing in search results.
+Removing a page from the sitemap will not remove it from the search index. If the page is still publicly accessible and returning a `200` response, you can [contact us](mailto:search@support.digitalgov.gov) to have it removed from the index, or you can use our [Filter URLs](/manual/filter-content.html) feature to suppress the item from appearing in search results.
 
 ## Q: How does the sitemap control my search results?
 
@@ -133,7 +133,7 @@ You will need to publish an XML sitemap of your non-CMS material, or you could m
 
 ## Q: Are there CMS sitemap plugins available, other than Drupal?
  
-Yes - see our [XML Sitemaps overview page](https://search.gov/blog/sitemaps.html) for a more complete list of tools.
+Yes - see our [XML Sitemaps overview page](/blog/sitemaps.html) for a more complete list of tools.
 
 ## Q: What if we have no plans for a CMS?
  
