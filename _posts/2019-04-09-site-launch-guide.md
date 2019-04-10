@@ -24,7 +24,7 @@ At Search.gov we aim to provide a self-service, plug and play search solution. T
 <img class="img-responsive"
         src="/files/site-launch-workflow.png"
         alt="Flow chart showing the steps involved in launching a search site on Search.gov">
-<a href="https://search.gov/blog/site-launch-flow.html#description">Site launch flow chart detailed description</a><br />
+<a href="https://search.gov/manual/site-launch-flow.html#description">Site launch flow chart detailed description</a><br />
 <a href="https://search.gov/files/site-launch-workflow.png">Open large version</a>
 
 <a name="description"></a>
@@ -71,7 +71,8 @@ Regardless of the index used to support your search, we can only serve publicly 
 
 If we will be indexing your content ourselves, we will follow these steps:
 <a name="indexing-workflow"></a>
-<a href="#add-features">Skip to Step 4. Add Features</a>
+
+( Or <a href="#add-features">Skip to Step 4. Add Features</a>)
 
 <br />
 ### Indexing with Search.gov
