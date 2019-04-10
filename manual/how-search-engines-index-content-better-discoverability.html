@@ -96,19 +96,36 @@
 
 <div class="container-fluid">
   <div class="col-md-8 col-md-offset-2">
+
+  <nav aria-label="breadcrumb" class="mt-2">
+  <ul class="breadcrumb">
+    
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/"><span property="name">Home</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/"><span property="name">Help Manual</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/indexing-with-searchgov.html"><span property="name">Indexing</span></a></li>
+    
+    
+    <li class="breadcrumb-item active">
+    Better Discoverability
+    </li>
+  </ul>
+
     <!-- do not remove as used to parse in usasearch -->
     <main id="main-container">
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/blog/how-search-engines-index-content-better-discoverability.html">How to get search engines to index the right content for better discoverability</a>
+    <a href="/manual/how-search-engines-index-content-better-discoverability.html">How to get search engines to index the right content for better discoverability</a>
   </h1>
   
 
   <div class='post-content'>
     <p>Website structure and content can have a significant impact on the ability of search engines to provide a good search experience. As a result, the Search Engine Optimization industry evolved to provide better understanding of these impacts and close critical gaps. Some elements on your website will actively hinder the search experience, and this post will show you how to target valuable content and exclude distractions.</p>
 
-<p>We’ve written a <a href="/blog/robotstxt.html">post about robots.txt files</a>, talking about high level inclusion and exclusion of content from search engines. There are other key tools you will want to employ on your website to further target the content on individual pages:</p>
+<p>We’ve written a <a href="https://search.gov/manual/robotstxt.html">post about robots.txt files</a>, talking about high level inclusion and exclusion of content from search engines. There are other key tools you will want to employ on your website to further target the content on individual pages:</p>
 
 <ul>
   <li><a href="#main-element">The &lt;main&gt; element</a></li>
@@ -120,6 +137,7 @@
 <p><br />
 <a id="main-element"></a></p>
 <h2 id="the-main-element">The <code>&lt;main&gt;</code> element</h2>
+
 <h3 id="targeting-particular-content-on-a-page">Targeting particular content on a page</h3>
 
 <p>A <code>&lt;main&gt;</code> element allows you to target content you want indexed by search engines. If a <code>&lt;main&gt;</code> element is present, the system will only collect the content inside the element. Be sure that the content you want indexed is inside of this element. If the element is closed too early, important content will not be indexed. Unless the system finds a <code>&lt;main&gt;</code> element demarcating where the primary content of the page is to be found, repetitive content such as headers, footers, and sidebars will be picked up by search engines as part of a page’s content.</p>
@@ -173,7 +191,7 @@ Various scripts, etc.
 <h2 id="robots-meta-tags">Robots meta tags</h2>
 <h3 id="exclude-particular-pages-from-indexing-or-exclude-their-links-from-being-followed">Exclude particular pages from indexing, or exclude their links from being followed</h3>
 
-<p>There are individual pages on your websites that do not make good search results. This could be archived event pages, list views such as Recent Blog Posts, etc. Blocking individual pages on the <a href="/blog/robotstxt.html">robots.txt file</a> will be difficult if you don’t have easy access to edit the file Even if edits are easy, it could quickly lead to an unmanageably long <code>robots.txt</code>.</p>
+<p>There are individual pages on your websites that do not make good search results. This could be archived event pages, list views such as Recent Blog Posts, etc. Blocking individual pages on the <a href="https://search.gov/manual/robotstxt.html">robots.txt file</a> will be difficult if you don’t have easy access to edit the file Even if edits are easy, it could quickly lead to an unmanageably long <code>robots.txt</code>.</p>
 
 <p>It’s also important to note that search engines will pay attention to <code>Disallow</code> directives in <code>robots.txt</code> when crawling, but may not when accessing your URLs from other sources, like links from other sites or your sitemap. <strong>Search.gov will rely on robots meta tags when working off your sitemap to know what content you want searchable, and what you don’t want searchable.</strong></p>
 
@@ -198,7 +216,7 @@ Various scripts, etc.
 <ul>
   <li>Once the page’s window of relevance is over, add a <code>&lt;meta name="robots" content="noindex" /&gt;</code> tag to the <code>&lt;head&gt;</code> of the page.</li>
   <li>Make sure the modified_time on the page is updated.</li>
-  <li>Leave the item in the <a href="/blog/sitemaps.html">sitemap</a>, so that search engines will see the page was updated, revisit it, and see that the item should be removed from the index.</li>
+  <li>Leave the item in the <a href="https://search.gov/manual/sitemaps.html">sitemap</a>, so that search engines will see the page was updated, revisit it, and see that the item should be removed from the index.</li>
 </ul>
 
 <p><br />
@@ -321,8 +339,8 @@ Various scripts, etc.
     
     
     
-    <a href="/blog/how-search-engines-index-content-better-discoverability.html">
-      <time>October 11, 2018</time>
+    <a href="/manual/how-search-engines-index-content-better-discoverability.html">
+      <time>April 9, 2019</time>
     </a>
   </div>
 

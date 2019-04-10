@@ -4,7 +4,7 @@
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   
-  <title>Going Live with Search.gov</title>
+  <title>Robots.txt Files</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -96,86 +96,135 @@
 
 <div class="container-fluid">
   <div class="col-md-8 col-md-offset-2">
+
+  <nav aria-label="breadcrumb" class="mt-2">
+  <ul class="breadcrumb">
+    
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/"><span property="name">Home</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/"><span property="name">Help Manual</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/indexing-with-searchgov.html"><span property="name">Indexing</span></a></li>
+    
+    
+    <li class="breadcrumb-item active">
+    Robots.txt
+    </li>
+  </ul>
+
     <!-- do not remove as used to parse in usasearch -->
     <main id="main-container">
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/blog/go-live.html">Going Live with Search.gov</a>
+    <a href="/manual/robotstxt.html">Robots.txt Files</a>
   </h1>
   
 
   <div class='post-content'>
-    <p>Your pre-launch checklist will be unique to your agency’s workflow, requirements, and deadlines. Below is a typical checklist.</p>
+    <p>A <code>/robots.txt</code> file is a text file that instructs automated web bots on how to crawl and/or index a website. Web teams use them to provide information about what site directories should or should not be crawled, how quickly content should be accessed, and which bots are welcome on the site.</p>
 
-<h2 id="double-check-your-content-settings">Double Check Your Content Settings</h2>
+<h2 id="what-should-my-robotstxt-file-look-like">What should my robots.txt file look like?</h2>
+<p>Please refer to the <a href="http://www.robotstxt.org/robotstxt.html">robots.txt protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> for detailed information on how and where to create your robots.txt. Key points to keep in mind:</p>
 
-<p><i class="icon-check"></i> <strong>1. Have you told us which domain(s) you want to search?</strong> List one or more <a href="/manual/domains.html">domains</a> that you want to search on the first page of web results. Some agencies opt to leave out the ‘www’ to include all subdomains (for example, list usa.gov to include answers.usa.gov, blog.usa.gov, publications.usa.gov, etc). Some agencies especially department-level portals opt to also include their bureaus’ websites (for example, Commerce.gov includes commerce.gov, noaa.gov, trade.gov, etc.)</p>
+<ul>
+  <li>The file must be located at the root of the domain, and each subdomain needs its own file.</li>
+  <li>The robots.txt protocol is case sensitive.</li>
+  <li>It’s easy to accidentally block crawling of everything
+    <ul>
+      <li><code>Disallow: /</code> means disallow everything</li>
+      <li><code>Disallow:  </code> means disallow nothing, thus allowing everything</li>
+      <li><code>Allow: /</code> means allow everything</li>
+      <li><code>Allow:  </code> means allow nothing, thus disallowing everything</li>
+    </ul>
+  </li>
+  <li>The instructions in robots.txt are guidance for bots, not binding requirements.</li>
+</ul>
 
-<p><i class="icon-check"></i> <strong>2. Have we indexed your your content?</strong> We follow search engine optimization (SEO) best practices and leverage your <a href="/blog/sitemaps.html">XML sitemaps</a> to monitor for new content. Verify also that you have a <a href="/blog/robotstxt.html">robots.txt file</a>. These two files are typically located in the root directory of your website (i.e., <code>exampleagency.gov/robots.txt</code> and <code>exampleagency.gov/sitemap.xml</code>, respectively). Also verify that your robots.txt file allows our user agent (<code>usasearch</code>) to access your public content.</p>
+<h2 id="how-can-i-optimize-my-robotstxt-for-searchgov">How can I optimize my robots.txt for Search.gov?</h2>
 
-<p><i class="icon-check"></i> <strong>3. Have you told us about your RSS feeds?</strong> We love <a href="/manual/rss.html">RSS feeds</a>. Tell us about all of your feeds, even if you opt not to show them (see #5 below). They’re a quick way for us to index your new and updated content, in addition to the content listed on your sitemap (see above). (Tip: Preview your feeds from the RSS page in the <a href="https://search.usa.gov/sites/">Admin Center</a> to confirm that we’ve indexed your content.)</p>
+<h3 id="crawl-delay">Crawl delay</h3>
+<p>A robots.txt file may specify a “crawl delay” directive for one or more user agents, which tells a bot how quickly it can request pages from a website. For example, a crawl delay of 10 specifies that a crawler should not request a new page more than every 10 seconds.  We recommend a crawl-delay of 2 seconds for our <code>usasearch</code> user agent, and setting a higher crawl delay for all other bots. The lower the crawl delay, the faster Search.gov will be able to index your site. In the robots.txt file, it would look like this:</p>
 
-<p><i class="icon-check"></i> <strong>4. Have you told us about your social media accounts?</strong> <a href="/manual/flickr.html">Flickr photostreams</a>, <a href="/manual/twitter.html">tweets</a>, and <a href="/manual/youtube.html">YouTube videos</a> are a great way to highlight your recent content and offer a single point of access to your various publishing channels.</p>
+<pre><code>User-agent: usasearch  
+Crawl-delay: 2
 
-<h2 id="customize-the-display-of-your-search-results-page">Customize the Display of Your Search Results Page</h2>
-
-<p><i class="icon-check"></i> <strong>5. Have you made the search results page look like your website?</strong> Customize the <a href="/manual/brand.html">brand</a> (font, colors, logo, favicon, and navigation links) of your search results page to create a seamless experience for users as they search and browse your website.</p>
-
-<p><i class="icon-check"></i> <strong>6. Have you told us what to show on your results page?</strong> Turn on (or off) the inline modules and facets that you want to appear on your search results page. You can change the default settings on the <a href="/manual/display-overview.html">Display Overview</a> page in the Admin Center.</p>
-
-<h2 id="connect-your-site-to-searchgov">Connect Your Site to Search.gov</h2>
-
-<p>Most agencies add these two <a href="/manual/code.html">snippets of code</a> to the template(s) in their websites or content management systems (rather than adding them to individual pages).</p>
-
-<p><i class="icon-check"></i> <strong>7. Does your search box point to Search.gov?</strong> Update your search box form code point to our service so that, when users execute a search, they’ll see your Search.gov-hosted results page.</p>
-
-<pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;&lt;div style="margin:0;padding:0;display:inline"&gt;&lt;input name="utf8" type="hidden" value="&amp;#x2713;" /&gt;&lt;/div&gt;
-	 &lt;input id="affiliate" name="affiliate" type="hidden" value="YourSiteHandle" /&gt;
- 	&lt;label for="query"&gt;Enter Search Term(s):&lt;/label&gt;
- 	&lt;input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text" /&gt;
- 	&lt;input name="commit" type="submit" value="Search" /&gt;
-&lt;/form&gt;
+User-agent: *
+Crawl-delay: 10
 </code></pre>
 
-<p><i class="icon-check"></i> <strong>8. Do you have our Javascript tag on your webpages?</strong> This Javascript powers the suggestions for type-ahead and <a href="/manual/display-overview.html">related searches</a>. It also provides data on your trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</p>
+<h3 id="xml-sitemaps">XML Sitemaps</h3>
+<p>Your robots.txt file should also list one or more of your <a href="https://search.gov/blog/sitemaps.html">XML sitemaps</a>. For example:</p>
 
-<pre><code>&lt;script type="text/javascript"&gt;
-//&lt;![CDATA[
-	 var usasearch_config = { siteHandle:"YourSiteHandle" };
- 	var script = document.createElement("script");
- 	script.type = "text/javascript";
- 	script.src = "//search.usa.gov/javascripts/remote.loader.js";
- 	document.getElementsByTagName("head")[0].appendChild(script);
-//]]&gt;
-&lt;/script&gt;
+<pre><code>Sitemap: https://www.exampleagency.gov/sitemap.xml
+Sitemap: https://www.exampleagency.gov/independent-subsection-sitemap.xml
+</code></pre>
+<ul>
+  <li>Only list sitemaps for the domain matching where the robots.txt file is. A different subdomain’s sitemap should be listed on that subdomain’s robots.txt.</li>
+</ul>
+
+<h3 id="allow-only-the-content-that-you-want-searchable">Allow only the content that you want searchable</h3>
+<p>We recommend disallowing any directories or files that should not be searchable. For example:</p>
+
+<pre><code>Disallow: /archive/
+Disallow: /news-1997/
+Disallow: /reports/duplicative-page.html
 </code></pre>
 
-<h2 id="set-up-nice-to-have-features-optional">Set Up Nice-to-Have Features (Optional)</h2>
+<ul>
+  <li>Note that if you disallow a directory after it’s been indexed by a search engine, this may not trigger a removal of that content from the index. You’ll need to go into the search engine’s webmaster tools to request removal.</li>
+  <li>Also note that search engines may index individual pages within a disallowed folder if the search engine learns about the URL from a non-crawl method, like a link from another site or your sitemap. To ensure a given page is not searchable, set a <a href="/blog/how-search-engines-index-content-better-discoverability.html#robots">robots meta tag</a> on that page.</li>
+</ul>
 
-<p><i class="icon-check"></i> <strong>9. Have you masked your domain?</strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers search.YOURSITE.gov (instead of search.USA.gov). If you leverage DNS masking you will have to change your search box form action from search.usa.gov to search.YOURSITE.gov. Be sure to alert us you will be adding a domain mask, so we can add you to our SSL certificate before you update your search box form code.</p>
+<h3 id="customize-settings-for-different-bots">Customize settings for different bots</h3>
+<p>You can set different permissions for different bots. For example, if you want us to index your archived content but don’t want Google or Bing to index it, you can specify that:</p>
 
-<p><i class="icon-check"></i> <strong>10. Have you added the Javascripts for your other third-party web services to your results page?</strong> If you have a <a href="/manual/third-party.html">third-party service</a> running on your website, you likely want it to run on your results page. Agencies often include their Foresee, Google Analytics, Omniture, or WebTrends code, among others. If your federal website participates in the <a href="https://www.digitalgov.gov/services/dap/">Digital Analytics Program</a>, you do not need to take any action: DAP code is included on your results page, by default.</p>
+<pre><code>User-agent: usasearch  
+Crawl-delay: 2
+Allow: /archive/
 
-<h2 id="dont-forget-seo">Don’t Forget SEO</h2>
+User-agent: *
+Crawl-delay: 10
+Disallow: /archive/
+</code></pre>
 
-<p><i class="icon-check"></i> <strong>11. Have you registered your site with the major commercial search engines?</strong> Register for both <a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="https://www.google.com/webmasters/tools/home?hl=en">Google Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i> to maximize the coverage of your content in their search results.</p>
+<h2 id="robotstxt-checklist">Robots.txt checklist</h2>
+<p><i class="icon-check"></i> 1. A robots.txt file has been created in the site’s root directory (<code>https://exampleagency.gov/robots.txt</code>)</p>
+
+<p><i class="icon-check"></i> 2. The robots.txt file disallows any directories and files that automated bots should not crawl</p>
+
+<p><i class="icon-check"></i> 3. The robots.txt file lists one or more <a href="https://search.gov/blog/sitemaps.html">XML sitemaps</a></p>
+
+<p><i class="icon-check"></i> 4. The robots.txt file format has been <a href="http://tools.seochat.com/tools/robots-txt-validator/">validated</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<h2 id="additional-resources">Additional Resources</h2>
+<p><a href="https://yoast.com/ultimate-guide-robots-txt/">Yoast SEO’s Ultimate Guide to Robots.txt</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<p><a href="https://support.google.com/webmasters/answer/6062608?hl=en&amp;ref_topic=6061961">Google’s “Learn about robots.txt files”</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+    <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+    
+    <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+    
+    <a href="/tagged/indexing"><span class="label label-info">indexing</span></a>
     
   </div>
 
   <div class='time'>
     
+    </br><span>Page last reviewed or updated:</span>
     
     
     
-    <a href="/blog/go-live.html">
-      <time>March 28, 2018</time>
+    
+    <a href="/manual/robotstxt.html">
+      <time>April 9, 2019</time>
     </a>
   </div>
 

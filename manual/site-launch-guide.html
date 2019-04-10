@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  
+  <title>Search Site Launch Guide</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/stylesheets/font-awesome-ie7.min.css">
+  <![endif]-->
+
+  <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+  <link href="/stylesheets/custom.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+  <link rel="shortcut icon" href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/favicon.ico">
+  <link rel='alternate' type='application/atom+xml' title='search.gov Atom feed' href='/all.atom' />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="/javascripts/bootstrap3-typeahead.js"></script>
+ </head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        <span class="search">Search.gov</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <form class="navbar-form navbar-left form-search" accept-charset="UTF-8" action="https://find.search.gov/search/" id="search-form" method="get">
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+        <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+        <div class="input-group input-append">
+          <label for="search-query" class="hide">Query</label>
+
+          <input name="query" autocomplete="off"  type="text" class="typeahead form-control search-query" id="search-query" data-provide="typeahead" >
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-nav" aria-label="Left Align" id="search-button">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+          </span>
+        </div>
+      </form>
+      <div class="nav navbar-right">
+          <a href="https://search.usa.gov/sites" class="navbar-brand"><i
+              class="icon-user icon-white"></i>&nbsp;Login</a>
+      </div>&nbsp;&nbsp;&nbsp;<div class="nav navbar-right">
+          <a href="http://search.usa.gov/signup" class="navbar-brand">Sign up</a>
+      </div>&nbsp;&nbsp;&nbsp;<div class="nav navbar-right">
+          <a href="https://search.gov/status.html" class="navbar-brand">System Status</a>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="col-md-offset-2 col-md-8  hidden-sm hidden-md hidden-lg">
+
+  <form class="form-search" accept-charset="UTF-8" action="https://find.search.gov/search/" id="search-form" method="get">
+    <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+    <div class="input-group input-append">
+      <label for="search-query" class="hide">Query</label>
+
+      <input name="query" autocomplete="off"  type="text" class=" form-control search-query" id="search-query"  >
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </span>
+    </div>
+  </form>
+</div>
+
+
+<div class="container-fluid">
+  <div class="col-md-8 col-md-offset-2">
+
+  <nav aria-label="breadcrumb" class="mt-2">
+  <ul class="breadcrumb">
+    
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/"><span property="name">Home</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/"><span property="name">Help Manual</span></a></li>
+    
+    
+    <li class="breadcrumb-item active">
+    Site Launch Guide
+    </li>
+  </ul>
+
+    <!-- do not remove as used to parse in usasearch -->
+    <main id="main-container">
+      <article class="article feature" style="padding:0 30px; margin-top: 10px;">
+  
+  <h1>
+    <a href="/manual/site-launch-guide.html">Search Site Launch Guide</a>
+  </h1>
+  
+
+  <div class='post-content'>
+    <p>At Search.gov we aim to provide a self-service, plug and play search solution. This guide will walk you through everything you need to do, and let you know when to reach out to us. The basic steps are:</p>
+
+<ol>
+  <li><a href="#add-site">Add a site</a></li>
+  <li><a href="#add-domains">Add Domains</a></li>
+  <li><a href="#select-index">We will select the search index your site will use</a></li>
+  <li><a href="#add-features">Add additional search features</a></li>
+  <li><a href="#turn-features-on">Turn on the search features</a></li>
+  <li><a href="#configure-branding">Configure the branding of your results page</a></li>
+  <li><a href="#go-live">Connect your website’s search box to your search site</a></li>
+</ol>
+
+<p><img class="img-responsive" src="/files/site-launch-workflow.jpg" alt="Flow chart showing the steps involved in launching a search site on Search.gov" />
+<a href="https://search.gov/blog/site-launch-flow.html#description">Site launch flow chart detailed description</a><br />
+<a href="https://search.gov/files/site-launch-workflow.jpg">Open large version</a></p>
+
+<p><a name="description"></a></p>
+
+<p><a name="add-site"></a></p>
+
+<h2 id="1-add-site">1. Add Site</h2>
+
+<p><strong>*Who:</strong>  You, the agency web team</p>
+
+<p><strong>What:</strong> After you’ve successfully opened an account with Search.gov, you’ll need to create a search site. A search site is where you configure the search experience for your website. Find the <code>Add Site</code> link at the top of the Admin Center, and enter some basic details about your site. Please note that our service is for publicly accessible, federal government content. More detailed information can be found on our <a href="https://search.gov/manual/add-site.html">Add Site help page</a>.</p>
+
+<p>Once you’ve created your site, note the actions available on the left-hand navigation of your Admin Center.</p>
+
+<p><i class="icon-dashboard"></i> The <strong>Dashboard</strong> is where you can view a Site Overview, manage users, update your site’s homepage, or site display name.</p>
+
+<p><i class="icon-bar-chart"></i> <strong>Analytics</strong> are provided for the past 13 months, reporting your top queries, clicks, and referrers (the pages people were on when they ran their searches), and monthly rollup data.</p>
+
+<p><i class="icon-file"></i> <strong>Content</strong> management is where you define what your search experience will include, both the default search scope, additional content sources, and alternative search views.</p>
+
+<p><i class="icon-desktop"></i> <strong>Display</strong> management is where you can configure the branding of your search results page.</p>
+
+<p><i class="icon-eye-open"></i> <strong>Preview</strong> your search results page to see what your search experience will be like, before you go live.</p>
+
+<p><i class="icon-code"></i> And finally, the <strong>Activate</strong> section provides pre-formatted code snippets to help you go live. Don’t be afraid of entering this area, nothing will actually be activated.</p>
+
+<p><a name="add-domains"></a>
+<br /></p>
+<h2 id="2-add-domains">2. Add Domains</h2>
+
+<p><strong>Who:</strong> You, the agency web team</p>
+
+<p><strong>What:</strong> In the content management section, the domains list defines the default search scope for your site. You can include one domain or several, or you can focus on particular subdomains of one domain. <a href="https://search.gov/manual/domains.html">Read more here</a>.</p>
+
+<p><a name="select-index"></a>
+<br /></p>
+<h2 id="3-web-index-selection">3. Web Index Selection</h2>
+
+<p><strong>Who:</strong> Search.gov team, in consultation with you, the agency web team</p>
+
+<p><strong>What:</strong> By default a new search site will be connected to the Bing web index to receive web results. Websites with very low levels of search traffic can continue to use the Bing web index after they launched our service. However, sites that will see greater than 150,000 queries per year will need to be indexed directly by our service before going live.  We monitor new sites established in our system, and will reach out if we think your site will need to be indexed by us, or if we need more information to make a determination.</p>
+
+<p>Regardless of the index used to support your search, we can only serve publicly accessible content. You will not be able to use our service for secure content, including intranets, and we can never index or serve personally identifiable information (PII) or other confidential data.</p>
+
+<p>If we will be indexing your content ourselves, we will follow these steps:</p>
+
+<p><a href="#add-features">Skip to Step 4. Add Features</a></p>
+
+<p><a name="indexing-workflow"></a><br /></p>
+<h3 id="indexing-with-searchgov">Indexing with Search.gov</h3>
+<p><br /></p>
+<h4 id="a-define-domains-and-subdomains">A. Define Domains and Subdomains</h4>
+
+<p><strong>Who:</strong> You, the agency web team, in consultation with the Search.gov team</p>
+
+<p><strong>What:</strong> The Admin Center Domains list controls what we pull out of our index for a search on your site. But we also need to know what to put in to the index to begin with. We’ll work with you to confirm the domains and subdomains you want discoverable through search. For example, after discussing with you, we may plan to index all of your subdomains, or just a selection of the major sections:</p>
+
+<pre><code>www.example.gov
+data.example.gov
+archive.example.gov
+www.subagencydomainexample.gov 
+</code></pre>
+<p><br /></p>
+<h4 id="b-sitemap-for-each-subdomain">B. Sitemap for Each Subdomain</h4>
+
+<p><strong>Who:</strong> You, the agency web team, in consultation with the Search.gov team</p>
+
+<p><strong>What:</strong> The easiest way for us to discover what URLs exist on your domain is via an XML sitemap. Each domain identified above will need a separate sitemap. Please read our <a href="https://search.gov/blog/sitemaps.html">detailed discussion of XML sitemaps</a>, and let us know if you have any questions. We understand it can be difficult for some legacy systems to generate a sitemaps, so if this is the case, <a href="mailto:search@support.digitalgov.gov">please reach out</a>.</p>
+
+<p>We do not crawl websites by default due to the high resource demand of crawling every page on every website all the time. One of the goals of our service is to contain the costs of search government-wide, and a crawling-first model would increase costs significantly.
+<br /><br /></p>
+<h4 id="c-index-subdomains">C. Index Subdomains</h4>
+
+<p><strong>Who:</strong> The Search.gov team</p>
+
+<p><strong>What:</strong> Once sitemaps are posted to your website, our system will index your content. Alert us when the sitemaps are posted, and we’ll add your domains to our list of domains that we monitor. Then, indexing will begin.</p>
+
+<p>By default, we make 1 request per second to a domain. If a <code>Crawl-delay</code> is declared in your <a href="https://search.gov/blog/robotstxt.html">/robots.txt file</a>, we will honor that delay while fetching your content for indexing. The length of time required to index a site is <code>(number of items) x (crawl delay) / 3600 = hours to index</code>.</p>
+
+<p>If you use a firewall service, it’s possible our indexer will be blocked. We can provide our IP addresses for you to whitelist in your firewall.</p>
+
+<p>Please note, we can only index domains that are publicly accessible. This means that if you have a password-protected staging environment, we will not be able to index it for you as part of your testing process. <a href="mailto:search@support.digitalgov.gov">Please reach out</a> and we can discuss options if you need to test our service pre-production.
+<br /><br /></p>
+<h4 id="d-test-index">D. Test Index</h4>
+
+<p><strong>Who:</strong> Search.gov Team</p>
+
+<p><strong>What:</strong> For search sites switching from Bing: After your content is indexed, we’ll start up a parallel search site using your current site configuration and the new index, and run a number of test queries to ensure the index is performing satisfactorily. Our test will cover your live site’s most popular queries. 
+<br /><br /></p>
+<h4 id="e-review-index">E. Review Index</h4>
+
+<p><strong>Who:</strong> You, the agency web team</p>
+
+<p><strong>What:</strong> For sites switching from Bing: After we’re satisfied with the index, we’ll send you a link to the test search site, so you can review and provide feedback.</p>
+
+<p>For brand new sites: You will be able to test the index using your regular search site(s).
+<br /><br /></p>
+<h4 id="f-ready-to-launch">F. Ready to Launch</h4>
+
+<p><strong>Who:</strong> You, the agency web team, in collaboration with Search.gov</p>
+
+<p><strong>What:</strong>  For brand new sites: Your index is ready to go, you can proceed with the rest of the site launch steps and go live without any further action from our team.</p>
+
+<p>For sites switching from Bing: When you give us the green light to switch to the new index, there is no action needed on your part other than the approval. We will change a setting in our back end, which will point your existing search site’s web results module to our index, and the change is effective immediately. All other elements of your search site remain the same: search features, branding, etc.</p>
+
+<p><a name="add-features"></a>
+<br /><br /></p>
+<h2 id="4-add-search-features">4. Add Search Features</h2>
+
+<p><strong>Who:</strong> You, the agency web team</p>
+
+<p><strong>What:</strong> We offer several additional search features you can configure to enhance your search experience.</p>
+
+<ul>
+  <li><a href="https://search.gov/manual/collections.html">Collections</a> allow you to set up alternative search scopes from the Domains you declare for the main search. Often Collections point at particular subfolders or subdomains of the primary domain for the site. Sometimes they point at a different domain entirely. If you are indexed by Searhc.gov and you want a Collection to search another domain, check with us to see if we have that content already indexed.</li>
+  <li><a href="https://search.gov/manual/best-bets.html">Best Bets</a> work like ads in Google, and allow you to pin certain results to the top of your search results. Use Text Best Bets to boost individual items, and Graphics Best Bets to boost a set of related items, such as a form, its instructions page, and other related material.</li>
+  <li><a href="https://search.gov/manual/routed-queries.html">Routed queries</a> allow you to bypass the results page entirely for a given query, where you know exactly the page you want a person to get to after running that query. This is helpful for always getting people to the landing page for a process, rather than their clicking to a mid-process page from a search results page.</li>
+  <li><a href="https://search.gov/manual/rss.html">RSS</a> feeds can be indexed and searched either as separate tabs on the search results, or as an inline module promoting your latest content alongside your web results.</li>
+  <li><a href="https://search.gov/manual/youtube.html">YouTube</a> videos can also be searched</li>
+  <li><a href="https://search.gov/manual/twitter.html">Twitter</a></li>
+  <li><a href="https://search.gov/manual/flickr.html">Flickr</a></li>
+  <li><a href="https://search.gov/manual/govbox-jobs.html">Jobs</a> are one of the most frequently searched topics on agency websites. Use our jobs module to show your agency’s postings from USAJOBS in your own website’s search results.</li>
+  <li><a href="https://search.gov/manual/govbox-federal-register.html"><em>Federal Register</em></a> rules and notices can be added to your search results in a separate module.</li>
+</ul>
+
+<p><a name="turn-features-on"></a>
+<br /></p>
+<h2 id="5-toggle-search-features-on">5. Toggle Search Features On</h2>
+
+<p><strong>Who:</strong> You, the agency web team</p>
+
+<p><strong>What:</strong> In order to display any of the search features you just added above, you’ll need to toggle ON the display for each one, using the <a href="https://search.gov/manual/display-overview.html">Display Overview page</a>. If you want to show Jobs or <em>Federal Register</em> results and you don’t see those options on the Display Overview page, <a href="mailto:search@support.digitalgov.gov">let us know</a> and we can connect your search site to those features.</p>
+
+<p><a name="configure-branding"></a>
+<br /></p>
+<h2 id="6-configure-results-page">6. Configure Results Page</h2>
+
+<p><strong>Who:</strong> You, the agency web team</p>
+
+<p><strong>What:</strong> To make the results page complement your website’s look and feel, upload your logo, set the font style, and customize the page colors to ensure a more seamless experience for your searchers as they move from your site to ours, and back again. You can also add header and footer links to support navigation back to your website. <a href="https://search.gov/manual/brand.html">See more details here</a>.</p>
+
+<p><a href="https://search.gov/manual/cname.html">Masking the domain for your results page</a> is another way you can provide continuity to your searchers as they move back and forth between your site and our system.</p>
+
+<p><a name="go-live"></a>
+<br /></p>
+<h2 id="7-connect-your-search-box-to-searchgov">7. Connect Your Search Box to Search.gov</h2>
+
+<p><strong>Who:</strong> You, the agency web team, in collaboration with your deploy team, if different</p>
+
+<p><strong>What:</strong> Once you’re ready to go live with your search site, take a look at the <a href="https://search.gov/manual/go-live.html">Go-Live Checklist</a> to make sure you’ve covered all your bases. Then you will need to modify the form code for the search box on your website. We provide simple pre-formatted code in the Admin Center, or you can include these same parameters in another style of search box. <a href="https://search.gov/manual/code.html">Read more and see required parameters here</a>.</p>
+
+<p>You’re now live with Search.gov!</p>
+
+  </div>
+
+  <div class='tags'>
+    
+    <a href="/tagged/go-live"><span class="label label-info">go-live</span></a>
+    
+    <a href="/tagged/site-launch"><span class="label label-info">site-launch</span></a>
+    
+    <a href="/tagged/indexing"><span class="label label-info">indexing</span></a>
+    
+  </div>
+
+  <div class='time'>
+    
+    
+    
+    
+    <a href="/manual/site-launch-guide.html">
+      <time>April 9, 2019</time>
+    </a>
+  </div>
+
+</article>
+
+    </main>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p><a href="mailto:search@support.digitalgov.gov">Email us</a> or call us at 202-969-7426</p>
+    <p> An Official Website of the U.S. Government <br />
+      <a href="https://www.gsa.gov/portal/category/25729">Technology Transformation Service</a>, <a href="https://www.gsa.gov/portal/category/100000">U.S. General Services Administration</a>
+    </p>
+    <ul class="footer-links list-unstyled list-inline">
+      <li><a href="https://www.usa.gov">USA.gov</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/tos.html">Terms of Service</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="https://www.digitalgov.gov/about/policies/">Site Policies</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/developer/">Developers</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  //<![CDATA[
+  var usasearch_config = { siteHandle:"usasearch" };
+
+jQuery(document).ready(function() {
+  $('.typeahead').typeahead({
+      source: function (query, process) {
+          return $.get('https://search.usa.gov/sayt?name=usasearch&q=' + query, function (data) {
+              return process(data);
+          });
+      }, minLength: 2
+  });
+})
+
+
+  // var script = document.createElement("script");
+  // script.type = "text/javascript";
+  // script.src = "https://search.usa.gov/javascripts/remote.loader.js";
+  // document.getElementsByTagName("head")[0].appendChild(script);
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31302465-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  //]]>
+</script>
+
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA" id="_fed_an_ua_tag"></script>
+
+
+</body>
+</html>
