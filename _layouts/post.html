@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-<article class="article feature" style="padding:0 30px; margin-top: 10px;">
 
+<article class="article feature" style="padding:0 30px; margin-top: 10px;">
   {% unless page.category == 'quote' %}
   <h1>
     <a href="{{ page.url }}">{{ page.title }}</a>
@@ -12,7 +12,7 @@ layout: default
   <div class='post-content'>
     {{ content }}
   </div>
-  
+
   <div class='tags'>
     {% for tag in page.tags %}
     <a href="/tagged/{{ tag }}"><span class="label label-info">{{ tag }}</span></a>

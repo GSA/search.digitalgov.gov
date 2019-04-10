@@ -1,32 +1,26 @@
 ---
 layout: post
 title: Adding Supplemental Content to Your Search Configuration
-slug: Advanced Features
 category: manual
 tags: "help-manual manage-content domains advanced supplemental-feed supplemental-urls"
 published: true
-breadcrumbs:
-  - label: "Home"
-    url: https://search.gov/
-  - label: "Help Manual"
-    url: https://search.gov/manual/
 ---
 
-Find it in the [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > [Domains](https://search.gov/manual/domains.html) > Advanced
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > [Domains](/manual/domains.html) > Advanced
 
 Is content missing from your search results? Do you want to have RSS content appear in your main page search results?
 
 We offer two ways for you to tell us about content that you want us to fetch and include in our web index: via RSS feed (Supplemental Feed) or manually (via the [Supplemental URLs](#supplemental-urls) section).
 
-**Note for customers using Collections:** We serve [Collections](https://search.gov/manual/collections.html) results from commercial indexes; the instructions below only apply to your main search results.
+**Note for customers using Collections:** We serve [Collections](/manual/collections.html) results from commercial indexes; the instructions below only apply to your main search results.
 
-**Note to our i14y customers:** Supplemental content will not appear for customers using our [i14y content indexing API](https://search.gov/developer/i14y.html).
+**Note to our i14y customers:** Supplemental content will not appear for customers using our [i14y content indexing API](/developer/i14y.html).
 
 ## Adding Content via Supplemental Feed
 
 You can use an RSS feed to add URLs. The feed is useful if you'd like to automate the process, add multiple URLs, or both.
 
-Enter the URL of your RSS feed. Click `Submit`. We'll fetch each URL in your feed and index the title, description (optional), and the full text of the document/webpage for the items you provide. Please be sure to follow our [schema](https://search.gov/manual/rss.html), and note that we will only index the items that are listed in the feed. 
+Enter the URL of your RSS feed. Click `Submit`. We'll fetch each URL in your feed and index the title, description (optional), and the full text of the document/webpage for the items you provide. Please be sure to follow our [schema](/manual/rss.html), and note that we will only index the items that are listed in the feed. 
 
 You can see the list of URLs we have indexed from your feed by viewing the Supplemental URLs section.
 
@@ -59,11 +53,11 @@ After hitting ‘next’ to view page 2, supplemental content is served.
 
 ### Page 1:
 
-![Commercial Results are Displayed on Page One of the DigitalGov.gov Search Results Page](https://search.gov/img/Commercial-Results-First-Page-1.png)
+![Commercial Results are Displayed on Page One of the DigitalGov.gov Search Results Page](/img/Commercial-Results-First-Page-1.png){:height="95%" width="95%"}
 
 ### Page 2: 
 
-![Supplemental Feed Results are Displayed on Page Two of the DigitalGov.gov Search Results Page](https://search.gov/img/Commercial-Results-First-Page-2.png)
+![Supplemental Feed Results are Displayed on Page Two of the DigitalGov.gov Search Results Page](/img/Commercial-Results-First-Page-2.png){:height="95%" width="95%"}
 
 If there are no commercial results for a query but there are supplemental content results, we will display the supplemental content on page one.
 
@@ -71,17 +65,17 @@ If there are no commercial results for a query but there are supplemental conten
 
 If you would like your supplemental content to always appear first in search results, please [contact our team](mailto:search@suppot.digitalgov.gov). Searchers will first be served any supplemental content results, and are then offered the chance to “search again,” which will lead them to commercial index results. 
 
-Please note: if you have any [regular RSS feeds](https://search.gov/manual/rss.html) set up in your search site, this regular RSS content will also appear first with the supplemental content, prior to commercial results. If content is present in both types of feed, duplicates will appear in your results.
+Please note: if you have any [regular RSS feeds](/manual/rss.html) set up in your search site, this regular RSS content will also appear first with the supplemental content, prior to commercial results. If content is present in both types of feed, duplicates will appear in your results.
 
 In the example below, a Supplemental URL appears first, and clicking “Try your search again” will lead to a page of Bing results. 
 
-![A Supplemental URL is Displayed on Page One of the DigitalGo Search Search Results Page](https://search.gov/img/Supplemental-Content-First-Example.png)
+![A Supplemental URL is Displayed on Page One of the DigitalGo Search Search Results Page](/img/Supplemental-Content-First-Example.png){:height="95%" width="95%"}
 
 ## Getting Supplemental Content To Be Your Only Search Results
 
 If you would like your supplemental content to be the only results served from your site, please [contact our team](mailto:search@suppot.digitalgov.gov). Searchers will not be offered the chance to “search again” on a commercial index after they exhaust your supplemental content results (see above example). 
 
-Please note: if you have any [regular RSS feeds](https://search.gov/manual/rss.html) set up in your search site, this regular RSS content will also appear with the supplemental content. If content is present in both types of feed, duplicates will appear in your results.
+Please note: if you have any [regular RSS feeds](/manual/rss.html) set up in your search site, this regular RSS content will also appear with the supplemental content. If content is present in both types of feed, duplicates will appear in your results.
 
 ---
 

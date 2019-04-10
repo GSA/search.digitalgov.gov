@@ -1,17 +1,11 @@
 ---
 layout: post
-title: Add Your Content to Our Indexes&#58; An Overview
-slug: Content Overview
+title: "Add Your Content to Our Indexes: An Overview"
 category: manual
 tags: help-manual manage-content
-breadcrumbs:
-  - label: "Home"
-    url: https://search.gov/
-  - label: "Help Manual"
-    url: https://search.gov/manual/
 ---
 
-Find it in the [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > Content Overview
+[Search.gov Home](/index.html) > [Admin Center](https://search.usa.gov/sites/) > YourSite > Manage Content > Content Overview
 
 To display the results on your search results page, we index content from various sources. Each time a searcher enters a query on your site, we determine which indexes answer the searcher's question and display results from them. This means a single search results page often includes items from several indexes.
 
