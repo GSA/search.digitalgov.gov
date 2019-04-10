@@ -96,9 +96,6 @@
 
 <div class="container-fluid">
   <div class="col-md-8 col-md-offset-2">
-
-
-
     <!-- do not remove as used to parse in usasearch -->
     <main id="main-container">
       <!-- begin tag layout -->
@@ -110,7 +107,7 @@
  
     
     <h1>
-      <a href="/manual/Domain-Masking.html">How to Mask Your Domain</a>
+      <a href="/manual/cname.html">How to Mask Your Domain</a>
     </h1>
     
 
@@ -122,7 +119,7 @@
     <p>Create a <code>search</code> subdomain for your domain. If <code>search</code> is already in use in your environment, you could use <code>find</code> or <code>findit</code> as your subdomain.</p>
   </li>
   <li>
-    <p>Create a CNAME in your external DNS records for <code>search.youragency.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>. Your site handle is listed on the <a href="https://search.gov/manual/settings.html">settings page</a> in the Search Admin Center.</p>
+    <p>Create a CNAME in your external DNS records for <code>search.youragency.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>. Your site handle is listed on the <a href="/manual/settings.html">settings page</a> in the Search Admin Center.</p>
 
     <p>For example: if your site handle is <code>abc</code>, the DNS record would look like this:</p>
 
@@ -138,7 +135,7 @@
     <p>After your DNS record has been added, <a href="mailto:search@support.digitalgov.gov">email us</a> to request to be added to our SSL certificate. If your CNAME is not on our SSL certificate, browser security warnings will appear when your search results page attemps to load over <code>HTTPS</code>. It generally takes a few days for these requests to get through our queue.<br /><br />Your domain mask will work as soon as these two steps are complete.</p>
   </li>
   <li>
-    <p>When your DNS record is in place and you have received confirmation that your domain mask has been added to our SSL certificate, change your search box’s <a href="https://search.gov/manual/code.html">form code</a> action from <code>search.usa.gov/search</code> to <code>search.youragency.gov/search</code>.</p>
+    <p>When your DNS record is in place and you have received confirmation that your domain mask has been added to our SSL certificate, change your search box’s <a href="/manual/code.html">form code</a> action from <code>search.usa.gov/search</code> to <code>search.youragency.gov/search</code>.</p>
   </li>
 </ol>
 
@@ -169,7 +166,7 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
       
       
       
-      <a href="/manual/Domain-Masking.html">
+      <a href="/manual/cname.html">
         <time datetime="2018-09-21">September 21, 2018</time>
       </a>
     </div>

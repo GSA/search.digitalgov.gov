@@ -96,9 +96,6 @@
 
 <div class="container-fluid">
   <div class="col-md-8 col-md-offset-2">
-
-
-
     <!-- do not remove as used to parse in usasearch -->
     <main id="main-container">
       <!-- begin tag layout -->
@@ -110,7 +107,7 @@
  
     
     <h1>
-      <a href="/manual/Robots.txt-Files.html">Robots.txt Files</a>
+      <a href="/blog/robotstxt.html">Robots.txt Files</a>
     </h1>
     
 
@@ -137,16 +134,7 @@
 <h2 id="how-can-i-optimize-my-robotstxt-for-searchgov">How can I optimize my robots.txt for Search.gov?</h2>
 
 <h3 id="crawl-delay">Crawl delay</h3>
-<p>A robots.txt file may specify a “crawl delay” directive for one or more user agents, which tells a bot how quickly it can request pages from a website. For example, a crawl delay of 10 specifies that a crawler should not request a new page more than every 10 seconds.</p>
-
-<pre><code>  500,000 URLs
-     x 10 seconds
-5,000,000 seconds
-
-5,000,000 seconds = 58 days to index the site once.
-</code></pre>
-
-<p>We recommend a crawl-delay of 2 seconds for our <code>usasearch</code> user agent, and setting a higher crawl delay for all other bots. The lower the crawl delay, the faster Search.gov will be able to index your site. In the robots.txt file, it would look like this:</p>
+<p>A robots.txt file may specify a “crawl delay” directive for one or more user agents, which tells a bot how quickly it can request pages from a website. For example, a crawl delay of 10 specifies that a crawler should not request a new page more than every 10 seconds.  We recommend a crawl-delay of 2 seconds for our <code>usasearch</code> user agent, and setting a higher crawl delay for all other bots. The lower the crawl delay, the faster Search.gov will be able to index your site. In the robots.txt file, it would look like this:</p>
 
 <pre><code>User-agent: usasearch  
 Crawl-delay: 2
@@ -215,8 +203,6 @@ Disallow: /archive/
       
       <a href="/tagged/indexing"><span class="label label-info">indexing</span></a>
       
-      <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
-      
     </div>
    <div class='time'>
       
@@ -225,8 +211,8 @@ Disallow: /archive/
       
       
       
-      <a href="/manual/Robots.txt-Files.html">
-        <time datetime="2019-04-09">April 9, 2019</time>
+      <a href="/blog/robotstxt.html">
+        <time datetime="2018-10-11">October 11, 2018</time>
       </a>
     </div>
     </article>
@@ -235,12 +221,12 @@ Disallow: /archive/
  
     
     <h1>
-      <a href="/manual/Best-Bets.html">How to Boost Certain Results using Best Bets</a>
+      <a href="/manual/best-bets.html">How to Boost Certain Results using Best Bets</a>
     </h1>
     
 
     <div class='post-content'>
-      <p>Find it in the <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Best Bets: Text or Graphics</p>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Best Bets: Text or Graphics</p>
 
 <p>Do you want to promote a specific page or resource? <a href="#best-bets-text">Create a Text Best Bet</a>.</p>
 
@@ -270,7 +256,7 @@ Disallow: /archive/
 
 <h3 id="add-multiple-best-bets-via-bulk-upload">Add Multiple Best Bets via Bulk Upload</h3>
 
-<p>Create a comma-separated file with the following fields (in this order). Download our <a href="https://search.gov/files/best-bets-template-201603.csv">sample template for uploading best bets</a> [CSV] to see the correct format.</p>
+<p>Create a comma-separated file with the following fields (in this order). Download our <a href="/files/best-bets-template-201603.csv">sample template for uploading best bets</a> [CSV] to see the correct format.</p>
 
 <p>Title, URL, Description, StartDate, EndDate, Keywords, Match_Keywords_Only, Status</p>
 
@@ -368,7 +354,7 @@ Keyword 4: market value
 
 <h3 id="it-is-active">It Is Active</h3>
 
-<p>We use <a href="https://search.gov/manual/color-codes.html">color coding</a> to indicate each entry’s status.</p>
+<p>We use <a href="/manual/color-codes.html">color coding</a> to indicate each entry’s status.</p>
 
 <table>
   <thead>
@@ -399,11 +385,11 @@ Keyword 4: market value
 
 <p>Watch the recording of our February 2015 webinar <a href="https://www.youtube.com/embed/WzQocKYK0t4"><strong>Straight to the Top: Best Bets in DigitalGov Search</strong></a> (55 mins)</p>
 
-<p><strong><em>Did you know?</em></strong> Use the <a href="https://search.gov/manual/system-alert.html">Search Page Alert</a> feature to add a text message to your search results page, which will appear at all times above all search results, <em>regardless of the query</em>.</p>
+<p><strong><em>Did you know?</em></strong> Use the <a href="/manual/system-alert.html">Search Page Alert</a> feature to add a text message to your search results page, which will appear at all times above all search results, <em>regardless of the query</em>.</p>
 
-<p><strong><em>Did you know?</em></strong> Analyze the number of impressions and clicks and clickthru rate for each best bet on the <a href="https://search.gov/manual/monthly-reports.html">Monthly Reports</a> page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.</p>
+<p><strong><em>Did you know?</em></strong> Analyze the number of impressions and clicks and clickthru rate for each best bet on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page. Use the data to inform your titles, descriptions, and keywords and your decision to deactivate or delete an entry.</p>
 
-<p><strong><em>Did you know?</em></strong> When you use the <a href="https://search.gov/manual/collections.html#sitelimit">sitelimit parameter</a> to scope the search to a subsection of your website, we’ll apply this sitelimit to your Best Bets so searchers see recommended pages from within that folder or subdomain only.</p>
+<p><strong><em>Did you know?</em></strong> When you use the <a href="/manual/collections.html#sitelimit">sitelimit parameter</a> to scope the search to a subsection of your website, we’ll apply this sitelimit to your Best Bets so searchers see recommended pages from within that folder or subdomain only.</p>
 
     </div>
 
@@ -421,7 +407,7 @@ Keyword 4: market value
       
       
       
-      <a href="/manual/Best-Bets.html">
+      <a href="/manual/best-bets.html">
         <time datetime="2018-06-20">June 20, 2018</time>
       </a>
     </div>
@@ -431,7 +417,7 @@ Keyword 4: market value
  
     
     <h1>
-      <a href="/developer/Getting-Started-With-i14y.html">Getting Started with i14y</a>
+      <a href="/developer/i14y.html">Getting Started with i14y</a>
     </h1>
     
 
@@ -552,7 +538,7 @@ Keyword 4: market value
       
       
       
-      <a href="/developer/Getting-Started-With-i14y.html">
+      <a href="/developer/i14y.html">
         <time datetime="2018-04-12">April 12, 2018</time>
       </a>
     </div>
@@ -562,16 +548,16 @@ Keyword 4: market value
  
     
     <h1>
-      <a href="/developer/i14y-Testing.html">cURL Commands for i14y Testing</a>
+      <a href="/developer/i14y-testing.html">cURL Commands for i14y Testing</a>
     </h1>
     
 
     <div class='post-content'>
       <blockquote>
-  <p><strong>Important Note:</strong> April, 2018. i14y does not visit your content to do full-text scraping of your content. For new implementations, the Search.gov team recommends you index your content with us not using the i14y API, but rather by publishing a comprehensive xml sitemap, which we can use to index your content. <a href="https://search.gov/blog/six-months-in.html">Read more.</a></p>
+  <p><strong>Important Note:</strong> April, 2018. i14y does not visit your content to do full-text scraping of your content. For new implementations, the Search.gov team recommends you index your content with us not using the i14y API, but rather by publishing a comprehensive xml sitemap, which we can use to index your content. <a href="/blog/six-months-in.html">Read more.</a></p>
 </blockquote>
 
-<p>If you experience difficulty sending documents to our index via <a href="https://search.gov/developer/i14y.html">i14y</a>, it is possible your firewall is not letting you communicate with the i14y server. Adding a test document to your i14y drawer can help you diagnose a firewall issue.
+<p>If you experience difficulty sending documents to our index via <a href="/developer/i14y.html">i14y</a>, it is possible your firewall is not letting you communicate with the i14y server. Adding a test document to your i14y drawer can help you diagnose a firewall issue.
 Windows users may need to <a href="https://curl.haxx.se/download.html">install cURL</a> <i class="icon-external-link"><span>(External link)</span></i> in order to run this test from the command line.</p>
 
 <h2 id="adding-the-test-document">Adding the Test Document</h2>
@@ -581,7 +567,7 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
 <pre><code>curl "https://i14y.usa.gov/api/v1/documents" -XPOST -H "Content-Type:application/json" -u your_drawer_handle:your_secret_token -d '{"document_id":"1", "title":"Test Document", "path": "http://www.gov.gov/cms/doc1.html", "created": "2015-05-12T22:35:09Z", "description":"The summary of the document goes here.", "content":"This is placeholder text, and in a real document would be paragraphs long.", "promote": false, "language" : "en", "tags" : "tag1, another tag"}'
 </code></pre>
 
-<p>Note: you need to replace <strong>your_drawer_handle</strong> with your i14y drawer handle, found in the i14y drawers section in the Search Admin Center (<a href="https://search.gov/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers). You will also need to replace <strong>your_secret_token</strong> with the drawer’s secret token, which can be found by hitting “Show” in the 14y drawer list. The drawer handle and token should be separated by a colon (:) with no spaces on either side of the colon.</p>
+<p>Note: you need to replace <strong>your_drawer_handle</strong> with your i14y drawer handle, found in the i14y drawers section in the Search Admin Center (<a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers). You will also need to replace <strong>your_secret_token</strong> with the drawer’s secret token, which can be found by hitting “Show” in the 14y drawer list. The drawer handle and token should be separated by a colon (:) with no spaces on either side of the colon.</p>
 
 <p>The above command returns JSON structured like this:</p>
 
@@ -594,7 +580,7 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
 
 <p>If you do not see a 200 status, <a href="mailto:search@support.digitalgov.gov">contact our team</a>.</p>
 
-<p>After successfully sending a document, you should see an increase (by 1) in the number of documents in your <a href="https://search.gov/manual/i14y-drawers.html">i14y drawer</a>.</p>
+<p>After successfully sending a document, you should see an increase (by 1) in the number of documents in your <a href="/manual/i14y-drawers.html">i14y drawer</a>.</p>
 
 <h2 id="removing-the-test-document">Removing the Test Document</h2>
 
@@ -616,7 +602,7 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
 
 <hr />
 
-<p><strong><em>Resources:</em></strong> Read tips on <a href="https://search.gov/developer/i14y.html">Getting Started With i14y</a>, or view the full <a href="https://search.gov/developer/indexing-api.html">i14y technical documentation</a>.</p>
+<p><strong><em>Resources:</em></strong> Read tips on <a href="/developer/i14y.html">Getting Started With i14y</a>, or view the full <a href="/developer/indexing-api.html">i14y technical documentation</a>.</p>
 
     </div>
 
@@ -634,7 +620,7 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
       
       
       
-      <a href="/developer/i14y-Testing.html">
+      <a href="/developer/i14y-testing.html">
         <time datetime="2018-04-12">April 12, 2018</time>
       </a>
     </div>
@@ -644,12 +630,12 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
  
     
     <h1>
-      <a href="/manual/Routed-Queries.html">Route Queries to a Specific Page</a>
+      <a href="/manual/routed-queries.html">Route Queries to a Specific Page</a>
     </h1>
     
 
     <div class='post-content'>
-      <p>Find it in the <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Routed Queries</p>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Routed Queries</p>
 
 <p>Do you want to get searchers to a specific web page as quickly as possible? Create a Routed Query.</p>
 
@@ -665,7 +651,7 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
 
 <p><strong><em>Keywords.</em></strong> Add the specific words or phrases used to trigger the routing. Searchers will only be directed to the URL above when their query term exactly matches one of the listed keywords. Common keywords include synonyms, acronyms, compound words, misspellings, slang, or other variants. Enter each keyword (word or phrase up to 255 characters) in a separate field.</p>
 
-<p><em>Note</em>: Any keyword that you add to a Routed Query will become a permanent <a href="https://search.gov/manual/typeahead-api.html">type-ahead suggestion</a>. This applies to all 3 ways that type-ahead suggestions are displayed from our system: the module that can be turned on in the <a href="https://search.gov/manual/display-overview.html#modules">Display Overview section</a>, the <a href="https://search.gov/manual/typeahead-api.html">JavaScript snippet</a>, and the <a href="https://search.gov/manual/typeahead-api.html">API</a>. If you do not want certain keywords to appear as type-ahead suggestions, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
+<p><em>Note</em>: Any keyword that you add to a Routed Query will become a permanent <a href="/manual/typeahead-api.html">type-ahead suggestion</a>. This applies to all 3 ways that type-ahead suggestions are displayed from our system: the module that can be turned on in the <a href="/manual/display-overview.html#modules">Display Overview section</a>, the <a href="/manual/typeahead-api.html">JavaScript snippet</a>, and the <a href="/manual/typeahead-api.html">API</a>. If you do not want certain keywords to appear as type-ahead suggestions, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
 
 <h2 id="examples-of-how-it-works">Examples of How It Works</h2>
 
@@ -686,7 +672,7 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
 
 <p>If they search for something not on the above list, like <em>show me missing money</em>, they’ll still get the normal search results.</p>
 
-<p><img src="https://search.gov/img/unclaimed-money.png" alt="Standard search results for 'I am looking for unclaimed money' on USA.gov" height="95%" width="95%" /></p>
+<p><img src="/img/unclaimed-money.png" alt="Standard search results for 'I am looking for unclaimed money' on USA.gov" height="95%" width="95%" /></p>
 
     </div>
 
@@ -704,7 +690,7 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
       
       
       
-      <a href="/manual/Routed-Queries.html">
+      <a href="/manual/routed-queries.html">
         <time datetime="2018-02-09">February 9, 2018</time>
       </a>
     </div>
@@ -719,7 +705,7 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
     
 
     <div class='post-content'>
-      <p><a href="https://search.gov/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Instagram</p>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Instagram</p>
 
 <p><strong>ALERT:</strong>  Instagram now requires accounts to grant permission to index their images via an integration between systems. Since this integration will not be possible for Search.gov in the foreseeable future, we’re exploring other options. Our Instagram index was last updated in June 2016. Any images in our index prior to that date will continue to be shown on your search results page, as long as you do not remove your Instagram account from the Admin Center. If you remove your account, any photos in our index will be permanently deleted from our system. This help manual page is for historical reference only.</p>
 
@@ -743,11 +729,11 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
 
 <hr />
 
-<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency’s photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="https://search.gov/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
+<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency’s photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
 
-<p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="https://search.gov/manual/flickr.html">Flickr</a> photostream. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.</p>
+<p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/flickr.html">Flickr</a> photostream. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.</p>
 
-<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="https://search.gov/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> if you’re ready to turn on the new results page.</p>
+<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">newly redesigned results page</a> only. Email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> if you’re ready to turn on the new results page.</p>
 
     </div>
 
@@ -779,12 +765,12 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
  
     
     <h1>
-      <a href="/manual/Filtering-Tags.html">Filtering Tags</a>
+      <a href="/manual/filter-tags.html">Filtering Tags</a>
     </h1>
     
 
     <div class='post-content'>
-      <p>Find it in the <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; <a href="/manual/domains.html">Domains</a> &gt; Advanced &gt; Filter Tags</p>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; <a href="/manual/domains.html">Domains</a> &gt; Advanced &gt; Filter Tags</p>
 
 <p><strong>Note:</strong> this feature is only available to sites that are enabled for <a href="/developer/i14y.html">i14y</a>.</p>
 
@@ -814,7 +800,7 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
       
       
       
-      <a href="/manual/Filtering-Tags.html">
+      <a href="/manual/filter-tags.html">
         <time datetime="2017-12-14">December 14, 2017</time>
       </a>
     </div>
@@ -824,12 +810,12 @@ Windows users may need to <a href="https://curl.haxx.se/download.html">install c
  
     
     <h1>
-      <a href="/manual/RSS-Feeds.html">Add Your RSS Feeds to Our Index</a>
+      <a href="/manual/rss.html">Add Your RSS Feeds to Our Index</a>
     </h1>
     
 
     <div class='post-content'>
-      <p>Find it in the <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; RSS</p>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; RSS</p>
 
 <p>Would you like searchers to be able to search your news or multimedia content? Would you like them to be able to narrow results by date?</p>
 
@@ -1006,7 +992,7 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
       
       
       
-      <a href="/manual/RSS-Feeds.html">
+      <a href="/manual/rss.html">
         <time datetime="2017-11-09">November 9, 2017</time>
       </a>
     </div>
@@ -1016,12 +1002,12 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
  
     
     <h1>
-      <a href="/manual/i14y-Drawers.html">Working with i14y Drawers</a>
+      <a href="/manual/i14y-drawers.html">Working with i14y Drawers</a>
     </h1>
     
 
     <div class='post-content'>
-      <p>Find it in the <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers</p>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers</p>
 
 <p>An <a href="/developer/i14y.html">i14y</a> Drawer is an index receiving content via the i14y API. We’ve called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
 
@@ -1078,7 +1064,7 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
       
       
       
-      <a href="/manual/i14y-Drawers.html">
+      <a href="/manual/i14y-drawers.html">
         <time datetime="2017-10-03">October 3, 2017</time>
       </a>
     </div>
@@ -1088,26 +1074,26 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
  
     
     <h1>
-      <a href="/manual/Advanced-Features.html">Adding Supplemental Content to Your Search Configuration</a>
+      <a href="/manual/domains-advanced.html">Adding Supplemental Content to Your Search Configuration</a>
     </h1>
     
 
     <div class='post-content'>
-      <p>Find it in the <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; <a href="https://search.gov/manual/domains.html">Domains</a> &gt; Advanced</p>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; <a href="/manual/domains.html">Domains</a> &gt; Advanced</p>
 
 <p>Is content missing from your search results? Do you want to have RSS content appear in your main page search results?</p>
 
 <p>We offer two ways for you to tell us about content that you want us to fetch and include in our web index: via RSS feed (Supplemental Feed) or manually (via the <a href="#supplemental-urls">Supplemental URLs</a> section).</p>
 
-<p><strong>Note for customers using Collections:</strong> We serve <a href="https://search.gov/manual/collections.html">Collections</a> results from commercial indexes; the instructions below only apply to your main search results.</p>
+<p><strong>Note for customers using Collections:</strong> We serve <a href="/manual/collections.html">Collections</a> results from commercial indexes; the instructions below only apply to your main search results.</p>
 
-<p><strong>Note to our i14y customers:</strong> Supplemental content will not appear for customers using our <a href="https://search.gov/developer/i14y.html">i14y content indexing API</a>.</p>
+<p><strong>Note to our i14y customers:</strong> Supplemental content will not appear for customers using our <a href="/developer/i14y.html">i14y content indexing API</a>.</p>
 
 <h2 id="adding-content-via-supplemental-feed">Adding Content via Supplemental Feed</h2>
 
 <p>You can use an RSS feed to add URLs. The feed is useful if you’d like to automate the process, add multiple URLs, or both.</p>
 
-<p>Enter the URL of your RSS feed. Click <code>Submit</code>. We’ll fetch each URL in your feed and index the title, description (optional), and the full text of the document/webpage for the items you provide. Please be sure to follow our <a href="https://search.gov/manual/rss.html">schema</a>, and note that we will only index the items that are listed in the feed.</p>
+<p>Enter the URL of your RSS feed. Click <code>Submit</code>. We’ll fetch each URL in your feed and index the title, description (optional), and the full text of the document/webpage for the items you provide. Please be sure to follow our <a href="/manual/rss.html">schema</a>, and note that we will only index the items that are listed in the feed.</p>
 
 <p>You can see the list of URLs we have indexed from your feed by viewing the Supplemental URLs section.</p>
 
@@ -1142,11 +1128,11 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
 
 <h3 id="page-1">Page 1:</h3>
 
-<p><img src="https://search.gov/img/Commercial-Results-First-Page-1.png" alt="Commercial Results are Displayed on Page One of the DigitalGov.gov Search Results Page" /></p>
+<p><img src="/img/Commercial-Results-First-Page-1.png" alt="Commercial Results are Displayed on Page One of the DigitalGov.gov Search Results Page" height="95%" width="95%" /></p>
 
 <h3 id="page-2">Page 2:</h3>
 
-<p><img src="https://search.gov/img/Commercial-Results-First-Page-2.png" alt="Supplemental Feed Results are Displayed on Page Two of the DigitalGov.gov Search Results Page" /></p>
+<p><img src="/img/Commercial-Results-First-Page-2.png" alt="Supplemental Feed Results are Displayed on Page Two of the DigitalGov.gov Search Results Page" height="95%" width="95%" /></p>
 
 <p>If there are no commercial results for a query but there are supplemental content results, we will display the supplemental content on page one.</p>
 
@@ -1154,17 +1140,17 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
 
 <p>If you would like your supplemental content to always appear first in search results, please <a href="mailto:search@suppot.digitalgov.gov">contact our team</a>. Searchers will first be served any supplemental content results, and are then offered the chance to “search again,” which will lead them to commercial index results.</p>
 
-<p>Please note: if you have any <a href="https://search.gov/manual/rss.html">regular RSS feeds</a> set up in your search site, this regular RSS content will also appear first with the supplemental content, prior to commercial results. If content is present in both types of feed, duplicates will appear in your results.</p>
+<p>Please note: if you have any <a href="/manual/rss.html">regular RSS feeds</a> set up in your search site, this regular RSS content will also appear first with the supplemental content, prior to commercial results. If content is present in both types of feed, duplicates will appear in your results.</p>
 
 <p>In the example below, a Supplemental URL appears first, and clicking “Try your search again” will lead to a page of Bing results.</p>
 
-<p><img src="https://search.gov/img/Supplemental-Content-First-Example.png" alt="A Supplemental URL is Displayed on Page One of the DigitalGo Search Search Results Page" /></p>
+<p><img src="/img/Supplemental-Content-First-Example.png" alt="A Supplemental URL is Displayed on Page One of the DigitalGo Search Search Results Page" height="95%" width="95%" /></p>
 
 <h2 id="getting-supplemental-content-to-be-your-only-search-results">Getting Supplemental Content To Be Your Only Search Results</h2>
 
 <p>If you would like your supplemental content to be the only results served from your site, please <a href="mailto:search@suppot.digitalgov.gov">contact our team</a>. Searchers will not be offered the chance to “search again” on a commercial index after they exhaust your supplemental content results (see above example).</p>
 
-<p>Please note: if you have any <a href="https://search.gov/manual/rss.html">regular RSS feeds</a> set up in your search site, this regular RSS content will also appear with the supplemental content. If content is present in both types of feed, duplicates will appear in your results.</p>
+<p>Please note: if you have any <a href="/manual/rss.html">regular RSS feeds</a> set up in your search site, this regular RSS content will also appear with the supplemental content. If content is present in both types of feed, duplicates will appear in your results.</p>
 
 <hr />
 
@@ -1214,7 +1200,7 @@ http://gallery.usgs.gov/photos/05_24_2013_gkb4Erq11X_05_24_2013_0
       
       
       
-      <a href="/manual/Advanced-Features.html">
+      <a href="/manual/domains-advanced.html">
         <time datetime="2017-05-02">May 2, 2017</time>
       </a>
     </div>

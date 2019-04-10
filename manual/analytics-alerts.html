@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  
+  <title>Setting Up Analytics Alerts</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/stylesheets/font-awesome-ie7.min.css">
+  <![endif]-->
+
+  <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+  <link href="/stylesheets/custom.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+  <link rel="shortcut icon" href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/favicon.ico">
+  <link rel='alternate' type='application/atom+xml' title='search.gov Atom feed' href='/all.atom' />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="/javascripts/bootstrap3-typeahead.js"></script>
+ </head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        <span class="search">Search.gov</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <form class="navbar-form navbar-left form-search" accept-charset="UTF-8" action="https://find.search.gov/search/" id="search-form" method="get">
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+        <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+        <div class="input-group input-append">
+          <label for="search-query" class="hide">Query</label>
+
+          <input name="query" autocomplete="off"  type="text" class="typeahead form-control search-query" id="search-query" data-provide="typeahead" >
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-nav" aria-label="Left Align" id="search-button">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+          </span>
+        </div>
+      </form>
+      <div class="nav navbar-right">
+          <a href="https://search.usa.gov/sites" class="navbar-brand"><i
+              class="icon-user icon-white"></i>&nbsp;Login</a>
+      </div>&nbsp;&nbsp;&nbsp;<div class="nav navbar-right">
+          <a href="http://search.usa.gov/signup" class="navbar-brand">Sign up</a>
+      </div>&nbsp;&nbsp;&nbsp;<div class="nav navbar-right">
+          <a href="https://search.gov/status.html" class="navbar-brand">System Status</a>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="col-md-offset-2 col-md-8  hidden-sm hidden-md hidden-lg">
+
+  <form class="form-search" accept-charset="UTF-8" action="https://find.search.gov/search/" id="search-form" method="get">
+    <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+    <div class="input-group input-append">
+      <label for="search-query" class="hide">Query</label>
+
+      <input name="query" autocomplete="off"  type="text" class=" form-control search-query" id="search-query"  >
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </span>
+    </div>
+  </form>
+</div>
+
+
+<div class="container-fluid">
+  <div class="col-md-8 col-md-offset-2">
+    <!-- do not remove as used to parse in usasearch -->
+    <main id="main-container">
+      <article class="article feature" style="padding:0 30px; margin-top: 10px;">
+  
+  <h1>
+    <a href="/manual/analytics-alerts.html">Setting Up Analytics Alerts</a>
+  </h1>
+  
+
+  <div class='post-content'>
+    <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Analytics &gt; Analytics Alerts</p>
+
+<p>Analytics Alerts let you receive email alerts when your site visitors are getting no results for a particular query or when a query is getting a <a href="#low-query-click-through-rate">low click-through rate</a>. <strong><em>Note:</em></strong> the Low Click-through Rate alert is not currently functional. We apologize for any inconvience this may cause.</p>
+
+<h2 id="no-results">No Results</h2>
+
+<p>Set up this alert to be notified if specific queries are frequently searched for but are returning no results. Help on specific fields follows, and there is an <a href="#no-results-example">example</a> below.</p>
+
+<p><strong>Name</strong></p>
+
+<p>Enter a name for your alert. It will be the subject line of your alert email. The name of your alert must be unique across our entire search alert system, so if you see an error message, please modify the name.</p>
+
+<p><strong>Check interval</strong></p>
+
+<p>Enter the frequency at which you’d like the system to check for queries with no results. Use <code>m</code>, <code>h</code>, <code>d</code>, or <code>w</code> to specify the minutes/hours/days/weeks you’d like between checks.</p>
+
+<p><strong>Minimum number of queries</strong></p>
+
+<p>Enter the minimum number of times, over the time window, that a given query must be entered to trigger the alert.</p>
+
+<p><strong>Time window for each check</strong></p>
+
+<p>Enter the amount of time the system should look back through for each check. Use <code>m</code>, <code>h</code>, <code>d</code>, or <code>w</code> to specify minutes/hours/days/weeks.</p>
+
+<p><strong>Time between alerts</strong></p>
+
+<p>Enter the minimum period of time between successive email messages.</p>
+
+<p><strong>Ignored query terms</strong></p>
+
+<p>Enter any query terms that you don’t want included in the alert, separated by commas.</p>
+
+<h3 id="no-results-example">No Results Example:</h3>
+
+<p>In this example, the alert system will check every 30 minutes to see if any query has been entered at least 50 times over the past 12 hours and yielded no results. The system will send an alert at most once per day if there are queries that fit this criteria, and it will not include the query ‘panda’ in the alert.</p>
+
+<p><img src="https://search.digitalgov.gov/img/No-Results-Screenshot.png" alt="No Results Analytics Alert Example" title="No Results Analytics Alert Example" height="95%" width="95%" /></p>
+
+<h2 id="low-query-click-through-rate">Low Query Click-through Rate</h2>
+
+<p><strong><em>Note:</em></strong> the Low Click-through Rate alert is not currently functional. We apologize for any inconvience this may cause.</p>
+
+<p>Set up this alert to be notified if the results page for a query with significant traffic is not getting many clicks. If the query resulted in a click less than 20% of the time, it is considered to have a low click-through rate (CTR); however, you are able to set any percentage threshold for your alert emails. Help on specific fields follows, and there is an <a href="#low-ctr-example">example</a> below.</p>
+
+<p><strong>Name</strong></p>
+
+<p>Enter a name for your alert. It will be the subject line of your email. The name of your alert must be unique across our entire search alert system, so if you see an error message, please modify the name.</p>
+
+<p><strong>Check interval</strong></p>
+
+<p>Enter the frequency at which you’d like the system to check for queries with a low CTR. Use <code>m</code>, <code>h</code>, <code>d</code>, or <code>w</code> to specify the minutes/hours/days/weeks you’d like between checks.</p>
+
+<p><strong>Minimum search activity level (queries + clicks)</strong></p>
+
+<p>Enter the minimum number of times, over the time window, that a given query must have search activity (queries plus clicks) to trigger the low query CTR alert. Because we’re not able to differentiate between query activity and click activity, you may want to pad this number a little. However, since these queries are not getting a lot of clicks, you don’t want to pad it too much.</p>
+
+<p><strong>Maximum CTR for alert</strong></p>
+
+<p>Enter the maximum click-through rate that will trigger an alert, expressed as a percentage. You will receive an alert for a query that has a CTR equal to or lower than that percentage during the given time window.</p>
+
+<p><strong>Time window for each check</strong></p>
+
+<p>Enter the amount of time the system should look back through for each check. Use <code>m</code>, <code>h</code>, <code>d</code>, or <code>w</code> to specify minutes/hours/days/weeks.</p>
+
+<p><strong>Time between alerts</strong></p>
+
+<p>Enter the minimum period of time between successive email messages.</p>
+
+<p><strong>Ignored query terms</strong></p>
+
+<p>Enter any query terms that you don’t want included in the alert, separated by commas.</p>
+
+<h3 id="low-ctr-example">Low CTR Example:</h3>
+
+<p>In this example, the alert system will check every 30 minutes for a query that has had search activity (queries plus clicks) at least 100 times over the past 12 hours and has a CTR 15% or lower. The system will send an alert at most once per day if there are queries that fit these criteria, and it will not include queries for ‘lion’ in the alert.</p>
+
+<p><img src="https://search.digitalgov.gov/img/Low-CTR-Screenshot.png" alt="Low CTR Analytics Alert Example" title="Low CTR Analytics Alert Example" height="95%" width="95%" /></p>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> Don’t forget to hit ‘add’ in the upper right corner!</p>
+
+<p><strong><em>Troubleshooting tip:</em></strong> Analytics alerts are only sent to the Search.gov user who set up the alert.</p>
+
+  </div>
+
+  <div class='tags'>
+    
+    <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+    
+    <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
+    
+  </div>
+
+  <div class='time'>
+    
+    
+    
+    
+    <a href="/manual/analytics-alerts.html">
+      <time>March 23, 2017</time>
+    </a>
+  </div>
+
+</article>
+
+    </main>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p><a href="mailto:search@support.digitalgov.gov">Email us</a> or call us at 202-969-7426</p>
+    <p> An Official Website of the U.S. Government <br />
+      <a href="https://www.gsa.gov/portal/category/25729">Technology Transformation Service</a>, <a href="https://www.gsa.gov/portal/category/100000">U.S. General Services Administration</a>
+    </p>
+    <ul class="footer-links list-unstyled list-inline">
+      <li><a href="https://www.usa.gov">USA.gov</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/tos.html">Terms of Service</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="https://www.digitalgov.gov/about/policies/">Site Policies</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/developer/">Developers</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  //<![CDATA[
+  var usasearch_config = { siteHandle:"usasearch" };
+
+jQuery(document).ready(function() {
+  $('.typeahead').typeahead({
+      source: function (query, process) {
+          return $.get('https://search.usa.gov/sayt?name=usasearch&q=' + query, function (data) {
+              return process(data);
+          });
+      }, minLength: 2
+  });
+})
+
+
+  // var script = document.createElement("script");
+  // script.type = "text/javascript";
+  // script.src = "https://search.usa.gov/javascripts/remote.loader.js";
+  // document.getElementsByTagName("head")[0].appendChild(script);
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31302465-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  //]]>
+</script>
+
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA" id="_fed_an_ua_tag"></script>
+
+
+</body>
+</html>

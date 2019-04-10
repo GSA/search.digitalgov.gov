@@ -96,9 +96,6 @@
 
 <div class="container-fluid">
   <div class="col-md-8 col-md-offset-2">
-
-
-
     <!-- do not remove as used to parse in usasearch -->
     <main id="main-container">
       <!-- begin tag layout -->
@@ -110,7 +107,7 @@
  
     
     <h1>
-      <a href="/manual/Domain-Masking.html">How to Mask Your Domain</a>
+      <a href="/manual/cname.html">How to Mask Your Domain</a>
     </h1>
     
 
@@ -122,7 +119,7 @@
     <p>Create a <code>search</code> subdomain for your domain. If <code>search</code> is already in use in your environment, you could use <code>find</code> or <code>findit</code> as your subdomain.</p>
   </li>
   <li>
-    <p>Create a CNAME in your external DNS records for <code>search.youragency.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>. Your site handle is listed on the <a href="https://search.gov/manual/settings.html">settings page</a> in the Search Admin Center.</p>
+    <p>Create a CNAME in your external DNS records for <code>search.youragency.gov</code>. Point it to <code>yoursitehandle.sites.infr.search.usa.gov</code>. Your site handle is listed on the <a href="/manual/settings.html">settings page</a> in the Search Admin Center.</p>
 
     <p>For example: if your site handle is <code>abc</code>, the DNS record would look like this:</p>
 
@@ -138,7 +135,7 @@
     <p>After your DNS record has been added, <a href="mailto:search@support.digitalgov.gov">email us</a> to request to be added to our SSL certificate. If your CNAME is not on our SSL certificate, browser security warnings will appear when your search results page attemps to load over <code>HTTPS</code>. It generally takes a few days for these requests to get through our queue.<br /><br />Your domain mask will work as soon as these two steps are complete.</p>
   </li>
   <li>
-    <p>When your DNS record is in place and you have received confirmation that your domain mask has been added to our SSL certificate, change your search box’s <a href="https://search.gov/manual/code.html">form code</a> action from <code>search.usa.gov/search</code> to <code>search.youragency.gov/search</code>.</p>
+    <p>When your DNS record is in place and you have received confirmation that your domain mask has been added to our SSL certificate, change your search box’s <a href="/manual/code.html">form code</a> action from <code>search.usa.gov/search</code> to <code>search.youragency.gov/search</code>.</p>
   </li>
 </ol>
 
@@ -169,7 +166,7 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
       
       
       
-      <a href="/manual/Domain-Masking.html">
+      <a href="/manual/cname.html">
         <time datetime="2018-09-21">September 21, 2018</time>
       </a>
     </div>
@@ -179,7 +176,7 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
  
     
     <h1>
-      <a href="/manual/Search-Results-API.html">Showing Results Within Your Agency's Website</a>
+      <a href="/manual/search-results-api.html">Showing Results Within Your Agency's Website</a>
     </h1>
     
 
@@ -190,17 +187,17 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
 
 <ul>
   <li>Web results</li>
-  <li><a href="https://search.gov/manual/best-bets.html">Best Bets</a></li>
-  <li><a href="https://search.gov/manual/govbox-health.html">Health topics</a></li>
-  <li><a href="https://search.gov/manual/govbox-jobs.html">Job openings</a></li>
-  <li><a href="https://search.gov/manual/twitter.html">Recent tweets</a></li>
-  <li><a href="https://search.gov/manual/rss.html">Recent news</a></li>
-  <li><a href="https://search.gov/manual/youtube.html">Recent videos</a></li>
-  <li><a href="https://search.gov/manual/govbox-federal-register.html">Federal Register documents</a></li>
-  <li><a href="https://search.gov/manual/display-overview.html#modules">Related searches</a></li>
+  <li><a href="/manual/best-bets.html">Best Bets</a></li>
+  <li><a href="/manual/govbox-health.html">Health topics</a></li>
+  <li><a href="/manual/govbox-jobs.html">Job openings</a></li>
+  <li><a href="/manual/twitter.html">Recent tweets</a></li>
+  <li><a href="/manual/rss.html">Recent news</a></li>
+  <li><a href="/manual/youtube.html">Recent videos</a></li>
+  <li><a href="/manual/govbox-federal-register.html">Federal Register documents</a></li>
+  <li><a href="/manual/display-overview.html#modules">Related searches</a></li>
 </ul>
 
-<p><strong><em>Note about Web Results:</em></strong> To retrieve web results through this API, you must either use our indexes populated by us from your <a href="https://search.gov/manual/indexing-with-searchgov.html">sitemaps</a>, by you via the <a href="https://search.gov/developer/i14y.html">i14y API</a> or by us from your <a href="https://search.gov/manual/rss.html">RSS</a>), or you must purchase an API key from Bing.</p>
+<p><strong><em>Note about Web Results:</em></strong> To retrieve web results through this API, you must either use our indexes (populated via the <a href="/developer/i14y.html">i14y API</a> or via <a href="/manual/rss.html">RSS</a>), or you must purchase an API key from Bing.</p>
 
 <p>This API is available for use on official government websites only. You must be a Search.gov customer to access the instructions. <a href="https://search.usa.gov/sites">Sign in</a> is required.</p>
 
@@ -220,7 +217,7 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
       
       
       
-      <a href="/manual/Search-Results-API.html">
+      <a href="/manual/search-results-api.html">
         <time datetime="2017-10-30">October 30, 2017</time>
       </a>
     </div>
@@ -230,12 +227,12 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
  
     
     <h1>
-      <a href="/manual/Type-ahead-Search.html">Displaying Type-ahead Suggestions on Your Agency's Website</a>
+      <a href="/manual/typeahead-api.html">Displaying Type-ahead Suggestions on Your Agency's Website</a>
     </h1>
     
 
     <div class='post-content'>
-      <p><strong><em>Note</em></strong>: this information is for customers who wish to display type-ahead (autocomplete) suggestions on their agency’s website. If you are only looking to turn on type-ahead suggestions on your search results page, please review the instructions on our <a href="https://search.gov/manual/display-overview.html#modules">Display Overview</a> page.</p>
+      <p><strong><em>Note</em></strong>: this information is for customers who wish to display type-ahead (autocomplete) suggestions on their agency’s website. If you are only looking to turn on type-ahead suggestions on your search results page, please review the instructions on our <a href="/manual/display-overview.html#modules">Display Overview</a> page.</p>
 
 <p>There are two ways to get type-ahead suggestions to appear on your agency’s website.</p>
 
@@ -287,7 +284,7 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
       
       
       
-      <a href="/manual/Type-ahead-Search.html">
+      <a href="/manual/typeahead-api.html">
         <time datetime="2017-10-26">October 26, 2017</time>
       </a>
     </div>
@@ -297,12 +294,12 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
  
     
     <h1>
-      <a href="/manual/Activate-Your-Search.html">How to Activate Your Search by Adding Our Code Snippets to Your Website</a>
+      <a href="/manual/code.html">How to Activate Your Search by Adding Our Code Snippets to Your Website</a>
     </h1>
     
 
     <div class='post-content'>
-      <p>Find it in the <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Activate Search &gt; Code Snippets</p>
+      <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Activate Search &gt; Code Snippets</p>
 
 <p>Visit our <a href="https://search.usa.gov/sites/">Admin Center</a>, select your site, and click on the Activate Search option in the left-hand menu.</p>
 
@@ -324,7 +321,7 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
 
 <h2 id="2-javascript-snippet">2. Javascript Snippet</h2>
 
-<p>Include this snippet of code before the closing <code>&lt;/body&gt;</code> tag. This tag enables type-ahead search in the search box on your web pages and powers the data on trending URLs on the <a href="https://search.gov/manual/site-overview.html">Site Overview</a> page in the Admin Center. It should look something like this:</p>
+<p>Include this snippet of code before the closing <code>&lt;/body&gt;</code> tag. This tag enables type-ahead search in the search box on your web pages and powers the data on trending URLs on the <a href="/manual/site-overview.html">Site Overview</a> page in the Admin Center. It should look something like this:</p>
 
 <pre><code>&lt;script type="text/javascript"&gt;
 //&lt;![CDATA[
@@ -345,7 +342,7 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
 
 <h3 id="option-1-limit-to-collections">Option 1. Limit to Collections</h3>
 
-<p>Create a <a href="https://search.gov/manual/collections.html">collection</a>. Then update your form code to (a) change the action to <code>action="https://search.usa.gov/search/docs/</code> and (b) add an input for this collection, <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>. It should look something like this:</p>
+<p>Create a <a href="/manual/collections.html">collection</a>. Then update your form code to (a) change the action to <code>action="https://search.usa.gov/search/docs/</code> and (b) add an input for this collection, <code>&lt;input type="hidden" name="dc" value="###"&gt;</code>. It should look something like this:</p>
 
 <pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search/docs/" id="search_form" method="get"&gt;
     &lt;div style="margin:0;padding:0;display:inline"&gt;
@@ -364,7 +361,7 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
 
 <h3 id="option-2-limit-to-rss-feeds">Option 2. Limit to RSS Feeds</h3>
 
-<p>Set up an <a href="https://search.gov/manual/rss.html">RSS feed</a>. Then update your form code to (a) change the action to <code>action="https://search.usa.gov/search/news/</code> and (b) add an input for this feed, <code>&lt;input type="hidden" name="channel" value="###"&gt;</code>.  It should look something like this:</p>
+<p>Set up an <a href="/manual/rss.html">RSS feed</a>. Then update your form code to (a) change the action to <code>action="https://search.usa.gov/search/news/</code> and (b) add an input for this feed, <code>&lt;input type="hidden" name="channel" value="###"&gt;</code>.  It should look something like this:</p>
 
 <pre><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search/news/" id="search_form" method="get"&gt;
     &lt;div style="margin:0;padding:0;display:inline"&gt;
@@ -392,7 +389,7 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
 
 <p><strong><em>Did you know?</em></strong> If you’re using Drupal, be sure to check out our <a href="https://www.drupal.org/project/usasearch">Drupal module</a>.</p>
 
-<p><strong><em>Did you know?</em></strong> We offer <a href="https://search.gov/manual/cname.html">DNS masking</a>, which allows you to show searchers your domain (instead of USA.gov).</p>
+<p><strong><em>Did you know?</em></strong> We offer <a href="/manual/cname.html">DNS masking</a>, which allows you to show searchers your domain (instead of USA.gov).</p>
 
     </div>
 
@@ -410,7 +407,7 @@ sure to update your <em>external</em> DNS records (step 1) before changing your 
       
       
       
-      <a href="/manual/Activate-Your-Search.html">
+      <a href="/manual/code.html">
         <time datetime="2017-02-27">February 27, 2017</time>
       </a>
     </div>

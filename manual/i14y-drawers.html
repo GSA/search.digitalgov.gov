@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  
+  <title>Working with i14y Drawers</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/stylesheets/font-awesome-ie7.min.css">
+  <![endif]-->
+
+  <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+  <link href="/stylesheets/custom.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+  <link rel="shortcut icon" href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/favicon.ico">
+  <link rel='alternate' type='application/atom+xml' title='search.gov Atom feed' href='/all.atom' />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="/javascripts/bootstrap3-typeahead.js"></script>
+ </head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        <span class="search">Search.gov</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <form class="navbar-form navbar-left form-search" accept-charset="UTF-8" action="https://find.search.gov/search/" id="search-form" method="get">
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+        <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+        <div class="input-group input-append">
+          <label for="search-query" class="hide">Query</label>
+
+          <input name="query" autocomplete="off"  type="text" class="typeahead form-control search-query" id="search-query" data-provide="typeahead" >
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-nav" aria-label="Left Align" id="search-button">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+          </span>
+        </div>
+      </form>
+      <div class="nav navbar-right">
+          <a href="https://search.usa.gov/sites" class="navbar-brand"><i
+              class="icon-user icon-white"></i>&nbsp;Login</a>
+      </div>&nbsp;&nbsp;&nbsp;<div class="nav navbar-right">
+          <a href="http://search.usa.gov/signup" class="navbar-brand">Sign up</a>
+      </div>&nbsp;&nbsp;&nbsp;<div class="nav navbar-right">
+          <a href="https://search.gov/status.html" class="navbar-brand">System Status</a>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="col-md-offset-2 col-md-8  hidden-sm hidden-md hidden-lg">
+
+  <form class="form-search" accept-charset="UTF-8" action="https://find.search.gov/search/" id="search-form" method="get">
+    <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+    <div class="input-group input-append">
+      <label for="search-query" class="hide">Query</label>
+
+      <input name="query" autocomplete="off"  type="text" class=" form-control search-query" id="search-query"  >
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </span>
+    </div>
+  </form>
+</div>
+
+
+<div class="container-fluid">
+  <div class="col-md-8 col-md-offset-2">
+    <!-- do not remove as used to parse in usasearch -->
+    <main id="main-container">
+      <article class="article feature" style="padding:0 30px; margin-top: 10px;">
+  
+  <h1>
+    <a href="/manual/i14y-drawers.html">Working with i14y Drawers</a>
+  </h1>
+  
+
+  <div class='post-content'>
+    <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers</p>
+
+<p>An <a href="/developer/i14y.html">i14y</a> Drawer is an index receiving content via the i14y API. We’ve called them <strong>Drawers</strong> because, like drawers in a filing cabinet, multiple indexes can be included in a single configuration to scope the entirety of a site’s search.</p>
+
+<p>Information on working with our Drupal module is <a href="/manual/drupal.html">here</a>.</p>
+
+<h2 id="step-1-make-sure-your-site-is-connected-to-i14y">Step 1. Make sure your site is connected to i14y</h2>
+
+<p>If your site Admin Center has the following page: <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers, your site is connected to i14y. If you don’t see this page in the Admin Center, <a href="mailto:search@support.digitalgov.gov">email us</a>. You can also read about <a href="/developer/i14y.html">Getting Started with i14y</a>.</p>
+
+<h2 id="step-2-add-one-or-more-drawers">Step 2. Add one or more Drawers</h2>
+<p>On <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; i14y Drawers, Click <code>Add i14y Drawer</code> in the upper right corner. If you have more than one website that will be sending content, add a separate Drawer for each of these sites.</p>
+
+<h3 id="handle">Handle</h3>
+
+<p>Let us know what the handle for your drawer should be - the handle must be all lowercase alphanumeric, all one word, and can include underscores but no other special characters (e.g., agency_drawer_handle2).</p>
+
+<p>The Drawer <em>Description</em> is optional</p>
+
+<h2 id="step-3-send-content-to-fill-your-drawer">Step 3. Send Content to Fill your Drawer</h2>
+
+<p>After you have created your Drawer(s), click <code>Show</code> from the i14y Drawers list to find that Drawer’s secret API key. Use this secret key with your drawer handle in your API call or your CMS module to <a href="/developer/indexing-api.html">send your content to the right place</a>.</p>
+
+<h2 id="step-4-review-your-index">Step 4. Review your Index</h2>
+
+<p>You can view the number of documents indexed for each drawer on the main i14y Drawers list, and when the most recent document was received. Click <code>Show</code> to view documents within a particular drawer. We display the most recent 1,000 items that were sent to the drawer. You can also search for keywords in the documents’ text, titles, and descriptions (Note: you cannot currently search for URLs).</p>
+
+<p><strong>Note:</strong> We use the <a href="/manual/domains.html">Domains</a> section to scope search results - if the domain(s) of your i14y content are not listed in the Domains section, that content will not appear on your search results page.</p>
+
+<p>We send success and / or failure codes in response to your API call, so if the number of documents in our index doesn’t match what you sent, check those response codes.</p>
+
+<p><strong><em>Note:</em></strong> If you experience difficulty sending documents to i14y, it is possible your firewall is not letting you communicate with the i14y server. Check out our <a href="/developer/i14y-testing.html">cURL test commands</a> or view the full <a href="/developer/indexing-api.html">i14y documentation</a>.</p>
+
+<hr />
+<p><strong><em>Caution:</em></strong> A pop-up message will appear when you hit <code>Remove</code> on a drawer: please review this pop-up message carefully. If you remove a drawer that is only associated with one search configuration, the drawer and its contents will be deleted from our system. If the drawer is attached to multiple search configurations, it will only be removed from the search configuration you are currently on. The pop-up message will indicate what type of drawer you have.</p>
+
+<p>If you accidentally delete a drawer, you will need to set-up a new drawer and resend the content - we are unable to retrieve deleted drawers. If you accidentally remove a shared drawer but it is still associated with other search configurations, we can re-attach it to your site. <a href="mailto:search@support.digitalgov.gov">Contact us</a> for assistance.</p>
+
+<hr />
+<p><strong><em>Did you know?</em></strong> We can attach each i14y drawer to multiple search configurations: if you have a drawer that you’d like to use for multiple search sites, <a href="mailto:search@support.digitalgov.gov">email us</a>.</p>
+
+  </div>
+
+  <div class='tags'>
+    
+    <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+    
+    <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+    
+    <a href="/tagged/i14y"><span class="label label-info">i14y</span></a>
+    
+  </div>
+
+  <div class='time'>
+    
+    
+    
+    
+    <a href="/manual/i14y-drawers.html">
+      <time>October 3, 2017</time>
+    </a>
+  </div>
+
+</article>
+
+    </main>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p><a href="mailto:search@support.digitalgov.gov">Email us</a> or call us at 202-969-7426</p>
+    <p> An Official Website of the U.S. Government <br />
+      <a href="https://www.gsa.gov/portal/category/25729">Technology Transformation Service</a>, <a href="https://www.gsa.gov/portal/category/100000">U.S. General Services Administration</a>
+    </p>
+    <ul class="footer-links list-unstyled list-inline">
+      <li><a href="https://www.usa.gov">USA.gov</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/tos.html">Terms of Service</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="https://www.digitalgov.gov/about/policies/">Site Policies</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/developer/">Developers</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  //<![CDATA[
+  var usasearch_config = { siteHandle:"usasearch" };
+
+jQuery(document).ready(function() {
+  $('.typeahead').typeahead({
+      source: function (query, process) {
+          return $.get('https://search.usa.gov/sayt?name=usasearch&q=' + query, function (data) {
+              return process(data);
+          });
+      }, minLength: 2
+  });
+})
+
+
+  // var script = document.createElement("script");
+  // script.type = "text/javascript";
+  // script.src = "https://search.usa.gov/javascripts/remote.loader.js";
+  // document.getElementsByTagName("head")[0].appendChild(script);
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31302465-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  //]]>
+</script>
+
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA" id="_fed_an_ua_tag"></script>
+
+
+</body>
+</html>

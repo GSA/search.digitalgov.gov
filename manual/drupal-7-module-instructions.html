@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  
+  <title>Step by Step Instructions for Setting Up the Drupal 7 usasearch module</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/stylesheets/font-awesome-ie7.min.css">
+  <![endif]-->
+
+  <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+  <link href="/stylesheets/custom.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+  <link rel="shortcut icon" href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/favicon.ico">
+  <link rel='alternate' type='application/atom+xml' title='search.gov Atom feed' href='/all.atom' />
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="/javascripts/bootstrap3-typeahead.js"></script>
+ </head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        <span class="search">Search.gov</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <form class="navbar-form navbar-left form-search" accept-charset="UTF-8" action="https://find.search.gov/search/" id="search-form" method="get">
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+        <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+        <div class="input-group input-append">
+          <label for="search-query" class="hide">Query</label>
+
+          <input name="query" autocomplete="off"  type="text" class="typeahead form-control search-query" id="search-query" data-provide="typeahead" >
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-nav" aria-label="Left Align" id="search-button">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+          </span>
+        </div>
+      </form>
+      <div class="nav navbar-right">
+          <a href="https://search.usa.gov/sites" class="navbar-brand"><i
+              class="icon-user icon-white"></i>&nbsp;Login</a>
+      </div>&nbsp;&nbsp;&nbsp;<div class="nav navbar-right">
+          <a href="http://search.usa.gov/signup" class="navbar-brand">Sign up</a>
+      </div>&nbsp;&nbsp;&nbsp;<div class="nav navbar-right">
+          <a href="https://search.gov/status.html" class="navbar-brand">System Status</a>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="col-md-offset-2 col-md-8  hidden-sm hidden-md hidden-lg">
+
+  <form class="form-search" accept-charset="UTF-8" action="https://find.search.gov/search/" id="search-form" method="get">
+    <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+    <div class="input-group input-append">
+      <label for="search-query" class="hide">Query</label>
+
+      <input name="query" autocomplete="off"  type="text" class=" form-control search-query" id="search-query"  >
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </span>
+    </div>
+  </form>
+</div>
+
+
+<div class="container-fluid">
+  <div class="col-md-8 col-md-offset-2">
+    <!-- do not remove as used to parse in usasearch -->
+    <main id="main-container">
+      <article class="article feature" style="padding:0 30px; margin-top: 10px;">
+  
+  <h1>
+    <a href="/manual/drupal-7-module-instructions.html">Step by Step Instructions for Setting Up the Drupal 7 usasearch module</a>
+  </h1>
+  
+
+  <div class='post-content'>
+    <blockquote>
+  <p><strong>Important Note:</strong> April, 2018. For new implementations, the Search.gov team recommends you index your content with us not using our Drupal module to send content to our i14y indexing API, but rather by publishing a comprehensive XML sitemap, which we can use to index your content. We recommend the <a href="https://www.drupal.org/project/xmlsitemap">XML Sitemap module</a> <i class="icon-external-link"><span>(External link)</span></i>. <a href="/blog/six-months-in.html">Read more.</a></p>
+</blockquote>
+
+<p>This documentation will walk you through setting up the <code>usasearch</code> <a href="https://drupal.org/project/usasearch">Drupal 7 module</a> <i class="icon-external-link"><span>(External link)</span></i> field by field, to integrate your Drupal CMS with the Search.gov service. If you have trouble, take a look at our <a href="/manual/drupal-module-troubleshooting.html">troubleshooting tips</a>.</p>
+
+<p>These instructions follow the order of settings listed in our Drupal module at <code>YOUR-DRUPAL-7-SITE.gov/admin/config/search/usasearch</code>.</p>
+
+<p>Instructions for setting up the <strong>Drupal 8</strong> module are <a href="/manual/drupal-8-module-instructions.html">here</a>.</p>
+
+<h2 id="affiliate-site-handle">Affiliate site handle</h2>
+
+<p>Required. Enter the site handle you gave your search site. This is found in our <a href="https://search.usa.gov/sites">Search Admin Center</a> &gt; Your site &gt; Dashboard &gt; Settings.</p>
+
+<h2 id="drawer-handle">Drawer Handle</h2>
+
+<p>Required. Enter your i14y  “drawer handle”. This is the name you gave your drawer and is found in: <a href="https://search.usa.gov/sites">Search Admin Center</a> &gt; Your site &gt; Manage Content &gt; i14y Drawers.</p>
+
+<h2 id="i14y-api-secret-token">i14y API Secret Token</h2>
+
+<p>Required. Enter your i14y drawer’s “secret token”. This can be found in our system in: <a href="https://search.usa.gov/sites">Search Admin Center</a> &gt; Your site &gt; Manage Content &gt; i14y Drawers, select the option, <code>Show</code>.</p>
+
+<h2 id="enable-autocomplete">Enable autocomplete</h2>
+
+<p>Recommended setting (default): Checked.</p>
+
+<p>Check this box if you want to enable the Javascript for our <a href="/developer/">Type-ahead API</a>. Suggestions for popular queries will appear below your search box as searchers begin typing. A query must have been run more than 10 times in a day for it to become a search suggestion.</p>
+
+<h2 id="search-domain">Search domain</h2>
+
+<p>We offer <a href="/manual/cname.html">domain masking</a>, which allows you to display <code>search.YOURAGENCY.gov</code> in the URL of your search results page, instead of the default <code>search.usa.gov</code>.</p>
+
+<p>NOTE: Only change this setting if you have domain masking configured for your search site! If you haven’t set it up, leave the default <code>https://search.usa.gov</code> until you’ve completed the masking steps.</p>
+
+<h2 id="alternate-indexing-domain">Alternate indexing domain</h2>
+
+<p>Do you edit your site on one domain or subdomain, but publish on another? If so, use this field to set the domain you want us to present for your content on the search results page. For instance, if you enter <code>www.YOURAGENCY.gov</code> here, nodes that are stored in Drupal under <code>edit.YOURAGENCY.gov</code> would be indexed with us as <code>www.YOURAGENCY.gov</code>.</p>
+
+<h2 id="use-rules-to-index-content">Use rules to index content</h2>
+
+<p>Check this box to index content manually with rules. IMPORTANT: If checked, the Search.gov index will not be updated unless specified in a rule action.</p>
+
+<p>Be sure to write rules for your content types in sets of three:</p>
+<ul>
+  <li>adding to the index</li>
+  <li>updating the index</li>
+  <li>deleting from the index</li>
+</ul>
+
+<h2 id="results-description-view-mode">Results Description View Mode</h2>
+
+<p>Recommended setting (default): Teaser.</p>
+
+<p>Select the search result description text that works best for your site. Choose among the text you’ve set as your teaser, RSS item content, Drupal search index snippet, or full text. The view mode will need to be enabled and configured for each content type. If the view mode is not available for a content type, “Teaser” will be used. We will still index and search the full text of your content if <code>Indexed content view mode</code> is <code>Full content</code>.</p>
+
+<p>Note: If you don’t like the content that’s being sent to us as the Teaser, you can make changes for that content type’s at <code>YOUR-DRUPAL-7-SITE.gov/admin/structure/types/manage/[CONTENT TYPE] &gt; Display settings</code> or at <code>YOUR-DRUPAL-7-SITE.gov/admin/structure/types/manage/[CONTENT TYPE]/display/teaser</code>.</p>
+
+<h2 id="indexed-content-view-mode">Indexed content view mode</h2>
+
+<p>Recommended setting (default): Full content.</p>
+
+<p>If you don’t want the full text of your nodes to be searchable, select a preferred view mode to define the content that gets indexed. If the view mode is not available for a content type <code>Full content</code> will be used.</p>
+
+<h2 id="include-by-content-type-unless-explicitly-excluded">Include by content type unless explicitly excluded</h2>
+
+<p>Recommended setting (default): Checked.</p>
+
+<p>Check this box to include entire content types in the search index. Include or exclude particular content types in their entirety in the Search.gov settings for the content type’s structure page, e.g. <code>YOUR-DRUPAL-7-SITE.gov/admin/structure/types/manage/article</code>. You can exclude individual nodes using the Search.gov Settings within the node edit view.</p>
+
+<p>If this box is unchecked, node indexing will need to be managed individually. We recommend you leave the box checked on the module settings.</p>
+
+<p>If you exclude a content type from indexing, and later decide to <em>include</em> it, nodes of this type will be indexed on the next cron run. You may also want to review any nodes that were created in the interim, to ensure in their individual Search.gov settings that they are enabled for indexing.</p>
+
+<h2 id="save-configuration">Save configuration</h2>
+
+<p>After you save these settings, the module will send a command to us when you hit <code>Save</code> on a node in Drupal, either to add a node to the index, update it, or delete from the index.</p>
+
+<p>If you select <code>re-index site</code> on the main Drupal search settings page (see below), we will begin a full-site reindexing on your next cron run.</p>
+
+<h2 id="optional-indexing-content-retroactively">Optional: Indexing content retroactively</h2>
+
+<p>Go to the main Drupal search settings page (<code>YOUR-DRUPAL-7-SITE.gov/admin/config/search/settings</code>) and click <code>Re-index site</code>. This will start sending us content for indexing on your next cron run. You can wait for cron to run, or you can run it manually. You can also adjust the number of documents sent to us in each cron run using the <code>throttle</code> setting on the Drupal search settings page.</p>
+
+<h2 id="having-trouble">Having trouble?</h2>
+
+<p>Take a look at our <a href="/manual/drupal-module-troubleshooting.html">troubleshooting tips</a>, and don’t hesitate to <a href="mailto:search@support.digitalgov.gov">reach out</a>. We’re not Drupal experts ourselves, but we’ll try to help.</p>
+
+
+  </div>
+
+  <div class='tags'>
+    
+    <a href="/tagged/drupal,"><span class="label label-info">drupal,</span></a>
+    
+    <a href="/tagged/i14y"><span class="label label-info">i14y</span></a>
+    
+  </div>
+
+  <div class='time'>
+    
+    
+    
+    
+    <a href="/manual/drupal-7-module-instructions.html">
+      <time>April 12, 2018</time>
+    </a>
+  </div>
+
+</article>
+
+    </main>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p><a href="mailto:search@support.digitalgov.gov">Email us</a> or call us at 202-969-7426</p>
+    <p> An Official Website of the U.S. Government <br />
+      <a href="https://www.gsa.gov/portal/category/25729">Technology Transformation Service</a>, <a href="https://www.gsa.gov/portal/category/100000">U.S. General Services Administration</a>
+    </p>
+    <ul class="footer-links list-unstyled list-inline">
+      <li><a href="https://www.usa.gov">USA.gov</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/tos.html">Terms of Service</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="https://www.digitalgov.gov/about/policies/">Site Policies</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/developer/">Developers</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  //<![CDATA[
+  var usasearch_config = { siteHandle:"usasearch" };
+
+jQuery(document).ready(function() {
+  $('.typeahead').typeahead({
+      source: function (query, process) {
+          return $.get('https://search.usa.gov/sayt?name=usasearch&q=' + query, function (data) {
+              return process(data);
+          });
+      }, minLength: 2
+  });
+})
+
+
+  // var script = document.createElement("script");
+  // script.type = "text/javascript";
+  // script.src = "https://search.usa.gov/javascripts/remote.loader.js";
+  // document.getElementsByTagName("head")[0].appendChild(script);
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31302465-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  //]]>
+</script>
+
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA" id="_fed_an_ua_tag"></script>
+
+
+</body>
+</html>
