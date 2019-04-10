@@ -21,7 +21,7 @@ breadcrumbs:
 
 * [How Search.gov ranks your search results](https://search.gov/manual/ranking-factors.html)
 
-* [How A Page on a Sitemap Becomes a Search Result](https://search.gov/manual/sitemaps-and-search)
+* [How A Page on a Sitemap Becomes a Search Result](https://search.gov/manual/sitemaps-to-search-sites.html)
 
 * [A step-by-step indexing workflow](https://search.gov/manual/site-launch-guide.html#indexing-workflow)
 
