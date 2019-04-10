@@ -17,7 +17,7 @@ breadcrumbs:
   * [Webinar](https://search.gov/manual/training.html#how-engines-index) (48 mins)
   * [Slides](https://search.gov/files/HowSearchEnginesIndexYourWebsite.pdf)
 
-* [What Search.gov indexes from your website](https://search.gov/manual/what-searchgov-indexes-website.html)
+* [What Search.gov indexes from your website](https://search.gov/manual/what-searchgov-indexes.html)
 
 * [How Search.gov ranks your search results](https://search.gov/manual/ranking-factors.html)
 
