@@ -69,10 +69,10 @@ Once you've created your site, note the actions available on the left-hand navig
 
 Regardless of the index used to support your search, we can only serve publicly accessible content. You will not be able to use our service for secure content, including intranets, and we can never index or serve personally identifiable information (PII) or other confidential data.
 
+(<a href="#add-features">Jump to Step 4. Add Features</a> if you don't need the details of the indexing process at this time.)
+
 If we will be indexing your content ourselves, we will follow these steps:
 <a name="indexing-workflow"></a>
-
-( Or <a href="#add-features">Skip to Step 4. Add Features</a>)
 
 <br />
 ### Indexing with Search.gov
