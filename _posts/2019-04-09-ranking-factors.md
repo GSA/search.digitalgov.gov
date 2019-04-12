@@ -25,6 +25,8 @@ For any pages you want always to appear in the top of search results, regardless
 
 ## Ranking Factors
 
+Each of the following ranking factors is calculated separately, and then multiplied together to create the final ranking score of a given item for a given search.
+
 ### File Type
 
 We prefer HTML documents over other file types. Non-HTML results are demoted significantly, to prevent, for instance, PDF files from crowding out their respective landing pages.
@@ -52,6 +54,7 @@ Our system is built on Elasticsearch, which itself is built on Apache Lucene. Fo
   * This AND (that OR foo) NOT bar
   * **Note** that while the relevance ranking takes these into account, we do not currently use these operators if entered by a searcher. Support for user-entered Boolean operators is coming in 2019.
 * **TF/IDF** means term frequency / inverse document frequency. It counts the number of times a term appears in a document, and compares it to how many documents have that word. It aims to identify documents where the query terms appear frequently, and documents with more rare terms across the whole set of documents will get a higher score. Documents with a lot of common terms appearing in many documents will get a lower score.
+  * They also have tempered the TF/IDF score with a method called **BM25**, which attempts to balance the TF/IDF scores of documents that are very different in length. If there are ten documents containing rare terms, the longest doc with the most instances of the terms would get a much higher score than a short doc with only a few instances of the terms. This makes intuitive sense, but when considered as a full pdf of a report vs the summary of the report, the full report isn't that much more relevant to the query than the summary is. BM25's length 'normalizatin' addresses that issue.
 * The **vector space model** allows the search engine to weight the individual terms in the query, so a common term in the query would receive a lower match score than a rare term in the query.
 * [Read detailed technical documentation here](https://www.elastic.co/guide/en/elasticsearch/guide/master/practical-scoring-function.html){% external_link %}
 
