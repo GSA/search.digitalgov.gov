@@ -3,10 +3,44 @@
   <title><![CDATA[Search.gov]]></title>
   <link href="https://search.gov/all.atom" rel="self"/>
   <link href="https://search.gov/"/>
-  <updated>2019-04-19T16:33:08+00:00</updated>
+  <updated>2019-04-22T13:51:07+00:00</updated>
   <id>https://search.gov/</id>
   <author><name><![CDATA[Search.gov]]></name></author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Setting up Search.gov for Federalist Sites]]></title>
+    <link href="https://search.gov/manual/searchgov-for-federalist.html"/>
+    <updated>2019-04-22T00:00:00+00:00</updated>
+    <id>https://search.gov/manual/searchgov-for-federalist.html</id>
+    <content type="html"><![CDATA[<p>For 18 years, GSA’s Search.gov has transformed the public’s search experience on federal government websites. Agencies use our free, shared service to power over 2,000 search boxes on over 30% of federal domains. This page will walk you through the steps required to integrate Search.gov with your Federalist website.</p>
+
+<h2 id="on-the-federalist-side-of-things-part-1">On the Federalist side of things, part 1</h2>
+
+<ol>
+  <li>Confirm you have the <code>jekyll-sitemap</code> gem installed in your repo. <a href="https://github.com/jekyll/jekyll-sitemap">Read the docs here</a> and <a href="https://help.github.com/en/articles/sitemaps-for-github-pages">instructions for GitHub Pages here</a>.</li>
+</ol>
+
+<h2 id="on-the-searchgov-side-of-things">On the Search.gov side of things:</h2>
+
+<ol>
+  <li>Sign up for a <a href="https://search.usa.gov/sign-up">user account</a>.</li>
+  <li>Read our <a href="https://search.gov/manual/getting-started.html">Search Site Launch Guide</a> if you’d like some direction.</li>
+  <li>Request that your domain be indexed by <a href="mailto:search@support.digitalgov.gov">emailing our team</a>. Note, the site must be publicly available for our indexer to be able to access your content.</li>
+  <li>Create and configure a search site in our <a href="https://search.usa.gov/sites">Admin Center</a>. Note: you’ll give your site a display name and a site handle, and you’ll need to enter the site handle in the search box form code on your website.</li>
+  <li><a href="https://search.gov/manual/preview.html">Preview your search results</a> once the indexing is complete.</li>
+  <li>Put finishing touches on your search site in the Admin Center - brand your results page, etc.</li>
+</ol>
+
+<h2 id="on-the-federalist-side-of-things-part-2">On the Federalist side of things, part 2</h2>
+
+<ol>
+  <li>Add your site handle from the Admin Center to the <code>_config.yml</code> file in your Federalist repo, on the <code>searchgov_affiliate</code> line.</li>
+  <li>Include the <code>_includes/searchgov/form.html</code> search box in your <code>&lt;header&gt;</code> include.</li>
+  <li>If you would like type-ahead search suggestions to appear in your website’s search box, add include the <code>_includes/searchgov/script.html</code> block in your <code>&lt;footer&gt;</code> include.</li>
+</ol>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Search.gov Training]]></title>
@@ -693,40 +727,6 @@ www.subagencydomainexample.gov
 <p><strong>What:</strong> Once you’re ready to go live with your search site, take a look at the <a href="https://search.gov/manual/go-live.html">Go-Live Checklist</a> to make sure you’ve covered all your bases. Then you will need to modify the form code for the search box on your website. We provide simple pre-formatted code in the Admin Center, or you can include these same parameters in another style of search box. <a href="https://search.gov/manual/code.html">Read more and see required parameters here</a>.</p>
 
 <p>You’re now live with Search.gov!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Setting up Search.gov for Federalist Sites]]></title>
-    <link href="https://search.gov/manual/searchgov-for-federalist.html"/>
-    <updated>2019-04-09T00:00:00+00:00</updated>
-    <id>https://search.gov/manual/searchgov-for-federalist.html</id>
-    <content type="html"><![CDATA[<p>For 18 years, GSA’s Search.gov has transformed the public’s search experience on federal government websites. Agencies use our free, shared service to power over 2,000 search boxes on over 30% of federal domains. This page will walk you through the steps required to integrate Search.gov with your Federalist website.</p>
-
-<h2 id="on-the-federalist-side-of-things-part-1">On the Federalist side of things, part 1</h2>
-
-<ol>
-  <li>Confirm you have the <code>jekyll-sitemap</code> gem installed in your repo. <a href="https://github.com/jekyll/jekyll-sitemap">Read the docs here</a>.</li>
-</ol>
-
-<h2 id="on-the-searchgov-side-of-things">On the Search.gov side of things:</h2>
-
-<ol>
-  <li>Sign up for a <a href="https://search.usa.gov/sign-up">user account</a>.</li>
-  <li>Read our <a href="https://search.gov/manual/getting-started.html">Search Site Launch Guide</a> if you’d like some direction.</li>
-  <li>Request that your domain be indexed by <a href="mailto:search@support.digitalgov.gov">emailing our team</a>. Note, the site must be publicly available for our indexer to be able to access your content.</li>
-  <li>Create and configure a search site in our <a href="https://search.usa.gov/sites">Admin Center</a>. Note: you’ll give your site a display name and a site handle, and you’ll need to enter the site handle in the search box form code on your website.</li>
-  <li><a href="https://search.gov/manual/preview.html">Preview your search results</a> once the indexing is complete.</li>
-  <li>Put finishing touches on your search site in the Admin Center - brand your results page, etc.</li>
-</ol>
-
-<h2 id="on-the-federalist-side-of-things-part-2">On the Federalist side of things, part 2</h2>
-
-<ol>
-  <li>Add your site handle from the Admin Center to the <code>_config.yml</code> file in your Federalist repo, on the <code>searchgov_affiliate</code> line.</li>
-  <li>Include the <code>_includes/searchgov/form.html</code> search box in your <code>&lt;header&gt;</code> include.</li>
-  <li>If you would like type-ahead search suggestions to appear in your website’s search box, add include the <code>_includes/searchgov/script.html</code> block in your <code>&lt;footer&gt;</code> include.</li>
-</ol>
 ]]></content>
   </entry>
   

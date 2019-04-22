@@ -108,6 +108,64 @@
  
     
     <h1>
+      <a href="/manual/searchgov-for-federalist.html">Setting up Search.gov for Federalist Sites</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <p>For 18 years, GSA’s Search.gov has transformed the public’s search experience on federal government websites. Agencies use our free, shared service to power over 2,000 search boxes on over 30% of federal domains. This page will walk you through the steps required to integrate Search.gov with your Federalist website.</p>
+
+<h2 id="on-the-federalist-side-of-things-part-1">On the Federalist side of things, part 1</h2>
+
+<ol>
+  <li>Confirm you have the <code>jekyll-sitemap</code> gem installed in your repo. <a href="https://github.com/jekyll/jekyll-sitemap">Read the docs here</a> and <a href="https://help.github.com/en/articles/sitemaps-for-github-pages">instructions for GitHub Pages here</a>.</li>
+</ol>
+
+<h2 id="on-the-searchgov-side-of-things">On the Search.gov side of things:</h2>
+
+<ol>
+  <li>Sign up for a <a href="https://search.usa.gov/sign-up">user account</a>.</li>
+  <li>Read our <a href="https://search.gov/manual/getting-started.html">Search Site Launch Guide</a> if you’d like some direction.</li>
+  <li>Request that your domain be indexed by <a href="mailto:search@support.digitalgov.gov">emailing our team</a>. Note, the site must be publicly available for our indexer to be able to access your content.</li>
+  <li>Create and configure a search site in our <a href="https://search.usa.gov/sites">Admin Center</a>. Note: you’ll give your site a display name and a site handle, and you’ll need to enter the site handle in the search box form code on your website.</li>
+  <li><a href="https://search.gov/manual/preview.html">Preview your search results</a> once the indexing is complete.</li>
+  <li>Put finishing touches on your search site in the Admin Center - brand your results page, etc.</li>
+</ol>
+
+<h2 id="on-the-federalist-side-of-things-part-2">On the Federalist side of things, part 2</h2>
+
+<ol>
+  <li>Add your site handle from the Admin Center to the <code>_config.yml</code> file in your Federalist repo, on the <code>searchgov_affiliate</code> line.</li>
+  <li>Include the <code>_includes/searchgov/form.html</code> search box in your <code>&lt;header&gt;</code> include.</li>
+  <li>If you would like type-ahead search suggestions to appear in your website’s search box, add include the <code>_includes/searchgov/script.html</code> block in your <code>&lt;footer&gt;</code> include.</li>
+</ol>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/getting-started"><span class="label label-info">getting-started</span></a>
+      
+      <a href="/tagged/go-live"><span class="label label-info">go-live</span></a>
+      
+      <a href="/tagged/site-launch"><span class="label label-info">site-launch</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      
+      
+      <a href="/manual/searchgov-for-federalist.html">
+        <time datetime="2019-04-22">April 22, 2019</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/manual/sitemaps-to-search-sites.html">How a Page on a Sitemap Becomes a Search Result</a>
     </h1>
     
@@ -375,64 +433,6 @@ www.subagencydomainexample.gov
       
       
       <a href="/manual/site-launch-guide.html">
-        <time datetime="2019-04-09">April 9, 2019</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/manual/searchgov-for-federalist.html">Setting up Search.gov for Federalist Sites</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>For 18 years, GSA’s Search.gov has transformed the public’s search experience on federal government websites. Agencies use our free, shared service to power over 2,000 search boxes on over 30% of federal domains. This page will walk you through the steps required to integrate Search.gov with your Federalist website.</p>
-
-<h2 id="on-the-federalist-side-of-things-part-1">On the Federalist side of things, part 1</h2>
-
-<ol>
-  <li>Confirm you have the <code>jekyll-sitemap</code> gem installed in your repo. <a href="https://github.com/jekyll/jekyll-sitemap">Read the docs here</a>.</li>
-</ol>
-
-<h2 id="on-the-searchgov-side-of-things">On the Search.gov side of things:</h2>
-
-<ol>
-  <li>Sign up for a <a href="https://search.usa.gov/sign-up">user account</a>.</li>
-  <li>Read our <a href="https://search.gov/manual/getting-started.html">Search Site Launch Guide</a> if you’d like some direction.</li>
-  <li>Request that your domain be indexed by <a href="mailto:search@support.digitalgov.gov">emailing our team</a>. Note, the site must be publicly available for our indexer to be able to access your content.</li>
-  <li>Create and configure a search site in our <a href="https://search.usa.gov/sites">Admin Center</a>. Note: you’ll give your site a display name and a site handle, and you’ll need to enter the site handle in the search box form code on your website.</li>
-  <li><a href="https://search.gov/manual/preview.html">Preview your search results</a> once the indexing is complete.</li>
-  <li>Put finishing touches on your search site in the Admin Center - brand your results page, etc.</li>
-</ol>
-
-<h2 id="on-the-federalist-side-of-things-part-2">On the Federalist side of things, part 2</h2>
-
-<ol>
-  <li>Add your site handle from the Admin Center to the <code>_config.yml</code> file in your Federalist repo, on the <code>searchgov_affiliate</code> line.</li>
-  <li>Include the <code>_includes/searchgov/form.html</code> search box in your <code>&lt;header&gt;</code> include.</li>
-  <li>If you would like type-ahead search suggestions to appear in your website’s search box, add include the <code>_includes/searchgov/script.html</code> block in your <code>&lt;footer&gt;</code> include.</li>
-</ol>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/getting-started"><span class="label label-info">getting-started</span></a>
-      
-      <a href="/tagged/go-live"><span class="label label-info">go-live</span></a>
-      
-      <a href="/tagged/site-launch"><span class="label label-info">site-launch</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      
-      
-      <a href="/manual/searchgov-for-federalist.html">
         <time datetime="2019-04-09">April 9, 2019</time>
       </a>
     </div>
