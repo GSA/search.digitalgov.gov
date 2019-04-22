@@ -74,10 +74,10 @@ Regardless of the index used to support your search, we can only serve publicly 
 If we will be indexing your content ourselves, we will follow these steps:
 <a name="indexing-workflow"></a>
 
-<br />
-### Indexing with Search.gov
-<br />
-#### A. Define Domains and Subdomains
+<br /><br />
+###  Indexing with Search.gov
+<br /><br />
+####  A. Define Domains and Subdomains
 
 **Who:** You, the agency web team, in consultation with the Search.gov team
 
@@ -89,14 +89,16 @@ data.example.gov
 archive.example.gov
 www.subagencydomainexample.gov 
 ```
-<br />
-#### B. Sitemap for Each Subdomain
+<br /><br />
+####  B. Sitemap for Each Subdomain
 
 **Who:** You, the agency web team, in consultation with the Search.gov team
 
 **What:** The easiest way for us to discover what URLs exist on your domain is via an XML sitemap. Each domain identified above will need a separate sitemap. Please read our [detailed discussion of XML sitemaps](https://search.gov/blog/sitemaps.html), and let us know if you have any questions. We understand it can be difficult for some legacy systems to generate a sitemaps, so if this is the case, [please reach out](mailto:search@support.digitalgov.gov).
 
 We do not crawl websites by default due to the high resource demand of crawling every page on every website all the time. One of the goals of our service is to contain the costs of search government-wide, and a crawling-first model would increase costs significantly.
+
+If you publish your site on Federalist, read these [additional instructions](https://search.gov/manual/searchgov-for-federalist.html).
 <br /><br />
 ####  C. Index Subdomains
 
@@ -110,13 +112,13 @@ If you use a firewall service, it’s possible our indexer will be blocked. We c
 
 Please note, we can only index domains that are publicly accessible. This means that if you have a password-protected staging environment, we will not be able to index it for you as part of your testing process. [Please reach out](mailto:search@support.digitalgov.gov) and we can discuss options if you need to test our service pre-production.
 <br /><br />
-#### D. Test Index
+####  D. Test Index
 
 **Who:** Search.gov Team
 
 **What:** For search sites switching from Bing: After your content is indexed, we’ll start up a parallel search site using your current site configuration and the new index, and run a number of test queries to ensure the index is performing satisfactorily. Our test will cover your live site’s most popular queries. 
 <br /><br />
-#### E. Review Index
+####  E. Review Index
 
 **Who:** You, the agency web team
 
@@ -124,7 +126,7 @@ Please note, we can only index domains that are publicly accessible. This means 
 
 For brand new sites: You will be able to test the index using your regular search site(s).
 <br /><br />
-#### F. Ready to Launch
+####  F. Ready to Launch
 
 **Who:** You, the agency web team, in collaboration with Search.gov
 
@@ -174,6 +176,8 @@ For sites switching from Bing: When you give us the green light to switch to the
 
 **Who:** You, the agency web team, in collaboration with your deploy team, if different
 
-**What:** Once you’re ready to go live with your search site, take a look at the [Go-Live Checklist](https://search.gov/manual/go-live.html) to make sure you've covered all your bases. Then you will need to modify the form code for the search box on your website. We provide simple pre-formatted code in the Admin Center, or you can include these same parameters in another style of search box. [Read more and see required parameters here](https://search.gov/manual/code.html).
+**What:** Once you’re ready to go live with your search site, take a look at the [Go-Live Checklist](https://search.gov/manual/go-live.html) to make sure you've covered all your bases. Then you will need to modify the form code for the search box on your website. We provide simple pre-formatted code in the Admin Center, or you can include these same parameters in another style of search box. [Read more and see required parameters here](https://search.gov/manual/code.html). 
+
+If you publish your site on Federalist, read these [alternative instructions](https://search.gov/manual/searchgov-for-federalist.html).
 
 You’re now live with Search.gov!
