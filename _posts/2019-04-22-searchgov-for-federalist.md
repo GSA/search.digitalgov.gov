@@ -17,7 +17,7 @@ For 18 years, GSA's Search.gov has transformed the public’s search experience 
 
 ## On the Federalist side of things, part 1
 
-1. Confirm you have the `jekyll-sitemap` gem installed in your repo. [Read the docs here](https://github.com/jekyll/jekyll-sitemap).
+1. Confirm you have the `jekyll-sitemap` gem installed in your repo. [Read the docs here](https://github.com/jekyll/jekyll-sitemap) and [instructions for GitHub Pages here](https://help.github.com/en/articles/sitemaps-for-github-pages).
 
 ## On the Search.gov side of things:
 
