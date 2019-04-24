@@ -3,7 +3,7 @@
   <title><![CDATA[Search.gov]]></title>
   <link href="https://search.gov/all.atom" rel="self"/>
   <link href="https://search.gov/"/>
-  <updated>2019-04-24T19:57:07+00:00</updated>
+  <updated>2019-04-24T20:12:06+00:00</updated>
   <id>https://search.gov/</id>
   <author><name><![CDATA[Search.gov]]></name></author>
 
@@ -15,7 +15,7 @@
     <id>https://search.gov/manual/what-searchgov-indexes.html</id>
     <content type="html"><![CDATA[<h2 id="content">Content</h2>
 
-<p>When we think about indexing pages for search, we usually think about indexing the primary content of the page. But if the page isn’t structured to tell the search engine where that content is to be found, it will collect the full <code>&lt;body&gt;</code> tag. Learn more on our post about aiming search engines at the content you really want to be searchable, using <a href="https://search.gov/manual/how-search-engines-index-content-better-discoverability.html#main-element">the &lt;/main&gt; element</a>.</p>
+<p>When we think about indexing pages for search, we usually think about indexing the primary content of the page. But if the page isn’t structured to tell the search engine where that content is to be found, it will collect the <code>&lt;body&gt;</code> tag, and then filter out the <code>&lt;nav&gt;</code> and <code>&lt;footer&gt;</code> elements, if present. If <code>&lt;main&gt;</code>, <code>&lt;nav&gt;</code>, or <code>&lt;footer&gt;</code> are not present, we collect the full contents of the <code>&lt;body&gt;</code> tag. Learn more on our post about aiming search engines at the content you really want to be searchable, using <a href="https://search.gov/manual/how-search-engines-index-content-better-discoverability.html#main-element">the &lt;/main&gt; element</a>.</p>
 
 <h2 id="metadata">Metadata</h2>
 
@@ -58,6 +58,7 @@
   <li>Powerpoint</li>
 </ul>
 
+<p>Please note that at this time we cannot index javascript content, <a href="https://moz.com/blog/search-engines-ready-for-javascript-crawling">similar to most search engines</a> <i class="icon-external-link"><span>(External link)</span></i>. At this time we recommend your team adds well crafted, unique description text for each of your pages, or perhaps auto-generate description tag text from the first few lines of the article text. However the text is added, it should include the keywords you want the page to respond to in search, framed in plain language. This will give us, and other search engines, something to work with when we’re matching and ranking results. See our discussion of description <a href="https://search.gov/manual/metadata.html">metadata</a> for more information.</p>
 ]]></content>
   </entry>
   
