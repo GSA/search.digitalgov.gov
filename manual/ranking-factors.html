@@ -143,9 +143,9 @@
 
 <h3 id="freshness">Freshness</h3>
 
-<p>We prefer documents that are fresh. Anything published or updated in the past 30 days is considered fresh. After that, we use a Gaussian decay function to demote documents, so that the older a document is, the more it is demoted. When a document is 5 years old or older, we consider them to be equally old and do not demote further.</p>
+<p>We prefer documents that are fresh. Anything published or updated in the past 30 days is considered fresh. After that, we use a Gaussian decay function to demote documents, so that the older a document is, the more it is demoted. When documents are 5 years old or older, we consider them to be equally old and do not demote further. We use either the <code>article:modified_time</code> on an individual page, or that page’s <code>&lt;lastmod&gt;</code> date from the sitemap, whichever is more recent. If there is only an <code>article:published_time</code> for a given page, we use that date.</p>
 
-<p>Documents with no date metadata at all are considered fresh and are not demoted. <a href="https://search.gov/blog/metadata.html">Read more about date metadata</a> we collect and why it’s important to add metadata to your files.</p>
+<p>Documents with no date metadata at all are considered fresh and are not demoted. <a href="https://search.gov/manual/metadata.html">Read more about date metadata</a> we collect and why it’s important to add metadata to your files.</p>
 
 <h3 id="page-popularity">Page Popularity</h3>
 
@@ -200,7 +200,7 @@
     
     
     <a href="/manual/ranking-factors.html">
-      <time>April 9, 2019</time>
+      <time>April 24, 2019</time>
     </a>
   </div>
 

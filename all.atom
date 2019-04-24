@@ -3,7 +3,7 @@
   <title><![CDATA[Search.gov]]></title>
   <link href="https://search.gov/all.atom" rel="self"/>
   <link href="https://search.gov/"/>
-  <updated>2019-04-24T19:42:08+00:00</updated>
+  <updated>2019-04-24T19:48:08+00:00</updated>
   <id>https://search.gov/</id>
   <author><name><![CDATA[Search.gov]]></name></author>
 
@@ -58,6 +58,74 @@
   <li>Powerpoint</li>
 </ul>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[How Search.gov Ranks Your Search Results]]></title>
+    <link href="https://search.gov/manual/ranking-factors.html"/>
+    <updated>2019-04-24T00:00:00+00:00</updated>
+    <id>https://search.gov/manual/ranking-factors.html</id>
+    <content type="html"><![CDATA[<p>Google and Bing hold their ranking algorithms closely as trade secrets, as a guard against people trying to game the system to ensure their own content comes out on top, regardless of whether that’s appropriate to the search. Search Engine Optimization (SEO) consulting has grown up as an industry to try to help websites get the best possible placement in search results.  You may be interested in our webinars on <a href="https://search.gov/manual/training.html#site-structure-better-seo">technical SEO</a> and <a href="https://search.gov/manual/training.html#search-doctor">best practices</a> that will help you get your website into better shape for search, and we’re also available to advise federal web teams on particular search issues. Generally speaking, though, SEO is a lot like reading tea leaves.</p>
+
+<p>We at Search.gov share our ranking factors because we want you to game our system. This helps ensure that the best, most appropriate content rises to the top of search results to help the American public find what they need.</p>
+
+<p>This page will be updated as new ranking factors are added.</p>
+
+<h2 id="guaranteed-1st-place-spot">Guaranteed 1st Place Spot</h2>
+
+<p>For any pages you want always to appear in the top of search results, regardless of what the ranking algorithm might decide, use a <a href="https://search.gov/manual/best-bets.html">Best Bet</a>. Like an ad in the commercial engines, Best Bets allow you to pin recommended pages to the top of results. Text Best Bets are for single pages, and Graphics Best Bets allow you to boost a set of related items. Our <code>Match Keywords Only</code> feature allows you to put a tight focus on the terms you want a Best Bet to respond to. <a href="https://search.gov/manual/best-bets.html">Read more here</a>.</p>
+
+<h2 id="ranking-factors">Ranking Factors</h2>
+
+<p>Each of the following ranking factors is calculated separately, and then multiplied together to create the final ranking score of a given item for a given search.</p>
+
+<h3 id="file-type">File Type</h3>
+
+<p>We prefer HTML documents over other file types. Non-HTML results are demoted significantly, to prevent, for instance, PDF files from crowding out their respective landing pages.</p>
+
+<h3 id="freshness">Freshness</h3>
+
+<p>We prefer documents that are fresh. Anything published or updated in the past 30 days is considered fresh. After that, we use a Gaussian decay function to demote documents, so that the older a document is, the more it is demoted. When documents are 5 years old or older, we consider them to be equally old and do not demote further. We use either the <code>article:modified_time</code> on an individual page, or that page’s <code>&lt;lastmod&gt;</code> date from the sitemap, whichever is more recent. If there is only an <code>article:published_time</code> for a given page, we use that date.</p>
+
+<p>Documents with no date metadata at all are considered fresh and are not demoted. <a href="https://search.gov/manual/metadata.html">Read more about date metadata</a> we collect and why it’s important to add metadata to your files.</p>
+
+<h3 id="page-popularity">Page Popularity</h3>
+
+<p>We prefer documents that users interact with more. Currently we leverage our own search analytics to track the number of times a URL is clicked on from the results page. The more clicks, the more that URL is promoted, or boosted. We use a logarithmic function to determine how much to boost the relevance score for each URL.</p>
+
+<p>Note: Sites using the search results API to present our results on their own websites will not be able to take advantage of our click data ranking.</p>
+
+<h3 id="core-ranking-algorithm">Core Ranking Algorithm</h3>
+
+<p>Our system is built on Elasticsearch, which itself is built on Apache Lucene. For the first several generations, Elasticsearch used Lucene’s default ranking, the Practical Scoring Function. This Function starts with a basic Boolean match for single terms and adds in TF/IDF and a vector space model. Here are some high level definitions for these technical terms:</p>
+
+<ul>
+  <li><strong>Boolean matches</strong> are the AND / OR / NOT matches you’ve probably heard about.
+    <ul>
+      <li>This AND that</li>
+      <li>This OR that</li>
+      <li>This NOT that</li>
+      <li>This AND (that OR foo) NOT bar</li>
+      <li><strong>Note</strong> that while the relevance ranking takes these into account, we do not currently use these operators if entered by a searcher. Support for user-entered Boolean operators is coming in 2019.</li>
+    </ul>
+  </li>
+  <li><strong>TF/IDF</strong> means term frequency / inverse document frequency. It counts the number of times a term appears in a document, and compares it to how many documents have that word. It aims to identify documents where the query terms appear frequently, and documents with more rare terms across the whole set of documents will get a higher score. Documents with a lot of common terms appearing in many documents will get a lower score.
+    <ul>
+      <li>They also have tempered the TF/IDF score with a method called <strong>BM25</strong>, which attempts to balance the TF/IDF scores of documents that are very different in length. If there are ten documents containing rare terms, the longest doc with the most instances of the terms would get a much higher score than a short doc with only a few instances of the terms. This makes intuitive sense, but when considered as a full pdf of a report vs the summary of the report, the full report isn’t that much more relevant to the query than the summary is. BM25’s length ‘normalizatin’ addresses that issue.</li>
+    </ul>
+  </li>
+  <li>The <strong>vector space model</strong> allows the search engine to weight the individual terms in the query, so a common term in the query would receive a lower match score than a rare term in the query.</li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/guide/master/practical-scoring-function.html">Read detailed technical documentation here</a> <i class="icon-external-link"><span>(External link)</span></i></li>
+</ul>
+
+<p>The latest versions of Elasticsearch takes into account the context of terms within the document, whether they are in structured data fields or in unstructured fields, like body text.</p>
+
+<ul>
+  <li>Structured data fields, like dates, are treated with a Boolean match method - does the field value match, or not?</li>
+  <li>Unstructured data fields, like webpage body content, are considered for how well a document matches a query.</li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html">Read highly technical documentation here</a> <i class="icon-external-link"><span>(External link)</span></i></li>
+</ul>
 ]]></content>
   </entry>
   
@@ -875,74 +943,6 @@ Disallow: /archive/
 
 <p><a href="https://support.google.com/webmasters/answer/6062608?hl=en&amp;ref_topic=6061961">Google’s “Learn about robots.txt files”</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[How Search.gov Ranks Your Search Results]]></title>
-    <link href="https://search.gov/manual/ranking-factors.html"/>
-    <updated>2019-04-09T00:00:00+00:00</updated>
-    <id>https://search.gov/manual/ranking-factors.html</id>
-    <content type="html"><![CDATA[<p>Google and Bing hold their ranking algorithms closely as trade secrets, as a guard against people trying to game the system to ensure their own content comes out on top, regardless of whether that’s appropriate to the search. Search Engine Optimization (SEO) consulting has grown up as an industry to try to help websites get the best possible placement in search results.  You may be interested in our webinars on <a href="https://search.gov/manual/training.html#site-structure-better-seo">technical SEO</a> and <a href="https://search.gov/manual/training.html#search-doctor">best practices</a> that will help you get your website into better shape for search, and we’re also available to advise federal web teams on particular search issues. Generally speaking, though, SEO is a lot like reading tea leaves.</p>
-
-<p>We at Search.gov share our ranking factors because we want you to game our system. This helps ensure that the best, most appropriate content rises to the top of search results to help the American public find what they need.</p>
-
-<p>This page will be updated as new ranking factors are added.</p>
-
-<h2 id="guaranteed-1st-place-spot">Guaranteed 1st Place Spot</h2>
-
-<p>For any pages you want always to appear in the top of search results, regardless of what the ranking algorithm might decide, use a <a href="https://search.gov/manual/best-bets.html">Best Bet</a>. Like an ad in the commercial engines, Best Bets allow you to pin recommended pages to the top of results. Text Best Bets are for single pages, and Graphics Best Bets allow you to boost a set of related items. Our <code>Match Keywords Only</code> feature allows you to put a tight focus on the terms you want a Best Bet to respond to. <a href="https://search.gov/manual/best-bets.html">Read more here</a>.</p>
-
-<h2 id="ranking-factors">Ranking Factors</h2>
-
-<p>Each of the following ranking factors is calculated separately, and then multiplied together to create the final ranking score of a given item for a given search.</p>
-
-<h3 id="file-type">File Type</h3>
-
-<p>We prefer HTML documents over other file types. Non-HTML results are demoted significantly, to prevent, for instance, PDF files from crowding out their respective landing pages.</p>
-
-<h3 id="freshness">Freshness</h3>
-
-<p>We prefer documents that are fresh. Anything published or updated in the past 30 days is considered fresh. After that, we use a Gaussian decay function to demote documents, so that the older a document is, the more it is demoted. When a document is 5 years old or older, we consider them to be equally old and do not demote further.</p>
-
-<p>Documents with no date metadata at all are considered fresh and are not demoted. <a href="https://search.gov/blog/metadata.html">Read more about date metadata</a> we collect and why it’s important to add metadata to your files.</p>
-
-<h3 id="page-popularity">Page Popularity</h3>
-
-<p>We prefer documents that users interact with more. Currently we leverage our own search analytics to track the number of times a URL is clicked on from the results page. The more clicks, the more that URL is promoted, or boosted. We use a logarithmic function to determine how much to boost the relevance score for each URL.</p>
-
-<p>Note: Sites using the search results API to present our results on their own websites will not be able to take advantage of our click data ranking.</p>
-
-<h3 id="core-ranking-algorithm">Core Ranking Algorithm</h3>
-
-<p>Our system is built on Elasticsearch, which itself is built on Apache Lucene. For the first several generations, Elasticsearch used Lucene’s default ranking, the Practical Scoring Function. This Function starts with a basic Boolean match for single terms and adds in TF/IDF and a vector space model. Here are some high level definitions for these technical terms:</p>
-
-<ul>
-  <li><strong>Boolean matches</strong> are the AND / OR / NOT matches you’ve probably heard about.
-    <ul>
-      <li>This AND that</li>
-      <li>This OR that</li>
-      <li>This NOT that</li>
-      <li>This AND (that OR foo) NOT bar</li>
-      <li><strong>Note</strong> that while the relevance ranking takes these into account, we do not currently use these operators if entered by a searcher. Support for user-entered Boolean operators is coming in 2019.</li>
-    </ul>
-  </li>
-  <li><strong>TF/IDF</strong> means term frequency / inverse document frequency. It counts the number of times a term appears in a document, and compares it to how many documents have that word. It aims to identify documents where the query terms appear frequently, and documents with more rare terms across the whole set of documents will get a higher score. Documents with a lot of common terms appearing in many documents will get a lower score.
-    <ul>
-      <li>They also have tempered the TF/IDF score with a method called <strong>BM25</strong>, which attempts to balance the TF/IDF scores of documents that are very different in length. If there are ten documents containing rare terms, the longest doc with the most instances of the terms would get a much higher score than a short doc with only a few instances of the terms. This makes intuitive sense, but when considered as a full pdf of a report vs the summary of the report, the full report isn’t that much more relevant to the query than the summary is. BM25’s length ‘normalizatin’ addresses that issue.</li>
-    </ul>
-  </li>
-  <li>The <strong>vector space model</strong> allows the search engine to weight the individual terms in the query, so a common term in the query would receive a lower match score than a rare term in the query.</li>
-  <li><a href="https://www.elastic.co/guide/en/elasticsearch/guide/master/practical-scoring-function.html">Read detailed technical documentation here</a> <i class="icon-external-link"><span>(External link)</span></i></li>
-</ul>
-
-<p>The latest versions of Elasticsearch takes into account the context of terms within the document, whether they are in structured data fields or in unstructured fields, like body text.</p>
-
-<ul>
-  <li>Structured data fields, like dates, are treated with a Boolean match method - does the field value match, or not?</li>
-  <li>Unstructured data fields, like webpage body content, are considered for how well a document matches a query.</li>
-  <li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html">Read highly technical documentation here</a> <i class="icon-external-link"><span>(External link)</span></i></li>
-</ul>
 ]]></content>
   </entry>
   
