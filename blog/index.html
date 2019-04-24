@@ -105,6 +105,163 @@
   <article class="article">
 
     <pre><code>&lt;h1&gt;
+  &lt;a href="/manual/what-searchgov-indexes.html"&gt;What Search.gov Indexes From Your Website&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;h2 id="content"&gt;Content&lt;/h2&gt;
+</code></pre>
+
+    <p>When we think about indexing pages for search, we usually think about indexing the primary content of the page. But if the page isn’t structured to tell the search engine where that content is to be found, it will collect the full <code>&lt;body&gt;</code> tag. Learn more on our post about aiming search engines at the content you really want to be searchable, using <a href="https://search.gov/manual/how-search-engines-index-content-better-discoverability.html#main-element">the &lt;/main&gt; element</a>.</p>
+
+    <h2 id="metadata">Metadata</h2>
+
+    <p>You can <a href="https://search.gov/manual/metadata.html">read more detail on each of the following elements here</a>.</p>
+
+    <h3 id="standard-metadata-elements">Standard metadata elements</h3>
+
+    <ul>
+  <li>title</li>
+  <li>meta description</li>
+  <li>meta keywords</li>
+  <li>locale or language (from the opening <code>&lt;html&gt;</code> tag)</li>
+  <li>url</li>
+  <li>lastmod (collected from XML sitemaps)</li>
+</ul>
+
+    <h3 id="open-graph-protocol-external-link-elements"><a href="http://ogp.me/">Open Graph protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> elements</h3>
+
+    <ul>
+  <li>og:description</li>
+  <li>og:title</li>
+  <li>article:published_time</li>
+  <li>article:modified_time</li>
+</ul>
+
+    <h2 id="file-formats">File formats</h2>
+
+    <p>In addition to HTML pages with their various file extensions, Search.gov indexes the following file types:</p>
+
+    <ul>
+  <li>PDFs</li>
+  <li>Word docs</li>
+  <li>Excel docs</li>
+  <li>TXT</li>
+  <li>Images can be indexed either using our <a href="https://search.gov/manual/flickr.html">Flickr integration</a>, or by sending us an <a href="https://search.gov/manual/rss.html">MRSS feed</a>. Note that images are not indexed during web page indexing, so you’ll need to use one of these two methods.</li>
+</ul>
+
+    <p>Coming soon:</p>
+    <ul>
+  <li>Powerpoint</li>
+</ul>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/indexing"&gt;&lt;span class="label label-info"&gt;indexing&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/seo"&gt;&lt;span class="label label-info"&gt;seo&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/manual/what-searchgov-indexes.html"&gt;
+    &lt;time datetime="2019-04-24"&gt;April 24, 2019&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
+  &lt;a href="/manual/metadata.html"&gt;Metadata and tags you should include in your website&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;p&gt;Search.gov, like other search engines, relies on structured data to help inform how we index your content and how it is presented in search results. You should also read up on the metadata used by &lt;a href="https://support.google.com/webmasters/answer/79812?hl=en"&gt;Google&lt;/a&gt; &lt;i class="icon-external-link"&gt;&lt;span&gt;(External link)&lt;/span&gt;&lt;/i&gt; and &lt;a href=""&gt;Bing&lt;/a&gt; &lt;i class="icon-external-link"&gt;&lt;span&gt;(External link)&lt;/span&gt;&lt;/i&gt;.&lt;/p&gt;
+</code></pre>
+
+    <p>Including the following tags and metadata in each of your pages will improve the quality of your content’s indexing, as well as results ranking.</p>
+
+    <p>This page will be updated over time as we add more tag-based indexing functions and ranking factors to our service.</p>
+
+    <p><code>&lt;title&gt;</code>
+<br /><strong>Detail:</strong> Unique title of the page. If you want to include the agency or section name, place that after the actual page title.
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;meta name=”description” content=”foo” /&gt;</code> 
+<br /><strong>Used in:</strong> Your well crafted summary of the page content. This will often be used by search engines in place of a page snippet. Best to limit to 160 characters, so it will not be truncated. <a href="https://moz.com/learn/seo/meta-description">Read more here</a> <i class="icon-external-link"><span>(External link)</span></i>.
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;meta name=”keywords” content=”foo bar baz ” /&gt;</code>
+<br /><strong>Detail:</strong> While not often used by commercial search engines due to <a href="https://support.google.com/webmasters/answer/66358?hl=en">keyword stuffing</a> <i class="icon-external-link"><span>(External link)</span></i>, Search.gov indexes your keywords, if you have added them.
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;meta property="og:title” content=”Title goes here” /&gt;</code>
+<br /><strong>Detail:</strong> Usually duplicative of <code>&lt;title&gt;</code>, we use the <code>og:title</code> property as the result title if it appears to be more substantive than the <code>&lt;title&gt;</code> tag.
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;meta property="og:description” content=”Description goes here” /&gt;</code>
+<br /><strong>Detail:</strong> Often duplicative of the meta description, we will index this as well, in case it has different content.
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;meta property="article:published_time" content="YYYY-MM-DD" /&gt;</code>
+<br /><strong>Detail:</strong> Exact time is optional; <a href="https://en.wikipedia.org/wiki/ISO_8601">read more here</a> <i class="icon-external-link"><span>(External link)</span></i>.
+<br /><strong>Used in:</strong> Page freshness scoring.<br />
+<br />
+<code>&lt;meta property="article:modified_time" content="YYYY-MM-DD" /&gt;</code>
+<br /><strong>Detail:</strong> Exact time is optional; <a href="https://en.wikipedia.org/wiki/ISO_8601">read more here</a> <i class="icon-external-link"><span>(External link)</span></i>.
+<br /><strong>Used in:</strong> Page freshness scoring.<br />
+<br />
+<code>&lt;meta name="robots" content="..., ..." /&gt;</code>
+<br /><strong>Detail:</strong> Use the <a href="https://search.gov/blog/how-search-engines-index-content-better-discoverability.html#robots">meta robots tag</a> to block the search engine from indexing a particular page.
+<br /><strong>Used in:</strong> Used during indexing, does not affect relevance ranking.<br />
+<br />
+<code>&lt;main&gt;</code>
+<br /><strong>Detail:</strong> Allows the search engine to target the actual content of the page and avoid headers, sidebars and other page content not useful to search. <a href="https://search.gov/blog/how-search-engines-index-content-better-discoverability.html#main-element">Read more about the &lt;main&gt; element here</a>
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;lastmod&gt;</code>
+<br /><strong>Detail:</strong> This field is included in XML sitemaps to signal to search engines when a page was last modified. Search.gov collects this metadata in case there is no <code>article:modified_time</code> data included in the page itself.
+<br /><strong>Used in:</strong> Indexing processing, page freshness scoring.<br />
+<br />
+<br /></p>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/indexing"&gt;&lt;span class="label label-info"&gt;indexing&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/seo"&gt;&lt;span class="label label-info"&gt;seo&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/manual/metadata.html"&gt;
+    &lt;time datetime="2019-04-24"&gt;April 24, 2019&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
   &lt;a href="/manual/site-launch-guide.html"&gt;Search Site Launch Guide&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -680,83 +837,6 @@ Custom <a href="https://search.gov/manual/system-alert.html">Search Page Alert</
   <article class="article">
 
     <pre><code>&lt;h1&gt;
-  &lt;a href="/manual/what-searchgov-indexes.html"&gt;What Search.gov Indexes From Your Website&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;h2 id="content"&gt;Content&lt;/h2&gt;
-</code></pre>
-
-    <p>When we think about indexing pages for search, we usually think about indexing the primary content of the page. But if the page isn’t structured to tell the search engine where that content is to be found, it will collect the full <code>&lt;body&gt;</code> tag. Learn more on our post about aiming search engines at the content you really want to be searchable, using <a href="https://search.gov/manual/how-search-engines-index-content-better-discoverability.html#main-element">the &lt;/main&gt; element</a>.</p>
-
-    <h2 id="metadata">Metadata</h2>
-
-    <p>You can <a href="https://search.gov/manual/metadata.html">read more detail on each of the following elements here</a>.</p>
-
-    <h3 id="standard-metadata-elements">Standard metadata elements</h3>
-
-    <ul>
-  <li>title</li>
-  <li>meta description</li>
-  <li>meta keywords</li>
-  <li>locale or language (from the opening <code>&lt;html&gt;</code> tag)</li>
-  <li>url</li>
-  <li>lastmod (collected from XML sitemaps)</li>
-</ul>
-
-    <h3 id="open-graph-protocol-external-link-elements"><a href="http://ogp.me/">Open Graph protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> elements</h3>
-
-    <ul>
-  <li>og:description</li>
-  <li>og:title</li>
-  <li>article:published_time</li>
-  <li>article:modified_time</li>
-</ul>
-
-    <h2 id="file-formats">File formats</h2>
-
-    <p>In addition to HTML pages with their various file extensions, Search.gov indexes the following file types:</p>
-
-    <ul>
-  <li>PDFs</li>
-  <li>Word docs</li>
-  <li>Excel docs</li>
-  <li>TXT</li>
-  <li>Images can be indexed either using our <a href="https://search.gov/manual/flickr.html">Flickr integration</a>, or by sending us an <a href="https://search.gov/manual/rss.html">MRSS feed</a>. Note that images are not indexed during web page indexing, so you’ll need to use one of these two methods.</li>
-</ul>
-
-    <p>Coming soon:</p>
-    <ul>
-  <li>Powerpoint</li>
-</ul>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/indexing"&gt;&lt;span class="label label-info"&gt;indexing&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/seo"&gt;&lt;span class="label label-info"&gt;seo&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/manual/what-searchgov-indexes.html"&gt;
-    &lt;time datetime="2019-04-09"&gt;April 9, 2019&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
   &lt;a href="/status.html"&gt;Search.gov System Status&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -1047,122 +1127,6 @@ Tributaries feed into a lake, and fishers can go out to any part of the lake to 
   
   
   &lt;a href="/manual/sitemaps-to-search-sites.html"&gt;
-    &lt;time datetime="2019-04-09"&gt;April 9, 2019&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/manual/robotstxt.html"&gt;Robots.txt Files&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;A &lt;code&gt;/robots.txt&lt;/code&gt; file is a text file that instructs automated web bots on how to crawl and/or index a website. Web teams use them to provide information about what site directories should or should not be crawled, how quickly content should be accessed, and which bots are welcome on the site.&lt;/p&gt;
-</code></pre>
-
-    <h2 id="what-should-my-robotstxt-file-look-like">What should my robots.txt file look like?</h2>
-    <p>Please refer to the <a href="http://www.robotstxt.org/robotstxt.html">robots.txt protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> for detailed information on how and where to create your robots.txt. Key points to keep in mind:</p>
-
-    <ul>
-  <li>The file must be located at the root of the domain, and each subdomain needs its own file.</li>
-  <li>The robots.txt protocol is case sensitive.</li>
-  <li>It’s easy to accidentally block crawling of everything
-    <ul>
-      <li><code>Disallow: /</code> means disallow everything</li>
-      <li><code>Disallow:  </code> means disallow nothing, thus allowing everything</li>
-      <li><code>Allow: /</code> means allow everything</li>
-      <li><code>Allow:  </code> means allow nothing, thus disallowing everything</li>
-    </ul>
-  </li>
-  <li>The instructions in robots.txt are guidance for bots, not binding requirements.</li>
-</ul>
-
-    <h2 id="how-can-i-optimize-my-robotstxt-for-searchgov">How can I optimize my robots.txt for Search.gov?</h2>
-
-    <h3 id="crawl-delay">Crawl delay</h3>
-    <p>A robots.txt file may specify a “crawl delay” directive for one or more user agents, which tells a bot how quickly it can request pages from a website. For example, a crawl delay of 10 specifies that a crawler should not request a new page more than every 10 seconds.  We recommend a crawl-delay of 2 seconds for our <code>usasearch</code> user agent, and setting a higher crawl delay for all other bots. The lower the crawl delay, the faster Search.gov will be able to index your site. In the robots.txt file, it would look like this:</p>
-
-    <pre><code>User-agent: usasearch  
-Crawl-delay: 2
-
-User-agent: *
-Crawl-delay: 10
-</code></pre>
-
-    <h3 id="xml-sitemaps">XML Sitemaps</h3>
-    <p>Your robots.txt file should also list one or more of your <a href="https://search.gov/blog/sitemaps.html">XML sitemaps</a>. For example:</p>
-
-    <pre><code>Sitemap: https://www.exampleagency.gov/sitemap.xml
-Sitemap: https://www.exampleagency.gov/independent-subsection-sitemap.xml
-</code></pre>
-    <ul>
-  <li>Only list sitemaps for the domain matching where the robots.txt file is. A different subdomain’s sitemap should be listed on that subdomain’s robots.txt.</li>
-</ul>
-
-    <h3 id="allow-only-the-content-that-you-want-searchable">Allow only the content that you want searchable</h3>
-    <p>We recommend disallowing any directories or files that should not be searchable. For example:</p>
-
-    <pre><code>Disallow: /archive/
-Disallow: /news-1997/
-Disallow: /reports/duplicative-page.html
-</code></pre>
-
-    <ul>
-  <li>Note that if you disallow a directory after it’s been indexed by a search engine, this may not trigger a removal of that content from the index. You’ll need to go into the search engine’s webmaster tools to request removal.</li>
-  <li>Also note that search engines may index individual pages within a disallowed folder if the search engine learns about the URL from a non-crawl method, like a link from another site or your sitemap. To ensure a given page is not searchable, set a <a href="/blog/how-search-engines-index-content-better-discoverability.html#robots">robots meta tag</a> on that page.</li>
-</ul>
-
-    <h3 id="customize-settings-for-different-bots">Customize settings for different bots</h3>
-    <p>You can set different permissions for different bots. For example, if you want us to index your archived content but don’t want Google or Bing to index it, you can specify that:</p>
-
-    <pre><code>User-agent: usasearch  
-Crawl-delay: 2
-Allow: /archive/
-
-User-agent: *
-Crawl-delay: 10
-Disallow: /archive/
-</code></pre>
-
-    <h2 id="robotstxt-checklist">Robots.txt checklist</h2>
-    <p><i class="icon-check"></i> 1. A robots.txt file has been created in the site’s root directory (<code>https://exampleagency.gov/robots.txt</code>)</p>
-
-    <p><i class="icon-check"></i> 2. The robots.txt file disallows any directories and files that automated bots should not crawl</p>
-
-    <p><i class="icon-check"></i> 3. The robots.txt file lists one or more <a href="https://search.gov/blog/sitemaps.html">XML sitemaps</a></p>
-
-    <p><i class="icon-check"></i> 4. The robots.txt file format has been <a href="http://tools.seochat.com/tools/robots-txt-validator/">validated</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <h2 id="additional-resources">Additional Resources</h2>
-    <p><a href="https://yoast.com/ultimate-guide-robots-txt/">Yoast SEO’s Ultimate Guide to Robots.txt</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <p><a href="https://support.google.com/webmasters/answer/6062608?hl=en&amp;ref_topic=6061961">Google’s “Learn about robots.txt files”</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/how-to"&gt;&lt;span class="label label-info"&gt;how-to&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/manage-content"&gt;&lt;span class="label label-info"&gt;manage-content&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/indexing"&gt;&lt;span class="label label-info"&gt;indexing&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
-  
-  
-  
-  
-  &lt;a href="/manual/robotstxt.html"&gt;
     &lt;time datetime="2019-04-09"&gt;April 9, 2019&lt;/time&gt;
   &lt;/a&gt;
 &lt;/div&gt;

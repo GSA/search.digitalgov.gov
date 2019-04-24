@@ -3,10 +3,118 @@
   <title><![CDATA[Search.gov]]></title>
   <link href="https://search.gov/all.atom" rel="self"/>
   <link href="https://search.gov/"/>
-  <updated>2019-04-24T19:36:09+00:00</updated>
+  <updated>2019-04-24T19:42:08+00:00</updated>
   <id>https://search.gov/</id>
   <author><name><![CDATA[Search.gov]]></name></author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[What Search.gov Indexes From Your Website]]></title>
+    <link href="https://search.gov/manual/what-searchgov-indexes.html"/>
+    <updated>2019-04-24T00:00:00+00:00</updated>
+    <id>https://search.gov/manual/what-searchgov-indexes.html</id>
+    <content type="html"><![CDATA[<h2 id="content">Content</h2>
+
+<p>When we think about indexing pages for search, we usually think about indexing the primary content of the page. But if the page isn’t structured to tell the search engine where that content is to be found, it will collect the full <code>&lt;body&gt;</code> tag. Learn more on our post about aiming search engines at the content you really want to be searchable, using <a href="https://search.gov/manual/how-search-engines-index-content-better-discoverability.html#main-element">the &lt;/main&gt; element</a>.</p>
+
+<h2 id="metadata">Metadata</h2>
+
+<p>You can <a href="https://search.gov/manual/metadata.html">read more detail on each of the following elements here</a>.</p>
+
+<h3 id="standard-metadata-elements">Standard metadata elements</h3>
+
+<ul>
+  <li>title</li>
+  <li>meta description</li>
+  <li>meta keywords</li>
+  <li>locale or language (from the opening <code>&lt;html&gt;</code> tag)</li>
+  <li>url</li>
+  <li>lastmod (collected from XML sitemaps)</li>
+</ul>
+
+<h3 id="open-graph-protocol-external-link-elements"><a href="http://ogp.me/">Open Graph protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> elements</h3>
+
+<ul>
+  <li>og:description</li>
+  <li>og:title</li>
+  <li>article:published_time</li>
+  <li>article:modified_time</li>
+</ul>
+
+<h2 id="file-formats">File formats</h2>
+
+<p>In addition to HTML pages with their various file extensions, Search.gov indexes the following file types:</p>
+
+<ul>
+  <li>PDFs</li>
+  <li>Word docs</li>
+  <li>Excel docs</li>
+  <li>TXT</li>
+  <li>Images can be indexed either using our <a href="https://search.gov/manual/flickr.html">Flickr integration</a>, or by sending us an <a href="https://search.gov/manual/rss.html">MRSS feed</a>. Note that images are not indexed during web page indexing, so you’ll need to use one of these two methods.</li>
+</ul>
+
+<p>Coming soon:</p>
+<ul>
+  <li>Powerpoint</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Metadata and tags you should include in your website]]></title>
+    <link href="https://search.gov/manual/metadata.html"/>
+    <updated>2019-04-24T00:00:00+00:00</updated>
+    <id>https://search.gov/manual/metadata.html</id>
+    <content type="html"><![CDATA[<p>Search.gov, like other search engines, relies on structured data to help inform how we index your content and how it is presented in search results. You should also read up on the metadata used by <a href="https://support.google.com/webmasters/answer/79812?hl=en">Google</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="">Bing</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
+
+<p>Including the following tags and metadata in each of your pages will improve the quality of your content’s indexing, as well as results ranking.</p>
+
+<p>This page will be updated over time as we add more tag-based indexing functions and ranking factors to our service.</p>
+
+<p><code>&lt;title&gt;</code>
+<br /><strong>Detail:</strong> Unique title of the page. If you want to include the agency or section name, place that after the actual page title.
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;meta name=”description” content=”foo” /&gt;</code> 
+<br /><strong>Used in:</strong> Your well crafted summary of the page content. This will often be used by search engines in place of a page snippet. Best to limit to 160 characters, so it will not be truncated. <a href="https://moz.com/learn/seo/meta-description">Read more here</a> <i class="icon-external-link"><span>(External link)</span></i>.
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;meta name=”keywords” content=”foo bar baz ” /&gt;</code>
+<br /><strong>Detail:</strong> While not often used by commercial search engines due to <a href="https://support.google.com/webmasters/answer/66358?hl=en">keyword stuffing</a> <i class="icon-external-link"><span>(External link)</span></i>, Search.gov indexes your keywords, if you have added them.
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;meta property="og:title” content=”Title goes here” /&gt;</code>
+<br /><strong>Detail:</strong> Usually duplicative of <code>&lt;title&gt;</code>, we use the <code>og:title</code> property as the result title if it appears to be more substantive than the <code>&lt;title&gt;</code> tag.
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;meta property="og:description” content=”Description goes here” /&gt;</code>
+<br /><strong>Detail:</strong> Often duplicative of the meta description, we will index this as well, in case it has different content.
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;meta property="article:published_time" content="YYYY-MM-DD" /&gt;</code>
+<br /><strong>Detail:</strong> Exact time is optional; <a href="https://en.wikipedia.org/wiki/ISO_8601">read more here</a> <i class="icon-external-link"><span>(External link)</span></i>.
+<br /><strong>Used in:</strong> Page freshness scoring.<br />
+<br />
+<code>&lt;meta property="article:modified_time" content="YYYY-MM-DD" /&gt;</code>
+<br /><strong>Detail:</strong> Exact time is optional; <a href="https://en.wikipedia.org/wiki/ISO_8601">read more here</a> <i class="icon-external-link"><span>(External link)</span></i>.
+<br /><strong>Used in:</strong> Page freshness scoring.<br />
+<br />
+<code>&lt;meta name="robots" content="..., ..." /&gt;</code>
+<br /><strong>Detail:</strong> Use the <a href="https://search.gov/blog/how-search-engines-index-content-better-discoverability.html#robots">meta robots tag</a> to block the search engine from indexing a particular page.
+<br /><strong>Used in:</strong> Used during indexing, does not affect relevance ranking.<br />
+<br />
+<code>&lt;main&gt;</code>
+<br /><strong>Detail:</strong> Allows the search engine to target the actual content of the page and avoid headers, sidebars and other page content not useful to search. <a href="https://search.gov/blog/how-search-engines-index-content-better-discoverability.html#main-element">Read more about the &lt;main&gt; element here</a>
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;lastmod&gt;</code>
+<br /><strong>Detail:</strong> This field is included in XML sitemaps to signal to search engines when a page was last modified. Search.gov collects this metadata in case there is no <code>article:modified_time</code> data included in the page itself.
+<br /><strong>Used in:</strong> Indexing processing, page freshness scoring.<br />
+<br />
+<br /></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Search Site Launch Guide]]></title>
@@ -455,59 +563,6 @@ Custom <a href="https://search.gov/manual/system-alert.html">Search Page Alert</
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[What Search.gov Indexes From Your Website]]></title>
-    <link href="https://search.gov/manual/what-searchgov-indexes.html"/>
-    <updated>2019-04-09T00:00:00+00:00</updated>
-    <id>https://search.gov/manual/what-searchgov-indexes.html</id>
-    <content type="html"><![CDATA[<h2 id="content">Content</h2>
-
-<p>When we think about indexing pages for search, we usually think about indexing the primary content of the page. But if the page isn’t structured to tell the search engine where that content is to be found, it will collect the full <code>&lt;body&gt;</code> tag. Learn more on our post about aiming search engines at the content you really want to be searchable, using <a href="https://search.gov/manual/how-search-engines-index-content-better-discoverability.html#main-element">the &lt;/main&gt; element</a>.</p>
-
-<h2 id="metadata">Metadata</h2>
-
-<p>You can <a href="https://search.gov/manual/metadata.html">read more detail on each of the following elements here</a>.</p>
-
-<h3 id="standard-metadata-elements">Standard metadata elements</h3>
-
-<ul>
-  <li>title</li>
-  <li>meta description</li>
-  <li>meta keywords</li>
-  <li>locale or language (from the opening <code>&lt;html&gt;</code> tag)</li>
-  <li>url</li>
-  <li>lastmod (collected from XML sitemaps)</li>
-</ul>
-
-<h3 id="open-graph-protocol-external-link-elements"><a href="http://ogp.me/">Open Graph protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> elements</h3>
-
-<ul>
-  <li>og:description</li>
-  <li>og:title</li>
-  <li>article:published_time</li>
-  <li>article:modified_time</li>
-</ul>
-
-<h2 id="file-formats">File formats</h2>
-
-<p>In addition to HTML pages with their various file extensions, Search.gov indexes the following file types:</p>
-
-<ul>
-  <li>PDFs</li>
-  <li>Word docs</li>
-  <li>Excel docs</li>
-  <li>TXT</li>
-  <li>Images can be indexed either using our <a href="https://search.gov/manual/flickr.html">Flickr integration</a>, or by sending us an <a href="https://search.gov/manual/rss.html">MRSS feed</a>. Note that images are not indexed during web page indexing, so you’ll need to use one of these two methods.</li>
-</ul>
-
-<p>Coming soon:</p>
-<ul>
-  <li>Powerpoint</li>
-</ul>
-
-]]></content>
-  </entry>
-  
-  <entry>
     <title type="html"><![CDATA[Search.gov System Status]]></title>
     <link href="https://search.gov/status.html"/>
     <updated>2019-04-09T00:00:00+00:00</updated>
@@ -888,57 +943,6 @@ Disallow: /archive/
   <li>Unstructured data fields, like webpage body content, are considered for how well a document matches a query.</li>
   <li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html">Read highly technical documentation here</a> <i class="icon-external-link"><span>(External link)</span></i></li>
 </ul>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Metadata and tags you should include in your website]]></title>
-    <link href="https://search.gov/manual/metadata.html"/>
-    <updated>2019-04-09T00:00:00+00:00</updated>
-    <id>https://search.gov/manual/metadata.html</id>
-    <content type="html"><![CDATA[<p>Search.gov, like other search engines, relies on structured data to help inform how we index your content and how it is presented in search results. You should also read up on the metadata used by <a href="https://support.google.com/webmasters/answer/79812?hl=en">Google</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="">Bing</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
-
-<p>Including the following tags and metadata in each of your pages will improve the quality of your content’s indexing, as well as results ranking.</p>
-
-<p>This page will be updated over time as we add more tag-based indexing functions and ranking factors to our service.</p>
-
-<p><code>&lt;title&gt;</code>
-<br /><strong>Detail:</strong> Unique title of the page. If you want to include the agency or section name, place that after the actual page title.
-<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
-<br />
-<code>&lt;meta name=”description” content=”foo” /&gt;</code> 
-<br /><strong>Used in:</strong> Your well crafted summary of the page content. This will often be used by search engines in place of a page snippet. Best to limit to 160 characters, so it will not be truncated. <a href="https://moz.com/learn/seo/meta-description">Read more here</a> <i class="icon-external-link"><span>(External link)</span></i>.
-<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
-<br />
-<code>&lt;meta name=”keywords” content=”foo bar baz ” /&gt;</code>
-<br /><strong>Detail:</strong> While not often used by commercial search engines due to <a href="https://support.google.com/webmasters/answer/66358?hl=en">keyword stuffing</a> <i class="icon-external-link"><span>(External link)</span></i>, Search.gov indexes your keywords, if you have added them.
-<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
-<br />
-<code>&lt;meta property="og:title” content=”Title goes here” /&gt;</code>
-<br /><strong>Detail:</strong> Usually duplicative of <code>&lt;title&gt;</code>, we use the <code>og:title</code> property as the result title if it appears to be more substantive than the <code>&lt;title&gt;</code> tag.
-<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
-<br />
-<code>&lt;meta property="og:description” content=”Description goes here” /&gt;</code>
-<br /><strong>Detail:</strong> Often duplicative of the meta description, we will index this as well, in case it has different content.
-<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
-<br />
-<code>&lt;meta property="article:published_time" content="YYYY-MM-DD" /&gt;</code>
-<br /><strong>Detail:</strong> Exact time is optional; <a href="https://en.wikipedia.org/wiki/ISO_8601">read more here</a> <i class="icon-external-link"><span>(External link)</span></i>.
-<br /><strong>Used in:</strong> Page freshness scoring.<br />
-<br />
-<code>&lt;meta property="article:modified_time" content="YYYY-MM-DD" /&gt;</code>
-<br /><strong>Detail:</strong> Exact time is optional; <a href="https://en.wikipedia.org/wiki/ISO_8601">read more here</a> <i class="icon-external-link"><span>(External link)</span></i>.
-<br /><strong>Used in:</strong> Page freshness scoring.<br />
-<br />
-<code>&lt;meta name="robots" content="..., ..." /&gt;</code>
-<br /><strong>Detail:</strong> Use the <a href="https://search.gov/blog/how-search-engines-index-content-better-discoverability.html#robots">meta robots tag</a> to block the search engine from indexing a particular page.
-<br /><strong>Used in:</strong> Used during indexing, does not affect relevance ranking.<br />
-<br />
-<code>&lt;main&gt;</code>
-<br /><strong>Detail:</strong> Allows the search engine to target the actual content of the page and avoid headers, sidebars and other page content not useful to search. <a href="https://search.gov/blog/how-search-engines-index-content-better-discoverability.html#main-element">Read more about the &lt;main&gt; element here</a>
-<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
-<br />
-<br /></p>
 ]]></content>
   </entry>
   
