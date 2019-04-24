@@ -19,15 +19,16 @@ When we think about indexing pages for search, we usually think about indexing t
 
 ## Metadata
 
-You can [read more detail on each of the following elements here](https://search.gov/blog/metadata.html).
+You can [read more detail on each of the following elements here](https://search.gov/manual/metadata.html).
 
 ### Standard metadata elements
 
 * title
 * meta description
 * meta keywords
-* locale or language (from the opening `<html>` tag
+* locale or language (from the opening `<html>` tag)
 * url
+* lastmod (collected from XML sitemaps)
 
 ### [Open Graph protocol](http://ogp.me/) {% external_link %} elements
 
