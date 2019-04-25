@@ -33,7 +33,7 @@ At Search.gov we aim to provide a self-service, plug and play search solution. T
 
 ## 1. Add Site
 
-***Who:**  You, the agency web team
+**Who:**  You, the agency web team
 
 **What:** After you’ve successfully opened an account with Search.gov, you'll need to create a search site. A search site is where you configure the search experience for your website. Find the `Add Site` link at the top of the Admin Center, and enter some basic details about your site. Please note that our service is for publicly accessible, federal government content. More detailed information can be found on our [Add Site help page](https://search.gov/manual/add-site.html). 
 
