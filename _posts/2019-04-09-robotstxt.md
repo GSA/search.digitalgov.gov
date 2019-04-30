@@ -3,8 +3,7 @@ layout: post
 title: Robots.txt Files
 crumbname: Robots.txt
 category: manual
-redirect-from:
-  - /blog/robotstxt.html
+redirect_from: "/blog/robotstxt.html"
 tags: how-to manage-content indexing
 breadcrumbs:
   - label: Home
