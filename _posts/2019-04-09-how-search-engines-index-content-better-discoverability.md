@@ -3,8 +3,7 @@ layout: post
 title: How to get search engines to index the right content for better discoverability
 crumbname: Better Discoverability
 category: manual
-redirect-from:
-  - /blog/how-search-engines-index-content-better-discoverability.html
+redirect-from: "/blog/how-search-engines-index-content-better-discoverability.html"
 tags: indexing seo
 breadcrumbs:
   - label: Home
