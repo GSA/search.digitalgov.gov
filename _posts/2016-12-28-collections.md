@@ -53,4 +53,4 @@ Note that the searcher sees that results are filtered to nih.gov/news in a messa
 
 Simply add the following line to your form code on your search box to use the `sitelimit` parameter.
 
-`<input type="hidden" name="sitelimit" id="sitelimit" value="https://www.agency.gov/limittothisfolder">` 
+`<input type="hidden" name="sitelimit" id="sitelimit" value="www.agency.gov/limittothisfolder">` 
