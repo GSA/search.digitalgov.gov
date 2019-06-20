@@ -105,107 +105,6 @@
   <article class="article">
 
     <pre><code>&lt;h1&gt;
-  &lt;a href="/releases/may-2019.html"&gt;May 2019 Release Notes&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;h2 id="improvements"&gt;Improvements&lt;/h2&gt;
-</code></pre>
-    <ul>
-  <li><strong>Sitelimit parameter support</strong>
-    <ul>
-      <li>Now our customers can specify that a search box only returns results from a particular part of their site. For example, for site www.example.gov,  you want a search box on your site to only return results from <code>www.example.gov/history</code>. By adding the appropriate URL parameter and value, you can limit results: <code>&amp;sitelimit=www.example.gov/history</code>.</li>
-      <li>You can also specify multiple values for the sitelimit. See this <a href="https://www.nps.gov/search/?affiliate=nps&amp;query=seneca&amp;sitelimit=www.nps.gov/subjects/oceans+www.nps.gov/subjects/womenshistory">example from the National Park Service</a>.</li>
-      <li>Keep in mind that the sitelimit must be for a domain within your site’s index. That is, if the Domains list includes <code>www.example.gov</code>, the sitelimit parameter cannot be <code>www.agency.gov/history</code>.</li>
-      <li>This feature is an alternative to our Collections feature.</li>
-    </ul>
-  </li>
-  <li><strong>Service upgrades</strong>
-    <ul>
-      <li>We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
-    </ul>
-  </li>
-</ul>
-
-    <h2 id="fixes">Fixes</h2>
-    <ul>
-  <li><strong>Highlighting bug</strong>
-    <ul>
-      <li>We fixed a bug that prevented highlighting for exact, phrased queries on sites indexed by Search.gov. <a href="https://search.usa.gov/search?utf8=%E2%9C%93&amp;affiliate=usasearch&amp;sort_by=&amp;query=%22search+features%22">Here’s an example of it working correctly now</a>.</li>
-    </ul>
-  </li>
-</ul>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
-  
-  
-  
-  &lt;a href="/releases/may-2019.html"&gt;
-    &lt;time datetime="2019-06-20"&gt;June 20, 2019&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/releases/april-2019.html"&gt;April 2019 Release Notes&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;h2 id="improvements"&gt;Improvements&lt;/h2&gt;
-</code></pre>
-    <ul>
-  <li>We launched updated Freshness ranking for customers indexed by Search.gov. The fresher a page the more likely it is to be promoted. Previously, we only factored the date a page is created into its freshness. Now, we first factor the date a page was last modified and then, the date a page is created. This new feature highlights the importance of ensuring that metadata on your site’s pages and sitemap is accurate. Here is more information about how we rank your search results: https://search.gov/manual/ranking-factors.html</li>
-  <li>We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
-</ul>
-
-    <h2 id="fixes-and-chores">Fixes and Chores</h2>
-    <ul>
-  <li>Fixed a bug that made it difficult to view sidebar items on the search results page when hovering over individual links. Now, the experience when hovering over these links is fully accessible.</li>
-</ul>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
-  
-  
-  
-  &lt;a href="/releases/april-2019.html"&gt;
-    &lt;time datetime="2019-05-10"&gt;May 10, 2019&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
   &lt;a href="/manual/training.html"&gt;Search.gov Training&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -217,7 +116,6 @@
     <h2 id="upcoming-sessions">Upcoming Sessions</h2>
 
     <ul>
-  <li>Intro to Search.gov - June 12, 2019 - Registration open soon</li>
   <li>We hold our Search.gov Intro session a couple times a year.</li>
 </ul>
 
@@ -226,6 +124,18 @@
     <h2 id="previous-sessions">Previous Sessions</h2>
 
     <p>Can’t view our YouTube vidoes? When available, a downloadable .mp4 file can be found below each embedded video on this page.</p>
+
+    <p><a name="intro-to-search-gov"></a>
+<br /></p>
+    <h3 id="intro-to-searchgov">Intro to Search.gov</h3>
+    <p>June 2019 | 69 mins</p>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/niT9kU6AfP8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+    <p><em>Resources:</em>
+<br /><a href="https://d3qcdigd1fhos0.cloudfront.net/media/2019_06_12-intro-to-search.mp4">Download the mp4</a>
+<br /><a href="https://search.gov/files/2019_06_12-intro-to-search-event-transcript.txt">Transcript</a>
+<br /><em>Note:</em> As new Intro sessions are held, recordings of previous sessions will be taken down.</p>
 
     <p><a name="indexing-with-searchgov"></a>
 <br /></p>
@@ -247,17 +157,7 @@
 
     <p><em>Resources:</em>
 <br /><a href="https://search.gov/files/HowSearchEnginesIndexYourWebsite.pdf">Presentation Slides &amp; Notes</a> (PDF)
-<br /><a href="https://d3qcdigd1fhos0.cloudfront.net/media/howsearchenginesindex.mp4">How Search Engines Index Your Websites .mp4</a></p>
-
-    <p><a name="intro-to-search-gov"></a>
-<br /></p>
-    <h3 id="intro-to-searchgov">Intro to Search.gov</h3>
-    <p>May 2018 | 60 mins</p>
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/W9gFgy4Jx6k?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
-
-    <p>Download not available at this time.
-<br /><em>Note:</em> As new Intro sessions are held, recordings of previous sessions will be taken down.</p>
+<br />Download <a href="https://d3qcdigd1fhos0.cloudfront.net/media/howsearchenginesindex.mp4">How Search Engines Index Your Websites .mp4</a></p>
 
     <p><a name="site-structure-better-seo"></a>
 <br /></p>
@@ -359,7 +259,108 @@
   
   
   &lt;a href="/manual/training.html"&gt;
-    &lt;time datetime="2019-05-02"&gt;May 2, 2019&lt;/time&gt;
+    &lt;time datetime="2019-06-20"&gt;June 20, 2019&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
+  &lt;a href="/releases/may-2019.html"&gt;May 2019 Release Notes&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;h2 id="improvements"&gt;Improvements&lt;/h2&gt;
+</code></pre>
+    <ul>
+  <li><strong>Sitelimit parameter support</strong>
+    <ul>
+      <li>Now our customers can specify that a search box only returns results from a particular part of their site. For example, for site www.example.gov,  you want a search box on your site to only return results from <code>www.example.gov/history</code>. By adding the appropriate URL parameter and value, you can limit results: <code>&amp;sitelimit=www.example.gov/history</code>.</li>
+      <li>You can also specify multiple values for the sitelimit. See this <a href="https://www.nps.gov/search/?affiliate=nps&amp;query=seneca&amp;sitelimit=www.nps.gov/subjects/oceans+www.nps.gov/subjects/womenshistory">example from the National Park Service</a>.</li>
+      <li>Keep in mind that the sitelimit must be for a domain within your site’s index. That is, if the Domains list includes <code>www.example.gov</code>, the sitelimit parameter cannot be <code>www.agency.gov/history</code>.</li>
+      <li>This feature is an alternative to our Collections feature.</li>
+    </ul>
+  </li>
+  <li><strong>Service upgrades</strong>
+    <ul>
+      <li>We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
+    </ul>
+  </li>
+</ul>
+
+    <h2 id="fixes">Fixes</h2>
+    <ul>
+  <li><strong>Highlighting bug</strong>
+    <ul>
+      <li>We fixed a bug that prevented highlighting for exact, phrased queries on sites indexed by Search.gov. <a href="https://search.usa.gov/search?utf8=%E2%9C%93&amp;affiliate=usasearch&amp;sort_by=&amp;query=%22search+features%22">Here’s an example of it working correctly now</a>.</li>
+    </ul>
+  </li>
+</ul>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
+  
+  
+  
+  &lt;a href="/releases/may-2019.html"&gt;
+    &lt;time datetime="2019-06-20"&gt;June 20, 2019&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
+  &lt;a href="/releases/april-2019.html"&gt;April 2019 Release Notes&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;h2 id="improvements"&gt;Improvements&lt;/h2&gt;
+</code></pre>
+    <ul>
+  <li>We launched updated Freshness ranking for customers indexed by Search.gov. The fresher a page the more likely it is to be promoted. Previously, we only factored the date a page is created into its freshness. Now, we first factor the date a page was last modified and then, the date a page is created. This new feature highlights the importance of ensuring that metadata on your site’s pages and sitemap is accurate. Here is more information about how we rank your search results: https://search.gov/manual/ranking-factors.html</li>
+  <li>We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
+</ul>
+
+    <h2 id="fixes-and-chores">Fixes and Chores</h2>
+    <ul>
+  <li>Fixed a bug that made it difficult to view sidebar items on the search results page when hovering over individual links. Now, the experience when hovering over these links is fully accessible.</li>
+</ul>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
+  
+  
+  
+  &lt;a href="/releases/april-2019.html"&gt;
+    &lt;time datetime="2019-05-10"&gt;May 10, 2019&lt;/time&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 </code></pre>
