@@ -3,10 +3,43 @@
   <title><![CDATA[Search.gov]]></title>
   <link href="https://search.gov/all.atom" rel="self"/>
   <link href="https://search.gov/"/>
-  <updated>2019-05-10T17:21:08+00:00</updated>
+  <updated>2019-06-20T20:33:07+00:00</updated>
   <id>https://search.gov/</id>
   <author><name><![CDATA[Search.gov]]></name></author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[May 2019 Release Notes]]></title>
+    <link href="https://search.gov/releases/may-2019.html"/>
+    <updated>2019-06-20T00:00:00+00:00</updated>
+    <id>https://search.gov/releases/may-2019.html</id>
+    <content type="html"><![CDATA[<h2 id="improvements">Improvements</h2>
+<ul>
+  <li><strong>Sitelimit parameter support</strong>
+    <ul>
+      <li>Now our customers can specify that a search box only returns results from a particular part of their site. For example, for site www.example.gov,  you want a search box on your site to only return results from <code>www.example.gov/history</code>. By adding the appropriate URL parameter and value, you can limit results: <code>&amp;sitelimit=www.example.gov/history</code>.</li>
+      <li>You can also specify multiple values for the sitelimit. See this <a href="https://www.nps.gov/search/?affiliate=nps&amp;query=seneca&amp;sitelimit=www.nps.gov/subjects/oceans+www.nps.gov/subjects/womenshistory">example from the National Park Service</a>.</li>
+      <li>Keep in mind that the sitelimit must be for a domain within your site’s index. That is, if the Domains list includes <code>www.example.gov</code>, the sitelimit parameter cannot be <code>www.agency.gov/history</code>.</li>
+      <li>This feature is an alternative to our Collections feature.</li>
+    </ul>
+  </li>
+  <li><strong>Service upgrades</strong>
+    <ul>
+      <li>We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+<ul>
+  <li><strong>Highlighting bug</strong>
+    <ul>
+      <li>We fixed a bug that prevented highlighting for exact, phrased queries on sites indexed by Search.gov. <a href="https://search.usa.gov/search?utf8=%E2%9C%93&amp;affiliate=usasearch&amp;sort_by=&amp;query=%22search+features%22">Here’s an example of it working correctly now</a>.</li>
+    </ul>
+  </li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[April 2019 Release Notes]]></title>

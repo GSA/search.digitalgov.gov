@@ -3,8 +3,8 @@
 <head>
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
-   <meta name="robots" content="noindex, follow">
-  <title>Posts tagged release-notes</title>
+  
+  <title>May 2019 Release Notes</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -99,172 +99,61 @@
 
     <!-- do not remove as used to parse in usasearch -->
     <main id="main-container">
-      <!-- begin tag layout -->
-<p class="muted">Posts tagged <strong>release-notes</strong></p>
-
-<div class='articles'>
+      <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/june-2011.html">June 2011 Release Notes</a>
-    </h1>
-    
+  <h1>
+    <a href="/releases/may-2019.html">May 2019 Release Notes</a>
+  </h1>
+  
 
-    <div class='post-content'>
-      <p>Happy Fourth of July. Before everyone departs for the long holiday, we wanted to post our June release notes.</p>
-
-<p>As a reminder, we divide our work into three categories.</p>
-
-<ol>
-  <li>Features: things that you actually notice</li>
-  <li>Bugs: fixes to any code issues that may arise</li>
-  <li>Chores: back-end improvements that you don’t notice</li>
-</ol>
-
-<h2 id="features-for-end-users-users">Features for End Users Users</h2>
-
+  <div class='post-content'>
+    <h2 id="improvements">Improvements</h2>
 <ul>
-  <li>Users see polished agency GovBox design</li>
-  <li>Users see aligned text on SERPs</li>
-  <li>Users don’t see underlines on SERPs</li>
-  <li>User sees health GovBoxes</li>
-  <li>Users have improved accessibility for DigitalGov Search Program pages</li>
-  <li>Users see consistently-aligned items on landing pages</li>
-  <li>Users see added agency popular url model incl govbox view</li>
-  <li>Users see PDF before serp result titles for pdf urls</li>
-  <li>Users see improved basic_gray search term highlite visibility and removed</li>
-  <li>Mobile users can see SMS option</li>
-  <li>Spanish searchers can find web and imagenes landing pages</li>
-</ul>
-
-<h2 id="features-for-admins">Features for Admins</h2>
-
-<ul>
-  <li>USAAdmins can easily batch process new users by status</li>
-  <li>Analysts see 4 column daily click module containing module name, impressions, clicks, and CTR%</li>
+  <li><strong>Sitelimit parameter support</strong>
+    <ul>
+      <li>Now our customers can specify that a search box only returns results from a particular part of their site. For example, for site www.example.gov,  you want a search box on your site to only return results from <code>www.example.gov/history</code>. By adding the appropriate URL parameter and value, you can limit results: <code>&amp;sitelimit=www.example.gov/history</code>.</li>
+      <li>You can also specify multiple values for the sitelimit. See this <a href="https://www.nps.gov/search/?affiliate=nps&amp;query=seneca&amp;sitelimit=www.nps.gov/subjects/oceans+www.nps.gov/subjects/womenshistory">example from the National Park Service</a>.</li>
+      <li>Keep in mind that the sitelimit must be for a domain within your site’s index. That is, if the Domains list includes <code>www.example.gov</code>, the sitelimit parameter cannot be <code>www.agency.gov/history</code>.</li>
+      <li>This feature is an alternative to our Collections feature.</li>
+    </ul>
+  </li>
+  <li><strong>Service upgrades</strong>
+    <ul>
+      <li>We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="fixes">Fixes</h2>
-
 <ul>
-  <li>Users should not have letters “skipped” as they’re typing in the search box</li>
-  <li>Display shorter URLs on Affiliate SERPs</li>
-  <li>Affiliates should not see global terms populated in type ahead</li>
-  <li>Update API language</li>
-  <li>Fix type ahead suggestion drop down and font size in Grey Template</li>
-  <li>Modify indices on agency_urls</li>
-  <li>Boosted Sites/Spotlights/GovBoxes don’t have proper precedence rules.</li>
-  <li>HTML shows up on affiliate confirmation screen</li>
-  <li>Users don’t see web vertical spotlights on forms vertical</li>
-  <li>Search users should be able to see SAYT dropdown</li>
-  <li>Users get page not found error when logging out from some program/admin pages</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/june-2011.html">
-        <time datetime="2011-07-01">July 1, 2011</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/may-2011.html">May 2011 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>In the ongoing government effort for transparency, we are going to use our blog to post our release notes on a monthly basis. While they may not be the most exciting posts ever, it seems the logical place to publish our activities. Search, as many know, is difficult with many of the improvements happening behind the scenes.</p>
-
-<p>We divide our work into three categories.</p>
-
-<ol>
-  <li>Features: things that you actually notice</li>
-  <li>Bugs: fixes to any code issues that may arise</li>
-  <li>Chores: back-end improvements that you don’t notice</li>
-</ol>
-
-<p>We did complete a big chore this month by upgrading to Rails 3 which will be invisible to you, but it will bring additional stability for our search environment and allow us to have longer feature list in the coming months.</p>
-
-<h2 id="features">Features</h2>
-
-<ul>
-  <li>Searchers see new second-level top navigation on landing pages and SERPs on Search.USA.gov and Buscador.USA.gov.</li>
-  <li>Spanish searchers see improved web and image landing pages.</li>
-  <li>Spanish searchers see brown color scheme.</li>
-  <li>Visitors sees <a href="http://www.usa.gov">USA.gov</a>-branded search box on all pages.</li>
-  <li>Searchers see updated affiliate and mobile type-ahead search suggestions.</li>
-  <li>Mobile visitors can see SMS option on m.USA.gov.</li>
-  <li>Searchers see updated affiliate and mobile page.</li>
-</ul>
-
-<h2 id="bugs">Bugs</h2>
-
-<ul>
-  <li>Fixed bugs/display problems with monthly clicks/queries.</li>
-  <li>Inconsistent autocomplete on images landing page and image SERPs.</li>
-  <li>Spanish searchers see updated text on Buscador.USA.gov advanced search page.</li>
-</ul>
-
-<h2 id="chores">Chores</h2>
-
-<ul>
-  <li>We upgraded to Rails 3. The full chore list for this upgrade would be long, but let us know if anyone is interested in hearing about it.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/may-2011.html">
-        <time datetime="2011-06-03">June 3, 2011</time>
-      </a>
-    </div>
-    </article>
-  
-</div>
-
-
-<ul class="pager" >
-  
-  <li class="previous" style="padding: 10px 30px;">
-    
-    <a href="/tagged/release-notes/page7">&larr; Newer</a>
-    
+  <li><strong>Highlighting bug</strong>
+    <ul>
+      <li>We fixed a bug that prevented highlighting for exact, phrased queries on sites indexed by Search.gov. <a href="https://search.usa.gov/search?utf8=%E2%9C%93&amp;affiliate=usasearch&amp;sort_by=&amp;query=%22search+features%22">Here’s an example of it working correctly now</a>.</li>
+    </ul>
   </li>
-  
-
-  
 </ul>
 
-<!-- end tag layout -->
+  </div>
+
+  <div class='tags'>
+    
+    <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+    
+  </div>
+
+  <div class='time'>
+    
+    
+    </br><span>Page last reviewed or updated:</span>
+    
+    
+    
+    <a href="/releases/may-2019.html">
+      <time>June 20, 2019</time>
+    </a>
+  </div>
+
+</article>
 
     </main>
   </div>

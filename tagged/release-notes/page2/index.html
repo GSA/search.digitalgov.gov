@@ -108,6 +108,62 @@
  
     
     <h1>
+      <a href="/releases/june-july-2018.html">June-July 2018 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlights">Highlights</h2>
+<ul>
+  <li>We added support for XML sitemaps that are located in non-standard locations within a domain.</li>
+  <li>We added sort_by support to our Results API</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+<ul>
+  <li>We finished migrating to CircleCI for our continuous integration monitoring.</li>
+  <li>We improved our internal tracking of queries to the Bing API.</li>
+  <li>We improved how we handle indexing domains that time out.</li>
+  <li>We began indexing the last-modified date of a page, if provided</li>
+  <li>Our SitemapIndexer now processes one sitemap at a time, and we created an automated queue for indexing jobs and url fetching.</li>
+  <li>We improved the management of Searchgov domain states. Now each Searchgov domain has an “indexing activity”. States might include: indexing sitemaps, fetching new URLs (such as after bulk import), and crawling.</li>
+  <li>We now follow client-side redirects.</li>
+  <li>We improved our ability to avoid certain crawler traps.</li>
+  <li>We now index documents up to 15 MB in size. The previous limit was 10 MB.</li>
+  <li>We finalized our compliance with BOD 18-01.</li>
+  <li>We cleaned up how we handle temp files during indexing.</li>
+  <li>We tidied up our internal errors on indexing jobs, as well as our test suite.</li>
+</ul>
+
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+  <li>We fixed a bug that was not showing diacritics properly in non-English searches.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/june-july-2018.html">
+        <time datetime="2018-08-10">August 10, 2018</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/may-2018.html">May 2018 Release Notes</a>
     </h1>
     
@@ -561,57 +617,6 @@
       
       <a href="/releases/september-2017.html">
         <time datetime="2017-10-11">October 11, 2017</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/august-2017.html">August 2017 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="highlights">Highlights</h2>
-
-<ul>
-  <li>
-    <p>Agencies can send content directly to our indexes via our <a href="/developer/i14y.html">i14y API</a>. Previously, each document had to have a created date. Now, this field is optional. Review our <a href="/developer/indexing-api.html">technical documentation</a> for more information.</p>
-  </li>
-  <li>
-    <p>We continued work on backend features that will provide new ways for customer content to be sent directly into our own indexes. In August, our team created a rake task that will allow our system to fetch, parse, and index a list of URLs. We also investigated the spellchecker functionality in Elasticsearch. This is a long term project that extends through the rest of this calendar year and into 2018. Stay tuned!</p>
-  </li>
-</ul>
-
-<h2 id="chores">Chores</h2>
-
-<ul>
-  <li>
-    <p>We completed our upgrade to Ruby 2.3.</p>
-  </li>
-  <li>
-    <p>We continued work that will upgrade our server recipes to Chef 12.</p>
-  </li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/august-2017.html">
-        <time datetime="2017-09-12">September 12, 2017</time>
       </a>
     </div>
     </article>
