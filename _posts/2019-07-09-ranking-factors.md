@@ -39,7 +39,7 @@ Documents with no date metadata at all are considered fresh and are not demoted.
 
 ### Page Popularity
 
-We prefer documents that users interact with more. Currently we leverage our own search analytics to track the number of times a URL is clicked on from the results page. The more clicks, the more that URL is promoted, or boosted. We use a logarithmic function to determine how much to boost the relevance score for each URL. 
+We prefer documents that users interact with more. Currently we leverage our own search analytics to track the number of times a URL is clicked on from the results page. The more clicks, the more that URL is promoted, or boosted. We use a logarithmic function to determine how much to boost the relevance score for each URL. For sites new to our service, please expect this ranking factor to take 30 days to fully warm up after your search goes live.
 
 Note: Sites using the search results API to present our results on their own websites will not be able to take advantage of our click data ranking.
 
