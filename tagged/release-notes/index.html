@@ -108,6 +108,53 @@
  
     
     <h1>
+      <a href="/releases/june-2019.html">July 2019 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="improvements">Improvements</h2>
+
+<ul>
+  <li><strong>Increasing indexing coverage</strong> We now index pages with only title metadata. Previously, we required pages include either content or description metadata in order to be indexed. This was to ensure we indexed pages with more complete information. However, this limited relevant content included on Javascript pages and similar client-side rendered pages.
+    <ul>
+      <li>As you include title metadata, it’s important keep them short and on-topic without packing in repeated information such as agency name. If you want to include your agency name, we recommend you place it after the page title. More information on metadata and tags you should include <a href="https://search.gov/manual/metadata.html">is available here</a>.</li>
+    </ul>
+  </li>
+  <li><strong>Improving USAJOBS Integration</strong> Common government terms “federal” and “gobierno” no longer trigger our USAJOBS integration. Previously, queries that included these terms triggered our integration with USAJOBS to display relevant postings. However, these queries often resulted in no or irrelevant job postings.</li>
+  <li><strong>Service upgrades</strong> We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li><strong>Language parsing bug fix</strong> We fixed a bug that parsed non-English pages (e.g. Greek) incorrectly or not at all. This particularly affected pages containing mathematical formulas and equations.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/june-2019.html">
+        <time datetime="2019-07-12">July 12, 2019</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/may-2019.html">May 2019 Release Notes</a>
     </h1>
     
@@ -528,52 +575,6 @@
       
       <a href="/releases/september-2018.html">
         <time datetime="2018-11-02">November 2, 2018</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/august-2018.html">August 2018 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="highlights">Highlights</h2>
-<ul>
-  <li>We began work on leveraging click data in our relevancy scoring. This will allow us to use the relative popularity of pages as a ranking signal.</li>
-</ul>
-
-<h2 id="chores">Chores</h2>
-<ul>
-  <li>We now record the domain of a URL that has been clicked in addition to recording the full click. This way we can compare the click volume of URLs within a given domain.</li>
-  <li>We resolved security vulnerabilities in grape &amp; sprockets</li>
-  <li>Configure rspec to run specs in random order</li>
-</ul>
-
-<h2 id="bug-fixes">Bug Fixes</h2>
-<ul>
-  <li>None</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/august-2018.html">
-        <time datetime="2018-09-21">September 21, 2018</time>
       </a>
     </div>
     </article>

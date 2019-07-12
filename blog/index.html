@@ -105,6 +105,56 @@
   <article class="article">
 
     <pre><code>&lt;h1&gt;
+  &lt;a href="/releases/june-2019.html"&gt;July 2019 Release Notes&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;h2 id="improvements"&gt;Improvements&lt;/h2&gt;
+</code></pre>
+
+    <ul>
+  <li><strong>Increasing indexing coverage</strong> We now index pages with only title metadata. Previously, we required pages include either content or description metadata in order to be indexed. This was to ensure we indexed pages with more complete information. However, this limited relevant content included on Javascript pages and similar client-side rendered pages.
+    <ul>
+      <li>As you include title metadata, it’s important keep them short and on-topic without packing in repeated information such as agency name. If you want to include your agency name, we recommend you place it after the page title. More information on metadata and tags you should include <a href="https://search.gov/manual/metadata.html">is available here</a>.</li>
+    </ul>
+  </li>
+  <li><strong>Improving USAJOBS Integration</strong> Common government terms “federal” and “gobierno” no longer trigger our USAJOBS integration. Previously, queries that included these terms triggered our integration with USAJOBS to display relevant postings. However, these queries often resulted in no or irrelevant job postings.</li>
+  <li><strong>Service upgrades</strong> We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
+</ul>
+
+    <h2 id="fixes">Fixes</h2>
+
+    <ul>
+  <li><strong>Language parsing bug fix</strong> We fixed a bug that parsed non-English pages (e.g. Greek) incorrectly or not at all. This particularly affected pages containing mathematical formulas and equations.</li>
+</ul>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
+  
+  
+  
+  &lt;a href="/releases/june-2019.html"&gt;
+    &lt;time datetime="2019-07-12"&gt;July 12, 2019&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
   &lt;a href="/status.html"&gt;Search.gov System Status&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -982,67 +1032,6 @@ www.subagencydomainexample.gov
   
   
   &lt;a href="/manual/site-launch-guide.html"&gt;
-    &lt;time datetime="2019-04-22"&gt;April 22, 2019&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/manual/searchgov-for-federalist.html"&gt;Setting up Search.gov for Federalist Sites&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;For 18 years, GSA’s Search.gov has transformed the public’s search experience on federal government websites. Agencies use our free, shared service to power over 2,000 search boxes on over 30% of federal domains. This page will walk you through the steps required to integrate Search.gov with your Federalist website.&lt;/p&gt;
-</code></pre>
-
-    <h2 id="on-the-federalist-side-of-things-part-1">On the Federalist side of things, part 1</h2>
-
-    <ol>
-  <li>Confirm you have the <code>jekyll-sitemap</code> gem installed in your repo. <a href="https://github.com/jekyll/jekyll-sitemap">Read the docs here</a> and <a href="https://help.github.com/en/articles/sitemaps-for-github-pages">instructions for GitHub Pages here</a>.</li>
-</ol>
-
-    <h2 id="on-the-searchgov-side-of-things">On the Search.gov side of things:</h2>
-
-    <ol>
-  <li>Sign up for a <a href="https://search.usa.gov/sign-up">user account</a>.</li>
-  <li>Read our <a href="https://search.gov/manual/getting-started.html">Search Site Launch Guide</a> if you’d like some direction.</li>
-  <li>Request that your domain be indexed by <a href="mailto:search@support.digitalgov.gov">emailing our team</a>. Note, the site must be publicly available for our indexer to be able to access your content.</li>
-  <li>Create and configure a search site in our <a href="https://search.usa.gov/sites">Admin Center</a>. Note: you’ll give your site a display name and a site handle, and you’ll need to enter the site handle in the search box form code on your website.</li>
-  <li><a href="https://search.gov/manual/preview.html">Preview your search results</a> once the indexing is complete.</li>
-  <li>Put finishing touches on your search site in the Admin Center - brand your results page, etc.</li>
-</ol>
-
-    <h2 id="on-the-federalist-side-of-things-part-2">On the Federalist side of things, part 2</h2>
-
-    <ol>
-  <li>Add your site handle from the Admin Center to the <code>_config.yml</code> file in your Federalist repo, on the <code>searchgov_affiliate</code> line.</li>
-  <li>Include the <code>_includes/searchgov/form.html</code> search box in your <code>&lt;header&gt;</code> include.</li>
-  <li>If you would like type-ahead search suggestions to appear in your website’s search box, add include the <code>_includes/searchgov/script.html</code> block in your <code>&lt;footer&gt;</code> include.</li>
-</ol>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/getting-started"&gt;&lt;span class="label label-info"&gt;getting-started&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/go-live"&gt;&lt;span class="label label-info"&gt;go-live&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/site-launch"&gt;&lt;span class="label label-info"&gt;site-launch&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/manual/searchgov-for-federalist.html"&gt;
     &lt;time datetime="2019-04-22"&gt;April 22, 2019&lt;/time&gt;
   &lt;/a&gt;
 &lt;/div&gt;
