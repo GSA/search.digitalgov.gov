@@ -3,10 +3,35 @@
   <title><![CDATA[Search.gov]]></title>
   <link href="https://search.gov/all.atom" rel="self"/>
   <link href="https://search.gov/"/>
-  <updated>2019-08-12T23:36:06+00:00</updated>
+  <updated>2019-08-15T15:51:05+00:00</updated>
   <id>https://search.gov/</id>
   <author><name><![CDATA[Search.gov]]></name></author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[June 2019 Release Notes]]></title>
+    <link href="https://search.gov/releases/june-2019.html"/>
+    <updated>2019-08-15T00:00:00+00:00</updated>
+    <id>https://search.gov/releases/june-2019.html</id>
+    <content type="html"><![CDATA[<h2 id="improvements">Improvements</h2>
+
+<ul>
+  <li><strong>Increasing indexing coverage</strong> We now index pages with only title metadata. Previously, we required pages include either content or description metadata in order to be indexed. This was to ensure we indexed pages with more complete information. However, this limited relevant content included on Javascript pages and similar client-side rendered pages.
+    <ul>
+      <li>As you include title metadata, it’s important keep them short and on-topic without packing in repeated information such as agency name. If you want to include your agency name, we recommend you place it after the page title. More information on metadata and tags you should include <a href="https://search.gov/manual/metadata.html">is available here</a>.</li>
+    </ul>
+  </li>
+  <li><strong>Improving USAJOBS Integration</strong> Common government terms “federal” and “gobierno” no longer trigger our USAJOBS integration. Previously, queries that included these terms triggered our integration with USAJOBS to display relevant postings. However, these queries often resulted in no or irrelevant job postings.</li>
+  <li><strong>Service upgrades</strong> We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li><strong>Language parsing bug fix</strong> We fixed a bug that parsed non-English pages (e.g. Greek) incorrectly or not at all. This particularly affected pages containing mathematical formulas and equations.</li>
+</ul>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Search.gov System Status]]></title>
@@ -85,31 +110,6 @@ Details: We experienced intermittent errors due to request queue volume. Errors 
   </tbody>
 </table>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[July 2019 Release Notes]]></title>
-    <link href="https://search.gov/releases/june-2019.html"/>
-    <updated>2019-07-12T00:00:00+00:00</updated>
-    <id>https://search.gov/releases/june-2019.html</id>
-    <content type="html"><![CDATA[<h2 id="improvements">Improvements</h2>
-
-<ul>
-  <li><strong>Increasing indexing coverage</strong> We now index pages with only title metadata. Previously, we required pages include either content or description metadata in order to be indexed. This was to ensure we indexed pages with more complete information. However, this limited relevant content included on Javascript pages and similar client-side rendered pages.
-    <ul>
-      <li>As you include title metadata, it’s important keep them short and on-topic without packing in repeated information such as agency name. If you want to include your agency name, we recommend you place it after the page title. More information on metadata and tags you should include <a href="https://search.gov/manual/metadata.html">is available here</a>.</li>
-    </ul>
-  </li>
-  <li><strong>Improving USAJOBS Integration</strong> Common government terms “federal” and “gobierno” no longer trigger our USAJOBS integration. Previously, queries that included these terms triggered our integration with USAJOBS to display relevant postings. However, these queries often resulted in no or irrelevant job postings.</li>
-  <li><strong>Service upgrades</strong> We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-
-<ul>
-  <li><strong>Language parsing bug fix</strong> We fixed a bug that parsed non-English pages (e.g. Greek) incorrectly or not at all. This particularly affected pages containing mathematical formulas and equations.</li>
-</ul>
 ]]></content>
   </entry>
   
