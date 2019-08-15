@@ -3,7 +3,7 @@
   <title><![CDATA[Search.gov]]></title>
   <link href="https://search.gov/all.atom" rel="self"/>
   <link href="https://search.gov/"/>
-  <updated>2019-08-15T15:51:05+00:00</updated>
+  <updated>2019-08-15T16:00:10+00:00</updated>
   <id>https://search.gov/</id>
   <author><name><![CDATA[Search.gov]]></name></author>
 
@@ -29,6 +29,29 @@
 
 <ul>
   <li><strong>Language parsing bug fix</strong> We fixed a bug that parsed non-English pages (e.g. Greek) incorrectly or not at all. This particularly affected pages containing mathematical formulas and equations.</li>
+</ul>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[July 2019 Release Notes]]></title>
+    <link href="https://search.gov/releases/july-2019.html"/>
+    <updated>2019-08-15T00:00:00+00:00</updated>
+    <id>https://search.gov/releases/july-2019.html</id>
+    <content type="html"><![CDATA[<h2 id="improvements">Improvements</h2>
+
+<ul>
+  <li><strong>90 day Account Deactivations:</strong> We now deactivate accounts for users who haven’t logged into Search.gov in the last 90 days. If you are unable to login should contact us via search@support.digitalgov.gov to reactivate your accounts. Contractors who do not use .gov or .mil email addresses will be asked to have their government POC re-confirm their status.</li>
+  <li><strong>Improved stability:</strong> We stabilized search performance by removing unnecessary content from our indices to free up memory.</li>
+  <li><strong>Service upgrades:</strong> We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
+  <li><strong>Non-.gov Government Domains Inventory:</strong> We decommissioned the old tool we used to manage the inventory of domains in use by federal agencies outside of the .gov and .mil top level domains. We transferred the data to GitHub, where it will be easier for agency staff to contribute to the inventory. More information is <a href="https://search.gov/developer/govt-urls.html">available on our website</a>.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li><strong>Image search result bug fix:</strong> We fixed a bug that prevented images sent to our index via Media RSS from being displayed in search results.</li>
+  <li><strong>Video search results bug fix:</strong> We fixed a bug that prevented videos from appearing in some search results pages.</li>
 </ul>
 ]]></content>
   </entry>

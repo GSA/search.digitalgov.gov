@@ -108,6 +108,83 @@
  
     
     <h1>
+      <a href="/releases/july-2013.html">July 2013 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlight-add-a-url">Highlight: Add a URL</h2>
+
+<p>Are specific web pages missing from your Bing web results? Tell us about these pages and we’ll append the pages to your web results. We offer two ways for you to tell us about the web pages that you want us to fetch and include in our web index.</p>
+
+<ol>
+  <li>Add a specific URL manually.</li>
+  <li>Use an RSS feed to manage your URLs.</li>
+</ol>
+
+<p>Go to Manage Content &gt; <a href="/manual/domains.html">Domains</a> &gt; <a href="/manual/domains-advanced.html">Advanced</a>. Select Supplement URLs to add an individual URL or select Supplemental Feed to add multiple URLs via an RSS feed.</p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/Add_Supplemental_URL.png" alt="Add a Supplemental URL" /></p>
+
+<p>We’ll fetch the URLs you add and we’ll index their metadata (title, description, and URL) <strong><em>plus the full text of the web page or document</em></strong>.</p>
+
+<h2 id="other-features">Other Features</h2>
+
+<ul>
+  <li>For supplemental URLs, searchers now see a snippet from either the metadata (description field) or full document text (body field), depending on which field matches their search term.</li>
+  <li>You now see better error messages for supplemental URLs that we couldn’t index.</li>
+  <li>You can now access https results from our Search API.</li>
+  <li>You now see a clickable URL for system alerts posted in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
+  <li>We rolled out the first pages our new, beta Admin Center—the <a href="/manual/settings.html">Settings</a> and <a href="/manual/users.html">Manage Users</a> pages and their corresponding <a href="/manual/index.html">help files</a>.</li>
+  <li>Developers now see unique descriptions for CPSC items in the recalls API.</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+
+<ul>
+  <li>We set up a new cloud server to host our list of federal, state, local, tribal, and territorial <a href="http://govt-urls.usa.gov/tematres/vocab/index.php">government URLs that aren’t included in the .gov or .mil top-level domains</a> that are cataloged using <a href="http://sourceforge.net/projects/tematres/">TemaTres</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
+  <li>We moved the cached results for our commercial web indexes into a separate static cache subdirectory so that they (a) can be pruned at their own rate and (b) persist across production pushes.</li>
+  <li>We now use a persistent file for your header and footer CSS instead of generating it each time we load your results page.</li>
+  <li>We now return a 404 not found status code for static files that we don’t have. We used to return a 406.</li>
+  <li>We now index <a href="https://api.usa.gov/jobs/search.json?organization_id=US-WA:CITY-SEATTLE">Seattle.gov jobs</a> in our <a href="/developer/jobs.html">Jobs API</a>.</li>
+  <li>We updated our <a href="/developer/index.html">API documentation</a> to highlight the primary data sources for each API.</li>
+  <li>We started collecting your feedback on our new, beta <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
+  <li>We reviewed the click data for our related search results.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li>We improved our validation check for manually added supplemental URLs.</li>
+  <li>We fixed the message that you see after you upload an invalid RSS feed for the supplemental URLs so that it is more actionable.</li>
+  <li>We now escape special characters like apostrophes so that searchers don’t see unescaped values within the snippets of supplemental URLs.</li>
+  <li>You can now add <a href="/manual/rss.html">RSS feeds</a> without the http:// or https:// prefix.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/july-2013.html">
+        <time datetime="2013-07-31">July 31, 2013</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/june-2013.html">June 2013 Release Notes</a>
     </h1>
     
@@ -774,96 +851,6 @@
       
       <a href="/releases/september-2012.html">
         <time datetime="2012-09-28">September 28, 2012</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/july-2012.html">July 2012 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <p>One of your most frequently asked questions is, “What’s your roadmap?” We decided to use the halfway point of the year to expand our release notes to include notes on our upcoming features.</p>
-
-<h2 id="features">Features</h2>
-
-<h3 id="highlight-searchers-see-recent-tweets-when-they-search-on-your-website">Highlight: searchers see recent tweets when they search on your website</h3>
-
-<p>We’re now displaying Twitter results in the third rail. Searchers like Twitter results because they often contain your latest information. The third rail increases the  visibility of your tweets and it allows searchers to see both Twitter and YouTube results above the fold in the browser.</p>
-
-<p>See the sample results page below that shows social media results on Commerce.gov for a search on <em><a href="http://search.commerce.gov/search?query=innovation&amp;affiliate=commerce.gov">innovation</a></em>.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/tumblr_m71vk4FInR1qid15q.jpg" /></p>
-
-<p>If you have a Twitter account, tell us the name of your profile and searchers will be able to find relevant, recent tweets when they search on your website.</p>
-
-<ol>
-  <li>Log in to the <a href="https://search.usa.gov/sites/">Admin Center</a>. Select your site.</li>
-  <li>Click on the Social Media option. Enter the name of your Twitter account and click save.</li>
-  <li>Click on the Results Modules option and opt to show your tweets in a GovBox.</li>
-</ol>
-
-<p>Wait until you post your next tweet. Then, go to your website and do a search for a word or phrase in the tweet. You’ll see it as a GovBox intermingled with your web results.</p>
-
-<h2 id="other-features">Other features</h2>
-
-<ul>
-  <li>Customers with lots of documents will have them indexed more quickly.</li>
-  <li>You may now enter multiple handles if you have more than one social media account for Flickr, Twitter, or YouTube.</li>
-  <li>Mobile searchers can see image results.</li>
-  <li>You may now see whether we’ve indexed your Twitter or Flickr content.</li>
-  <li>We now index Microsoft Office documents (Excel, Word, and PowerPoint).</li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-
-<ul>
-  <li>Address memory bloat.</li>
-  <li>Searchers can no longer see multiple sidebar items selected.</li>
-  <li>Launch jumpstart index for newly added sites with a single site domain.</li>
-  <li>We now label Office documents.</li>
-  <li>We fixed an issue with Flickr indexing.</li>
-</ul>
-
-<h2 id="our-roadmap">Our Roadmap</h2>
-
-<h3 id="coming-up-in-july">Coming Up in July</h3>
-
-<p>We “celebrated” during the Fourth of July holiday by focusing on some general housekeeping to ensure stability for the rest of the year. We’ll release new features to index secure (https) content. We’ll also update our discovery tag to power both type-ahead and fetching (eliminating the need for you to have put two sets of javascript on your web pages).</p>
-
-<h3 id="coming-up-next-quarter">Coming Up Next Quarter</h3>
-
-<p>We divide our roadmap into four categories, and we complete one major feature in each category per quarter.</p>
-
-<ol>
-  <li><em>Customer Services.</em> We plan to improve and facilitate our signup process. We’re going to automatically populate more content when you add a site so it is easier for you to take advantage of new features. We also plan to create a dashboard to allow you to see what has changed within your search configuration.</li>
-  <li><em>Content Sources.</em> You’ve requested more control to divide search results into content sources, topics, etc. We plan to offer more flexibility to allow you to divide your content as it makes sense for your searchers.</li>
-  <li><em>Core Search.</em> One good (or bad) aspect about search is that there is always more work to do in terms of relevancy, speed, scaling, etc. We plan to focus on tuning these aspects, especially for our newer content sources.</li>
-  <li><em>Search Analytics.</em> We have a growing amount of data, and we want to expose more of it to you. In parallel with providing you just a dashboard in the Admin Center, we plan to proactively notify you of any potential issues.</li>
-</ol>
-
-<p>We hope that this glimpse into our recently released features and our short- and long-term roadmap helps you understand what we’re working on and what’s coming down the road.</p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/july-2012.html">
-        <time datetime="2012-07-27">July 27, 2012</time>
       </a>
     </div>
     </article>
