@@ -105,104 +105,6 @@
   <article class="article">
 
     <pre><code>&lt;h1&gt;
-  &lt;a href="/releases/june-2019.html"&gt;June 2019 Release Notes&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;h2 id="improvements"&gt;Improvements&lt;/h2&gt;
-</code></pre>
-
-    <ul>
-  <li><strong>Increasing indexing coverage</strong> We now index pages with only title metadata. Previously, we required pages include either content or description metadata in order to be indexed. This was to ensure we indexed pages with more complete information. However, this limited relevant content included on Javascript pages and similar client-side rendered pages.
-    <ul>
-      <li>As you include title metadata, it’s important keep them short and on-topic without packing in repeated information such as agency name. If you want to include your agency name, we recommend you place it after the page title. More information on metadata and tags you should include <a href="https://search.gov/manual/metadata.html">is available here</a>.</li>
-    </ul>
-  </li>
-  <li><strong>Improving USAJOBS Integration</strong> Common government terms “federal” and “gobierno” no longer trigger our USAJOBS integration. Previously, queries that included these terms triggered our integration with USAJOBS to display relevant postings. However, these queries often resulted in no or irrelevant job postings.</li>
-  <li><strong>Service upgrades</strong> We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
-</ul>
-
-    <h2 id="fixes">Fixes</h2>
-
-    <ul>
-  <li><strong>Language parsing bug fix</strong> We fixed a bug that parsed non-English pages (e.g. Greek) incorrectly or not at all. This particularly affected pages containing mathematical formulas and equations.</li>
-</ul>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
-  
-  
-  
-  &lt;a href="/releases/june-2019.html"&gt;
-    &lt;time datetime="2019-08-15"&gt;August 15, 2019&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/releases/july-2019.html"&gt;July 2019 Release Notes&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;h2 id="improvements"&gt;Improvements&lt;/h2&gt;
-</code></pre>
-
-    <ul>
-  <li><strong>90 day Account Deactivations:</strong> We now deactivate accounts for users who haven’t logged into Search.gov in the last 90 days. If you are unable to login should contact us via search@support.digitalgov.gov to reactivate your accounts. Contractors who do not use .gov or .mil email addresses will be asked to have their government POC re-confirm their status.</li>
-  <li><strong>Improved stability:</strong> We stabilized search performance by removing unnecessary content from our indices to free up memory.</li>
-  <li><strong>Service upgrades:</strong> We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
-  <li><strong>Non-.gov Government Domains Inventory:</strong> We decommissioned the old tool we used to manage the inventory of domains in use by federal agencies outside of the .gov and .mil top level domains. We transferred the data to GitHub, where it will be easier for agency staff to contribute to the inventory. More information is <a href="https://search.gov/developer/govt-urls.html">available on our website</a>.</li>
-</ul>
-
-    <h2 id="fixes">Fixes</h2>
-
-    <ul>
-  <li><strong>Image search result bug fix:</strong> We fixed a bug that prevented images sent to our index via Media RSS from being displayed in search results.</li>
-  <li><strong>Video search results bug fix:</strong> We fixed a bug that prevented videos from appearing in some search results pages.</li>
-</ul>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
-  
-  
-  
-  &lt;a href="/releases/july-2019.html"&gt;
-    &lt;time datetime="2019-08-15"&gt;August 15, 2019&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
   &lt;a href="/status.html"&gt;Search.gov System Status&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -297,7 +199,105 @@ Details: We experienced intermittent errors due to request queue volume. Errors 
   
   
   &lt;a href="/status.html"&gt;
-    &lt;time datetime="2019-08-12"&gt;August 12, 2019&lt;/time&gt;
+    &lt;time datetime="2019-08-16"&gt;August 16, 2019&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
+  &lt;a href="/releases/june-2019.html"&gt;June 2019 Release Notes&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;h2 id="improvements"&gt;Improvements&lt;/h2&gt;
+</code></pre>
+
+    <ul>
+  <li><strong>Increasing indexing coverage</strong> We now index pages with only title metadata. Previously, we required pages include either content or description metadata in order to be indexed. This was to ensure we indexed pages with more complete information. However, this limited relevant content included on Javascript pages and similar client-side rendered pages.
+    <ul>
+      <li>As you include title metadata, it’s important keep them short and on-topic without packing in repeated information such as agency name. If you want to include your agency name, we recommend you place it after the page title. More information on metadata and tags you should include <a href="https://search.gov/manual/metadata.html">is available here</a>.</li>
+    </ul>
+  </li>
+  <li><strong>Improving USAJOBS Integration</strong> Common government terms “federal” and “gobierno” no longer trigger our USAJOBS integration. Previously, queries that included these terms triggered our integration with USAJOBS to display relevant postings. However, these queries often resulted in no or irrelevant job postings.</li>
+  <li><strong>Service upgrades</strong> We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
+</ul>
+
+    <h2 id="fixes">Fixes</h2>
+
+    <ul>
+  <li><strong>Language parsing bug fix</strong> We fixed a bug that parsed non-English pages (e.g. Greek) incorrectly or not at all. This particularly affected pages containing mathematical formulas and equations.</li>
+</ul>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
+  
+  
+  
+  &lt;a href="/releases/june-2019.html"&gt;
+    &lt;time datetime="2019-08-15"&gt;August 15, 2019&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
+  &lt;a href="/releases/july-2019.html"&gt;July 2019 Release Notes&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;h2 id="improvements"&gt;Improvements&lt;/h2&gt;
+</code></pre>
+
+    <ul>
+  <li><strong>90 day Account Deactivations:</strong> We now deactivate accounts for users who haven’t logged into Search.gov in the last 90 days. If you are unable to login should contact us via search@support.digitalgov.gov to reactivate your accounts. Contractors who do not use .gov or .mil email addresses will be asked to have their government POC re-confirm their status.</li>
+  <li><strong>Improved stability:</strong> We stabilized search performance by removing unnecessary content from our indices to free up memory.</li>
+  <li><strong>Service upgrades:</strong> We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
+  <li><strong>Non-.gov Government Domains Inventory:</strong> We decommissioned the old tool we used to manage the inventory of domains in use by federal agencies outside of the .gov and .mil top level domains. We transferred the data to GitHub, where it will be easier for agency staff to contribute to the inventory. More information is <a href="https://search.gov/developer/govt-urls.html">available on our website</a>.</li>
+</ul>
+
+    <h2 id="fixes">Fixes</h2>
+
+    <ul>
+  <li><strong>Image search result bug fix:</strong> We fixed a bug that prevented images sent to our index via Media RSS from being displayed in search results.</li>
+  <li><strong>Video search results bug fix:</strong> We fixed a bug that prevented videos from appearing in some search results pages.</li>
+</ul>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
+  
+  
+  
+  &lt;a href="/releases/july-2019.html"&gt;
+    &lt;time datetime="2019-08-15"&gt;August 15, 2019&lt;/time&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 </code></pre>
