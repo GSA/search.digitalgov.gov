@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  
+  <title>Checklist for a Successful Website Redesign</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/stylesheets/font-awesome-ie7.min.css">
+  <![endif]-->
+
+  <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+  <link href="/stylesheets/custom.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+  <link rel="shortcut icon" href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/favicon.ico">
+  <link rel='alternate' type='application/atom+xml' title='search.gov Atom feed' href='/all.atom' />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="/javascripts/bootstrap3-typeahead.js"></script>
+ </head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        <span class="search">Search.gov</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <form class="navbar-form navbar-left form-search" accept-charset="UTF-8" action="https://find.search.gov/search/" id="search-form" method="get">
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+        <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+        <div class="input-group input-append">
+          <label for="search-query" class="hide">Query</label>
+
+          <input name="query" autocomplete="off"  type="text" class="typeahead form-control search-query" id="search-query" data-provide="typeahead" >
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-nav" aria-label="Left Align" id="search-button">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+          </span>
+        </div>
+      </form>
+      <div class="nav navbar-right">
+          <a href="https://search.usa.gov/sites" class="navbar-brand"><i
+              class="icon-user icon-white"></i>&nbsp;Login</a>
+      </div>&nbsp;&nbsp;&nbsp;<div class="nav navbar-right">
+          <a href="http://search.usa.gov/signup" class="navbar-brand">Sign up</a>
+      </div>&nbsp;&nbsp;&nbsp;<div class="nav navbar-right">
+          <a href="https://search.gov/status.html" class="navbar-brand">System Status</a>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="col-md-offset-2 col-md-8  hidden-sm hidden-md hidden-lg">
+
+  <form class="form-search" accept-charset="UTF-8" action="https://find.search.gov/search/" id="search-form" method="get">
+    <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+    <div class="input-group input-append">
+      <label for="search-query" class="hide">Query</label>
+
+      <input name="query" autocomplete="off"  type="text" class=" form-control search-query" id="search-query"  >
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </span>
+    </div>
+  </form>
+</div>
+
+
+<div class="container-fluid">
+  <div class="col-md-8 col-md-offset-2">
+
+  <nav aria-label="breadcrumb" class="mt-2">
+  <ul class="breadcrumb">
+    
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/"><span property="name">Home</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/"><span property="name">Help Manual</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/site-launch-guide.html"><span property="name">Site Launch Guide</span></a></li>
+    
+    
+    <li class="breadcrumb-item active">
+    Redesign Guide
+    </li>
+  </ul>
+
+    <!-- do not remove as used to parse in usasearch -->
+    <main id="main-container">
+      <article class="article feature" style="padding:0 30px; margin-top: 10px;">
+  
+  <h1>
+    <a href="/manual/redesign.html">Checklist for a Successful Website Redesign</a>
+  </h1>
+  
+
+  <div class='post-content'>
+    <p>We often receive questions when an agency conducts a major website upgrade, changes content management systems, or both. We created this checklist to help ensure your redesign is successful. The stages are:</p>
+
+<p><strong>Ready…</strong></p>
+
+<p>1. <a href="#contact-us">Let the Search.gov team know you are launching a new site</a></p>
+
+<p>2. <a href="#develop-plan">Develop a reindexing plan</a></p>
+
+<p><strong>Set…</strong></p>
+
+<p>3. <a href="#prep-seo">Prepare xml sitemaps and SEO elements</a></p>
+
+<p>4. <a href="#search-page-alert">Add a Search Page Alert</a></p>
+
+<p>5. <a href="#update-brand">Prepare color scheme updates and new logo to add to Admin Center</a></p>
+
+<p>6. <a href="#update-features">Prepare updates to your other search features</a></p>
+
+<p><strong>Go!</strong></p>
+
+<p>7. <a href="#go-live">Flip the new website live, let us know</a></p>
+
+<p>8. <a href="#parallel-tracks">Implement the changes to the search site</a></p>
+
+<p>9. <a href="#results-show">Results begin to show</a></p>
+
+<p><strong>Victory lap</strong></p>
+
+<p>10. <a href="#google-bing">Alert Google and Bing that your website has been refreshed</a></p>
+
+<p><img class="img-responsive" src="https://search.gov/img/website-relaunch-workflow.png" alt="Flow chart showing the steps involved in getting the search index ready to go on Search.gov, for a website that’s being relaunched." />
+<a href="https://search.gov/blog/redesign.html#description">Website relaunch flow chart detailed description</a><br />
+<a href="https://search.gov/img/website-relaunch-workflow.png">Open large version</a></p>
+
+<p><a name="description"></a></p>
+
+<h2 id="ready">Ready…</h2>
+
+<p><a name="contact-us"></a></p>
+
+<h3 id="1-let-the-searchgov-team-know-you-are-launching-a-new-site">1. Let the Search.gov team know you are launching a new site</h3>
+
+<p><strong>Who:</strong>  You, the agency web team</p>
+
+<p><strong>What:</strong> Send us an <a href="mailto:search@support.digitalgov.gov">email</a>, give us a call, either way, please let us know that you’re working on a redesign of your website. If we know ahead of time, we can help you get your new search experience prepped and in good shape on the day of the relaunch. When you reach out to us, include the planned launch date.</p>
+
+<p>It’s important to plan ahead, because if there are any changes to your site structure, your search results will break, which will lead to frustration for the public as they try to use your new site. This is true for our service, and out on Google and Bing. To avoid an avalanche of <code>404 not found</code> errors from your search results, wherever possible, use 301 redirects to send visitors from the old pages to the appropriate new pages. For more on 301 redirects, read tips from <a href="http://blogs.bing.com/webmaster/2011/10/06/managing-redirects-301s-302s-and-canonicals/">Bing</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="https://support.google.com/webmasters/answer/93633">Google</a> <i class="icon-external-link"><span>(External link)</span></i>. Notify other websites that link to you of the changes.</p>
+
+<p><a name="develop-plan"></a></p>
+
+<h3 id="2-develop-a-reindexing-plan">2. Develop a reindexing plan</h3>
+
+<p><strong>Who:</strong> Search.gov team, in consultation with you, the agency web team</p>
+
+<p><strong>What:</strong> We will ask you about your search needs for the new site, including what domains you need to include, how you can generate an <a href="https://search.gov/blog/sitemaps.html">xml sitemap</a>, and what SEO supports you’re putting in place in your new templates, like <a href="https://search.gov/manual/metadata.html">metadata</a> and <a href="https://search.gov/manual/how-search-engines-index-content-better-discoverability.html">other structured elements</a>. Read more about our <a href="https://search.gov/manual/site-launch-guide.html#indexing-workflow">indexing process here</a>.</p>
+
+<p>As part of this discussion, we’ll make some recommendations and likely agree on some action items for your team to consider implementing prior to your launch. If there are any major SEO warning signs in your setup, we’ll let you know.</p>
+
+<p>We’ll also ask you about the timeline for launch, so that we can reserve a time to coordinate <a href="#parallel-tracks">Step 8</a> with you.</p>
+
+<h2 id="set">Set…</h2>
+
+<p><a name="prep-seo"></a></p>
+
+<h3 id="3-prepare-xml-sitemaps-and-seo-elements">3. Prepare xml sitemaps and SEO elements</h3>
+
+<p><strong>Who:</strong> You, the agency web team</p>
+
+<p><strong>What:</strong> Action items that usually come out of the planning discussions include</p>
+
+<ul>
+  <li>Ensure that each domain and subdomain you want to be searchable launches with an <a href="https://search.gov/blog/sitemaps.html">xml sitemap</a>.</li>
+  <li>Add <a href="https://search.gov/manual/metadata.html">metadata</a> blocks to the <code>&lt;head&gt;</code> of your page templates, and Semantic Markup to the <code>&lt;body&gt;</code>.
+    <ul>
+      <li>Sometimes these pieces are in place, but need to be modified or moved.</li>
+    </ul>
+  </li>
+  <li>Talk with other web teams to ask them to do the above items on their sites, so you can leverage them when your site searches their site’s content.</li>
+</ul>
+
+<p><a name="search-page-alert"></a></p>
+
+<h3 id="4-add-a-search-page-alert-in-the-admin-center">4. Add a Search Page Alert in the Admin Center</h3>
+
+<p><strong>Who:</strong> You, the agency web team</p>
+
+<p><strong>What:</strong> Use our <a href="https://search.gov/manual/system-alert.html">Search Page Alert</a> feature to display a “pardon our dust” type message on your results page. For example:</p>
+<ul>
+  <li><code>We are launching a new example.gov. If your search does not return the content you expected, please check back soon for updated results.</code></li>
+  <li>Set the status of the alert to <code>Inactive</code> and wait for the relaunch.</li>
+</ul>
+
+<p><a name="add-features"></a></p>
+
+<h3 id="5-prepare-color-scheme-updates-and-new-logo-to-add-to-admin-center">5. Prepare color scheme updates and new logo to add to Admin Center</h3>
+
+<p><strong>Who:</strong> You, the agency web team</p>
+
+<p><strong>What:</strong> Gather your <a href="/manual/brand.html">new logo and color palette</a>, if needed. Many sites find it helpful to mock up their redesigned results page in a non-production search site - you can either <a href="https://search.gov/manual/clone-site.html">clone</a> your existing site or just use the <a href="https://search.gov/manual/add-site.html">Add Site</a> button to create a totally new one.</p>
+
+<p><strong>Don’t implement</strong> these changes on your production site ahead of the actual relaunch (that comes in <a href="#parallel-tracks">Step 8</a>, below).</p>
+
+<p><a name="update-features"></a></p>
+
+<h3 id="6-prepare-updates-to-your-other-search-features">6. Prepare updates to your other search features</h3>
+
+<p><strong>Who:</strong> You, the agency web team</p>
+
+<p><strong>What:</strong> When your URL structure changes, this will affect several of our search features. You’ll want to get your updates ready to go, but <strong>don’t implement</strong> them ahead of the relaunch, or people will end up in the wrong places:</p>
+
+<ul>
+  <li><a href="https://search.gov/manual/domains.html">Domains</a>: make sure your Domains list includes the domains and subdomains that you want included as the default content to search.</li>
+  <li><a href="https://search.gov/manual/collections.html">Collections</a>: make sure your Collections are searching for the right content in the new location.</li>
+  <li><a href="https://search.gov/manual/best-bets.html">Best Bets</a>: make sure your Best Bet URLs are correct for the content’s new location.</li>
+  <li><a href="https://search.gov/manual/routed-queries.html">Routed Queries</a>: update the target of your Routed Queries, so searchers will end up on the correct page.</li>
+  <li><a href="https://search.gov/manual/rss.html">RSS</a> feeds should be removed, and re-added from their new locations.</li>
+</ul>
+
+<h2 id="go">Go!</h2>
+
+<p><a name="go-live"></a></p>
+
+<h3 id="7-flip-the-new-website-live-and-let-us-know">7. Flip the new website live, and let us know</h3>
+
+<p><strong>Who:</strong> You, the agency web team</p>
+
+<p><strong>What:</strong> When your new website is publicly available, reach out to us by email or phone. This will be our signal to begin our part of <a href="#parallel-tracks">Step 8</a>.</p>
+
+<p><a name="parallel-tracks"></a></p>
+
+<h3 id="8-implement-the-changes-to-the-search-site">8. Implement the changes to the search site</h3>
+
+<p>At this point, the work splits into two parallel tracks, with your team and ours working on related items at the same time.</p>
+
+<p><strong>Who:</strong> You, the agency web team</p>
+
+<p><strong>What:</strong> Add the updates you prepared in Steps 4, 5, and 6 to the Admin Center for your production search site:</p>
+
+<ul>
+  <li>Set your Search Page Alert to <code>Active</code></li>
+  <li>Update your colors and logo</li>
+  <li>Update your Domains, Collections, Best Bets, Routed Queries, and RSS Feeds as necessary</li>
+</ul>
+
+<p><strong>Who:</strong> The Search.gov team</p>
+
+<p><strong>What:</strong> We complete several backend tasks</p>
+<ul>
+  <li>Switch your production search site to use the new index, which will begin empty for your domain(s).</li>
+  <li>Tell our indexer to begin working on your domain(s)
+    <ul>
+      <li>The time it takes to get your content indexed depends on the number of items you have, and whether you have a crawl delay declared in your <code>/robots.txt</code> file. Generally speaking, a few hundred items should be done in an hour or two, a few thousand items should be done in several hours, etc.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><a name="go-live"></a></p>
+
+<h3 id="9-results-begin-to-show">9. Results begin to show</h3>
+
+<p><strong>What:</strong> Our indexer will first read your sitemap, collect the urls, and then work through them in the order they were collected. We will work at the crawl delay set in your <code>/robots.txt</code> file, or 1 request per second, whichever is slower. This delay is the time after we’ve rendered a page, before requesting the next page to render.</p>
+
+<h2 id="victory-lap">Victory lap</h2>
+
+<p><a name="google-bing"></a></p>
+
+<h3 id="10-alert-google-and-bing-that-your-website-has-been-refreshed">10. Alert Google and Bing that your website has been refreshed.</h3>
+
+<p><strong>Who:</strong> You, the agency web team</p>
+
+<p><strong>What:</strong> Register for the commercial search engines’ webmaster tools, if you haven’t already done so.</p>
+<ul>
+  <li><a href="http://www.bing.com/toolbox/webmaster">Bing Webmaster Tools</a> <i class="icon-external-link"><span>(External link)</span></i></li>
+  <li><a href="https://www.google.com/webmasters/tools/home?hl=en">Google Search Console</a> <i class="icon-external-link"><span>(External link)</span></i> (now called Google Search Console)</li>
+  <li>Resources: 
+<em><a href="http://googlewebmastercentral.blogspot.com/2012/04/how-to-move-your-content-to-new.html">How to move your content to a new location</a></em> <i class="icon-external-link"><span>(External link)</span></i>, Google Webmaster Central Blog
+    <ul>
+      <li>In Bing, use the <a href="https://www.bing.com/webmaster/help/how-to-use-the-site-move-tool-bb8f5112">Site Move tool</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>If you’ve undergone a redesign, followed these steps, and your site search results are not what you’d expect, <a href="mailto:search@support.digitalgov.gov">send us an email</a>.</p>
+
+  </div>
+
+  <div class='tags'>
+    
+    <a href="/tagged/seo"><span class="label label-info">seo</span></a>
+    
+    <a href="/tagged/site-launch"><span class="label label-info">site-launch</span></a>
+    
+    <a href="/tagged/indexing"><span class="label label-info">indexing</span></a>
+    
+  </div>
+
+  <div class='time'>
+    
+    
+    
+    
+    <a href="/manual/redesign.html">
+      <time>August 30, 2019</time>
+    </a>
+  </div>
+
+</article>
+
+    </main>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p><a href="mailto:search@support.digitalgov.gov">Email us</a> or call us at 202-969-7426</p>
+    <p> An Official Website of the U.S. Government <br />
+      <a href="https://www.gsa.gov/portal/category/25729">Technology Transformation Service</a>, <a href="https://www.gsa.gov/portal/category/100000">U.S. General Services Administration</a>
+    </p>
+    <ul class="footer-links list-unstyled list-inline">
+      <li><a href="https://www.usa.gov">USA.gov</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/tos.html">Terms of Service</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="https://www.digitalgov.gov/about/policies/">Site Policies</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/developer/">Developers</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  //<![CDATA[
+  var usasearch_config = { siteHandle:"usasearch" };
+
+jQuery(document).ready(function() {
+  $('.typeahead').typeahead({
+      source: function (query, process) {
+          return $.get('https://search.usa.gov/sayt?name=usasearch&q=' + query, function (data) {
+              return process(data);
+          });
+      }, minLength: 2
+  });
+})
+
+
+  // var script = document.createElement("script");
+  // script.type = "text/javascript";
+  // script.src = "https://search.usa.gov/javascripts/remote.loader.js";
+  // document.getElementsByTagName("head")[0].appendChild(script);
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31302465-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  //]]>
+</script>
+
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA" id="_fed_an_ua_tag"></script>
+
+
+</body>
+</html>
