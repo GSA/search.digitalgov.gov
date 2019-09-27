@@ -108,6 +108,57 @@
  
     
     <h1>
+      <a href="/releases/november-2017.html">November 2017 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlights">Highlights</h2>
+<ul>
+  <li>To accomplish our <a href="/blog/searchgov-blog.html">FY 2018 goals</a>, we continued backend development that will allow your agency content to be served directly from our indexes. In November, our team began testing our new system. We also released several features related to this project:
+    <ul>
+      <li><a href="/manual/collections.html">Collections</a> results will now come from our indexes. Previously, a site that saw main page search results from our indexes would still see Bing or Google results when using Collections. Now, if a site is using our indexes for its main search page, its Collections results will also come from our indexes.</li>
+      <li>The <a href="/manual/rss.html">page-1 RSS module</a> and <a href="/manual/system-alert.html">search page alert</a> will now appear for sites getting results from our indexes. Previously, these two features only worked on sites using Bing/Google.</li>
+      <li><a href="/developer/indexing-api.html">i14y documents</a> will be rejected if the<code> document_id</code> contains slashes or is more than 512 bytes.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+<ul>
+  <li>On November 14th, we notified our users of a <a href="http://mailchi.mp/support/service-degradation-resolved">Bing service degradation</a>. This caused inconsistent results across sites, including incomplete results or 503 errors, and prevented access to the Search Admin Center. The inconsistency began at 2:05pm ET and ended at 3:05pm ET.</li>
+  <li>We continued transitioning our repos to use Circle CI.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+<ul>
+  <li>Phrase searches now work with content that is served from our indexes. A search for “cheese curds” will return results for the specific phrase “cheese curds” rather than the separate words “cheese” and “curds”.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/november-2017.html">
+        <time datetime="2017-12-18">December 18, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/october-2017.html">October 2017 Release Notes</a>
     </h1>
     
@@ -572,76 +623,6 @@
       
       <a href="/releases/february-2017.html">
         <time datetime="2017-03-15">March 15, 2017</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/january-2017.html">January 2017 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="highlighted-features">Highlighted Features</h2>
-
-<h3 id="i14y-drawer-management">i14y Drawer Management</h3>
-
-<p>We updated the process for removing <a href="/manual/i14y-drawers.html">i14y Drawers</a> from a search configuration.</p>
-
-<ul>
-  <li>If you remove a drawer that is associated with only one search configuration, it will be deleted from our system.</li>
-  <li>If you remove a drawer that is attached to multiple search configurations, it will be removed from only the one configuration and will remain attached to the others.</li>
-</ul>
-
-<h3 id="new-results-page-platform-launches">New Results Page Platform Launches</h3>
-
-<p>We launched our new JavaScript search results page, which is serving the search results on IRS.gov.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/new-serp.png" alt="New JavaScript results page" width="100%" /></p>
-
-<h2 id="chores">Chores</h2>
-
-<ul>
-  <li>Have your RSS feeds transitioned from <code>HTTP</code> to <code>HTTPS</code>? Our system now recognizes that transition automatically.</li>
-  <li>We indexed and support the search for whitehouse.gov. We prepared indexes to go live at noon January 20, for the obamawhitehouse.archives.gov sites, as well as the new content on whitehouse.gov.</li>
-  <li>We’ve updated the process around password reset links.
-    <ul>
-      <li>Password reset links are only valid for one hour: previously, if you requested a password reset link more than once within the hour, the first link would expire. This caused confusion for many users who accidentally hit the reset link twice and were encountering expired links.</li>
-      <li>Now, we will resend you the first, valid link for a period of one hour, regardless of how many times you hit the reset button.</li>
-      <li>We’ve also updated and clarified the message you see if you click an expired link.</li>
-    </ul>
-  </li>
-  <li>We finalized adding all our active repos to the <a href="https://code.gov">Code.gov</a> inventory.</li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-
-<ul>
-  <li>Our excellent asset caching was inadvertently prolonging transient errors by serving up cached error responses. We’ve fixed this so errors will really go away when they’ve cleared.</li>
-  <li>We also added a response code passthrough to make sure that, in our multiserver environment, we don’t end up returning <code>200</code> responses just because an error page is working just fine. We are now passing through the response code reported by the error page.</li>
-  <li>We fixed a bug where some password reset tokens were delivering users to the login page, when they should have been delivered to the password reset page.</li>
-  <li>We fixed an error that was interfering with our import of Federal Register documents for indexing.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/january-2017.html">
-        <time datetime="2017-02-17">February 17, 2017</time>
       </a>
     </div>
     </article>

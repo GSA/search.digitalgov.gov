@@ -108,6 +108,73 @@
  
     
     <h1>
+      <a href="/releases/september-2013.html">September 2013 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlight-visit-the-revamped-admin-center">Highlight: Visit the Revamped Admin Center</h2>
+
+<p>We’re excited to release our newly revamped <a href="https://search.usa.gov/sites/">Admin Center</a>. Be sure to update your bookmarks!</p>
+
+<p>After you log in, the new Default Site feature lets you set the site you see by default. We’ve automatically set it as your highest-traffic site. You can change the default site by clicking on the pin icon next to your selected site.</p>
+
+<p>Among the new features are Today’s Snapshot, where we’ve placed the snapshot of today’s search data front and center.</p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/todays-snapshot.png" alt="Today's Snapshot" /></p>
+
+<p>On <a href="/manual/site-overview.html">Today’s Snapshot</a>, you can view top queries and clicks, trending queries and URLs, queries with no results, and queries with low click thrus.</p>
+
+<p><a href="/manual/monthly-reports.html">Monthly reports</a> and <a href="/manual/queries.html">query</a> and <a href="/manual/clicks.html">click</a> stats are also available through the new Analytics section.</p>
+
+<p>We’ve also made it easier for you to manage the content that displays on your search results page by placing it all within one section, Manage Content.</p>
+
+<p>Another section, Manage Display, makes it easier for you turn <a href="/manual/display-overview.html">display features</a> on and off and to <a href="/manual/brand.html">brand</a> your results page by selecting your font and color scheme, managing your image assets, and adding header and footer links. Plus, you can now edit the ‘News’ label on the News Govbox.</p>
+
+<p>You can read our updated help by clicking on the Help? link on each page in the Admin Center, or see the full set of help files on our <a href="/manual/index.html">How to Set Up Your Search Box</a> page.</p>
+
+<p>Email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> to let us know if you have other ideas for how we can improve our Admin Center.</p>
+
+<h2 id="chores">Chores</h2>
+
+<ul>
+  <li>We made <a href="/manual/twitter.html">tweet</a> queries two orders of magnitude, or 130ms, faster and pruned older tweets from our index to increase retrieval speeds.</li>
+  <li>We upgraded our <a href="https://access.redhat.com/site/documentation/en-US/Red_Hat_Enterprise_Linux/6/html/6.3_Release_Notes/index.html">RedHat channel</a> <i class="icon-external-link"><span>(External link)</span></i> from 6.2 to 6.3.</li>
+  <li>We moved some servers to a new datacenter and resolved a bandwidth issue between our datacenters.</li>
+  <li>We sent Microsoft an updated list of federal, state, and local government domains that aren’t .gov or .mil so that searchers can get results from these websites on <a href="http://www.usa.gov">USA.gov</a>.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li>We updated our stemming file to fix a stemming issue with organ* so that searches on organic no longer find results for organizations, organisms, or other irrelevant terms.</li>
+  <li>We removed the ‘www’ for newly added sites so the default <a href="/manual/domains.html">domain</a> is now agency.gov, not www.agency.gov.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/september-2013.html">
+        <time datetime="2013-09-30">September 30, 2013</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/july-2013.html">July 2013 Release Notes</a>
     </h1>
     
@@ -773,84 +840,6 @@
       
       <a href="/releases/october-2012.html">
         <time datetime="2012-11-02">November 2, 2012</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/september-2012.html">September 2012 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="2-highlighted-features">2 Highlighted Features</h2>
-
-<h3 id="1-infinite-scrolling">1. Infinite scrolling</h3>
-
-<p>Searchers now have the benefit of infinite scrolling on your results pages. What is infinite scrolling? You’ve probably used it on many commercial websites, such as <a href="http://www.bing.com/images/search?q=yosemite">Bing Images</a> <i class="icon-external-link"><span>(External link)</span></i>, <a href="http://duckduckgo.com/?q=yosemite">Duck Duck Go</a> <i class="icon-external-link"><span>(External link)</span></i>, <a href="http://pinterest.com/search/boards/?q=yosemite">Pinterest</a> <i class="icon-external-link"><span>(External link)</span></i>, and <a href="https://twitter.com/i/#!/search/yosemite">Twitter</a> <i class="icon-external-link"><span>(External link)</span></i>. It automatically allows searchers to see more results when they get to the bottom of the page, without clicking on the link for the next page of results.</p>
-
-<p>Try it out on your site’s search results page, or on <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=yosemite">USA.gov</a>.</p>
-
-<p><a href="http://search.usa.gov/search?affiliate=usagov&amp;query=yosemite"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/tumblr_mb2awk8xwU1qid15q.png" alt="Infinite scroll on USA.gov's search results page" /></a></p>
-
-<p>Infinite scrolling has many advantages, including:</p>
-
-<ol>
-  <li><em>Speed.</em> The next set of new results loads quicker than a totally new page.</li>
-  <li><em>Streamlining the user interface.</em> Studies show most searchers don’t use the next page buttons. Proactively loading results allows searchers to see more results on one page and to compare them.</li>
-  <li><em>Simplifying the indexes.</em> When and how we display results from our various web indexes is easier for us, you, and end users.</li>
-</ol>
-
-<h3 id="2-helping-searchers-find-forms">2. Helping searchers find forms.</h3>
-
-<p>Similar to our existing agency and <a href="http://search.usa.gov/search?affiliate=usagov&amp;query=diabetes">health</a> GovBoxes, we created a forms GovBox to help searchers find federal government forms. So far, we’ve included forms from the Department of Defense, General Services Administration, Social Security Administration, U.S. Citizenship and Immigration Services, and Department of Veterans Affairs.</p>
-
-<p>We’ve also published the forms data as a Federal Forms API for third-party developers.</p>
-
-<h2 id="other-features">Other Features</h2>
-
-<ul>
-  <li>We completely revamped how <a href="/manual/collections.html">collections</a> work to provide you with more flexibility. We encourage you to check out this feature if you’re interested in offering  navigation options in the left-hand sidebar on your results page. You can now create a collection:</li>
-  <li>Covering tens of thousands (or even millions) of web pages.</li>
-  <li>Covering domains that aren’t part of your primary <a href="/manual/domains.html">domain</a> (i.e., that aren’t shown on the main web results page).</li>
-  <li>Without needing to add our Javascript <a href="/manual/code.html">code snippet</a>.</li>
-</ul>
-
-<h2 id="chores">Chores</h2>
-
-<ul>
-  <li>We upgraded our robots.txt parser to account for comments and varying cases.</li>
-  <li>We eliminated support for six <a href="/blog/legacy-domains.html">legacy domains</a> as part of the .gov web reform project.</li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-
-<ul>
-  <li>We fixed broken URLs for Best Bets image files.</li>
-  <li>We fixed a bug with our browser user agent so that Internet Explorer users no longer sometimes see a blank results page.</li>
-  <li>We fixed a CSS validation bug so you don’t see an error message when editing your header or footer.</li>
-  <li>We updated a broken link for Explore Topics on m.USA.gov.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/september-2012.html">
-        <time datetime="2012-09-28">September 28, 2012</time>
       </a>
     </div>
     </article>

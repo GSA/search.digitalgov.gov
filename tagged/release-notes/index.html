@@ -108,6 +108,49 @@
  
     
     <h1>
+      <a href="/releases/august-2019.html">August 2019 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="improvements">Improvements</h2>
+
+<ul>
+  <li><strong>Improved security:</strong> We resolved and upgraded a series of security vulnerabilities.</li>
+  <li><strong>Service upgrades:</strong> We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li><strong>Account Deactivations:</strong> We fixed a bug that erroneously deactivated some users’ accounts due to GSA account use policies.</li>
+  <li><strong>Twitter Integration:</strong> We fixed a bug that prevented us from retrieving data from the Twitter API.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/august-2019.html">
+        <time datetime="2019-09-27">September 27, 2019</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/june-2019.html">June 2019 Release Notes</a>
     </h1>
     
@@ -519,56 +562,6 @@
       
       
       <a href="/releases/october-2018.html">
-        <time datetime="2018-12-19">December 19, 2018</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/november-2018.html">November 2018 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="improvements">Improvements</h2>
-<ul>
-  <li>We integrated directly with the new USAJOBS API. This means that we
-    <ul>
-      <li>are now querying their system at query time, rather than building an index of their job postings within our own system and querying that at query time.</li>
-      <li>have reconfigured what information our jobs searches include in the full query that we send to USAJOBS</li>
-      <li>have increased the geographic radius we’ll look at when a user searches on a jobs-related term. The radius is now 75 miles from the user’s general location.</li>
-      <li>we are now always providing a link to USAJOBS.gov if someone has searched for a jobs-related term, even if there are no jobs located near the searcher.</li>
-    </ul>
-  </li>
-  <li>We now support indexing TXT files. There are more TXT files on government websites than you would have thought!</li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-<ul>
-  <li>We fixed a link in the Jobs module that led searchers to a broken USAJOBS.gov page.</li>
-  <li>We now deduplicate sitemap URLs so we will not try to index the same content more than once.</li>
-  <li>We updated Ruby gems: Loofah, Rack, FFI.</li>
-  <li>We upgraded Ruby.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/november-2018.html">
         <time datetime="2018-12-19">December 19, 2018</time>
       </a>
     </div>
