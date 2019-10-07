@@ -4,7 +4,7 @@
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   
-  <title>April 2013 Release Notes</title>
+  <title>Robots.txt Files</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -97,80 +97,134 @@
 <div class="container-fluid">
   <div class="col-md-8 col-md-offset-2">
 
+  <nav aria-label="breadcrumb" class="mt-2">
+  <ul class="breadcrumb">
+    
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/"><span property="name">Home</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/"><span property="name">Help Manual</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/indexing-with-searchgov.html"><span property="name">Indexing</span></a></li>
+    
+    
+    <li class="breadcrumb-item active">
+    Robots.txt
+    </li>
+  </ul>
+
     <!-- do not remove as used to parse in usasearch -->
     <main id="main-container">
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/releases/april-2013.html">April 2013 Release Notes</a>
+    <a href="/manual/robotstxt.html">Robots.txt Files</a>
   </h1>
   
 
   <div class='post-content'>
-    <h2 id="highlight-find-state-and-local-jobs">Highlight: Find State and Local Jobs</h2>
+    <p>A <code>/robots.txt</code> file is a text file that instructs automated web bots on how to crawl and/or index a website. Web teams use them to provide information about what site directories should or should not be crawled, how quickly content should be accessed, and which bots are welcome on the site.</p>
 
-<p>Searchers on many state and local websites can now see current job openings. We’re automatically indexing and displaying job openings for all of your websites that use <a href="http://www.neogov.com">NeoGov</a>.</p>
-
-<p>See the sample results page below that shows current job openings displayed on the City of Bloomington, MN, for a search on <a href="http://search.ci.bloomington.mn.us/search?affiliate=cityofbloomingtonmnsearchresults&amp;query=jobs">jobs</a>.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/jobs-bloomington.png" alt="Search results for jobs on ci.bloomington.mn.us" /></p>
-
-<p>(Thanks, City of Bloomington, for helping us pilot test this new feature!)</p>
-
-<h2 id="other-features">Other Features</h2>
+<h2 id="what-should-my-robotstxt-file-look-like">What should my robots.txt file look like?</h2>
+<p>Please refer to the <a href="http://www.robotstxt.org/robotstxt.html">robots.txt protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> for detailed information on how and where to create your robots.txt. Key points to keep in mind:</p>
 
 <ul>
-  <li>Searchers now see search results for <a href="/manual/collections.html">collections</a> that are in deeply nested folders on your site.</li>
-  <li>Searchers no longer see deep site links for the first-listed search result.</li>
-  <li>Developers can now access <a href="https://api.usa.gov/jobs/search.json?tags=state">state</a> and <a href="https://api.usa.gov/jobs/search.json?tags=city+county">local</a> jobs data via our <a href="/developer/jobs.html">Jobs API</a> for government agencies that use both DigitalGov Search and NeoGov.</li>
+  <li>The file must be located at the root of the domain, and each subdomain needs its own file.</li>
+  <li>The robots.txt protocol is case sensitive.</li>
+  <li>It’s easy to accidentally block crawling of everything
+    <ul>
+      <li><code>Disallow: /</code> means disallow everything</li>
+      <li><code>Disallow:  </code> means disallow nothing, thus allowing everything</li>
+      <li><code>Allow: /</code> means allow everything</li>
+      <li><code>Allow:  </code> means allow nothing, thus disallowing everything</li>
+    </ul>
+  </li>
+  <li>The instructions in robots.txt are guidance for bots, not binding requirements.</li>
 </ul>
 
-<h2 id="chores">Chores</h2>
+<h2 id="how-can-i-optimize-my-robotstxt-for-searchgov">How can I optimize my robots.txt for Search.gov?</h2>
+
+<h3 id="crawl-delay">Crawl delay</h3>
+<p>A robots.txt file may specify a “crawl delay” directive for one or more user agents, which tells a bot how quickly it can request pages from a website. For example, a crawl delay of 10 specifies that a crawler should not request a new page more than every 10 seconds.  We recommend a crawl-delay of 2 seconds for our <code>usasearch</code> user agent, and setting a higher crawl delay for all other bots. The lower the crawl delay, the faster Search.gov will be able to index your site. In the robots.txt file, it would look like this:</p>
+
+<pre><code>User-agent: usasearch  
+Crawl-delay: 2
+
+User-agent: *
+Crawl-delay: 10
+</code></pre>
+
+<h3 id="xml-sitemaps">XML Sitemaps</h3>
+<p>Your robots.txt file should also list one or more of your <a href="https://search.gov/blog/sitemaps.html">XML sitemaps</a>. For example:</p>
+
+<pre><code>Sitemap: https://www.exampleagency.gov/sitemap.xml
+Sitemap: https://www.exampleagency.gov/independent-subsection-sitemap.xml
+</code></pre>
+<ul>
+  <li>Only list sitemaps for the domain matching where the robots.txt file is. A different subdomain’s sitemap should be listed on that subdomain’s robots.txt.</li>
+</ul>
+
+<h3 id="allow-only-the-content-that-you-want-searchable">Allow only the content that you want searchable</h3>
+<p>We recommend disallowing any directories or files that should not be searchable. For example:</p>
+
+<pre><code>Disallow: /archive/
+Disallow: /news-1997/
+Disallow: /reports/duplicative-page.html
+</code></pre>
 
 <ul>
-  <li>We updated our <a href="/tos.html">terms of service</a>.</li>
-  <li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-  <li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> with any questions.</li>
-  <li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
-  <li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
-  <li>We removed the trending searches feature and widget.</li>
-  <li>We updated our <a href="http://jenkins-ci.org">Jenkins</a> build to fix to failing <a href="http://cukes.info">Cucumber</a> specs.</li>
+  <li>Note that if you disallow a directory after it’s been indexed by a search engine, this may not trigger a removal of that content from the index. You’ll need to go into the search engine’s webmaster tools to request removal.</li>
+  <li>Also note that search engines may index individual pages within a disallowed folder if the search engine learns about the URL from a non-crawl method, like a link from another site or your sitemap. To ensure a given page is not searchable, set a <a href="/blog/how-search-engines-index-content-better-discoverability.html#robots">robots meta tag</a> on that page.</li>
 </ul>
 
-<h2 id="fixes">Fixes</h2>
+<h3 id="customize-settings-for-different-bots">Customize settings for different bots</h3>
+<p>You can set different permissions for different bots. For example, if you want us to index your archived content but don’t want Google or Bing to index it, you can specify that:</p>
 
-<ul>
-  <li>We’re now tracking impressions on <a href="/manual/best-bets-graphics.html">graphics Best Bets</a>.</li>
-  <li>We now accept Flickr and RSS feeds even if there are invalid items without a description, date, or other required field.</li>
-  <li>The advanced search link no longer propagates unnecessary parameters in the URL.</li>
-  <li>We removed trailing spaces from Twitter handles to prevent broken links in the <a href="/manual/twitter.html">Twitter GovBox</a>.</li>
-  <li>We now accept Flickr handles with an ‘@’ sign in them.</li>
-  <li>Searchers now see better results when they do a search from the <a href="http://search.usa.gov/search/advanced?affiliate=usagov">advanced search page</a> with multiple terms in the ‘Any of these words’ and ‘None of these words’ fields.</li>
-  <li>Searchers now see results for terms like full-time and part-time. The hyphens had previously been treated as the NOT Boolean operator.</li>
-  <li>Searchers no longer see the <a href="/manual/govbox-jobs.html">Jobs GovBox</a> for advanced searches when it isn’t relevant.</li>
-  <li>We fixed a bug so that, if a site parameter is specified, it overrides the scopeid parameter.</li>
-  <li>We added some additional logic to the code that redirects visitors from search.usa.gov to USA.gov’s homepage.</li>
-  <li>We fixed a few regression bugs for related searches and the naming of the ‘unescapedUrl’ and ‘publishedAt’ fields in our Search API.</li>
-  <li>We now display search results only for pages that specify a URL.</li>
-</ul>
+<pre><code>User-agent: usasearch  
+Crawl-delay: 2
+Allow: /archive/
+
+User-agent: *
+Crawl-delay: 10
+Disallow: /archive/
+</code></pre>
+
+<h2 id="robotstxt-checklist">Robots.txt checklist</h2>
+<p><i class="icon-check"></i> 1. A robots.txt file has been created in the site’s root directory (<code>https://exampleagency.gov/robots.txt</code>)</p>
+
+<p><i class="icon-check"></i> 2. The robots.txt file disallows any directories and files that automated bots should not crawl</p>
+
+<p><i class="icon-check"></i> 3. The robots.txt file lists one or more <a href="https://search.gov/blog/sitemaps.html">XML sitemaps</a></p>
+
+<p><i class="icon-check"></i> 4. The robots.txt file format has been <a href="http://tools.seochat.com/tools/robots-txt-validator/">validated</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<h2 id="additional-resources">Additional Resources</h2>
+<p><a href="https://yoast.com/ultimate-guide-robots-txt/">Yoast SEO’s Ultimate Guide to Robots.txt</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<p><a href="https://support.google.com/webmasters/answer/6062608?hl=en&amp;ref_topic=6061961">Google’s “Learn about robots.txt files”</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+    <a href="/tagged/how-to"><span class="label label-info">how-to</span></a>
+    
+    <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+    
+    <a href="/tagged/indexing"><span class="label label-info">indexing</span></a>
     
   </div>
 
   <div class='time'>
     
-    
     </br><span>Page last reviewed or updated:</span>
     
     
     
-    <a href="/releases/april-2013.html">
-      <time>May 3, 2013</time>
+    
+    <a href="/manual/robotstxt.html">
+      <time>April 9, 2019</time>
     </a>
   </div>
 

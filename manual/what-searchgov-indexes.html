@@ -4,7 +4,7 @@
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   
-  <title>April 2013 Release Notes</title>
+  <title>What Search.gov Indexes From Your Website</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -97,80 +97,96 @@
 <div class="container-fluid">
   <div class="col-md-8 col-md-offset-2">
 
+  <nav aria-label="breadcrumb" class="mt-2">
+  <ul class="breadcrumb">
+    
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/"><span property="name">Home</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/"><span property="name">Help Manual</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/indexing-with-searchgov.html"><span property="name">Indexing</span></a></li>
+    
+    
+    <li class="breadcrumb-item active">
+    What Search.gov Indexes
+    </li>
+  </ul>
+
     <!-- do not remove as used to parse in usasearch -->
     <main id="main-container">
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/releases/april-2013.html">April 2013 Release Notes</a>
+    <a href="/manual/what-searchgov-indexes.html">What Search.gov Indexes From Your Website</a>
   </h1>
   
 
   <div class='post-content'>
-    <h2 id="highlight-find-state-and-local-jobs">Highlight: Find State and Local Jobs</h2>
+    <h2 id="content">Content</h2>
 
-<p>Searchers on many state and local websites can now see current job openings. We’re automatically indexing and displaying job openings for all of your websites that use <a href="http://www.neogov.com">NeoGov</a>.</p>
+<p>When we think about indexing pages for search, we usually think about indexing the primary content of the page. But if the page isn’t structured to tell the search engine where that content is to be found, it will collect the <code>&lt;body&gt;</code> tag, and then filter out the <code>&lt;nav&gt;</code> and <code>&lt;footer&gt;</code> elements, if present. If <code>&lt;main&gt;</code>, <code>&lt;nav&gt;</code>, or <code>&lt;footer&gt;</code> are not present, we collect the full contents of the <code>&lt;body&gt;</code> tag. Learn more on our post about aiming search engines at the content you really want to be searchable, using <a href="https://search.gov/manual/how-search-engines-index-content-better-discoverability.html#main-element">the &lt;/main&gt; element</a>.</p>
 
-<p>See the sample results page below that shows current job openings displayed on the City of Bloomington, MN, for a search on <a href="http://search.ci.bloomington.mn.us/search?affiliate=cityofbloomingtonmnsearchresults&amp;query=jobs">jobs</a>.</p>
+<h2 id="metadata">Metadata</h2>
 
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/jobs-bloomington.png" alt="Search results for jobs on ci.bloomington.mn.us" /></p>
+<p>You can <a href="https://search.gov/manual/metadata.html">read more detail on each of the following elements here</a>.</p>
 
-<p>(Thanks, City of Bloomington, for helping us pilot test this new feature!)</p>
-
-<h2 id="other-features">Other Features</h2>
+<h3 id="standard-metadata-elements">Standard metadata elements</h3>
 
 <ul>
-  <li>Searchers now see search results for <a href="/manual/collections.html">collections</a> that are in deeply nested folders on your site.</li>
-  <li>Searchers no longer see deep site links for the first-listed search result.</li>
-  <li>Developers can now access <a href="https://api.usa.gov/jobs/search.json?tags=state">state</a> and <a href="https://api.usa.gov/jobs/search.json?tags=city+county">local</a> jobs data via our <a href="/developer/jobs.html">Jobs API</a> for government agencies that use both DigitalGov Search and NeoGov.</li>
+  <li>title</li>
+  <li>meta description</li>
+  <li>meta keywords</li>
+  <li>locale or language (from the opening <code>&lt;html&gt;</code> tag)</li>
+  <li>url</li>
+  <li>lastmod (collected from XML sitemaps)</li>
 </ul>
 
-<h2 id="chores">Chores</h2>
+<h3 id="open-graph-protocol-external-link-elements"><a href="http://ogp.me/">Open Graph protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> elements</h3>
 
 <ul>
-  <li>We updated our <a href="/tos.html">terms of service</a>.</li>
-  <li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-  <li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> with any questions.</li>
-  <li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
-  <li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
-  <li>We removed the trending searches feature and widget.</li>
-  <li>We updated our <a href="http://jenkins-ci.org">Jenkins</a> build to fix to failing <a href="http://cukes.info">Cucumber</a> specs.</li>
+  <li>og:description</li>
+  <li>og:title</li>
+  <li>article:published_time</li>
+  <li>article:modified_time</li>
 </ul>
 
-<h2 id="fixes">Fixes</h2>
+<h2 id="file-formats">File formats</h2>
+
+<p>In addition to HTML pages with their various file extensions, Search.gov indexes the following file types:</p>
 
 <ul>
-  <li>We’re now tracking impressions on <a href="/manual/best-bets-graphics.html">graphics Best Bets</a>.</li>
-  <li>We now accept Flickr and RSS feeds even if there are invalid items without a description, date, or other required field.</li>
-  <li>The advanced search link no longer propagates unnecessary parameters in the URL.</li>
-  <li>We removed trailing spaces from Twitter handles to prevent broken links in the <a href="/manual/twitter.html">Twitter GovBox</a>.</li>
-  <li>We now accept Flickr handles with an ‘@’ sign in them.</li>
-  <li>Searchers now see better results when they do a search from the <a href="http://search.usa.gov/search/advanced?affiliate=usagov">advanced search page</a> with multiple terms in the ‘Any of these words’ and ‘None of these words’ fields.</li>
-  <li>Searchers now see results for terms like full-time and part-time. The hyphens had previously been treated as the NOT Boolean operator.</li>
-  <li>Searchers no longer see the <a href="/manual/govbox-jobs.html">Jobs GovBox</a> for advanced searches when it isn’t relevant.</li>
-  <li>We fixed a bug so that, if a site parameter is specified, it overrides the scopeid parameter.</li>
-  <li>We added some additional logic to the code that redirects visitors from search.usa.gov to USA.gov’s homepage.</li>
-  <li>We fixed a few regression bugs for related searches and the naming of the ‘unescapedUrl’ and ‘publishedAt’ fields in our Search API.</li>
-  <li>We now display search results only for pages that specify a URL.</li>
+  <li>PDFs</li>
+  <li>Word docs</li>
+  <li>Excel docs</li>
+  <li>TXT</li>
+  <li>Images can be indexed either using our <a href="https://search.gov/manual/flickr.html">Flickr integration</a>, or by sending us an <a href="https://search.gov/manual/rss.html">MRSS feed</a>. Note that images are not indexed during web page indexing, so you’ll need to use one of these two methods.</li>
 </ul>
+
+<p>Coming soon:</p>
+<ul>
+  <li>Powerpoint</li>
+</ul>
+
+<p>Please note that at this time we cannot index javascript content, <a href="https://moz.com/blog/search-engines-ready-for-javascript-crawling">similar to most search engines</a> <i class="icon-external-link"><span>(External link)</span></i>. At this time we recommend your team adds well crafted, unique description text for each of your pages, or perhaps auto-generate description tag text from the first few lines of the article text. However the text is added, it should include the keywords you want the page to respond to in search, framed in plain language. This will give us, and other search engines, something to work with when we’re matching and ranking results. See our discussion of description <a href="https://search.gov/manual/metadata.html">metadata</a> for more information.</p>
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+    <a href="/tagged/indexing"><span class="label label-info">indexing</span></a>
+    
+    <a href="/tagged/seo"><span class="label label-info">seo</span></a>
     
   </div>
 
   <div class='time'>
     
     
-    </br><span>Page last reviewed or updated:</span>
     
     
-    
-    <a href="/releases/april-2013.html">
-      <time>May 3, 2013</time>
+    <a href="/manual/what-searchgov-indexes.html">
+      <time>April 24, 2019</time>
     </a>
   </div>
 

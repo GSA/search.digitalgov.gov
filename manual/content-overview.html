@@ -4,7 +4,7 @@
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   
-  <title>April 2013 Release Notes</title>
+  <title>Add Your Content to Our Indexes: An Overview</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -102,75 +102,90 @@
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/releases/april-2013.html">April 2013 Release Notes</a>
+    <a href="/manual/content-overview.html">Add Your Content to Our Indexes: An Overview</a>
   </h1>
   
 
   <div class='post-content'>
-    <h2 id="highlight-find-state-and-local-jobs">Highlight: Find State and Local Jobs</h2>
+    <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Content Overview</p>
 
-<p>Searchers on many state and local websites can now see current job openings. We’re automatically indexing and displaying job openings for all of your websites that use <a href="http://www.neogov.com">NeoGov</a>.</p>
+<p>To display the results on your search results page, we index content from various sources. Each time a searcher enters a query on your site, we determine which indexes answer the searcher’s question and display results from them. This means a single search results page often includes items from several indexes.</p>
 
-<p>See the sample results page below that shows current job openings displayed on the City of Bloomington, MN, for a search on <a href="http://search.ci.bloomington.mn.us/search?affiliate=cityofbloomingtonmnsearchresults&amp;query=jobs">jobs</a>.</p>
+<p>When you first <a href="/manual/add-site.html">add a site</a>, we pull the homepage you listed into your <a href="/manual/domains.html">domains</a> list, and populate any social media accounts (<a href="/manual/flickr.html">Flickr</a>, <a href="/manual/twitter.html">Twitter</a>, and <a href="/manual/youtube.html">YouTube</a>) and <a href="/manual/rss.html">RSS feeds</a> that are linked from your homepage. Use the Discover option on this Content Overview page to automatically (re)discover the RSS and social media accounts on your site’s homepage, or any other page you want to scan.</p>
 
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/jobs-bloomington.png" alt="Search results for jobs on ci.bloomington.mn.us" /></p>
+<p>You can also add content manually to each of the sections listed above.</p>
 
-<p>(Thanks, City of Bloomington, for helping us pilot test this new feature!)</p>
+<h2 id="add-your-web-pages">Add Your Web Pages</h2>
 
-<h2 id="other-features">Other Features</h2>
+<p>When you <a href="/manual/domains.html">add your domains</a>, we’ll show results for all of your web pages listed within these domains. <strong><em>By default, these web results are powered by Bing.</em></strong></p>
 
-<ul>
-  <li>Searchers now see search results for <a href="/manual/collections.html">collections</a> that are in deeply nested folders on your site.</li>
-  <li>Searchers no longer see deep site links for the first-listed search result.</li>
-  <li>Developers can now access <a href="https://api.usa.gov/jobs/search.json?tags=state">state</a> and <a href="https://api.usa.gov/jobs/search.json?tags=city+county">local</a> jobs data via our <a href="/developer/jobs.html">Jobs API</a> for government agencies that use both DigitalGov Search and NeoGov.</li>
-</ul>
+<p>If you don’t like the default web results, you can choose to use another index. Options follow.</p>
 
-<h2 id="chores">Chores</h2>
+<p><strong>Option 1. Use Our Search.gov Web Index.</strong> We can index content that is sent to us by API or RSS. Email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> and we’ll work with you to determine the best way for us to get your content.</p>
 
-<ul>
-  <li>We updated our <a href="/tos.html">terms of service</a>.</li>
-  <li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-  <li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> with any questions.</li>
-  <li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
-  <li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
-  <li>We removed the trending searches feature and widget.</li>
-  <li>We updated our <a href="http://jenkins-ci.org">Jenkins</a> build to fix to failing <a href="http://cukes.info">Cucumber</a> specs.</li>
-</ul>
+<p><strong>Option 2. Use Another Web Index of Your Choice.</strong> Most search indexes expose their results as XML. If you have another search index that renders XML, let us know and we’ll work with you to determine if you can use it.</p>
 
-<h2 id="fixes">Fixes</h2>
+<p>Once you’ve added your web pages, you can create <a href="/manual/collections.html">Collections</a> to give searchers the option to narrow (or, less frequently, broaden) the results to a specific subset of pages.</p>
+
+<h2 id="add-your-images">Add Your Images</h2>
 
 <ul>
-  <li>We’re now tracking impressions on <a href="/manual/best-bets-graphics.html">graphics Best Bets</a>.</li>
-  <li>We now accept Flickr and RSS feeds even if there are invalid items without a description, date, or other required field.</li>
-  <li>The advanced search link no longer propagates unnecessary parameters in the URL.</li>
-  <li>We removed trailing spaces from Twitter handles to prevent broken links in the <a href="/manual/twitter.html">Twitter GovBox</a>.</li>
-  <li>We now accept Flickr handles with an ‘@’ sign in them.</li>
-  <li>Searchers now see better results when they do a search from the <a href="http://search.usa.gov/search/advanced?affiliate=usagov">advanced search page</a> with multiple terms in the ‘Any of these words’ and ‘None of these words’ fields.</li>
-  <li>Searchers now see results for terms like full-time and part-time. The hyphens had previously been treated as the NOT Boolean operator.</li>
-  <li>Searchers no longer see the <a href="/manual/govbox-jobs.html">Jobs GovBox</a> for advanced searches when it isn’t relevant.</li>
-  <li>We fixed a bug so that, if a site parameter is specified, it overrides the scopeid parameter.</li>
-  <li>We added some additional logic to the code that redirects visitors from search.usa.gov to USA.gov’s homepage.</li>
-  <li>We fixed a few regression bugs for related searches and the naming of the ‘unescapedUrl’ and ‘publishedAt’ fields in our Search API.</li>
-  <li>We now display search results only for pages that specify a URL.</li>
+  <li><strong>Flickr.</strong> When you <a href="/manual/flickr.html">add your Flickr URL</a>, we’ll index your Flickr photostream.</li>
+  <li><strong>Photo Galleries on Your Site.</strong> Do you have a multimedia gallery on your website for your agency’s images? When you <a href="/manual/rss.html">add a media RSS</a> (MRSS) for your gallery, we’ll index its images.</li>
+  <li><strong>Images on Your Web Pages.</strong> We backfill the image results from social media and photo galleries with the images published on the web pages of the <a href="/manual/domains.html">domain(s) you’ve added</a>.</li>
 </ul>
+
+<h2 id="add-your-videos">Add Your Videos</h2>
+
+<ul>
+  <li><strong>YouTube.</strong> When you <a href="/manual/youtube.html">add your YouTube account</a>, we’ll index your YouTube videos. We will also index any videos in your playlists.</li>
+  <li><strong>Video Galleries on Your Site.</strong> Do you have a multimedia gallery on your website for your agency’s videos? When you <a href="/manual/rss.html">add a media RSS</a> (MRSS) for your gallery, we’ll index its videos.</li>
+</ul>
+
+<h2 id="add-your-news">Add Your News</h2>
+
+<ul>
+  <li><strong>RSS Feeds.</strong> Do you have RSS feeds set up for your press releases, blog posts, or other newsworthy content? When you <a href="/manual/rss.html">add an RSS</a>, we’ll index the items on that feed.</li>
+  <li><strong>Twitter.</strong> Does your agency use Twitter? You can <a href="/manual/twitter.html">add your Twitter handle</a>, and we’ll index your tweets. You have the option of asking us to index the tweets from other Twitter users that you maintain in public lists on Twitter. Because tweets are ephemeral, we display tweets from the past three days when they match a searcher’s query.</li>
+</ul>
+
+<h2 id="add-your-recommendations">Add Your Recommendations</h2>
+
+<p>Create <a href="/manual/best-bets.html">Best Bets (Text or Graphics)</a> to promote specific results. Best Bets appear at the top of the results page when a searcher’s query matches the text of their titles, descriptions, or keywords.</p>
+
+<h2 id="turn-it-all-on">Turn It All On</h2>
+
+<p>After you’ve added your content, be sure to <a href="/manual/display-overview.html">set the display options</a> to control how each index appears on your search results page.</p>
+
+<p>We also have three pre-built, government-centric content modules that you can opt to turn on, too.</p>
+
+<ul>
+  <li><strong>Job Openings.</strong> Toggle on the <a href="/manual/govbox-jobs.html">Jobs module</a> to show your agency’s job openings from USAJobs.</li>
+  <li><strong><em>Federal Register</em> Documents.</strong> Toggle on the <a href="/manual/govbox-federal-register.html"><em>Federal Register</em> module</a> to show your agency’s documents posted on FederalRegister.gov.</li>
+  <li><strong>Health Topics.</strong> Toggle on the <a href="/manual/govbox-health.html">Health Topics module</a> to show authoritative health information from MedlinePlus and ClinicalTrials.gov.</li>
+</ul>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> We’ve connected your site to your agency on the backend. If you’re not seeing jobs or <em>Federal Register</em> documents specific to your agency, <a href="mailto:search@support.digitalgov.gov">email us</a> so we can fix the agency setting for your site.</p>
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+    <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+    
+    <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
     
   </div>
 
   <div class='time'>
     
     
-    </br><span>Page last reviewed or updated:</span>
     
     
-    
-    <a href="/releases/april-2013.html">
-      <time>May 3, 2013</time>
+    <a href="/manual/content-overview.html">
+      <time>February 27, 2017</time>
     </a>
   </div>
 

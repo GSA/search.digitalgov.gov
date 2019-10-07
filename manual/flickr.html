@@ -4,7 +4,7 @@
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   
-  <title>April 2013 Release Notes</title>
+  <title>How to Add Your Flickr Images to Our Index</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -102,75 +102,56 @@
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/releases/april-2013.html">April 2013 Release Notes</a>
+    <a href="/manual/flickr.html">How to Add Your Flickr Images to Our Index</a>
   </h1>
   
 
   <div class='post-content'>
-    <h2 id="highlight-find-state-and-local-jobs">Highlight: Find State and Local Jobs</h2>
+    <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Flickr</p>
 
-<p>Searchers on many state and local websites can now see current job openings. We’re automatically indexing and displaying job openings for all of your websites that use <a href="http://www.neogov.com">NeoGov</a>.</p>
+<h2 id="tell-us-about-your-flickr-photostream">Tell Us About Your Flickr Photostream</h2>
 
-<p>See the sample results page below that shows current job openings displayed on the City of Bloomington, MN, for a search on <a href="http://search.ci.bloomington.mn.us/search?affiliate=cityofbloomingtonmnsearchresults&amp;query=jobs">jobs</a>.</p>
+<p>Provide us with the <em>full URL</em> for your Flickr photostream. Most photostreams are in the photos folder (e.g., <a href="https://www.flickr.com/photos/hudopa">https://www.flickr.com/photos/hudopa</a> for HUD). Some photostreams are in the groups folder (such as <a href="https://www.flickr.com/groups/usagov">https://www.flickr.com/groups/usagov</a> for USA.gov).</p>
 
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/jobs-bloomington.png" alt="Search results for jobs on ci.bloomington.mn.us" /></p>
+<p>The URL must be for your overall photostream. You cannot specify individual photos, sets, favorites, or maps.</p>
 
-<p>(Thanks, City of Bloomington, for helping us pilot test this new feature!)</p>
+<h2 id="opt-to-display-your-flickr-images">Opt to Display Your Flickr Images</h2>
 
-<h2 id="other-features">Other Features</h2>
+<p>When you add the URL for your Flickr photostream, we’ll automatically index all of the images in your photostream.</p>
 
-<ul>
-  <li>Searchers now see search results for <a href="/manual/collections.html">collections</a> that are in deeply nested folders on your site.</li>
-  <li>Searchers no longer see deep site links for the first-listed search result.</li>
-  <li>Developers can now access <a href="https://api.usa.gov/jobs/search.json?tags=state">state</a> and <a href="https://api.usa.gov/jobs/search.json?tags=city+county">local</a> jobs data via our <a href="/developer/jobs.html">Jobs API</a> for government agencies that use both DigitalGov Search and NeoGov.</li>
-</ul>
+<p>On the image results page, we’ll display the images from your Flickr photostream by default. If you’d like to backfill them with the standard image results from your website, <a href="mailto:search@support.digitalgov.gov">email us</a> and we’ll turn on your web images for you.</p>
 
-<h2 id="chores">Chores</h2>
+<hr />
 
-<ul>
-  <li>We updated our <a href="/tos.html">terms of service</a>.</li>
-  <li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-  <li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> with any questions.</li>
-  <li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
-  <li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
-  <li>We removed the trending searches feature and widget.</li>
-  <li>We updated our <a href="http://jenkins-ci.org">Jenkins</a> build to fix to failing <a href="http://cukes.info">Cucumber</a> specs.</li>
-</ul>
+<p><strong><em>Did you know?</em></strong> Do you have a multimedia gallery on your website for your agency’s photos, images, videos, podcasts, or other multimedia content? Do you use a content management system, database, or media RSS (MRSS) feed to power this gallery? You can index <a href="/manual/rss.html">MRSS feeds</a> so that your multimedia content is automatically included in your search results.</p>
 
-<h2 id="fixes">Fixes</h2>
+<p><strong><em>Did you know?</em></strong> You can also tell us about your <a href="/manual/instagram.html">Instagram</a> account. Note that searchers see interspersed results from both Flickr and Instagram. If you have a lot of duplicate images in the two services, consider listing only one in the Admin Center.</p>
 
-<ul>
-  <li>We’re now tracking impressions on <a href="/manual/best-bets-graphics.html">graphics Best Bets</a>.</li>
-  <li>We now accept Flickr and RSS feeds even if there are invalid items without a description, date, or other required field.</li>
-  <li>The advanced search link no longer propagates unnecessary parameters in the URL.</li>
-  <li>We removed trailing spaces from Twitter handles to prevent broken links in the <a href="/manual/twitter.html">Twitter GovBox</a>.</li>
-  <li>We now accept Flickr handles with an ‘@’ sign in them.</li>
-  <li>Searchers now see better results when they do a search from the <a href="http://search.usa.gov/search/advanced?affiliate=usagov">advanced search page</a> with multiple terms in the ‘Any of these words’ and ‘None of these words’ fields.</li>
-  <li>Searchers now see results for terms like full-time and part-time. The hyphens had previously been treated as the NOT Boolean operator.</li>
-  <li>Searchers no longer see the <a href="/manual/govbox-jobs.html">Jobs GovBox</a> for advanced searches when it isn’t relevant.</li>
-  <li>We fixed a bug so that, if a site parameter is specified, it overrides the scopeid parameter.</li>
-  <li>We added some additional logic to the code that redirects visitors from search.usa.gov to USA.gov’s homepage.</li>
-  <li>We fixed a few regression bugs for related searches and the naming of the ‘unescapedUrl’ and ‘publishedAt’ fields in our Search API.</li>
-  <li>We now display search results only for pages that specify a URL.</li>
-</ul>
+<p><strong><em>Troubleshooting tip:</em></strong> Flickr and Instagram results appear on the <a href="/blog/serp-redesign.html">redesigned results page</a> only.</p>
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+    <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+    
+    <a href="/tagged/manage-content"><span class="label label-info">manage-content</span></a>
+    
+    <a href="/tagged/social-media"><span class="label label-info">social-media</span></a>
+    
+    <a href="/tagged/flickr"><span class="label label-info">flickr</span></a>
+    
+    <a href="/tagged/images"><span class="label label-info">images</span></a>
     
   </div>
 
   <div class='time'>
     
     
-    </br><span>Page last reviewed or updated:</span>
     
     
-    
-    <a href="/releases/april-2013.html">
-      <time>May 3, 2013</time>
+    <a href="/manual/flickr.html">
+      <time>February 27, 2017</time>
     </a>
   </div>
 

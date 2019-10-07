@@ -4,7 +4,7 @@
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   
-  <title>April 2013 Release Notes</title>
+  <title>Metadata and tags you should include in your website</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -97,80 +97,97 @@
 <div class="container-fluid">
   <div class="col-md-8 col-md-offset-2">
 
+  <nav aria-label="breadcrumb" class="mt-2">
+  <ul class="breadcrumb">
+    
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/"><span property="name">Home</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/"><span property="name">Help Manual</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/indexing-with-searchgov.html"><span property="name">Indexing</span></a></li>
+    
+    
+    <li class="breadcrumb-item active">
+    Metadata
+    </li>
+  </ul>
+
     <!-- do not remove as used to parse in usasearch -->
     <main id="main-container">
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/releases/april-2013.html">April 2013 Release Notes</a>
+    <a href="/manual/metadata.html">Metadata and tags you should include in your website</a>
   </h1>
   
 
   <div class='post-content'>
-    <h2 id="highlight-find-state-and-local-jobs">Highlight: Find State and Local Jobs</h2>
+    <p>Search.gov, like other search engines, relies on structured data to help inform how we index your content and how it is presented in search results. You should also read up on the metadata and structured data used by <a href="https://support.google.com/webmasters/answer/79812?hl=en">Google</a> <i class="icon-external-link"><span>(External link)</span></i> and <a href="https://www.bing.com/webmaster/help/marking-up-your-site-with-structured-data-3a93e731">Bing</a> <i class="icon-external-link"><span>(External link)</span></i>.</p>
 
-<p>Searchers on many state and local websites can now see current job openings. We’re automatically indexing and displaying job openings for all of your websites that use <a href="http://www.neogov.com">NeoGov</a>.</p>
+<p>Including the following tags and metadata in each of your pages will improve the quality of your content’s indexing, as well as results ranking. We also encourage you to read about more <a href="https://www.semrush.com/blog/semantic-html5-guide/">HTML5 semantic markup</a> <i class="icon-external-link"><span>(External link)</span></i> you can include in your websites.</p>
 
-<p>See the sample results page below that shows current job openings displayed on the City of Bloomington, MN, for a search on <a href="http://search.ci.bloomington.mn.us/search?affiliate=cityofbloomingtonmnsearchresults&amp;query=jobs">jobs</a>.</p>
+<p>This page will be updated over time as we add more tag-based indexing functions and ranking factors to our service.</p>
 
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/jobs-bloomington.png" alt="Search results for jobs on ci.bloomington.mn.us" /></p>
-
-<p>(Thanks, City of Bloomington, for helping us pilot test this new feature!)</p>
-
-<h2 id="other-features">Other Features</h2>
-
-<ul>
-  <li>Searchers now see search results for <a href="/manual/collections.html">collections</a> that are in deeply nested folders on your site.</li>
-  <li>Searchers no longer see deep site links for the first-listed search result.</li>
-  <li>Developers can now access <a href="https://api.usa.gov/jobs/search.json?tags=state">state</a> and <a href="https://api.usa.gov/jobs/search.json?tags=city+county">local</a> jobs data via our <a href="/developer/jobs.html">Jobs API</a> for government agencies that use both DigitalGov Search and NeoGov.</li>
-</ul>
-
-<h2 id="chores">Chores</h2>
-
-<ul>
-  <li>We updated our <a href="/tos.html">terms of service</a>.</li>
-  <li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-  <li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> with any questions.</li>
-  <li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
-  <li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
-  <li>We removed the trending searches feature and widget.</li>
-  <li>We updated our <a href="http://jenkins-ci.org">Jenkins</a> build to fix to failing <a href="http://cukes.info">Cucumber</a> specs.</li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-
-<ul>
-  <li>We’re now tracking impressions on <a href="/manual/best-bets-graphics.html">graphics Best Bets</a>.</li>
-  <li>We now accept Flickr and RSS feeds even if there are invalid items without a description, date, or other required field.</li>
-  <li>The advanced search link no longer propagates unnecessary parameters in the URL.</li>
-  <li>We removed trailing spaces from Twitter handles to prevent broken links in the <a href="/manual/twitter.html">Twitter GovBox</a>.</li>
-  <li>We now accept Flickr handles with an ‘@’ sign in them.</li>
-  <li>Searchers now see better results when they do a search from the <a href="http://search.usa.gov/search/advanced?affiliate=usagov">advanced search page</a> with multiple terms in the ‘Any of these words’ and ‘None of these words’ fields.</li>
-  <li>Searchers now see results for terms like full-time and part-time. The hyphens had previously been treated as the NOT Boolean operator.</li>
-  <li>Searchers no longer see the <a href="/manual/govbox-jobs.html">Jobs GovBox</a> for advanced searches when it isn’t relevant.</li>
-  <li>We fixed a bug so that, if a site parameter is specified, it overrides the scopeid parameter.</li>
-  <li>We added some additional logic to the code that redirects visitors from search.usa.gov to USA.gov’s homepage.</li>
-  <li>We fixed a few regression bugs for related searches and the naming of the ‘unescapedUrl’ and ‘publishedAt’ fields in our Search API.</li>
-  <li>We now display search results only for pages that specify a URL.</li>
-</ul>
+<p><code>&lt;title&gt;</code>
+<br /><strong>Detail:</strong> Unique title of the page. If you want to include the agency or section name, place that after the actual page title.
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;meta name=”description” content=”foo” /&gt;</code> 
+<br /><strong>Used in:</strong> Your well crafted, plain language summary of the page content. This will often be used by search engines in place of a page snippet. Be sure to include the keywords you want the page to rank well for. Best to limit to 160 characters, so it will not be truncated. <a href="https://moz.com/learn/seo/meta-description">Read more here</a> <i class="icon-external-link"><span>(External link)</span></i>.
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;meta name=”keywords” content=”foo bar baz ” /&gt;</code>
+<br /><strong>Detail:</strong> While not often used by commercial search engines due to <a href="https://support.google.com/webmasters/answer/66358?hl=en">keyword stuffing</a> <i class="icon-external-link"><span>(External link)</span></i>, Search.gov indexes your keywords, if you have added them.
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;meta property="og:title” content=”Title goes here” /&gt;</code>
+<br /><strong>Detail:</strong> Usually duplicative of <code>&lt;title&gt;</code>, we use the <code>og:title</code> property as the result title if it appears to be more substantive than the <code>&lt;title&gt;</code> tag. Note, Open Graph elements are used to display previews of your content in FaceBook and some other social media platforms.
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;meta property="og:description” content=”Description goes here” /&gt;</code>
+<br /><strong>Detail:</strong> Often duplicative of the meta description, we index this field as well, in case it has different content. This field is a good opportunity to include more keywords than you could write into the meta description. Note, Open Graph elements are used to display previews of your content in FaceBook and some other social media platforms.
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;meta property="article:published_time" content="YYYY-MM-DD" /&gt;</code>
+<br /><strong>Detail:</strong> Exact time is optional; <a href="https://en.wikipedia.org/wiki/ISO_8601">read more here</a> <i class="icon-external-link"><span>(External link)</span></i>.
+<br /><strong>Used in:</strong> Page freshness scoring.<br />
+<br />
+<code>&lt;meta property="article:modified_time" content="YYYY-MM-DD" /&gt;</code>
+<br /><strong>Detail:</strong> Exact time is optional; <a href="https://en.wikipedia.org/wiki/ISO_8601">read more here</a> <i class="icon-external-link"><span>(External link)</span></i>.
+<br /><strong>Used in:</strong> Page freshness scoring.<br />
+<br />
+<code>&lt;meta name="robots" content="..., ..." /&gt;</code>
+<br /><strong>Detail:</strong> Use the <a href="https://search.gov/blog/how-search-engines-index-content-better-discoverability.html#robots">meta robots tag</a> to block the search engine from indexing a particular page.
+<br /><strong>Used in:</strong> Used during indexing, does not affect relevance ranking.<br />
+<br />
+<code>&lt;main&gt;</code>
+<br /><strong>Detail:</strong> Allows the search engine to target the actual content of the page and avoid headers, sidebars and other page content not useful to search. <a href="https://search.gov/blog/how-search-engines-index-content-better-discoverability.html#main-element">Read more about the &lt;main&gt; element here</a>
+<br /><strong>Used in:</strong> Query matching, term frequency scoring<br />
+<br />
+<code>&lt;lastmod&gt;</code>
+<br /><strong>Detail:</strong> This field is included in XML sitemaps to signal to search engines when a page was last modified. Search.gov collects this metadata in case there is no <code>article:modified_time</code> data included in the page itself.
+<br /><strong>Used in:</strong> Indexing processing, page freshness scoring.<br />
+<br />
+<br /></p>
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+    <a href="/tagged/indexing"><span class="label label-info">indexing</span></a>
+    
+    <a href="/tagged/seo"><span class="label label-info">seo</span></a>
     
   </div>
 
   <div class='time'>
     
     
-    </br><span>Page last reviewed or updated:</span>
     
     
-    
-    <a href="/releases/april-2013.html">
-      <time>May 3, 2013</time>
+    <a href="/manual/metadata.html">
+      <time>April 24, 2019</time>
     </a>
   </div>
 

@@ -4,7 +4,7 @@
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   
-  <title>April 2013 Release Notes</title>
+  <title>How a Page on a Sitemap Becomes a Search Result</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -97,80 +97,97 @@
 <div class="container-fluid">
   <div class="col-md-8 col-md-offset-2">
 
+  <nav aria-label="breadcrumb" class="mt-2">
+  <ul class="breadcrumb">
+    
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/"><span property="name">Home</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/"><span property="name">Help Manual</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/indexing-with-searchgov.html"><span property="name">Indexing</span></a></li>
+    
+    
+    <li class="breadcrumb-item active">
+    Sitemaps and Search Results
+    </li>
+  </ul>
+
     <!-- do not remove as used to parse in usasearch -->
     <main id="main-container">
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/releases/april-2013.html">April 2013 Release Notes</a>
+    <a href="/manual/sitemaps-to-search-sites.html">How a Page on a Sitemap Becomes a Search Result</a>
   </h1>
   
 
   <div class='post-content'>
-    <h2 id="highlight-find-state-and-local-jobs">Highlight: Find State and Local Jobs</h2>
+    <p>We often get questions about how sitemaps control the search results for a given site. The answer is, they don’t! This page will describe to you the relationship between sitemaps, search indexes, and the search experiences you create through the <a href="https://search.usa.gov/sites">Admin Center</a>.</p>
 
-<p>Searchers on many state and local websites can now see current job openings. We’re automatically indexing and displaying job openings for all of your websites that use <a href="http://www.neogov.com">NeoGov</a>.</p>
+<h2 id="a-frame-for-the-relationships-described-below">A frame for the relationships described below</h2>
 
-<p>See the sample results page below that shows current job openings displayed on the City of Bloomington, MN, for a search on <a href="http://search.ci.bloomington.mn.us/search?affiliate=cityofbloomingtonmnsearchresults&amp;query=jobs">jobs</a>.</p>
+<p>Imagine a big lake. There are any number of tributaries feeding into the lake. There are fishing boats out on the lake, each loaded up with the gear they need and a guide to the kinds of fish they’re trying to catch.</p>
 
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/jobs-bloomington.png" alt="Search results for jobs on ci.bloomington.mn.us" /></p>
+<h2 id="the-big-searchgov-index-the-lake">The Big Search.gov Index: the Lake</h2>
 
-<p>(Thanks, City of Bloomington, for helping us pilot test this new feature!)</p>
+<p>Like a lake with its fish, the common search index has all the content from all the sites we index, ready to be brought up by any number of different search site configurations.</p>
 
-<h2 id="other-features">Other Features</h2>
+<p>The main difference in the search site setup process is the source of the web results. Like Google and Bing, when we index your content, we collect every site’s web pages into a big, common index. All search sites using our index reference this same common data pool.</p>
 
-<ul>
-  <li>Searchers now see search results for <a href="/manual/collections.html">collections</a> that are in deeply nested folders on your site.</li>
-  <li>Searchers no longer see deep site links for the first-listed search result.</li>
-  <li>Developers can now access <a href="https://api.usa.gov/jobs/search.json?tags=state">state</a> and <a href="https://api.usa.gov/jobs/search.json?tags=city+county">local</a> jobs data via our <a href="/developer/jobs.html">Jobs API</a> for government agencies that use both DigitalGov Search and NeoGov.</li>
-</ul>
+<h2 id="sitemaps-the-tributaries">Sitemaps: the Tributaries</h2>
 
-<h2 id="chores">Chores</h2>
+<p><a href="https://search.gov/manual/sitemaps.html">XML Sitemaps</a> are like tributaries feeding into a lake. They do not feed into sitemap-specific indexes connected to particular search sites.</p>
 
-<ul>
-  <li>We updated our <a href="/tos.html">terms of service</a>.</li>
-  <li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-  <li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> with any questions.</li>
-  <li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
-  <li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
-  <li>We removed the trending searches feature and widget.</li>
-  <li>We updated our <a href="http://jenkins-ci.org">Jenkins</a> build to fix to failing <a href="http://cukes.info">Cucumber</a> specs.</li>
-</ul>
+<p>Sitemaps list the content available on websites in a machine-friendly format, so that search engines will know what to collect from the site. The <a href="https://search.gov/manual/indexing-with-searchgov.html">content indexed</a> from your website goes into the big index mentioned above, along with the content from all other websites. You can, in theory, pull content from any website we have indexed into your search experience. This supports portal search experiences.</p>
 
-<h2 id="fixes">Fixes</h2>
+<h2 id="search-site-setup-the-fishing-boats">Search Site Setup: the Fishing Boats</h2>
 
-<ul>
-  <li>We’re now tracking impressions on <a href="/manual/best-bets-graphics.html">graphics Best Bets</a>.</li>
-  <li>We now accept Flickr and RSS feeds even if there are invalid items without a description, date, or other required field.</li>
-  <li>The advanced search link no longer propagates unnecessary parameters in the URL.</li>
-  <li>We removed trailing spaces from Twitter handles to prevent broken links in the <a href="/manual/twitter.html">Twitter GovBox</a>.</li>
-  <li>We now accept Flickr handles with an ‘@’ sign in them.</li>
-  <li>Searchers now see better results when they do a search from the <a href="http://search.usa.gov/search/advanced?affiliate=usagov">advanced search page</a> with multiple terms in the ‘Any of these words’ and ‘None of these words’ fields.</li>
-  <li>Searchers now see results for terms like full-time and part-time. The hyphens had previously been treated as the NOT Boolean operator.</li>
-  <li>Searchers no longer see the <a href="/manual/govbox-jobs.html">Jobs GovBox</a> for advanced searches when it isn’t relevant.</li>
-  <li>We fixed a bug so that, if a site parameter is specified, it overrides the scopeid parameter.</li>
-  <li>We added some additional logic to the code that redirects visitors from search.usa.gov to USA.gov’s homepage.</li>
-  <li>We fixed a few regression bugs for related searches and the naming of the ‘unescapedUrl’ and ‘publishedAt’ fields in our Search API.</li>
-  <li>We now display search results only for pages that specify a URL.</li>
-</ul>
+<p>Like a fishing boat on the water, you’ve decided what fish you’re going after, you know what corners of the lake to go to, and you’ve collected the gear you need to get the fish.</p>
+
+<p>Search.gov used to rely on the Bing web index for our main search results. Customers would log in to the <a href="https://search.usa.gov/sites">Admin Center</a> and use the <a href="https://search.gov/manual/domains.html">Domains</a> list to include the content they wanted to pull from Bing. Now that we’re building our index in house, all this remains the same. You log in to the Admin Center and configure what you want your search to return on the results page.</p>
+
+<h2 id="tying-it-all-together">Tying it all together</h2>
+
+<p>We use sitemaps to inform what we index into our system. You use the Admin Center to determine what results will come out of the index when people search on your website.
+Tributaries feed into a lake, and fishers can go out to any part of the lake to get the particular kinds of fish that they want.</p>
+
+<p>Following a particular page through this cycle looks like this:</p>
+
+<ol>
+  <li>A page is posted to a website</li>
+  <li>Its URL is added to the sitemap</li>
+  <li>Search.gov’s indexer reads the sitemap and picks up the URL</li>
+  <li>Search.gov’s indexer visits the page and <a href="https://search.gov/manual/what-searchgov-indexes.html">scrapes the content</a></li>
+  <li>The content is added to the index. Meanwhile, the search site had already been configured to include this content within the index.</li>
+  <li>A member of the public searches on the website</li>
+  <li>The query matches the page’s content</li>
+  <li>The page is returned as a search result</li>
+  <li>The searcher clicks on the URL on the results page</li>
+  <li>
+    <p>The searcher is brought to the page on the website</p>
+
+    <p><img class="img-responsive" src="/files/sitemaps-to-search-results.png" alt="Diagram showing a large circle, representing the Search.gov website. To the left of the circle is an array of small blocks, each representing an individual sitemap. Arrows point from the sitemaps to the large circle. To the right of the circle is a set of pentagons representing search sites. To the right of these is a vertical bar representing the Public. Arrows flow from the circle, through the pentagon and end at the bar, representing the flow of search results from the central Search.gov index through the search sites to the members of the public who are searching." /></p>
+  </li>
+</ol>
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+    <a href="/tagged/go-live"><span class="label label-info">go-live</span></a>
+    
+    <a href="/tagged/indexing"><span class="label label-info">indexing</span></a>
     
   </div>
 
   <div class='time'>
     
     
-    </br><span>Page last reviewed or updated:</span>
     
     
-    
-    <a href="/releases/april-2013.html">
-      <time>May 3, 2013</time>
+    <a href="/manual/sitemaps-to-search-sites.html">
+      <time>April 9, 2019</time>
     </a>
   </div>
 

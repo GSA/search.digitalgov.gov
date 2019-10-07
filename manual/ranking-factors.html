@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  
+  <title>How Search.gov Ranks Your Search Results</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/stylesheets/font-awesome-ie7.min.css">
+  <![endif]-->
+
+  <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+  <link href="/stylesheets/custom.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+  <link rel="shortcut icon" href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/favicon.ico">
+  <link rel='alternate' type='application/atom+xml' title='search.gov Atom feed' href='/all.atom' />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="/javascripts/bootstrap3-typeahead.js"></script>
+ </head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        <span class="search">Search.gov</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <form class="navbar-form navbar-left form-search" accept-charset="UTF-8" action="https://find.search.gov/search/" id="search-form" method="get">
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+        <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+        <div class="input-group input-append">
+          <label for="search-query" class="hide">Query</label>
+
+          <input name="query" autocomplete="off"  type="text" class="typeahead form-control search-query" id="search-query" data-provide="typeahead" >
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-nav" aria-label="Left Align" id="search-button">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+          </span>
+        </div>
+      </form>
+      <div class="nav navbar-right">
+          <a href="https://search.usa.gov/sites" class="navbar-brand"><i
+              class="icon-user icon-white"></i>&nbsp;Login</a>
+      </div>&nbsp;&nbsp;&nbsp;<div class="nav navbar-right">
+          <a href="http://search.usa.gov/signup" class="navbar-brand">Sign up</a>
+      </div>&nbsp;&nbsp;&nbsp;<div class="nav navbar-right">
+          <a href="https://search.gov/status.html" class="navbar-brand">System Status</a>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="col-md-offset-2 col-md-8  hidden-sm hidden-md hidden-lg">
+
+  <form class="form-search" accept-charset="UTF-8" action="https://find.search.gov/search/" id="search-form" method="get">
+    <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+    <div class="input-group input-append">
+      <label for="search-query" class="hide">Query</label>
+
+      <input name="query" autocomplete="off"  type="text" class=" form-control search-query" id="search-query"  >
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </span>
+    </div>
+  </form>
+</div>
+
+
+<div class="container-fluid">
+  <div class="col-md-8 col-md-offset-2">
+
+  <nav aria-label="breadcrumb" class="mt-2">
+  <ul class="breadcrumb">
+    
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/"><span property="name">Home</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/"><span property="name">Help Manual</span></a></li>
+    
+      <li class="breadcrumb-item" property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" href="https://search.gov/manual/indexing-with-searchgov.html"><span property="name">Indexing</span></a></li>
+    
+    
+    <li class="breadcrumb-item active">
+    Ranking Factors
+    </li>
+  </ul>
+
+    <!-- do not remove as used to parse in usasearch -->
+    <main id="main-container">
+      <article class="article feature" style="padding:0 30px; margin-top: 10px;">
+  
+  <h1>
+    <a href="/manual/ranking-factors.html">How Search.gov Ranks Your Search Results</a>
+  </h1>
+  
+
+  <div class='post-content'>
+    <p>Google and Bing hold their ranking algorithms closely as trade secrets, as a guard against people trying to game the system to ensure their own content comes out on top, regardless of whether that’s appropriate to the search. Search Engine Optimization (SEO) consulting has grown up as an industry to try to help websites get the best possible placement in search results.  You may be interested in our webinars on <a href="https://search.gov/manual/training.html#site-structure-better-seo">technical SEO</a> and <a href="https://search.gov/manual/training.html#search-doctor">best practices</a> that will help you get your website into better shape for search, and we’re also available to advise federal web teams on particular search issues. Generally speaking, though, SEO is a lot like reading tea leaves.</p>
+
+<p>We at Search.gov share our ranking factors because we want you to game our system. This helps ensure that the best, most appropriate content rises to the top of search results to help the American public find what they need.</p>
+
+<p>This page will be updated as new ranking factors are added.</p>
+
+<h2 id="guaranteed-1st-place-spot">Guaranteed 1st Place Spot</h2>
+
+<p>For any pages you want always to appear in the top of search results, regardless of what the ranking algorithm might decide, use a <a href="https://search.gov/manual/best-bets.html">Best Bet</a>. Like an ad in the commercial engines, Best Bets allow you to pin recommended pages to the top of results. Text Best Bets are for single pages, and Graphics Best Bets allow you to boost a set of related items. Our <code>Match Keywords Only</code> feature allows you to put a tight focus on the terms you want a Best Bet to respond to. <a href="https://search.gov/manual/best-bets.html">Read more here</a>.</p>
+
+<h2 id="ranking-factors">Ranking Factors</h2>
+
+<p>Each of the following ranking factors is calculated separately, and then multiplied together to create the final ranking score of a given item for a given search.</p>
+
+<h3 id="file-type">File Type</h3>
+
+<p>We prefer HTML documents over other file types. Non-HTML results are demoted significantly, to prevent, for instance, PDF files from crowding out their respective landing pages.</p>
+
+<h3 id="freshness">Freshness</h3>
+
+<p>We prefer documents that are fresh. Anything published or updated in the past 30 days is considered fresh. After that, we use a Gaussian decay function to demote documents, so that the older a document is, the more it is demoted. When documents are 5 years old or older, we consider them to be equally old and do not demote further. We use either the <code>article:modified_time</code> on an individual page, or that page’s <code>&lt;lastmod&gt;</code> date from the sitemap, whichever is more recent. If there is only an <code>article:published_time</code> for a given page, we use that date.</p>
+
+<p>Documents with no date metadata at all are considered fresh and are not demoted. <a href="https://search.gov/manual/metadata.html">Read more about date metadata</a> we collect and why it’s important to add metadata to your files.</p>
+
+<h3 id="page-popularity">Page Popularity</h3>
+
+<p>We prefer documents that users interact with more. Currently we leverage our own search analytics to track the number of times a URL is clicked on from the results page. The more clicks, the more that URL is promoted, or boosted. We use a logarithmic function to determine how much to boost the relevance score for each URL. For sites new to our service, please expect this ranking factor to take 30 days to fully warm up after your search goes live.</p>
+
+<p>Note: Sites using the search results API to present our results on their own websites will not be able to take advantage of our click data ranking.</p>
+
+<h3 id="core-ranking-algorithm">Core Ranking Algorithm</h3>
+
+<p>Our system is built on Elasticsearch, which itself is built on Apache Lucene. For the first several generations, Elasticsearch used Lucene’s default ranking, the Practical Scoring Function. This Function starts with a basic Boolean match for single terms and adds in TF/IDF and a vector space model. Here are some high level definitions for these technical terms:</p>
+
+<ul>
+  <li><strong>Boolean matches</strong> are the AND / OR / NOT matches you’ve probably heard about.
+    <ul>
+      <li>This AND that</li>
+      <li>This OR that</li>
+      <li>This NOT that</li>
+      <li>This AND (that OR foo) NOT bar</li>
+      <li><strong>Note</strong> that while the relevance ranking takes these into account, we do not currently use these operators if entered by a searcher. Support for user-entered Boolean operators is coming in 2019.</li>
+    </ul>
+  </li>
+  <li><strong>TF/IDF</strong> means term frequency / inverse document frequency. It counts the number of times a term appears in a document, and compares it to how many documents have that word. It aims to identify documents where the query terms appear frequently, and documents with more rare terms across the whole set of documents will get a higher score. Documents with a lot of common terms appearing in many documents will get a lower score.
+    <ul>
+      <li>They also have tempered the TF/IDF score with a method called <strong>BM25</strong>, which attempts to balance the TF/IDF scores of documents that are very different in length. If there are ten documents containing rare terms, the longest doc with the most instances of the terms would get a much higher score than a short doc with only a few instances of the terms. This makes intuitive sense, but when considered as a full pdf of a report vs the summary of the report, the full report isn’t that much more relevant to the query than the summary is. BM25’s length ‘normalizatin’ addresses that issue.</li>
+    </ul>
+  </li>
+  <li>The <strong>vector space model</strong> allows the search engine to weight the individual terms in the query, so a common term in the query would receive a lower match score than a rare term in the query.</li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/guide/master/practical-scoring-function.html">Read detailed technical documentation here</a> <i class="icon-external-link"><span>(External link)</span></i></li>
+</ul>
+
+<p>The latest versions of Elasticsearch takes into account the context of terms within the document, whether they are in structured data fields or in unstructured fields, like body text.</p>
+
+<ul>
+  <li>Structured data fields, like dates, are treated with a Boolean match method - does the field value match, or not?</li>
+  <li>Unstructured data fields, like webpage body content, are considered for how well a document matches a query.</li>
+  <li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html">Read highly technical documentation here</a> <i class="icon-external-link"><span>(External link)</span></i></li>
+</ul>
+
+  </div>
+
+  <div class='tags'>
+    
+    <a href="/tagged/indexing"><span class="label label-info">indexing</span></a>
+    
+    <a href="/tagged/seo"><span class="label label-info">seo</span></a>
+    
+  </div>
+
+  <div class='time'>
+    
+    
+    
+    
+    <a href="/manual/ranking-factors.html">
+      <time>July 9, 2019</time>
+    </a>
+  </div>
+
+</article>
+
+    </main>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p><a href="mailto:search@support.digitalgov.gov">Email us</a> or call us at 202-969-7426</p>
+    <p> An Official Website of the U.S. Government <br />
+      <a href="https://www.gsa.gov/portal/category/25729">Technology Transformation Service</a>, <a href="https://www.gsa.gov/portal/category/100000">U.S. General Services Administration</a>
+    </p>
+    <ul class="footer-links list-unstyled list-inline">
+      <li><a href="https://www.usa.gov">USA.gov</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/tos.html">Terms of Service</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="https://www.digitalgov.gov/about/policies/">Site Policies</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/developer/">Developers</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  //<![CDATA[
+  var usasearch_config = { siteHandle:"usasearch" };
+
+jQuery(document).ready(function() {
+  $('.typeahead').typeahead({
+      source: function (query, process) {
+          return $.get('https://search.usa.gov/sayt?name=usasearch&q=' + query, function (data) {
+              return process(data);
+          });
+      }, minLength: 2
+  });
+})
+
+
+  // var script = document.createElement("script");
+  // script.type = "text/javascript";
+  // script.src = "https://search.usa.gov/javascripts/remote.loader.js";
+  // document.getElementsByTagName("head")[0].appendChild(script);
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31302465-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  //]]>
+</script>
+
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA" id="_fed_an_ua_tag"></script>
+
+
+</body>
+</html>

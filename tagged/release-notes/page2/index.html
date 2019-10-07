@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+   <meta name="robots" content="noindex, follow">
+  <title>Posts tagged release-notes</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,700" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/stylesheets/font-awesome-ie7.min.css">
+  <![endif]-->
+
+  <!--<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">-->
+  <link href="/stylesheets/custom.css" rel="stylesheet">
+
+  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="/javascripts/html5shiv.js"></script>
+  <![endif]-->
+
+  <!-- Fav and touch icons -->
+  <!--  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+          href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114"
+          href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"
+          href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">-->
+  <link rel="shortcut icon" href="https://d3qcdigd1fhos0.cloudfront.net/blog/img/favicon.ico">
+  <link rel='alternate' type='application/atom+xml' title='search.gov Atom feed' href='/all.atom' />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="/javascripts/bootstrap3-typeahead.js"></script>
+ </head>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        <span class="search">Search.gov</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+      <form class="navbar-form navbar-left form-search" accept-charset="UTF-8" action="https://find.search.gov/search/" id="search-form" method="get">
+        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+        <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+        <div class="input-group input-append">
+          <label for="search-query" class="hide">Query</label>
+
+          <input name="query" autocomplete="off"  type="text" class="typeahead form-control search-query" id="search-query" data-provide="typeahead" >
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-nav" aria-label="Left Align" id="search-button">
+              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+          </span>
+        </div>
+      </form>
+      <div class="nav navbar-right">
+          <a href="https://search.usa.gov/sites" class="navbar-brand"><i
+              class="icon-user icon-white"></i>&nbsp;Login</a>
+      </div>&nbsp;&nbsp;&nbsp;<div class="nav navbar-right">
+          <a href="http://search.usa.gov/signup" class="navbar-brand">Sign up</a>
+      </div>&nbsp;&nbsp;&nbsp;<div class="nav navbar-right">
+          <a href="https://search.gov/status.html" class="navbar-brand">System Status</a>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="col-md-offset-2 col-md-8  hidden-sm hidden-md hidden-lg">
+
+  <form class="form-search" accept-charset="UTF-8" action="https://find.search.gov/search/" id="search-form" method="get">
+    <input name="affiliate" id="affiliate" type="hidden" value="usasearch">
+    <div class="input-group input-append">
+      <label for="search-query" class="hide">Query</label>
+
+      <input name="query" autocomplete="off"  type="text" class=" form-control search-query" id="search-query"  >
+      <span class="input-group-btn">
+        <button type="submit" class="btn btn-primary" aria-label="Left Align" id="search-button">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </span>
+    </div>
+  </form>
+</div>
+
+
+<div class="container-fluid">
+  <div class="col-md-8 col-md-offset-2">
+
+    <!-- do not remove as used to parse in usasearch -->
+    <main id="main-container">
+      <!-- begin tag layout -->
+<p class="muted">Posts tagged <strong>release-notes</strong></p>
+
+<div class='articles'>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/releases/november-2018.html">November 2018 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="improvements">Improvements</h2>
+<ul>
+  <li>We integrated directly with the new USAJOBS API. This means that we
+    <ul>
+      <li>are now querying their system at query time, rather than building an index of their job postings within our own system and querying that at query time.</li>
+      <li>have reconfigured what information our jobs searches include in the full query that we send to USAJOBS</li>
+      <li>have increased the geographic radius we’ll look at when a user searches on a jobs-related term. The radius is now 75 miles from the user’s general location.</li>
+      <li>we are now always providing a link to USAJOBS.gov if someone has searched for a jobs-related term, even if there are no jobs located near the searcher.</li>
+    </ul>
+  </li>
+  <li>We now support indexing TXT files. There are more TXT files on government websites than you would have thought!</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+<ul>
+  <li>We fixed a link in the Jobs module that led searchers to a broken USAJOBS.gov page.</li>
+  <li>We now deduplicate sitemap URLs so we will not try to index the same content more than once.</li>
+  <li>We updated Ruby gems: Loofah, Rack, FFI.</li>
+  <li>We upgraded Ruby.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/november-2018.html">
+        <time datetime="2018-12-19">December 19, 2018</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/releases/september-2018.html">September 2018 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlights">Highlights</h2>
+<ul>
+  <li>We began work on using click data in our relevancy ranking, starting with
+    <ul>
+      <li>Recording the domain of the clicked-on URL separately, so we can manage all the clicks for a particular domain.</li>
+      <li>Calculating the top N clicked-on URLs for a given domain.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+<ul>
+  <li>We indexed a lot of content for agencies.</li>
+  <li>We got our new developers set up and ready to work on great stuff.</li>
+</ul>
+
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+  <li>None</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/september-2018.html">
+        <time datetime="2018-11-02">November 2, 2018</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/releases/august-2018.html">August 2018 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlights">Highlights</h2>
+<ul>
+  <li>We began work on leveraging click data in our relevancy scoring. This will allow us to use the relative popularity of pages as a ranking signal.</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+<ul>
+  <li>We now record the domain of a URL that has been clicked in addition to recording the full click. This way we can compare the click volume of URLs within a given domain.</li>
+  <li>We resolved security vulnerabilities in grape &amp; sprockets</li>
+  <li>Configure rspec to run specs in random order</li>
+</ul>
+
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+  <li>None</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/august-2018.html">
+        <time datetime="2018-09-21">September 21, 2018</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/releases/june-july-2018.html">June-July 2018 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlights">Highlights</h2>
+<ul>
+  <li>We added support for XML sitemaps that are located in non-standard locations within a domain.</li>
+  <li>We added sort_by support to our Results API</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+<ul>
+  <li>We finished migrating to CircleCI for our continuous integration monitoring.</li>
+  <li>We improved our internal tracking of queries to the Bing API.</li>
+  <li>We improved how we handle indexing domains that time out.</li>
+  <li>We began indexing the last-modified date of a page, if provided</li>
+  <li>Our SitemapIndexer now processes one sitemap at a time, and we created an automated queue for indexing jobs and url fetching.</li>
+  <li>We improved the management of Searchgov domain states. Now each Searchgov domain has an “indexing activity”. States might include: indexing sitemaps, fetching new URLs (such as after bulk import), and crawling.</li>
+  <li>We now follow client-side redirects.</li>
+  <li>We improved our ability to avoid certain crawler traps.</li>
+  <li>We now index documents up to 15 MB in size. The previous limit was 10 MB.</li>
+  <li>We finalized our compliance with BOD 18-01.</li>
+  <li>We cleaned up how we handle temp files during indexing.</li>
+  <li>We tidied up our internal errors on indexing jobs, as well as our test suite.</li>
+</ul>
+
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+  <li>We fixed a bug that was not showing diacritics properly in non-English searches.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/june-july-2018.html">
+        <time datetime="2018-08-10">August 10, 2018</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/releases/may-2018.html">May 2018 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlights">Highlights</h2>
+<ul>
+  <li>We continue to make good progress towards our indexing system, and continues to be highly focused on the back end of our system. See below for more details.</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+<ul>
+  <li>We created back-end interfaces allowing the Search.gov team to manage indexed domains &amp; urls.</li>
+  <li>We added a delay method to <code>SearchGov Domain</code>, to honor the crawl delay settings in a given site’s <code>robots.txt</code> file.</li>
+  <li>We created a <code>SearchGov Domain Indexer</code> job that will enqueue urls in need of fetching, to allow bulk indexing tasks to be automated without overloading anyone’s servers, and we added support for <code>resque-scheduler</code> to our configuration baseline.</li>
+  <li>We set the sitemap indexer to reject urls from other domains to avoid erroneous attempts to index content from beta sites, old domains, etc.</li>
+  <li>We now check the protocol of a domain, and whether the site is responding to us. We also set our url fetcher to throw an error if the domain is unavailable or blocking our indexer.</li>
+  <li>We re-indexed the searchgov indices.</li>
+  <li>We upgraded mySQL in demo environments, and streamlined the scenario data for our test suite.</li>
+</ul>
+
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+  <li>We fixed bug that sent searchers back to page 1 results when changing the time scope in a Collection search.</li>
+  <li>We mitigated SSL certificate problems with some sites.</li>
+  <li>We made our redirection check more strict to avoid filling our database and indexes with domains and web pages that don’t need to be searchable.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/may-2018.html">
+        <time datetime="2018-06-20">June 20, 2018</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/releases/april-2018.html">April 2018 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlights">Highlights</h2>
+<ul>
+  <li>We’re making good progress towards our indexing system, but all our work in April was in the back end of our system. See below for more information.</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+<ul>
+  <li>We have updated the jQuery version.</li>
+  <li>We configured our analytics alerts to send emails via SES instead of Mandrill.</li>
+  <li>We upgraded Ruby to version 2.3.7.</li>
+  <li>We computed filename extensions for documents in our primary index.</li>
+  <li>We improved how we handle email bounces for our notifications, and complaints that may come in.</li>
+</ul>
+
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+  <li>We fixed and error with our S3 backups for Logstash.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/april-2018.html">
+        <time datetime="2018-05-15">May 15, 2018</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/releases/march-2018.html">March 2018 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlights">Highlights</h2>
+<ul>
+  <li>We added a manual page about <a href="https://search.gov/blog/sitemaps.html">xml sitemaps</a> to our Search.gov help manual.</li>
+  <li>We created a <a href="https://search.gov/blog/robotstxt.html">robots.txt files</a> manual page.</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+<ul>
+  <li>We have updated how we create and update the search.gov sitemap.</li>
+  <li>We transitioned our i14y repo to CircleCI.</li>
+  <li>We increased storage volumes used by Elasticsearch 5.6.4.</li>
+  <li>We open-sourced the usasearch application, which is now known as <a href="https://github.com/GSA/search-gov">search-gov</a>.</li>
+  <li>We are now sending our email notifications via AWS Simple Email Service (SES).</li>
+  <li>We setup a metrics dashboard for SES emails.</li>
+</ul>
+
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+  <li>We removed all Rspec/VCR dependencies on actual private keys.</li>
+  <li>We removed the link to Search.gov website from the “Powered by Search.gov” logo that appears at the bottom of our hosted SERPs.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/march-2018.html">
+        <time datetime="2018-04-24">April 24, 2018</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/releases/february-2018.html">February 2018 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlights">Highlights</h2>
+<ul>
+  <li>Our <a href="/blog/searchgov-blog.html">new indexing system</a> has been in production since December! In February, we continued to release several features that are building on and improving our new system:
+    <ul>
+      <li>We have made our indexing rake task more efficient.</li>
+      <li>We began implementing indexing from XML sitemaps. Check out our new <a href="/blog/sitemaps.html">XML Sitemaps page</a> to learn more about them.</li>
+    </ul>
+  </li>
+  <li>We made our title parsing more flexible, drawing from either <code>&lt;title&gt;</code> or <code>&lt;og:title&gt;</code> tags, depending on where a site’s quality title metadata may be.</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+<ul>
+  <li>We upgraded Rails for our core application</li>
+  <li>We switched our highlighting of terms in search results to a much lighter method.</li>
+  <li>We now have all apps enforcing HTTPs and are compliant with BOD 18-01.</li>
+  <li>We removed abandoned i14y drawers.</li>
+  <li>We improved how our indexing job updates records for existing pages.</li>
+</ul>
+
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+  <li>We fixed an RSS feeds fetch issue.</li>
+  <li>We have fixed the bug causing search sites to have access to the Best Bets of other affiliates.</li>
+  <li>We disabled four-byte UTF-8 characters in Twitter results, and now support eight-byte characters. That’s right - emojis in your search results if they are used in your tweets.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/february-2018.html">
+        <time datetime="2018-03-27">March 27, 2018</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/releases/january-2018.html">January 2018 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlights">Highlights</h2>
+<ul>
+  <li>Our <a href="/blog/searchgov-blog.html">new indexing system</a> has been in production since December! In January, we released several features that are building on and improving our new system:
+    <ul>
+      <li>We updated our index with new stemming settings. Stemming refers to how a system processes related words, based on the root of the words. For example, stemming is what allows a search for “renew passport” to show results for “passport renewal”.</li>
+      <li>URLs in our index can be permanently deleted from our system.</li>
+      <li>Documents in our index are now limited to 10 MB in size.</li>
+      <li>We can extract body text from a document if the <code>&lt;main&gt;</code> element is empty.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+<ul>
+  <li>We upgraded Rails and Elasticsearch on our <a href="https://github.com/GSA/asis">ASIS application</a>.</li>
+  <li>We upgraded Elasticsearch on our <a href="https://github.com/GSA/jobs_api">Jobs API</a>.</li>
+</ul>
+
+<h2 id="deprecations">Deprecations</h2>
+<ul>
+  <li>The Instagram section is no longer displayed in the Admin Center dashboard, unless you had an Instagram account added to your search site prior to June 2016. At that time, Instagram began requiring accounts to grant permission to index their images via an integration between systems, which Search.gov cannot support. Therefore, our Instagram index was last updated in June 2016. Any images in our index prior to that date will continue to be shown on your search results page, as long as you do not remove your Instagram account from the Admin Center. If you remove your account, any photos in our index will be permanently deleted from our system.</li>
+  <li>Drilldown tables and graphs are no longer available in the Monthly Reports section. According to our analytics, the tables and graphs were not being viewed. We anticipate rolling out new analytics viewing options later in 2018.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/january-2018.html">
+        <time datetime="2018-02-15">February 15, 2018</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/releases/december-2017.html">December 2017 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlights">Highlights</h2>
+<ul>
+  <li>Our <a href="/blog/searchgov-blog.html">new indexing system</a> is now in production! Our team has been hard at work on this effort since June, and we are thrilled to reach this exciting milestone. In December, we released several features that helped us cross the first phase finish line:
+    <ul>
+      <li>Our new system is live with an updated version of ElasticSearch.</li>
+      <li>Our new system takes into consideration a “Promote” value when determining relevancy. “Promote” is a true/false value and is optional.</li>
+      <li>Our technical lead improved the way the Loofah scraper gets HTML documents into our system. We work in the open as much as possible, and this <a href="https://github.com/flavorjones/loofah/pull/134">minor change</a> helped fix a large bug in the Loofah core code.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+<ul>
+  <li>The endpoint for our <a href="/developer/jobs.html">Jobs API</a> was updated on December 7th. This change puts the hostname under Search.gov’s DNS zone; previously, it was hosted in another part of our division. This code change only affected agencies that are directly calling our open source API. If you are only using our Jobs Module on your hosted search results page, you did not need to take any action.</li>
+  <li>We updated Rails on our Jobs API.</li>
+  <li>We updated Ruby on our main application.</li>
+  <li>We transitioned away from using UserVoice to collect feedback from our customers. Instead, you can submit feedback via  <a href="https://docs.google.com/forms/d/e/1FAIpQLSemE9w893BahVqCbDl8vlgsawGPdcXigwovOZIqIQAIMRyOWw/viewform">Google form</a> or by <a href="mailto:search@support.digitalgov.gov">emailing us</a>. Take a moment to review the <a href="/feedback/feedback.html">feedback</a> we’ve already received.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/december-2017.html">
+        <time datetime="2018-01-25">January 25, 2018</time>
+      </a>
+    </div>
+    </article>
+  
+</div>
+
+
+<ul class="pager" >
+  
+  <li class="previous" style="padding: 10px 30px;">
+    
+    <a href="/tagged/release-notes">&larr; Newer</a>
+    
+  </li>
+  
+
+  
+  <li class="next">
+    <a href="/tagged/release-notes/page3">Older &rarr;</a>
+  </li>
+  
+</ul>
+
+<!-- end tag layout -->
+
+    </main>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p><a href="mailto:search@support.digitalgov.gov">Email us</a> or call us at 202-969-7426</p>
+    <p> An Official Website of the U.S. Government <br />
+      <a href="https://www.gsa.gov/portal/category/25729">Technology Transformation Service</a>, <a href="https://www.gsa.gov/portal/category/100000">U.S. General Services Administration</a>
+    </p>
+    <ul class="footer-links list-unstyled list-inline">
+      <li><a href="https://www.usa.gov">USA.gov</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/tos.html">Terms of Service</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="https://www.digitalgov.gov/about/policies/">Site Policies</a></li>
+      <li class="muted">&bull;</li>
+      <li><a href="/developer/">Developers</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script type="text/javascript">
+  //<![CDATA[
+  var usasearch_config = { siteHandle:"usasearch" };
+
+jQuery(document).ready(function() {
+  $('.typeahead').typeahead({
+      source: function (query, process) {
+          return $.get('https://search.usa.gov/sayt?name=usasearch&q=' + query, function (data) {
+              return process(data);
+          });
+      }, minLength: 2
+  });
+})
+
+
+  // var script = document.createElement("script");
+  // script.type = "text/javascript";
+  // script.src = "https://search.usa.gov/javascripts/remote.loader.js";
+  // document.getElementsByTagName("head")[0].appendChild(script);
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31302465-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  //]]>
+</script>
+
+<script async type="text/javascript" src="https://dap.digitalgov.gov/Universal-Federated-Analytics-Min.js?agency=GSA" id="_fed_an_ua_tag"></script>
+
+
+</body>
+</html>

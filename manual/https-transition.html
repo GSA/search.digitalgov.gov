@@ -4,7 +4,7 @@
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   
-  <title>April 2013 Release Notes</title>
+  <title>Preparing Your Site for HTTPS</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -102,75 +102,115 @@
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/releases/april-2013.html">April 2013 Release Notes</a>
+    <a href="/manual/https-transition.html">Preparing Your Site for HTTPS</a>
   </h1>
   
 
   <div class='post-content'>
-    <h2 id="highlight-find-state-and-local-jobs">Highlight: Find State and Local Jobs</h2>
+    <p><a href="https://https.cio.gov/">OMB memo M-15-13</a> <i class="icon-external-link"><span>(External link)</span></i> requires all publicly available federal websites and web services to <a href="https://www.digitalgov.gov/2015/07/21/an-introduction-to-https-by-18f-and-digitalgov-university/">implement HTTPS</a> <i class="icon-external-link"><span>(External link)</span></i> by December 31, 2016.</p>
 
-<p>Searchers on many state and local websites can now see current job openings. We’re automatically indexing and displaying job openings for all of your websites that use <a href="http://www.neogov.com">NeoGov</a>.</p>
+<p>Below is a checklist of action items that should be completed in order for your search site to function as expected in HTTPS.</p>
 
-<p>See the sample results page below that shows current job openings displayed on the City of Bloomington, MN, for a search on <a href="http://search.ci.bloomington.mn.us/search?affiliate=cityofbloomingtonmnsearchresults&amp;query=jobs">jobs</a>.</p>
+<h2 id="1-the-admin-center">1. The Admin Center</h2>
 
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/jobs-bloomington.png" alt="Search results for jobs on ci.bloomington.mn.us" /></p>
+<p>Update all URLs that are listed in the Search Admin Center for each of your search configurations. <em>You will need to update the links for all of your search configurations.</em></p>
 
-<p>(Thanks, City of Bloomington, for helping us pilot test this new feature!)</p>
+<h3 id="everyone">Everyone:</h3>
 
-<h2 id="other-features">Other Features</h2>
-
-<ul>
-  <li>Searchers now see search results for <a href="/manual/collections.html">collections</a> that are in deeply nested folders on your site.</li>
-  <li>Searchers no longer see deep site links for the first-listed search result.</li>
-  <li>Developers can now access <a href="https://api.usa.gov/jobs/search.json?tags=state">state</a> and <a href="https://api.usa.gov/jobs/search.json?tags=city+county">local</a> jobs data via our <a href="/developer/jobs.html">Jobs API</a> for government agencies that use both DigitalGov Search and NeoGov.</li>
-</ul>
-
-<h2 id="chores">Chores</h2>
+<p><strong>Dashboard:</strong></p>
 
 <ul>
-  <li>We updated our <a href="/tos.html">terms of service</a>.</li>
-  <li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-  <li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> with any questions.</li>
-  <li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
-  <li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
-  <li>We removed the trending searches feature and widget.</li>
-  <li>We updated our <a href="http://jenkins-ci.org">Jenkins</a> build to fix to failing <a href="http://cukes.info">Cucumber</a> specs.</li>
+  <li><strong>Settings:</strong> Update your Homepage URL.</li>
 </ul>
 
-<h2 id="fixes">Fixes</h2>
+<p><strong>Analytics:</strong></p>
 
 <ul>
-  <li>We’re now tracking impressions on <a href="/manual/best-bets-graphics.html">graphics Best Bets</a>.</li>
-  <li>We now accept Flickr and RSS feeds even if there are invalid items without a description, date, or other required field.</li>
-  <li>The advanced search link no longer propagates unnecessary parameters in the URL.</li>
-  <li>We removed trailing spaces from Twitter handles to prevent broken links in the <a href="/manual/twitter.html">Twitter GovBox</a>.</li>
-  <li>We now accept Flickr handles with an ‘@’ sign in them.</li>
-  <li>Searchers now see better results when they do a search from the <a href="http://search.usa.gov/search/advanced?affiliate=usagov">advanced search page</a> with multiple terms in the ‘Any of these words’ and ‘None of these words’ fields.</li>
-  <li>Searchers now see results for terms like full-time and part-time. The hyphens had previously been treated as the NOT Boolean operator.</li>
-  <li>Searchers no longer see the <a href="/manual/govbox-jobs.html">Jobs GovBox</a> for advanced searches when it isn’t relevant.</li>
-  <li>We fixed a bug so that, if a site parameter is specified, it overrides the scopeid parameter.</li>
-  <li>We added some additional logic to the code that redirects visitors from search.usa.gov to USA.gov’s homepage.</li>
-  <li>We fixed a few regression bugs for related searches and the naming of the ‘unescapedUrl’ and ‘publishedAt’ fields in our Search API.</li>
-  <li>We now display search results only for pages that specify a URL.</li>
+  <li><strong>3rd Party Tracking:</strong> If you are using <a href="/manual/third-party.html">3rd party tracking code</a> that is HTTP protocol-specific, you will need to submit updated code.</li>
 </ul>
+
+<p><strong>Content:</strong></p>
+
+<ul>
+  <li><strong>Content Overview:</strong> No action needed. The URL that we scan for social media accounts is synced with the homepage you have listed in the Dashboard section.</li>
+  <li><strong>Domains:</strong> No action needed, as this list isn’t protocol-specific.</li>
+  <li><strong>Collections:</strong> Update all URL paths in your collections; if you have mixed collections, leave any HTTP sites as-is.</li>
+  <li><strong>Best Bets (Text and Graphics):</strong> Throughout December 2016, we are doing bulk updates of Best Bet URLs in our system. If your site is serving content over HTTPS, we will update the URLs for your Best Bets. We suggest doing a spotcheck to confirm that all Best Bets have been updated. If you need a bulk update done after December, please <a href="mailto:search@support.digitalgov.gov">email us</a>.</li>
+  <li><strong>Routed Queries:</strong> Update routed query URLs.</li>
+  <li><strong>RSS feeds:</strong> Throughout December 2016, we are doing bulk updates of RSS feed URLs in our system. If your site is serving content over HTTPS, we will update the indexed URLs for your RSS feeds. We suggest doing a spotcheck to confirm that all feeds have been updated. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS. If you need a bulk update done after December, please <a href="mailto:search@support.digitalgov.gov">email us</a>.</li>
+</ul>
+
+<p><strong>Display:</strong></p>
+
+<ul>
+  <li><strong>Image Assets:</strong> Update the Favicon URL.</li>
+  <li><strong>Header &amp; Footer:</strong> Update header and footer links.</li>
+  <li><strong>No Results Page:</strong> Update alternative links.</li>
+</ul>
+
+<h3 id="only-those-using-domains--advanced-features">Only those using <code>Domains &gt; Advanced</code> features:</h3>
+
+<ul>
+  <li><strong>Supplemental Feed:</strong> Throughout December 2016, we are doing bulk updates of RSS feed URLs in our system. If your site is serving content over HTTPS, we will update the indexed URLs for your RSS feeds. We suggest doing a spotcheck to confirm that all feeds have been updated. Note: check to make sure that the URLs listed <em>within</em> the RSS feed are also HTTPS. If you need a bulk update done after December, please <a href="mailto:search@support.digitalgov.gov">email us</a>.</li>
+  <li><strong>Supplemental URLs:</strong> Throughout December 2016, we are doing bulk updates of supplemental URLs in our system. If your site is serving content over HTTPS, we will update the supplemental URLs you have submitted. We suggest doing a spotcheck to confirm that all URLs have been updated. If you need a bulk update done after December, please <a href="mailto:search@support.digitalgov.gov">email us</a>.</li>
+  <li><strong>Filter URLs:</strong> Update filtered URLs.</li>
+</ul>
+
+<h2 id="2-masked-domains">2. Masked Domains</h2>
+
+<p>If your site uses <a href="/manual/cname.html">domain masking</a>: <a href="mailto:search@support.digitalgov.gov">contact our team</a> to be added to our SSL certificate. While this step doesn’t apply to everyone, it does need to be done before step 3.</p>
+
+<h2 id="3-form-code-action-on-your-website">3. Form Code Action on Your Website</h2>
+
+<p>Update your form code action: An <code>s</code> must be added to your site’s form action in order for the request to be made over HTTPS, and for the results page to be served over HTTPS. Example:</p>
+
+<p><code>&lt;form accept-charset="UTF-8" action="https://search.usa.gov/search" id="search_form" method="get"&gt;</code></p>
+
+<h2 id="4-commercial-search-engines">4. Commercial Search Engines</h2>
+
+<p>Notify Google and Bing about the change; Google and Bing treat a migration from HTTP to HTTPS as a site move.</p>
+
+<ul>
+  <li>Google has a step-by-step guide, <a href="https://support.google.com/webmasters/answer/6033049">Move a Site with URL changes</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
+  <li>For Bing, review <a href="https://www.bing.com/webmaster/help/how-to-use-the-site-move-tool-bb8f5112">How to Use the Site Move tool</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
+</ul>
+
+<p>Additional SEO best practices:</p>
+
+<ul>
+  <li>Update your XML sitemap with HTTPS URLs.</li>
+  <li>Use <code>rel canonical</code> to <a href="https://support.google.com/webmasters/answer/139066?hl=en#https">declare HTTPS the preferred version</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
+  <li>Update internal website links.</li>
+  <li>Update links to your website from social media and other platforms managed by your agency.</li>
+</ul>
+
+<hr />
+
+<p><strong><em>Additional Information:</em></strong></p>
+
+<ul>
+  <li>Read more about the <a href="https://https.cio.gov/">HTTPS-Only Standard</a> <i class="icon-external-link"><span>(External link)</span></i> from the Federal CIO Council.</li>
+  <li>View a <a href="https://docs.google.com/spreadsheets/d/1XB26X_wFoBBlQEqecj7HB79hQ7DTLIPo97SS5irwsK8/edit#gid=1975121463">SEO Checklist</a>  <i class="icon-external-link"><span>(External link)</span></i> created by Aleyda Solís.</li>
+</ul>
+
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+    <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+    
+    <a href="/tagged/https"><span class="label label-info">https</span></a>
     
   </div>
 
   <div class='time'>
     
     
-    </br><span>Page last reviewed or updated:</span>
     
     
-    
-    <a href="/releases/april-2013.html">
-      <time>May 3, 2013</time>
+    <a href="/manual/https-transition.html">
+      <time>December 15, 2016</time>
     </a>
   </div>
 

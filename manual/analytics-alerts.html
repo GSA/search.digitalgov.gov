@@ -4,7 +4,7 @@
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
   
-  <title>April 2013 Release Notes</title>
+  <title>Setting Up Analytics Alerts</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,700" media="screen" rel="stylesheet" type="text/css" />
@@ -102,75 +102,112 @@
       <article class="article feature" style="padding:0 30px; margin-top: 10px;">
   
   <h1>
-    <a href="/releases/april-2013.html">April 2013 Release Notes</a>
+    <a href="/manual/analytics-alerts.html">Setting Up Analytics Alerts</a>
   </h1>
   
 
   <div class='post-content'>
-    <h2 id="highlight-find-state-and-local-jobs">Highlight: Find State and Local Jobs</h2>
+    <p><a href="/index.html">Search.gov Home</a> &gt; <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Analytics &gt; Analytics Alerts</p>
 
-<p>Searchers on many state and local websites can now see current job openings. We’re automatically indexing and displaying job openings for all of your websites that use <a href="http://www.neogov.com">NeoGov</a>.</p>
+<p>Analytics Alerts let you receive email alerts when your site visitors are getting no results for a particular query or when a query is getting a <a href="#low-query-click-through-rate">low click-through rate</a>. <strong><em>Note:</em></strong> the Low Click-through Rate alert is not currently functional. We apologize for any inconvience this may cause.</p>
 
-<p>See the sample results page below that shows current job openings displayed on the City of Bloomington, MN, for a search on <a href="http://search.ci.bloomington.mn.us/search?affiliate=cityofbloomingtonmnsearchresults&amp;query=jobs">jobs</a>.</p>
+<h2 id="no-results">No Results</h2>
 
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/jobs-bloomington.png" alt="Search results for jobs on ci.bloomington.mn.us" /></p>
+<p>Set up this alert to be notified if specific queries are frequently searched for but are returning no results. Help on specific fields follows, and there is an <a href="#no-results-example">example</a> below.</p>
 
-<p>(Thanks, City of Bloomington, for helping us pilot test this new feature!)</p>
+<p><strong>Name</strong></p>
 
-<h2 id="other-features">Other Features</h2>
+<p>Enter a name for your alert. It will be the subject line of your alert email. The name of your alert must be unique across our entire search alert system, so if you see an error message, please modify the name.</p>
 
-<ul>
-  <li>Searchers now see search results for <a href="/manual/collections.html">collections</a> that are in deeply nested folders on your site.</li>
-  <li>Searchers no longer see deep site links for the first-listed search result.</li>
-  <li>Developers can now access <a href="https://api.usa.gov/jobs/search.json?tags=state">state</a> and <a href="https://api.usa.gov/jobs/search.json?tags=city+county">local</a> jobs data via our <a href="/developer/jobs.html">Jobs API</a> for government agencies that use both DigitalGov Search and NeoGov.</li>
-</ul>
+<p><strong>Check interval</strong></p>
 
-<h2 id="chores">Chores</h2>
+<p>Enter the frequency at which you’d like the system to check for queries with no results. Use <code>m</code>, <code>h</code>, <code>d</code>, or <code>w</code> to specify the minutes/hours/days/weeks you’d like between checks.</p>
 
-<ul>
-  <li>We updated our <a href="/tos.html">terms of service</a>.</li>
-  <li>We updated the links in the header of our Admin Center and search results page to match our new website.</li>
-  <li>We removed the option to exclude specific domains from the Admin Center. Read our tip on <a href="/manual/domains.html">how to exclude content</a> or email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> with any questions.</li>
-  <li>We removed outdated, unused code that allowed you to embed the search results page within an iFrame.</li>
-  <li>We removed code that allowed you to set keywords to limit the scope of the search results (which had previously been a workaround to allow searchers to see your deeply nested content).</li>
-  <li>We removed the trending searches feature and widget.</li>
-  <li>We updated our <a href="http://jenkins-ci.org">Jenkins</a> build to fix to failing <a href="http://cukes.info">Cucumber</a> specs.</li>
-</ul>
+<p><strong>Minimum number of queries</strong></p>
 
-<h2 id="fixes">Fixes</h2>
+<p>Enter the minimum number of times, over the time window, that a given query must be entered to trigger the alert.</p>
 
-<ul>
-  <li>We’re now tracking impressions on <a href="/manual/best-bets-graphics.html">graphics Best Bets</a>.</li>
-  <li>We now accept Flickr and RSS feeds even if there are invalid items without a description, date, or other required field.</li>
-  <li>The advanced search link no longer propagates unnecessary parameters in the URL.</li>
-  <li>We removed trailing spaces from Twitter handles to prevent broken links in the <a href="/manual/twitter.html">Twitter GovBox</a>.</li>
-  <li>We now accept Flickr handles with an ‘@’ sign in them.</li>
-  <li>Searchers now see better results when they do a search from the <a href="http://search.usa.gov/search/advanced?affiliate=usagov">advanced search page</a> with multiple terms in the ‘Any of these words’ and ‘None of these words’ fields.</li>
-  <li>Searchers now see results for terms like full-time and part-time. The hyphens had previously been treated as the NOT Boolean operator.</li>
-  <li>Searchers no longer see the <a href="/manual/govbox-jobs.html">Jobs GovBox</a> for advanced searches when it isn’t relevant.</li>
-  <li>We fixed a bug so that, if a site parameter is specified, it overrides the scopeid parameter.</li>
-  <li>We added some additional logic to the code that redirects visitors from search.usa.gov to USA.gov’s homepage.</li>
-  <li>We fixed a few regression bugs for related searches and the naming of the ‘unescapedUrl’ and ‘publishedAt’ fields in our Search API.</li>
-  <li>We now display search results only for pages that specify a URL.</li>
-</ul>
+<p><strong>Time window for each check</strong></p>
+
+<p>Enter the amount of time the system should look back through for each check. Use <code>m</code>, <code>h</code>, <code>d</code>, or <code>w</code> to specify minutes/hours/days/weeks.</p>
+
+<p><strong>Time between alerts</strong></p>
+
+<p>Enter the minimum period of time between successive email messages.</p>
+
+<p><strong>Ignored query terms</strong></p>
+
+<p>Enter any query terms that you don’t want included in the alert, separated by commas.</p>
+
+<h3 id="no-results-example">No Results Example:</h3>
+
+<p>In this example, the alert system will check every 30 minutes to see if any query has been entered at least 50 times over the past 12 hours and yielded no results. The system will send an alert at most once per day if there are queries that fit this criteria, and it will not include the query ‘panda’ in the alert.</p>
+
+<p><img src="https://search.digitalgov.gov/img/No-Results-Screenshot.png" alt="No Results Analytics Alert Example" title="No Results Analytics Alert Example" height="95%" width="95%" /></p>
+
+<h2 id="low-query-click-through-rate">Low Query Click-through Rate</h2>
+
+<p><strong><em>Note:</em></strong> the Low Click-through Rate alert is not currently functional. We apologize for any inconvience this may cause.</p>
+
+<p>Set up this alert to be notified if the results page for a query with significant traffic is not getting many clicks. If the query resulted in a click less than 20% of the time, it is considered to have a low click-through rate (CTR); however, you are able to set any percentage threshold for your alert emails. Help on specific fields follows, and there is an <a href="#low-ctr-example">example</a> below.</p>
+
+<p><strong>Name</strong></p>
+
+<p>Enter a name for your alert. It will be the subject line of your email. The name of your alert must be unique across our entire search alert system, so if you see an error message, please modify the name.</p>
+
+<p><strong>Check interval</strong></p>
+
+<p>Enter the frequency at which you’d like the system to check for queries with a low CTR. Use <code>m</code>, <code>h</code>, <code>d</code>, or <code>w</code> to specify the minutes/hours/days/weeks you’d like between checks.</p>
+
+<p><strong>Minimum search activity level (queries + clicks)</strong></p>
+
+<p>Enter the minimum number of times, over the time window, that a given query must have search activity (queries plus clicks) to trigger the low query CTR alert. Because we’re not able to differentiate between query activity and click activity, you may want to pad this number a little. However, since these queries are not getting a lot of clicks, you don’t want to pad it too much.</p>
+
+<p><strong>Maximum CTR for alert</strong></p>
+
+<p>Enter the maximum click-through rate that will trigger an alert, expressed as a percentage. You will receive an alert for a query that has a CTR equal to or lower than that percentage during the given time window.</p>
+
+<p><strong>Time window for each check</strong></p>
+
+<p>Enter the amount of time the system should look back through for each check. Use <code>m</code>, <code>h</code>, <code>d</code>, or <code>w</code> to specify minutes/hours/days/weeks.</p>
+
+<p><strong>Time between alerts</strong></p>
+
+<p>Enter the minimum period of time between successive email messages.</p>
+
+<p><strong>Ignored query terms</strong></p>
+
+<p>Enter any query terms that you don’t want included in the alert, separated by commas.</p>
+
+<h3 id="low-ctr-example">Low CTR Example:</h3>
+
+<p>In this example, the alert system will check every 30 minutes for a query that has had search activity (queries plus clicks) at least 100 times over the past 12 hours and has a CTR 15% or lower. The system will send an alert at most once per day if there are queries that fit these criteria, and it will not include queries for ‘lion’ in the alert.</p>
+
+<p><img src="https://search.digitalgov.gov/img/Low-CTR-Screenshot.png" alt="Low CTR Analytics Alert Example" title="Low CTR Analytics Alert Example" height="95%" width="95%" /></p>
+
+<hr />
+
+<p><strong><em>Troubleshooting tip:</em></strong> Don’t forget to hit ‘add’ in the upper right corner!</p>
+
+<p><strong><em>Troubleshooting tip:</em></strong> Analytics alerts are only sent to the Search.gov user who set up the alert.</p>
 
   </div>
 
   <div class='tags'>
     
-    <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+    <a href="/tagged/help-manual"><span class="label label-info">help-manual</span></a>
+    
+    <a href="/tagged/analytics"><span class="label label-info">analytics</span></a>
     
   </div>
 
   <div class='time'>
     
     
-    </br><span>Page last reviewed or updated:</span>
     
     
-    
-    <a href="/releases/april-2013.html">
-      <time>May 3, 2013</time>
+    <a href="/manual/analytics-alerts.html">
+      <time>March 23, 2017</time>
     </a>
   </div>
 
