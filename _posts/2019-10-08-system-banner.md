@@ -4,11 +4,13 @@ layout: post
 title: Search.gov Login Terms
 tags: status
 description: This page provides access to the Search.gov Application.
+sitemap: false
+metatags: noindex
 ---
 
 ## Members of the general public
 
-Please use the search box on [USA.gov](https://www.usa.gov) to locate information on government programs and services. There is no government-wide search available through this system, only through USA.gov.
+Please use the search box on [USA.gov](https://www.usa.gov){% external_link %} to locate information on government programs and services. There is no government-wide search available through this system, only through USA.gov.
 
 
 ## Federal employees and contractors
