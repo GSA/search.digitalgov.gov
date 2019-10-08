@@ -13,10 +13,14 @@ Please use the search box on [USA.gov](https://www.usa.gov) to locate informatio
 
 ## Federal employees and contractors
 
-<p>*************************************************WARNING****************************************************<br />
-This is a U.S. General Services Administration Federal Government computer system that is "FOR OFFICIAL USE ONLY." This system is subject to monitoring. Therefore, no expectation of privacy is to be assumed. Individuals found performing unauthorized activities are subject to disciplinary action including criminal prosecution.<br />
-<p>****************************************************************************************************************
-<p>
+<pre align="center">*****************************WARNING********************************
+This is a U.S. General Services Administration Federal Government 
+computer system that is "FOR OFFICIAL USE ONLY." This system is subject 
+to monitoring. Therefore, no expectation of privacy is to be assumed. 
+Individuals found performing unauthorized activities are subject to 
+disciplinary action including criminal prosecution.
+*********************************************************************</pre>
+
 <div class='signup-wrapper'>
   <a href="https://search.usa.gov/login?terms=i_accept" class="btn btn-primary btn-large">Accept and Proceed to Login</a>
 </div>
