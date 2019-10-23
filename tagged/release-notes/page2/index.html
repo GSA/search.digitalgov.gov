@@ -108,6 +108,46 @@
  
     
     <h1>
+      <a href="/releases/october-2018.html">October 2018 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="improvements">Improvements</h2>
+<ul>
+  <li>We made several updates to our Chef cookbooks to further harden our operating system, including backend password policies, package configuration, and OS configuration.</li>
+  <li>We shifted our model for supporting domain masks for hosted search results pages to leverage CAA records.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+<ul>
+  <li>We fixed a gnarly bug in Elasticsearch that made queries containing very common words, like “the”, behave as if there were no results.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/october-2018.html">
+        <time datetime="2018-12-19">December 19, 2018</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/november-2018.html">November 2018 Release Notes</a>
     </h1>
     
@@ -562,54 +602,6 @@
       
       <a href="/releases/january-2018.html">
         <time datetime="2018-02-15">February 15, 2018</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/december-2017.html">December 2017 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="highlights">Highlights</h2>
-<ul>
-  <li>Our <a href="/blog/searchgov-blog.html">new indexing system</a> is now in production! Our team has been hard at work on this effort since June, and we are thrilled to reach this exciting milestone. In December, we released several features that helped us cross the first phase finish line:
-    <ul>
-      <li>Our new system is live with an updated version of ElasticSearch.</li>
-      <li>Our new system takes into consideration a “Promote” value when determining relevancy. “Promote” is a true/false value and is optional.</li>
-      <li>Our technical lead improved the way the Loofah scraper gets HTML documents into our system. We work in the open as much as possible, and this <a href="https://github.com/flavorjones/loofah/pull/134">minor change</a> helped fix a large bug in the Loofah core code.</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="chores">Chores</h2>
-<ul>
-  <li>The endpoint for our <a href="/developer/jobs.html">Jobs API</a> was updated on December 7th. This change puts the hostname under Search.gov’s DNS zone; previously, it was hosted in another part of our division. This code change only affected agencies that are directly calling our open source API. If you are only using our Jobs Module on your hosted search results page, you did not need to take any action.</li>
-  <li>We updated Rails on our Jobs API.</li>
-  <li>We updated Ruby on our main application.</li>
-  <li>We transitioned away from using UserVoice to collect feedback from our customers. Instead, you can submit feedback via  <a href="https://docs.google.com/forms/d/e/1FAIpQLSemE9w893BahVqCbDl8vlgsawGPdcXigwovOZIqIQAIMRyOWw/viewform">Google form</a> or by <a href="mailto:search@support.digitalgov.gov">emailing us</a>. Take a moment to review the <a href="/feedback/feedback.html">feedback</a> we’ve already received.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/december-2017.html">
-        <time datetime="2018-01-25">January 25, 2018</time>
       </a>
     </div>
     </article>

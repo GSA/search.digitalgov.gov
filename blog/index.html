@@ -105,6 +105,47 @@
   <article class="article">
 
     <pre><code>&lt;h1&gt;
+  &lt;a href="/releases/september-2019.html"&gt;September 2019 Release Notes&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;h2 id="improvements"&gt;Improvements&lt;/h2&gt;
+</code></pre>
+
+    <ul>
+  <li><strong>Service upgrades:</strong> We upgraded our Rails version and continued working on other internal upgrades that ensured smooth migration across versions.</li>
+  <li><strong>Improved security:</strong> We resolved and upgraded a series of security vulnerabilities.</li>
+  <li><strong>Login.gov:</strong> Continued to work on our integration with Login.gov</li>
+  <li><strong>Elasticsearch Indexing:</strong> We made several changes to prepare for an upcoming Elasticsearch upgrade.</li>
+</ul>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
+  
+  
+  
+  &lt;a href="/releases/september-2019.html"&gt;
+    &lt;time datetime="2019-10-23"&gt;October 23, 2019&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
   &lt;a href="/status.html"&gt;Search.gov System Status&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -1028,64 +1069,6 @@ Details: We experienced intermittent errors due to request queue volume. Errors 
   
   
   &lt;a href="/manual/training.html"&gt;
-    &lt;time datetime="2019-06-20"&gt;June 20, 2019&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/releases/may-2019.html"&gt;May 2019 Release Notes&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;h2 id="improvements"&gt;Improvements&lt;/h2&gt;
-</code></pre>
-    <ul>
-  <li><strong>Sitelimit parameter support</strong>
-    <ul>
-      <li>Now our customers can specify that a search box only returns results from a particular part of their site. For example, for site www.example.gov,  you want a search box on your site to only return results from <code>www.example.gov/history</code>. By adding the appropriate URL parameter and value, you can limit results: <code>&amp;sitelimit=www.example.gov/history</code>.</li>
-      <li>You can also specify multiple values for the sitelimit. See this <a href="https://www.nps.gov/search/?affiliate=nps&amp;query=seneca&amp;sitelimit=www.nps.gov/subjects/oceans+www.nps.gov/subjects/womenshistory">example from the National Park Service</a>.</li>
-      <li>Keep in mind that the sitelimit must be for a domain within your site’s index. That is, if the Domains list includes <code>www.example.gov</code>, the sitelimit parameter cannot be <code>www.agency.gov/history</code>.</li>
-      <li>This feature is an alternative to our Collections feature.</li>
-    </ul>
-  </li>
-  <li><strong>Service upgrades</strong>
-    <ul>
-      <li>We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
-    </ul>
-  </li>
-</ul>
-
-    <h2 id="fixes">Fixes</h2>
-    <ul>
-  <li><strong>Highlighting bug</strong>
-    <ul>
-      <li>We fixed a bug that prevented highlighting for exact, phrased queries on sites indexed by Search.gov. <a href="https://search.usa.gov/search?utf8=%E2%9C%93&amp;affiliate=usasearch&amp;sort_by=&amp;query=%22search+features%22">Here’s an example of it working correctly now</a>.</li>
-    </ul>
-  </li>
-</ul>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
-  
-  
-  
-  &lt;a href="/releases/may-2019.html"&gt;
     &lt;time datetime="2019-06-20"&gt;June 20, 2019&lt;/time&gt;
   &lt;/a&gt;
 &lt;/div&gt;
