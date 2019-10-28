@@ -15,11 +15,11 @@ description: This page provides an error message for invalid login attempts.
 
 <div style="text-align: center; font-size: 20px;">
 Access Denied: These credentials are not recognized as valid for accessing Search.gov. 
-<br>
-<br>
+<br />
+<br />
 Please reach out to **search@support.digitalgov.gov** if you believe this is in error.
-<br>
-<br>
+<br />
+<br />
 </div>
 
 </article>
