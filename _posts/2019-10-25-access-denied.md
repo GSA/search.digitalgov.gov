@@ -1,5 +1,5 @@
 ---
-permalink: /access-error.html
+permalink: /access-denied.html
 layout: feature
 title: Access Denied
 description: This page provides an error message for invalid login attempts.
