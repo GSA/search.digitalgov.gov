@@ -31,7 +31,17 @@ Please refer to the [robots.txt protocol](http://www.robotstxt.org/robotstxt.htm
 ## How can I optimize my robots.txt for Search.gov?
 
 ### Crawl delay
-A robots.txt file may specify a "crawl delay" directive for one or more user agents, which tells a bot how quickly it can request pages from a website. For example, a crawl delay of 10 specifies that a crawler should not request a new page more than every 10 seconds.  We recommend a crawl-delay of 2 seconds for our `usasearch` user agent, and setting a higher crawl delay for all other bots. The lower the crawl delay, the faster Search.gov will be able to index your site. In the robots.txt file, it would look like this:
+A robots.txt file may specify a "crawl delay" directive for one or more user agents, which tells a bot how quickly it can request pages from a website. For example, a crawl delay of 10 specifies that a crawler should not request a new page more than every 10 seconds.
+
+```
+  500,000 URLs
+     x 10 seconds between requests
+5,000,000 seconds for all requests
+
+5,000,000 seconds = 58 days to index the site once.
+```
+
+We recommend a crawl-delay of 2 seconds for our `usasearch` user agent, and setting a higher crawl delay for all other bots. The lower the crawl delay, the faster Search.gov will be able to index your site. In the robots.txt file, it would look like this:
 
 ```
 User-agent: usasearch  
