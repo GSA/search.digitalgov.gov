@@ -105,6 +105,115 @@
   <article class="article">
 
     <pre><code>&lt;h1&gt;
+  &lt;a href="/developer/jobs.html"&gt;Jobs API&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;p&gt;This Jobs API has been deprecated. Please use the &lt;a href="https://developer.usajobs.gov"&gt;USAJOBS API&lt;/a&gt; instead.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/jobs"&gt;&lt;span class="label label-info"&gt;jobs&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/api"&gt;&lt;span class="label label-info"&gt;api&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/developer/jobs.html"&gt;
+    &lt;time datetime="2019-11-20"&gt;November 20, 2019&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
+  &lt;a href="/developer/index.html"&gt;Resources for Developers&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;p&gt;In line with the White House’s &lt;a href="https://www.whitehouse.gov/sites/default/files/omb/egov/digital-government/digital-government.html"&gt;Digital Government Strategy&lt;/a&gt;, we’re making our code and data more open.&lt;/p&gt;
+</code></pre>
+
+    <h2 id="apis-for-searchgov-customers">APIs for Search.gov Customers</h2>
+
+    <p>These APIs are available for use on official government websites only. You must be a Search.gov customer. <a href="https://search.usa.gov/sites">Sign in</a> is required.</p>
+
+    <p><strong><a href="/manual/search-results-api.html">Search Results API</a></strong>—This API exposes all relevant results “modules” in a single JSON call, including: web results, best bets, health topics, job openings, recent tweets, recent news, recent videos, <em>Federal Register</em> documents, and related searches. Use it to <strong><em>pull search results</em></strong> from our service to display on your agency’s website or mobile applications. Instructions can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Activate Search.</p>
+
+    <p><strong><a href="/manual/typeahead-api.html">Type-ahead API</a></strong>—This API exposes the type-ahead suggestions that often appear below your search box as searchers enter their search terms. Instructions can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Activate Search.</p>
+
+    <p><strong><a href="/developer/i14y.html">i14y</a></strong>—This API is still available, but we encourage the use of sitemap-based indexing instead. Read more about our indexing process <a href="https://search.gov/manual/indexing-with-searchgov.html">here</a>. The i14y API allows you to send content directly from your content management system (CMS) into Search.gov for real-time indexing.</p>
+
+    <h2 id="apis-and-data-feeds-for-the-public">APIs and Data Feeds for the Public</h2>
+
+    <p><strong><a href="https://developer.usajobs.gov">USAJOBS API</a></strong>—Taps into a list of current job openings in federal agencies. The Search.gov Jobs API has been deprecated.</p>
+
+    <p><strong><a href="https://www.usa.gov/developer">USA.gov/Developer</a></strong>—Full list of USA.gov’s APIs and data feeds available to the public.</p>
+
+    <p><strong><a href="https://api.data.gov">api.data.gov</a></strong>—Portal for access to APIs from across the federal government.</p>
+
+    <h2 id="source-code-public-github-repositories">Source Code (Public Github Repositories)</h2>
+
+    <p><strong><a href="https://github.com/GSA/asis">ASIS (Advanced Social Image Search)</a></strong>—The source code that runs our image search. ASIS indexes images from Flickr, Instagram, and media RSS to provide a combined search API.</p>
+
+    <p><strong><a href="https://github.com/GSA/i14y">i14y</a></strong>—The source code that runs our search engine for agencies’ published content. i14y indexes agencies’ published content in real time, for search through our regular search channels.</p>
+
+    <p><strong><a href="https://github.com/GSA/govt-urls">Non-.gov URLs</a></strong>—The source code that runs our non-.gov URLs API. Indexes all government URLs that don’t end in .gov or .mil.</p>
+
+    <p><strong><a href="https://github.com/GSA/punchcard">Punchcard</a></strong>—The repository of synonyms, protected words, stop words, localizations, and other vocabularies that we use to improve the precision, recall, and usability of search results.</p>
+
+    <p><strong><a href="https://github.com/gsa/search.digitalgov.gov">search.digitalgov.gov</a></strong>—Pages and layout for our website, <a href="https://search.gov">https://search.gov</a>.</p>
+
+    <p><strong><a href="https://github.com/GSA/sitelink_generator">Site Links</a></strong>—The source code that “decorates” organic web results to provide additional, value-added links to help searchers find what they’re looking for. Currently provides one-click links to EDGAR filings for relevant SEC.gov results. Also published as a Ruby gem at <a href="https://rubygems.org/gems/sitelink_generator">https://rubygems.org/gems/sitelink_generator</a>.</p>
+
+    <p><strong><a href="https://github.com/GSA/activerecord-validate_unique_child_attribute">Unique Child Attribute</a></strong>—activerecord-validate_unique_child_attribute is an ActiveRecord extension to enforce uniqueness validations when accepting nested attributes. Works around <a href="https://github.com/rails/rails/issues/4568">Rails issue #4568</a>.</p>
+
+    <h2 id="cms-modules-and-plugins">CMS Modules and Plugins</h2>
+
+    <p>These modules and plugins were developed by Search.gov customers, not us, but we’re linking to them here so you have easy access to them. Use their respective platforms to connect with their developers and submit issues.</p>
+
+    <p><strong><a href="https://www.drupal.org/project/usasearch">Drupal Module</a></strong>—Allows you to connect your Drupal website to your Search.gov search configuration. The module also supports realtime indexing via Search.gov’s i14y content indexing API. Check out our <a href="/manual/drupal.html">help docs here</a>.</p>
+
+    <p><strong><a href="https://github.com/GSA/sites-digitalgov-search">WordPress Plugin</a></strong>—Starter code - contributions welcome! This plugin allows you to override the default WordPress search and connect your WordPress-powered website to your Search.gov search configuration.</p>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/api"&gt;&lt;span class="label label-info"&gt;api&lt;/span&gt;&lt;/a&gt;
+  
+  &lt;a href="/tagged/open"&gt;&lt;span class="label label-info"&gt;open&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  
+  
+  &lt;a href="/developer/index.html"&gt;
+    &lt;time datetime="2019-11-20"&gt;November 20, 2019&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
   &lt;a href="/manual/robotstxt.html"&gt;Robots.txt Files&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -852,147 +961,6 @@ Details: We experienced intermittent errors due to request queue volume. Errors 
   
   &lt;a href="/releases/june-2019.html"&gt;
     &lt;time datetime="2019-08-15"&gt;August 15, 2019&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/releases/july-2019.html"&gt;July 2019 Release Notes&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;h2 id="improvements"&gt;Improvements&lt;/h2&gt;
-</code></pre>
-
-    <ul>
-  <li><strong>90 day Account Deactivations:</strong> We now deactivate accounts for users who haven’t logged into Search.gov in the last 90 days. If you are unable to login should contact us via search@support.digitalgov.gov to reactivate your accounts. Contractors who do not use .gov or .mil email addresses will be asked to have their government POC re-confirm their status.</li>
-  <li><strong>Improved stability:</strong> We stabilized search performance by removing unnecessary content from our indices to free up memory.</li>
-  <li><strong>Service upgrades:</strong> We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
-  <li><strong>Non-.gov Government Domains Inventory:</strong> We decommissioned the old tool we used to manage the inventory of domains in use by federal agencies outside of the .gov and .mil top level domains. We transferred the data to GitHub, where it will be easier for agency staff to contribute to the inventory. More information is <a href="https://search.gov/developer/govt-urls.html">available on our website</a>.</li>
-</ul>
-
-    <h2 id="fixes">Fixes</h2>
-
-    <ul>
-  <li><strong>Image search result bug fix:</strong> We fixed a bug that prevented images sent to our index via Media RSS from being displayed in search results.</li>
-  <li><strong>Video search results bug fix:</strong> We fixed a bug that prevented videos from appearing in some search results pages.</li>
-</ul>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
-  
-  
-  
-  &lt;a href="/releases/july-2019.html"&gt;
-    &lt;time datetime="2019-08-15"&gt;August 15, 2019&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/manual/ranking-factors.html"&gt;How Search.gov Ranks Your Search Results&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;p&gt;Google and Bing hold their ranking algorithms closely as trade secrets, as a guard against people trying to game the system to ensure their own content comes out on top, regardless of whether that’s appropriate to the search. Search Engine Optimization (SEO) consulting has grown up as an industry to try to help websites get the best possible placement in search results.  You may be interested in our webinars on &lt;a href="https://search.gov/manual/training.html#site-structure-better-seo"&gt;technical SEO&lt;/a&gt; and &lt;a href="https://search.gov/manual/training.html#search-doctor"&gt;best practices&lt;/a&gt; that will help you get your website into better shape for search, and we’re also available to advise federal web teams on particular search issues. Generally speaking, though, SEO is a lot like reading tea leaves.&lt;/p&gt;
-</code></pre>
-
-    <p>We at Search.gov share our ranking factors because we want you to game our system. This helps ensure that the best, most appropriate content rises to the top of search results to help the American public find what they need.</p>
-
-    <p>This page will be updated as new ranking factors are added.</p>
-
-    <h2 id="guaranteed-1st-place-spot">Guaranteed 1st Place Spot</h2>
-
-    <p>For any pages you want always to appear in the top of search results, regardless of what the ranking algorithm might decide, use a <a href="https://search.gov/manual/best-bets.html">Best Bet</a>. Like an ad in the commercial engines, Best Bets allow you to pin recommended pages to the top of results. Text Best Bets are for single pages, and Graphics Best Bets allow you to boost a set of related items. Our <code>Match Keywords Only</code> feature allows you to put a tight focus on the terms you want a Best Bet to respond to. <a href="https://search.gov/manual/best-bets.html">Read more here</a>.</p>
-
-    <h2 id="ranking-factors">Ranking Factors</h2>
-
-    <p>Each of the following ranking factors is calculated separately, and then multiplied together to create the final ranking score of a given item for a given search.</p>
-
-    <h3 id="file-type">File Type</h3>
-
-    <p>We prefer HTML documents over other file types. Non-HTML results are demoted significantly, to prevent, for instance, PDF files from crowding out their respective landing pages.</p>
-
-    <h3 id="freshness">Freshness</h3>
-
-    <p>We prefer documents that are fresh. Anything published or updated in the past 30 days is considered fresh. After that, we use a Gaussian decay function to demote documents, so that the older a document is, the more it is demoted. When documents are 5 years old or older, we consider them to be equally old and do not demote further. We use either the <code>article:modified_time</code> on an individual page, or that page’s <code>&lt;lastmod&gt;</code> date from the sitemap, whichever is more recent. If there is only an <code>article:published_time</code> for a given page, we use that date.</p>
-
-    <p>Documents with no date metadata at all are considered fresh and are not demoted. <a href="https://search.gov/manual/metadata.html">Read more about date metadata</a> we collect and why it’s important to add metadata to your files.</p>
-
-    <h3 id="page-popularity">Page Popularity</h3>
-
-    <p>We prefer documents that users interact with more. Currently we leverage our own search analytics to track the number of times a URL is clicked on from the results page. The more clicks, the more that URL is promoted, or boosted. We use a logarithmic function to determine how much to boost the relevance score for each URL. For sites new to our service, please expect this ranking factor to take 30 days to fully warm up after your search goes live.</p>
-
-    <p>Note: Sites using the search results API to present our results on their own websites will not be able to take advantage of our click data ranking.</p>
-
-    <h3 id="core-ranking-algorithm">Core Ranking Algorithm</h3>
-
-    <p>Our system is built on Elasticsearch, which itself is built on Apache Lucene. For the first several generations, Elasticsearch used Lucene’s default ranking, the Practical Scoring Function. This Function starts with a basic Boolean match for single terms and adds in TF/IDF and a vector space model. Here are some high level definitions for these technical terms:</p>
-
-    <ul>
-  <li><strong>Boolean matches</strong> are the AND / OR / NOT matches you’ve probably heard about.
-    <ul>
-      <li>This AND that</li>
-      <li>This OR that</li>
-      <li>This NOT that</li>
-      <li>This AND (that OR foo) NOT bar</li>
-      <li><strong>Note</strong> that while the relevance ranking takes these into account, we do not currently use these operators if entered by a searcher. Support for user-entered Boolean operators is coming in 2019.</li>
-    </ul>
-  </li>
-  <li><strong>TF/IDF</strong> means term frequency / inverse document frequency. It counts the number of times a term appears in a document, and compares it to how many documents have that word. It aims to identify documents where the query terms appear frequently, and documents with more rare terms across the whole set of documents will get a higher score. Documents with a lot of common terms appearing in many documents will get a lower score.
-    <ul>
-      <li>They also have tempered the TF/IDF score with a method called <strong>BM25</strong>, which attempts to balance the TF/IDF scores of documents that are very different in length. If there are ten documents containing rare terms, the longest doc with the most instances of the terms would get a much higher score than a short doc with only a few instances of the terms. This makes intuitive sense, but when considered as a full pdf of a report vs the summary of the report, the full report isn’t that much more relevant to the query than the summary is. BM25’s length ‘normalizatin’ addresses that issue.</li>
-    </ul>
-  </li>
-  <li>The <strong>vector space model</strong> allows the search engine to weight the individual terms in the query, so a common term in the query would receive a lower match score than a rare term in the query.</li>
-  <li><a href="https://www.elastic.co/guide/en/elasticsearch/guide/master/practical-scoring-function.html">Read detailed technical documentation here</a> <i class="icon-external-link"><span>(External link)</span></i></li>
-</ul>
-
-    <p>The latest versions of Elasticsearch takes into account the context of terms within the document, whether they are in structured data fields or in unstructured fields, like body text.</p>
-
-    <ul>
-  <li>Structured data fields, like dates, are treated with a Boolean match method - does the field value match, or not?</li>
-  <li>Unstructured data fields, like webpage body content, are considered for how well a document matches a query.</li>
-  <li><a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html">Read highly technical documentation here</a> <i class="icon-external-link"><span>(External link)</span></i></li>
-</ul>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/indexing"&gt;&lt;span class="label label-info"&gt;indexing&lt;/span&gt;&lt;/a&gt;
-  
-  &lt;a href="/tagged/seo"&gt;&lt;span class="label label-info"&gt;seo&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  
-  
-  &lt;a href="/manual/ranking-factors.html"&gt;
-    &lt;time datetime="2019-07-09"&gt;July 9, 2019&lt;/time&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 </code></pre>

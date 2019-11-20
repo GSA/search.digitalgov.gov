@@ -119,31 +119,25 @@
 
 <p>These APIs are available for use on official government websites only. You must be a Search.gov customer. <a href="https://search.usa.gov/sites">Sign in</a> is required.</p>
 
-<p><strong><a href="/developer/i14y.html">i14y</a></strong>—This API allows you to send content directly from your content management system (CMS) into Search.gov for real-time indexing. Instructions can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Content &gt; i14y. Request your site be activated for i14y to enable this section.</p>
-
 <p><strong><a href="/manual/search-results-api.html">Search Results API</a></strong>—This API exposes all relevant results “modules” in a single JSON call, including: web results, best bets, health topics, job openings, recent tweets, recent news, recent videos, <em>Federal Register</em> documents, and related searches. Use it to <strong><em>pull search results</em></strong> from our service to display on your agency’s website or mobile applications. Instructions can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Activate Search.</p>
 
 <p><strong><a href="/manual/typeahead-api.html">Type-ahead API</a></strong>—This API exposes the type-ahead suggestions that often appear below your search box as searchers enter their search terms. Instructions can be found under <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Activate Search.</p>
 
+<p><strong><a href="/developer/i14y.html">i14y</a></strong>—This API is still available, but we encourage the use of sitemap-based indexing instead. Read more about our indexing process <a href="https://search.gov/manual/indexing-with-searchgov.html">here</a>. The i14y API allows you to send content directly from your content management system (CMS) into Search.gov for real-time indexing.</p>
+
 <h2 id="apis-and-data-feeds-for-the-public">APIs and Data Feeds for the Public</h2>
 
-<p><strong><a href="jobs.html">Jobs API</a></strong>—</p>
+<p><strong><a href="https://developer.usajobs.gov">USAJOBS API</a></strong>—Taps into a list of current job openings in federal agencies. The Search.gov Jobs API has been deprecated.</p>
 
-<blockquote>
-  <p><strong>Important Note:</strong> The Jobs API will be deprecated early 2019.  Please use the <a href="https://developer.usajobs.gov">USAJOBS API</a> instead.</p>
-</blockquote>
+<p><strong><a href="https://www.usa.gov/developer">USA.gov/Developer</a></strong>—Full list of USA.gov’s APIs and data feeds available to the public.</p>
 
-<p>Taps into a list of current jobs openings in federal agencies. Jobs are searchable by keyword, location, agency, schedule, or any combination of these.</p>
-
-<p>Visit <a href="https://www.usa.gov/developer">USA.gov/Developer</a> for a full list of USA.gov’s APIs and data feeds available to the public.</p>
+<p><strong><a href="https://api.data.gov">api.data.gov</a></strong>—Portal for access to APIs from across the federal government.</p>
 
 <h2 id="source-code-public-github-repositories">Source Code (Public Github Repositories)</h2>
 
 <p><strong><a href="https://github.com/GSA/asis">ASIS (Advanced Social Image Search)</a></strong>—The source code that runs our image search. ASIS indexes images from Flickr, Instagram, and media RSS to provide a combined search API.</p>
 
 <p><strong><a href="https://github.com/GSA/i14y">i14y</a></strong>—The source code that runs our search engine for agencies’ published content. i14y indexes agencies’ published content in real time, for search through our regular search channels.</p>
-
-<p><strong><a href="https://github.com/GSA/jobs_api">Jobs</a></strong>— <strong>Slated for deprecation. Please use the <a href="https://developer.usajobs.gov">USAJOBS API</a> instead.</strong> The source code that runs our jobs search and <a href="jobs.html">Jobs API</a>. Indexes current jobs openings in federal agencies.</p>
 
 <p><strong><a href="https://github.com/GSA/govt-urls">Non-.gov URLs</a></strong>—The source code that runs our non-.gov URLs API. Indexes all government URLs that don’t end in .gov or .mil.</p>
 
@@ -178,7 +172,7 @@
       
       
       <a href="/developer/index.html">
-        <time datetime="2018-12-20">December 20, 2018</time>
+        <time datetime="2019-11-20">November 20, 2019</time>
       </a>
     </div>
     </article>
