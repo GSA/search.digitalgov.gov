@@ -108,6 +108,54 @@
  
     
     <h1>
+      <a href="/releases/october-2019.html">October 2019 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="improvements">Improvements</h2>
+
+<ul>
+  <li><strong>Login.gov:</strong> We continued to work on our integration with Login.gov.</li>
+  <li><strong>Elasticsearch Indexing:</strong> We upgraded the underlying Elasticsearch engine for our optional search features, which includes the following:
+    <ul>
+      <li><a href="https://search.gov/manual/best-bets.html">Best Bets</a></li>
+      <li><a href="https://search.gov/manual/govbox-federal-register.html">Federal Register</a></li>
+      <li><a href="https://search.gov/manual/govbox-health.html">Health Topics</a></li>
+      <li><a href="">Related Searches</a></li>
+      <li><a href="https://search.gov/manual/rss.html">RSS Feeds</a></li>
+      <li><a href="https://search.gov/manual/twitter.html">Twitter</a></li>
+      <li><a href="https://search.gov/manual/youtube.html">YouTube</a></li>
+    </ul>
+  </li>
+  <li><strong>Rails Upgrade:</strong> We implemented infrastructure changes for our forthcoming Rails upgrade.</li>
+  <li><strong>Improved Security:</strong> We improved the security and stability of our system through a series of upgrades.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/october-2019.html">
+        <time datetime="2019-11-26">November 26, 2019</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/september-2019.html">September 2019 Release Notes</a>
     </h1>
     
@@ -515,51 +563,6 @@
       
       
       <a href="/releases/january-2019.html">
-        <time datetime="2019-02-15">February 15, 2019</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/december-2018.html">December 2018 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="improvements">Improvements</h2>
-
-<ul>
-  <li>We integrated with Bing v7 and transitioned our customers to this newer version.</li>
-  <li>We now will index content on a domain even if the root of that domain lists a different domain as the canonical domain. For example, <code>https://publications.sampleagency.gov</code> may list <code>https://www.sampleagency.gov</code> as the canonical domain, but still serve content from <code>https://publications.sampleagency.gov/reports/first_report.pdf</code>. We can now index https://publications.sampleagency.gov/reports/first_report.pdf`.</li>
-  <li>We updated our job search location feature to show more job openings, and cleaned up how we send job queries to the USAJOBS api to get more results.</li>
-  <li>We now automatically review URLs for reindexing, checking for 404s and 301s. We’re doing this every 30 days to begin with, and will adjust that timeframe as needed.</li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-
-<ul>
-  <li>We upgraded the Ruby version on the repo for our search.gov website, and <code>asis</code>, our image indexing repo.</li>
-  <li>We upgraded the <code>activejob</code> Ruby gem across repos.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/december-2018.html">
         <time datetime="2019-02-15">February 15, 2019</time>
       </a>
     </div>

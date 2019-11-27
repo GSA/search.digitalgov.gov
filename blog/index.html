@@ -105,6 +105,57 @@
   <article class="article">
 
     <pre><code>&lt;h1&gt;
+  &lt;a href="/releases/october-2019.html"&gt;October 2019 Release Notes&lt;/a&gt;
+&lt;/h1&gt;
+
+
+&lt;div class='post-content'&gt;
+  &lt;h2 id="improvements"&gt;Improvements&lt;/h2&gt;
+</code></pre>
+
+    <ul>
+  <li><strong>Login.gov:</strong> We continued to work on our integration with Login.gov.</li>
+  <li><strong>Elasticsearch Indexing:</strong> We upgraded the underlying Elasticsearch engine for our optional search features, which includes the following:
+    <ul>
+      <li><a href="https://search.gov/manual/best-bets.html">Best Bets</a></li>
+      <li><a href="https://search.gov/manual/govbox-federal-register.html">Federal Register</a></li>
+      <li><a href="https://search.gov/manual/govbox-health.html">Health Topics</a></li>
+      <li><a href="">Related Searches</a></li>
+      <li><a href="https://search.gov/manual/rss.html">RSS Feeds</a></li>
+      <li><a href="https://search.gov/manual/twitter.html">Twitter</a></li>
+      <li><a href="https://search.gov/manual/youtube.html">YouTube</a></li>
+    </ul>
+  </li>
+  <li><strong>Rails Upgrade:</strong> We implemented infrastructure changes for our forthcoming Rails upgrade.</li>
+  <li><strong>Improved Security:</strong> We improved the security and stability of our system through a series of upgrades.</li>
+</ul>
+
+    <pre><code>&lt;/div&gt;
+
+&lt;div class='tags'&gt;
+  
+  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
+  
+&lt;/div&gt;
+
+&lt;div class='time'&gt;
+  
+  
+  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
+  
+  
+  
+  &lt;a href="/releases/october-2019.html"&gt;
+    &lt;time datetime="2019-11-26"&gt;November 26, 2019&lt;/time&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+  </article>
+
+  <article class="article">
+
+    <pre><code>&lt;h1&gt;
   &lt;a href="/developer/jobs.html"&gt;Jobs API&lt;/a&gt;
 &lt;/h1&gt;
 
@@ -911,56 +962,6 @@ Details: We experienced intermittent errors due to request queue volume. Errors 
   
   &lt;a href="/status.html"&gt;
     &lt;time datetime="2019-08-20"&gt;August 20, 2019&lt;/time&gt;
-  &lt;/a&gt;
-&lt;/div&gt;
-</code></pre>
-
-  </article>
-
-  <article class="article">
-
-    <pre><code>&lt;h1&gt;
-  &lt;a href="/releases/june-2019.html"&gt;June 2019 Release Notes&lt;/a&gt;
-&lt;/h1&gt;
-
-
-&lt;div class='post-content'&gt;
-  &lt;h2 id="improvements"&gt;Improvements&lt;/h2&gt;
-</code></pre>
-
-    <ul>
-  <li><strong>Increasing indexing coverage</strong> We now index pages with only title metadata. Previously, we required pages include either content or description metadata in order to be indexed. This was to ensure we indexed pages with more complete information. However, this limited relevant content included on Javascript pages and similar client-side rendered pages.
-    <ul>
-      <li>As you include title metadata, it’s important keep them short and on-topic without packing in repeated information such as agency name. If you want to include your agency name, we recommend you place it after the page title. More information on metadata and tags you should include <a href="https://search.gov/manual/metadata.html">is available here</a>.</li>
-    </ul>
-  </li>
-  <li><strong>Improving USAJOBS Integration</strong> Common government terms “federal” and “gobierno” no longer trigger our USAJOBS integration. Previously, queries that included these terms triggered our integration with USAJOBS to display relevant postings. However, these queries often resulted in no or irrelevant job postings.</li>
-  <li><strong>Service upgrades</strong> We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
-</ul>
-
-    <h2 id="fixes">Fixes</h2>
-
-    <ul>
-  <li><strong>Language parsing bug fix</strong> We fixed a bug that parsed non-English pages (e.g. Greek) incorrectly or not at all. This particularly affected pages containing mathematical formulas and equations.</li>
-</ul>
-
-    <pre><code>&lt;/div&gt;
-
-&lt;div class='tags'&gt;
-  
-  &lt;a href="/tagged/release-notes"&gt;&lt;span class="label label-info"&gt;release-notes&lt;/span&gt;&lt;/a&gt;
-  
-&lt;/div&gt;
-
-&lt;div class='time'&gt;
-  
-  
-  &lt;/br&gt;&lt;span&gt;Page last reviewed or updated:&lt;/span&gt;
-  
-  
-  
-  &lt;a href="/releases/june-2019.html"&gt;
-    &lt;time datetime="2019-08-15"&gt;August 15, 2019&lt;/time&gt;
   &lt;/a&gt;
 &lt;/div&gt;
 </code></pre>

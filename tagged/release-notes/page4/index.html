@@ -108,6 +108,56 @@
  
     
     <h1>
+      <a href="/releases/march-2017.html">March 2017 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlighted-features">Highlighted Features</h2>
+
+<ul>
+  <li>Customers can use our <a href="/manual/domains-advanced.html">Supplemental RSS Feed</a> and <a href="/manual/domains-advanced.html#supplemental-urls">Supplemental URLs</a> feature to add missing content to their search results or to have complete control over what content appears. Previously, every item had to have a description. Now, descriptions are optional. If there is no description for an item, we’ll display snippets taken from an item’s full text. If a description is provided, we’ll show the description if it has a match with the query; otherwise, we’ll show snippets from the full text. Note: descriptions are still required for our <a href="/manual/rss.html">main RSS feed</a> feature.</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+
+<ul>
+  <li>As of March 1st, we only support federal and District of Columbia websites. We wrapped up our behind-the-scenes work that facilitated this transition.</li>
+  <li>Google announced that it is <a href="https://enterprise.google.com/search/products/gss.html">deprecating the Google Site Search API</a>. We use the GSS API to serve Google results in the limited cases where Bing results are not sufficient. We’ve renewed our license and will continue to use GSS until its end date of March 31, 2018. We are investigating how to best mitigate the effect of this deprecation.</li>
+  <li>A new help manual page has been added for our <a href="/manual/analytics-alerts.html">Analytics Alert</a> feature. We also revised the pages for <a href="/manual/domains-advanced.html">adding supplemental content</a> to your search site and <a href="/manual/filter-content.html">filtering URLs</a>.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li>Users who were deactivated from our system still received <a href="/manual/site-overview.html">Daily Snapshot</a> emails of their site’s activity. This has been corrected, and deactivated users no longer receive those emails.</li>
+  <li>On March 17th, our system was offline for 1 hour. We traced the problem to a specific configuration in our new logging mechanism. We mitigated the issue and will ensure the long term solution is stable.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/march-2017.html">
+        <time datetime="2017-04-21">April 21, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/february-2017.html">February 2017 Release Notes</a>
     </h1>
     
@@ -751,76 +801,6 @@
       
       <a href="/releases/september-2014.html">
         <time datetime="2014-11-17">November 17, 2014</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/august-2014.html">August 2014 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="add-instagram-pictures-to-your-image-results">Add Instagram Pictures to Your Image Results</h2>
-
-<p>Does your agency have an Instagram account? Your pictures can now appear in your site’s search results.</p>
-
-<p>Simply <a href="/manual/instagram.html">tell us your Instagram username</a> at <a href="https://search.usa.gov/sites/">Admin Center</a> &gt; YourSite &gt; Manage Content &gt; Instagram. We’ll automatically index all of the pictures in your account within minutes.</p>
-
-<p>See the sample results below for a search for <a href="http://search.doi.gov/search/images?affiliate=doi.gov&amp;query=moon"><em>moon</em> on DOI.gov</a>.</p>
-
-<p><a href="http://search.doi.gov/search/images?&amp;affiliate=doi.gov&amp;query=moon"><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/release-08-2014-doi-instagram.png" alt="DOI Instagram Results" title="DOI Instagram results for moon" /></a></p>
-
-<p>This feature is reflective of our commitment to bring your content, <a href="http://www.digitalgov.gov/2014/08/26/help-the-public-find-your-information-wherever-and-however-youve-published-it/">wherever it lives</a>, to your searchers.</p>
-
-<h2 id="other-features">Other Features</h2>
-
-<ul>
-  <li>Searchers now see results for Instagram pictures, regardless of spacing. For example, Apollo11 now returns the same results as Apollo 11. [<a href="https://github.com/GSA/oasis/commit/9a29de80dd22978581af4b0e460e439b78e614d7">Commit 9a29de8</a>]</li>
-  <li>Searchers now see better spelling suggestions for image searches. [<a href="https://github.com/GSA/oasis/commit/1ae0c7e7fff3a4eb02f3e09e8c8d7c030fd50e14">Commit 1ae0c7e7ff</a>]</li>
-  <li>Searchers now see images from all known government Flickr and Instagram accounts when <a href="http://search.usa.gov/search/images?affiliate=usagov&amp;query=hoover">searching for images on USA.gov</a>.</li>
-  <li>Searchers now see <a href="http://dublincore.org/documents/dcmi-terms/">Dublin Core</a> <i class="icon-external-link"><span>(External link)</span></i> facets on the <a href="/blog/serp-redesign.html">newly redesigned search results page</a>.</li>
-  <li>Searchers now see a consistent look and phrasing for the See more… option on the various modules on the results page.</li>
-  <li>You can now toggle the display of <a href="/manual/govbox-federal-register.html"><em>Federal Register</em> results</a> in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
-  <li>To improve the accessibility of the <a href="https://search.usa.gov/sites/">Admin Center</a>, you now see an outline defining the area of focus, and you can access the links for My Account and Sign Out when navigating with the keyboard.</li>
-</ul>
-
-<h2 id="chores">Chores</h2>
-
-<ul>
-  <li>We upgraded to <a href="http://www.elasticsearch.org/downloads/1-3-2/">ElasticSearch 1.3.2</a> <i class="icon-external-link"><span>(External link)</span></i>.</li>
-  <li>We added a notice of upcoming changes to the API Instructions page in the <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-
-<ul>
-  <li>We fixed the spacing between titles and descriptions so it is consistent on all of our results pages.</li>
-  <li>To improve the quality of type-ahead suggestions, we decreased the number of times a term must be searched before appearing as a suggestion.</li>
-  <li>The option to drill down into detailed data for Best Bets now remains when you change the date on the <a href="/manual/monthly-reports.html">Monthly Reports</a> page.</li>
-  <li>Searchers no longer see deleted RSS items with 404 http status codes in their results.</li>
-  <li>We now pre-validate social media account handles.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/august-2014.html">
-        <time datetime="2014-09-04">September 4, 2014</time>
       </a>
     </div>
     </article>
