@@ -108,6 +108,59 @@
  
     
     <h1>
+      <a href="/releases/april-2017.html">April 2017 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlights">Highlights</h2>
+
+<ul>
+  <li>We deactivate user accounts for customers who are no longer at their agency, do not have a search site set up, have never verified their email, or have not logged in to their account for more than a year. Previously, deactivated users who attempted to log-in to our system and/or reset their passwords were redirected to the USA.gov homepage. Now, deactivated users see a message, alerting them to contact our team.</li>
+  <li>We hosted a webinar covering the current ways that customers can directly index their content with our service: via <a href="/manual/domains-advanced.html">Supplemental RSS feed</a>, <a href="/developer/i14y.html">i14y API</a> or via the <a href="https://www.drupal.org/project/usasearch">Drupal module</a> that connects with our API. We’ll post the recording in the <a href="/manual/training.html">Training</a> section of our website as soon as it is available.</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+
+<ul>
+  <li>Our developer team began a sprint investigating the best way to get customer content into our own indexes. There are several advantages to using our own indexes:
+    <ul>
+      <li>Customers can have complete control over what content is included in their search results.</li>
+      <li>Customers don’t need to rely on results from commercial indexes, which can be out of date or have unpredictable titles/descriptions.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li>Our <a href="/developer/jobs.html">Jobs API</a> was briefly offline on Thursday, April 27th (from approximately 4:50 pm - 5:40 pm). A DNS update made by another program in our division caused the outage, which was immediately caught by our alerting system and rectified.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/april-2017.html">
+        <time datetime="2017-05-10">May 10, 2017</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/march-2017.html">March 2017 Release Notes</a>
     </h1>
     
@@ -726,81 +779,6 @@
       
       <a href="/releases/october-2014.html">
         <time datetime="2014-11-25">November 25, 2014</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/september-2014.html">September 2014 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="promote-related-content-as-value-added-links">Promote Related Content as Value-Added Links</h2>
-
-<p>To help searchers more easily find what they’re looking for, you can now promote related content by listing it as a set of value-added links under your organic web results. See the sample results page below that shows value-added links for EDGAR filings for a search on <em>apple</em> on SEC.gov.</p>
-
-<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/sitelink.png" alt="Sitelink-generated links for EDGAR filings on SEC.gov" title="Sitelink-generated links for EDGAR filings on SEC.gov" /></p>
-
-<p>Do you have related content that you’d like to display as value-added links that searchers should see within the context of each other (such as related forms, instructions, and publications)? If your related content follows a discernable URL pattern, email us at <a href="mailto:search@support.digitalgov.gov">search@support.digitalgov.gov</a> and we’ll work with you to promote the related content on your site.</p>
-
-<p>We’ve open sourced the <a href="https://github.com/GSA/sitelink_generator">code for the sitelink generator</a> on Github so you can <a href="https://github.com/GSA/sitelink_generator/fork">fork the code</a> and contribute to it directly. We’ve also <a href="http://rubygems.org/gems/sitelink_generator">published it as Ruby gem</a>.</p>
-
-<p>Thanks, <a href="http://www.sec.gov">SEC.gov</a> team, for helping us build this new feature!</p>
-
-<h2 id="other-features">Other Features</h2>
-
-<ul>
-  <li>Searchers now see underlined links when they hover over them on the results page.</li>
-  <li>Searchers using screen readers now see an <a href="http://www.w3.org/TR/wai-aria/">ARIA</a> <i class="icon-external-link"><span>(External link)</span></i> alert for type-ahead search suggestions to let them know the number of available suggestions and how to access them.</li>
-  <li>You can now add a tagline at the top of your results page. See the sample tagline, <em>NIJ.gov - Strengthen Science. Advance Justice.</em>, on <a href="http://search.usa.gov/search?affiliate=national-institute-of-justice&amp;query=dna">NIJ.gov’s results page</a>.</li>
-  <li>You can now left-align your hamburger menu. See the sample left-aligned menu on <a href="http://search.whitehouse.gov/search?affiliate=wh&amp;query=bo">WhiteHouse.gov’s results page</a>. (Perhaps needed because <a href="http://time.com/3107557/top-10-lefties/">Obama is a leftie</a> <i class="icon-external-link"><span>(External link)</span></i>?)</li>
-  <li>You can now add an alt tag to your logo on the <a href="/manual/brand.html">Image Assets</a> page in the Admin Center.</li>
-  <li>To improve its accessibility, you now see legends and instructional text for all radio button options in the Admin Center. You can also tab logically through all menu items.</li>
-</ul>
-
-<h2 id="chores">Chores</h2>
-
-<ul>
-  <li>We upgraded to version 4.0 of the <a href="https://rubygems.org/gems/airbrake">Airbrake gem</a> <i class="icon-external-link"><span>(External link)</span></i> and version 6.5 of <a href="http://www.redhat.com/en/technologies/linux-platforms/enterprise-linux">Red Hat Enterprise Linux</a> <i class="icon-external-link"><span>(External link)</span></i>. We also installed patches to address the <a href="https://www.us-cert.gov/ncas/alerts/TA14-268A">Shellshock vulnerability</a>.</li>
-  <li>We gained 40% more capacity in our main Elasticsearch cluster by upgrading our hardware.</li>
-  <li>We removed infinite scroll on the results page.</li>
-  <li>We now redirect searchers to USA.gov’s 404 page when they use a null or incorrect ‘affiliate’ parameter.</li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-
-<ul>
-  <li>We’ve added a user agent to our request headers so you can see it when we poll your RSS feeds.</li>
-  <li>If you’ve opted to turn off web tracking, we now turn off the tags for both our own Google Analytics and the <a href="http://www.digitalgov.gov/services/dap/">Digital Analytics Program</a>.</li>
-  <li>We now show fewer similar or duplicate pictures in our image results. [<a href="https://github.com/GSA/asis/commit/f6ab91539efa965325dbe02b6c67ff68a7dff431">Commit f6ab915</a>]</li>
-  <li>We fixed our image search pagination to account for really old pictures and how we group photos into albums. [<a href="https://github.com/GSA/asis/commit/b12eb198c900d0d1a00c06a017477114b003489c">Commit b12eb19</a>]</li>
-  <li>We also fixed our indexing of images with circa dates. [<a href="https://github.com/GSA/asis/commit/f7b577c21daed4ac5b00711a70028602c4117d72">Commit f7b577c</a>]</li>
-  <li>We lessened the complexity of the importer logic for Instagram. [<a href="https://github.com/GSA/asis/commit/5f828e3e426d66300fcff574ffecff262e9b4d73">Commit 5f828e3</a>]</li>
-  <li>The option to narrow results to images only now appears by default for sites with an Instagram account. It had previously displayed only for sites with a Flickr account.</li>
-  <li>Searchers no longer see government-wide image results on sites without a Flickr or Instagram account. They now see site-specific image results.</li>
-  <li>Image searches without a search term no longer cause an error.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/september-2014.html">
-        <time datetime="2014-11-17">November 17, 2014</time>
       </a>
     </div>
     </article>

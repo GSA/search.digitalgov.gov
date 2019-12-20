@@ -108,6 +108,54 @@
  
     
     <h1>
+      <a href="/releases/january-2019.html">January 2019 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="improvements">Improvements</h2>
+
+<ul>
+  <li>After integrating directly with the new USAJOBS API, we worked on additional tuning of trigger words to avoid false positive job-related searches</li>
+  <li>We have improved search performance by caching repeat queries made to our data store</li>
+  <li>We updated our content parser to accept some non-standard HTML tags, and to ignore any content within <code>&lt;nav&gt;</code> and <code>&lt;footer&gt;</code> elements</li>
+</ul>
+
+<h2 id="fixes-upgrades-misc">Fixes, Upgrades, Misc</h2>
+
+<ul>
+  <li>We upgraded Ruby on our <code>search-gov</code> repo</li>
+  <li>We increased the processing power on the servers that support our primary web index</li>
+  <li>We reindexed our primary index into more Elasticsearch shards</li>
+  <li>We decreased the cookie timeout for Admin Center sessions</li>
+  <li>We made the failed password reset alert language more ambiguous, so people will no longer be able to tell whether the email address has an account</li>
+  <li>We fixed a bug in our MRSS photo indexer</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/january-2019.html">
+        <time datetime="2019-02-15">February 15, 2019</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/december-2018.html">December 2018 Release Notes</a>
     </h1>
     
@@ -538,62 +586,6 @@
       
       <a href="/releases/march-2018.html">
         <time datetime="2018-04-24">April 24, 2018</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/february-2018.html">February 2018 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="highlights">Highlights</h2>
-<ul>
-  <li>Our <a href="/blog/searchgov-blog.html">new indexing system</a> has been in production since December! In February, we continued to release several features that are building on and improving our new system:
-    <ul>
-      <li>We have made our indexing rake task more efficient.</li>
-      <li>We began implementing indexing from XML sitemaps. Check out our new <a href="/blog/sitemaps.html">XML Sitemaps page</a> to learn more about them.</li>
-    </ul>
-  </li>
-  <li>We made our title parsing more flexible, drawing from either <code>&lt;title&gt;</code> or <code>&lt;og:title&gt;</code> tags, depending on where a site’s quality title metadata may be.</li>
-</ul>
-
-<h2 id="chores">Chores</h2>
-<ul>
-  <li>We upgraded Rails for our core application</li>
-  <li>We switched our highlighting of terms in search results to a much lighter method.</li>
-  <li>We now have all apps enforcing HTTPs and are compliant with BOD 18-01.</li>
-  <li>We removed abandoned i14y drawers.</li>
-  <li>We improved how our indexing job updates records for existing pages.</li>
-</ul>
-
-<h2 id="bug-fixes">Bug Fixes</h2>
-<ul>
-  <li>We fixed an RSS feeds fetch issue.</li>
-  <li>We have fixed the bug causing search sites to have access to the Best Bets of other affiliates.</li>
-  <li>We disabled four-byte UTF-8 characters in Twitter results, and now support eight-byte characters. That’s right - emojis in your search results if they are used in your tweets.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/february-2018.html">
-        <time datetime="2018-03-27">March 27, 2018</time>
       </a>
     </div>
     </article>
