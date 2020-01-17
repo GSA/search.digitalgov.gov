@@ -93,7 +93,7 @@ Disallow: /archive/
 
 <i class="icon-check"></i> 3. The robots.txt file lists one or more [XML sitemaps](https://search.gov/blog/sitemaps.html)  
 
-<i class="icon-check"></i> 4. The robots.txt file format has been [validated](http://tools.seochat.com/tools/robots-txt-validator/) {% external_link %}
+<i class="icon-check"></i> 4. The robots.txt file format has been [validated](https://www.websiteplanet.com/webtools/sitemap-validator/) {% external_link %}
 
 ## Additional Resources
 [Yoast SEO's Ultimate Guide to Robots.txt](https://yoast.com/ultimate-guide-robots-txt/) {% external_link %}  
