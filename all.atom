@@ -3,10 +3,220 @@
   <title><![CDATA[Search.gov]]></title>
   <link href="https://search.gov/all.atom" rel="self"/>
   <link href="https://search.gov/"/>
-  <updated>2020-01-15T21:24:05+00:00</updated>
+  <updated>2020-01-17T21:06:06+00:00</updated>
   <id>https://search.gov/</id>
   <author><name><![CDATA[Search.gov]]></name></author>
 
+  
+  <entry>
+    <title type="html"><![CDATA[XML Sitemaps]]></title>
+    <link href="https://search.gov/manual/sitemaps.html"/>
+    <updated>2020-01-17T00:00:00+00:00</updated>
+    <id>https://search.gov/manual/sitemaps.html</id>
+    <content type="html"><![CDATA[<p>An <a href="https://en.wikipedia.org/wiki/Sitemaps">XML sitemap</a>  <i class="icon-external-link"><span>(External link)</span></i> is an XML formatted file containing a list of URLs on a website. An XML sitemap provides information that allows a search engine to index your website more intelligently, and to keep its search index up to date.</p>
+
+<p>Sitemaps tell search engines what URLs are on a website, and, if URLs are added as they are published, they tell the engines what new content needs to be picked up. They may also provide additional metadata about each URL, such as the last modified date, which signals to the engine to update the index record for that page.</p>
+
+<p>Search.gov uses sitemaps to tell us what URLs should be in our index and when a URL has been updated. Sitemaps are used in a similar way by <a href="https://support.google.com/webmasters/answer/156184">Google</a>  <i class="icon-external-link"><span>(External link)</span></i>, Bing, and and other search engines. <em>Having an xml sitemap will improve your Google SEO (search engine optimization).</em></p>
+
+<p>Example: <a href="https://search.gov/sitemap.xml">https://search.gov/sitemap.xml</a></p>
+
+<h2 id="what-content-should-be-on-xml-sitemap">What content should be on XML sitemap?</h2>
+
+<p>Some sitemaps are comprehensive, but for very large sites you may need to publish several sitemaps. Each sitemap should be no more than 50MB or 50,000 URLs, whichever comes first. You do not need to add URLs of content you want to remain unsearchable.</p>
+
+<p><strong>Note</strong> that an HTML formatted file listing the pages of a site is more akin to an index page, and is not the same as an XML sitemap. HTML files are human friendly, but not machine friendly, and Search engines need an xml formatted file in order to leverage the information for indexing work.</p>
+
+<h2 id="more-than-one-web-platform-use-multiple-sitemaps">More than one web platform? Use multiple sitemaps.</h2>
+
+<p>It’s common for agencies to use more than one platform to publish their websites. For instance, a CMS was launched, but some content is still on the legacy site’s platform. In this case, use available plugins for the CMS’s in your environment to auto-generate sitemaps for that content. Manually generate a sitemap for any static content. You can publish a <a href="https://www.sitemaps.org/protocol.html#index">sitemap index file</a>  <i class="icon-external-link"><span>(External link)</span></i> that lists the locations of all your specific sitemaps, or you can list all your sitemaps on your robots.txt file.</p>
+
+<h2 id="how-do-search-engines-find-my-sitemaps">How do search engines find my sitemap(s)?</h2>
+
+<p>Sitemaps (or the <a href="https://www.sitemaps.org/protocol.html#index">sitemap index</a>  <i class="icon-external-link"><span>(External link)</span></i>) should be listed in your site’s robots.txt file, i.e.:<br />
+<code>Sitemap: https://www.agency.gov/sitemap_1.xml</code><br />
+<code>Sitemap: https://www.agency.gov/sitemap_2.xml</code></p>
+
+<p>List the appropriate sitemap(s) for the domain or subdomain. <code>www.exampleagency.gov/robots.txt</code> would list sitemaps for content in the <code>www</code> subdomain, while <code>forms.exampleagency.gov/robots.txt</code> would list sitemaps for the <code>forms</code> subdomain.</p>
+
+<p>Read more about <a href="https://search.gov/blog/robotstxt.html">robots.txt files</a>, and take a look at ours: <a href="https://search.gov/robots.txt">https://search.gov/robots.txt</a></p>
+
+<h2 id="what-should-my-xml-sitemap-look-like">What should my XML sitemap look like?</h2>
+
+<p>Please refer to the official <a href="https://www.sitemaps.org/protocol.html">sitemaps protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> for full information on how a sitemap should be structured.</p>
+
+<p>When publishing your sitemap, be sure it begins with an <code>&lt;xml&gt;</code> declaration, and that the URLs are enclosed in opening and closing tags. To take a simplified example:</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;urlset&gt;
+&lt;url&gt;
+&lt;loc&gt;https://exampleagency.gov/blog/file1.html&lt;/loc&gt;
+&lt;lastmod&gt;2018-03-19T00:00:00+00:00&lt;/lastmod&gt;
+&lt;/url&gt;
+&lt;url&gt;
+&lt;loc&gt;https://exampleagency.gov/policy/new-policy.html&lt;/loc&gt;
+&lt;lastmod&gt;2018-03-27T00:00:00+00:00&lt;/lastmod&gt;
+&lt;/url&gt;
+&lt;/urlset&gt;
+</code></pre>
+<p>If you use multiple sitemaps, then you’ll need to use a <a href="https://www.sitemaps.org/protocol.html#index">sitemap index</a>  <i class="icon-external-link"><span>(External link)</span></i>, along these lines:</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;sitemapindex&gt;
+&lt;sitemap&gt;https://exampleagency.gov/sitemap.xml?page=1&lt;/sitemap&gt;
+&lt;sitemap&gt;https://exampleagency.gov/sitemap.xml?page=2&lt;/sitemap&gt;
+&lt;/sitemapindex&gt;
+</code></pre>
+<p>Importantly, be sure that any <a href="https://www.sitemaps.org/protocol.html#escaping">special characters in your URLs are escaped</a>  <i class="icon-external-link"><span>(External link)</span></i> so the search engines will know how to read them.</p>
+
+<h2 id="what-metadata-does-searchgov-require-for-each-xml-sitemap-url">What metadata does Search.gov require for each XML sitemap URL?</h2>
+
+<p>The sitemap protocol defines <a href="https://www.sitemaps.org/protocol.html#xmlTagDefinitions">required and optional XML tags</a>  <i class="icon-external-link"><span>(External link)</span></i> for each URL. We recommend including the <code>&lt;lastmod&gt;</code> value (the date of last modification of the file) whenever possible, to indicate when a file has been updated and needs to be re-indexed.</p>
+
+<p>We do not have plans to support the <code>&lt;priority&gt;</code> tag, which is <a href="https://www.seroundtable.com/google-priority-change-frequency-xml-sitemap-20273.html">no longer used</a>  <i class="icon-external-link"><span>(External link)</span></i> by search engines like Google. We may support the <code>&lt;changefreq&gt;</code> tag in the future, but the <code>&lt;lastmod&gt;</code> tag is more accurate and supported by more search engines.</p>
+
+<h2 id="how-can-i-create-an-xml-sitemap">How can I create an XML sitemap?</h2>
+
+<p>Most content management systems provide tools to generate a sitemap and keep it updated. Below are some tools that we recommend:</p>
+
+<h3 id="drupal">Drupal</h3>
+<p><a href="https://www.drupal.org/project/xmlsitemap">XML Sitemap Module</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<h3 id="wordpress">Wordpress</h3>
+<p><a href="https://wordpress.org/plugins/wordpress-seo/">Yoast SEO Plugin</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<p><a href="https://wordpress.org/plugins/google-sitemap-generator/">Google Sitemap Plugin</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<h3 id="wagtail">Wagtail</h3>
+<p><a href="http://docs.wagtail.io/en/latest/reference/contrib/sitemaps.html">Sitemap Generator</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<h3 id="github-pages-jekyll">Github Pages (Jekyll)</h3>
+<p><a href="https://help.github.com/articles/sitemaps-for-github-pages/">Jekyll Sitemap gem</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<h3 id="online-generators">Online generators</h3>
+<p>(Note: free online generators often have a limit to the number of URLs they will include, and do not always generate the most accurate sitemaps. Use them only as a last resort.)</p>
+
+<p><a href="https://freesitemapgenerator.com">Free Sitemap Generator</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<p><a href="http://www.web-site-map.com/">Web Sitemap</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<h2 id="sitemap-checklist">Sitemap checklist</h2>
+<p><i class="icon-check"></i> 1. One or more sitemaps have been created</p>
+
+<p><i class="icon-check"></i> 2. The URLs in the sitemap have been reviewed (clean URLs, only includes URLs that should be searchable)</p>
+
+<p><i class="icon-check"></i> 3. Each sitemap’s XML format has been <a href="https://www.websiteplanet.com/webtools/sitemap-validator/">validated</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<p><i class="icon-check"></i> 4. Each sitemap (or a sitemap index) is listed in the site’s robots.txt file</p>
+
+<h2 id="additional-resources">Additional Resources:</h2>
+<p><a href="https://www.sitemaps.org/">Official Documentation from Sitemaps.org</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<p><a href="https://support.google.com/webmasters/answer/183668?hl=en&amp;ref_topic=4581190">Google’s guide to building a sitemap</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<p><a href="https://www.websiteplanet.com/webtools/sitemap-validator/">Sitemap validator</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<h2 id="more-questions">More questions?</h2>
+<p>If you have questions that aren’t answered here, <a href="mailto:search@support.digitalgov.gov">email us</a>. We’ll also keep updating this page over time.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Robots.txt Files]]></title>
+    <link href="https://search.gov/manual/robotstxt.html"/>
+    <updated>2020-01-17T00:00:00+00:00</updated>
+    <id>https://search.gov/manual/robotstxt.html</id>
+    <content type="html"><![CDATA[<p>A <code>/robots.txt</code> file is a text file that instructs automated web bots on how to crawl and/or index a website. Web teams use them to provide information about what site directories should or should not be crawled, how quickly content should be accessed, and which bots are welcome on the site.</p>
+
+<h2 id="what-should-my-robotstxt-file-look-like">What should my robots.txt file look like?</h2>
+<p>Please refer to the <a href="http://www.robotstxt.org/robotstxt.html">robots.txt protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> for detailed information on how and where to create your robots.txt. Key points to keep in mind:</p>
+
+<ul>
+  <li>The file must be located at the root of the domain, and each subdomain needs its own file.</li>
+  <li>The robots.txt protocol is case sensitive.</li>
+  <li>It’s easy to accidentally block crawling of everything
+    <ul>
+      <li><code>Disallow: /</code> means disallow everything</li>
+      <li><code>Disallow:  </code> means disallow nothing, thus allowing everything</li>
+      <li><code>Allow: /</code> means allow everything</li>
+      <li><code>Allow:  </code> means allow nothing, thus disallowing everything</li>
+    </ul>
+  </li>
+  <li>The instructions in robots.txt are guidance for bots, not binding requirements.</li>
+</ul>
+
+<h2 id="how-can-i-optimize-my-robotstxt-for-searchgov">How can I optimize my robots.txt for Search.gov?</h2>
+
+<h3 id="crawl-delay">Crawl delay</h3>
+<p>A robots.txt file may specify a “crawl delay” directive for one or more user agents, which tells a bot how quickly it can request pages from a website. For example, a crawl delay of 10 specifies that a crawler should not request a new page more than every 10 seconds.</p>
+
+<pre><code>  500,000 URLs
+     x 10 seconds between requests
+5,000,000 seconds for all requests
+
+5,000,000 seconds = 58 days to index the site once.
+</code></pre>
+
+<p>We recommend a crawl-delay of 2 seconds for our <code>usasearch</code> user agent, and setting a higher crawl delay for all other bots. The lower the crawl delay, the faster Search.gov will be able to index your site. In the robots.txt file, it would look like this:</p>
+
+<pre><code>User-agent: usasearch  
+Crawl-delay: 2
+
+User-agent: *
+Crawl-delay: 10
+</code></pre>
+
+<h3 id="xml-sitemaps">XML Sitemaps</h3>
+<p>Your robots.txt file should also list one or more of your <a href="https://search.gov/blog/sitemaps.html">XML sitemaps</a>. For example:</p>
+
+<pre><code>Sitemap: https://www.exampleagency.gov/sitemap.xml
+Sitemap: https://www.exampleagency.gov/independent-subsection-sitemap.xml
+</code></pre>
+<ul>
+  <li>Only list sitemaps for the domain matching where the robots.txt file is. A different subdomain’s sitemap should be listed on that subdomain’s robots.txt.</li>
+</ul>
+
+<h3 id="allow-only-the-content-that-you-want-searchable">Allow only the content that you want searchable</h3>
+<p>We recommend disallowing any directories or files that should not be searchable. For example:</p>
+
+<pre><code>Disallow: /archive/
+Disallow: /news-1997/
+Disallow: /reports/duplicative-page.html
+</code></pre>
+
+<ul>
+  <li>Note that if you disallow a directory after it’s been indexed by a search engine, this may not trigger a removal of that content from the index. You’ll need to go into the search engine’s webmaster tools to request removal.</li>
+  <li>Also note that search engines may index individual pages within a disallowed folder if the search engine learns about the URL from a non-crawl method, like a link from another site or your sitemap. To ensure a given page is not searchable, set a <a href="/blog/how-search-engines-index-content-better-discoverability.html#robots">robots meta tag</a> on that page.</li>
+</ul>
+
+<h3 id="customize-settings-for-different-bots">Customize settings for different bots</h3>
+<p>You can set different permissions for different bots. For example, if you want us to index your archived content but don’t want Google or Bing to index it, you can specify that:</p>
+
+<pre><code>User-agent: usasearch  
+Crawl-delay: 2
+Allow: /archive/
+
+User-agent: *
+Crawl-delay: 10
+Disallow: /archive/
+</code></pre>
+
+<h2 id="robotstxt-checklist">Robots.txt checklist</h2>
+<p><i class="icon-check"></i> 1. A robots.txt file has been created in the site’s root directory (<code>https://exampleagency.gov/robots.txt</code>)</p>
+
+<p><i class="icon-check"></i> 2. The robots.txt file disallows any directories and files that automated bots should not crawl</p>
+
+<p><i class="icon-check"></i> 3. The robots.txt file lists one or more <a href="https://search.gov/blog/sitemaps.html">XML sitemaps</a></p>
+
+<p><i class="icon-check"></i> 4. The robots.txt file format has been <a href="https://www.websiteplanet.com/webtools/sitemap-validator/">validated</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<h2 id="additional-resources">Additional Resources</h2>
+<p><a href="https://yoast.com/ultimate-guide-robots-txt/">Yoast SEO’s Ultimate Guide to Robots.txt</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+<p><a href="https://support.google.com/webmasters/answer/6062608?hl=en&amp;ref_topic=6061961">Google’s “Learn about robots.txt files”</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[December 2019 Release Notes]]></title>
@@ -250,103 +460,6 @@
 <p><strong><a href="https://www.drupal.org/project/usasearch">Drupal Module</a></strong>—Allows you to connect your Drupal website to your Search.gov search configuration. The module also supports realtime indexing via Search.gov’s i14y content indexing API. Check out our <a href="/manual/drupal.html">help docs here</a>.</p>
 
 <p><strong><a href="https://github.com/GSA/sites-digitalgov-search">WordPress Plugin</a></strong>—Starter code - contributions welcome! This plugin allows you to override the default WordPress search and connect your WordPress-powered website to your Search.gov search configuration.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Robots.txt Files]]></title>
-    <link href="https://search.gov/manual/robotstxt.html"/>
-    <updated>2019-11-15T00:00:00+00:00</updated>
-    <id>https://search.gov/manual/robotstxt.html</id>
-    <content type="html"><![CDATA[<p>A <code>/robots.txt</code> file is a text file that instructs automated web bots on how to crawl and/or index a website. Web teams use them to provide information about what site directories should or should not be crawled, how quickly content should be accessed, and which bots are welcome on the site.</p>
-
-<h2 id="what-should-my-robotstxt-file-look-like">What should my robots.txt file look like?</h2>
-<p>Please refer to the <a href="http://www.robotstxt.org/robotstxt.html">robots.txt protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> for detailed information on how and where to create your robots.txt. Key points to keep in mind:</p>
-
-<ul>
-  <li>The file must be located at the root of the domain, and each subdomain needs its own file.</li>
-  <li>The robots.txt protocol is case sensitive.</li>
-  <li>It’s easy to accidentally block crawling of everything
-    <ul>
-      <li><code>Disallow: /</code> means disallow everything</li>
-      <li><code>Disallow:  </code> means disallow nothing, thus allowing everything</li>
-      <li><code>Allow: /</code> means allow everything</li>
-      <li><code>Allow:  </code> means allow nothing, thus disallowing everything</li>
-    </ul>
-  </li>
-  <li>The instructions in robots.txt are guidance for bots, not binding requirements.</li>
-</ul>
-
-<h2 id="how-can-i-optimize-my-robotstxt-for-searchgov">How can I optimize my robots.txt for Search.gov?</h2>
-
-<h3 id="crawl-delay">Crawl delay</h3>
-<p>A robots.txt file may specify a “crawl delay” directive for one or more user agents, which tells a bot how quickly it can request pages from a website. For example, a crawl delay of 10 specifies that a crawler should not request a new page more than every 10 seconds.</p>
-
-<pre><code>  500,000 URLs
-     x 10 seconds between requests
-5,000,000 seconds for all requests
-
-5,000,000 seconds = 58 days to index the site once.
-</code></pre>
-
-<p>We recommend a crawl-delay of 2 seconds for our <code>usasearch</code> user agent, and setting a higher crawl delay for all other bots. The lower the crawl delay, the faster Search.gov will be able to index your site. In the robots.txt file, it would look like this:</p>
-
-<pre><code>User-agent: usasearch  
-Crawl-delay: 2
-
-User-agent: *
-Crawl-delay: 10
-</code></pre>
-
-<h3 id="xml-sitemaps">XML Sitemaps</h3>
-<p>Your robots.txt file should also list one or more of your <a href="https://search.gov/blog/sitemaps.html">XML sitemaps</a>. For example:</p>
-
-<pre><code>Sitemap: https://www.exampleagency.gov/sitemap.xml
-Sitemap: https://www.exampleagency.gov/independent-subsection-sitemap.xml
-</code></pre>
-<ul>
-  <li>Only list sitemaps for the domain matching where the robots.txt file is. A different subdomain’s sitemap should be listed on that subdomain’s robots.txt.</li>
-</ul>
-
-<h3 id="allow-only-the-content-that-you-want-searchable">Allow only the content that you want searchable</h3>
-<p>We recommend disallowing any directories or files that should not be searchable. For example:</p>
-
-<pre><code>Disallow: /archive/
-Disallow: /news-1997/
-Disallow: /reports/duplicative-page.html
-</code></pre>
-
-<ul>
-  <li>Note that if you disallow a directory after it’s been indexed by a search engine, this may not trigger a removal of that content from the index. You’ll need to go into the search engine’s webmaster tools to request removal.</li>
-  <li>Also note that search engines may index individual pages within a disallowed folder if the search engine learns about the URL from a non-crawl method, like a link from another site or your sitemap. To ensure a given page is not searchable, set a <a href="/blog/how-search-engines-index-content-better-discoverability.html#robots">robots meta tag</a> on that page.</li>
-</ul>
-
-<h3 id="customize-settings-for-different-bots">Customize settings for different bots</h3>
-<p>You can set different permissions for different bots. For example, if you want us to index your archived content but don’t want Google or Bing to index it, you can specify that:</p>
-
-<pre><code>User-agent: usasearch  
-Crawl-delay: 2
-Allow: /archive/
-
-User-agent: *
-Crawl-delay: 10
-Disallow: /archive/
-</code></pre>
-
-<h2 id="robotstxt-checklist">Robots.txt checklist</h2>
-<p><i class="icon-check"></i> 1. A robots.txt file has been created in the site’s root directory (<code>https://exampleagency.gov/robots.txt</code>)</p>
-
-<p><i class="icon-check"></i> 2. The robots.txt file disallows any directories and files that automated bots should not crawl</p>
-
-<p><i class="icon-check"></i> 3. The robots.txt file lists one or more <a href="https://search.gov/blog/sitemaps.html">XML sitemaps</a></p>
-
-<p><i class="icon-check"></i> 4. The robots.txt file format has been <a href="http://tools.seochat.com/tools/robots-txt-validator/">validated</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-<h2 id="additional-resources">Additional Resources</h2>
-<p><a href="https://yoast.com/ultimate-guide-robots-txt/">Yoast SEO’s Ultimate Guide to Robots.txt</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-<p><a href="https://support.google.com/webmasters/answer/6062608?hl=en&amp;ref_topic=6061961">Google’s “Learn about robots.txt files”</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
 ]]></content>
   </entry>
   
@@ -1638,119 +1751,6 @@ Details: We experienced intermittent errors due to request queue volume. Errors 
   </tbody>
 </table>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[XML Sitemaps]]></title>
-    <link href="https://search.gov/manual/sitemaps.html"/>
-    <updated>2019-04-09T00:00:00+00:00</updated>
-    <id>https://search.gov/manual/sitemaps.html</id>
-    <content type="html"><![CDATA[<p>An <a href="https://en.wikipedia.org/wiki/Sitemaps">XML sitemap</a>  <i class="icon-external-link"><span>(External link)</span></i> is an XML formatted file containing a list of URLs on a website. An XML sitemap provides information that allows a search engine to index your website more intelligently, and to keep its search index up to date.</p>
-
-<p>Sitemaps tell search engines what URLs are on a website, and, if URLs are added as they are published, they tell the engines what new content needs to be picked up. They may also provide additional metadata about each URL, such as the last modified date, which signals to the engine to update the index record for that page.</p>
-
-<p>Search.gov uses sitemaps to tell us what URLs should be in our index and when a URL has been updated. Sitemaps are used in a similar way by <a href="https://support.google.com/webmasters/answer/156184">Google</a>  <i class="icon-external-link"><span>(External link)</span></i>, Bing, and and other search engines. <em>Having an xml sitemap will improve your Google SEO (search engine optimization).</em></p>
-
-<p>Example: <a href="https://search.gov/sitemap.xml">https://search.gov/sitemap.xml</a></p>
-
-<h2 id="what-content-should-be-on-xml-sitemap">What content should be on XML sitemap?</h2>
-
-<p>Some sitemaps are comprehensive, but for very large sites you may need to publish several sitemaps. Each sitemap should be no more than 50MB or 50,000 URLs, whichever comes first. You do not need to add URLs of content you want to remain unsearchable.</p>
-
-<p><strong>Note</strong> that an HTML formatted file listing the pages of a site is more akin to an index page, and is not the same as an XML sitemap. HTML files are human friendly, but not machine friendly, and Search engines need an xml formatted file in order to leverage the information for indexing work.</p>
-
-<h2 id="more-than-one-web-platform-use-multiple-sitemaps">More than one web platform? Use multiple sitemaps.</h2>
-
-<p>It’s common for agencies to use more than one platform to publish their websites. For instance, a CMS was launched, but some content is still on the legacy site’s platform. In this case, use available plugins for the CMS’s in your environment to auto-generate sitemaps for that content. Manually generate a sitemap for any static content. You can publish a <a href="https://www.sitemaps.org/protocol.html#index">sitemap index file</a>  <i class="icon-external-link"><span>(External link)</span></i> that lists the locations of all your specific sitemaps, or you can list all your sitemaps on your robots.txt file.</p>
-
-<h2 id="how-do-search-engines-find-my-sitemaps">How do search engines find my sitemap(s)?</h2>
-
-<p>Sitemaps (or the <a href="https://www.sitemaps.org/protocol.html#index">sitemap index</a>  <i class="icon-external-link"><span>(External link)</span></i>) should be listed in your site’s robots.txt file, i.e.:<br />
-<code>Sitemap: https://www.agency.gov/sitemap_1.xml</code><br />
-<code>Sitemap: https://www.agency.gov/sitemap_2.xml</code></p>
-
-<p>List the appropriate sitemap(s) for the domain or subdomain. <code>www.exampleagency.gov/robots.txt</code> would list sitemaps for content in the <code>www</code> subdomain, while <code>forms.exampleagency.gov/robots.txt</code> would list sitemaps for the <code>forms</code> subdomain.</p>
-
-<p>Read more about <a href="https://search.gov/blog/robotstxt.html">robots.txt files</a>, and take a look at ours: <a href="https://search.gov/robots.txt">https://search.gov/robots.txt</a></p>
-
-<h2 id="what-should-my-xml-sitemap-look-like">What should my XML sitemap look like?</h2>
-
-<p>Please refer to the official <a href="https://www.sitemaps.org/protocol.html">sitemaps protocol</a>  <i class="icon-external-link"><span>(External link)</span></i> for full information on how a sitemap should be structured.</p>
-
-<p>When publishing your sitemap, be sure it begins with an <code>&lt;xml&gt;</code> declaration, and that the URLs are enclosed in opening and closing tags. To take a simplified example:</p>
-
-<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;urlset&gt;
-&lt;url&gt;
-&lt;loc&gt;https://exampleagency.gov/blog/file1.html&lt;/loc&gt;
-&lt;lastmod&gt;2018-03-19T00:00:00+00:00&lt;/lastmod&gt;
-&lt;/url&gt;
-&lt;url&gt;
-&lt;loc&gt;https://exampleagency.gov/policy/new-policy.html&lt;/loc&gt;
-&lt;lastmod&gt;2018-03-27T00:00:00+00:00&lt;/lastmod&gt;
-&lt;/url&gt;
-&lt;/urlset&gt;
-</code></pre>
-<p>If you use multiple sitemaps, then you’ll need to use a <a href="https://www.sitemaps.org/protocol.html#index">sitemap index</a>  <i class="icon-external-link"><span>(External link)</span></i>, along these lines:</p>
-
-<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;sitemapindex&gt;
-&lt;sitemap&gt;https://exampleagency.gov/sitemap.xml?page=1&lt;/sitemap&gt;
-&lt;sitemap&gt;https://exampleagency.gov/sitemap.xml?page=2&lt;/sitemap&gt;
-&lt;/sitemapindex&gt;
-</code></pre>
-<p>Importantly, be sure that any <a href="https://www.sitemaps.org/protocol.html#escaping">special characters in your URLs are escaped</a>  <i class="icon-external-link"><span>(External link)</span></i> so the search engines will know how to read them.</p>
-
-<h2 id="what-metadata-does-searchgov-require-for-each-xml-sitemap-url">What metadata does Search.gov require for each XML sitemap URL?</h2>
-
-<p>The sitemap protocol defines <a href="https://www.sitemaps.org/protocol.html#xmlTagDefinitions">required and optional XML tags</a>  <i class="icon-external-link"><span>(External link)</span></i> for each URL. We recommend including the <code>&lt;lastmod&gt;</code> value (the date of last modification of the file) whenever possible, to indicate when a file has been updated and needs to be re-indexed.</p>
-
-<p>We do not have plans to support the <code>&lt;priority&gt;</code> tag, which is <a href="https://www.seroundtable.com/google-priority-change-frequency-xml-sitemap-20273.html">no longer used</a>  <i class="icon-external-link"><span>(External link)</span></i> by search engines like Google. We may support the <code>&lt;changefreq&gt;</code> tag in the future, but the <code>&lt;lastmod&gt;</code> tag is more accurate and supported by more search engines.</p>
-
-<h2 id="how-can-i-create-an-xml-sitemap">How can I create an XML sitemap?</h2>
-
-<p>Most content management systems provide tools to generate a sitemap and keep it updated. Below are some tools that we recommend:</p>
-
-<h3 id="drupal">Drupal</h3>
-<p><a href="https://www.drupal.org/project/xmlsitemap">XML Sitemap Module</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-<h3 id="wordpress">Wordpress</h3>
-<p><a href="https://wordpress.org/plugins/wordpress-seo/">Yoast SEO Plugin</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-<p><a href="https://wordpress.org/plugins/google-sitemap-generator/">Google Sitemap Plugin</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-<h3 id="wagtail">Wagtail</h3>
-<p><a href="http://docs.wagtail.io/en/latest/reference/contrib/sitemaps.html">Sitemap Generator</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-<h3 id="github-pages-jekyll">Github Pages (Jekyll)</h3>
-<p><a href="https://help.github.com/articles/sitemaps-for-github-pages/">Jekyll Sitemap gem</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-<h3 id="online-generators">Online generators</h3>
-<p>(Note: free online generators often have a limit to the number of URLs they will include, and do not always generate the most accurate sitemaps. Use them only as a last resort.)</p>
-
-<p><a href="https://freesitemapgenerator.com">Free Sitemap Generator</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-<p><a href="http://www.web-site-map.com/">Web Sitemap</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-<h2 id="sitemap-checklist">Sitemap checklist</h2>
-<p><i class="icon-check"></i> 1. One or more sitemaps have been created</p>
-
-<p><i class="icon-check"></i> 2. The URLs in the sitemap have been reviewed (clean URLs, only includes URLs that should be searchable)</p>
-
-<p><i class="icon-check"></i> 3. Each sitemap’s XML format has been <a href="http://tools.seochat.com/tools/site-validator/">validated</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-<p><i class="icon-check"></i> 4. Each sitemap (or a sitemap index) is listed in the site’s robots.txt file</p>
-
-<h2 id="additional-resources">Additional Resources:</h2>
-<p><a href="https://www.sitemaps.org/">Official Documentation from Sitemaps.org</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-<p><a href="https://support.google.com/webmasters/answer/183668?hl=en&amp;ref_topic=4581190">Google’s guide to building a sitemap</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-<p><a href="https://www.websiteplanet.com/webtools/sitemap-validator/">Sitemap validator</a>  <i class="icon-external-link"><span>(External link)</span></i></p>
-
-<h2 id="more-questions">More questions?</h2>
-<p>If you have questions that aren’t answered here, <a href="mailto:search@support.digitalgov.gov">email us</a>. We’ll also keep updating this page over time.</p>
 ]]></content>
   </entry>
   
