@@ -29,7 +29,7 @@ We’ve written a [post about robots.txt files](https://search.gov/manual/robots
 
 ### Targeting particular content on a page
 
-A `<main>` element allows you to target content you want indexed by search engines. If a `<main>` element is present, the system will only collect the content inside the element. Be sure that the content you want indexed is inside of this element. If the element is closed too early, important content will not be indexed. Unless the system finds a `<main>` element demarcating where the primary content of the page is to be found, repetitive content such as headers, footers, and sidebars will be picked up by search engines as part of a page’s content. 
+A `<main>` element allows you to target content you want indexed by search engines. If a `<main>` element is present, the system will only collect the content inside the element. Be sure that the content you want indexed is inside of this element. If the element is closed too early, important content will not be indexed. Unless the system finds a `<main>` element demarcating where the primary content of the page is to be found, or other semantic section markers, repetitive content such as headers, footers, and sidebars can be picked up by search engines as part of a page’s content. We recommend adding `<main>` and other semantic elements such as `<header>`, `<nav>`, and `<footer>` to demarcate these sections and facilitate clean indexing.
 
 The element is implemented as a stand-alone tag:
 
@@ -59,7 +59,9 @@ Various scripts, etc.
 </body>
 ```
 
-As mentioned above, if no `<main>` element is present, the entire page will be scraped. This is best reserved for non-HTML file types, though, including PDFs, DOCs, and PPTs. 
+If possible, open the `<main>` tag just ahead of the `<H1>` for your page title. If you use breadcrumbs on your site, `<main>` should be placed in between the breadcrumbs and the `<H1>` so that the repetitive text in the breadcrumb links will not be indexed.
+
+If no `<main>` element is present, we will omit the `<nav>` and `<footer>` elements. If none of these are present, the entire page will be scraped. Full-page scraping performs best for non-HTML file types, including PDFs and DOCs, so we encourage you to implement these semantic elements in your page templates to assist the search engines in understanding the structure of your site.
 
 <br>
 <a id="rel-canonical"></a>
@@ -133,14 +135,15 @@ The following code sample is for a dynamically generated list of pages on your s
 </head>
 
 <body>
-Redundant header code and navigation elements, sidebars, etc.
+<header>Redundant header code</header>
+<nav>Navigation elements, sidebars, breadcrumbs, etc.</nav>
 <main>
 <h1>Unique title of the page</h1>
 <p>This is the introductory text of the page. It tells people what they’ll find here, why the topic is important, etc. This text is within the main element, and so it will be used to retrieve this page in searches.
 </main>
 Dynamically generated list of relevant pages
 Pagination
-Redundant footer code
+<footer>Redundant footer code</footer>
 Various scripts, etc.
 </body>
 ```
@@ -165,11 +168,14 @@ Note: the description tags are still present in case someone links to this page 
 </head>
 
 <body>
-Redundant header code and navigation elements, sidebars, etc.
+<header>Redundant header code</header>
+<nav>Navigation elements, sidebars, breadcrumbs, etc.</nav>
+<main>
 <h1>Unique title of the page</h1>
 Dynamically generated list of relevant pages
+</main>
 Pagination
-Redundant footer code
+<footer>Redundant footer code</footer>
 Various scripts, etc.
 </body>
 ```
@@ -192,13 +198,14 @@ In the following example, an event page was published in June, and then updated 
 </head>
 
 <body>
-Redundant header code and navigation elements, sidebars, etc.
+<header>Redundant header code</header>
+<nav>Navigation elements, sidebars, breadcrumbs, etc.</nav>
 <main>
 <h1>Unique title of the page</h1>
 <p>This is the introductory text of the page. It tells people what they’ll find here, why the topic is important, etc. This text is within the main element, and so it will be used to retrieve this page in searches.
 Specifics about the event.
 </main>
-Redundant footer code
+<footer>Redundant footer code</footer>
 Various scripts, etc.
 </body>
 ```
