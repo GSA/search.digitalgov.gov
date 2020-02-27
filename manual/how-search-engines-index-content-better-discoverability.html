@@ -140,7 +140,7 @@
 
 <h3 id="targeting-particular-content-on-a-page">Targeting particular content on a page</h3>
 
-<p>A <code>&lt;main&gt;</code> element allows you to target content you want indexed by search engines. If a <code>&lt;main&gt;</code> element is present, the system will only collect the content inside the element. Be sure that the content you want indexed is inside of this element. If the element is closed too early, important content will not be indexed. Unless the system finds a <code>&lt;main&gt;</code> element demarcating where the primary content of the page is to be found, repetitive content such as headers, footers, and sidebars will be picked up by search engines as part of a page’s content.</p>
+<p>A <code>&lt;main&gt;</code> element allows you to target content you want indexed by search engines. If a <code>&lt;main&gt;</code> element is present, the system will only collect the content inside the element. Be sure that the content you want indexed is inside of this element. If the element is closed too early, important content will not be indexed. Unless the system finds a <code>&lt;main&gt;</code> element demarcating where the primary content of the page is to be found, or other semantic section markers, repetitive content such as headers, footers, and sidebars can be picked up by search engines as part of a page’s content. We recommend adding <code>&lt;main&gt;</code> and other semantic elements such as <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;footer&gt;</code> to demarcate these sections and facilitate clean indexing.</p>
 
 <p>The element is implemented as a stand-alone tag:</p>
 
@@ -168,7 +168,9 @@ Various scripts, etc.
 &lt;/body&gt;
 </code></pre>
 
-<p>As mentioned above, if no <code>&lt;main&gt;</code> element is present, the entire page will be scraped. This is best reserved for non-HTML file types, though, including PDFs, DOCs, and PPTs.</p>
+<p>If possible, open the <code>&lt;main&gt;</code> tag just ahead of the <code>&lt;H1&gt;</code> for your page title. If you use breadcrumbs on your site, <code>&lt;main&gt;</code> should be placed in between the breadcrumbs and the <code>&lt;H1&gt;</code> so that the repetitive text in the breadcrumb links will not be indexed.</p>
+
+<p>If no <code>&lt;main&gt;</code> element is present, we will omit the <code>&lt;nav&gt;</code> and <code>&lt;footer&gt;</code> elements. If none of these are present, the entire page will be scraped. Full-page scraping performs best for non-HTML file types, including PDFs and DOCs, so we encourage you to implement these semantic elements in your page templates to assist the search engines in understanding the structure of your site.</p>
 
 <p><br />
 <a id="rel-canonical"></a></p>
@@ -245,14 +247,15 @@ Various scripts, etc.
 &lt;/head&gt;
 
 &lt;body&gt;
-Redundant header code and navigation elements, sidebars, etc.
+&lt;header&gt;Redundant header code&lt;/header&gt;
+&lt;nav&gt;Navigation elements, sidebars, breadcrumbs, etc.&lt;/nav&gt;
 &lt;main&gt;
 &lt;h1&gt;Unique title of the page&lt;/h1&gt;
 &lt;p&gt;This is the introductory text of the page. It tells people what they’ll find here, why the topic is important, etc. This text is within the main element, and so it will be used to retrieve this page in searches.
 &lt;/main&gt;
 Dynamically generated list of relevant pages
 Pagination
-Redundant footer code
+&lt;footer&gt;Redundant footer code&lt;/footer&gt;
 Various scripts, etc.
 &lt;/body&gt;
 </code></pre>
@@ -276,11 +279,14 @@ Various scripts, etc.
 &lt;/head&gt;
 
 &lt;body&gt;
-Redundant header code and navigation elements, sidebars, etc.
+&lt;header&gt;Redundant header code&lt;/header&gt;
+&lt;nav&gt;Navigation elements, sidebars, breadcrumbs, etc.&lt;/nav&gt;
+&lt;main&gt;
 &lt;h1&gt;Unique title of the page&lt;/h1&gt;
 Dynamically generated list of relevant pages
+&lt;/main&gt;
 Pagination
-Redundant footer code
+&lt;footer&gt;Redundant footer code&lt;/footer&gt;
 Various scripts, etc.
 &lt;/body&gt;
 </code></pre>
@@ -302,13 +308,14 @@ Various scripts, etc.
 &lt;/head&gt;
 
 &lt;body&gt;
-Redundant header code and navigation elements, sidebars, etc.
+&lt;header&gt;Redundant header code&lt;/header&gt;
+&lt;nav&gt;Navigation elements, sidebars, breadcrumbs, etc.&lt;/nav&gt;
 &lt;main&gt;
 &lt;h1&gt;Unique title of the page&lt;/h1&gt;
 &lt;p&gt;This is the introductory text of the page. It tells people what they’ll find here, why the topic is important, etc. This text is within the main element, and so it will be used to retrieve this page in searches.
 Specifics about the event.
 &lt;/main&gt;
-Redundant footer code
+&lt;footer&gt;Redundant footer code&lt;/footer&gt;
 Various scripts, etc.
 &lt;/body&gt;
 </code></pre>
@@ -340,7 +347,7 @@ Various scripts, etc.
     
     
     <a href="/manual/how-search-engines-index-content-better-discoverability.html">
-      <time>April 9, 2019</time>
+      <time>February 27, 2020</time>
     </a>
   </div>
 
