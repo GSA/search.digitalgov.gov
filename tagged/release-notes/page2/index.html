@@ -108,46 +108,6 @@
  
     
     <h1>
-      <a href="/releases/april-2019.html">April 2019 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="improvements">Improvements</h2>
-<ul>
-  <li>We launched updated Freshness ranking for customers indexed by Search.gov. The fresher a page the more likely it is to be promoted. Previously, we only factored the date a page is created into its freshness. Now, we first factor the date a page was last modified and then, the date a page is created. This new feature highlights the importance of ensuring that metadata on your site’s pages and sitemap is accurate. Here is more information about how we rank your search results: https://search.gov/manual/ranking-factors.html</li>
-  <li>We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
-</ul>
-
-<h2 id="fixes-and-chores">Fixes and Chores</h2>
-<ul>
-  <li>Fixed a bug that made it difficult to view sidebar items on the search results page when hovering over individual links. Now, the experience when hovering over these links is fully accessible.</li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/april-2019.html">
-        <time datetime="2019-05-10">May 10, 2019</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
       <a href="/releases/march-2019.html">March 2019 Release Notes</a>
     </h1>
     
@@ -575,6 +535,58 @@
       
       <a href="/releases/june-july-2018.html">
         <time datetime="2018-08-10">August 10, 2018</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/releases/may-2018.html">May 2018 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="highlights">Highlights</h2>
+<ul>
+  <li>We continue to make good progress towards our indexing system, and continues to be highly focused on the back end of our system. See below for more details.</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+<ul>
+  <li>We created back-end interfaces allowing the Search.gov team to manage indexed domains &amp; urls.</li>
+  <li>We added a delay method to <code>SearchGov Domain</code>, to honor the crawl delay settings in a given site’s <code>robots.txt</code> file.</li>
+  <li>We created a <code>SearchGov Domain Indexer</code> job that will enqueue urls in need of fetching, to allow bulk indexing tasks to be automated without overloading anyone’s servers, and we added support for <code>resque-scheduler</code> to our configuration baseline.</li>
+  <li>We set the sitemap indexer to reject urls from other domains to avoid erroneous attempts to index content from beta sites, old domains, etc.</li>
+  <li>We now check the protocol of a domain, and whether the site is responding to us. We also set our url fetcher to throw an error if the domain is unavailable or blocking our indexer.</li>
+  <li>We re-indexed the searchgov indices.</li>
+  <li>We upgraded mySQL in demo environments, and streamlined the scenario data for our test suite.</li>
+</ul>
+
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+  <li>We fixed bug that sent searchers back to page 1 results when changing the time scope in a Collection search.</li>
+  <li>We mitigated SSL certificate problems with some sites.</li>
+  <li>We made our redirection check more strict to avoid filling our database and indexes with domains and web pages that don’t need to be searchable.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/may-2018.html">
+        <time datetime="2018-06-20">June 20, 2018</time>
       </a>
     </div>
     </article>

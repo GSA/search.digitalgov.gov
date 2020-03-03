@@ -108,60 +108,6 @@
  
     
     <h1>
-      <a href="/releases/july-2017.html">July 2017 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="highlights">Highlights</h2>
-
-<ul>
-  <li>We’ve begun work on backend features that will provide new ways for customer content to be sent directly into our own indexes. In July, a new index was set up in our system. We also investigated ways to fetch, parse, and send data to our indexes. This is a long term project that extends through the rest of this calendar year and into 2018. Stay tuned!</li>
-</ul>
-
-<h2 id="chores">Chores</h2>
-
-<ul>
-  <li>
-    <p>We wrapped up refinements to our bot-blocking feature that was <a href="/releases/may-2017.html">released in May</a>.</p>
-  </li>
-  <li>
-    <p>We continued work that will upgrade our server recipes to Chef 12 and our Ruby version to 2.3.</p>
-  </li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-
-<ul>
-  <li>As part of our compliance with Section 508 law, we increased the size of facet text on our search results pages. The guideline is that text should be at least 13 pixels, and our facet text is now 13.125 pixels.</li>
-</ul>
-
-<p><img class="img-responsive" src="https://search.digitalgov.gov/img/usagov_facets.png" alt="Screenshot of USA.gov search results page with red box around facets" width="100%" /></p>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/july-2017.html">
-        <time datetime="2017-08-17">August 17, 2017</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
       <a href="/releases/june-2017.html">June 2017 Release Notes</a>
     </h1>
     
@@ -704,6 +650,86 @@
       
       <a href="/releases/february-2012.html">
         <time datetime="2015-05-08">May 8, 2015</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
+      <a href="/releases/february-2013.html">February 2013 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="2-highlighted-features">2 Highlighted Features</h2>
+
+<h3 id="1-tools-for-filtering-results">1. Tools for Filtering Results</h3>
+
+<p>The display of search results pages is constantly evolving. Some changes are subtle. Others are more noticeable.</p>
+
+<p>In line with industry best practices and commercial search engines, we’ve moved the tools for filtering and sorting results to the top of results list (rather than on the left side). We’ve also added an option to clear all filters.</p>
+
+<p><img src="https://d3qcdigd1fhos0.cloudfront.net/blog/img/search-tools.png" alt="Tools for filtering and sorting" /></p>
+
+<h3 id="2-access-your-raw-logs">2. Access Your Raw Logs</h3>
+
+<p>You can now access your raw HTTP logs. These logs contain valuable data on searches, clicks and discovery tag page loads.</p>
+
+<p>Read <em>How to Access Your Raw Logs</em> for more details about how to request secure FTP access to your logs.</p>
+
+<h2 id="other-features">Other Features</h2>
+
+<ul>
+  <li>Searchers now see the most current titles and descriptions available for <a href="/manual/youtube.html">YouTube videos</a> and they won’t see any deleted videos.</li>
+  <li>Visitors to the pages search.usa.gov and buscador.usa.gov are now automatically redirected to <a href="http://www.usa.gov">USA.gov</a> and <a href="https://www.usa.gov/gobiernousa">GobiernoUSA.gov</a>, respectively, so they see the most recent content on these homepages.</li>
+  <li>Spanish searchers now see <a href="http://www.plainlanguage.gov">plain language</a> helper text.</li>
+  <li>Searchers no longer see two search boxes on the search results page, which will create a more visually appealing and usable page.</li>
+  <li>We open sourced all of the code that powers our <a href="https://github.com/GSA/recalls_api">Recalls Server API</a> in Github.</li>
+  <li>Searchers are now able to search and see results from collections that are not visible in the left-hand navigation on your “main” web results. You can use this option to provide a search box on a small subset of content (such as a policy manual or meeting minutes) while not cluttering up the left-hand navigation on your main results page. (It also helps reduce the likelihood that searchers experience a “dead end” on your main results page.)</li>
+</ul>
+
+<h2 id="chores">Chores</h2>
+
+<ul>
+  <li>We rewrote some query routing rules for job searches to present more precise results in the <a href="/manual/govbox-jobs.html">Jobs GovBox</a>.</li>
+  <li>We configured <a href="https://travis-ci.org">Travis-CI</a> to enable continuous integration for the <a href="https://github.com/GSA/recalls_api">Recalls Server API</a> and <a href="https://github.com/GSA/jobs_api">Jobs Server API</a>.</li>
+  <li>We shortened the Jobs API base URL to <code>https://api.usa.gov/jobs/search</code>.</li>
+  <li>We reconfigured our RSS feed fetching to update more efficiently.</li>
+  <li>We upgraded to <a href="http://weblog.rubyonrails.org/2013/2/11/SEC-ANN-Rails-3-2-12-3-1-11-and-2-3-17-have-been-released">Rails 3.2.12</a> and <a href="http://rubygems.org/gems/rack">Rack</a> 1.4.5.</li>
+  <li>We upgraded our <a href="http://www.cloudera.com/content/cloudera/en/products/cdh.html">Cloudera Distribution for Hadoop</a> (CDH) cluster.</li>
+  <li>We removed the outdated yellow call out boxes from the <a href="https://search.usa.gov/sites/">Admin Center</a>.</li>
+  <li>We upgraded to <a href="&quot;http://weblog.rubyonrails.org/2013/1/8/Rails-3-2-11-3-1-10-3-0-19-and-2-3-15-have-been-released">Rails 3.2.11</a>.</li>
+  <li>We upgraded to <a href="http://www.centos.org/">CentOS</a> 6.3.</li>
+  <li>We optimized the routing of search queries so that they’re served by the geographically closest datacenter.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li>You’ll no longer see an error message if you delete a site that has a YouTube profile or when adding a site that has no managed RSS feed.</li>
+  <li>Searchers no longer see Did You Mean suggestions for your excluded domains.</li>
+  <li>We fixed a cross browser compatibility issue on the Query Logs page in the Admin Center so that the number of clicks’ column is now visible.</li>
+  <li>We labeled the Safe Search radio options on our <a href="http://search.usa.gov/search/advanced?affiliate=govbenefits">advanced search page</a> as a fieldset to improve accessibility for screen readers.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/february-2013.html">
+        <time datetime="2015-02-23">February 23, 2015</time>
       </a>
     </div>
     </article>
