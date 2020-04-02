@@ -108,6 +108,49 @@
  
     
     <h1>
+      <a href="/releases/march-2020.html">March 2020 Release Notes</a>
+    </h1>
+    
+
+    <div class='post-content'>
+      <h2 id="improvements">Improvements</h2>
+
+<ul>
+  <li><strong>Search.gov Account Signup:</strong> First Name and Last Name are now their own fields on user profiles. Where possible, these fields are pre-filled, but in some cases, users will need to complete the Last Name field on their next login before proceeding.</li>
+  <li><strong>Elasticsearch Query Updates:</strong> We updated our search query logic to increase response times for some websites.</li>
+  <li><strong>Improved Security:</strong> We found and resolved some security vulnerabilities.</li>
+</ul>
+
+<h2 id="fixes">Fixes</h2>
+
+<ul>
+  <li><strong>Account Deactivation Reminders:</strong> Previously, some users were receiving account deactivation warnings in error. This has now been resolved, and the email copy has been updated.</li>
+</ul>
+
+    </div>
+
+    <div class='tags'>
+      
+      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
+      
+    </div>
+   <div class='time'>
+      
+      
+      </br><span>Page last reviewed or updated:</span>
+      
+      
+      
+      <a href="/releases/march-2020.html">
+        <time datetime="2020-04-02">April 2, 2020</time>
+      </a>
+    </div>
+    </article>
+  
+  <article class='article'>
+ 
+    
+    <h1>
       <a href="/releases/february-2020.html">February 2020 Release Notes</a>
     </h1>
     
@@ -480,61 +523,6 @@
       
       <a href="/releases/july-2019.html">
         <time datetime="2019-08-15">August 15, 2019</time>
-      </a>
-    </div>
-    </article>
-  
-  <article class='article'>
- 
-    
-    <h1>
-      <a href="/releases/may-2019.html">May 2019 Release Notes</a>
-    </h1>
-    
-
-    <div class='post-content'>
-      <h2 id="improvements">Improvements</h2>
-<ul>
-  <li><strong>Sitelimit parameter support</strong>
-    <ul>
-      <li>Now our customers can specify that a search box only returns results from a particular part of their site. For example, for site www.example.gov,  you want a search box on your site to only return results from <code>www.example.gov/history</code>. By adding the appropriate URL parameter and value, you can limit results: <code>&amp;sitelimit=www.example.gov/history</code>.</li>
-      <li>You can also specify multiple values for the sitelimit. See this <a href="https://www.nps.gov/search/?affiliate=nps&amp;query=seneca&amp;sitelimit=www.nps.gov/subjects/oceans+www.nps.gov/subjects/womenshistory">example from the National Park Service</a>.</li>
-      <li>Keep in mind that the sitelimit must be for a domain within your site’s index. That is, if the Domains list includes <code>www.example.gov</code>, the sitelimit parameter cannot be <code>www.agency.gov/history</code>.</li>
-      <li>This feature is an alternative to our Collections feature.</li>
-    </ul>
-  </li>
-  <li><strong>Service upgrades</strong>
-    <ul>
-      <li>We continued to upgrade components of our service, including ElasticSearch, Rails, and Ruby to improve the overall performance of our indexing system.</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="fixes">Fixes</h2>
-<ul>
-  <li><strong>Highlighting bug</strong>
-    <ul>
-      <li>We fixed a bug that prevented highlighting for exact, phrased queries on sites indexed by Search.gov. <a href="https://search.usa.gov/search?utf8=%E2%9C%93&amp;affiliate=usasearch&amp;sort_by=&amp;query=%22search+features%22">Here’s an example of it working correctly now</a>.</li>
-    </ul>
-  </li>
-</ul>
-
-    </div>
-
-    <div class='tags'>
-      
-      <a href="/tagged/release-notes"><span class="label label-info">release-notes</span></a>
-      
-    </div>
-   <div class='time'>
-      
-      
-      </br><span>Page last reviewed or updated:</span>
-      
-      
-      
-      <a href="/releases/may-2019.html">
-        <time datetime="2019-06-20">June 20, 2019</time>
       </a>
     </div>
     </article>
